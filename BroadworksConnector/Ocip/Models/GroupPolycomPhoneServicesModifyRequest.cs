@@ -1,0 +1,22 @@
+using System;
+using System.Xml.Serialization;
+    using System.Collections.Generic;
+
+namespace BroadworksConnector.Ocip.Models
+{
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupPolycomPhoneServicesModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+{
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
+    public string ServiceProviderId { get; set; }
+    [XmlElement(ElementName = "groupId", IsNullable = false)]
+    public string GroupId { get; set; }
+    [XmlElement(ElementName = "includeGroupCommonPhoneListInDirectory", IsNullable = false)]
+    public bool IncludeGroupCommonPhoneListInDirectory { get; set; }
+    [XmlElement(ElementName = "includeGroupCustomContactDirectoryInDirectory", IsNullable = false)]
+    public bool IncludeGroupCustomContactDirectoryInDirectory { get; set; }
+    [XmlElement(ElementName = "groupCustomContactDirectory", IsNullable = true)]
+    public string GroupCustomContactDirectory { get; set; }
+ }
+}

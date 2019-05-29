@@ -1,0 +1,22 @@
+using System;
+using System.Xml.Serialization;
+    using System.Collections.Generic;
+
+namespace BroadworksConnector.Ocip.Models
+{
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupBroadWorksAnywhereGetInstanceResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+{
+    [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false)]
+    public BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile { get; set; }
+    [XmlElement(ElementName = "broadWorksAnywhereScope", IsNullable = false)]
+    public BroadworksConnector.Ocip.Models.BroadWorksAnywhereScope BroadWorksAnywhereScope { get; set; }
+    [XmlElement(ElementName = "promptForCLID", IsNullable = false)]
+    public BroadworksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt PromptForCLID { get; set; }
+    [XmlElement(ElementName = "silentPromptMode", IsNullable = false)]
+    public bool SilentPromptMode { get; set; }
+    [XmlElement(ElementName = "promptForPasscode", IsNullable = false)]
+    public bool PromptForPasscode { get; set; }
+ }
+}

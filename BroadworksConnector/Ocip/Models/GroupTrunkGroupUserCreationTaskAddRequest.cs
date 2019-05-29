@@ -1,0 +1,40 @@
+using System;
+using System.Xml.Serialization;
+    using System.Collections.Generic;
+
+namespace BroadworksConnector.Ocip.Models
+{
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupTrunkGroupUserCreationTaskAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+{
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
+    public string ServiceUserId { get; set; }
+    [XmlElement(ElementName = "taskName", IsNullable = false)]
+    public string TaskName { get; set; }
+    [XmlElement(ElementName = "userIdFormat", IsNullable = false)]
+    public BroadworksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat UserIdFormat { get; set; }
+    [XmlElement(ElementName = "userIdDomain", IsNullable = false)]
+    public string UserIdDomain { get; set; }
+    [XmlElement(ElementName = "populateExtension", IsNullable = false)]
+    public bool PopulateExtension { get; set; }
+    [XmlElement(ElementName = "linePortFormat", IsNullable = false)]
+    public BroadworksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat LinePortFormat { get; set; }
+    [XmlElement(ElementName = "linePortDomain", IsNullable = false)]
+    public string LinePortDomain { get; set; }
+    [XmlElement(ElementName = "populateContact", IsNullable = false)]
+    public bool PopulateContact { get; set; }
+    [XmlElement(ElementName = "contactFormat", IsNullable = false)]
+    public BroadworksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat ContactFormat { get; set; }
+    [XmlElement(ElementName = "contactDomain", IsNullable = false)]
+    public string ContactDomain { get; set; }
+    [XmlElement(ElementName = "userPhoneNumbers", IsNullable = false)]
+    public BroadworksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserPhoneNumbers UserPhoneNumbers { get; set; }
+    [XmlElement(ElementName = "userExtensions", IsNullable = false)]
+    public BroadworksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserExtensions UserExtensions { get; set; }
+    [XmlElement(ElementName = "servicePackName", IsNullable = false)]
+    public List<string> ServicePackName { get; set; }
+    [XmlElement(ElementName = "userService", IsNullable = false)]
+    public List<BroadworksConnector.Ocip.Models.UserService> UserService { get; set; }
+ }
+}
