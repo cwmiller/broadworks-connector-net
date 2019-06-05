@@ -15,6 +15,11 @@ namespace BroadworksConnector.Ocip
             _uri = uri;
         }
 
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<string> Send(string request)
         {
             throw new NotImplementedException();

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBroadWorksMobilityServiceAccessCodeGetListRequest21 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceAccessCodeListName", IsNullable = false)]
-    public string ServiceAccessCodeListName { get; set; }
- }
+    private string _serviceAccessCodeListName;
+
+    [XmlElement(ElementName = "serviceAccessCodeListName", IsNullable = false, Namespace = "")]
+    public string ServiceAccessCodeListName {
+        get => _serviceAccessCodeListName;
+        set {
+            ServiceAccessCodeListNameSpecified = true;
+            _serviceAccessCodeListName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceAccessCodeListNameSpecified { get; set; }
+}
 }

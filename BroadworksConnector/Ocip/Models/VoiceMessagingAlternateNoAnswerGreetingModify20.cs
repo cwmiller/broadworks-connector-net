@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class VoiceMessagingAlternateNoAnswerGreetingModify20 
 {
-    [XmlElement(ElementName = "name", IsNullable = true)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "audioFile", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile { get; set; }
-    [XmlElement(ElementName = "videoFile", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile { get; set; }
- }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = true, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
+
+    [XmlElement(ElementName = "audioFile", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile {
+        get => _audioFile;
+        set {
+            AudioFileSpecified = true;
+            _audioFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioFileSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
+
+    [XmlElement(ElementName = "videoFile", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile {
+        get => _videoFile;
+        set {
+            VideoFileSpecified = true;
+            _videoFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoFileSpecified { get; set; }
+}
 }

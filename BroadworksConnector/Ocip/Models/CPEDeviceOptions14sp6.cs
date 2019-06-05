@@ -1,24 +1,102 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CPEDeviceOptions14sp6 
-{
-    [XmlElement(ElementName = "enableMonitoring", IsNullable = false)]
-    public bool EnableMonitoring { get; set; }
-    [XmlElement(ElementName = "resetEvent", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CPEDeviceResetEventType ResetEvent { get; set; }
-    [XmlElement(ElementName = "configType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigType { get; set; }
-    [XmlElement(ElementName = "systemFileName", IsNullable = false)]
-    public string SystemFileName { get; set; }
-    [XmlElement(ElementName = "deviceFileFormat", IsNullable = false)]
-    public string DeviceFileFormat { get; set; }
-    [XmlElement(ElementName = "deviceManagementDeviceTypeOptions", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DeviceManagementDeviceTypeOptions DeviceManagementDeviceTypeOptions { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class CPEDeviceOptions14sp6
+    {
+        private bool _enableMonitoring;
+
+        [XmlElement(ElementName = "enableMonitoring", IsNullable = false, Namespace = "")]
+        public bool EnableMonitoring
+        {
+            get => _enableMonitoring;
+            set
+            {
+                EnableMonitoringSpecified = true;
+                _enableMonitoring = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool EnableMonitoringSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.CPEDeviceResetEventType _resetEvent;
+
+        [XmlElement(ElementName = "resetEvent", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.CPEDeviceResetEventType ResetEvent
+        {
+            get => _resetEvent;
+            set
+            {
+                ResetEventSpecified = true;
+                _resetEvent = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ResetEventSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
+
+        [XmlElement(ElementName = "configType", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigType
+        {
+            get => _configType;
+            set
+            {
+                ConfigTypeSpecified = true;
+                _configType = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ConfigTypeSpecified { get; set; }
+        private string _systemFileName;
+
+        [XmlElement(ElementName = "systemFileName", IsNullable = false, Namespace = "")]
+        public string SystemFileName
+        {
+            get => _systemFileName;
+            set
+            {
+                SystemFileNameSpecified = true;
+                _systemFileName = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool SystemFileNameSpecified { get; set; }
+        private string _deviceFileFormat;
+
+        [XmlElement(ElementName = "deviceFileFormat", IsNullable = false, Namespace = "")]
+        public string DeviceFileFormat
+        {
+            get => _deviceFileFormat;
+            set
+            {
+                DeviceFileFormatSpecified = true;
+                _deviceFileFormat = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool DeviceFileFormatSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.DeviceManagementDeviceTypeOptions _deviceManagementDeviceTypeOptions;
+
+        [XmlElement(ElementName = "deviceManagementDeviceTypeOptions", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.DeviceManagementDeviceTypeOptions DeviceManagementDeviceTypeOptions
+        {
+            get => _deviceManagementDeviceTypeOptions;
+            set
+            {
+                DeviceManagementDeviceTypeOptionsSpecified = true;
+                _deviceManagementDeviceTypeOptions = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool DeviceManagementDeviceTypeOptionsSpecified { get; set; }
+    }
 }

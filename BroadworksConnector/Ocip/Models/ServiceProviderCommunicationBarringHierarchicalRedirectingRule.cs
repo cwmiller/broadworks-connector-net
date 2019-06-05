@@ -8,19 +8,96 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderCommunicationBarringHierarchicalRedirectingRule 
 {
-    [XmlElement(ElementName = "criteria", IsNullable = false)]
-    public string Criteria { get; set; }
-    [XmlElement(ElementName = "digitPatternCriteria", IsNullable = false)]
-    public string DigitPatternCriteria { get; set; }
-    [XmlElement(ElementName = "action", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingAction Action { get; set; }
-    [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = false)]
-    public int CallTimeoutSeconds { get; set; }
-    [XmlElement(ElementName = "timeSchedule", IsNullable = false)]
-    public string TimeSchedule { get; set; }
-    [XmlElement(ElementName = "holidaySchedule", IsNullable = false)]
-    public string HolidaySchedule { get; set; }
-    [XmlElement(ElementName = "priority", IsNullable = false)]
-    public decimal Priority { get; set; }
- }
+    private string _criteria;
+
+    [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
+    public string Criteria {
+        get => _criteria;
+        set {
+            CriteriaSpecified = true;
+            _criteria = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CriteriaSpecified { get; set; }
+    private string _digitPatternCriteria;
+
+    [XmlElement(ElementName = "digitPatternCriteria", IsNullable = false, Namespace = "")]
+    public string DigitPatternCriteria {
+        get => _digitPatternCriteria;
+        set {
+            DigitPatternCriteriaSpecified = true;
+            _digitPatternCriteria = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DigitPatternCriteriaSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingAction _action;
+
+    [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingAction Action {
+        get => _action;
+        set {
+            ActionSpecified = true;
+            _action = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ActionSpecified { get; set; }
+    private int _callTimeoutSeconds;
+
+    [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int CallTimeoutSeconds {
+        get => _callTimeoutSeconds;
+        set {
+            CallTimeoutSecondsSpecified = true;
+            _callTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallTimeoutSecondsSpecified { get; set; }
+    private string _timeSchedule;
+
+    [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
+    public string TimeSchedule {
+        get => _timeSchedule;
+        set {
+            TimeScheduleSpecified = true;
+            _timeSchedule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeScheduleSpecified { get; set; }
+    private string _holidaySchedule;
+
+    [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
+    public string HolidaySchedule {
+        get => _holidaySchedule;
+        set {
+            HolidayScheduleSpecified = true;
+            _holidaySchedule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HolidayScheduleSpecified { get; set; }
+    private decimal _priority;
+
+    [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
+    public decimal Priority {
+        get => _priority;
+        set {
+            PrioritySpecified = true;
+            _priority = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrioritySpecified { get; set; }
+}
 }

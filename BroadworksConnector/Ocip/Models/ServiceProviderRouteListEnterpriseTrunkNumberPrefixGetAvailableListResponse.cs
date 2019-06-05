@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderRouteListEnterpriseTrunkNumberPrefixGetAvailableListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "availableNumberPrefixTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable AvailableNumberPrefixTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _availableNumberPrefixTable;
+
+    [XmlElement(ElementName = "availableNumberPrefixTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable AvailableNumberPrefixTable {
+        get => _availableNumberPrefixTable;
+        set {
+            AvailableNumberPrefixTableSpecified = true;
+            _availableNumberPrefixTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AvailableNumberPrefixTableSpecified { get; set; }
+}
 }

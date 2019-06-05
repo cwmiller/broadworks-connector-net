@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class PublicClusterGetFullyQualifiedDomainNameResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "publicClusterFQDN", IsNullable = false)]
-    public string PublicClusterFQDN { get; set; }
- }
+    private string _publicClusterFQDN;
+
+    [XmlElement(ElementName = "publicClusterFQDN", IsNullable = false, Namespace = "")]
+    public string PublicClusterFQDN {
+        get => _publicClusterFQDN;
+        set {
+            PublicClusterFQDNSpecified = true;
+            _publicClusterFQDN = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PublicClusterFQDNSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderMeetMeConferencingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "allocatedPorts", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
+
+    [XmlElement(ElementName = "allocatedPorts", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts {
+        get => _allocatedPorts;
+        set {
+            AllocatedPortsSpecified = true;
+            _allocatedPorts = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllocatedPortsSpecified { get; set; }
+}
 }

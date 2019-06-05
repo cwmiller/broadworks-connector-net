@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupTrunkGroupGetAvailableDetailListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "trunkGroup", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.GroupTrunkGroupGetAvailableDetailListResponseTrunkGroup> TrunkGroup { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.GroupTrunkGroupGetAvailableDetailListResponseTrunkGroup> _trunkGroup;
+
+    [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.GroupTrunkGroupGetAvailableDetailListResponseTrunkGroup> TrunkGroup {
+        get => _trunkGroup;
+        set {
+            TrunkGroupSpecified = true;
+            _trunkGroup = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TrunkGroupSpecified { get; set; }
+}
 }

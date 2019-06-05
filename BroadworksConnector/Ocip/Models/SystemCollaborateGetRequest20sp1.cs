@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCollaborateGetRequest20sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

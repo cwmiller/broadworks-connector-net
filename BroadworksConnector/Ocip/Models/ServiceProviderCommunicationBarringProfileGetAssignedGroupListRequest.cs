@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderCommunicationBarringProfileGetAssignedGroupListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "profile", IsNullable = false)]
-    public string Profile { get; set; }
-    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false)]
-    public int ResponseSizeLimit { get; set; }
-    [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId { get; set; }
-    [XmlElement(ElementName = "searchCriteriaGroupName", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupName> SearchCriteriaGroupName { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _profile;
+
+    [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
+    public string Profile {
+        get => _profile;
+        set {
+            ProfileSpecified = true;
+            _profile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProfileSpecified { get; set; }
+    private int _responseSizeLimit;
+
+    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
+    public int ResponseSizeLimit {
+        get => _responseSizeLimit;
+        set {
+            ResponseSizeLimitSpecified = true;
+            _responseSizeLimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResponseSizeLimitSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId;
+
+    [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId {
+        get => _searchCriteriaGroupId;
+        set {
+            SearchCriteriaGroupIdSpecified = true;
+            _searchCriteriaGroupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaGroupIdSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupName> _searchCriteriaGroupName;
+
+    [XmlElement(ElementName = "searchCriteriaGroupName", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupName> SearchCriteriaGroupName {
+        get => _searchCriteriaGroupName;
+        set {
+            SearchCriteriaGroupNameSpecified = true;
+            _searchCriteriaGroupName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaGroupNameSpecified { get; set; }
+}
 }

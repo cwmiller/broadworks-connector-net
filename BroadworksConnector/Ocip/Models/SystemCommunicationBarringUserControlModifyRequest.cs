@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCommunicationBarringUserControlModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "enableLockout", IsNullable = false)]
-    public bool EnableLockout { get; set; }
-    [XmlElement(ElementName = "maxNumberOfFailedAttempts", IsNullable = false)]
-    public int MaxNumberOfFailedAttempts { get; set; }
-    [XmlElement(ElementName = "lockoutMinutes", IsNullable = false)]
-    public int LockoutMinutes { get; set; }
- }
+    private bool _enableLockout;
+
+    [XmlElement(ElementName = "enableLockout", IsNullable = false, Namespace = "")]
+    public bool EnableLockout {
+        get => _enableLockout;
+        set {
+            EnableLockoutSpecified = true;
+            _enableLockout = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableLockoutSpecified { get; set; }
+    private int _maxNumberOfFailedAttempts;
+
+    [XmlElement(ElementName = "maxNumberOfFailedAttempts", IsNullable = false, Namespace = "")]
+    public int MaxNumberOfFailedAttempts {
+        get => _maxNumberOfFailedAttempts;
+        set {
+            MaxNumberOfFailedAttemptsSpecified = true;
+            _maxNumberOfFailedAttempts = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxNumberOfFailedAttemptsSpecified { get; set; }
+    private int _lockoutMinutes;
+
+    [XmlElement(ElementName = "lockoutMinutes", IsNullable = false, Namespace = "")]
+    public int LockoutMinutes {
+        get => _lockoutMinutes;
+        set {
+            LockoutMinutesSpecified = true;
+            _lockoutMinutes = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LockoutMinutesSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserFlexibleSeatingGuestGetAvailableHostListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "hostUserTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable HostUserTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _hostUserTable;
+
+    [XmlElement(ElementName = "hostUserTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable HostUserTable {
+        get => _hostUserTable;
+        set {
+            HostUserTableSpecified = true;
+            _hostUserTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HostUserTableSpecified { get; set; }
+}
 }

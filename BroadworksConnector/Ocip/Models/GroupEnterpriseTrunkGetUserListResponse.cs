@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupEnterpriseTrunkGetUserListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enterpriseTrunkUserTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable EnterpriseTrunkUserTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _enterpriseTrunkUserTable;
+
+    [XmlElement(ElementName = "enterpriseTrunkUserTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable EnterpriseTrunkUserTable {
+        get => _enterpriseTrunkUserTable;
+        set {
+            EnterpriseTrunkUserTableSpecified = true;
+            _enterpriseTrunkUserTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnterpriseTrunkUserTableSpecified { get; set; }
+}
 }

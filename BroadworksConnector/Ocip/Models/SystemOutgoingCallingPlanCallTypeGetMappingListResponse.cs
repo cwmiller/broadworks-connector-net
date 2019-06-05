@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemOutgoingCallingPlanCallTypeGetMappingListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "callTypeMapping", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CallTypeMapping { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _callTypeMapping;
+
+    [XmlElement(ElementName = "callTypeMapping", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable CallTypeMapping {
+        get => _callTypeMapping;
+        set {
+            CallTypeMappingSpecified = true;
+            _callTypeMapping = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallTypeMappingSpecified { get; set; }
+}
 }

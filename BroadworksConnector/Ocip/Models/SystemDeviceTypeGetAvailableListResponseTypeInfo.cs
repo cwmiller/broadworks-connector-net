@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDeviceTypeGetAvailableListResponseTypeInfo 
 {
-    [XmlElement(ElementName = "profile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SignalingAddressType Profile { get; set; }
-    [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false)]
-    public bool StaticRegistrationCapable { get; set; }
-    [XmlElement(ElementName = "protocolChoice", IsNullable = false)]
-    public List<string> ProtocolChoice { get; set; }
-    [XmlElement(ElementName = "isIpAddressOptional", IsNullable = false)]
-    public bool IsIpAddressOptional { get; set; }
-    [XmlElement(ElementName = "useDomain", IsNullable = false)]
-    public bool UseDomain { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.SignalingAddressType _profile;
+
+    [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SignalingAddressType Profile {
+        get => _profile;
+        set {
+            ProfileSpecified = true;
+            _profile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProfileSpecified { get; set; }
+    private bool _staticRegistrationCapable;
+
+    [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
+    public bool StaticRegistrationCapable {
+        get => _staticRegistrationCapable;
+        set {
+            StaticRegistrationCapableSpecified = true;
+            _staticRegistrationCapable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StaticRegistrationCapableSpecified { get; set; }
+    private List<string> _protocolChoice;
+
+    [XmlElement(ElementName = "protocolChoice", IsNullable = false, Namespace = "")]
+    public List<string> ProtocolChoice {
+        get => _protocolChoice;
+        set {
+            ProtocolChoiceSpecified = true;
+            _protocolChoice = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProtocolChoiceSpecified { get; set; }
+    private bool _isIpAddressOptional;
+
+    [XmlElement(ElementName = "isIpAddressOptional", IsNullable = false, Namespace = "")]
+    public bool IsIpAddressOptional {
+        get => _isIpAddressOptional;
+        set {
+            IsIpAddressOptionalSpecified = true;
+            _isIpAddressOptional = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsIpAddressOptionalSpecified { get; set; }
+    private bool _useDomain;
+
+    [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
+    public bool UseDomain {
+        get => _useDomain;
+        set {
+            UseDomainSpecified = true;
+            _useDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseDomainSpecified { get; set; }
+}
 }

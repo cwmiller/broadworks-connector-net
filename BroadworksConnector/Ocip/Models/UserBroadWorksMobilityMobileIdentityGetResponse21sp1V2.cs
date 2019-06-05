@@ -8,67 +8,408 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserBroadWorksMobilityMobileIdentityGetResponse21sp1V2 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "description", IsNullable = false)]
-    public string Description { get; set; }
-    [XmlElement(ElementName = "isPrimary", IsNullable = false)]
-    public bool IsPrimary { get; set; }
-    [XmlElement(ElementName = "enableAlerting", IsNullable = false)]
-    public bool EnableAlerting { get; set; }
-    [XmlElement(ElementName = "alertAgentCalls", IsNullable = false)]
-    public bool AlertAgentCalls { get; set; }
-    [XmlElement(ElementName = "alertClickToDialCalls", IsNullable = false)]
-    public bool AlertClickToDialCalls { get; set; }
-    [XmlElement(ElementName = "alertGroupPagingCalls", IsNullable = false)]
-    public bool AlertGroupPagingCalls { get; set; }
-    [XmlElement(ElementName = "useMobilityCallingLineID", IsNullable = false)]
-    public bool UseMobilityCallingLineID { get; set; }
-    [XmlElement(ElementName = "enableDiversionInhibitor", IsNullable = false)]
-    public bool EnableDiversionInhibitor { get; set; }
-    [XmlElement(ElementName = "requireAnswerConfirmation", IsNullable = false)]
-    public bool RequireAnswerConfirmation { get; set; }
-    [XmlElement(ElementName = "broadworksCallControl", IsNullable = false)]
-    public bool BroadworksCallControl { get; set; }
-    [XmlElement(ElementName = "useSettingLevel", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel UseSettingLevel { get; set; }
-    [XmlElement(ElementName = "denyCallOriginations", IsNullable = false)]
-    public bool DenyCallOriginations { get; set; }
-    [XmlElement(ElementName = "denyCallTerminations", IsNullable = false)]
-    public bool DenyCallTerminations { get; set; }
-    [XmlElement(ElementName = "effectiveEnableLocationServices", IsNullable = false)]
-    public bool EffectiveEnableLocationServices { get; set; }
-    [XmlElement(ElementName = "effectiveEnableMSRNLookup", IsNullable = false)]
-    public bool EffectiveEnableMSRNLookup { get; set; }
-    [XmlElement(ElementName = "effectiveEnableMobileStateChecking", IsNullable = false)]
-    public bool EffectiveEnableMobileStateChecking { get; set; }
-    [XmlElement(ElementName = "effectiveEnableAnnouncementSuppression", IsNullable = false)]
-    public bool EffectiveEnableAnnouncementSuppression { get; set; }
-    [XmlElement(ElementName = "effectiveDenyCallOriginations", IsNullable = false)]
-    public bool EffectiveDenyCallOriginations { get; set; }
-    [XmlElement(ElementName = "effectiveDenyCallTerminations", IsNullable = false)]
-    public bool EffectiveDenyCallTerminations { get; set; }
-    [XmlElement(ElementName = "devicesToRing", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing DevicesToRing { get; set; }
-    [XmlElement(ElementName = "includeSharedCallAppearance", IsNullable = false)]
-    public bool IncludeSharedCallAppearance { get; set; }
-    [XmlElement(ElementName = "includeBroadworksAnywhere", IsNullable = false)]
-    public bool IncludeBroadworksAnywhere { get; set; }
-    [XmlElement(ElementName = "includeExecutiveAssistant", IsNullable = false)]
-    public bool IncludeExecutiveAssistant { get; set; }
-    [XmlElement(ElementName = "enableCallAnchoring", IsNullable = false)]
-    public bool EnableCallAnchoring { get; set; }
-    [XmlElement(ElementName = "timeSchedule", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ScheduleGlobalKey TimeSchedule { get; set; }
-    [XmlElement(ElementName = "holidaySchedule", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ScheduleGlobalKey HolidaySchedule { get; set; }
-    [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead AccessDeviceEndpoint { get; set; }
-    [XmlElement(ElementName = "outboundAlternateNumber", IsNullable = false)]
-    public string OutboundAlternateNumber { get; set; }
-    [XmlElement(ElementName = "enableDirectRouting", IsNullable = false)]
-    public bool EnableDirectRouting { get; set; }
-    [XmlElement(ElementName = "markCDRAsEnterpriseGroupCalls", IsNullable = false)]
-    public bool MarkCDRAsEnterpriseGroupCalls { get; set; }
-    [XmlElement(ElementName = "mobileNumberAlertedTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable MobileNumberAlertedTable { get; set; }
- }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+    private bool _isPrimary;
+
+    [XmlElement(ElementName = "isPrimary", IsNullable = false, Namespace = "")]
+    public bool IsPrimary {
+        get => _isPrimary;
+        set {
+            IsPrimarySpecified = true;
+            _isPrimary = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsPrimarySpecified { get; set; }
+    private bool _enableAlerting;
+
+    [XmlElement(ElementName = "enableAlerting", IsNullable = false, Namespace = "")]
+    public bool EnableAlerting {
+        get => _enableAlerting;
+        set {
+            EnableAlertingSpecified = true;
+            _enableAlerting = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableAlertingSpecified { get; set; }
+    private bool _alertAgentCalls;
+
+    [XmlElement(ElementName = "alertAgentCalls", IsNullable = false, Namespace = "")]
+    public bool AlertAgentCalls {
+        get => _alertAgentCalls;
+        set {
+            AlertAgentCallsSpecified = true;
+            _alertAgentCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertAgentCallsSpecified { get; set; }
+    private bool _alertClickToDialCalls;
+
+    [XmlElement(ElementName = "alertClickToDialCalls", IsNullable = false, Namespace = "")]
+    public bool AlertClickToDialCalls {
+        get => _alertClickToDialCalls;
+        set {
+            AlertClickToDialCallsSpecified = true;
+            _alertClickToDialCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertClickToDialCallsSpecified { get; set; }
+    private bool _alertGroupPagingCalls;
+
+    [XmlElement(ElementName = "alertGroupPagingCalls", IsNullable = false, Namespace = "")]
+    public bool AlertGroupPagingCalls {
+        get => _alertGroupPagingCalls;
+        set {
+            AlertGroupPagingCallsSpecified = true;
+            _alertGroupPagingCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertGroupPagingCallsSpecified { get; set; }
+    private bool _useMobilityCallingLineID;
+
+    [XmlElement(ElementName = "useMobilityCallingLineID", IsNullable = false, Namespace = "")]
+    public bool UseMobilityCallingLineID {
+        get => _useMobilityCallingLineID;
+        set {
+            UseMobilityCallingLineIDSpecified = true;
+            _useMobilityCallingLineID = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseMobilityCallingLineIDSpecified { get; set; }
+    private bool _enableDiversionInhibitor;
+
+    [XmlElement(ElementName = "enableDiversionInhibitor", IsNullable = false, Namespace = "")]
+    public bool EnableDiversionInhibitor {
+        get => _enableDiversionInhibitor;
+        set {
+            EnableDiversionInhibitorSpecified = true;
+            _enableDiversionInhibitor = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableDiversionInhibitorSpecified { get; set; }
+    private bool _requireAnswerConfirmation;
+
+    [XmlElement(ElementName = "requireAnswerConfirmation", IsNullable = false, Namespace = "")]
+    public bool RequireAnswerConfirmation {
+        get => _requireAnswerConfirmation;
+        set {
+            RequireAnswerConfirmationSpecified = true;
+            _requireAnswerConfirmation = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RequireAnswerConfirmationSpecified { get; set; }
+    private bool _broadworksCallControl;
+
+    [XmlElement(ElementName = "broadworksCallControl", IsNullable = false, Namespace = "")]
+    public bool BroadworksCallControl {
+        get => _broadworksCallControl;
+        set {
+            BroadworksCallControlSpecified = true;
+            _broadworksCallControl = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool BroadworksCallControlSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel _useSettingLevel;
+
+    [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel UseSettingLevel {
+        get => _useSettingLevel;
+        set {
+            UseSettingLevelSpecified = true;
+            _useSettingLevel = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseSettingLevelSpecified { get; set; }
+    private bool _denyCallOriginations;
+
+    [XmlElement(ElementName = "denyCallOriginations", IsNullable = false, Namespace = "")]
+    public bool DenyCallOriginations {
+        get => _denyCallOriginations;
+        set {
+            DenyCallOriginationsSpecified = true;
+            _denyCallOriginations = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DenyCallOriginationsSpecified { get; set; }
+    private bool _denyCallTerminations;
+
+    [XmlElement(ElementName = "denyCallTerminations", IsNullable = false, Namespace = "")]
+    public bool DenyCallTerminations {
+        get => _denyCallTerminations;
+        set {
+            DenyCallTerminationsSpecified = true;
+            _denyCallTerminations = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DenyCallTerminationsSpecified { get; set; }
+    private bool _effectiveEnableLocationServices;
+
+    [XmlElement(ElementName = "effectiveEnableLocationServices", IsNullable = false, Namespace = "")]
+    public bool EffectiveEnableLocationServices {
+        get => _effectiveEnableLocationServices;
+        set {
+            EffectiveEnableLocationServicesSpecified = true;
+            _effectiveEnableLocationServices = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EffectiveEnableLocationServicesSpecified { get; set; }
+    private bool _effectiveEnableMSRNLookup;
+
+    [XmlElement(ElementName = "effectiveEnableMSRNLookup", IsNullable = false, Namespace = "")]
+    public bool EffectiveEnableMSRNLookup {
+        get => _effectiveEnableMSRNLookup;
+        set {
+            EffectiveEnableMSRNLookupSpecified = true;
+            _effectiveEnableMSRNLookup = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EffectiveEnableMSRNLookupSpecified { get; set; }
+    private bool _effectiveEnableMobileStateChecking;
+
+    [XmlElement(ElementName = "effectiveEnableMobileStateChecking", IsNullable = false, Namespace = "")]
+    public bool EffectiveEnableMobileStateChecking {
+        get => _effectiveEnableMobileStateChecking;
+        set {
+            EffectiveEnableMobileStateCheckingSpecified = true;
+            _effectiveEnableMobileStateChecking = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EffectiveEnableMobileStateCheckingSpecified { get; set; }
+    private bool _effectiveEnableAnnouncementSuppression;
+
+    [XmlElement(ElementName = "effectiveEnableAnnouncementSuppression", IsNullable = false, Namespace = "")]
+    public bool EffectiveEnableAnnouncementSuppression {
+        get => _effectiveEnableAnnouncementSuppression;
+        set {
+            EffectiveEnableAnnouncementSuppressionSpecified = true;
+            _effectiveEnableAnnouncementSuppression = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EffectiveEnableAnnouncementSuppressionSpecified { get; set; }
+    private bool _effectiveDenyCallOriginations;
+
+    [XmlElement(ElementName = "effectiveDenyCallOriginations", IsNullable = false, Namespace = "")]
+    public bool EffectiveDenyCallOriginations {
+        get => _effectiveDenyCallOriginations;
+        set {
+            EffectiveDenyCallOriginationsSpecified = true;
+            _effectiveDenyCallOriginations = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EffectiveDenyCallOriginationsSpecified { get; set; }
+    private bool _effectiveDenyCallTerminations;
+
+    [XmlElement(ElementName = "effectiveDenyCallTerminations", IsNullable = false, Namespace = "")]
+    public bool EffectiveDenyCallTerminations {
+        get => _effectiveDenyCallTerminations;
+        set {
+            EffectiveDenyCallTerminationsSpecified = true;
+            _effectiveDenyCallTerminations = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EffectiveDenyCallTerminationsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _devicesToRing;
+
+    [XmlElement(ElementName = "devicesToRing", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing DevicesToRing {
+        get => _devicesToRing;
+        set {
+            DevicesToRingSpecified = true;
+            _devicesToRing = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DevicesToRingSpecified { get; set; }
+    private bool _includeSharedCallAppearance;
+
+    [XmlElement(ElementName = "includeSharedCallAppearance", IsNullable = false, Namespace = "")]
+    public bool IncludeSharedCallAppearance {
+        get => _includeSharedCallAppearance;
+        set {
+            IncludeSharedCallAppearanceSpecified = true;
+            _includeSharedCallAppearance = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IncludeSharedCallAppearanceSpecified { get; set; }
+    private bool _includeBroadworksAnywhere;
+
+    [XmlElement(ElementName = "includeBroadworksAnywhere", IsNullable = false, Namespace = "")]
+    public bool IncludeBroadworksAnywhere {
+        get => _includeBroadworksAnywhere;
+        set {
+            IncludeBroadworksAnywhereSpecified = true;
+            _includeBroadworksAnywhere = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IncludeBroadworksAnywhereSpecified { get; set; }
+    private bool _includeExecutiveAssistant;
+
+    [XmlElement(ElementName = "includeExecutiveAssistant", IsNullable = false, Namespace = "")]
+    public bool IncludeExecutiveAssistant {
+        get => _includeExecutiveAssistant;
+        set {
+            IncludeExecutiveAssistantSpecified = true;
+            _includeExecutiveAssistant = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IncludeExecutiveAssistantSpecified { get; set; }
+    private bool _enableCallAnchoring;
+
+    [XmlElement(ElementName = "enableCallAnchoring", IsNullable = false, Namespace = "")]
+    public bool EnableCallAnchoring {
+        get => _enableCallAnchoring;
+        set {
+            EnableCallAnchoringSpecified = true;
+            _enableCallAnchoring = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableCallAnchoringSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ScheduleGlobalKey _timeSchedule;
+
+    [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ScheduleGlobalKey TimeSchedule {
+        get => _timeSchedule;
+        set {
+            TimeScheduleSpecified = true;
+            _timeSchedule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeScheduleSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ScheduleGlobalKey _holidaySchedule;
+
+    [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ScheduleGlobalKey HolidaySchedule {
+        get => _holidaySchedule;
+        set {
+            HolidayScheduleSpecified = true;
+            _holidaySchedule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HolidayScheduleSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead _accessDeviceEndpoint;
+
+    [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead AccessDeviceEndpoint {
+        get => _accessDeviceEndpoint;
+        set {
+            AccessDeviceEndpointSpecified = true;
+            _accessDeviceEndpoint = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessDeviceEndpointSpecified { get; set; }
+    private string _outboundAlternateNumber;
+
+    [XmlElement(ElementName = "outboundAlternateNumber", IsNullable = false, Namespace = "")]
+    public string OutboundAlternateNumber {
+        get => _outboundAlternateNumber;
+        set {
+            OutboundAlternateNumberSpecified = true;
+            _outboundAlternateNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OutboundAlternateNumberSpecified { get; set; }
+    private bool _enableDirectRouting;
+
+    [XmlElement(ElementName = "enableDirectRouting", IsNullable = false, Namespace = "")]
+    public bool EnableDirectRouting {
+        get => _enableDirectRouting;
+        set {
+            EnableDirectRoutingSpecified = true;
+            _enableDirectRouting = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableDirectRoutingSpecified { get; set; }
+    private bool _markCDRAsEnterpriseGroupCalls;
+
+    [XmlElement(ElementName = "markCDRAsEnterpriseGroupCalls", IsNullable = false, Namespace = "")]
+    public bool MarkCDRAsEnterpriseGroupCalls {
+        get => _markCDRAsEnterpriseGroupCalls;
+        set {
+            MarkCDRAsEnterpriseGroupCallsSpecified = true;
+            _markCDRAsEnterpriseGroupCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MarkCDRAsEnterpriseGroupCallsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _mobileNumberAlertedTable;
+
+    [XmlElement(ElementName = "mobileNumberAlertedTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable MobileNumberAlertedTable {
+        get => _mobileNumberAlertedTable;
+        set {
+            MobileNumberAlertedTableSpecified = true;
+            _mobileNumberAlertedTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MobileNumberAlertedTableSpecified { get; set; }
+}
 }

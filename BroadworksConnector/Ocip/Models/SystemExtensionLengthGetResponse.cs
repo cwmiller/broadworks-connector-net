@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemExtensionLengthGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "minExtensionLength", IsNullable = false)]
-    public int MinExtensionLength { get; set; }
-    [XmlElement(ElementName = "maxExtensionLength", IsNullable = false)]
-    public int MaxExtensionLength { get; set; }
- }
+    private int _minExtensionLength;
+
+    [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
+    public int MinExtensionLength {
+        get => _minExtensionLength;
+        set {
+            MinExtensionLengthSpecified = true;
+            _minExtensionLength = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MinExtensionLengthSpecified { get; set; }
+    private int _maxExtensionLength;
+
+    [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
+    public int MaxExtensionLength {
+        get => _maxExtensionLength;
+        set {
+            MaxExtensionLengthSpecified = true;
+            _maxExtensionLength = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxExtensionLengthSpecified { get; set; }
+}
 }

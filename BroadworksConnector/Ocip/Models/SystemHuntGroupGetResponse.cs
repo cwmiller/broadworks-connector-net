@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemHuntGroupGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "anonymousInsteadOfPrivateCLID", IsNullable = false)]
-    public bool AnonymousInsteadOfPrivateCLID { get; set; }
-    [XmlElement(ElementName = "removeHuntGroupNameFromCLID", IsNullable = false)]
-    public bool RemoveHuntGroupNameFromCLID { get; set; }
- }
+    private bool _anonymousInsteadOfPrivateCLID;
+
+    [XmlElement(ElementName = "anonymousInsteadOfPrivateCLID", IsNullable = false, Namespace = "")]
+    public bool AnonymousInsteadOfPrivateCLID {
+        get => _anonymousInsteadOfPrivateCLID;
+        set {
+            AnonymousInsteadOfPrivateCLIDSpecified = true;
+            _anonymousInsteadOfPrivateCLID = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AnonymousInsteadOfPrivateCLIDSpecified { get; set; }
+    private bool _removeHuntGroupNameFromCLID;
+
+    [XmlElement(ElementName = "removeHuntGroupNameFromCLID", IsNullable = false, Namespace = "")]
+    public bool RemoveHuntGroupNameFromCLID {
+        get => _removeHuntGroupNameFromCLID;
+        set {
+            RemoveHuntGroupNameFromCLIDSpecified = true;
+            _removeHuntGroupNameFromCLID = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RemoveHuntGroupNameFromCLIDSpecified { get; set; }
+}
 }

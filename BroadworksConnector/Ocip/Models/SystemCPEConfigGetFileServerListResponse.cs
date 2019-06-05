@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCPEConfigGetFileServerListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "fileServerTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable FileServerTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _fileServerTable;
+
+    [XmlElement(ElementName = "fileServerTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable FileServerTable {
+        get => _fileServerTable;
+        set {
+            FileServerTableSpecified = true;
+            _fileServerTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileServerTableSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPersonalPhoneListGetPagedSortedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false)]
-    public int TotalNumberOfRows { get; set; }
-    [XmlElement(ElementName = "personalPhoneListTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable PersonalPhoneListTable { get; set; }
- }
+    private int _totalNumberOfRows;
+
+    [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
+    public int TotalNumberOfRows {
+        get => _totalNumberOfRows;
+        set {
+            TotalNumberOfRowsSpecified = true;
+            _totalNumberOfRows = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TotalNumberOfRowsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _personalPhoneListTable;
+
+    [XmlElement(ElementName = "personalPhoneListTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable PersonalPhoneListTable {
+        get => _personalPhoneListTable;
+        set {
+            PersonalPhoneListTableSpecified = true;
+            _personalPhoneListTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PersonalPhoneListTableSpecified { get; set; }
+}
 }

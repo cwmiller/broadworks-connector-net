@@ -3,10 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum BroadWorksMobilityPhoneToRing{
-    Fixed,
-    Mobile,
-    Both,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum BroadWorksMobilityPhoneToRing
+    {
+        [XmlEnum(Name = "Fixed")]
+        Fixed,
+        [XmlEnum(Name = "Mobile")]
+        Mobile,
+        [XmlEnum(Name = "Both")]
+        Both,
+    }
 }

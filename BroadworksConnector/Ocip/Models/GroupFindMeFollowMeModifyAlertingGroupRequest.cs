@@ -8,23 +8,122 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupFindMeFollowMeModifyAlertingGroupRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "alertingGroupName", IsNullable = false)]
-    public string AlertingGroupName { get; set; }
-    [XmlElement(ElementName = "newAlertingGroupName", IsNullable = false)]
-    public string NewAlertingGroupName { get; set; }
-    [XmlElement(ElementName = "alertingGroupDescription", IsNullable = true)]
-    public string AlertingGroupDescription { get; set; }
-    [XmlElement(ElementName = "useDiversionInhibitor", IsNullable = false)]
-    public bool UseDiversionInhibitor { get; set; }
-    [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false)]
-    public bool AnswerConfirmationRequired { get; set; }
-    [XmlElement(ElementName = "numberOfRings", IsNullable = false)]
-    public int NumberOfRings { get; set; }
-    [XmlElement(ElementName = "phoneNumberOrUserList", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.FindMeFollowMeAlertingGroupReplacementOutgoingDNSIPURIorUserIdList PhoneNumberOrUserList { get; set; }
-    [XmlElement(ElementName = "criteriaActivation", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private string _alertingGroupName;
+
+    [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
+    public string AlertingGroupName {
+        get => _alertingGroupName;
+        set {
+            AlertingGroupNameSpecified = true;
+            _alertingGroupName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertingGroupNameSpecified { get; set; }
+    private string _newAlertingGroupName;
+
+    [XmlElement(ElementName = "newAlertingGroupName", IsNullable = false, Namespace = "")]
+    public string NewAlertingGroupName {
+        get => _newAlertingGroupName;
+        set {
+            NewAlertingGroupNameSpecified = true;
+            _newAlertingGroupName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NewAlertingGroupNameSpecified { get; set; }
+    private string _alertingGroupDescription;
+
+    [XmlElement(ElementName = "alertingGroupDescription", IsNullable = true, Namespace = "")]
+    public string AlertingGroupDescription {
+        get => _alertingGroupDescription;
+        set {
+            AlertingGroupDescriptionSpecified = true;
+            _alertingGroupDescription = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertingGroupDescriptionSpecified { get; set; }
+    private bool _useDiversionInhibitor;
+
+    [XmlElement(ElementName = "useDiversionInhibitor", IsNullable = false, Namespace = "")]
+    public bool UseDiversionInhibitor {
+        get => _useDiversionInhibitor;
+        set {
+            UseDiversionInhibitorSpecified = true;
+            _useDiversionInhibitor = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseDiversionInhibitorSpecified { get; set; }
+    private bool _answerConfirmationRequired;
+
+    [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
+    public bool AnswerConfirmationRequired {
+        get => _answerConfirmationRequired;
+        set {
+            AnswerConfirmationRequiredSpecified = true;
+            _answerConfirmationRequired = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AnswerConfirmationRequiredSpecified { get; set; }
+    private int _numberOfRings;
+
+    [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
+    public int NumberOfRings {
+        get => _numberOfRings;
+        set {
+            NumberOfRingsSpecified = true;
+            _numberOfRings = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NumberOfRingsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.FindMeFollowMeAlertingGroupReplacementOutgoingDNSIPURIorUserIdList _phoneNumberOrUserList;
+
+    [XmlElement(ElementName = "phoneNumberOrUserList", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.FindMeFollowMeAlertingGroupReplacementOutgoingDNSIPURIorUserIdList PhoneNumberOrUserList {
+        get => _phoneNumberOrUserList;
+        set {
+            PhoneNumberOrUserListSpecified = true;
+            _phoneNumberOrUserList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PhoneNumberOrUserListSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
+
+    [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
+        get => _criteriaActivation;
+        set {
+            CriteriaActivationSpecified = true;
+            _criteriaActivation = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CriteriaActivationSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGETSNumberDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "number", IsNullable = false)]
-    public string Number { get; set; }
- }
+    private string _number;
+
+    [XmlElement(ElementName = "number", IsNullable = false, Namespace = "")]
+    public string Number {
+        get => _number;
+        set {
+            NumberSpecified = true;
+            _number = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NumberSpecified { get; set; }
+}
 }

@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemEmergencyCallDDoSProtectionModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "enabled", IsNullable = false)]
-    public bool Enabled { get; set; }
-    [XmlElement(ElementName = "sampleIntervalSeconds", IsNullable = false)]
-    public int SampleIntervalSeconds { get; set; }
-    [XmlElement(ElementName = "protectionRate", IsNullable = true)]
-    public int? ProtectionRate { get; set; }
-    [XmlElement(ElementName = "protectionAction", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ProtectionAction ProtectionAction { get; set; }
- }
+    private bool _enabled;
+
+    [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
+    public bool Enabled {
+        get => _enabled;
+        set {
+            EnabledSpecified = true;
+            _enabled = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnabledSpecified { get; set; }
+    private int _sampleIntervalSeconds;
+
+    [XmlElement(ElementName = "sampleIntervalSeconds", IsNullable = false, Namespace = "")]
+    public int SampleIntervalSeconds {
+        get => _sampleIntervalSeconds;
+        set {
+            SampleIntervalSecondsSpecified = true;
+            _sampleIntervalSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SampleIntervalSecondsSpecified { get; set; }
+    private int? _protectionRate;
+
+    [XmlElement(ElementName = "protectionRate", IsNullable = true, Namespace = "")]
+    public int? ProtectionRate {
+        get => _protectionRate;
+        set {
+            ProtectionRateSpecified = true;
+            _protectionRate = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProtectionRateSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ProtectionAction _protectionAction;
+
+    [XmlElement(ElementName = "protectionAction", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ProtectionAction ProtectionAction {
+        get => _protectionAction;
+        set {
+            ProtectionActionSpecified = true;
+            _protectionAction = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProtectionActionSpecified { get; set; }
+}
 }

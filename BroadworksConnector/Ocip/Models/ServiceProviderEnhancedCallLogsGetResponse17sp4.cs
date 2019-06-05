@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderEnhancedCallLogsGetResponse17sp4 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "maxLoggedCalls", IsNullable = false)]
-    public int MaxLoggedCalls { get; set; }
-    [XmlElement(ElementName = "callExpirationDays", IsNullable = false)]
-    public int CallExpirationDays { get; set; }
- }
+    private int _maxLoggedCalls;
+
+    [XmlElement(ElementName = "maxLoggedCalls", IsNullable = false, Namespace = "")]
+    public int MaxLoggedCalls {
+        get => _maxLoggedCalls;
+        set {
+            MaxLoggedCallsSpecified = true;
+            _maxLoggedCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxLoggedCallsSpecified { get; set; }
+    private int _callExpirationDays;
+
+    [XmlElement(ElementName = "callExpirationDays", IsNullable = false, Namespace = "")]
+    public int CallExpirationDays {
+        get => _callExpirationDays;
+        set {
+            CallExpirationDaysSpecified = true;
+            _callExpirationDays = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallExpirationDaysSpecified { get; set; }
+}
 }

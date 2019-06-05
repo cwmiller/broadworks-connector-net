@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemTimeScheduleDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "timeScheduleName", IsNullable = false)]
-    public string TimeScheduleName { get; set; }
- }
+    private string _timeScheduleName;
+
+    [XmlElement(ElementName = "timeScheduleName", IsNullable = false, Namespace = "")]
+    public string TimeScheduleName {
+        get => _timeScheduleName;
+        set {
+            TimeScheduleNameSpecified = true;
+            _timeScheduleName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeScheduleNameSpecified { get; set; }
+}
 }

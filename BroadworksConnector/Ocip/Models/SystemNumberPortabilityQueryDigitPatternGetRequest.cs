@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemNumberPortabilityQueryDigitPatternGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "digitPattern", IsNullable = false)]
-    public string DigitPattern { get; set; }
- }
+    private string _digitPattern;
+
+    [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
+    public string DigitPattern {
+        get => _digitPattern;
+        set {
+            DigitPatternSpecified = true;
+            _digitPattern = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DigitPatternSpecified { get; set; }
+}
 }

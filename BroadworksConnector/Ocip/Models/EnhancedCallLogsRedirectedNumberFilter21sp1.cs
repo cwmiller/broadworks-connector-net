@@ -1,26 +1,117 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class EnhancedCallLogsRedirectedNumberFilter21sp1 
-{
-    [XmlElement(ElementName = "redirectedCall", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.EnhancedCallLogsRedirectedCallSelection21sp1 RedirectedCall { get; set; }
-    [XmlElement(ElementName = "includeServiceInvocationBasicCallType", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.BasicCallType> IncludeServiceInvocationBasicCallType { get; set; }
-    [XmlElement(ElementName = "includeServiceInvocationCallCategory", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CallCategory> IncludeServiceInvocationCallCategory { get; set; }
-    [XmlElement(ElementName = "includeServiceInvocationConfigurableCallType", IsNullable = false)]
-    public List<string> IncludeServiceInvocationConfigurableCallType { get; set; }
-    [XmlElement(ElementName = "searchCriteriaServiceInvocationDialedNumber", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationDialedNumber { get; set; }
-    [XmlElement(ElementName = "searchCriteriaServiceInvocationCalledNumber", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationCalledNumber { get; set; }
-    [XmlElement(ElementName = "searchCriteriaServiceInvocationNetworkTranslatedNumber", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationNetworkTranslatedNumber { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class EnhancedCallLogsRedirectedNumberFilter21sp1
+    {
+        private BroadworksConnector.Ocip.Models.EnhancedCallLogsRedirectedCallSelection21sp1 _redirectedCall;
+
+        [XmlElement(ElementName = "redirectedCall", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.EnhancedCallLogsRedirectedCallSelection21sp1 RedirectedCall
+        {
+            get => _redirectedCall;
+            set
+            {
+                RedirectedCallSpecified = true;
+                _redirectedCall = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool RedirectedCallSpecified { get; set; }
+        private List<BroadworksConnector.Ocip.Models.BasicCallType> _includeServiceInvocationBasicCallType;
+
+        [XmlElement(ElementName = "includeServiceInvocationBasicCallType", IsNullable = false, Namespace = "")]
+        public List<BroadworksConnector.Ocip.Models.BasicCallType> IncludeServiceInvocationBasicCallType
+        {
+            get => _includeServiceInvocationBasicCallType;
+            set
+            {
+                IncludeServiceInvocationBasicCallTypeSpecified = true;
+                _includeServiceInvocationBasicCallType = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool IncludeServiceInvocationBasicCallTypeSpecified { get; set; }
+        private List<BroadworksConnector.Ocip.Models.CallCategory> _includeServiceInvocationCallCategory;
+
+        [XmlElement(ElementName = "includeServiceInvocationCallCategory", IsNullable = false, Namespace = "")]
+        public List<BroadworksConnector.Ocip.Models.CallCategory> IncludeServiceInvocationCallCategory
+        {
+            get => _includeServiceInvocationCallCategory;
+            set
+            {
+                IncludeServiceInvocationCallCategorySpecified = true;
+                _includeServiceInvocationCallCategory = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool IncludeServiceInvocationCallCategorySpecified { get; set; }
+        private List<string> _includeServiceInvocationConfigurableCallType;
+
+        [XmlElement(ElementName = "includeServiceInvocationConfigurableCallType", IsNullable = false, Namespace = "")]
+        public List<string> IncludeServiceInvocationConfigurableCallType
+        {
+            get => _includeServiceInvocationConfigurableCallType;
+            set
+            {
+                IncludeServiceInvocationConfigurableCallTypeSpecified = true;
+                _includeServiceInvocationConfigurableCallType = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool IncludeServiceInvocationConfigurableCallTypeSpecified { get; set; }
+        private List<BroadworksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationDialedNumber;
+
+        [XmlElement(ElementName = "searchCriteriaServiceInvocationDialedNumber", IsNullable = false, Namespace = "")]
+        public List<BroadworksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationDialedNumber
+        {
+            get => _searchCriteriaServiceInvocationDialedNumber;
+            set
+            {
+                SearchCriteriaServiceInvocationDialedNumberSpecified = true;
+                _searchCriteriaServiceInvocationDialedNumber = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool SearchCriteriaServiceInvocationDialedNumberSpecified { get; set; }
+        private List<BroadworksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationCalledNumber;
+
+        [XmlElement(ElementName = "searchCriteriaServiceInvocationCalledNumber", IsNullable = false, Namespace = "")]
+        public List<BroadworksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationCalledNumber
+        {
+            get => _searchCriteriaServiceInvocationCalledNumber;
+            set
+            {
+                SearchCriteriaServiceInvocationCalledNumberSpecified = true;
+                _searchCriteriaServiceInvocationCalledNumber = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool SearchCriteriaServiceInvocationCalledNumberSpecified { get; set; }
+        private List<BroadworksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationNetworkTranslatedNumber;
+
+        [XmlElement(ElementName = "searchCriteriaServiceInvocationNetworkTranslatedNumber", IsNullable = false, Namespace = "")]
+        public List<BroadworksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationNetworkTranslatedNumber
+        {
+            get => _searchCriteriaServiceInvocationNetworkTranslatedNumber;
+            set
+            {
+                SearchCriteriaServiceInvocationNetworkTranslatedNumberSpecified = true;
+                _searchCriteriaServiceInvocationNetworkTranslatedNumber = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool SearchCriteriaServiceInvocationNetworkTranslatedNumberSpecified { get; set; }
+    }
 }

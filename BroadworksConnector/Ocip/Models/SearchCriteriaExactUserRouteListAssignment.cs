@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactUserRouteListAssignment : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "assigned", IsNullable = false)]
-    public bool Assigned { get; set; }
- }
+    private bool _assigned;
+
+    [XmlElement(ElementName = "assigned", IsNullable = false, Namespace = "")]
+    public bool Assigned {
+        get => _assigned;
+        set {
+            AssignedSpecified = true;
+            _assigned = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AssignedSpecified { get; set; }
+}
 }

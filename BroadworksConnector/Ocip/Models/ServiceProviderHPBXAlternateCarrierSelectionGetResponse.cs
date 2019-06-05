@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderHPBXAlternateCarrierSelectionGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "processCbcCarrierSelection", IsNullable = false)]
-    public bool ProcessCbcCarrierSelection { get; set; }
-    [XmlElement(ElementName = "preselectedLocalCarrier", IsNullable = false)]
-    public string PreselectedLocalCarrier { get; set; }
-    [XmlElement(ElementName = "preselectedDistantCarrier", IsNullable = false)]
-    public string PreselectedDistantCarrier { get; set; }
- }
+    private bool _processCbcCarrierSelection;
+
+    [XmlElement(ElementName = "processCbcCarrierSelection", IsNullable = false, Namespace = "")]
+    public bool ProcessCbcCarrierSelection {
+        get => _processCbcCarrierSelection;
+        set {
+            ProcessCbcCarrierSelectionSpecified = true;
+            _processCbcCarrierSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProcessCbcCarrierSelectionSpecified { get; set; }
+    private string _preselectedLocalCarrier;
+
+    [XmlElement(ElementName = "preselectedLocalCarrier", IsNullable = false, Namespace = "")]
+    public string PreselectedLocalCarrier {
+        get => _preselectedLocalCarrier;
+        set {
+            PreselectedLocalCarrierSpecified = true;
+            _preselectedLocalCarrier = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PreselectedLocalCarrierSpecified { get; set; }
+    private string _preselectedDistantCarrier;
+
+    [XmlElement(ElementName = "preselectedDistantCarrier", IsNullable = false, Namespace = "")]
+    public string PreselectedDistantCarrier {
+        get => _preselectedDistantCarrier;
+        set {
+            PreselectedDistantCarrierSpecified = true;
+            _preselectedDistantCarrier = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PreselectedDistantCarrierSpecified { get; set; }
+}
 }

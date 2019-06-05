@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class OutgoingCallingPlanRedirectedDepartmentPermissionsModify 
 {
-    [XmlElement(ElementName = "departmentKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey { get; set; }
-    [XmlElement(ElementName = "permissions", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissionsModify Permissions { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.DepartmentKey _departmentKey;
+
+    [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+        get => _departmentKey;
+        set {
+            DepartmentKeySpecified = true;
+            _departmentKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentKeySpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissionsModify _permissions;
+
+    [XmlElement(ElementName = "permissions", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissionsModify Permissions {
+        get => _permissions;
+        set {
+            PermissionsSpecified = true;
+            _permissions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PermissionsSpecified { get; set; }
+}
 }

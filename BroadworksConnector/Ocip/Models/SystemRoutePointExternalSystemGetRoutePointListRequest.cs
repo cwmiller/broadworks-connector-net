@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutePointExternalSystemGetRoutePointListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "routePointExternalSystem", IsNullable = false)]
-    public string RoutePointExternalSystem { get; set; }
- }
+    private string _routePointExternalSystem;
+
+    [XmlElement(ElementName = "routePointExternalSystem", IsNullable = false, Namespace = "")]
+    public string RoutePointExternalSystem {
+        get => _routePointExternalSystem;
+        set {
+            RoutePointExternalSystemSpecified = true;
+            _routePointExternalSystem = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoutePointExternalSystemSpecified { get; set; }
+}
 }

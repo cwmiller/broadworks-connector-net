@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGETSResourcePriorityModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "priorityValue", IsNullable = false)]
-    public string PriorityValue { get; set; }
-    [XmlElement(ElementName = "newPriorityValue", IsNullable = false)]
-    public string NewPriorityValue { get; set; }
-    [XmlElement(ElementName = "priorityLevel", IsNullable = false)]
-    public int PriorityLevel { get; set; }
-    [XmlElement(ElementName = "priorityClass", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.GETSPriorityClass PriorityClass { get; set; }
- }
+    private string _priorityValue;
+
+    [XmlElement(ElementName = "priorityValue", IsNullable = false, Namespace = "")]
+    public string PriorityValue {
+        get => _priorityValue;
+        set {
+            PriorityValueSpecified = true;
+            _priorityValue = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PriorityValueSpecified { get; set; }
+    private string _newPriorityValue;
+
+    [XmlElement(ElementName = "newPriorityValue", IsNullable = false, Namespace = "")]
+    public string NewPriorityValue {
+        get => _newPriorityValue;
+        set {
+            NewPriorityValueSpecified = true;
+            _newPriorityValue = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NewPriorityValueSpecified { get; set; }
+    private int _priorityLevel;
+
+    [XmlElement(ElementName = "priorityLevel", IsNullable = false, Namespace = "")]
+    public int PriorityLevel {
+        get => _priorityLevel;
+        set {
+            PriorityLevelSpecified = true;
+            _priorityLevel = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PriorityLevelSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.GETSPriorityClass _priorityClass;
+
+    [XmlElement(ElementName = "priorityClass", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.GETSPriorityClass PriorityClass {
+        get => _priorityClass;
+        set {
+            PriorityClassSpecified = true;
+            _priorityClass = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PriorityClassSpecified { get; set; }
+}
 }

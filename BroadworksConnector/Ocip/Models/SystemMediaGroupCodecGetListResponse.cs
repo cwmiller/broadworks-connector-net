@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemMediaGroupCodecGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "codecTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CodecTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _codecTable;
+
+    [XmlElement(ElementName = "codecTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable CodecTable {
+        get => _codecTable;
+        set {
+            CodecTableSpecified = true;
+            _codecTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CodecTableSpecified { get; set; }
+}
 }

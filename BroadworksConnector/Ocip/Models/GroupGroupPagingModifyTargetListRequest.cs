@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupGroupPagingModifyTargetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "targetUserIdList", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList TargetUserIdList { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _targetUserIdList;
+
+    [XmlElement(ElementName = "targetUserIdList", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementUserIdList TargetUserIdList {
+        get => _targetUserIdList;
+        set {
+            TargetUserIdListSpecified = true;
+            _targetUserIdList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TargetUserIdListSpecified { get; set; }
+}
 }

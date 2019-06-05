@@ -1,16 +1,42 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class EnterpriseCallCenterCallDispositionCodeModifyActiveListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
-{
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "callDispositionCodeActivation", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CallDispositionCodeActivation> CallDispositionCodeActivation { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class EnterpriseCallCenterCallDispositionCodeModifyActiveListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+    {
+        private string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        public string ServiceProviderId
+        {
+            get => _serviceProviderId;
+            set
+            {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ServiceProviderIdSpecified { get; set; }
+        private List<BroadworksConnector.Ocip.Models.CallDispositionCodeActivation> _callDispositionCodeActivation;
+
+        [XmlElement(ElementName = "callDispositionCodeActivation", IsNullable = false, Namespace = "")]
+        public List<BroadworksConnector.Ocip.Models.CallDispositionCodeActivation> CallDispositionCodeActivation
+        {
+            get => _callDispositionCodeActivation;
+            set
+            {
+                CallDispositionCodeActivationSpecified = true;
+                _callDispositionCodeActivation = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool CallDispositionCodeActivationSpecified { get; set; }
+    }
 }

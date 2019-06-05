@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21DeleteAllMessagesMenuKeys 
 {
-    [XmlElement(ElementName = "confirmDeletion", IsNullable = false)]
-    public string ConfirmDeletion { get; set; }
-    [XmlElement(ElementName = "cancelDeletion", IsNullable = false)]
-    public string CancelDeletion { get; set; }
- }
+    private string _confirmDeletion;
+
+    [XmlElement(ElementName = "confirmDeletion", IsNullable = false, Namespace = "")]
+    public string ConfirmDeletion {
+        get => _confirmDeletion;
+        set {
+            ConfirmDeletionSpecified = true;
+            _confirmDeletion = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConfirmDeletionSpecified { get; set; }
+    private string _cancelDeletion;
+
+    [XmlElement(ElementName = "cancelDeletion", IsNullable = false, Namespace = "")]
+    public string CancelDeletion {
+        get => _cancelDeletion;
+        set {
+            CancelDeletionSpecified = true;
+            _cancelDeletion = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CancelDeletionSpecified { get; set; }
+}
 }

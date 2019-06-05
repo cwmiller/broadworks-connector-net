@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDialPlanPolicyModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false)]
-    public bool RequiresAccessCodeForPublicCalls { get; set; }
-    [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false)]
-    public bool AllowE164PublicCalls { get; set; }
-    [XmlElement(ElementName = "preferE164NumberFormatForCallbackServices", IsNullable = false)]
-    public bool PreferE164NumberFormatForCallbackServices { get; set; }
-    [XmlElement(ElementName = "publicDigitMap", IsNullable = false)]
-    public string PublicDigitMap { get; set; }
-    [XmlElement(ElementName = "privateDigitMap", IsNullable = true)]
-    public string PrivateDigitMap { get; set; }
- }
+    private bool _requiresAccessCodeForPublicCalls;
+
+    [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false, Namespace = "")]
+    public bool RequiresAccessCodeForPublicCalls {
+        get => _requiresAccessCodeForPublicCalls;
+        set {
+            RequiresAccessCodeForPublicCallsSpecified = true;
+            _requiresAccessCodeForPublicCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RequiresAccessCodeForPublicCallsSpecified { get; set; }
+    private bool _allowE164PublicCalls;
+
+    [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false, Namespace = "")]
+    public bool AllowE164PublicCalls {
+        get => _allowE164PublicCalls;
+        set {
+            AllowE164PublicCallsSpecified = true;
+            _allowE164PublicCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowE164PublicCallsSpecified { get; set; }
+    private bool _preferE164NumberFormatForCallbackServices;
+
+    [XmlElement(ElementName = "preferE164NumberFormatForCallbackServices", IsNullable = false, Namespace = "")]
+    public bool PreferE164NumberFormatForCallbackServices {
+        get => _preferE164NumberFormatForCallbackServices;
+        set {
+            PreferE164NumberFormatForCallbackServicesSpecified = true;
+            _preferE164NumberFormatForCallbackServices = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PreferE164NumberFormatForCallbackServicesSpecified { get; set; }
+    private string _publicDigitMap;
+
+    [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
+    public string PublicDigitMap {
+        get => _publicDigitMap;
+        set {
+            PublicDigitMapSpecified = true;
+            _publicDigitMap = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PublicDigitMapSpecified { get; set; }
+    private string _privateDigitMap;
+
+    [XmlElement(ElementName = "privateDigitMap", IsNullable = true, Namespace = "")]
+    public string PrivateDigitMap {
+        get => _privateDigitMap;
+        set {
+            PrivateDigitMapSpecified = true;
+            _privateDigitMap = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrivateDigitMapSpecified { get; set; }
+}
 }

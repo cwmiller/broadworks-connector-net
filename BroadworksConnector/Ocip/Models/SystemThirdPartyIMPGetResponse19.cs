@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemThirdPartyIMPGetResponse19 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "serviceNetAddress", IsNullable = false)]
-    public string ServiceNetAddress { get; set; }
-    [XmlElement(ElementName = "servicePort", IsNullable = false)]
-    public int ServicePort { get; set; }
-    [XmlElement(ElementName = "boshURL", IsNullable = false)]
-    public string BoshURL { get; set; }
- }
+    private string _serviceNetAddress;
+
+    [XmlElement(ElementName = "serviceNetAddress", IsNullable = false, Namespace = "")]
+    public string ServiceNetAddress {
+        get => _serviceNetAddress;
+        set {
+            ServiceNetAddressSpecified = true;
+            _serviceNetAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceNetAddressSpecified { get; set; }
+    private int _servicePort;
+
+    [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
+    public int ServicePort {
+        get => _servicePort;
+        set {
+            ServicePortSpecified = true;
+            _servicePort = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServicePortSpecified { get; set; }
+    private string _boshURL;
+
+    [XmlElement(ElementName = "boshURL", IsNullable = false, Namespace = "")]
+    public string BoshURL {
+        get => _boshURL;
+        set {
+            BoshURLSpecified = true;
+            _boshURL = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool BoshURLSpecified { get; set; }
+}
 }

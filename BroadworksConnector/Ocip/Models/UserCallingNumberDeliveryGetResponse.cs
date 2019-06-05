@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallingNumberDeliveryGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isActiveForExternalCalls", IsNullable = false)]
-    public bool IsActiveForExternalCalls { get; set; }
-    [XmlElement(ElementName = "isActiveForInternalCalls", IsNullable = false)]
-    public bool IsActiveForInternalCalls { get; set; }
- }
+    private bool _isActiveForExternalCalls;
+
+    [XmlElement(ElementName = "isActiveForExternalCalls", IsNullable = false, Namespace = "")]
+    public bool IsActiveForExternalCalls {
+        get => _isActiveForExternalCalls;
+        set {
+            IsActiveForExternalCallsSpecified = true;
+            _isActiveForExternalCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveForExternalCallsSpecified { get; set; }
+    private bool _isActiveForInternalCalls;
+
+    [XmlElement(ElementName = "isActiveForInternalCalls", IsNullable = false, Namespace = "")]
+    public bool IsActiveForInternalCalls {
+        get => _isActiveForInternalCalls;
+        set {
+            IsActiveForInternalCallsSpecified = true;
+            _isActiveForInternalCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveForInternalCallsSpecified { get; set; }
+}
 }

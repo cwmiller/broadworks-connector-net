@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum DeviceManagementEventQueueType{
-    Completed,
-    InProgressOrPending,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum DeviceManagementEventQueueType
+    {
+        [XmlEnum(Name = "Completed")]
+        Completed,
+        [XmlEnum(Name = "In Progress Or Pending")]
+        InProgressOrPending,
+    }
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemHPBXAlternateCarrierSelectionGetCarrierListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "HPBXAlternateCarriersTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable HPBXAlternateCarriersTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _hPBXAlternateCarriersTable;
+
+    [XmlElement(ElementName = "HPBXAlternateCarriersTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable HPBXAlternateCarriersTable {
+        get => _hPBXAlternateCarriersTable;
+        set {
+            HPBXAlternateCarriersTableSpecified = true;
+            _hPBXAlternateCarriersTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HPBXAlternateCarriersTableSpecified { get; set; }
+}
 }

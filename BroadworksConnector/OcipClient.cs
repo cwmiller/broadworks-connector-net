@@ -14,7 +14,10 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector
 {
-    public class OcipClient
+    /// <summary>
+    /// Client for communicating with BroadWorks OCI-P
+    /// </summary>
+    public class OcipClient : IDisposable
     {
         private readonly string _username;
 
@@ -26,8 +29,14 @@ namespace BroadworksConnector
 
         private readonly XmlSerializer _serializer;
 
-        private bool _isLoggedIn;
+        public UserDetails UserDetails { get; private set; }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
         public OcipClient(string url, string username, string password)
         {
             _username = username;
@@ -51,18 +60,27 @@ namespace BroadworksConnector
             }
         }
 
+        /// <summary>
+        /// Executes a single Request
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
         public async Task<OCIResponse> Call(OCICommand command)
         {
-            if (!_isLoggedIn)
+            if (UserDetails == null)
             {
                 await Login();
             }
 
             var responses = await ExecuteCommands(new List<OCICommand> { command });
 
-            return responses.First();
+            return responses.First() as OCIResponse;
         }
 
+        /// <summary>
+        /// All sessions require a session ID to be generated. This is created once and used for all requests.
+        /// </summary>
+        /// <returns></returns>
         private string GenerateSessionId()
         {
             var sha256 = new SHA256Managed();
@@ -72,41 +90,111 @@ namespace BroadworksConnector
             return ticks.ToString();
         }
 
-        private async Task Login()
+        /// <summary>
+        /// Authenticates against OCI-P using the provided username and password
+        /// </summary>
+        /// <returns></returns>
+        public async Task<UserDetails> Login()
         {
-            if (!_isLoggedIn)
+            if (UserDetails == null)
             {
                 var authRequest = new AuthenticationRequest
                 {
                     UserId = _username
                 };
 
-                var authResponse = await ExecuteCommands(new List<OCICommand>() { authRequest });
+                try
+                {
+                    var authResponse = (await ExecuteCommands(new List<OCICommand>() { authRequest })).First() as AuthenticationResponse;
+                    string signedPassword = null;
 
-                Debug.WriteLine(authResponse);
+                    if (authResponse.PasswordAlgorithm == DigitalSignatureAlgorithm.MD5)
+                    {
+                        signedPassword = Md5($"{authResponse.Nonce}:{Sha1(_password)}");
+                    }
+                    else
+                    {
+                        throw new LoginException("Only MD5 supported for signing");
+                    }
+
+                    // TODO: R22 support
+                    var loginRequest = new LoginRequest14sp4
+                    {
+                        UserId = _username,
+                        SignedPassword = signedPassword
+                    };
+
+                    var loginResponse = (await ExecuteCommands(new List<OCICommand>() { loginRequest })).First() as LoginResponse14sp4;
+
+                    // TODO: set R22 properties
+                    UserDetails = new UserDetails
+                    {
+                        LoginType = loginResponse.LoginType,
+                        Locale = loginResponse.Locale,
+                        Encoding = loginResponse.Encoding,
+                        GroupId = loginResponse.GroupId,
+                        ServiceProviderId = loginResponse.ServiceProviderId,
+                        IsEnterprise = loginResponse.IsEnterprise,
+                        PasswordExpiresDays = loginResponse.PasswordExpiresDays,
+                        UserDomain = loginResponse.UserDomain
+                    };
+                }
+                catch (ErrorResponseException e)
+                {
+                    throw new LoginException(e.Message, e);
+                }
             }
+
+            return UserDetails;
         }
 
-        private async Task<IEnumerable<OCIResponse>> ExecuteCommands(IEnumerable<OCICommand> commands)
+        /// <summary>
+        /// Executes multiple commands
+        /// </summary>
+        /// <param name="commands"></param>
+        /// <exception cref="BadResponseException"></exception>
+        /// <returns></returns>
+        private async Task<IEnumerable<OCICommand>> ExecuteCommands(IEnumerable<OCICommand> commands)
         {
-            // TODO: validate
+            // TODO: validate commands
 
-            var xml = BuildCommandXml(commands);
+            var xml = SerializeCommands(commands);
             BroadsoftDocument response = null;
 
-            var responseXml = (await Transport.Send(xml)).Trim('\0');
+            var responseXml = await Transport.Send(xml);
 
             Debug.WriteLine(responseXml);
 
             using (var reader = new StringReader(responseXml))
             {
-                response = _serializer.Deserialize(reader) as BroadsoftDocument;
+                try
+                {
+                    response = _serializer.Deserialize(reader) as BroadsoftDocument;
+                } catch(Exception e)
+                {
+                    throw new BadResponseException("Unable to deserialize response.", e);
+                }
             }
 
-            return response.Command as IEnumerable<OCIResponse>;
+            if (!(response is BroadsoftDocument))
+            {
+                throw new BadResponseException("Response did not include a BroadsoftDocument element.");
+            }
+
+            if (response.Command.Count == 0)
+            {
+                throw new BadResponseException("Response does not include any commands.");
+            }
+
+            return response.Command;
         }
 
-        private string BuildCommandXml(IEnumerable<OCICommand> commands)
+        /// <summary>
+        /// Serializes the given list of commands to XML
+        /// </summary>
+        /// <param name="commands"></param>
+        /// <returns></returns>
+        private string SerializeCommands(IEnumerable<OCICommand> commands)
         {
             string xml;
             
@@ -129,6 +217,40 @@ namespace BroadworksConnector
             }
 
             return xml;
+        }
+
+        /// <summary>
+        /// Calculates the MD5 hash of a string
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private string Md5(string input)
+        {
+            MD5 md5 = MD5.Create();
+            var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            return string.Concat(hash.Select(b => b.ToString("x2")));
+        }
+
+        /// <summary>
+        /// Calculates the SHA1 hash of a string
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private string Sha1(string input)
+        {
+            SHA1Managed sha1 = new SHA1Managed();
+            var hash = sha1.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            return string.Concat(hash.Select(b => b.ToString("x2")));
+        }
+
+        public void Dispose()
+        {
+            if (Transport != null)
+            {
+                Transport.Dispose();
+            }
         }
     }
 }

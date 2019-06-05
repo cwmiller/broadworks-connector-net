@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum DeviceManagementEventType{
-    Automatic,
-    Manual,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum DeviceManagementEventType
+    {
+        [XmlEnum(Name = "Automatic")]
+        Automatic,
+        [XmlEnum(Name = "Manual")]
+        Manual,
+    }
 }

@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupDirectoryNumberHuntingModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "agentUserIdList", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList { get; set; }
-    [XmlElement(ElementName = "useTerminateCallToAgentFirst", IsNullable = false)]
-    public bool UseTerminateCallToAgentFirst { get; set; }
-    [XmlElement(ElementName = "useOriginalAgentServicesForBusyAndNoAnswerCalls", IsNullable = false)]
-    public bool UseOriginalAgentServicesForBusyAndNoAnswerCalls { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
+
+    [XmlElement(ElementName = "agentUserIdList", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList {
+        get => _agentUserIdList;
+        set {
+            AgentUserIdListSpecified = true;
+            _agentUserIdList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AgentUserIdListSpecified { get; set; }
+    private bool _useTerminateCallToAgentFirst;
+
+    [XmlElement(ElementName = "useTerminateCallToAgentFirst", IsNullable = false, Namespace = "")]
+    public bool UseTerminateCallToAgentFirst {
+        get => _useTerminateCallToAgentFirst;
+        set {
+            UseTerminateCallToAgentFirstSpecified = true;
+            _useTerminateCallToAgentFirst = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseTerminateCallToAgentFirstSpecified { get; set; }
+    private bool _useOriginalAgentServicesForBusyAndNoAnswerCalls;
+
+    [XmlElement(ElementName = "useOriginalAgentServicesForBusyAndNoAnswerCalls", IsNullable = false, Namespace = "")]
+    public bool UseOriginalAgentServicesForBusyAndNoAnswerCalls {
+        get => _useOriginalAgentServicesForBusyAndNoAnswerCalls;
+        set {
+            UseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified = true;
+            _useOriginalAgentServicesForBusyAndNoAnswerCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified { get; set; }
+}
 }

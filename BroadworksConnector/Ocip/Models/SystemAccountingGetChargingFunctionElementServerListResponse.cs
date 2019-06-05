@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAccountingGetChargingFunctionElementServerListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "chargingFunctionElementServerTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ChargingFunctionElementServerTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _chargingFunctionElementServerTable;
+
+    [XmlElement(ElementName = "chargingFunctionElementServerTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ChargingFunctionElementServerTable {
+        get => _chargingFunctionElementServerTable;
+        set {
+            ChargingFunctionElementServerTableSpecified = true;
+            _chargingFunctionElementServerTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ChargingFunctionElementServerTableSpecified { get; set; }
+}
 }

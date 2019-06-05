@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementCombinedServicePackAssignmentList 
 {
-    [XmlElement(ElementName = "servicePack", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CombinedServicePackAssignment> ServicePack { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.CombinedServicePackAssignment> _servicePack;
+
+    [XmlElement(ElementName = "servicePack", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CombinedServicePackAssignment> ServicePack {
+        get => _servicePack;
+        set {
+            ServicePackSpecified = true;
+            _servicePack = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServicePackSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderRouteListEnterpriseTrunkNumberRangeGetSummaryListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "numberRangeSummaryTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable NumberRangeSummaryTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _numberRangeSummaryTable;
+
+    [XmlElement(ElementName = "numberRangeSummaryTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable NumberRangeSummaryTable {
+        get => _numberRangeSummaryTable;
+        set {
+            NumberRangeSummaryTableSpecified = true;
+            _numberRangeSummaryTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NumberRangeSummaryTableSpecified { get; set; }
+}
 }

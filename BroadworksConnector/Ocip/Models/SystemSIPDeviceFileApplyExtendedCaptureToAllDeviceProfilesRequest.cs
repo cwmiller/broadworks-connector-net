@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSIPDeviceFileApplyExtendedCaptureToAllDeviceProfilesRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "deviceType", IsNullable = false)]
-    public string DeviceType { get; set; }
-    [XmlElement(ElementName = "fileFormat", IsNullable = false)]
-    public string FileFormat { get; set; }
-    [XmlElement(ElementName = "extendedCaptureOnUploadFromDevice", IsNullable = false)]
-    public bool ExtendedCaptureOnUploadFromDevice { get; set; }
- }
+    private string _deviceType;
+
+    [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
+    public string DeviceType {
+        get => _deviceType;
+        set {
+            DeviceTypeSpecified = true;
+            _deviceType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceTypeSpecified { get; set; }
+    private string _fileFormat;
+
+    [XmlElement(ElementName = "fileFormat", IsNullable = false, Namespace = "")]
+    public string FileFormat {
+        get => _fileFormat;
+        set {
+            FileFormatSpecified = true;
+            _fileFormat = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileFormatSpecified { get; set; }
+    private bool _extendedCaptureOnUploadFromDevice;
+
+    [XmlElement(ElementName = "extendedCaptureOnUploadFromDevice", IsNullable = false, Namespace = "")]
+    public bool ExtendedCaptureOnUploadFromDevice {
+        get => _extendedCaptureOnUploadFromDevice;
+        set {
+            ExtendedCaptureOnUploadFromDeviceSpecified = true;
+            _extendedCaptureOnUploadFromDevice = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExtendedCaptureOnUploadFromDeviceSpecified { get; set; }
+}
 }

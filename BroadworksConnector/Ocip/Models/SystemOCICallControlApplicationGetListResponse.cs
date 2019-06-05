@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemOCICallControlApplicationGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "appTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable AppTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _appTable;
+
+    [XmlElement(ElementName = "appTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable AppTable {
+        get => _appTable;
+        set {
+            AppTableSpecified = true;
+            _appTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AppTableSpecified { get; set; }
+}
 }

@@ -3,11 +3,17 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum EnterpriseTrunkOrderingAlgorithm{
-    OrderedLoadBalancing,
-    Overflow,
-    MostIdle,
-    LeastIdle,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum EnterpriseTrunkOrderingAlgorithm
+    {
+        [XmlEnum(Name = "Ordered Load Balancing")]
+        OrderedLoadBalancing,
+        [XmlEnum(Name = "Overflow")]
+        Overflow,
+        [XmlEnum(Name = "Most Idle")]
+        MostIdle,
+        [XmlEnum(Name = "Least Idle")]
+        LeastIdle,
+    }
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class MusicOnHoldSourceModifyExternalSource 
 {
-    [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointModify AccessDeviceEndpoint { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.AccessDeviceEndpointModify _accessDeviceEndpoint;
+
+    [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointModify AccessDeviceEndpoint {
+        get => _accessDeviceEndpoint;
+        set {
+            AccessDeviceEndpointSpecified = true;
+            _accessDeviceEndpoint = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessDeviceEndpointSpecified { get; set; }
+}
 }

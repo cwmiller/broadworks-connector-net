@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemZoneLocationBasedPhysicalLocationGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "zoneName", IsNullable = false)]
-    public string ZoneName { get; set; }
-    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false)]
-    public int ResponseSizeLimit { get; set; }
-    [XmlElement(ElementName = "searchCriteriaPhysicalLocation", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaPhysicalLocation> SearchCriteriaPhysicalLocation { get; set; }
- }
+    private string _zoneName;
+
+    [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
+    public string ZoneName {
+        get => _zoneName;
+        set {
+            ZoneNameSpecified = true;
+            _zoneName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ZoneNameSpecified { get; set; }
+    private int _responseSizeLimit;
+
+    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
+    public int ResponseSizeLimit {
+        get => _responseSizeLimit;
+        set {
+            ResponseSizeLimitSpecified = true;
+            _responseSizeLimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResponseSizeLimitSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaPhysicalLocation> _searchCriteriaPhysicalLocation;
+
+    [XmlElement(ElementName = "searchCriteriaPhysicalLocation", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaPhysicalLocation> SearchCriteriaPhysicalLocation {
+        get => _searchCriteriaPhysicalLocation;
+        set {
+            SearchCriteriaPhysicalLocationSpecified = true;
+            _searchCriteriaPhysicalLocation = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaPhysicalLocationSpecified { get; set; }
+}
 }

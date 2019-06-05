@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupExtensionLengthGetResponse17 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "minExtensionLength", IsNullable = false)]
-    public int MinExtensionLength { get; set; }
-    [XmlElement(ElementName = "maxExtensionLength", IsNullable = false)]
-    public int MaxExtensionLength { get; set; }
-    [XmlElement(ElementName = "defaultExtensionLength", IsNullable = false)]
-    public int DefaultExtensionLength { get; set; }
- }
+    private int _minExtensionLength;
+
+    [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
+    public int MinExtensionLength {
+        get => _minExtensionLength;
+        set {
+            MinExtensionLengthSpecified = true;
+            _minExtensionLength = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MinExtensionLengthSpecified { get; set; }
+    private int _maxExtensionLength;
+
+    [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
+    public int MaxExtensionLength {
+        get => _maxExtensionLength;
+        set {
+            MaxExtensionLengthSpecified = true;
+            _maxExtensionLength = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxExtensionLengthSpecified { get; set; }
+    private int _defaultExtensionLength;
+
+    [XmlElement(ElementName = "defaultExtensionLength", IsNullable = false, Namespace = "")]
+    public int DefaultExtensionLength {
+        get => _defaultExtensionLength;
+        set {
+            DefaultExtensionLengthSpecified = true;
+            _defaultExtensionLength = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultExtensionLengthSpecified { get; set; }
+}
 }

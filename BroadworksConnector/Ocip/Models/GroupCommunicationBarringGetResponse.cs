@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCommunicationBarringGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "useDefaultServiceProviderProfile", IsNullable = false)]
-    public bool UseDefaultServiceProviderProfile { get; set; }
-    [XmlElement(ElementName = "profile", IsNullable = false)]
-    public string Profile { get; set; }
- }
+    private bool _useDefaultServiceProviderProfile;
+
+    [XmlElement(ElementName = "useDefaultServiceProviderProfile", IsNullable = false, Namespace = "")]
+    public bool UseDefaultServiceProviderProfile {
+        get => _useDefaultServiceProviderProfile;
+        set {
+            UseDefaultServiceProviderProfileSpecified = true;
+            _useDefaultServiceProviderProfile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseDefaultServiceProviderProfileSpecified { get; set; }
+    private string _profile;
+
+    [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
+    public string Profile {
+        get => _profile;
+        set {
+            ProfileSpecified = true;
+            _profile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProfileSpecified { get; set; }
+}
 }

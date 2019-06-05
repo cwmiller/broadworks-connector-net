@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemOCIReportingGetACLListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "ociReportingACLTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable OciReportingACLTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _ociReportingACLTable;
+
+    [XmlElement(ElementName = "ociReportingACLTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable OciReportingACLTable {
+        get => _ociReportingACLTable;
+        set {
+            OciReportingACLTableSpecified = true;
+            _ociReportingACLTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OciReportingACLTableSpecified { get; set; }
+}
 }

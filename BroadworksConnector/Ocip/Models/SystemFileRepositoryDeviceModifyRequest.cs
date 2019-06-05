@@ -8,21 +8,109 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemFileRepositoryDeviceModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "rootDirectory", IsNullable = true)]
-    public string RootDirectory { get; set; }
-    [XmlElement(ElementName = "secure", IsNullable = false)]
-    public bool Secure { get; set; }
-    [XmlElement(ElementName = "netAddress", IsNullable = false)]
-    public string NetAddress { get; set; }
-    [XmlElement(ElementName = "ftpPassive", IsNullable = false)]
-    public bool FtpPassive { get; set; }
-    [XmlElement(ElementName = "protocol", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.FileRepositoryProtocol Protocol { get; set; }
-    [XmlElement(ElementName = "port", IsNullable = true)]
-    public int? Port { get; set; }
-    [XmlElement(ElementName = "ftpRemoteVerification", IsNullable = false)]
-    public bool FtpRemoteVerification { get; set; }
- }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private string _rootDirectory;
+
+    [XmlElement(ElementName = "rootDirectory", IsNullable = true, Namespace = "")]
+    public string RootDirectory {
+        get => _rootDirectory;
+        set {
+            RootDirectorySpecified = true;
+            _rootDirectory = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RootDirectorySpecified { get; set; }
+    private bool _secure;
+
+    [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
+    public bool Secure {
+        get => _secure;
+        set {
+            SecureSpecified = true;
+            _secure = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SecureSpecified { get; set; }
+    private string _netAddress;
+
+    [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
+    public string NetAddress {
+        get => _netAddress;
+        set {
+            NetAddressSpecified = true;
+            _netAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetAddressSpecified { get; set; }
+    private bool _ftpPassive;
+
+    [XmlElement(ElementName = "ftpPassive", IsNullable = false, Namespace = "")]
+    public bool FtpPassive {
+        get => _ftpPassive;
+        set {
+            FtpPassiveSpecified = true;
+            _ftpPassive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FtpPassiveSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.FileRepositoryProtocol _protocol;
+
+    [XmlElement(ElementName = "protocol", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.FileRepositoryProtocol Protocol {
+        get => _protocol;
+        set {
+            ProtocolSpecified = true;
+            _protocol = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProtocolSpecified { get; set; }
+    private int? _port;
+
+    [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
+    public int? Port {
+        get => _port;
+        set {
+            PortSpecified = true;
+            _port = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PortSpecified { get; set; }
+    private bool _ftpRemoteVerification;
+
+    [XmlElement(ElementName = "ftpRemoteVerification", IsNullable = false, Namespace = "")]
+    public bool FtpRemoteVerification {
+        get => _ftpRemoteVerification;
+        set {
+            FtpRemoteVerificationSpecified = true;
+            _ftpRemoteVerification = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FtpRemoteVerificationSpecified { get; set; }
+}
 }

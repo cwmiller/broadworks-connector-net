@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ResellerMailParametersGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "defaultFromAddress", IsNullable = false)]
-    public string DefaultFromAddress { get; set; }
- }
+    private string _defaultFromAddress;
+
+    [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
+    public string DefaultFromAddress {
+        get => _defaultFromAddress;
+        set {
+            DefaultFromAddressSpecified = true;
+            _defaultFromAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultFromAddressSpecified { get; set; }
+}
 }

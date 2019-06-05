@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models.C
 [XmlRoot(Namespace = "C")]
 public  class SuccessResponse : BroadworksConnector.Ocip.Models.C.OCIResponse
 {
- }
+}
 }

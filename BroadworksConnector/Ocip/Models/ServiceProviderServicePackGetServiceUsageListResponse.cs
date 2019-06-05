@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderServicePackGetServiceUsageListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "serviceUsageTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ServiceUsageTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _serviceUsageTable;
+
+    [XmlElement(ElementName = "serviceUsageTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ServiceUsageTable {
+        get => _serviceUsageTable;
+        set {
+            ServiceUsageTableSpecified = true;
+            _serviceUsageTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUsageTableSpecified { get; set; }
+}
 }

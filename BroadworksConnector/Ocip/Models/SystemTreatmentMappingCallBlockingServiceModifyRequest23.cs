@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemTreatmentMappingCallBlockingServiceModifyRequest23 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "callBlockingService", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallBlockingService23 CallBlockingService { get; set; }
-    [XmlElement(ElementName = "treatmentId", IsNullable = false)]
-    public string TreatmentId { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.CallBlockingService23 _callBlockingService;
+
+    [XmlElement(ElementName = "callBlockingService", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallBlockingService23 CallBlockingService {
+        get => _callBlockingService;
+        set {
+            CallBlockingServiceSpecified = true;
+            _callBlockingService = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallBlockingServiceSpecified { get; set; }
+    private string _treatmentId;
+
+    [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
+    public string TreatmentId {
+        get => _treatmentId;
+        set {
+            TreatmentIdSpecified = true;
+            _treatmentId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TreatmentIdSpecified { get; set; }
+}
 }

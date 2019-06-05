@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallCenterGetSupervisorCallCenterListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "supervisorUserId", IsNullable = false)]
-    public string SupervisorUserId { get; set; }
- }
+    private string _supervisorUserId;
+
+    [XmlElement(ElementName = "supervisorUserId", IsNullable = false, Namespace = "")]
+    public string SupervisorUserId {
+        get => _supervisorUserId;
+        set {
+            SupervisorUserIdSpecified = true;
+            _supervisorUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SupervisorUserIdSpecified { get; set; }
+}
 }

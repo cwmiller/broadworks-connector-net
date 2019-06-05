@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderCommunicationBarringProfileGetRequest19sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+}
 }

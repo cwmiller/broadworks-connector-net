@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSIPDeviceTypeServiceModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "deviceType", IsNullable = false)]
-    public string DeviceType { get; set; }
-    [XmlElement(ElementName = "supportsPolycomPhoneServices", IsNullable = false)]
-    public bool SupportsPolycomPhoneServices { get; set; }
- }
+    private string _deviceType;
+
+    [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
+    public string DeviceType {
+        get => _deviceType;
+        set {
+            DeviceTypeSpecified = true;
+            _deviceType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceTypeSpecified { get; set; }
+    private bool _supportsPolycomPhoneServices;
+
+    [XmlElement(ElementName = "supportsPolycomPhoneServices", IsNullable = false, Namespace = "")]
+    public bool SupportsPolycomPhoneServices {
+        get => _supportsPolycomPhoneServices;
+        set {
+            SupportsPolycomPhoneServicesSpecified = true;
+            _supportsPolycomPhoneServices = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SupportsPolycomPhoneServicesSpecified { get; set; }
+}
 }

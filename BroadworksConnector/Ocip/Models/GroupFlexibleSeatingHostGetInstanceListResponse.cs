@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupFlexibleSeatingHostGetInstanceListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "flexibleSeatingHostTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable FlexibleSeatingHostTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _flexibleSeatingHostTable;
+
+    [XmlElement(ElementName = "flexibleSeatingHostTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable FlexibleSeatingHostTable {
+        get => _flexibleSeatingHostTable;
+        set {
+            FlexibleSeatingHostTableSpecified = true;
+            _flexibleSeatingHostTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FlexibleSeatingHostTableSpecified { get; set; }
+}
 }

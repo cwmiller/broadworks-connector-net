@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserMeetMeConferencingModifyConferenceGreetingExecutionServerRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "conferenceKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey { get; set; }
-    [XmlElement(ElementName = "playEntranceGreeting", IsNullable = false)]
-    public bool PlayEntranceGreeting { get; set; }
-    [XmlElement(ElementName = "entranceGreetingFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.LabeledFileNameResource EntranceGreetingFile { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
+
+    [XmlElement(ElementName = "conferenceKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey {
+        get => _conferenceKey;
+        set {
+            ConferenceKeySpecified = true;
+            _conferenceKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConferenceKeySpecified { get; set; }
+    private bool _playEntranceGreeting;
+
+    [XmlElement(ElementName = "playEntranceGreeting", IsNullable = false, Namespace = "")]
+    public bool PlayEntranceGreeting {
+        get => _playEntranceGreeting;
+        set {
+            PlayEntranceGreetingSpecified = true;
+            _playEntranceGreeting = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PlayEntranceGreetingSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.LabeledFileNameResource _entranceGreetingFile;
+
+    [XmlElement(ElementName = "entranceGreetingFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.LabeledFileNameResource EntranceGreetingFile {
+        get => _entranceGreetingFile;
+        set {
+            EntranceGreetingFileSpecified = true;
+            _entranceGreetingFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EntranceGreetingFileSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPhoneDirectoryGetSearchedListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "nameSearchString", IsNullable = false)]
-    public string NameSearchString { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private string _nameSearchString;
+
+    [XmlElement(ElementName = "nameSearchString", IsNullable = false, Namespace = "")]
+    public string NameSearchString {
+        get => _nameSearchString;
+        set {
+            NameSearchStringSpecified = true;
+            _nameSearchString = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSearchStringSpecified { get; set; }
+}
 }

@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemLocationBasedCallingRestrictionsGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

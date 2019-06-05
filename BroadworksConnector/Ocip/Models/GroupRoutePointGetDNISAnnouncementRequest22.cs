@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutePointGetDNISAnnouncementRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "dnisKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DNISKey DnisKey { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.DNISKey _dnisKey;
+
+    [XmlElement(ElementName = "dnisKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DNISKey DnisKey {
+        get => _dnisKey;
+        set {
+            DnisKeySpecified = true;
+            _dnisKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DnisKeySpecified { get; set; }
+}
 }

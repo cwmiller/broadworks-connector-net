@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class MusicOnHoldSourceRead22V2ExternalSource 
 {
-    [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead22 AccessDeviceEndpoint { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead22 _accessDeviceEndpoint;
+
+    [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead22 AccessDeviceEndpoint {
+        get => _accessDeviceEndpoint;
+        set {
+            AccessDeviceEndpointSpecified = true;
+            _accessDeviceEndpoint = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessDeviceEndpointSpecified { get; set; }
+}
 }

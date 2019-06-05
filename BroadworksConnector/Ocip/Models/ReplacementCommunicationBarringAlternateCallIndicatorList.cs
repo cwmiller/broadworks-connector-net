@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementCommunicationBarringAlternateCallIndicatorList 
 {
-    [XmlElement(ElementName = "alternateCallIndicator", IsNullable = false)]
-    public List<string> AlternateCallIndicator { get; set; }
- }
+    private List<string> _alternateCallIndicator;
+
+    [XmlElement(ElementName = "alternateCallIndicator", IsNullable = false, Namespace = "")]
+    public List<string> AlternateCallIndicator {
+        get => _alternateCallIndicator;
+        set {
+            AlternateCallIndicatorSpecified = true;
+            _alternateCallIndicator = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlternateCallIndicatorSpecified { get; set; }
+}
 }

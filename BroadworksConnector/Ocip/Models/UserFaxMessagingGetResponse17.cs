@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserFaxMessagingGetResponse17 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "phoneNumber", IsNullable = false)]
-    public string PhoneNumber { get; set; }
-    [XmlElement(ElementName = "extension", IsNullable = false)]
-    public string Extension { get; set; }
- }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private string _phoneNumber;
+
+    [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
+    public string PhoneNumber {
+        get => _phoneNumber;
+        set {
+            PhoneNumberSpecified = true;
+            _phoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PhoneNumberSpecified { get; set; }
+    private string _extension;
+
+    [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
+    public string Extension {
+        get => _extension;
+        set {
+            ExtensionSpecified = true;
+            _extension = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExtensionSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupSessionAdmissionControlGroupGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "sessionAdmissionControlGroupTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable SessionAdmissionControlGroupTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _sessionAdmissionControlGroupTable;
+
+    [XmlElement(ElementName = "sessionAdmissionControlGroupTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable SessionAdmissionControlGroupTable {
+        get => _sessionAdmissionControlGroupTable;
+        set {
+            SessionAdmissionControlGroupTableSpecified = true;
+            _sessionAdmissionControlGroupTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SessionAdmissionControlGroupTableSpecified { get; set; }
+}
 }

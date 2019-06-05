@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCollaborateInstantRoomAddResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "roomId", IsNullable = false)]
-    public string RoomId { get; set; }
- }
+    private string _roomId;
+
+    [XmlElement(ElementName = "roomId", IsNullable = false, Namespace = "")]
+    public string RoomId {
+        get => _roomId;
+        set {
+            RoomIdSpecified = true;
+            _roomId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoomIdSpecified { get; set; }
+}
 }

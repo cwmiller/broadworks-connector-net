@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserINIntegrationGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "originatingServiceKey", IsNullable = false)]
-    public int OriginatingServiceKey { get; set; }
-    [XmlElement(ElementName = "terminatingServiceKey", IsNullable = false)]
-    public int TerminatingServiceKey { get; set; }
- }
+    private int _originatingServiceKey;
+
+    [XmlElement(ElementName = "originatingServiceKey", IsNullable = false, Namespace = "")]
+    public int OriginatingServiceKey {
+        get => _originatingServiceKey;
+        set {
+            OriginatingServiceKeySpecified = true;
+            _originatingServiceKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OriginatingServiceKeySpecified { get; set; }
+    private int _terminatingServiceKey;
+
+    [XmlElement(ElementName = "terminatingServiceKey", IsNullable = false, Namespace = "")]
+    public int TerminatingServiceKey {
+        get => _terminatingServiceKey;
+        set {
+            TerminatingServiceKeySpecified = true;
+            _terminatingServiceKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TerminatingServiceKeySpecified { get; set; }
+}
 }

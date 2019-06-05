@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderOfficeZoneAssignListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "officeZoneName", IsNullable = false)]
-    public List<string> OfficeZoneName { get; set; }
-    [XmlElement(ElementName = "defaultOfficeZoneName", IsNullable = false)]
-    public string DefaultOfficeZoneName { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private List<string> _officeZoneName;
+
+    [XmlElement(ElementName = "officeZoneName", IsNullable = false, Namespace = "")]
+    public List<string> OfficeZoneName {
+        get => _officeZoneName;
+        set {
+            OfficeZoneNameSpecified = true;
+            _officeZoneName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OfficeZoneNameSpecified { get; set; }
+    private string _defaultOfficeZoneName;
+
+    [XmlElement(ElementName = "defaultOfficeZoneName", IsNullable = false, Namespace = "")]
+    public string DefaultOfficeZoneName {
+        get => _defaultOfficeZoneName;
+        set {
+            DefaultOfficeZoneNameSpecified = true;
+            _defaultOfficeZoneName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultOfficeZoneNameSpecified { get; set; }
+}
 }

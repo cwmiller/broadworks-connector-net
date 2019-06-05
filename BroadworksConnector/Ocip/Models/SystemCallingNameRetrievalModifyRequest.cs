@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallingNameRetrievalModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "queryTimerMilliSeconds", IsNullable = false)]
-    public int QueryTimerMilliSeconds { get; set; }
-    [XmlElement(ElementName = "serverNetAddress", IsNullable = true)]
-    public string ServerNetAddress { get; set; }
-    [XmlElement(ElementName = "serverPort", IsNullable = true)]
-    public int? ServerPort { get; set; }
-    [XmlElement(ElementName = "serverTransportProtocol", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.TransportProtocol ServerTransportProtocol { get; set; }
- }
+    private int _queryTimerMilliSeconds;
+
+    [XmlElement(ElementName = "queryTimerMilliSeconds", IsNullable = false, Namespace = "")]
+    public int QueryTimerMilliSeconds {
+        get => _queryTimerMilliSeconds;
+        set {
+            QueryTimerMilliSecondsSpecified = true;
+            _queryTimerMilliSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool QueryTimerMilliSecondsSpecified { get; set; }
+    private string _serverNetAddress;
+
+    [XmlElement(ElementName = "serverNetAddress", IsNullable = true, Namespace = "")]
+    public string ServerNetAddress {
+        get => _serverNetAddress;
+        set {
+            ServerNetAddressSpecified = true;
+            _serverNetAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServerNetAddressSpecified { get; set; }
+    private int? _serverPort;
+
+    [XmlElement(ElementName = "serverPort", IsNullable = true, Namespace = "")]
+    public int? ServerPort {
+        get => _serverPort;
+        set {
+            ServerPortSpecified = true;
+            _serverPort = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServerPortSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.TransportProtocol _serverTransportProtocol;
+
+    [XmlElement(ElementName = "serverTransportProtocol", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.TransportProtocol ServerTransportProtocol {
+        get => _serverTransportProtocol;
+        set {
+            ServerTransportProtocolSpecified = true;
+            _serverTransportProtocol = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServerTransportProtocolSpecified { get; set; }
+}
 }

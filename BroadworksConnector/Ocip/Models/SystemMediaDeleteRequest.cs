@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemMediaDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "mediaName", IsNullable = false)]
-    public string MediaName { get; set; }
- }
+    private string _mediaName;
+
+    [XmlElement(ElementName = "mediaName", IsNullable = false, Namespace = "")]
+    public string MediaName {
+        get => _mediaName;
+        set {
+            MediaNameSpecified = true;
+            _mediaName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MediaNameSpecified { get; set; }
+}
 }

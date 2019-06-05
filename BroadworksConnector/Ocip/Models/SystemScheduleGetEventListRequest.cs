@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemScheduleGetEventListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "scheduleKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ScheduleKey ScheduleKey { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.ScheduleKey _scheduleKey;
+
+    [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ScheduleKey ScheduleKey {
+        get => _scheduleKey;
+        set {
+            ScheduleKeySpecified = true;
+            _scheduleKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScheduleKeySpecified { get; set; }
+}
 }

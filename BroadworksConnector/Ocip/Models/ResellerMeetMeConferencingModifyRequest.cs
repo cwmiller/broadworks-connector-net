@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ResellerMeetMeConferencingModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "resellerId", IsNullable = false)]
-    public string ResellerId { get; set; }
-    [XmlElement(ElementName = "conferenceFromAddress", IsNullable = true)]
-    public string ConferenceFromAddress { get; set; }
-    [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false)]
-    public int MaxAllocatedPorts { get; set; }
- }
+    private string _resellerId;
+
+    [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
+    public string ResellerId {
+        get => _resellerId;
+        set {
+            ResellerIdSpecified = true;
+            _resellerId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResellerIdSpecified { get; set; }
+    private string _conferenceFromAddress;
+
+    [XmlElement(ElementName = "conferenceFromAddress", IsNullable = true, Namespace = "")]
+    public string ConferenceFromAddress {
+        get => _conferenceFromAddress;
+        set {
+            ConferenceFromAddressSpecified = true;
+            _conferenceFromAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConferenceFromAddressSpecified { get; set; }
+    private int _maxAllocatedPorts;
+
+    [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false, Namespace = "")]
+    public int MaxAllocatedPorts {
+        get => _maxAllocatedPorts;
+        set {
+            MaxAllocatedPortsSpecified = true;
+            _maxAllocatedPorts = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxAllocatedPortsSpecified { get; set; }
+}
 }

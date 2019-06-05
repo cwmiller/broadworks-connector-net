@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemServicePackMigrationModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "maxSimultaneousMigrationTasks", IsNullable = false)]
-    public int MaxSimultaneousMigrationTasks { get; set; }
- }
+    private int _maxSimultaneousMigrationTasks;
+
+    [XmlElement(ElementName = "maxSimultaneousMigrationTasks", IsNullable = false, Namespace = "")]
+    public int MaxSimultaneousMigrationTasks {
+        get => _maxSimultaneousMigrationTasks;
+        set {
+            MaxSimultaneousMigrationTasksSpecified = true;
+            _maxSimultaneousMigrationTasks = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxSimultaneousMigrationTasksSpecified { get; set; }
+}
 }

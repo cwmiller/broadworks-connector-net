@@ -3,14 +3,23 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum EnhancedCallLogsSubscriberType{
-    AutoAttendant,
-    BroadWorksAnywherePortal,
-    CallCenter,
-    HuntGroup,
-    RoutePoint,
-    User,
-    FindmeFollowme,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum EnhancedCallLogsSubscriberType
+    {
+        [XmlEnum(Name = "Auto Attendant")]
+        AutoAttendant,
+        [XmlEnum(Name = "BroadWorks Anywhere Portal")]
+        BroadWorksAnywherePortal,
+        [XmlEnum(Name = "Call Center")]
+        CallCenter,
+        [XmlEnum(Name = "Hunt Group")]
+        HuntGroup,
+        [XmlEnum(Name = "Route Point")]
+        RoutePoint,
+        [XmlEnum(Name = "User")]
+        User,
+        [XmlEnum(Name = "Find-me/Follow-me")]
+        FindmeFollowme,
+    }
 }

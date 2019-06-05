@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserSimultaneousRingFamilyGetPhoneNumberResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false)]
-    public bool AnswerConfirmationRequired { get; set; }
- }
+    private bool _answerConfirmationRequired;
+
+    [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
+    public bool AnswerConfirmationRequired {
+        get => _answerConfirmationRequired;
+        set {
+            AnswerConfirmationRequiredSpecified = true;
+            _answerConfirmationRequired = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AnswerConfirmationRequiredSpecified { get; set; }
+}
 }

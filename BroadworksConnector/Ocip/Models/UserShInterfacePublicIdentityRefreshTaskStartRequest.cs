@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserShInterfacePublicIdentityRefreshTaskStartRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "publicUserIdentity", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.PublicUserIdentity PublicUserIdentity { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
+
+    [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.PublicUserIdentity PublicUserIdentity {
+        get => _publicUserIdentity;
+        set {
+            PublicUserIdentitySpecified = true;
+            _publicUserIdentity = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PublicUserIdentitySpecified { get; set; }
+}
 }

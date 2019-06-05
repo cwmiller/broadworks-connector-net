@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ResellerVoiceMessagingGroupGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "deliveryFromAddress", IsNullable = false)]
-    public string DeliveryFromAddress { get; set; }
-    [XmlElement(ElementName = "notificationFromAddress", IsNullable = false)]
-    public string NotificationFromAddress { get; set; }
-    [XmlElement(ElementName = "voicePortalLockoutFromAddress", IsNullable = false)]
-    public string VoicePortalLockoutFromAddress { get; set; }
- }
+    private string _deliveryFromAddress;
+
+    [XmlElement(ElementName = "deliveryFromAddress", IsNullable = false, Namespace = "")]
+    public string DeliveryFromAddress {
+        get => _deliveryFromAddress;
+        set {
+            DeliveryFromAddressSpecified = true;
+            _deliveryFromAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeliveryFromAddressSpecified { get; set; }
+    private string _notificationFromAddress;
+
+    [XmlElement(ElementName = "notificationFromAddress", IsNullable = false, Namespace = "")]
+    public string NotificationFromAddress {
+        get => _notificationFromAddress;
+        set {
+            NotificationFromAddressSpecified = true;
+            _notificationFromAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NotificationFromAddressSpecified { get; set; }
+    private string _voicePortalLockoutFromAddress;
+
+    [XmlElement(ElementName = "voicePortalLockoutFromAddress", IsNullable = false, Namespace = "")]
+    public string VoicePortalLockoutFromAddress {
+        get => _voicePortalLockoutFromAddress;
+        set {
+            VoicePortalLockoutFromAddressSpecified = true;
+            _voicePortalLockoutFromAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VoicePortalLockoutFromAddressSpecified { get; set; }
+}
 }

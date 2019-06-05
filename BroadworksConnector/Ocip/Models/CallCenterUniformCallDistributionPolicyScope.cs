@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallCenterUniformCallDistributionPolicyScope{
-    Agent,
-    CallCenter,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallCenterUniformCallDistributionPolicyScope
+    {
+        [XmlEnum(Name = "Agent")]
+        Agent,
+        [XmlEnum(Name = "Call Center")]
+        CallCenter,
+    }
 }

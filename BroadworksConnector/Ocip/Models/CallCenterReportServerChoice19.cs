@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallCenterReportServerChoice19{
-    Enhanced,
-    Off,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallCenterReportServerChoice19
+    {
+        [XmlEnum(Name = "Enhanced")]
+        Enhanced,
+        [XmlEnum(Name = "Off")]
+        Off,
+    }
 }

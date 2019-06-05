@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupTrunkGroupSecurityClassificationModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "trunkGroupKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey { get; set; }
-    [XmlElement(ElementName = "defaultSecurityClassification", IsNullable = true)]
-    public string DefaultSecurityClassification { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
+
+    [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey {
+        get => _trunkGroupKey;
+        set {
+            TrunkGroupKeySpecified = true;
+            _trunkGroupKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TrunkGroupKeySpecified { get; set; }
+    private string _defaultSecurityClassification;
+
+    [XmlElement(ElementName = "defaultSecurityClassification", IsNullable = true, Namespace = "")]
+    public string DefaultSecurityClassification {
+        get => _defaultSecurityClassification;
+        set {
+            DefaultSecurityClassificationSpecified = true;
+            _defaultSecurityClassification = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultSecurityClassificationSpecified { get; set; }
+}
 }

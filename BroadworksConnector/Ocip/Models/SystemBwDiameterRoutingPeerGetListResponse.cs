@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBwDiameterRoutingPeerGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "routingPeerTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable RoutingPeerTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _routingPeerTable;
+
+    [XmlElement(ElementName = "routingPeerTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable RoutingPeerTable {
+        get => _routingPeerTable;
+        set {
+            RoutingPeerTableSpecified = true;
+            _routingPeerTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoutingPeerTableSpecified { get; set; }
+}
 }

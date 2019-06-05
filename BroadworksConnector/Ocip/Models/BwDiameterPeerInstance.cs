@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum BwDiameterPeerInstance{
-    XS,
-    PS,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum BwDiameterPeerInstance
+    {
+        [XmlEnum(Name = "XS")]
+        XS,
+        [XmlEnum(Name = "PS")]
+        PS,
+    }
 }

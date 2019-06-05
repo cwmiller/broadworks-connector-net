@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactScheduleType : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "type", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ScheduleType Type { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.ScheduleType _type;
+
+    [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ScheduleType Type {
+        get => _type;
+        set {
+            TypeSpecified = true;
+            _type = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TypeSpecified { get; set; }
+}
 }

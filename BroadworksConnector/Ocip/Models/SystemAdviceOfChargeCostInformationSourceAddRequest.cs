@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAdviceOfChargeCostInformationSourceAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "peerIdentity", IsNullable = false)]
-    public string PeerIdentity { get; set; }
-    [XmlElement(ElementName = "priority", IsNullable = false)]
-    public int Priority { get; set; }
- }
+    private string _peerIdentity;
+
+    [XmlElement(ElementName = "peerIdentity", IsNullable = false, Namespace = "")]
+    public string PeerIdentity {
+        get => _peerIdentity;
+        set {
+            PeerIdentitySpecified = true;
+            _peerIdentity = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PeerIdentitySpecified { get; set; }
+    private int _priority;
+
+    [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
+    public int Priority {
+        get => _priority;
+        set {
+            PrioritySpecified = true;
+            _priority = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrioritySpecified { get; set; }
+}
 }

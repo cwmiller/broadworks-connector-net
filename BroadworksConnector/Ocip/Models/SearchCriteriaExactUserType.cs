@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactUserType : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "userType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.UserType UserType { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.UserType _userType;
+
+    [XmlElement(ElementName = "userType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.UserType UserType {
+        get => _userType;
+        set {
+            UserTypeSpecified = true;
+            _userType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserTypeSpecified { get; set; }
+}
 }

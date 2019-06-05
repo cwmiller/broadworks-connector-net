@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPreferredCarrierNameModify 
 {
-    [XmlElement(ElementName = "useGroupPreferredCarrier", IsNullable = false)]
-    public bool UseGroupPreferredCarrier { get; set; }
-    [XmlElement(ElementName = "carrier", IsNullable = true)]
-    public string Carrier { get; set; }
- }
+    private bool _useGroupPreferredCarrier;
+
+    [XmlElement(ElementName = "useGroupPreferredCarrier", IsNullable = false, Namespace = "")]
+    public bool UseGroupPreferredCarrier {
+        get => _useGroupPreferredCarrier;
+        set {
+            UseGroupPreferredCarrierSpecified = true;
+            _useGroupPreferredCarrier = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseGroupPreferredCarrierSpecified { get; set; }
+    private string _carrier;
+
+    [XmlElement(ElementName = "carrier", IsNullable = true, Namespace = "")]
+    public string Carrier {
+        get => _carrier;
+        set {
+            CarrierSpecified = true;
+            _carrier = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CarrierSpecified { get; set; }
+}
 }

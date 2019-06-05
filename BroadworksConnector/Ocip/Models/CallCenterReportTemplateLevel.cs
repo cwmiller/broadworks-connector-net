@@ -3,10 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallCenterReportTemplateLevel{
-    System,
-    Enterprise,
-    Group,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallCenterReportTemplateLevel
+    {
+        [XmlEnum(Name = "System")]
+        System,
+        [XmlEnum(Name = "Enterprise")]
+        Enterprise,
+        [XmlEnum(Name = "Group")]
+        Group,
+    }
 }

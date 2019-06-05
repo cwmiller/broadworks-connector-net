@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSubscriberModifyProvisioningParametersRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "configurableCLIDNormalization", IsNullable = false)]
-    public bool ConfigurableCLIDNormalization { get; set; }
- }
+    private bool _configurableCLIDNormalization;
+
+    [XmlElement(ElementName = "configurableCLIDNormalization", IsNullable = false, Namespace = "")]
+    public bool ConfigurableCLIDNormalization {
+        get => _configurableCLIDNormalization;
+        set {
+            ConfigurableCLIDNormalizationSpecified = true;
+            _configurableCLIDNormalization = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConfigurableCLIDNormalizationSpecified { get; set; }
+}
 }

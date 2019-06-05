@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemTreatmentMappingAccessSIPStatusDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "sipStatusCode", IsNullable = false)]
-    public int SipStatusCode { get; set; }
- }
+    private int _sipStatusCode;
+
+    [XmlElement(ElementName = "sipStatusCode", IsNullable = false, Namespace = "")]
+    public int SipStatusCode {
+        get => _sipStatusCode;
+        set {
+            SipStatusCodeSpecified = true;
+            _sipStatusCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SipStatusCodeSpecified { get; set; }
+}
 }

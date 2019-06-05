@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupInventoryReportGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "inventoryReportTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable InventoryReportTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _inventoryReportTable;
+
+    [XmlElement(ElementName = "inventoryReportTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable InventoryReportTable {
+        get => _inventoryReportTable;
+        set {
+            InventoryReportTableSpecified = true;
+            _inventoryReportTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InventoryReportTableSpecified { get; set; }
+}
 }

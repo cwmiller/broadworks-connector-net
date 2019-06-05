@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserTwoStageDialingGetResponse13Mp20 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "allowActivationWithUserAddresses", IsNullable = false)]
-    public bool AllowActivationWithUserAddresses { get; set; }
- }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private bool _allowActivationWithUserAddresses;
+
+    [XmlElement(ElementName = "allowActivationWithUserAddresses", IsNullable = false, Namespace = "")]
+    public bool AllowActivationWithUserAddresses {
+        get => _allowActivationWithUserAddresses;
+        set {
+            AllowActivationWithUserAddressesSpecified = true;
+            _allowActivationWithUserAddresses = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowActivationWithUserAddressesSpecified { get; set; }
+}
 }

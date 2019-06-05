@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemClassmarkGetUtilizationListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "classmarkUserTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ClassmarkUserTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _classmarkUserTable;
+
+    [XmlElement(ElementName = "classmarkUserTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ClassmarkUserTable {
+        get => _classmarkUserTable;
+        set {
+            ClassmarkUserTableSpecified = true;
+            _classmarkUserTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ClassmarkUserTableSpecified { get; set; }
+}
 }

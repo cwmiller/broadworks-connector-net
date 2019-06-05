@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderAdviceOfChargeGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "useSPLevelAoCSettings", IsNullable = false)]
-    public bool UseSPLevelAoCSettings { get; set; }
-    [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false)]
-    public int DelayBetweenNotificationSeconds { get; set; }
- }
+    private bool _useSPLevelAoCSettings;
+
+    [XmlElement(ElementName = "useSPLevelAoCSettings", IsNullable = false, Namespace = "")]
+    public bool UseSPLevelAoCSettings {
+        get => _useSPLevelAoCSettings;
+        set {
+            UseSPLevelAoCSettingsSpecified = true;
+            _useSPLevelAoCSettings = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseSPLevelAoCSettingsSpecified { get; set; }
+    private int _delayBetweenNotificationSeconds;
+
+    [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
+    public int DelayBetweenNotificationSeconds {
+        get => _delayBetweenNotificationSeconds;
+        set {
+            DelayBetweenNotificationSecondsSpecified = true;
+            _delayBetweenNotificationSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DelayBetweenNotificationSecondsSpecified { get; set; }
+}
 }

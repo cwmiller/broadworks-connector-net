@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemNetworkDeviceMonitorParametersModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "pollingIntervalMinutes", IsNullable = false)]
-    public int PollingIntervalMinutes { get; set; }
-    [XmlElement(ElementName = "failedPollingIntervalMinutes", IsNullable = false)]
-    public int FailedPollingIntervalMinutes { get; set; }
- }
+    private int _pollingIntervalMinutes;
+
+    [XmlElement(ElementName = "pollingIntervalMinutes", IsNullable = false, Namespace = "")]
+    public int PollingIntervalMinutes {
+        get => _pollingIntervalMinutes;
+        set {
+            PollingIntervalMinutesSpecified = true;
+            _pollingIntervalMinutes = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PollingIntervalMinutesSpecified { get; set; }
+    private int _failedPollingIntervalMinutes;
+
+    [XmlElement(ElementName = "failedPollingIntervalMinutes", IsNullable = false, Namespace = "")]
+    public int FailedPollingIntervalMinutes {
+        get => _failedPollingIntervalMinutes;
+        set {
+            FailedPollingIntervalMinutesSpecified = true;
+            _failedPollingIntervalMinutes = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FailedPollingIntervalMinutesSpecified { get; set; }
+}
 }

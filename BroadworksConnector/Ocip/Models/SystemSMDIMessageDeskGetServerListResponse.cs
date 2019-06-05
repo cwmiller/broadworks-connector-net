@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSMDIMessageDeskGetServerListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "smdiServerTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable SmdiServerTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _smdiServerTable;
+
+    [XmlElement(ElementName = "smdiServerTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable SmdiServerTable {
+        get => _smdiServerTable;
+        set {
+            SmdiServerTableSpecified = true;
+            _smdiServerTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SmdiServerTableSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserMeetMeConferencingGetConferenceListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "conferenceTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ConferenceTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _conferenceTable;
+
+    [XmlElement(ElementName = "conferenceTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ConferenceTable {
+        get => _conferenceTable;
+        set {
+            ConferenceTableSpecified = true;
+            _conferenceTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConferenceTableSpecified { get; set; }
+}
 }

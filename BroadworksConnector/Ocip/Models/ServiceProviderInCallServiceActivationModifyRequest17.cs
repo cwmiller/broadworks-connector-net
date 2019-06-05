@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderInCallServiceActivationModifyRequest17 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "flashActivationDigits", IsNullable = false)]
-    public string FlashActivationDigits { get; set; }
-    [XmlElement(ElementName = "callTransferActivationDigits", IsNullable = false)]
-    public string CallTransferActivationDigits { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _flashActivationDigits;
+
+    [XmlElement(ElementName = "flashActivationDigits", IsNullable = false, Namespace = "")]
+    public string FlashActivationDigits {
+        get => _flashActivationDigits;
+        set {
+            FlashActivationDigitsSpecified = true;
+            _flashActivationDigits = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FlashActivationDigitsSpecified { get; set; }
+    private string _callTransferActivationDigits;
+
+    [XmlElement(ElementName = "callTransferActivationDigits", IsNullable = false, Namespace = "")]
+    public string CallTransferActivationDigits {
+        get => _callTransferActivationDigits;
+        set {
+            CallTransferActivationDigitsSpecified = true;
+            _callTransferActivationDigits = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallTransferActivationDigitsSpecified { get; set; }
+}
 }

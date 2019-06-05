@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementAgentWeightList 
 {
-    [XmlElement(ElementName = "agentWeight", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.HuntAgentWeight> AgentWeight { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.HuntAgentWeight> _agentWeight;
+
+    [XmlElement(ElementName = "agentWeight", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.HuntAgentWeight> AgentWeight {
+        get => _agentWeight;
+        set {
+            AgentWeightSpecified = true;
+            _agentWeight = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AgentWeightSpecified { get; set; }
+}
 }

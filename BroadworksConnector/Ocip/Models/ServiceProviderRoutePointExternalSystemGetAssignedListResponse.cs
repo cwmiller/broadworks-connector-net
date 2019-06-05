@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderRoutePointExternalSystemGetAssignedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "externalSystemTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ExternalSystemTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _externalSystemTable;
+
+    [XmlElement(ElementName = "externalSystemTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ExternalSystemTable {
+        get => _externalSystemTable;
+        set {
+            ExternalSystemTableSpecified = true;
+            _externalSystemTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExternalSystemTableSpecified { get; set; }
+}
 }

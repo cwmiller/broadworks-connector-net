@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderMaliciousCallTraceGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "useSystemPlayMCTWarningAnnouncement", IsNullable = false)]
-    public bool UseSystemPlayMCTWarningAnnouncement { get; set; }
-    [XmlElement(ElementName = "playMCTWarningAnnouncement", IsNullable = false)]
-    public bool PlayMCTWarningAnnouncement { get; set; }
- }
+    private bool _useSystemPlayMCTWarningAnnouncement;
+
+    [XmlElement(ElementName = "useSystemPlayMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
+    public bool UseSystemPlayMCTWarningAnnouncement {
+        get => _useSystemPlayMCTWarningAnnouncement;
+        set {
+            UseSystemPlayMCTWarningAnnouncementSpecified = true;
+            _useSystemPlayMCTWarningAnnouncement = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseSystemPlayMCTWarningAnnouncementSpecified { get; set; }
+    private bool _playMCTWarningAnnouncement;
+
+    [XmlElement(ElementName = "playMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
+    public bool PlayMCTWarningAnnouncement {
+        get => _playMCTWarningAnnouncement;
+        set {
+            PlayMCTWarningAnnouncementSpecified = true;
+            _playMCTWarningAnnouncement = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PlayMCTWarningAnnouncementSpecified { get; set; }
+}
 }

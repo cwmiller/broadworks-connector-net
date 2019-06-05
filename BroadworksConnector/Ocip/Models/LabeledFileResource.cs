@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class LabeledFileResource 
 {
-    [XmlElement(ElementName = "description", IsNullable = false)]
-    public string Description { get; set; }
-    [XmlElement(ElementName = "sourceFileName", IsNullable = false)]
-    public string SourceFileName { get; set; }
-    [XmlElement(ElementName = "content", IsNullable = false)]
-    public string Content { get; set; }
- }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+    private string _sourceFileName;
+
+    [XmlElement(ElementName = "sourceFileName", IsNullable = false, Namespace = "")]
+    public string SourceFileName {
+        get => _sourceFileName;
+        set {
+            SourceFileNameSpecified = true;
+            _sourceFileName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SourceFileNameSpecified { get; set; }
+    private string _content;
+
+    [XmlElement(ElementName = "content", IsNullable = false, Namespace = "")]
+    public string Content {
+        get => _content;
+        set {
+            ContentSpecified = true;
+            _content = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ContentSpecified { get; set; }
+}
 }

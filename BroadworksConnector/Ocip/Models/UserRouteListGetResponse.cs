@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserRouteListGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "treatOriginationsAndPBXRedirectionsAsScreened", IsNullable = false)]
-    public bool TreatOriginationsAndPBXRedirectionsAsScreened { get; set; }
-    [XmlElement(ElementName = "useRouteListIdentityForNonEmergencyCalls", IsNullable = false)]
-    public bool UseRouteListIdentityForNonEmergencyCalls { get; set; }
-    [XmlElement(ElementName = "useRouteListIdentityForEmergencyCalls", IsNullable = false)]
-    public bool UseRouteListIdentityForEmergencyCalls { get; set; }
-    [XmlElement(ElementName = "assignedNumberRangeTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable AssignedNumberRangeTable { get; set; }
- }
+    private bool _treatOriginationsAndPBXRedirectionsAsScreened;
+
+    [XmlElement(ElementName = "treatOriginationsAndPBXRedirectionsAsScreened", IsNullable = false, Namespace = "")]
+    public bool TreatOriginationsAndPBXRedirectionsAsScreened {
+        get => _treatOriginationsAndPBXRedirectionsAsScreened;
+        set {
+            TreatOriginationsAndPBXRedirectionsAsScreenedSpecified = true;
+            _treatOriginationsAndPBXRedirectionsAsScreened = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TreatOriginationsAndPBXRedirectionsAsScreenedSpecified { get; set; }
+    private bool _useRouteListIdentityForNonEmergencyCalls;
+
+    [XmlElement(ElementName = "useRouteListIdentityForNonEmergencyCalls", IsNullable = false, Namespace = "")]
+    public bool UseRouteListIdentityForNonEmergencyCalls {
+        get => _useRouteListIdentityForNonEmergencyCalls;
+        set {
+            UseRouteListIdentityForNonEmergencyCallsSpecified = true;
+            _useRouteListIdentityForNonEmergencyCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseRouteListIdentityForNonEmergencyCallsSpecified { get; set; }
+    private bool _useRouteListIdentityForEmergencyCalls;
+
+    [XmlElement(ElementName = "useRouteListIdentityForEmergencyCalls", IsNullable = false, Namespace = "")]
+    public bool UseRouteListIdentityForEmergencyCalls {
+        get => _useRouteListIdentityForEmergencyCalls;
+        set {
+            UseRouteListIdentityForEmergencyCallsSpecified = true;
+            _useRouteListIdentityForEmergencyCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _assignedNumberRangeTable;
+
+    [XmlElement(ElementName = "assignedNumberRangeTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable AssignedNumberRangeTable {
+        get => _assignedNumberRangeTable;
+        set {
+            AssignedNumberRangeTableSpecified = true;
+            _assignedNumberRangeTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AssignedNumberRangeTableSpecified { get; set; }
+}
 }

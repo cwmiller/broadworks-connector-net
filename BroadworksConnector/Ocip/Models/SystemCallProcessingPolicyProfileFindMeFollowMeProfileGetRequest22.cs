@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false)]
-    public string CallProcessingPolicyProfileName { get; set; }
- }
+    private string _callProcessingPolicyProfileName;
+
+    [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
+    public string CallProcessingPolicyProfileName {
+        get => _callProcessingPolicyProfileName;
+        set {
+            CallProcessingPolicyProfileNameSpecified = true;
+            _callProcessingPolicyProfileName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallProcessingPolicyProfileNameSpecified { get; set; }
+}
 }

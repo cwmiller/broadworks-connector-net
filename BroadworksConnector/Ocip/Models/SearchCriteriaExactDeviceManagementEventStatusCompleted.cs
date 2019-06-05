@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactDeviceManagementEventStatusCompleted : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "dmEventStatusCompleted", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DeviceManagementEventStatusCompleted DmEventStatusCompleted { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.DeviceManagementEventStatusCompleted _dmEventStatusCompleted;
+
+    [XmlElement(ElementName = "dmEventStatusCompleted", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DeviceManagementEventStatusCompleted DmEventStatusCompleted {
+        get => _dmEventStatusCompleted;
+        set {
+            DmEventStatusCompletedSpecified = true;
+            _dmEventStatusCompleted = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DmEventStatusCompletedSpecified { get; set; }
+}
 }

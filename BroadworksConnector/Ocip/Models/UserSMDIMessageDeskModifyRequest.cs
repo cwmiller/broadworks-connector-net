@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserSMDIMessageDeskModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "messageDeskNumber", IsNullable = true)]
-    public string MessageDeskNumber { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private string _messageDeskNumber;
+
+    [XmlElement(ElementName = "messageDeskNumber", IsNullable = true, Namespace = "")]
+    public string MessageDeskNumber {
+        get => _messageDeskNumber;
+        set {
+            MessageDeskNumberSpecified = true;
+            _messageDeskNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MessageDeskNumberSpecified { get; set; }
+}
 }

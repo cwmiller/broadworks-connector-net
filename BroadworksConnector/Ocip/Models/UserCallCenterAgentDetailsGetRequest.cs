@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallCenterAgentDetailsGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "agentUserId", IsNullable = false)]
-    public string AgentUserId { get; set; }
- }
+    private string _agentUserId;
+
+    [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
+    public string AgentUserId {
+        get => _agentUserId;
+        set {
+            AgentUserIdSpecified = true;
+            _agentUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AgentUserIdSpecified { get; set; }
+}
 }

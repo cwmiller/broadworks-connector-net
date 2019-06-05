@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBusyLampFieldGetRequest18 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

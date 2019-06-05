@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallCenterGetSupervisorCallCenterListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "callCenterTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CallCenterTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _callCenterTable;
+
+    [XmlElement(ElementName = "callCenterTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable CallCenterTable {
+        get => _callCenterTable;
+        set {
+            CallCenterTableSpecified = true;
+            _callCenterTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallCenterTableSpecified { get; set; }
+}
 }

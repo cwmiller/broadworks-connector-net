@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ResellerGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "resellerName", IsNullable = false)]
-    public string ResellerName { get; set; }
- }
+    private string _resellerName;
+
+    [XmlElement(ElementName = "resellerName", IsNullable = false, Namespace = "")]
+    public string ResellerName {
+        get => _resellerName;
+        set {
+            ResellerNameSpecified = true;
+            _resellerName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResellerNameSpecified { get; set; }
+}
 }

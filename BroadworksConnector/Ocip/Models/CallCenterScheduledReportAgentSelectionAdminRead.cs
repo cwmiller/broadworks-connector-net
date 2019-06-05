@@ -1,18 +1,57 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CallCenterScheduledReportAgentSelectionAdminRead 
-{
-    [XmlElement(ElementName = "allAgent", IsNullable = false)]
-    public bool AllAgent { get; set; }
-    [XmlElement(ElementName = "currentAgentTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CurrentAgentTable { get; set; }
-    [XmlElement(ElementName = "pastAgentTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable PastAgentTable { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class CallCenterScheduledReportAgentSelectionAdminRead
+    {
+        private bool _allAgent;
+
+        [XmlElement(ElementName = "allAgent", IsNullable = false, Namespace = "")]
+        public bool AllAgent
+        {
+            get => _allAgent;
+            set
+            {
+                AllAgentSpecified = true;
+                _allAgent = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool AllAgentSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.C.OCITable _currentAgentTable;
+
+        [XmlElement(ElementName = "currentAgentTable", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.C.OCITable CurrentAgentTable
+        {
+            get => _currentAgentTable;
+            set
+            {
+                CurrentAgentTableSpecified = true;
+                _currentAgentTable = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool CurrentAgentTableSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.C.OCITable _pastAgentTable;
+
+        [XmlElement(ElementName = "pastAgentTable", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.C.OCITable PastAgentTable
+        {
+            get => _pastAgentTable;
+            set
+            {
+                PastAgentTableSpecified = true;
+                _pastAgentTable = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool PastAgentTableSpecified { get; set; }
+    }
 }

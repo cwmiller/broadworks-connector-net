@@ -8,21 +8,109 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupGroupPagingAddInstanceRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile { get; set; }
-    [XmlElement(ElementName = "confirmationToneTimeoutSeconds", IsNullable = false)]
-    public int ConfirmationToneTimeoutSeconds { get; set; }
-    [XmlElement(ElementName = "deliverOriginatorCLIDInstead", IsNullable = false)]
-    public bool DeliverOriginatorCLIDInstead { get; set; }
-    [XmlElement(ElementName = "originatorCLIDPrefix", IsNullable = false)]
-    public string OriginatorCLIDPrefix { get; set; }
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false)]
-    public string NetworkClassOfService { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
+
+    [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile {
+        get => _serviceInstanceProfile;
+        set {
+            ServiceInstanceProfileSpecified = true;
+            _serviceInstanceProfile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceInstanceProfileSpecified { get; set; }
+    private int _confirmationToneTimeoutSeconds;
+
+    [XmlElement(ElementName = "confirmationToneTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int ConfirmationToneTimeoutSeconds {
+        get => _confirmationToneTimeoutSeconds;
+        set {
+            ConfirmationToneTimeoutSecondsSpecified = true;
+            _confirmationToneTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConfirmationToneTimeoutSecondsSpecified { get; set; }
+    private bool _deliverOriginatorCLIDInstead;
+
+    [XmlElement(ElementName = "deliverOriginatorCLIDInstead", IsNullable = false, Namespace = "")]
+    public bool DeliverOriginatorCLIDInstead {
+        get => _deliverOriginatorCLIDInstead;
+        set {
+            DeliverOriginatorCLIDInsteadSpecified = true;
+            _deliverOriginatorCLIDInstead = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeliverOriginatorCLIDInsteadSpecified { get; set; }
+    private string _originatorCLIDPrefix;
+
+    [XmlElement(ElementName = "originatorCLIDPrefix", IsNullable = false, Namespace = "")]
+    public string OriginatorCLIDPrefix {
+        get => _originatorCLIDPrefix;
+        set {
+            OriginatorCLIDPrefixSpecified = true;
+            _originatorCLIDPrefix = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OriginatorCLIDPrefixSpecified { get; set; }
+    private string _networkClassOfService;
+
+    [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+    public string NetworkClassOfService {
+        get => _networkClassOfService;
+        set {
+            NetworkClassOfServiceSpecified = true;
+            _networkClassOfService = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetworkClassOfServiceSpecified { get; set; }
+}
 }

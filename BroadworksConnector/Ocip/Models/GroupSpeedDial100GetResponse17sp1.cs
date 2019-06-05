@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupSpeedDial100GetResponse17sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "prefix", IsNullable = false)]
-    public string Prefix { get; set; }
- }
+    private string _prefix;
+
+    [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
+    public string Prefix {
+        get => _prefix;
+        set {
+            PrefixSpecified = true;
+            _prefix = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrefixSpecified { get; set; }
+}
 }

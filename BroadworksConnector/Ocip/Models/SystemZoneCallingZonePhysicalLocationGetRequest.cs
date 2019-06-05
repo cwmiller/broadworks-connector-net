@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemZoneCallingZonePhysicalLocationGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "zoneName", IsNullable = false)]
-    public string ZoneName { get; set; }
- }
+    private string _zoneName;
+
+    [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
+    public string ZoneName {
+        get => _zoneName;
+        set {
+            ZoneNameSpecified = true;
+            _zoneName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ZoneNameSpecified { get; set; }
+}
 }

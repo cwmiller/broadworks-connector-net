@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutePointQueueCallDispositionCodeGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "description", IsNullable = false)]
-    public string Description { get; set; }
- }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+}
 }

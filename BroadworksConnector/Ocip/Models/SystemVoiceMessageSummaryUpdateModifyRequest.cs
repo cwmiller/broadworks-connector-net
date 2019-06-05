@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessageSummaryUpdateModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "sendSavedAndUrgentMWIOnNotification", IsNullable = false)]
-    public bool SendSavedAndUrgentMWIOnNotification { get; set; }
-    [XmlElement(ElementName = "sendMessageSummaryUpdateOnRegister", IsNullable = false)]
-    public bool SendMessageSummaryUpdateOnRegister { get; set; }
-    [XmlElement(ElementName = "minTimeBetweenMWIOnRegister", IsNullable = false)]
-    public int MinTimeBetweenMWIOnRegister { get; set; }
- }
+    private bool _sendSavedAndUrgentMWIOnNotification;
+
+    [XmlElement(ElementName = "sendSavedAndUrgentMWIOnNotification", IsNullable = false, Namespace = "")]
+    public bool SendSavedAndUrgentMWIOnNotification {
+        get => _sendSavedAndUrgentMWIOnNotification;
+        set {
+            SendSavedAndUrgentMWIOnNotificationSpecified = true;
+            _sendSavedAndUrgentMWIOnNotification = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SendSavedAndUrgentMWIOnNotificationSpecified { get; set; }
+    private bool _sendMessageSummaryUpdateOnRegister;
+
+    [XmlElement(ElementName = "sendMessageSummaryUpdateOnRegister", IsNullable = false, Namespace = "")]
+    public bool SendMessageSummaryUpdateOnRegister {
+        get => _sendMessageSummaryUpdateOnRegister;
+        set {
+            SendMessageSummaryUpdateOnRegisterSpecified = true;
+            _sendMessageSummaryUpdateOnRegister = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SendMessageSummaryUpdateOnRegisterSpecified { get; set; }
+    private int _minTimeBetweenMWIOnRegister;
+
+    [XmlElement(ElementName = "minTimeBetweenMWIOnRegister", IsNullable = false, Namespace = "")]
+    public int MinTimeBetweenMWIOnRegister {
+        get => _minTimeBetweenMWIOnRegister;
+        set {
+            MinTimeBetweenMWIOnRegisterSpecified = true;
+            _minTimeBetweenMWIOnRegister = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MinTimeBetweenMWIOnRegisterSpecified { get; set; }
+}
 }

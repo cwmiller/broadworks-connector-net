@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderServicePackMigrationTaskGetListResponse21 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "taskTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable TaskTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _taskTable;
+
+    [XmlElement(ElementName = "taskTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable TaskTable {
+        get => _taskTable;
+        set {
+            TaskTableSpecified = true;
+            _taskTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TaskTableSpecified { get; set; }
+}
 }

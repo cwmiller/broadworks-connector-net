@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGroupNightForwardingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "nightForwardInterGroupCallsWithinEnterprise", IsNullable = false)]
-    public bool NightForwardInterGroupCallsWithinEnterprise { get; set; }
- }
+    private bool _nightForwardInterGroupCallsWithinEnterprise;
+
+    [XmlElement(ElementName = "nightForwardInterGroupCallsWithinEnterprise", IsNullable = false, Namespace = "")]
+    public bool NightForwardInterGroupCallsWithinEnterprise {
+        get => _nightForwardInterGroupCallsWithinEnterprise;
+        set {
+            NightForwardInterGroupCallsWithinEnterpriseSpecified = true;
+            _nightForwardInterGroupCallsWithinEnterprise = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NightForwardInterGroupCallsWithinEnterpriseSpecified { get; set; }
+}
 }

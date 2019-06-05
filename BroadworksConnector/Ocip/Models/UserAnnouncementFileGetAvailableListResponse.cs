@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserAnnouncementFileGetAvailableListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "announcementTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable AnnouncementTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _announcementTable;
+
+    [XmlElement(ElementName = "announcementTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable AnnouncementTable {
+        get => _announcementTable;
+        set {
+            AnnouncementTableSpecified = true;
+            _announcementTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AnnouncementTableSpecified { get; set; }
+}
 }

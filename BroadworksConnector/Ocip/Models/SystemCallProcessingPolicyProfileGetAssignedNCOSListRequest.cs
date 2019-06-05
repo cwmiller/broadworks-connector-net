@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallProcessingPolicyProfileGetAssignedNCOSListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "profileName", IsNullable = false)]
-    public string ProfileName { get; set; }
- }
+    private string _profileName;
+
+    [XmlElement(ElementName = "profileName", IsNullable = false, Namespace = "")]
+    public string ProfileName {
+        get => _profileName;
+        set {
+            ProfileNameSpecified = true;
+            _profileName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProfileNameSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemNumberPortabilityQueryDigitPatternGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "statusDigitPatternTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable StatusDigitPatternTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _statusDigitPatternTable;
+
+    [XmlElement(ElementName = "statusDigitPatternTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable StatusDigitPatternTable {
+        get => _statusDigitPatternTable;
+        set {
+            StatusDigitPatternTableSpecified = true;
+            _statusDigitPatternTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StatusDigitPatternTableSpecified { get; set; }
+}
 }

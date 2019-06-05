@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDeviceManagementTagSetAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "tagSetName", IsNullable = false)]
-    public string TagSetName { get; set; }
-    [XmlElement(ElementName = "resellerId", IsNullable = false)]
-    public string ResellerId { get; set; }
- }
+    private string _tagSetName;
+
+    [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
+    public string TagSetName {
+        get => _tagSetName;
+        set {
+            TagSetNameSpecified = true;
+            _tagSetName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TagSetNameSpecified { get; set; }
+    private string _resellerId;
+
+    [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
+    public string ResellerId {
+        get => _resellerId;
+        set {
+            ResellerIdSpecified = true;
+            _resellerId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResellerIdSpecified { get; set; }
+}
 }

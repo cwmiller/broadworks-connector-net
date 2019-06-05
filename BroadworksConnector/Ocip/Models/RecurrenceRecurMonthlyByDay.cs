@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class RecurrenceRecurMonthlyByDay 
 {
-    [XmlElement(ElementName = "recurInterval", IsNullable = false)]
-    public int RecurInterval { get; set; }
-    [XmlElement(ElementName = "dayOfMonth", IsNullable = false)]
-    public int DayOfMonth { get; set; }
- }
+    private int _recurInterval;
+
+    [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
+    public int RecurInterval {
+        get => _recurInterval;
+        set {
+            RecurIntervalSpecified = true;
+            _recurInterval = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RecurIntervalSpecified { get; set; }
+    private int _dayOfMonth;
+
+    [XmlElement(ElementName = "dayOfMonth", IsNullable = false, Namespace = "")]
+    public int DayOfMonth {
+        get => _dayOfMonth;
+        set {
+            DayOfMonthSpecified = true;
+            _dayOfMonth = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DayOfMonthSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserMeetMeConferencingAddConferenceResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "conferenceId", IsNullable = false)]
-    public string ConferenceId { get; set; }
-    [XmlElement(ElementName = "moderatorPin", IsNullable = false)]
-    public string ModeratorPin { get; set; }
- }
+    private string _conferenceId;
+
+    [XmlElement(ElementName = "conferenceId", IsNullable = false, Namespace = "")]
+    public string ConferenceId {
+        get => _conferenceId;
+        set {
+            ConferenceIdSpecified = true;
+            _conferenceId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConferenceIdSpecified { get; set; }
+    private string _moderatorPin;
+
+    [XmlElement(ElementName = "moderatorPin", IsNullable = false, Namespace = "")]
+    public string ModeratorPin {
+        get => _moderatorPin;
+        set {
+            ModeratorPinSpecified = true;
+            _moderatorPin = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ModeratorPinSpecified { get; set; }
+}
 }

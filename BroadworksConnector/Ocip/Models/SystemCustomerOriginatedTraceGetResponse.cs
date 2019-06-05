@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCustomerOriginatedTraceGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "screenMaliciousCallers", IsNullable = false)]
-    public bool ScreenMaliciousCallers { get; set; }
- }
+    private bool _screenMaliciousCallers;
+
+    [XmlElement(ElementName = "screenMaliciousCallers", IsNullable = false, Namespace = "")]
+    public bool ScreenMaliciousCallers {
+        get => _screenMaliciousCallers;
+        set {
+            ScreenMaliciousCallersSpecified = true;
+            _screenMaliciousCallers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScreenMaliciousCallersSpecified { get; set; }
+}
 }

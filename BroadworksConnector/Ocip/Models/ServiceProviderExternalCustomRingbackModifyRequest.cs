@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderExternalCustomRingbackModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "prefixDigits", IsNullable = true)]
-    public string PrefixDigits { get; set; }
-    [XmlElement(ElementName = "serverNetAddress", IsNullable = true)]
-    public string ServerNetAddress { get; set; }
-    [XmlElement(ElementName = "serverPort", IsNullable = true)]
-    public int? ServerPort { get; set; }
-    [XmlElement(ElementName = "timeoutSeconds", IsNullable = false)]
-    public int TimeoutSeconds { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _prefixDigits;
+
+    [XmlElement(ElementName = "prefixDigits", IsNullable = true, Namespace = "")]
+    public string PrefixDigits {
+        get => _prefixDigits;
+        set {
+            PrefixDigitsSpecified = true;
+            _prefixDigits = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrefixDigitsSpecified { get; set; }
+    private string _serverNetAddress;
+
+    [XmlElement(ElementName = "serverNetAddress", IsNullable = true, Namespace = "")]
+    public string ServerNetAddress {
+        get => _serverNetAddress;
+        set {
+            ServerNetAddressSpecified = true;
+            _serverNetAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServerNetAddressSpecified { get; set; }
+    private int? _serverPort;
+
+    [XmlElement(ElementName = "serverPort", IsNullable = true, Namespace = "")]
+    public int? ServerPort {
+        get => _serverPort;
+        set {
+            ServerPortSpecified = true;
+            _serverPort = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServerPortSpecified { get; set; }
+    private int _timeoutSeconds;
+
+    [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
+    public int TimeoutSeconds {
+        get => _timeoutSeconds;
+        set {
+            TimeoutSecondsSpecified = true;
+            _timeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeoutSecondsSpecified { get; set; }
+}
 }

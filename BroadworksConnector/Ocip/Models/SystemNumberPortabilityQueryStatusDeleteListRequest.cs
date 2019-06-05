@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemNumberPortabilityQueryStatusDeleteListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "status", IsNullable = false)]
-    public List<string> Status { get; set; }
- }
+    private List<string> _status;
+
+    [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
+    public List<string> Status {
+        get => _status;
+        set {
+            StatusSpecified = true;
+            _status = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StatusSpecified { get; set; }
+}
 }

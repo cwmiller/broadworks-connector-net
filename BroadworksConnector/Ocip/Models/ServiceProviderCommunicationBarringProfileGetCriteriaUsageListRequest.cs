@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderCommunicationBarringProfileGetCriteriaUsageListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "criteriaName", IsNullable = false)]
-    public string CriteriaName { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _criteriaName;
+
+    [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
+    public string CriteriaName {
+        get => _criteriaName;
+        set {
+            CriteriaNameSpecified = true;
+            _criteriaName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CriteriaNameSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutePointGetInstanceListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "routePointTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable RoutePointTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _routePointTable;
+
+    [XmlElement(ElementName = "routePointTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable RoutePointTable {
+        get => _routePointTable;
+        set {
+            RoutePointTableSpecified = true;
+            _routePointTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoutePointTableSpecified { get; set; }
+}
 }

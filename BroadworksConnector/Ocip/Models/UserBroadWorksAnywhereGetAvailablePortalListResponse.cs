@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserBroadWorksAnywhereGetAvailablePortalListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "portalTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable PortalTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _portalTable;
+
+    [XmlElement(ElementName = "portalTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable PortalTable {
+        get => _portalTable;
+        set {
+            PortalTableSpecified = true;
+            _portalTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PortalTableSpecified { get; set; }
+}
 }

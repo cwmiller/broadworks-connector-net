@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderPreferredCarrierGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "serviceProviderCarrierTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ServiceProviderCarrierTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _serviceProviderCarrierTable;
+
+    [XmlElement(ElementName = "serviceProviderCarrierTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ServiceProviderCarrierTable {
+        get => _serviceProviderCarrierTable;
+        set {
+            ServiceProviderCarrierTableSpecified = true;
+            _serviceProviderCarrierTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderCarrierTableSpecified { get; set; }
+}
 }

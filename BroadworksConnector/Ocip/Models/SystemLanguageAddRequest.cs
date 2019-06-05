@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemLanguageAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "language", IsNullable = false)]
-    public string Language { get; set; }
-    [XmlElement(ElementName = "locale", IsNullable = false)]
-    public string Locale { get; set; }
-    [XmlElement(ElementName = "encoding", IsNullable = false)]
-    public string Encoding { get; set; }
- }
+    private string _language;
+
+    [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
+    public string Language {
+        get => _language;
+        set {
+            LanguageSpecified = true;
+            _language = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LanguageSpecified { get; set; }
+    private string _locale;
+
+    [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
+    public string Locale {
+        get => _locale;
+        set {
+            LocaleSpecified = true;
+            _locale = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LocaleSpecified { get; set; }
+    private string _encoding;
+
+    [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
+    public string Encoding {
+        get => _encoding;
+        set {
+            EncodingSpecified = true;
+            _encoding = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EncodingSpecified { get; set; }
+}
 }

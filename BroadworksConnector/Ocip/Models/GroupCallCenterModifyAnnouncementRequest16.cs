@@ -8,39 +8,226 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "playEntranceMessage", IsNullable = false)]
-    public bool PlayEntranceMessage { get; set; }
-    [XmlElement(ElementName = "mandatoryEntranceMessage", IsNullable = false)]
-    public bool MandatoryEntranceMessage { get; set; }
-    [XmlElement(ElementName = "entranceAudioMessageSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection EntranceAudioMessageSelection { get; set; }
-    [XmlElement(ElementName = "entranceMessageAudioFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource EntranceMessageAudioFile { get; set; }
-    [XmlElement(ElementName = "entranceVideoMessageSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection EntranceVideoMessageSelection { get; set; }
-    [XmlElement(ElementName = "entranceMessageVideoFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource EntranceMessageVideoFile { get; set; }
-    [XmlElement(ElementName = "playPeriodicComfortMessage", IsNullable = false)]
-    public bool PlayPeriodicComfortMessage { get; set; }
-    [XmlElement(ElementName = "timeBetweenComfortMessagesSeconds", IsNullable = false)]
-    public int TimeBetweenComfortMessagesSeconds { get; set; }
-    [XmlElement(ElementName = "periodicComfortAudioMessageSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection PeriodicComfortAudioMessageSelection { get; set; }
-    [XmlElement(ElementName = "periodicComfortMessageAudioFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource PeriodicComfortMessageAudioFile { get; set; }
-    [XmlElement(ElementName = "periodicComfortVideoMessageSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection PeriodicComfortVideoMessageSelection { get; set; }
-    [XmlElement(ElementName = "periodicComfortMessageVideoFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource PeriodicComfortMessageVideoFile { get; set; }
-    [XmlElement(ElementName = "enableMediaOnHoldForQueuedCalls", IsNullable = false)]
-    public bool EnableMediaOnHoldForQueuedCalls { get; set; }
-    [XmlElement(ElementName = "mediaOnHoldSource", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 MediaOnHoldSource { get; set; }
-    [XmlElement(ElementName = "mediaOnHoldUseAlternateSourceForInternalCalls", IsNullable = false)]
-    public bool MediaOnHoldUseAlternateSourceForInternalCalls { get; set; }
-    [XmlElement(ElementName = "mediaOnHoldInternalSource", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 MediaOnHoldInternalSource { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private bool _playEntranceMessage;
+
+    [XmlElement(ElementName = "playEntranceMessage", IsNullable = false, Namespace = "")]
+    public bool PlayEntranceMessage {
+        get => _playEntranceMessage;
+        set {
+            PlayEntranceMessageSpecified = true;
+            _playEntranceMessage = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PlayEntranceMessageSpecified { get; set; }
+    private bool _mandatoryEntranceMessage;
+
+    [XmlElement(ElementName = "mandatoryEntranceMessage", IsNullable = false, Namespace = "")]
+    public bool MandatoryEntranceMessage {
+        get => _mandatoryEntranceMessage;
+        set {
+            MandatoryEntranceMessageSpecified = true;
+            _mandatoryEntranceMessage = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MandatoryEntranceMessageSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _entranceAudioMessageSelection;
+
+    [XmlElement(ElementName = "entranceAudioMessageSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection EntranceAudioMessageSelection {
+        get => _entranceAudioMessageSelection;
+        set {
+            EntranceAudioMessageSelectionSpecified = true;
+            _entranceAudioMessageSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EntranceAudioMessageSelectionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource _entranceMessageAudioFile;
+
+    [XmlElement(ElementName = "entranceMessageAudioFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource EntranceMessageAudioFile {
+        get => _entranceMessageAudioFile;
+        set {
+            EntranceMessageAudioFileSpecified = true;
+            _entranceMessageAudioFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EntranceMessageAudioFileSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _entranceVideoMessageSelection;
+
+    [XmlElement(ElementName = "entranceVideoMessageSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection EntranceVideoMessageSelection {
+        get => _entranceVideoMessageSelection;
+        set {
+            EntranceVideoMessageSelectionSpecified = true;
+            _entranceVideoMessageSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EntranceVideoMessageSelectionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource _entranceMessageVideoFile;
+
+    [XmlElement(ElementName = "entranceMessageVideoFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource EntranceMessageVideoFile {
+        get => _entranceMessageVideoFile;
+        set {
+            EntranceMessageVideoFileSpecified = true;
+            _entranceMessageVideoFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EntranceMessageVideoFileSpecified { get; set; }
+    private bool _playPeriodicComfortMessage;
+
+    [XmlElement(ElementName = "playPeriodicComfortMessage", IsNullable = false, Namespace = "")]
+    public bool PlayPeriodicComfortMessage {
+        get => _playPeriodicComfortMessage;
+        set {
+            PlayPeriodicComfortMessageSpecified = true;
+            _playPeriodicComfortMessage = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PlayPeriodicComfortMessageSpecified { get; set; }
+    private int _timeBetweenComfortMessagesSeconds;
+
+    [XmlElement(ElementName = "timeBetweenComfortMessagesSeconds", IsNullable = false, Namespace = "")]
+    public int TimeBetweenComfortMessagesSeconds {
+        get => _timeBetweenComfortMessagesSeconds;
+        set {
+            TimeBetweenComfortMessagesSecondsSpecified = true;
+            _timeBetweenComfortMessagesSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeBetweenComfortMessagesSecondsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _periodicComfortAudioMessageSelection;
+
+    [XmlElement(ElementName = "periodicComfortAudioMessageSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection PeriodicComfortAudioMessageSelection {
+        get => _periodicComfortAudioMessageSelection;
+        set {
+            PeriodicComfortAudioMessageSelectionSpecified = true;
+            _periodicComfortAudioMessageSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PeriodicComfortAudioMessageSelectionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource _periodicComfortMessageAudioFile;
+
+    [XmlElement(ElementName = "periodicComfortMessageAudioFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource PeriodicComfortMessageAudioFile {
+        get => _periodicComfortMessageAudioFile;
+        set {
+            PeriodicComfortMessageAudioFileSpecified = true;
+            _periodicComfortMessageAudioFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PeriodicComfortMessageAudioFileSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _periodicComfortVideoMessageSelection;
+
+    [XmlElement(ElementName = "periodicComfortVideoMessageSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection PeriodicComfortVideoMessageSelection {
+        get => _periodicComfortVideoMessageSelection;
+        set {
+            PeriodicComfortVideoMessageSelectionSpecified = true;
+            _periodicComfortVideoMessageSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PeriodicComfortVideoMessageSelectionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource _periodicComfortMessageVideoFile;
+
+    [XmlElement(ElementName = "periodicComfortMessageVideoFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource PeriodicComfortMessageVideoFile {
+        get => _periodicComfortMessageVideoFile;
+        set {
+            PeriodicComfortMessageVideoFileSpecified = true;
+            _periodicComfortMessageVideoFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PeriodicComfortMessageVideoFileSpecified { get; set; }
+    private bool _enableMediaOnHoldForQueuedCalls;
+
+    [XmlElement(ElementName = "enableMediaOnHoldForQueuedCalls", IsNullable = false, Namespace = "")]
+    public bool EnableMediaOnHoldForQueuedCalls {
+        get => _enableMediaOnHoldForQueuedCalls;
+        set {
+            EnableMediaOnHoldForQueuedCallsSpecified = true;
+            _enableMediaOnHoldForQueuedCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableMediaOnHoldForQueuedCallsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 _mediaOnHoldSource;
+
+    [XmlElement(ElementName = "mediaOnHoldSource", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 MediaOnHoldSource {
+        get => _mediaOnHoldSource;
+        set {
+            MediaOnHoldSourceSpecified = true;
+            _mediaOnHoldSource = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MediaOnHoldSourceSpecified { get; set; }
+    private bool _mediaOnHoldUseAlternateSourceForInternalCalls;
+
+    [XmlElement(ElementName = "mediaOnHoldUseAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
+    public bool MediaOnHoldUseAlternateSourceForInternalCalls {
+        get => _mediaOnHoldUseAlternateSourceForInternalCalls;
+        set {
+            MediaOnHoldUseAlternateSourceForInternalCallsSpecified = true;
+            _mediaOnHoldUseAlternateSourceForInternalCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MediaOnHoldUseAlternateSourceForInternalCallsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 _mediaOnHoldInternalSource;
+
+    [XmlElement(ElementName = "mediaOnHoldInternalSource", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 MediaOnHoldInternalSource {
+        get => _mediaOnHoldInternalSource;
+        set {
+            MediaOnHoldInternalSourceSpecified = true;
+            _mediaOnHoldInternalSource = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MediaOnHoldInternalSourceSpecified { get; set; }
+}
 }

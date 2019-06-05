@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemApplicationControllerAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "subscriberId", IsNullable = false)]
-    public string SubscriberId { get; set; }
-    [XmlElement(ElementName = "channelSetId", IsNullable = false)]
-    public string ChannelSetId { get; set; }
- }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private string _subscriberId;
+
+    [XmlElement(ElementName = "subscriberId", IsNullable = false, Namespace = "")]
+    public string SubscriberId {
+        get => _subscriberId;
+        set {
+            SubscriberIdSpecified = true;
+            _subscriberId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SubscriberIdSpecified { get; set; }
+    private string _channelSetId;
+
+    [XmlElement(ElementName = "channelSetId", IsNullable = false, Namespace = "")]
+    public string ChannelSetId {
+        get => _channelSetId;
+        set {
+            ChannelSetIdSpecified = true;
+            _channelSetId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ChannelSetIdSpecified { get; set; }
+}
 }

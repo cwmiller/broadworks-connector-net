@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupDomainGetAssignedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "groupDefaultDomain", IsNullable = false)]
-    public string GroupDefaultDomain { get; set; }
-    [XmlElement(ElementName = "domain", IsNullable = false)]
-    public List<string> Domain { get; set; }
- }
+    private string _groupDefaultDomain;
+
+    [XmlElement(ElementName = "groupDefaultDomain", IsNullable = false, Namespace = "")]
+    public string GroupDefaultDomain {
+        get => _groupDefaultDomain;
+        set {
+            GroupDefaultDomainSpecified = true;
+            _groupDefaultDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupDefaultDomainSpecified { get; set; }
+    private List<string> _domain;
+
+    [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
+    public List<string> Domain {
+        get => _domain;
+        set {
+            DomainSpecified = true;
+            _domain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DomainSpecified { get; set; }
+}
 }

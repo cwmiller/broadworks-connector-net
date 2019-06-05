@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutingProfileModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "routingProfile", IsNullable = true)]
-    public string RoutingProfile { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private string _routingProfile;
+
+    [XmlElement(ElementName = "routingProfile", IsNullable = true, Namespace = "")]
+    public string RoutingProfile {
+        get => _routingProfile;
+        set {
+            RoutingProfileSpecified = true;
+            _routingProfile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoutingProfileSpecified { get; set; }
+}
 }

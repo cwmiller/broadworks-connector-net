@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderServicePackMigrationTaskModifyUserSelectionRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "taskName", IsNullable = false)]
-    public string TaskName { get; set; }
-    [XmlElement(ElementName = "userSelectionType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType UserSelectionType { get; set; }
-    [XmlElement(ElementName = "userServiceNameList", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementUserServiceList UserServiceNameList { get; set; }
-    [XmlElement(ElementName = "servicePackNameList", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementServicePackNameList ServicePackNameList { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _taskName;
+
+    [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
+    public string TaskName {
+        get => _taskName;
+        set {
+            TaskNameSpecified = true;
+            _taskName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TaskNameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType _userSelectionType;
+
+    [XmlElement(ElementName = "userSelectionType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType UserSelectionType {
+        get => _userSelectionType;
+        set {
+            UserSelectionTypeSpecified = true;
+            _userSelectionType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserSelectionTypeSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementUserServiceList _userServiceNameList;
+
+    [XmlElement(ElementName = "userServiceNameList", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementUserServiceList UserServiceNameList {
+        get => _userServiceNameList;
+        set {
+            UserServiceNameListSpecified = true;
+            _userServiceNameList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserServiceNameListSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementServicePackNameList _servicePackNameList;
+
+    [XmlElement(ElementName = "servicePackNameList", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementServicePackNameList ServicePackNameList {
+        get => _servicePackNameList;
+        set {
+            ServicePackNameListSpecified = true;
+            _servicePackNameList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServicePackNameListSpecified { get; set; }
+}
 }

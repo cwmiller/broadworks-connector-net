@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAnonymousCallRejectionGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "paiRequired", IsNullable = false)]
-    public bool PaiRequired { get; set; }
-    [XmlElement(ElementName = "screenOnlyLocalCalls", IsNullable = false)]
-    public bool ScreenOnlyLocalCalls { get; set; }
- }
+    private bool _paiRequired;
+
+    [XmlElement(ElementName = "paiRequired", IsNullable = false, Namespace = "")]
+    public bool PaiRequired {
+        get => _paiRequired;
+        set {
+            PaiRequiredSpecified = true;
+            _paiRequired = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PaiRequiredSpecified { get; set; }
+    private bool _screenOnlyLocalCalls;
+
+    [XmlElement(ElementName = "screenOnlyLocalCalls", IsNullable = false, Namespace = "")]
+    public bool ScreenOnlyLocalCalls {
+        get => _screenOnlyLocalCalls;
+        set {
+            ScreenOnlyLocalCallsSpecified = true;
+            _screenOnlyLocalCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScreenOnlyLocalCallsSpecified { get; set; }
+}
 }

@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum AuthenticationMode22{
-    Enabled,
-    Disabled,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum AuthenticationMode22
+    {
+        [XmlEnum(Name = "Enabled")]
+        Enabled,
+        [XmlEnum(Name = "Disabled")]
+        Disabled,
+    }
 }

@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAdviceOfChargeModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false)]
-    public int DelayBetweenNotificationSeconds { get; set; }
-    [XmlElement(ElementName = "incomingAocHandling", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling { get; set; }
-    [XmlElement(ElementName = "costInformationSource", IsNullable = true)]
-    public string CostInformationSource { get; set; }
- }
+    private int _delayBetweenNotificationSeconds;
+
+    [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
+    public int DelayBetweenNotificationSeconds {
+        get => _delayBetweenNotificationSeconds;
+        set {
+            DelayBetweenNotificationSecondsSpecified = true;
+            _delayBetweenNotificationSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DelayBetweenNotificationSecondsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
+
+    [XmlElement(ElementName = "incomingAocHandling", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling {
+        get => _incomingAocHandling;
+        set {
+            IncomingAocHandlingSpecified = true;
+            _incomingAocHandling = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IncomingAocHandlingSpecified { get; set; }
+    private string _costInformationSource;
+
+    [XmlElement(ElementName = "costInformationSource", IsNullable = true, Namespace = "")]
+    public string CostInformationSource {
+        get => _costInformationSource;
+        set {
+            CostInformationSourceSpecified = true;
+            _costInformationSource = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CostInformationSourceSpecified { get; set; }
+}
 }

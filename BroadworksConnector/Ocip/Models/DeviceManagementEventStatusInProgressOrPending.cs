@@ -3,12 +3,19 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum DeviceManagementEventStatusInProgressOrPending{
-    Pending,
-    Queued,
-    InProgress,
-    ProcessOnOtherHost,
-    Stale,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum DeviceManagementEventStatusInProgressOrPending
+    {
+        [XmlEnum(Name = "Pending")]
+        Pending,
+        [XmlEnum(Name = "Queued")]
+        Queued,
+        [XmlEnum(Name = "In Progress")]
+        InProgress,
+        [XmlEnum(Name = "Process On Other Host")]
+        ProcessOnOtherHost,
+        [XmlEnum(Name = "Stale")]
+        Stale,
+    }
 }

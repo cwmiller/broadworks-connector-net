@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementSIPAliasList 
 {
-    [XmlElement(ElementName = "sipAlias", IsNullable = false)]
-    public List<string> SipAlias { get; set; }
- }
+    private List<string> _sipAlias;
+
+    [XmlElement(ElementName = "sipAlias", IsNullable = false, Namespace = "")]
+    public List<string> SipAlias {
+        get => _sipAlias;
+        set {
+            SipAliasSpecified = true;
+            _sipAlias = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SipAliasSpecified { get; set; }
+}
 }

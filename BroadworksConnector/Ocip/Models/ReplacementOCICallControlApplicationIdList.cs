@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementOCICallControlApplicationIdList 
 {
-    [XmlElement(ElementName = "applicationId", IsNullable = false)]
-    public List<string> ApplicationId { get; set; }
- }
+    private List<string> _applicationId;
+
+    [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
+    public List<string> ApplicationId {
+        get => _applicationId;
+        set {
+            ApplicationIdSpecified = true;
+            _applicationId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ApplicationIdSpecified { get; set; }
+}
 }

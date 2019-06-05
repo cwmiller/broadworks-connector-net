@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SortOrderGroupHuntGroupGetAvailableUserPagedSortedList 
 {
-    [XmlElement(ElementName = "sortByUserId", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SortByUserId SortByUserId { get; set; }
-    [XmlElement(ElementName = "sortByUserLastName", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SortByUserLastName SortByUserLastName { get; set; }
-    [XmlElement(ElementName = "sortByUserFirstName", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SortByUserFirstName SortByUserFirstName { get; set; }
-    [XmlElement(ElementName = "sortByDn", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SortByDn SortByDn { get; set; }
-    [XmlElement(ElementName = "sortByExtension", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SortByExtension SortByExtension { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.SortByUserId _sortByUserId;
+
+    [XmlElement(ElementName = "sortByUserId", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SortByUserId SortByUserId {
+        get => _sortByUserId;
+        set {
+            SortByUserIdSpecified = true;
+            _sortByUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SortByUserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
+
+    [XmlElement(ElementName = "sortByUserLastName", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SortByUserLastName SortByUserLastName {
+        get => _sortByUserLastName;
+        set {
+            SortByUserLastNameSpecified = true;
+            _sortByUserLastName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SortByUserLastNameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
+
+    [XmlElement(ElementName = "sortByUserFirstName", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SortByUserFirstName SortByUserFirstName {
+        get => _sortByUserFirstName;
+        set {
+            SortByUserFirstNameSpecified = true;
+            _sortByUserFirstName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SortByUserFirstNameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.SortByDn _sortByDn;
+
+    [XmlElement(ElementName = "sortByDn", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SortByDn SortByDn {
+        get => _sortByDn;
+        set {
+            SortByDnSpecified = true;
+            _sortByDn = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SortByDnSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.SortByExtension _sortByExtension;
+
+    [XmlElement(ElementName = "sortByExtension", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SortByExtension SortByExtension {
+        get => _sortByExtension;
+        set {
+            SortByExtensionSpecified = true;
+            _sortByExtension = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SortByExtensionSpecified { get; set; }
+}
 }

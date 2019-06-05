@@ -1,16 +1,42 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class DialableCallerIDCriteriaPriorityOrder 
-{
-    [XmlElement(ElementName = "criteriaName", IsNullable = false)]
-    public string CriteriaName { get; set; }
-    [XmlElement(ElementName = "priority", IsNullable = false)]
-    public decimal Priority { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class DialableCallerIDCriteriaPriorityOrder
+    {
+        private string _criteriaName;
+
+        [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
+        public string CriteriaName
+        {
+            get => _criteriaName;
+            set
+            {
+                CriteriaNameSpecified = true;
+                _criteriaName = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool CriteriaNameSpecified { get; set; }
+        private decimal _priority;
+
+        [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
+        public decimal Priority
+        {
+            get => _priority;
+            set
+            {
+                PrioritySpecified = true;
+                _priority = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool PrioritySpecified { get; set; }
+    }
 }

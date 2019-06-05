@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSystemVoicePortalGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "systemVoicePortalsTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable SystemVoicePortalsTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _systemVoicePortalsTable;
+
+    [XmlElement(ElementName = "systemVoicePortalsTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable SystemVoicePortalsTable {
+        get => _systemVoicePortalsTable;
+        set {
+            SystemVoicePortalsTableSpecified = true;
+            _systemVoicePortalsTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SystemVoicePortalsTableSpecified { get; set; }
+}
 }

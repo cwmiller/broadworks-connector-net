@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderEnhancedCallLogsModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "maxLoggedCalls", IsNullable = false)]
-    public int MaxLoggedCalls { get; set; }
-    [XmlElement(ElementName = "callExpirationDays", IsNullable = false)]
-    public int CallExpirationDays { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private int _maxLoggedCalls;
+
+    [XmlElement(ElementName = "maxLoggedCalls", IsNullable = false, Namespace = "")]
+    public int MaxLoggedCalls {
+        get => _maxLoggedCalls;
+        set {
+            MaxLoggedCallsSpecified = true;
+            _maxLoggedCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxLoggedCallsSpecified { get; set; }
+    private int _callExpirationDays;
+
+    [XmlElement(ElementName = "callExpirationDays", IsNullable = false, Namespace = "")]
+    public int CallExpirationDays {
+        get => _callExpirationDays;
+        set {
+            CallExpirationDaysSpecified = true;
+            _callExpirationDays = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallExpirationDaysSpecified { get; set; }
+}
 }

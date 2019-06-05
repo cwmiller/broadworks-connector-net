@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupOutgoingCallingPlanTransferNumbersModifyListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "groupNumbers", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify GroupNumbers { get; set; }
-    [XmlElement(ElementName = "departmentNumbers", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify> DepartmentNumbers { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify _groupNumbers;
+
+    [XmlElement(ElementName = "groupNumbers", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify GroupNumbers {
+        get => _groupNumbers;
+        set {
+            GroupNumbersSpecified = true;
+            _groupNumbers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupNumbersSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify> _departmentNumbers;
+
+    [XmlElement(ElementName = "departmentNumbers", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify> DepartmentNumbers {
+        get => _departmentNumbers;
+        set {
+            DepartmentNumbersSpecified = true;
+            _departmentNumbers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentNumbersSpecified { get; set; }
+}
 }

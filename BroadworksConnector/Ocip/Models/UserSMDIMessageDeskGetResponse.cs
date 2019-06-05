@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserSMDIMessageDeskGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "messageDeskNumber", IsNullable = false)]
-    public string MessageDeskNumber { get; set; }
- }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private string _messageDeskNumber;
+
+    [XmlElement(ElementName = "messageDeskNumber", IsNullable = false, Namespace = "")]
+    public string MessageDeskNumber {
+        get => _messageDeskNumber;
+        set {
+            MessageDeskNumberSpecified = true;
+            _messageDeskNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MessageDeskNumberSpecified { get; set; }
+}
 }

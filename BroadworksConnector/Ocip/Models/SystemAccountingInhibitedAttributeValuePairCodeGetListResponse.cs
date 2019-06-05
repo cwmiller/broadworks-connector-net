@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAccountingInhibitedAttributeValuePairCodeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "inhibitedAttributeValuePairCodeTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable InhibitedAttributeValuePairCodeTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _inhibitedAttributeValuePairCodeTable;
+
+    [XmlElement(ElementName = "inhibitedAttributeValuePairCodeTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable InhibitedAttributeValuePairCodeTable {
+        get => _inhibitedAttributeValuePairCodeTable;
+        set {
+            InhibitedAttributeValuePairCodeTableSpecified = true;
+            _inhibitedAttributeValuePairCodeTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InhibitedAttributeValuePairCodeTableSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList 
 {
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public List<string> GroupId { get; set; }
- }
+    private List<string> _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public List<string> GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+}
 }

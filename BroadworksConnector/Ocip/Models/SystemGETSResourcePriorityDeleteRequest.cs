@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGETSResourcePriorityDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "priorityValue", IsNullable = false)]
-    public string PriorityValue { get; set; }
- }
+    private string _priorityValue;
+
+    [XmlElement(ElementName = "priorityValue", IsNullable = false, Namespace = "")]
+    public string PriorityValue {
+        get => _priorityValue;
+        set {
+            PriorityValueSpecified = true;
+            _priorityValue = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PriorityValueSpecified { get; set; }
+}
 }

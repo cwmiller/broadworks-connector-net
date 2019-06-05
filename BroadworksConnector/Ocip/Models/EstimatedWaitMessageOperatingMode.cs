@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum EstimatedWaitMessageOperatingMode{
-    Position,
-    Time,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum EstimatedWaitMessageOperatingMode
+    {
+        [XmlEnum(Name = "Position")]
+        Position,
+        [XmlEnum(Name = "Time")]
+        Time,
+    }
 }

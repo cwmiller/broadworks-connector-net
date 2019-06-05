@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGETSNumberGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "reservedNumberTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ReservedNumberTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _reservedNumberTable;
+
+    [XmlElement(ElementName = "reservedNumberTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ReservedNumberTable {
+        get => _reservedNumberTable;
+        set {
+            ReservedNumberTableSpecified = true;
+            _reservedNumberTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReservedNumberTableSpecified { get; set; }
+}
 }

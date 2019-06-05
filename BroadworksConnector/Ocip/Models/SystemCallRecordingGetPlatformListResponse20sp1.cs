@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallRecordingGetPlatformListResponse20sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "systemDefault", IsNullable = false)]
-    public string SystemDefault { get; set; }
-    [XmlElement(ElementName = "callRecordingPlatformTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CallRecordingPlatformTable { get; set; }
- }
+    private string _systemDefault;
+
+    [XmlElement(ElementName = "systemDefault", IsNullable = false, Namespace = "")]
+    public string SystemDefault {
+        get => _systemDefault;
+        set {
+            SystemDefaultSpecified = true;
+            _systemDefault = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SystemDefaultSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _callRecordingPlatformTable;
+
+    [XmlElement(ElementName = "callRecordingPlatformTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable CallRecordingPlatformTable {
+        get => _callRecordingPlatformTable;
+        set {
+            CallRecordingPlatformTableSpecified = true;
+            _callRecordingPlatformTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallRecordingPlatformTableSpecified { get; set; }
+}
 }

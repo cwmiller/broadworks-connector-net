@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21CallForwardingOptionsMenuKeys 
 {
-    [XmlElement(ElementName = "activateCallForwarding", IsNullable = false)]
-    public string ActivateCallForwarding { get; set; }
-    [XmlElement(ElementName = "deactivateCallForwarding", IsNullable = false)]
-    public string DeactivateCallForwarding { get; set; }
-    [XmlElement(ElementName = "changeCallForwardingDestination", IsNullable = false)]
-    public string ChangeCallForwardingDestination { get; set; }
-    [XmlElement(ElementName = "listenToCallForwardingStatus", IsNullable = false)]
-    public string ListenToCallForwardingStatus { get; set; }
-    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false)]
-    public string ReturnToPreviousMenu { get; set; }
-    [XmlElement(ElementName = "repeatMenu", IsNullable = false)]
-    public string RepeatMenu { get; set; }
- }
+    private string _activateCallForwarding;
+
+    [XmlElement(ElementName = "activateCallForwarding", IsNullable = false, Namespace = "")]
+    public string ActivateCallForwarding {
+        get => _activateCallForwarding;
+        set {
+            ActivateCallForwardingSpecified = true;
+            _activateCallForwarding = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ActivateCallForwardingSpecified { get; set; }
+    private string _deactivateCallForwarding;
+
+    [XmlElement(ElementName = "deactivateCallForwarding", IsNullable = false, Namespace = "")]
+    public string DeactivateCallForwarding {
+        get => _deactivateCallForwarding;
+        set {
+            DeactivateCallForwardingSpecified = true;
+            _deactivateCallForwarding = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeactivateCallForwardingSpecified { get; set; }
+    private string _changeCallForwardingDestination;
+
+    [XmlElement(ElementName = "changeCallForwardingDestination", IsNullable = false, Namespace = "")]
+    public string ChangeCallForwardingDestination {
+        get => _changeCallForwardingDestination;
+        set {
+            ChangeCallForwardingDestinationSpecified = true;
+            _changeCallForwardingDestination = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ChangeCallForwardingDestinationSpecified { get; set; }
+    private string _listenToCallForwardingStatus;
+
+    [XmlElement(ElementName = "listenToCallForwardingStatus", IsNullable = false, Namespace = "")]
+    public string ListenToCallForwardingStatus {
+        get => _listenToCallForwardingStatus;
+        set {
+            ListenToCallForwardingStatusSpecified = true;
+            _listenToCallForwardingStatus = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ListenToCallForwardingStatusSpecified { get; set; }
+    private string _returnToPreviousMenu;
+
+    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
+    public string ReturnToPreviousMenu {
+        get => _returnToPreviousMenu;
+        set {
+            ReturnToPreviousMenuSpecified = true;
+            _returnToPreviousMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReturnToPreviousMenuSpecified { get; set; }
+    private string _repeatMenu;
+
+    [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
+    public string RepeatMenu {
+        get => _repeatMenu;
+        set {
+            RepeatMenuSpecified = true;
+            _repeatMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RepeatMenuSpecified { get; set; }
+}
 }

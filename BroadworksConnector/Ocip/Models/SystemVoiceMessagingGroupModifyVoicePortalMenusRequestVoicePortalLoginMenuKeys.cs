@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestVoicePortalLoginMenuKeys 
 {
-    [XmlElement(ElementName = "accessUsingOtherMailboxId", IsNullable = true)]
-    public string AccessUsingOtherMailboxId { get; set; }
- }
+    private string _accessUsingOtherMailboxId;
+
+    [XmlElement(ElementName = "accessUsingOtherMailboxId", IsNullable = true, Namespace = "")]
+    public string AccessUsingOtherMailboxId {
+        get => _accessUsingOtherMailboxId;
+        set {
+            AccessUsingOtherMailboxIdSpecified = true;
+            _accessUsingOtherMailboxId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessUsingOtherMailboxIdSpecified { get; set; }
+}
 }

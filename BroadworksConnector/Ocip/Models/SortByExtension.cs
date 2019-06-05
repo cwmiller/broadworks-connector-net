@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SortByExtension : BroadworksConnector.Ocip.Models.SortCriteria
 {
- }
+}
 }

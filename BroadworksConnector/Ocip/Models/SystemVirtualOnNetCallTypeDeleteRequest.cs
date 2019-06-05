@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVirtualOnNetCallTypeDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false)]
-    public string VirtualOnNetCallTypeName { get; set; }
- }
+    private string _virtualOnNetCallTypeName;
+
+    [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
+    public string VirtualOnNetCallTypeName {
+        get => _virtualOnNetCallTypeName;
+        set {
+            VirtualOnNetCallTypeNameSpecified = true;
+            _virtualOnNetCallTypeName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VirtualOnNetCallTypeNameSpecified { get; set; }
+}
 }

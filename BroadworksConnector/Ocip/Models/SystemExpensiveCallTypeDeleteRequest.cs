@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemExpensiveCallTypeDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "alternateCallIndicator", IsNullable = false)]
-    public string AlternateCallIndicator { get; set; }
- }
+    private string _alternateCallIndicator;
+
+    [XmlElement(ElementName = "alternateCallIndicator", IsNullable = false, Namespace = "")]
+    public string AlternateCallIndicator {
+        get => _alternateCallIndicator;
+        set {
+            AlternateCallIndicatorSpecified = true;
+            _alternateCallIndicator = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlternateCallIndicatorSpecified { get; set; }
+}
 }

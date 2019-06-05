@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSIPGetContentTypeListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserExecutiveModifyAssistantRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "allowOptInOut", IsNullable = false)]
-    public bool AllowOptInOut { get; set; }
-    [XmlElement(ElementName = "assistantUserIdList", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList AssistantUserIdList { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private bool _allowOptInOut;
+
+    [XmlElement(ElementName = "allowOptInOut", IsNullable = false, Namespace = "")]
+    public bool AllowOptInOut {
+        get => _allowOptInOut;
+        set {
+            AllowOptInOutSpecified = true;
+            _allowOptInOut = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowOptInOutSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _assistantUserIdList;
+
+    [XmlElement(ElementName = "assistantUserIdList", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementUserIdList AssistantUserIdList {
+        get => _assistantUserIdList;
+        set {
+            AssistantUserIdListSpecified = true;
+            _assistantUserIdList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AssistantUserIdListSpecified { get; set; }
+}
 }

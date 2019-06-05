@@ -8,29 +8,161 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCallCenterHolidayServiceGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "action", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterScheduledServiceAction Action { get; set; }
-    [XmlElement(ElementName = "holidaySchedule", IsNullable = false)]
-    public string HolidaySchedule { get; set; }
-    [XmlElement(ElementName = "transferPhoneNumber", IsNullable = false)]
-    public string TransferPhoneNumber { get; set; }
-    [XmlElement(ElementName = "playAnnouncementBeforeAction", IsNullable = false)]
-    public bool PlayAnnouncementBeforeAction { get; set; }
-    [XmlElement(ElementName = "audioMessageSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection { get; set; }
-    [XmlElement(ElementName = "audioFileUrl", IsNullable = false)]
-    public string AudioFileUrl { get; set; }
-    [XmlElement(ElementName = "audioFileDescription", IsNullable = false)]
-    public string AudioFileDescription { get; set; }
-    [XmlElement(ElementName = "audioMediaType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MediaFileType AudioMediaType { get; set; }
-    [XmlElement(ElementName = "videoMessageSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection { get; set; }
-    [XmlElement(ElementName = "videoFileUrl", IsNullable = false)]
-    public string VideoFileUrl { get; set; }
-    [XmlElement(ElementName = "videoFileDescription", IsNullable = false)]
-    public string VideoFileDescription { get; set; }
-    [XmlElement(ElementName = "videoMediaType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MediaFileType VideoMediaType { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.CallCenterScheduledServiceAction _action;
+
+    [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallCenterScheduledServiceAction Action {
+        get => _action;
+        set {
+            ActionSpecified = true;
+            _action = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ActionSpecified { get; set; }
+    private string _holidaySchedule;
+
+    [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
+    public string HolidaySchedule {
+        get => _holidaySchedule;
+        set {
+            HolidayScheduleSpecified = true;
+            _holidaySchedule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HolidayScheduleSpecified { get; set; }
+    private string _transferPhoneNumber;
+
+    [XmlElement(ElementName = "transferPhoneNumber", IsNullable = false, Namespace = "")]
+    public string TransferPhoneNumber {
+        get => _transferPhoneNumber;
+        set {
+            TransferPhoneNumberSpecified = true;
+            _transferPhoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TransferPhoneNumberSpecified { get; set; }
+    private bool _playAnnouncementBeforeAction;
+
+    [XmlElement(ElementName = "playAnnouncementBeforeAction", IsNullable = false, Namespace = "")]
+    public bool PlayAnnouncementBeforeAction {
+        get => _playAnnouncementBeforeAction;
+        set {
+            PlayAnnouncementBeforeActionSpecified = true;
+            _playAnnouncementBeforeAction = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PlayAnnouncementBeforeActionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
+
+    [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection {
+        get => _audioMessageSelection;
+        set {
+            AudioMessageSelectionSpecified = true;
+            _audioMessageSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioMessageSelectionSpecified { get; set; }
+    private string _audioFileUrl;
+
+    [XmlElement(ElementName = "audioFileUrl", IsNullable = false, Namespace = "")]
+    public string AudioFileUrl {
+        get => _audioFileUrl;
+        set {
+            AudioFileUrlSpecified = true;
+            _audioFileUrl = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioFileUrlSpecified { get; set; }
+    private string _audioFileDescription;
+
+    [XmlElement(ElementName = "audioFileDescription", IsNullable = false, Namespace = "")]
+    public string AudioFileDescription {
+        get => _audioFileDescription;
+        set {
+            AudioFileDescriptionSpecified = true;
+            _audioFileDescription = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioFileDescriptionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MediaFileType _audioMediaType;
+
+    [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MediaFileType AudioMediaType {
+        get => _audioMediaType;
+        set {
+            AudioMediaTypeSpecified = true;
+            _audioMediaType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioMediaTypeSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
+
+    [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection {
+        get => _videoMessageSelection;
+        set {
+            VideoMessageSelectionSpecified = true;
+            _videoMessageSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoMessageSelectionSpecified { get; set; }
+    private string _videoFileUrl;
+
+    [XmlElement(ElementName = "videoFileUrl", IsNullable = false, Namespace = "")]
+    public string VideoFileUrl {
+        get => _videoFileUrl;
+        set {
+            VideoFileUrlSpecified = true;
+            _videoFileUrl = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoFileUrlSpecified { get; set; }
+    private string _videoFileDescription;
+
+    [XmlElement(ElementName = "videoFileDescription", IsNullable = false, Namespace = "")]
+    public string VideoFileDescription {
+        get => _videoFileDescription;
+        set {
+            VideoFileDescriptionSpecified = true;
+            _videoFileDescription = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoFileDescriptionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MediaFileType _videoMediaType;
+
+    [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MediaFileType VideoMediaType {
+        get => _videoMediaType;
+        set {
+            VideoMediaTypeSpecified = true;
+            _videoMediaType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoMediaTypeSpecified { get; set; }
+}
 }

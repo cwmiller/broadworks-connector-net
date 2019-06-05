@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderDeviceManagementGetAccessDeviceCountForDeviceTypeServiceProviderResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "accessDeviceCount", IsNullable = false)]
-    public int AccessDeviceCount { get; set; }
- }
+    private int _accessDeviceCount;
+
+    [XmlElement(ElementName = "accessDeviceCount", IsNullable = false, Namespace = "")]
+    public int AccessDeviceCount {
+        get => _accessDeviceCount;
+        set {
+            AccessDeviceCountSpecified = true;
+            _accessDeviceCount = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessDeviceCountSpecified { get; set; }
+}
 }

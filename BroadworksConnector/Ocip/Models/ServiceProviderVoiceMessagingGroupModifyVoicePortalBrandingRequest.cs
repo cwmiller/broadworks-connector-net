@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderVoiceMessagingGroupModifyVoicePortalBrandingRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "voicePortalGreetingSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoicePortalGreetingSelection { get; set; }
-    [XmlElement(ElementName = "voicePortalGreetingFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource VoicePortalGreetingFile { get; set; }
-    [XmlElement(ElementName = "voiceMessagingGreetingSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoiceMessagingGreetingSelection { get; set; }
-    [XmlElement(ElementName = "voiceMessagingGreetingFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource VoiceMessagingGreetingFile { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voicePortalGreetingSelection;
+
+    [XmlElement(ElementName = "voicePortalGreetingSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoicePortalGreetingSelection {
+        get => _voicePortalGreetingSelection;
+        set {
+            VoicePortalGreetingSelectionSpecified = true;
+            _voicePortalGreetingSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VoicePortalGreetingSelectionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.LabeledFileResource _voicePortalGreetingFile;
+
+    [XmlElement(ElementName = "voicePortalGreetingFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.LabeledFileResource VoicePortalGreetingFile {
+        get => _voicePortalGreetingFile;
+        set {
+            VoicePortalGreetingFileSpecified = true;
+            _voicePortalGreetingFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VoicePortalGreetingFileSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voiceMessagingGreetingSelection;
+
+    [XmlElement(ElementName = "voiceMessagingGreetingSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoiceMessagingGreetingSelection {
+        get => _voiceMessagingGreetingSelection;
+        set {
+            VoiceMessagingGreetingSelectionSpecified = true;
+            _voiceMessagingGreetingSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VoiceMessagingGreetingSelectionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.LabeledFileResource _voiceMessagingGreetingFile;
+
+    [XmlElement(ElementName = "voiceMessagingGreetingFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.LabeledFileResource VoiceMessagingGreetingFile {
+        get => _voiceMessagingGreetingFile;
+        set {
+            VoiceMessagingGreetingFileSpecified = true;
+            _voiceMessagingGreetingFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VoiceMessagingGreetingFileSpecified { get; set; }
+}
 }

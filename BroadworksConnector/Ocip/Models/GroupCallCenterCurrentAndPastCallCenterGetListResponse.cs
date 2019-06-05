@@ -1,16 +1,42 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupCallCenterCurrentAndPastCallCenterGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-{
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public List<string> ServiceUserId { get; set; }
-    [XmlElement(ElementName = "deletedServiceUserId", IsNullable = false)]
-    public List<string> DeletedServiceUserId { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class GroupCallCenterCurrentAndPastCallCenterGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+    {
+        private List<string> _serviceUserId;
+
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        public List<string> ServiceUserId
+        {
+            get => _serviceUserId;
+            set
+            {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ServiceUserIdSpecified { get; set; }
+        private List<string> _deletedServiceUserId;
+
+        [XmlElement(ElementName = "deletedServiceUserId", IsNullable = false, Namespace = "")]
+        public List<string> DeletedServiceUserId
+        {
+            get => _deletedServiceUserId;
+            set
+            {
+                DeletedServiceUserIdSpecified = true;
+                _deletedServiceUserId = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool DeletedServiceUserIdSpecified { get; set; }
+    }
 }

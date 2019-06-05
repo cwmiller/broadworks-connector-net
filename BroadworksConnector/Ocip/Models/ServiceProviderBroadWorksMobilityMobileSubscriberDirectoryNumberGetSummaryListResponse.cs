@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberGetSummaryListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "mobileSubscriberDirectoryNumbersSummaryTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable MobileSubscriberDirectoryNumbersSummaryTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _mobileSubscriberDirectoryNumbersSummaryTable;
+
+    [XmlElement(ElementName = "mobileSubscriberDirectoryNumbersSummaryTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable MobileSubscriberDirectoryNumbersSummaryTable {
+        get => _mobileSubscriberDirectoryNumbersSummaryTable;
+        set {
+            MobileSubscriberDirectoryNumbersSummaryTableSpecified = true;
+            _mobileSubscriberDirectoryNumbersSummaryTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MobileSubscriberDirectoryNumbersSummaryTableSpecified { get; set; }
+}
 }

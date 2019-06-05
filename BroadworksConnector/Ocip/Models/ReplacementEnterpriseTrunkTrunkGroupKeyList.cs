@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementEnterpriseTrunkTrunkGroupKeyList 
 {
-    [XmlElement(ElementName = "trunkGroupList", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey> TrunkGroupList { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey> _trunkGroupList;
+
+    [XmlElement(ElementName = "trunkGroupList", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey> TrunkGroupList {
+        get => _trunkGroupList;
+        set {
+            TrunkGroupListSpecified = true;
+            _trunkGroupList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TrunkGroupListSpecified { get; set; }
+}
 }

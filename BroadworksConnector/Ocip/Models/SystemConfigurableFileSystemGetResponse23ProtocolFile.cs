@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemConfigurableFileSystemGetResponse23ProtocolFile 
 {
-    [XmlElement(ElementName = "replicated", IsNullable = false)]
-    public bool Replicated { get; set; }
- }
+    private bool _replicated;
+
+    [XmlElement(ElementName = "replicated", IsNullable = false, Namespace = "")]
+    public bool Replicated {
+        get => _replicated;
+        set {
+            ReplicatedSpecified = true;
+            _replicated = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReplicatedSpecified { get; set; }
+}
 }

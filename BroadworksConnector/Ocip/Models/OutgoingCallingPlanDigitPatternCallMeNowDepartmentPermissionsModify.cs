@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class OutgoingCallingPlanDigitPatternCallMeNowDepartmentPermissionsModify 
 {
-    [XmlElement(ElementName = "departmentKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey { get; set; }
-    [XmlElement(ElementName = "digitPatternPermissions", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions DigitPatternPermissions { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.DepartmentKey _departmentKey;
+
+    [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+        get => _departmentKey;
+        set {
+            DepartmentKeySpecified = true;
+            _departmentKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentKeySpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions _digitPatternPermissions;
+
+    [XmlElement(ElementName = "digitPatternPermissions", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions DigitPatternPermissions {
+        get => _digitPatternPermissions;
+        set {
+            DigitPatternPermissionsSpecified = true;
+            _digitPatternPermissions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DigitPatternPermissionsSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class MusicOnHoldSourceReadCustomSource 
 {
-    [XmlElement(ElementName = "audioFileDescription", IsNullable = false)]
-    public string AudioFileDescription { get; set; }
-    [XmlElement(ElementName = "videoFileDescription", IsNullable = false)]
-    public string VideoFileDescription { get; set; }
- }
+    private string _audioFileDescription;
+
+    [XmlElement(ElementName = "audioFileDescription", IsNullable = false, Namespace = "")]
+    public string AudioFileDescription {
+        get => _audioFileDescription;
+        set {
+            AudioFileDescriptionSpecified = true;
+            _audioFileDescription = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioFileDescriptionSpecified { get; set; }
+    private string _videoFileDescription;
+
+    [XmlElement(ElementName = "videoFileDescription", IsNullable = false, Namespace = "")]
+    public string VideoFileDescription {
+        get => _videoFileDescription;
+        set {
+            VideoFileDescriptionSpecified = true;
+            _videoFileDescription = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoFileDescriptionSpecified { get; set; }
+}
 }

@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum GroupAdminEnhancedServiceInstanceAccess{
-    Full,
-    ModifyOnly,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum GroupAdminEnhancedServiceInstanceAccess
+    {
+        [XmlEnum(Name = "Full")]
+        Full,
+        [XmlEnum(Name = "Modify-Only")]
+        ModifyOnly,
+    }
 }

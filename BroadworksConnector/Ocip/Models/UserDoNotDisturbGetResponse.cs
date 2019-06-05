@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserDoNotDisturbGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "ringSplash", IsNullable = false)]
-    public bool RingSplash { get; set; }
- }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private bool _ringSplash;
+
+    [XmlElement(ElementName = "ringSplash", IsNullable = false, Namespace = "")]
+    public bool RingSplash {
+        get => _ringSplash;
+        set {
+            RingSplashSpecified = true;
+            _ringSplash = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RingSplashSpecified { get; set; }
+}
 }

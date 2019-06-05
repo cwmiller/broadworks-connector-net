@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemServicePhoneNumberLookupRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.NumberLookupServiceType ServiceType { get; set; }
-    [XmlElement(ElementName = "phoneNumber", IsNullable = false)]
-    public string PhoneNumber { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.NumberLookupServiceType _serviceType;
+
+    [XmlElement(ElementName = "serviceType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.NumberLookupServiceType ServiceType {
+        get => _serviceType;
+        set {
+            ServiceTypeSpecified = true;
+            _serviceType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceTypeSpecified { get; set; }
+    private string _phoneNumber;
+
+    [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
+    public string PhoneNumber {
+        get => _phoneNumber;
+        set {
+            PhoneNumberSpecified = true;
+            _phoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PhoneNumberSpecified { get; set; }
+}
 }

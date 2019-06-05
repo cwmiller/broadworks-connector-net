@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCommunicationBarringUserControlGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "lockoutStatus", IsNullable = false)]
-    public bool LockoutStatus { get; set; }
-    [XmlElement(ElementName = "profileTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ProfileTable { get; set; }
- }
+    private bool _lockoutStatus;
+
+    [XmlElement(ElementName = "lockoutStatus", IsNullable = false, Namespace = "")]
+    public bool LockoutStatus {
+        get => _lockoutStatus;
+        set {
+            LockoutStatusSpecified = true;
+            _lockoutStatus = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LockoutStatusSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _profileTable;
+
+    [XmlElement(ElementName = "profileTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ProfileTable {
+        get => _profileTable;
+        set {
+            ProfileTableSpecified = true;
+            _profileTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProfileTableSpecified { get; set; }
+}
 }

@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPersonalAssistantGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "presence", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.PersonalAssistantPresence Presence { get; set; }
-    [XmlElement(ElementName = "enableTransferToAttendant", IsNullable = false)]
-    public bool EnableTransferToAttendant { get; set; }
-    [XmlElement(ElementName = "attendantNumber", IsNullable = false)]
-    public string AttendantNumber { get; set; }
-    [XmlElement(ElementName = "enableRingSplash", IsNullable = false)]
-    public bool EnableRingSplash { get; set; }
-    [XmlElement(ElementName = "enableExpirationTime", IsNullable = false)]
-    public bool EnableExpirationTime { get; set; }
-    [XmlElement(ElementName = "expirationTime", IsNullable = false)]
-    public string ExpirationTime { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.PersonalAssistantPresence _presence;
+
+    [XmlElement(ElementName = "presence", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.PersonalAssistantPresence Presence {
+        get => _presence;
+        set {
+            PresenceSpecified = true;
+            _presence = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PresenceSpecified { get; set; }
+    private bool _enableTransferToAttendant;
+
+    [XmlElement(ElementName = "enableTransferToAttendant", IsNullable = false, Namespace = "")]
+    public bool EnableTransferToAttendant {
+        get => _enableTransferToAttendant;
+        set {
+            EnableTransferToAttendantSpecified = true;
+            _enableTransferToAttendant = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableTransferToAttendantSpecified { get; set; }
+    private string _attendantNumber;
+
+    [XmlElement(ElementName = "attendantNumber", IsNullable = false, Namespace = "")]
+    public string AttendantNumber {
+        get => _attendantNumber;
+        set {
+            AttendantNumberSpecified = true;
+            _attendantNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AttendantNumberSpecified { get; set; }
+    private bool _enableRingSplash;
+
+    [XmlElement(ElementName = "enableRingSplash", IsNullable = false, Namespace = "")]
+    public bool EnableRingSplash {
+        get => _enableRingSplash;
+        set {
+            EnableRingSplashSpecified = true;
+            _enableRingSplash = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableRingSplashSpecified { get; set; }
+    private bool _enableExpirationTime;
+
+    [XmlElement(ElementName = "enableExpirationTime", IsNullable = false, Namespace = "")]
+    public bool EnableExpirationTime {
+        get => _enableExpirationTime;
+        set {
+            EnableExpirationTimeSpecified = true;
+            _enableExpirationTime = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableExpirationTimeSpecified { get; set; }
+    private string _expirationTime;
+
+    [XmlElement(ElementName = "expirationTime", IsNullable = false, Namespace = "")]
+    public string ExpirationTime {
+        get => _expirationTime;
+        set {
+            ExpirationTimeSpecified = true;
+            _expirationTime = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExpirationTimeSpecified { get; set; }
+}
 }

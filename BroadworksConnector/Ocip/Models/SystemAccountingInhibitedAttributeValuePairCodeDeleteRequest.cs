@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAccountingInhibitedAttributeValuePairCodeDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "attributeValuePairCode", IsNullable = false)]
-    public int AttributeValuePairCode { get; set; }
-    [XmlElement(ElementName = "vendorId", IsNullable = false)]
-    public int VendorId { get; set; }
- }
+    private int _attributeValuePairCode;
+
+    [XmlElement(ElementName = "attributeValuePairCode", IsNullable = false, Namespace = "")]
+    public int AttributeValuePairCode {
+        get => _attributeValuePairCode;
+        set {
+            AttributeValuePairCodeSpecified = true;
+            _attributeValuePairCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AttributeValuePairCodeSpecified { get; set; }
+    private int _vendorId;
+
+    [XmlElement(ElementName = "vendorId", IsNullable = false, Namespace = "")]
+    public int VendorId {
+        get => _vendorId;
+        set {
+            VendorIdSpecified = true;
+            _vendorId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VendorIdSpecified { get; set; }
+}
 }

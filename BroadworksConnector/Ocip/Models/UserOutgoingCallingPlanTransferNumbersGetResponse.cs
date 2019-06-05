@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserOutgoingCallingPlanTransferNumbersGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "useCustomSettings", IsNullable = false)]
-    public bool UseCustomSettings { get; set; }
-    [XmlElement(ElementName = "userNumbers", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers UserNumbers { get; set; }
- }
+    private bool _useCustomSettings;
+
+    [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
+    public bool UseCustomSettings {
+        get => _useCustomSettings;
+        set {
+            UseCustomSettingsSpecified = true;
+            _useCustomSettings = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseCustomSettingsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers _userNumbers;
+
+    [XmlElement(ElementName = "userNumbers", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers UserNumbers {
+        get => _userNumbers;
+        set {
+            UserNumbersSpecified = true;
+            _userNumbers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserNumbersSpecified { get; set; }
+}
 }

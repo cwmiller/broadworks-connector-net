@@ -3,10 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum DeviceAccessProtocol{
-    Http,
-    Https,
-    FTP,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum DeviceAccessProtocol
+    {
+        [XmlEnum(Name = "Http")]
+        Http,
+        [XmlEnum(Name = "Https")]
+        Https,
+        [XmlEnum(Name = "FTP")]
+        FTP,
+    }
 }

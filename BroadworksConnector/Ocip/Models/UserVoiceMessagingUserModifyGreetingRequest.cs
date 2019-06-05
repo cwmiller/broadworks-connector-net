@@ -8,27 +8,148 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserVoiceMessagingUserModifyGreetingRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "busyAnnouncementSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AnnouncementSelection BusyAnnouncementSelection { get; set; }
-    [XmlElement(ElementName = "busyPersonalAudioFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource BusyPersonalAudioFile { get; set; }
-    [XmlElement(ElementName = "busyPersonalVideoFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource BusyPersonalVideoFile { get; set; }
-    [XmlElement(ElementName = "noAnswerAnnouncementSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection NoAnswerAnnouncementSelection { get; set; }
-    [XmlElement(ElementName = "noAnswerPersonalAudioFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource NoAnswerPersonalAudioFile { get; set; }
-    [XmlElement(ElementName = "noAnswerPersonalVideoFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource NoAnswerPersonalVideoFile { get; set; }
-    [XmlElement(ElementName = "noAnswerAlternateGreeting01", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify NoAnswerAlternateGreeting01 { get; set; }
-    [XmlElement(ElementName = "noAnswerAlternateGreeting02", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify NoAnswerAlternateGreeting02 { get; set; }
-    [XmlElement(ElementName = "noAnswerAlternateGreeting03", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify NoAnswerAlternateGreeting03 { get; set; }
-    [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingNumberOfRings NoAnswerNumberOfRings { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.AnnouncementSelection _busyAnnouncementSelection;
+
+    [XmlElement(ElementName = "busyAnnouncementSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AnnouncementSelection BusyAnnouncementSelection {
+        get => _busyAnnouncementSelection;
+        set {
+            BusyAnnouncementSelectionSpecified = true;
+            _busyAnnouncementSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool BusyAnnouncementSelectionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.LabeledFileResource _busyPersonalAudioFile;
+
+    [XmlElement(ElementName = "busyPersonalAudioFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.LabeledFileResource BusyPersonalAudioFile {
+        get => _busyPersonalAudioFile;
+        set {
+            BusyPersonalAudioFileSpecified = true;
+            _busyPersonalAudioFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool BusyPersonalAudioFileSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.LabeledFileResource _busyPersonalVideoFile;
+
+    [XmlElement(ElementName = "busyPersonalVideoFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.LabeledFileResource BusyPersonalVideoFile {
+        get => _busyPersonalVideoFile;
+        set {
+            BusyPersonalVideoFileSpecified = true;
+            _busyPersonalVideoFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool BusyPersonalVideoFileSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection _noAnswerAnnouncementSelection;
+
+    [XmlElement(ElementName = "noAnswerAnnouncementSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection NoAnswerAnnouncementSelection {
+        get => _noAnswerAnnouncementSelection;
+        set {
+            NoAnswerAnnouncementSelectionSpecified = true;
+            _noAnswerAnnouncementSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NoAnswerAnnouncementSelectionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.LabeledFileResource _noAnswerPersonalAudioFile;
+
+    [XmlElement(ElementName = "noAnswerPersonalAudioFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.LabeledFileResource NoAnswerPersonalAudioFile {
+        get => _noAnswerPersonalAudioFile;
+        set {
+            NoAnswerPersonalAudioFileSpecified = true;
+            _noAnswerPersonalAudioFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NoAnswerPersonalAudioFileSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.LabeledFileResource _noAnswerPersonalVideoFile;
+
+    [XmlElement(ElementName = "noAnswerPersonalVideoFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.LabeledFileResource NoAnswerPersonalVideoFile {
+        get => _noAnswerPersonalVideoFile;
+        set {
+            NoAnswerPersonalVideoFileSpecified = true;
+            _noAnswerPersonalVideoFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NoAnswerPersonalVideoFileSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify _noAnswerAlternateGreeting01;
+
+    [XmlElement(ElementName = "noAnswerAlternateGreeting01", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify NoAnswerAlternateGreeting01 {
+        get => _noAnswerAlternateGreeting01;
+        set {
+            NoAnswerAlternateGreeting01Specified = true;
+            _noAnswerAlternateGreeting01 = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NoAnswerAlternateGreeting01Specified { get; set; }
+    private BroadworksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify _noAnswerAlternateGreeting02;
+
+    [XmlElement(ElementName = "noAnswerAlternateGreeting02", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify NoAnswerAlternateGreeting02 {
+        get => _noAnswerAlternateGreeting02;
+        set {
+            NoAnswerAlternateGreeting02Specified = true;
+            _noAnswerAlternateGreeting02 = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NoAnswerAlternateGreeting02Specified { get; set; }
+    private BroadworksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify _noAnswerAlternateGreeting03;
+
+    [XmlElement(ElementName = "noAnswerAlternateGreeting03", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify NoAnswerAlternateGreeting03 {
+        get => _noAnswerAlternateGreeting03;
+        set {
+            NoAnswerAlternateGreeting03Specified = true;
+            _noAnswerAlternateGreeting03 = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NoAnswerAlternateGreeting03Specified { get; set; }
+    private BroadworksConnector.Ocip.Models.VoiceMessagingNumberOfRings _noAnswerNumberOfRings;
+
+    [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.VoiceMessagingNumberOfRings NoAnswerNumberOfRings {
+        get => _noAnswerNumberOfRings;
+        set {
+            NoAnswerNumberOfRingsSpecified = true;
+            _noAnswerNumberOfRings = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NoAnswerNumberOfRingsSpecified { get; set; }
+}
 }

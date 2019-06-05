@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAccountingAddChargingFunctionElementServerRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "address", IsNullable = false)]
-    public string Address { get; set; }
-    [XmlElement(ElementName = "isNetAddressExtended", IsNullable = false)]
-    public bool IsNetAddressExtended { get; set; }
-    [XmlElement(ElementName = "type", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ChargingFunctionElementServerType Type { get; set; }
-    [XmlElement(ElementName = "description", IsNullable = false)]
-    public string Description { get; set; }
- }
+    private string _address;
+
+    [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
+    public string Address {
+        get => _address;
+        set {
+            AddressSpecified = true;
+            _address = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AddressSpecified { get; set; }
+    private bool _isNetAddressExtended;
+
+    [XmlElement(ElementName = "isNetAddressExtended", IsNullable = false, Namespace = "")]
+    public bool IsNetAddressExtended {
+        get => _isNetAddressExtended;
+        set {
+            IsNetAddressExtendedSpecified = true;
+            _isNetAddressExtended = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsNetAddressExtendedSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ChargingFunctionElementServerType _type;
+
+    [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ChargingFunctionElementServerType Type {
+        get => _type;
+        set {
+            TypeSpecified = true;
+            _type = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TypeSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+}
 }

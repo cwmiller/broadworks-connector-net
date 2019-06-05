@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemInterceptUserAddDnListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "interceptDNList", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.InterceptDNListEntry> InterceptDNList { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.InterceptDNListEntry> _interceptDNList;
+
+    [XmlElement(ElementName = "interceptDNList", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.InterceptDNListEntry> InterceptDNList {
+        get => _interceptDNList;
+        set {
+            InterceptDNListSpecified = true;
+            _interceptDNList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InterceptDNListSpecified { get; set; }
+}
 }

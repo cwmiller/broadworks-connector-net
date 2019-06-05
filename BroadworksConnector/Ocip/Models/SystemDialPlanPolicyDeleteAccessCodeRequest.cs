@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDialPlanPolicyDeleteAccessCodeRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "accessCode", IsNullable = false)]
-    public string AccessCode { get; set; }
- }
+    private string _accessCode;
+
+    [XmlElement(ElementName = "accessCode", IsNullable = false, Namespace = "")]
+    public string AccessCode {
+        get => _accessCode;
+        set {
+            AccessCodeSpecified = true;
+            _accessCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessCodeSpecified { get; set; }
+}
 }

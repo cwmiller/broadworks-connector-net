@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSIPAuthenticationTrunkGroupLockoutGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false)]
-    public int ResponseSizeLimit { get; set; }
-    [XmlElement(ElementName = "searchCriteriaServiceProviderId", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId { get; set; }
-    [XmlElement(ElementName = "searchCriteriaExactOrganizationType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactOrganizationType SearchCriteriaExactOrganizationType { get; set; }
-    [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId { get; set; }
-    [XmlElement(ElementName = "searchCriteriaTrunkGroupName", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaTrunkGroupName> SearchCriteriaTrunkGroupName { get; set; }
- }
+    private int _responseSizeLimit;
+
+    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
+    public int ResponseSizeLimit {
+        get => _responseSizeLimit;
+        set {
+            ResponseSizeLimitSpecified = true;
+            _responseSizeLimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResponseSizeLimitSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceProviderId> _searchCriteriaServiceProviderId;
+
+    [XmlElement(ElementName = "searchCriteriaServiceProviderId", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId {
+        get => _searchCriteriaServiceProviderId;
+        set {
+            SearchCriteriaServiceProviderIdSpecified = true;
+            _searchCriteriaServiceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaServiceProviderIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.SearchCriteriaExactOrganizationType _searchCriteriaExactOrganizationType;
+
+    [XmlElement(ElementName = "searchCriteriaExactOrganizationType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SearchCriteriaExactOrganizationType SearchCriteriaExactOrganizationType {
+        get => _searchCriteriaExactOrganizationType;
+        set {
+            SearchCriteriaExactOrganizationTypeSpecified = true;
+            _searchCriteriaExactOrganizationType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaExactOrganizationTypeSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId;
+
+    [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId {
+        get => _searchCriteriaGroupId;
+        set {
+            SearchCriteriaGroupIdSpecified = true;
+            _searchCriteriaGroupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaGroupIdSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaTrunkGroupName> _searchCriteriaTrunkGroupName;
+
+    [XmlElement(ElementName = "searchCriteriaTrunkGroupName", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaTrunkGroupName> SearchCriteriaTrunkGroupName {
+        get => _searchCriteriaTrunkGroupName;
+        set {
+            SearchCriteriaTrunkGroupNameSpecified = true;
+            _searchCriteriaTrunkGroupName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaTrunkGroupNameSpecified { get; set; }
+}
 }

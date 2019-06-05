@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ScheduleGlobalKey 
 {
-    [XmlElement(ElementName = "scheduleKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ScheduleKey ScheduleKey { get; set; }
-    [XmlElement(ElementName = "scheduleLevel", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ScheduleLevel ScheduleLevel { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.ScheduleKey _scheduleKey;
+
+    [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ScheduleKey ScheduleKey {
+        get => _scheduleKey;
+        set {
+            ScheduleKeySpecified = true;
+            _scheduleKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScheduleKeySpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ScheduleLevel _scheduleLevel;
+
+    [XmlElement(ElementName = "scheduleLevel", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ScheduleLevel ScheduleLevel {
+        get => _scheduleLevel;
+        set {
+            ScheduleLevelSpecified = true;
+            _scheduleLevel = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScheduleLevelSpecified { get; set; }
+}
 }

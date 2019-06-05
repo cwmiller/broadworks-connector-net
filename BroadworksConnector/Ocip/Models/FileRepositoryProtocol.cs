@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum FileRepositoryProtocol{
-    WebDAV,
-    FTP,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum FileRepositoryProtocol
+    {
+        [XmlEnum(Name = "WebDAV")]
+        WebDAV,
+        [XmlEnum(Name = "FTP")]
+        FTP,
+    }
 }

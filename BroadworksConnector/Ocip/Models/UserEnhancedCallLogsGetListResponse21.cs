@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserEnhancedCallLogsGetListResponse21 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false)]
-    public int TotalNumberOfRows { get; set; }
-    [XmlElement(ElementName = "legacyEntry", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse21LegacyEntry LegacyEntry { get; set; }
-    [XmlElement(ElementName = "extendedEntry", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse21ExtendedEntry ExtendedEntry { get; set; }
- }
+    private int _totalNumberOfRows;
+
+    [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
+    public int TotalNumberOfRows {
+        get => _totalNumberOfRows;
+        set {
+            TotalNumberOfRowsSpecified = true;
+            _totalNumberOfRows = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TotalNumberOfRowsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse21LegacyEntry _legacyEntry;
+
+    [XmlElement(ElementName = "legacyEntry", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse21LegacyEntry LegacyEntry {
+        get => _legacyEntry;
+        set {
+            LegacyEntrySpecified = true;
+            _legacyEntry = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LegacyEntrySpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse21ExtendedEntry _extendedEntry;
+
+    [XmlElement(ElementName = "extendedEntry", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse21ExtendedEntry ExtendedEntry {
+        get => _extendedEntry;
+        set {
+            ExtendedEntrySpecified = true;
+            _extendedEntry = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExtendedEntrySpecified { get; set; }
+}
 }

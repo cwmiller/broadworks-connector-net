@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class OcpCallTypeEntry 
 {
-    [XmlElement(ElementName = "countryCode", IsNullable = false)]
-    public string CountryCode { get; set; }
-    [XmlElement(ElementName = "digitMap", IsNullable = false)]
-    public string DigitMap { get; set; }
-    [XmlElement(ElementName = "callType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanCallType CallType { get; set; }
- }
+    private string _countryCode;
+
+    [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
+    public string CountryCode {
+        get => _countryCode;
+        set {
+            CountryCodeSpecified = true;
+            _countryCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CountryCodeSpecified { get; set; }
+    private string _digitMap;
+
+    [XmlElement(ElementName = "digitMap", IsNullable = false, Namespace = "")]
+    public string DigitMap {
+        get => _digitMap;
+        set {
+            DigitMapSpecified = true;
+            _digitMap = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DigitMapSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanCallType _callType;
+
+    [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanCallType CallType {
+        get => _callType;
+        set {
+            CallTypeSpecified = true;
+            _callType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallTypeSpecified { get; set; }
+}
 }

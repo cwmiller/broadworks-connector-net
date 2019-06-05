@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserSecurityClassificationGetResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "securityClassification", IsNullable = false)]
-    public string SecurityClassification { get; set; }
-    [XmlElement(ElementName = "customizedSecurityClassification", IsNullable = false)]
-    public string CustomizedSecurityClassification { get; set; }
- }
+    private string _securityClassification;
+
+    [XmlElement(ElementName = "securityClassification", IsNullable = false, Namespace = "")]
+    public string SecurityClassification {
+        get => _securityClassification;
+        set {
+            SecurityClassificationSpecified = true;
+            _securityClassification = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SecurityClassificationSpecified { get; set; }
+    private string _customizedSecurityClassification;
+
+    [XmlElement(ElementName = "customizedSecurityClassification", IsNullable = false, Namespace = "")]
+    public string CustomizedSecurityClassification {
+        get => _customizedSecurityClassification;
+        set {
+            CustomizedSecurityClassificationSpecified = true;
+            _customizedSecurityClassification = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CustomizedSecurityClassificationSpecified { get; set; }
+}
 }

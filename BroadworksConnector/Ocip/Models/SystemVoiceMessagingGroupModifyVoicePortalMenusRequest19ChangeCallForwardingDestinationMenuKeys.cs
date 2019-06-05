@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeCallForwardingDestinationMenuKeys 
 {
-    [XmlElement(ElementName = "finishEnteringNewDestinationNumber", IsNullable = false)]
-    public string FinishEnteringNewDestinationNumber { get; set; }
- }
+    private string _finishEnteringNewDestinationNumber;
+
+    [XmlElement(ElementName = "finishEnteringNewDestinationNumber", IsNullable = false, Namespace = "")]
+    public string FinishEnteringNewDestinationNumber {
+        get => _finishEnteringNewDestinationNumber;
+        set {
+            FinishEnteringNewDestinationNumberSpecified = true;
+            _finishEnteringNewDestinationNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FinishEnteringNewDestinationNumberSpecified { get; set; }
+}
 }

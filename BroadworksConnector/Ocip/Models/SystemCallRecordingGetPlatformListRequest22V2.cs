@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallRecordingGetPlatformListRequest22V2 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "excludeReseller", IsNullable = false)]
-    public bool ExcludeReseller { get; set; }
-    [XmlElement(ElementName = "resellerId", IsNullable = false)]
-    public string ResellerId { get; set; }
- }
+    private bool _excludeReseller;
+
+    [XmlElement(ElementName = "excludeReseller", IsNullable = false, Namespace = "")]
+    public bool ExcludeReseller {
+        get => _excludeReseller;
+        set {
+            ExcludeResellerSpecified = true;
+            _excludeReseller = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExcludeResellerSpecified { get; set; }
+    private string _resellerId;
+
+    [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
+    public string ResellerId {
+        get => _resellerId;
+        set {
+            ResellerIdSpecified = true;
+            _resellerId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResellerIdSpecified { get; set; }
+}
 }

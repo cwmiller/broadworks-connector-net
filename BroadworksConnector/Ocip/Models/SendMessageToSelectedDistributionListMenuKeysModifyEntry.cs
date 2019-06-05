@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SendMessageToSelectedDistributionListMenuKeysModifyEntry 
 {
-    [XmlElement(ElementName = "confirmSendingToDistributionList", IsNullable = true)]
-    public string ConfirmSendingToDistributionList { get; set; }
-    [XmlElement(ElementName = "cancelSendingToDistributionList", IsNullable = false)]
-    public string CancelSendingToDistributionList { get; set; }
- }
+    private string _confirmSendingToDistributionList;
+
+    [XmlElement(ElementName = "confirmSendingToDistributionList", IsNullable = true, Namespace = "")]
+    public string ConfirmSendingToDistributionList {
+        get => _confirmSendingToDistributionList;
+        set {
+            ConfirmSendingToDistributionListSpecified = true;
+            _confirmSendingToDistributionList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConfirmSendingToDistributionListSpecified { get; set; }
+    private string _cancelSendingToDistributionList;
+
+    [XmlElement(ElementName = "cancelSendingToDistributionList", IsNullable = false, Namespace = "")]
+    public string CancelSendingToDistributionList {
+        get => _cancelSendingToDistributionList;
+        set {
+            CancelSendingToDistributionListSpecified = true;
+            _cancelSendingToDistributionList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CancelSendingToDistributionListSpecified { get; set; }
+}
 }

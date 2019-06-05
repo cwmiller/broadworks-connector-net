@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class NetworkClassOfServiceCommunicationBarringProfile 
 {
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "isPrimary", IsNullable = false)]
-    public bool IsPrimary { get; set; }
- }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private bool _isPrimary;
+
+    [XmlElement(ElementName = "isPrimary", IsNullable = false, Namespace = "")]
+    public bool IsPrimary {
+        get => _isPrimary;
+        set {
+            IsPrimarySpecified = true;
+            _isPrimary = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsPrimarySpecified { get; set; }
+}
 }

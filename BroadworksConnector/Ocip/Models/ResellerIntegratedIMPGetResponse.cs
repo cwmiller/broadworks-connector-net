@@ -8,19 +8,96 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ResellerIntegratedIMPGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "useSystemServiceDomain", IsNullable = false)]
-    public bool UseSystemServiceDomain { get; set; }
-    [XmlElement(ElementName = "serviceDomain", IsNullable = false)]
-    public string ServiceDomain { get; set; }
-    [XmlElement(ElementName = "servicePort", IsNullable = false)]
-    public int ServicePort { get; set; }
-    [XmlElement(ElementName = "useSystemMessagingServer", IsNullable = false)]
-    public bool UseSystemMessagingServer { get; set; }
-    [XmlElement(ElementName = "provisioningUrl", IsNullable = false)]
-    public string ProvisioningUrl { get; set; }
-    [XmlElement(ElementName = "provisioningUserId", IsNullable = false)]
-    public string ProvisioningUserId { get; set; }
-    [XmlElement(ElementName = "boshURL", IsNullable = false)]
-    public string BoshURL { get; set; }
- }
+    private bool _useSystemServiceDomain;
+
+    [XmlElement(ElementName = "useSystemServiceDomain", IsNullable = false, Namespace = "")]
+    public bool UseSystemServiceDomain {
+        get => _useSystemServiceDomain;
+        set {
+            UseSystemServiceDomainSpecified = true;
+            _useSystemServiceDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseSystemServiceDomainSpecified { get; set; }
+    private string _serviceDomain;
+
+    [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
+    public string ServiceDomain {
+        get => _serviceDomain;
+        set {
+            ServiceDomainSpecified = true;
+            _serviceDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceDomainSpecified { get; set; }
+    private int _servicePort;
+
+    [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
+    public int ServicePort {
+        get => _servicePort;
+        set {
+            ServicePortSpecified = true;
+            _servicePort = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServicePortSpecified { get; set; }
+    private bool _useSystemMessagingServer;
+
+    [XmlElement(ElementName = "useSystemMessagingServer", IsNullable = false, Namespace = "")]
+    public bool UseSystemMessagingServer {
+        get => _useSystemMessagingServer;
+        set {
+            UseSystemMessagingServerSpecified = true;
+            _useSystemMessagingServer = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseSystemMessagingServerSpecified { get; set; }
+    private string _provisioningUrl;
+
+    [XmlElement(ElementName = "provisioningUrl", IsNullable = false, Namespace = "")]
+    public string ProvisioningUrl {
+        get => _provisioningUrl;
+        set {
+            ProvisioningUrlSpecified = true;
+            _provisioningUrl = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProvisioningUrlSpecified { get; set; }
+    private string _provisioningUserId;
+
+    [XmlElement(ElementName = "provisioningUserId", IsNullable = false, Namespace = "")]
+    public string ProvisioningUserId {
+        get => _provisioningUserId;
+        set {
+            ProvisioningUserIdSpecified = true;
+            _provisioningUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProvisioningUserIdSpecified { get; set; }
+    private string _boshURL;
+
+    [XmlElement(ElementName = "boshURL", IsNullable = false, Namespace = "")]
+    public string BoshURL {
+        get => _boshURL;
+        set {
+            BoshURLSpecified = true;
+            _boshURL = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool BoshURLSpecified { get; set; }
+}
 }

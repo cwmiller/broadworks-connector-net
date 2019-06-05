@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderAccessDeviceGetEnhancedConfigurationTypeResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "supportsEnhancedConfiguration", IsNullable = false)]
-    public bool SupportsEnhancedConfiguration { get; set; }
-    [XmlElement(ElementName = "supportsReset", IsNullable = false)]
-    public bool SupportsReset { get; set; }
-    [XmlElement(ElementName = "configurationType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigurationType { get; set; }
-    [XmlElement(ElementName = "configurationFileName", IsNullable = false)]
-    public string ConfigurationFileName { get; set; }
- }
+    private bool _supportsEnhancedConfiguration;
+
+    [XmlElement(ElementName = "supportsEnhancedConfiguration", IsNullable = false, Namespace = "")]
+    public bool SupportsEnhancedConfiguration {
+        get => _supportsEnhancedConfiguration;
+        set {
+            SupportsEnhancedConfigurationSpecified = true;
+            _supportsEnhancedConfiguration = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SupportsEnhancedConfigurationSpecified { get; set; }
+    private bool _supportsReset;
+
+    [XmlElement(ElementName = "supportsReset", IsNullable = false, Namespace = "")]
+    public bool SupportsReset {
+        get => _supportsReset;
+        set {
+            SupportsResetSpecified = true;
+            _supportsReset = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SupportsResetSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configurationType;
+
+    [XmlElement(ElementName = "configurationType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigurationType {
+        get => _configurationType;
+        set {
+            ConfigurationTypeSpecified = true;
+            _configurationType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConfigurationTypeSpecified { get; set; }
+    private string _configurationFileName;
+
+    [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
+    public string ConfigurationFileName {
+        get => _configurationFileName;
+        set {
+            ConfigurationFileNameSpecified = true;
+            _configurationFileName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConfigurationFileNameSpecified { get; set; }
+}
 }

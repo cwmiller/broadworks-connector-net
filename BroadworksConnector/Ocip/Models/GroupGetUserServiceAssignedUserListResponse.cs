@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupGetUserServiceAssignedUserListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "userListTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserListTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _userListTable;
+
+    [XmlElement(ElementName = "userListTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable UserListTable {
+        get => _userListTable;
+        set {
+            UserListTableSpecified = true;
+            _userListTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserListTableSpecified { get; set; }
+}
 }

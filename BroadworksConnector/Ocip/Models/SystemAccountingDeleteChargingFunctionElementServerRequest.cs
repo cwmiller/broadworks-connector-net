@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAccountingDeleteChargingFunctionElementServerRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "address", IsNullable = false)]
-    public string Address { get; set; }
- }
+    private string _address;
+
+    [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
+    public string Address {
+        get => _address;
+        set {
+            AddressSpecified = true;
+            _address = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AddressSpecified { get; set; }
+}
 }

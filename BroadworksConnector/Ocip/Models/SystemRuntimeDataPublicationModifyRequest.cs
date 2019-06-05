@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRuntimeDataPublicationModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "enableRuntimeDataSync", IsNullable = false)]
-    public bool EnableRuntimeDataSync { get; set; }
-    [XmlElement(ElementName = "runtimeDataSyncIntervalInMilliSeconds", IsNullable = false)]
-    public int RuntimeDataSyncIntervalInMilliSeconds { get; set; }
- }
+    private bool _enableRuntimeDataSync;
+
+    [XmlElement(ElementName = "enableRuntimeDataSync", IsNullable = false, Namespace = "")]
+    public bool EnableRuntimeDataSync {
+        get => _enableRuntimeDataSync;
+        set {
+            EnableRuntimeDataSyncSpecified = true;
+            _enableRuntimeDataSync = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableRuntimeDataSyncSpecified { get; set; }
+    private int _runtimeDataSyncIntervalInMilliSeconds;
+
+    [XmlElement(ElementName = "runtimeDataSyncIntervalInMilliSeconds", IsNullable = false, Namespace = "")]
+    public int RuntimeDataSyncIntervalInMilliSeconds {
+        get => _runtimeDataSyncIntervalInMilliSeconds;
+        set {
+            RuntimeDataSyncIntervalInMilliSecondsSpecified = true;
+            _runtimeDataSyncIntervalInMilliSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RuntimeDataSyncIntervalInMilliSecondsSpecified { get; set; }
+}
 }

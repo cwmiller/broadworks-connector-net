@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallCenterReportTemplateAccessOption{
-    SupervisorOnly,
-    SupervisorandAgent,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallCenterReportTemplateAccessOption
+    {
+        [XmlEnum(Name = "Supervisor Only")]
+        SupervisorOnly,
+        [XmlEnum(Name = "Supervisor and Agent")]
+        SupervisorandAgent,
+    }
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallTypeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "callType", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SystemCallType> CallType { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.SystemCallType> _callType;
+
+    [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SystemCallType> CallType {
+        get => _callType;
+        set {
+            CallTypeSpecified = true;
+            _callType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallTypeSpecified { get; set; }
+}
 }

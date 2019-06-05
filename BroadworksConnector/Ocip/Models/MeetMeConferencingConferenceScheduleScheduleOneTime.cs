@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class MeetMeConferencingConferenceScheduleScheduleOneTime 
 {
-    [XmlElement(ElementName = "startTime", IsNullable = false)]
-    public string StartTime { get; set; }
-    [XmlElement(ElementName = "duration", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration Duration { get; set; }
- }
+    private string _startTime;
+
+    [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
+    public string StartTime {
+        get => _startTime;
+        set {
+            StartTimeSpecified = true;
+            _startTime = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StartTimeSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _duration;
+
+    [XmlElement(ElementName = "duration", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration Duration {
+        get => _duration;
+        set {
+            DurationSpecified = true;
+            _duration = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DurationSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutingAddTranslationRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "digits", IsNullable = false)]
-    public string Digits { get; set; }
-    [XmlElement(ElementName = "routeName", IsNullable = false)]
-    public string RouteName { get; set; }
- }
+    private string _digits;
+
+    [XmlElement(ElementName = "digits", IsNullable = false, Namespace = "")]
+    public string Digits {
+        get => _digits;
+        set {
+            DigitsSpecified = true;
+            _digits = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DigitsSpecified { get; set; }
+    private string _routeName;
+
+    [XmlElement(ElementName = "routeName", IsNullable = false, Namespace = "")]
+    public string RouteName {
+        get => _routeName;
+        set {
+            RouteNameSpecified = true;
+            _routeName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RouteNameSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupExtensionLengthGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "extensionLength", IsNullable = false)]
-    public int ExtensionLength { get; set; }
- }
+    private int _extensionLength;
+
+    [XmlElement(ElementName = "extensionLength", IsNullable = false, Namespace = "")]
+    public int ExtensionLength {
+        get => _extensionLength;
+        set {
+            ExtensionLengthSpecified = true;
+            _extensionLength = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExtensionLengthSpecified { get; set; }
+}
 }

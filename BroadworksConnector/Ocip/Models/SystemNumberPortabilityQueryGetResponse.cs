@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemNumberPortabilityQueryGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "continueCallAsDialedOnTimeoutOrError", IsNullable = false)]
-    public bool ContinueCallAsDialedOnTimeoutOrError { get; set; }
-    [XmlElement(ElementName = "numberPortabilityNameLookupTimeoutMilliseconds", IsNullable = false)]
-    public int NumberPortabilityNameLookupTimeoutMilliseconds { get; set; }
- }
+    private bool _continueCallAsDialedOnTimeoutOrError;
+
+    [XmlElement(ElementName = "continueCallAsDialedOnTimeoutOrError", IsNullable = false, Namespace = "")]
+    public bool ContinueCallAsDialedOnTimeoutOrError {
+        get => _continueCallAsDialedOnTimeoutOrError;
+        set {
+            ContinueCallAsDialedOnTimeoutOrErrorSpecified = true;
+            _continueCallAsDialedOnTimeoutOrError = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ContinueCallAsDialedOnTimeoutOrErrorSpecified { get; set; }
+    private int _numberPortabilityNameLookupTimeoutMilliseconds;
+
+    [XmlElement(ElementName = "numberPortabilityNameLookupTimeoutMilliseconds", IsNullable = false, Namespace = "")]
+    public int NumberPortabilityNameLookupTimeoutMilliseconds {
+        get => _numberPortabilityNameLookupTimeoutMilliseconds;
+        set {
+            NumberPortabilityNameLookupTimeoutMillisecondsSpecified = true;
+            _numberPortabilityNameLookupTimeoutMilliseconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NumberPortabilityNameLookupTimeoutMillisecondsSpecified { get; set; }
+}
 }

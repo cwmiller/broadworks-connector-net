@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupFindMeFollowMeModifyAlertingGroupListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "alertingGroupName", IsNullable = false)]
-    public List<string> AlertingGroupName { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private List<string> _alertingGroupName;
+
+    [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
+    public List<string> AlertingGroupName {
+        get => _alertingGroupName;
+        set {
+            AlertingGroupNameSpecified = true;
+            _alertingGroupName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertingGroupNameSpecified { get; set; }
+}
 }

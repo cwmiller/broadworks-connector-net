@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19sp1ReviewSelectedDistributionListMenuKeys 
 {
-    [XmlElement(ElementName = "interruptPlaybackAndReturnToPreviousMenu", IsNullable = false)]
-    public string InterruptPlaybackAndReturnToPreviousMenu { get; set; }
- }
+    private string _interruptPlaybackAndReturnToPreviousMenu;
+
+    [XmlElement(ElementName = "interruptPlaybackAndReturnToPreviousMenu", IsNullable = false, Namespace = "")]
+    public string InterruptPlaybackAndReturnToPreviousMenu {
+        get => _interruptPlaybackAndReturnToPreviousMenu;
+        set {
+            InterruptPlaybackAndReturnToPreviousMenuSpecified = true;
+            _interruptPlaybackAndReturnToPreviousMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InterruptPlaybackAndReturnToPreviousMenuSpecified { get; set; }
+}
 }

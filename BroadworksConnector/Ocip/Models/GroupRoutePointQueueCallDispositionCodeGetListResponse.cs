@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutePointQueueCallDispositionCodeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "dispositionCodesTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DispositionCodesTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _dispositionCodesTable;
+
+    [XmlElement(ElementName = "dispositionCodesTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable DispositionCodesTable {
+        get => _dispositionCodesTable;
+        set {
+            DispositionCodesTableSpecified = true;
+            _dispositionCodesTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DispositionCodesTableSpecified { get; set; }
+}
 }

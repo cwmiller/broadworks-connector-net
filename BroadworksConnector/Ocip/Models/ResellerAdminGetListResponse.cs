@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ResellerAdminGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "resellerAdminTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ResellerAdminTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _resellerAdminTable;
+
+    [XmlElement(ElementName = "resellerAdminTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ResellerAdminTable {
+        get => _resellerAdminTable;
+        set {
+            ResellerAdminTableSpecified = true;
+            _resellerAdminTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResellerAdminTableSpecified { get; set; }
+}
 }

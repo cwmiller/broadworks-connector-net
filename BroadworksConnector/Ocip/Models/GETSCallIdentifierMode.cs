@@ -3,10 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum GETSCallIdentifierMode{
-    RequestURI,
-    RPH,
-    RPHRequestURI,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum GETSCallIdentifierMode
+    {
+        [XmlEnum(Name = "Request-URI")]
+        RequestURI,
+        [XmlEnum(Name = "RPH")]
+        RPH,
+        [XmlEnum(Name = "RPH-Request-URI")]
+        RPHRequestURI,
+    }
 }

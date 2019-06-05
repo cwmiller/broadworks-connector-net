@@ -3,11 +3,17 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum EnterpriseVoiceVPNPolicySelection{
-    Private,
-    Public,
-    Route,
-    Treatment,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum EnterpriseVoiceVPNPolicySelection
+    {
+        [XmlEnum(Name = "Private")]
+        Private,
+        [XmlEnum(Name = "Public")]
+        Public,
+        [XmlEnum(Name = "Route")]
+        Route,
+        [XmlEnum(Name = "Treatment")]
+        Treatment,
+    }
 }

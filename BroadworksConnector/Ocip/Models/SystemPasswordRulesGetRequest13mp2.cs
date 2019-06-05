@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemPasswordRulesGetRequest13mp2 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

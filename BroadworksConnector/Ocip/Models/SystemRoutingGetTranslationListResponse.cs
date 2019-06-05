@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutingGetTranslationListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "routingTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable RoutingTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _routingTable;
+
+    [XmlElement(ElementName = "routingTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable RoutingTable {
+        get => _routingTable;
+        set {
+            RoutingTableSpecified = true;
+            _routingTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoutingTableSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBCCTAddOCIInterfaceAddressRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "interfaceNetAddress", IsNullable = false)]
-    public string InterfaceNetAddress { get; set; }
- }
+    private string _interfaceNetAddress;
+
+    [XmlElement(ElementName = "interfaceNetAddress", IsNullable = false, Namespace = "")]
+    public string InterfaceNetAddress {
+        get => _interfaceNetAddress;
+        set {
+            InterfaceNetAddressSpecified = true;
+            _interfaceNetAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InterfaceNetAddressSpecified { get; set; }
+}
 }

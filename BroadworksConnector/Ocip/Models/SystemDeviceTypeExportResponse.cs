@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDeviceTypeExportResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "file", IsNullable = false)]
-    public string File { get; set; }
- }
+    private string _file;
+
+    [XmlElement(ElementName = "file", IsNullable = false, Namespace = "")]
+    public string File {
+        get => _file;
+        set {
+            FileSpecified = true;
+            _file = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileSpecified { get; set; }
+}
 }

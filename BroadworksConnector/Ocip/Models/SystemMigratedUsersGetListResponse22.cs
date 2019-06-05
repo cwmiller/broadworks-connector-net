@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemMigratedUsersGetListResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public List<string> UserId { get; set; }
-    [XmlElement(ElementName = "totalNumberOfMigratedUsers", IsNullable = false)]
-    public int TotalNumberOfMigratedUsers { get; set; }
- }
+    private List<string> _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public List<string> UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private int _totalNumberOfMigratedUsers;
+
+    [XmlElement(ElementName = "totalNumberOfMigratedUsers", IsNullable = false, Namespace = "")]
+    public int TotalNumberOfMigratedUsers {
+        get => _totalNumberOfMigratedUsers;
+        set {
+            TotalNumberOfMigratedUsersSpecified = true;
+            _totalNumberOfMigratedUsers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TotalNumberOfMigratedUsersSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemClientIdentityAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "clientIdentity", IsNullable = false)]
-    public string ClientIdentity { get; set; }
- }
+    private string _clientIdentity;
+
+    [XmlElement(ElementName = "clientIdentity", IsNullable = false, Namespace = "")]
+    public string ClientIdentity {
+        get => _clientIdentity;
+        set {
+            ClientIdentitySpecified = true;
+            _clientIdentity = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ClientIdentitySpecified { get; set; }
+}
 }

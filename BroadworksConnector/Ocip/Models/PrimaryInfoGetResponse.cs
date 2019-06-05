@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class PrimaryInfoGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isPrimary", IsNullable = false)]
-    public bool IsPrimary { get; set; }
-    [XmlElement(ElementName = "hostnameForPrimary", IsNullable = false)]
-    public string HostnameForPrimary { get; set; }
-    [XmlElement(ElementName = "addressForPrimary", IsNullable = false)]
-    public List<string> AddressForPrimary { get; set; }
-    [XmlElement(ElementName = "privateAddressForPrimary", IsNullable = false)]
-    public List<string> PrivateAddressForPrimary { get; set; }
- }
+    private bool _isPrimary;
+
+    [XmlElement(ElementName = "isPrimary", IsNullable = false, Namespace = "")]
+    public bool IsPrimary {
+        get => _isPrimary;
+        set {
+            IsPrimarySpecified = true;
+            _isPrimary = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsPrimarySpecified { get; set; }
+    private string _hostnameForPrimary;
+
+    [XmlElement(ElementName = "hostnameForPrimary", IsNullable = false, Namespace = "")]
+    public string HostnameForPrimary {
+        get => _hostnameForPrimary;
+        set {
+            HostnameForPrimarySpecified = true;
+            _hostnameForPrimary = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HostnameForPrimarySpecified { get; set; }
+    private List<string> _addressForPrimary;
+
+    [XmlElement(ElementName = "addressForPrimary", IsNullable = false, Namespace = "")]
+    public List<string> AddressForPrimary {
+        get => _addressForPrimary;
+        set {
+            AddressForPrimarySpecified = true;
+            _addressForPrimary = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AddressForPrimarySpecified { get; set; }
+    private List<string> _privateAddressForPrimary;
+
+    [XmlElement(ElementName = "privateAddressForPrimary", IsNullable = false, Namespace = "")]
+    public List<string> PrivateAddressForPrimary {
+        get => _privateAddressForPrimary;
+        set {
+            PrivateAddressForPrimarySpecified = true;
+            _privateAddressForPrimary = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrivateAddressForPrimarySpecified { get; set; }
+}
 }

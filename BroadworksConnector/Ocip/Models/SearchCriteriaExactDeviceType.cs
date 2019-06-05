@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactDeviceType : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "deviceType", IsNullable = false)]
-    public string DeviceType { get; set; }
- }
+    private string _deviceType;
+
+    [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
+    public string DeviceType {
+        get => _deviceType;
+        set {
+            DeviceTypeSpecified = true;
+            _deviceType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceTypeSpecified { get; set; }
+}
 }

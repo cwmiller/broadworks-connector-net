@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class MixedCallLogsEntry 
 {
-    [XmlElement(ElementName = "callLogType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallLogsType CallLogType { get; set; }
-    [XmlElement(ElementName = "countryCode", IsNullable = false)]
-    public string CountryCode { get; set; }
-    [XmlElement(ElementName = "callLogId", IsNullable = false)]
-    public string CallLogId { get; set; }
-    [XmlElement(ElementName = "phoneNumber", IsNullable = false)]
-    public string PhoneNumber { get; set; }
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "time", IsNullable = false)]
-    public string Time { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.CallLogsType _callLogType;
+
+    [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallLogsType CallLogType {
+        get => _callLogType;
+        set {
+            CallLogTypeSpecified = true;
+            _callLogType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallLogTypeSpecified { get; set; }
+    private string _countryCode;
+
+    [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
+    public string CountryCode {
+        get => _countryCode;
+        set {
+            CountryCodeSpecified = true;
+            _countryCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CountryCodeSpecified { get; set; }
+    private string _callLogId;
+
+    [XmlElement(ElementName = "callLogId", IsNullable = false, Namespace = "")]
+    public string CallLogId {
+        get => _callLogId;
+        set {
+            CallLogIdSpecified = true;
+            _callLogId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallLogIdSpecified { get; set; }
+    private string _phoneNumber;
+
+    [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
+    public string PhoneNumber {
+        get => _phoneNumber;
+        set {
+            PhoneNumberSpecified = true;
+            _phoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PhoneNumberSpecified { get; set; }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private string _time;
+
+    [XmlElement(ElementName = "time", IsNullable = false, Namespace = "")]
+    public string Time {
+        get => _time;
+        set {
+            TimeSpecified = true;
+            _time = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeSpecified { get; set; }
+}
 }

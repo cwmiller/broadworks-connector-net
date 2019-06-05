@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemNumberActivationGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "useNumberActivation", IsNullable = false)]
-    public bool UseNumberActivation { get; set; }
- }
+    private bool _useNumberActivation;
+
+    [XmlElement(ElementName = "useNumberActivation", IsNullable = false, Namespace = "")]
+    public bool UseNumberActivation {
+        get => _useNumberActivation;
+        set {
+            UseNumberActivationSpecified = true;
+            _useNumberActivation = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseNumberActivationSpecified { get; set; }
+}
 }

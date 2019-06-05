@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupHuntGroupGetInstancePagedSortedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "huntGroupTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable HuntGroupTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _huntGroupTable;
+
+    [XmlElement(ElementName = "huntGroupTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable HuntGroupTable {
+        get => _huntGroupTable;
+        set {
+            HuntGroupTableSpecified = true;
+            _huntGroupTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HuntGroupTableSpecified { get; set; }
+}
 }

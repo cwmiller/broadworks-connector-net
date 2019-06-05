@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRedundancyParametersGetResponse16sp2 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "rollBackTimerMinutes", IsNullable = false)]
-    public int RollBackTimerMinutes { get; set; }
-    [XmlElement(ElementName = "sendSipOptionMessageUponMigration", IsNullable = false)]
-    public bool SendSipOptionMessageUponMigration { get; set; }
- }
+    private int _rollBackTimerMinutes;
+
+    [XmlElement(ElementName = "rollBackTimerMinutes", IsNullable = false, Namespace = "")]
+    public int RollBackTimerMinutes {
+        get => _rollBackTimerMinutes;
+        set {
+            RollBackTimerMinutesSpecified = true;
+            _rollBackTimerMinutes = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RollBackTimerMinutesSpecified { get; set; }
+    private bool _sendSipOptionMessageUponMigration;
+
+    [XmlElement(ElementName = "sendSipOptionMessageUponMigration", IsNullable = false, Namespace = "")]
+    public bool SendSipOptionMessageUponMigration {
+        get => _sendSipOptionMessageUponMigration;
+        set {
+            SendSipOptionMessageUponMigrationSpecified = true;
+            _sendSipOptionMessageUponMigration = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SendSipOptionMessageUponMigrationSpecified { get; set; }
+}
 }

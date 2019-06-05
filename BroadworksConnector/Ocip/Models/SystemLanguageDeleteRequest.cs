@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemLanguageDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "language", IsNullable = false)]
-    public string Language { get; set; }
- }
+    private string _language;
+
+    [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
+    public string Language {
+        get => _language;
+        set {
+            LanguageSpecified = true;
+            _language = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LanguageSpecified { get; set; }
+}
 }

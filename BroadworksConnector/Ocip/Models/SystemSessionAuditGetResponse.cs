@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSessionAuditGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "intervalSeconds", IsNullable = false)]
-    public int IntervalSeconds { get; set; }
-    [XmlElement(ElementName = "timeoutPeriodSeconds", IsNullable = false)]
-    public int TimeoutPeriodSeconds { get; set; }
- }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private int _intervalSeconds;
+
+    [XmlElement(ElementName = "intervalSeconds", IsNullable = false, Namespace = "")]
+    public int IntervalSeconds {
+        get => _intervalSeconds;
+        set {
+            IntervalSecondsSpecified = true;
+            _intervalSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IntervalSecondsSpecified { get; set; }
+    private int _timeoutPeriodSeconds;
+
+    [XmlElement(ElementName = "timeoutPeriodSeconds", IsNullable = false, Namespace = "")]
+    public int TimeoutPeriodSeconds {
+        get => _timeoutPeriodSeconds;
+        set {
+            TimeoutPeriodSecondsSpecified = true;
+            _timeoutPeriodSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeoutPeriodSecondsSpecified { get; set; }
+}
 }

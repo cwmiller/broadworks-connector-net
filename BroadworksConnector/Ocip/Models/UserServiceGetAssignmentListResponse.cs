@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserServiceGetAssignmentListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "servicePacksAssignmentTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ServicePacksAssignmentTable { get; set; }
-    [XmlElement(ElementName = "userServicesAssignmentTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserServicesAssignmentTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _servicePacksAssignmentTable;
+
+    [XmlElement(ElementName = "servicePacksAssignmentTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ServicePacksAssignmentTable {
+        get => _servicePacksAssignmentTable;
+        set {
+            ServicePacksAssignmentTableSpecified = true;
+            _servicePacksAssignmentTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServicePacksAssignmentTableSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _userServicesAssignmentTable;
+
+    [XmlElement(ElementName = "userServicesAssignmentTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable UserServicesAssignmentTable {
+        get => _userServicesAssignmentTable;
+        set {
+            UserServicesAssignmentTableSpecified = true;
+            _userServicesAssignmentTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserServicesAssignmentTableSpecified { get; set; }
+}
 }

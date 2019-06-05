@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupDepartmentAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "departmentName", IsNullable = false)]
-    public string DepartmentName { get; set; }
-    [XmlElement(ElementName = "parentDepartmentKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DepartmentKey ParentDepartmentKey { get; set; }
-    [XmlElement(ElementName = "callingLineIdName", IsNullable = false)]
-    public string CallingLineIdName { get; set; }
-    [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = false)]
-    public string CallingLineIdPhoneNumber { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private string _departmentName;
+
+    [XmlElement(ElementName = "departmentName", IsNullable = false, Namespace = "")]
+    public string DepartmentName {
+        get => _departmentName;
+        set {
+            DepartmentNameSpecified = true;
+            _departmentName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentNameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.DepartmentKey _parentDepartmentKey;
+
+    [XmlElement(ElementName = "parentDepartmentKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DepartmentKey ParentDepartmentKey {
+        get => _parentDepartmentKey;
+        set {
+            ParentDepartmentKeySpecified = true;
+            _parentDepartmentKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ParentDepartmentKeySpecified { get; set; }
+    private string _callingLineIdName;
+
+    [XmlElement(ElementName = "callingLineIdName", IsNullable = false, Namespace = "")]
+    public string CallingLineIdName {
+        get => _callingLineIdName;
+        set {
+            CallingLineIdNameSpecified = true;
+            _callingLineIdName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallingLineIdNameSpecified { get; set; }
+    private string _callingLineIdPhoneNumber;
+
+    [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
+    public string CallingLineIdPhoneNumber {
+        get => _callingLineIdPhoneNumber;
+        set {
+            CallingLineIdPhoneNumberSpecified = true;
+            _callingLineIdPhoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallingLineIdPhoneNumberSpecified { get; set; }
+}
 }

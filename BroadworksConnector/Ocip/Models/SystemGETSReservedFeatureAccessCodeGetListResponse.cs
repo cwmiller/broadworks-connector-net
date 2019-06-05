@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGETSReservedFeatureAccessCodeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "reservedCodeTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ReservedCodeTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _reservedCodeTable;
+
+    [XmlElement(ElementName = "reservedCodeTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ReservedCodeTable {
+        get => _reservedCodeTable;
+        set {
+            ReservedCodeTableSpecified = true;
+            _reservedCodeTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReservedCodeTableSpecified { get; set; }
+}
 }

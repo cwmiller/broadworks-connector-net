@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class RecurrenceRecurDaily 
 {
-    [XmlElement(ElementName = "recurInterval", IsNullable = false)]
-    public int RecurInterval { get; set; }
- }
+    private int _recurInterval;
+
+    [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
+    public int RecurInterval {
+        get => _recurInterval;
+        set {
+            RecurIntervalSpecified = true;
+            _recurInterval = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RecurIntervalSpecified { get; set; }
+}
 }

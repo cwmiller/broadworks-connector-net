@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCallParkGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "recallTimerSeconds", IsNullable = false)]
-    public int RecallTimerSeconds { get; set; }
-    [XmlElement(ElementName = "displayTimerSeconds", IsNullable = false)]
-    public int DisplayTimerSeconds { get; set; }
-    [XmlElement(ElementName = "enableDestinationAnnouncement", IsNullable = false)]
-    public bool EnableDestinationAnnouncement { get; set; }
- }
+    private int _recallTimerSeconds;
+
+    [XmlElement(ElementName = "recallTimerSeconds", IsNullable = false, Namespace = "")]
+    public int RecallTimerSeconds {
+        get => _recallTimerSeconds;
+        set {
+            RecallTimerSecondsSpecified = true;
+            _recallTimerSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RecallTimerSecondsSpecified { get; set; }
+    private int _displayTimerSeconds;
+
+    [XmlElement(ElementName = "displayTimerSeconds", IsNullable = false, Namespace = "")]
+    public int DisplayTimerSeconds {
+        get => _displayTimerSeconds;
+        set {
+            DisplayTimerSecondsSpecified = true;
+            _displayTimerSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DisplayTimerSecondsSpecified { get; set; }
+    private bool _enableDestinationAnnouncement;
+
+    [XmlElement(ElementName = "enableDestinationAnnouncement", IsNullable = false, Namespace = "")]
+    public bool EnableDestinationAnnouncement {
+        get => _enableDestinationAnnouncement;
+        set {
+            EnableDestinationAnnouncementSpecified = true;
+            _enableDestinationAnnouncement = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableDestinationAnnouncementSpecified { get; set; }
+}
 }

@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupEnterpriseTrunkGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false)]
-    public string EnterpriseTrunkName { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private string _enterpriseTrunkName;
+
+    [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false, Namespace = "")]
+    public string EnterpriseTrunkName {
+        get => _enterpriseTrunkName;
+        set {
+            EnterpriseTrunkNameSpecified = true;
+            _enterpriseTrunkName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnterpriseTrunkNameSpecified { get; set; }
+}
 }

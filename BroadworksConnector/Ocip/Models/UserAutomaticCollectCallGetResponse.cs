@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserAutomaticCollectCallGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableAutomaticCollectCall", IsNullable = false)]
-    public bool EnableAutomaticCollectCall { get; set; }
- }
+    private bool _enableAutomaticCollectCall;
+
+    [XmlElement(ElementName = "enableAutomaticCollectCall", IsNullable = false, Namespace = "")]
+    public bool EnableAutomaticCollectCall {
+        get => _enableAutomaticCollectCall;
+        set {
+            EnableAutomaticCollectCallSpecified = true;
+            _enableAutomaticCollectCall = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableAutomaticCollectCallSpecified { get; set; }
+}
 }

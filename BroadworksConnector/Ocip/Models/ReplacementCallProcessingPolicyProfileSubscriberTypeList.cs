@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementCallProcessingPolicyProfileSubscriberTypeList 
 {
-    [XmlElement(ElementName = "subscriberType", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType> SubscriberType { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType> _subscriberType;
+
+    [XmlElement(ElementName = "subscriberType", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType> SubscriberType {
+        get => _subscriberType;
+        set {
+            SubscriberTypeSpecified = true;
+            _subscriberType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SubscriberTypeSpecified { get; set; }
+}
 }

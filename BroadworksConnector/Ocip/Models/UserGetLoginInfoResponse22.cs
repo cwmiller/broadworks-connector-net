@@ -8,29 +8,161 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserGetLoginInfoResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "loginType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.LoginType22 LoginType { get; set; }
-    [XmlElement(ElementName = "locale", IsNullable = false)]
-    public string Locale { get; set; }
-    [XmlElement(ElementName = "encoding", IsNullable = false)]
-    public string Encoding { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "isEnterprise", IsNullable = false)]
-    public bool IsEnterprise { get; set; }
-    [XmlElement(ElementName = "passwordExpiresDays", IsNullable = false)]
-    public int PasswordExpiresDays { get; set; }
-    [XmlElement(ElementName = "lastName", IsNullable = false)]
-    public string LastName { get; set; }
-    [XmlElement(ElementName = "firstName", IsNullable = false)]
-    public string FirstName { get; set; }
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "phoneNumber", IsNullable = false)]
-    public string PhoneNumber { get; set; }
-    [XmlElement(ElementName = "resellerId", IsNullable = false)]
-    public string ResellerId { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.LoginType22 _loginType;
+
+    [XmlElement(ElementName = "loginType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.LoginType22 LoginType {
+        get => _loginType;
+        set {
+            LoginTypeSpecified = true;
+            _loginType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LoginTypeSpecified { get; set; }
+    private string _locale;
+
+    [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
+    public string Locale {
+        get => _locale;
+        set {
+            LocaleSpecified = true;
+            _locale = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LocaleSpecified { get; set; }
+    private string _encoding;
+
+    [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
+    public string Encoding {
+        get => _encoding;
+        set {
+            EncodingSpecified = true;
+            _encoding = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EncodingSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private bool _isEnterprise;
+
+    [XmlElement(ElementName = "isEnterprise", IsNullable = false, Namespace = "")]
+    public bool IsEnterprise {
+        get => _isEnterprise;
+        set {
+            IsEnterpriseSpecified = true;
+            _isEnterprise = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsEnterpriseSpecified { get; set; }
+    private int _passwordExpiresDays;
+
+    [XmlElement(ElementName = "passwordExpiresDays", IsNullable = false, Namespace = "")]
+    public int PasswordExpiresDays {
+        get => _passwordExpiresDays;
+        set {
+            PasswordExpiresDaysSpecified = true;
+            _passwordExpiresDays = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PasswordExpiresDaysSpecified { get; set; }
+    private string _lastName;
+
+    [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
+    public string LastName {
+        get => _lastName;
+        set {
+            LastNameSpecified = true;
+            _lastName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LastNameSpecified { get; set; }
+    private string _firstName;
+
+    [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
+    public string FirstName {
+        get => _firstName;
+        set {
+            FirstNameSpecified = true;
+            _firstName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FirstNameSpecified { get; set; }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private string _phoneNumber;
+
+    [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
+    public string PhoneNumber {
+        get => _phoneNumber;
+        set {
+            PhoneNumberSpecified = true;
+            _phoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PhoneNumberSpecified { get; set; }
+    private string _resellerId;
+
+    [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
+    public string ResellerId {
+        get => _resellerId;
+        set {
+            ResellerIdSpecified = true;
+            _resellerId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResellerIdSpecified { get; set; }
+}
 }

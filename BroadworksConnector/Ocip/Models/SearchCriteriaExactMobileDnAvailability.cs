@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactMobileDnAvailability : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "available", IsNullable = false)]
-    public bool Available { get; set; }
- }
+    private bool _available;
+
+    [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
+    public bool Available {
+        get => _available;
+        set {
+            AvailableSpecified = true;
+            _available = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AvailableSpecified { get; set; }
+}
 }

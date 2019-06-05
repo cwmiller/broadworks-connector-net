@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ResponsePagingControl 
 {
-    [XmlElement(ElementName = "responseStartIndex", IsNullable = false)]
-    public int ResponseStartIndex { get; set; }
-    [XmlElement(ElementName = "responsePageSize", IsNullable = false)]
-    public int ResponsePageSize { get; set; }
- }
+    private int _responseStartIndex;
+
+    [XmlElement(ElementName = "responseStartIndex", IsNullable = false, Namespace = "")]
+    public int ResponseStartIndex {
+        get => _responseStartIndex;
+        set {
+            ResponseStartIndexSpecified = true;
+            _responseStartIndex = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResponseStartIndexSpecified { get; set; }
+    private int _responsePageSize;
+
+    [XmlElement(ElementName = "responsePageSize", IsNullable = false, Namespace = "")]
+    public int ResponsePageSize {
+        get => _responsePageSize;
+        set {
+            ResponsePageSizeSpecified = true;
+            _responsePageSize = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResponsePageSizeSpecified { get; set; }
+}
 }

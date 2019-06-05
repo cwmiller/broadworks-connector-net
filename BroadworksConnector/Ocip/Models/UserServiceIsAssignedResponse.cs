@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserServiceIsAssignedResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isAssigned", IsNullable = false)]
-    public bool IsAssigned { get; set; }
- }
+    private bool _isAssigned;
+
+    [XmlElement(ElementName = "isAssigned", IsNullable = false, Namespace = "")]
+    public bool IsAssigned {
+        get => _isAssigned;
+        set {
+            IsAssignedSpecified = true;
+            _isAssigned = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsAssignedSpecified { get; set; }
+}
 }

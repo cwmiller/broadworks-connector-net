@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementCombinedUserServiceAuthorizationList 
 {
-    [XmlElement(ElementName = "userServiceAuthorization", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CombinedUserServiceAuthorization> UserServiceAuthorization { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.CombinedUserServiceAuthorization> _userServiceAuthorization;
+
+    [XmlElement(ElementName = "userServiceAuthorization", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CombinedUserServiceAuthorization> UserServiceAuthorization {
+        get => _userServiceAuthorization;
+        set {
+            UserServiceAuthorizationSpecified = true;
+            _userServiceAuthorization = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserServiceAuthorizationSpecified { get; set; }
+}
 }

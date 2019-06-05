@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupFeatureAccessCodeModifyRequest20 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "useFeatureAccessCodeLevel", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.GroupFeatureAccessCodeLevel UseFeatureAccessCodeLevel { get; set; }
-    [XmlElement(ElementName = "restoreDefaultCodes", IsNullable = false)]
-    public bool RestoreDefaultCodes { get; set; }
-    [XmlElement(ElementName = "featureAccessCode", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.FeatureAccessCodeEntry> FeatureAccessCode { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.GroupFeatureAccessCodeLevel _useFeatureAccessCodeLevel;
+
+    [XmlElement(ElementName = "useFeatureAccessCodeLevel", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.GroupFeatureAccessCodeLevel UseFeatureAccessCodeLevel {
+        get => _useFeatureAccessCodeLevel;
+        set {
+            UseFeatureAccessCodeLevelSpecified = true;
+            _useFeatureAccessCodeLevel = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseFeatureAccessCodeLevelSpecified { get; set; }
+    private bool _restoreDefaultCodes;
+
+    [XmlElement(ElementName = "restoreDefaultCodes", IsNullable = false, Namespace = "")]
+    public bool RestoreDefaultCodes {
+        get => _restoreDefaultCodes;
+        set {
+            RestoreDefaultCodesSpecified = true;
+            _restoreDefaultCodes = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RestoreDefaultCodesSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.FeatureAccessCodeEntry> _featureAccessCode;
+
+    [XmlElement(ElementName = "featureAccessCode", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.FeatureAccessCodeEntry> FeatureAccessCode {
+        get => _featureAccessCode;
+        set {
+            FeatureAccessCodeSpecified = true;
+            _featureAccessCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FeatureAccessCodeSpecified { get; set; }
+}
 }

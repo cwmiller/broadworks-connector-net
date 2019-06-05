@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemFileRepositoryDeviceUserGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "fileRepositoryName", IsNullable = false)]
-    public string FileRepositoryName { get; set; }
- }
+    private string _fileRepositoryName;
+
+    [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
+    public string FileRepositoryName {
+        get => _fileRepositoryName;
+        set {
+            FileRepositoryNameSpecified = true;
+            _fileRepositoryName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileRepositoryNameSpecified { get; set; }
+}
 }

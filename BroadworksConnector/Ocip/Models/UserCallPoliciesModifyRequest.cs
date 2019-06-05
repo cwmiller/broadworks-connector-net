@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallPoliciesModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "redirectedCallsCOLPPrivacy", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ConnectedLineIdentificationPrivacyOnRedirectedCalls RedirectedCallsCOLPPrivacy { get; set; }
-    [XmlElement(ElementName = "callBeingForwardedResponseCallType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallBeingForwardedResponseCallType CallBeingForwardedResponseCallType { get; set; }
-    [XmlElement(ElementName = "callingLineIdentityForRedirectedCalls", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallingLineIdentityForRedirectedCalls CallingLineIdentityForRedirectedCalls { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ConnectedLineIdentificationPrivacyOnRedirectedCalls _redirectedCallsCOLPPrivacy;
+
+    [XmlElement(ElementName = "redirectedCallsCOLPPrivacy", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ConnectedLineIdentificationPrivacyOnRedirectedCalls RedirectedCallsCOLPPrivacy {
+        get => _redirectedCallsCOLPPrivacy;
+        set {
+            RedirectedCallsCOLPPrivacySpecified = true;
+            _redirectedCallsCOLPPrivacy = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RedirectedCallsCOLPPrivacySpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CallBeingForwardedResponseCallType _callBeingForwardedResponseCallType;
+
+    [XmlElement(ElementName = "callBeingForwardedResponseCallType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallBeingForwardedResponseCallType CallBeingForwardedResponseCallType {
+        get => _callBeingForwardedResponseCallType;
+        set {
+            CallBeingForwardedResponseCallTypeSpecified = true;
+            _callBeingForwardedResponseCallType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallBeingForwardedResponseCallTypeSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CallingLineIdentityForRedirectedCalls _callingLineIdentityForRedirectedCalls;
+
+    [XmlElement(ElementName = "callingLineIdentityForRedirectedCalls", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallingLineIdentityForRedirectedCalls CallingLineIdentityForRedirectedCalls {
+        get => _callingLineIdentityForRedirectedCalls;
+        set {
+            CallingLineIdentityForRedirectedCallsSpecified = true;
+            _callingLineIdentityForRedirectedCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallingLineIdentityForRedirectedCallsSpecified { get; set; }
+}
 }

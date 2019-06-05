@@ -8,21 +8,109 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupDialPlanPolicyModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "useSetting", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel UseSetting { get; set; }
-    [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false)]
-    public bool RequiresAccessCodeForPublicCalls { get; set; }
-    [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false)]
-    public bool AllowE164PublicCalls { get; set; }
-    [XmlElement(ElementName = "preferE164NumberFormatForCallbackServices", IsNullable = false)]
-    public bool PreferE164NumberFormatForCallbackServices { get; set; }
-    [XmlElement(ElementName = "publicDigitMap", IsNullable = true)]
-    public string PublicDigitMap { get; set; }
-    [XmlElement(ElementName = "privateDigitMap", IsNullable = true)]
-    public string PrivateDigitMap { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel _useSetting;
+
+    [XmlElement(ElementName = "useSetting", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel UseSetting {
+        get => _useSetting;
+        set {
+            UseSettingSpecified = true;
+            _useSetting = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseSettingSpecified { get; set; }
+    private bool _requiresAccessCodeForPublicCalls;
+
+    [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false, Namespace = "")]
+    public bool RequiresAccessCodeForPublicCalls {
+        get => _requiresAccessCodeForPublicCalls;
+        set {
+            RequiresAccessCodeForPublicCallsSpecified = true;
+            _requiresAccessCodeForPublicCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RequiresAccessCodeForPublicCallsSpecified { get; set; }
+    private bool _allowE164PublicCalls;
+
+    [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false, Namespace = "")]
+    public bool AllowE164PublicCalls {
+        get => _allowE164PublicCalls;
+        set {
+            AllowE164PublicCallsSpecified = true;
+            _allowE164PublicCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowE164PublicCallsSpecified { get; set; }
+    private bool _preferE164NumberFormatForCallbackServices;
+
+    [XmlElement(ElementName = "preferE164NumberFormatForCallbackServices", IsNullable = false, Namespace = "")]
+    public bool PreferE164NumberFormatForCallbackServices {
+        get => _preferE164NumberFormatForCallbackServices;
+        set {
+            PreferE164NumberFormatForCallbackServicesSpecified = true;
+            _preferE164NumberFormatForCallbackServices = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PreferE164NumberFormatForCallbackServicesSpecified { get; set; }
+    private string _publicDigitMap;
+
+    [XmlElement(ElementName = "publicDigitMap", IsNullable = true, Namespace = "")]
+    public string PublicDigitMap {
+        get => _publicDigitMap;
+        set {
+            PublicDigitMapSpecified = true;
+            _publicDigitMap = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PublicDigitMapSpecified { get; set; }
+    private string _privateDigitMap;
+
+    [XmlElement(ElementName = "privateDigitMap", IsNullable = true, Namespace = "")]
+    public string PrivateDigitMap {
+        get => _privateDigitMap;
+        set {
+            PrivateDigitMapSpecified = true;
+            _privateDigitMap = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrivateDigitMapSpecified { get; set; }
+}
 }

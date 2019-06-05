@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemPushNotificationAllowedApplicationDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "applicationId", IsNullable = false)]
-    public string ApplicationId { get; set; }
- }
+    private string _applicationId;
+
+    [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
+    public string ApplicationId {
+        get => _applicationId;
+        set {
+            ApplicationIdSpecified = true;
+            _applicationId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ApplicationIdSpecified { get; set; }
+}
 }

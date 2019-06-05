@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementVirtualOnNetCallTypeNameList 
 {
-    [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false)]
-    public List<string> VirtualOnNetCallTypeName { get; set; }
- }
+    private List<string> _virtualOnNetCallTypeName;
+
+    [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
+    public List<string> VirtualOnNetCallTypeName {
+        get => _virtualOnNetCallTypeName;
+        set {
+            VirtualOnNetCallTypeNameSpecified = true;
+            _virtualOnNetCallTypeName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VirtualOnNetCallTypeNameSpecified { get; set; }
+}
 }

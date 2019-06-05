@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserGetServiceInstanceListInServiceProviderResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "serviceInstanceTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ServiceInstanceTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _serviceInstanceTable;
+
+    [XmlElement(ElementName = "serviceInstanceTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ServiceInstanceTable {
+        get => _serviceInstanceTable;
+        set {
+            ServiceInstanceTableSpecified = true;
+            _serviceInstanceTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceInstanceTableSpecified { get; set; }
+}
 }

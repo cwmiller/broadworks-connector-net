@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SortByEnterpriseCommonPhoneListName : BroadworksConnector.Ocip.Models.SortCriteria
 {
- }
+}
 }

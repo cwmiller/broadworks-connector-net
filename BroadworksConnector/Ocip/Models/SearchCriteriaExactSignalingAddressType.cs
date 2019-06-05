@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactSignalingAddressType : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "profile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SignalingAddressType Profile { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.SignalingAddressType _profile;
+
+    [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SignalingAddressType Profile {
+        get => _profile;
+        set {
+            ProfileSpecified = true;
+            _profile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProfileSpecified { get; set; }
+}
 }

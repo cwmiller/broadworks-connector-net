@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ResellerNetworkClassOfServiceGetAssignedServiceProviderListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "spTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable SpTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _spTable;
+
+    [XmlElement(ElementName = "spTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable SpTable {
+        get => _spTable;
+        set {
+            SpTableSpecified = true;
+            _spTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SpTableSpecified { get; set; }
+}
 }

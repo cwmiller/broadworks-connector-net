@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderDnGetSummaryListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "dnSummaryTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DnSummaryTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _dnSummaryTable;
+
+    [XmlElement(ElementName = "dnSummaryTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable DnSummaryTable {
+        get => _dnSummaryTable;
+        set {
+            DnSummaryTableSpecified = true;
+            _dnSummaryTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DnSummaryTableSpecified { get; set; }
+}
 }

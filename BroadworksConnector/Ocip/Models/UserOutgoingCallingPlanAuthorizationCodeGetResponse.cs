@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserOutgoingCallingPlanAuthorizationCodeGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "useCustomSettings", IsNullable = false)]
-    public bool UseCustomSettings { get; set; }
- }
+    private bool _useCustomSettings;
+
+    [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
+    public bool UseCustomSettings {
+        get => _useCustomSettings;
+        set {
+            UseCustomSettingsSpecified = true;
+            _useCustomSettings = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseCustomSettingsSpecified { get; set; }
+}
 }

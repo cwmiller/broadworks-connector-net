@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupIntegratedIMPGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "useServiceProviderSetting", IsNullable = false)]
-    public bool UseServiceProviderSetting { get; set; }
-    [XmlElement(ElementName = "serviceDomain", IsNullable = false)]
-    public string ServiceDomain { get; set; }
- }
+    private bool _useServiceProviderSetting;
+
+    [XmlElement(ElementName = "useServiceProviderSetting", IsNullable = false, Namespace = "")]
+    public bool UseServiceProviderSetting {
+        get => _useServiceProviderSetting;
+        set {
+            UseServiceProviderSettingSpecified = true;
+            _useServiceProviderSetting = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseServiceProviderSettingSpecified { get; set; }
+    private string _serviceDomain;
+
+    [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
+    public string ServiceDomain {
+        get => _serviceDomain;
+        set {
+            ServiceDomainSpecified = true;
+            _serviceDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceDomainSpecified { get; set; }
+}
 }

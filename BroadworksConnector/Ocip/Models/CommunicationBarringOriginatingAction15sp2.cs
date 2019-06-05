@@ -3,12 +3,19 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CommunicationBarringOriginatingAction15sp2{
-    Allow,
-    Block,
-    AuthorizationCode,
-    Treatment,
-    Transfer,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CommunicationBarringOriginatingAction15sp2
+    {
+        [XmlEnum(Name = "Allow")]
+        Allow,
+        [XmlEnum(Name = "Block")]
+        Block,
+        [XmlEnum(Name = "Authorization Code")]
+        AuthorizationCode,
+        [XmlEnum(Name = "Treatment")]
+        Treatment,
+        [XmlEnum(Name = "Transfer")]
+        Transfer,
+    }
 }

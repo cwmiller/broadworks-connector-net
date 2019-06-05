@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class OutgoingPinholeDigitPlanDigitPatternRedirectingDepartmentPermissionsModify 
 {
-    [XmlElement(ElementName = "departmentKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey { get; set; }
-    [XmlElement(ElementName = "digitPatternPermissions", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions DigitPatternPermissions { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.DepartmentKey _departmentKey;
+
+    [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+        get => _departmentKey;
+        set {
+            DepartmentKeySpecified = true;
+            _departmentKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentKeySpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions _digitPatternPermissions;
+
+    [XmlElement(ElementName = "digitPatternPermissions", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions DigitPatternPermissions {
+        get => _digitPatternPermissions;
+        set {
+            DigitPatternPermissionsSpecified = true;
+            _digitPatternPermissions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DigitPatternPermissionsSpecified { get; set; }
+}
 }

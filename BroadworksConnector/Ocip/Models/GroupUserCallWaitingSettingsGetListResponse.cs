@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupUserCallWaitingSettingsGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "userCallWaitingTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserCallWaitingTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _userCallWaitingTable;
+
+    [XmlElement(ElementName = "userCallWaitingTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable UserCallWaitingTable {
+        get => _userCallWaitingTable;
+        set {
+            UserCallWaitingTableSpecified = true;
+            _userCallWaitingTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserCallWaitingTableSpecified { get; set; }
+}
 }

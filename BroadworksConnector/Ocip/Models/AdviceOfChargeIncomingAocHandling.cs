@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum AdviceOfChargeIncomingAocHandling{
-    Ignore,
-    Charge,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum AdviceOfChargeIncomingAocHandling
+    {
+        [XmlEnum(Name = "Ignore")]
+        Ignore,
+        [XmlEnum(Name = "Charge")]
+        Charge,
+    }
 }

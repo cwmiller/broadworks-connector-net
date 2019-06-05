@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBwDiameterRoutingRealmDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "instance", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.BwDiameterPeerInstance Instance { get; set; }
-    [XmlElement(ElementName = "realm", IsNullable = false)]
-    public string Realm { get; set; }
-    [XmlElement(ElementName = "applicationId", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.BwDiameterApplicationId ApplicationId { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
+
+    [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.BwDiameterPeerInstance Instance {
+        get => _instance;
+        set {
+            InstanceSpecified = true;
+            _instance = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InstanceSpecified { get; set; }
+    private string _realm;
+
+    [XmlElement(ElementName = "realm", IsNullable = false, Namespace = "")]
+    public string Realm {
+        get => _realm;
+        set {
+            RealmSpecified = true;
+            _realm = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RealmSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.BwDiameterApplicationId _applicationId;
+
+    [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.BwDiameterApplicationId ApplicationId {
+        get => _applicationId;
+        set {
+            ApplicationIdSpecified = true;
+            _applicationId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ApplicationIdSpecified { get; set; }
+}
 }

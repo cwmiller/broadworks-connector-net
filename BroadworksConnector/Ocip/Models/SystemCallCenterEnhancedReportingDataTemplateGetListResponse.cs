@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallCenterEnhancedReportingDataTemplateGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "info", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CallCenterReportDataTemplateInfo> Info { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.CallCenterReportDataTemplateInfo> _info;
+
+    [XmlElement(ElementName = "info", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CallCenterReportDataTemplateInfo> Info {
+        get => _info;
+        set {
+            InfoSpecified = true;
+            _info = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InfoSpecified { get; set; }
+}
 }

@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCPEConfigParametersModifyRequest20 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false)]
-    public bool EnableIPDeviceManagement { get; set; }
-    [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false)]
-    public int FtpConnectTimeoutSeconds { get; set; }
-    [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false)]
-    public int FtpFileTransferTimeoutSeconds { get; set; }
-    [XmlElement(ElementName = "pauseBetweenFileRebuildMilliseconds", IsNullable = false)]
-    public int PauseBetweenFileRebuildMilliseconds { get; set; }
-    [XmlElement(ElementName = "maxBusyTimeMinutes", IsNullable = false)]
-    public int MaxBusyTimeMinutes { get; set; }
-    [XmlElement(ElementName = "deviceAccessAppServerClusterName", IsNullable = true)]
-    public string DeviceAccessAppServerClusterName { get; set; }
- }
+    private bool _enableIPDeviceManagement;
+
+    [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false, Namespace = "")]
+    public bool EnableIPDeviceManagement {
+        get => _enableIPDeviceManagement;
+        set {
+            EnableIPDeviceManagementSpecified = true;
+            _enableIPDeviceManagement = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableIPDeviceManagementSpecified { get; set; }
+    private int _ftpConnectTimeoutSeconds;
+
+    [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int FtpConnectTimeoutSeconds {
+        get => _ftpConnectTimeoutSeconds;
+        set {
+            FtpConnectTimeoutSecondsSpecified = true;
+            _ftpConnectTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FtpConnectTimeoutSecondsSpecified { get; set; }
+    private int _ftpFileTransferTimeoutSeconds;
+
+    [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int FtpFileTransferTimeoutSeconds {
+        get => _ftpFileTransferTimeoutSeconds;
+        set {
+            FtpFileTransferTimeoutSecondsSpecified = true;
+            _ftpFileTransferTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
+    private int _pauseBetweenFileRebuildMilliseconds;
+
+    [XmlElement(ElementName = "pauseBetweenFileRebuildMilliseconds", IsNullable = false, Namespace = "")]
+    public int PauseBetweenFileRebuildMilliseconds {
+        get => _pauseBetweenFileRebuildMilliseconds;
+        set {
+            PauseBetweenFileRebuildMillisecondsSpecified = true;
+            _pauseBetweenFileRebuildMilliseconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PauseBetweenFileRebuildMillisecondsSpecified { get; set; }
+    private int _maxBusyTimeMinutes;
+
+    [XmlElement(ElementName = "maxBusyTimeMinutes", IsNullable = false, Namespace = "")]
+    public int MaxBusyTimeMinutes {
+        get => _maxBusyTimeMinutes;
+        set {
+            MaxBusyTimeMinutesSpecified = true;
+            _maxBusyTimeMinutes = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxBusyTimeMinutesSpecified { get; set; }
+    private string _deviceAccessAppServerClusterName;
+
+    [XmlElement(ElementName = "deviceAccessAppServerClusterName", IsNullable = true, Namespace = "")]
+    public string DeviceAccessAppServerClusterName {
+        get => _deviceAccessAppServerClusterName;
+        set {
+            DeviceAccessAppServerClusterNameSpecified = true;
+            _deviceAccessAppServerClusterName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceAccessAppServerClusterNameSpecified { get; set; }
+}
 }

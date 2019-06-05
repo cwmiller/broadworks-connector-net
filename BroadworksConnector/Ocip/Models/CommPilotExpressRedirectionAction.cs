@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CommPilotExpressRedirectionAction{
-    TransferToVoiceMail,
-    Forward,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CommPilotExpressRedirectionAction
+    {
+        [XmlEnum(Name = "Transfer To Voice Mail")]
+        TransferToVoiceMail,
+        [XmlEnum(Name = "Forward")]
+        Forward,
+    }
 }

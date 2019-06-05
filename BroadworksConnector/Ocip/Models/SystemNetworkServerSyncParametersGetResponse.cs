@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemNetworkServerSyncParametersGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableSync", IsNullable = false)]
-    public bool EnableSync { get; set; }
- }
+    private bool _enableSync;
+
+    [XmlElement(ElementName = "enableSync", IsNullable = false, Namespace = "")]
+    public bool EnableSync {
+        get => _enableSync;
+        set {
+            EnableSyncSpecified = true;
+            _enableSync = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableSyncSpecified { get; set; }
+}
 }

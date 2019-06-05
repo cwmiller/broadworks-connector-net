@@ -8,19 +8,96 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18ReplyMessageMenuKeys 
 {
-    [XmlElement(ElementName = "sendReplyToCaller", IsNullable = false)]
-    public string SendReplyToCaller { get; set; }
-    [XmlElement(ElementName = "changeCurrentReply", IsNullable = false)]
-    public string ChangeCurrentReply { get; set; }
-    [XmlElement(ElementName = "listenToCurrentReply", IsNullable = false)]
-    public string ListenToCurrentReply { get; set; }
-    [XmlElement(ElementName = "setOrClearUrgentIndicator", IsNullable = false)]
-    public string SetOrClearUrgentIndicator { get; set; }
-    [XmlElement(ElementName = "setOrClearConfidentialIndicator", IsNullable = false)]
-    public string SetOrClearConfidentialIndicator { get; set; }
-    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false)]
-    public string ReturnToPreviousMenu { get; set; }
-    [XmlElement(ElementName = "repeatMenu", IsNullable = false)]
-    public string RepeatMenu { get; set; }
- }
+    private string _sendReplyToCaller;
+
+    [XmlElement(ElementName = "sendReplyToCaller", IsNullable = false, Namespace = "")]
+    public string SendReplyToCaller {
+        get => _sendReplyToCaller;
+        set {
+            SendReplyToCallerSpecified = true;
+            _sendReplyToCaller = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SendReplyToCallerSpecified { get; set; }
+    private string _changeCurrentReply;
+
+    [XmlElement(ElementName = "changeCurrentReply", IsNullable = false, Namespace = "")]
+    public string ChangeCurrentReply {
+        get => _changeCurrentReply;
+        set {
+            ChangeCurrentReplySpecified = true;
+            _changeCurrentReply = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ChangeCurrentReplySpecified { get; set; }
+    private string _listenToCurrentReply;
+
+    [XmlElement(ElementName = "listenToCurrentReply", IsNullable = false, Namespace = "")]
+    public string ListenToCurrentReply {
+        get => _listenToCurrentReply;
+        set {
+            ListenToCurrentReplySpecified = true;
+            _listenToCurrentReply = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ListenToCurrentReplySpecified { get; set; }
+    private string _setOrClearUrgentIndicator;
+
+    [XmlElement(ElementName = "setOrClearUrgentIndicator", IsNullable = false, Namespace = "")]
+    public string SetOrClearUrgentIndicator {
+        get => _setOrClearUrgentIndicator;
+        set {
+            SetOrClearUrgentIndicatorSpecified = true;
+            _setOrClearUrgentIndicator = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SetOrClearUrgentIndicatorSpecified { get; set; }
+    private string _setOrClearConfidentialIndicator;
+
+    [XmlElement(ElementName = "setOrClearConfidentialIndicator", IsNullable = false, Namespace = "")]
+    public string SetOrClearConfidentialIndicator {
+        get => _setOrClearConfidentialIndicator;
+        set {
+            SetOrClearConfidentialIndicatorSpecified = true;
+            _setOrClearConfidentialIndicator = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SetOrClearConfidentialIndicatorSpecified { get; set; }
+    private string _returnToPreviousMenu;
+
+    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
+    public string ReturnToPreviousMenu {
+        get => _returnToPreviousMenu;
+        set {
+            ReturnToPreviousMenuSpecified = true;
+            _returnToPreviousMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReturnToPreviousMenuSpecified { get; set; }
+    private string _repeatMenu;
+
+    [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
+    public string RepeatMenu {
+        get => _repeatMenu;
+        set {
+            RepeatMenuSpecified = true;
+            _repeatMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RepeatMenuSpecified { get; set; }
+}
 }

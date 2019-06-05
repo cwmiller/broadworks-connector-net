@@ -8,21 +8,109 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallCenterGetResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "defaultFromAddress", IsNullable = false)]
-    public string DefaultFromAddress { get; set; }
-    [XmlElement(ElementName = "statisticsSamplingPeriodMinutes", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes StatisticsSamplingPeriodMinutes { get; set; }
-    [XmlElement(ElementName = "defaultEnableGuardTimer", IsNullable = false)]
-    public bool DefaultEnableGuardTimer { get; set; }
-    [XmlElement(ElementName = "defaultGuardTimerSeconds", IsNullable = false)]
-    public int DefaultGuardTimerSeconds { get; set; }
-    [XmlElement(ElementName = "forceAgentUnavailableOnDNDActivation", IsNullable = false)]
-    public bool ForceAgentUnavailableOnDNDActivation { get; set; }
-    [XmlElement(ElementName = "forceAgentUnavailableOnPersonalCalls", IsNullable = false)]
-    public bool ForceAgentUnavailableOnPersonalCalls { get; set; }
-    [XmlElement(ElementName = "forceAgentUnavailableOnBouncedCallLimit", IsNullable = false)]
-    public bool ForceAgentUnavailableOnBouncedCallLimit { get; set; }
-    [XmlElement(ElementName = "numberConsecutiveBouncedCallsToForceAgentUnavailable", IsNullable = false)]
-    public int NumberConsecutiveBouncedCallsToForceAgentUnavailable { get; set; }
- }
+    private string _defaultFromAddress;
+
+    [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
+    public string DefaultFromAddress {
+        get => _defaultFromAddress;
+        set {
+            DefaultFromAddressSpecified = true;
+            _defaultFromAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultFromAddressSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes _statisticsSamplingPeriodMinutes;
+
+    [XmlElement(ElementName = "statisticsSamplingPeriodMinutes", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes StatisticsSamplingPeriodMinutes {
+        get => _statisticsSamplingPeriodMinutes;
+        set {
+            StatisticsSamplingPeriodMinutesSpecified = true;
+            _statisticsSamplingPeriodMinutes = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StatisticsSamplingPeriodMinutesSpecified { get; set; }
+    private bool _defaultEnableGuardTimer;
+
+    [XmlElement(ElementName = "defaultEnableGuardTimer", IsNullable = false, Namespace = "")]
+    public bool DefaultEnableGuardTimer {
+        get => _defaultEnableGuardTimer;
+        set {
+            DefaultEnableGuardTimerSpecified = true;
+            _defaultEnableGuardTimer = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultEnableGuardTimerSpecified { get; set; }
+    private int _defaultGuardTimerSeconds;
+
+    [XmlElement(ElementName = "defaultGuardTimerSeconds", IsNullable = false, Namespace = "")]
+    public int DefaultGuardTimerSeconds {
+        get => _defaultGuardTimerSeconds;
+        set {
+            DefaultGuardTimerSecondsSpecified = true;
+            _defaultGuardTimerSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultGuardTimerSecondsSpecified { get; set; }
+    private bool _forceAgentUnavailableOnDNDActivation;
+
+    [XmlElement(ElementName = "forceAgentUnavailableOnDNDActivation", IsNullable = false, Namespace = "")]
+    public bool ForceAgentUnavailableOnDNDActivation {
+        get => _forceAgentUnavailableOnDNDActivation;
+        set {
+            ForceAgentUnavailableOnDNDActivationSpecified = true;
+            _forceAgentUnavailableOnDNDActivation = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ForceAgentUnavailableOnDNDActivationSpecified { get; set; }
+    private bool _forceAgentUnavailableOnPersonalCalls;
+
+    [XmlElement(ElementName = "forceAgentUnavailableOnPersonalCalls", IsNullable = false, Namespace = "")]
+    public bool ForceAgentUnavailableOnPersonalCalls {
+        get => _forceAgentUnavailableOnPersonalCalls;
+        set {
+            ForceAgentUnavailableOnPersonalCallsSpecified = true;
+            _forceAgentUnavailableOnPersonalCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ForceAgentUnavailableOnPersonalCallsSpecified { get; set; }
+    private bool _forceAgentUnavailableOnBouncedCallLimit;
+
+    [XmlElement(ElementName = "forceAgentUnavailableOnBouncedCallLimit", IsNullable = false, Namespace = "")]
+    public bool ForceAgentUnavailableOnBouncedCallLimit {
+        get => _forceAgentUnavailableOnBouncedCallLimit;
+        set {
+            ForceAgentUnavailableOnBouncedCallLimitSpecified = true;
+            _forceAgentUnavailableOnBouncedCallLimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ForceAgentUnavailableOnBouncedCallLimitSpecified { get; set; }
+    private int _numberConsecutiveBouncedCallsToForceAgentUnavailable;
+
+    [XmlElement(ElementName = "numberConsecutiveBouncedCallsToForceAgentUnavailable", IsNullable = false, Namespace = "")]
+    public int NumberConsecutiveBouncedCallsToForceAgentUnavailable {
+        get => _numberConsecutiveBouncedCallsToForceAgentUnavailable;
+        set {
+            NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified = true;
+            _numberConsecutiveBouncedCallsToForceAgentUnavailable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified { get; set; }
+}
 }

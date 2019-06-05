@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemNumberPortabilityQueryStatusGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "status", IsNullable = false)]
-    public string Status { get; set; }
- }
+    private string _status;
+
+    [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
+    public string Status {
+        get => _status;
+        set {
+            StatusSpecified = true;
+            _status = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StatusSpecified { get; set; }
+}
 }

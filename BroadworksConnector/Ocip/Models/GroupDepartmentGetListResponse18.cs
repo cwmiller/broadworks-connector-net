@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupDepartmentGetListResponse18 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "departmentTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DepartmentTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _departmentTable;
+
+    [XmlElement(ElementName = "departmentTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable DepartmentTable {
+        get => _departmentTable;
+        set {
+            DepartmentTableSpecified = true;
+            _departmentTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentTableSpecified { get; set; }
+}
 }

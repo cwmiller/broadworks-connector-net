@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class MusicOnHoldUserSourceRead 
 {
-    [XmlElement(ElementName = "messageSourceSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldUserMessageSelection MessageSourceSelection { get; set; }
-    [XmlElement(ElementName = "customSource", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceReadCustomSource CustomSource { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.MusicOnHoldUserMessageSelection _messageSourceSelection;
+
+    [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MusicOnHoldUserMessageSelection MessageSourceSelection {
+        get => _messageSourceSelection;
+        set {
+            MessageSourceSelectionSpecified = true;
+            _messageSourceSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MessageSourceSelectionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceReadCustomSource _customSource;
+
+    [XmlElement(ElementName = "customSource", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceReadCustomSource CustomSource {
+        get => _customSource;
+        set {
+            CustomSourceSpecified = true;
+            _customSource = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CustomSourceSpecified { get; set; }
+}
 }

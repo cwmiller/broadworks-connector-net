@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAccountingDeleteRadiusServerRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "netAddress", IsNullable = false)]
-    public string NetAddress { get; set; }
-    [XmlElement(ElementName = "port", IsNullable = false)]
-    public int Port { get; set; }
- }
+    private string _netAddress;
+
+    [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
+    public string NetAddress {
+        get => _netAddress;
+        set {
+            NetAddressSpecified = true;
+            _netAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetAddressSpecified { get; set; }
+    private int _port;
+
+    [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
+    public int Port {
+        get => _port;
+        set {
+            PortSpecified = true;
+            _port = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PortSpecified { get; set; }
+}
 }

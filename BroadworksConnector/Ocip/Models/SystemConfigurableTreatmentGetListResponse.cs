@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemConfigurableTreatmentGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "treatmentTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable TreatmentTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _treatmentTable;
+
+    [XmlElement(ElementName = "treatmentTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable TreatmentTable {
+        get => _treatmentTable;
+        set {
+            TreatmentTableSpecified = true;
+            _treatmentTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TreatmentTableSpecified { get; set; }
+}
 }

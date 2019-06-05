@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemExecutiveGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "treatVirtualOnNetCallsAsInternal", IsNullable = false)]
-    public bool TreatVirtualOnNetCallsAsInternal { get; set; }
- }
+    private bool _treatVirtualOnNetCallsAsInternal;
+
+    [XmlElement(ElementName = "treatVirtualOnNetCallsAsInternal", IsNullable = false, Namespace = "")]
+    public bool TreatVirtualOnNetCallsAsInternal {
+        get => _treatVirtualOnNetCallsAsInternal;
+        set {
+            TreatVirtualOnNetCallsAsInternalSpecified = true;
+            _treatVirtualOnNetCallsAsInternal = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TreatVirtualOnNetCallsAsInternalSpecified { get; set; }
+}
 }

@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum AutoAttendantType{
-    Basic,
-    Standard,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum AutoAttendantType
+    {
+        [XmlEnum(Name = "Basic")]
+        Basic,
+        [XmlEnum(Name = "Standard")]
+        Standard,
+    }
 }

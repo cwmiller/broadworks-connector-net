@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupFlexibleSeatingAccessDeviceGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "availableAccessDevice", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.GroupFlexibleSeatingAccessDeviceGetListResponseAvailableAccessDevice> AvailableAccessDevice { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.GroupFlexibleSeatingAccessDeviceGetListResponseAvailableAccessDevice> _availableAccessDevice;
+
+    [XmlElement(ElementName = "availableAccessDevice", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.GroupFlexibleSeatingAccessDeviceGetListResponseAvailableAccessDevice> AvailableAccessDevice {
+        get => _availableAccessDevice;
+        set {
+            AvailableAccessDeviceSpecified = true;
+            _availableAccessDevice = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AvailableAccessDeviceSpecified { get; set; }
+}
 }

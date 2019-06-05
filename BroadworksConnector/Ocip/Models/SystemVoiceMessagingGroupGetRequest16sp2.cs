@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupGetRequest16sp2 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

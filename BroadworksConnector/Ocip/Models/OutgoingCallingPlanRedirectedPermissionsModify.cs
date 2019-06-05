@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class OutgoingCallingPlanRedirectedPermissionsModify 
 {
-    [XmlElement(ElementName = "outsideGroup", IsNullable = false)]
-    public bool OutsideGroup { get; set; }
- }
+    private bool _outsideGroup;
+
+    [XmlElement(ElementName = "outsideGroup", IsNullable = false, Namespace = "")]
+    public bool OutsideGroup {
+        get => _outsideGroup;
+        set {
+            OutsideGroupSpecified = true;
+            _outsideGroup = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OutsideGroupSpecified { get; set; }
+}
 }

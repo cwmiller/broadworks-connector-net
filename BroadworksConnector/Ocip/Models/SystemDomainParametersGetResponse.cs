@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDomainParametersGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "useAliasForDomain", IsNullable = false)]
-    public bool UseAliasForDomain { get; set; }
-    [XmlElement(ElementName = "defaultDomain", IsNullable = false)]
-    public string DefaultDomain { get; set; }
- }
+    private bool _useAliasForDomain;
+
+    [XmlElement(ElementName = "useAliasForDomain", IsNullable = false, Namespace = "")]
+    public bool UseAliasForDomain {
+        get => _useAliasForDomain;
+        set {
+            UseAliasForDomainSpecified = true;
+            _useAliasForDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseAliasForDomainSpecified { get; set; }
+    private string _defaultDomain;
+
+    [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
+    public string DefaultDomain {
+        get => _defaultDomain;
+        set {
+            DefaultDomainSpecified = true;
+            _defaultDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultDomainSpecified { get; set; }
+}
 }

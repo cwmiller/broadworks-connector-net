@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderNetworkClassOfServiceGetAssignedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "networkClassOfServiceTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable NetworkClassOfServiceTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _networkClassOfServiceTable;
+
+    [XmlElement(ElementName = "networkClassOfServiceTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable NetworkClassOfServiceTable {
+        get => _networkClassOfServiceTable;
+        set {
+            NetworkClassOfServiceTableSpecified = true;
+            _networkClassOfServiceTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetworkClassOfServiceTableSpecified { get; set; }
+}
 }

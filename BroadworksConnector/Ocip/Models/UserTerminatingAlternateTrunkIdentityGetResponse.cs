@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserTerminatingAlternateTrunkIdentityGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "terminatingTrunkIdentity", IsNullable = false)]
-    public string TerminatingTrunkIdentity { get; set; }
- }
+    private string _terminatingTrunkIdentity;
+
+    [XmlElement(ElementName = "terminatingTrunkIdentity", IsNullable = false, Namespace = "")]
+    public string TerminatingTrunkIdentity {
+        get => _terminatingTrunkIdentity;
+        set {
+            TerminatingTrunkIdentitySpecified = true;
+            _terminatingTrunkIdentity = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TerminatingTrunkIdentitySpecified { get; set; }
+}
 }

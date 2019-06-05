@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserDirectedCallPickupWithBargeInGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableBargeInWarningTone", IsNullable = false)]
-    public bool EnableBargeInWarningTone { get; set; }
- }
+    private bool _enableBargeInWarningTone;
+
+    [XmlElement(ElementName = "enableBargeInWarningTone", IsNullable = false, Namespace = "")]
+    public bool EnableBargeInWarningTone {
+        get => _enableBargeInWarningTone;
+        set {
+            EnableBargeInWarningToneSpecified = true;
+            _enableBargeInWarningTone = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableBargeInWarningToneSpecified { get; set; }
+}
 }

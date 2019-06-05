@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemInterceptUserModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "emergencyAndRepairIntercept", IsNullable = false)]
-    public bool EmergencyAndRepairIntercept { get; set; }
- }
+    private bool _emergencyAndRepairIntercept;
+
+    [XmlElement(ElementName = "emergencyAndRepairIntercept", IsNullable = false, Namespace = "")]
+    public bool EmergencyAndRepairIntercept {
+        get => _emergencyAndRepairIntercept;
+        set {
+            EmergencyAndRepairInterceptSpecified = true;
+            _emergencyAndRepairIntercept = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EmergencyAndRepairInterceptSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDeviceManagementGetEventStatusSummaryCountResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "statusCountTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable StatusCountTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _statusCountTable;
+
+    [XmlElement(ElementName = "statusCountTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable StatusCountTable {
+        get => _statusCountTable;
+        set {
+            StatusCountTableSpecified = true;
+            _statusCountTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StatusCountTableSpecified { get; set; }
+}
 }

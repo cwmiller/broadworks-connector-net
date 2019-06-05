@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallProcessingPolicyProfileGetResponse20 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "description", IsNullable = false)]
-    public string Description { get; set; }
-    [XmlElement(ElementName = "assignedSubscriberType", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType20> AssignedSubscriberType { get; set; }
- }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType20> _assignedSubscriberType;
+
+    [XmlElement(ElementName = "assignedSubscriberType", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType20> AssignedSubscriberType {
+        get => _assignedSubscriberType;
+        set {
+            AssignedSubscriberTypeSpecified = true;
+            _assignedSubscriberType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AssignedSubscriberTypeSpecified { get; set; }
+}
 }

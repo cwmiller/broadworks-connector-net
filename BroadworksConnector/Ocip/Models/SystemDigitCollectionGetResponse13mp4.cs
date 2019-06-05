@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDigitCollectionGetResponse13mp4 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "accessCode", IsNullable = false)]
-    public string AccessCode { get; set; }
-    [XmlElement(ElementName = "publicDigitMap", IsNullable = false)]
-    public string PublicDigitMap { get; set; }
-    [XmlElement(ElementName = "privateDigitMap", IsNullable = false)]
-    public string PrivateDigitMap { get; set; }
- }
+    private string _accessCode;
+
+    [XmlElement(ElementName = "accessCode", IsNullable = false, Namespace = "")]
+    public string AccessCode {
+        get => _accessCode;
+        set {
+            AccessCodeSpecified = true;
+            _accessCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessCodeSpecified { get; set; }
+    private string _publicDigitMap;
+
+    [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
+    public string PublicDigitMap {
+        get => _publicDigitMap;
+        set {
+            PublicDigitMapSpecified = true;
+            _publicDigitMap = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PublicDigitMapSpecified { get; set; }
+    private string _privateDigitMap;
+
+    [XmlElement(ElementName = "privateDigitMap", IsNullable = false, Namespace = "")]
+    public string PrivateDigitMap {
+        get => _privateDigitMap;
+        set {
+            PrivateDigitMapSpecified = true;
+            _privateDigitMap = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrivateDigitMapSpecified { get; set; }
+}
 }

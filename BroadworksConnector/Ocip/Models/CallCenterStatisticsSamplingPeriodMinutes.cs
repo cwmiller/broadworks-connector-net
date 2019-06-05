@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallCenterStatisticsSamplingPeriodMinutes{
-    _15,
-    _30,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallCenterStatisticsSamplingPeriodMinutes
+    {
+        [XmlEnum(Name = "15")]
+        _15,
+        [XmlEnum(Name = "30")]
+        _30,
+    }
 }

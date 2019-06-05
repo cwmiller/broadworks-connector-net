@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserSMDIMessageDeskDeleteServerListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "deviceName", IsNullable = false)]
-    public List<string> DeviceName { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private List<string> _deviceName;
+
+    [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
+    public List<string> DeviceName {
+        get => _deviceName;
+        set {
+            DeviceNameSpecified = true;
+            _deviceName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceNameSpecified { get; set; }
+}
 }

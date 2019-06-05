@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemHPBXMobileTerminationGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "routingPrefix", IsNullable = false)]
-    public string RoutingPrefix { get; set; }
- }
+    private string _routingPrefix;
+
+    [XmlElement(ElementName = "routingPrefix", IsNullable = false, Namespace = "")]
+    public string RoutingPrefix {
+        get => _routingPrefix;
+        set {
+            RoutingPrefixSpecified = true;
+            _routingPrefix = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoutingPrefixSpecified { get; set; }
+}
 }

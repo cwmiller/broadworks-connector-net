@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPushNotificationGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "sendPushNotificationForClickToDial", IsNullable = false)]
-    public bool SendPushNotificationForClickToDial { get; set; }
- }
+    private bool _sendPushNotificationForClickToDial;
+
+    [XmlElement(ElementName = "sendPushNotificationForClickToDial", IsNullable = false, Namespace = "")]
+    public bool SendPushNotificationForClickToDial {
+        get => _sendPushNotificationForClickToDial;
+        set {
+            SendPushNotificationForClickToDialSpecified = true;
+            _sendPushNotificationForClickToDial = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SendPushNotificationForClickToDialSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupSecurityClassificationCustomizationGetAvailableListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "securityClassificationNameTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable SecurityClassificationNameTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _securityClassificationNameTable;
+
+    [XmlElement(ElementName = "securityClassificationNameTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable SecurityClassificationNameTable {
+        get => _securityClassificationNameTable;
+        set {
+            SecurityClassificationNameTableSpecified = true;
+            _securityClassificationNameTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SecurityClassificationNameTableSpecified { get; set; }
+}
 }

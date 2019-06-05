@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallCenterManualNightServiceAnnouncementMode{
-    NormalAnnouncement,
-    ManualAnnouncement,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallCenterManualNightServiceAnnouncementMode
+    {
+        [XmlEnum(Name = "Normal Announcement")]
+        NormalAnnouncement,
+        [XmlEnum(Name = "Manual Announcement")]
+        ManualAnnouncement,
+    }
 }

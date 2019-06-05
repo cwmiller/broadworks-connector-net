@@ -1,16 +1,42 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupCallCenterGetRoutingPolicyResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-{
-    [XmlElement(ElementName = "routingPolicy", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterRoutingPolicy RoutingPolicy { get; set; }
-    [XmlElement(ElementName = "callCenterTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CallCenterTable { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class GroupCallCenterGetRoutingPolicyResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+    {
+        private BroadworksConnector.Ocip.Models.CallCenterRoutingPolicy _routingPolicy;
+
+        [XmlElement(ElementName = "routingPolicy", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.CallCenterRoutingPolicy RoutingPolicy
+        {
+            get => _routingPolicy;
+            set
+            {
+                RoutingPolicySpecified = true;
+                _routingPolicy = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool RoutingPolicySpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.C.OCITable _callCenterTable;
+
+        [XmlElement(ElementName = "callCenterTable", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.C.OCITable CallCenterTable
+        {
+            get => _callCenterTable;
+            set
+            {
+                CallCenterTableSpecified = true;
+                _callCenterTable = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool CallCenterTableSpecified { get; set; }
+    }
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallProcessingPolicyProfileGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "callProcessingPolicyProfilesTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CallProcessingPolicyProfilesTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _callProcessingPolicyProfilesTable;
+
+    [XmlElement(ElementName = "callProcessingPolicyProfilesTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable CallProcessingPolicyProfilesTable {
+        get => _callProcessingPolicyProfilesTable;
+        set {
+            CallProcessingPolicyProfilesTableSpecified = true;
+            _callProcessingPolicyProfilesTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallProcessingPolicyProfilesTableSpecified { get; set; }
+}
 }

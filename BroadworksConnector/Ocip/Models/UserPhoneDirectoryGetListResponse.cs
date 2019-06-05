@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPhoneDirectoryGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "directoryTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DirectoryTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _directoryTable;
+
+    [XmlElement(ElementName = "directoryTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable DirectoryTable {
+        get => _directoryTable;
+        set {
+            DirectoryTableSpecified = true;
+            _directoryTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DirectoryTableSpecified { get; set; }
+}
 }

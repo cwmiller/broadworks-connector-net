@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSIPDeviceTypeLanguageMappingModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "deviceType", IsNullable = false)]
-    public string DeviceType { get; set; }
-    [XmlElement(ElementName = "languageMapping", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.DeviceManagementLanguageMapping> LanguageMapping { get; set; }
- }
+    private string _deviceType;
+
+    [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
+    public string DeviceType {
+        get => _deviceType;
+        set {
+            DeviceTypeSpecified = true;
+            _deviceType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceTypeSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.DeviceManagementLanguageMapping> _languageMapping;
+
+    [XmlElement(ElementName = "languageMapping", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.DeviceManagementLanguageMapping> LanguageMapping {
+        get => _languageMapping;
+        set {
+            LanguageMappingSpecified = true;
+            _languageMapping = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LanguageMappingSpecified { get; set; }
+}
 }

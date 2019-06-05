@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutePointDistinctiveRingingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableDistinctiveRinging", IsNullable = false)]
-    public bool EnableDistinctiveRinging { get; set; }
-    [XmlElement(ElementName = "distinctiveRingingRingPattern", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.RingPattern DistinctiveRingingRingPattern { get; set; }
-    [XmlElement(ElementName = "distinctiveRingingForceDeliveryRingPattern", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.RingPattern DistinctiveRingingForceDeliveryRingPattern { get; set; }
- }
+    private bool _enableDistinctiveRinging;
+
+    [XmlElement(ElementName = "enableDistinctiveRinging", IsNullable = false, Namespace = "")]
+    public bool EnableDistinctiveRinging {
+        get => _enableDistinctiveRinging;
+        set {
+            EnableDistinctiveRingingSpecified = true;
+            _enableDistinctiveRinging = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableDistinctiveRingingSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.RingPattern _distinctiveRingingRingPattern;
+
+    [XmlElement(ElementName = "distinctiveRingingRingPattern", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.RingPattern DistinctiveRingingRingPattern {
+        get => _distinctiveRingingRingPattern;
+        set {
+            DistinctiveRingingRingPatternSpecified = true;
+            _distinctiveRingingRingPattern = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DistinctiveRingingRingPatternSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.RingPattern _distinctiveRingingForceDeliveryRingPattern;
+
+    [XmlElement(ElementName = "distinctiveRingingForceDeliveryRingPattern", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.RingPattern DistinctiveRingingForceDeliveryRingPattern {
+        get => _distinctiveRingingForceDeliveryRingPattern;
+        set {
+            DistinctiveRingingForceDeliveryRingPatternSpecified = true;
+            _distinctiveRingingForceDeliveryRingPattern = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DistinctiveRingingForceDeliveryRingPatternSpecified { get; set; }
+}
 }

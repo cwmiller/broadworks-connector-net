@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ResellerCollaborateGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "collaborateFromAddress", IsNullable = false)]
-    public string CollaborateFromAddress { get; set; }
- }
+    private string _collaborateFromAddress;
+
+    [XmlElement(ElementName = "collaborateFromAddress", IsNullable = false, Namespace = "")]
+    public string CollaborateFromAddress {
+        get => _collaborateFromAddress;
+        set {
+            CollaborateFromAddressSpecified = true;
+            _collaborateFromAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CollaborateFromAddressSpecified { get; set; }
+}
 }

@@ -8,27 +8,148 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCPEConfigParametersModifyRequest21 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false)]
-    public bool EnableIPDeviceManagement { get; set; }
-    [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false)]
-    public int FtpConnectTimeoutSeconds { get; set; }
-    [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false)]
-    public int FtpFileTransferTimeoutSeconds { get; set; }
-    [XmlElement(ElementName = "pauseBetweenFileRebuildMilliseconds", IsNullable = false)]
-    public int PauseBetweenFileRebuildMilliseconds { get; set; }
-    [XmlElement(ElementName = "deviceAccessAppServerClusterName", IsNullable = true)]
-    public string DeviceAccessAppServerClusterName { get; set; }
-    [XmlElement(ElementName = "minTimeBetweenResetMilliseconds", IsNullable = false)]
-    public int MinTimeBetweenResetMilliseconds { get; set; }
-    [XmlElement(ElementName = "alwaysPushFilesOnRebuild", IsNullable = false)]
-    public bool AlwaysPushFilesOnRebuild { get; set; }
-    [XmlElement(ElementName = "maxFileOperationRetryAttempts", IsNullable = false)]
-    public int MaxFileOperationRetryAttempts { get; set; }
-    [XmlElement(ElementName = "enableAutoRebuildConfig", IsNullable = false)]
-    public bool EnableAutoRebuildConfig { get; set; }
-    [XmlElement(ElementName = "eventQueueSize", IsNullable = false)]
-    public int EventQueueSize { get; set; }
-    [XmlElement(ElementName = "allowDeviceCredentialsRetrieval", IsNullable = false)]
-    public bool AllowDeviceCredentialsRetrieval { get; set; }
- }
+    private bool _enableIPDeviceManagement;
+
+    [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false, Namespace = "")]
+    public bool EnableIPDeviceManagement {
+        get => _enableIPDeviceManagement;
+        set {
+            EnableIPDeviceManagementSpecified = true;
+            _enableIPDeviceManagement = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableIPDeviceManagementSpecified { get; set; }
+    private int _ftpConnectTimeoutSeconds;
+
+    [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int FtpConnectTimeoutSeconds {
+        get => _ftpConnectTimeoutSeconds;
+        set {
+            FtpConnectTimeoutSecondsSpecified = true;
+            _ftpConnectTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FtpConnectTimeoutSecondsSpecified { get; set; }
+    private int _ftpFileTransferTimeoutSeconds;
+
+    [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int FtpFileTransferTimeoutSeconds {
+        get => _ftpFileTransferTimeoutSeconds;
+        set {
+            FtpFileTransferTimeoutSecondsSpecified = true;
+            _ftpFileTransferTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
+    private int _pauseBetweenFileRebuildMilliseconds;
+
+    [XmlElement(ElementName = "pauseBetweenFileRebuildMilliseconds", IsNullable = false, Namespace = "")]
+    public int PauseBetweenFileRebuildMilliseconds {
+        get => _pauseBetweenFileRebuildMilliseconds;
+        set {
+            PauseBetweenFileRebuildMillisecondsSpecified = true;
+            _pauseBetweenFileRebuildMilliseconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PauseBetweenFileRebuildMillisecondsSpecified { get; set; }
+    private string _deviceAccessAppServerClusterName;
+
+    [XmlElement(ElementName = "deviceAccessAppServerClusterName", IsNullable = true, Namespace = "")]
+    public string DeviceAccessAppServerClusterName {
+        get => _deviceAccessAppServerClusterName;
+        set {
+            DeviceAccessAppServerClusterNameSpecified = true;
+            _deviceAccessAppServerClusterName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceAccessAppServerClusterNameSpecified { get; set; }
+    private int _minTimeBetweenResetMilliseconds;
+
+    [XmlElement(ElementName = "minTimeBetweenResetMilliseconds", IsNullable = false, Namespace = "")]
+    public int MinTimeBetweenResetMilliseconds {
+        get => _minTimeBetweenResetMilliseconds;
+        set {
+            MinTimeBetweenResetMillisecondsSpecified = true;
+            _minTimeBetweenResetMilliseconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MinTimeBetweenResetMillisecondsSpecified { get; set; }
+    private bool _alwaysPushFilesOnRebuild;
+
+    [XmlElement(ElementName = "alwaysPushFilesOnRebuild", IsNullable = false, Namespace = "")]
+    public bool AlwaysPushFilesOnRebuild {
+        get => _alwaysPushFilesOnRebuild;
+        set {
+            AlwaysPushFilesOnRebuildSpecified = true;
+            _alwaysPushFilesOnRebuild = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlwaysPushFilesOnRebuildSpecified { get; set; }
+    private int _maxFileOperationRetryAttempts;
+
+    [XmlElement(ElementName = "maxFileOperationRetryAttempts", IsNullable = false, Namespace = "")]
+    public int MaxFileOperationRetryAttempts {
+        get => _maxFileOperationRetryAttempts;
+        set {
+            MaxFileOperationRetryAttemptsSpecified = true;
+            _maxFileOperationRetryAttempts = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxFileOperationRetryAttemptsSpecified { get; set; }
+    private bool _enableAutoRebuildConfig;
+
+    [XmlElement(ElementName = "enableAutoRebuildConfig", IsNullable = false, Namespace = "")]
+    public bool EnableAutoRebuildConfig {
+        get => _enableAutoRebuildConfig;
+        set {
+            EnableAutoRebuildConfigSpecified = true;
+            _enableAutoRebuildConfig = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableAutoRebuildConfigSpecified { get; set; }
+    private int _eventQueueSize;
+
+    [XmlElement(ElementName = "eventQueueSize", IsNullable = false, Namespace = "")]
+    public int EventQueueSize {
+        get => _eventQueueSize;
+        set {
+            EventQueueSizeSpecified = true;
+            _eventQueueSize = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EventQueueSizeSpecified { get; set; }
+    private bool _allowDeviceCredentialsRetrieval;
+
+    [XmlElement(ElementName = "allowDeviceCredentialsRetrieval", IsNullable = false, Namespace = "")]
+    public bool AllowDeviceCredentialsRetrieval {
+        get => _allowDeviceCredentialsRetrieval;
+        set {
+            AllowDeviceCredentialsRetrievalSpecified = true;
+            _allowDeviceCredentialsRetrieval = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowDeviceCredentialsRetrievalSpecified { get; set; }
+}
 }

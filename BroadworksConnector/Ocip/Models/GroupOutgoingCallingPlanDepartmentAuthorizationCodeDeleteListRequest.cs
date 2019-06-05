@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupOutgoingCallingPlanDepartmentAuthorizationCodeDeleteListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "departmentKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey { get; set; }
-    [XmlElement(ElementName = "code", IsNullable = false)]
-    public List<string> Code { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.DepartmentKey _departmentKey;
+
+    [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+        get => _departmentKey;
+        set {
+            DepartmentKeySpecified = true;
+            _departmentKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentKeySpecified { get; set; }
+    private List<string> _code;
+
+    [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
+    public List<string> Code {
+        get => _code;
+        set {
+            CodeSpecified = true;
+            _code = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CodeSpecified { get; set; }
+}
 }

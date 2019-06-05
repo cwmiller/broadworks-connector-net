@@ -1,14 +1,27 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupAccessDeviceTagSetGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-{
-    [XmlElement(ElementName = "tagSetName", IsNullable = false)]
-    public string TagSetName { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class GroupAccessDeviceTagSetGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+    {
+        private string _tagSetName;
+
+        [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
+        public string TagSetName
+        {
+            get => _tagSetName;
+            set
+            {
+                TagSetNameSpecified = true;
+                _tagSetName = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool TagSetNameSpecified { get; set; }
+    }
 }

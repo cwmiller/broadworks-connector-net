@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemShInterfaceParametersGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "hssRealm", IsNullable = false)]
-    public string HssRealm { get; set; }
-    [XmlElement(ElementName = "requestTimeoutSeconds", IsNullable = false)]
-    public int RequestTimeoutSeconds { get; set; }
-    [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false)]
-    public int PublicIdentityRefreshDelaySeconds { get; set; }
- }
+    private string _hssRealm;
+
+    [XmlElement(ElementName = "hssRealm", IsNullable = false, Namespace = "")]
+    public string HssRealm {
+        get => _hssRealm;
+        set {
+            HssRealmSpecified = true;
+            _hssRealm = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HssRealmSpecified { get; set; }
+    private int _requestTimeoutSeconds;
+
+    [XmlElement(ElementName = "requestTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int RequestTimeoutSeconds {
+        get => _requestTimeoutSeconds;
+        set {
+            RequestTimeoutSecondsSpecified = true;
+            _requestTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RequestTimeoutSecondsSpecified { get; set; }
+    private int _publicIdentityRefreshDelaySeconds;
+
+    [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
+    public int PublicIdentityRefreshDelaySeconds {
+        get => _publicIdentityRefreshDelaySeconds;
+        set {
+            PublicIdentityRefreshDelaySecondsSpecified = true;
+            _publicIdentityRefreshDelaySeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PublicIdentityRefreshDelaySecondsSpecified { get; set; }
+}
 }

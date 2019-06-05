@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemZoneGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "zoneName", IsNullable = false)]
-    public List<string> ZoneName { get; set; }
- }
+    private List<string> _zoneName;
+
+    [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
+    public List<string> ZoneName {
+        get => _zoneName;
+        set {
+            ZoneNameSpecified = true;
+            _zoneName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ZoneNameSpecified { get; set; }
+}
 }

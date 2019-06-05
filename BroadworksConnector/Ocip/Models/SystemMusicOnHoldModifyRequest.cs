@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemMusicOnHoldModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "delayMilliseconds", IsNullable = false)]
-    public int DelayMilliseconds { get; set; }
- }
+    private int _delayMilliseconds;
+
+    [XmlElement(ElementName = "delayMilliseconds", IsNullable = false, Namespace = "")]
+    public int DelayMilliseconds {
+        get => _delayMilliseconds;
+        set {
+            DelayMillisecondsSpecified = true;
+            _delayMilliseconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DelayMillisecondsSpecified { get; set; }
+}
 }

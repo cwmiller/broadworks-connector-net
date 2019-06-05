@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactGroupAdminType : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "type", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.GroupAdminType Type { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.GroupAdminType _type;
+
+    [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.GroupAdminType Type {
+        get => _type;
+        set {
+            TypeSpecified = true;
+            _type = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TypeSpecified { get; set; }
+}
 }

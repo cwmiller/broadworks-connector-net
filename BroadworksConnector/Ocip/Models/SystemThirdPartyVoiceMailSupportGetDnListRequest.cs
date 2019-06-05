@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemThirdPartyVoiceMailSupportGetDnListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false)]
-    public int ResponseSizeLimit { get; set; }
-    [XmlElement(ElementName = "searchCriteriaSystemServiceDn", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaSystemServiceDn> SearchCriteriaSystemServiceDn { get; set; }
- }
+    private int _responseSizeLimit;
+
+    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
+    public int ResponseSizeLimit {
+        get => _responseSizeLimit;
+        set {
+            ResponseSizeLimitSpecified = true;
+            _responseSizeLimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResponseSizeLimitSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaSystemServiceDn> _searchCriteriaSystemServiceDn;
+
+    [XmlElement(ElementName = "searchCriteriaSystemServiceDn", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaSystemServiceDn> SearchCriteriaSystemServiceDn {
+        get => _searchCriteriaSystemServiceDn;
+        set {
+            SearchCriteriaSystemServiceDnSpecified = true;
+            _searchCriteriaSystemServiceDn = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaSystemServiceDnSpecified { get; set; }
+}
 }

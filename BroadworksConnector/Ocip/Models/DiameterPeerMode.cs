@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum DiameterPeerMode{
-    Active,
-    Standby,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum DiameterPeerMode
+    {
+        [XmlEnum(Name = "Active")]
+        Active,
+        [XmlEnum(Name = "Standby")]
+        Standby,
+    }
 }

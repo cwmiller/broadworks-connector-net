@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserTimeScheduleGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "timeScheduleName", IsNullable = false)]
-    public string TimeScheduleName { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private string _timeScheduleName;
+
+    [XmlElement(ElementName = "timeScheduleName", IsNullable = false, Namespace = "")]
+    public string TimeScheduleName {
+        get => _timeScheduleName;
+        set {
+            TimeScheduleNameSpecified = true;
+            _timeScheduleName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeScheduleNameSpecified { get; set; }
+}
 }

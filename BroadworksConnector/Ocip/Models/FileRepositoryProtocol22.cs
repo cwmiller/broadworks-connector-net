@@ -3,11 +3,17 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum FileRepositoryProtocol22{
-    WebDAV,
-    FTP,
-    FTPS,
-    SFTP,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum FileRepositoryProtocol22
+    {
+        [XmlEnum(Name = "WebDAV")]
+        WebDAV,
+        [XmlEnum(Name = "FTP")]
+        FTP,
+        [XmlEnum(Name = "FTPS")]
+        FTPS,
+        [XmlEnum(Name = "SFTP")]
+        SFTP,
+    }
 }

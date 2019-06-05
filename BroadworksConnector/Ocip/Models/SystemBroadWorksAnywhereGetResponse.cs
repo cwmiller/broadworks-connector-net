@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBroadWorksAnywhereGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableTransferNotification", IsNullable = false)]
-    public bool EnableTransferNotification { get; set; }
- }
+    private bool _enableTransferNotification;
+
+    [XmlElement(ElementName = "enableTransferNotification", IsNullable = false, Namespace = "")]
+    public bool EnableTransferNotification {
+        get => _enableTransferNotification;
+        set {
+            EnableTransferNotificationSpecified = true;
+            _enableTransferNotification = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableTransferNotificationSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserHolidayScheduleGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "holidayScheduleTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable HolidayScheduleTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _holidayScheduleTable;
+
+    [XmlElement(ElementName = "holidayScheduleTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable HolidayScheduleTable {
+        get => _holidayScheduleTable;
+        set {
+            HolidayScheduleTableSpecified = true;
+            _holidayScheduleTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HolidayScheduleTableSpecified { get; set; }
+}
 }

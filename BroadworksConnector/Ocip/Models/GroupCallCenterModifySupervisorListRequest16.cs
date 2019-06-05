@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCallCenterModifySupervisorListRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "supervisorUserIdList", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList SupervisorUserIdList { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _supervisorUserIdList;
+
+    [XmlElement(ElementName = "supervisorUserIdList", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementUserIdList SupervisorUserIdList {
+        get => _supervisorUserIdList;
+        set {
+            SupervisorUserIdListSpecified = true;
+            _supervisorUserIdList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SupervisorUserIdListSpecified { get; set; }
+}
 }

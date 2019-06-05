@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupIntegratedIMPGetResponse21sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "useServiceProviderSetting", IsNullable = false)]
-    public bool UseServiceProviderSetting { get; set; }
-    [XmlElement(ElementName = "serviceDomain", IsNullable = false)]
-    public string ServiceDomain { get; set; }
-    [XmlElement(ElementName = "effectiveServiceDomain", IsNullable = false)]
-    public string EffectiveServiceDomain { get; set; }
-    [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false)]
-    public bool AddServiceProviderInIMPUserId { get; set; }
-    [XmlElement(ElementName = "defaultImpIdType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.IntegratedIMPUserIDType DefaultImpIdType { get; set; }
- }
+    private bool _useServiceProviderSetting;
+
+    [XmlElement(ElementName = "useServiceProviderSetting", IsNullable = false, Namespace = "")]
+    public bool UseServiceProviderSetting {
+        get => _useServiceProviderSetting;
+        set {
+            UseServiceProviderSettingSpecified = true;
+            _useServiceProviderSetting = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseServiceProviderSettingSpecified { get; set; }
+    private string _serviceDomain;
+
+    [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
+    public string ServiceDomain {
+        get => _serviceDomain;
+        set {
+            ServiceDomainSpecified = true;
+            _serviceDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceDomainSpecified { get; set; }
+    private string _effectiveServiceDomain;
+
+    [XmlElement(ElementName = "effectiveServiceDomain", IsNullable = false, Namespace = "")]
+    public string EffectiveServiceDomain {
+        get => _effectiveServiceDomain;
+        set {
+            EffectiveServiceDomainSpecified = true;
+            _effectiveServiceDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EffectiveServiceDomainSpecified { get; set; }
+    private bool _addServiceProviderInIMPUserId;
+
+    [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
+    public bool AddServiceProviderInIMPUserId {
+        get => _addServiceProviderInIMPUserId;
+        set {
+            AddServiceProviderInIMPUserIdSpecified = true;
+            _addServiceProviderInIMPUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AddServiceProviderInIMPUserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
+
+    [XmlElement(ElementName = "defaultImpIdType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.IntegratedIMPUserIDType DefaultImpIdType {
+        get => _defaultImpIdType;
+        set {
+            DefaultImpIdTypeSpecified = true;
+            _defaultImpIdType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultImpIdTypeSpecified { get; set; }
+}
 }

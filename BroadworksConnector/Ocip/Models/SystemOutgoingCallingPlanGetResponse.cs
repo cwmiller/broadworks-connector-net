@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemOutgoingCallingPlanGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "directTransferScreening", IsNullable = false)]
-    public bool DirectTransferScreening { get; set; }
- }
+    private bool _directTransferScreening;
+
+    [XmlElement(ElementName = "directTransferScreening", IsNullable = false, Namespace = "")]
+    public bool DirectTransferScreening {
+        get => _directTransferScreening;
+        set {
+            DirectTransferScreeningSpecified = true;
+            _directTransferScreening = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DirectTransferScreeningSpecified { get; set; }
+}
 }

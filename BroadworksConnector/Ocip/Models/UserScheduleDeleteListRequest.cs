@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserScheduleDeleteListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "scheduleKey", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.ScheduleKey> ScheduleKey { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.ScheduleKey> _scheduleKey;
+
+    [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.ScheduleKey> ScheduleKey {
+        get => _scheduleKey;
+        set {
+            ScheduleKeySpecified = true;
+            _scheduleKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScheduleKeySpecified { get; set; }
+}
 }

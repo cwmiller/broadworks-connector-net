@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoamingNetworkGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "roamingNetworkTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable RoamingNetworkTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _roamingNetworkTable;
+
+    [XmlElement(ElementName = "roamingNetworkTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable RoamingNetworkTable {
+        get => _roamingNetworkTable;
+        set {
+            RoamingNetworkTableSpecified = true;
+            _roamingNetworkTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoamingNetworkTableSpecified { get; set; }
+}
 }

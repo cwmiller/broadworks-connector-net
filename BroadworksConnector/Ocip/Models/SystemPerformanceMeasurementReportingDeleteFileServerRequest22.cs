@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemPerformanceMeasurementReportingDeleteFileServerRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "repositoryUrl", IsNullable = false)]
-    public string RepositoryUrl { get; set; }
- }
+    private string _repositoryUrl;
+
+    [XmlElement(ElementName = "repositoryUrl", IsNullable = false, Namespace = "")]
+    public string RepositoryUrl {
+        get => _repositoryUrl;
+        set {
+            RepositoryUrlSpecified = true;
+            _repositoryUrl = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RepositoryUrlSpecified { get; set; }
+}
 }

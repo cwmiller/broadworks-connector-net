@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactOrganizationType : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "organizationType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.OrganizationType OrganizationType { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.OrganizationType _organizationType;
+
+    [XmlElement(ElementName = "organizationType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.OrganizationType OrganizationType {
+        get => _organizationType;
+        set {
+            OrganizationTypeSpecified = true;
+            _organizationType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OrganizationTypeSpecified { get; set; }
+}
 }

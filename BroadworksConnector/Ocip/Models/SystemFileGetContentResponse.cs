@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemFileGetContentResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "fileContent", IsNullable = false)]
-    public string FileContent { get; set; }
- }
+    private string _fileContent;
+
+    [XmlElement(ElementName = "fileContent", IsNullable = false, Namespace = "")]
+    public string FileContent {
+        get => _fileContent;
+        set {
+            FileContentSpecified = true;
+            _fileContent = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileContentSpecified { get; set; }
+}
 }

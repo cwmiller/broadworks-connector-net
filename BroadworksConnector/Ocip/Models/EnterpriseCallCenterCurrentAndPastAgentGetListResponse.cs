@@ -1,16 +1,42 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class EnterpriseCallCenterCurrentAndPastAgentGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-{
-    [XmlElement(ElementName = "agentUserTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable AgentUserTable { get; set; }
-    [XmlElement(ElementName = "deletedAgentUserTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DeletedAgentUserTable { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class EnterpriseCallCenterCurrentAndPastAgentGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+    {
+        private BroadworksConnector.Ocip.Models.C.OCITable _agentUserTable;
+
+        [XmlElement(ElementName = "agentUserTable", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.C.OCITable AgentUserTable
+        {
+            get => _agentUserTable;
+            set
+            {
+                AgentUserTableSpecified = true;
+                _agentUserTable = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool AgentUserTableSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.C.OCITable _deletedAgentUserTable;
+
+        [XmlElement(ElementName = "deletedAgentUserTable", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.C.OCITable DeletedAgentUserTable
+        {
+            get => _deletedAgentUserTable;
+            set
+            {
+                DeletedAgentUserTableSpecified = true;
+                _deletedAgentUserTable = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool DeletedAgentUserTableSpecified { get; set; }
+    }
 }

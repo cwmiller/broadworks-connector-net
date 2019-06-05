@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class TimeSchedule 
 {
-    [XmlElement(ElementName = "type", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ScheduleLevel Type { get; set; }
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.ScheduleLevel _type;
+
+    [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ScheduleLevel Type {
+        get => _type;
+        set {
+            TypeSpecified = true;
+            _type = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TypeSpecified { get; set; }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+}
 }

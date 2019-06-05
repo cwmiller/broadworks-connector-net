@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserServiceIsAssignedRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "serviceName", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.UserService ServiceName { get; set; }
-    [XmlElement(ElementName = "servicePackName", IsNullable = false)]
-    public string ServicePackName { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.UserService _serviceName;
+
+    [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.UserService ServiceName {
+        get => _serviceName;
+        set {
+            ServiceNameSpecified = true;
+            _serviceName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceNameSpecified { get; set; }
+    private string _servicePackName;
+
+    [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
+    public string ServicePackName {
+        get => _servicePackName;
+        set {
+            ServicePackNameSpecified = true;
+            _servicePackName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServicePackNameSpecified { get; set; }
+}
 }

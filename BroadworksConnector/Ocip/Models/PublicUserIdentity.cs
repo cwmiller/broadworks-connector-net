@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class PublicUserIdentity 
 {
-    [XmlElement(ElementName = "sipURI", IsNullable = false)]
-    public string SipURI { get; set; }
-    [XmlElement(ElementName = "telURI", IsNullable = false)]
-    public string TelURI { get; set; }
- }
+    private string _sipURI;
+
+    [XmlElement(ElementName = "sipURI", IsNullable = false, Namespace = "")]
+    public string SipURI {
+        get => _sipURI;
+        set {
+            SipURISpecified = true;
+            _sipURI = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SipURISpecified { get; set; }
+    private string _telURI;
+
+    [XmlElement(ElementName = "telURI", IsNullable = false, Namespace = "")]
+    public string TelURI {
+        get => _telURI;
+        set {
+            TelURISpecified = true;
+            _telURI = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TelURISpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderGroupPagingTargetsCapacityModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "maximumTargetUsers", IsNullable = false)]
-    public int MaximumTargetUsers { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private int _maximumTargetUsers;
+
+    [XmlElement(ElementName = "maximumTargetUsers", IsNullable = false, Namespace = "")]
+    public int MaximumTargetUsers {
+        get => _maximumTargetUsers;
+        set {
+            MaximumTargetUsersSpecified = true;
+            _maximumTargetUsers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaximumTargetUsersSpecified { get; set; }
+}
 }

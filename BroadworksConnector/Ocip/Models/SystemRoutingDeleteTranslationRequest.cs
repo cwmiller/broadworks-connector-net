@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutingDeleteTranslationRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "digits", IsNullable = false)]
-    public string Digits { get; set; }
- }
+    private string _digits;
+
+    [XmlElement(ElementName = "digits", IsNullable = false, Namespace = "")]
+    public string Digits {
+        get => _digits;
+        set {
+            DigitsSpecified = true;
+            _digits = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DigitsSpecified { get; set; }
+}
 }

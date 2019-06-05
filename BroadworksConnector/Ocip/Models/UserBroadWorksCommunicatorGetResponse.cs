@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserBroadWorksCommunicatorGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "configurationServerURL", IsNullable = false)]
-    public string ConfigurationServerURL { get; set; }
- }
+    private string _configurationServerURL;
+
+    [XmlElement(ElementName = "configurationServerURL", IsNullable = false, Namespace = "")]
+    public string ConfigurationServerURL {
+        get => _configurationServerURL;
+        set {
+            ConfigurationServerURLSpecified = true;
+            _configurationServerURL = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConfigurationServerURLSpecified { get; set; }
+}
 }

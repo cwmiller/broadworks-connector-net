@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserScheduleGetEventListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "eventName", IsNullable = false)]
-    public List<string> EventName { get; set; }
- }
+    private List<string> _eventName;
+
+    [XmlElement(ElementName = "eventName", IsNullable = false, Namespace = "")]
+    public List<string> EventName {
+        get => _eventName;
+        set {
+            EventNameSpecified = true;
+            _eventName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EventNameSpecified { get; set; }
+}
 }

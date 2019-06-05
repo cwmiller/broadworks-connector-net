@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGeographicRedundancyUnreachableFromPrimaryGetUserListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "unreachableFromPrimaryUserTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable UnreachableFromPrimaryUserTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _unreachableFromPrimaryUserTable;
+
+    [XmlElement(ElementName = "unreachableFromPrimaryUserTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable UnreachableFromPrimaryUserTable {
+        get => _unreachableFromPrimaryUserTable;
+        set {
+            UnreachableFromPrimaryUserTableSpecified = true;
+            _unreachableFromPrimaryUserTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UnreachableFromPrimaryUserTableSpecified { get; set; }
+}
 }

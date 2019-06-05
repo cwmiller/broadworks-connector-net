@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAccessDeviceFileGetRequest20 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "deviceName", IsNullable = false)]
-    public string DeviceName { get; set; }
-    [XmlElement(ElementName = "fileFormat", IsNullable = false)]
-    public string FileFormat { get; set; }
- }
+    private string _deviceName;
+
+    [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
+    public string DeviceName {
+        get => _deviceName;
+        set {
+            DeviceNameSpecified = true;
+            _deviceName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceNameSpecified { get; set; }
+    private string _fileFormat;
+
+    [XmlElement(ElementName = "fileFormat", IsNullable = false, Namespace = "")]
+    public string FileFormat {
+        get => _fileFormat;
+        set {
+            FileFormatSpecified = true;
+            _fileFormat = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileFormatSpecified { get; set; }
+}
 }

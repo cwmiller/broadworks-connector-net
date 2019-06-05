@@ -1,20 +1,72 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupCallCapacityManagementDeleteUserListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
-{
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public List<string> UserId { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class GroupCallCapacityManagementDeleteUserListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+    {
+        private string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        public string ServiceProviderId
+        {
+            get => _serviceProviderId;
+            set
+            {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ServiceProviderIdSpecified { get; set; }
+        private string _groupId;
+
+        [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+        public string GroupId
+        {
+            get => _groupId;
+            set
+            {
+                GroupIdSpecified = true;
+                _groupId = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool GroupIdSpecified { get; set; }
+        private string _name;
+
+        [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                NameSpecified = true;
+                _name = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool NameSpecified { get; set; }
+        private List<string> _userId;
+
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public List<string> UserId
+        {
+            get => _userId;
+            set
+            {
+                UserIdSpecified = true;
+                _userId = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+    }
 }

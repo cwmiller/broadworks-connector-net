@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallWaitingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "playDistinctiveRingback", IsNullable = false)]
-    public bool PlayDistinctiveRingback { get; set; }
- }
+    private bool _playDistinctiveRingback;
+
+    [XmlElement(ElementName = "playDistinctiveRingback", IsNullable = false, Namespace = "")]
+    public bool PlayDistinctiveRingback {
+        get => _playDistinctiveRingback;
+        set {
+            PlayDistinctiveRingbackSpecified = true;
+            _playDistinctiveRingback = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PlayDistinctiveRingbackSpecified { get; set; }
+}
 }

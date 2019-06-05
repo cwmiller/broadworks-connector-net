@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserSelectiveCallRejectionGetCriteriaResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "timeSchedule", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.TimeSchedule TimeSchedule { get; set; }
-    [XmlElement(ElementName = "fromDnCriteria", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.TimeSchedule _timeSchedule;
+
+    [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+        get => _timeSchedule;
+        set {
+            TimeScheduleSpecified = true;
+            _timeSchedule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeScheduleSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
+
+    [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria {
+        get => _fromDnCriteria;
+        set {
+            FromDnCriteriaSpecified = true;
+            _fromDnCriteria = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FromDnCriteriaSpecified { get; set; }
+}
 }

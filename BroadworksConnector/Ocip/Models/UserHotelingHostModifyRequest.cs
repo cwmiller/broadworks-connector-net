@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserHotelingHostModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "enforceAssociationLimit", IsNullable = false)]
-    public bool EnforceAssociationLimit { get; set; }
-    [XmlElement(ElementName = "associationLimitHours", IsNullable = false)]
-    public int AssociationLimitHours { get; set; }
-    [XmlElement(ElementName = "accessLevel", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.HotelingHostAccessLevel AccessLevel { get; set; }
-    [XmlElement(ElementName = "removeGuestAssociation", IsNullable = false)]
-    public bool RemoveGuestAssociation { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private bool _enforceAssociationLimit;
+
+    [XmlElement(ElementName = "enforceAssociationLimit", IsNullable = false, Namespace = "")]
+    public bool EnforceAssociationLimit {
+        get => _enforceAssociationLimit;
+        set {
+            EnforceAssociationLimitSpecified = true;
+            _enforceAssociationLimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnforceAssociationLimitSpecified { get; set; }
+    private int _associationLimitHours;
+
+    [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
+    public int AssociationLimitHours {
+        get => _associationLimitHours;
+        set {
+            AssociationLimitHoursSpecified = true;
+            _associationLimitHours = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AssociationLimitHoursSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.HotelingHostAccessLevel _accessLevel;
+
+    [XmlElement(ElementName = "accessLevel", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.HotelingHostAccessLevel AccessLevel {
+        get => _accessLevel;
+        set {
+            AccessLevelSpecified = true;
+            _accessLevel = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessLevelSpecified { get; set; }
+    private bool _removeGuestAssociation;
+
+    [XmlElement(ElementName = "removeGuestAssociation", IsNullable = false, Namespace = "")]
+    public bool RemoveGuestAssociation {
+        get => _removeGuestAssociation;
+        set {
+            RemoveGuestAssociationSpecified = true;
+            _removeGuestAssociation = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RemoveGuestAssociationSpecified { get; set; }
+}
 }

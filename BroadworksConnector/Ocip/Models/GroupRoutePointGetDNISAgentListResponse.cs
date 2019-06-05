@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutePointGetDNISAgentListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "agentTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable AgentTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _agentTable;
+
+    [XmlElement(ElementName = "agentTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable AgentTable {
+        get => _agentTable;
+        set {
+            AgentTableSpecified = true;
+            _agentTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AgentTableSpecified { get; set; }
+}
 }

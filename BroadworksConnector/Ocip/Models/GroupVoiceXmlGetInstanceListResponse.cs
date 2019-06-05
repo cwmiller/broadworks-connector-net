@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupVoiceXmlGetInstanceListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "voiceXmlTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable VoiceXmlTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _voiceXmlTable;
+
+    [XmlElement(ElementName = "voiceXmlTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable VoiceXmlTable {
+        get => _voiceXmlTable;
+        set {
+            VoiceXmlTableSpecified = true;
+            _voiceXmlTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VoiceXmlTableSpecified { get; set; }
+}
 }

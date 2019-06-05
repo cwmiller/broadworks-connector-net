@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserSpeedDial100GetListResponse17sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "prefix", IsNullable = false)]
-    public string Prefix { get; set; }
-    [XmlElement(ElementName = "speedDialEntry", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SpeedDial100Entry> SpeedDialEntry { get; set; }
- }
+    private string _prefix;
+
+    [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
+    public string Prefix {
+        get => _prefix;
+        set {
+            PrefixSpecified = true;
+            _prefix = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrefixSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SpeedDial100Entry> _speedDialEntry;
+
+    [XmlElement(ElementName = "speedDialEntry", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SpeedDial100Entry> SpeedDialEntry {
+        get => _speedDialEntry;
+        set {
+            SpeedDialEntrySpecified = true;
+            _speedDialEntry = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SpeedDialEntrySpecified { get; set; }
+}
 }

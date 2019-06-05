@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21GreetingsMenuKeys 
 {
-    [XmlElement(ElementName = "personalizedName", IsNullable = false)]
-    public string PersonalizedName { get; set; }
-    [XmlElement(ElementName = "conferenceGreeting", IsNullable = false)]
-    public string ConferenceGreeting { get; set; }
-    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false)]
-    public string ReturnToPreviousMenu { get; set; }
-    [XmlElement(ElementName = "repeatMenu", IsNullable = false)]
-    public string RepeatMenu { get; set; }
- }
+    private string _personalizedName;
+
+    [XmlElement(ElementName = "personalizedName", IsNullable = false, Namespace = "")]
+    public string PersonalizedName {
+        get => _personalizedName;
+        set {
+            PersonalizedNameSpecified = true;
+            _personalizedName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PersonalizedNameSpecified { get; set; }
+    private string _conferenceGreeting;
+
+    [XmlElement(ElementName = "conferenceGreeting", IsNullable = false, Namespace = "")]
+    public string ConferenceGreeting {
+        get => _conferenceGreeting;
+        set {
+            ConferenceGreetingSpecified = true;
+            _conferenceGreeting = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConferenceGreetingSpecified { get; set; }
+    private string _returnToPreviousMenu;
+
+    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
+    public string ReturnToPreviousMenu {
+        get => _returnToPreviousMenu;
+        set {
+            ReturnToPreviousMenuSpecified = true;
+            _returnToPreviousMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReturnToPreviousMenuSpecified { get; set; }
+    private string _repeatMenu;
+
+    [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
+    public string RepeatMenu {
+        get => _repeatMenu;
+        set {
+            RepeatMenuSpecified = true;
+            _repeatMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RepeatMenuSpecified { get; set; }
+}
 }

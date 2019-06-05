@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class IPAddressRange 
 {
-    [XmlElement(ElementName = "minIpAddress", IsNullable = false)]
-    public string MinIpAddress { get; set; }
-    [XmlElement(ElementName = "maxIpAddress", IsNullable = false)]
-    public string MaxIpAddress { get; set; }
- }
+    private string _minIpAddress;
+
+    [XmlElement(ElementName = "minIpAddress", IsNullable = false, Namespace = "")]
+    public string MinIpAddress {
+        get => _minIpAddress;
+        set {
+            MinIpAddressSpecified = true;
+            _minIpAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MinIpAddressSpecified { get; set; }
+    private string _maxIpAddress;
+
+    [XmlElement(ElementName = "maxIpAddress", IsNullable = false, Namespace = "")]
+    public string MaxIpAddress {
+        get => _maxIpAddress;
+        set {
+            MaxIpAddressSpecified = true;
+            _maxIpAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxIpAddressSpecified { get; set; }
+}
 }

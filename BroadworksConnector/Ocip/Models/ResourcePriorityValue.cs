@@ -4,11 +4,17 @@ using System.Xml.Serialization;
 namespace BroadworksConnector.Ocip.Models
 {
 [Serializable]
+[XmlRoot(Namespace = "")]
 public enum ResourcePriorityValue{
+    [XmlEnum(Name = "q735.0")]
     Q7350,
+    [XmlEnum(Name = "q735.1")]
     Q7351,
+    [XmlEnum(Name = "q735.2")]
     Q7352,
+    [XmlEnum(Name = "q735.3")]
     Q7353,
+    [XmlEnum(Name = "q735.4")]
     Q7354,
  }
 }

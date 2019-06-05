@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSIPDeleteContentTypeRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "contentType", IsNullable = false)]
-    public string ContentType { get; set; }
- }
+    private string _contentType;
+
+    [XmlElement(ElementName = "contentType", IsNullable = false, Namespace = "")]
+    public string ContentType {
+        get => _contentType;
+        set {
+            ContentTypeSpecified = true;
+            _contentType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ContentTypeSpecified { get; set; }
+}
 }

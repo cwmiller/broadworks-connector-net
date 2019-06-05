@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemInterceptUserGetDnListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "interceptUserList", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.InterceptDNListEntry> InterceptUserList { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.InterceptDNListEntry> _interceptUserList;
+
+    [XmlElement(ElementName = "interceptUserList", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.InterceptDNListEntry> InterceptUserList {
+        get => _interceptUserList;
+        set {
+            InterceptUserListSpecified = true;
+            _interceptUserList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InterceptUserListSpecified { get; set; }
+}
 }

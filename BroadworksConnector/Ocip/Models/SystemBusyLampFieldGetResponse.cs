@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBusyLampFieldGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "displayLocalUserIdentityLastNameFirst", IsNullable = false)]
-    public bool DisplayLocalUserIdentityLastNameFirst { get; set; }
- }
+    private bool _displayLocalUserIdentityLastNameFirst;
+
+    [XmlElement(ElementName = "displayLocalUserIdentityLastNameFirst", IsNullable = false, Namespace = "")]
+    public bool DisplayLocalUserIdentityLastNameFirst {
+        get => _displayLocalUserIdentityLastNameFirst;
+        set {
+            DisplayLocalUserIdentityLastNameFirstSpecified = true;
+            _displayLocalUserIdentityLastNameFirst = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DisplayLocalUserIdentityLastNameFirstSpecified { get; set; }
+}
 }

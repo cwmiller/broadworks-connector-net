@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVideoServerParametersModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "videoServerResponseTimerMilliseconds", IsNullable = false)]
-    public int VideoServerResponseTimerMilliseconds { get; set; }
-    [XmlElement(ElementName = "videoServerSelectionRouteTimerMilliseconds", IsNullable = false)]
-    public int VideoServerSelectionRouteTimerMilliseconds { get; set; }
-    [XmlElement(ElementName = "useStaticVideoServerDevice", IsNullable = false)]
-    public bool UseStaticVideoServerDevice { get; set; }
- }
+    private int _videoServerResponseTimerMilliseconds;
+
+    [XmlElement(ElementName = "videoServerResponseTimerMilliseconds", IsNullable = false, Namespace = "")]
+    public int VideoServerResponseTimerMilliseconds {
+        get => _videoServerResponseTimerMilliseconds;
+        set {
+            VideoServerResponseTimerMillisecondsSpecified = true;
+            _videoServerResponseTimerMilliseconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoServerResponseTimerMillisecondsSpecified { get; set; }
+    private int _videoServerSelectionRouteTimerMilliseconds;
+
+    [XmlElement(ElementName = "videoServerSelectionRouteTimerMilliseconds", IsNullable = false, Namespace = "")]
+    public int VideoServerSelectionRouteTimerMilliseconds {
+        get => _videoServerSelectionRouteTimerMilliseconds;
+        set {
+            VideoServerSelectionRouteTimerMillisecondsSpecified = true;
+            _videoServerSelectionRouteTimerMilliseconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoServerSelectionRouteTimerMillisecondsSpecified { get; set; }
+    private bool _useStaticVideoServerDevice;
+
+    [XmlElement(ElementName = "useStaticVideoServerDevice", IsNullable = false, Namespace = "")]
+    public bool UseStaticVideoServerDevice {
+        get => _useStaticVideoServerDevice;
+        set {
+            UseStaticVideoServerDeviceSpecified = true;
+            _useStaticVideoServerDevice = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseStaticVideoServerDeviceSpecified { get; set; }
+}
 }

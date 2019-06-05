@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserBroadWorksAnywhereGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "alertAllLocationsForClickToDialCalls", IsNullable = false)]
-    public bool AlertAllLocationsForClickToDialCalls { get; set; }
-    [XmlElement(ElementName = "phoneNumberTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable PhoneNumberTable { get; set; }
- }
+    private bool _alertAllLocationsForClickToDialCalls;
+
+    [XmlElement(ElementName = "alertAllLocationsForClickToDialCalls", IsNullable = false, Namespace = "")]
+    public bool AlertAllLocationsForClickToDialCalls {
+        get => _alertAllLocationsForClickToDialCalls;
+        set {
+            AlertAllLocationsForClickToDialCallsSpecified = true;
+            _alertAllLocationsForClickToDialCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertAllLocationsForClickToDialCallsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
+
+    [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable PhoneNumberTable {
+        get => _phoneNumberTable;
+        set {
+            PhoneNumberTableSpecified = true;
+            _phoneNumberTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PhoneNumberTableSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemTreatmentMappingQ850CauseModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "q850CauseValue", IsNullable = false)]
-    public int Q850CauseValue { get; set; }
-    [XmlElement(ElementName = "treatmentId", IsNullable = false)]
-    public string TreatmentId { get; set; }
- }
+    private int _q850CauseValue;
+
+    [XmlElement(ElementName = "q850CauseValue", IsNullable = false, Namespace = "")]
+    public int Q850CauseValue {
+        get => _q850CauseValue;
+        set {
+            Q850CauseValueSpecified = true;
+            _q850CauseValue = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool Q850CauseValueSpecified { get; set; }
+    private string _treatmentId;
+
+    [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
+    public string TreatmentId {
+        get => _treatmentId;
+        set {
+            TreatmentIdSpecified = true;
+            _treatmentId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TreatmentIdSpecified { get; set; }
+}
 }

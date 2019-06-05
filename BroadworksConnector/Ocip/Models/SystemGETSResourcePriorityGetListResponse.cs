@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGETSResourcePriorityGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "resourcePriorityTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ResourcePriorityTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _resourcePriorityTable;
+
+    [XmlElement(ElementName = "resourcePriorityTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ResourcePriorityTable {
+        get => _resourcePriorityTable;
+        set {
+            ResourcePriorityTableSpecified = true;
+            _resourcePriorityTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResourcePriorityTableSpecified { get; set; }
+}
 }

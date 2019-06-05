@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19sp1GreetingOnlyForwardingDestinationMenuKeys 
 {
-    [XmlElement(ElementName = "greetingOnlyForwardingDestination", IsNullable = false)]
-    public string GreetingOnlyForwardingDestination { get; set; }
- }
+    private string _greetingOnlyForwardingDestination;
+
+    [XmlElement(ElementName = "greetingOnlyForwardingDestination", IsNullable = false, Namespace = "")]
+    public string GreetingOnlyForwardingDestination {
+        get => _greetingOnlyForwardingDestination;
+        set {
+            GreetingOnlyForwardingDestinationSpecified = true;
+            _greetingOnlyForwardingDestination = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GreetingOnlyForwardingDestinationSpecified { get; set; }
+}
 }

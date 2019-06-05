@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCommonPhoneListGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "entry", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.PhoneListEntry> Entry { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.PhoneListEntry> _entry;
+
+    [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.PhoneListEntry> Entry {
+        get => _entry;
+        set {
+            EntrySpecified = true;
+            _entry = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EntrySpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactDeviceLevel : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "deviceLevel", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AccessDeviceLevel DeviceLevel { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
+
+    [XmlElement(ElementName = "deviceLevel", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AccessDeviceLevel DeviceLevel {
+        get => _deviceLevel;
+        set {
+            DeviceLevelSpecified = true;
+            _deviceLevel = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceLevelSpecified { get; set; }
+}
 }

@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPortalPasscodeGetInfoResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isLoginDisabled", IsNullable = false)]
-    public bool IsLoginDisabled { get; set; }
-    [XmlElement(ElementName = "expirationDays", IsNullable = false)]
-    public int ExpirationDays { get; set; }
-    [XmlElement(ElementName = "doesNotExpire", IsNullable = false)]
-    public bool DoesNotExpire { get; set; }
-    [XmlElement(ElementName = "passcode", IsNullable = false)]
-    public string Passcode { get; set; }
- }
+    private bool _isLoginDisabled;
+
+    [XmlElement(ElementName = "isLoginDisabled", IsNullable = false, Namespace = "")]
+    public bool IsLoginDisabled {
+        get => _isLoginDisabled;
+        set {
+            IsLoginDisabledSpecified = true;
+            _isLoginDisabled = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsLoginDisabledSpecified { get; set; }
+    private int _expirationDays;
+
+    [XmlElement(ElementName = "expirationDays", IsNullable = false, Namespace = "")]
+    public int ExpirationDays {
+        get => _expirationDays;
+        set {
+            ExpirationDaysSpecified = true;
+            _expirationDays = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExpirationDaysSpecified { get; set; }
+    private bool _doesNotExpire;
+
+    [XmlElement(ElementName = "doesNotExpire", IsNullable = false, Namespace = "")]
+    public bool DoesNotExpire {
+        get => _doesNotExpire;
+        set {
+            DoesNotExpireSpecified = true;
+            _doesNotExpire = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DoesNotExpireSpecified { get; set; }
+    private string _passcode;
+
+    [XmlElement(ElementName = "passcode", IsNullable = false, Namespace = "")]
+    public string Passcode {
+        get => _passcode;
+        set {
+            PasscodeSpecified = true;
+            _passcode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PasscodeSpecified { get; set; }
+}
 }

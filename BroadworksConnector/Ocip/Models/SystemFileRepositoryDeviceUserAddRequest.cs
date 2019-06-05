@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemFileRepositoryDeviceUserAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "fileRepositoryName", IsNullable = false)]
-    public string FileRepositoryName { get; set; }
-    [XmlElement(ElementName = "userName", IsNullable = false)]
-    public string UserName { get; set; }
-    [XmlElement(ElementName = "password", IsNullable = false)]
-    public string Password { get; set; }
-    [XmlElement(ElementName = "allowPut", IsNullable = false)]
-    public bool AllowPut { get; set; }
-    [XmlElement(ElementName = "allowDelete", IsNullable = false)]
-    public bool AllowDelete { get; set; }
-    [XmlElement(ElementName = "allowGet", IsNullable = false)]
-    public bool AllowGet { get; set; }
- }
+    private string _fileRepositoryName;
+
+    [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
+    public string FileRepositoryName {
+        get => _fileRepositoryName;
+        set {
+            FileRepositoryNameSpecified = true;
+            _fileRepositoryName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileRepositoryNameSpecified { get; set; }
+    private string _userName;
+
+    [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
+    public string UserName {
+        get => _userName;
+        set {
+            UserNameSpecified = true;
+            _userName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserNameSpecified { get; set; }
+    private string _password;
+
+    [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
+    public string Password {
+        get => _password;
+        set {
+            PasswordSpecified = true;
+            _password = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PasswordSpecified { get; set; }
+    private bool _allowPut;
+
+    [XmlElement(ElementName = "allowPut", IsNullable = false, Namespace = "")]
+    public bool AllowPut {
+        get => _allowPut;
+        set {
+            AllowPutSpecified = true;
+            _allowPut = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowPutSpecified { get; set; }
+    private bool _allowDelete;
+
+    [XmlElement(ElementName = "allowDelete", IsNullable = false, Namespace = "")]
+    public bool AllowDelete {
+        get => _allowDelete;
+        set {
+            AllowDeleteSpecified = true;
+            _allowDelete = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowDeleteSpecified { get; set; }
+    private bool _allowGet;
+
+    [XmlElement(ElementName = "allowGet", IsNullable = false, Namespace = "")]
+    public bool AllowGet {
+        get => _allowGet;
+        set {
+            AllowGetSpecified = true;
+            _allowGet = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowGetSpecified { get; set; }
+}
 }

@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemOCIReportingParametersGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "serverPort", IsNullable = false)]
-    public int ServerPort { get; set; }
-    [XmlElement(ElementName = "enableConnectionPing", IsNullable = false)]
-    public bool EnableConnectionPing { get; set; }
-    [XmlElement(ElementName = "connectionPingIntervalSeconds", IsNullable = false)]
-    public int ConnectionPingIntervalSeconds { get; set; }
-    [XmlElement(ElementName = "alterPasswords", IsNullable = false)]
-    public bool AlterPasswords { get; set; }
- }
+    private int _serverPort;
+
+    [XmlElement(ElementName = "serverPort", IsNullable = false, Namespace = "")]
+    public int ServerPort {
+        get => _serverPort;
+        set {
+            ServerPortSpecified = true;
+            _serverPort = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServerPortSpecified { get; set; }
+    private bool _enableConnectionPing;
+
+    [XmlElement(ElementName = "enableConnectionPing", IsNullable = false, Namespace = "")]
+    public bool EnableConnectionPing {
+        get => _enableConnectionPing;
+        set {
+            EnableConnectionPingSpecified = true;
+            _enableConnectionPing = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableConnectionPingSpecified { get; set; }
+    private int _connectionPingIntervalSeconds;
+
+    [XmlElement(ElementName = "connectionPingIntervalSeconds", IsNullable = false, Namespace = "")]
+    public int ConnectionPingIntervalSeconds {
+        get => _connectionPingIntervalSeconds;
+        set {
+            ConnectionPingIntervalSecondsSpecified = true;
+            _connectionPingIntervalSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConnectionPingIntervalSecondsSpecified { get; set; }
+    private bool _alterPasswords;
+
+    [XmlElement(ElementName = "alterPasswords", IsNullable = false, Namespace = "")]
+    public bool AlterPasswords {
+        get => _alterPasswords;
+        set {
+            AlterPasswordsSpecified = true;
+            _alterPasswords = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlterPasswordsSpecified { get; set; }
+}
 }

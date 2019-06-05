@@ -3,10 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum AutoAttendantDialingScope{
-    Enterprise,
-    Group,
-    Department,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum AutoAttendantDialingScope
+    {
+        [XmlEnum(Name = "Enterprise")]
+        Enterprise,
+        [XmlEnum(Name = "Group")]
+        Group,
+        [XmlEnum(Name = "Department")]
+        Department,
+    }
 }

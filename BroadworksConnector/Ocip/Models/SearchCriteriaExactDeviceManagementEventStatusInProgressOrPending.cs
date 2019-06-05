@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactDeviceManagementEventStatusInProgressOrPending : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "dmEventStatusInProgressOrPending", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DeviceManagementEventStatusInProgressOrPending DmEventStatusInProgressOrPending { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.DeviceManagementEventStatusInProgressOrPending _dmEventStatusInProgressOrPending;
+
+    [XmlElement(ElementName = "dmEventStatusInProgressOrPending", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DeviceManagementEventStatusInProgressOrPending DmEventStatusInProgressOrPending {
+        get => _dmEventStatusInProgressOrPending;
+        set {
+            DmEventStatusInProgressOrPendingSpecified = true;
+            _dmEventStatusInProgressOrPending = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DmEventStatusInProgressOrPendingSpecified { get; set; }
+}
 }

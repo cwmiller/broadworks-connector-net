@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBroadWorksMobilityDeleteMobileNetworkIMRNListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "mobileNetworkName", IsNullable = false)]
-    public string MobileNetworkName { get; set; }
-    [XmlElement(ElementName = "imrnNumber", IsNullable = false)]
-    public List<string> ImrnNumber { get; set; }
- }
+    private string _mobileNetworkName;
+
+    [XmlElement(ElementName = "mobileNetworkName", IsNullable = false, Namespace = "")]
+    public string MobileNetworkName {
+        get => _mobileNetworkName;
+        set {
+            MobileNetworkNameSpecified = true;
+            _mobileNetworkName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MobileNetworkNameSpecified { get; set; }
+    private List<string> _imrnNumber;
+
+    [XmlElement(ElementName = "imrnNumber", IsNullable = false, Namespace = "")]
+    public List<string> ImrnNumber {
+        get => _imrnNumber;
+        set {
+            ImrnNumberSpecified = true;
+            _imrnNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ImrnNumberSpecified { get; set; }
+}
 }

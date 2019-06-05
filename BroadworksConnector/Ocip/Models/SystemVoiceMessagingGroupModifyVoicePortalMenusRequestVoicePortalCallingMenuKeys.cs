@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestVoicePortalCallingMenuKeys 
 {
-    [XmlElement(ElementName = "endCurrentCallAndGoBackToPreviousMenu", IsNullable = false)]
-    public string EndCurrentCallAndGoBackToPreviousMenu { get; set; }
-    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false)]
-    public string ReturnToPreviousMenu { get; set; }
- }
+    private string _endCurrentCallAndGoBackToPreviousMenu;
+
+    [XmlElement(ElementName = "endCurrentCallAndGoBackToPreviousMenu", IsNullable = false, Namespace = "")]
+    public string EndCurrentCallAndGoBackToPreviousMenu {
+        get => _endCurrentCallAndGoBackToPreviousMenu;
+        set {
+            EndCurrentCallAndGoBackToPreviousMenuSpecified = true;
+            _endCurrentCallAndGoBackToPreviousMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EndCurrentCallAndGoBackToPreviousMenuSpecified { get; set; }
+    private string _returnToPreviousMenu;
+
+    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
+    public string ReturnToPreviousMenu {
+        get => _returnToPreviousMenu;
+        set {
+            ReturnToPreviousMenuSpecified = true;
+            _returnToPreviousMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReturnToPreviousMenuSpecified { get; set; }
+}
 }

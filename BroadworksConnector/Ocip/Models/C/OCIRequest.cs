@@ -3476,5 +3476,5 @@ namespace BroadworksConnector.Ocip.Models.C
 [XmlInclude(typeof(BroadworksConnector.Ocip.Models.UserShInterfaceGetUserIdDataRequest))]
 public abstract class OCIRequest : BroadworksConnector.Ocip.Models.C.OCICommand
 {
- }
+}
 }

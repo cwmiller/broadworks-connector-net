@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutingGetRouteDeviceListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "routeDeviceTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable RouteDeviceTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _routeDeviceTable;
+
+    [XmlElement(ElementName = "routeDeviceTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable RouteDeviceTable {
+        get => _routeDeviceTable;
+        set {
+            RouteDeviceTableSpecified = true;
+            _routeDeviceTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RouteDeviceTableSpecified { get; set; }
+}
 }

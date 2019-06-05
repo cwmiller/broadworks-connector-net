@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRouteListEnterpriseTrunkNumberPrefixGetSummaryListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "prefixSummaryTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable PrefixSummaryTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _prefixSummaryTable;
+
+    [XmlElement(ElementName = "prefixSummaryTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable PrefixSummaryTable {
+        get => _prefixSummaryTable;
+        set {
+            PrefixSummaryTableSpecified = true;
+            _prefixSummaryTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrefixSummaryTableSpecified { get; set; }
+}
 }

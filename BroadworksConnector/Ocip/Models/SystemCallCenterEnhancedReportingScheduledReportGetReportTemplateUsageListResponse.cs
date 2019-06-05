@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallCenterEnhancedReportingScheduledReportGetReportTemplateUsageListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "scheduleReportTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ScheduleReportTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _scheduleReportTable;
+
+    [XmlElement(ElementName = "scheduleReportTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ScheduleReportTable {
+        get => _scheduleReportTable;
+        set {
+            ScheduleReportTableSpecified = true;
+            _scheduleReportTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScheduleReportTableSpecified { get; set; }
+}
 }

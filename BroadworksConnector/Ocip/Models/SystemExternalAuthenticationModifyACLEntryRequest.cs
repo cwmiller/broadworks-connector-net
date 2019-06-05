@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemExternalAuthenticationModifyACLEntryRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "netAddress", IsNullable = false)]
-    public string NetAddress { get; set; }
-    [XmlElement(ElementName = "description", IsNullable = true)]
-    public string Description { get; set; }
- }
+    private string _netAddress;
+
+    [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
+    public string NetAddress {
+        get => _netAddress;
+        set {
+            NetAddressSpecified = true;
+            _netAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetAddressSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+}
 }

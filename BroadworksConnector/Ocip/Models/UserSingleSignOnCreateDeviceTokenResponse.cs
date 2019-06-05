@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserSingleSignOnCreateDeviceTokenResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "deviceToken", IsNullable = false)]
-    public string DeviceToken { get; set; }
- }
+    private string _deviceToken;
+
+    [XmlElement(ElementName = "deviceToken", IsNullable = false, Namespace = "")]
+    public string DeviceToken {
+        get => _deviceToken;
+        set {
+            DeviceTokenSpecified = true;
+            _deviceToken = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceTokenSpecified { get; set; }
+}
 }

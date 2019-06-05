@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemShInterfaceRefreshTaskGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isRunning", IsNullable = false)]
-    public bool IsRunning { get; set; }
-    [XmlElement(ElementName = "numberPublicIdentityRefreshesStarted", IsNullable = false)]
-    public int NumberPublicIdentityRefreshesStarted { get; set; }
-    [XmlElement(ElementName = "numberPublicIdentities", IsNullable = false)]
-    public int NumberPublicIdentities { get; set; }
- }
+    private bool _isRunning;
+
+    [XmlElement(ElementName = "isRunning", IsNullable = false, Namespace = "")]
+    public bool IsRunning {
+        get => _isRunning;
+        set {
+            IsRunningSpecified = true;
+            _isRunning = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsRunningSpecified { get; set; }
+    private int _numberPublicIdentityRefreshesStarted;
+
+    [XmlElement(ElementName = "numberPublicIdentityRefreshesStarted", IsNullable = false, Namespace = "")]
+    public int NumberPublicIdentityRefreshesStarted {
+        get => _numberPublicIdentityRefreshesStarted;
+        set {
+            NumberPublicIdentityRefreshesStartedSpecified = true;
+            _numberPublicIdentityRefreshesStarted = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NumberPublicIdentityRefreshesStartedSpecified { get; set; }
+    private int _numberPublicIdentities;
+
+    [XmlElement(ElementName = "numberPublicIdentities", IsNullable = false, Namespace = "")]
+    public int NumberPublicIdentities {
+        get => _numberPublicIdentities;
+        set {
+            NumberPublicIdentitiesSpecified = true;
+            _numberPublicIdentities = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NumberPublicIdentitiesSpecified { get; set; }
+}
 }

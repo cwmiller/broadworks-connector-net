@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactUserInTrunkGroup : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "userInTrunkGroup", IsNullable = false)]
-    public bool UserInTrunkGroup { get; set; }
- }
+    private bool _userInTrunkGroup;
+
+    [XmlElement(ElementName = "userInTrunkGroup", IsNullable = false, Namespace = "")]
+    public bool UserInTrunkGroup {
+        get => _userInTrunkGroup;
+        set {
+            UserInTrunkGroupSpecified = true;
+            _userInTrunkGroup = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserInTrunkGroupSpecified { get; set; }
+}
 }

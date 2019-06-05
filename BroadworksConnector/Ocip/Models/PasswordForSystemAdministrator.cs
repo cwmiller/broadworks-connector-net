@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class PasswordForSystemAdministrator 
 {
-    [XmlElement(ElementName = "administratorId", IsNullable = false)]
-    public string AdministratorId { get; set; }
-    [XmlElement(ElementName = "generatePassword", IsNullable = false)]
-    public bool GeneratePassword { get; set; }
- }
+    private string _administratorId;
+
+    [XmlElement(ElementName = "administratorId", IsNullable = false, Namespace = "")]
+    public string AdministratorId {
+        get => _administratorId;
+        set {
+            AdministratorIdSpecified = true;
+            _administratorId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AdministratorIdSpecified { get; set; }
+    private bool _generatePassword;
+
+    [XmlElement(ElementName = "generatePassword", IsNullable = false, Namespace = "")]
+    public bool GeneratePassword {
+        get => _generatePassword;
+        set {
+            GeneratePasswordSpecified = true;
+            _generatePassword = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GeneratePasswordSpecified { get; set; }
+}
 }

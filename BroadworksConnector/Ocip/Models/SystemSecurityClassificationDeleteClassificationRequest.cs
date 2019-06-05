@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSecurityClassificationDeleteClassificationRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "securityClassificationName", IsNullable = false)]
-    public string SecurityClassificationName { get; set; }
- }
+    private string _securityClassificationName;
+
+    [XmlElement(ElementName = "securityClassificationName", IsNullable = false, Namespace = "")]
+    public string SecurityClassificationName {
+        get => _securityClassificationName;
+        set {
+            SecurityClassificationNameSpecified = true;
+            _securityClassificationName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SecurityClassificationNameSpecified { get; set; }
+}
 }

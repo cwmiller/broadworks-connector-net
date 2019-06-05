@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CollaborateRoomAttendeeNotification{
-    PlayTone,
-    NoNotification,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CollaborateRoomAttendeeNotification
+    {
+        [XmlEnum(Name = "Play Tone")]
+        PlayTone,
+        [XmlEnum(Name = "No Notification")]
+        NoNotification,
+    }
 }

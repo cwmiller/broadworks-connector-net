@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallMeNowModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "passcodeLength", IsNullable = false)]
-    public int PasscodeLength { get; set; }
-    [XmlElement(ElementName = "passcodeTimeoutSeconds", IsNullable = false)]
-    public int PasscodeTimeoutSeconds { get; set; }
- }
+    private int _passcodeLength;
+
+    [XmlElement(ElementName = "passcodeLength", IsNullable = false, Namespace = "")]
+    public int PasscodeLength {
+        get => _passcodeLength;
+        set {
+            PasscodeLengthSpecified = true;
+            _passcodeLength = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PasscodeLengthSpecified { get; set; }
+    private int _passcodeTimeoutSeconds;
+
+    [XmlElement(ElementName = "passcodeTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int PasscodeTimeoutSeconds {
+        get => _passcodeTimeoutSeconds;
+        set {
+            PasscodeTimeoutSecondsSpecified = true;
+            _passcodeTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PasscodeTimeoutSecondsSpecified { get; set; }
+}
 }

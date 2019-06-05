@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupTrunkGroupGetInstanceRequest15 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "trunkGroupKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
+
+    [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey {
+        get => _trunkGroupKey;
+        set {
+            TrunkGroupKeySpecified = true;
+            _trunkGroupKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TrunkGroupKeySpecified { get; set; }
+}
 }

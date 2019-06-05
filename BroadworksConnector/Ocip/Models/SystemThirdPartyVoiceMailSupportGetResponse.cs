@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemThirdPartyVoiceMailSupportGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "overrideAltCallerIdForVMRetrieval", IsNullable = false)]
-    public bool OverrideAltCallerIdForVMRetrieval { get; set; }
- }
+    private bool _overrideAltCallerIdForVMRetrieval;
+
+    [XmlElement(ElementName = "overrideAltCallerIdForVMRetrieval", IsNullable = false, Namespace = "")]
+    public bool OverrideAltCallerIdForVMRetrieval {
+        get => _overrideAltCallerIdForVMRetrieval;
+        set {
+            OverrideAltCallerIdForVMRetrievalSpecified = true;
+            _overrideAltCallerIdForVMRetrieval = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OverrideAltCallerIdForVMRetrievalSpecified { get; set; }
+}
 }

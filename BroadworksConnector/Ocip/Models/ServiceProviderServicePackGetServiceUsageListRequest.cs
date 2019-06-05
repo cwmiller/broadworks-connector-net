@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderServicePackGetServiceUsageListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "serviceName", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.UserService ServiceName { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.UserService _serviceName;
+
+    [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.UserService ServiceName {
+        get => _serviceName;
+        set {
+            ServiceNameSpecified = true;
+            _serviceName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceNameSpecified { get; set; }
+}
 }

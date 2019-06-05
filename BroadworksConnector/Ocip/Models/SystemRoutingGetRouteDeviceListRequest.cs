@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutingGetRouteDeviceListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "routeName", IsNullable = false)]
-    public string RouteName { get; set; }
- }
+    private string _routeName;
+
+    [XmlElement(ElementName = "routeName", IsNullable = false, Namespace = "")]
+    public string RouteName {
+        get => _routeName;
+        set {
+            RouteNameSpecified = true;
+            _routeName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RouteNameSpecified { get; set; }
+}
 }

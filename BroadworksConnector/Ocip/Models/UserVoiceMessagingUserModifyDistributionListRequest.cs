@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserVoiceMessagingUserModifyDistributionListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "listId", IsNullable = false)]
-    public int ListId { get; set; }
-    [XmlElement(ElementName = "description", IsNullable = true)]
-    public string Description { get; set; }
-    [XmlElement(ElementName = "phoneNumberList", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList PhoneNumberList { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private int _listId;
+
+    [XmlElement(ElementName = "listId", IsNullable = false, Namespace = "")]
+    public int ListId {
+        get => _listId;
+        set {
+            ListIdSpecified = true;
+            _listId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ListIdSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList _phoneNumberList;
+
+    [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList PhoneNumberList {
+        get => _phoneNumberList;
+        set {
+            PhoneNumberListSpecified = true;
+            _phoneNumberList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PhoneNumberListSpecified { get; set; }
+}
 }

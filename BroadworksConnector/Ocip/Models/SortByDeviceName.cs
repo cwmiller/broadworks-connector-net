@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SortByDeviceName : BroadworksConnector.Ocip.Models.SortCriteria
 {
- }
+}
 }

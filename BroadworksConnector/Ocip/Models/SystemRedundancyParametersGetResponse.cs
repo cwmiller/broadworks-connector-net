@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRedundancyParametersGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "rollBackTimerMinutes", IsNullable = false)]
-    public int RollBackTimerMinutes { get; set; }
- }
+    private int _rollBackTimerMinutes;
+
+    [XmlElement(ElementName = "rollBackTimerMinutes", IsNullable = false, Namespace = "")]
+    public int RollBackTimerMinutes {
+        get => _rollBackTimerMinutes;
+        set {
+            RollBackTimerMinutesSpecified = true;
+            _rollBackTimerMinutes = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RollBackTimerMinutesSpecified { get; set; }
+}
 }

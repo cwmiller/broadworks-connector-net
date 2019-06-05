@@ -1,16 +1,42 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class AdviceOfChargeCostInformationSourceEntry 
-{
-    [XmlElement(ElementName = "peerIdentity", IsNullable = false)]
-    public string PeerIdentity { get; set; }
-    [XmlElement(ElementName = "priority", IsNullable = false)]
-    public int Priority { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class AdviceOfChargeCostInformationSourceEntry
+    {
+        private string _peerIdentity;
+
+        [XmlElement(ElementName = "peerIdentity", IsNullable = false, Namespace = "")]
+        public string PeerIdentity
+        {
+            get => _peerIdentity;
+            set
+            {
+                PeerIdentitySpecified = true;
+                _peerIdentity = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool PeerIdentitySpecified { get; set; }
+        private int _priority;
+
+        [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
+        public int Priority
+        {
+            get => _priority;
+            set
+            {
+                PrioritySpecified = true;
+                _priority = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool PrioritySpecified { get; set; }
+    }
 }

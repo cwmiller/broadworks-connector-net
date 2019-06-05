@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementCommunicationBarringCallTypeList 
 {
-    [XmlElement(ElementName = "callType", IsNullable = false)]
-    public List<string> CallType { get; set; }
- }
+    private List<string> _callType;
+
+    [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
+    public List<string> CallType {
+        get => _callType;
+        set {
+            CallTypeSpecified = true;
+            _callType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallTypeSpecified { get; set; }
+}
 }

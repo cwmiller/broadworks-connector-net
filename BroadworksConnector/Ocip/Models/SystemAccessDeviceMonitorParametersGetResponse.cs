@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAccessDeviceMonitorParametersGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "pollingIntervalMinutes", IsNullable = false)]
-    public int PollingIntervalMinutes { get; set; }
- }
+    private int _pollingIntervalMinutes;
+
+    [XmlElement(ElementName = "pollingIntervalMinutes", IsNullable = false, Namespace = "")]
+    public int PollingIntervalMinutes {
+        get => _pollingIntervalMinutes;
+        set {
+            PollingIntervalMinutesSpecified = true;
+            _pollingIntervalMinutes = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PollingIntervalMinutesSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderMWIDeliveryToMobileEndpointGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "templateActivationTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable TemplateActivationTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _templateActivationTable;
+
+    [XmlElement(ElementName = "templateActivationTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable TemplateActivationTable {
+        get => _templateActivationTable;
+        set {
+            TemplateActivationTableSpecified = true;
+            _templateActivationTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TemplateActivationTableSpecified { get; set; }
+}
 }

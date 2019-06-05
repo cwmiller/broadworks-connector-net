@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSIPModifyContentTypeRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "contentType", IsNullable = false)]
-    public string ContentType { get; set; }
-    [XmlElement(ElementName = "interface", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SystemSIPSupportedInterface Interface { get; set; }
- }
+    private string _contentType;
+
+    [XmlElement(ElementName = "contentType", IsNullable = false, Namespace = "")]
+    public string ContentType {
+        get => _contentType;
+        set {
+            ContentTypeSpecified = true;
+            _contentType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ContentTypeSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.SystemSIPSupportedInterface _interface;
+
+    [XmlElement(ElementName = "interface", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SystemSIPSupportedInterface Interface {
+        get => _interface;
+        set {
+            InterfaceSpecified = true;
+            _interface = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InterfaceSpecified { get; set; }
+}
 }

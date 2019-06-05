@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutingDeleteRouteDeviceRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "routeName", IsNullable = false)]
-    public string RouteName { get; set; }
-    [XmlElement(ElementName = "netAddress", IsNullable = false)]
-    public string NetAddress { get; set; }
-    [XmlElement(ElementName = "port", IsNullable = false)]
-    public int Port { get; set; }
- }
+    private string _routeName;
+
+    [XmlElement(ElementName = "routeName", IsNullable = false, Namespace = "")]
+    public string RouteName {
+        get => _routeName;
+        set {
+            RouteNameSpecified = true;
+            _routeName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RouteNameSpecified { get; set; }
+    private string _netAddress;
+
+    [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
+    public string NetAddress {
+        get => _netAddress;
+        set {
+            NetAddressSpecified = true;
+            _netAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetAddressSpecified { get; set; }
+    private int _port;
+
+    [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
+    public int Port {
+        get => _port;
+        set {
+            PortSpecified = true;
+            _port = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PortSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ResellerMeetMeConferencingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "conferenceFromAddress", IsNullable = false)]
-    public string ConferenceFromAddress { get; set; }
-    [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false)]
-    public int MaxAllocatedPorts { get; set; }
- }
+    private string _conferenceFromAddress;
+
+    [XmlElement(ElementName = "conferenceFromAddress", IsNullable = false, Namespace = "")]
+    public string ConferenceFromAddress {
+        get => _conferenceFromAddress;
+        set {
+            ConferenceFromAddressSpecified = true;
+            _conferenceFromAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConferenceFromAddressSpecified { get; set; }
+    private int _maxAllocatedPorts;
+
+    [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false, Namespace = "")]
+    public int MaxAllocatedPorts {
+        get => _maxAllocatedPorts;
+        set {
+            MaxAllocatedPortsSpecified = true;
+            _maxAllocatedPorts = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxAllocatedPortsSpecified { get; set; }
+}
 }

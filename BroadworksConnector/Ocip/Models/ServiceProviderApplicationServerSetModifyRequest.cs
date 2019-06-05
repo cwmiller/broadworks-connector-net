@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderApplicationServerSetModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "applicationServerSetName", IsNullable = true)]
-    public string ApplicationServerSetName { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _applicationServerSetName;
+
+    [XmlElement(ElementName = "applicationServerSetName", IsNullable = true, Namespace = "")]
+    public string ApplicationServerSetName {
+        get => _applicationServerSetName;
+        set {
+            ApplicationServerSetNameSpecified = true;
+            _applicationServerSetName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ApplicationServerSetNameSpecified { get; set; }
+}
 }

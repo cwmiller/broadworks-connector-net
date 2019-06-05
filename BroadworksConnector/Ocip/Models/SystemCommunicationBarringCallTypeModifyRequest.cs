@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCommunicationBarringCallTypeModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "callType", IsNullable = false)]
-    public string CallType { get; set; }
-    [XmlElement(ElementName = "networkServerCallType", IsNullable = false)]
-    public string NetworkServerCallType { get; set; }
- }
+    private string _callType;
+
+    [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
+    public string CallType {
+        get => _callType;
+        set {
+            CallTypeSpecified = true;
+            _callType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallTypeSpecified { get; set; }
+    private string _networkServerCallType;
+
+    [XmlElement(ElementName = "networkServerCallType", IsNullable = false, Namespace = "")]
+    public string NetworkServerCallType {
+        get => _networkServerCallType;
+        set {
+            NetworkServerCallTypeSpecified = true;
+            _networkServerCallType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetworkServerCallTypeSpecified { get; set; }
+}
 }

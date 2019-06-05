@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderDeviceTypeFileGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "serviceProviderDeviceTypeFilesTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ServiceProviderDeviceTypeFilesTable { get; set; }
-    [XmlElement(ElementName = "serviceProviderHasCustomizableDynamicFiles", IsNullable = false)]
-    public bool ServiceProviderHasCustomizableDynamicFiles { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _serviceProviderDeviceTypeFilesTable;
+
+    [XmlElement(ElementName = "serviceProviderDeviceTypeFilesTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ServiceProviderDeviceTypeFilesTable {
+        get => _serviceProviderDeviceTypeFilesTable;
+        set {
+            ServiceProviderDeviceTypeFilesTableSpecified = true;
+            _serviceProviderDeviceTypeFilesTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderDeviceTypeFilesTableSpecified { get; set; }
+    private bool _serviceProviderHasCustomizableDynamicFiles;
+
+    [XmlElement(ElementName = "serviceProviderHasCustomizableDynamicFiles", IsNullable = false, Namespace = "")]
+    public bool ServiceProviderHasCustomizableDynamicFiles {
+        get => _serviceProviderHasCustomizableDynamicFiles;
+        set {
+            ServiceProviderHasCustomizableDynamicFilesSpecified = true;
+            _serviceProviderHasCustomizableDynamicFiles = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderHasCustomizableDynamicFilesSpecified { get; set; }
+}
 }

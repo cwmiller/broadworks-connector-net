@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemNetworkServerSyncParametersGetResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableSync", IsNullable = false)]
-    public bool EnableSync { get; set; }
-    [XmlElement(ElementName = "syncLinePorts", IsNullable = false)]
-    public bool SyncLinePorts { get; set; }
-    [XmlElement(ElementName = "syncDeviceManagementInfo", IsNullable = false)]
-    public bool SyncDeviceManagementInfo { get; set; }
- }
+    private bool _enableSync;
+
+    [XmlElement(ElementName = "enableSync", IsNullable = false, Namespace = "")]
+    public bool EnableSync {
+        get => _enableSync;
+        set {
+            EnableSyncSpecified = true;
+            _enableSync = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableSyncSpecified { get; set; }
+    private bool _syncLinePorts;
+
+    [XmlElement(ElementName = "syncLinePorts", IsNullable = false, Namespace = "")]
+    public bool SyncLinePorts {
+        get => _syncLinePorts;
+        set {
+            SyncLinePortsSpecified = true;
+            _syncLinePorts = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SyncLinePortsSpecified { get; set; }
+    private bool _syncDeviceManagementInfo;
+
+    [XmlElement(ElementName = "syncDeviceManagementInfo", IsNullable = false, Namespace = "")]
+    public bool SyncDeviceManagementInfo {
+        get => _syncDeviceManagementInfo;
+        set {
+            SyncDeviceManagementInfoSpecified = true;
+            _syncDeviceManagementInfo = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SyncDeviceManagementInfoSpecified { get; set; }
+}
 }

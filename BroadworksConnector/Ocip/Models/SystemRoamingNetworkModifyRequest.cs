@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoamingNetworkModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "mscAddress", IsNullable = false)]
-    public string MscAddress { get; set; }
-    [XmlElement(ElementName = "networkTranslationIndex", IsNullable = true)]
-    public string NetworkTranslationIndex { get; set; }
- }
+    private string _mscAddress;
+
+    [XmlElement(ElementName = "mscAddress", IsNullable = false, Namespace = "")]
+    public string MscAddress {
+        get => _mscAddress;
+        set {
+            MscAddressSpecified = true;
+            _mscAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MscAddressSpecified { get; set; }
+    private string _networkTranslationIndex;
+
+    [XmlElement(ElementName = "networkTranslationIndex", IsNullable = true, Namespace = "")]
+    public string NetworkTranslationIndex {
+        get => _networkTranslationIndex;
+        set {
+            NetworkTranslationIndexSpecified = true;
+            _networkTranslationIndex = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetworkTranslationIndexSpecified { get; set; }
+}
 }

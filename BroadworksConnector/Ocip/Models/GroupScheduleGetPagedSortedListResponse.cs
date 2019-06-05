@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupScheduleGetPagedSortedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "scheduleTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ScheduleTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _scheduleTable;
+
+    [XmlElement(ElementName = "scheduleTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ScheduleTable {
+        get => _scheduleTable;
+        set {
+            ScheduleTableSpecified = true;
+            _scheduleTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScheduleTableSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderPreferredCarrierGetAvailableCountryCodeListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "defaultCountryCode", IsNullable = false)]
-    public string DefaultCountryCode { get; set; }
-    [XmlElement(ElementName = "countryCode", IsNullable = false)]
-    public List<string> CountryCode { get; set; }
- }
+    private string _defaultCountryCode;
+
+    [XmlElement(ElementName = "defaultCountryCode", IsNullable = false, Namespace = "")]
+    public string DefaultCountryCode {
+        get => _defaultCountryCode;
+        set {
+            DefaultCountryCodeSpecified = true;
+            _defaultCountryCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultCountryCodeSpecified { get; set; }
+    private List<string> _countryCode;
+
+    [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
+    public List<string> CountryCode {
+        get => _countryCode;
+        set {
+            CountryCodeSpecified = true;
+            _countryCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CountryCodeSpecified { get; set; }
+}
 }

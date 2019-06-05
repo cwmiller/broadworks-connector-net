@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupOutgoingCallingPlanDigitPlanCallMeNowGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "groupPermissions", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions GroupPermissions { get; set; }
-    [XmlElement(ElementName = "departmentPermissions", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowDepartmentPermissions> DepartmentPermissions { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions _groupPermissions;
+
+    [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions GroupPermissions {
+        get => _groupPermissions;
+        set {
+            GroupPermissionsSpecified = true;
+            _groupPermissions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupPermissionsSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowDepartmentPermissions> _departmentPermissions;
+
+    [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowDepartmentPermissions> DepartmentPermissions {
+        get => _departmentPermissions;
+        set {
+            DepartmentPermissionsSpecified = true;
+            _departmentPermissions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentPermissionsSpecified { get; set; }
+}
 }

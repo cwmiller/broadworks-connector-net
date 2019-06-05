@@ -4,9 +4,13 @@ using System.Xml.Serialization;
 namespace BroadworksConnector.Ocip.Models
 {
 [Serializable]
+[XmlRoot(Namespace = "")]
 public enum MediaBandwidthEnforcementType{
+    [XmlEnum(Name = "Allow All")]
     AllowAll,
+    [XmlEnum(Name = "Allow Unspecified")]
     AllowUnspecified,
+    [XmlEnum(Name = "Enforce All")]
     EnforceAll,
  }
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserBusyLampFieldGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "listURI", IsNullable = false)]
-    public string ListURI { get; set; }
-    [XmlElement(ElementName = "monitoredUserTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable MonitoredUserTable { get; set; }
- }
+    private string _listURI;
+
+    [XmlElement(ElementName = "listURI", IsNullable = false, Namespace = "")]
+    public string ListURI {
+        get => _listURI;
+        set {
+            ListURISpecified = true;
+            _listURI = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ListURISpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _monitoredUserTable;
+
+    [XmlElement(ElementName = "monitoredUserTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable MonitoredUserTable {
+        get => _monitoredUserTable;
+        set {
+            MonitoredUserTableSpecified = true;
+            _monitoredUserTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MonitoredUserTableSpecified { get; set; }
+}
 }

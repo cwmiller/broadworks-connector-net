@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserFeatureAccessCodeModifyEntry 
 {
-    [XmlElement(ElementName = "featureAccessCodeName", IsNullable = false)]
-    public string FeatureAccessCodeName { get; set; }
-    [XmlElement(ElementName = "enableFAC", IsNullable = false)]
-    public bool EnableFAC { get; set; }
- }
+    private string _featureAccessCodeName;
+
+    [XmlElement(ElementName = "featureAccessCodeName", IsNullable = false, Namespace = "")]
+    public string FeatureAccessCodeName {
+        get => _featureAccessCodeName;
+        set {
+            FeatureAccessCodeNameSpecified = true;
+            _featureAccessCodeName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FeatureAccessCodeNameSpecified { get; set; }
+    private bool _enableFAC;
+
+    [XmlElement(ElementName = "enableFAC", IsNullable = false, Namespace = "")]
+    public bool EnableFAC {
+        get => _enableFAC;
+        set {
+            EnableFACSpecified = true;
+            _enableFAC = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableFACSpecified { get; set; }
+}
 }

@@ -8,21 +8,109 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutePointModifyFailoverPolicyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "enableFailoverSupport", IsNullable = false)]
-    public bool EnableFailoverSupport { get; set; }
-    [XmlElement(ElementName = "externalSystem", IsNullable = true)]
-    public string ExternalSystem { get; set; }
-    [XmlElement(ElementName = "failoverPhoneNumber", IsNullable = true)]
-    public string FailoverPhoneNumber { get; set; }
-    [XmlElement(ElementName = "perCallEnableFailoverSupport", IsNullable = false)]
-    public bool PerCallEnableFailoverSupport { get; set; }
-    [XmlElement(ElementName = "perCallCallFailureTimeoutSeconds", IsNullable = false)]
-    public int PerCallCallFailureTimeoutSeconds { get; set; }
-    [XmlElement(ElementName = "perCallOutboundCallFailureTimeoutSeconds", IsNullable = false)]
-    public int PerCallOutboundCallFailureTimeoutSeconds { get; set; }
-    [XmlElement(ElementName = "perCallFailoverPhoneNumber", IsNullable = true)]
-    public string PerCallFailoverPhoneNumber { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private bool _enableFailoverSupport;
+
+    [XmlElement(ElementName = "enableFailoverSupport", IsNullable = false, Namespace = "")]
+    public bool EnableFailoverSupport {
+        get => _enableFailoverSupport;
+        set {
+            EnableFailoverSupportSpecified = true;
+            _enableFailoverSupport = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableFailoverSupportSpecified { get; set; }
+    private string _externalSystem;
+
+    [XmlElement(ElementName = "externalSystem", IsNullable = true, Namespace = "")]
+    public string ExternalSystem {
+        get => _externalSystem;
+        set {
+            ExternalSystemSpecified = true;
+            _externalSystem = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExternalSystemSpecified { get; set; }
+    private string _failoverPhoneNumber;
+
+    [XmlElement(ElementName = "failoverPhoneNumber", IsNullable = true, Namespace = "")]
+    public string FailoverPhoneNumber {
+        get => _failoverPhoneNumber;
+        set {
+            FailoverPhoneNumberSpecified = true;
+            _failoverPhoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FailoverPhoneNumberSpecified { get; set; }
+    private bool _perCallEnableFailoverSupport;
+
+    [XmlElement(ElementName = "perCallEnableFailoverSupport", IsNullable = false, Namespace = "")]
+    public bool PerCallEnableFailoverSupport {
+        get => _perCallEnableFailoverSupport;
+        set {
+            PerCallEnableFailoverSupportSpecified = true;
+            _perCallEnableFailoverSupport = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PerCallEnableFailoverSupportSpecified { get; set; }
+    private int _perCallCallFailureTimeoutSeconds;
+
+    [XmlElement(ElementName = "perCallCallFailureTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int PerCallCallFailureTimeoutSeconds {
+        get => _perCallCallFailureTimeoutSeconds;
+        set {
+            PerCallCallFailureTimeoutSecondsSpecified = true;
+            _perCallCallFailureTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PerCallCallFailureTimeoutSecondsSpecified { get; set; }
+    private int _perCallOutboundCallFailureTimeoutSeconds;
+
+    [XmlElement(ElementName = "perCallOutboundCallFailureTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int PerCallOutboundCallFailureTimeoutSeconds {
+        get => _perCallOutboundCallFailureTimeoutSeconds;
+        set {
+            PerCallOutboundCallFailureTimeoutSecondsSpecified = true;
+            _perCallOutboundCallFailureTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PerCallOutboundCallFailureTimeoutSecondsSpecified { get; set; }
+    private string _perCallFailoverPhoneNumber;
+
+    [XmlElement(ElementName = "perCallFailoverPhoneNumber", IsNullable = true, Namespace = "")]
+    public string PerCallFailoverPhoneNumber {
+        get => _perCallFailoverPhoneNumber;
+        set {
+            PerCallFailoverPhoneNumberSpecified = true;
+            _perCallFailoverPhoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PerCallFailoverPhoneNumberSpecified { get; set; }
+}
 }

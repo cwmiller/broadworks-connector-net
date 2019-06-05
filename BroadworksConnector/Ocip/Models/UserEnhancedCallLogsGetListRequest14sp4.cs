@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserEnhancedCallLogsGetListRequest14sp4 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "callLogType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallLogsType CallLogType { get; set; }
-    [XmlElement(ElementName = "startingOffset", IsNullable = false)]
-    public int StartingOffset { get; set; }
-    [XmlElement(ElementName = "numCalls", IsNullable = false)]
-    public int NumCalls { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CallLogsType _callLogType;
+
+    [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallLogsType CallLogType {
+        get => _callLogType;
+        set {
+            CallLogTypeSpecified = true;
+            _callLogType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallLogTypeSpecified { get; set; }
+    private int _startingOffset;
+
+    [XmlElement(ElementName = "startingOffset", IsNullable = false, Namespace = "")]
+    public int StartingOffset {
+        get => _startingOffset;
+        set {
+            StartingOffsetSpecified = true;
+            _startingOffset = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StartingOffsetSpecified { get; set; }
+    private int _numCalls;
+
+    [XmlElement(ElementName = "numCalls", IsNullable = false, Namespace = "")]
+    public int NumCalls {
+        get => _numCalls;
+        set {
+            NumCallsSpecified = true;
+            _numCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NumCallsSpecified { get; set; }
+}
 }

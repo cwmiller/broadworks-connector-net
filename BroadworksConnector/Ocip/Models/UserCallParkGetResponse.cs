@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallParkGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "userTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserTable { get; set; }
- }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _userTable;
+
+    [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable UserTable {
+        get => _userTable;
+        set {
+            UserTableSpecified = true;
+            _userTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserTableSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class TutorialFlagModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "enableTutorial", IsNullable = false)]
-    public bool EnableTutorial { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private bool _enableTutorial;
+
+    [XmlElement(ElementName = "enableTutorial", IsNullable = false, Namespace = "")]
+    public bool EnableTutorial {
+        get => _enableTutorial;
+        set {
+            EnableTutorialSpecified = true;
+            _enableTutorial = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableTutorialSpecified { get; set; }
+}
 }

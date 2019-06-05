@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserEnhancedCallLogsGetListResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false)]
-    public int TotalNumberOfRows { get; set; }
-    [XmlElement(ElementName = "callLog", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.MixedCallLogsEntry> CallLog { get; set; }
- }
+    private int _totalNumberOfRows;
+
+    [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
+    public int TotalNumberOfRows {
+        get => _totalNumberOfRows;
+        set {
+            TotalNumberOfRowsSpecified = true;
+            _totalNumberOfRows = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TotalNumberOfRowsSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.MixedCallLogsEntry> _callLog;
+
+    [XmlElement(ElementName = "callLog", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.MixedCallLogsEntry> CallLog {
+        get => _callLog;
+        set {
+            CallLogSpecified = true;
+            _callLog = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallLogSpecified { get; set; }
+}
 }

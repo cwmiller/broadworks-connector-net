@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactPortNumber : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "port", IsNullable = false)]
-    public int Port { get; set; }
- }
+    private int _port;
+
+    [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
+    public int Port {
+        get => _port;
+        set {
+            PortSpecified = true;
+            _port = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PortSpecified { get; set; }
+}
 }

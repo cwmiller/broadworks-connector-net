@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserTwoStageDialingModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "allowActivationWithUserAddresses", IsNullable = false)]
-    public bool AllowActivationWithUserAddresses { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private bool _allowActivationWithUserAddresses;
+
+    [XmlElement(ElementName = "allowActivationWithUserAddresses", IsNullable = false, Namespace = "")]
+    public bool AllowActivationWithUserAddresses {
+        get => _allowActivationWithUserAddresses;
+        set {
+            AllowActivationWithUserAddressesSpecified = true;
+            _allowActivationWithUserAddresses = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowActivationWithUserAddressesSpecified { get; set; }
+}
 }

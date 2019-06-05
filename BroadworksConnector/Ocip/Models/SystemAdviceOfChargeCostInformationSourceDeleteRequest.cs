@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAdviceOfChargeCostInformationSourceDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "peerIdentity", IsNullable = false)]
-    public string PeerIdentity { get; set; }
- }
+    private string _peerIdentity;
+
+    [XmlElement(ElementName = "peerIdentity", IsNullable = false, Namespace = "")]
+    public string PeerIdentity {
+        get => _peerIdentity;
+        set {
+            PeerIdentitySpecified = true;
+            _peerIdentity = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PeerIdentitySpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactServiceType : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "serviceType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ServiceType ServiceType { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.ServiceType _serviceType;
+
+    [XmlElement(ElementName = "serviceType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ServiceType ServiceType {
+        get => _serviceType;
+        set {
+            ServiceTypeSpecified = true;
+            _serviceType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceTypeSpecified { get; set; }
+}
 }

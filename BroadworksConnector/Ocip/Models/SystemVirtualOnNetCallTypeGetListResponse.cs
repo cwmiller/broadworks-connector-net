@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVirtualOnNetCallTypeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "virtualOnNetCallTypeTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable VirtualOnNetCallTypeTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _virtualOnNetCallTypeTable;
+
+    [XmlElement(ElementName = "virtualOnNetCallTypeTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable VirtualOnNetCallTypeTable {
+        get => _virtualOnNetCallTypeTable;
+        set {
+            VirtualOnNetCallTypeTableSpecified = true;
+            _virtualOnNetCallTypeTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VirtualOnNetCallTypeTableSpecified { get; set; }
+}
 }

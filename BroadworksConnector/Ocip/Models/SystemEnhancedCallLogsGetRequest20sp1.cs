@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemEnhancedCallLogsGetRequest20sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

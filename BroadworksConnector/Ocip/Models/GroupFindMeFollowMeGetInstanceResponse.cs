@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupFindMeFollowMeGetInstanceResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 ServiceInstanceProfile { get; set; }
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false)]
-    public string NetworkClassOfService { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 _serviceInstanceProfile;
+
+    [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 ServiceInstanceProfile {
+        get => _serviceInstanceProfile;
+        set {
+            ServiceInstanceProfileSpecified = true;
+            _serviceInstanceProfile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceInstanceProfileSpecified { get; set; }
+    private string _networkClassOfService;
+
+    [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+    public string NetworkClassOfService {
+        get => _networkClassOfService;
+        set {
+            NetworkClassOfServiceSpecified = true;
+            _networkClassOfService = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetworkClassOfServiceSpecified { get; set; }
+}
 }

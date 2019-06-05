@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRouteListEnterpriseTrunkNumberRangeGetAvailableListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "availableNumberRangeTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable AvailableNumberRangeTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _availableNumberRangeTable;
+
+    [XmlElement(ElementName = "availableNumberRangeTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable AvailableNumberRangeTable {
+        get => _availableNumberRangeTable;
+        set {
+            AvailableNumberRangeTableSpecified = true;
+            _availableNumberRangeTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AvailableNumberRangeTableSpecified { get; set; }
+}
 }

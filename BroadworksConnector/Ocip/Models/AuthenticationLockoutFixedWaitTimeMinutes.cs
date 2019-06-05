@@ -3,12 +3,19 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum AuthenticationLockoutFixedWaitTimeMinutes{
-    _5,
-    _10,
-    _20,
-    _40,
-    _60,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum AuthenticationLockoutFixedWaitTimeMinutes
+    {
+        [XmlEnum(Name = "5")]
+        _5,
+        [XmlEnum(Name = "10")]
+        _10,
+        [XmlEnum(Name = "20")]
+        _20,
+        [XmlEnum(Name = "40")]
+        _40,
+        [XmlEnum(Name = "60")]
+        _60,
+    }
 }

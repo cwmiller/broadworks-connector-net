@@ -141,5 +141,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlInclude(typeof(BroadworksConnector.Ocip.Models.SearchCriteriaExactEndpointType))]
 public abstract class SearchCriteria 
 {
- }
+}
 }

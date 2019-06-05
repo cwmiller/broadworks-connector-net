@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemOCIReportingGetMessageNameListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "messageNameStartsWith", IsNullable = false)]
-    public List<string> MessageNameStartsWith { get; set; }
- }
+    private List<string> _messageNameStartsWith;
+
+    [XmlElement(ElementName = "messageNameStartsWith", IsNullable = false, Namespace = "")]
+    public List<string> MessageNameStartsWith {
+        get => _messageNameStartsWith;
+        set {
+            MessageNameStartsWithSpecified = true;
+            _messageNameStartsWith = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MessageNameStartsWithSpecified { get; set; }
+}
 }

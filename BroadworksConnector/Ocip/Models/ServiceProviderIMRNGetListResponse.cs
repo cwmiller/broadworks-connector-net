@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderIMRNGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "imrn", IsNullable = false)]
-    public List<string> Imrn { get; set; }
- }
+    private List<string> _imrn;
+
+    [XmlElement(ElementName = "imrn", IsNullable = false, Namespace = "")]
+    public List<string> Imrn {
+        get => _imrn;
+        set {
+            ImrnSpecified = true;
+            _imrn = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ImrnSpecified { get; set; }
+}
 }

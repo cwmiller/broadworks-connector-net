@@ -8,61 +8,369 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCommunicationBarringCriteriaGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "description", IsNullable = false)]
-    public string Description { get; set; }
-    [XmlElement(ElementName = "matchCallType", IsNullable = false)]
-    public List<string> MatchCallType { get; set; }
-    [XmlElement(ElementName = "matchAlternateCallIndicator", IsNullable = false)]
-    public List<string> MatchAlternateCallIndicator { get; set; }
-    [XmlElement(ElementName = "matchPublicNetwork", IsNullable = false)]
-    public bool MatchPublicNetwork { get; set; }
-    [XmlElement(ElementName = "matchPrivateNetwork", IsNullable = false)]
-    public bool MatchPrivateNetwork { get; set; }
-    [XmlElement(ElementName = "matchLocalCategory", IsNullable = false)]
-    public bool MatchLocalCategory { get; set; }
-    [XmlElement(ElementName = "matchNationalCategory", IsNullable = false)]
-    public bool MatchNationalCategory { get; set; }
-    [XmlElement(ElementName = "matchInterlataCategory", IsNullable = false)]
-    public bool MatchInterlataCategory { get; set; }
-    [XmlElement(ElementName = "matchIntralataCategory", IsNullable = false)]
-    public bool MatchIntralataCategory { get; set; }
-    [XmlElement(ElementName = "matchInternationalCategory", IsNullable = false)]
-    public bool MatchInternationalCategory { get; set; }
-    [XmlElement(ElementName = "matchPrivateCategory", IsNullable = false)]
-    public bool MatchPrivateCategory { get; set; }
-    [XmlElement(ElementName = "matchEmergencyCategory", IsNullable = false)]
-    public bool MatchEmergencyCategory { get; set; }
-    [XmlElement(ElementName = "matchOtherCategory", IsNullable = false)]
-    public bool MatchOtherCategory { get; set; }
-    [XmlElement(ElementName = "matchInterNetwork", IsNullable = false)]
-    public bool MatchInterNetwork { get; set; }
-    [XmlElement(ElementName = "matchInterHostingNE", IsNullable = false)]
-    public bool MatchInterHostingNE { get; set; }
-    [XmlElement(ElementName = "matchInterAS", IsNullable = false)]
-    public bool MatchInterAS { get; set; }
-    [XmlElement(ElementName = "matchIntraAS", IsNullable = false)]
-    public bool MatchIntraAS { get; set; }
-    [XmlElement(ElementName = "matchChargeCalls", IsNullable = false)]
-    public bool MatchChargeCalls { get; set; }
-    [XmlElement(ElementName = "matchNoChargeCalls", IsNullable = false)]
-    public bool MatchNoChargeCalls { get; set; }
-    [XmlElement(ElementName = "matchGroupCalls", IsNullable = false)]
-    public bool MatchGroupCalls { get; set; }
-    [XmlElement(ElementName = "matchEnterpriseCalls", IsNullable = false)]
-    public bool MatchEnterpriseCalls { get; set; }
-    [XmlElement(ElementName = "matchNetworkCalls", IsNullable = false)]
-    public bool MatchNetworkCalls { get; set; }
-    [XmlElement(ElementName = "matchNetworkURLCalls", IsNullable = false)]
-    public bool MatchNetworkURLCalls { get; set; }
-    [XmlElement(ElementName = "matchRepairCalls", IsNullable = false)]
-    public bool MatchRepairCalls { get; set; }
-    [XmlElement(ElementName = "matchEmergencyCalls", IsNullable = false)]
-    public bool MatchEmergencyCalls { get; set; }
-    [XmlElement(ElementName = "matchInternalCalls", IsNullable = false)]
-    public bool MatchInternalCalls { get; set; }
-    [XmlElement(ElementName = "timeSchedule", IsNullable = false)]
-    public string TimeSchedule { get; set; }
-    [XmlElement(ElementName = "holidaySchedule", IsNullable = false)]
-    public string HolidaySchedule { get; set; }
- }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+    private List<string> _matchCallType;
+
+    [XmlElement(ElementName = "matchCallType", IsNullable = false, Namespace = "")]
+    public List<string> MatchCallType {
+        get => _matchCallType;
+        set {
+            MatchCallTypeSpecified = true;
+            _matchCallType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchCallTypeSpecified { get; set; }
+    private List<string> _matchAlternateCallIndicator;
+
+    [XmlElement(ElementName = "matchAlternateCallIndicator", IsNullable = false, Namespace = "")]
+    public List<string> MatchAlternateCallIndicator {
+        get => _matchAlternateCallIndicator;
+        set {
+            MatchAlternateCallIndicatorSpecified = true;
+            _matchAlternateCallIndicator = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchAlternateCallIndicatorSpecified { get; set; }
+    private bool _matchPublicNetwork;
+
+    [XmlElement(ElementName = "matchPublicNetwork", IsNullable = false, Namespace = "")]
+    public bool MatchPublicNetwork {
+        get => _matchPublicNetwork;
+        set {
+            MatchPublicNetworkSpecified = true;
+            _matchPublicNetwork = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchPublicNetworkSpecified { get; set; }
+    private bool _matchPrivateNetwork;
+
+    [XmlElement(ElementName = "matchPrivateNetwork", IsNullable = false, Namespace = "")]
+    public bool MatchPrivateNetwork {
+        get => _matchPrivateNetwork;
+        set {
+            MatchPrivateNetworkSpecified = true;
+            _matchPrivateNetwork = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchPrivateNetworkSpecified { get; set; }
+    private bool _matchLocalCategory;
+
+    [XmlElement(ElementName = "matchLocalCategory", IsNullable = false, Namespace = "")]
+    public bool MatchLocalCategory {
+        get => _matchLocalCategory;
+        set {
+            MatchLocalCategorySpecified = true;
+            _matchLocalCategory = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchLocalCategorySpecified { get; set; }
+    private bool _matchNationalCategory;
+
+    [XmlElement(ElementName = "matchNationalCategory", IsNullable = false, Namespace = "")]
+    public bool MatchNationalCategory {
+        get => _matchNationalCategory;
+        set {
+            MatchNationalCategorySpecified = true;
+            _matchNationalCategory = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchNationalCategorySpecified { get; set; }
+    private bool _matchInterlataCategory;
+
+    [XmlElement(ElementName = "matchInterlataCategory", IsNullable = false, Namespace = "")]
+    public bool MatchInterlataCategory {
+        get => _matchInterlataCategory;
+        set {
+            MatchInterlataCategorySpecified = true;
+            _matchInterlataCategory = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchInterlataCategorySpecified { get; set; }
+    private bool _matchIntralataCategory;
+
+    [XmlElement(ElementName = "matchIntralataCategory", IsNullable = false, Namespace = "")]
+    public bool MatchIntralataCategory {
+        get => _matchIntralataCategory;
+        set {
+            MatchIntralataCategorySpecified = true;
+            _matchIntralataCategory = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchIntralataCategorySpecified { get; set; }
+    private bool _matchInternationalCategory;
+
+    [XmlElement(ElementName = "matchInternationalCategory", IsNullable = false, Namespace = "")]
+    public bool MatchInternationalCategory {
+        get => _matchInternationalCategory;
+        set {
+            MatchInternationalCategorySpecified = true;
+            _matchInternationalCategory = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchInternationalCategorySpecified { get; set; }
+    private bool _matchPrivateCategory;
+
+    [XmlElement(ElementName = "matchPrivateCategory", IsNullable = false, Namespace = "")]
+    public bool MatchPrivateCategory {
+        get => _matchPrivateCategory;
+        set {
+            MatchPrivateCategorySpecified = true;
+            _matchPrivateCategory = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchPrivateCategorySpecified { get; set; }
+    private bool _matchEmergencyCategory;
+
+    [XmlElement(ElementName = "matchEmergencyCategory", IsNullable = false, Namespace = "")]
+    public bool MatchEmergencyCategory {
+        get => _matchEmergencyCategory;
+        set {
+            MatchEmergencyCategorySpecified = true;
+            _matchEmergencyCategory = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchEmergencyCategorySpecified { get; set; }
+    private bool _matchOtherCategory;
+
+    [XmlElement(ElementName = "matchOtherCategory", IsNullable = false, Namespace = "")]
+    public bool MatchOtherCategory {
+        get => _matchOtherCategory;
+        set {
+            MatchOtherCategorySpecified = true;
+            _matchOtherCategory = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchOtherCategorySpecified { get; set; }
+    private bool _matchInterNetwork;
+
+    [XmlElement(ElementName = "matchInterNetwork", IsNullable = false, Namespace = "")]
+    public bool MatchInterNetwork {
+        get => _matchInterNetwork;
+        set {
+            MatchInterNetworkSpecified = true;
+            _matchInterNetwork = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchInterNetworkSpecified { get; set; }
+    private bool _matchInterHostingNE;
+
+    [XmlElement(ElementName = "matchInterHostingNE", IsNullable = false, Namespace = "")]
+    public bool MatchInterHostingNE {
+        get => _matchInterHostingNE;
+        set {
+            MatchInterHostingNESpecified = true;
+            _matchInterHostingNE = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchInterHostingNESpecified { get; set; }
+    private bool _matchInterAS;
+
+    [XmlElement(ElementName = "matchInterAS", IsNullable = false, Namespace = "")]
+    public bool MatchInterAS {
+        get => _matchInterAS;
+        set {
+            MatchInterASSpecified = true;
+            _matchInterAS = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchInterASSpecified { get; set; }
+    private bool _matchIntraAS;
+
+    [XmlElement(ElementName = "matchIntraAS", IsNullable = false, Namespace = "")]
+    public bool MatchIntraAS {
+        get => _matchIntraAS;
+        set {
+            MatchIntraASSpecified = true;
+            _matchIntraAS = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchIntraASSpecified { get; set; }
+    private bool _matchChargeCalls;
+
+    [XmlElement(ElementName = "matchChargeCalls", IsNullable = false, Namespace = "")]
+    public bool MatchChargeCalls {
+        get => _matchChargeCalls;
+        set {
+            MatchChargeCallsSpecified = true;
+            _matchChargeCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchChargeCallsSpecified { get; set; }
+    private bool _matchNoChargeCalls;
+
+    [XmlElement(ElementName = "matchNoChargeCalls", IsNullable = false, Namespace = "")]
+    public bool MatchNoChargeCalls {
+        get => _matchNoChargeCalls;
+        set {
+            MatchNoChargeCallsSpecified = true;
+            _matchNoChargeCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchNoChargeCallsSpecified { get; set; }
+    private bool _matchGroupCalls;
+
+    [XmlElement(ElementName = "matchGroupCalls", IsNullable = false, Namespace = "")]
+    public bool MatchGroupCalls {
+        get => _matchGroupCalls;
+        set {
+            MatchGroupCallsSpecified = true;
+            _matchGroupCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchGroupCallsSpecified { get; set; }
+    private bool _matchEnterpriseCalls;
+
+    [XmlElement(ElementName = "matchEnterpriseCalls", IsNullable = false, Namespace = "")]
+    public bool MatchEnterpriseCalls {
+        get => _matchEnterpriseCalls;
+        set {
+            MatchEnterpriseCallsSpecified = true;
+            _matchEnterpriseCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchEnterpriseCallsSpecified { get; set; }
+    private bool _matchNetworkCalls;
+
+    [XmlElement(ElementName = "matchNetworkCalls", IsNullable = false, Namespace = "")]
+    public bool MatchNetworkCalls {
+        get => _matchNetworkCalls;
+        set {
+            MatchNetworkCallsSpecified = true;
+            _matchNetworkCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchNetworkCallsSpecified { get; set; }
+    private bool _matchNetworkURLCalls;
+
+    [XmlElement(ElementName = "matchNetworkURLCalls", IsNullable = false, Namespace = "")]
+    public bool MatchNetworkURLCalls {
+        get => _matchNetworkURLCalls;
+        set {
+            MatchNetworkURLCallsSpecified = true;
+            _matchNetworkURLCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchNetworkURLCallsSpecified { get; set; }
+    private bool _matchRepairCalls;
+
+    [XmlElement(ElementName = "matchRepairCalls", IsNullable = false, Namespace = "")]
+    public bool MatchRepairCalls {
+        get => _matchRepairCalls;
+        set {
+            MatchRepairCallsSpecified = true;
+            _matchRepairCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchRepairCallsSpecified { get; set; }
+    private bool _matchEmergencyCalls;
+
+    [XmlElement(ElementName = "matchEmergencyCalls", IsNullable = false, Namespace = "")]
+    public bool MatchEmergencyCalls {
+        get => _matchEmergencyCalls;
+        set {
+            MatchEmergencyCallsSpecified = true;
+            _matchEmergencyCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchEmergencyCallsSpecified { get; set; }
+    private bool _matchInternalCalls;
+
+    [XmlElement(ElementName = "matchInternalCalls", IsNullable = false, Namespace = "")]
+    public bool MatchInternalCalls {
+        get => _matchInternalCalls;
+        set {
+            MatchInternalCallsSpecified = true;
+            _matchInternalCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchInternalCallsSpecified { get; set; }
+    private string _timeSchedule;
+
+    [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
+    public string TimeSchedule {
+        get => _timeSchedule;
+        set {
+            TimeScheduleSpecified = true;
+            _timeSchedule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeScheduleSpecified { get; set; }
+    private string _holidaySchedule;
+
+    [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
+    public string HolidaySchedule {
+        get => _holidaySchedule;
+        set {
+            HolidayScheduleSpecified = true;
+            _holidaySchedule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HolidayScheduleSpecified { get; set; }
+}
 }

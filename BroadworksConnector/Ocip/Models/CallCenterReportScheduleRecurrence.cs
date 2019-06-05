@@ -1,20 +1,72 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CallCenterReportScheduleRecurrence 
-{
-    [XmlElement(ElementName = "timeZone", IsNullable = false)]
-    public string TimeZone { get; set; }
-    [XmlElement(ElementName = "startDate", IsNullable = false)]
-    public string StartDate { get; set; }
-    [XmlElement(ElementName = "scheduleTime", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.HourMinute ScheduleTime { get; set; }
-    [XmlElement(ElementName = "recurrence", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.Recurrence Recurrence { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class CallCenterReportScheduleRecurrence
+    {
+        private string _timeZone;
+
+        [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
+        public string TimeZone
+        {
+            get => _timeZone;
+            set
+            {
+                TimeZoneSpecified = true;
+                _timeZone = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool TimeZoneSpecified { get; set; }
+        private string _startDate;
+
+        [XmlElement(ElementName = "startDate", IsNullable = false, Namespace = "")]
+        public string StartDate
+        {
+            get => _startDate;
+            set
+            {
+                StartDateSpecified = true;
+                _startDate = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool StartDateSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.HourMinute _scheduleTime;
+
+        [XmlElement(ElementName = "scheduleTime", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.HourMinute ScheduleTime
+        {
+            get => _scheduleTime;
+            set
+            {
+                ScheduleTimeSpecified = true;
+                _scheduleTime = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ScheduleTimeSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.Recurrence _recurrence;
+
+        [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.Recurrence Recurrence
+        {
+            get => _recurrence;
+            set
+            {
+                RecurrenceSpecified = true;
+                _recurrence = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool RecurrenceSpecified { get; set; }
+    }
 }

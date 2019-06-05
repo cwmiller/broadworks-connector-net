@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserModifyGroupIdRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "newGroupId", IsNullable = false)]
-    public string NewGroupId { get; set; }
-    [XmlElement(ElementName = "evaluateOnly", IsNullable = false)]
-    public bool EvaluateOnly { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private string _newGroupId;
+
+    [XmlElement(ElementName = "newGroupId", IsNullable = false, Namespace = "")]
+    public string NewGroupId {
+        get => _newGroupId;
+        set {
+            NewGroupIdSpecified = true;
+            _newGroupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NewGroupIdSpecified { get; set; }
+    private bool _evaluateOnly;
+
+    [XmlElement(ElementName = "evaluateOnly", IsNullable = false, Namespace = "")]
+    public bool EvaluateOnly {
+        get => _evaluateOnly;
+        set {
+            EvaluateOnlySpecified = true;
+            _evaluateOnly = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EvaluateOnlySpecified { get; set; }
+}
 }

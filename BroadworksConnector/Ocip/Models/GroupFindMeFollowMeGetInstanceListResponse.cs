@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupFindMeFollowMeGetInstanceListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "findMeFollowMeTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable FindMeFollowMeTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _findMeFollowMeTable;
+
+    [XmlElement(ElementName = "findMeFollowMeTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable FindMeFollowMeTable {
+        get => _findMeFollowMeTable;
+        set {
+            FindMeFollowMeTableSpecified = true;
+            _findMeFollowMeTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FindMeFollowMeTableSpecified { get; set; }
+}
 }

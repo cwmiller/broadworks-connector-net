@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderServiceGetAuthorizationResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "authorized", IsNullable = false)]
-    public bool Authorized { get; set; }
-    [XmlElement(ElementName = "authorizedQuantity", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt AuthorizedQuantity { get; set; }
-    [XmlElement(ElementName = "usedQuantity", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt UsedQuantity { get; set; }
-    [XmlElement(ElementName = "authorizable", IsNullable = false)]
-    public bool Authorizable { get; set; }
- }
+    private bool _authorized;
+
+    [XmlElement(ElementName = "authorized", IsNullable = false, Namespace = "")]
+    public bool Authorized {
+        get => _authorized;
+        set {
+            AuthorizedSpecified = true;
+            _authorized = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AuthorizedSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt _authorizedQuantity;
+
+    [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt AuthorizedQuantity {
+        get => _authorizedQuantity;
+        set {
+            AuthorizedQuantitySpecified = true;
+            _authorizedQuantity = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AuthorizedQuantitySpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt _usedQuantity;
+
+    [XmlElement(ElementName = "usedQuantity", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt UsedQuantity {
+        get => _usedQuantity;
+        set {
+            UsedQuantitySpecified = true;
+            _usedQuantity = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UsedQuantitySpecified { get; set; }
+    private bool _authorizable;
+
+    [XmlElement(ElementName = "authorizable", IsNullable = false, Namespace = "")]
+    public bool Authorizable {
+        get => _authorizable;
+        set {
+            AuthorizableSpecified = true;
+            _authorizable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AuthorizableSpecified { get; set; }
+}
 }

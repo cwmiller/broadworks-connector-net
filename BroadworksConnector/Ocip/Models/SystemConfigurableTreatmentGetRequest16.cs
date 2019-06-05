@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemConfigurableTreatmentGetRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "treatmentId", IsNullable = false)]
-    public string TreatmentId { get; set; }
- }
+    private string _treatmentId;
+
+    [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
+    public string TreatmentId {
+        get => _treatmentId;
+        set {
+            TreatmentIdSpecified = true;
+            _treatmentId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TreatmentIdSpecified { get; set; }
+}
 }

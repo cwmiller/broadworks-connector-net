@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupPreferredCarrierGroupGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "intraLataCarrier", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.GroupPreferredCarrierName IntraLataCarrier { get; set; }
-    [XmlElement(ElementName = "interLataCarrier", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.GroupPreferredCarrierName InterLataCarrier { get; set; }
-    [XmlElement(ElementName = "internationalCarrier", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.GroupPreferredCarrierName InternationalCarrier { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.GroupPreferredCarrierName _intraLataCarrier;
+
+    [XmlElement(ElementName = "intraLataCarrier", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.GroupPreferredCarrierName IntraLataCarrier {
+        get => _intraLataCarrier;
+        set {
+            IntraLataCarrierSpecified = true;
+            _intraLataCarrier = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IntraLataCarrierSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.GroupPreferredCarrierName _interLataCarrier;
+
+    [XmlElement(ElementName = "interLataCarrier", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.GroupPreferredCarrierName InterLataCarrier {
+        get => _interLataCarrier;
+        set {
+            InterLataCarrierSpecified = true;
+            _interLataCarrier = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InterLataCarrierSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.GroupPreferredCarrierName _internationalCarrier;
+
+    [XmlElement(ElementName = "internationalCarrier", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.GroupPreferredCarrierName InternationalCarrier {
+        get => _internationalCarrier;
+        set {
+            InternationalCarrierSpecified = true;
+            _internationalCarrier = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InternationalCarrierSpecified { get; set; }
+}
 }

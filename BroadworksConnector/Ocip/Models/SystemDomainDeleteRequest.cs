@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDomainDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "domain", IsNullable = false)]
-    public string Domain { get; set; }
- }
+    private string _domain;
+
+    [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
+    public string Domain {
+        get => _domain;
+        set {
+            DomainSpecified = true;
+            _domain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DomainSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDeviceManagementAutoRebuildConfigGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "autoRebuildConfigTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable AutoRebuildConfigTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _autoRebuildConfigTable;
+
+    [XmlElement(ElementName = "autoRebuildConfigTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable AutoRebuildConfigTable {
+        get => _autoRebuildConfigTable;
+        set {
+            AutoRebuildConfigTableSpecified = true;
+            _autoRebuildConfigTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AutoRebuildConfigTableSpecified { get; set; }
+}
 }

@@ -3,26 +3,47 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallBlockingService{
-    OCP,
-    EOCP,
-    ICP,
-    ACR,
-    SCR,
-    SCA,
-    AAC,
-    Intercept,
-    PTT,
-    CommunicationBarring,
-    SAC,
-    IncomingCommunicationBarring,
-    HierarchicalCommunicationBarring,
-    IncomingHierarchicalCommunicationBarring,
-    BroadWorksMobilityDenyOriginations,
-    BroadWorksMobilityDenyTerminations,
-    EnterpriseTrunkRouteExhaust,
-    CallPark,
-    NumberPortability,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallBlockingService
+    {
+        [XmlEnum(Name = "OCP")]
+        OCP,
+        [XmlEnum(Name = "EOCP")]
+        EOCP,
+        [XmlEnum(Name = "ICP")]
+        ICP,
+        [XmlEnum(Name = "ACR")]
+        ACR,
+        [XmlEnum(Name = "SCR")]
+        SCR,
+        [XmlEnum(Name = "SCA")]
+        SCA,
+        [XmlEnum(Name = "AAC")]
+        AAC,
+        [XmlEnum(Name = "Intercept")]
+        Intercept,
+        [XmlEnum(Name = "PTT")]
+        PTT,
+        [XmlEnum(Name = "Communication Barring")]
+        CommunicationBarring,
+        [XmlEnum(Name = "SAC")]
+        SAC,
+        [XmlEnum(Name = "Incoming Communication Barring")]
+        IncomingCommunicationBarring,
+        [XmlEnum(Name = "Hierarchical Communication Barring")]
+        HierarchicalCommunicationBarring,
+        [XmlEnum(Name = "Incoming Hierarchical Communication Barring")]
+        IncomingHierarchicalCommunicationBarring,
+        [XmlEnum(Name = "BroadWorks Mobility Deny Originations")]
+        BroadWorksMobilityDenyOriginations,
+        [XmlEnum(Name = "BroadWorks Mobility Deny Terminations")]
+        BroadWorksMobilityDenyTerminations,
+        [XmlEnum(Name = "Enterprise Trunk Route Exhaust")]
+        EnterpriseTrunkRouteExhaust,
+        [XmlEnum(Name = "Call Park")]
+        CallPark,
+        [XmlEnum(Name = "Number Portability")]
+        NumberPortability,
+    }
 }

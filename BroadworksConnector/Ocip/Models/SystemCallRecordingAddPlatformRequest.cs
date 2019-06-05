@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallRecordingAddPlatformRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "netAddress", IsNullable = false)]
-    public string NetAddress { get; set; }
-    [XmlElement(ElementName = "port", IsNullable = false)]
-    public int Port { get; set; }
-    [XmlElement(ElementName = "mediaStream", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MediaStream MediaStream { get; set; }
-    [XmlElement(ElementName = "transportType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.TransportProtocol TransportType { get; set; }
-    [XmlElement(ElementName = "description", IsNullable = false)]
-    public string Description { get; set; }
- }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private string _netAddress;
+
+    [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
+    public string NetAddress {
+        get => _netAddress;
+        set {
+            NetAddressSpecified = true;
+            _netAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetAddressSpecified { get; set; }
+    private int _port;
+
+    [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
+    public int Port {
+        get => _port;
+        set {
+            PortSpecified = true;
+            _port = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PortSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MediaStream _mediaStream;
+
+    [XmlElement(ElementName = "mediaStream", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MediaStream MediaStream {
+        get => _mediaStream;
+        set {
+            MediaStreamSpecified = true;
+            _mediaStream = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MediaStreamSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.TransportProtocol _transportType;
+
+    [XmlElement(ElementName = "transportType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.TransportProtocol TransportType {
+        get => _transportType;
+        set {
+            TransportTypeSpecified = true;
+            _transportType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TransportTypeSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+}
 }

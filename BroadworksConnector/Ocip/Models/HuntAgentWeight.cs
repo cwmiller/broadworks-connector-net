@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class HuntAgentWeight 
 {
-    [XmlElement(ElementName = "agentUserId", IsNullable = false)]
-    public string AgentUserId { get; set; }
-    [XmlElement(ElementName = "weight", IsNullable = false)]
-    public int Weight { get; set; }
- }
+    private string _agentUserId;
+
+    [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
+    public string AgentUserId {
+        get => _agentUserId;
+        set {
+            AgentUserIdSpecified = true;
+            _agentUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AgentUserIdSpecified { get; set; }
+    private int _weight;
+
+    [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
+    public int Weight {
+        get => _weight;
+        set {
+            WeightSpecified = true;
+            _weight = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool WeightSpecified { get; set; }
+}
 }

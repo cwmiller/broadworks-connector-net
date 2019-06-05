@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCollaborateRoomListGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "roomInstanceTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable RoomInstanceTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _roomInstanceTable;
+
+    [XmlElement(ElementName = "roomInstanceTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable RoomInstanceTable {
+        get => _roomInstanceTable;
+        set {
+            RoomInstanceTableSpecified = true;
+            _roomInstanceTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoomInstanceTableSpecified { get; set; }
+}
 }

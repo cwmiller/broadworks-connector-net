@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SIPAuthenticationUserNamePassword 
 {
-    [XmlElement(ElementName = "sipAuthenticationUserName", IsNullable = false)]
-    public string SipAuthenticationUserName { get; set; }
-    [XmlElement(ElementName = "sipAuthenticationPassword", IsNullable = false)]
-    public string SipAuthenticationPassword { get; set; }
- }
+    private string _sipAuthenticationUserName;
+
+    [XmlElement(ElementName = "sipAuthenticationUserName", IsNullable = false, Namespace = "")]
+    public string SipAuthenticationUserName {
+        get => _sipAuthenticationUserName;
+        set {
+            SipAuthenticationUserNameSpecified = true;
+            _sipAuthenticationUserName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SipAuthenticationUserNameSpecified { get; set; }
+    private string _sipAuthenticationPassword;
+
+    [XmlElement(ElementName = "sipAuthenticationPassword", IsNullable = false, Namespace = "")]
+    public string SipAuthenticationPassword {
+        get => _sipAuthenticationPassword;
+        set {
+            SipAuthenticationPasswordSpecified = true;
+            _sipAuthenticationPassword = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SipAuthenticationPasswordSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SortOrderServiceProviderGetPagedSortedList 
 {
-    [XmlElement(ElementName = "sortByServiceProviderId", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SortByServiceProviderId SortByServiceProviderId { get; set; }
-    [XmlElement(ElementName = "sortByServiceProviderName", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SortByServiceProviderName SortByServiceProviderName { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.SortByServiceProviderId _sortByServiceProviderId;
+
+    [XmlElement(ElementName = "sortByServiceProviderId", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SortByServiceProviderId SortByServiceProviderId {
+        get => _sortByServiceProviderId;
+        set {
+            SortByServiceProviderIdSpecified = true;
+            _sortByServiceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SortByServiceProviderIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.SortByServiceProviderName _sortByServiceProviderName;
+
+    [XmlElement(ElementName = "sortByServiceProviderName", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SortByServiceProviderName SortByServiceProviderName {
+        get => _sortByServiceProviderName;
+        set {
+            SortByServiceProviderNameSpecified = true;
+            _sortByServiceProviderName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SortByServiceProviderNameSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDeviceManagementTagSetGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "tagSetName", IsNullable = false)]
-    public List<string> TagSetName { get; set; }
- }
+    private List<string> _tagSetName;
+
+    [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
+    public List<string> TagSetName {
+        get => _tagSetName;
+        set {
+            TagSetNameSpecified = true;
+            _tagSetName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TagSetNameSpecified { get; set; }
+}
 }

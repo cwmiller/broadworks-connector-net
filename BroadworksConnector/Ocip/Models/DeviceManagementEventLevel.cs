@@ -3,14 +3,23 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum DeviceManagementEventLevel{
-    Device,
-    DeviceType,
-    DeviceTypeGroup,
-    Group,
-    User,
-    DeviceTypeServiceProvider,
-    ServiceProvider,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum DeviceManagementEventLevel
+    {
+        [XmlEnum(Name = "Device")]
+        Device,
+        [XmlEnum(Name = "Device Type")]
+        DeviceType,
+        [XmlEnum(Name = "Device Type Group")]
+        DeviceTypeGroup,
+        [XmlEnum(Name = "Group")]
+        Group,
+        [XmlEnum(Name = "User")]
+        User,
+        [XmlEnum(Name = "Device Type Service Provider")]
+        DeviceTypeServiceProvider,
+        [XmlEnum(Name = "Service Provider")]
+        ServiceProvider,
+    }
 }

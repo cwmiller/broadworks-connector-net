@@ -3,10 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum BroadWorksAnywhereCLIDPrompt{
-    AlwaysPrompt,
-    NeverPrompt,
-    PromptWhenNotAvailable,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum BroadWorksAnywhereCLIDPrompt
+    {
+        [XmlEnum(Name = "Always Prompt")]
+        AlwaysPrompt,
+        [XmlEnum(Name = "Never Prompt")]
+        NeverPrompt,
+        [XmlEnum(Name = "Prompt When Not Available")]
+        PromptWhenNotAvailable,
+    }
 }

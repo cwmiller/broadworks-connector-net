@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSystemVoicePortalGetRequest21sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "systemVoicePortalId", IsNullable = false)]
-    public string SystemVoicePortalId { get; set; }
- }
+    private string _systemVoicePortalId;
+
+    [XmlElement(ElementName = "systemVoicePortalId", IsNullable = false, Namespace = "")]
+    public string SystemVoicePortalId {
+        get => _systemVoicePortalId;
+        set {
+            SystemVoicePortalIdSpecified = true;
+            _systemVoicePortalId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SystemVoicePortalIdSpecified { get; set; }
+}
 }

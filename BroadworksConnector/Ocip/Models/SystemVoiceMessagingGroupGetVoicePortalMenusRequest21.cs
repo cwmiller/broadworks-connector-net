@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupGetVoicePortalMenusRequest21 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "getDefaultMenuKeys", IsNullable = false)]
-    public bool GetDefaultMenuKeys { get; set; }
- }
+    private bool _getDefaultMenuKeys;
+
+    [XmlElement(ElementName = "getDefaultMenuKeys", IsNullable = false, Namespace = "")]
+    public bool GetDefaultMenuKeys {
+        get => _getDefaultMenuKeys;
+        set {
+            GetDefaultMenuKeysSpecified = true;
+            _getDefaultMenuKeys = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GetDefaultMenuKeysSpecified { get; set; }
+}
 }

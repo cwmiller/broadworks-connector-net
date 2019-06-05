@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum EnterpriseVoiceVPNDefaultSelection{
-    Public,
-    Private,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum EnterpriseVoiceVPNDefaultSelection
+    {
+        [XmlEnum(Name = "Public")]
+        Public,
+        [XmlEnum(Name = "Private")]
+        Private,
+    }
 }

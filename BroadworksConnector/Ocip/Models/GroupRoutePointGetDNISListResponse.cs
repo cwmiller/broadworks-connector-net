@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutePointGetDNISListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "displayDNISNumber", IsNullable = false)]
-    public bool DisplayDNISNumber { get; set; }
-    [XmlElement(ElementName = "displayDNISName", IsNullable = false)]
-    public bool DisplayDNISName { get; set; }
-    [XmlElement(ElementName = "dnisTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DnisTable { get; set; }
- }
+    private bool _displayDNISNumber;
+
+    [XmlElement(ElementName = "displayDNISNumber", IsNullable = false, Namespace = "")]
+    public bool DisplayDNISNumber {
+        get => _displayDNISNumber;
+        set {
+            DisplayDNISNumberSpecified = true;
+            _displayDNISNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DisplayDNISNumberSpecified { get; set; }
+    private bool _displayDNISName;
+
+    [XmlElement(ElementName = "displayDNISName", IsNullable = false, Namespace = "")]
+    public bool DisplayDNISName {
+        get => _displayDNISName;
+        set {
+            DisplayDNISNameSpecified = true;
+            _displayDNISName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DisplayDNISNameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _dnisTable;
+
+    [XmlElement(ElementName = "dnisTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable DnisTable {
+        get => _dnisTable;
+        set {
+            DnisTableSpecified = true;
+            _dnisTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DnisTableSpecified { get; set; }
+}
 }

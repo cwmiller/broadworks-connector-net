@@ -3,11 +3,17 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum AccessDeviceStatus{
-    Online,
-    Offline,
-    Unavailable,
-    Unknown,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum AccessDeviceStatus
+    {
+        [XmlEnum(Name = "Online")]
+        Online,
+        [XmlEnum(Name = "Offline")]
+        Offline,
+        [XmlEnum(Name = "Unavailable")]
+        Unavailable,
+        [XmlEnum(Name = "Unknown")]
+        Unknown,
+    }
 }

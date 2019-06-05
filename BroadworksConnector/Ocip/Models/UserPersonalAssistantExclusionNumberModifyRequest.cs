@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPersonalAssistantExclusionNumberModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "exclusionNumber", IsNullable = false)]
-    public string ExclusionNumber { get; set; }
-    [XmlElement(ElementName = "description", IsNullable = true)]
-    public string Description { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private string _exclusionNumber;
+
+    [XmlElement(ElementName = "exclusionNumber", IsNullable = false, Namespace = "")]
+    public string ExclusionNumber {
+        get => _exclusionNumber;
+        set {
+            ExclusionNumberSpecified = true;
+            _exclusionNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExclusionNumberSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+}
 }

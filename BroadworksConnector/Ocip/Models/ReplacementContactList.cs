@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementContactList 
 {
-    [XmlElement(ElementName = "contact", IsNullable = false)]
-    public List<string> Contact { get; set; }
- }
+    private List<string> _contact;
+
+    [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
+    public List<string> Contact {
+        get => _contact;
+        set {
+            ContactSpecified = true;
+            _contact = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ContactSpecified { get; set; }
+}
 }

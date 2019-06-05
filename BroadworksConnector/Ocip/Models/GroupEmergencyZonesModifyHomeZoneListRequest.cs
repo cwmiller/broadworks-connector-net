@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupEmergencyZonesModifyHomeZoneListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "homeZoneIpAddressList", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressList> HomeZoneIpAddressList { get; set; }
-    [XmlElement(ElementName = "homeZoneIpAddressRangeList", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressRangeList> HomeZoneIpAddressRangeList { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressList> _homeZoneIpAddressList;
+
+    [XmlElement(ElementName = "homeZoneIpAddressList", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressList> HomeZoneIpAddressList {
+        get => _homeZoneIpAddressList;
+        set {
+            HomeZoneIpAddressListSpecified = true;
+            _homeZoneIpAddressList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HomeZoneIpAddressListSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressRangeList> _homeZoneIpAddressRangeList;
+
+    [XmlElement(ElementName = "homeZoneIpAddressRangeList", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressRangeList> HomeZoneIpAddressRangeList {
+        get => _homeZoneIpAddressRangeList;
+        set {
+            HomeZoneIpAddressRangeListSpecified = true;
+            _homeZoneIpAddressRangeList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HomeZoneIpAddressRangeListSpecified { get; set; }
+}
 }

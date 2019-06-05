@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupEmergencyZonesGetHomeZoneListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "homeZoneIpAddress", IsNullable = false)]
-    public List<string> HomeZoneIpAddress { get; set; }
-    [XmlElement(ElementName = "homeZoneIpAddressRange", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.IPAddressRange> HomeZoneIpAddressRange { get; set; }
- }
+    private List<string> _homeZoneIpAddress;
+
+    [XmlElement(ElementName = "homeZoneIpAddress", IsNullable = false, Namespace = "")]
+    public List<string> HomeZoneIpAddress {
+        get => _homeZoneIpAddress;
+        set {
+            HomeZoneIpAddressSpecified = true;
+            _homeZoneIpAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HomeZoneIpAddressSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.IPAddressRange> _homeZoneIpAddressRange;
+
+    [XmlElement(ElementName = "homeZoneIpAddressRange", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.IPAddressRange> HomeZoneIpAddressRange {
+        get => _homeZoneIpAddressRange;
+        set {
+            HomeZoneIpAddressRangeSpecified = true;
+            _homeZoneIpAddressRange = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HomeZoneIpAddressRangeSpecified { get; set; }
+}
 }

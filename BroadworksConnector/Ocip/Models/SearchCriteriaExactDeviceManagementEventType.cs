@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactDeviceManagementEventType : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "dmEventType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DeviceManagementEventType DmEventType { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.DeviceManagementEventType _dmEventType;
+
+    [XmlElement(ElementName = "dmEventType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DeviceManagementEventType DmEventType {
+        get => _dmEventType;
+        set {
+            DmEventTypeSpecified = true;
+            _dmEventType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DmEventTypeSpecified { get; set; }
+}
 }

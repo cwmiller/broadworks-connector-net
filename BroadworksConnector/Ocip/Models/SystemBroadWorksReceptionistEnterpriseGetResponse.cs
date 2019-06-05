@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBroadWorksReceptionistEnterpriseGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "maxMonitoredUsers", IsNullable = false)]
-    public int MaxMonitoredUsers { get; set; }
- }
+    private int _maxMonitoredUsers;
+
+    [XmlElement(ElementName = "maxMonitoredUsers", IsNullable = false, Namespace = "")]
+    public int MaxMonitoredUsers {
+        get => _maxMonitoredUsers;
+        set {
+            MaxMonitoredUsersSpecified = true;
+            _maxMonitoredUsers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxMonitoredUsersSpecified { get; set; }
+}
 }

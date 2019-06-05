@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupGroupPagingModifyActiveInstanceListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceActivation", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.ServiceActivation> ServiceActivation { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.ServiceActivation> _serviceActivation;
+
+    [XmlElement(ElementName = "serviceActivation", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.ServiceActivation> ServiceActivation {
+        get => _serviceActivation;
+        set {
+            ServiceActivationSpecified = true;
+            _serviceActivation = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceActivationSpecified { get; set; }
+}
 }

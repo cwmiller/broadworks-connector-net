@@ -8,25 +8,135 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "defaultDomain", IsNullable = false)]
-    public string DefaultDomain { get; set; }
-    [XmlElement(ElementName = "userLimit", IsNullable = false)]
-    public int UserLimit { get; set; }
-    [XmlElement(ElementName = "userCount", IsNullable = false)]
-    public int UserCount { get; set; }
-    [XmlElement(ElementName = "groupName", IsNullable = false)]
-    public string GroupName { get; set; }
-    [XmlElement(ElementName = "callingLineIdName", IsNullable = false)]
-    public string CallingLineIdName { get; set; }
-    [XmlElement(ElementName = "timeZone", IsNullable = false)]
-    public string TimeZone { get; set; }
-    [XmlElement(ElementName = "timeZoneDisplayName", IsNullable = false)]
-    public string TimeZoneDisplayName { get; set; }
-    [XmlElement(ElementName = "locationDialingCode", IsNullable = false)]
-    public string LocationDialingCode { get; set; }
-    [XmlElement(ElementName = "contact", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.Contact Contact { get; set; }
-    [XmlElement(ElementName = "address", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.StreetAddress Address { get; set; }
- }
+    private string _defaultDomain;
+
+    [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
+    public string DefaultDomain {
+        get => _defaultDomain;
+        set {
+            DefaultDomainSpecified = true;
+            _defaultDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultDomainSpecified { get; set; }
+    private int _userLimit;
+
+    [XmlElement(ElementName = "userLimit", IsNullable = false, Namespace = "")]
+    public int UserLimit {
+        get => _userLimit;
+        set {
+            UserLimitSpecified = true;
+            _userLimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserLimitSpecified { get; set; }
+    private int _userCount;
+
+    [XmlElement(ElementName = "userCount", IsNullable = false, Namespace = "")]
+    public int UserCount {
+        get => _userCount;
+        set {
+            UserCountSpecified = true;
+            _userCount = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserCountSpecified { get; set; }
+    private string _groupName;
+
+    [XmlElement(ElementName = "groupName", IsNullable = false, Namespace = "")]
+    public string GroupName {
+        get => _groupName;
+        set {
+            GroupNameSpecified = true;
+            _groupName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupNameSpecified { get; set; }
+    private string _callingLineIdName;
+
+    [XmlElement(ElementName = "callingLineIdName", IsNullable = false, Namespace = "")]
+    public string CallingLineIdName {
+        get => _callingLineIdName;
+        set {
+            CallingLineIdNameSpecified = true;
+            _callingLineIdName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallingLineIdNameSpecified { get; set; }
+    private string _timeZone;
+
+    [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
+    public string TimeZone {
+        get => _timeZone;
+        set {
+            TimeZoneSpecified = true;
+            _timeZone = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeZoneSpecified { get; set; }
+    private string _timeZoneDisplayName;
+
+    [XmlElement(ElementName = "timeZoneDisplayName", IsNullable = false, Namespace = "")]
+    public string TimeZoneDisplayName {
+        get => _timeZoneDisplayName;
+        set {
+            TimeZoneDisplayNameSpecified = true;
+            _timeZoneDisplayName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeZoneDisplayNameSpecified { get; set; }
+    private string _locationDialingCode;
+
+    [XmlElement(ElementName = "locationDialingCode", IsNullable = false, Namespace = "")]
+    public string LocationDialingCode {
+        get => _locationDialingCode;
+        set {
+            LocationDialingCodeSpecified = true;
+            _locationDialingCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LocationDialingCodeSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.Contact _contact;
+
+    [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.Contact Contact {
+        get => _contact;
+        set {
+            ContactSpecified = true;
+            _contact = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ContactSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.StreetAddress _address;
+
+    [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.StreetAddress Address {
+        get => _address;
+        set {
+            AddressSpecified = true;
+            _address = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AddressSpecified { get; set; }
+}
 }

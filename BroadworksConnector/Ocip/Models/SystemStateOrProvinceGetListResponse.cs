@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemStateOrProvinceGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "stateOrProvinceTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable StateOrProvinceTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _stateOrProvinceTable;
+
+    [XmlElement(ElementName = "stateOrProvinceTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable StateOrProvinceTable {
+        get => _stateOrProvinceTable;
+        set {
+            StateOrProvinceTableSpecified = true;
+            _stateOrProvinceTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StateOrProvinceTableSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupGroupPagingGetTargetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "targetTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable TargetTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _targetTable;
+
+    [XmlElement(ElementName = "targetTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable TargetTable {
+        get => _targetTable;
+        set {
+            TargetTableSpecified = true;
+            _targetTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TargetTableSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSystemServiceDnGetAvailableListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "availableDn", IsNullable = false)]
-    public List<string> AvailableDn { get; set; }
- }
+    private List<string> _availableDn;
+
+    [XmlElement(ElementName = "availableDn", IsNullable = false, Namespace = "")]
+    public List<string> AvailableDn {
+        get => _availableDn;
+        set {
+            AvailableDnSpecified = true;
+            _availableDn = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AvailableDnSpecified { get; set; }
+}
 }

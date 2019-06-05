@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "availableMobileSubscriberDirectoryNumber", IsNullable = false)]
-    public List<string> AvailableMobileSubscriberDirectoryNumber { get; set; }
- }
+    private List<string> _availableMobileSubscriberDirectoryNumber;
+
+    [XmlElement(ElementName = "availableMobileSubscriberDirectoryNumber", IsNullable = false, Namespace = "")]
+    public List<string> AvailableMobileSubscriberDirectoryNumber {
+        get => _availableMobileSubscriberDirectoryNumber;
+        set {
+            AvailableMobileSubscriberDirectoryNumberSpecified = true;
+            _availableMobileSubscriberDirectoryNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AvailableMobileSubscriberDirectoryNumberSpecified { get; set; }
+}
 }

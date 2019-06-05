@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemShInterfaceParametersModifyRequest17 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "hssRealm", IsNullable = true)]
-    public string HssRealm { get; set; }
-    [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false)]
-    public int PublicIdentityRefreshDelaySeconds { get; set; }
- }
+    private string _hssRealm;
+
+    [XmlElement(ElementName = "hssRealm", IsNullable = true, Namespace = "")]
+    public string HssRealm {
+        get => _hssRealm;
+        set {
+            HssRealmSpecified = true;
+            _hssRealm = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HssRealmSpecified { get; set; }
+    private int _publicIdentityRefreshDelaySeconds;
+
+    [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
+    public int PublicIdentityRefreshDelaySeconds {
+        get => _publicIdentityRefreshDelaySeconds;
+        set {
+            PublicIdentityRefreshDelaySecondsSpecified = true;
+            _publicIdentityRefreshDelaySeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PublicIdentityRefreshDelaySecondsSpecified { get; set; }
+}
 }

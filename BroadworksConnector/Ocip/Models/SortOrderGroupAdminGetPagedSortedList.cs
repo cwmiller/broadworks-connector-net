@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SortOrderGroupAdminGetPagedSortedList 
 {
-    [XmlElement(ElementName = "sortByAdminId", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SortByAdminId SortByAdminId { get; set; }
-    [XmlElement(ElementName = "sortByAdminLastName", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SortByAdminLastName SortByAdminLastName { get; set; }
-    [XmlElement(ElementName = "sortByAdminFirstName", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SortByAdminFirstName SortByAdminFirstName { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.SortByAdminId _sortByAdminId;
+
+    [XmlElement(ElementName = "sortByAdminId", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SortByAdminId SortByAdminId {
+        get => _sortByAdminId;
+        set {
+            SortByAdminIdSpecified = true;
+            _sortByAdminId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SortByAdminIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.SortByAdminLastName _sortByAdminLastName;
+
+    [XmlElement(ElementName = "sortByAdminLastName", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SortByAdminLastName SortByAdminLastName {
+        get => _sortByAdminLastName;
+        set {
+            SortByAdminLastNameSpecified = true;
+            _sortByAdminLastName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SortByAdminLastNameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.SortByAdminFirstName _sortByAdminFirstName;
+
+    [XmlElement(ElementName = "sortByAdminFirstName", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SortByAdminFirstName SortByAdminFirstName {
+        get => _sortByAdminFirstName;
+        set {
+            SortByAdminFirstNameSpecified = true;
+            _sortByAdminFirstName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SortByAdminFirstNameSpecified { get; set; }
+}
 }

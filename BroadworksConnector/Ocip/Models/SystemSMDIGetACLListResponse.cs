@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSMDIGetACLListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "aclTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable AclTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _aclTable;
+
+    [XmlElement(ElementName = "aclTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable AclTable {
+        get => _aclTable;
+        set {
+            AclTableSpecified = true;
+            _aclTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AclTableSpecified { get; set; }
+}
 }

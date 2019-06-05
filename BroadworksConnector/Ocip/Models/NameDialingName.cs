@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class NameDialingName 
 {
-    [XmlElement(ElementName = "nameDialingLastName", IsNullable = false)]
-    public string NameDialingLastName { get; set; }
-    [XmlElement(ElementName = "nameDialingFirstName", IsNullable = false)]
-    public string NameDialingFirstName { get; set; }
- }
+    private string _nameDialingLastName;
+
+    [XmlElement(ElementName = "nameDialingLastName", IsNullable = false, Namespace = "")]
+    public string NameDialingLastName {
+        get => _nameDialingLastName;
+        set {
+            NameDialingLastNameSpecified = true;
+            _nameDialingLastName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameDialingLastNameSpecified { get; set; }
+    private string _nameDialingFirstName;
+
+    [XmlElement(ElementName = "nameDialingFirstName", IsNullable = false, Namespace = "")]
+    public string NameDialingFirstName {
+        get => _nameDialingFirstName;
+        set {
+            NameDialingFirstNameSpecified = true;
+            _nameDialingFirstName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameDialingFirstNameSpecified { get; set; }
+}
 }

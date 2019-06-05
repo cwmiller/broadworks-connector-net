@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderAccessDeviceTagSetModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "deviceName", IsNullable = false)]
-    public string DeviceName { get; set; }
-    [XmlElement(ElementName = "tagSetName", IsNullable = true)]
-    public string TagSetName { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _deviceName;
+
+    [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
+    public string DeviceName {
+        get => _deviceName;
+        set {
+            DeviceNameSpecified = true;
+            _deviceName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceNameSpecified { get; set; }
+    private string _tagSetName;
+
+    [XmlElement(ElementName = "tagSetName", IsNullable = true, Namespace = "")]
+    public string TagSetName {
+        get => _tagSetName;
+        set {
+            TagSetNameSpecified = true;
+            _tagSetName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TagSetNameSpecified { get; set; }
+}
 }

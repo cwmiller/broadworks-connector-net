@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemOutgoingCallingPlanModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "directTransferScreening", IsNullable = false)]
-    public bool DirectTransferScreening { get; set; }
-    [XmlElement(ElementName = "enableEnhancedTollCallTyping", IsNullable = false)]
-    public bool EnableEnhancedTollCallTyping { get; set; }
- }
+    private bool _directTransferScreening;
+
+    [XmlElement(ElementName = "directTransferScreening", IsNullable = false, Namespace = "")]
+    public bool DirectTransferScreening {
+        get => _directTransferScreening;
+        set {
+            DirectTransferScreeningSpecified = true;
+            _directTransferScreening = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DirectTransferScreeningSpecified { get; set; }
+    private bool _enableEnhancedTollCallTyping;
+
+    [XmlElement(ElementName = "enableEnhancedTollCallTyping", IsNullable = false, Namespace = "")]
+    public bool EnableEnhancedTollCallTyping {
+        get => _enableEnhancedTollCallTyping;
+        set {
+            EnableEnhancedTollCallTypingSpecified = true;
+            _enableEnhancedTollCallTyping = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableEnhancedTollCallTypingSpecified { get; set; }
+}
 }

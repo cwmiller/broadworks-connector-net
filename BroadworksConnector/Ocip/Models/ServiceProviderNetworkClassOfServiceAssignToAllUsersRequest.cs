@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderNetworkClassOfServiceAssignToAllUsersRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false)]
-    public string NetworkClassOfService { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _networkClassOfService;
+
+    [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+    public string NetworkClassOfService {
+        get => _networkClassOfService;
+        set {
+            NetworkClassOfServiceSpecified = true;
+            _networkClassOfService = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetworkClassOfServiceSpecified { get; set; }
+}
 }

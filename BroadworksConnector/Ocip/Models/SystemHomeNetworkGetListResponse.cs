@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemHomeNetworkGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "mscAddress", IsNullable = false)]
-    public List<string> MscAddress { get; set; }
- }
+    private List<string> _mscAddress;
+
+    [XmlElement(ElementName = "mscAddress", IsNullable = false, Namespace = "")]
+    public List<string> MscAddress {
+        get => _mscAddress;
+        set {
+            MscAddressSpecified = true;
+            _mscAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MscAddressSpecified { get; set; }
+}
 }

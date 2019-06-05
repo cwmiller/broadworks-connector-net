@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallingPartyCategoryGetResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "category", IsNullable = false)]
-    public string Category { get; set; }
- }
+    private string _category;
+
+    [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
+    public string Category {
+        get => _category;
+        set {
+            CategorySpecified = true;
+            _category = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CategorySpecified { get; set; }
+}
 }

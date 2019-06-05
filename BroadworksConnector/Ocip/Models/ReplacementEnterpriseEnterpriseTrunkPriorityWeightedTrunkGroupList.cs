@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementEnterpriseEnterpriseTrunkPriorityWeightedTrunkGroupList 
 {
-    [XmlElement(ElementName = "trunkGroup", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.EnterpriseEnterpriseTrunkPriorityWeightedTrunkGroup> TrunkGroup { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.EnterpriseEnterpriseTrunkPriorityWeightedTrunkGroup> _trunkGroup;
+
+    [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.EnterpriseEnterpriseTrunkPriorityWeightedTrunkGroup> TrunkGroup {
+        get => _trunkGroup;
+        set {
+            TrunkGroupSpecified = true;
+            _trunkGroup = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TrunkGroupSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSMDIMessageDeskModifyServerRouteRequestDeviceNameList 
 {
-    [XmlElement(ElementName = "deviceName", IsNullable = false)]
-    public List<string> DeviceName { get; set; }
- }
+    private List<string> _deviceName;
+
+    [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
+    public List<string> DeviceName {
+        get => _deviceName;
+        set {
+            DeviceNameSpecified = true;
+            _deviceName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceNameSpecified { get; set; }
+}
 }

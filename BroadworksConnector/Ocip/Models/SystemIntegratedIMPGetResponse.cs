@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemIntegratedIMPGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "serviceDomain", IsNullable = false)]
-    public string ServiceDomain { get; set; }
-    [XmlElement(ElementName = "servicePort", IsNullable = false)]
-    public int ServicePort { get; set; }
-    [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false)]
-    public bool AddServiceProviderInIMPUserId { get; set; }
- }
+    private string _serviceDomain;
+
+    [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
+    public string ServiceDomain {
+        get => _serviceDomain;
+        set {
+            ServiceDomainSpecified = true;
+            _serviceDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceDomainSpecified { get; set; }
+    private int _servicePort;
+
+    [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
+    public int ServicePort {
+        get => _servicePort;
+        set {
+            ServicePortSpecified = true;
+            _servicePort = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServicePortSpecified { get; set; }
+    private bool _addServiceProviderInIMPUserId;
+
+    [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
+    public bool AddServiceProviderInIMPUserId {
+        get => _addServiceProviderInIMPUserId;
+        set {
+            AddServiceProviderInIMPUserIdSpecified = true;
+            _addServiceProviderInIMPUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AddServiceProviderInIMPUserIdSpecified { get; set; }
+}
 }

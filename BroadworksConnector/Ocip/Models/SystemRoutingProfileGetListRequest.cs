@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutingProfileGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "resellerId", IsNullable = false)]
-    public string ResellerId { get; set; }
- }
+    private string _resellerId;
+
+    [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
+    public string ResellerId {
+        get => _resellerId;
+        set {
+            ResellerIdSpecified = true;
+            _resellerId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResellerIdSpecified { get; set; }
+}
 }

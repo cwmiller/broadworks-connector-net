@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserSelectiveCallRejectionGetCriteriaResponse16sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "timeSchedule", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.TimeSchedule TimeSchedule { get; set; }
-    [XmlElement(ElementName = "fromDnCriteria", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallType FromDnCriteria { get; set; }
-    [XmlElement(ElementName = "blacklisted", IsNullable = false)]
-    public bool Blacklisted { get; set; }
-    [XmlElement(ElementName = "holidaySchedule", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.HolidaySchedule HolidaySchedule { get; set; }
-    [XmlElement(ElementName = "private", IsNullable = false)]
-    public bool Private { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.TimeSchedule _timeSchedule;
+
+    [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+        get => _timeSchedule;
+        set {
+            TimeScheduleSpecified = true;
+            _timeSchedule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeScheduleSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallType _fromDnCriteria;
+
+    [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallType FromDnCriteria {
+        get => _fromDnCriteria;
+        set {
+            FromDnCriteriaSpecified = true;
+            _fromDnCriteria = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FromDnCriteriaSpecified { get; set; }
+    private bool _blacklisted;
+
+    [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
+    public bool Blacklisted {
+        get => _blacklisted;
+        set {
+            BlacklistedSpecified = true;
+            _blacklisted = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool BlacklistedSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+
+    [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+        get => _holidaySchedule;
+        set {
+            HolidayScheduleSpecified = true;
+            _holidaySchedule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HolidayScheduleSpecified { get; set; }
+    private bool _private;
+
+    [XmlElement(ElementName = "private", IsNullable = false, Namespace = "")]
+    public bool Private {
+        get => _private;
+        set {
+            PrivateSpecified = true;
+            _private = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrivateSpecified { get; set; }
+}
 }

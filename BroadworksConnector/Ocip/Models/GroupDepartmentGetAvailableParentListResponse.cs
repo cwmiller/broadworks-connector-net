@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupDepartmentGetAvailableParentListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "departmentKey", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.DepartmentKey> DepartmentKey { get; set; }
-    [XmlElement(ElementName = "fullPathName", IsNullable = false)]
-    public List<string> FullPathName { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.DepartmentKey> _departmentKey;
+
+    [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.DepartmentKey> DepartmentKey {
+        get => _departmentKey;
+        set {
+            DepartmentKeySpecified = true;
+            _departmentKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentKeySpecified { get; set; }
+    private List<string> _fullPathName;
+
+    [XmlElement(ElementName = "fullPathName", IsNullable = false, Namespace = "")]
+    public List<string> FullPathName {
+        get => _fullPathName;
+        set {
+            FullPathNameSpecified = true;
+            _fullPathName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FullPathNameSpecified { get; set; }
+}
 }

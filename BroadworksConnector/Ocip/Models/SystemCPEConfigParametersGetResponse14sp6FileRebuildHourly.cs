@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCPEConfigParametersGetResponse14sp6FileRebuildHourly 
 {
-    [XmlElement(ElementName = "startMinute", IsNullable = false)]
-    public int StartMinute { get; set; }
- }
+    private int _startMinute;
+
+    [XmlElement(ElementName = "startMinute", IsNullable = false, Namespace = "")]
+    public int StartMinute {
+        get => _startMinute;
+        set {
+            StartMinuteSpecified = true;
+            _startMinute = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StartMinuteSpecified { get; set; }
+}
 }

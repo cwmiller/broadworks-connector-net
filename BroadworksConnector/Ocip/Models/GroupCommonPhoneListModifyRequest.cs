@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCommonPhoneListModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "entryName", IsNullable = false)]
-    public string EntryName { get; set; }
-    [XmlElement(ElementName = "newEntryName", IsNullable = false)]
-    public string NewEntryName { get; set; }
-    [XmlElement(ElementName = "phoneNumber", IsNullable = false)]
-    public string PhoneNumber { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private string _entryName;
+
+    [XmlElement(ElementName = "entryName", IsNullable = false, Namespace = "")]
+    public string EntryName {
+        get => _entryName;
+        set {
+            EntryNameSpecified = true;
+            _entryName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EntryNameSpecified { get; set; }
+    private string _newEntryName;
+
+    [XmlElement(ElementName = "newEntryName", IsNullable = false, Namespace = "")]
+    public string NewEntryName {
+        get => _newEntryName;
+        set {
+            NewEntryNameSpecified = true;
+            _newEntryName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NewEntryNameSpecified { get; set; }
+    private string _phoneNumber;
+
+    [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
+    public string PhoneNumber {
+        get => _phoneNumber;
+        set {
+            PhoneNumberSpecified = true;
+            _phoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PhoneNumberSpecified { get; set; }
+}
 }

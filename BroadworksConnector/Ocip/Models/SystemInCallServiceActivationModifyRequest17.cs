@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemInCallServiceActivationModifyRequest17 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "defaultFlashActivationDigits", IsNullable = false)]
-    public string DefaultFlashActivationDigits { get; set; }
-    [XmlElement(ElementName = "defaultCallTransferActivationDigits", IsNullable = false)]
-    public string DefaultCallTransferActivationDigits { get; set; }
- }
+    private string _defaultFlashActivationDigits;
+
+    [XmlElement(ElementName = "defaultFlashActivationDigits", IsNullable = false, Namespace = "")]
+    public string DefaultFlashActivationDigits {
+        get => _defaultFlashActivationDigits;
+        set {
+            DefaultFlashActivationDigitsSpecified = true;
+            _defaultFlashActivationDigits = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultFlashActivationDigitsSpecified { get; set; }
+    private string _defaultCallTransferActivationDigits;
+
+    [XmlElement(ElementName = "defaultCallTransferActivationDigits", IsNullable = false, Namespace = "")]
+    public string DefaultCallTransferActivationDigits {
+        get => _defaultCallTransferActivationDigits;
+        set {
+            DefaultCallTransferActivationDigitsSpecified = true;
+            _defaultCallTransferActivationDigits = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultCallTransferActivationDigitsSpecified { get; set; }
+}
 }

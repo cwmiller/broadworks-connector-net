@@ -3,8 +3,11 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum DigitalSignatureAlgorithm{
-    MD5,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum DigitalSignatureAlgorithm
+    {
+        [XmlEnum(Name = "MD5")]
+        MD5,
+    }
 }

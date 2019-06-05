@@ -4,9 +4,13 @@ using System.Xml.Serialization;
 namespace BroadworksConnector.Ocip.Models
 {
 [Serializable]
+[XmlRoot(Namespace = "")]
 public enum SelectiveCallRejectionCriteriaCallTypeSelection{
+    [XmlEnum(Name = "Any")]
     Any,
+    [XmlEnum(Name = "Forwarded")]
     Forwarded,
+    [XmlEnum(Name = "Specified Only")]
     SpecifiedOnly,
  }
 }

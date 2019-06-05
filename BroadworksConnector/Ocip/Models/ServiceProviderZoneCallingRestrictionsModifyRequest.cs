@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderZoneCallingRestrictionsModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "enableZoneCallingRestrictions", IsNullable = false)]
-    public bool EnableZoneCallingRestrictions { get; set; }
-    [XmlElement(ElementName = "enableOriginationRoamingRestrictions", IsNullable = false)]
-    public bool EnableOriginationRoamingRestrictions { get; set; }
-    [XmlElement(ElementName = "enableEmergencyOriginationRoamingRestrictions", IsNullable = false)]
-    public bool EnableEmergencyOriginationRoamingRestrictions { get; set; }
-    [XmlElement(ElementName = "enableTerminationRoamingRestrictions", IsNullable = false)]
-    public bool EnableTerminationRoamingRestrictions { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private bool _enableZoneCallingRestrictions;
+
+    [XmlElement(ElementName = "enableZoneCallingRestrictions", IsNullable = false, Namespace = "")]
+    public bool EnableZoneCallingRestrictions {
+        get => _enableZoneCallingRestrictions;
+        set {
+            EnableZoneCallingRestrictionsSpecified = true;
+            _enableZoneCallingRestrictions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableZoneCallingRestrictionsSpecified { get; set; }
+    private bool _enableOriginationRoamingRestrictions;
+
+    [XmlElement(ElementName = "enableOriginationRoamingRestrictions", IsNullable = false, Namespace = "")]
+    public bool EnableOriginationRoamingRestrictions {
+        get => _enableOriginationRoamingRestrictions;
+        set {
+            EnableOriginationRoamingRestrictionsSpecified = true;
+            _enableOriginationRoamingRestrictions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableOriginationRoamingRestrictionsSpecified { get; set; }
+    private bool _enableEmergencyOriginationRoamingRestrictions;
+
+    [XmlElement(ElementName = "enableEmergencyOriginationRoamingRestrictions", IsNullable = false, Namespace = "")]
+    public bool EnableEmergencyOriginationRoamingRestrictions {
+        get => _enableEmergencyOriginationRoamingRestrictions;
+        set {
+            EnableEmergencyOriginationRoamingRestrictionsSpecified = true;
+            _enableEmergencyOriginationRoamingRestrictions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableEmergencyOriginationRoamingRestrictionsSpecified { get; set; }
+    private bool _enableTerminationRoamingRestrictions;
+
+    [XmlElement(ElementName = "enableTerminationRoamingRestrictions", IsNullable = false, Namespace = "")]
+    public bool EnableTerminationRoamingRestrictions {
+        get => _enableTerminationRoamingRestrictions;
+        set {
+            EnableTerminationRoamingRestrictionsSpecified = true;
+            _enableTerminationRoamingRestrictions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableTerminationRoamingRestrictionsSpecified { get; set; }
+}
 }

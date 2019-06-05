@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class TutorialFlagGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableTutorial", IsNullable = false)]
-    public bool EnableTutorial { get; set; }
- }
+    private bool _enableTutorial;
+
+    [XmlElement(ElementName = "enableTutorial", IsNullable = false, Namespace = "")]
+    public bool EnableTutorial {
+        get => _enableTutorial;
+        set {
+            EnableTutorialSpecified = true;
+            _enableTutorial = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableTutorialSpecified { get; set; }
+}
 }

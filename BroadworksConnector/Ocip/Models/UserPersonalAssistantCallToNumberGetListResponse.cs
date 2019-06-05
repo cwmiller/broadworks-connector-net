@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPersonalAssistantCallToNumberGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "callToNumber", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CallToNumber> CallToNumber { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.CallToNumber> _callToNumber;
+
+    [XmlElement(ElementName = "callToNumber", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CallToNumber> CallToNumber {
+        get => _callToNumber;
+        set {
+            CallToNumberSpecified = true;
+            _callToNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallToNumberSpecified { get; set; }
+}
 }

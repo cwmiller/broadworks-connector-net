@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDialableCallerIDModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "criteriaPriorityOrder", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> CriteriaPriorityOrder { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> _criteriaPriorityOrder;
+
+    [XmlElement(ElementName = "criteriaPriorityOrder", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> CriteriaPriorityOrder {
+        get => _criteriaPriorityOrder;
+        set {
+            CriteriaPriorityOrderSpecified = true;
+            _criteriaPriorityOrder = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CriteriaPriorityOrderSpecified { get; set; }
+}
 }

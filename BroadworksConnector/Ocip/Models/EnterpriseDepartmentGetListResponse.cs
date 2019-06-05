@@ -1,16 +1,42 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class EnterpriseDepartmentGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-{
-    [XmlElement(ElementName = "departmentKey", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.DepartmentKey> DepartmentKey { get; set; }
-    [XmlElement(ElementName = "fullPathName", IsNullable = false)]
-    public List<string> FullPathName { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class EnterpriseDepartmentGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+    {
+        private List<BroadworksConnector.Ocip.Models.DepartmentKey> _departmentKey;
+
+        [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
+        public List<BroadworksConnector.Ocip.Models.DepartmentKey> DepartmentKey
+        {
+            get => _departmentKey;
+            set
+            {
+                DepartmentKeySpecified = true;
+                _departmentKey = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool DepartmentKeySpecified { get; set; }
+        private List<string> _fullPathName;
+
+        [XmlElement(ElementName = "fullPathName", IsNullable = false, Namespace = "")]
+        public List<string> FullPathName
+        {
+            get => _fullPathName;
+            set
+            {
+                FullPathNameSpecified = true;
+                _fullPathName = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool FullPathNameSpecified { get; set; }
+    }
 }

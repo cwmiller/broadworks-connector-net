@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSessionAuditGetRequest14sp3 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

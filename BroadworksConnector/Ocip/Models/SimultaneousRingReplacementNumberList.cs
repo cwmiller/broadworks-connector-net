@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SimultaneousRingReplacementNumberList 
 {
-    [XmlElement(ElementName = "simultaneousRingNumber", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SimultaneousRingNumber> SimultaneousRingNumber { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.SimultaneousRingNumber> _simultaneousRingNumber;
+
+    [XmlElement(ElementName = "simultaneousRingNumber", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SimultaneousRingNumber> SimultaneousRingNumber {
+        get => _simultaneousRingNumber;
+        set {
+            SimultaneousRingNumberSpecified = true;
+            _simultaneousRingNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SimultaneousRingNumberSpecified { get; set; }
+}
 }

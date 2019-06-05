@@ -8,33 +8,187 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupEnterpriseTrunkGetUserListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false)]
-    public string EnterpriseTrunkName { get; set; }
-    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false)]
-    public int ResponseSizeLimit { get; set; }
-    [XmlElement(ElementName = "searchCriteriaUserLastName", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName { get; set; }
-    [XmlElement(ElementName = "searchCriteriaUserFirstName", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName { get; set; }
-    [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn { get; set; }
-    [XmlElement(ElementName = "searchCriteriaUserId", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId { get; set; }
-    [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId { get; set; }
-    [XmlElement(ElementName = "searchCriteriaAlternateTrunkIdentity", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaAlternateTrunkIdentity> SearchCriteriaAlternateTrunkIdentity { get; set; }
-    [XmlElement(ElementName = "searchCriteriaAlternateTrunkIdentityDomain", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaAlternateTrunkIdentityDomain> SearchCriteriaAlternateTrunkIdentityDomain { get; set; }
-    [XmlElement(ElementName = "searchCriteriaExtension", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension { get; set; }
-    [XmlElement(ElementName = "searchCriteriaExactUserDepartment", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExactUserDepartment> SearchCriteriaExactUserDepartment { get; set; }
-    [XmlElement(ElementName = "searchCriteriaExactUserRouteListAssigned", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExactUserRouteListAssigned> SearchCriteriaExactUserRouteListAssigned { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private string _enterpriseTrunkName;
+
+    [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false, Namespace = "")]
+    public string EnterpriseTrunkName {
+        get => _enterpriseTrunkName;
+        set {
+            EnterpriseTrunkNameSpecified = true;
+            _enterpriseTrunkName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnterpriseTrunkNameSpecified { get; set; }
+    private int _responseSizeLimit;
+
+    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
+    public int ResponseSizeLimit {
+        get => _responseSizeLimit;
+        set {
+            ResponseSizeLimitSpecified = true;
+            _responseSizeLimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResponseSizeLimitSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName;
+
+    [XmlElement(ElementName = "searchCriteriaUserLastName", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName {
+        get => _searchCriteriaUserLastName;
+        set {
+            SearchCriteriaUserLastNameSpecified = true;
+            _searchCriteriaUserLastName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaUserLastNameSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserFirstName> _searchCriteriaUserFirstName;
+
+    [XmlElement(ElementName = "searchCriteriaUserFirstName", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName {
+        get => _searchCriteriaUserFirstName;
+        set {
+            SearchCriteriaUserFirstNameSpecified = true;
+            _searchCriteriaUserFirstName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaUserFirstNameSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
+
+    [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
+        get => _searchCriteriaDn;
+        set {
+            SearchCriteriaDnSpecified = true;
+            _searchCriteriaDn = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaDnSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
+
+    [XmlElement(ElementName = "searchCriteriaUserId", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
+        get => _searchCriteriaUserId;
+        set {
+            SearchCriteriaUserIdSpecified = true;
+            _searchCriteriaUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaUserIdSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId;
+
+    [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId {
+        get => _searchCriteriaGroupId;
+        set {
+            SearchCriteriaGroupIdSpecified = true;
+            _searchCriteriaGroupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaGroupIdSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaAlternateTrunkIdentity> _searchCriteriaAlternateTrunkIdentity;
+
+    [XmlElement(ElementName = "searchCriteriaAlternateTrunkIdentity", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaAlternateTrunkIdentity> SearchCriteriaAlternateTrunkIdentity {
+        get => _searchCriteriaAlternateTrunkIdentity;
+        set {
+            SearchCriteriaAlternateTrunkIdentitySpecified = true;
+            _searchCriteriaAlternateTrunkIdentity = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaAlternateTrunkIdentitySpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaAlternateTrunkIdentityDomain> _searchCriteriaAlternateTrunkIdentityDomain;
+
+    [XmlElement(ElementName = "searchCriteriaAlternateTrunkIdentityDomain", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaAlternateTrunkIdentityDomain> SearchCriteriaAlternateTrunkIdentityDomain {
+        get => _searchCriteriaAlternateTrunkIdentityDomain;
+        set {
+            SearchCriteriaAlternateTrunkIdentityDomainSpecified = true;
+            _searchCriteriaAlternateTrunkIdentityDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaAlternateTrunkIdentityDomainSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension;
+
+    [XmlElement(ElementName = "searchCriteriaExtension", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension {
+        get => _searchCriteriaExtension;
+        set {
+            SearchCriteriaExtensionSpecified = true;
+            _searchCriteriaExtension = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaExtensionSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExactUserDepartment> _searchCriteriaExactUserDepartment;
+
+    [XmlElement(ElementName = "searchCriteriaExactUserDepartment", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExactUserDepartment> SearchCriteriaExactUserDepartment {
+        get => _searchCriteriaExactUserDepartment;
+        set {
+            SearchCriteriaExactUserDepartmentSpecified = true;
+            _searchCriteriaExactUserDepartment = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaExactUserDepartmentSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExactUserRouteListAssigned> _searchCriteriaExactUserRouteListAssigned;
+
+    [XmlElement(ElementName = "searchCriteriaExactUserRouteListAssigned", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExactUserRouteListAssigned> SearchCriteriaExactUserRouteListAssigned {
+        get => _searchCriteriaExactUserRouteListAssigned;
+        set {
+            SearchCriteriaExactUserRouteListAssignedSpecified = true;
+            _searchCriteriaExactUserRouteListAssigned = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaExactUserRouteListAssignedSpecified { get; set; }
+}
 }

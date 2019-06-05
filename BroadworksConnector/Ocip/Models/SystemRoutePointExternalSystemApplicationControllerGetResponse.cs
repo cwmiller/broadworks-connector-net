@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutePointExternalSystemApplicationControllerGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "applicationController", IsNullable = false)]
-    public List<string> ApplicationController { get; set; }
- }
+    private List<string> _applicationController;
+
+    [XmlElement(ElementName = "applicationController", IsNullable = false, Namespace = "")]
+    public List<string> ApplicationController {
+        get => _applicationController;
+        set {
+            ApplicationControllerSpecified = true;
+            _applicationController = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ApplicationControllerSpecified { get; set; }
+}
 }

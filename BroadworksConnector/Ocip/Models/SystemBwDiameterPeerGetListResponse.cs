@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBwDiameterPeerGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "peerTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable PeerTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _peerTable;
+
+    [XmlElement(ElementName = "peerTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable PeerTable {
+        get => _peerTable;
+        set {
+            PeerTableSpecified = true;
+            _peerTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PeerTableSpecified { get; set; }
+}
 }

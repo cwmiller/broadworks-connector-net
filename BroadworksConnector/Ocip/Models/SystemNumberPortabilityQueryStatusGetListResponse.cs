@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemNumberPortabilityQueryStatusGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "statusTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable StatusTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _statusTable;
+
+    [XmlElement(ElementName = "statusTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable StatusTable {
+        get => _statusTable;
+        set {
+            StatusTableSpecified = true;
+            _statusTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StatusTableSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemPreferredCarrierDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "carrier", IsNullable = false)]
-    public string Carrier { get; set; }
- }
+    private string _carrier;
+
+    [XmlElement(ElementName = "carrier", IsNullable = false, Namespace = "")]
+    public string Carrier {
+        get => _carrier;
+        set {
+            CarrierSpecified = true;
+            _carrier = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CarrierSpecified { get; set; }
+}
 }

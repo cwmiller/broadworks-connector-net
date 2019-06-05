@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupFindMeFollowMeGetAlertingGroupListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "alertingGroupTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable AlertingGroupTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _alertingGroupTable;
+
+    [XmlElement(ElementName = "alertingGroupTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable AlertingGroupTable {
+        get => _alertingGroupTable;
+        set {
+            AlertingGroupTableSpecified = true;
+            _alertingGroupTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertingGroupTableSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemOfficeZoneGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "officeZoneTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable OfficeZoneTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _officeZoneTable;
+
+    [XmlElement(ElementName = "officeZoneTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable OfficeZoneTable {
+        get => _officeZoneTable;
+        set {
+            OfficeZoneTableSpecified = true;
+            _officeZoneTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OfficeZoneTableSpecified { get; set; }
+}
 }

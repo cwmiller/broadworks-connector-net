@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactDnActivation : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "activated", IsNullable = false)]
-    public bool Activated { get; set; }
- }
+    private bool _activated;
+
+    [XmlElement(ElementName = "activated", IsNullable = false, Namespace = "")]
+    public bool Activated {
+        get => _activated;
+        set {
+            ActivatedSpecified = true;
+            _activated = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ActivatedSpecified { get; set; }
+}
 }

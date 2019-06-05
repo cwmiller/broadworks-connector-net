@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSIPDeviceTypeLanguageMappingGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "deviceTypeLanguagesTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DeviceTypeLanguagesTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _deviceTypeLanguagesTable;
+
+    [XmlElement(ElementName = "deviceTypeLanguagesTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable DeviceTypeLanguagesTable {
+        get => _deviceTypeLanguagesTable;
+        set {
+            DeviceTypeLanguagesTableSpecified = true;
+            _deviceTypeLanguagesTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceTypeLanguagesTableSpecified { get; set; }
+}
 }

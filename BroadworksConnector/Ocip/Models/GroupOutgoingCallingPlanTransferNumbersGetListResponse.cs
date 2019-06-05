@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupOutgoingCallingPlanTransferNumbersGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "groupNumbers", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers GroupNumbers { get; set; }
-    [XmlElement(ElementName = "departmentNumbers", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbers> DepartmentNumbers { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers _groupNumbers;
+
+    [XmlElement(ElementName = "groupNumbers", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers GroupNumbers {
+        get => _groupNumbers;
+        set {
+            GroupNumbersSpecified = true;
+            _groupNumbers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupNumbersSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbers> _departmentNumbers;
+
+    [XmlElement(ElementName = "departmentNumbers", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbers> DepartmentNumbers {
+        get => _departmentNumbers;
+        set {
+            DepartmentNumbersSpecified = true;
+            _departmentNumbers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentNumbersSpecified { get; set; }
+}
 }

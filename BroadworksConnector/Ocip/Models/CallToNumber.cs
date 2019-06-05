@@ -1,18 +1,57 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CallToNumber 
-{
-    [XmlElement(ElementName = "type", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallToNumberType Type { get; set; }
-    [XmlElement(ElementName = "number", IsNullable = false)]
-    public string Number { get; set; }
-    [XmlElement(ElementName = "extension", IsNullable = false)]
-    public string Extension { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class CallToNumber
+    {
+        private BroadworksConnector.Ocip.Models.CallToNumberType _type;
+
+        [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.CallToNumberType Type
+        {
+            get => _type;
+            set
+            {
+                TypeSpecified = true;
+                _type = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool TypeSpecified { get; set; }
+        private string _number;
+
+        [XmlElement(ElementName = "number", IsNullable = false, Namespace = "")]
+        public string Number
+        {
+            get => _number;
+            set
+            {
+                NumberSpecified = true;
+                _number = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool NumberSpecified { get; set; }
+        private string _extension;
+
+        [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
+        public string Extension
+        {
+            get => _extension;
+            set
+            {
+                ExtensionSpecified = true;
+                _extension = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ExtensionSpecified { get; set; }
+    }
 }

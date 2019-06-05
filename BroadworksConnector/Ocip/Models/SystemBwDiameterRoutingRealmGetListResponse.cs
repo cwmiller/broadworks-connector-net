@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBwDiameterRoutingRealmGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "routingRealmTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable RoutingRealmTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _routingRealmTable;
+
+    [XmlElement(ElementName = "routingRealmTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable RoutingRealmTable {
+        get => _routingRealmTable;
+        set {
+            RoutingRealmTableSpecified = true;
+            _routingRealmTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoutingRealmTableSpecified { get; set; }
+}
 }

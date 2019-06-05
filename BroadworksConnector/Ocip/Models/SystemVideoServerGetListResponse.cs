@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVideoServerGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "videoServerTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable VideoServerTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _videoServerTable;
+
+    [XmlElement(ElementName = "videoServerTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable VideoServerTable {
+        get => _videoServerTable;
+        set {
+            VideoServerTableSpecified = true;
+            _videoServerTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoServerTableSpecified { get; set; }
+}
 }

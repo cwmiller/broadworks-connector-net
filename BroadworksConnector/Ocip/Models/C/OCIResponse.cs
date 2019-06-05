@@ -11,5 +11,5 @@ namespace BroadworksConnector.Ocip.Models.C
 [XmlInclude(typeof(BroadworksConnector.Ocip.Models.C.ErrorResponse))]
 public abstract class OCIResponse : BroadworksConnector.Ocip.Models.C.OCICommand
 {
- }
+}
 }

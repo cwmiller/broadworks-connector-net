@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupInstantGroupCallGetInstanceListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "instantGroupCallTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable InstantGroupCallTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _instantGroupCallTable;
+
+    [XmlElement(ElementName = "instantGroupCallTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable InstantGroupCallTable {
+        get => _instantGroupCallTable;
+        set {
+            InstantGroupCallTableSpecified = true;
+            _instantGroupCallTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InstantGroupCallTableSpecified { get; set; }
+}
 }

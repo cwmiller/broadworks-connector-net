@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class MWIDeliveryToMobileEndpointTemplateLine 
 {
-    [XmlElement(ElementName = "prefix", IsNullable = false)]
-    public string Prefix { get; set; }
-    [XmlElement(ElementName = "tag", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag Tag { get; set; }
-    [XmlElement(ElementName = "postfix", IsNullable = false)]
-    public string Postfix { get; set; }
- }
+    private string _prefix;
+
+    [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
+    public string Prefix {
+        get => _prefix;
+        set {
+            PrefixSpecified = true;
+            _prefix = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrefixSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag _tag;
+
+    [XmlElement(ElementName = "tag", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag Tag {
+        get => _tag;
+        set {
+            TagSpecified = true;
+            _tag = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TagSpecified { get; set; }
+    private string _postfix;
+
+    [XmlElement(ElementName = "postfix", IsNullable = false, Namespace = "")]
+    public string Postfix {
+        get => _postfix;
+        set {
+            PostfixSpecified = true;
+            _postfix = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PostfixSpecified { get; set; }
+}
 }

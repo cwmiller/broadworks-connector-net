@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVerifyTranslationAndRoutingRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "parameters", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.VerifyTranslationAndRoutingParameters Parameters { get; set; }
-    [XmlElement(ElementName = "sipMessage", IsNullable = false)]
-    public string SipMessage { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.VerifyTranslationAndRoutingParameters _parameters;
+
+    [XmlElement(ElementName = "parameters", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.VerifyTranslationAndRoutingParameters Parameters {
+        get => _parameters;
+        set {
+            ParametersSpecified = true;
+            _parameters = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ParametersSpecified { get; set; }
+    private string _sipMessage;
+
+    [XmlElement(ElementName = "sipMessage", IsNullable = false, Namespace = "")]
+    public string SipMessage {
+        get => _sipMessage;
+        set {
+            SipMessageSpecified = true;
+            _sipMessage = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SipMessageSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserGroupCommonPhoneListGetPagedSortedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false)]
-    public int TotalNumberOfRows { get; set; }
-    [XmlElement(ElementName = "groupCommonPhoneListTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable GroupCommonPhoneListTable { get; set; }
- }
+    private int _totalNumberOfRows;
+
+    [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
+    public int TotalNumberOfRows {
+        get => _totalNumberOfRows;
+        set {
+            TotalNumberOfRowsSpecified = true;
+            _totalNumberOfRows = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TotalNumberOfRowsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _groupCommonPhoneListTable;
+
+    [XmlElement(ElementName = "groupCommonPhoneListTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable GroupCommonPhoneListTable {
+        get => _groupCommonPhoneListTable;
+        set {
+            GroupCommonPhoneListTableSpecified = true;
+            _groupCommonPhoneListTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupCommonPhoneListTableSpecified { get; set; }
+}
 }

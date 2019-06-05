@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupGroupPagingModifyOriginatorListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "originatorUserIdList", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList OriginatorUserIdList { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _originatorUserIdList;
+
+    [XmlElement(ElementName = "originatorUserIdList", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementUserIdList OriginatorUserIdList {
+        get => _originatorUserIdList;
+        set {
+            OriginatorUserIdListSpecified = true;
+            _originatorUserIdList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OriginatorUserIdListSpecified { get; set; }
+}
 }

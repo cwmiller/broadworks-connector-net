@@ -1,16 +1,42 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class AccessDeviceEndpointKey 
-{
-    [XmlElement(ElementName = "accessDevice", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AccessDevice AccessDevice { get; set; }
-    [XmlElement(ElementName = "linePort", IsNullable = false)]
-    public string LinePort { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class AccessDeviceEndpointKey
+    {
+        private BroadworksConnector.Ocip.Models.AccessDevice _accessDevice;
+
+        [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.AccessDevice AccessDevice
+        {
+            get => _accessDevice;
+            set
+            {
+                AccessDeviceSpecified = true;
+                _accessDevice = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool AccessDeviceSpecified { get; set; }
+        private string _linePort;
+
+        [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
+        public string LinePort
+        {
+            get => _linePort;
+            set
+            {
+                LinePortSpecified = true;
+                _linePort = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool LinePortSpecified { get; set; }
+    }
 }

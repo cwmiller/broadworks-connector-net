@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderDialPlanPolicyGetAccessCodeRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "accessCode", IsNullable = false)]
-    public string AccessCode { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _accessCode;
+
+    [XmlElement(ElementName = "accessCode", IsNullable = false, Namespace = "")]
+    public string AccessCode {
+        get => _accessCode;
+        set {
+            AccessCodeSpecified = true;
+            _accessCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessCodeSpecified { get; set; }
+}
 }

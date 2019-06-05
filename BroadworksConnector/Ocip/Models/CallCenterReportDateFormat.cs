@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallCenterReportDateFormat{
-    MMDDYYYY,
-    DDMMYYYY,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallCenterReportDateFormat
+    {
+        [XmlEnum(Name = "MMDDYYYY")]
+        MMDDYYYY,
+        [XmlEnum(Name = "DDMMYYYY")]
+        DDMMYYYY,
+    }
 }

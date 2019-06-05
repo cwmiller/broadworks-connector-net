@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserExternalCustomRingbackModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "useSettingLevel", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel UseSettingLevel { get; set; }
-    [XmlElement(ElementName = "sipRequestURI", IsNullable = true)]
-    public string SipRequestURI { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel _useSettingLevel;
+
+    [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel UseSettingLevel {
+        get => _useSettingLevel;
+        set {
+            UseSettingLevelSpecified = true;
+            _useSettingLevel = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseSettingLevelSpecified { get; set; }
+    private string _sipRequestURI;
+
+    [XmlElement(ElementName = "sipRequestURI", IsNullable = true, Namespace = "")]
+    public string SipRequestURI {
+        get => _sipRequestURI;
+        set {
+            SipRequestURISpecified = true;
+            _sipRequestURI = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SipRequestURISpecified { get; set; }
+}
 }

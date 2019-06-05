@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupFindMeFollowMeDeleteAlertingGroupSelectiveCriteriaRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "alertingGroupName", IsNullable = false)]
-    public string AlertingGroupName { get; set; }
-    [XmlElement(ElementName = "criteriaName", IsNullable = false)]
-    public string CriteriaName { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private string _alertingGroupName;
+
+    [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
+    public string AlertingGroupName {
+        get => _alertingGroupName;
+        set {
+            AlertingGroupNameSpecified = true;
+            _alertingGroupName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertingGroupNameSpecified { get; set; }
+    private string _criteriaName;
+
+    [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
+    public string CriteriaName {
+        get => _criteriaName;
+        set {
+            CriteriaNameSpecified = true;
+            _criteriaName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CriteriaNameSpecified { get; set; }
+}
 }

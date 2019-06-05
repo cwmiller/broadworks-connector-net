@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemMediaSetGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "setName", IsNullable = false)]
-    public string SetName { get; set; }
- }
+    private string _setName;
+
+    [XmlElement(ElementName = "setName", IsNullable = false, Namespace = "")]
+    public string SetName {
+        get => _setName;
+        set {
+            SetNameSpecified = true;
+            _setName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SetNameSpecified { get; set; }
+}
 }

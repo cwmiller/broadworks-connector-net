@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "phoneNumberTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable PhoneNumberTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
+
+    [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable PhoneNumberTable {
+        get => _phoneNumberTable;
+        set {
+            PhoneNumberTableSpecified = true;
+            _phoneNumberTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PhoneNumberTableSpecified { get; set; }
+}
 }

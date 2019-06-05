@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderRoutePointExternalSystemGetAssignedGroupListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "groupTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable GroupTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _groupTable;
+
+    [XmlElement(ElementName = "groupTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable GroupTable {
+        get => _groupTable;
+        set {
+            GroupTableSpecified = true;
+            _groupTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupTableSpecified { get; set; }
+}
 }

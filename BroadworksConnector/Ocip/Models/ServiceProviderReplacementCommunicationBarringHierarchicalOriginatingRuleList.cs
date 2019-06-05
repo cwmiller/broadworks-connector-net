@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderReplacementCommunicationBarringHierarchicalOriginatingRuleList 
 {
-    [XmlElement(ElementName = "rule", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.ServiceProviderCommunicationBarringHierarchicalOriginatingRule> Rule { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.ServiceProviderCommunicationBarringHierarchicalOriginatingRule> _rule;
+
+    [XmlElement(ElementName = "rule", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.ServiceProviderCommunicationBarringHierarchicalOriginatingRule> Rule {
+        get => _rule;
+        set {
+            RuleSpecified = true;
+            _rule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RuleSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServicePolicyProfileKey 
 {
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "category", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ServicePolicyProfileCategory Category { get; set; }
- }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ServicePolicyProfileCategory _category;
+
+    [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ServicePolicyProfileCategory Category {
+        get => _category;
+        set {
+            CategorySpecified = true;
+            _category = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CategorySpecified { get; set; }
+}
 }

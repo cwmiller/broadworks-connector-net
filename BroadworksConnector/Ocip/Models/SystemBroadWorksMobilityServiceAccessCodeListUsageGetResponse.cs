@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBroadWorksMobilityServiceAccessCodeListUsageGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "mobileNetworkName", IsNullable = false)]
-    public List<string> MobileNetworkName { get; set; }
- }
+    private List<string> _mobileNetworkName;
+
+    [XmlElement(ElementName = "mobileNetworkName", IsNullable = false, Namespace = "")]
+    public List<string> MobileNetworkName {
+        get => _mobileNetworkName;
+        set {
+            MobileNetworkNameSpecified = true;
+            _mobileNetworkName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MobileNetworkNameSpecified { get; set; }
+}
 }

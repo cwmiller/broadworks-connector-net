@@ -1,34 +1,177 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupCallCenterComfortMessageBypassModifyRequest20 : BroadworksConnector.Ocip.Models.C.OCIRequest
-{
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "callWaitingAgeThresholdSeconds", IsNullable = false)]
-    public int CallWaitingAgeThresholdSeconds { get; set; }
-    [XmlElement(ElementName = "playAnnouncementAfterRinging", IsNullable = false)]
-    public bool PlayAnnouncementAfterRinging { get; set; }
-    [XmlElement(ElementName = "ringTimeBeforePlayingAnnouncementSeconds", IsNullable = false)]
-    public int RingTimeBeforePlayingAnnouncementSeconds { get; set; }
-    [XmlElement(ElementName = "audioMessageSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection { get; set; }
-    [XmlElement(ElementName = "audioUrlList", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterAnnouncementURLListModify AudioUrlList { get; set; }
-    [XmlElement(ElementName = "audioFileList", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterAnnouncementFileListModify20 AudioFileList { get; set; }
-    [XmlElement(ElementName = "videoMessageSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection { get; set; }
-    [XmlElement(ElementName = "videoUrlList", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterAnnouncementURLListModify VideoUrlList { get; set; }
-    [XmlElement(ElementName = "videoFileList", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterAnnouncementFileListModify20 VideoFileList { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class GroupCallCenterComfortMessageBypassModifyRequest20 : BroadworksConnector.Ocip.Models.C.OCIRequest
+    {
+        private string _serviceUserId;
+
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        public string ServiceUserId
+        {
+            get => _serviceUserId;
+            set
+            {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ServiceUserIdSpecified { get; set; }
+        private bool _isActive;
+
+        [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+        public bool IsActive
+        {
+            get => _isActive;
+            set
+            {
+                IsActiveSpecified = true;
+                _isActive = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool IsActiveSpecified { get; set; }
+        private int _callWaitingAgeThresholdSeconds;
+
+        [XmlElement(ElementName = "callWaitingAgeThresholdSeconds", IsNullable = false, Namespace = "")]
+        public int CallWaitingAgeThresholdSeconds
+        {
+            get => _callWaitingAgeThresholdSeconds;
+            set
+            {
+                CallWaitingAgeThresholdSecondsSpecified = true;
+                _callWaitingAgeThresholdSeconds = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool CallWaitingAgeThresholdSecondsSpecified { get; set; }
+        private bool _playAnnouncementAfterRinging;
+
+        [XmlElement(ElementName = "playAnnouncementAfterRinging", IsNullable = false, Namespace = "")]
+        public bool PlayAnnouncementAfterRinging
+        {
+            get => _playAnnouncementAfterRinging;
+            set
+            {
+                PlayAnnouncementAfterRingingSpecified = true;
+                _playAnnouncementAfterRinging = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool PlayAnnouncementAfterRingingSpecified { get; set; }
+        private int _ringTimeBeforePlayingAnnouncementSeconds;
+
+        [XmlElement(ElementName = "ringTimeBeforePlayingAnnouncementSeconds", IsNullable = false, Namespace = "")]
+        public int RingTimeBeforePlayingAnnouncementSeconds
+        {
+            get => _ringTimeBeforePlayingAnnouncementSeconds;
+            set
+            {
+                RingTimeBeforePlayingAnnouncementSecondsSpecified = true;
+                _ringTimeBeforePlayingAnnouncementSeconds = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool RingTimeBeforePlayingAnnouncementSecondsSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
+
+        [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection
+        {
+            get => _audioMessageSelection;
+            set
+            {
+                AudioMessageSelectionSpecified = true;
+                _audioMessageSelection = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool AudioMessageSelectionSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.CallCenterAnnouncementURLListModify _audioUrlList;
+
+        [XmlElement(ElementName = "audioUrlList", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.CallCenterAnnouncementURLListModify AudioUrlList
+        {
+            get => _audioUrlList;
+            set
+            {
+                AudioUrlListSpecified = true;
+                _audioUrlList = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool AudioUrlListSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.CallCenterAnnouncementFileListModify20 _audioFileList;
+
+        [XmlElement(ElementName = "audioFileList", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.CallCenterAnnouncementFileListModify20 AudioFileList
+        {
+            get => _audioFileList;
+            set
+            {
+                AudioFileListSpecified = true;
+                _audioFileList = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool AudioFileListSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
+
+        [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection
+        {
+            get => _videoMessageSelection;
+            set
+            {
+                VideoMessageSelectionSpecified = true;
+                _videoMessageSelection = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool VideoMessageSelectionSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.CallCenterAnnouncementURLListModify _videoUrlList;
+
+        [XmlElement(ElementName = "videoUrlList", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.CallCenterAnnouncementURLListModify VideoUrlList
+        {
+            get => _videoUrlList;
+            set
+            {
+                VideoUrlListSpecified = true;
+                _videoUrlList = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool VideoUrlListSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.CallCenterAnnouncementFileListModify20 _videoFileList;
+
+        [XmlElement(ElementName = "videoFileList", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.CallCenterAnnouncementFileListModify20 VideoFileList
+        {
+            get => _videoFileList;
+            set
+            {
+                VideoFileListSpecified = true;
+                _videoFileList = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool VideoFileListSpecified { get; set; }
+    }
 }

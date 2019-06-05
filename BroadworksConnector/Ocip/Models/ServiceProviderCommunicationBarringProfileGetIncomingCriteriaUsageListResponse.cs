@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderCommunicationBarringProfileGetIncomingCriteriaUsageListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "profileTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ProfileTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _profileTable;
+
+    [XmlElement(ElementName = "profileTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ProfileTable {
+        get => _profileTable;
+        set {
+            ProfileTableSpecified = true;
+            _profileTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProfileTableSpecified { get; set; }
+}
 }

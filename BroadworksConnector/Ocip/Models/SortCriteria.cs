@@ -53,9 +53,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlInclude(typeof(BroadworksConnector.Ocip.Models.SortByYahooId))]
 public abstract class SortCriteria 
 {
-    [XmlElement(ElementName = "isAscending", IsNullable = false)]
-    public bool IsAscending { get; set; }
-    [XmlElement(ElementName = "isCaseSensitive", IsNullable = false)]
-    public bool IsCaseSensitive { get; set; }
- }
+    private bool _isAscending;
+
+    [XmlElement(ElementName = "isAscending", IsNullable = false, Namespace = "")]
+    public bool IsAscending {
+        get => _isAscending;
+        set {
+            IsAscendingSpecified = true;
+            _isAscending = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsAscendingSpecified { get; set; }
+    private bool _isCaseSensitive;
+
+    [XmlElement(ElementName = "isCaseSensitive", IsNullable = false, Namespace = "")]
+    public bool IsCaseSensitive {
+        get => _isCaseSensitive;
+        set {
+            IsCaseSensitiveSpecified = true;
+            _isCaseSensitive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsCaseSensitiveSpecified { get; set; }
+}
 }

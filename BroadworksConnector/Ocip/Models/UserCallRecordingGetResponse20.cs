@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallRecordingGetResponse20 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "recordingOption", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.RecordingOption20 RecordingOption { get; set; }
-    [XmlElement(ElementName = "pauseResumeNotification", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.RecordingPauseResumeNotificationType PauseResumeNotification { get; set; }
-    [XmlElement(ElementName = "enableCallRecordingAnnouncement", IsNullable = false)]
-    public bool EnableCallRecordingAnnouncement { get; set; }
-    [XmlElement(ElementName = "enableRecordCallRepeatWarningTone", IsNullable = false)]
-    public bool EnableRecordCallRepeatWarningTone { get; set; }
-    [XmlElement(ElementName = "recordCallRepeatWarningToneTimerSeconds", IsNullable = false)]
-    public int RecordCallRepeatWarningToneTimerSeconds { get; set; }
-    [XmlElement(ElementName = "enableVoiceMailRecording", IsNullable = false)]
-    public bool EnableVoiceMailRecording { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.RecordingOption20 _recordingOption;
+
+    [XmlElement(ElementName = "recordingOption", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.RecordingOption20 RecordingOption {
+        get => _recordingOption;
+        set {
+            RecordingOptionSpecified = true;
+            _recordingOption = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RecordingOptionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.RecordingPauseResumeNotificationType _pauseResumeNotification;
+
+    [XmlElement(ElementName = "pauseResumeNotification", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.RecordingPauseResumeNotificationType PauseResumeNotification {
+        get => _pauseResumeNotification;
+        set {
+            PauseResumeNotificationSpecified = true;
+            _pauseResumeNotification = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PauseResumeNotificationSpecified { get; set; }
+    private bool _enableCallRecordingAnnouncement;
+
+    [XmlElement(ElementName = "enableCallRecordingAnnouncement", IsNullable = false, Namespace = "")]
+    public bool EnableCallRecordingAnnouncement {
+        get => _enableCallRecordingAnnouncement;
+        set {
+            EnableCallRecordingAnnouncementSpecified = true;
+            _enableCallRecordingAnnouncement = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableCallRecordingAnnouncementSpecified { get; set; }
+    private bool _enableRecordCallRepeatWarningTone;
+
+    [XmlElement(ElementName = "enableRecordCallRepeatWarningTone", IsNullable = false, Namespace = "")]
+    public bool EnableRecordCallRepeatWarningTone {
+        get => _enableRecordCallRepeatWarningTone;
+        set {
+            EnableRecordCallRepeatWarningToneSpecified = true;
+            _enableRecordCallRepeatWarningTone = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableRecordCallRepeatWarningToneSpecified { get; set; }
+    private int _recordCallRepeatWarningToneTimerSeconds;
+
+    [XmlElement(ElementName = "recordCallRepeatWarningToneTimerSeconds", IsNullable = false, Namespace = "")]
+    public int RecordCallRepeatWarningToneTimerSeconds {
+        get => _recordCallRepeatWarningToneTimerSeconds;
+        set {
+            RecordCallRepeatWarningToneTimerSecondsSpecified = true;
+            _recordCallRepeatWarningToneTimerSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RecordCallRepeatWarningToneTimerSecondsSpecified { get; set; }
+    private bool _enableVoiceMailRecording;
+
+    [XmlElement(ElementName = "enableVoiceMailRecording", IsNullable = false, Namespace = "")]
+    public bool EnableVoiceMailRecording {
+        get => _enableVoiceMailRecording;
+        set {
+            EnableVoiceMailRecordingSpecified = true;
+            _enableVoiceMailRecording = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableVoiceMailRecordingSpecified { get; set; }
+}
 }

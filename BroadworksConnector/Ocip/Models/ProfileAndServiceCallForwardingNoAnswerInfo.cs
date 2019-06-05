@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ProfileAndServiceCallForwardingNoAnswerInfo 
 {
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false)]
-    public string ForwardToPhoneNumber { get; set; }
-    [XmlElement(ElementName = "numberOfRings", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings NumberOfRings { get; set; }
- }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private string _forwardToPhoneNumber;
+
+    [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
+    public string ForwardToPhoneNumber {
+        get => _forwardToPhoneNumber;
+        set {
+            ForwardToPhoneNumberSpecified = true;
+            _forwardToPhoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ForwardToPhoneNumberSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings _numberOfRings;
+
+    [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings NumberOfRings {
+        get => _numberOfRings;
+        set {
+            NumberOfRingsSpecified = true;
+            _numberOfRings = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NumberOfRingsSpecified { get; set; }
+}
 }

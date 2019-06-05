@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactUserNetworkClassOfService : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false)]
-    public string NetworkClassOfService { get; set; }
- }
+    private string _networkClassOfService;
+
+    [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+    public string NetworkClassOfService {
+        get => _networkClassOfService;
+        set {
+            NetworkClassOfServiceSpecified = true;
+            _networkClassOfService = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetworkClassOfServiceSpecified { get; set; }
+}
 }

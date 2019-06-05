@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class IncomingCallingPlanDigitPatternPermission 
 {
-    [XmlElement(ElementName = "digitPatternName", IsNullable = false)]
-    public string DigitPatternName { get; set; }
-    [XmlElement(ElementName = "allow", IsNullable = false)]
-    public bool Allow { get; set; }
- }
+    private string _digitPatternName;
+
+    [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
+    public string DigitPatternName {
+        get => _digitPatternName;
+        set {
+            DigitPatternNameSpecified = true;
+            _digitPatternName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DigitPatternNameSpecified { get; set; }
+    private bool _allow;
+
+    [XmlElement(ElementName = "allow", IsNullable = false, Namespace = "")]
+    public bool Allow {
+        get => _allow;
+        set {
+            AllowSpecified = true;
+            _allow = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowSpecified { get; set; }
+}
 }

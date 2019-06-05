@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderApplicationServerSetGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "applicationServerSetName", IsNullable = false)]
-    public string ApplicationServerSetName { get; set; }
- }
+    private string _applicationServerSetName;
+
+    [XmlElement(ElementName = "applicationServerSetName", IsNullable = false, Namespace = "")]
+    public string ApplicationServerSetName {
+        get => _applicationServerSetName;
+        set {
+            ApplicationServerSetNameSpecified = true;
+            _applicationServerSetName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ApplicationServerSetNameSpecified { get; set; }
+}
 }

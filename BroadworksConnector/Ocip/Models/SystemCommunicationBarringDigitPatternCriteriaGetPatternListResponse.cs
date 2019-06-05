@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCommunicationBarringDigitPatternCriteriaGetPatternListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "matchDigitPattern", IsNullable = false)]
-    public List<string> MatchDigitPattern { get; set; }
- }
+    private List<string> _matchDigitPattern;
+
+    [XmlElement(ElementName = "matchDigitPattern", IsNullable = false, Namespace = "")]
+    public List<string> MatchDigitPattern {
+        get => _matchDigitPattern;
+        set {
+            MatchDigitPatternSpecified = true;
+            _matchDigitPattern = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MatchDigitPatternSpecified { get; set; }
+}
 }

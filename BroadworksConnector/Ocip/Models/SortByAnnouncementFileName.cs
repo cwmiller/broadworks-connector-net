@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SortByAnnouncementFileName : BroadworksConnector.Ocip.Models.SortCriteria
 {
- }
+}
 }

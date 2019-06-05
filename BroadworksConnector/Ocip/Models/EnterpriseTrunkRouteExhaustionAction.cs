@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum EnterpriseTrunkRouteExhaustionAction{
-    None,
-    Forward,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum EnterpriseTrunkRouteExhaustionAction
+    {
+        [XmlEnum(Name = "None")]
+        None,
+        [XmlEnum(Name = "Forward")]
+        Forward,
+    }
 }

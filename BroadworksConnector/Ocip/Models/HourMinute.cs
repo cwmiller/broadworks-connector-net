@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class HourMinute 
 {
-    [XmlElement(ElementName = "hour", IsNullable = false)]
-    public int Hour { get; set; }
-    [XmlElement(ElementName = "minute", IsNullable = false)]
-    public int Minute { get; set; }
- }
+    private int _hour;
+
+    [XmlElement(ElementName = "hour", IsNullable = false, Namespace = "")]
+    public int Hour {
+        get => _hour;
+        set {
+            HourSpecified = true;
+            _hour = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HourSpecified { get; set; }
+    private int _minute;
+
+    [XmlElement(ElementName = "minute", IsNullable = false, Namespace = "")]
+    public int Minute {
+        get => _minute;
+        set {
+            MinuteSpecified = true;
+            _minute = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MinuteSpecified { get; set; }
+}
 }

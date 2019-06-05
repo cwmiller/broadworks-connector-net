@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSecurityClassificationGetClassificationResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "audioAnnouncementFileDescription", IsNullable = false)]
-    public string AudioAnnouncementFileDescription { get; set; }
-    [XmlElement(ElementName = "audioAnnouncementFileType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MediaFileType AudioAnnouncementFileType { get; set; }
- }
+    private string _audioAnnouncementFileDescription;
+
+    [XmlElement(ElementName = "audioAnnouncementFileDescription", IsNullable = false, Namespace = "")]
+    public string AudioAnnouncementFileDescription {
+        get => _audioAnnouncementFileDescription;
+        set {
+            AudioAnnouncementFileDescriptionSpecified = true;
+            _audioAnnouncementFileDescription = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioAnnouncementFileDescriptionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MediaFileType _audioAnnouncementFileType;
+
+    [XmlElement(ElementName = "audioAnnouncementFileType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MediaFileType AudioAnnouncementFileType {
+        get => _audioAnnouncementFileType;
+        set {
+            AudioAnnouncementFileTypeSpecified = true;
+            _audioAnnouncementFileType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioAnnouncementFileTypeSpecified { get; set; }
+}
 }

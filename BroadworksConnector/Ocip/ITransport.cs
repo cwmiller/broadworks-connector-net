@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace BroadworksConnector.Ocip
 {
-    public interface ITransport
+    public interface ITransport : IDisposable
     {
         Task<string> Send(string request);
     }

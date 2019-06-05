@@ -3,13 +3,21 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum BasicCallType{
-    Group,
-    Enterprise,
-    Network,
-    NetworkURL,
-    Repair,
-    Emergency,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum BasicCallType
+    {
+        [XmlEnum(Name = "Group")]
+        Group,
+        [XmlEnum(Name = "Enterprise")]
+        Enterprise,
+        [XmlEnum(Name = "Network")]
+        Network,
+        [XmlEnum(Name = "Network URL")]
+        NetworkURL,
+        [XmlEnum(Name = "Repair")]
+        Repair,
+        [XmlEnum(Name = "Emergency")]
+        Emergency,
+    }
 }

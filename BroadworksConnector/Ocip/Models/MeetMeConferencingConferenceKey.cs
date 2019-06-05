@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class MeetMeConferencingConferenceKey 
 {
-    [XmlElement(ElementName = "bridgeId", IsNullable = false)]
-    public string BridgeId { get; set; }
-    [XmlElement(ElementName = "conferenceId", IsNullable = false)]
-    public string ConferenceId { get; set; }
- }
+    private string _bridgeId;
+
+    [XmlElement(ElementName = "bridgeId", IsNullable = false, Namespace = "")]
+    public string BridgeId {
+        get => _bridgeId;
+        set {
+            BridgeIdSpecified = true;
+            _bridgeId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool BridgeIdSpecified { get; set; }
+    private string _conferenceId;
+
+    [XmlElement(ElementName = "conferenceId", IsNullable = false, Namespace = "")]
+    public string ConferenceId {
+        get => _conferenceId;
+        set {
+            ConferenceIdSpecified = true;
+            _conferenceId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConferenceIdSpecified { get; set; }
+}
 }

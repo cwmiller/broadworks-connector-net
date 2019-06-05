@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutePointModifyDNISParametersRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "displayDNISNumber", IsNullable = false)]
-    public bool DisplayDNISNumber { get; set; }
-    [XmlElement(ElementName = "displayDNISName", IsNullable = false)]
-    public bool DisplayDNISName { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private bool _displayDNISNumber;
+
+    [XmlElement(ElementName = "displayDNISNumber", IsNullable = false, Namespace = "")]
+    public bool DisplayDNISNumber {
+        get => _displayDNISNumber;
+        set {
+            DisplayDNISNumberSpecified = true;
+            _displayDNISNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DisplayDNISNumberSpecified { get; set; }
+    private bool _displayDNISName;
+
+    [XmlElement(ElementName = "displayDNISName", IsNullable = false, Namespace = "")]
+    public bool DisplayDNISName {
+        get => _displayDNISName;
+        set {
+            DisplayDNISNameSpecified = true;
+            _displayDNISName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DisplayDNISNameSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserAssignedServicesGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "groupServiceEntry", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.AssignedGroupServicesEntry> GroupServiceEntry { get; set; }
-    [XmlElement(ElementName = "userServiceEntry", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.AssignedUserServicesEntry> UserServiceEntry { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.AssignedGroupServicesEntry> _groupServiceEntry;
+
+    [XmlElement(ElementName = "groupServiceEntry", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.AssignedGroupServicesEntry> GroupServiceEntry {
+        get => _groupServiceEntry;
+        set {
+            GroupServiceEntrySpecified = true;
+            _groupServiceEntry = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupServiceEntrySpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.AssignedUserServicesEntry> _userServiceEntry;
+
+    [XmlElement(ElementName = "userServiceEntry", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.AssignedUserServicesEntry> UserServiceEntry {
+        get => _userServiceEntry;
+        set {
+            UserServiceEntrySpecified = true;
+            _userServiceEntry = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserServiceEntrySpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class InternalReleaseCauseMapEntry 
 {
-    [XmlElement(ElementName = "internalReleaseCause", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.InternalReleaseCause16 InternalReleaseCause { get; set; }
-    [XmlElement(ElementName = "treatmentId", IsNullable = false)]
-    public string TreatmentId { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.InternalReleaseCause16 _internalReleaseCause;
+
+    [XmlElement(ElementName = "internalReleaseCause", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.InternalReleaseCause16 InternalReleaseCause {
+        get => _internalReleaseCause;
+        set {
+            InternalReleaseCauseSpecified = true;
+            _internalReleaseCause = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InternalReleaseCauseSpecified { get; set; }
+    private string _treatmentId;
+
+    [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
+    public string TreatmentId {
+        get => _treatmentId;
+        set {
+            TreatmentIdSpecified = true;
+            _treatmentId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TreatmentIdSpecified { get; set; }
+}
 }

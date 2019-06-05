@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGeographicRedundancyUnreachableFromPrimaryGetUserListResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "unreachableFromPrimaryUserTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable UnreachableFromPrimaryUserTable { get; set; }
-    [XmlElement(ElementName = "totalNumberOfUnreachableFromPrimaryUsers", IsNullable = false)]
-    public int TotalNumberOfUnreachableFromPrimaryUsers { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _unreachableFromPrimaryUserTable;
+
+    [XmlElement(ElementName = "unreachableFromPrimaryUserTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable UnreachableFromPrimaryUserTable {
+        get => _unreachableFromPrimaryUserTable;
+        set {
+            UnreachableFromPrimaryUserTableSpecified = true;
+            _unreachableFromPrimaryUserTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UnreachableFromPrimaryUserTableSpecified { get; set; }
+    private int _totalNumberOfUnreachableFromPrimaryUsers;
+
+    [XmlElement(ElementName = "totalNumberOfUnreachableFromPrimaryUsers", IsNullable = false, Namespace = "")]
+    public int TotalNumberOfUnreachableFromPrimaryUsers {
+        get => _totalNumberOfUnreachableFromPrimaryUsers;
+        set {
+            TotalNumberOfUnreachableFromPrimaryUsersSpecified = true;
+            _totalNumberOfUnreachableFromPrimaryUsers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TotalNumberOfUnreachableFromPrimaryUsersSpecified { get; set; }
+}
 }

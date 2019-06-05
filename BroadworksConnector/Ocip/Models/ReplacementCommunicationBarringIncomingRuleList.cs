@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementCommunicationBarringIncomingRuleList 
 {
-    [XmlElement(ElementName = "rule", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CommunicationBarringIncomingRule> Rule { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.CommunicationBarringIncomingRule> _rule;
+
+    [XmlElement(ElementName = "rule", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CommunicationBarringIncomingRule> Rule {
+        get => _rule;
+        set {
+            RuleSpecified = true;
+            _rule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RuleSpecified { get; set; }
+}
 }

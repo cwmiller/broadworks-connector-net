@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemInventoryReportGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

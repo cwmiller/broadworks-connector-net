@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAliasGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "aliasNetAddress", IsNullable = false)]
-    public List<string> AliasNetAddress { get; set; }
- }
+    private List<string> _aliasNetAddress;
+
+    [XmlElement(ElementName = "aliasNetAddress", IsNullable = false, Namespace = "")]
+    public List<string> AliasNetAddress {
+        get => _aliasNetAddress;
+        set {
+            AliasNetAddressSpecified = true;
+            _aliasNetAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AliasNetAddressSpecified { get; set; }
+}
 }

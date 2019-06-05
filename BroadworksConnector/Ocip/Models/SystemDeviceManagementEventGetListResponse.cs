@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDeviceManagementEventGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "eventTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable EventTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _eventTable;
+
+    [XmlElement(ElementName = "eventTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable EventTable {
+        get => _eventTable;
+        set {
+            EventTableSpecified = true;
+            _eventTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EventTableSpecified { get; set; }
+}
 }

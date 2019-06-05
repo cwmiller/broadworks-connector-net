@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemOfficeZoneDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "officeZoneName", IsNullable = false)]
-    public string OfficeZoneName { get; set; }
- }
+    private string _officeZoneName;
+
+    [XmlElement(ElementName = "officeZoneName", IsNullable = false, Namespace = "")]
+    public string OfficeZoneName {
+        get => _officeZoneName;
+        set {
+            OfficeZoneNameSpecified = true;
+            _officeZoneName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OfficeZoneNameSpecified { get; set; }
+}
 }

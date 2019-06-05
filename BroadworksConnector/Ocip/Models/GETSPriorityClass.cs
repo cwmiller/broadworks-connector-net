@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum GETSPriorityClass{
-    GETSMandatory,
-    GETS,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum GETSPriorityClass
+    {
+        [XmlEnum(Name = "GETS-Mandatory")]
+        GETSMandatory,
+        [XmlEnum(Name = "GETS")]
+        GETS,
+    }
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemLicensingGetSystemLicenseListResponse19sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "license", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SystemLicenseType19sp1> License { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.SystemLicenseType19sp1> _license;
+
+    [XmlElement(ElementName = "license", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SystemLicenseType19sp1> License {
+        get => _license;
+        set {
+            LicenseSpecified = true;
+            _license = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LicenseSpecified { get; set; }
+}
 }

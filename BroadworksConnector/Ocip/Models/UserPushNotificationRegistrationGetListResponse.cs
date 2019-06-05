@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPushNotificationRegistrationGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "registrationsTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable RegistrationsTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _registrationsTable;
+
+    [XmlElement(ElementName = "registrationsTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable RegistrationsTable {
+        get => _registrationsTable;
+        set {
+            RegistrationsTableSpecified = true;
+            _registrationsTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RegistrationsTableSpecified { get; set; }
+}
 }

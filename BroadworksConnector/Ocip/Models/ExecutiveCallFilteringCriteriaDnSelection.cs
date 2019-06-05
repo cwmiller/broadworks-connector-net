@@ -3,11 +3,17 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum ExecutiveCallFilteringCriteriaDnSelection{
-    Any,
-    AnyInternal,
-    AnyExternal,
-    SpecifiedOnly,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum ExecutiveCallFilteringCriteriaDnSelection
+    {
+        [XmlEnum(Name = "Any")]
+        Any,
+        [XmlEnum(Name = "Any Internal")]
+        AnyInternal,
+        [XmlEnum(Name = "Any External")]
+        AnyExternal,
+        [XmlEnum(Name = "Specified Only")]
+        SpecifiedOnly,
+    }
 }

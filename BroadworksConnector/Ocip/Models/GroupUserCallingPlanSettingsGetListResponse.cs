@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupUserCallingPlanSettingsGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "userCallingPlanTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserCallingPlanTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _userCallingPlanTable;
+
+    [XmlElement(ElementName = "userCallingPlanTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable UserCallingPlanTable {
+        get => _userCallingPlanTable;
+        set {
+            UserCallingPlanTableSpecified = true;
+            _userCallingPlanTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserCallingPlanTableSpecified { get; set; }
+}
 }

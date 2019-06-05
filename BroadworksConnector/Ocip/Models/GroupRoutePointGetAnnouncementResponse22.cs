@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutePointGetAnnouncementResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "mediaOnHoldSource", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceRead22 MediaOnHoldSource { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceRead22 _mediaOnHoldSource;
+
+    [XmlElement(ElementName = "mediaOnHoldSource", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceRead22 MediaOnHoldSource {
+        get => _mediaOnHoldSource;
+        set {
+            MediaOnHoldSourceSpecified = true;
+            _mediaOnHoldSource = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MediaOnHoldSourceSpecified { get; set; }
+}
 }

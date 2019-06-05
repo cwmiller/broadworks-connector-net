@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserMWIDeliveryToMobileEndpointGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "mobilePhoneNumber", IsNullable = false)]
-    public string MobilePhoneNumber { get; set; }
- }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private string _mobilePhoneNumber;
+
+    [XmlElement(ElementName = "mobilePhoneNumber", IsNullable = false, Namespace = "")]
+    public string MobilePhoneNumber {
+        get => _mobilePhoneNumber;
+        set {
+            MobilePhoneNumberSpecified = true;
+            _mobilePhoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MobilePhoneNumberSpecified { get; set; }
+}
 }

@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum BroadWorksMobilityServiceProviderSettingLevel{
-    ServiceProvider,
-    System,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum BroadWorksMobilityServiceProviderSettingLevel
+    {
+        [XmlEnum(Name = "ServiceProvider")]
+        ServiceProvider,
+        [XmlEnum(Name = "System")]
+        System,
+    }
 }

@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAdviceOfChargeGetRequest19sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

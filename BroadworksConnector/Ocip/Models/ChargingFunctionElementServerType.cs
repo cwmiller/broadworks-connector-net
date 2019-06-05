@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum ChargingFunctionElementServerType{
-    CCF,
-    ECF,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum ChargingFunctionElementServerType
+    {
+        [XmlEnum(Name = "CCF")]
+        CCF,
+        [XmlEnum(Name = "ECF")]
+        ECF,
+    }
 }

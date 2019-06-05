@@ -8,19 +8,96 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallTransferModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "isRecallActive", IsNullable = false)]
-    public bool IsRecallActive { get; set; }
-    [XmlElement(ElementName = "recallNumberOfRings", IsNullable = false)]
-    public int RecallNumberOfRings { get; set; }
-    [XmlElement(ElementName = "useDiversionInhibitorForBlindTransfer", IsNullable = false)]
-    public bool UseDiversionInhibitorForBlindTransfer { get; set; }
-    [XmlElement(ElementName = "useDiversionInhibitorForConsultativeCalls", IsNullable = false)]
-    public bool UseDiversionInhibitorForConsultativeCalls { get; set; }
-    [XmlElement(ElementName = "enableBusyCampOn", IsNullable = false)]
-    public bool EnableBusyCampOn { get; set; }
-    [XmlElement(ElementName = "busyCampOnSeconds", IsNullable = false)]
-    public int BusyCampOnSeconds { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private bool _isRecallActive;
+
+    [XmlElement(ElementName = "isRecallActive", IsNullable = false, Namespace = "")]
+    public bool IsRecallActive {
+        get => _isRecallActive;
+        set {
+            IsRecallActiveSpecified = true;
+            _isRecallActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsRecallActiveSpecified { get; set; }
+    private int _recallNumberOfRings;
+
+    [XmlElement(ElementName = "recallNumberOfRings", IsNullable = false, Namespace = "")]
+    public int RecallNumberOfRings {
+        get => _recallNumberOfRings;
+        set {
+            RecallNumberOfRingsSpecified = true;
+            _recallNumberOfRings = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RecallNumberOfRingsSpecified { get; set; }
+    private bool _useDiversionInhibitorForBlindTransfer;
+
+    [XmlElement(ElementName = "useDiversionInhibitorForBlindTransfer", IsNullable = false, Namespace = "")]
+    public bool UseDiversionInhibitorForBlindTransfer {
+        get => _useDiversionInhibitorForBlindTransfer;
+        set {
+            UseDiversionInhibitorForBlindTransferSpecified = true;
+            _useDiversionInhibitorForBlindTransfer = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseDiversionInhibitorForBlindTransferSpecified { get; set; }
+    private bool _useDiversionInhibitorForConsultativeCalls;
+
+    [XmlElement(ElementName = "useDiversionInhibitorForConsultativeCalls", IsNullable = false, Namespace = "")]
+    public bool UseDiversionInhibitorForConsultativeCalls {
+        get => _useDiversionInhibitorForConsultativeCalls;
+        set {
+            UseDiversionInhibitorForConsultativeCallsSpecified = true;
+            _useDiversionInhibitorForConsultativeCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseDiversionInhibitorForConsultativeCallsSpecified { get; set; }
+    private bool _enableBusyCampOn;
+
+    [XmlElement(ElementName = "enableBusyCampOn", IsNullable = false, Namespace = "")]
+    public bool EnableBusyCampOn {
+        get => _enableBusyCampOn;
+        set {
+            EnableBusyCampOnSpecified = true;
+            _enableBusyCampOn = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableBusyCampOnSpecified { get; set; }
+    private int _busyCampOnSeconds;
+
+    [XmlElement(ElementName = "busyCampOnSeconds", IsNullable = false, Namespace = "")]
+    public int BusyCampOnSeconds {
+        get => _busyCampOnSeconds;
+        set {
+            BusyCampOnSecondsSpecified = true;
+            _busyCampOnSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool BusyCampOnSecondsSpecified { get; set; }
+}
 }

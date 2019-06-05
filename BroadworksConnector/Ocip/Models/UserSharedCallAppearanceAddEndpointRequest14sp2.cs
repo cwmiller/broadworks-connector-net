@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserSharedCallAppearanceAddEndpointRequest14sp2 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint { get; set; }
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "allowOrigination", IsNullable = false)]
-    public bool AllowOrigination { get; set; }
-    [XmlElement(ElementName = "allowTermination", IsNullable = false)]
-    public bool AllowTermination { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
+
+    [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint {
+        get => _accessDeviceEndpoint;
+        set {
+            AccessDeviceEndpointSpecified = true;
+            _accessDeviceEndpoint = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessDeviceEndpointSpecified { get; set; }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private bool _allowOrigination;
+
+    [XmlElement(ElementName = "allowOrigination", IsNullable = false, Namespace = "")]
+    public bool AllowOrigination {
+        get => _allowOrigination;
+        set {
+            AllowOriginationSpecified = true;
+            _allowOrigination = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowOriginationSpecified { get; set; }
+    private bool _allowTermination;
+
+    [XmlElement(ElementName = "allowTermination", IsNullable = false, Namespace = "")]
+    public bool AllowTermination {
+        get => _allowTermination;
+        set {
+            AllowTerminationSpecified = true;
+            _allowTermination = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowTerminationSpecified { get; set; }
+}
 }

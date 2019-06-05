@@ -3,10 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CommunicationBarringRedirectingAction{
-    Allow,
-    AllowTimed,
-    Block,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CommunicationBarringRedirectingAction
+    {
+        [XmlEnum(Name = "Allow")]
+        Allow,
+        [XmlEnum(Name = "Allow Timed")]
+        AllowTimed,
+        [XmlEnum(Name = "Block")]
+        Block,
+    }
 }

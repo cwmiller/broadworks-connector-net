@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSystemServiceDnGetAvailableListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

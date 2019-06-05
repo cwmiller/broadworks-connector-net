@@ -8,41 +8,239 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCommunicationBarringProfileModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "newName", IsNullable = false)]
-    public string NewName { get; set; }
-    [XmlElement(ElementName = "description", IsNullable = true)]
-    public string Description { get; set; }
-    [XmlElement(ElementName = "originatingDefaultAction", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringOriginatingAction OriginatingDefaultAction { get; set; }
-    [XmlElement(ElementName = "originatingDefaultTreatmentId", IsNullable = true)]
-    public string OriginatingDefaultTreatmentId { get; set; }
-    [XmlElement(ElementName = "originatingDefaultTransferNumber", IsNullable = true)]
-    public string OriginatingDefaultTransferNumber { get; set; }
-    [XmlElement(ElementName = "originatingDefaultCallTimeout", IsNullable = true)]
-    public int? OriginatingDefaultCallTimeout { get; set; }
-    [XmlElement(ElementName = "originatingRule", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringOriginatingRuleList OriginatingRule { get; set; }
-    [XmlElement(ElementName = "redirectingDefaultAction", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingAction RedirectingDefaultAction { get; set; }
-    [XmlElement(ElementName = "redirectingDefaultCallTimeout", IsNullable = true)]
-    public int? RedirectingDefaultCallTimeout { get; set; }
-    [XmlElement(ElementName = "redirectingRule", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringRedirectingRuleList RedirectingRule { get; set; }
-    [XmlElement(ElementName = "incomingDefaultAction", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringIncomingAction IncomingDefaultAction { get; set; }
-    [XmlElement(ElementName = "incomingDefaultCallTimeout", IsNullable = true)]
-    public int? IncomingDefaultCallTimeout { get; set; }
-    [XmlElement(ElementName = "incomingRule", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringIncomingRuleList19sp1 IncomingRule { get; set; }
-    [XmlElement(ElementName = "callMeNowDefaultAction", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringCallMeNowAction CallMeNowDefaultAction { get; set; }
-    [XmlElement(ElementName = "callMeNowDefaultCallTimeout", IsNullable = true)]
-    public int? CallMeNowDefaultCallTimeout { get; set; }
-    [XmlElement(ElementName = "callMeNowRule", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringCallMeNowRuleList CallMeNowRule { get; set; }
-    [XmlElement(ElementName = "applyToAttendedCallTransfers", IsNullable = false)]
-    public bool ApplyToAttendedCallTransfers { get; set; }
- }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private string _newName;
+
+    [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
+    public string NewName {
+        get => _newName;
+        set {
+            NewNameSpecified = true;
+            _newName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NewNameSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CommunicationBarringOriginatingAction _originatingDefaultAction;
+
+    [XmlElement(ElementName = "originatingDefaultAction", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CommunicationBarringOriginatingAction OriginatingDefaultAction {
+        get => _originatingDefaultAction;
+        set {
+            OriginatingDefaultActionSpecified = true;
+            _originatingDefaultAction = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OriginatingDefaultActionSpecified { get; set; }
+    private string _originatingDefaultTreatmentId;
+
+    [XmlElement(ElementName = "originatingDefaultTreatmentId", IsNullable = true, Namespace = "")]
+    public string OriginatingDefaultTreatmentId {
+        get => _originatingDefaultTreatmentId;
+        set {
+            OriginatingDefaultTreatmentIdSpecified = true;
+            _originatingDefaultTreatmentId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OriginatingDefaultTreatmentIdSpecified { get; set; }
+    private string _originatingDefaultTransferNumber;
+
+    [XmlElement(ElementName = "originatingDefaultTransferNumber", IsNullable = true, Namespace = "")]
+    public string OriginatingDefaultTransferNumber {
+        get => _originatingDefaultTransferNumber;
+        set {
+            OriginatingDefaultTransferNumberSpecified = true;
+            _originatingDefaultTransferNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OriginatingDefaultTransferNumberSpecified { get; set; }
+    private int? _originatingDefaultCallTimeout;
+
+    [XmlElement(ElementName = "originatingDefaultCallTimeout", IsNullable = true, Namespace = "")]
+    public int? OriginatingDefaultCallTimeout {
+        get => _originatingDefaultCallTimeout;
+        set {
+            OriginatingDefaultCallTimeoutSpecified = true;
+            _originatingDefaultCallTimeout = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OriginatingDefaultCallTimeoutSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringOriginatingRuleList _originatingRule;
+
+    [XmlElement(ElementName = "originatingRule", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringOriginatingRuleList OriginatingRule {
+        get => _originatingRule;
+        set {
+            OriginatingRuleSpecified = true;
+            _originatingRule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OriginatingRuleSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingAction _redirectingDefaultAction;
+
+    [XmlElement(ElementName = "redirectingDefaultAction", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingAction RedirectingDefaultAction {
+        get => _redirectingDefaultAction;
+        set {
+            RedirectingDefaultActionSpecified = true;
+            _redirectingDefaultAction = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RedirectingDefaultActionSpecified { get; set; }
+    private int? _redirectingDefaultCallTimeout;
+
+    [XmlElement(ElementName = "redirectingDefaultCallTimeout", IsNullable = true, Namespace = "")]
+    public int? RedirectingDefaultCallTimeout {
+        get => _redirectingDefaultCallTimeout;
+        set {
+            RedirectingDefaultCallTimeoutSpecified = true;
+            _redirectingDefaultCallTimeout = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RedirectingDefaultCallTimeoutSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringRedirectingRuleList _redirectingRule;
+
+    [XmlElement(ElementName = "redirectingRule", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringRedirectingRuleList RedirectingRule {
+        get => _redirectingRule;
+        set {
+            RedirectingRuleSpecified = true;
+            _redirectingRule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RedirectingRuleSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CommunicationBarringIncomingAction _incomingDefaultAction;
+
+    [XmlElement(ElementName = "incomingDefaultAction", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CommunicationBarringIncomingAction IncomingDefaultAction {
+        get => _incomingDefaultAction;
+        set {
+            IncomingDefaultActionSpecified = true;
+            _incomingDefaultAction = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IncomingDefaultActionSpecified { get; set; }
+    private int? _incomingDefaultCallTimeout;
+
+    [XmlElement(ElementName = "incomingDefaultCallTimeout", IsNullable = true, Namespace = "")]
+    public int? IncomingDefaultCallTimeout {
+        get => _incomingDefaultCallTimeout;
+        set {
+            IncomingDefaultCallTimeoutSpecified = true;
+            _incomingDefaultCallTimeout = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IncomingDefaultCallTimeoutSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringIncomingRuleList19sp1 _incomingRule;
+
+    [XmlElement(ElementName = "incomingRule", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringIncomingRuleList19sp1 IncomingRule {
+        get => _incomingRule;
+        set {
+            IncomingRuleSpecified = true;
+            _incomingRule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IncomingRuleSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _callMeNowDefaultAction;
+
+    [XmlElement(ElementName = "callMeNowDefaultAction", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CommunicationBarringCallMeNowAction CallMeNowDefaultAction {
+        get => _callMeNowDefaultAction;
+        set {
+            CallMeNowDefaultActionSpecified = true;
+            _callMeNowDefaultAction = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallMeNowDefaultActionSpecified { get; set; }
+    private int? _callMeNowDefaultCallTimeout;
+
+    [XmlElement(ElementName = "callMeNowDefaultCallTimeout", IsNullable = true, Namespace = "")]
+    public int? CallMeNowDefaultCallTimeout {
+        get => _callMeNowDefaultCallTimeout;
+        set {
+            CallMeNowDefaultCallTimeoutSpecified = true;
+            _callMeNowDefaultCallTimeout = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallMeNowDefaultCallTimeoutSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringCallMeNowRuleList _callMeNowRule;
+
+    [XmlElement(ElementName = "callMeNowRule", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringCallMeNowRuleList CallMeNowRule {
+        get => _callMeNowRule;
+        set {
+            CallMeNowRuleSpecified = true;
+            _callMeNowRule = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallMeNowRuleSpecified { get; set; }
+    private bool _applyToAttendedCallTransfers;
+
+    [XmlElement(ElementName = "applyToAttendedCallTransfers", IsNullable = false, Namespace = "")]
+    public bool ApplyToAttendedCallTransfers {
+        get => _applyToAttendedCallTransfers;
+        set {
+            ApplyToAttendedCallTransfersSpecified = true;
+            _applyToAttendedCallTransfers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ApplyToAttendedCallTransfersSpecified { get; set; }
+}
 }

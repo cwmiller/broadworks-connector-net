@@ -3,10 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallCenterStatisticsSource17sp1{
-    None,
-    ApplicationServer,
-    ExternalReportingServer,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallCenterStatisticsSource17sp1
+    {
+        [XmlEnum(Name = "None")]
+        None,
+        [XmlEnum(Name = "Application Server")]
+        ApplicationServer,
+        [XmlEnum(Name = "External Reporting Server")]
+        ExternalReportingServer,
+    }
 }

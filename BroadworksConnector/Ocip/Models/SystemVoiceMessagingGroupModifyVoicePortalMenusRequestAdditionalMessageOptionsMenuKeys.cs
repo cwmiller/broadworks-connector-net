@@ -8,27 +8,148 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestAdditionalMessageOptionsMenuKeys 
 {
-    [XmlElement(ElementName = "saveMessage", IsNullable = true)]
-    public string SaveMessage { get; set; }
-    [XmlElement(ElementName = "deleteMessage", IsNullable = true)]
-    public string DeleteMessage { get; set; }
-    [XmlElement(ElementName = "playEnvelope", IsNullable = true)]
-    public string PlayEnvelope { get; set; }
-    [XmlElement(ElementName = "callbackCaller", IsNullable = true)]
-    public string CallbackCaller { get; set; }
-    [XmlElement(ElementName = "composeMessage", IsNullable = true)]
-    public string ComposeMessage { get; set; }
-    [XmlElement(ElementName = "replyMessage", IsNullable = true)]
-    public string ReplyMessage { get; set; }
-    [XmlElement(ElementName = "forwardMessage", IsNullable = true)]
-    public string ForwardMessage { get; set; }
-    [XmlElement(ElementName = "personalizedName", IsNullable = true)]
-    public string PersonalizedName { get; set; }
-    [XmlElement(ElementName = "passcode", IsNullable = true)]
-    public string Passcode { get; set; }
-    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false)]
-    public string ReturnToPreviousMenu { get; set; }
-    [XmlElement(ElementName = "repeatMenu", IsNullable = true)]
-    public string RepeatMenu { get; set; }
- }
+    private string _saveMessage;
+
+    [XmlElement(ElementName = "saveMessage", IsNullable = true, Namespace = "")]
+    public string SaveMessage {
+        get => _saveMessage;
+        set {
+            SaveMessageSpecified = true;
+            _saveMessage = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SaveMessageSpecified { get; set; }
+    private string _deleteMessage;
+
+    [XmlElement(ElementName = "deleteMessage", IsNullable = true, Namespace = "")]
+    public string DeleteMessage {
+        get => _deleteMessage;
+        set {
+            DeleteMessageSpecified = true;
+            _deleteMessage = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeleteMessageSpecified { get; set; }
+    private string _playEnvelope;
+
+    [XmlElement(ElementName = "playEnvelope", IsNullable = true, Namespace = "")]
+    public string PlayEnvelope {
+        get => _playEnvelope;
+        set {
+            PlayEnvelopeSpecified = true;
+            _playEnvelope = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PlayEnvelopeSpecified { get; set; }
+    private string _callbackCaller;
+
+    [XmlElement(ElementName = "callbackCaller", IsNullable = true, Namespace = "")]
+    public string CallbackCaller {
+        get => _callbackCaller;
+        set {
+            CallbackCallerSpecified = true;
+            _callbackCaller = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallbackCallerSpecified { get; set; }
+    private string _composeMessage;
+
+    [XmlElement(ElementName = "composeMessage", IsNullable = true, Namespace = "")]
+    public string ComposeMessage {
+        get => _composeMessage;
+        set {
+            ComposeMessageSpecified = true;
+            _composeMessage = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ComposeMessageSpecified { get; set; }
+    private string _replyMessage;
+
+    [XmlElement(ElementName = "replyMessage", IsNullable = true, Namespace = "")]
+    public string ReplyMessage {
+        get => _replyMessage;
+        set {
+            ReplyMessageSpecified = true;
+            _replyMessage = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReplyMessageSpecified { get; set; }
+    private string _forwardMessage;
+
+    [XmlElement(ElementName = "forwardMessage", IsNullable = true, Namespace = "")]
+    public string ForwardMessage {
+        get => _forwardMessage;
+        set {
+            ForwardMessageSpecified = true;
+            _forwardMessage = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ForwardMessageSpecified { get; set; }
+    private string _personalizedName;
+
+    [XmlElement(ElementName = "personalizedName", IsNullable = true, Namespace = "")]
+    public string PersonalizedName {
+        get => _personalizedName;
+        set {
+            PersonalizedNameSpecified = true;
+            _personalizedName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PersonalizedNameSpecified { get; set; }
+    private string _passcode;
+
+    [XmlElement(ElementName = "passcode", IsNullable = true, Namespace = "")]
+    public string Passcode {
+        get => _passcode;
+        set {
+            PasscodeSpecified = true;
+            _passcode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PasscodeSpecified { get; set; }
+    private string _returnToPreviousMenu;
+
+    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
+    public string ReturnToPreviousMenu {
+        get => _returnToPreviousMenu;
+        set {
+            ReturnToPreviousMenuSpecified = true;
+            _returnToPreviousMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReturnToPreviousMenuSpecified { get; set; }
+    private string _repeatMenu;
+
+    [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
+    public string RepeatMenu {
+        get => _repeatMenu;
+        set {
+            RepeatMenuSpecified = true;
+            _repeatMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RepeatMenuSpecified { get; set; }
+}
 }

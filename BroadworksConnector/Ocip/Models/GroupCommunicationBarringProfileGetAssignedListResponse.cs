@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCommunicationBarringProfileGetAssignedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "profileName", IsNullable = false)]
-    public List<string> ProfileName { get; set; }
- }
+    private List<string> _profileName;
+
+    [XmlElement(ElementName = "profileName", IsNullable = false, Namespace = "")]
+    public List<string> ProfileName {
+        get => _profileName;
+        set {
+            ProfileNameSpecified = true;
+            _profileName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProfileNameSpecified { get; set; }
+}
 }

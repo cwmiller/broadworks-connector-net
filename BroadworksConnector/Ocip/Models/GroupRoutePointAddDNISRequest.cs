@@ -8,23 +8,122 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupRoutePointAddDNISRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "dnisKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DNISKey DnisKey { get; set; }
-    [XmlElement(ElementName = "dnisPhoneNumber", IsNullable = false)]
-    public string DnisPhoneNumber { get; set; }
-    [XmlElement(ElementName = "extension", IsNullable = false)]
-    public string Extension { get; set; }
-    [XmlElement(ElementName = "useCustomCLIDSettings", IsNullable = false)]
-    public bool UseCustomCLIDSettings { get; set; }
-    [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = false)]
-    public string CallingLineIdPhoneNumber { get; set; }
-    [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false)]
-    public string CallingLineIdLastName { get; set; }
-    [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false)]
-    public string CallingLineIdFirstName { get; set; }
-    [XmlElement(ElementName = "useCustomDnisAnnouncementSettings", IsNullable = false)]
-    public bool UseCustomDnisAnnouncementSettings { get; set; }
-    [XmlElement(ElementName = "allowOutgoingACDCall", IsNullable = false)]
-    public bool AllowOutgoingACDCall { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.DNISKey _dnisKey;
+
+    [XmlElement(ElementName = "dnisKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DNISKey DnisKey {
+        get => _dnisKey;
+        set {
+            DnisKeySpecified = true;
+            _dnisKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DnisKeySpecified { get; set; }
+    private string _dnisPhoneNumber;
+
+    [XmlElement(ElementName = "dnisPhoneNumber", IsNullable = false, Namespace = "")]
+    public string DnisPhoneNumber {
+        get => _dnisPhoneNumber;
+        set {
+            DnisPhoneNumberSpecified = true;
+            _dnisPhoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DnisPhoneNumberSpecified { get; set; }
+    private string _extension;
+
+    [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
+    public string Extension {
+        get => _extension;
+        set {
+            ExtensionSpecified = true;
+            _extension = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExtensionSpecified { get; set; }
+    private bool _useCustomCLIDSettings;
+
+    [XmlElement(ElementName = "useCustomCLIDSettings", IsNullable = false, Namespace = "")]
+    public bool UseCustomCLIDSettings {
+        get => _useCustomCLIDSettings;
+        set {
+            UseCustomCLIDSettingsSpecified = true;
+            _useCustomCLIDSettings = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseCustomCLIDSettingsSpecified { get; set; }
+    private string _callingLineIdPhoneNumber;
+
+    [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
+    public string CallingLineIdPhoneNumber {
+        get => _callingLineIdPhoneNumber;
+        set {
+            CallingLineIdPhoneNumberSpecified = true;
+            _callingLineIdPhoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallingLineIdPhoneNumberSpecified { get; set; }
+    private string _callingLineIdLastName;
+
+    [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
+    public string CallingLineIdLastName {
+        get => _callingLineIdLastName;
+        set {
+            CallingLineIdLastNameSpecified = true;
+            _callingLineIdLastName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallingLineIdLastNameSpecified { get; set; }
+    private string _callingLineIdFirstName;
+
+    [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
+    public string CallingLineIdFirstName {
+        get => _callingLineIdFirstName;
+        set {
+            CallingLineIdFirstNameSpecified = true;
+            _callingLineIdFirstName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallingLineIdFirstNameSpecified { get; set; }
+    private bool _useCustomDnisAnnouncementSettings;
+
+    [XmlElement(ElementName = "useCustomDnisAnnouncementSettings", IsNullable = false, Namespace = "")]
+    public bool UseCustomDnisAnnouncementSettings {
+        get => _useCustomDnisAnnouncementSettings;
+        set {
+            UseCustomDnisAnnouncementSettingsSpecified = true;
+            _useCustomDnisAnnouncementSettings = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseCustomDnisAnnouncementSettingsSpecified { get; set; }
+    private bool _allowOutgoingACDCall;
+
+    [XmlElement(ElementName = "allowOutgoingACDCall", IsNullable = false, Namespace = "")]
+    public bool AllowOutgoingACDCall {
+        get => _allowOutgoingACDCall;
+        set {
+            AllowOutgoingACDCallSpecified = true;
+            _allowOutgoingACDCall = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowOutgoingACDCallSpecified { get; set; }
+}
 }

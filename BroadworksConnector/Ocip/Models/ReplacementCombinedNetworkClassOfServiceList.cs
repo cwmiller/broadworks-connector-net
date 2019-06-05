@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementCombinedNetworkClassOfServiceList 
 {
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false)]
-    public List<string> NetworkClassOfService { get; set; }
- }
+    private List<string> _networkClassOfService;
+
+    [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+    public List<string> NetworkClassOfService {
+        get => _networkClassOfService;
+        set {
+            NetworkClassOfServiceSpecified = true;
+            _networkClassOfService = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetworkClassOfServiceSpecified { get; set; }
+}
 }

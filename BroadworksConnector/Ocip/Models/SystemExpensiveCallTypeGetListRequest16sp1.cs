@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemExpensiveCallTypeGetListRequest16sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

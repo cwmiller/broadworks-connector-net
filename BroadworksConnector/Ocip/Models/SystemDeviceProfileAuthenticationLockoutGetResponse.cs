@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDeviceProfileAuthenticationLockoutGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "lockoutTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable LockoutTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _lockoutTable;
+
+    [XmlElement(ElementName = "lockoutTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable LockoutTable {
+        get => _lockoutTable;
+        set {
+            LockoutTableSpecified = true;
+            _lockoutTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LockoutTableSpecified { get; set; }
+}
 }

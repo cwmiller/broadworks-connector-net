@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPersonalAssistantExclusionNumberGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "exclusionNumberTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ExclusionNumberTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _exclusionNumberTable;
+
+    [XmlElement(ElementName = "exclusionNumberTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ExclusionNumberTable {
+        get => _exclusionNumberTable;
+        set {
+            ExclusionNumberTableSpecified = true;
+            _exclusionNumberTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExclusionNumberTableSpecified { get; set; }
+}
 }

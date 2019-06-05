@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCPEConfigParametersGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false)]
-    public bool EnableIPDeviceManagement { get; set; }
-    [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false)]
-    public int FtpConnectTimeoutSeconds { get; set; }
-    [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false)]
-    public int FtpFileTransferTimeoutSeconds { get; set; }
- }
+    private bool _enableIPDeviceManagement;
+
+    [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false, Namespace = "")]
+    public bool EnableIPDeviceManagement {
+        get => _enableIPDeviceManagement;
+        set {
+            EnableIPDeviceManagementSpecified = true;
+            _enableIPDeviceManagement = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableIPDeviceManagementSpecified { get; set; }
+    private int _ftpConnectTimeoutSeconds;
+
+    [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int FtpConnectTimeoutSeconds {
+        get => _ftpConnectTimeoutSeconds;
+        set {
+            FtpConnectTimeoutSecondsSpecified = true;
+            _ftpConnectTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FtpConnectTimeoutSecondsSpecified { get; set; }
+    private int _ftpFileTransferTimeoutSeconds;
+
+    [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false, Namespace = "")]
+    public int FtpFileTransferTimeoutSeconds {
+        get => _ftpFileTransferTimeoutSeconds;
+        set {
+            FtpFileTransferTimeoutSecondsSpecified = true;
+            _ftpFileTransferTimeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
+}
 }

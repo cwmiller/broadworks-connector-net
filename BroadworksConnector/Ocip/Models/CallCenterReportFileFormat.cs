@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallCenterReportFileFormat{
-    PDF,
-    XLS,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallCenterReportFileFormat
+    {
+        [XmlEnum(Name = "PDF")]
+        PDF,
+        [XmlEnum(Name = "XLS")]
+        XLS,
+    }
 }

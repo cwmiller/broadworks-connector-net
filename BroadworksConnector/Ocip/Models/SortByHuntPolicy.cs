@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SortByHuntPolicy : BroadworksConnector.Ocip.Models.SortCriteria
 {
- }
+}
 }

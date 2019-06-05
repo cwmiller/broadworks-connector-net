@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemConfigurableFileSystemGetResponse23ProtocolWebDAV 
 {
-    [XmlElement(ElementName = "secure", IsNullable = false)]
-    public bool Secure { get; set; }
-    [XmlElement(ElementName = "userName", IsNullable = false)]
-    public string UserName { get; set; }
-    [XmlElement(ElementName = "fileServerFQDN", IsNullable = false)]
-    public string FileServerFQDN { get; set; }
- }
+    private bool _secure;
+
+    [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
+    public bool Secure {
+        get => _secure;
+        set {
+            SecureSpecified = true;
+            _secure = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SecureSpecified { get; set; }
+    private string _userName;
+
+    [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
+    public string UserName {
+        get => _userName;
+        set {
+            UserNameSpecified = true;
+            _userName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserNameSpecified { get; set; }
+    private string _fileServerFQDN;
+
+    [XmlElement(ElementName = "fileServerFQDN", IsNullable = false, Namespace = "")]
+    public string FileServerFQDN {
+        get => _fileServerFQDN;
+        set {
+            FileServerFQDNSpecified = true;
+            _fileServerFQDN = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileServerFQDNSpecified { get; set; }
+}
 }

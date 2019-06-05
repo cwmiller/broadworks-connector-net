@@ -4,8 +4,11 @@ using System.Xml.Serialization;
 namespace BroadworksConnector.Ocip.Models
 {
 [Serializable]
+[XmlRoot(Namespace = "")]
 public enum TrunkGroupSupportConnectedIdentityPolicy{
+    [XmlEnum(Name = "Enabled")]
     Enabled,
+    [XmlEnum(Name = "Disabled")]
     Disabled,
  }
 }

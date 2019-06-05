@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserNumberPortabilityAnnouncementGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enable", IsNullable = false)]
-    public bool Enable { get; set; }
- }
+    private bool _enable;
+
+    [XmlElement(ElementName = "enable", IsNullable = false, Namespace = "")]
+    public bool Enable {
+        get => _enable;
+        set {
+            EnableSpecified = true;
+            _enable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCLIDDeliveryPrefixGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "prefix", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CLIDDeliveryPrefix> Prefix { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.CLIDDeliveryPrefix> _prefix;
+
+    [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CLIDDeliveryPrefix> Prefix {
+        get => _prefix;
+        set {
+            PrefixSpecified = true;
+            _prefix = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrefixSpecified { get; set; }
+}
 }

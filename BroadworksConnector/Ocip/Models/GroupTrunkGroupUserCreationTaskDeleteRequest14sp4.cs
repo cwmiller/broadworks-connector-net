@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupTrunkGroupUserCreationTaskDeleteRequest14sp4 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "trunkGroupKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey { get; set; }
-    [XmlElement(ElementName = "taskName", IsNullable = false)]
-    public string TaskName { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
+
+    [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey {
+        get => _trunkGroupKey;
+        set {
+            TrunkGroupKeySpecified = true;
+            _trunkGroupKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TrunkGroupKeySpecified { get; set; }
+    private string _taskName;
+
+    [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
+    public string TaskName {
+        get => _taskName;
+        set {
+            TaskNameSpecified = true;
+            _taskName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TaskNameSpecified { get; set; }
+}
 }

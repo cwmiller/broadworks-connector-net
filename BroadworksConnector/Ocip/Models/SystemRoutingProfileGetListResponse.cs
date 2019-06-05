@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutingProfileGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "routingProfile", IsNullable = false)]
-    public List<string> RoutingProfile { get; set; }
- }
+    private List<string> _routingProfile;
+
+    [XmlElement(ElementName = "routingProfile", IsNullable = false, Namespace = "")]
+    public List<string> RoutingProfile {
+        get => _routingProfile;
+        set {
+            RoutingProfileSpecified = true;
+            _routingProfile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoutingProfileSpecified { get; set; }
+}
 }

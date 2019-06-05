@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models.C
 [XmlRoot(Namespace = "C")]
 public  class OCITableRow 
 {
-    [XmlElement(ElementName = "col", IsNullable = false)]
-    public List<string> Col { get; set; }
- }
+    private List<string> _col;
+
+    [XmlElement(ElementName = "col", IsNullable = false, Namespace = "")]
+    public List<string> Col {
+        get => _col;
+        set {
+            ColSpecified = true;
+            _col = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ColSpecified { get; set; }
+}
 }

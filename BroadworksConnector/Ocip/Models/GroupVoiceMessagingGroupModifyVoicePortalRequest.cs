@@ -8,31 +8,174 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupVoiceMessagingGroupModifyVoicePortalRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile { get; set; }
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "enableExtendedScope", IsNullable = false)]
-    public bool EnableExtendedScope { get; set; }
-    [XmlElement(ElementName = "allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin", IsNullable = false)]
-    public bool AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin { get; set; }
-    [XmlElement(ElementName = "useVoicePortalWizard", IsNullable = false)]
-    public bool UseVoicePortalWizard { get; set; }
-    [XmlElement(ElementName = "voicePortalExternalRoutingScope", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.VoicePortalExternalRoutingScope VoicePortalExternalRoutingScope { get; set; }
-    [XmlElement(ElementName = "useExternalRouting", IsNullable = false)]
-    public bool UseExternalRouting { get; set; }
-    [XmlElement(ElementName = "externalRoutingAddress", IsNullable = true)]
-    public string ExternalRoutingAddress { get; set; }
-    [XmlElement(ElementName = "homeZoneName", IsNullable = true)]
-    public string HomeZoneName { get; set; }
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false)]
-    public string NetworkClassOfService { get; set; }
-    [XmlElement(ElementName = "expressMode", IsNullable = false)]
-    public bool ExpressMode { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
+
+    [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
+        get => _serviceInstanceProfile;
+        set {
+            ServiceInstanceProfileSpecified = true;
+            _serviceInstanceProfile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceInstanceProfileSpecified { get; set; }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private bool _enableExtendedScope;
+
+    [XmlElement(ElementName = "enableExtendedScope", IsNullable = false, Namespace = "")]
+    public bool EnableExtendedScope {
+        get => _enableExtendedScope;
+        set {
+            EnableExtendedScopeSpecified = true;
+            _enableExtendedScope = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableExtendedScopeSpecified { get; set; }
+    private bool _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
+
+    [XmlElement(ElementName = "allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin", IsNullable = false, Namespace = "")]
+    public bool AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin {
+        get => _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
+        set {
+            AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLoginSpecified = true;
+            _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLoginSpecified { get; set; }
+    private bool _useVoicePortalWizard;
+
+    [XmlElement(ElementName = "useVoicePortalWizard", IsNullable = false, Namespace = "")]
+    public bool UseVoicePortalWizard {
+        get => _useVoicePortalWizard;
+        set {
+            UseVoicePortalWizardSpecified = true;
+            _useVoicePortalWizard = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseVoicePortalWizardSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.VoicePortalExternalRoutingScope _voicePortalExternalRoutingScope;
+
+    [XmlElement(ElementName = "voicePortalExternalRoutingScope", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.VoicePortalExternalRoutingScope VoicePortalExternalRoutingScope {
+        get => _voicePortalExternalRoutingScope;
+        set {
+            VoicePortalExternalRoutingScopeSpecified = true;
+            _voicePortalExternalRoutingScope = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VoicePortalExternalRoutingScopeSpecified { get; set; }
+    private bool _useExternalRouting;
+
+    [XmlElement(ElementName = "useExternalRouting", IsNullable = false, Namespace = "")]
+    public bool UseExternalRouting {
+        get => _useExternalRouting;
+        set {
+            UseExternalRoutingSpecified = true;
+            _useExternalRouting = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseExternalRoutingSpecified { get; set; }
+    private string _externalRoutingAddress;
+
+    [XmlElement(ElementName = "externalRoutingAddress", IsNullable = true, Namespace = "")]
+    public string ExternalRoutingAddress {
+        get => _externalRoutingAddress;
+        set {
+            ExternalRoutingAddressSpecified = true;
+            _externalRoutingAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExternalRoutingAddressSpecified { get; set; }
+    private string _homeZoneName;
+
+    [XmlElement(ElementName = "homeZoneName", IsNullable = true, Namespace = "")]
+    public string HomeZoneName {
+        get => _homeZoneName;
+        set {
+            HomeZoneNameSpecified = true;
+            _homeZoneName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HomeZoneNameSpecified { get; set; }
+    private string _networkClassOfService;
+
+    [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+    public string NetworkClassOfService {
+        get => _networkClassOfService;
+        set {
+            NetworkClassOfServiceSpecified = true;
+            _networkClassOfService = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetworkClassOfServiceSpecified { get; set; }
+    private bool _expressMode;
+
+    [XmlElement(ElementName = "expressMode", IsNullable = false, Namespace = "")]
+    public bool ExpressMode {
+        get => _expressMode;
+        set {
+            ExpressModeSpecified = true;
+            _expressMode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExpressModeSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserBroadWorksReceptionistEnterpriseNoteGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "receptionistNote", IsNullable = false)]
-    public string ReceptionistNote { get; set; }
- }
+    private string _receptionistNote;
+
+    [XmlElement(ElementName = "receptionistNote", IsNullable = false, Namespace = "")]
+    public string ReceptionistNote {
+        get => _receptionistNote;
+        set {
+            ReceptionistNoteSpecified = true;
+            _receptionistNote = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReceptionistNoteSpecified { get; set; }
+}
 }

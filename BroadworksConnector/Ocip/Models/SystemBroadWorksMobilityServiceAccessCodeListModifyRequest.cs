@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBroadWorksMobilityServiceAccessCodeListModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "newName", IsNullable = false)]
-    public string NewName { get; set; }
- }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private string _newName;
+
+    [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
+    public string NewName {
+        get => _newName;
+        set {
+            NewNameSpecified = true;
+            _newName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NewNameSpecified { get; set; }
+}
 }

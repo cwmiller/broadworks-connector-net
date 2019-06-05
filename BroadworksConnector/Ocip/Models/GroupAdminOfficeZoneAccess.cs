@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum GroupAdminOfficeZoneAccess{
-    Full,
-    ReadOnly,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum GroupAdminOfficeZoneAccess
+    {
+        [XmlEnum(Name = "Full")]
+        Full,
+        [XmlEnum(Name = "Read-Only")]
+        ReadOnly,
+    }
 }

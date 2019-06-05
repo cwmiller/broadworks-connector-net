@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCommunicationBarringAuthorizationCodeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "code", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> Code { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> _code;
+
+    [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> Code {
+        get => _code;
+        set {
+            CodeSpecified = true;
+            _code = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CodeSpecified { get; set; }
+}
 }

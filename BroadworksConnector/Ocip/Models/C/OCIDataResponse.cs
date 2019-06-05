@@ -1833,5 +1833,5 @@ namespace BroadworksConnector.Ocip.Models.C
 [XmlInclude(typeof(BroadworksConnector.Ocip.Models.UserShInterfaceGetUserIdDataResponse))]
 public abstract class OCIDataResponse : BroadworksConnector.Ocip.Models.C.OCIResponse
 {
- }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserDevicePoliciesGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "lineMode", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.UserDevicePolicyLineMode LineMode { get; set; }
-    [XmlElement(ElementName = "enableDeviceFeatureSynchronization", IsNullable = false)]
-    public bool EnableDeviceFeatureSynchronization { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
+
+    [XmlElement(ElementName = "lineMode", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.UserDevicePolicyLineMode LineMode {
+        get => _lineMode;
+        set {
+            LineModeSpecified = true;
+            _lineMode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LineModeSpecified { get; set; }
+    private bool _enableDeviceFeatureSynchronization;
+
+    [XmlElement(ElementName = "enableDeviceFeatureSynchronization", IsNullable = false, Namespace = "")]
+    public bool EnableDeviceFeatureSynchronization {
+        get => _enableDeviceFeatureSynchronization;
+        set {
+            EnableDeviceFeatureSynchronizationSpecified = true;
+            _enableDeviceFeatureSynchronization = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableDeviceFeatureSynchronizationSpecified { get; set; }
+}
 }

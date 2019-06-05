@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallingPlanService{
-    IncomingCallingPlan,
-    OutgoingCallingPlan,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallingPlanService
+    {
+        [XmlEnum(Name = "Incoming Calling Plan")]
+        IncomingCallingPlan,
+        [XmlEnum(Name = "Outgoing Calling Plan")]
+        OutgoingCallingPlan,
+    }
 }

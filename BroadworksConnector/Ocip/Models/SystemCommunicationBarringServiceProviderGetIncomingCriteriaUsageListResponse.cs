@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "serviceProviderTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ServiceProviderTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _serviceProviderTable;
+
+    [XmlElement(ElementName = "serviceProviderTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ServiceProviderTable {
+        get => _serviceProviderTable;
+        set {
+            ServiceProviderTableSpecified = true;
+            _serviceProviderTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderTableSpecified { get; set; }
+}
 }

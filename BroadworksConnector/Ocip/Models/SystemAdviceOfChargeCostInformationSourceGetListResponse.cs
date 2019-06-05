@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAdviceOfChargeCostInformationSourceGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "costInformationSourceTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CostInformationSourceTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _costInformationSourceTable;
+
+    [XmlElement(ElementName = "costInformationSourceTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable CostInformationSourceTable {
+        get => _costInformationSourceTable;
+        set {
+            CostInformationSourceTableSpecified = true;
+            _costInformationSourceTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CostInformationSourceTableSpecified { get; set; }
+}
 }

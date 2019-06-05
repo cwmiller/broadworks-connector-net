@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserNumberPortabilityAnnouncementModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "enable", IsNullable = false)]
-    public bool Enable { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private bool _enable;
+
+    [XmlElement(ElementName = "enable", IsNullable = false, Namespace = "")]
+    public bool Enable {
+        get => _enable;
+        set {
+            EnableSpecified = true;
+            _enable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableSpecified { get; set; }
+}
 }

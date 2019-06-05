@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class PasswordModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "oldPassword", IsNullable = false)]
-    public string OldPassword { get; set; }
-    [XmlElement(ElementName = "newPassword", IsNullable = false)]
-    public string NewPassword { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private string _oldPassword;
+
+    [XmlElement(ElementName = "oldPassword", IsNullable = false, Namespace = "")]
+    public string OldPassword {
+        get => _oldPassword;
+        set {
+            OldPasswordSpecified = true;
+            _oldPassword = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OldPasswordSpecified { get; set; }
+    private string _newPassword;
+
+    [XmlElement(ElementName = "newPassword", IsNullable = false, Namespace = "")]
+    public string NewPassword {
+        get => _newPassword;
+        set {
+            NewPasswordSpecified = true;
+            _newPassword = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NewPasswordSpecified { get; set; }
+}
 }

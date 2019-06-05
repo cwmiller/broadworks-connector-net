@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupEnterpriseTrunkGetResponsePriorityWeightedRouting 
 {
-    [XmlElement(ElementName = "priorityWeightedTrunkGroup", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.GroupEnterpriseTrunkPriorityWeightedTrunkGroup> PriorityWeightedTrunkGroup { get; set; }
-    [XmlElement(ElementName = "maximumRerouteAttemptsWithinPriority", IsNullable = false)]
-    public int MaximumRerouteAttemptsWithinPriority { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.GroupEnterpriseTrunkPriorityWeightedTrunkGroup> _priorityWeightedTrunkGroup;
+
+    [XmlElement(ElementName = "priorityWeightedTrunkGroup", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.GroupEnterpriseTrunkPriorityWeightedTrunkGroup> PriorityWeightedTrunkGroup {
+        get => _priorityWeightedTrunkGroup;
+        set {
+            PriorityWeightedTrunkGroupSpecified = true;
+            _priorityWeightedTrunkGroup = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PriorityWeightedTrunkGroupSpecified { get; set; }
+    private int _maximumRerouteAttemptsWithinPriority;
+
+    [XmlElement(ElementName = "maximumRerouteAttemptsWithinPriority", IsNullable = false, Namespace = "")]
+    public int MaximumRerouteAttemptsWithinPriority {
+        get => _maximumRerouteAttemptsWithinPriority;
+        set {
+            MaximumRerouteAttemptsWithinPrioritySpecified = true;
+            _maximumRerouteAttemptsWithinPriority = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaximumRerouteAttemptsWithinPrioritySpecified { get; set; }
+}
 }

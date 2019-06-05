@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserScheduleGetListResponse17sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "scheduleGlobalKey", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.ScheduleGlobalKey> ScheduleGlobalKey { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.ScheduleGlobalKey> _scheduleGlobalKey;
+
+    [XmlElement(ElementName = "scheduleGlobalKey", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.ScheduleGlobalKey> ScheduleGlobalKey {
+        get => _scheduleGlobalKey;
+        set {
+            ScheduleGlobalKeySpecified = true;
+            _scheduleGlobalKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScheduleGlobalKeySpecified { get; set; }
+}
 }

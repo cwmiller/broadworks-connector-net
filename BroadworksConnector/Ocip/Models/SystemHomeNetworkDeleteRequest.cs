@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemHomeNetworkDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "mscAddress", IsNullable = false)]
-    public string MscAddress { get; set; }
- }
+    private string _mscAddress;
+
+    [XmlElement(ElementName = "mscAddress", IsNullable = false, Namespace = "")]
+    public string MscAddress {
+        get => _mscAddress;
+        set {
+            MscAddressSpecified = true;
+            _mscAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MscAddressSpecified { get; set; }
+}
 }

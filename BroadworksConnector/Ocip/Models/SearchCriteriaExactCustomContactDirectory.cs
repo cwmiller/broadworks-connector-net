@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactCustomContactDirectory : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "customContactDirectoryName", IsNullable = false)]
-    public string CustomContactDirectoryName { get; set; }
- }
+    private string _customContactDirectoryName;
+
+    [XmlElement(ElementName = "customContactDirectoryName", IsNullable = false, Namespace = "")]
+    public string CustomContactDirectoryName {
+        get => _customContactDirectoryName;
+        set {
+            CustomContactDirectoryNameSpecified = true;
+            _customContactDirectoryName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CustomContactDirectoryNameSpecified { get; set; }
+}
 }

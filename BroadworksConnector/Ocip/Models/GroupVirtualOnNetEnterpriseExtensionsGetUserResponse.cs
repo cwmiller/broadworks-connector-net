@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupVirtualOnNetEnterpriseExtensionsGetUserResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "extension", IsNullable = false)]
-    public string Extension { get; set; }
-    [XmlElement(ElementName = "firstName", IsNullable = false)]
-    public string FirstName { get; set; }
-    [XmlElement(ElementName = "lastName", IsNullable = false)]
-    public string LastName { get; set; }
-    [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false)]
-    public string CallingLineIdFirstName { get; set; }
-    [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false)]
-    public string CallingLineIdLastName { get; set; }
-    [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false)]
-    public string VirtualOnNetCallTypeName { get; set; }
- }
+    private string _extension;
+
+    [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
+    public string Extension {
+        get => _extension;
+        set {
+            ExtensionSpecified = true;
+            _extension = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExtensionSpecified { get; set; }
+    private string _firstName;
+
+    [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
+    public string FirstName {
+        get => _firstName;
+        set {
+            FirstNameSpecified = true;
+            _firstName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FirstNameSpecified { get; set; }
+    private string _lastName;
+
+    [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
+    public string LastName {
+        get => _lastName;
+        set {
+            LastNameSpecified = true;
+            _lastName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LastNameSpecified { get; set; }
+    private string _callingLineIdFirstName;
+
+    [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
+    public string CallingLineIdFirstName {
+        get => _callingLineIdFirstName;
+        set {
+            CallingLineIdFirstNameSpecified = true;
+            _callingLineIdFirstName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallingLineIdFirstNameSpecified { get; set; }
+    private string _callingLineIdLastName;
+
+    [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
+    public string CallingLineIdLastName {
+        get => _callingLineIdLastName;
+        set {
+            CallingLineIdLastNameSpecified = true;
+            _callingLineIdLastName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallingLineIdLastNameSpecified { get; set; }
+    private string _virtualOnNetCallTypeName;
+
+    [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
+    public string VirtualOnNetCallTypeName {
+        get => _virtualOnNetCallTypeName;
+        set {
+            VirtualOnNetCallTypeNameSpecified = true;
+            _virtualOnNetCallTypeName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VirtualOnNetCallTypeNameSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactCallCenterType : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "callCenterType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterType CallCenterType { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.CallCenterType _callCenterType;
+
+    [XmlElement(ElementName = "callCenterType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallCenterType CallCenterType {
+        get => _callCenterType;
+        set {
+            CallCenterTypeSpecified = true;
+            _callCenterType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallCenterTypeSpecified { get; set; }
+}
 }

@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupDeviceTypeFileGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "deviceType", IsNullable = false)]
-    public string DeviceType { get; set; }
-    [XmlElement(ElementName = "fileType", IsNullable = false)]
-    public string FileType { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private string _deviceType;
+
+    [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
+    public string DeviceType {
+        get => _deviceType;
+        set {
+            DeviceTypeSpecified = true;
+            _deviceType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceTypeSpecified { get; set; }
+    private string _fileType;
+
+    [XmlElement(ElementName = "fileType", IsNullable = false, Namespace = "")]
+    public string FileType {
+        get => _fileType;
+        set {
+            FileTypeSpecified = true;
+            _fileType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileTypeSpecified { get; set; }
+}
 }

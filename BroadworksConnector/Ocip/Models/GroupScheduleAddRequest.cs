@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupScheduleAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "scheduleName", IsNullable = false)]
-    public string ScheduleName { get; set; }
-    [XmlElement(ElementName = "scheduleType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ScheduleType ScheduleType { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private string _scheduleName;
+
+    [XmlElement(ElementName = "scheduleName", IsNullable = false, Namespace = "")]
+    public string ScheduleName {
+        get => _scheduleName;
+        set {
+            ScheduleNameSpecified = true;
+            _scheduleName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScheduleNameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ScheduleType _scheduleType;
+
+    [XmlElement(ElementName = "scheduleType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ScheduleType ScheduleType {
+        get => _scheduleType;
+        set {
+            ScheduleTypeSpecified = true;
+            _scheduleType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScheduleTypeSpecified { get; set; }
+}
 }

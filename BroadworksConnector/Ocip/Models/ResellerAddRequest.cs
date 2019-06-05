@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ResellerAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "resellerId", IsNullable = false)]
-    public string ResellerId { get; set; }
-    [XmlElement(ElementName = "resellerName", IsNullable = false)]
-    public string ResellerName { get; set; }
- }
+    private string _resellerId;
+
+    [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
+    public string ResellerId {
+        get => _resellerId;
+        set {
+            ResellerIdSpecified = true;
+            _resellerId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResellerIdSpecified { get; set; }
+    private string _resellerName;
+
+    [XmlElement(ElementName = "resellerName", IsNullable = false, Namespace = "")]
+    public string ResellerName {
+        get => _resellerName;
+        set {
+            ResellerNameSpecified = true;
+            _resellerName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResellerNameSpecified { get; set; }
+}
 }

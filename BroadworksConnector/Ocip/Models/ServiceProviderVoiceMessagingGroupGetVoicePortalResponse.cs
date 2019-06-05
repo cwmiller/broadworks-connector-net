@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderVoiceMessagingGroupGetVoicePortalResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "voicePortalScope", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ServiceProviderVoicePortalScope VoicePortalScope { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voicePortalScope;
+
+    [XmlElement(ElementName = "voicePortalScope", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ServiceProviderVoicePortalScope VoicePortalScope {
+        get => _voicePortalScope;
+        set {
+            VoicePortalScopeSpecified = true;
+            _voicePortalScope = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VoicePortalScopeSpecified { get; set; }
+}
 }

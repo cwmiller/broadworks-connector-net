@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSelectiveServicesGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "scheduleCombination", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ScheduleCombinationType ScheduleCombination { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.ScheduleCombinationType _scheduleCombination;
+
+    [XmlElement(ElementName = "scheduleCombination", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ScheduleCombinationType ScheduleCombination {
+        get => _scheduleCombination;
+        set {
+            ScheduleCombinationSpecified = true;
+            _scheduleCombination = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScheduleCombinationSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserScheduleGetEventDetailListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "scheduleGlobalKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ScheduleGlobalKey ScheduleGlobalKey { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ScheduleGlobalKey _scheduleGlobalKey;
+
+    [XmlElement(ElementName = "scheduleGlobalKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ScheduleGlobalKey ScheduleGlobalKey {
+        get => _scheduleGlobalKey;
+        set {
+            ScheduleGlobalKeySpecified = true;
+            _scheduleGlobalKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScheduleGlobalKeySpecified { get; set; }
+}
 }

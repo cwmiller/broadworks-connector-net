@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDomainGetListResponse22V2 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "systemDefaultDomain", IsNullable = false)]
-    public string SystemDefaultDomain { get; set; }
-    [XmlElement(ElementName = "domainTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DomainTable { get; set; }
- }
+    private string _systemDefaultDomain;
+
+    [XmlElement(ElementName = "systemDefaultDomain", IsNullable = false, Namespace = "")]
+    public string SystemDefaultDomain {
+        get => _systemDefaultDomain;
+        set {
+            SystemDefaultDomainSpecified = true;
+            _systemDefaultDomain = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SystemDefaultDomainSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _domainTable;
+
+    [XmlElement(ElementName = "domainTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable DomainTable {
+        get => _domainTable;
+        set {
+            DomainTableSpecified = true;
+            _domainTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DomainTableSpecified { get; set; }
+}
 }

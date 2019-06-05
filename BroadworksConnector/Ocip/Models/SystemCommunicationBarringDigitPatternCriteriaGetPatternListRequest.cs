@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCommunicationBarringDigitPatternCriteriaGetPatternListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "name", IsNullable = false)]
-    public string Name { get; set; }
-    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false)]
-    public int ResponseSizeLimit { get; set; }
-    [XmlElement(ElementName = "searchCriteriaDigitPattern", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDigitPattern> SearchCriteriaDigitPattern { get; set; }
- }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private int _responseSizeLimit;
+
+    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
+    public int ResponseSizeLimit {
+        get => _responseSizeLimit;
+        set {
+            ResponseSizeLimitSpecified = true;
+            _responseSizeLimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResponseSizeLimitSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDigitPattern> _searchCriteriaDigitPattern;
+
+    [XmlElement(ElementName = "searchCriteriaDigitPattern", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDigitPattern> SearchCriteriaDigitPattern {
+        get => _searchCriteriaDigitPattern;
+        set {
+            SearchCriteriaDigitPatternSpecified = true;
+            _searchCriteriaDigitPattern = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaDigitPatternSpecified { get; set; }
+}
 }

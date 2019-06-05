@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGETSReservedFeatureAccessCodeModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "code", IsNullable = false)]
-    public string Code { get; set; }
-    [XmlElement(ElementName = "newCode", IsNullable = false)]
-    public string NewCode { get; set; }
-    [XmlElement(ElementName = "description", IsNullable = true)]
-    public string Description { get; set; }
- }
+    private string _code;
+
+    [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
+    public string Code {
+        get => _code;
+        set {
+            CodeSpecified = true;
+            _code = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CodeSpecified { get; set; }
+    private string _newCode;
+
+    [XmlElement(ElementName = "newCode", IsNullable = false, Namespace = "")]
+    public string NewCode {
+        get => _newCode;
+        set {
+            NewCodeSpecified = true;
+            _newCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NewCodeSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+}
 }

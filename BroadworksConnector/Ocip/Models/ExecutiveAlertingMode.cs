@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum ExecutiveAlertingMode{
-    Simultaneous,
-    Sequential,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum ExecutiveAlertingMode
+    {
+        [XmlEnum(Name = "Simultaneous")]
+        Simultaneous,
+        [XmlEnum(Name = "Sequential")]
+        Sequential,
+    }
 }

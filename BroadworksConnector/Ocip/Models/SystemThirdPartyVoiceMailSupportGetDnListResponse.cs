@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemThirdPartyVoiceMailSupportGetDnListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "thirdPartyVoiceMailSupportTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ThirdPartyVoiceMailSupportTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _thirdPartyVoiceMailSupportTable;
+
+    [XmlElement(ElementName = "thirdPartyVoiceMailSupportTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ThirdPartyVoiceMailSupportTable {
+        get => _thirdPartyVoiceMailSupportTable;
+        set {
+            ThirdPartyVoiceMailSupportTableSpecified = true;
+            _thirdPartyVoiceMailSupportTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ThirdPartyVoiceMailSupportTableSpecified { get; set; }
+}
 }

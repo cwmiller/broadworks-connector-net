@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVerifyTranslationAndRoutingResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "Result", IsNullable = false)]
-    public string Result { get; set; }
- }
+    private string _result;
+
+    [XmlElement(ElementName = "Result", IsNullable = false, Namespace = "")]
+    public string Result {
+        get => _result;
+        set {
+            ResultSpecified = true;
+            _result = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResultSpecified { get; set; }
+}
 }

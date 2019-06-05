@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactScheduleLevel : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "level", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ScheduleLevel Level { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.ScheduleLevel _level;
+
+    [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ScheduleLevel Level {
+        get => _level;
+        set {
+            LevelSpecified = true;
+            _level = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LevelSpecified { get; set; }
+}
 }

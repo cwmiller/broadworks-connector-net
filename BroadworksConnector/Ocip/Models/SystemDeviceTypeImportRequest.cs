@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemDeviceTypeImportRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "file", IsNullable = false)]
-    public string File { get; set; }
-    [XmlElement(ElementName = "resellerId", IsNullable = false)]
-    public string ResellerId { get; set; }
- }
+    private string _file;
+
+    [XmlElement(ElementName = "file", IsNullable = false, Namespace = "")]
+    public string File {
+        get => _file;
+        set {
+            FileSpecified = true;
+            _file = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileSpecified { get; set; }
+    private string _resellerId;
+
+    [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
+    public string ResellerId {
+        get => _resellerId;
+        set {
+            ResellerIdSpecified = true;
+            _resellerId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResellerIdSpecified { get; set; }
+}
 }

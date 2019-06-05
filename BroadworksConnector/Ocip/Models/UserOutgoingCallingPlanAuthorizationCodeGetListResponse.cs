@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserOutgoingCallingPlanAuthorizationCodeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "codeEntry", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> CodeEntry { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> _codeEntry;
+
+    [XmlElement(ElementName = "codeEntry", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> CodeEntry {
+        get => _codeEntry;
+        set {
+            CodeEntrySpecified = true;
+            _codeEntry = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CodeEntrySpecified { get; set; }
+}
 }

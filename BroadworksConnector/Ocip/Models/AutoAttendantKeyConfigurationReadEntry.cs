@@ -1,26 +1,117 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class AutoAttendantKeyConfigurationReadEntry 
-{
-    [XmlElement(ElementName = "description", IsNullable = false)]
-    public string Description { get; set; }
-    [XmlElement(ElementName = "action", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AutoAttendantKeyAction Action { get; set; }
-    [XmlElement(ElementName = "phoneNumber", IsNullable = false)]
-    public string PhoneNumber { get; set; }
-    [XmlElement(ElementName = "audioFileDescription", IsNullable = false)]
-    public string AudioFileDescription { get; set; }
-    [XmlElement(ElementName = "audioMediaType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MediaFileType AudioMediaType { get; set; }
-    [XmlElement(ElementName = "videoFileDescription", IsNullable = false)]
-    public string VideoFileDescription { get; set; }
-    [XmlElement(ElementName = "videoMediaType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MediaFileType VideoMediaType { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class AutoAttendantKeyConfigurationReadEntry
+    {
+        private string _description;
+
+        [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+        public string Description
+        {
+            get => _description;
+            set
+            {
+                DescriptionSpecified = true;
+                _description = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool DescriptionSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.AutoAttendantKeyAction _action;
+
+        [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.AutoAttendantKeyAction Action
+        {
+            get => _action;
+            set
+            {
+                ActionSpecified = true;
+                _action = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ActionSpecified { get; set; }
+        private string _phoneNumber;
+
+        [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
+        public string PhoneNumber
+        {
+            get => _phoneNumber;
+            set
+            {
+                PhoneNumberSpecified = true;
+                _phoneNumber = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool PhoneNumberSpecified { get; set; }
+        private string _audioFileDescription;
+
+        [XmlElement(ElementName = "audioFileDescription", IsNullable = false, Namespace = "")]
+        public string AudioFileDescription
+        {
+            get => _audioFileDescription;
+            set
+            {
+                AudioFileDescriptionSpecified = true;
+                _audioFileDescription = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool AudioFileDescriptionSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.MediaFileType _audioMediaType;
+
+        [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.MediaFileType AudioMediaType
+        {
+            get => _audioMediaType;
+            set
+            {
+                AudioMediaTypeSpecified = true;
+                _audioMediaType = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool AudioMediaTypeSpecified { get; set; }
+        private string _videoFileDescription;
+
+        [XmlElement(ElementName = "videoFileDescription", IsNullable = false, Namespace = "")]
+        public string VideoFileDescription
+        {
+            get => _videoFileDescription;
+            set
+            {
+                VideoFileDescriptionSpecified = true;
+                _videoFileDescription = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool VideoFileDescriptionSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.MediaFileType _videoMediaType;
+
+        [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.MediaFileType VideoMediaType
+        {
+            get => _videoMediaType;
+            set
+            {
+                VideoMediaTypeSpecified = true;
+                _videoMediaType = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool VideoMediaTypeSpecified { get; set; }
+    }
 }

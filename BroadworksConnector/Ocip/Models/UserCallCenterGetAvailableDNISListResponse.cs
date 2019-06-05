@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallCenterGetAvailableDNISListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "availableDNIS", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.DNISKey> AvailableDNIS { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.DNISKey> _availableDNIS;
+
+    [XmlElement(ElementName = "availableDNIS", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.DNISKey> AvailableDNIS {
+        get => _availableDNIS;
+        set {
+            AvailableDNISSpecified = true;
+            _availableDNIS = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AvailableDNISSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserMeetMeConferencingGetConferenceRequest20 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "conferenceKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
+
+    [XmlElement(ElementName = "conferenceKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey {
+        get => _conferenceKey;
+        set {
+            ConferenceKeySpecified = true;
+            _conferenceKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ConferenceKeySpecified { get; set; }
+}
 }

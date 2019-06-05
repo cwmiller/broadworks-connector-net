@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallingNameRetrievalSourceIdentity{
-    PresentationIdentity,
-    AssertedIdentity,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallingNameRetrievalSourceIdentity
+    {
+        [XmlEnum(Name = "Presentation Identity")]
+        PresentationIdentity,
+        [XmlEnum(Name = "Asserted Identity")]
+        AssertedIdentity,
+    }
 }

@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCallCenterEnhancedReportingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "archiveReports", IsNullable = false)]
-    public bool ArchiveReports { get; set; }
-    [XmlElement(ElementName = "reportApplicationURL", IsNullable = false)]
-    public string ReportApplicationURL { get; set; }
-    [XmlElement(ElementName = "repositoryApplicationURL", IsNullable = false)]
-    public string RepositoryApplicationURL { get; set; }
- }
+    private bool _archiveReports;
+
+    [XmlElement(ElementName = "archiveReports", IsNullable = false, Namespace = "")]
+    public bool ArchiveReports {
+        get => _archiveReports;
+        set {
+            ArchiveReportsSpecified = true;
+            _archiveReports = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ArchiveReportsSpecified { get; set; }
+    private string _reportApplicationURL;
+
+    [XmlElement(ElementName = "reportApplicationURL", IsNullable = false, Namespace = "")]
+    public string ReportApplicationURL {
+        get => _reportApplicationURL;
+        set {
+            ReportApplicationURLSpecified = true;
+            _reportApplicationURL = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReportApplicationURLSpecified { get; set; }
+    private string _repositoryApplicationURL;
+
+    [XmlElement(ElementName = "repositoryApplicationURL", IsNullable = false, Namespace = "")]
+    public string RepositoryApplicationURL {
+        get => _repositoryApplicationURL;
+        set {
+            RepositoryApplicationURLSpecified = true;
+            _repositoryApplicationURL = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RepositoryApplicationURLSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSpeedDial100ModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "prefix", IsNullable = true)]
-    public string Prefix { get; set; }
- }
+    private string _prefix;
+
+    [XmlElement(ElementName = "prefix", IsNullable = true, Namespace = "")]
+    public string Prefix {
+        get => _prefix;
+        set {
+            PrefixSpecified = true;
+            _prefix = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrefixSpecified { get; set; }
+}
 }

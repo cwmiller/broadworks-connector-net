@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupDnGetAssignmentListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "dnTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DnTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _dnTable;
+
+    [XmlElement(ElementName = "dnTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable DnTable {
+        get => _dnTable;
+        set {
+            DnTableSpecified = true;
+            _dnTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DnTableSpecified { get; set; }
+}
 }

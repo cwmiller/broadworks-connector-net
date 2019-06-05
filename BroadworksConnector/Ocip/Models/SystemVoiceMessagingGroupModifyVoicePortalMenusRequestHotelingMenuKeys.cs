@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestHotelingMenuKeys 
 {
-    [XmlElement(ElementName = "checkHostStatus", IsNullable = true)]
-    public string CheckHostStatus { get; set; }
-    [XmlElement(ElementName = "associateWithHost", IsNullable = true)]
-    public string AssociateWithHost { get; set; }
-    [XmlElement(ElementName = "disassociateFromHost", IsNullable = true)]
-    public string DisassociateFromHost { get; set; }
-    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false)]
-    public string ReturnToPreviousMenu { get; set; }
-    [XmlElement(ElementName = "repeatMenu", IsNullable = true)]
-    public string RepeatMenu { get; set; }
- }
+    private string _checkHostStatus;
+
+    [XmlElement(ElementName = "checkHostStatus", IsNullable = true, Namespace = "")]
+    public string CheckHostStatus {
+        get => _checkHostStatus;
+        set {
+            CheckHostStatusSpecified = true;
+            _checkHostStatus = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CheckHostStatusSpecified { get; set; }
+    private string _associateWithHost;
+
+    [XmlElement(ElementName = "associateWithHost", IsNullable = true, Namespace = "")]
+    public string AssociateWithHost {
+        get => _associateWithHost;
+        set {
+            AssociateWithHostSpecified = true;
+            _associateWithHost = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AssociateWithHostSpecified { get; set; }
+    private string _disassociateFromHost;
+
+    [XmlElement(ElementName = "disassociateFromHost", IsNullable = true, Namespace = "")]
+    public string DisassociateFromHost {
+        get => _disassociateFromHost;
+        set {
+            DisassociateFromHostSpecified = true;
+            _disassociateFromHost = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DisassociateFromHostSpecified { get; set; }
+    private string _returnToPreviousMenu;
+
+    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
+    public string ReturnToPreviousMenu {
+        get => _returnToPreviousMenu;
+        set {
+            ReturnToPreviousMenuSpecified = true;
+            _returnToPreviousMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReturnToPreviousMenuSpecified { get; set; }
+    private string _repeatMenu;
+
+    [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
+    public string RepeatMenu {
+        get => _repeatMenu;
+        set {
+            RepeatMenuSpecified = true;
+            _repeatMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RepeatMenuSpecified { get; set; }
+}
 }

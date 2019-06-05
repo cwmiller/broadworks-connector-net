@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemOutgoingCallingPlanGetRequest17sp3 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

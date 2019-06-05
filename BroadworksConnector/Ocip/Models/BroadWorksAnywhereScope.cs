@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum BroadWorksAnywhereScope{
-    ServiceProvider,
-    Group,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum BroadWorksAnywhereScope
+    {
+        [XmlEnum(Name = "Service Provider")]
+        ServiceProvider,
+        [XmlEnum(Name = "Group")]
+        Group,
+    }
 }

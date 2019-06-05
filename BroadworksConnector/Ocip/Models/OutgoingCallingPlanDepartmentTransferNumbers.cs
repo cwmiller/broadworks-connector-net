@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class OutgoingCallingPlanDepartmentTransferNumbers 
 {
-    [XmlElement(ElementName = "departmentKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey { get; set; }
-    [XmlElement(ElementName = "departmentName", IsNullable = false)]
-    public string DepartmentName { get; set; }
-    [XmlElement(ElementName = "transferNumbers", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers TransferNumbers { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.DepartmentKey _departmentKey;
+
+    [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+        get => _departmentKey;
+        set {
+            DepartmentKeySpecified = true;
+            _departmentKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentKeySpecified { get; set; }
+    private string _departmentName;
+
+    [XmlElement(ElementName = "departmentName", IsNullable = false, Namespace = "")]
+    public string DepartmentName {
+        get => _departmentName;
+        set {
+            DepartmentNameSpecified = true;
+            _departmentName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentNameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers _transferNumbers;
+
+    [XmlElement(ElementName = "transferNumbers", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers TransferNumbers {
+        get => _transferNumbers;
+        set {
+            TransferNumbersSpecified = true;
+            _transferNumbers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TransferNumbersSpecified { get; set; }
+}
 }

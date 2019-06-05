@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemPushNotificationAllowedApplicationModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "applicationId", IsNullable = false)]
-    public string ApplicationId { get; set; }
-    [XmlElement(ElementName = "description", IsNullable = true)]
-    public string Description { get; set; }
- }
+    private string _applicationId;
+
+    [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
+    public string ApplicationId {
+        get => _applicationId;
+        set {
+            ApplicationIdSpecified = true;
+            _applicationId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ApplicationIdSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+}
 }

@@ -1,16 +1,42 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class EnterpriseCommunicationBarringAuthorizationCodeGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-{
-    [XmlElement(ElementName = "description", IsNullable = false)]
-    public string Description { get; set; }
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false)]
-    public string NetworkClassOfService { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class EnterpriseCommunicationBarringAuthorizationCodeGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+    {
+        private string _description;
+
+        [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+        public string Description
+        {
+            get => _description;
+            set
+            {
+                DescriptionSpecified = true;
+                _description = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool DescriptionSpecified { get; set; }
+        private string _networkClassOfService;
+
+        [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+        public string NetworkClassOfService
+        {
+            get => _networkClassOfService;
+            set
+            {
+                NetworkClassOfServiceSpecified = true;
+                _networkClassOfService = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool NetworkClassOfServiceSpecified { get; set; }
+    }
 }

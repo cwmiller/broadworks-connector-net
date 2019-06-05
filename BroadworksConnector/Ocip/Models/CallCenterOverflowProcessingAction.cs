@@ -3,10 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallCenterOverflowProcessingAction{
-    Busy,
-    Transfer,
-    Ringing,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallCenterOverflowProcessingAction
+    {
+        [XmlEnum(Name = "Busy")]
+        Busy,
+        [XmlEnum(Name = "Transfer")]
+        Transfer,
+        [XmlEnum(Name = "Ringing")]
+        Ringing,
+    }
 }

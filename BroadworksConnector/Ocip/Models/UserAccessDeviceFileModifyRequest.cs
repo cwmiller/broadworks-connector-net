@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserAccessDeviceFileModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "accessDevice", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AccessDevice AccessDevice { get; set; }
-    [XmlElement(ElementName = "fileFormat", IsNullable = false)]
-    public string FileFormat { get; set; }
-    [XmlElement(ElementName = "uploadFile", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.FileResource UploadFile { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.AccessDevice _accessDevice;
+
+    [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AccessDevice AccessDevice {
+        get => _accessDevice;
+        set {
+            AccessDeviceSpecified = true;
+            _accessDevice = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessDeviceSpecified { get; set; }
+    private string _fileFormat;
+
+    [XmlElement(ElementName = "fileFormat", IsNullable = false, Namespace = "")]
+    public string FileFormat {
+        get => _fileFormat;
+        set {
+            FileFormatSpecified = true;
+            _fileFormat = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileFormatSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.FileResource _uploadFile;
+
+    [XmlElement(ElementName = "uploadFile", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.FileResource UploadFile {
+        get => _uploadFile;
+        set {
+            UploadFileSpecified = true;
+            _uploadFile = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UploadFileSpecified { get; set; }
+}
 }

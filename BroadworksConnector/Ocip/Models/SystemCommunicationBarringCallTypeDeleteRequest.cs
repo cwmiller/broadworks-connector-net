@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCommunicationBarringCallTypeDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "callType", IsNullable = false)]
-    public string CallType { get; set; }
- }
+    private string _callType;
+
+    [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
+    public string CallType {
+        get => _callType;
+        set {
+            CallTypeSpecified = true;
+            _callType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallTypeSpecified { get; set; }
+}
 }

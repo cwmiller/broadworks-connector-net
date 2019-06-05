@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGeographicRedundancyUnreachableFromPrimaryGetUserListRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userListSizeLimit", IsNullable = false)]
-    public int UserListSizeLimit { get; set; }
- }
+    private int _userListSizeLimit;
+
+    [XmlElement(ElementName = "userListSizeLimit", IsNullable = false, Namespace = "")]
+    public int UserListSizeLimit {
+        get => _userListSizeLimit;
+        set {
+            UserListSizeLimitSpecified = true;
+            _userListSizeLimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserListSizeLimitSpecified { get; set; }
+}
 }

@@ -8,19 +8,96 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserSharedCallAppearanceGetResponse14 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "alertAllAppearancesForClickToDialCalls", IsNullable = false)]
-    public bool AlertAllAppearancesForClickToDialCalls { get; set; }
-    [XmlElement(ElementName = "maxAppearances", IsNullable = false)]
-    public int MaxAppearances { get; set; }
-    [XmlElement(ElementName = "enableMultipleCallArrangement", IsNullable = false)]
-    public bool EnableMultipleCallArrangement { get; set; }
-    [XmlElement(ElementName = "multipleCallArrangementIsActive", IsNullable = false)]
-    public bool MultipleCallArrangementIsActive { get; set; }
-    [XmlElement(ElementName = "endpointTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable EndpointTable { get; set; }
-    [XmlElement(ElementName = "allowBridgingBetweenLocations", IsNullable = false)]
-    public bool AllowBridgingBetweenLocations { get; set; }
-    [XmlElement(ElementName = "bridgeWarningTone", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone { get; set; }
- }
+    private bool _alertAllAppearancesForClickToDialCalls;
+
+    [XmlElement(ElementName = "alertAllAppearancesForClickToDialCalls", IsNullable = false, Namespace = "")]
+    public bool AlertAllAppearancesForClickToDialCalls {
+        get => _alertAllAppearancesForClickToDialCalls;
+        set {
+            AlertAllAppearancesForClickToDialCallsSpecified = true;
+            _alertAllAppearancesForClickToDialCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertAllAppearancesForClickToDialCallsSpecified { get; set; }
+    private int _maxAppearances;
+
+    [XmlElement(ElementName = "maxAppearances", IsNullable = false, Namespace = "")]
+    public int MaxAppearances {
+        get => _maxAppearances;
+        set {
+            MaxAppearancesSpecified = true;
+            _maxAppearances = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxAppearancesSpecified { get; set; }
+    private bool _enableMultipleCallArrangement;
+
+    [XmlElement(ElementName = "enableMultipleCallArrangement", IsNullable = false, Namespace = "")]
+    public bool EnableMultipleCallArrangement {
+        get => _enableMultipleCallArrangement;
+        set {
+            EnableMultipleCallArrangementSpecified = true;
+            _enableMultipleCallArrangement = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableMultipleCallArrangementSpecified { get; set; }
+    private bool _multipleCallArrangementIsActive;
+
+    [XmlElement(ElementName = "multipleCallArrangementIsActive", IsNullable = false, Namespace = "")]
+    public bool MultipleCallArrangementIsActive {
+        get => _multipleCallArrangementIsActive;
+        set {
+            MultipleCallArrangementIsActiveSpecified = true;
+            _multipleCallArrangementIsActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MultipleCallArrangementIsActiveSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _endpointTable;
+
+    [XmlElement(ElementName = "endpointTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable EndpointTable {
+        get => _endpointTable;
+        set {
+            EndpointTableSpecified = true;
+            _endpointTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EndpointTableSpecified { get; set; }
+    private bool _allowBridgingBetweenLocations;
+
+    [XmlElement(ElementName = "allowBridgingBetweenLocations", IsNullable = false, Namespace = "")]
+    public bool AllowBridgingBetweenLocations {
+        get => _allowBridgingBetweenLocations;
+        set {
+            AllowBridgingBetweenLocationsSpecified = true;
+            _allowBridgingBetweenLocations = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowBridgingBetweenLocationsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
+
+    [XmlElement(ElementName = "bridgeWarningTone", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone {
+        get => _bridgeWarningTone;
+        set {
+            BridgeWarningToneSpecified = true;
+            _bridgeWarningTone = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool BridgeWarningToneSpecified { get; set; }
+}
 }

@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemServiceCodeAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceCode", IsNullable = false)]
-    public string ServiceCode { get; set; }
-    [XmlElement(ElementName = "description", IsNullable = false)]
-    public string Description { get; set; }
- }
+    private string _serviceCode;
+
+    [XmlElement(ElementName = "serviceCode", IsNullable = false, Namespace = "")]
+    public string ServiceCode {
+        get => _serviceCode;
+        set {
+            ServiceCodeSpecified = true;
+            _serviceCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceCodeSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+}
 }

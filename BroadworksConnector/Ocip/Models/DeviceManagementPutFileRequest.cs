@@ -1,16 +1,42 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class DeviceManagementPutFileRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
-{
-    [XmlElement(ElementName = "deviceAccessURI", IsNullable = false)]
-    public string DeviceAccessURI { get; set; }
-    [XmlElement(ElementName = "ipAddress", IsNullable = false)]
-    public string IpAddress { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class DeviceManagementPutFileRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+    {
+        private string _deviceAccessURI;
+
+        [XmlElement(ElementName = "deviceAccessURI", IsNullable = false, Namespace = "")]
+        public string DeviceAccessURI
+        {
+            get => _deviceAccessURI;
+            set
+            {
+                DeviceAccessURISpecified = true;
+                _deviceAccessURI = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool DeviceAccessURISpecified { get; set; }
+        private string _ipAddress;
+
+        [XmlElement(ElementName = "ipAddress", IsNullable = false, Namespace = "")]
+        public string IpAddress
+        {
+            get => _ipAddress;
+            set
+            {
+                IpAddressSpecified = true;
+                _ipAddress = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool IpAddressSpecified { get; set; }
+    }
 }

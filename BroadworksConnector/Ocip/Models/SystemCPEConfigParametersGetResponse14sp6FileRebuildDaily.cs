@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCPEConfigParametersGetResponse14sp6FileRebuildDaily 
 {
-    [XmlElement(ElementName = "startHour", IsNullable = false)]
-    public int StartHour { get; set; }
-    [XmlElement(ElementName = "startMinute", IsNullable = false)]
-    public int StartMinute { get; set; }
- }
+    private int _startHour;
+
+    [XmlElement(ElementName = "startHour", IsNullable = false, Namespace = "")]
+    public int StartHour {
+        get => _startHour;
+        set {
+            StartHourSpecified = true;
+            _startHour = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StartHourSpecified { get; set; }
+    private int _startMinute;
+
+    [XmlElement(ElementName = "startMinute", IsNullable = false, Namespace = "")]
+    public int StartMinute {
+        get => _startMinute;
+        set {
+            StartMinuteSpecified = true;
+            _startMinute = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StartMinuteSpecified { get; set; }
+}
 }

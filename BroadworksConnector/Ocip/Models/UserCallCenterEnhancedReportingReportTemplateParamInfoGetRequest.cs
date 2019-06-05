@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallCenterEnhancedReportingReportTemplateParamInfoGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "reportTemplate", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CallCenterReportTemplateKey ReportTemplate { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.CallCenterReportTemplateKey _reportTemplate;
+
+    [XmlElement(ElementName = "reportTemplate", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.CallCenterReportTemplateKey ReportTemplate {
+        get => _reportTemplate;
+        set {
+            ReportTemplateSpecified = true;
+            _reportTemplate = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReportTemplateSpecified { get; set; }
+}
 }

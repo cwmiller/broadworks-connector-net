@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CPEDeviceConfigRebuildType{
-    DeviceType,
-    DeviceProfiles,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CPEDeviceConfigRebuildType
+    {
+        [XmlEnum(Name = "Device Type")]
+        DeviceType,
+        [XmlEnum(Name = "Device Profiles")]
+        DeviceProfiles,
+    }
 }

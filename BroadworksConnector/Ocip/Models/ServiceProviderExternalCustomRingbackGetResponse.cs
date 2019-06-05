@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderExternalCustomRingbackGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "prefixDigits", IsNullable = false)]
-    public string PrefixDigits { get; set; }
-    [XmlElement(ElementName = "serverNetAddress", IsNullable = false)]
-    public string ServerNetAddress { get; set; }
-    [XmlElement(ElementName = "serverPort", IsNullable = false)]
-    public int ServerPort { get; set; }
-    [XmlElement(ElementName = "timeoutSeconds", IsNullable = false)]
-    public int TimeoutSeconds { get; set; }
- }
+    private string _prefixDigits;
+
+    [XmlElement(ElementName = "prefixDigits", IsNullable = false, Namespace = "")]
+    public string PrefixDigits {
+        get => _prefixDigits;
+        set {
+            PrefixDigitsSpecified = true;
+            _prefixDigits = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrefixDigitsSpecified { get; set; }
+    private string _serverNetAddress;
+
+    [XmlElement(ElementName = "serverNetAddress", IsNullable = false, Namespace = "")]
+    public string ServerNetAddress {
+        get => _serverNetAddress;
+        set {
+            ServerNetAddressSpecified = true;
+            _serverNetAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServerNetAddressSpecified { get; set; }
+    private int _serverPort;
+
+    [XmlElement(ElementName = "serverPort", IsNullable = false, Namespace = "")]
+    public int ServerPort {
+        get => _serverPort;
+        set {
+            ServerPortSpecified = true;
+            _serverPort = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServerPortSpecified { get; set; }
+    private int _timeoutSeconds;
+
+    [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
+    public int TimeoutSeconds {
+        get => _timeoutSeconds;
+        set {
+            TimeoutSecondsSpecified = true;
+            _timeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeoutSecondsSpecified { get; set; }
+}
 }

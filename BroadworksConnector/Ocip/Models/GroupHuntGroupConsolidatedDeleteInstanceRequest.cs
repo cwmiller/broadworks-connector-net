@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupHuntGroupConsolidatedDeleteInstanceRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
+
+    [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers {
+        get => _unassignPhoneNumbers;
+        set {
+            UnassignPhoneNumbersSpecified = true;
+            _unassignPhoneNumbers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UnassignPhoneNumbersSpecified { get; set; }
+}
 }

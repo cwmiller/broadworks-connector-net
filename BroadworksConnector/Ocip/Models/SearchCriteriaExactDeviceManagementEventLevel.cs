@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactDeviceManagementEventLevel : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "dmEventLevel", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DeviceManagementEventLevel DmEventLevel { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.DeviceManagementEventLevel _dmEventLevel;
+
+    [XmlElement(ElementName = "dmEventLevel", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DeviceManagementEventLevel DmEventLevel {
+        get => _dmEventLevel;
+        set {
+            DmEventLevelSpecified = true;
+            _dmEventLevel = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DmEventLevelSpecified { get; set; }
+}
 }

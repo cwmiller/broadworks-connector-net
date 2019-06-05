@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSelectiveServicesGetRequest18sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

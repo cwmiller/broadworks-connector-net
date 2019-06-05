@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemPerformanceMeasurementReportingModifyFileServerRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "repositoryUrl", IsNullable = false)]
-    public string RepositoryUrl { get; set; }
-    [XmlElement(ElementName = "passiveFTP", IsNullable = false)]
-    public bool PassiveFTP { get; set; }
- }
+    private string _repositoryUrl;
+
+    [XmlElement(ElementName = "repositoryUrl", IsNullable = false, Namespace = "")]
+    public string RepositoryUrl {
+        get => _repositoryUrl;
+        set {
+            RepositoryUrlSpecified = true;
+            _repositoryUrl = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RepositoryUrlSpecified { get; set; }
+    private bool _passiveFTP;
+
+    [XmlElement(ElementName = "passiveFTP", IsNullable = false, Namespace = "")]
+    public bool PassiveFTP {
+        get => _passiveFTP;
+        set {
+            PassiveFTPSpecified = true;
+            _passiveFTP = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PassiveFTPSpecified { get; set; }
+}
 }

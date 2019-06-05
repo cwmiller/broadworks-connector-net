@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementCustomContactDirectoryEntryList 
 {
-    [XmlElement(ElementName = "entry", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CustomContactDirectoryEntry> Entry { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.CustomContactDirectoryEntry> _entry;
+
+    [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CustomContactDirectoryEntry> Entry {
+        get => _entry;
+        set {
+            EntrySpecified = true;
+            _entry = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EntrySpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserAlternateUserIdGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "userIdTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserIdTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _userIdTable;
+
+    [XmlElement(ElementName = "userIdTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable UserIdTable {
+        get => _userIdTable;
+        set {
+            UserIdTableSpecified = true;
+            _userIdTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdTableSpecified { get; set; }
+}
 }

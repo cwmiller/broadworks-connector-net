@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserAdviceOfChargeGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "aocType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.AdviceOfChargeType AocType { get; set; }
- }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.AdviceOfChargeType _aocType;
+
+    [XmlElement(ElementName = "aocType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.AdviceOfChargeType AocType {
+        get => _aocType;
+        set {
+            AocTypeSpecified = true;
+            _aocType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AocTypeSpecified { get; set; }
+}
 }

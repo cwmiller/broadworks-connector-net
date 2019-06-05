@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemProvisioningValidationGetResponse14sp2 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "isNetworkServerQueryActive", IsNullable = false)]
-    public bool IsNetworkServerQueryActive { get; set; }
-    [XmlElement(ElementName = "timeoutSeconds", IsNullable = false)]
-    public int TimeoutSeconds { get; set; }
- }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private bool _isNetworkServerQueryActive;
+
+    [XmlElement(ElementName = "isNetworkServerQueryActive", IsNullable = false, Namespace = "")]
+    public bool IsNetworkServerQueryActive {
+        get => _isNetworkServerQueryActive;
+        set {
+            IsNetworkServerQueryActiveSpecified = true;
+            _isNetworkServerQueryActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsNetworkServerQueryActiveSpecified { get; set; }
+    private int _timeoutSeconds;
+
+    [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
+    public int TimeoutSeconds {
+        get => _timeoutSeconds;
+        set {
+            TimeoutSecondsSpecified = true;
+            _timeoutSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeoutSecondsSpecified { get; set; }
+}
 }

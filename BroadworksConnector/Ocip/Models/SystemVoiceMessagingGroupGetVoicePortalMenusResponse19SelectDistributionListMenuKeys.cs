@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19SelectDistributionListMenuKeys 
 {
-    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false)]
-    public string ReturnToPreviousMenu { get; set; }
-    [XmlElement(ElementName = "repeatMenuOrFinishEnteringDistributionListNumber", IsNullable = false)]
-    public string RepeatMenuOrFinishEnteringDistributionListNumber { get; set; }
- }
+    private string _returnToPreviousMenu;
+
+    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
+    public string ReturnToPreviousMenu {
+        get => _returnToPreviousMenu;
+        set {
+            ReturnToPreviousMenuSpecified = true;
+            _returnToPreviousMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReturnToPreviousMenuSpecified { get; set; }
+    private string _repeatMenuOrFinishEnteringDistributionListNumber;
+
+    [XmlElement(ElementName = "repeatMenuOrFinishEnteringDistributionListNumber", IsNullable = false, Namespace = "")]
+    public string RepeatMenuOrFinishEnteringDistributionListNumber {
+        get => _repeatMenuOrFinishEnteringDistributionListNumber;
+        set {
+            RepeatMenuOrFinishEnteringDistributionListNumberSpecified = true;
+            _repeatMenuOrFinishEnteringDistributionListNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RepeatMenuOrFinishEnteringDistributionListNumberSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSIPDeviceTypeFileGetListResponse14sp8 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "deviceTypeFilesTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DeviceTypeFilesTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _deviceTypeFilesTable;
+
+    [XmlElement(ElementName = "deviceTypeFilesTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable DeviceTypeFilesTable {
+        get => _deviceTypeFilesTable;
+        set {
+            DeviceTypeFilesTableSpecified = true;
+            _deviceTypeFilesTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceTypeFilesTableSpecified { get; set; }
+}
 }

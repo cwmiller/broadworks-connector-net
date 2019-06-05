@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SortByUserFirstName : BroadworksConnector.Ocip.Models.SortCriteria
 {
- }
+}
 }

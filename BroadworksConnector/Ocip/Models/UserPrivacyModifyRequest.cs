@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPrivacyModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false)]
-    public bool EnableDirectoryPrivacy { get; set; }
-    [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false)]
-    public bool EnableAutoAttendantExtensionDialingPrivacy { get; set; }
-    [XmlElement(ElementName = "enableAutoAttendantNameDialingPrivacy", IsNullable = false)]
-    public bool EnableAutoAttendantNameDialingPrivacy { get; set; }
-    [XmlElement(ElementName = "enablePhoneStatusPrivacy", IsNullable = false)]
-    public bool EnablePhoneStatusPrivacy { get; set; }
-    [XmlElement(ElementName = "permittedMonitorUserIdList", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList PermittedMonitorUserIdList { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private bool _enableDirectoryPrivacy;
+
+    [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
+    public bool EnableDirectoryPrivacy {
+        get => _enableDirectoryPrivacy;
+        set {
+            EnableDirectoryPrivacySpecified = true;
+            _enableDirectoryPrivacy = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableDirectoryPrivacySpecified { get; set; }
+    private bool _enableAutoAttendantExtensionDialingPrivacy;
+
+    [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false, Namespace = "")]
+    public bool EnableAutoAttendantExtensionDialingPrivacy {
+        get => _enableAutoAttendantExtensionDialingPrivacy;
+        set {
+            EnableAutoAttendantExtensionDialingPrivacySpecified = true;
+            _enableAutoAttendantExtensionDialingPrivacy = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableAutoAttendantExtensionDialingPrivacySpecified { get; set; }
+    private bool _enableAutoAttendantNameDialingPrivacy;
+
+    [XmlElement(ElementName = "enableAutoAttendantNameDialingPrivacy", IsNullable = false, Namespace = "")]
+    public bool EnableAutoAttendantNameDialingPrivacy {
+        get => _enableAutoAttendantNameDialingPrivacy;
+        set {
+            EnableAutoAttendantNameDialingPrivacySpecified = true;
+            _enableAutoAttendantNameDialingPrivacy = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableAutoAttendantNameDialingPrivacySpecified { get; set; }
+    private bool _enablePhoneStatusPrivacy;
+
+    [XmlElement(ElementName = "enablePhoneStatusPrivacy", IsNullable = false, Namespace = "")]
+    public bool EnablePhoneStatusPrivacy {
+        get => _enablePhoneStatusPrivacy;
+        set {
+            EnablePhoneStatusPrivacySpecified = true;
+            _enablePhoneStatusPrivacy = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnablePhoneStatusPrivacySpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _permittedMonitorUserIdList;
+
+    [XmlElement(ElementName = "permittedMonitorUserIdList", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementUserIdList PermittedMonitorUserIdList {
+        get => _permittedMonitorUserIdList;
+        set {
+            PermittedMonitorUserIdListSpecified = true;
+            _permittedMonitorUserIdList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PermittedMonitorUserIdListSpecified { get; set; }
+}
 }

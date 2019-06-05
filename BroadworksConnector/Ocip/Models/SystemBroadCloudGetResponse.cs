@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBroadCloudGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "provisioningUrl", IsNullable = false)]
-    public string ProvisioningUrl { get; set; }
-    [XmlElement(ElementName = "provisioningUserId", IsNullable = false)]
-    public string ProvisioningUserId { get; set; }
-    [XmlElement(ElementName = "enableSynchronization", IsNullable = false)]
-    public bool EnableSynchronization { get; set; }
- }
+    private string _provisioningUrl;
+
+    [XmlElement(ElementName = "provisioningUrl", IsNullable = false, Namespace = "")]
+    public string ProvisioningUrl {
+        get => _provisioningUrl;
+        set {
+            ProvisioningUrlSpecified = true;
+            _provisioningUrl = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProvisioningUrlSpecified { get; set; }
+    private string _provisioningUserId;
+
+    [XmlElement(ElementName = "provisioningUserId", IsNullable = false, Namespace = "")]
+    public string ProvisioningUserId {
+        get => _provisioningUserId;
+        set {
+            ProvisioningUserIdSpecified = true;
+            _provisioningUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProvisioningUserIdSpecified { get; set; }
+    private bool _enableSynchronization;
+
+    [XmlElement(ElementName = "enableSynchronization", IsNullable = false, Namespace = "")]
+    public bool EnableSynchronization {
+        get => _enableSynchronization;
+        set {
+            EnableSynchronizationSpecified = true;
+            _enableSynchronization = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableSynchronizationSpecified { get; set; }
+}
 }

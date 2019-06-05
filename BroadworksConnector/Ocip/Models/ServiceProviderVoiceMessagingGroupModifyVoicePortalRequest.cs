@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderVoiceMessagingGroupModifyVoicePortalRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "voicePortalScope", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ServiceProviderVoicePortalScope VoicePortalScope { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voicePortalScope;
+
+    [XmlElement(ElementName = "voicePortalScope", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ServiceProviderVoicePortalScope VoicePortalScope {
+        get => _voicePortalScope;
+        set {
+            VoicePortalScopeSpecified = true;
+            _voicePortalScope = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VoicePortalScopeSpecified { get; set; }
+}
 }

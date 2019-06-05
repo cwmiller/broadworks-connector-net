@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemOCIReportingAddMessageNameListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "netAddress", IsNullable = false)]
-    public string NetAddress { get; set; }
-    [XmlElement(ElementName = "messageNameStartsWith", IsNullable = false)]
-    public List<string> MessageNameStartsWith { get; set; }
- }
+    private string _netAddress;
+
+    [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
+    public string NetAddress {
+        get => _netAddress;
+        set {
+            NetAddressSpecified = true;
+            _netAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetAddressSpecified { get; set; }
+    private List<string> _messageNameStartsWith;
+
+    [XmlElement(ElementName = "messageNameStartsWith", IsNullable = false, Namespace = "")]
+    public List<string> MessageNameStartsWith {
+        get => _messageNameStartsWith;
+        set {
+            MessageNameStartsWithSpecified = true;
+            _messageNameStartsWith = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MessageNameStartsWithSpecified { get; set; }
+}
 }

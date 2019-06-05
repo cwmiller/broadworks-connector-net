@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class OutgoingPinholeDigitPlanDigitPatternCallMeNowPermissions 
 {
-    [XmlElement(ElementName = "digitPatternPermissions", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternCallMeNowPermission> DigitPatternPermissions { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternCallMeNowPermission> _digitPatternPermissions;
+
+    [XmlElement(ElementName = "digitPatternPermissions", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternCallMeNowPermission> DigitPatternPermissions {
+        get => _digitPatternPermissions;
+        set {
+            DigitPatternPermissionsSpecified = true;
+            _digitPatternPermissions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DigitPatternPermissionsSpecified { get; set; }
+}
 }

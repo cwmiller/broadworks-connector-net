@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupTrunkGroupSecurityClassificationGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "defaultSecurityClassification", IsNullable = false)]
-    public string DefaultSecurityClassification { get; set; }
- }
+    private string _defaultSecurityClassification;
+
+    [XmlElement(ElementName = "defaultSecurityClassification", IsNullable = false, Namespace = "")]
+    public string DefaultSecurityClassification {
+        get => _defaultSecurityClassification;
+        set {
+            DefaultSecurityClassificationSpecified = true;
+            _defaultSecurityClassification = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultSecurityClassificationSpecified { get; set; }
+}
 }

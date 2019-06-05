@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19ChangeCurrentIntroductionOrMessageOrReplyMenuKeys 
 {
-    [XmlElement(ElementName = "endRecording", IsNullable = false)]
-    public string EndRecording { get; set; }
- }
+    private string _endRecording;
+
+    [XmlElement(ElementName = "endRecording", IsNullable = false, Namespace = "")]
+    public string EndRecording {
+        get => _endRecording;
+        set {
+            EndRecordingSpecified = true;
+            _endRecording = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EndRecordingSpecified { get; set; }
+}
 }

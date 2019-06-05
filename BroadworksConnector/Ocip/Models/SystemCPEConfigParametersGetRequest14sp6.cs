@@ -8,5 +8,5 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCPEConfigParametersGetRequest14sp6 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
- }
+}
 }

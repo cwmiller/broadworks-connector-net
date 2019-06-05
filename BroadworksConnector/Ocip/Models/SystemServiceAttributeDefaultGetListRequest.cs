@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemServiceAttributeDefaultGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceName", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ServiceCategory ServiceName { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.ServiceCategory _serviceName;
+
+    [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ServiceCategory ServiceName {
+        get => _serviceName;
+        set {
+            ServiceNameSpecified = true;
+            _serviceName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceNameSpecified { get; set; }
+}
 }

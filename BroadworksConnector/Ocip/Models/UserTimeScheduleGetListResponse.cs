@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserTimeScheduleGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "timeScheduleTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable TimeScheduleTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _timeScheduleTable;
+
+    [XmlElement(ElementName = "timeScheduleTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable TimeScheduleTable {
+        get => _timeScheduleTable;
+        set {
+            TimeScheduleTableSpecified = true;
+            _timeScheduleTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TimeScheduleTableSpecified { get; set; }
+}
 }

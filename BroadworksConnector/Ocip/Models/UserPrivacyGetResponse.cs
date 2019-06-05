@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPrivacyGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false)]
-    public bool EnableDirectoryPrivacy { get; set; }
- }
+    private bool _enableDirectoryPrivacy;
+
+    [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
+    public bool EnableDirectoryPrivacy {
+        get => _enableDirectoryPrivacy;
+        set {
+            EnableDirectoryPrivacySpecified = true;
+            _enableDirectoryPrivacy = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableDirectoryPrivacySpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class MWIDeliveryToMobileEndpointTemplateBody 
 {
-    [XmlElement(ElementName = "line", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> Line { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> _line;
+
+    [XmlElement(ElementName = "line", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> Line {
+        get => _line;
+        set {
+            LineSpecified = true;
+            _line = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LineSpecified { get; set; }
+}
 }

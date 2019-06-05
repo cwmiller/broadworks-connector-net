@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupEnterpriseTrunkAddRequestOrderedRouting 
 {
-    [XmlElement(ElementName = "trunkGroup", IsNullable = false)]
-    public List<string> TrunkGroup { get; set; }
-    [XmlElement(ElementName = "orderingAlgorithm", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm OrderingAlgorithm { get; set; }
- }
+    private List<string> _trunkGroup;
+
+    [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
+    public List<string> TrunkGroup {
+        get => _trunkGroup;
+        set {
+            TrunkGroupSpecified = true;
+            _trunkGroup = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TrunkGroupSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm _orderingAlgorithm;
+
+    [XmlElement(ElementName = "orderingAlgorithm", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm OrderingAlgorithm {
+        get => _orderingAlgorithm;
+        set {
+            OrderingAlgorithmSpecified = true;
+            _orderingAlgorithm = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool OrderingAlgorithmSpecified { get; set; }
+}
 }

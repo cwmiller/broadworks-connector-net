@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "isRouteRoundRobin", IsNullable = false)]
-    public bool IsRouteRoundRobin { get; set; }
-    [XmlElement(ElementName = "routeTimerSeconds", IsNullable = false)]
-    public int RouteTimerSeconds { get; set; }
-    [XmlElement(ElementName = "dnsResolvedAddressSelectionPolicy", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy DnsResolvedAddressSelectionPolicy { get; set; }
-    [XmlElement(ElementName = "statefulExpirationMinutes", IsNullable = false)]
-    public int StatefulExpirationMinutes { get; set; }
-    [XmlElement(ElementName = "maxAddressesPerHostname", IsNullable = false)]
-    public int MaxAddressesPerHostname { get; set; }
-    [XmlElement(ElementName = "maxAddressesDuringSetup", IsNullable = false)]
-    public int MaxAddressesDuringSetup { get; set; }
- }
+    private bool _isRouteRoundRobin;
+
+    [XmlElement(ElementName = "isRouteRoundRobin", IsNullable = false, Namespace = "")]
+    public bool IsRouteRoundRobin {
+        get => _isRouteRoundRobin;
+        set {
+            IsRouteRoundRobinSpecified = true;
+            _isRouteRoundRobin = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsRouteRoundRobinSpecified { get; set; }
+    private int _routeTimerSeconds;
+
+    [XmlElement(ElementName = "routeTimerSeconds", IsNullable = false, Namespace = "")]
+    public int RouteTimerSeconds {
+        get => _routeTimerSeconds;
+        set {
+            RouteTimerSecondsSpecified = true;
+            _routeTimerSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RouteTimerSecondsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy _dnsResolvedAddressSelectionPolicy;
+
+    [XmlElement(ElementName = "dnsResolvedAddressSelectionPolicy", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy DnsResolvedAddressSelectionPolicy {
+        get => _dnsResolvedAddressSelectionPolicy;
+        set {
+            DnsResolvedAddressSelectionPolicySpecified = true;
+            _dnsResolvedAddressSelectionPolicy = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DnsResolvedAddressSelectionPolicySpecified { get; set; }
+    private int _statefulExpirationMinutes;
+
+    [XmlElement(ElementName = "statefulExpirationMinutes", IsNullable = false, Namespace = "")]
+    public int StatefulExpirationMinutes {
+        get => _statefulExpirationMinutes;
+        set {
+            StatefulExpirationMinutesSpecified = true;
+            _statefulExpirationMinutes = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StatefulExpirationMinutesSpecified { get; set; }
+    private int _maxAddressesPerHostname;
+
+    [XmlElement(ElementName = "maxAddressesPerHostname", IsNullable = false, Namespace = "")]
+    public int MaxAddressesPerHostname {
+        get => _maxAddressesPerHostname;
+        set {
+            MaxAddressesPerHostnameSpecified = true;
+            _maxAddressesPerHostname = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxAddressesPerHostnameSpecified { get; set; }
+    private int _maxAddressesDuringSetup;
+
+    [XmlElement(ElementName = "maxAddressesDuringSetup", IsNullable = false, Namespace = "")]
+    public int MaxAddressesDuringSetup {
+        get => _maxAddressesDuringSetup;
+        set {
+            MaxAddressesDuringSetupSpecified = true;
+            _maxAddressesDuringSetup = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxAddressesDuringSetupSpecified { get; set; }
+}
 }

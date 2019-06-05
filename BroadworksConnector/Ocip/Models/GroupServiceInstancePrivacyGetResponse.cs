@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupServiceInstancePrivacyGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false)]
-    public bool EnableDirectoryPrivacy { get; set; }
-    [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false)]
-    public bool EnableAutoAttendantExtensionDialingPrivacy { get; set; }
- }
+    private bool _enableDirectoryPrivacy;
+
+    [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
+    public bool EnableDirectoryPrivacy {
+        get => _enableDirectoryPrivacy;
+        set {
+            EnableDirectoryPrivacySpecified = true;
+            _enableDirectoryPrivacy = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableDirectoryPrivacySpecified { get; set; }
+    private bool _enableAutoAttendantExtensionDialingPrivacy;
+
+    [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false, Namespace = "")]
+    public bool EnableAutoAttendantExtensionDialingPrivacy {
+        get => _enableAutoAttendantExtensionDialingPrivacy;
+        set {
+            EnableAutoAttendantExtensionDialingPrivacySpecified = true;
+            _enableAutoAttendantExtensionDialingPrivacy = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableAutoAttendantExtensionDialingPrivacySpecified { get; set; }
+}
 }

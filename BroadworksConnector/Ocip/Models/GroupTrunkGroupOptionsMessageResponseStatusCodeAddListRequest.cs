@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupTrunkGroupOptionsMessageResponseStatusCodeAddListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "trunkGroupKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey { get; set; }
-    [XmlElement(ElementName = "statusCode", IsNullable = false)]
-    public List<string> StatusCode { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
+
+    [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey {
+        get => _trunkGroupKey;
+        set {
+            TrunkGroupKeySpecified = true;
+            _trunkGroupKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TrunkGroupKeySpecified { get; set; }
+    private List<string> _statusCode;
+
+    [XmlElement(ElementName = "statusCode", IsNullable = false, Namespace = "")]
+    public List<string> StatusCode {
+        get => _statusCode;
+        set {
+            StatusCodeSpecified = true;
+            _statusCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool StatusCodeSpecified { get; set; }
+}
 }

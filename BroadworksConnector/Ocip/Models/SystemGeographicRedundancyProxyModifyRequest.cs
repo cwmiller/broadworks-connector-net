@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGeographicRedundancyProxyModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "enabled", IsNullable = false)]
-    public bool Enabled { get; set; }
- }
+    private bool _enabled;
+
+    [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
+    public bool Enabled {
+        get => _enabled;
+        set {
+            EnabledSpecified = true;
+            _enabled = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnabledSpecified { get; set; }
+}
 }

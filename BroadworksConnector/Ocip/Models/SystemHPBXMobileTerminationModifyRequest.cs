@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemHPBXMobileTerminationModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "routingPrefix", IsNullable = true)]
-    public string RoutingPrefix { get; set; }
- }
+    private string _routingPrefix;
+
+    [XmlElement(ElementName = "routingPrefix", IsNullable = true, Namespace = "")]
+    public string RoutingPrefix {
+        get => _routingPrefix;
+        set {
+            RoutingPrefixSpecified = true;
+            _routingPrefix = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RoutingPrefixSpecified { get; set; }
+}
 }

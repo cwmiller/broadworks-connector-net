@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactPolicySelection : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "policySelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection PolicySelection { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection _policySelection;
+
+    [XmlElement(ElementName = "policySelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection PolicySelection {
+        get => _policySelection;
+        set {
+            PolicySelectionSpecified = true;
+            _policySelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PolicySelectionSpecified { get; set; }
+}
 }

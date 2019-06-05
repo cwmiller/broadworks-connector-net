@@ -8,27 +8,148 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemLicensingGetResponse14sp3 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "licenseStrictness", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.LicenseStrictness LicenseStrictness { get; set; }
-    [XmlElement(ElementName = "groupUserlimit", IsNullable = false)]
-    public int GroupUserlimit { get; set; }
-    [XmlElement(ElementName = "expirationDate", IsNullable = false)]
-    public string ExpirationDate { get; set; }
-    [XmlElement(ElementName = "hostId", IsNullable = false)]
-    public List<string> HostId { get; set; }
-    [XmlElement(ElementName = "licenseName", IsNullable = false)]
-    public List<string> LicenseName { get; set; }
-    [XmlElement(ElementName = "numberOfTrunkUsers", IsNullable = false)]
-    public int NumberOfTrunkUsers { get; set; }
-    [XmlElement(ElementName = "subscriberLicenseTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable SubscriberLicenseTable { get; set; }
-    [XmlElement(ElementName = "groupServiceLicenseTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable GroupServiceLicenseTable { get; set; }
-    [XmlElement(ElementName = "virtualServiceLicenseTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable VirtualServiceLicenseTable { get; set; }
-    [XmlElement(ElementName = "userServiceLicenseTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserServiceLicenseTable { get; set; }
-    [XmlElement(ElementName = "systemParamLicenseTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable SystemParamLicenseTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.LicenseStrictness _licenseStrictness;
+
+    [XmlElement(ElementName = "licenseStrictness", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.LicenseStrictness LicenseStrictness {
+        get => _licenseStrictness;
+        set {
+            LicenseStrictnessSpecified = true;
+            _licenseStrictness = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LicenseStrictnessSpecified { get; set; }
+    private int _groupUserlimit;
+
+    [XmlElement(ElementName = "groupUserlimit", IsNullable = false, Namespace = "")]
+    public int GroupUserlimit {
+        get => _groupUserlimit;
+        set {
+            GroupUserlimitSpecified = true;
+            _groupUserlimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupUserlimitSpecified { get; set; }
+    private string _expirationDate;
+
+    [XmlElement(ElementName = "expirationDate", IsNullable = false, Namespace = "")]
+    public string ExpirationDate {
+        get => _expirationDate;
+        set {
+            ExpirationDateSpecified = true;
+            _expirationDate = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExpirationDateSpecified { get; set; }
+    private List<string> _hostId;
+
+    [XmlElement(ElementName = "hostId", IsNullable = false, Namespace = "")]
+    public List<string> HostId {
+        get => _hostId;
+        set {
+            HostIdSpecified = true;
+            _hostId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HostIdSpecified { get; set; }
+    private List<string> _licenseName;
+
+    [XmlElement(ElementName = "licenseName", IsNullable = false, Namespace = "")]
+    public List<string> LicenseName {
+        get => _licenseName;
+        set {
+            LicenseNameSpecified = true;
+            _licenseName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LicenseNameSpecified { get; set; }
+    private int _numberOfTrunkUsers;
+
+    [XmlElement(ElementName = "numberOfTrunkUsers", IsNullable = false, Namespace = "")]
+    public int NumberOfTrunkUsers {
+        get => _numberOfTrunkUsers;
+        set {
+            NumberOfTrunkUsersSpecified = true;
+            _numberOfTrunkUsers = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NumberOfTrunkUsersSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _subscriberLicenseTable;
+
+    [XmlElement(ElementName = "subscriberLicenseTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable SubscriberLicenseTable {
+        get => _subscriberLicenseTable;
+        set {
+            SubscriberLicenseTableSpecified = true;
+            _subscriberLicenseTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SubscriberLicenseTableSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _groupServiceLicenseTable;
+
+    [XmlElement(ElementName = "groupServiceLicenseTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable GroupServiceLicenseTable {
+        get => _groupServiceLicenseTable;
+        set {
+            GroupServiceLicenseTableSpecified = true;
+            _groupServiceLicenseTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupServiceLicenseTableSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _virtualServiceLicenseTable;
+
+    [XmlElement(ElementName = "virtualServiceLicenseTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable VirtualServiceLicenseTable {
+        get => _virtualServiceLicenseTable;
+        set {
+            VirtualServiceLicenseTableSpecified = true;
+            _virtualServiceLicenseTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VirtualServiceLicenseTableSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _userServiceLicenseTable;
+
+    [XmlElement(ElementName = "userServiceLicenseTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable UserServiceLicenseTable {
+        get => _userServiceLicenseTable;
+        set {
+            UserServiceLicenseTableSpecified = true;
+            _userServiceLicenseTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserServiceLicenseTableSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _systemParamLicenseTable;
+
+    [XmlElement(ElementName = "systemParamLicenseTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable SystemParamLicenseTable {
+        get => _systemParamLicenseTable;
+        set {
+            SystemParamLicenseTableSpecified = true;
+            _systemParamLicenseTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SystemParamLicenseTableSpecified { get; set; }
+}
 }

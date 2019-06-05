@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemMultimediaPolicyGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "restrictNonAudioVideoMediaTypes", IsNullable = false)]
-    public bool RestrictNonAudioVideoMediaTypes { get; set; }
- }
+    private bool _restrictNonAudioVideoMediaTypes;
+
+    [XmlElement(ElementName = "restrictNonAudioVideoMediaTypes", IsNullable = false, Namespace = "")]
+    public bool RestrictNonAudioVideoMediaTypes {
+        get => _restrictNonAudioVideoMediaTypes;
+        set {
+            RestrictNonAudioVideoMediaTypesSpecified = true;
+            _restrictNonAudioVideoMediaTypes = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RestrictNonAudioVideoMediaTypesSpecified { get; set; }
+}
 }

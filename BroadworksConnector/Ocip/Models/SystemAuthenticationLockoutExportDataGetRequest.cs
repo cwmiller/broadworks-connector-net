@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAuthenticationLockoutExportDataGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "fileName", IsNullable = false)]
-    public string FileName { get; set; }
- }
+    private string _fileName;
+
+    [XmlElement(ElementName = "fileName", IsNullable = false, Namespace = "")]
+    public string FileName {
+        get => _fileName;
+        set {
+            FileNameSpecified = true;
+            _fileName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileNameSpecified { get; set; }
+}
 }

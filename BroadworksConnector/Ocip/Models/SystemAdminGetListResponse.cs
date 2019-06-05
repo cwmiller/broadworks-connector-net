@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAdminGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "systemAdminTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable SystemAdminTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _systemAdminTable;
+
+    [XmlElement(ElementName = "systemAdminTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable SystemAdminTable {
+        get => _systemAdminTable;
+        set {
+            SystemAdminTableSpecified = true;
+            _systemAdminTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SystemAdminTableSpecified { get; set; }
+}
 }

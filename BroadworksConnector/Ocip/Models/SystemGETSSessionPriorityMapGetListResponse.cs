@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemGETSSessionPriorityMapGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "sessionPriorityTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable SessionPriorityTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _sessionPriorityTable;
+
+    [XmlElement(ElementName = "sessionPriorityTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable SessionPriorityTable {
+        get => _sessionPriorityTable;
+        set {
+            SessionPriorityTableSpecified = true;
+            _sessionPriorityTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SessionPriorityTableSpecified { get; set; }
+}
 }

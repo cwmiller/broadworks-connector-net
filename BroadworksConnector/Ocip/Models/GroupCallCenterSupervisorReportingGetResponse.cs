@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCallCenterSupervisorReportingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "reportingServerName", IsNullable = false)]
-    public string ReportingServerName { get; set; }
-    [XmlElement(ElementName = "supervisorTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable SupervisorTable { get; set; }
- }
+    private string _reportingServerName;
+
+    [XmlElement(ElementName = "reportingServerName", IsNullable = false, Namespace = "")]
+    public string ReportingServerName {
+        get => _reportingServerName;
+        set {
+            ReportingServerNameSpecified = true;
+            _reportingServerName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReportingServerNameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _supervisorTable;
+
+    [XmlElement(ElementName = "supervisorTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable SupervisorTable {
+        get => _supervisorTable;
+        set {
+            SupervisorTableSpecified = true;
+            _supervisorTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SupervisorTableSpecified { get; set; }
+}
 }

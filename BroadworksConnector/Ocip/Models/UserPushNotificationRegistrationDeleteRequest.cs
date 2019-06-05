@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserPushNotificationRegistrationDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "registrationId", IsNullable = false)]
-    public string RegistrationId { get; set; }
- }
+    private string _registrationId;
+
+    [XmlElement(ElementName = "registrationId", IsNullable = false, Namespace = "")]
+    public string RegistrationId {
+        get => _registrationId;
+        set {
+            RegistrationIdSpecified = true;
+            _registrationId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RegistrationIdSpecified { get; set; }
+}
 }

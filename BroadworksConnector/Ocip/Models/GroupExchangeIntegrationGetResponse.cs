@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupExchangeIntegrationGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableExchangeIntegration", IsNullable = false)]
-    public bool EnableExchangeIntegration { get; set; }
-    [XmlElement(ElementName = "exchangeURL", IsNullable = false)]
-    public string ExchangeURL { get; set; }
-    [XmlElement(ElementName = "exchangeUserName", IsNullable = false)]
-    public string ExchangeUserName { get; set; }
- }
+    private bool _enableExchangeIntegration;
+
+    [XmlElement(ElementName = "enableExchangeIntegration", IsNullable = false, Namespace = "")]
+    public bool EnableExchangeIntegration {
+        get => _enableExchangeIntegration;
+        set {
+            EnableExchangeIntegrationSpecified = true;
+            _enableExchangeIntegration = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableExchangeIntegrationSpecified { get; set; }
+    private string _exchangeURL;
+
+    [XmlElement(ElementName = "exchangeURL", IsNullable = false, Namespace = "")]
+    public string ExchangeURL {
+        get => _exchangeURL;
+        set {
+            ExchangeURLSpecified = true;
+            _exchangeURL = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExchangeURLSpecified { get; set; }
+    private string _exchangeUserName;
+
+    [XmlElement(ElementName = "exchangeUserName", IsNullable = false, Namespace = "")]
+    public string ExchangeUserName {
+        get => _exchangeUserName;
+        set {
+            ExchangeUserNameSpecified = true;
+            _exchangeUserName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExchangeUserNameSpecified { get; set; }
+}
 }

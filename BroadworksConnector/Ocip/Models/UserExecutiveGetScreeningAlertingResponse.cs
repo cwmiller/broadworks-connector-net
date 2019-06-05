@@ -8,39 +8,226 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserExecutiveGetScreeningAlertingResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enableScreening", IsNullable = false)]
-    public bool EnableScreening { get; set; }
-    [XmlElement(ElementName = "screeningAlertType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExecutiveScreeningAlertType ScreeningAlertType { get; set; }
-    [XmlElement(ElementName = "alertBroadWorksMobilityLocation", IsNullable = false)]
-    public bool AlertBroadWorksMobilityLocation { get; set; }
-    [XmlElement(ElementName = "alertBroadWorksAnywhereLocations", IsNullable = false)]
-    public bool AlertBroadWorksAnywhereLocations { get; set; }
-    [XmlElement(ElementName = "alertSharedCallAppearanceLocations", IsNullable = false)]
-    public bool AlertSharedCallAppearanceLocations { get; set; }
-    [XmlElement(ElementName = "alertingMode", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExecutiveAlertingMode AlertingMode { get; set; }
-    [XmlElement(ElementName = "alertingCallingLineIdNameMode", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode AlertingCallingLineIdNameMode { get; set; }
-    [XmlElement(ElementName = "alertingCustomCallingLineIdName", IsNullable = false)]
-    public string AlertingCustomCallingLineIdName { get; set; }
-    [XmlElement(ElementName = "unicodeAlertingCustomCallingLineIdName", IsNullable = false)]
-    public string UnicodeAlertingCustomCallingLineIdName { get; set; }
-    [XmlElement(ElementName = "alertingCallingLineIdPhoneNumberMode", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode AlertingCallingLineIdPhoneNumberMode { get; set; }
-    [XmlElement(ElementName = "alertingCustomCallingLineIdPhoneNumber", IsNullable = false)]
-    public string AlertingCustomCallingLineIdPhoneNumber { get; set; }
-    [XmlElement(ElementName = "callPushRecallNumberOfRings", IsNullable = false)]
-    public int CallPushRecallNumberOfRings { get; set; }
-    [XmlElement(ElementName = "nextAssistantNumberOfRings", IsNullable = false)]
-    public int NextAssistantNumberOfRings { get; set; }
-    [XmlElement(ElementName = "enableRollover", IsNullable = false)]
-    public bool EnableRollover { get; set; }
-    [XmlElement(ElementName = "rolloverWaitTimeSeconds", IsNullable = false)]
-    public int RolloverWaitTimeSeconds { get; set; }
-    [XmlElement(ElementName = "rolloverAction", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExecutiveRolloverActionType RolloverAction { get; set; }
-    [XmlElement(ElementName = "rolloverForwardToPhoneNumber", IsNullable = false)]
-    public string RolloverForwardToPhoneNumber { get; set; }
- }
+    private bool _enableScreening;
+
+    [XmlElement(ElementName = "enableScreening", IsNullable = false, Namespace = "")]
+    public bool EnableScreening {
+        get => _enableScreening;
+        set {
+            EnableScreeningSpecified = true;
+            _enableScreening = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableScreeningSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExecutiveScreeningAlertType _screeningAlertType;
+
+    [XmlElement(ElementName = "screeningAlertType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExecutiveScreeningAlertType ScreeningAlertType {
+        get => _screeningAlertType;
+        set {
+            ScreeningAlertTypeSpecified = true;
+            _screeningAlertType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScreeningAlertTypeSpecified { get; set; }
+    private bool _alertBroadWorksMobilityLocation;
+
+    [XmlElement(ElementName = "alertBroadWorksMobilityLocation", IsNullable = false, Namespace = "")]
+    public bool AlertBroadWorksMobilityLocation {
+        get => _alertBroadWorksMobilityLocation;
+        set {
+            AlertBroadWorksMobilityLocationSpecified = true;
+            _alertBroadWorksMobilityLocation = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertBroadWorksMobilityLocationSpecified { get; set; }
+    private bool _alertBroadWorksAnywhereLocations;
+
+    [XmlElement(ElementName = "alertBroadWorksAnywhereLocations", IsNullable = false, Namespace = "")]
+    public bool AlertBroadWorksAnywhereLocations {
+        get => _alertBroadWorksAnywhereLocations;
+        set {
+            AlertBroadWorksAnywhereLocationsSpecified = true;
+            _alertBroadWorksAnywhereLocations = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertBroadWorksAnywhereLocationsSpecified { get; set; }
+    private bool _alertSharedCallAppearanceLocations;
+
+    [XmlElement(ElementName = "alertSharedCallAppearanceLocations", IsNullable = false, Namespace = "")]
+    public bool AlertSharedCallAppearanceLocations {
+        get => _alertSharedCallAppearanceLocations;
+        set {
+            AlertSharedCallAppearanceLocationsSpecified = true;
+            _alertSharedCallAppearanceLocations = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertSharedCallAppearanceLocationsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExecutiveAlertingMode _alertingMode;
+
+    [XmlElement(ElementName = "alertingMode", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExecutiveAlertingMode AlertingMode {
+        get => _alertingMode;
+        set {
+            AlertingModeSpecified = true;
+            _alertingMode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertingModeSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode _alertingCallingLineIdNameMode;
+
+    [XmlElement(ElementName = "alertingCallingLineIdNameMode", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode AlertingCallingLineIdNameMode {
+        get => _alertingCallingLineIdNameMode;
+        set {
+            AlertingCallingLineIdNameModeSpecified = true;
+            _alertingCallingLineIdNameMode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertingCallingLineIdNameModeSpecified { get; set; }
+    private string _alertingCustomCallingLineIdName;
+
+    [XmlElement(ElementName = "alertingCustomCallingLineIdName", IsNullable = false, Namespace = "")]
+    public string AlertingCustomCallingLineIdName {
+        get => _alertingCustomCallingLineIdName;
+        set {
+            AlertingCustomCallingLineIdNameSpecified = true;
+            _alertingCustomCallingLineIdName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertingCustomCallingLineIdNameSpecified { get; set; }
+    private string _unicodeAlertingCustomCallingLineIdName;
+
+    [XmlElement(ElementName = "unicodeAlertingCustomCallingLineIdName", IsNullable = false, Namespace = "")]
+    public string UnicodeAlertingCustomCallingLineIdName {
+        get => _unicodeAlertingCustomCallingLineIdName;
+        set {
+            UnicodeAlertingCustomCallingLineIdNameSpecified = true;
+            _unicodeAlertingCustomCallingLineIdName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UnicodeAlertingCustomCallingLineIdNameSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode _alertingCallingLineIdPhoneNumberMode;
+
+    [XmlElement(ElementName = "alertingCallingLineIdPhoneNumberMode", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode AlertingCallingLineIdPhoneNumberMode {
+        get => _alertingCallingLineIdPhoneNumberMode;
+        set {
+            AlertingCallingLineIdPhoneNumberModeSpecified = true;
+            _alertingCallingLineIdPhoneNumberMode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertingCallingLineIdPhoneNumberModeSpecified { get; set; }
+    private string _alertingCustomCallingLineIdPhoneNumber;
+
+    [XmlElement(ElementName = "alertingCustomCallingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
+    public string AlertingCustomCallingLineIdPhoneNumber {
+        get => _alertingCustomCallingLineIdPhoneNumber;
+        set {
+            AlertingCustomCallingLineIdPhoneNumberSpecified = true;
+            _alertingCustomCallingLineIdPhoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AlertingCustomCallingLineIdPhoneNumberSpecified { get; set; }
+    private int _callPushRecallNumberOfRings;
+
+    [XmlElement(ElementName = "callPushRecallNumberOfRings", IsNullable = false, Namespace = "")]
+    public int CallPushRecallNumberOfRings {
+        get => _callPushRecallNumberOfRings;
+        set {
+            CallPushRecallNumberOfRingsSpecified = true;
+            _callPushRecallNumberOfRings = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallPushRecallNumberOfRingsSpecified { get; set; }
+    private int _nextAssistantNumberOfRings;
+
+    [XmlElement(ElementName = "nextAssistantNumberOfRings", IsNullable = false, Namespace = "")]
+    public int NextAssistantNumberOfRings {
+        get => _nextAssistantNumberOfRings;
+        set {
+            NextAssistantNumberOfRingsSpecified = true;
+            _nextAssistantNumberOfRings = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NextAssistantNumberOfRingsSpecified { get; set; }
+    private bool _enableRollover;
+
+    [XmlElement(ElementName = "enableRollover", IsNullable = false, Namespace = "")]
+    public bool EnableRollover {
+        get => _enableRollover;
+        set {
+            EnableRolloverSpecified = true;
+            _enableRollover = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableRolloverSpecified { get; set; }
+    private int _rolloverWaitTimeSeconds;
+
+    [XmlElement(ElementName = "rolloverWaitTimeSeconds", IsNullable = false, Namespace = "")]
+    public int RolloverWaitTimeSeconds {
+        get => _rolloverWaitTimeSeconds;
+        set {
+            RolloverWaitTimeSecondsSpecified = true;
+            _rolloverWaitTimeSeconds = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RolloverWaitTimeSecondsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExecutiveRolloverActionType _rolloverAction;
+
+    [XmlElement(ElementName = "rolloverAction", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExecutiveRolloverActionType RolloverAction {
+        get => _rolloverAction;
+        set {
+            RolloverActionSpecified = true;
+            _rolloverAction = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RolloverActionSpecified { get; set; }
+    private string _rolloverForwardToPhoneNumber;
+
+    [XmlElement(ElementName = "rolloverForwardToPhoneNumber", IsNullable = false, Namespace = "")]
+    public string RolloverForwardToPhoneNumber {
+        get => _rolloverForwardToPhoneNumber;
+        set {
+            RolloverForwardToPhoneNumberSpecified = true;
+            _rolloverForwardToPhoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RolloverForwardToPhoneNumberSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemMediaSetGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "mediaName", IsNullable = false)]
-    public List<string> MediaName { get; set; }
- }
+    private List<string> _mediaName;
+
+    [XmlElement(ElementName = "mediaName", IsNullable = false, Namespace = "")]
+    public List<string> MediaName {
+        get => _mediaName;
+        set {
+            MediaNameSpecified = true;
+            _mediaName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MediaNameSpecified { get; set; }
+}
 }

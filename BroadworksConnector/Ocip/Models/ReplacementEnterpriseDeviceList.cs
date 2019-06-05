@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementEnterpriseDeviceList 
 {
-    [XmlElement(ElementName = "device", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.EnterpriseAccessDevice> Device { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.EnterpriseAccessDevice> _device;
+
+    [XmlElement(ElementName = "device", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.EnterpriseAccessDevice> Device {
+        get => _device;
+        set {
+            DeviceSpecified = true;
+            _device = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceSpecified { get; set; }
+}
 }

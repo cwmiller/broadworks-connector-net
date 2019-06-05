@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ReplacementCombinedUserServiceAssignmentList 
 {
-    [XmlElement(ElementName = "serviceName", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.CombinedUserServiceAssignment> ServiceName { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.CombinedUserServiceAssignment> _serviceName;
+
+    [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.CombinedUserServiceAssignment> ServiceName {
+        get => _serviceName;
+        set {
+            ServiceNameSpecified = true;
+            _serviceName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceNameSpecified { get; set; }
+}
 }

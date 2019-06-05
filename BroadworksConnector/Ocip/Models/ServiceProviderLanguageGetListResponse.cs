@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderLanguageGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "language", IsNullable = false)]
-    public List<string> Language { get; set; }
-    [XmlElement(ElementName = "defaultLanguage", IsNullable = false)]
-    public string DefaultLanguage { get; set; }
- }
+    private List<string> _language;
+
+    [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
+    public List<string> Language {
+        get => _language;
+        set {
+            LanguageSpecified = true;
+            _language = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LanguageSpecified { get; set; }
+    private string _defaultLanguage;
+
+    [XmlElement(ElementName = "defaultLanguage", IsNullable = false, Namespace = "")]
+    public string DefaultLanguage {
+        get => _defaultLanguage;
+        set {
+            DefaultLanguageSpecified = true;
+            _defaultLanguage = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultLanguageSpecified { get; set; }
+}
 }

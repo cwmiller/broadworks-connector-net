@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupShInterfaceGetUserListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "entry", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.ShInterfaceUserListEntry> Entry { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.ShInterfaceUserListEntry> _entry;
+
+    [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.ShInterfaceUserListEntry> Entry {
+        get => _entry;
+        set {
+            EntrySpecified = true;
+            _entry = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EntrySpecified { get; set; }
+}
 }

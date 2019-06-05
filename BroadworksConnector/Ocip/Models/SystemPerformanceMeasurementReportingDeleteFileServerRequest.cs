@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemPerformanceMeasurementReportingDeleteFileServerRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "ftpHostNetAddress", IsNullable = false)]
-    public string FtpHostNetAddress { get; set; }
- }
+    private string _ftpHostNetAddress;
+
+    [XmlElement(ElementName = "ftpHostNetAddress", IsNullable = false, Namespace = "")]
+    public string FtpHostNetAddress {
+        get => _ftpHostNetAddress;
+        set {
+            FtpHostNetAddressSpecified = true;
+            _ftpHostNetAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FtpHostNetAddressSpecified { get; set; }
+}
 }

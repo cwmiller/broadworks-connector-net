@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactMobileNetwork : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "mobileNetworkName", IsNullable = false)]
-    public string MobileNetworkName { get; set; }
- }
+    private string _mobileNetworkName;
+
+    [XmlElement(ElementName = "mobileNetworkName", IsNullable = false, Namespace = "")]
+    public string MobileNetworkName {
+        get => _mobileNetworkName;
+        set {
+            MobileNetworkNameSpecified = true;
+            _mobileNetworkName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MobileNetworkNameSpecified { get; set; }
+}
 }

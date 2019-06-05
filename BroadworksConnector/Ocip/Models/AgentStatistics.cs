@@ -1,22 +1,87 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class AgentStatistics 
-{
-    [XmlElement(ElementName = "numberOfCallsHandled", IsNullable = false)]
-    public int NumberOfCallsHandled { get; set; }
-    [XmlElement(ElementName = "numberOfCallsUnanswered", IsNullable = false)]
-    public int NumberOfCallsUnanswered { get; set; }
-    [XmlElement(ElementName = "averageCallSeconds", IsNullable = false)]
-    public int AverageCallSeconds { get; set; }
-    [XmlElement(ElementName = "totalTalkSeconds", IsNullable = false)]
-    public int TotalTalkSeconds { get; set; }
-    [XmlElement(ElementName = "totalStaffedSeconds", IsNullable = false)]
-    public int TotalStaffedSeconds { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class AgentStatistics
+    {
+        private int _numberOfCallsHandled;
+
+        [XmlElement(ElementName = "numberOfCallsHandled", IsNullable = false, Namespace = "")]
+        public int NumberOfCallsHandled
+        {
+            get => _numberOfCallsHandled;
+            set
+            {
+                NumberOfCallsHandledSpecified = true;
+                _numberOfCallsHandled = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool NumberOfCallsHandledSpecified { get; set; }
+        private int _numberOfCallsUnanswered;
+
+        [XmlElement(ElementName = "numberOfCallsUnanswered", IsNullable = false, Namespace = "")]
+        public int NumberOfCallsUnanswered
+        {
+            get => _numberOfCallsUnanswered;
+            set
+            {
+                NumberOfCallsUnansweredSpecified = true;
+                _numberOfCallsUnanswered = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool NumberOfCallsUnansweredSpecified { get; set; }
+        private int _averageCallSeconds;
+
+        [XmlElement(ElementName = "averageCallSeconds", IsNullable = false, Namespace = "")]
+        public int AverageCallSeconds
+        {
+            get => _averageCallSeconds;
+            set
+            {
+                AverageCallSecondsSpecified = true;
+                _averageCallSeconds = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool AverageCallSecondsSpecified { get; set; }
+        private int _totalTalkSeconds;
+
+        [XmlElement(ElementName = "totalTalkSeconds", IsNullable = false, Namespace = "")]
+        public int TotalTalkSeconds
+        {
+            get => _totalTalkSeconds;
+            set
+            {
+                TotalTalkSecondsSpecified = true;
+                _totalTalkSeconds = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool TotalTalkSecondsSpecified { get; set; }
+        private int _totalStaffedSeconds;
+
+        [XmlElement(ElementName = "totalStaffedSeconds", IsNullable = false, Namespace = "")]
+        public int TotalStaffedSeconds
+        {
+            get => _totalStaffedSeconds;
+            set
+            {
+                TotalStaffedSecondsSpecified = true;
+                _totalStaffedSeconds = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool TotalStaffedSecondsSpecified { get; set; }
+    }
 }

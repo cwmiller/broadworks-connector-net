@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CallingNameRetrievalQueryProtocol{
-    Sip,
-    Soap,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallingNameRetrievalQueryProtocol
+    {
+        [XmlEnum(Name = "Sip")]
+        Sip,
+        [XmlEnum(Name = "Soap")]
+        Soap,
+    }
 }

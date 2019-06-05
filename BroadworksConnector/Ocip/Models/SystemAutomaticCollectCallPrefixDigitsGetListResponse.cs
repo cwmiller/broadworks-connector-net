@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemAutomaticCollectCallPrefixDigitsGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "prefixTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable PrefixTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _prefixTable;
+
+    [XmlElement(ElementName = "prefixTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable PrefixTable {
+        get => _prefixTable;
+        set {
+            PrefixTableSpecified = true;
+            _prefixTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrefixTableSpecified { get; set; }
+}
 }

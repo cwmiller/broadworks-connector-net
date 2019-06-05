@@ -1,18 +1,57 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CommPilotExpressAvailableInOfficeModify 
-{
-    [XmlElement(ElementName = "additionalPhoneNumberToRing", IsNullable = true)]
-    public string AdditionalPhoneNumberToRing { get; set; }
-    [XmlElement(ElementName = "busySetting", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CommPilotExpressRedirectionModify BusySetting { get; set; }
-    [XmlElement(ElementName = "noAnswerSetting", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.CommPilotExpressRedirectionModify NoAnswerSetting { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class CommPilotExpressAvailableInOfficeModify
+    {
+        private string _additionalPhoneNumberToRing;
+
+        [XmlElement(ElementName = "additionalPhoneNumberToRing", IsNullable = true, Namespace = "")]
+        public string AdditionalPhoneNumberToRing
+        {
+            get => _additionalPhoneNumberToRing;
+            set
+            {
+                AdditionalPhoneNumberToRingSpecified = true;
+                _additionalPhoneNumberToRing = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool AdditionalPhoneNumberToRingSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.CommPilotExpressRedirectionModify _busySetting;
+
+        [XmlElement(ElementName = "busySetting", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.CommPilotExpressRedirectionModify BusySetting
+        {
+            get => _busySetting;
+            set
+            {
+                BusySettingSpecified = true;
+                _busySetting = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool BusySettingSpecified { get; set; }
+        private BroadworksConnector.Ocip.Models.CommPilotExpressRedirectionModify _noAnswerSetting;
+
+        [XmlElement(ElementName = "noAnswerSetting", IsNullable = false, Namespace = "")]
+        public BroadworksConnector.Ocip.Models.CommPilotExpressRedirectionModify NoAnswerSetting
+        {
+            get => _noAnswerSetting;
+            set
+            {
+                NoAnswerSettingSpecified = true;
+                _noAnswerSetting = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool NoAnswerSettingSpecified { get; set; }
+    }
 }

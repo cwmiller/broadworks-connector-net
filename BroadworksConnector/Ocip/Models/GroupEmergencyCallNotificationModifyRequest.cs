@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupEmergencyCallNotificationModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "sendEmergencyCallNotificationEmail", IsNullable = false)]
-    public bool SendEmergencyCallNotificationEmail { get; set; }
-    [XmlElement(ElementName = "emergencyCallNotifyEmailAddress", IsNullable = true)]
-    public string EmergencyCallNotifyEmailAddress { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private bool _sendEmergencyCallNotificationEmail;
+
+    [XmlElement(ElementName = "sendEmergencyCallNotificationEmail", IsNullable = false, Namespace = "")]
+    public bool SendEmergencyCallNotificationEmail {
+        get => _sendEmergencyCallNotificationEmail;
+        set {
+            SendEmergencyCallNotificationEmailSpecified = true;
+            _sendEmergencyCallNotificationEmail = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SendEmergencyCallNotificationEmailSpecified { get; set; }
+    private string _emergencyCallNotifyEmailAddress;
+
+    [XmlElement(ElementName = "emergencyCallNotifyEmailAddress", IsNullable = true, Namespace = "")]
+    public string EmergencyCallNotifyEmailAddress {
+        get => _emergencyCallNotifyEmailAddress;
+        set {
+            EmergencyCallNotifyEmailAddressSpecified = true;
+            _emergencyCallNotifyEmailAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EmergencyCallNotifyEmailAddressSpecified { get; set; }
+}
 }

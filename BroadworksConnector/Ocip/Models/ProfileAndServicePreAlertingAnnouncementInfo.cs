@@ -8,25 +8,135 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ProfileAndServicePreAlertingAnnouncementInfo 
 {
-    [XmlElement(ElementName = "isActive", IsNullable = false)]
-    public bool IsActive { get; set; }
-    [XmlElement(ElementName = "audioSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection { get; set; }
-    [XmlElement(ElementName = "audioFileDescription", IsNullable = false)]
-    public string AudioFileDescription { get; set; }
-    [XmlElement(ElementName = "audioMediaType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MediaFileType AudioMediaType { get; set; }
-    [XmlElement(ElementName = "audioFileUrl", IsNullable = false)]
-    public string AudioFileUrl { get; set; }
-    [XmlElement(ElementName = "videoSelection", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection { get; set; }
-    [XmlElement(ElementName = "videoFileDescription", IsNullable = false)]
-    public string VideoFileDescription { get; set; }
-    [XmlElement(ElementName = "videoMediaType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MediaFileType VideoMediaType { get; set; }
-    [XmlElement(ElementName = "videoFileUrl", IsNullable = false)]
-    public string VideoFileUrl { get; set; }
-    [XmlElement(ElementName = "criteriaTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CriteriaTable { get; set; }
- }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
+
+    [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
+        get => _audioSelection;
+        set {
+            AudioSelectionSpecified = true;
+            _audioSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioSelectionSpecified { get; set; }
+    private string _audioFileDescription;
+
+    [XmlElement(ElementName = "audioFileDescription", IsNullable = false, Namespace = "")]
+    public string AudioFileDescription {
+        get => _audioFileDescription;
+        set {
+            AudioFileDescriptionSpecified = true;
+            _audioFileDescription = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioFileDescriptionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MediaFileType _audioMediaType;
+
+    [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MediaFileType AudioMediaType {
+        get => _audioMediaType;
+        set {
+            AudioMediaTypeSpecified = true;
+            _audioMediaType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioMediaTypeSpecified { get; set; }
+    private string _audioFileUrl;
+
+    [XmlElement(ElementName = "audioFileUrl", IsNullable = false, Namespace = "")]
+    public string AudioFileUrl {
+        get => _audioFileUrl;
+        set {
+            AudioFileUrlSpecified = true;
+            _audioFileUrl = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AudioFileUrlSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
+
+    [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
+        get => _videoSelection;
+        set {
+            VideoSelectionSpecified = true;
+            _videoSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoSelectionSpecified { get; set; }
+    private string _videoFileDescription;
+
+    [XmlElement(ElementName = "videoFileDescription", IsNullable = false, Namespace = "")]
+    public string VideoFileDescription {
+        get => _videoFileDescription;
+        set {
+            VideoFileDescriptionSpecified = true;
+            _videoFileDescription = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoFileDescriptionSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MediaFileType _videoMediaType;
+
+    [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MediaFileType VideoMediaType {
+        get => _videoMediaType;
+        set {
+            VideoMediaTypeSpecified = true;
+            _videoMediaType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoMediaTypeSpecified { get; set; }
+    private string _videoFileUrl;
+
+    [XmlElement(ElementName = "videoFileUrl", IsNullable = false, Namespace = "")]
+    public string VideoFileUrl {
+        get => _videoFileUrl;
+        set {
+            VideoFileUrlSpecified = true;
+            _videoFileUrl = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VideoFileUrlSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _criteriaTable;
+
+    [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable CriteriaTable {
+        get => _criteriaTable;
+        set {
+            CriteriaTableSpecified = true;
+            _criteriaTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CriteriaTableSpecified { get; set; }
+}
 }

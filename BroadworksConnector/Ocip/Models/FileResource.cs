@@ -1,16 +1,42 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class FileResource 
-{
-    [XmlElement(ElementName = "sourceFileName", IsNullable = false)]
-    public string SourceFileName { get; set; }
-    [XmlElement(ElementName = "fileContent", IsNullable = false)]
-    public string FileContent { get; set; }
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public class FileResource
+    {
+        private string _sourceFileName;
+
+        [XmlElement(ElementName = "sourceFileName", IsNullable = false, Namespace = "")]
+        public string SourceFileName
+        {
+            get => _sourceFileName;
+            set
+            {
+                SourceFileNameSpecified = true;
+                _sourceFileName = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool SourceFileNameSpecified { get; set; }
+        private string _fileContent;
+
+        [XmlElement(ElementName = "fileContent", IsNullable = false, Namespace = "")]
+        public string FileContent
+        {
+            get => _fileContent;
+            set
+            {
+                FileContentSpecified = true;
+                _fileContent = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool FileContentSpecified { get; set; }
+    }
 }

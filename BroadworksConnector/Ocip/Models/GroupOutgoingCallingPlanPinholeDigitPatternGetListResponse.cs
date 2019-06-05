@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupOutgoingCallingPlanPinholeDigitPatternGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "digitPatternTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DigitPatternTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _digitPatternTable;
+
+    [XmlElement(ElementName = "digitPatternTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable DigitPatternTable {
+        get => _digitPatternTable;
+        set {
+            DigitPatternTableSpecified = true;
+            _digitPatternTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DigitPatternTableSpecified { get; set; }
+}
 }

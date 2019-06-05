@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemPushNotificationAllowedApplicationGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "applicationTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable ApplicationTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _applicationTable;
+
+    [XmlElement(ElementName = "applicationTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable ApplicationTable {
+        get => _applicationTable;
+        set {
+            ApplicationTableSpecified = true;
+            _applicationTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ApplicationTableSpecified { get; set; }
+}
 }

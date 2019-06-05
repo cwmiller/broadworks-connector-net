@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactEndpointType21sp1 : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "endpointType", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.EndpointType21sp1 EndpointType { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.EndpointType21sp1 _endpointType;
+
+    [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.EndpointType21sp1 EndpointType {
+        get => _endpointType;
+        set {
+            EndpointTypeSpecified = true;
+            _endpointType = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EndpointTypeSpecified { get; set; }
+}
 }

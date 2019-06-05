@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemCountryCodeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "defaultCountryCode", IsNullable = false)]
-    public string DefaultCountryCode { get; set; }
-    [XmlElement(ElementName = "countryCodeTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CountryCodeTable { get; set; }
- }
+    private string _defaultCountryCode;
+
+    [XmlElement(ElementName = "defaultCountryCode", IsNullable = false, Namespace = "")]
+    public string DefaultCountryCode {
+        get => _defaultCountryCode;
+        set {
+            DefaultCountryCodeSpecified = true;
+            _defaultCountryCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultCountryCodeSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _countryCodeTable;
+
+    [XmlElement(ElementName = "countryCodeTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable CountryCodeTable {
+        get => _countryCodeTable;
+        set {
+            CountryCodeTableSpecified = true;
+            _countryCodeTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CountryCodeTableSpecified { get; set; }
+}
 }

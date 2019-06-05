@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SearchCriteriaExactHuntPolicy : BroadworksConnector.Ocip.Models.SearchCriteria
 {
-    [XmlElement(ElementName = "huntPolicy", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.HuntPolicy HuntPolicy { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.HuntPolicy _huntPolicy;
+
+    [XmlElement(ElementName = "huntPolicy", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.HuntPolicy HuntPolicy {
+        get => _huntPolicy;
+        set {
+            HuntPolicySpecified = true;
+            _huntPolicy = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool HuntPolicySpecified { get; set; }
+}
 }

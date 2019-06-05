@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum CPEDeviceResetEventType{
-    Resync,
-    CheckSync,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CPEDeviceResetEventType
+    {
+        [XmlEnum(Name = "Resync")]
+        Resync,
+        [XmlEnum(Name = "Check Sync")]
+        CheckSync,
+    }
 }

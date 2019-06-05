@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBroadCloudModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "provisioningUrl", IsNullable = true)]
-    public string ProvisioningUrl { get; set; }
-    [XmlElement(ElementName = "provisioningUserId", IsNullable = true)]
-    public string ProvisioningUserId { get; set; }
-    [XmlElement(ElementName = "provisioningPassword", IsNullable = true)]
-    public string ProvisioningPassword { get; set; }
-    [XmlElement(ElementName = "enableSynchronization", IsNullable = false)]
-    public bool EnableSynchronization { get; set; }
- }
+    private string _provisioningUrl;
+
+    [XmlElement(ElementName = "provisioningUrl", IsNullable = true, Namespace = "")]
+    public string ProvisioningUrl {
+        get => _provisioningUrl;
+        set {
+            ProvisioningUrlSpecified = true;
+            _provisioningUrl = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProvisioningUrlSpecified { get; set; }
+    private string _provisioningUserId;
+
+    [XmlElement(ElementName = "provisioningUserId", IsNullable = true, Namespace = "")]
+    public string ProvisioningUserId {
+        get => _provisioningUserId;
+        set {
+            ProvisioningUserIdSpecified = true;
+            _provisioningUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProvisioningUserIdSpecified { get; set; }
+    private string _provisioningPassword;
+
+    [XmlElement(ElementName = "provisioningPassword", IsNullable = true, Namespace = "")]
+    public string ProvisioningPassword {
+        get => _provisioningPassword;
+        set {
+            ProvisioningPasswordSpecified = true;
+            _provisioningPassword = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ProvisioningPasswordSpecified { get; set; }
+    private bool _enableSynchronization;
+
+    [XmlElement(ElementName = "enableSynchronization", IsNullable = false, Namespace = "")]
+    public bool EnableSynchronization {
+        get => _enableSynchronization;
+        set {
+            EnableSynchronizationSpecified = true;
+            _enableSynchronization = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnableSynchronizationSpecified { get; set; }
+}
 }

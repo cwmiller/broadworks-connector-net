@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBwDiameterPeerDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "instance", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.BwDiameterPeerInstance Instance { get; set; }
-    [XmlElement(ElementName = "identity", IsNullable = false)]
-    public string Identity { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
+
+    [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.BwDiameterPeerInstance Instance {
+        get => _instance;
+        set {
+            InstanceSpecified = true;
+            _instance = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InstanceSpecified { get; set; }
+    private string _identity;
+
+    [XmlElement(ElementName = "identity", IsNullable = false, Namespace = "")]
+    public string Identity {
+        get => _identity;
+        set {
+            IdentitySpecified = true;
+            _identity = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IdentitySpecified { get; set; }
+}
 }

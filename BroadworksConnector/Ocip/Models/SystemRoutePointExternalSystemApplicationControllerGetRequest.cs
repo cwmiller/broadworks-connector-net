@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemRoutePointExternalSystemApplicationControllerGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "externalSystem", IsNullable = false)]
-    public string ExternalSystem { get; set; }
- }
+    private string _externalSystem;
+
+    [XmlElement(ElementName = "externalSystem", IsNullable = false, Namespace = "")]
+    public string ExternalSystem {
+        get => _externalSystem;
+        set {
+            ExternalSystemSpecified = true;
+            _externalSystem = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExternalSystemSpecified { get; set; }
+}
 }

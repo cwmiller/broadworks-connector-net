@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupDialPlanPolicyGetAccessCodeListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "accessCodeTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable AccessCodeTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _accessCodeTable;
+
+    [XmlElement(ElementName = "accessCodeTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable AccessCodeTable {
+        get => _accessCodeTable;
+        set {
+            AccessCodeTableSpecified = true;
+            _accessCodeTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AccessCodeTableSpecified { get; set; }
+}
 }

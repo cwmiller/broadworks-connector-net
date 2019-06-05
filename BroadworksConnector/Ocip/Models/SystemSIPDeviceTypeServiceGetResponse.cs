@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSIPDeviceTypeServiceGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "supportsPolycomPhoneServices", IsNullable = false)]
-    public bool SupportsPolycomPhoneServices { get; set; }
- }
+    private bool _supportsPolycomPhoneServices;
+
+    [XmlElement(ElementName = "supportsPolycomPhoneServices", IsNullable = false, Namespace = "")]
+    public bool SupportsPolycomPhoneServices {
+        get => _supportsPolycomPhoneServices;
+        set {
+            SupportsPolycomPhoneServicesSpecified = true;
+            _supportsPolycomPhoneServices = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SupportsPolycomPhoneServicesSpecified { get; set; }
+}
 }

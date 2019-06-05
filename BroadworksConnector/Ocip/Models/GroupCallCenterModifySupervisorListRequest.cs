@@ -8,11 +8,44 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCallCenterModifySupervisorListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false)]
-    public string ServiceUserId { get; set; }
-    [XmlElement(ElementName = "reportingServerURL", IsNullable = true)]
-    public string ReportingServerURL { get; set; }
-    [XmlElement(ElementName = "supervisorUserIdList", IsNullable = true)]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList SupervisorUserIdList { get; set; }
- }
+    private string _serviceUserId;
+
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public string ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private string _reportingServerURL;
+
+    [XmlElement(ElementName = "reportingServerURL", IsNullable = true, Namespace = "")]
+    public string ReportingServerURL {
+        get => _reportingServerURL;
+        set {
+            ReportingServerURLSpecified = true;
+            _reportingServerURL = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReportingServerURLSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _supervisorUserIdList;
+
+    [XmlElement(ElementName = "supervisorUserIdList", IsNullable = true, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.ReplacementUserIdList SupervisorUserIdList {
+        get => _supervisorUserIdList;
+        set {
+            SupervisorUserIdListSpecified = true;
+            _supervisorUserIdList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SupervisorUserIdListSpecified { get; set; }
+}
 }

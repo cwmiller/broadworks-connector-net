@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class IncomingCallingPlanDepartmentPermissions 
 {
-    [XmlElement(ElementName = "departmentKey", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey { get; set; }
-    [XmlElement(ElementName = "departmentFullPathName", IsNullable = false)]
-    public string DepartmentFullPathName { get; set; }
-    [XmlElement(ElementName = "allowFromWithinGroup", IsNullable = false)]
-    public bool AllowFromWithinGroup { get; set; }
-    [XmlElement(ElementName = "allowFromOutsideGroup", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission AllowFromOutsideGroup { get; set; }
-    [XmlElement(ElementName = "allowCollectCalls", IsNullable = false)]
-    public bool AllowCollectCalls { get; set; }
-    [XmlElement(ElementName = "digitPatternPermission", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> DigitPatternPermission { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.DepartmentKey _departmentKey;
+
+    [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+        get => _departmentKey;
+        set {
+            DepartmentKeySpecified = true;
+            _departmentKey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentKeySpecified { get; set; }
+    private string _departmentFullPathName;
+
+    [XmlElement(ElementName = "departmentFullPathName", IsNullable = false, Namespace = "")]
+    public string DepartmentFullPathName {
+        get => _departmentFullPathName;
+        set {
+            DepartmentFullPathNameSpecified = true;
+            _departmentFullPathName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DepartmentFullPathNameSpecified { get; set; }
+    private bool _allowFromWithinGroup;
+
+    [XmlElement(ElementName = "allowFromWithinGroup", IsNullable = false, Namespace = "")]
+    public bool AllowFromWithinGroup {
+        get => _allowFromWithinGroup;
+        set {
+            AllowFromWithinGroupSpecified = true;
+            _allowFromWithinGroup = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowFromWithinGroupSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission _allowFromOutsideGroup;
+
+    [XmlElement(ElementName = "allowFromOutsideGroup", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission AllowFromOutsideGroup {
+        get => _allowFromOutsideGroup;
+        set {
+            AllowFromOutsideGroupSpecified = true;
+            _allowFromOutsideGroup = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowFromOutsideGroupSpecified { get; set; }
+    private bool _allowCollectCalls;
+
+    [XmlElement(ElementName = "allowCollectCalls", IsNullable = false, Namespace = "")]
+    public bool AllowCollectCalls {
+        get => _allowCollectCalls;
+        set {
+            AllowCollectCallsSpecified = true;
+            _allowCollectCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowCollectCallsSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> _digitPatternPermission;
+
+    [XmlElement(ElementName = "digitPatternPermission", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> DigitPatternPermission {
+        get => _digitPatternPermission;
+        set {
+            DigitPatternPermissionSpecified = true;
+            _digitPatternPermission = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DigitPatternPermissionSpecified { get; set; }
+}
 }

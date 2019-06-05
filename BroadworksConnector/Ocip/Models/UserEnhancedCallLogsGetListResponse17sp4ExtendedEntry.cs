@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserEnhancedCallLogsGetListResponse17sp4ExtendedEntry 
 {
-    [XmlElement(ElementName = "extendedCallLog", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.ExtendedMixedCallLogsEntry> ExtendedCallLog { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.ExtendedMixedCallLogsEntry> _extendedCallLog;
+
+    [XmlElement(ElementName = "extendedCallLog", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.ExtendedMixedCallLogsEntry> ExtendedCallLog {
+        get => _extendedCallLog;
+        set {
+            ExtendedCallLogSpecified = true;
+            _extendedCallLog = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ExtendedCallLogSpecified { get; set; }
+}
 }

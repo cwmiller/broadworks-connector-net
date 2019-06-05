@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemFileRepositoryDeviceUserDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "fileRepositoryName", IsNullable = false)]
-    public string FileRepositoryName { get; set; }
-    [XmlElement(ElementName = "userName", IsNullable = false)]
-    public string UserName { get; set; }
- }
+    private string _fileRepositoryName;
+
+    [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
+    public string FileRepositoryName {
+        get => _fileRepositoryName;
+        set {
+            FileRepositoryNameSpecified = true;
+            _fileRepositoryName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileRepositoryNameSpecified { get; set; }
+    private string _userName;
+
+    [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
+    public string UserName {
+        get => _userName;
+        set {
+            UserNameSpecified = true;
+            _userName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserNameSpecified { get; set; }
+}
 }

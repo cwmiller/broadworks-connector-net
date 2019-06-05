@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemConnectedLineIdentificationPresentationGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "enforceUserServiceAssignment", IsNullable = false)]
-    public bool EnforceUserServiceAssignment { get; set; }
- }
+    private bool _enforceUserServiceAssignment;
+
+    [XmlElement(ElementName = "enforceUserServiceAssignment", IsNullable = false, Namespace = "")]
+    public bool EnforceUserServiceAssignment {
+        get => _enforceUserServiceAssignment;
+        set {
+            EnforceUserServiceAssignmentSpecified = true;
+            _enforceUserServiceAssignment = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool EnforceUserServiceAssignmentSpecified { get; set; }
+}
 }

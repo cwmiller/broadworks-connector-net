@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemBroadWorksMobilityGetMobileNetworkIMRNListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "imrnNumber", IsNullable = false)]
-    public List<string> ImrnNumber { get; set; }
- }
+    private List<string> _imrnNumber;
+
+    [XmlElement(ElementName = "imrnNumber", IsNullable = false, Namespace = "")]
+    public List<string> ImrnNumber {
+        get => _imrnNumber;
+        set {
+            ImrnNumberSpecified = true;
+            _imrnNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ImrnNumberSpecified { get; set; }
+}
 }

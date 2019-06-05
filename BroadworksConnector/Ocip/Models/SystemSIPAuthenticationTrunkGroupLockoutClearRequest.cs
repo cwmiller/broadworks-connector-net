@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSIPAuthenticationTrunkGroupLockoutClearRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "trunkGroupkey", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.TrunkGroupKey> TrunkGroupkey { get; set; }
- }
+    private List<BroadworksConnector.Ocip.Models.TrunkGroupKey> _trunkGroupkey;
+
+    [XmlElement(ElementName = "trunkGroupkey", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.TrunkGroupKey> TrunkGroupkey {
+        get => _trunkGroupkey;
+        set {
+            TrunkGroupkeySpecified = true;
+            _trunkGroupkey = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool TrunkGroupkeySpecified { get; set; }
+}
 }

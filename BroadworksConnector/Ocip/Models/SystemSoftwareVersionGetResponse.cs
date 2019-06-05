@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemSoftwareVersionGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "version", IsNullable = false)]
-    public string Version { get; set; }
- }
+    private string _version;
+
+    [XmlElement(ElementName = "version", IsNullable = false, Namespace = "")]
+    public string Version {
+        get => _version;
+        set {
+            VersionSpecified = true;
+            _version = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool VersionSpecified { get; set; }
+}
 }

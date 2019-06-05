@@ -8,23 +8,122 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupSessionAdmissionControlGroupGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "maxSession", IsNullable = false)]
-    public int MaxSession { get; set; }
-    [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = false)]
-    public int MaxUserOriginatingSessions { get; set; }
-    [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = false)]
-    public int MaxUserTerminatingSessions { get; set; }
-    [XmlElement(ElementName = "reservedSession", IsNullable = false)]
-    public int ReservedSession { get; set; }
-    [XmlElement(ElementName = "reservedUserOriginatingSessions", IsNullable = false)]
-    public int ReservedUserOriginatingSessions { get; set; }
-    [XmlElement(ElementName = "reservedUserTerminatingSessions", IsNullable = false)]
-    public int ReservedUserTerminatingSessions { get; set; }
-    [XmlElement(ElementName = "defaultGroup", IsNullable = false)]
-    public bool DefaultGroup { get; set; }
-    [XmlElement(ElementName = "countIntraSACGroupSessions", IsNullable = false)]
-    public bool CountIntraSACGroupSessions { get; set; }
-    [XmlElement(ElementName = "devices", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.AccessDevice> Devices { get; set; }
- }
+    private int _maxSession;
+
+    [XmlElement(ElementName = "maxSession", IsNullable = false, Namespace = "")]
+    public int MaxSession {
+        get => _maxSession;
+        set {
+            MaxSessionSpecified = true;
+            _maxSession = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxSessionSpecified { get; set; }
+    private int _maxUserOriginatingSessions;
+
+    [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = false, Namespace = "")]
+    public int MaxUserOriginatingSessions {
+        get => _maxUserOriginatingSessions;
+        set {
+            MaxUserOriginatingSessionsSpecified = true;
+            _maxUserOriginatingSessions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxUserOriginatingSessionsSpecified { get; set; }
+    private int _maxUserTerminatingSessions;
+
+    [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = false, Namespace = "")]
+    public int MaxUserTerminatingSessions {
+        get => _maxUserTerminatingSessions;
+        set {
+            MaxUserTerminatingSessionsSpecified = true;
+            _maxUserTerminatingSessions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool MaxUserTerminatingSessionsSpecified { get; set; }
+    private int _reservedSession;
+
+    [XmlElement(ElementName = "reservedSession", IsNullable = false, Namespace = "")]
+    public int ReservedSession {
+        get => _reservedSession;
+        set {
+            ReservedSessionSpecified = true;
+            _reservedSession = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReservedSessionSpecified { get; set; }
+    private int _reservedUserOriginatingSessions;
+
+    [XmlElement(ElementName = "reservedUserOriginatingSessions", IsNullable = false, Namespace = "")]
+    public int ReservedUserOriginatingSessions {
+        get => _reservedUserOriginatingSessions;
+        set {
+            ReservedUserOriginatingSessionsSpecified = true;
+            _reservedUserOriginatingSessions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReservedUserOriginatingSessionsSpecified { get; set; }
+    private int _reservedUserTerminatingSessions;
+
+    [XmlElement(ElementName = "reservedUserTerminatingSessions", IsNullable = false, Namespace = "")]
+    public int ReservedUserTerminatingSessions {
+        get => _reservedUserTerminatingSessions;
+        set {
+            ReservedUserTerminatingSessionsSpecified = true;
+            _reservedUserTerminatingSessions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReservedUserTerminatingSessionsSpecified { get; set; }
+    private bool _defaultGroup;
+
+    [XmlElement(ElementName = "defaultGroup", IsNullable = false, Namespace = "")]
+    public bool DefaultGroup {
+        get => _defaultGroup;
+        set {
+            DefaultGroupSpecified = true;
+            _defaultGroup = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultGroupSpecified { get; set; }
+    private bool _countIntraSACGroupSessions;
+
+    [XmlElement(ElementName = "countIntraSACGroupSessions", IsNullable = false, Namespace = "")]
+    public bool CountIntraSACGroupSessions {
+        get => _countIntraSACGroupSessions;
+        set {
+            CountIntraSACGroupSessionsSpecified = true;
+            _countIntraSACGroupSessions = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CountIntraSACGroupSessionsSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.AccessDevice> _devices;
+
+    [XmlElement(ElementName = "devices", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.AccessDevice> Devices {
+        get => _devices;
+        set {
+            DevicesSpecified = true;
+            _devices = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DevicesSpecified { get; set; }
+}
 }

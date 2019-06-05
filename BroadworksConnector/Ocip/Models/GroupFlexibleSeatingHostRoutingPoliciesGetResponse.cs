@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupFlexibleSeatingHostRoutingPoliciesGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "allowEmergencyCalls", IsNullable = false)]
-    public bool AllowEmergencyCalls { get; set; }
-    [XmlElement(ElementName = "allowCallsToVoicePortal", IsNullable = false)]
-    public bool AllowCallsToVoicePortal { get; set; }
- }
+    private bool _allowEmergencyCalls;
+
+    [XmlElement(ElementName = "allowEmergencyCalls", IsNullable = false, Namespace = "")]
+    public bool AllowEmergencyCalls {
+        get => _allowEmergencyCalls;
+        set {
+            AllowEmergencyCallsSpecified = true;
+            _allowEmergencyCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowEmergencyCallsSpecified { get; set; }
+    private bool _allowCallsToVoicePortal;
+
+    [XmlElement(ElementName = "allowCallsToVoicePortal", IsNullable = false, Namespace = "")]
+    public bool AllowCallsToVoicePortal {
+        get => _allowCallsToVoicePortal;
+        set {
+            AllowCallsToVoicePortalSpecified = true;
+            _allowCallsToVoicePortal = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AllowCallsToVoicePortalSpecified { get; set; }
+}
 }

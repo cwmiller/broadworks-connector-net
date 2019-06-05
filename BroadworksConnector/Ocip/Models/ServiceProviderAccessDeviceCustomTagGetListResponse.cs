@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderAccessDeviceCustomTagGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "deviceCustomTagsTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable DeviceCustomTagsTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _deviceCustomTagsTable;
+
+    [XmlElement(ElementName = "deviceCustomTagsTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable DeviceCustomTagsTable {
+        get => _deviceCustomTagsTable;
+        set {
+            DeviceCustomTagsTableSpecified = true;
+            _deviceCustomTagsTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeviceCustomTagsTableSpecified { get; set; }
+}
 }

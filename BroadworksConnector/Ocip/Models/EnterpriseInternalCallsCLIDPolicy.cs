@@ -3,10 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum EnterpriseInternalCallsCLIDPolicy{
-    UseExtension,
-    UseLocationCodeplusExtension,
-    UseExternalCallsPolicy,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum EnterpriseInternalCallsCLIDPolicy
+    {
+        [XmlEnum(Name = "Use Extension")]
+        UseExtension,
+        [XmlEnum(Name = "Use Location Code plus Extension")]
+        UseLocationCodeplusExtension,
+        [XmlEnum(Name = "Use External Calls Policy")]
+        UseExternalCallsPolicy,
+    }
 }

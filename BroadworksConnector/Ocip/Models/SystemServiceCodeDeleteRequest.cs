@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemServiceCodeDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceCode", IsNullable = false)]
-    public string ServiceCode { get; set; }
- }
+    private string _serviceCode;
+
+    [XmlElement(ElementName = "serviceCode", IsNullable = false, Namespace = "")]
+    public string ServiceCode {
+        get => _serviceCode;
+        set {
+            ServiceCodeSpecified = true;
+            _serviceCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceCodeSpecified { get; set; }
+}
 }

@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallCenterMonitoringGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "playToneToAgentForSilentMonitoring", IsNullable = false)]
-    public bool PlayToneToAgentForSilentMonitoring { get; set; }
- }
+    private bool _playToneToAgentForSilentMonitoring;
+
+    [XmlElement(ElementName = "playToneToAgentForSilentMonitoring", IsNullable = false, Namespace = "")]
+    public bool PlayToneToAgentForSilentMonitoring {
+        get => _playToneToAgentForSilentMonitoring;
+        set {
+            PlayToneToAgentForSilentMonitoringSpecified = true;
+            _playToneToAgentForSilentMonitoring = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PlayToneToAgentForSilentMonitoringSpecified { get; set; }
+}
 }

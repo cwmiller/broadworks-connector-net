@@ -3,11 +3,17 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum ConnectedNumberSource{
-    ConfigurableCLID,
-    Group,
-    User,
-    Department,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum ConnectedNumberSource
+    {
+        [XmlEnum(Name = "Configurable CLID")]
+        ConfigurableCLID,
+        [XmlEnum(Name = "Group")]
+        Group,
+        [XmlEnum(Name = "User")]
+        User,
+        [XmlEnum(Name = "Department")]
+        Department,
+    }
 }

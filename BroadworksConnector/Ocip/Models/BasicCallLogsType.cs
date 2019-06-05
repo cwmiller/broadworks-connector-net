@@ -3,10 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum BasicCallLogsType{
-    Placed,
-    Received,
-    Missed,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum BasicCallLogsType
+    {
+        [XmlEnum(Name = "Placed")]
+        Placed,
+        [XmlEnum(Name = "Received")]
+        Received,
+        [XmlEnum(Name = "Missed")]
+        Missed,
+    }
 }

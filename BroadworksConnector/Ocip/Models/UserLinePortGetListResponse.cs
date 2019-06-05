@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserLinePortGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "linePortTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable LinePortTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _linePortTable;
+
+    [XmlElement(ElementName = "linePortTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable LinePortTable {
+        get => _linePortTable;
+        set {
+            LinePortTableSpecified = true;
+            _linePortTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LinePortTableSpecified { get; set; }
+}
 }

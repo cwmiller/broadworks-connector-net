@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemTreatmentMappingNetworkServerTreatmentDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "nsTreatment", IsNullable = false)]
-    public string NsTreatment { get; set; }
- }
+    private string _nsTreatment;
+
+    [XmlElement(ElementName = "nsTreatment", IsNullable = false, Namespace = "")]
+    public string NsTreatment {
+        get => _nsTreatment;
+        set {
+            NsTreatmentSpecified = true;
+            _nsTreatment = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NsTreatmentSpecified { get; set; }
+}
 }

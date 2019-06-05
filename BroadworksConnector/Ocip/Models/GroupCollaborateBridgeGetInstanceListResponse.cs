@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCollaborateBridgeGetInstanceListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "collaborateBridgeTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CollaborateBridgeTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _collaborateBridgeTable;
+
+    [XmlElement(ElementName = "collaborateBridgeTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable CollaborateBridgeTable {
+        get => _collaborateBridgeTable;
+        set {
+            CollaborateBridgeTableSpecified = true;
+            _collaborateBridgeTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CollaborateBridgeTableSpecified { get; set; }
+}
 }

@@ -8,15 +8,70 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestChangeBusyOrNoAnswerGreetingMenuKeys 
 {
-    [XmlElement(ElementName = "recordNewGreeting", IsNullable = true)]
-    public string RecordNewGreeting { get; set; }
-    [XmlElement(ElementName = "listenToCurrentGreeting", IsNullable = true)]
-    public string ListenToCurrentGreeting { get; set; }
-    [XmlElement(ElementName = "revertToSystemDefaultGreeting", IsNullable = true)]
-    public string RevertToSystemDefaultGreeting { get; set; }
-    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false)]
-    public string ReturnToPreviousMenu { get; set; }
-    [XmlElement(ElementName = "repeatMenu", IsNullable = true)]
-    public string RepeatMenu { get; set; }
- }
+    private string _recordNewGreeting;
+
+    [XmlElement(ElementName = "recordNewGreeting", IsNullable = true, Namespace = "")]
+    public string RecordNewGreeting {
+        get => _recordNewGreeting;
+        set {
+            RecordNewGreetingSpecified = true;
+            _recordNewGreeting = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RecordNewGreetingSpecified { get; set; }
+    private string _listenToCurrentGreeting;
+
+    [XmlElement(ElementName = "listenToCurrentGreeting", IsNullable = true, Namespace = "")]
+    public string ListenToCurrentGreeting {
+        get => _listenToCurrentGreeting;
+        set {
+            ListenToCurrentGreetingSpecified = true;
+            _listenToCurrentGreeting = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ListenToCurrentGreetingSpecified { get; set; }
+    private string _revertToSystemDefaultGreeting;
+
+    [XmlElement(ElementName = "revertToSystemDefaultGreeting", IsNullable = true, Namespace = "")]
+    public string RevertToSystemDefaultGreeting {
+        get => _revertToSystemDefaultGreeting;
+        set {
+            RevertToSystemDefaultGreetingSpecified = true;
+            _revertToSystemDefaultGreeting = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RevertToSystemDefaultGreetingSpecified { get; set; }
+    private string _returnToPreviousMenu;
+
+    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
+    public string ReturnToPreviousMenu {
+        get => _returnToPreviousMenu;
+        set {
+            ReturnToPreviousMenuSpecified = true;
+            _returnToPreviousMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ReturnToPreviousMenuSpecified { get; set; }
+    private string _repeatMenu;
+
+    [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
+    public string RepeatMenu {
+        get => _repeatMenu;
+        set {
+            RepeatMenuSpecified = true;
+            _repeatMenu = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool RepeatMenuSpecified { get; set; }
+}
 }

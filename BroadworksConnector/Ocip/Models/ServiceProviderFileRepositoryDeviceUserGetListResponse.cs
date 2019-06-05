@@ -8,7 +8,18 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class ServiceProviderFileRepositoryDeviceUserGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "fileRepositoryUserTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable FileRepositoryUserTable { get; set; }
- }
+    private BroadworksConnector.Ocip.Models.C.OCITable _fileRepositoryUserTable;
+
+    [XmlElement(ElementName = "fileRepositoryUserTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable FileRepositoryUserTable {
+        get => _fileRepositoryUserTable;
+        set {
+            FileRepositoryUserTableSpecified = true;
+            _fileRepositoryUserTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FileRepositoryUserTableSpecified { get; set; }
+}
 }

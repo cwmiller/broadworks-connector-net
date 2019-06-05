@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class SystemNetworkSynchingServerGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "preferredNetworkServerNetAddress", IsNullable = false)]
-    public string PreferredNetworkServerNetAddress { get; set; }
-    [XmlElement(ElementName = "networkSynchingServerTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable NetworkSynchingServerTable { get; set; }
- }
+    private string _preferredNetworkServerNetAddress;
+
+    [XmlElement(ElementName = "preferredNetworkServerNetAddress", IsNullable = false, Namespace = "")]
+    public string PreferredNetworkServerNetAddress {
+        get => _preferredNetworkServerNetAddress;
+        set {
+            PreferredNetworkServerNetAddressSpecified = true;
+            _preferredNetworkServerNetAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PreferredNetworkServerNetAddressSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _networkSynchingServerTable;
+
+    [XmlElement(ElementName = "networkSynchingServerTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable NetworkSynchingServerTable {
+        get => _networkSynchingServerTable;
+        set {
+            NetworkSynchingServerTableSpecified = true;
+            _networkSynchingServerTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetworkSynchingServerTableSpecified { get; set; }
+}
 }

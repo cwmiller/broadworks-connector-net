@@ -8,17 +8,83 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class GroupCommunicationBarringAuthorizationCodeGetListRequest21sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false)]
-    public string ServiceProviderId { get; set; }
-    [XmlElement(ElementName = "groupId", IsNullable = false)]
-    public string GroupId { get; set; }
-    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false)]
-    public int ResponseSizeLimit { get; set; }
-    [XmlElement(ElementName = "searchCriteriaCommunicationBarringAuthorizationCode", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCode> SearchCriteriaCommunicationBarringAuthorizationCode { get; set; }
-    [XmlElement(ElementName = "searchCriteriaCommunicationBarringAuthorizationCodeDescription", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCodeDescription> SearchCriteriaCommunicationBarringAuthorizationCodeDescription { get; set; }
-    [XmlElement(ElementName = "searchCriteriaNetworkClassOfServiceName", IsNullable = false)]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaNetworkClassOfServiceName> SearchCriteriaNetworkClassOfServiceName { get; set; }
- }
+    private string _serviceProviderId;
+
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private int _responseSizeLimit;
+
+    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
+    public int ResponseSizeLimit {
+        get => _responseSizeLimit;
+        set {
+            ResponseSizeLimitSpecified = true;
+            _responseSizeLimit = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ResponseSizeLimitSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCode> _searchCriteriaCommunicationBarringAuthorizationCode;
+
+    [XmlElement(ElementName = "searchCriteriaCommunicationBarringAuthorizationCode", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCode> SearchCriteriaCommunicationBarringAuthorizationCode {
+        get => _searchCriteriaCommunicationBarringAuthorizationCode;
+        set {
+            SearchCriteriaCommunicationBarringAuthorizationCodeSpecified = true;
+            _searchCriteriaCommunicationBarringAuthorizationCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaCommunicationBarringAuthorizationCodeSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCodeDescription> _searchCriteriaCommunicationBarringAuthorizationCodeDescription;
+
+    [XmlElement(ElementName = "searchCriteriaCommunicationBarringAuthorizationCodeDescription", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCodeDescription> SearchCriteriaCommunicationBarringAuthorizationCodeDescription {
+        get => _searchCriteriaCommunicationBarringAuthorizationCodeDescription;
+        set {
+            SearchCriteriaCommunicationBarringAuthorizationCodeDescriptionSpecified = true;
+            _searchCriteriaCommunicationBarringAuthorizationCodeDescription = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaCommunicationBarringAuthorizationCodeDescriptionSpecified { get; set; }
+    private List<BroadworksConnector.Ocip.Models.SearchCriteriaNetworkClassOfServiceName> _searchCriteriaNetworkClassOfServiceName;
+
+    [XmlElement(ElementName = "searchCriteriaNetworkClassOfServiceName", IsNullable = false, Namespace = "")]
+    public List<BroadworksConnector.Ocip.Models.SearchCriteriaNetworkClassOfServiceName> SearchCriteriaNetworkClassOfServiceName {
+        get => _searchCriteriaNetworkClassOfServiceName;
+        set {
+            SearchCriteriaNetworkClassOfServiceNameSpecified = true;
+            _searchCriteriaNetworkClassOfServiceName = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SearchCriteriaNetworkClassOfServiceNameSpecified { get; set; }
+}
 }

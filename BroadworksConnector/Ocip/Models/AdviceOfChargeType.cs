@@ -3,9 +3,13 @@ using System.Xml.Serialization;
 
 namespace BroadworksConnector.Ocip.Models
 {
-[Serializable]
-public enum AdviceOfChargeType{
-    DuringCall,
-    EndOfCall,
- }
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum AdviceOfChargeType
+    {
+        [XmlEnum(Name = "During Call")]
+        DuringCall,
+        [XmlEnum(Name = "End Of Call")]
+        EndOfCall,
+    }
 }

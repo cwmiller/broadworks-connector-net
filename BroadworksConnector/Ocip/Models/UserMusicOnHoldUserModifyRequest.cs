@@ -8,13 +8,57 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserMusicOnHoldUserModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 {
-    [XmlElement(ElementName = "userId", IsNullable = false)]
-    public string UserId { get; set; }
-    [XmlElement(ElementName = "source", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModify Source { get; set; }
-    [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false)]
-    public bool UseAlternateSourceForInternalCalls { get; set; }
-    [XmlElement(ElementName = "internalSource", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModify InternalSource { get; set; }
- }
+    private string _userId;
+
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModify _source;
+
+    [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModify Source {
+        get => _source;
+        set {
+            SourceSpecified = true;
+            _source = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool SourceSpecified { get; set; }
+    private bool _useAlternateSourceForInternalCalls;
+
+    [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
+    public bool UseAlternateSourceForInternalCalls {
+        get => _useAlternateSourceForInternalCalls;
+        set {
+            UseAlternateSourceForInternalCallsSpecified = true;
+            _useAlternateSourceForInternalCalls = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UseAlternateSourceForInternalCallsSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModify _internalSource;
+
+    [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModify InternalSource {
+        get => _internalSource;
+        set {
+            InternalSourceSpecified = true;
+            _internalSource = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool InternalSourceSpecified { get; set; }
+}
 }

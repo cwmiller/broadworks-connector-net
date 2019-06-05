@@ -8,9 +8,31 @@ namespace BroadworksConnector.Ocip.Models
 [XmlRoot(Namespace = "")]
 public  class UserCallNotifyGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
 {
-    [XmlElement(ElementName = "callNotifyEmailAddress", IsNullable = false)]
-    public string CallNotifyEmailAddress { get; set; }
-    [XmlElement(ElementName = "criteriaTable", IsNullable = false)]
-    public BroadworksConnector.Ocip.Models.C.OCITable CriteriaTable { get; set; }
- }
+    private string _callNotifyEmailAddress;
+
+    [XmlElement(ElementName = "callNotifyEmailAddress", IsNullable = false, Namespace = "")]
+    public string CallNotifyEmailAddress {
+        get => _callNotifyEmailAddress;
+        set {
+            CallNotifyEmailAddressSpecified = true;
+            _callNotifyEmailAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallNotifyEmailAddressSpecified { get; set; }
+    private BroadworksConnector.Ocip.Models.C.OCITable _criteriaTable;
+
+    [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
+    public BroadworksConnector.Ocip.Models.C.OCITable CriteriaTable {
+        get => _criteriaTable;
+        set {
+            CriteriaTableSpecified = true;
+            _criteriaTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CriteriaTableSpecified { get; set; }
+}
 }
