@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserDirectRouteGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserDirectRouteGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy _outgoingDTGPolicy;
+    private BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy _outgoingDTGPolicy;
 
     [XmlElement(ElementName = "outgoingDTGPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy OutgoingDTGPolicy {
+    public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy OutgoingDTGPolicy {
         get => _outgoingDTGPolicy;
         set {
             OutgoingDTGPolicySpecified = true;
@@ -21,10 +21,10 @@ public  class UserDirectRouteGetResponse : BroadworksConnector.Ocip.Models.C.OCI
 
     [XmlIgnore]
     public bool OutgoingDTGPolicySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy _outgoingTrunkIdentityPolicy;
+    private BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy _outgoingTrunkIdentityPolicy;
 
     [XmlElement(ElementName = "outgoingTrunkIdentityPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy OutgoingTrunkIdentityPolicy {
+    public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy OutgoingTrunkIdentityPolicy {
         get => _outgoingTrunkIdentityPolicy;
         set {
             OutgoingTrunkIdentityPolicySpecified = true;
@@ -34,10 +34,10 @@ public  class UserDirectRouteGetResponse : BroadworksConnector.Ocip.Models.C.OCI
 
     [XmlIgnore]
     public bool OutgoingTrunkIdentityPolicySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DirectRouteIdentifiers _directRouteIdentityList;
+    private BroadWorksConnector.Ocip.Models.DirectRouteIdentifiers _directRouteIdentityList;
 
     [XmlElement(ElementName = "directRouteIdentityList", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DirectRouteIdentifiers DirectRouteIdentityList {
+    public BroadWorksConnector.Ocip.Models.DirectRouteIdentifiers DirectRouteIdentityList {
         get => _directRouteIdentityList;
         set {
             DirectRouteIdentityListSpecified = true;

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallCenterEnhancedReportingBrandingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemCallCenterEnhancedReportingBrandingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice _brandingChoice;
+    private BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice _brandingChoice;
 
     [XmlElement(ElementName = "brandingChoice", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice BrandingChoice {
+    public BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice BrandingChoice {
         get => _brandingChoice;
         set {
             BrandingChoiceSpecified = true;

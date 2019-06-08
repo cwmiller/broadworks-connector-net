@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberGetSummaryListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberGetSummaryListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberGe
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaMobileSubscriberDirectoryNumber> _searchCriteriaMobileSubscriberDirectoryNumber;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaMobileSubscriberDirectoryNumber> _searchCriteriaMobileSubscriberDirectoryNumber;
 
     [XmlElement(ElementName = "searchCriteriaMobileSubscriberDirectoryNumber", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaMobileSubscriberDirectoryNumber> SearchCriteriaMobileSubscriberDirectoryNumber {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaMobileSubscriberDirectoryNumber> SearchCriteriaMobileSubscriberDirectoryNumber {
         get => _searchCriteriaMobileSubscriberDirectoryNumber;
         set {
             SearchCriteriaMobileSubscriberDirectoryNumberSpecified = true;
@@ -47,10 +47,10 @@ public  class ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberGe
 
     [XmlIgnore]
     public bool SearchCriteriaMobileSubscriberDirectoryNumberSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId;
 
     [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId {
         get => _searchCriteriaGroupId;
         set {
             SearchCriteriaGroupIdSpecified = true;
@@ -60,10 +60,10 @@ public  class ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberGe
 
     [XmlIgnore]
     public bool SearchCriteriaGroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactMobileNetwork _searchCriteriaExactMobileNetwork;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactMobileNetwork _searchCriteriaExactMobileNetwork;
 
     [XmlElement(ElementName = "searchCriteriaExactMobileNetwork", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactMobileNetwork SearchCriteriaExactMobileNetwork {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactMobileNetwork SearchCriteriaExactMobileNetwork {
         get => _searchCriteriaExactMobileNetwork;
         set {
             SearchCriteriaExactMobileNetworkSpecified = true;

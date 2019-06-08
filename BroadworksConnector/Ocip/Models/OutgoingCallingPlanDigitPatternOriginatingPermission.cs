@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class OutgoingCallingPlanDigitPatternOriginatingPermission
 
     [XmlIgnore]
     public bool DigitPatternNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _permission;
+    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _permission;
 
     [XmlElement(ElementName = "permission", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission Permission {
+    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission Permission {
         get => _permission;
         set {
             PermissionSpecified = true;

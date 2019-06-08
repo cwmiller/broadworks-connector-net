@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupUserCallWaitingSettingsGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupUserCallWaitingSettingsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _userCallWaitingTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _userCallWaitingTable;
 
     [XmlElement(ElementName = "userCallWaitingTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserCallWaitingTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable UserCallWaitingTable {
         get => _userCallWaitingTable;
         set {
             UserCallWaitingTableSpecified = true;

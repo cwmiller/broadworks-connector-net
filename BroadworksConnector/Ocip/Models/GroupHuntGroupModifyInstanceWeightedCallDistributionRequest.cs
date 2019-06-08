@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupHuntGroupModifyInstanceWeightedCallDistributionRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupHuntGroupModifyInstanceWeightedCallDistributionRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -21,10 +21,10 @@ public  class GroupHuntGroupModifyInstanceWeightedCallDistributionRequest : Broa
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.HuntAgentWeight> _agentWeight;
+    private List<BroadWorksConnector.Ocip.Models.HuntAgentWeight> _agentWeight;
 
     [XmlElement(ElementName = "agentWeight", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.HuntAgentWeight> AgentWeight {
+    public List<BroadWorksConnector.Ocip.Models.HuntAgentWeight> AgentWeight {
         get => _agentWeight;
         set {
             AgentWeightSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupRoutePointAddInstanceRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupRoutePointAddInstanceRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupRoutePointAddInstanceRequest22 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceAddProfileCallCenter _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfileCallCenter _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceAddProfileCallCenter ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfileCallCenter ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupRoutePointAddInstanceRequest22 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool NetworkClassOfServiceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AudioFileCodec22 _externalPreferredAudioCodec;
+    private BroadWorksConnector.Ocip.Models.AudioFileCodec22 _externalPreferredAudioCodec;
 
     [XmlElement(ElementName = "externalPreferredAudioCodec", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AudioFileCodec22 ExternalPreferredAudioCodec {
+    public BroadWorksConnector.Ocip.Models.AudioFileCodec22 ExternalPreferredAudioCodec {
         get => _externalPreferredAudioCodec;
         set {
             ExternalPreferredAudioCodecSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupRoutePointAddInstanceRequest22 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool ExternalPreferredAudioCodecSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AudioFileCodec22 _internalPreferredAudioCodec;
+    private BroadWorksConnector.Ocip.Models.AudioFileCodec22 _internalPreferredAudioCodec;
 
     [XmlElement(ElementName = "internalPreferredAudioCodec", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AudioFileCodec22 InternalPreferredAudioCodec {
+    public BroadWorksConnector.Ocip.Models.AudioFileCodec22 InternalPreferredAudioCodec {
         get => _internalPreferredAudioCodec;
         set {
             InternalPreferredAudioCodecSpecified = true;
@@ -190,10 +190,10 @@ public  class GroupRoutePointAddInstanceRequest22 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool EnableAutomaticStateChangeForAgentsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AgentACDAutomaticState _agentStateAfterCall;
+    private BroadWorksConnector.Ocip.Models.AgentACDAutomaticState _agentStateAfterCall;
 
     [XmlElement(ElementName = "agentStateAfterCall", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AgentACDAutomaticState AgentStateAfterCall {
+    public BroadWorksConnector.Ocip.Models.AgentACDAutomaticState AgentStateAfterCall {
         get => _agentStateAfterCall;
         set {
             AgentStateAfterCallSpecified = true;

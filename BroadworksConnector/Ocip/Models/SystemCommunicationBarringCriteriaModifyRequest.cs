@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCommunicationBarringCriteriaModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemCommunicationBarringCriteriaModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _name;
 
@@ -47,10 +47,10 @@ public  class SystemCommunicationBarringCriteriaModifyRequest : BroadworksConnec
 
     [XmlIgnore]
     public bool DescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringCallTypeList _matchCallType;
+    private BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringCallTypeList _matchCallType;
 
     [XmlElement(ElementName = "matchCallType", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringCallTypeList MatchCallType {
+    public BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringCallTypeList MatchCallType {
         get => _matchCallType;
         set {
             MatchCallTypeSpecified = true;
@@ -60,10 +60,10 @@ public  class SystemCommunicationBarringCriteriaModifyRequest : BroadworksConnec
 
     [XmlIgnore]
     public bool MatchCallTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringAlternateCallIndicatorList _matchAlternateCallIndicator;
+    private BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringAlternateCallIndicatorList _matchAlternateCallIndicator;
 
     [XmlElement(ElementName = "matchAlternateCallIndicator", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringAlternateCallIndicatorList MatchAlternateCallIndicator {
+    public BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringAlternateCallIndicatorList MatchAlternateCallIndicator {
         get => _matchAlternateCallIndicator;
         set {
             MatchAlternateCallIndicatorSpecified = true;
@@ -73,10 +73,10 @@ public  class SystemCommunicationBarringCriteriaModifyRequest : BroadworksConnec
 
     [XmlIgnore]
     public bool MatchAlternateCallIndicatorSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementVirtualOnNetCallTypeNameList _matchVirtualOnNetCallType;
+    private BroadWorksConnector.Ocip.Models.ReplacementVirtualOnNetCallTypeNameList _matchVirtualOnNetCallType;
 
     [XmlElement(ElementName = "matchVirtualOnNetCallType", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementVirtualOnNetCallTypeNameList MatchVirtualOnNetCallType {
+    public BroadWorksConnector.Ocip.Models.ReplacementVirtualOnNetCallTypeNameList MatchVirtualOnNetCallType {
         get => _matchVirtualOnNetCallType;
         set {
             MatchVirtualOnNetCallTypeSpecified = true;
@@ -476,10 +476,10 @@ public  class SystemCommunicationBarringCriteriaModifyRequest : BroadworksConnec
 
     [XmlIgnore]
     public bool MatchGETSFCNTGetsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LocationCriteria _matchLocation;
+    private BroadWorksConnector.Ocip.Models.LocationCriteria _matchLocation;
 
     [XmlElement(ElementName = "matchLocation", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LocationCriteria MatchLocation {
+    public BroadWorksConnector.Ocip.Models.LocationCriteria MatchLocation {
         get => _matchLocation;
         set {
             MatchLocationSpecified = true;
@@ -489,10 +489,10 @@ public  class SystemCommunicationBarringCriteriaModifyRequest : BroadworksConnec
 
     [XmlIgnore]
     public bool MatchLocationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RoamingCriteria _matchRoaming;
+    private BroadWorksConnector.Ocip.Models.RoamingCriteria _matchRoaming;
 
     [XmlElement(ElementName = "matchRoaming", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RoamingCriteria MatchRoaming {
+    public BroadWorksConnector.Ocip.Models.RoamingCriteria MatchRoaming {
         get => _matchRoaming;
         set {
             MatchRoamingSpecified = true;
@@ -528,10 +528,10 @@ public  class SystemCommunicationBarringCriteriaModifyRequest : BroadworksConnec
 
     [XmlIgnore]
     public bool HolidayScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementNumberPortabilityStatusList _matchNumberPortabilityStatus;
+    private BroadWorksConnector.Ocip.Models.ReplacementNumberPortabilityStatusList _matchNumberPortabilityStatus;
 
     [XmlElement(ElementName = "matchNumberPortabilityStatus", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementNumberPortabilityStatusList MatchNumberPortabilityStatus {
+    public BroadWorksConnector.Ocip.Models.ReplacementNumberPortabilityStatusList MatchNumberPortabilityStatus {
         get => _matchNumberPortabilityStatus;
         set {
             MatchNumberPortabilityStatusSpecified = true;

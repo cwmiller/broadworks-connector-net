@@ -1,10 +1,10 @@
-﻿using BroadworksConnector.Ocip.Models.C;
+﻿using BroadWorksConnector.Ocip.Models.C;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector.Ocip
+namespace BroadWorksConnector.Ocip
 {
     [XmlRootAttribute(Namespace = "C")]
     public class BroadsoftDocument : OCIMessage

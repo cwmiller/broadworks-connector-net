@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : Broad
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;
@@ -34,10 +34,10 @@ public  class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : Broad
 
     [XmlIgnore]
     public bool ResponsePagingControlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByLocation _sortByLocation;
+    private BroadWorksConnector.Ocip.Models.SortByLocation _sortByLocation;
 
     [XmlElement(ElementName = "sortByLocation", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByLocation SortByLocation {
+    public BroadWorksConnector.Ocip.Models.SortByLocation SortByLocation {
         get => _sortByLocation;
         set {
             SortByLocationSpecified = true;
@@ -47,10 +47,10 @@ public  class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : Broad
 
     [XmlIgnore]
     public bool SortByLocationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByEnabled _sortByEnabled;
+    private BroadWorksConnector.Ocip.Models.SortByEnabled _sortByEnabled;
 
     [XmlElement(ElementName = "sortByEnabled", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByEnabled SortByEnabled {
+    public BroadWorksConnector.Ocip.Models.SortByEnabled SortByEnabled {
         get => _sortByEnabled;
         set {
             SortByEnabledSpecified = true;
@@ -60,10 +60,10 @@ public  class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : Broad
 
     [XmlIgnore]
     public bool SortByEnabledSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaLocation> _searchCriteriaLocation;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation> _searchCriteriaLocation;
 
     [XmlElement(ElementName = "searchCriteriaLocation", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaLocation> SearchCriteriaLocation {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation> SearchCriteriaLocation {
         get => _searchCriteriaLocation;
         set {
             SearchCriteriaLocationSpecified = true;
@@ -73,10 +73,10 @@ public  class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : Broad
 
     [XmlIgnore]
     public bool SearchCriteriaLocationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactLocationEnabled _searchCriteriaExactLocationEnabled;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactLocationEnabled _searchCriteriaExactLocationEnabled;
 
     [XmlElement(ElementName = "searchCriteriaExactLocationEnabled", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactLocationEnabled SearchCriteriaExactLocationEnabled {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactLocationEnabled SearchCriteriaExactLocationEnabled {
         get => _searchCriteriaExactLocationEnabled;
         set {
             SearchCriteriaExactLocationEnabledSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupMeetMeConferencingAddInstanceRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupMeetMeConferencingAddInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupMeetMeConferencingAddInstanceRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupMeetMeConferencingAddInstanceRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
     [XmlElement(ElementName = "allocatedPorts", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts {
         get => _allocatedPorts;
         set {
             AllocatedPortsSpecified = true;

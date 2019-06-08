@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallCenterModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserCallCenterModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserCallCenterModifyRequest : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AgentACDState _agentACDState;
+    private BroadWorksConnector.Ocip.Models.AgentACDState _agentACDState;
 
     [XmlElement(ElementName = "agentACDState", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AgentACDState AgentACDState {
+    public BroadWorksConnector.Ocip.Models.AgentACDState AgentACDState {
         get => _agentACDState;
         set {
             AgentACDStateSpecified = true;
@@ -164,10 +164,10 @@ public  class UserCallCenterModifyRequest : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool MakeOutgoingCallsAsCallCenterSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DNISKey _outgoingCallDNIS;
+    private BroadWorksConnector.Ocip.Models.DNISKey _outgoingCallDNIS;
 
     [XmlElement(ElementName = "outgoingCallDNIS", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DNISKey OutgoingCallDNIS {
+    public BroadWorksConnector.Ocip.Models.DNISKey OutgoingCallDNIS {
         get => _outgoingCallDNIS;
         set {
             OutgoingCallDNISSpecified = true;
@@ -177,10 +177,10 @@ public  class UserCallCenterModifyRequest : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool OutgoingCallDNISSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CallCenterAgentAvailability> _callCenterAvailability;
+    private List<BroadWorksConnector.Ocip.Models.CallCenterAgentAvailability> _callCenterAvailability;
 
     [XmlElement(ElementName = "callCenterAvailability", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CallCenterAgentAvailability> CallCenterAvailability {
+    public List<BroadWorksConnector.Ocip.Models.CallCenterAgentAvailability> CallCenterAvailability {
         get => _callCenterAvailability;
         set {
             CallCenterAvailabilitySpecified = true;

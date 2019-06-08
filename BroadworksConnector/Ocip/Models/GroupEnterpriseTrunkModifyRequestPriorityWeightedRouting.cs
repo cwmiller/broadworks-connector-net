@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class GroupEnterpriseTrunkModifyRequestPriorityWeightedRouting
 
     [XmlIgnore]
     public bool MaximumRerouteAttemptsWithinPrioritySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList _priorityWeightedTrunkGroupList;
+    private BroadWorksConnector.Ocip.Models.ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList _priorityWeightedTrunkGroupList;
 
     [XmlElement(ElementName = "priorityWeightedTrunkGroupList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList PriorityWeightedTrunkGroupList {
+    public BroadWorksConnector.Ocip.Models.ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList PriorityWeightedTrunkGroupList {
         get => _priorityWeightedTrunkGroupList;
         set {
             PriorityWeightedTrunkGroupListSpecified = true;

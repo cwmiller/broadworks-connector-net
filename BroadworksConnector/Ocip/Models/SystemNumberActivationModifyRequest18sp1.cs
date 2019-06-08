@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemNumberActivationModifyRequest18sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemNumberActivationModifyRequest18sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.NumberActivationMode _numberActivationMode;
+    private BroadWorksConnector.Ocip.Models.NumberActivationMode _numberActivationMode;
 
     [XmlElement(ElementName = "numberActivationMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NumberActivationMode NumberActivationMode {
+    public BroadWorksConnector.Ocip.Models.NumberActivationMode NumberActivationMode {
         get => _numberActivationMode;
         set {
             NumberActivationModeSpecified = true;

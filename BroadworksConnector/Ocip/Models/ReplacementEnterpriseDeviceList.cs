@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class ReplacementEnterpriseDeviceList 
 {
-    private List<BroadworksConnector.Ocip.Models.EnterpriseAccessDevice> _device;
+    private List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> _device;
 
     [XmlElement(ElementName = "device", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.EnterpriseAccessDevice> Device {
+    public List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> Device {
         get => _device;
         set {
             DeviceSpecified = true;

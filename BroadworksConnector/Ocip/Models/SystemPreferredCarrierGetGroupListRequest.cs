@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemPreferredCarrierGetGroupListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemPreferredCarrierGetGroupListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _carrier;
 
@@ -34,10 +34,10 @@ public  class SystemPreferredCarrierGetGroupListRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId;
 
     [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId {
         get => _searchCriteriaGroupId;
         set {
             SearchCriteriaGroupIdSpecified = true;
@@ -47,10 +47,10 @@ public  class SystemPreferredCarrierGetGroupListRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool SearchCriteriaGroupIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupName> _searchCriteriaGroupName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupName> _searchCriteriaGroupName;
 
     [XmlElement(ElementName = "searchCriteriaGroupName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupName> SearchCriteriaGroupName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupName> SearchCriteriaGroupName {
         get => _searchCriteriaGroupName;
         set {
             SearchCriteriaGroupNameSpecified = true;
@@ -60,10 +60,10 @@ public  class SystemPreferredCarrierGetGroupListRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool SearchCriteriaGroupNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExactServiceProvider> _searchCriteriaExactServiceProvider;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactServiceProvider> _searchCriteriaExactServiceProvider;
 
     [XmlElement(ElementName = "searchCriteriaExactServiceProvider", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExactServiceProvider> SearchCriteriaExactServiceProvider {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactServiceProvider> SearchCriteriaExactServiceProvider {
         get => _searchCriteriaExactServiceProvider;
         set {
             SearchCriteriaExactServiceProviderSpecified = true;
@@ -73,10 +73,10 @@ public  class SystemPreferredCarrierGetGroupListRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool SearchCriteriaExactServiceProviderSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceProviderId> _searchCriteriaServiceProviderId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> _searchCriteriaServiceProviderId;
 
     [XmlElement(ElementName = "searchCriteriaServiceProviderId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId {
         get => _searchCriteriaServiceProviderId;
         set {
             SearchCriteriaServiceProviderIdSpecified = true;

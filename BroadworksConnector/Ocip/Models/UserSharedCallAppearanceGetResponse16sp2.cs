@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserSharedCallAppearanceGetResponse16sp2 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserSharedCallAppearanceGetResponse16sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _alertAllAppearancesForClickToDialCalls;
 
@@ -86,10 +86,10 @@ public  class UserSharedCallAppearanceGetResponse16sp2 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool MultipleCallArrangementIsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _endpointTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _endpointTable;
 
     [XmlElement(ElementName = "endpointTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable EndpointTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable EndpointTable {
         get => _endpointTable;
         set {
             EndpointTableSpecified = true;
@@ -112,10 +112,10 @@ public  class UserSharedCallAppearanceGetResponse16sp2 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool AllowBridgingBetweenLocationsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
+    private BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
 
     [XmlElement(ElementName = "bridgeWarningTone", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone {
+    public BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone {
         get => _bridgeWarningTone;
         set {
             BridgeWarningToneSpecified = true;

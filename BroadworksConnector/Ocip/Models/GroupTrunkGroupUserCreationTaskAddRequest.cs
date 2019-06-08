@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupTrunkGroupUserCreationTaskAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupTrunkGroupUserCreationTaskAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -34,10 +34,10 @@ public  class GroupTrunkGroupUserCreationTaskAddRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool TaskNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat _userIdFormat;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat _userIdFormat;
 
     [XmlElement(ElementName = "userIdFormat", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat UserIdFormat {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat UserIdFormat {
         get => _userIdFormat;
         set {
             UserIdFormatSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupTrunkGroupUserCreationTaskAddRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool PopulateExtensionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _linePortFormat;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _linePortFormat;
 
     [XmlElement(ElementName = "linePortFormat", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat LinePortFormat {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat LinePortFormat {
         get => _linePortFormat;
         set {
             LinePortFormatSpecified = true;
@@ -112,10 +112,10 @@ public  class GroupTrunkGroupUserCreationTaskAddRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool PopulateContactSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _contactFormat;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _contactFormat;
 
     [XmlElement(ElementName = "contactFormat", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat ContactFormat {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat ContactFormat {
         get => _contactFormat;
         set {
             ContactFormatSpecified = true;
@@ -138,10 +138,10 @@ public  class GroupTrunkGroupUserCreationTaskAddRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool ContactDomainSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserPhoneNumbers _userPhoneNumbers;
+    private BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserPhoneNumbers _userPhoneNumbers;
 
     [XmlElement(ElementName = "userPhoneNumbers", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserPhoneNumbers UserPhoneNumbers {
+    public BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserPhoneNumbers UserPhoneNumbers {
         get => _userPhoneNumbers;
         set {
             UserPhoneNumbersSpecified = true;
@@ -151,10 +151,10 @@ public  class GroupTrunkGroupUserCreationTaskAddRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool UserPhoneNumbersSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserExtensions _userExtensions;
+    private BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserExtensions _userExtensions;
 
     [XmlElement(ElementName = "userExtensions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserExtensions UserExtensions {
+    public BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserExtensions UserExtensions {
         get => _userExtensions;
         set {
             UserExtensionsSpecified = true;
@@ -177,10 +177,10 @@ public  class GroupTrunkGroupUserCreationTaskAddRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool ServicePackNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.UserService> _userService;
+    private List<BroadWorksConnector.Ocip.Models.UserService> _userService;
 
     [XmlElement(ElementName = "userService", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.UserService> UserService {
+    public List<BroadWorksConnector.Ocip.Models.UserService> UserService {
         get => _userService;
         set {
             UserServiceSpecified = true;

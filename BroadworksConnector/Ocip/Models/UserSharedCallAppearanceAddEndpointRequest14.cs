@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserSharedCallAppearanceAddEndpointRequest14 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserSharedCallAppearanceAddEndpointRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserSharedCallAppearanceAddEndpointRequest14 : BroadworksConnector
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;

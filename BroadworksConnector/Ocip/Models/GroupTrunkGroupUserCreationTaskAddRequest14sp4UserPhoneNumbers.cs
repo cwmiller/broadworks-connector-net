@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class GroupTrunkGroupUserCreationTaskAddRequest14sp4UserPhoneNumbers
 
     [XmlIgnore]
     public bool PhoneNumberSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.DNRange> _dnRange;
+    private List<BroadWorksConnector.Ocip.Models.DNRange> _dnRange;
 
     [XmlElement(ElementName = "dnRange", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.DNRange> DnRange {
+    public List<BroadWorksConnector.Ocip.Models.DNRange> DnRange {
         get => _dnRange;
         set {
             DnRangeSpecified = true;

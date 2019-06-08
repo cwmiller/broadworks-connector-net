@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupEmergencyZonesModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupEmergencyZonesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupEmergencyZonesModifyRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EmergencyZonesProhibition _emergencyZonesProhibition;
+    private BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition _emergencyZonesProhibition;
 
     [XmlElement(ElementName = "emergencyZonesProhibition", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EmergencyZonesProhibition EmergencyZonesProhibition {
+    public BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition EmergencyZonesProhibition {
         get => _emergencyZonesProhibition;
         set {
             EmergencyZonesProhibitionSpecified = true;

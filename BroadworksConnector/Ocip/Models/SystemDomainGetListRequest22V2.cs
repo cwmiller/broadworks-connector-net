@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDomainGetListRequest22V2 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemDomainGetListRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private bool _excludeReseller;
 
@@ -47,10 +47,10 @@ public  class SystemDomainGetListRequest22V2 : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDomainName> _searchCriteriaDomainName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDomainName> _searchCriteriaDomainName;
 
     [XmlElement(ElementName = "searchCriteriaDomainName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDomainName> SearchCriteriaDomainName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDomainName> SearchCriteriaDomainName {
         get => _searchCriteriaDomainName;
         set {
             SearchCriteriaDomainNameSpecified = true;

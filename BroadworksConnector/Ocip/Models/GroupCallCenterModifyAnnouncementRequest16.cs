@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallCenterModifyAnnouncementRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -47,10 +47,10 @@ public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool MandatoryEntranceMessageSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _entranceAudioMessageSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _entranceAudioMessageSelection;
 
     [XmlElement(ElementName = "entranceAudioMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection EntranceAudioMessageSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection EntranceAudioMessageSelection {
         get => _entranceAudioMessageSelection;
         set {
             EntranceAudioMessageSelectionSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool EntranceAudioMessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource _entranceMessageAudioFile;
+    private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _entranceMessageAudioFile;
 
     [XmlElement(ElementName = "entranceMessageAudioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource EntranceMessageAudioFile {
+    public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource EntranceMessageAudioFile {
         get => _entranceMessageAudioFile;
         set {
             EntranceMessageAudioFileSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool EntranceMessageAudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _entranceVideoMessageSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _entranceVideoMessageSelection;
 
     [XmlElement(ElementName = "entranceVideoMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection EntranceVideoMessageSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection EntranceVideoMessageSelection {
         get => _entranceVideoMessageSelection;
         set {
             EntranceVideoMessageSelectionSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool EntranceVideoMessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource _entranceMessageVideoFile;
+    private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _entranceMessageVideoFile;
 
     [XmlElement(ElementName = "entranceMessageVideoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource EntranceMessageVideoFile {
+    public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource EntranceMessageVideoFile {
         get => _entranceMessageVideoFile;
         set {
             EntranceMessageVideoFileSpecified = true;
@@ -125,10 +125,10 @@ public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool TimeBetweenComfortMessagesSecondsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _periodicComfortAudioMessageSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _periodicComfortAudioMessageSelection;
 
     [XmlElement(ElementName = "periodicComfortAudioMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection PeriodicComfortAudioMessageSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection PeriodicComfortAudioMessageSelection {
         get => _periodicComfortAudioMessageSelection;
         set {
             PeriodicComfortAudioMessageSelectionSpecified = true;
@@ -138,10 +138,10 @@ public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool PeriodicComfortAudioMessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource _periodicComfortMessageAudioFile;
+    private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _periodicComfortMessageAudioFile;
 
     [XmlElement(ElementName = "periodicComfortMessageAudioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource PeriodicComfortMessageAudioFile {
+    public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource PeriodicComfortMessageAudioFile {
         get => _periodicComfortMessageAudioFile;
         set {
             PeriodicComfortMessageAudioFileSpecified = true;
@@ -151,10 +151,10 @@ public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool PeriodicComfortMessageAudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _periodicComfortVideoMessageSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _periodicComfortVideoMessageSelection;
 
     [XmlElement(ElementName = "periodicComfortVideoMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection PeriodicComfortVideoMessageSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection PeriodicComfortVideoMessageSelection {
         get => _periodicComfortVideoMessageSelection;
         set {
             PeriodicComfortVideoMessageSelectionSpecified = true;
@@ -164,10 +164,10 @@ public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool PeriodicComfortVideoMessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource _periodicComfortMessageVideoFile;
+    private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _periodicComfortMessageVideoFile;
 
     [XmlElement(ElementName = "periodicComfortMessageVideoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource PeriodicComfortMessageVideoFile {
+    public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource PeriodicComfortMessageVideoFile {
         get => _periodicComfortMessageVideoFile;
         set {
             PeriodicComfortMessageVideoFileSpecified = true;
@@ -190,10 +190,10 @@ public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool EnableMediaOnHoldForQueuedCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 _mediaOnHoldSource;
+    private BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 _mediaOnHoldSource;
 
     [XmlElement(ElementName = "mediaOnHoldSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 MediaOnHoldSource {
+    public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 MediaOnHoldSource {
         get => _mediaOnHoldSource;
         set {
             MediaOnHoldSourceSpecified = true;
@@ -216,10 +216,10 @@ public  class GroupCallCenterModifyAnnouncementRequest16 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool MediaOnHoldUseAlternateSourceForInternalCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 _mediaOnHoldInternalSource;
+    private BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 _mediaOnHoldInternalSource;
 
     [XmlElement(ElementName = "mediaOnHoldInternalSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 MediaOnHoldInternalSource {
+    public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify16 MediaOnHoldInternalSource {
         get => _mediaOnHoldInternalSource;
         set {
             MediaOnHoldInternalSourceSpecified = true;

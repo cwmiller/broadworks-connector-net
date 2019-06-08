@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class SelectiveCallRejectionCriteriaCallTypeModify 
 {
-    private BroadworksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallTypeSelection _fromDnCriteriaSelection;
+    private BroadWorksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallTypeSelection _fromDnCriteriaSelection;
 
     [XmlElement(ElementName = "fromDnCriteriaSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallTypeSelection FromDnCriteriaSelection {
+    public BroadWorksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallTypeSelection FromDnCriteriaSelection {
         get => _fromDnCriteriaSelection;
         set {
             FromDnCriteriaSelectionSpecified = true;
@@ -47,10 +47,10 @@ public  class SelectiveCallRejectionCriteriaCallTypeModify
 
     [XmlIgnore]
     public bool IncludeUnavailableCallersSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CriteriaReplacementDNList _phoneNumberList;
+    private BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList _phoneNumberList;
 
     [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CriteriaReplacementDNList PhoneNumberList {
+    public BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList PhoneNumberList {
         get => _phoneNumberList;
         set {
             PhoneNumberListSpecified = true;

@@ -1,42 +1,38 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class GroupCallCenterCurrentAndPastCallCenterGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private List<string> _serviceUserId;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupCallCenterCurrentAndPastCallCenterGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private List<string> _serviceUserId;
 
-        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public List<string> ServiceUserId
-        {
-            get => _serviceUserId;
-            set
-            {
-                ServiceUserIdSpecified = true;
-                _serviceUserId = value;
-            }
+    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+    public List<string> ServiceUserId {
+        get => _serviceUserId;
+        set {
+            ServiceUserIdSpecified = true;
+            _serviceUserId = value;
         }
-
-        [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
-        private List<string> _deletedServiceUserId;
-
-        [XmlElement(ElementName = "deletedServiceUserId", IsNullable = false, Namespace = "")]
-        public List<string> DeletedServiceUserId
-        {
-            get => _deletedServiceUserId;
-            set
-            {
-                DeletedServiceUserIdSpecified = true;
-                _deletedServiceUserId = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool DeletedServiceUserIdSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool ServiceUserIdSpecified { get; set; }
+    private List<string> _deletedServiceUserId;
+
+    [XmlElement(ElementName = "deletedServiceUserId", IsNullable = false, Namespace = "")]
+    public List<string> DeletedServiceUserId {
+        get => _deletedServiceUserId;
+        set {
+            DeletedServiceUserIdSpecified = true;
+            _deletedServiceUserId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DeletedServiceUserIdSpecified { get; set; }
+}
 }

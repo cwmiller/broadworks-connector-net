@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallCenterModifyInstanceRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallCenterModifyInstanceRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -21,10 +21,10 @@ public  class GroupCallCenterModifyInstanceRequest16 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupCallCenterModifyInstanceRequest16 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterType _type;
+    private BroadWorksConnector.Ocip.Models.CallCenterType _type;
 
     [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterType Type {
+    public BroadWorksConnector.Ocip.Models.CallCenterType Type {
         get => _type;
         set {
             TypeSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupCallCenterModifyInstanceRequest16 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool TypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HuntPolicy _policy;
+    private BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
 
     [XmlElement(ElementName = "policy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HuntPolicy Policy {
+    public BroadWorksConnector.Ocip.Models.HuntPolicy Policy {
         get => _policy;
         set {
             PolicySpecified = true;
@@ -242,10 +242,10 @@ public  class GroupCallCenterModifyInstanceRequest16 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool EnableAutomaticStateChangeForAgentsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AgentACDAutomaticState _agentStateAfterCall;
+    private BroadWorksConnector.Ocip.Models.AgentACDAutomaticState _agentStateAfterCall;
 
     [XmlElement(ElementName = "agentStateAfterCall", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AgentACDAutomaticState AgentStateAfterCall {
+    public BroadWorksConnector.Ocip.Models.AgentACDAutomaticState AgentStateAfterCall {
         get => _agentStateAfterCall;
         set {
             AgentStateAfterCallSpecified = true;
@@ -268,10 +268,10 @@ public  class GroupCallCenterModifyInstanceRequest16 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool AgentUnavailableCodeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AudioFileCodec _externalPreferredAudioCodec;
+    private BroadWorksConnector.Ocip.Models.AudioFileCodec _externalPreferredAudioCodec;
 
     [XmlElement(ElementName = "externalPreferredAudioCodec", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AudioFileCodec ExternalPreferredAudioCodec {
+    public BroadWorksConnector.Ocip.Models.AudioFileCodec ExternalPreferredAudioCodec {
         get => _externalPreferredAudioCodec;
         set {
             ExternalPreferredAudioCodecSpecified = true;
@@ -281,10 +281,10 @@ public  class GroupCallCenterModifyInstanceRequest16 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool ExternalPreferredAudioCodecSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AudioFileCodec _internalPreferredAudioCodec;
+    private BroadWorksConnector.Ocip.Models.AudioFileCodec _internalPreferredAudioCodec;
 
     [XmlElement(ElementName = "internalPreferredAudioCodec", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AudioFileCodec InternalPreferredAudioCodec {
+    public BroadWorksConnector.Ocip.Models.AudioFileCodec InternalPreferredAudioCodec {
         get => _internalPreferredAudioCodec;
         set {
             InternalPreferredAudioCodecSpecified = true;

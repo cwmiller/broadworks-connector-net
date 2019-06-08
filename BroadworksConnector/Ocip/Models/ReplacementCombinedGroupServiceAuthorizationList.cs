@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class ReplacementCombinedGroupServiceAuthorizationList 
 {
-    private List<BroadworksConnector.Ocip.Models.CombinedGroupServiceAuthorization> _groupServiceAuthorization;
+    private List<BroadWorksConnector.Ocip.Models.CombinedGroupServiceAuthorization> _groupServiceAuthorization;
 
     [XmlElement(ElementName = "groupServiceAuthorization", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CombinedGroupServiceAuthorization> GroupServiceAuthorization {
+    public List<BroadWorksConnector.Ocip.Models.CombinedGroupServiceAuthorization> GroupServiceAuthorization {
         get => _groupServiceAuthorization;
         set {
             GroupServiceAuthorizationSpecified = true;

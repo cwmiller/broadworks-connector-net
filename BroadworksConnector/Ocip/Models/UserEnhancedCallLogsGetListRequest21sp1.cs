@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserEnhancedCallLogsGetListRequest21sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserEnhancedCallLogsGetListRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserEnhancedCallLogsGetListRequest21sp1 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnhancedCallLogsCallLogsRequestType _callLogType;
+    private BroadWorksConnector.Ocip.Models.EnhancedCallLogsCallLogsRequestType _callLogType;
 
     [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnhancedCallLogsCallLogsRequestType CallLogType {
+    public BroadWorksConnector.Ocip.Models.EnhancedCallLogsCallLogsRequestType CallLogType {
         get => _callLogType;
         set {
             CallLogTypeSpecified = true;
@@ -34,10 +34,10 @@ public  class UserEnhancedCallLogsGetListRequest21sp1 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool CallLogTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnhancedCallLogsTimeRange _dateTimeRange;
+    private BroadWorksConnector.Ocip.Models.EnhancedCallLogsTimeRange _dateTimeRange;
 
     [XmlElement(ElementName = "dateTimeRange", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnhancedCallLogsTimeRange DateTimeRange {
+    public BroadWorksConnector.Ocip.Models.EnhancedCallLogsTimeRange DateTimeRange {
         get => _dateTimeRange;
         set {
             DateTimeRangeSpecified = true;
@@ -47,10 +47,10 @@ public  class UserEnhancedCallLogsGetListRequest21sp1 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool DateTimeRangeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnhancedCallLogsNumberFilter _numberFilter;
+    private BroadWorksConnector.Ocip.Models.EnhancedCallLogsNumberFilter _numberFilter;
 
     [XmlElement(ElementName = "numberFilter", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnhancedCallLogsNumberFilter NumberFilter {
+    public BroadWorksConnector.Ocip.Models.EnhancedCallLogsNumberFilter NumberFilter {
         get => _numberFilter;
         set {
             NumberFilterSpecified = true;
@@ -60,10 +60,10 @@ public  class UserEnhancedCallLogsGetListRequest21sp1 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool NumberFilterSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnhancedCallLogsRedirectedNumberFilter21sp1 _redirectedNumberFilter;
+    private BroadWorksConnector.Ocip.Models.EnhancedCallLogsRedirectedNumberFilter21sp1 _redirectedNumberFilter;
 
     [XmlElement(ElementName = "redirectedNumberFilter", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnhancedCallLogsRedirectedNumberFilter21sp1 RedirectedNumberFilter {
+    public BroadWorksConnector.Ocip.Models.EnhancedCallLogsRedirectedNumberFilter21sp1 RedirectedNumberFilter {
         get => _redirectedNumberFilter;
         set {
             RedirectedNumberFilterSpecified = true;
@@ -73,10 +73,10 @@ public  class UserEnhancedCallLogsGetListRequest21sp1 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool RedirectedNumberFilterSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnhancedCallLogsAccountAuthorizationCodeFilter _accountAuthorizationCodeFilter;
+    private BroadWorksConnector.Ocip.Models.EnhancedCallLogsAccountAuthorizationCodeFilter _accountAuthorizationCodeFilter;
 
     [XmlElement(ElementName = "accountAuthorizationCodeFilter", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnhancedCallLogsAccountAuthorizationCodeFilter AccountAuthorizationCodeFilter {
+    public BroadWorksConnector.Ocip.Models.EnhancedCallLogsAccountAuthorizationCodeFilter AccountAuthorizationCodeFilter {
         get => _accountAuthorizationCodeFilter;
         set {
             AccountAuthorizationCodeFilterSpecified = true;
@@ -86,10 +86,10 @@ public  class UserEnhancedCallLogsGetListRequest21sp1 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool AccountAuthorizationCodeFilterSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnhancedCallLogsCallAuthorizationCodeFilter _callAuthorizationCodeFilter;
+    private BroadWorksConnector.Ocip.Models.EnhancedCallLogsCallAuthorizationCodeFilter _callAuthorizationCodeFilter;
 
     [XmlElement(ElementName = "callAuthorizationCodeFilter", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnhancedCallLogsCallAuthorizationCodeFilter CallAuthorizationCodeFilter {
+    public BroadWorksConnector.Ocip.Models.EnhancedCallLogsCallAuthorizationCodeFilter CallAuthorizationCodeFilter {
         get => _callAuthorizationCodeFilter;
         set {
             CallAuthorizationCodeFilterSpecified = true;
@@ -99,10 +99,10 @@ public  class UserEnhancedCallLogsGetListRequest21sp1 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool CallAuthorizationCodeFilterSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnhancedCallLogsSubscriberType20 _subscriberType;
+    private BroadWorksConnector.Ocip.Models.EnhancedCallLogsSubscriberType20 _subscriberType;
 
     [XmlElement(ElementName = "subscriberType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnhancedCallLogsSubscriberType20 SubscriberType {
+    public BroadWorksConnector.Ocip.Models.EnhancedCallLogsSubscriberType20 SubscriberType {
         get => _subscriberType;
         set {
             SubscriberTypeSpecified = true;
@@ -112,10 +112,10 @@ public  class UserEnhancedCallLogsGetListRequest21sp1 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool SubscriberTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;

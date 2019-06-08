@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallCenterGetResponse17 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserCallCenterGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.AgentACDState _agentACDState;
+    private BroadWorksConnector.Ocip.Models.AgentACDState _agentACDState;
 
     [XmlElement(ElementName = "agentACDState", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AgentACDState AgentACDState {
+    public BroadWorksConnector.Ocip.Models.AgentACDState AgentACDState {
         get => _agentACDState;
         set {
             AgentACDStateSpecified = true;
@@ -151,10 +151,10 @@ public  class UserCallCenterGetResponse17 : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool MakeOutgoingCallsAsCallCenterSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DNISKey _outgoingCallDNIS;
+    private BroadWorksConnector.Ocip.Models.DNISKey _outgoingCallDNIS;
 
     [XmlElement(ElementName = "outgoingCallDNIS", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DNISKey OutgoingCallDNIS {
+    public BroadWorksConnector.Ocip.Models.DNISKey OutgoingCallDNIS {
         get => _outgoingCallDNIS;
         set {
             OutgoingCallDNISSpecified = true;
@@ -164,10 +164,10 @@ public  class UserCallCenterGetResponse17 : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool OutgoingCallDNISSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _callCenterTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _callCenterTable;
 
     [XmlElement(ElementName = "callCenterTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable CallCenterTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable CallCenterTable {
         get => _callCenterTable;
         set {
             CallCenterTableSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCPEConfigParametersModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemCPEConfigParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private bool _enableIPDeviceManagement;
 
@@ -99,10 +99,10 @@ public  class SystemCPEConfigParametersModifyRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool FileRebuildImmediateSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemCPEConfigParametersModifyRequestFileRebuildDaily _fileRebuildDaily;
+    private BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersModifyRequestFileRebuildDaily _fileRebuildDaily;
 
     [XmlElement(ElementName = "fileRebuildDaily", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemCPEConfigParametersModifyRequestFileRebuildDaily FileRebuildDaily {
+    public BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersModifyRequestFileRebuildDaily FileRebuildDaily {
         get => _fileRebuildDaily;
         set {
             FileRebuildDailySpecified = true;
@@ -112,10 +112,10 @@ public  class SystemCPEConfigParametersModifyRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool FileRebuildDailySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemCPEConfigParametersModifyRequestFileRebuildHourly _fileRebuildHourly;
+    private BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersModifyRequestFileRebuildHourly _fileRebuildHourly;
 
     [XmlElement(ElementName = "fileRebuildHourly", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemCPEConfigParametersModifyRequestFileRebuildHourly FileRebuildHourly {
+    public BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersModifyRequestFileRebuildHourly FileRebuildHourly {
         get => _fileRebuildHourly;
         set {
             FileRebuildHourlySpecified = true;

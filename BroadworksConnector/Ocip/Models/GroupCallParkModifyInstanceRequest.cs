@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallParkModifyInstanceRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallParkModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -60,10 +60,10 @@ public  class GroupCallParkModifyInstanceRequest : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool NewNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _userIdList;
+    private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _userIdList;
 
     [XmlElement(ElementName = "userIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList UserIdList {
+    public BroadWorksConnector.Ocip.Models.ReplacementUserIdList UserIdList {
         get => _userIdList;
         set {
             UserIdListSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupCallParkModifyInstanceRequest : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool RecallAlternateUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallParkRecallTo _recallTo;
+    private BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
 
     [XmlElement(ElementName = "recallTo", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallParkRecallTo RecallTo {
+    public BroadWorksConnector.Ocip.Models.CallParkRecallTo RecallTo {
         get => _recallTo;
         set {
             RecallToSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderDialableCallerIDGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderDialableCallerIDGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _useServiceProviderCriteria;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderDialableCallerIDGetResponse : BroadworksConnector.O
 
     [XmlIgnore]
     public bool UseServiceProviderCriteriaSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.NsScreeningFailurePolicy _nsScreeningFailurePolicy;
+    private BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy _nsScreeningFailurePolicy;
 
     [XmlElement(ElementName = "nsScreeningFailurePolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NsScreeningFailurePolicy NsScreeningFailurePolicy {
+    public BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy NsScreeningFailurePolicy {
         get => _nsScreeningFailurePolicy;
         set {
             NsScreeningFailurePolicySpecified = true;
@@ -34,10 +34,10 @@ public  class ServiceProviderDialableCallerIDGetResponse : BroadworksConnector.O
 
     [XmlIgnore]
     public bool NsScreeningFailurePolicySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _criteriaTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
     [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable CriteriaTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
         get => _criteriaTable;
         set {
             CriteriaTableSpecified = true;

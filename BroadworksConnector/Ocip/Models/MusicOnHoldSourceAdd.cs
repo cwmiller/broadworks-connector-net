@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class MusicOnHoldSourceAdd 
 {
-    private BroadworksConnector.Ocip.Models.AudioFileCodec _audioFilePreferredCodec;
+    private BroadWorksConnector.Ocip.Models.AudioFileCodec _audioFilePreferredCodec;
 
     [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AudioFileCodec AudioFilePreferredCodec {
+    public BroadWorksConnector.Ocip.Models.AudioFileCodec AudioFilePreferredCodec {
         get => _audioFilePreferredCodec;
         set {
             AudioFilePreferredCodecSpecified = true;
@@ -21,10 +21,10 @@ public  class MusicOnHoldSourceAdd
 
     [XmlIgnore]
     public bool AudioFilePreferredCodecSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
 
     [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection {
         get => _messageSourceSelection;
         set {
             MessageSourceSelectionSpecified = true;
@@ -34,10 +34,10 @@ public  class MusicOnHoldSourceAdd
 
     [XmlIgnore]
     public bool MessageSourceSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldSourceAddCustomSource _customSource;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAddCustomSource _customSource;
 
     [XmlElement(ElementName = "customSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldSourceAddCustomSource CustomSource {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAddCustomSource CustomSource {
         get => _customSource;
         set {
             CustomSourceSpecified = true;
@@ -47,10 +47,10 @@ public  class MusicOnHoldSourceAdd
 
     [XmlIgnore]
     public bool CustomSourceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldSourceAddExternalSource _externalSource;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAddExternalSource _externalSource;
 
     [XmlElement(ElementName = "externalSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldSourceAddExternalSource ExternalSource {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAddExternalSource ExternalSource {
         get => _externalSource;
         set {
             ExternalSourceSpecified = true;

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemExternalAuthenticationGetACLListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemExternalAuthenticationGetACLListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _aclTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _aclTable;
 
     [XmlElement(ElementName = "aclTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable AclTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable AclTable {
         get => _aclTable;
         set {
             AclTableSpecified = true;

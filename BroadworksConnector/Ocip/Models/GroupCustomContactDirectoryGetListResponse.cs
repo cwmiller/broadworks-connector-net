@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCustomContactDirectoryGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupCustomContactDirectoryGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private List<string> _name;
 

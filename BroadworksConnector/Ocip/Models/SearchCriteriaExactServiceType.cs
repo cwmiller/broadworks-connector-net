@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactServiceType : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactServiceType : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.ServiceType _serviceType;
+    private BroadWorksConnector.Ocip.Models.ServiceType _serviceType;
 
     [XmlElement(ElementName = "serviceType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceType ServiceType {
+    public BroadWorksConnector.Ocip.Models.ServiceType ServiceType {
         get => _serviceType;
         set {
             ServiceTypeSpecified = true;

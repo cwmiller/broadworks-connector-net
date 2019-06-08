@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallMeNowModifyCriteriaRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserCallMeNowModifyCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -47,10 +47,10 @@ public  class UserCallMeNowModifyCriteriaRequest : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool NewCriteriaNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeSchedule _timeSchedule;
+    private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
     [XmlElement(ElementName = "timeSchedule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+    public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule {
         get => _timeSchedule;
         set {
             TimeScheduleSpecified = true;
@@ -60,10 +60,10 @@ public  class UserCallMeNowModifyCriteriaRequest : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool TimeScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+    private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
     [XmlElement(ElementName = "holidaySchedule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+    public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
         get => _holidaySchedule;
         set {
             HolidayScheduleSpecified = true;
@@ -86,10 +86,10 @@ public  class UserCallMeNowModifyCriteriaRequest : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool RejectCallSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallMeNowToDnCriteriaModify _toDnCriteria;
+    private BroadWorksConnector.Ocip.Models.CallMeNowToDnCriteriaModify _toDnCriteria;
 
     [XmlElement(ElementName = "toDnCriteria", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallMeNowToDnCriteriaModify ToDnCriteria {
+    public BroadWorksConnector.Ocip.Models.CallMeNowToDnCriteriaModify ToDnCriteria {
         get => _toDnCriteria;
         set {
             ToDnCriteriaSpecified = true;

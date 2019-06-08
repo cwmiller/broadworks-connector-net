@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class ShInterfaceUserListEntry
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UserType _userType;
+    private BroadWorksConnector.Ocip.Models.UserType _userType;
 
     [XmlElement(ElementName = "userType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserType UserType {
+    public BroadWorksConnector.Ocip.Models.UserType UserType {
         get => _userType;
         set {
             UserTypeSpecified = true;
@@ -34,10 +34,10 @@ public  class ShInterfaceUserListEntry
 
     [XmlIgnore]
     public bool UserTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
+    private BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
 
     [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.PublicUserIdentity PublicUserIdentity {
+    public BroadWorksConnector.Ocip.Models.PublicUserIdentity PublicUserIdentity {
         get => _publicUserIdentity;
         set {
             PublicUserIdentitySpecified = true;
@@ -47,10 +47,10 @@ public  class ShInterfaceUserListEntry
 
     [XmlIgnore]
     public bool PublicUserIdentitySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EndpointType _endpointType;
+    private BroadWorksConnector.Ocip.Models.EndpointType _endpointType;
 
     [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EndpointType EndpointType {
+    public BroadWorksConnector.Ocip.Models.EndpointType EndpointType {
         get => _endpointType;
         set {
             EndpointTypeSpecified = true;
@@ -73,10 +73,10 @@ public  class ShInterfaceUserListEntry
 
     [XmlIgnore]
     public bool SCSCFNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.IMSUserState _iMSUserState;
+    private BroadWorksConnector.Ocip.Models.IMSUserState _iMSUserState;
 
     [XmlElement(ElementName = "IMSUserState", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.IMSUserState IMSUserState {
+    public BroadWorksConnector.Ocip.Models.IMSUserState IMSUserState {
         get => _iMSUserState;
         set {
             IMSUserStateSpecified = true;

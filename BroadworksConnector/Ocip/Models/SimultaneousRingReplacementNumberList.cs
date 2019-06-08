@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class SimultaneousRingReplacementNumberList 
 {
-    private List<BroadworksConnector.Ocip.Models.SimultaneousRingNumber> _simultaneousRingNumber;
+    private List<BroadWorksConnector.Ocip.Models.SimultaneousRingNumber> _simultaneousRingNumber;
 
     [XmlElement(ElementName = "simultaneousRingNumber", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SimultaneousRingNumber> SimultaneousRingNumber {
+    public List<BroadWorksConnector.Ocip.Models.SimultaneousRingNumber> SimultaneousRingNumber {
         get => _simultaneousRingNumber;
         set {
             SimultaneousRingNumberSpecified = true;

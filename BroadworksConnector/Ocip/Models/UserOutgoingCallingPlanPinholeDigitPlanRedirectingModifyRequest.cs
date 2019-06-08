@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserOutgoingCallingPlanPinholeDigitPlanRedirectingModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserOutgoingCallingPlanPinholeDigitPlanRedirectingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserOutgoingCallingPlanPinholeDigitPlanRedirectingModifyRequest : 
 
     [XmlIgnore]
     public bool UseCustomSettingsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions _userPermissions;
+    private BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions _userPermissions;
 
     [XmlElement(ElementName = "userPermissions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions UserPermissions {
+    public BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions UserPermissions {
         get => _userPermissions;
         set {
             UserPermissionsSpecified = true;

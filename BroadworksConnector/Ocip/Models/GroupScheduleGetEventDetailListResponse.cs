@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupScheduleGetEventDetailListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupScheduleGetEventDetailListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private List<BroadworksConnector.Ocip.Models.ScheduleEvents> _scheduleEventsList;
+    private List<BroadWorksConnector.Ocip.Models.ScheduleEvents> _scheduleEventsList;
 
     [XmlElement(ElementName = "scheduleEventsList", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.ScheduleEvents> ScheduleEventsList {
+    public List<BroadWorksConnector.Ocip.Models.ScheduleEvents> ScheduleEventsList {
         get => _scheduleEventsList;
         set {
             ScheduleEventsListSpecified = true;

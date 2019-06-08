@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -34,10 +34,10 @@ public  class RecurrenceRecurYearlyByDay
 
     [XmlIgnore]
     public bool DayOfMonthSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.Month _month;
+    private BroadWorksConnector.Ocip.Models.Month _month;
 
     [XmlElement(ElementName = "month", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.Month Month {
+    public BroadWorksConnector.Ocip.Models.Month Month {
         get => _month;
         set {
             MonthSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactDeviceType : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactDeviceType : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
     private string _deviceType;
 

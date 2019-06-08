@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserVoiceMessagingUserModifyOutgoingSMDIMWIRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserVoiceMessagingUserModifyOutgoingSMDIMWIRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserVoiceMessagingUserModifyOutgoingSMDIMWIRequest : BroadworksCon
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementOutgoingDNList _outgoingSMDIMWIPhoneNumberList;
+    private BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNList _outgoingSMDIMWIPhoneNumberList;
 
     [XmlElement(ElementName = "outgoingSMDIMWIPhoneNumberList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementOutgoingDNList OutgoingSMDIMWIPhoneNumberList {
+    public BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNList OutgoingSMDIMWIPhoneNumberList {
         get => _outgoingSMDIMWIPhoneNumberList;
         set {
             OutgoingSMDIMWIPhoneNumberListSpecified = true;

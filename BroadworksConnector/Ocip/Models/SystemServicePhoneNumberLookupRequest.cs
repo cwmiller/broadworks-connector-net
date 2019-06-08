@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemServicePhoneNumberLookupRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemServicePhoneNumberLookupRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.NumberLookupServiceType _serviceType;
+    private BroadWorksConnector.Ocip.Models.NumberLookupServiceType _serviceType;
 
     [XmlElement(ElementName = "serviceType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NumberLookupServiceType ServiceType {
+    public BroadWorksConnector.Ocip.Models.NumberLookupServiceType ServiceType {
         get => _serviceType;
         set {
             ServiceTypeSpecified = true;

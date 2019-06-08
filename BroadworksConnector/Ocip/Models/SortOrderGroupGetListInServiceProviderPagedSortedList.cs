@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class SortOrderGroupGetListInServiceProviderPagedSortedList 
 {
-    private BroadworksConnector.Ocip.Models.SortByGroupId _sortByGroupId;
+    private BroadWorksConnector.Ocip.Models.SortByGroupId _sortByGroupId;
 
     [XmlElement(ElementName = "sortByGroupId", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByGroupId SortByGroupId {
+    public BroadWorksConnector.Ocip.Models.SortByGroupId SortByGroupId {
         get => _sortByGroupId;
         set {
             SortByGroupIdSpecified = true;
@@ -21,10 +21,10 @@ public  class SortOrderGroupGetListInServiceProviderPagedSortedList
 
     [XmlIgnore]
     public bool SortByGroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByGroupName _sortByGroupName;
+    private BroadWorksConnector.Ocip.Models.SortByGroupName _sortByGroupName;
 
     [XmlElement(ElementName = "sortByGroupName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByGroupName SortByGroupName {
+    public BroadWorksConnector.Ocip.Models.SortByGroupName SortByGroupName {
         get => _sortByGroupName;
         set {
             SortByGroupNameSpecified = true;

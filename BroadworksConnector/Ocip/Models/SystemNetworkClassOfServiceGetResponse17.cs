@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemNetworkClassOfServiceGetResponse17 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemNetworkClassOfServiceGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _description;
 
@@ -21,10 +21,10 @@ public  class SystemNetworkClassOfServiceGetResponse17 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool DescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile0;
+    private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile0;
 
     [XmlElement(ElementName = "communicationBarringProfile0", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile0 {
+    public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile0 {
         get => _communicationBarringProfile0;
         set {
             CommunicationBarringProfile0Specified = true;
@@ -34,10 +34,10 @@ public  class SystemNetworkClassOfServiceGetResponse17 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool CommunicationBarringProfile0Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile1;
+    private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile1;
 
     [XmlElement(ElementName = "communicationBarringProfile1", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile1 {
+    public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile1 {
         get => _communicationBarringProfile1;
         set {
             CommunicationBarringProfile1Specified = true;
@@ -47,10 +47,10 @@ public  class SystemNetworkClassOfServiceGetResponse17 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool CommunicationBarringProfile1Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile2;
+    private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile2;
 
     [XmlElement(ElementName = "communicationBarringProfile2", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile2 {
+    public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile2 {
         get => _communicationBarringProfile2;
         set {
             CommunicationBarringProfile2Specified = true;
@@ -60,10 +60,10 @@ public  class SystemNetworkClassOfServiceGetResponse17 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool CommunicationBarringProfile2Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile3;
+    private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile3;
 
     [XmlElement(ElementName = "communicationBarringProfile3", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile3 {
+    public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile3 {
         get => _communicationBarringProfile3;
         set {
             CommunicationBarringProfile3Specified = true;
@@ -73,10 +73,10 @@ public  class SystemNetworkClassOfServiceGetResponse17 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool CommunicationBarringProfile3Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile4;
+    private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile4;
 
     [XmlElement(ElementName = "communicationBarringProfile4", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile4 {
+    public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile4 {
         get => _communicationBarringProfile4;
         set {
             CommunicationBarringProfile4Specified = true;
@@ -86,10 +86,10 @@ public  class SystemNetworkClassOfServiceGetResponse17 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool CommunicationBarringProfile4Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile5;
+    private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile5;
 
     [XmlElement(ElementName = "communicationBarringProfile5", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile5 {
+    public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile5 {
         get => _communicationBarringProfile5;
         set {
             CommunicationBarringProfile5Specified = true;
@@ -99,10 +99,10 @@ public  class SystemNetworkClassOfServiceGetResponse17 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool CommunicationBarringProfile5Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile6;
+    private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile6;
 
     [XmlElement(ElementName = "communicationBarringProfile6", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile6 {
+    public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile6 {
         get => _communicationBarringProfile6;
         set {
             CommunicationBarringProfile6Specified = true;
@@ -112,10 +112,10 @@ public  class SystemNetworkClassOfServiceGetResponse17 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool CommunicationBarringProfile6Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile7;
+    private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile7;
 
     [XmlElement(ElementName = "communicationBarringProfile7", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile7 {
+    public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile7 {
         get => _communicationBarringProfile7;
         set {
             CommunicationBarringProfile7Specified = true;
@@ -125,10 +125,10 @@ public  class SystemNetworkClassOfServiceGetResponse17 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool CommunicationBarringProfile7Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile8;
+    private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile8;
 
     [XmlElement(ElementName = "communicationBarringProfile8", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile8 {
+    public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile8 {
         get => _communicationBarringProfile8;
         set {
             CommunicationBarringProfile8Specified = true;
@@ -138,10 +138,10 @@ public  class SystemNetworkClassOfServiceGetResponse17 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool CommunicationBarringProfile8Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile9;
+    private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile9;
 
     [XmlElement(ElementName = "communicationBarringProfile9", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile9 {
+    public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile9 {
         get => _communicationBarringProfile9;
         set {
             CommunicationBarringProfile9Specified = true;

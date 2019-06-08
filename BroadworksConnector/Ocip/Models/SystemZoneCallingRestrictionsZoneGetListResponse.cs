@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemZoneCallingRestrictionsZoneGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemZoneCallingRestrictionsZoneGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _zoneTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _zoneTable;
 
     [XmlElement(ElementName = "zoneTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ZoneTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ZoneTable {
         get => _zoneTable;
         set {
             ZoneTableSpecified = true;

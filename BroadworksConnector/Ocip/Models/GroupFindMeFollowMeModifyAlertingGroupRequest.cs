@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupFindMeFollowMeModifyAlertingGroupRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupFindMeFollowMeModifyAlertingGroupRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -99,10 +99,10 @@ public  class GroupFindMeFollowMeModifyAlertingGroupRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool NumberOfRingsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.FindMeFollowMeAlertingGroupReplacementOutgoingDNSIPURIorUserIdList _phoneNumberOrUserList;
+    private BroadWorksConnector.Ocip.Models.FindMeFollowMeAlertingGroupReplacementOutgoingDNSIPURIorUserIdList _phoneNumberOrUserList;
 
     [XmlElement(ElementName = "phoneNumberOrUserList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.FindMeFollowMeAlertingGroupReplacementOutgoingDNSIPURIorUserIdList PhoneNumberOrUserList {
+    public BroadWorksConnector.Ocip.Models.FindMeFollowMeAlertingGroupReplacementOutgoingDNSIPURIorUserIdList PhoneNumberOrUserList {
         get => _phoneNumberOrUserList;
         set {
             PhoneNumberOrUserListSpecified = true;
@@ -112,10 +112,10 @@ public  class GroupFindMeFollowMeModifyAlertingGroupRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool PhoneNumberOrUserListSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
+    private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
 
     [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
+    public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
         get => _criteriaActivation;
         set {
             CriteriaActivationSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemTrunkGroupGetResponse19sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemTrunkGroupGetResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _enforceCLIDServiceAssignmentForPilotUser;
 
@@ -34,10 +34,10 @@ public  class SystemTrunkGroupGetResponse19sp1 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool TerminateUnreachableTriggerDetectionOnReceiptOf18xSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy _pilotUserCallingLineAssertedIdentityPolicy;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy _pilotUserCallingLineAssertedIdentityPolicy;
 
     [XmlElement(ElementName = "pilotUserCallingLineAssertedIdentityPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy PilotUserCallingLineAssertedIdentityPolicy {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy PilotUserCallingLineAssertedIdentityPolicy {
         get => _pilotUserCallingLineAssertedIdentityPolicy;
         set {
             PilotUserCallingLineAssertedIdentityPolicySpecified = true;
@@ -60,10 +60,10 @@ public  class SystemTrunkGroupGetResponse19sp1 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool EnforceOutOfDialogPBXRedirectionPoliciesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupUnscreenedRedirectionHandling _unscreenedRedirectionHandling;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUnscreenedRedirectionHandling _unscreenedRedirectionHandling;
 
     [XmlElement(ElementName = "unscreenedRedirectionHandling", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUnscreenedRedirectionHandling UnscreenedRedirectionHandling {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUnscreenedRedirectionHandling UnscreenedRedirectionHandling {
         get => _unscreenedRedirectionHandling;
         set {
             UnscreenedRedirectionHandlingSpecified = true;
@@ -86,10 +86,10 @@ public  class SystemTrunkGroupGetResponse19sp1 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool EnableHoldoverOfHighwaterCallCountsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupHighwaterCallCountHoldoverPeriodMinutes _holdoverPeriod;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupHighwaterCallCountHoldoverPeriodMinutes _holdoverPeriod;
 
     [XmlElement(ElementName = "holdoverPeriod", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupHighwaterCallCountHoldoverPeriodMinutes HoldoverPeriod {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupHighwaterCallCountHoldoverPeriodMinutes HoldoverPeriod {
         get => _holdoverPeriod;
         set {
             HoldoverPeriodSpecified = true;
@@ -99,10 +99,10 @@ public  class SystemTrunkGroupGetResponse19sp1 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool HoldoverPeriodSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupTimeZoneOffsetMinutes _timeZoneOffsetMinutes;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupTimeZoneOffsetMinutes _timeZoneOffsetMinutes;
 
     [XmlElement(ElementName = "timeZoneOffsetMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupTimeZoneOffsetMinutes TimeZoneOffsetMinutes {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupTimeZoneOffsetMinutes TimeZoneOffsetMinutes {
         get => _timeZoneOffsetMinutes;
         set {
             TimeZoneOffsetMinutesSpecified = true;
@@ -112,10 +112,10 @@ public  class SystemTrunkGroupGetResponse19sp1 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool TimeZoneOffsetMinutesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupCLIDSourceForScreenedCallsPolicy _clidSourceForScreenedCallsPolicy;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupCLIDSourceForScreenedCallsPolicy _clidSourceForScreenedCallsPolicy;
 
     [XmlElement(ElementName = "clidSourceForScreenedCallsPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupCLIDSourceForScreenedCallsPolicy ClidSourceForScreenedCallsPolicy {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupCLIDSourceForScreenedCallsPolicy ClidSourceForScreenedCallsPolicy {
         get => _clidSourceForScreenedCallsPolicy;
         set {
             ClidSourceForScreenedCallsPolicySpecified = true;
@@ -125,10 +125,10 @@ public  class SystemTrunkGroupGetResponse19sp1 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool ClidSourceForScreenedCallsPolicySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupUserLookupPolicy _userLookupPolicy;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUserLookupPolicy _userLookupPolicy;
 
     [XmlElement(ElementName = "userLookupPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUserLookupPolicy UserLookupPolicy {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUserLookupPolicy UserLookupPolicy {
         get => _userLookupPolicy;
         set {
             UserLookupPolicySpecified = true;

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminProfileAccess _profileAccess;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminProfileAccess _profileAccess;
 
     [XmlElement(ElementName = "profileAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminProfileAccess ProfileAccess {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminProfileAccess ProfileAccess {
         get => _profileAccess;
         set {
             ProfileAccessSpecified = true;
@@ -21,10 +21,10 @@ public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool ProfileAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminGroupAccess _groupAccess;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminGroupAccess _groupAccess;
 
     [XmlElement(ElementName = "groupAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminGroupAccess GroupAccess {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminGroupAccess GroupAccess {
         get => _groupAccess;
         set {
             GroupAccessSpecified = true;
@@ -34,10 +34,10 @@ public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool GroupAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminUserAccess _userAccess;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminUserAccess _userAccess;
 
     [XmlElement(ElementName = "userAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminUserAccess UserAccess {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminUserAccess UserAccess {
         get => _userAccess;
         set {
             UserAccessSpecified = true;
@@ -47,10 +47,10 @@ public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool UserAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminAdminAccess _adminAccess;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminAdminAccess _adminAccess;
 
     [XmlElement(ElementName = "adminAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminAdminAccess AdminAccess {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminAdminAccess AdminAccess {
         get => _adminAccess;
         set {
             AdminAccessSpecified = true;
@@ -60,10 +60,10 @@ public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool AdminAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminDepartmentAccess _departmentAccess;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminDepartmentAccess _departmentAccess;
 
     [XmlElement(ElementName = "departmentAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminDepartmentAccess DepartmentAccess {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminDepartmentAccess DepartmentAccess {
         get => _departmentAccess;
         set {
             DepartmentAccessSpecified = true;
@@ -73,10 +73,10 @@ public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool DepartmentAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminAccessDeviceAccess _accessDeviceAccess;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminAccessDeviceAccess _accessDeviceAccess;
 
     [XmlElement(ElementName = "accessDeviceAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminAccessDeviceAccess AccessDeviceAccess {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminAccessDeviceAccess AccessDeviceAccess {
         get => _accessDeviceAccess;
         set {
             AccessDeviceAccessSpecified = true;
@@ -86,10 +86,10 @@ public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool AccessDeviceAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminPhoneNumberExtensionAccess _phoneNumberExtensionAccess;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminPhoneNumberExtensionAccess _phoneNumberExtensionAccess;
 
     [XmlElement(ElementName = "phoneNumberExtensionAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminPhoneNumberExtensionAccess PhoneNumberExtensionAccess {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminPhoneNumberExtensionAccess PhoneNumberExtensionAccess {
         get => _phoneNumberExtensionAccess;
         set {
             PhoneNumberExtensionAccessSpecified = true;
@@ -99,10 +99,10 @@ public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool PhoneNumberExtensionAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminServiceAccess _serviceAccess;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminServiceAccess _serviceAccess;
 
     [XmlElement(ElementName = "serviceAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminServiceAccess ServiceAccess {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminServiceAccess ServiceAccess {
         get => _serviceAccess;
         set {
             ServiceAccessSpecified = true;
@@ -112,10 +112,10 @@ public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool ServiceAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminServicePackAccess _servicePackAccess;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminServicePackAccess _servicePackAccess;
 
     [XmlElement(ElementName = "servicePackAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminServicePackAccess ServicePackAccess {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminServicePackAccess ServicePackAccess {
         get => _servicePackAccess;
         set {
             ServicePackAccessSpecified = true;
@@ -125,10 +125,10 @@ public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool ServicePackAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminSessionAdmissionControlAccess _sessionAdmissionControlAccess;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminSessionAdmissionControlAccess _sessionAdmissionControlAccess;
 
     [XmlElement(ElementName = "sessionAdmissionControlAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminSessionAdmissionControlAccess SessionAdmissionControlAccess {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminSessionAdmissionControlAccess SessionAdmissionControlAccess {
         get => _sessionAdmissionControlAccess;
         set {
             SessionAdmissionControlAccessSpecified = true;
@@ -138,10 +138,10 @@ public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SessionAdmissionControlAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminWebBrandingAccess _webBrandingAccess;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminWebBrandingAccess _webBrandingAccess;
 
     [XmlElement(ElementName = "webBrandingAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminWebBrandingAccess WebBrandingAccess {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminWebBrandingAccess WebBrandingAccess {
         get => _webBrandingAccess;
         set {
             WebBrandingAccessSpecified = true;
@@ -151,10 +151,10 @@ public  class ServiceProviderAdminGetPolicyResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool WebBrandingAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess _networkPolicyAccess;
+    private BroadWorksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess _networkPolicyAccess;
 
     [XmlElement(ElementName = "networkPolicyAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess NetworkPolicyAccess {
+    public BroadWorksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess NetworkPolicyAccess {
         get => _networkPolicyAccess;
         set {
             NetworkPolicyAccessSpecified = true;

@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class EnterpriseSessionAdmissionControlGroupGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private BroadworksConnector.Ocip.Models.C.OCITable _sessionAdmissionControlGroupTable;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class EnterpriseSessionAdmissionControlGroupGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private BroadWorksConnector.Ocip.Models.C.OCITable _sessionAdmissionControlGroupTable;
 
-        [XmlElement(ElementName = "sessionAdmissionControlGroupTable", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.C.OCITable SessionAdmissionControlGroupTable
-        {
-            get => _sessionAdmissionControlGroupTable;
-            set
-            {
-                SessionAdmissionControlGroupTableSpecified = true;
-                _sessionAdmissionControlGroupTable = value;
-            }
+    [XmlElement(ElementName = "sessionAdmissionControlGroupTable", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.C.OCITable SessionAdmissionControlGroupTable {
+        get => _sessionAdmissionControlGroupTable;
+        set {
+            SessionAdmissionControlGroupTableSpecified = true;
+            _sessionAdmissionControlGroupTable = value;
         }
-
-        [XmlIgnore]
-        public bool SessionAdmissionControlGroupTableSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool SessionAdmissionControlGroupTableSpecified { get; set; }
+}
 }

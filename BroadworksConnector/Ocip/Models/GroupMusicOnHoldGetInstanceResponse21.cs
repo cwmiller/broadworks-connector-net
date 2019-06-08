@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupMusicOnHoldGetInstanceResponse21 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupMusicOnHoldGetInstanceResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _serviceUserId;
 
@@ -73,10 +73,10 @@ public  class GroupMusicOnHoldGetInstanceResponse21 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool EnableVideoSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldSourceRead21 _source;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead21 _source;
 
     [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldSourceRead21 Source {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead21 Source {
         get => _source;
         set {
             SourceSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupMusicOnHoldGetInstanceResponse21 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool UseAlternateSourceForInternalCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldSourceRead21 _internalSource;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead21 _internalSource;
 
     [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldSourceRead21 InternalSource {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead21 InternalSource {
         get => _internalSource;
         set {
             InternalSourceSpecified = true;

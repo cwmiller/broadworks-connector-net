@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSecurityClassificationGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemSecurityClassificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private int _meetMeAnncThreshold;
 
@@ -21,10 +21,10 @@ public  class SystemSecurityClassificationGetResponse : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool MeetMeAnncThresholdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _securityClassificationTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _securityClassificationTable;
 
     [XmlElement(ElementName = "SecurityClassificationTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable SecurityClassificationTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable SecurityClassificationTable {
         get => _securityClassificationTable;
         set {
             SecurityClassificationTableSpecified = true;

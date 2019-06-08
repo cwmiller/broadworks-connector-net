@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemGETSAvpCodeMapGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemGETSAvpCodeMapGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _avpCodeTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _avpCodeTable;
 
     [XmlElement(ElementName = "avpCodeTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable AvpCodeTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable AvpCodeTable {
         get => _avpCodeTable;
         set {
             AvpCodeTableSpecified = true;

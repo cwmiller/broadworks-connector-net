@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderServicePackGetDetailListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderServicePackGetDetailListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _servicePackName;
 
@@ -47,10 +47,10 @@ public  class ServiceProviderServicePackGetDetailListResponse : BroadworksConnec
 
     [XmlIgnore]
     public bool IsAvailableForUseSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedPositiveInt _servicePackQuantity;
+    private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _servicePackQuantity;
 
     [XmlElement(ElementName = "servicePackQuantity", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedPositiveInt ServicePackQuantity {
+    public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt ServicePackQuantity {
         get => _servicePackQuantity;
         set {
             ServicePackQuantitySpecified = true;
@@ -60,10 +60,10 @@ public  class ServiceProviderServicePackGetDetailListResponse : BroadworksConnec
 
     [XmlIgnore]
     public bool ServicePackQuantitySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt _assignedQuantity;
+    private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _assignedQuantity;
 
     [XmlElement(ElementName = "assignedQuantity", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt AssignedQuantity {
+    public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt AssignedQuantity {
         get => _assignedQuantity;
         set {
             AssignedQuantitySpecified = true;
@@ -73,10 +73,10 @@ public  class ServiceProviderServicePackGetDetailListResponse : BroadworksConnec
 
     [XmlIgnore]
     public bool AssignedQuantitySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedPositiveInt _allowedQuantity;
+    private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _allowedQuantity;
 
     [XmlElement(ElementName = "allowedQuantity", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedPositiveInt AllowedQuantity {
+    public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt AllowedQuantity {
         get => _allowedQuantity;
         set {
             AllowedQuantitySpecified = true;
@@ -86,10 +86,10 @@ public  class ServiceProviderServicePackGetDetailListResponse : BroadworksConnec
 
     [XmlIgnore]
     public bool AllowedQuantitySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _userServiceTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _userServiceTable;
 
     [XmlElement(ElementName = "userServiceTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserServiceTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable UserServiceTable {
         get => _userServiceTable;
         set {
             UserServiceTableSpecified = true;

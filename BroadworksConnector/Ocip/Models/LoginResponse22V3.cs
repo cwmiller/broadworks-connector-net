@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class LoginResponse22V3 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class LoginResponse22V3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.LoginType22 _loginType;
+    private BroadWorksConnector.Ocip.Models.LoginType22 _loginType;
 
     [XmlElement(ElementName = "loginType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LoginType22 LoginType {
+    public BroadWorksConnector.Ocip.Models.LoginType22 LoginType {
         get => _loginType;
         set {
             LoginTypeSpecified = true;

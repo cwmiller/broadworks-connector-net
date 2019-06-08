@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactOrganizationType : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactOrganizationType : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.OrganizationType _organizationType;
+    private BroadWorksConnector.Ocip.Models.OrganizationType _organizationType;
 
     [XmlElement(ElementName = "organizationType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OrganizationType OrganizationType {
+    public BroadWorksConnector.Ocip.Models.OrganizationType OrganizationType {
         get => _organizationType;
         set {
             OrganizationTypeSpecified = true;

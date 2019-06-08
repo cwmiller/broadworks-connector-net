@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallCenterGetAvailableDNISListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserCallCenterGetAvailableDNISListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private List<BroadworksConnector.Ocip.Models.DNISKey> _availableDNIS;
+    private List<BroadWorksConnector.Ocip.Models.DNISKey> _availableDNIS;
 
     [XmlElement(ElementName = "availableDNIS", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.DNISKey> AvailableDNIS {
+    public List<BroadWorksConnector.Ocip.Models.DNISKey> AvailableDNIS {
         get => _availableDNIS;
         set {
             AvailableDNISSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSessionAuditGetResponse23 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemSessionAuditGetResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isAuditActive;
 
@@ -164,10 +164,10 @@ public  class SystemSessionAuditGetResponse23 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool AlwaysUseSessionTimerWhenSupportedSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SessionTimerRefresher _preferredSessionTimerRefresher;
+    private BroadWorksConnector.Ocip.Models.SessionTimerRefresher _preferredSessionTimerRefresher;
 
     [XmlElement(ElementName = "preferredSessionTimerRefresher", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SessionTimerRefresher PreferredSessionTimerRefresher {
+    public BroadWorksConnector.Ocip.Models.SessionTimerRefresher PreferredSessionTimerRefresher {
         get => _preferredSessionTimerRefresher;
         set {
             PreferredSessionTimerRefresherSpecified = true;

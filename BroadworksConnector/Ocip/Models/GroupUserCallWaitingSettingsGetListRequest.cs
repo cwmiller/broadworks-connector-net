@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupUserCallWaitingSettingsGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool ResponsePagingControlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
+    private BroadWorksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
 
     [XmlElement(ElementName = "sortByUserLastName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByUserLastName SortByUserLastName {
+    public BroadWorksConnector.Ocip.Models.SortByUserLastName SortByUserLastName {
         get => _sortByUserLastName;
         set {
             SortByUserLastNameSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SortByUserLastNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
+    private BroadWorksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
 
     [XmlElement(ElementName = "sortByUserFirstName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByUserFirstName SortByUserFirstName {
+    public BroadWorksConnector.Ocip.Models.SortByUserFirstName SortByUserFirstName {
         get => _sortByUserFirstName;
         set {
             SortByUserFirstNameSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SortByUserFirstNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByUserDepartment _sortByUserDepartment;
+    private BroadWorksConnector.Ocip.Models.SortByUserDepartment _sortByUserDepartment;
 
     [XmlElement(ElementName = "sortByUserDepartment", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByUserDepartment SortByUserDepartment {
+    public BroadWorksConnector.Ocip.Models.SortByUserDepartment SortByUserDepartment {
         get => _sortByUserDepartment;
         set {
             SortByUserDepartmentSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SortByUserDepartmentSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByDn _sortByDn;
+    private BroadWorksConnector.Ocip.Models.SortByDn _sortByDn;
 
     [XmlElement(ElementName = "sortByDn", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByDn SortByDn {
+    public BroadWorksConnector.Ocip.Models.SortByDn SortByDn {
         get => _sortByDn;
         set {
             SortByDnSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SortByDnSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByExtension _sortByExtension;
+    private BroadWorksConnector.Ocip.Models.SortByExtension _sortByExtension;
 
     [XmlElement(ElementName = "sortByExtension", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByExtension SortByExtension {
+    public BroadWorksConnector.Ocip.Models.SortByExtension SortByExtension {
         get => _sortByExtension;
         set {
             SortByExtensionSpecified = true;
@@ -112,10 +112,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SortByExtensionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByServiceStatus _sortByServiceStatus;
+    private BroadWorksConnector.Ocip.Models.SortByServiceStatus _sortByServiceStatus;
 
     [XmlElement(ElementName = "sortByServiceStatus", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByServiceStatus SortByServiceStatus {
+    public BroadWorksConnector.Ocip.Models.SortByServiceStatus SortByServiceStatus {
         get => _sortByServiceStatus;
         set {
             SortByServiceStatusSpecified = true;
@@ -138,10 +138,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool IncludeVirtualUsersSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName;
 
     [XmlElement(ElementName = "searchCriteriaUserLastName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName {
         get => _searchCriteriaUserLastName;
         set {
             SearchCriteriaUserLastNameSpecified = true;
@@ -151,10 +151,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SearchCriteriaUserLastNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserFirstName> _searchCriteriaUserFirstName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> _searchCriteriaUserFirstName;
 
     [XmlElement(ElementName = "searchCriteriaUserFirstName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName {
         get => _searchCriteriaUserFirstName;
         set {
             SearchCriteriaUserFirstNameSpecified = true;
@@ -164,10 +164,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SearchCriteriaUserFirstNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
 
     [XmlElement(ElementName = "searchCriteriaUserId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
         get => _searchCriteriaUserId;
         set {
             SearchCriteriaUserIdSpecified = true;
@@ -177,10 +177,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SearchCriteriaUserIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
 
     [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
         get => _searchCriteriaDn;
         set {
             SearchCriteriaDnSpecified = true;
@@ -190,10 +190,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SearchCriteriaDnSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension;
 
     [XmlElement(ElementName = "searchCriteriaExtension", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension {
         get => _searchCriteriaExtension;
         set {
             SearchCriteriaExtensionSpecified = true;
@@ -203,10 +203,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SearchCriteriaExtensionSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaEmailAddress> _searchCriteriaEmailAddress;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEmailAddress> _searchCriteriaEmailAddress;
 
     [XmlElement(ElementName = "searchCriteriaEmailAddress", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaEmailAddress> SearchCriteriaEmailAddress {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaEmailAddress> SearchCriteriaEmailAddress {
         get => _searchCriteriaEmailAddress;
         set {
             SearchCriteriaEmailAddressSpecified = true;
@@ -216,10 +216,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SearchCriteriaEmailAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactUserDepartment _searchCriteriaExactUserDepartment;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment _searchCriteriaExactUserDepartment;
 
     [XmlElement(ElementName = "searchCriteriaExactUserDepartment", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactUserDepartment SearchCriteriaExactUserDepartment {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment SearchCriteriaExactUserDepartment {
         get => _searchCriteriaExactUserDepartment;
         set {
             SearchCriteriaExactUserDepartmentSpecified = true;
@@ -229,10 +229,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SearchCriteriaExactUserDepartmentSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactUserInTrunkGroup _searchCriteriaExactUserInTrunkGroup;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserInTrunkGroup _searchCriteriaExactUserInTrunkGroup;
 
     [XmlElement(ElementName = "searchCriteriaExactUserInTrunkGroup", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactUserInTrunkGroup SearchCriteriaExactUserInTrunkGroup {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserInTrunkGroup SearchCriteriaExactUserInTrunkGroup {
         get => _searchCriteriaExactUserInTrunkGroup;
         set {
             SearchCriteriaExactUserInTrunkGroupSpecified = true;
@@ -242,10 +242,10 @@ public  class GroupUserCallWaitingSettingsGetListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SearchCriteriaExactUserInTrunkGroupSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaServiceStatus _searchCriteriaServiceStatus;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaServiceStatus _searchCriteriaServiceStatus;
 
     [XmlElement(ElementName = "searchCriteriaServiceStatus", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaServiceStatus SearchCriteriaServiceStatus {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaServiceStatus SearchCriteriaServiceStatus {
         get => _searchCriteriaServiceStatus;
         set {
             SearchCriteriaServiceStatusSpecified = true;

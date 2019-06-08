@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemMeetMeConferencingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemMeetMeConferencingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private int _conferenceIdLength;
 
@@ -73,10 +73,10 @@ public  class SystemMeetMeConferencingGetResponse : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool DeleteExpiredConferencesAfterHoldPeriodSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays _expiredConferenceHoldPeriodDays;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays _expiredConferenceHoldPeriodDays;
 
     [XmlElement(ElementName = "expiredConferenceHoldPeriodDays", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays ExpiredConferenceHoldPeriodDays {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays ExpiredConferenceHoldPeriodDays {
         get => _expiredConferenceHoldPeriodDays;
         set {
             ExpiredConferenceHoldPeriodDaysSpecified = true;

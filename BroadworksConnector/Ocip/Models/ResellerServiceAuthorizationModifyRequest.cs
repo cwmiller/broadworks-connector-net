@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ResellerServiceAuthorizationModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ResellerServiceAuthorizationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _resellerId;
 
@@ -21,10 +21,10 @@ public  class ResellerServiceAuthorizationModifyRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool ResellerIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.FileResource _serviceOffering;
+    private BroadWorksConnector.Ocip.Models.FileResource _serviceOffering;
 
     [XmlElement(ElementName = "serviceOffering", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.FileResource ServiceOffering {
+    public BroadWorksConnector.Ocip.Models.FileResource ServiceOffering {
         get => _serviceOffering;
         set {
             ServiceOfferingSpecified = true;

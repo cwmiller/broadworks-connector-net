@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupDepartmentKey : BroadworksConnector.Ocip.Models.DepartmentKey
+public  class GroupDepartmentKey : BroadWorksConnector.Ocip.Models.DepartmentKey
 {
     private string _serviceProviderId;
 

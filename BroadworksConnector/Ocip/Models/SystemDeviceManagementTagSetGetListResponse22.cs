@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDeviceManagementTagSetGetListResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemDeviceManagementTagSetGetListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _tagSetTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _tagSetTable;
 
     [XmlElement(ElementName = "tagSetTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable TagSetTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable TagSetTable {
         get => _tagSetTable;
         set {
             TagSetTableSpecified = true;

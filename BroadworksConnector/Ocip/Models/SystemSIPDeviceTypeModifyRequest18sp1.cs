@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPDeviceTypeModifyRequest18sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSIPDeviceTypeModifyRequest18sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _deviceType;
 
@@ -47,10 +47,10 @@ public  class SystemSIPDeviceTypeModifyRequest18sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool RegistrationCapableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HoldNormalizationMode _holdNormalization;
+    private BroadWorksConnector.Ocip.Models.HoldNormalizationMode _holdNormalization;
 
     [XmlElement(ElementName = "holdNormalization", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HoldNormalizationMode HoldNormalization {
+    public BroadWorksConnector.Ocip.Models.HoldNormalizationMode HoldNormalization {
         get => _holdNormalization;
         set {
             HoldNormalizationSpecified = true;
@@ -60,10 +60,10 @@ public  class SystemSIPDeviceTypeModifyRequest18sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool HoldNormalizationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HoldAnnouncementMethodMode _holdAnnouncementMethod;
+    private BroadWorksConnector.Ocip.Models.HoldAnnouncementMethodMode _holdAnnouncementMethod;
 
     [XmlElement(ElementName = "holdAnnouncementMethod", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HoldAnnouncementMethodMode HoldAnnouncementMethod {
+    public BroadWorksConnector.Ocip.Models.HoldAnnouncementMethodMode HoldAnnouncementMethod {
         get => _holdAnnouncementMethod;
         set {
             HoldAnnouncementMethodSpecified = true;
@@ -190,10 +190,10 @@ public  class SystemSIPDeviceTypeModifyRequest18sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool StaticRegistrationCapableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CPEDeviceModifyOptions16sp1 _cpeDeviceOptions;
+    private BroadWorksConnector.Ocip.Models.CPEDeviceModifyOptions16sp1 _cpeDeviceOptions;
 
     [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CPEDeviceModifyOptions16sp1 CpeDeviceOptions {
+    public BroadWorksConnector.Ocip.Models.CPEDeviceModifyOptions16sp1 CpeDeviceOptions {
         get => _cpeDeviceOptions;
         set {
             CpeDeviceOptionsSpecified = true;
@@ -203,10 +203,10 @@ public  class SystemSIPDeviceTypeModifyRequest18sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool CpeDeviceOptionsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EarlyMediaSupportType _earlyMediaSupport;
+    private BroadWorksConnector.Ocip.Models.EarlyMediaSupportType _earlyMediaSupport;
 
     [XmlElement(ElementName = "earlyMediaSupport", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EarlyMediaSupportType EarlyMediaSupport {
+    public BroadWorksConnector.Ocip.Models.EarlyMediaSupportType EarlyMediaSupport {
         get => _earlyMediaSupport;
         set {
             EarlyMediaSupportSpecified = true;
@@ -242,10 +242,10 @@ public  class SystemSIPDeviceTypeModifyRequest18sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool AutoConfigSoftClientSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationMode _authenticationMode;
+    private BroadWorksConnector.Ocip.Models.AuthenticationMode _authenticationMode;
 
     [XmlElement(ElementName = "authenticationMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationMode AuthenticationMode {
+    public BroadWorksConnector.Ocip.Models.AuthenticationMode AuthenticationMode {
         get => _authenticationMode;
         set {
             AuthenticationModeSpecified = true;
@@ -320,10 +320,10 @@ public  class SystemSIPDeviceTypeModifyRequest18sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool AdviceOfChargeCapableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceResetEvent? _resetEvent;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent? _resetEvent;
 
     [XmlElement(ElementName = "resetEvent", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceResetEvent? ResetEvent {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent? ResetEvent {
         get => _resetEvent;
         set {
             ResetEventSpecified = true;
@@ -346,10 +346,10 @@ public  class SystemSIPDeviceTypeModifyRequest18sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool SupportCallCenterMIMETypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkMode _trunkMode;
+    private BroadWorksConnector.Ocip.Models.TrunkMode _trunkMode;
 
     [XmlElement(ElementName = "trunkMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkMode TrunkMode {
+    public BroadWorksConnector.Ocip.Models.TrunkMode TrunkMode {
         get => _trunkMode;
         set {
             TrunkModeSpecified = true;
@@ -385,10 +385,10 @@ public  class SystemSIPDeviceTypeModifyRequest18sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool SupportIdentityInUpdateAndReInviteSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnscreenedPresentationIdentityPolicy _unscreenedPresentationIdentityPolicy;
+    private BroadWorksConnector.Ocip.Models.UnscreenedPresentationIdentityPolicy _unscreenedPresentationIdentityPolicy;
 
     [XmlElement(ElementName = "unscreenedPresentationIdentityPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnscreenedPresentationIdentityPolicy UnscreenedPresentationIdentityPolicy {
+    public BroadWorksConnector.Ocip.Models.UnscreenedPresentationIdentityPolicy UnscreenedPresentationIdentityPolicy {
         get => _unscreenedPresentationIdentityPolicy;
         set {
             UnscreenedPresentationIdentityPolicySpecified = true;

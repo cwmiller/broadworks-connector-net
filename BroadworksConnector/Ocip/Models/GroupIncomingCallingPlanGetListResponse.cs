@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupIncomingCallingPlanGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupIncomingCallingPlanGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.IncomingCallingPlanPermissions _groupPermissions;
+    private BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissions _groupPermissions;
 
     [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.IncomingCallingPlanPermissions GroupPermissions {
+    public BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissions GroupPermissions {
         get => _groupPermissions;
         set {
             GroupPermissionsSpecified = true;
@@ -21,10 +21,10 @@ public  class GroupIncomingCallingPlanGetListResponse : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool GroupPermissionsSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissions> _departmentPermissions;
+    private List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissions> _departmentPermissions;
 
     [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissions> DepartmentPermissions {
+    public List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissions> DepartmentPermissions {
         get => _departmentPermissions;
         set {
             DepartmentPermissionsSpecified = true;

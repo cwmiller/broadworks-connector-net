@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -47,10 +47,10 @@ public  class ProfileAndServiceCallForwardingSelectiveInfo
 
     [XmlIgnore]
     public bool PlayRingReminderSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _criteriaTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
     [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable CriteriaTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
         get => _criteriaTable;
         set {
             CriteriaTableSpecified = true;

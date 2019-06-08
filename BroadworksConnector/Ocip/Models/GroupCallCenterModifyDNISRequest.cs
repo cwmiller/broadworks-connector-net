@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallCenterModifyDNISRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallCenterModifyDNISRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.DNISKey _dnisKey;
+    private BroadWorksConnector.Ocip.Models.DNISKey _dnisKey;
 
     [XmlElement(ElementName = "dnisKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DNISKey DnisKey {
+    public BroadWorksConnector.Ocip.Models.DNISKey DnisKey {
         get => _dnisKey;
         set {
             DnisKeySpecified = true;
@@ -125,10 +125,10 @@ public  class GroupCallCenterModifyDNISRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool UseCustomDnisAnnouncementSettingsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DNISPriority _priority;
+    private BroadWorksConnector.Ocip.Models.DNISPriority _priority;
 
     [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DNISPriority Priority {
+    public BroadWorksConnector.Ocip.Models.DNISPriority Priority {
         get => _priority;
         set {
             PrioritySpecified = true;

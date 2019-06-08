@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserAddRequest14 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserAddRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -177,10 +177,10 @@ public  class UserAddRequest14 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool PasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _department;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
     [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey Department {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
         get => _department;
         set {
             DepartmentSpecified = true;
@@ -229,10 +229,10 @@ public  class UserAddRequest14 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool AliasSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;
@@ -242,10 +242,10 @@ public  class UserAddRequest14 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool AccessDeviceEndpointSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupDeviceEndpointAdd _trunkGroupDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupDeviceEndpointAdd _trunkGroupDeviceEndpoint;
 
     [XmlElement(ElementName = "trunkGroupDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupDeviceEndpointAdd TrunkGroupDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupDeviceEndpointAdd TrunkGroupDeviceEndpoint {
         get => _trunkGroupDeviceEndpoint;
         set {
             TrunkGroupDeviceEndpointSpecified = true;
@@ -333,10 +333,10 @@ public  class UserAddRequest14 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool AddressLocationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.StreetAddress _address;
+    private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
     [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.StreetAddress Address {
+    public BroadWorksConnector.Ocip.Models.StreetAddress Address {
         get => _address;
         set {
             AddressSpecified = true;

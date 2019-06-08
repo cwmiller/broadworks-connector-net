@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCommPilotExpressModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserCommPilotExpressModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserCommPilotExpressModifyRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommPilotExpressProfile? _profile;
+    private BroadWorksConnector.Ocip.Models.CommPilotExpressProfile? _profile;
 
     [XmlElement(ElementName = "profile", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommPilotExpressProfile? Profile {
+    public BroadWorksConnector.Ocip.Models.CommPilotExpressProfile? Profile {
         get => _profile;
         set {
             ProfileSpecified = true;
@@ -34,10 +34,10 @@ public  class UserCommPilotExpressModifyRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool ProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommPilotExpressAvailableInOfficeModify _availableInOffice;
+    private BroadWorksConnector.Ocip.Models.CommPilotExpressAvailableInOfficeModify _availableInOffice;
 
     [XmlElement(ElementName = "availableInOffice", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommPilotExpressAvailableInOfficeModify AvailableInOffice {
+    public BroadWorksConnector.Ocip.Models.CommPilotExpressAvailableInOfficeModify AvailableInOffice {
         get => _availableInOffice;
         set {
             AvailableInOfficeSpecified = true;
@@ -47,10 +47,10 @@ public  class UserCommPilotExpressModifyRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool AvailableInOfficeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommPilotExpressAvailableOutOfOfficeModify _availableOutOfOffice;
+    private BroadWorksConnector.Ocip.Models.CommPilotExpressAvailableOutOfOfficeModify _availableOutOfOffice;
 
     [XmlElement(ElementName = "availableOutOfOffice", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommPilotExpressAvailableOutOfOfficeModify AvailableOutOfOffice {
+    public BroadWorksConnector.Ocip.Models.CommPilotExpressAvailableOutOfOfficeModify AvailableOutOfOffice {
         get => _availableOutOfOffice;
         set {
             AvailableOutOfOfficeSpecified = true;
@@ -60,10 +60,10 @@ public  class UserCommPilotExpressModifyRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool AvailableOutOfOfficeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommPilotExpressBusyModify _busy;
+    private BroadWorksConnector.Ocip.Models.CommPilotExpressBusyModify _busy;
 
     [XmlElement(ElementName = "busy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommPilotExpressBusyModify Busy {
+    public BroadWorksConnector.Ocip.Models.CommPilotExpressBusyModify Busy {
         get => _busy;
         set {
             BusySpecified = true;
@@ -73,10 +73,10 @@ public  class UserCommPilotExpressModifyRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool BusySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommPilotExpressUnavailableModify _unavailable;
+    private BroadWorksConnector.Ocip.Models.CommPilotExpressUnavailableModify _unavailable;
 
     [XmlElement(ElementName = "unavailable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommPilotExpressUnavailableModify Unavailable {
+    public BroadWorksConnector.Ocip.Models.CommPilotExpressUnavailableModify Unavailable {
         get => _unavailable;
         set {
             UnavailableSpecified = true;

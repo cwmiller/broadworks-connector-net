@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderGetPagedSortedListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;
@@ -21,10 +21,10 @@ public  class ServiceProviderGetPagedSortedListRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool ResponsePagingControlSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SortOrderServiceProviderGetPagedSortedList> _sortOrder;
+    private List<BroadWorksConnector.Ocip.Models.SortOrderServiceProviderGetPagedSortedList> _sortOrder;
 
     [XmlElement(ElementName = "sortOrder", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SortOrderServiceProviderGetPagedSortedList> SortOrder {
+    public List<BroadWorksConnector.Ocip.Models.SortOrderServiceProviderGetPagedSortedList> SortOrder {
         get => _sortOrder;
         set {
             SortOrderSpecified = true;
@@ -34,10 +34,10 @@ public  class ServiceProviderGetPagedSortedListRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool SortOrderSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceProviderId> _searchCriteriaServiceProviderId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> _searchCriteriaServiceProviderId;
 
     [XmlElement(ElementName = "searchCriteriaServiceProviderId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId {
         get => _searchCriteriaServiceProviderId;
         set {
             SearchCriteriaServiceProviderIdSpecified = true;
@@ -47,10 +47,10 @@ public  class ServiceProviderGetPagedSortedListRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool SearchCriteriaServiceProviderIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceProviderName> _searchCriteriaServiceProviderName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderName> _searchCriteriaServiceProviderName;
 
     [XmlElement(ElementName = "searchCriteriaServiceProviderName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceProviderName> SearchCriteriaServiceProviderName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderName> SearchCriteriaServiceProviderName {
         get => _searchCriteriaServiceProviderName;
         set {
             SearchCriteriaServiceProviderNameSpecified = true;
@@ -60,10 +60,10 @@ public  class ServiceProviderGetPagedSortedListRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool SearchCriteriaServiceProviderNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactOrganizationType _searchCriteriaExactOrganizationType;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactOrganizationType _searchCriteriaExactOrganizationType;
 
     [XmlElement(ElementName = "searchCriteriaExactOrganizationType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactOrganizationType SearchCriteriaExactOrganizationType {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactOrganizationType SearchCriteriaExactOrganizationType {
         get => _searchCriteriaExactOrganizationType;
         set {
             SearchCriteriaExactOrganizationTypeSpecified = true;
@@ -73,10 +73,10 @@ public  class ServiceProviderGetPagedSortedListRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool SearchCriteriaExactOrganizationTypeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId;
 
     [XmlElement(ElementName = "searchCriteriaResellerId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId {
         get => _searchCriteriaResellerId;
         set {
             SearchCriteriaResellerIdSpecified = true;

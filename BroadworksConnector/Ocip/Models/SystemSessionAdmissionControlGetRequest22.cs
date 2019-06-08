@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSessionAdmissionControlGetRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSessionAdmissionControlGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
 }
 }

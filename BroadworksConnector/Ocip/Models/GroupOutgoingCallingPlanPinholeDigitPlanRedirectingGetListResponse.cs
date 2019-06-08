@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupOutgoingCallingPlanPinholeDigitPlanRedirectingGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupOutgoingCallingPlanPinholeDigitPlanRedirectingGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions _groupPermissions;
+    private BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions _groupPermissions;
 
     [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions GroupPermissions {
+    public BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions GroupPermissions {
         get => _groupPermissions;
         set {
             GroupPermissionsSpecified = true;
@@ -21,10 +21,10 @@ public  class GroupOutgoingCallingPlanPinholeDigitPlanRedirectingGetListResponse
 
     [XmlIgnore]
     public bool GroupPermissionsSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingDepartmentPermissions> _departmentPermissions;
+    private List<BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingDepartmentPermissions> _departmentPermissions;
 
     [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingDepartmentPermissions> DepartmentPermissions {
+    public List<BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingDepartmentPermissions> DepartmentPermissions {
         get => _departmentPermissions;
         set {
             DepartmentPermissionsSpecified = true;

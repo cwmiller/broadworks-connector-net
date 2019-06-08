@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSMPPGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemSMPPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _primarySMPPServerNetAddress;
 
@@ -86,10 +86,10 @@ public  class SystemSMPPGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataR
 
     [XmlIgnore]
     public bool PasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SMPPVersion _version;
+    private BroadWorksConnector.Ocip.Models.SMPPVersion _version;
 
     [XmlElement(ElementName = "version", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SMPPVersion Version {
+    public BroadWorksConnector.Ocip.Models.SMPPVersion Version {
         get => _version;
         set {
             VersionSpecified = true;

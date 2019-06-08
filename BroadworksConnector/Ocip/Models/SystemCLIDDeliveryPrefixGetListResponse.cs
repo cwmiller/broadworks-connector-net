@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCLIDDeliveryPrefixGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemCLIDDeliveryPrefixGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private List<BroadworksConnector.Ocip.Models.CLIDDeliveryPrefix> _prefix;
+    private List<BroadWorksConnector.Ocip.Models.CLIDDeliveryPrefix> _prefix;
 
     [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CLIDDeliveryPrefix> Prefix {
+    public List<BroadWorksConnector.Ocip.Models.CLIDDeliveryPrefix> Prefix {
         get => _prefix;
         set {
             PrefixSpecified = true;

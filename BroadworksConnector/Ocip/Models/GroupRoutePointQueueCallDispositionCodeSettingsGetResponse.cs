@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupRoutePointQueueCallDispositionCodeSettingsGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupRoutePointQueueCallDispositionCodeSettingsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _enableCallDispositionCodes;
 
@@ -47,10 +47,10 @@ public  class GroupRoutePointQueueCallDispositionCodeSettingsGetResponse : Broad
 
     [XmlIgnore]
     public bool ForceUseOfCallDispositionCodesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallDispositionCodeWithLevel _defaultCallDispositionCode;
+    private BroadWorksConnector.Ocip.Models.CallDispositionCodeWithLevel _defaultCallDispositionCode;
 
     [XmlElement(ElementName = "defaultCallDispositionCode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallDispositionCodeWithLevel DefaultCallDispositionCode {
+    public BroadWorksConnector.Ocip.Models.CallDispositionCodeWithLevel DefaultCallDispositionCode {
         get => _defaultCallDispositionCode;
         set {
             DefaultCallDispositionCodeSpecified = true;

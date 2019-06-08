@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDeviceTypeGetResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemDeviceTypeGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isObsolete;
 
@@ -21,10 +21,10 @@ public  class SystemDeviceTypeGetResponse16 : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool IsObsoleteSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SignalingAddressType _profile;
+    private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
     [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SignalingAddressType Profile {
+    public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
         get => _profile;
         set {
             ProfileSpecified = true;
@@ -60,10 +60,10 @@ public  class SystemDeviceTypeGetResponse16 : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool StaticRegistrationCapableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CPEDeviceOptionsRead16 _cpeDeviceOptions;
+    private BroadWorksConnector.Ocip.Models.CPEDeviceOptionsRead16 _cpeDeviceOptions;
 
     [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CPEDeviceOptionsRead16 CpeDeviceOptions {
+    public BroadWorksConnector.Ocip.Models.CPEDeviceOptionsRead16 CpeDeviceOptions {
         get => _cpeDeviceOptions;
         set {
             CpeDeviceOptionsSpecified = true;

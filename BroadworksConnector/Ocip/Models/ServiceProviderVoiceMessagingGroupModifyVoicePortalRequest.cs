@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderVoiceMessagingGroupModifyVoicePortalRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderVoiceMessagingGroupModifyVoicePortalRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderVoiceMessagingGroupModifyVoicePortalRequest : Broad
 
     [XmlIgnore]
     public bool ServiceProviderIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voicePortalScope;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voicePortalScope;
 
     [XmlElement(ElementName = "voicePortalScope", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderVoicePortalScope VoicePortalScope {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope VoicePortalScope {
         get => _voicePortalScope;
         set {
             VoicePortalScopeSpecified = true;

@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class SequentialRingLocationModify
 
     [XmlIgnore]
     public bool PhoneNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingNumberOfRings _numberOfRings;
+    private BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings _numberOfRings;
 
     [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingNumberOfRings NumberOfRings {
+    public BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings NumberOfRings {
         get => _numberOfRings;
         set {
             NumberOfRingsSpecified = true;

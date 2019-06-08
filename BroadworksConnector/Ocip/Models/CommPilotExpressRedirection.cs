@@ -1,42 +1,38 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class CommPilotExpressRedirection
-    {
-        private BroadworksConnector.Ocip.Models.CommPilotExpressRedirectionAction _action;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class CommPilotExpressRedirection 
+{
+    private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionAction _action;
 
-        [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.CommPilotExpressRedirectionAction Action
-        {
-            get => _action;
-            set
-            {
-                ActionSpecified = true;
-                _action = value;
-            }
+    [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionAction Action {
+        get => _action;
+        set {
+            ActionSpecified = true;
+            _action = value;
         }
-
-        [XmlIgnore]
-        public bool ActionSpecified { get; set; }
-        private string _forwardingPhoneNumber;
-
-        [XmlElement(ElementName = "forwardingPhoneNumber", IsNullable = false, Namespace = "")]
-        public string ForwardingPhoneNumber
-        {
-            get => _forwardingPhoneNumber;
-            set
-            {
-                ForwardingPhoneNumberSpecified = true;
-                _forwardingPhoneNumber = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool ForwardingPhoneNumberSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool ActionSpecified { get; set; }
+    private string _forwardingPhoneNumber;
+
+    [XmlElement(ElementName = "forwardingPhoneNumber", IsNullable = false, Namespace = "")]
+    public string ForwardingPhoneNumber {
+        get => _forwardingPhoneNumber;
+        set {
+            ForwardingPhoneNumberSpecified = true;
+            _forwardingPhoneNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ForwardingPhoneNumberSpecified { get; set; }
+}
 }

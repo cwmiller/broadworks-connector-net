@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallingNameRetrievalGetResponse14 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemCallingNameRetrievalGetResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private int _queryTimerMilliSeconds;
 
@@ -47,10 +47,10 @@ public  class SystemCallingNameRetrievalGetResponse14 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool ServerPortSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TransportProtocol _serverTransportProtocol;
+    private BroadWorksConnector.Ocip.Models.TransportProtocol _serverTransportProtocol;
 
     [XmlElement(ElementName = "serverTransportProtocol", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TransportProtocol ServerTransportProtocol {
+    public BroadWorksConnector.Ocip.Models.TransportProtocol ServerTransportProtocol {
         get => _serverTransportProtocol;
         set {
             ServerTransportProtocolSpecified = true;

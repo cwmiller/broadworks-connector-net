@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemLegacyAutomaticCallbackGetLineTypeListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemLegacyAutomaticCallbackGetLineTypeListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _lineTypeTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _lineTypeTable;
 
     [XmlElement(ElementName = "lineTypeTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable LineTypeTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable LineTypeTable {
         get => _lineTypeTable;
         set {
             LineTypeTableSpecified = true;

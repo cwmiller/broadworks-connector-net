@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderVoiceMessagingGroupGetVoicePortalResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderVoiceMessagingGroupGetVoicePortalResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voicePortalScope;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voicePortalScope;
 
     [XmlElement(ElementName = "voicePortalScope", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderVoicePortalScope VoicePortalScope {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope VoicePortalScope {
         get => _voicePortalScope;
         set {
             VoicePortalScopeSpecified = true;

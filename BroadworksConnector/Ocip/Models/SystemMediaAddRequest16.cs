@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemMediaAddRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemMediaAddRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _mediaName;
 
@@ -47,10 +47,10 @@ public  class SystemMediaAddRequest16 : BroadworksConnector.Ocip.Models.C.OCIReq
 
     [XmlIgnore]
     public bool MediaTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaBandwidthEnforcementType _bandwidthEnforcementType;
+    private BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType _bandwidthEnforcementType;
 
     [XmlElement(ElementName = "bandwidthEnforcementType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaBandwidthEnforcementType BandwidthEnforcementType {
+    public BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType BandwidthEnforcementType {
         get => _bandwidthEnforcementType;
         set {
             BandwidthEnforcementTypeSpecified = true;

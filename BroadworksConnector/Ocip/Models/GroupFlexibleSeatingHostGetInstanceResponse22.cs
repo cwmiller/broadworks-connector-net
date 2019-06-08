@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupFlexibleSeatingHostGetInstanceResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupFlexibleSeatingHostGetInstanceResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupFlexibleSeatingHostGetInstanceResponse22 : BroadworksConnecto
 
     [XmlIgnore]
     public bool DefaultAliasSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointRead22 _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointRead22 _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointRead22 AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointRead22 AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;

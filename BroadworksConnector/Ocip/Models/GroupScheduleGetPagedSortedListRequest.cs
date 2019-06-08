@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupScheduleGetPagedSortedListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupScheduleGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupScheduleGetPagedSortedListRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupScheduleGetPagedSortedListRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool ResponsePagingControlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByScheduleName _sortByScheduleName;
+    private BroadWorksConnector.Ocip.Models.SortByScheduleName _sortByScheduleName;
 
     [XmlElement(ElementName = "sortByScheduleName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByScheduleName SortByScheduleName {
+    public BroadWorksConnector.Ocip.Models.SortByScheduleName SortByScheduleName {
         get => _sortByScheduleName;
         set {
             SortByScheduleNameSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupScheduleGetPagedSortedListRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool SortByScheduleNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaScheduleName> _searchCriteriaScheduleName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName> _searchCriteriaScheduleName;
 
     [XmlElement(ElementName = "searchCriteriaScheduleName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaScheduleName> SearchCriteriaScheduleName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName> SearchCriteriaScheduleName {
         get => _searchCriteriaScheduleName;
         set {
             SearchCriteriaScheduleNameSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupScheduleGetPagedSortedListRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool SearchCriteriaScheduleNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExactScheduleType> _searchCriteriaExactScheduleType;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType> _searchCriteriaExactScheduleType;
 
     [XmlElement(ElementName = "searchCriteriaExactScheduleType", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExactScheduleType> SearchCriteriaExactScheduleType {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType> SearchCriteriaExactScheduleType {
         get => _searchCriteriaExactScheduleType;
         set {
             SearchCriteriaExactScheduleTypeSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupScheduleGetPagedSortedListRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool SearchCriteriaExactScheduleTypeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel> _searchCriteriaExactScheduleLevel;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel> _searchCriteriaExactScheduleLevel;
 
     [XmlElement(ElementName = "searchCriteriaExactScheduleLevel", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel> SearchCriteriaExactScheduleLevel {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel> SearchCriteriaExactScheduleLevel {
         get => _searchCriteriaExactScheduleLevel;
         set {
             SearchCriteriaExactScheduleLevelSpecified = true;

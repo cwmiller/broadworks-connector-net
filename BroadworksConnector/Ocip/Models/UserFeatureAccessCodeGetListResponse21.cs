@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserFeatureAccessCodeGetListResponse21 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserFeatureAccessCodeGetListResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private List<BroadworksConnector.Ocip.Models.FeatureAccessCodeReadEntry> _featureAccessCode;
+    private List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeReadEntry> _featureAccessCode;
 
     [XmlElement(ElementName = "featureAccessCode", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.FeatureAccessCodeReadEntry> FeatureAccessCode {
+    public List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeReadEntry> FeatureAccessCode {
         get => _featureAccessCode;
         set {
             FeatureAccessCodeSpecified = true;

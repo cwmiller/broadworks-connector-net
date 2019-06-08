@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupEmergencyZonesModifyHomeZoneListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupEmergencyZonesModifyHomeZoneListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupEmergencyZonesModifyHomeZoneListRequest : BroadworksConnector
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressList> _homeZoneIpAddressList;
+    private List<BroadWorksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressList> _homeZoneIpAddressList;
 
     [XmlElement(ElementName = "homeZoneIpAddressList", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressList> HomeZoneIpAddressList {
+    public List<BroadWorksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressList> HomeZoneIpAddressList {
         get => _homeZoneIpAddressList;
         set {
             HomeZoneIpAddressListSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupEmergencyZonesModifyHomeZoneListRequest : BroadworksConnector
 
     [XmlIgnore]
     public bool HomeZoneIpAddressListSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressRangeList> _homeZoneIpAddressRangeList;
+    private List<BroadWorksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressRangeList> _homeZoneIpAddressRangeList;
 
     [XmlElement(ElementName = "homeZoneIpAddressRangeList", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressRangeList> HomeZoneIpAddressRangeList {
+    public List<BroadWorksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressRangeList> HomeZoneIpAddressRangeList {
         get => _homeZoneIpAddressRangeList;
         set {
             HomeZoneIpAddressRangeListSpecified = true;

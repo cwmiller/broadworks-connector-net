@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallCenterModifyInstanceStatisticsReportingRequest17sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallCenterModifyInstanceStatisticsReportingRequest17sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -34,10 +34,10 @@ public  class GroupCallCenterModifyInstanceStatisticsReportingRequest17sp1 : Bro
 
     [XmlIgnore]
     public bool GenerateDailyReportSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
+    private BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
 
     [XmlElement(ElementName = "collectionPeriodMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes CollectionPeriodMinutes {
+    public BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes CollectionPeriodMinutes {
         get => _collectionPeriodMinutes;
         set {
             CollectionPeriodMinutesSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupCallCenterModifyInstanceStatisticsReportingRequest17sp1 : Bro
 
     [XmlIgnore]
     public bool ReportingEmailAddress2Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterStatisticsSource17sp1 _statisticsSource;
+    private BroadWorksConnector.Ocip.Models.CallCenterStatisticsSource17sp1 _statisticsSource;
 
     [XmlElement(ElementName = "statisticsSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterStatisticsSource17sp1 StatisticsSource {
+    public BroadWorksConnector.Ocip.Models.CallCenterStatisticsSource17sp1 StatisticsSource {
         get => _statisticsSource;
         set {
             StatisticsSourceSpecified = true;

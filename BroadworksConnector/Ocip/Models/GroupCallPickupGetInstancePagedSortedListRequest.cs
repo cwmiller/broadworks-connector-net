@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallPickupGetInstancePagedSortedListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallPickupGetInstancePagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupCallPickupGetInstancePagedSortedListRequest : BroadworksConne
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupCallPickupGetInstancePagedSortedListRequest : BroadworksConne
 
     [XmlIgnore]
     public bool ResponsePagingControlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByCallPickupName _sortByCallPickupName;
+    private BroadWorksConnector.Ocip.Models.SortByCallPickupName _sortByCallPickupName;
 
     [XmlElement(ElementName = "sortByCallPickupName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByCallPickupName SortByCallPickupName {
+    public BroadWorksConnector.Ocip.Models.SortByCallPickupName SortByCallPickupName {
         get => _sortByCallPickupName;
         set {
             SortByCallPickupNameSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupCallPickupGetInstancePagedSortedListRequest : BroadworksConne
 
     [XmlIgnore]
     public bool SortByCallPickupNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaCallPickupName> _searchCriteriaCallPickupName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallPickupName> _searchCriteriaCallPickupName;
 
     [XmlElement(ElementName = "searchCriteriaCallPickupName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaCallPickupName> SearchCriteriaCallPickupName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallPickupName> SearchCriteriaCallPickupName {
         get => _searchCriteriaCallPickupName;
         set {
             SearchCriteriaCallPickupNameSpecified = true;

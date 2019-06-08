@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupTrunkGroupAddInstanceRequest14 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupTrunkGroupAddInstanceRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupTrunkGroupAddInstanceRequest14 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceAddProfileTrunkGroup _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfileTrunkGroup _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceAddProfileTrunkGroup ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfileTrunkGroup ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupTrunkGroupAddInstanceRequest14 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderCPEConfigSetConfigFileRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderCPEConfigSetConfigFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class ServiceProviderCPEConfigSetConfigFileRequest : BroadworksConnector
 
     [XmlIgnore]
     public bool DeviceTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.FileResource _configFile;
+    private BroadWorksConnector.Ocip.Models.FileResource _configFile;
 
     [XmlElement(ElementName = "configFile", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.FileResource ConfigFile {
+    public BroadWorksConnector.Ocip.Models.FileResource ConfigFile {
         get => _configFile;
         set {
             ConfigFileSpecified = true;

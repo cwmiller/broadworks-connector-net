@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class ReplacementConsolidatedServicePackAssignmentList 
 {
-    private List<BroadworksConnector.Ocip.Models.ConsolidatedServicePackAssignment> _servicePack;
+    private List<BroadWorksConnector.Ocip.Models.ConsolidatedServicePackAssignment> _servicePack;
 
     [XmlElement(ElementName = "servicePack", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.ConsolidatedServicePackAssignment> ServicePack {
+    public List<BroadWorksConnector.Ocip.Models.ConsolidatedServicePackAssignment> ServicePack {
         get => _servicePack;
         set {
             ServicePackSpecified = true;

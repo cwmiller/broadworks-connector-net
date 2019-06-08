@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -125,10 +125,10 @@ public  class ServiceInstanceReadProfile19sp1
 
     [XmlIgnore]
     public bool NationalPrefixSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _department;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
     [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey Department {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
         get => _department;
         set {
             DepartmentSpecified = true;

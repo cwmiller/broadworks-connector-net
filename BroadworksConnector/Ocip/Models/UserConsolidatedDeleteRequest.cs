@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserConsolidatedDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserConsolidatedDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserConsolidatedDeleteRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool DeleteExistingDevicesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
+    private BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
 
     [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers {
+    public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers {
         get => _unassignPhoneNumbers;
         set {
             UnassignPhoneNumbersSpecified = true;

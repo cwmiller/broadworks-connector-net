@@ -1,15 +1,14 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public enum GroupAdminEnhancedServiceInstanceAccess
-    {
-        [XmlEnum(Name = "Full")]
-        Full,
-        [XmlEnum(Name = "Modify-Only")]
-        ModifyOnly,
-    }
+[Serializable]
+[XmlRoot(Namespace = "")]
+public enum GroupAdminEnhancedServiceInstanceAccess{
+    [XmlEnum(Name = "Full")]
+    Full,
+    [XmlEnum(Name = "Modify-Only")]
+    ModifyOnly,
+ }
 }

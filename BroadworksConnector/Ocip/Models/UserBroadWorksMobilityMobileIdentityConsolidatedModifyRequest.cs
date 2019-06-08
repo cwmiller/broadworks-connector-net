@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserBroadWorksMobilityMobileIdentityConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserBroadWorksMobilityMobileIdentityConsolidatedModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -177,10 +177,10 @@ public  class UserBroadWorksMobilityMobileIdentityConsolidatedModifyRequest : Br
 
     [XmlIgnore]
     public bool BroadworksCallControlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel _useSettingLevel;
+    private BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel _useSettingLevel;
 
     [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel UseSettingLevel {
+    public BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel UseSettingLevel {
         get => _useSettingLevel;
         set {
             UseSettingLevelSpecified = true;
@@ -216,10 +216,10 @@ public  class UserBroadWorksMobilityMobileIdentityConsolidatedModifyRequest : Br
 
     [XmlIgnore]
     public bool DenyCallTerminationsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _devicesToRing;
+    private BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _devicesToRing;
 
     [XmlElement(ElementName = "devicesToRing", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing DevicesToRing {
+    public BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing DevicesToRing {
         get => _devicesToRing;
         set {
             DevicesToRingSpecified = true;
@@ -268,10 +268,10 @@ public  class UserBroadWorksMobilityMobileIdentityConsolidatedModifyRequest : Br
 
     [XmlIgnore]
     public bool IncludeExecutiveAssistantSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList _mobileNumbersAlerted;
+    private BroadWorksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList _mobileNumbersAlerted;
 
     [XmlElement(ElementName = "mobileNumbersAlerted", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList MobileNumbersAlerted {
+    public BroadWorksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList MobileNumbersAlerted {
         get => _mobileNumbersAlerted;
         set {
             MobileNumbersAlertedSpecified = true;
@@ -294,10 +294,10 @@ public  class UserBroadWorksMobilityMobileIdentityConsolidatedModifyRequest : Br
 
     [XmlIgnore]
     public bool EnableCallAnchoringSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ScheduleGlobalKey _timeSchedule;
+    private BroadWorksConnector.Ocip.Models.ScheduleGlobalKey _timeSchedule;
 
     [XmlElement(ElementName = "timeSchedule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleGlobalKey TimeSchedule {
+    public BroadWorksConnector.Ocip.Models.ScheduleGlobalKey TimeSchedule {
         get => _timeSchedule;
         set {
             TimeScheduleSpecified = true;
@@ -307,10 +307,10 @@ public  class UserBroadWorksMobilityMobileIdentityConsolidatedModifyRequest : Br
 
     [XmlIgnore]
     public bool TimeScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ScheduleGlobalKey _holidaySchedule;
+    private BroadWorksConnector.Ocip.Models.ScheduleGlobalKey _holidaySchedule;
 
     [XmlElement(ElementName = "holidaySchedule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleGlobalKey HolidaySchedule {
+    public BroadWorksConnector.Ocip.Models.ScheduleGlobalKey HolidaySchedule {
         get => _holidaySchedule;
         set {
             HolidayScheduleSpecified = true;
@@ -320,10 +320,10 @@ public  class UserBroadWorksMobilityMobileIdentityConsolidatedModifyRequest : Br
 
     [XmlIgnore]
     public bool HolidayScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ConsolidatedSharedCallAppearanceAccessDeviceMultipleIdentityEndpoint _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.ConsolidatedSharedCallAppearanceAccessDeviceMultipleIdentityEndpoint _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ConsolidatedSharedCallAppearanceAccessDeviceMultipleIdentityEndpoint AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.ConsolidatedSharedCallAppearanceAccessDeviceMultipleIdentityEndpoint AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;

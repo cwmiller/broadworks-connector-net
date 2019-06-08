@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -112,10 +112,10 @@ public  class TrunkGroupMultipleContactPilotUser22
 
     [XmlIgnore]
     public bool PasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _department;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
     [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey Department {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
         get => _department;
         set {
             DepartmentSpecified = true;
@@ -164,10 +164,10 @@ public  class TrunkGroupMultipleContactPilotUser22
 
     [XmlIgnore]
     public bool LinePortSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SIPContactInfo> _contact;
+    private List<BroadWorksConnector.Ocip.Models.SIPContactInfo> _contact;
 
     [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SIPContactInfo> Contact {
+    public List<BroadWorksConnector.Ocip.Models.SIPContactInfo> Contact {
         get => _contact;
         set {
             ContactSpecified = true;

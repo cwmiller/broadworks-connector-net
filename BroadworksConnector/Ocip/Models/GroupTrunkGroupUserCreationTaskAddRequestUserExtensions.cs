@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class GroupTrunkGroupUserCreationTaskAddRequestUserExtensions
 
     [XmlIgnore]
     public bool ExtensionSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.ExtensionRange> _extensionRange;
+    private List<BroadWorksConnector.Ocip.Models.ExtensionRange> _extensionRange;
 
     [XmlElement(ElementName = "extensionRange", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.ExtensionRange> ExtensionRange {
+    public List<BroadWorksConnector.Ocip.Models.ExtensionRange> ExtensionRange {
         get => _extensionRange;
         set {
             ExtensionRangeSpecified = true;

@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class MeetMeConferencingConferenceScheduleScheduleRecurring
 
     [XmlIgnore]
     public bool StartTimeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _duration;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _duration;
 
     [XmlElement(ElementName = "duration", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration Duration {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration Duration {
         get => _duration;
         set {
             DurationSpecified = true;
@@ -34,10 +34,10 @@ public  class MeetMeConferencingConferenceScheduleScheduleRecurring
 
     [XmlIgnore]
     public bool DurationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.Recurrence _recurrence;
+    private BroadWorksConnector.Ocip.Models.Recurrence _recurrence;
 
     [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.Recurrence Recurrence {
+    public BroadWorksConnector.Ocip.Models.Recurrence Recurrence {
         get => _recurrence;
         set {
             RecurrenceSpecified = true;

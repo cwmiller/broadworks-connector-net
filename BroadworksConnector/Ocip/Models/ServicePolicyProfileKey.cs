@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class ServicePolicyProfileKey
 
     [XmlIgnore]
     public bool NameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServicePolicyProfileCategory _category;
+    private BroadWorksConnector.Ocip.Models.ServicePolicyProfileCategory _category;
 
     [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServicePolicyProfileCategory Category {
+    public BroadWorksConnector.Ocip.Models.ServicePolicyProfileCategory Category {
         get => _category;
         set {
             CategorySpecified = true;

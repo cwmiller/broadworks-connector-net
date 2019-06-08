@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallingPlanGetDigitPatternListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupCallingPlanGetDigitPatternListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _digitPatternTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _digitPatternTable;
 
     [XmlElement(ElementName = "digitPatternTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable DigitPatternTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable DigitPatternTable {
         get => _digitPatternTable;
         set {
             DigitPatternTableSpecified = true;

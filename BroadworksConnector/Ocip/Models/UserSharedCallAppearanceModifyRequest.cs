@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserSharedCallAppearanceModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserSharedCallAppearanceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -86,10 +86,10 @@ public  class UserSharedCallAppearanceModifyRequest : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool AllowBridgingBetweenLocationsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
+    private BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
 
     [XmlElement(ElementName = "bridgeWarningTone", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone {
+    public BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone {
         get => _bridgeWarningTone;
         set {
             BridgeWarningToneSpecified = true;

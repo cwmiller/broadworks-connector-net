@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaAccessDeviceVersion : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaAccessDeviceVersion : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.SearchMode _mode;
+    private BroadWorksConnector.Ocip.Models.SearchMode _mode;
 
     [XmlElement(ElementName = "mode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchMode Mode {
+    public BroadWorksConnector.Ocip.Models.SearchMode Mode {
         get => _mode;
         set {
             ModeSpecified = true;

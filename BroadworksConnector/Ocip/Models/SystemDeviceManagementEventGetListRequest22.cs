@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDeviceManagementEventGetListRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemDeviceManagementEventGetListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.DeviceManagementEventQueueType _eventQueueType;
+    private BroadWorksConnector.Ocip.Models.DeviceManagementEventQueueType _eventQueueType;
 
     [XmlElement(ElementName = "eventQueueType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DeviceManagementEventQueueType EventQueueType {
+    public BroadWorksConnector.Ocip.Models.DeviceManagementEventQueueType EventQueueType {
         get => _eventQueueType;
         set {
             EventQueueTypeSpecified = true;
@@ -34,10 +34,10 @@ public  class SystemDeviceManagementEventGetListRequest22 : BroadworksConnector.
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventStatusInProgressOrPending _searchCriteriaExactDeviceManagementEventStatusInProgressOrPending;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventStatusInProgressOrPending _searchCriteriaExactDeviceManagementEventStatusInProgressOrPending;
 
     [XmlElement(ElementName = "searchCriteriaExactDeviceManagementEventStatusInProgressOrPending", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventStatusInProgressOrPending SearchCriteriaExactDeviceManagementEventStatusInProgressOrPending {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventStatusInProgressOrPending SearchCriteriaExactDeviceManagementEventStatusInProgressOrPending {
         get => _searchCriteriaExactDeviceManagementEventStatusInProgressOrPending;
         set {
             SearchCriteriaExactDeviceManagementEventStatusInProgressOrPendingSpecified = true;
@@ -47,10 +47,10 @@ public  class SystemDeviceManagementEventGetListRequest22 : BroadworksConnector.
 
     [XmlIgnore]
     public bool SearchCriteriaExactDeviceManagementEventStatusInProgressOrPendingSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventStatusCompleted _searchCriteriaExactDeviceManagementEventStatusCompleted;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventStatusCompleted _searchCriteriaExactDeviceManagementEventStatusCompleted;
 
     [XmlElement(ElementName = "searchCriteriaExactDeviceManagementEventStatusCompleted", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventStatusCompleted SearchCriteriaExactDeviceManagementEventStatusCompleted {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventStatusCompleted SearchCriteriaExactDeviceManagementEventStatusCompleted {
         get => _searchCriteriaExactDeviceManagementEventStatusCompleted;
         set {
             SearchCriteriaExactDeviceManagementEventStatusCompletedSpecified = true;
@@ -60,10 +60,10 @@ public  class SystemDeviceManagementEventGetListRequest22 : BroadworksConnector.
 
     [XmlIgnore]
     public bool SearchCriteriaExactDeviceManagementEventStatusCompletedSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventAction _searchCriteriaExactDeviceManagementEventAction;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventAction _searchCriteriaExactDeviceManagementEventAction;
 
     [XmlElement(ElementName = "searchCriteriaExactDeviceManagementEventAction", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventAction SearchCriteriaExactDeviceManagementEventAction {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventAction SearchCriteriaExactDeviceManagementEventAction {
         get => _searchCriteriaExactDeviceManagementEventAction;
         set {
             SearchCriteriaExactDeviceManagementEventActionSpecified = true;
@@ -73,10 +73,10 @@ public  class SystemDeviceManagementEventGetListRequest22 : BroadworksConnector.
 
     [XmlIgnore]
     public bool SearchCriteriaExactDeviceManagementEventActionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventLevel _searchCriteriaExactDeviceManagementEventLevel;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventLevel _searchCriteriaExactDeviceManagementEventLevel;
 
     [XmlElement(ElementName = "searchCriteriaExactDeviceManagementEventLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventLevel SearchCriteriaExactDeviceManagementEventLevel {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventLevel SearchCriteriaExactDeviceManagementEventLevel {
         get => _searchCriteriaExactDeviceManagementEventLevel;
         set {
             SearchCriteriaExactDeviceManagementEventLevelSpecified = true;
@@ -86,10 +86,10 @@ public  class SystemDeviceManagementEventGetListRequest22 : BroadworksConnector.
 
     [XmlIgnore]
     public bool SearchCriteriaExactDeviceManagementEventLevelSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventType _searchCriteriaExactDeviceManagementEventType;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventType _searchCriteriaExactDeviceManagementEventType;
 
     [XmlElement(ElementName = "searchCriteriaExactDeviceManagementEventType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventType SearchCriteriaExactDeviceManagementEventType {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventType SearchCriteriaExactDeviceManagementEventType {
         get => _searchCriteriaExactDeviceManagementEventType;
         set {
             SearchCriteriaExactDeviceManagementEventTypeSpecified = true;
@@ -99,10 +99,10 @@ public  class SystemDeviceManagementEventGetListRequest22 : BroadworksConnector.
 
     [XmlIgnore]
     public bool SearchCriteriaExactDeviceManagementEventTypeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventAdditionalInfo> _searchCriteriaDeviceManagementEventAdditionalInfo;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventAdditionalInfo> _searchCriteriaDeviceManagementEventAdditionalInfo;
 
     [XmlElement(ElementName = "searchCriteriaDeviceManagementEventAdditionalInfo", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventAdditionalInfo> SearchCriteriaDeviceManagementEventAdditionalInfo {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventAdditionalInfo> SearchCriteriaDeviceManagementEventAdditionalInfo {
         get => _searchCriteriaDeviceManagementEventAdditionalInfo;
         set {
             SearchCriteriaDeviceManagementEventAdditionalInfoSpecified = true;
@@ -112,10 +112,10 @@ public  class SystemDeviceManagementEventGetListRequest22 : BroadworksConnector.
 
     [XmlIgnore]
     public bool SearchCriteriaDeviceManagementEventAdditionalInfoSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventLoginId> _searchCriteriaDeviceManagementEventLoginId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventLoginId> _searchCriteriaDeviceManagementEventLoginId;
 
     [XmlElement(ElementName = "searchCriteriaDeviceManagementEventLoginId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventLoginId> SearchCriteriaDeviceManagementEventLoginId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventLoginId> SearchCriteriaDeviceManagementEventLoginId {
         get => _searchCriteriaDeviceManagementEventLoginId;
         set {
             SearchCriteriaDeviceManagementEventLoginIdSpecified = true;

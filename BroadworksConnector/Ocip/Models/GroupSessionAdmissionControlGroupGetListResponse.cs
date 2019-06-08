@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupSessionAdmissionControlGroupGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupSessionAdmissionControlGroupGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _sessionAdmissionControlGroupTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _sessionAdmissionControlGroupTable;
 
     [XmlElement(ElementName = "sessionAdmissionControlGroupTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable SessionAdmissionControlGroupTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable SessionAdmissionControlGroupTable {
         get => _sessionAdmissionControlGroupTable;
         set {
             SessionAdmissionControlGroupTableSpecified = true;

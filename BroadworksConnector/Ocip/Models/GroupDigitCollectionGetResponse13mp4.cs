@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupDigitCollectionGetResponse13mp4 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupDigitCollectionGetResponse13mp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.GroupDigitCollectionSettingLevel _useSetting;
+    private BroadWorksConnector.Ocip.Models.GroupDigitCollectionSettingLevel _useSetting;
 
     [XmlElement(ElementName = "useSetting", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupDigitCollectionSettingLevel UseSetting {
+    public BroadWorksConnector.Ocip.Models.GroupDigitCollectionSettingLevel UseSetting {
         get => _useSetting;
         set {
             UseSettingSpecified = true;

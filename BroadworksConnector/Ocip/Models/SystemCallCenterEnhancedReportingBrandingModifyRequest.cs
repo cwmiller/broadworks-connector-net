@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallCenterEnhancedReportingBrandingModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemCallCenterEnhancedReportingBrandingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice _brandingChoice;
+    private BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice _brandingChoice;
 
     [XmlElement(ElementName = "brandingChoice", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice BrandingChoice {
+    public BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice BrandingChoice {
         get => _brandingChoice;
         set {
             BrandingChoiceSpecified = true;
@@ -21,10 +21,10 @@ public  class SystemCallCenterEnhancedReportingBrandingModifyRequest : Broadwork
 
     [XmlIgnore]
     public bool BrandingChoiceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _customBrandingFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _customBrandingFile;
 
     [XmlElement(ElementName = "customBrandingFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource CustomBrandingFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource CustomBrandingFile {
         get => _customBrandingFile;
         set {
             CustomBrandingFileSpecified = true;

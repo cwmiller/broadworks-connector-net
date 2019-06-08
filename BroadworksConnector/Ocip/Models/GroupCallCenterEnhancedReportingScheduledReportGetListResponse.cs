@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class GroupCallCenterEnhancedReportingScheduledReportGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private BroadworksConnector.Ocip.Models.C.OCITable _scheduledReportTable;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupCallCenterEnhancedReportingScheduledReportGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private BroadWorksConnector.Ocip.Models.C.OCITable _scheduledReportTable;
 
-        [XmlElement(ElementName = "scheduledReportTable", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.C.OCITable ScheduledReportTable
-        {
-            get => _scheduledReportTable;
-            set
-            {
-                ScheduledReportTableSpecified = true;
-                _scheduledReportTable = value;
-            }
+    [XmlElement(ElementName = "scheduledReportTable", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.C.OCITable ScheduledReportTable {
+        get => _scheduledReportTable;
+        set {
+            ScheduledReportTableSpecified = true;
+            _scheduledReportTable = value;
         }
-
-        [XmlIgnore]
-        public bool ScheduledReportTableSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool ScheduledReportTableSpecified { get; set; }
+}
 }

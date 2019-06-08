@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupOutgoingCallingPlanPinholeDigitPlanOriginatingModifyListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupOutgoingCallingPlanPinholeDigitPlanOriginatingModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupOutgoingCallingPlanPinholeDigitPlanOriginatingModifyListReque
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingPermissions _groupPermissions;
+    private BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingPermissions _groupPermissions;
 
     [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingPermissions GroupPermissions {
+    public BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingPermissions GroupPermissions {
         get => _groupPermissions;
         set {
             GroupPermissionsSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupOutgoingCallingPlanPinholeDigitPlanOriginatingModifyListReque
 
     [XmlIgnore]
     public bool GroupPermissionsSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingDepartmentPermissionsModify> _departmentPermissions;
+    private List<BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingDepartmentPermissionsModify> _departmentPermissions;
 
     [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingDepartmentPermissionsModify> DepartmentPermissions {
+    public List<BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingDepartmentPermissionsModify> DepartmentPermissions {
         get => _departmentPermissions;
         set {
             DepartmentPermissionsSpecified = true;

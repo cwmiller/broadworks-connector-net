@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPAuthenticationTrunkGroupLockoutGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemSIPAuthenticationTrunkGroupLockoutGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _lockoutTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _lockoutTable;
 
     [XmlElement(ElementName = "lockoutTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable LockoutTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable LockoutTable {
         get => _lockoutTable;
         set {
             LockoutTableSpecified = true;

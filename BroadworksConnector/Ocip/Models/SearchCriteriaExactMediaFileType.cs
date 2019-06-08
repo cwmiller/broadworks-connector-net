@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactMediaFileType : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactMediaFileType : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.MediaFileType _type;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _type;
 
     [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType Type {
+    public BroadWorksConnector.Ocip.Models.MediaFileType Type {
         get => _type;
         set {
             TypeSpecified = true;

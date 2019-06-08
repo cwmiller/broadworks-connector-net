@@ -1,42 +1,38 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class GroupCallCenterCallDispositionCodeGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private bool _isActive;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupCallCenterCallDispositionCodeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private bool _isActive;
 
-        [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive
-        {
-            get => _isActive;
-            set
-            {
-                IsActiveSpecified = true;
-                _isActive = value;
-            }
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
         }
-
-        [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
-        private string _description;
-
-        [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        public string Description
-        {
-            get => _description;
-            set
-            {
-                DescriptionSpecified = true;
-                _description = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+}
 }

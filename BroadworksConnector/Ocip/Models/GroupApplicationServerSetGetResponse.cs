@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class GroupApplicationServerSetGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private string _applicationServerSetName;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupApplicationServerSetGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private string _applicationServerSetName;
 
-        [XmlElement(ElementName = "applicationServerSetName", IsNullable = false, Namespace = "")]
-        public string ApplicationServerSetName
-        {
-            get => _applicationServerSetName;
-            set
-            {
-                ApplicationServerSetNameSpecified = true;
-                _applicationServerSetName = value;
-            }
+    [XmlElement(ElementName = "applicationServerSetName", IsNullable = false, Namespace = "")]
+    public string ApplicationServerSetName {
+        get => _applicationServerSetName;
+        set {
+            ApplicationServerSetNameSpecified = true;
+            _applicationServerSetName = value;
         }
-
-        [XmlIgnore]
-        public bool ApplicationServerSetNameSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool ApplicationServerSetNameSpecified { get; set; }
+}
 }

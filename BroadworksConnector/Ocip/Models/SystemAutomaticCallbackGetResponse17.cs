@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemAutomaticCallbackGetResponse17 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemAutomaticCallbackGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private int _monitorMinutes;
 
@@ -73,10 +73,10 @@ public  class SystemAutomaticCallbackGetResponse17 : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool TerminatorIdleGuardSecondsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AutomaticCallbackMethod _callbackMethod;
+    private BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod _callbackMethod;
 
     [XmlElement(ElementName = "callbackMethod", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AutomaticCallbackMethod CallbackMethod {
+    public BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod CallbackMethod {
         get => _callbackMethod;
         set {
             CallbackMethodSpecified = true;

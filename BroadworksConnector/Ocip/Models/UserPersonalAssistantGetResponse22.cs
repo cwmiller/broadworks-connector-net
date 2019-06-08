@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserPersonalAssistantGetResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserPersonalAssistantGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.PersonalAssistantPresence _presence;
+    private BroadWorksConnector.Ocip.Models.PersonalAssistantPresence _presence;
 
     [XmlElement(ElementName = "presence", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.PersonalAssistantPresence Presence {
+    public BroadWorksConnector.Ocip.Models.PersonalAssistantPresence Presence {
         get => _presence;
         set {
             PresenceSpecified = true;
@@ -99,10 +99,10 @@ public  class UserPersonalAssistantGetResponse22 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool AlertMeFirstSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings _alertMeFirstNumberOfRings;
+    private BroadWorksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings _alertMeFirstNumberOfRings;
 
     [XmlElement(ElementName = "alertMeFirstNumberOfRings", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings AlertMeFirstNumberOfRings {
+    public BroadWorksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings AlertMeFirstNumberOfRings {
         get => _alertMeFirstNumberOfRings;
         set {
             AlertMeFirstNumberOfRingsSpecified = true;

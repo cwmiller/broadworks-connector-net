@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCollaborateBridgeGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserCollaborateBridgeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _bridgeId;
 
@@ -60,10 +60,10 @@ public  class UserCollaborateBridgeGetResponse : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool ExtensionSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.AlternateNumberEntry21> _alternateNumberEntry;
+    private List<BroadWorksConnector.Ocip.Models.AlternateNumberEntry21> _alternateNumberEntry;
 
     [XmlElement(ElementName = "alternateNumberEntry", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.AlternateNumberEntry21> AlternateNumberEntry {
+    public List<BroadWorksConnector.Ocip.Models.AlternateNumberEntry21> AlternateNumberEntry {
         get => _alternateNumberEntry;
         set {
             AlternateNumberEntrySpecified = true;

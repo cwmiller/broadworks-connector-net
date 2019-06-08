@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemAccessDeviceGetResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemAccessDeviceGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _deviceType;
 
@@ -125,10 +125,10 @@ public  class SystemAccessDeviceGetResponse16 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool DescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
+    private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
 
     [XmlElement(ElementName = "numberOfPorts", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts {
+    public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts {
         get => _numberOfPorts;
         set {
             NumberOfPortsSpecified = true;
@@ -151,10 +151,10 @@ public  class SystemAccessDeviceGetResponse16 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool NumberOfAssignedPortsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceStatus _status;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceStatus _status;
 
     [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceStatus Status {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceStatus Status {
         get => _status;
         set {
             StatusSpecified = true;
@@ -177,10 +177,10 @@ public  class SystemAccessDeviceGetResponse16 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool PhysicalLocationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TransportProtocol _transportProtocol;
+    private BroadWorksConnector.Ocip.Models.TransportProtocol _transportProtocol;
 
     [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TransportProtocol TransportProtocol {
+    public BroadWorksConnector.Ocip.Models.TransportProtocol TransportProtocol {
         get => _transportProtocol;
         set {
             TransportProtocolSpecified = true;

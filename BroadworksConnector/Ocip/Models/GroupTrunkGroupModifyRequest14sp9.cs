@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupTrunkGroupModifyRequest14sp9 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupTrunkGroupModifyRequest14sp9 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupTrunkGroupModifyRequest14sp9 : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool MaxActiveCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt _burstingMaxActiveCalls;
+    private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _burstingMaxActiveCalls;
 
     [XmlElement(ElementName = "burstingMaxActiveCalls", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt BurstingMaxActiveCalls {
+    public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt BurstingMaxActiveCalls {
         get => _burstingMaxActiveCalls;
         set {
             BurstingMaxActiveCallsSpecified = true;

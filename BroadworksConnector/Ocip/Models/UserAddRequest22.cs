@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserAddRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserAddRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -99,10 +99,10 @@ public  class UserAddRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool CallingLineIdFirstNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.NameDialingName _nameDialingName;
+    private BroadWorksConnector.Ocip.Models.NameDialingName _nameDialingName;
 
     [XmlElement(ElementName = "nameDialingName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NameDialingName NameDialingName {
+    public BroadWorksConnector.Ocip.Models.NameDialingName NameDialingName {
         get => _nameDialingName;
         set {
             NameDialingNameSpecified = true;
@@ -190,10 +190,10 @@ public  class UserAddRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool PasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _department;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
     [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey Department {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
         get => _department;
         set {
             DepartmentSpecified = true;
@@ -242,10 +242,10 @@ public  class UserAddRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool AliasSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceMultipleIdentityAndContactEndpointAdd22 _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleIdentityAndContactEndpointAdd22 _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceMultipleIdentityAndContactEndpointAdd22 AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleIdentityAndContactEndpointAdd22 AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;
@@ -255,10 +255,10 @@ public  class UserAddRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool AccessDeviceEndpointSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkAddressingMultipleContactAdd22 _trunkAddressing;
+    private BroadWorksConnector.Ocip.Models.TrunkAddressingMultipleContactAdd22 _trunkAddressing;
 
     [XmlElement(ElementName = "trunkAddressing", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkAddressingMultipleContactAdd22 TrunkAddressing {
+    public BroadWorksConnector.Ocip.Models.TrunkAddressingMultipleContactAdd22 TrunkAddressing {
         get => _trunkAddressing;
         set {
             TrunkAddressingSpecified = true;
@@ -346,10 +346,10 @@ public  class UserAddRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool AddressLocationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.StreetAddress _address;
+    private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
     [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.StreetAddress Address {
+    public BroadWorksConnector.Ocip.Models.StreetAddress Address {
         get => _address;
         set {
             AddressSpecified = true;
@@ -372,10 +372,10 @@ public  class UserAddRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool NetworkClassOfServiceSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.AlternateUserIdEntry> _alternateUserId;
+    private List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry> _alternateUserId;
 
     [XmlElement(ElementName = "alternateUserId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.AlternateUserIdEntry> AlternateUserId {
+    public List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry> AlternateUserId {
         get => _alternateUserId;
         set {
             AlternateUserIdSpecified = true;

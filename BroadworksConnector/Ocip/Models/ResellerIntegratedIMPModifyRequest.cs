@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ResellerIntegratedIMPModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ResellerIntegratedIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _resellerId;
 
@@ -125,10 +125,10 @@ public  class ResellerIntegratedIMPModifyRequest : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool BoshURLSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
+    private BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
 
     [XmlElement(ElementName = "defaultImpIdType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.IntegratedIMPUserIDType DefaultImpIdType {
+    public BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType DefaultImpIdType {
         get => _defaultImpIdType;
         set {
             DefaultImpIdTypeSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupRoutePointDistinctiveRingingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupRoutePointDistinctiveRingingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _enableDistinctiveRinging;
 
@@ -21,10 +21,10 @@ public  class GroupRoutePointDistinctiveRingingGetResponse : BroadworksConnector
 
     [XmlIgnore]
     public bool EnableDistinctiveRingingSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RingPattern _distinctiveRingingRingPattern;
+    private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingRingPattern;
 
     [XmlElement(ElementName = "distinctiveRingingRingPattern", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RingPattern DistinctiveRingingRingPattern {
+    public BroadWorksConnector.Ocip.Models.RingPattern DistinctiveRingingRingPattern {
         get => _distinctiveRingingRingPattern;
         set {
             DistinctiveRingingRingPatternSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupRoutePointDistinctiveRingingGetResponse : BroadworksConnector
 
     [XmlIgnore]
     public bool DistinctiveRingingRingPatternSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RingPattern _distinctiveRingingForceDeliveryRingPattern;
+    private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingForceDeliveryRingPattern;
 
     [XmlElement(ElementName = "distinctiveRingingForceDeliveryRingPattern", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RingPattern DistinctiveRingingForceDeliveryRingPattern {
+    public BroadWorksConnector.Ocip.Models.RingPattern DistinctiveRingingForceDeliveryRingPattern {
         get => _distinctiveRingingForceDeliveryRingPattern;
         set {
             DistinctiveRingingForceDeliveryRingPatternSpecified = true;

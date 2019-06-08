@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderAdminGetPagedSortedListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderAdminGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderAdminGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool ServiceProviderIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;
@@ -34,10 +34,10 @@ public  class ServiceProviderAdminGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool ResponsePagingControlSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SortOrderServiceProviderAdminGetPagedSortedList> _sortOrder;
+    private List<BroadWorksConnector.Ocip.Models.SortOrderServiceProviderAdminGetPagedSortedList> _sortOrder;
 
     [XmlElement(ElementName = "sortOrder", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SortOrderServiceProviderAdminGetPagedSortedList> SortOrder {
+    public List<BroadWorksConnector.Ocip.Models.SortOrderServiceProviderAdminGetPagedSortedList> SortOrder {
         get => _sortOrder;
         set {
             SortOrderSpecified = true;
@@ -47,10 +47,10 @@ public  class ServiceProviderAdminGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SortOrderSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaAdminId> _searchCriteriaAdminId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminId> _searchCriteriaAdminId;
 
     [XmlElement(ElementName = "searchCriteriaAdminId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaAdminId> SearchCriteriaAdminId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminId> SearchCriteriaAdminId {
         get => _searchCriteriaAdminId;
         set {
             SearchCriteriaAdminIdSpecified = true;
@@ -60,10 +60,10 @@ public  class ServiceProviderAdminGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaAdminIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaAdminLastName> _searchCriteriaAdminLastName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminLastName> _searchCriteriaAdminLastName;
 
     [XmlElement(ElementName = "searchCriteriaAdminLastName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaAdminLastName> SearchCriteriaAdminLastName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminLastName> SearchCriteriaAdminLastName {
         get => _searchCriteriaAdminLastName;
         set {
             SearchCriteriaAdminLastNameSpecified = true;
@@ -73,10 +73,10 @@ public  class ServiceProviderAdminGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaAdminLastNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaAdminFirstName> _searchCriteriaAdminFirstName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminFirstName> _searchCriteriaAdminFirstName;
 
     [XmlElement(ElementName = "searchCriteriaAdminFirstName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaAdminFirstName> SearchCriteriaAdminFirstName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminFirstName> SearchCriteriaAdminFirstName {
         get => _searchCriteriaAdminFirstName;
         set {
             SearchCriteriaAdminFirstNameSpecified = true;
@@ -86,10 +86,10 @@ public  class ServiceProviderAdminGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaAdminFirstNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExactServiceProviderAdminType> _searchCriteriaExactServiceProviderAdminType;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactServiceProviderAdminType> _searchCriteriaExactServiceProviderAdminType;
 
     [XmlElement(ElementName = "searchCriteriaExactServiceProviderAdminType", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExactServiceProviderAdminType> SearchCriteriaExactServiceProviderAdminType {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactServiceProviderAdminType> SearchCriteriaExactServiceProviderAdminType {
         get => _searchCriteriaExactServiceProviderAdminType;
         set {
             SearchCriteriaExactServiceProviderAdminTypeSpecified = true;
@@ -99,10 +99,10 @@ public  class ServiceProviderAdminGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaExactServiceProviderAdminTypeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaLanguage> _searchCriteriaLanguage;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaLanguage> _searchCriteriaLanguage;
 
     [XmlElement(ElementName = "searchCriteriaLanguage", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaLanguage> SearchCriteriaLanguage {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaLanguage> SearchCriteriaLanguage {
         get => _searchCriteriaLanguage;
         set {
             SearchCriteriaLanguageSpecified = true;

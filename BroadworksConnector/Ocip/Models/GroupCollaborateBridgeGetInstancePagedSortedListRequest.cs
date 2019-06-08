@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCollaborateBridgeGetInstancePagedSortedListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCollaborateBridgeGetInstancePagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupCollaborateBridgeGetInstancePagedSortedListRequest : Broadwor
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupCollaborateBridgeGetInstancePagedSortedListRequest : Broadwor
 
     [XmlIgnore]
     public bool ResponsePagingControlSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SortOrderGroupCollaborateBridgeGetInstancePagedSortedList> _sortOrder;
+    private List<BroadWorksConnector.Ocip.Models.SortOrderGroupCollaborateBridgeGetInstancePagedSortedList> _sortOrder;
 
     [XmlElement(ElementName = "sortOrder", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SortOrderGroupCollaborateBridgeGetInstancePagedSortedList> SortOrder {
+    public List<BroadWorksConnector.Ocip.Models.SortOrderGroupCollaborateBridgeGetInstancePagedSortedList> SortOrder {
         get => _sortOrder;
         set {
             SortOrderSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupCollaborateBridgeGetInstancePagedSortedListRequest : Broadwor
 
     [XmlIgnore]
     public bool SortOrderSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName;
 
     [XmlElement(ElementName = "searchCriteriaUserLastName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName {
         get => _searchCriteriaUserLastName;
         set {
             SearchCriteriaUserLastNameSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupCollaborateBridgeGetInstancePagedSortedListRequest : Broadwor
 
     [XmlIgnore]
     public bool SearchCriteriaUserLastNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDepartmentName> _searchCriteriaDepartmentName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDepartmentName> _searchCriteriaDepartmentName;
 
     [XmlElement(ElementName = "searchCriteriaDepartmentName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDepartmentName> SearchCriteriaDepartmentName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDepartmentName> SearchCriteriaDepartmentName {
         get => _searchCriteriaDepartmentName;
         set {
             SearchCriteriaDepartmentNameSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupCollaborateBridgeGetInstancePagedSortedListRequest : Broadwor
 
     [XmlIgnore]
     public bool SearchCriteriaDepartmentNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
 
     [XmlElement(ElementName = "searchCriteriaUserId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
         get => _searchCriteriaUserId;
         set {
             SearchCriteriaUserIdSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupCollaborateBridgeGetInstancePagedSortedListRequest : Broadwor
 
     [XmlIgnore]
     public bool SearchCriteriaUserIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
 
     [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
         get => _searchCriteriaDn;
         set {
             SearchCriteriaDnSpecified = true;
@@ -112,10 +112,10 @@ public  class GroupCollaborateBridgeGetInstancePagedSortedListRequest : Broadwor
 
     [XmlIgnore]
     public bool SearchCriteriaDnSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension;
 
     [XmlElement(ElementName = "searchCriteriaExtension", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension {
         get => _searchCriteriaExtension;
         set {
             SearchCriteriaExtensionSpecified = true;
@@ -125,10 +125,10 @@ public  class GroupCollaborateBridgeGetInstancePagedSortedListRequest : Broadwor
 
     [XmlIgnore]
     public bool SearchCriteriaExtensionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactDnActivation _searchCriteriaExactDnActivation;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDnActivation _searchCriteriaExactDnActivation;
 
     [XmlElement(ElementName = "searchCriteriaExactDnActivation", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactDnActivation SearchCriteriaExactDnActivation {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactDnActivation SearchCriteriaExactDnActivation {
         get => _searchCriteriaExactDnActivation;
         set {
             SearchCriteriaExactDnActivationSpecified = true;

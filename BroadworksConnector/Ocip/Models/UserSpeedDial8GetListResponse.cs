@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserSpeedDial8GetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserSpeedDial8GetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private List<BroadworksConnector.Ocip.Models.SpeedDial8Entry> _speedDialEntry;
+    private List<BroadWorksConnector.Ocip.Models.SpeedDial8Entry> _speedDialEntry;
 
     [XmlElement(ElementName = "speedDialEntry", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SpeedDial8Entry> SpeedDialEntry {
+    public List<BroadWorksConnector.Ocip.Models.SpeedDial8Entry> SpeedDialEntry {
         get => _speedDialEntry;
         set {
             SpeedDialEntrySpecified = true;

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserShInterfaceModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserShInterfaceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
+    private BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
 
     [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.PublicUserIdentity PublicUserIdentity {
+    public BroadWorksConnector.Ocip.Models.PublicUserIdentity PublicUserIdentity {
         get => _publicUserIdentity;
         set {
             PublicUserIdentitySpecified = true;
@@ -34,10 +34,10 @@ public  class UserShInterfaceModifyRequest : BroadworksConnector.Ocip.Models.C.O
 
     [XmlIgnore]
     public bool SCSCFNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.IMSUserState _iMSUserState;
+    private BroadWorksConnector.Ocip.Models.IMSUserState _iMSUserState;
 
     [XmlElement(ElementName = "IMSUserState", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.IMSUserState IMSUserState {
+    public BroadWorksConnector.Ocip.Models.IMSUserState IMSUserState {
         get => _iMSUserState;
         set {
             IMSUserStateSpecified = true;

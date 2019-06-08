@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class ReplacementCommunicationBarringCallMeNowRuleList 
 {
-    private List<BroadworksConnector.Ocip.Models.CommunicationBarringCallMeNowRule> _rule;
+    private List<BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowRule> _rule;
 
     [XmlElement(ElementName = "rule", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CommunicationBarringCallMeNowRule> Rule {
+    public List<BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowRule> Rule {
         get => _rule;
         set {
             RuleSpecified = true;

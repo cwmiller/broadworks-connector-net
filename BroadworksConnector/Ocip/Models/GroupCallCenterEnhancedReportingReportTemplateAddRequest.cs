@@ -1,297 +1,259 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class GroupCallCenterEnhancedReportingReportTemplateAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
-    {
-        private string _serviceProviderId;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupCallCenterEnhancedReportingReportTemplateAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+{
+    private string _serviceProviderId;
 
-        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId
-        {
-            get => _serviceProviderId;
-            set
-            {
-                ServiceProviderIdSpecified = true;
-                _serviceProviderId = value;
-            }
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
         }
-
-        [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
-        private string _groupId;
-
-        [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId
-        {
-            get => _groupId;
-            set
-            {
-                GroupIdSpecified = true;
-                _groupId = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
-        private string _name;
-
-        [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name
-        {
-            get => _name;
-            set
-            {
-                NameSpecified = true;
-                _name = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool NameSpecified { get; set; }
-        private string _description;
-
-        [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        public string Description
-        {
-            get => _description;
-            set
-            {
-                DescriptionSpecified = true;
-                _description = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
-        private string _dataTemplate;
-
-        [XmlElement(ElementName = "dataTemplate", IsNullable = false, Namespace = "")]
-        public string DataTemplate
-        {
-            get => _dataTemplate;
-            set
-            {
-                DataTemplateSpecified = true;
-                _dataTemplate = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool DataTemplateSpecified { get; set; }
-        private int _filterNumber;
-
-        [XmlElement(ElementName = "filterNumber", IsNullable = false, Namespace = "")]
-        public int FilterNumber
-        {
-            get => _filterNumber;
-            set
-            {
-                FilterNumberSpecified = true;
-                _filterNumber = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool FilterNumberSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.LabeledFileResource _xsltTemplate;
-
-        [XmlElement(ElementName = "xsltTemplate", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.LabeledFileResource XsltTemplate
-        {
-            get => _xsltTemplate;
-            set
-            {
-                XsltTemplateSpecified = true;
-                _xsltTemplate = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool XsltTemplateSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.CallCenterReportTemplateAccessOption _scope;
-
-        [XmlElement(ElementName = "scope", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.CallCenterReportTemplateAccessOption Scope
-        {
-            get => _scope;
-            set
-            {
-                ScopeSpecified = true;
-                _scope = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool ScopeSpecified { get; set; }
-        private bool _isEnabled;
-
-        [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
-        public bool IsEnabled
-        {
-            get => _isEnabled;
-            set
-            {
-                IsEnabledSpecified = true;
-                _isEnabled = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool IsEnabledSpecified { get; set; }
-        private bool _isRealtimeReport;
-
-        [XmlElement(ElementName = "isRealtimeReport", IsNullable = false, Namespace = "")]
-        public bool IsRealtimeReport
-        {
-            get => _isRealtimeReport;
-            set
-            {
-                IsRealtimeReportSpecified = true;
-                _isRealtimeReport = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool IsRealtimeReportSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption _callCompletionThresholdParam;
-
-        [XmlElement(ElementName = "callCompletionThresholdParam", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption CallCompletionThresholdParam
-        {
-            get => _callCompletionThresholdParam;
-            set
-            {
-                CallCompletionThresholdParamSpecified = true;
-                _callCompletionThresholdParam = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool CallCompletionThresholdParamSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption _shortDurationThresholdParam;
-
-        [XmlElement(ElementName = "shortDurationThresholdParam", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption ShortDurationThresholdParam
-        {
-            get => _shortDurationThresholdParam;
-            set
-            {
-                ShortDurationThresholdParamSpecified = true;
-                _shortDurationThresholdParam = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool ShortDurationThresholdParamSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelThresholdParam;
-
-        [XmlElement(ElementName = "serviceLevelThresholdParam", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelThresholdParam
-        {
-            get => _serviceLevelThresholdParam;
-            set
-            {
-                ServiceLevelThresholdParamSpecified = true;
-                _serviceLevelThresholdParam = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool ServiceLevelThresholdParamSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelInclusionsParam;
-
-        [XmlElement(ElementName = "serviceLevelInclusionsParam", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelInclusionsParam
-        {
-            get => _serviceLevelInclusionsParam;
-            set
-            {
-                ServiceLevelInclusionsParamSpecified = true;
-                _serviceLevelInclusionsParam = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool ServiceLevelInclusionsParamSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelObjectiveThresholdParam;
-
-        [XmlElement(ElementName = "serviceLevelObjectiveThresholdParam", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelObjectiveThresholdParam
-        {
-            get => _serviceLevelObjectiveThresholdParam;
-            set
-            {
-                ServiceLevelObjectiveThresholdParamSpecified = true;
-                _serviceLevelObjectiveThresholdParam = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool ServiceLevelObjectiveThresholdParamSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption _abandonedCallThresholdParam;
-
-        [XmlElement(ElementName = "abandonedCallThresholdParam", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.CallCenterReportInputParameterOption AbandonedCallThresholdParam
-        {
-            get => _abandonedCallThresholdParam;
-            set
-            {
-                AbandonedCallThresholdParamSpecified = true;
-                _abandonedCallThresholdParam = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool AbandonedCallThresholdParamSpecified { get; set; }
-        private int _serviceLevelThresholdParamNumber;
-
-        [XmlElement(ElementName = "serviceLevelThresholdParamNumber", IsNullable = false, Namespace = "")]
-        public int ServiceLevelThresholdParamNumber
-        {
-            get => _serviceLevelThresholdParamNumber;
-            set
-            {
-                ServiceLevelThresholdParamNumberSpecified = true;
-                _serviceLevelThresholdParamNumber = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool ServiceLevelThresholdParamNumberSpecified { get; set; }
-        private int _abandonedCallThresholdParamNumber;
-
-        [XmlElement(ElementName = "abandonedCallThresholdParamNumber", IsNullable = false, Namespace = "")]
-        public int AbandonedCallThresholdParamNumber
-        {
-            get => _abandonedCallThresholdParamNumber;
-            set
-            {
-                AbandonedCallThresholdParamNumberSpecified = true;
-                _abandonedCallThresholdParamNumber = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool AbandonedCallThresholdParamNumberSpecified { get; set; }
-        private List<string> _filterValue;
-
-        [XmlElement(ElementName = "filterValue", IsNullable = false, Namespace = "")]
-        public List<string> FilterValue
-        {
-            get => _filterValue;
-            set
-            {
-                FilterValueSpecified = true;
-                _filterValue = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool FilterValueSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _groupId;
+
+    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+    public string GroupId {
+        get => _groupId;
+        set {
+            GroupIdSpecified = true;
+            _groupId = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool GroupIdSpecified { get; set; }
+    private string _name;
+
+    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+    public string Name {
+        get => _name;
+        set {
+            NameSpecified = true;
+            _name = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NameSpecified { get; set; }
+    private string _description;
+
+    [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+    public string Description {
+        get => _description;
+        set {
+            DescriptionSpecified = true;
+            _description = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DescriptionSpecified { get; set; }
+    private string _dataTemplate;
+
+    [XmlElement(ElementName = "dataTemplate", IsNullable = false, Namespace = "")]
+    public string DataTemplate {
+        get => _dataTemplate;
+        set {
+            DataTemplateSpecified = true;
+            _dataTemplate = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DataTemplateSpecified { get; set; }
+    private int _filterNumber;
+
+    [XmlElement(ElementName = "filterNumber", IsNullable = false, Namespace = "")]
+    public int FilterNumber {
+        get => _filterNumber;
+        set {
+            FilterNumberSpecified = true;
+            _filterNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FilterNumberSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _xsltTemplate;
+
+    [XmlElement(ElementName = "xsltTemplate", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource XsltTemplate {
+        get => _xsltTemplate;
+        set {
+            XsltTemplateSpecified = true;
+            _xsltTemplate = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool XsltTemplateSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption _scope;
+
+    [XmlElement(ElementName = "scope", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption Scope {
+        get => _scope;
+        set {
+            ScopeSpecified = true;
+            _scope = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ScopeSpecified { get; set; }
+    private bool _isEnabled;
+
+    [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
+    public bool IsEnabled {
+        get => _isEnabled;
+        set {
+            IsEnabledSpecified = true;
+            _isEnabled = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsEnabledSpecified { get; set; }
+    private bool _isRealtimeReport;
+
+    [XmlElement(ElementName = "isRealtimeReport", IsNullable = false, Namespace = "")]
+    public bool IsRealtimeReport {
+        get => _isRealtimeReport;
+        set {
+            IsRealtimeReportSpecified = true;
+            _isRealtimeReport = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsRealtimeReportSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _callCompletionThresholdParam;
+
+    [XmlElement(ElementName = "callCompletionThresholdParam", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption CallCompletionThresholdParam {
+        get => _callCompletionThresholdParam;
+        set {
+            CallCompletionThresholdParamSpecified = true;
+            _callCompletionThresholdParam = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallCompletionThresholdParamSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _shortDurationThresholdParam;
+
+    [XmlElement(ElementName = "shortDurationThresholdParam", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ShortDurationThresholdParam {
+        get => _shortDurationThresholdParam;
+        set {
+            ShortDurationThresholdParamSpecified = true;
+            _shortDurationThresholdParam = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ShortDurationThresholdParamSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelThresholdParam;
+
+    [XmlElement(ElementName = "serviceLevelThresholdParam", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelThresholdParam {
+        get => _serviceLevelThresholdParam;
+        set {
+            ServiceLevelThresholdParamSpecified = true;
+            _serviceLevelThresholdParam = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceLevelThresholdParamSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelInclusionsParam;
+
+    [XmlElement(ElementName = "serviceLevelInclusionsParam", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelInclusionsParam {
+        get => _serviceLevelInclusionsParam;
+        set {
+            ServiceLevelInclusionsParamSpecified = true;
+            _serviceLevelInclusionsParam = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceLevelInclusionsParamSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelObjectiveThresholdParam;
+
+    [XmlElement(ElementName = "serviceLevelObjectiveThresholdParam", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelObjectiveThresholdParam {
+        get => _serviceLevelObjectiveThresholdParam;
+        set {
+            ServiceLevelObjectiveThresholdParamSpecified = true;
+            _serviceLevelObjectiveThresholdParam = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceLevelObjectiveThresholdParamSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _abandonedCallThresholdParam;
+
+    [XmlElement(ElementName = "abandonedCallThresholdParam", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption AbandonedCallThresholdParam {
+        get => _abandonedCallThresholdParam;
+        set {
+            AbandonedCallThresholdParamSpecified = true;
+            _abandonedCallThresholdParam = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AbandonedCallThresholdParamSpecified { get; set; }
+    private int _serviceLevelThresholdParamNumber;
+
+    [XmlElement(ElementName = "serviceLevelThresholdParamNumber", IsNullable = false, Namespace = "")]
+    public int ServiceLevelThresholdParamNumber {
+        get => _serviceLevelThresholdParamNumber;
+        set {
+            ServiceLevelThresholdParamNumberSpecified = true;
+            _serviceLevelThresholdParamNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ServiceLevelThresholdParamNumberSpecified { get; set; }
+    private int _abandonedCallThresholdParamNumber;
+
+    [XmlElement(ElementName = "abandonedCallThresholdParamNumber", IsNullable = false, Namespace = "")]
+    public int AbandonedCallThresholdParamNumber {
+        get => _abandonedCallThresholdParamNumber;
+        set {
+            AbandonedCallThresholdParamNumberSpecified = true;
+            _abandonedCallThresholdParamNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AbandonedCallThresholdParamNumberSpecified { get; set; }
+    private List<string> _filterValue;
+
+    [XmlElement(ElementName = "filterValue", IsNullable = false, Namespace = "")]
+    public List<string> FilterValue {
+        get => _filterValue;
+        set {
+            FilterValueSpecified = true;
+            _filterValue = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool FilterValueSpecified { get; set; }
+}
 }

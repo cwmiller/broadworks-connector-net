@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupSeriesCompletionModifyInstanceRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupSeriesCompletionModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -60,10 +60,10 @@ public  class GroupSeriesCompletionModifyInstanceRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool NewNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _userIdList;
+    private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _userIdList;
 
     [XmlElement(ElementName = "userIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList UserIdList {
+    public BroadWorksConnector.Ocip.Models.ReplacementUserIdList UserIdList {
         get => _userIdList;
         set {
             UserIdListSpecified = true;

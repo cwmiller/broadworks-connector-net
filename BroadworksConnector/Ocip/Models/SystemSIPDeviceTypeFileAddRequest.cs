@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPDeviceTypeFileAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSIPDeviceTypeFileAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _deviceType;
 
@@ -60,10 +60,10 @@ public  class SystemSIPDeviceTypeFileAddRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool RemoteFileFormatSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DeviceManagementFileCategory _fileCategory;
+    private BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory _fileCategory;
 
     [XmlElement(ElementName = "fileCategory", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DeviceManagementFileCategory FileCategory {
+    public BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory FileCategory {
         get => _fileCategory;
         set {
             FileCategorySpecified = true;
@@ -86,10 +86,10 @@ public  class SystemSIPDeviceTypeFileAddRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool AllowFileCustomizationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode _fileSource;
+    private BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode _fileSource;
 
     [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode FileSource {
+    public BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode FileSource {
         get => _fileSource;
         set {
             FileSourceSpecified = true;
@@ -99,10 +99,10 @@ public  class SystemSIPDeviceTypeFileAddRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool FileSourceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.FileResource _uploadFile;
+    private BroadWorksConnector.Ocip.Models.FileResource _uploadFile;
 
     [XmlElement(ElementName = "uploadFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.FileResource UploadFile {
+    public BroadWorksConnector.Ocip.Models.FileResource UploadFile {
         get => _uploadFile;
         set {
             UploadFileSpecified = true;

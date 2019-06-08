@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderServicePackMigrationTaskModifyRemovalListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderServicePackMigrationTaskModifyRemovalListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class ServiceProviderServicePackMigrationTaskModifyRemovalListRequest : 
 
     [XmlIgnore]
     public bool TaskNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementUserServiceList _userServiceNameList;
+    private BroadWorksConnector.Ocip.Models.ReplacementUserServiceList _userServiceNameList;
 
     [XmlElement(ElementName = "userServiceNameList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementUserServiceList UserServiceNameList {
+    public BroadWorksConnector.Ocip.Models.ReplacementUserServiceList UserServiceNameList {
         get => _userServiceNameList;
         set {
             UserServiceNameListSpecified = true;
@@ -47,10 +47,10 @@ public  class ServiceProviderServicePackMigrationTaskModifyRemovalListRequest : 
 
     [XmlIgnore]
     public bool UserServiceNameListSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementServicePackNameList _servicePackNameList;
+    private BroadWorksConnector.Ocip.Models.ReplacementServicePackNameList _servicePackNameList;
 
     [XmlElement(ElementName = "servicePackNameList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementServicePackNameList ServicePackNameList {
+    public BroadWorksConnector.Ocip.Models.ReplacementServicePackNameList ServicePackNameList {
         get => _servicePackNameList;
         set {
             ServicePackNameListSpecified = true;

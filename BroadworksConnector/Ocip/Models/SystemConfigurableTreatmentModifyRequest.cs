@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemConfigurableTreatmentModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemConfigurableTreatmentModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _treatmentId;
 
@@ -21,10 +21,10 @@ public  class SystemConfigurableTreatmentModifyRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool TreatmentIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ChargeIndicator _chargeIndicator;
+    private BroadWorksConnector.Ocip.Models.ChargeIndicator _chargeIndicator;
 
     [XmlElement(ElementName = "chargeIndicator", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ChargeIndicator ChargeIndicator {
+    public BroadWorksConnector.Ocip.Models.ChargeIndicator ChargeIndicator {
         get => _chargeIndicator;
         set {
             ChargeIndicatorSpecified = true;
@@ -203,10 +203,10 @@ public  class SystemConfigurableTreatmentModifyRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool RouteAdvanceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.InternalReleaseCause16? _internalReleaseCause;
+    private BroadWorksConnector.Ocip.Models.InternalReleaseCause16? _internalReleaseCause;
 
     [XmlElement(ElementName = "internalReleaseCause", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.InternalReleaseCause16? InternalReleaseCause {
+    public BroadWorksConnector.Ocip.Models.InternalReleaseCause16? InternalReleaseCause {
         get => _internalReleaseCause;
         set {
             InternalReleaseCauseSpecified = true;

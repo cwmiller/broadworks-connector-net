@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupInterceptGroupModifyRequest21sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupInterceptGroupModifyRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupInterceptGroupModifyRequest21sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
+    private BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
 
     [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection {
+    public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection {
         get => _announcementSelection;
         set {
             AnnouncementSelectionSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupInterceptGroupModifyRequest21sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool AnnouncementSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledMediaFileResource _audioFile;
+    private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _audioFile;
 
     [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledMediaFileResource AudioFile {
+    public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AudioFile {
         get => _audioFile;
         set {
             AudioFileSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupInterceptGroupModifyRequest21sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool AudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledMediaFileResource _videoFile;
+    private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _videoFile;
 
     [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledMediaFileResource VideoFile {
+    public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VideoFile {
         get => _videoFile;
         set {
             VideoFileSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupInterceptGroupModifyRequest21sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool VideoFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.InterceptInboundCall _inboundCallMode;
+    private BroadWorksConnector.Ocip.Models.InterceptInboundCall _inboundCallMode;
 
     [XmlElement(ElementName = "inboundCallMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.InterceptInboundCall InboundCallMode {
+    public BroadWorksConnector.Ocip.Models.InterceptInboundCall InboundCallMode {
         get => _inboundCallMode;
         set {
             InboundCallModeSpecified = true;
@@ -203,10 +203,10 @@ public  class GroupInterceptGroupModifyRequest21sp1 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool TransferPhoneNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.InterceptOutboundCall _outboundCallMode;
+    private BroadWorksConnector.Ocip.Models.InterceptOutboundCall _outboundCallMode;
 
     [XmlElement(ElementName = "outboundCallMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.InterceptOutboundCall OutboundCallMode {
+    public BroadWorksConnector.Ocip.Models.InterceptOutboundCall OutboundCallMode {
         get => _outboundCallMode;
         set {
             OutboundCallModeSpecified = true;

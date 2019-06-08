@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class GroupEnterpriseTrunkAddRequestOrderedRouting
 
     [XmlIgnore]
     public bool TrunkGroupSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm _orderingAlgorithm;
+    private BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm _orderingAlgorithm;
 
     [XmlElement(ElementName = "orderingAlgorithm", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm OrderingAlgorithm {
+    public BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm OrderingAlgorithm {
         get => _orderingAlgorithm;
         set {
             OrderingAlgorithmSpecified = true;

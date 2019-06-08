@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class SystemDeviceTypeGetAvailableListResponseTypeInfo 
 {
-    private BroadworksConnector.Ocip.Models.SignalingAddressType _profile;
+    private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
     [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SignalingAddressType Profile {
+    public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
         get => _profile;
         set {
             ProfileSpecified = true;

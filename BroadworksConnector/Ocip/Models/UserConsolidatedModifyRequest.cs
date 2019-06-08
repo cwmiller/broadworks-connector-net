@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserConsolidatedModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool DeleteExistingDevicesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
+    private BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
 
     [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers {
+    public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers {
         get => _unassignPhoneNumbers;
         set {
             UnassignPhoneNumbersSpecified = true;
@@ -125,10 +125,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool CallingLineIdFirstNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.NameDialingName _nameDialingName;
+    private BroadWorksConnector.Ocip.Models.NameDialingName _nameDialingName;
 
     [XmlElement(ElementName = "nameDialingName", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NameDialingName NameDialingName {
+    public BroadWorksConnector.Ocip.Models.NameDialingName NameDialingName {
         get => _nameDialingName;
         set {
             NameDialingNameSpecified = true;
@@ -177,10 +177,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool PhoneNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList _alternateUserIdList;
+    private BroadWorksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList _alternateUserIdList;
 
     [XmlElement(ElementName = "alternateUserIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList AlternateUserIdList {
+    public BroadWorksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList AlternateUserIdList {
         get => _alternateUserIdList;
         set {
             AlternateUserIdListSpecified = true;
@@ -242,10 +242,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool NewPasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _department;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
     [XmlElement(ElementName = "department", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey Department {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
         get => _department;
         set {
             DepartmentSpecified = true;
@@ -281,10 +281,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool TimeZoneSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
+    private BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
 
     [XmlElement(ElementName = "sipAliasList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
+    public BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
         get => _sipAliasList;
         set {
             SipAliasListSpecified = true;
@@ -294,10 +294,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool SipAliasListSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UserConsolidatedModifyRequestEndpoint _endpoint;
+    private BroadWorksConnector.Ocip.Models.UserConsolidatedModifyRequestEndpoint _endpoint;
 
     [XmlElement(ElementName = "endpoint", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserConsolidatedModifyRequestEndpoint Endpoint {
+    public BroadWorksConnector.Ocip.Models.UserConsolidatedModifyRequestEndpoint Endpoint {
         get => _endpoint;
         set {
             EndpointSpecified = true;
@@ -307,10 +307,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool EndpointSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementConsolidatedSharedCallAppearanceAccessDeviceMultipleIdentityEndpointList _sharedCallAppearanceAccessDeviceEndpointList;
+    private BroadWorksConnector.Ocip.Models.ReplacementConsolidatedSharedCallAppearanceAccessDeviceMultipleIdentityEndpointList _sharedCallAppearanceAccessDeviceEndpointList;
 
     [XmlElement(ElementName = "sharedCallAppearanceAccessDeviceEndpointList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementConsolidatedSharedCallAppearanceAccessDeviceMultipleIdentityEndpointList SharedCallAppearanceAccessDeviceEndpointList {
+    public BroadWorksConnector.Ocip.Models.ReplacementConsolidatedSharedCallAppearanceAccessDeviceMultipleIdentityEndpointList SharedCallAppearanceAccessDeviceEndpointList {
         get => _sharedCallAppearanceAccessDeviceEndpointList;
         set {
             SharedCallAppearanceAccessDeviceEndpointListSpecified = true;
@@ -398,10 +398,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool AddressLocationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.StreetAddress _address;
+    private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
     [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.StreetAddress Address {
+    public BroadWorksConnector.Ocip.Models.StreetAddress Address {
         get => _address;
         set {
             AddressSpecified = true;
@@ -424,10 +424,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool NetworkClassOfServiceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementConsolidatedUserServiceAssignmentList _userServiceList;
+    private BroadWorksConnector.Ocip.Models.ReplacementConsolidatedUserServiceAssignmentList _userServiceList;
 
     [XmlElement(ElementName = "userServiceList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementConsolidatedUserServiceAssignmentList UserServiceList {
+    public BroadWorksConnector.Ocip.Models.ReplacementConsolidatedUserServiceAssignmentList UserServiceList {
         get => _userServiceList;
         set {
             UserServiceListSpecified = true;
@@ -437,10 +437,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool UserServiceListSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementConsolidatedServicePackAssignmentList _servicePackList;
+    private BroadWorksConnector.Ocip.Models.ReplacementConsolidatedServicePackAssignmentList _servicePackList;
 
     [XmlElement(ElementName = "servicePackList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementConsolidatedServicePackAssignmentList ServicePackList {
+    public BroadWorksConnector.Ocip.Models.ReplacementConsolidatedServicePackAssignmentList ServicePackList {
         get => _servicePackList;
         set {
             ServicePackListSpecified = true;
@@ -450,10 +450,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool ServicePackListSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection _thirdPartyVoiceMailServerSelection;
+    private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection _thirdPartyVoiceMailServerSelection;
 
     [XmlElement(ElementName = "thirdPartyVoiceMailServerSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection ThirdPartyVoiceMailServerSelection {
+    public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection ThirdPartyVoiceMailServerSelection {
         get => _thirdPartyVoiceMailServerSelection;
         set {
             ThirdPartyVoiceMailServerSelectionSpecified = true;
@@ -476,10 +476,10 @@ public  class UserConsolidatedModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool ThirdPartyVoiceMailServerUserServerSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType _thirdPartyVoiceMailServerMailboxIdType;
+    private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType _thirdPartyVoiceMailServerMailboxIdType;
 
     [XmlElement(ElementName = "thirdPartyVoiceMailServerMailboxIdType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType ThirdPartyVoiceMailServerMailboxIdType {
+    public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType ThirdPartyVoiceMailServerMailboxIdType {
         get => _thirdPartyVoiceMailServerMailboxIdType;
         set {
             ThirdPartyVoiceMailServerMailboxIdTypeSpecified = true;

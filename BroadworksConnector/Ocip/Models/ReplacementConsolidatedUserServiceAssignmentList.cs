@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class ReplacementConsolidatedUserServiceAssignmentList 
 {
-    private List<BroadworksConnector.Ocip.Models.ConsolidatedUserServiceAssignment> _userServiceServiceName;
+    private List<BroadWorksConnector.Ocip.Models.ConsolidatedUserServiceAssignment> _userServiceServiceName;
 
     [XmlElement(ElementName = "userServiceServiceName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.ConsolidatedUserServiceAssignment> UserServiceServiceName {
+    public List<BroadWorksConnector.Ocip.Models.ConsolidatedUserServiceAssignment> UserServiceServiceName {
         get => _userServiceServiceName;
         set {
             UserServiceServiceNameSpecified = true;

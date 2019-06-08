@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCommunicationBarringAuthorizationCodeAddListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserCommunicationBarringAuthorizationCodeAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserCommunicationBarringAuthorizationCodeAddListRequest : Broadwor
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> _code;
+    private List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> _code;
 
     [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> Code {
+    public List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> Code {
         get => _code;
         set {
             CodeSpecified = true;

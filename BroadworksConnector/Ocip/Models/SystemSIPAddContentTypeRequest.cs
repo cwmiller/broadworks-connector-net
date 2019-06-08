@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPAddContentTypeRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSIPAddContentTypeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _contentType;
 
@@ -21,10 +21,10 @@ public  class SystemSIPAddContentTypeRequest : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool ContentTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemSIPSupportedInterface _interface;
+    private BroadWorksConnector.Ocip.Models.SystemSIPSupportedInterface _interface;
 
     [XmlElement(ElementName = "interface", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemSIPSupportedInterface Interface {
+    public BroadWorksConnector.Ocip.Models.SystemSIPSupportedInterface Interface {
         get => _interface;
         set {
             InterfaceSpecified = true;

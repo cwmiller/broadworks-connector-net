@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderRouteListEnterpriseTrunkNumberPrefixGetAvailableListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderRouteListEnterpriseTrunkNumberPrefixGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _availableNumberPrefixTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _availableNumberPrefixTable;
 
     [XmlElement(ElementName = "availableNumberPrefixTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable AvailableNumberPrefixTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable AvailableNumberPrefixTable {
         get => _availableNumberPrefixTable;
         set {
             AvailableNumberPrefixTableSpecified = true;

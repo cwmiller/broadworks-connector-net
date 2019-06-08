@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupIMRNGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupIMRNGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private List<string> _imrn;
 

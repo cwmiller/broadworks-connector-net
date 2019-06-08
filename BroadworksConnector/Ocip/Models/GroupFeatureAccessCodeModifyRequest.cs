@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupFeatureAccessCodeModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupFeatureAccessCodeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupFeatureAccessCodeModifyRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupFeatureAccessCodeLevel _useFeatureAccessCodeLevel;
+    private BroadWorksConnector.Ocip.Models.GroupFeatureAccessCodeLevel _useFeatureAccessCodeLevel;
 
     [XmlElement(ElementName = "useFeatureAccessCodeLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupFeatureAccessCodeLevel UseFeatureAccessCodeLevel {
+    public BroadWorksConnector.Ocip.Models.GroupFeatureAccessCodeLevel UseFeatureAccessCodeLevel {
         get => _useFeatureAccessCodeLevel;
         set {
             UseFeatureAccessCodeLevelSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupFeatureAccessCodeModifyRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool RestoreDefaultCodesSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.FeatureAccessCodeEntry> _featureAccessCode;
+    private List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeEntry> _featureAccessCode;
 
     [XmlElement(ElementName = "featureAccessCode", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.FeatureAccessCodeEntry> FeatureAccessCode {
+    public List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeEntry> FeatureAccessCode {
         get => _featureAccessCode;
         set {
             FeatureAccessCodeSpecified = true;

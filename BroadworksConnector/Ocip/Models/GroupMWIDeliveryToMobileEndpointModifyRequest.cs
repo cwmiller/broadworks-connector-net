@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupMWIDeliveryToMobileEndpointModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupMWIDeliveryToMobileEndpointModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupMWIDeliveryToMobileEndpointModifyRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointGroupSettingLevel _useSettingLevel;
+    private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointGroupSettingLevel _useSettingLevel;
 
     [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointGroupSettingLevel UseSettingLevel {
+    public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointGroupSettingLevel UseSettingLevel {
         get => _useSettingLevel;
         set {
             UseSettingLevelSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupMWIDeliveryToMobileEndpointModifyRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool UseSettingLevelSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateActivation> _templateActivation;
+    private List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateActivation> _templateActivation;
 
     [XmlElement(ElementName = "templateActivation", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateActivation> TemplateActivation {
+    public List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateActivation> TemplateActivation {
         get => _templateActivation;
         set {
             TemplateActivationSpecified = true;

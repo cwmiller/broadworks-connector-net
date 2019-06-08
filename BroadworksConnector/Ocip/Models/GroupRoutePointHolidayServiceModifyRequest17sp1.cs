@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupRoutePointHolidayServiceModifyRequest17sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupRoutePointHolidayServiceModifyRequest17sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -21,10 +21,10 @@ public  class GroupRoutePointHolidayServiceModifyRequest17sp1 : BroadworksConnec
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterScheduledServiceAction _action;
+    private BroadWorksConnector.Ocip.Models.CallCenterScheduledServiceAction _action;
 
     [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterScheduledServiceAction Action {
+    public BroadWorksConnector.Ocip.Models.CallCenterScheduledServiceAction Action {
         get => _action;
         set {
             ActionSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupRoutePointHolidayServiceModifyRequest17sp1 : BroadworksConnec
 
     [XmlIgnore]
     public bool ActionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+    private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
     [XmlElement(ElementName = "holidaySchedule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+    public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
         get => _holidaySchedule;
         set {
             HolidayScheduleSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupRoutePointHolidayServiceModifyRequest17sp1 : BroadworksConnec
 
     [XmlIgnore]
     public bool PlayAnnouncementBeforeActionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
 
     [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection {
         get => _audioMessageSelection;
         set {
             AudioMessageSelectionSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupRoutePointHolidayServiceModifyRequest17sp1 : BroadworksConnec
 
     [XmlIgnore]
     public bool AudioMessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterAnnouncementURLListModify _audioUrlList;
+    private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify _audioUrlList;
 
     [XmlElement(ElementName = "audioUrlList", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterAnnouncementURLListModify AudioUrlList {
+    public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify AudioUrlList {
         get => _audioUrlList;
         set {
             AudioUrlListSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupRoutePointHolidayServiceModifyRequest17sp1 : BroadworksConnec
 
     [XmlIgnore]
     public bool AudioUrlListSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterAnnouncementFileListModify _audioFileList;
+    private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify _audioFileList;
 
     [XmlElement(ElementName = "audioFileList", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterAnnouncementFileListModify AudioFileList {
+    public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify AudioFileList {
         get => _audioFileList;
         set {
             AudioFileListSpecified = true;
@@ -112,10 +112,10 @@ public  class GroupRoutePointHolidayServiceModifyRequest17sp1 : BroadworksConnec
 
     [XmlIgnore]
     public bool AudioFileListSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
 
     [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection {
         get => _videoMessageSelection;
         set {
             VideoMessageSelectionSpecified = true;
@@ -125,10 +125,10 @@ public  class GroupRoutePointHolidayServiceModifyRequest17sp1 : BroadworksConnec
 
     [XmlIgnore]
     public bool VideoMessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterAnnouncementURLListModify _videoUrlList;
+    private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify _videoUrlList;
 
     [XmlElement(ElementName = "videoUrlList", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterAnnouncementURLListModify VideoUrlList {
+    public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify VideoUrlList {
         get => _videoUrlList;
         set {
             VideoUrlListSpecified = true;
@@ -138,10 +138,10 @@ public  class GroupRoutePointHolidayServiceModifyRequest17sp1 : BroadworksConnec
 
     [XmlIgnore]
     public bool VideoUrlListSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterAnnouncementFileListModify _videoFileList;
+    private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify _videoFileList;
 
     [XmlElement(ElementName = "videoFileList", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterAnnouncementFileListModify VideoFileList {
+    public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify VideoFileList {
         get => _videoFileList;
         set {
             VideoFileListSpecified = true;

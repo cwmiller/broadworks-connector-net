@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupPreAlertingAnnouncementModifyRequest20 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupPreAlertingAnnouncementModifyRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupPreAlertingAnnouncementModifyRequest20 : BroadworksConnector.
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt _announcementInterruption;
+    private BroadWorksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt _announcementInterruption;
 
     [XmlElement(ElementName = "announcementInterruption", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt AnnouncementInterruption {
+    public BroadWorksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt AnnouncementInterruption {
         get => _announcementInterruption;
         set {
             AnnouncementInterruptionSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupPreAlertingAnnouncementModifyRequest20 : BroadworksConnector.
 
     [XmlIgnore]
     public bool InterruptionDigitSequenceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
 
     [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
         get => _audioSelection;
         set {
             AudioSelectionSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupPreAlertingAnnouncementModifyRequest20 : BroadworksConnector.
 
     [XmlIgnore]
     public bool AudioSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource20 _audioFile;
+    private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource20 _audioFile;
 
     [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource20 AudioFile {
+    public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource20 AudioFile {
         get => _audioFile;
         set {
             AudioFileSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupPreAlertingAnnouncementModifyRequest20 : BroadworksConnector.
 
     [XmlIgnore]
     public bool AudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
 
     [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
         get => _videoSelection;
         set {
             VideoSelectionSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupPreAlertingAnnouncementModifyRequest20 : BroadworksConnector.
 
     [XmlIgnore]
     public bool VideoSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource20 _videoFile;
+    private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource20 _videoFile;
 
     [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource20 VideoFile {
+    public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource20 VideoFile {
         get => _videoFile;
         set {
             VideoFileSpecified = true;

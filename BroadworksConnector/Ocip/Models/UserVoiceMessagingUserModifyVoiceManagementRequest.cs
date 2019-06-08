@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserVoiceMessagingUserModifyVoiceManagementRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserVoiceMessagingUserModifyVoiceManagementRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserVoiceMessagingUserModifyVoiceManagementRequest : BroadworksCon
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingMessageProcessing _processing;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingMessageProcessing _processing;
 
     [XmlElement(ElementName = "processing", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingMessageProcessing Processing {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingMessageProcessing Processing {
         get => _processing;
         set {
             ProcessingSpecified = true;

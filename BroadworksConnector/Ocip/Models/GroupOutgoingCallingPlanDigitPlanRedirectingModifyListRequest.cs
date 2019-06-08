@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupOutgoingCallingPlanDigitPlanRedirectingModifyListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupOutgoingCallingPlanDigitPlanRedirectingModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupOutgoingCallingPlanDigitPlanRedirectingModifyListRequest : Br
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingPermissions _groupPermissions;
+    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingPermissions _groupPermissions;
 
     [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingPermissions GroupPermissions {
+    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingPermissions GroupPermissions {
         get => _groupPermissions;
         set {
             GroupPermissionsSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupOutgoingCallingPlanDigitPlanRedirectingModifyListRequest : Br
 
     [XmlIgnore]
     public bool GroupPermissionsSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingDepartmentPermissionsModify> _departmentPermissions;
+    private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingDepartmentPermissionsModify> _departmentPermissions;
 
     [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingDepartmentPermissionsModify> DepartmentPermissions {
+    public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingDepartmentPermissionsModify> DepartmentPermissions {
         get => _departmentPermissions;
         set {
             DepartmentPermissionsSpecified = true;

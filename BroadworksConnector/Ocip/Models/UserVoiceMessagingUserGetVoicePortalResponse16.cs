@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserVoiceMessagingUserGetVoicePortalResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserVoiceMessagingUserGetVoicePortalResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _usePersonalizedName;
 
@@ -47,10 +47,10 @@ public  class UserVoiceMessagingUserGetVoicePortalResponse16 : BroadworksConnect
 
     [XmlIgnore]
     public bool PersonalizedNameAudioFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _personalizedNameMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _personalizedNameMediaType;
 
     [XmlElement(ElementName = "personalizedNameMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType PersonalizedNameMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType PersonalizedNameMediaType {
         get => _personalizedNameMediaType;
         set {
             PersonalizedNameMediaTypeSpecified = true;

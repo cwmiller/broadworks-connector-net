@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemBroadWorksMobilityAddIMRNListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemBroadWorksMobilityAddIMRNListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private List<string> _imrnNumber;
 
@@ -21,10 +21,10 @@ public  class SystemBroadWorksMobilityAddIMRNListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool ImrnNumberSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.DNRange> _numberRange;
+    private List<BroadWorksConnector.Ocip.Models.DNRange> _numberRange;
 
     [XmlElement(ElementName = "numberRange", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.DNRange> NumberRange {
+    public List<BroadWorksConnector.Ocip.Models.DNRange> NumberRange {
         get => _numberRange;
         set {
             NumberRangeSpecified = true;

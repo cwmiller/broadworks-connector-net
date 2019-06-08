@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallTypeAddMappingRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemCallTypeAddMappingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _countryCode;
 
@@ -34,10 +34,10 @@ public  class SystemCallTypeAddMappingRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool DigitMapSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemCallType _callType;
+    private BroadWorksConnector.Ocip.Models.SystemCallType _callType;
 
     [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemCallType CallType {
+    public BroadWorksConnector.Ocip.Models.SystemCallType CallType {
         get => _callType;
         set {
             CallTypeSpecified = true;

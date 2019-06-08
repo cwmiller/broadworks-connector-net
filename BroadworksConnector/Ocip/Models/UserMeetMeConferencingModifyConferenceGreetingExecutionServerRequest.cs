@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserMeetMeConferencingModifyConferenceGreetingExecutionServerRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserMeetMeConferencingModifyConferenceGreetingExecutionServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserMeetMeConferencingModifyConferenceGreetingExecutionServerReque
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
 
     [XmlElement(ElementName = "conferenceKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey {
         get => _conferenceKey;
         set {
             ConferenceKeySpecified = true;
@@ -47,10 +47,10 @@ public  class UserMeetMeConferencingModifyConferenceGreetingExecutionServerReque
 
     [XmlIgnore]
     public bool PlayEntranceGreetingSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileNameResource _entranceGreetingFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _entranceGreetingFile;
 
     [XmlElement(ElementName = "entranceGreetingFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileNameResource EntranceGreetingFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileNameResource EntranceGreetingFile {
         get => _entranceGreetingFile;
         set {
             EntranceGreetingFileSpecified = true;

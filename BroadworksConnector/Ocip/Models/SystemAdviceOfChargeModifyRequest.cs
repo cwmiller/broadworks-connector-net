@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemAdviceOfChargeModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemAdviceOfChargeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private int _delayBetweenNotificationSeconds;
 
@@ -21,10 +21,10 @@ public  class SystemAdviceOfChargeModifyRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool DelayBetweenNotificationSecondsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
+    private BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
 
     [XmlElement(ElementName = "incomingAocHandling", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling {
+    public BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling {
         get => _incomingAocHandling;
         set {
             IncomingAocHandlingSpecified = true;

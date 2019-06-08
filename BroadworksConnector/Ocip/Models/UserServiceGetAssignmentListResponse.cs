@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserServiceGetAssignmentListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserServiceGetAssignmentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _servicePacksAssignmentTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _servicePacksAssignmentTable;
 
     [XmlElement(ElementName = "servicePacksAssignmentTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ServicePacksAssignmentTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ServicePacksAssignmentTable {
         get => _servicePacksAssignmentTable;
         set {
             ServicePacksAssignmentTableSpecified = true;
@@ -21,10 +21,10 @@ public  class UserServiceGetAssignmentListResponse : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool ServicePacksAssignmentTableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _userServicesAssignmentTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _userServicesAssignmentTable;
 
     [XmlElement(ElementName = "userServicesAssignmentTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserServicesAssignmentTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable UserServicesAssignmentTable {
         get => _userServicesAssignmentTable;
         set {
             UserServicesAssignmentTableSpecified = true;

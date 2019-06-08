@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupDepartmentAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupDepartmentAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupDepartmentAddRequest : BroadworksConnector.Ocip.Models.C.OCIR
 
     [XmlIgnore]
     public bool DepartmentNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _parentDepartmentKey;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _parentDepartmentKey;
 
     [XmlElement(ElementName = "parentDepartmentKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey ParentDepartmentKey {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey ParentDepartmentKey {
         get => _parentDepartmentKey;
         set {
             ParentDepartmentKeySpecified = true;

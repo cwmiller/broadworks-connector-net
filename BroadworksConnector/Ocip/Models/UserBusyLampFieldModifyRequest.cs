@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserBusyLampFieldModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserBusyLampFieldModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserBusyLampFieldModifyRequest : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool ListURISpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _monitoredUserIdList;
+    private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _monitoredUserIdList;
 
     [XmlElement(ElementName = "monitoredUserIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList MonitoredUserIdList {
+    public BroadWorksConnector.Ocip.Models.ReplacementUserIdList MonitoredUserIdList {
         get => _monitoredUserIdList;
         set {
             MonitoredUserIdListSpecified = true;

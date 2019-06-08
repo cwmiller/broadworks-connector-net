@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemEnhancedCallLogsSchemaInstanceGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemEnhancedCallLogsSchemaInstanceGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _schemaInstanceUsageTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _schemaInstanceUsageTable;
 
     [XmlElement(ElementName = "schemaInstanceUsageTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable SchemaInstanceUsageTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable SchemaInstanceUsageTable {
         get => _schemaInstanceUsageTable;
         set {
             SchemaInstanceUsageTableSpecified = true;

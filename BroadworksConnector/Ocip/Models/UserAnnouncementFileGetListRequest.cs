@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserAnnouncementFileGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserAnnouncementFileGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserAnnouncementFileGetListRequest : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileType _announcementFileType;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileType _announcementFileType;
 
     [XmlElement(ElementName = "announcementFileType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileType AnnouncementFileType {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileType AnnouncementFileType {
         get => _announcementFileType;
         set {
             AnnouncementFileTypeSpecified = true;
@@ -60,10 +60,10 @@ public  class UserAnnouncementFileGetListRequest : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> _searchCriteriaAnnouncementFileName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> _searchCriteriaAnnouncementFileName;
 
     [XmlElement(ElementName = "searchCriteriaAnnouncementFileName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName {
         get => _searchCriteriaAnnouncementFileName;
         set {
             SearchCriteriaAnnouncementFileNameSpecified = true;

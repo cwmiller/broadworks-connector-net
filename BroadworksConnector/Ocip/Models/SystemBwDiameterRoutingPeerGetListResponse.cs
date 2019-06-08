@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemBwDiameterRoutingPeerGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemBwDiameterRoutingPeerGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _routingPeerTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _routingPeerTable;
 
     [XmlElement(ElementName = "routingPeerTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable RoutingPeerTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable RoutingPeerTable {
         get => _routingPeerTable;
         set {
             RoutingPeerTableSpecified = true;

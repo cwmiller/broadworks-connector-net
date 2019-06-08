@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupRoutePointModifyAnnouncementRequest20 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupRoutePointModifyAnnouncementRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -21,10 +21,10 @@ public  class GroupRoutePointModifyAnnouncementRequest20 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify20 _mediaOnHoldSource;
+    private BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify20 _mediaOnHoldSource;
 
     [XmlElement(ElementName = "mediaOnHoldSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify20 MediaOnHoldSource {
+    public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify20 MediaOnHoldSource {
         get => _mediaOnHoldSource;
         set {
             MediaOnHoldSourceSpecified = true;

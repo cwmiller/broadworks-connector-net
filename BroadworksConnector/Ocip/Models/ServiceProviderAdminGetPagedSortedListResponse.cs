@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderAdminGetPagedSortedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderAdminGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _serviceProviderAdminTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _serviceProviderAdminTable;
 
     [XmlElement(ElementName = "serviceProviderAdminTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ServiceProviderAdminTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ServiceProviderAdminTable {
         get => _serviceProviderAdminTable;
         set {
             ServiceProviderAdminTableSpecified = true;

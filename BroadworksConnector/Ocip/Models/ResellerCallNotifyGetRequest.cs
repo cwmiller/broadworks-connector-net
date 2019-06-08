@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ResellerCallNotifyGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ResellerCallNotifyGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _resellerId;
 

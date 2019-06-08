@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemHomeNetworkGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemHomeNetworkGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private int _responseSizeLimit;
 
@@ -21,10 +21,10 @@ public  class SystemHomeNetworkGetListRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaHomeMscAddress> _searchCriteriaHomeMscAddress;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaHomeMscAddress> _searchCriteriaHomeMscAddress;
 
     [XmlElement(ElementName = "searchCriteriaHomeMscAddress", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaHomeMscAddress> SearchCriteriaHomeMscAddress {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaHomeMscAddress> SearchCriteriaHomeMscAddress {
         get => _searchCriteriaHomeMscAddress;
         set {
             SearchCriteriaHomeMscAddressSpecified = true;

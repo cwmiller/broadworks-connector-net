@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactSkillLevel : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactSkillLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
     private int _skillLevel;
 

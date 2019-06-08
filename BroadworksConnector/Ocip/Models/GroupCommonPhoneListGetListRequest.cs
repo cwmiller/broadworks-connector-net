@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCommonPhoneListGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCommonPhoneListGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -60,10 +60,10 @@ public  class GroupCommonPhoneListGetListRequest : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool SearchCriteriaModeOrSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> _searchCriteriaGroupCommonPhoneListName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> _searchCriteriaGroupCommonPhoneListName;
 
     [XmlElement(ElementName = "searchCriteriaGroupCommonPhoneListName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> SearchCriteriaGroupCommonPhoneListName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> SearchCriteriaGroupCommonPhoneListName {
         get => _searchCriteriaGroupCommonPhoneListName;
         set {
             SearchCriteriaGroupCommonPhoneListNameSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupCommonPhoneListGetListRequest : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool SearchCriteriaGroupCommonPhoneListNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> _searchCriteriaGroupCommonPhoneListNumber;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> _searchCriteriaGroupCommonPhoneListNumber;
 
     [XmlElement(ElementName = "searchCriteriaGroupCommonPhoneListNumber", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> SearchCriteriaGroupCommonPhoneListNumber {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> SearchCriteriaGroupCommonPhoneListNumber {
         get => _searchCriteriaGroupCommonPhoneListNumber;
         set {
             SearchCriteriaGroupCommonPhoneListNumberSpecified = true;

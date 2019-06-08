@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallingNameRetrievalGetResponse16sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemCallingNameRetrievalGetResponse16sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _triggerCNAMQueriesForAllNetworkCalls;
 
@@ -34,10 +34,10 @@ public  class SystemCallingNameRetrievalGetResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool TriggerCNAMQueriesForGroupAndEnterpriseCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol _queryProtocol;
+    private BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol _queryProtocol;
 
     [XmlElement(ElementName = "queryProtocol", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol QueryProtocol {
+    public BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol QueryProtocol {
         get => _queryProtocol;
         set {
             QueryProtocolSpecified = true;
@@ -86,10 +86,10 @@ public  class SystemCallingNameRetrievalGetResponse16sp1 : BroadworksConnector.O
 
     [XmlIgnore]
     public bool SipExternalDatabasePortSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TransportProtocol _sipExternalDatabaseTransport;
+    private BroadWorksConnector.Ocip.Models.TransportProtocol _sipExternalDatabaseTransport;
 
     [XmlElement(ElementName = "sipExternalDatabaseTransport", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TransportProtocol SipExternalDatabaseTransport {
+    public BroadWorksConnector.Ocip.Models.TransportProtocol SipExternalDatabaseTransport {
         get => _sipExternalDatabaseTransport;
         set {
             SipExternalDatabaseTransportSpecified = true;

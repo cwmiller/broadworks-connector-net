@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserScheduleGetListResponse17sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserScheduleGetListResponse17sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private List<BroadworksConnector.Ocip.Models.ScheduleGlobalKey> _scheduleGlobalKey;
+    private List<BroadWorksConnector.Ocip.Models.ScheduleGlobalKey> _scheduleGlobalKey;
 
     [XmlElement(ElementName = "scheduleGlobalKey", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.ScheduleGlobalKey> ScheduleGlobalKey {
+    public List<BroadWorksConnector.Ocip.Models.ScheduleGlobalKey> ScheduleGlobalKey {
         get => _scheduleGlobalKey;
         set {
             ScheduleGlobalKeySpecified = true;

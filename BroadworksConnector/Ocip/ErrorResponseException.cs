@@ -1,8 +1,8 @@
-﻿using BroadworksConnector.Ocip.Models.C;
+﻿using BroadWorksConnector.Ocip.Models.C;
 using System;
 using System.Text.RegularExpressions;
 
-namespace BroadworksConnector.Ocip
+namespace BroadWorksConnector.Ocip
 {
     /// <summary>
     /// Thrown when BroadWorks returns an ErrorResponse object. This is generally returned when a validation or permission check fails.

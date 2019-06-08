@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class SortOrderGroupHuntGroupGetInstancePagedSortedList 
 {
-    private BroadworksConnector.Ocip.Models.SortByUserId _sortByUserId;
+    private BroadWorksConnector.Ocip.Models.SortByUserId _sortByUserId;
 
     [XmlElement(ElementName = "sortByUserId", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByUserId SortByUserId {
+    public BroadWorksConnector.Ocip.Models.SortByUserId SortByUserId {
         get => _sortByUserId;
         set {
             SortByUserIdSpecified = true;
@@ -21,10 +21,10 @@ public  class SortOrderGroupHuntGroupGetInstancePagedSortedList
 
     [XmlIgnore]
     public bool SortByUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
+    private BroadWorksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
 
     [XmlElement(ElementName = "sortByUserLastName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByUserLastName SortByUserLastName {
+    public BroadWorksConnector.Ocip.Models.SortByUserLastName SortByUserLastName {
         get => _sortByUserLastName;
         set {
             SortByUserLastNameSpecified = true;
@@ -34,10 +34,10 @@ public  class SortOrderGroupHuntGroupGetInstancePagedSortedList
 
     [XmlIgnore]
     public bool SortByUserLastNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByDn _sortByDn;
+    private BroadWorksConnector.Ocip.Models.SortByDn _sortByDn;
 
     [XmlElement(ElementName = "sortByDn", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByDn SortByDn {
+    public BroadWorksConnector.Ocip.Models.SortByDn SortByDn {
         get => _sortByDn;
         set {
             SortByDnSpecified = true;
@@ -47,10 +47,10 @@ public  class SortOrderGroupHuntGroupGetInstancePagedSortedList
 
     [XmlIgnore]
     public bool SortByDnSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByExtension _sortByExtension;
+    private BroadWorksConnector.Ocip.Models.SortByExtension _sortByExtension;
 
     [XmlElement(ElementName = "sortByExtension", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByExtension SortByExtension {
+    public BroadWorksConnector.Ocip.Models.SortByExtension SortByExtension {
         get => _sortByExtension;
         set {
             SortByExtensionSpecified = true;

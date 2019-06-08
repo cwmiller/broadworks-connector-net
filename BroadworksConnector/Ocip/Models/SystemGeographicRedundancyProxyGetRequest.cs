@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemGeographicRedundancyProxyGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemGeographicRedundancyProxyGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
 }
 }

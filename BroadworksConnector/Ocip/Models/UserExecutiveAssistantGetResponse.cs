@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserExecutiveAssistantGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserExecutiveAssistantGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _enableDivert;
 
@@ -34,10 +34,10 @@ public  class UserExecutiveAssistantGetResponse : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool DivertToPhoneNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _executiveTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _executiveTable;
 
     [XmlElement(ElementName = "executiveTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ExecutiveTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ExecutiveTable {
         get => _executiveTable;
         set {
             ExecutiveTableSpecified = true;

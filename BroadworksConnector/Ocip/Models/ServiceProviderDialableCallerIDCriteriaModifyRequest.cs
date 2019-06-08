@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderDialableCallerIDCriteriaModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderDialableCallerIDCriteriaModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -73,10 +73,10 @@ public  class ServiceProviderDialableCallerIDCriteriaModifyRequest : BroadworksC
 
     [XmlIgnore]
     public bool PrefixDigitsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringCallTypeList _matchCallType;
+    private BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringCallTypeList _matchCallType;
 
     [XmlElement(ElementName = "matchCallType", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringCallTypeList MatchCallType {
+    public BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringCallTypeList MatchCallType {
         get => _matchCallType;
         set {
             MatchCallTypeSpecified = true;
@@ -86,10 +86,10 @@ public  class ServiceProviderDialableCallerIDCriteriaModifyRequest : BroadworksC
 
     [XmlIgnore]
     public bool MatchCallTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringAlternateCallIndicatorList _matchAlternateCallIndicator;
+    private BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringAlternateCallIndicatorList _matchAlternateCallIndicator;
 
     [XmlElement(ElementName = "matchAlternateCallIndicator", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringAlternateCallIndicatorList MatchAlternateCallIndicator {
+    public BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringAlternateCallIndicatorList MatchAlternateCallIndicator {
         get => _matchAlternateCallIndicator;
         set {
             MatchAlternateCallIndicatorSpecified = true;

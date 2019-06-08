@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemScheduleGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemScheduleGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private List<string> _scheduleName;
 
@@ -21,10 +21,10 @@ public  class SystemScheduleGetListResponse : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool ScheduleNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.ScheduleType> _scheduleType;
+    private List<BroadWorksConnector.Ocip.Models.ScheduleType> _scheduleType;
 
     [XmlElement(ElementName = "scheduleType", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.ScheduleType> ScheduleType {
+    public List<BroadWorksConnector.Ocip.Models.ScheduleType> ScheduleType {
         get => _scheduleType;
         set {
             ScheduleTypeSpecified = true;

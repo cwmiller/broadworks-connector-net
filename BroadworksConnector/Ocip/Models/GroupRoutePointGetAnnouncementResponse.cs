@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupRoutePointGetAnnouncementResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupRoutePointGetAnnouncementResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceRead17 _mediaOnHoldSource;
+    private BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceRead17 _mediaOnHoldSource;
 
     [XmlElement(ElementName = "mediaOnHoldSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterMediaOnHoldSourceRead17 MediaOnHoldSource {
+    public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceRead17 MediaOnHoldSource {
         get => _mediaOnHoldSource;
         set {
             MediaOnHoldSourceSpecified = true;

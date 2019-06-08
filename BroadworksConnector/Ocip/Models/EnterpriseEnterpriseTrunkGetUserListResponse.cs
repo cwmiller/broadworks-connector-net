@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class EnterpriseEnterpriseTrunkGetUserListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private BroadworksConnector.Ocip.Models.C.OCITable _enterpriseTrunkUserTable;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class EnterpriseEnterpriseTrunkGetUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private BroadWorksConnector.Ocip.Models.C.OCITable _enterpriseTrunkUserTable;
 
-        [XmlElement(ElementName = "enterpriseTrunkUserTable", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.C.OCITable EnterpriseTrunkUserTable
-        {
-            get => _enterpriseTrunkUserTable;
-            set
-            {
-                EnterpriseTrunkUserTableSpecified = true;
-                _enterpriseTrunkUserTable = value;
-            }
+    [XmlElement(ElementName = "enterpriseTrunkUserTable", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.C.OCITable EnterpriseTrunkUserTable {
+        get => _enterpriseTrunkUserTable;
+        set {
+            EnterpriseTrunkUserTableSpecified = true;
+            _enterpriseTrunkUserTable = value;
         }
-
-        [XmlIgnore]
-        public bool EnterpriseTrunkUserTableSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool EnterpriseTrunkUserTableSpecified { get; set; }
+}
 }

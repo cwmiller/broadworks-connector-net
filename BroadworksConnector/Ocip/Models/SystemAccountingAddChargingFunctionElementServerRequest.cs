@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemAccountingAddChargingFunctionElementServerRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemAccountingAddChargingFunctionElementServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _address;
 
@@ -34,10 +34,10 @@ public  class SystemAccountingAddChargingFunctionElementServerRequest : Broadwor
 
     [XmlIgnore]
     public bool IsNetAddressExtendedSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ChargingFunctionElementServerType _type;
+    private BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType _type;
 
     [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ChargingFunctionElementServerType Type {
+    public BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType Type {
         get => _type;
         set {
             TypeSpecified = true;

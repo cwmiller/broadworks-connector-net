@@ -1,42 +1,38 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class AutomaticCollectCallPrefixDigitsEntry
-    {
-        private string _countryCode;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class AutomaticCollectCallPrefixDigitsEntry 
+{
+    private string _countryCode;
 
-        [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        public string CountryCode
-        {
-            get => _countryCode;
-            set
-            {
-                CountryCodeSpecified = true;
-                _countryCode = value;
-            }
+    [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
+    public string CountryCode {
+        get => _countryCode;
+        set {
+            CountryCodeSpecified = true;
+            _countryCode = value;
         }
-
-        [XmlIgnore]
-        public bool CountryCodeSpecified { get; set; }
-        private string _prefixDigits;
-
-        [XmlElement(ElementName = "prefixDigits", IsNullable = false, Namespace = "")]
-        public string PrefixDigits
-        {
-            get => _prefixDigits;
-            set
-            {
-                PrefixDigitsSpecified = true;
-                _prefixDigits = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool PrefixDigitsSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool CountryCodeSpecified { get; set; }
+    private string _prefixDigits;
+
+    [XmlElement(ElementName = "prefixDigits", IsNullable = false, Namespace = "")]
+    public string PrefixDigits {
+        get => _prefixDigits;
+        set {
+            PrefixDigitsSpecified = true;
+            _prefixDigits = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PrefixDigitsSpecified { get; set; }
+}
 }

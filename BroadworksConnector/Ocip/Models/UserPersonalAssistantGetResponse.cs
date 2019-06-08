@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserPersonalAssistantGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserPersonalAssistantGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.PersonalAssistantPresence _presence;
+    private BroadWorksConnector.Ocip.Models.PersonalAssistantPresence _presence;
 
     [XmlElement(ElementName = "presence", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.PersonalAssistantPresence Presence {
+    public BroadWorksConnector.Ocip.Models.PersonalAssistantPresence Presence {
         get => _presence;
         set {
             PresenceSpecified = true;

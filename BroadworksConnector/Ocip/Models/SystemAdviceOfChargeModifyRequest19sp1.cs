@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemAdviceOfChargeModifyRequest19sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemAdviceOfChargeModifyRequest19sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private int _delayBetweenNotificationSeconds;
 
@@ -21,10 +21,10 @@ public  class SystemAdviceOfChargeModifyRequest19sp1 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool DelayBetweenNotificationSecondsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
+    private BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
 
     [XmlElement(ElementName = "incomingAocHandling", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling {
+    public BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling {
         get => _incomingAocHandling;
         set {
             IncomingAocHandlingSpecified = true;
@@ -47,10 +47,10 @@ public  class SystemAdviceOfChargeModifyRequest19sp1 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool UseOCSEnquirySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType _oCSEnquiryType;
+    private BroadWorksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType _oCSEnquiryType;
 
     [XmlElement(ElementName = "OCSEnquiryType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType OCSEnquiryType {
+    public BroadWorksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType OCSEnquiryType {
         get => _oCSEnquiryType;
         set {
             OCSEnquiryTypeSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserModifyRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserModifyRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -164,10 +164,10 @@ public  class UserModifyRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool NewPasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _department;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
     [XmlElement(ElementName = "department", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey Department {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
         get => _department;
         set {
             DepartmentSpecified = true;
@@ -203,10 +203,10 @@ public  class UserModifyRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool TimeZoneSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
+    private BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
 
     [XmlElement(ElementName = "sipAliasList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
+    public BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
         get => _sipAliasList;
         set {
             SipAliasListSpecified = true;
@@ -216,10 +216,10 @@ public  class UserModifyRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool SipAliasListSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UserModifyRequest16Endpoint _endpoint;
+    private BroadWorksConnector.Ocip.Models.UserModifyRequest16Endpoint _endpoint;
 
     [XmlElement(ElementName = "endpoint", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserModifyRequest16Endpoint Endpoint {
+    public BroadWorksConnector.Ocip.Models.UserModifyRequest16Endpoint Endpoint {
         get => _endpoint;
         set {
             EndpointSpecified = true;
@@ -307,10 +307,10 @@ public  class UserModifyRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool AddressLocationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.StreetAddress _address;
+    private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
     [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.StreetAddress Address {
+    public BroadWorksConnector.Ocip.Models.StreetAddress Address {
         get => _address;
         set {
             AddressSpecified = true;

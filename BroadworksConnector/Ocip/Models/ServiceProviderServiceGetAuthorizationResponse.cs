@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderServiceGetAuthorizationResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderServiceGetAuthorizationResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _authorized;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderServiceGetAuthorizationResponse : BroadworksConnect
 
     [XmlIgnore]
     public bool AuthorizedSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt _authorizedQuantity;
+    private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _authorizedQuantity;
 
     [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt AuthorizedQuantity {
+    public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt AuthorizedQuantity {
         get => _authorizedQuantity;
         set {
             AuthorizedQuantitySpecified = true;
@@ -34,10 +34,10 @@ public  class ServiceProviderServiceGetAuthorizationResponse : BroadworksConnect
 
     [XmlIgnore]
     public bool AuthorizedQuantitySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt _usedQuantity;
+    private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _usedQuantity;
 
     [XmlElement(ElementName = "usedQuantity", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedNonNegativeInt UsedQuantity {
+    public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt UsedQuantity {
         get => _usedQuantity;
         set {
             UsedQuantitySpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemMeetMeConferencingGetResponse19 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemMeetMeConferencingGetResponse19 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private int _conferenceIdLength;
 
@@ -73,10 +73,10 @@ public  class SystemMeetMeConferencingGetResponse19 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool DeleteExpiredConferencesAfterHoldPeriodSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays _expiredConferenceHoldPeriodDays;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays _expiredConferenceHoldPeriodDays;
 
     [XmlElement(ElementName = "expiredConferenceHoldPeriodDays", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays ExpiredConferenceHoldPeriodDays {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays ExpiredConferenceHoldPeriodDays {
         get => _expiredConferenceHoldPeriodDays;
         set {
             ExpiredConferenceHoldPeriodDaysSpecified = true;
@@ -99,10 +99,10 @@ public  class SystemMeetMeConferencingGetResponse19 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool RecordingWebAppURLSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat _recordingFileFormat;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat _recordingFileFormat;
 
     [XmlElement(ElementName = "recordingFileFormat", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat RecordingFileFormat {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat RecordingFileFormat {
         get => _recordingFileFormat;
         set {
             RecordingFileFormatSpecified = true;
@@ -125,10 +125,10 @@ public  class SystemMeetMeConferencingGetResponse19 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool TerminateAfterGracePeriodSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _conferenceGracePeriodMinutes;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _conferenceGracePeriodMinutes;
 
     [XmlElement(ElementName = "conferenceGracePeriodMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration ConferenceGracePeriodMinutes {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration ConferenceGracePeriodMinutes {
         get => _conferenceGracePeriodMinutes;
         set {
             ConferenceGracePeriodMinutesSpecified = true;

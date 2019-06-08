@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressRangeList 
 {
-    private BroadworksConnector.Ocip.Models.IPAddressRange _homeZoneIpAddressRange;
+    private BroadWorksConnector.Ocip.Models.IPAddressRange _homeZoneIpAddressRange;
 
     [XmlElement(ElementName = "homeZoneIpAddressRange", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.IPAddressRange HomeZoneIpAddressRange {
+    public BroadWorksConnector.Ocip.Models.IPAddressRange HomeZoneIpAddressRange {
         get => _homeZoneIpAddressRange;
         set {
             HomeZoneIpAddressRangeSpecified = true;
@@ -21,10 +21,10 @@ public  class GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressRange
 
     [XmlIgnore]
     public bool HomeZoneIpAddressRangeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.IPAddressRange _newHomeZoneIpAddressRange;
+    private BroadWorksConnector.Ocip.Models.IPAddressRange _newHomeZoneIpAddressRange;
 
     [XmlElement(ElementName = "newHomeZoneIpAddressRange", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.IPAddressRange NewHomeZoneIpAddressRange {
+    public BroadWorksConnector.Ocip.Models.IPAddressRange NewHomeZoneIpAddressRange {
         get => _newHomeZoneIpAddressRange;
         set {
             NewHomeZoneIpAddressRangeSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDnGetSummaryListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemDnGetSummaryListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _resellerId;
 
@@ -21,10 +21,10 @@ public  class SystemDnGetSummaryListRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool ResellerIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
 
     [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
         get => _searchCriteriaDn;
         set {
             SearchCriteriaDnSpecified = true;
@@ -34,10 +34,10 @@ public  class SystemDnGetSummaryListRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool SearchCriteriaDnSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceProviderId> _searchCriteriaServiceProviderId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> _searchCriteriaServiceProviderId;
 
     [XmlElement(ElementName = "searchCriteriaServiceProviderId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId {
         get => _searchCriteriaServiceProviderId;
         set {
             SearchCriteriaServiceProviderIdSpecified = true;
@@ -47,10 +47,10 @@ public  class SystemDnGetSummaryListRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool SearchCriteriaServiceProviderIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactOrganizationType _searchCriteriaExactOrganizationType;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactOrganizationType _searchCriteriaExactOrganizationType;
 
     [XmlElement(ElementName = "searchCriteriaExactOrganizationType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactOrganizationType SearchCriteriaExactOrganizationType {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactOrganizationType SearchCriteriaExactOrganizationType {
         get => _searchCriteriaExactOrganizationType;
         set {
             SearchCriteriaExactOrganizationTypeSpecified = true;

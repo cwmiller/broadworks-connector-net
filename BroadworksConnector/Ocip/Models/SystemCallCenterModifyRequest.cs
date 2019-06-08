@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallCenterModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemCallCenterModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _defaultFromAddress;
 
@@ -21,10 +21,10 @@ public  class SystemCallCenterModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool DefaultFromAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes _statisticsSamplingPeriodMinutes;
+    private BroadWorksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes _statisticsSamplingPeriodMinutes;
 
     [XmlElement(ElementName = "statisticsSamplingPeriodMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes StatisticsSamplingPeriodMinutes {
+    public BroadWorksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes StatisticsSamplingPeriodMinutes {
         get => _statisticsSamplingPeriodMinutes;
         set {
             StatisticsSamplingPeriodMinutesSpecified = true;
@@ -138,10 +138,10 @@ public  class SystemCallCenterModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool DefaultPlayRingWhenOfferCallSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterUniformCallDistributionPolicyScope _uniformCallDistributionPolicyScope;
+    private BroadWorksConnector.Ocip.Models.CallCenterUniformCallDistributionPolicyScope _uniformCallDistributionPolicyScope;
 
     [XmlElement(ElementName = "uniformCallDistributionPolicyScope", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterUniformCallDistributionPolicyScope UniformCallDistributionPolicyScope {
+    public BroadWorksConnector.Ocip.Models.CallCenterUniformCallDistributionPolicyScope UniformCallDistributionPolicyScope {
         get => _uniformCallDistributionPolicyScope;
         set {
             UniformCallDistributionPolicyScopeSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserMaliciousCallTraceModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserMaliciousCallTraceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserMaliciousCallTraceModifyRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection _traceTypeSelection;
+    private BroadWorksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection _traceTypeSelection;
 
     [XmlElement(ElementName = "traceTypeSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection TraceTypeSelection {
+    public BroadWorksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection TraceTypeSelection {
         get => _traceTypeSelection;
         set {
             TraceTypeSelectionSpecified = true;
@@ -60,10 +60,10 @@ public  class UserMaliciousCallTraceModifyRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool TraceForTimePeriodSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MaliciousCallTraceTimePeriod _traceTimePeriod;
+    private BroadWorksConnector.Ocip.Models.MaliciousCallTraceTimePeriod _traceTimePeriod;
 
     [XmlElement(ElementName = "traceTimePeriod", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MaliciousCallTraceTimePeriod TraceTimePeriod {
+    public BroadWorksConnector.Ocip.Models.MaliciousCallTraceTimePeriod TraceTimePeriod {
         get => _traceTimePeriod;
         set {
             TraceTimePeriodSpecified = true;

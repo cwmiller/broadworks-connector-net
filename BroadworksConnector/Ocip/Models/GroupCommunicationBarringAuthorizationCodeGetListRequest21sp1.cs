@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCommunicationBarringAuthorizationCodeGetListRequest21sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCommunicationBarringAuthorizationCodeGetListRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupCommunicationBarringAuthorizationCodeGetListRequest21sp1 : Br
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCode> _searchCriteriaCommunicationBarringAuthorizationCode;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCode> _searchCriteriaCommunicationBarringAuthorizationCode;
 
     [XmlElement(ElementName = "searchCriteriaCommunicationBarringAuthorizationCode", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCode> SearchCriteriaCommunicationBarringAuthorizationCode {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCode> SearchCriteriaCommunicationBarringAuthorizationCode {
         get => _searchCriteriaCommunicationBarringAuthorizationCode;
         set {
             SearchCriteriaCommunicationBarringAuthorizationCodeSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupCommunicationBarringAuthorizationCodeGetListRequest21sp1 : Br
 
     [XmlIgnore]
     public bool SearchCriteriaCommunicationBarringAuthorizationCodeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCodeDescription> _searchCriteriaCommunicationBarringAuthorizationCodeDescription;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCodeDescription> _searchCriteriaCommunicationBarringAuthorizationCodeDescription;
 
     [XmlElement(ElementName = "searchCriteriaCommunicationBarringAuthorizationCodeDescription", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCodeDescription> SearchCriteriaCommunicationBarringAuthorizationCodeDescription {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaCommunicationBarringAuthorizationCodeDescription> SearchCriteriaCommunicationBarringAuthorizationCodeDescription {
         get => _searchCriteriaCommunicationBarringAuthorizationCodeDescription;
         set {
             SearchCriteriaCommunicationBarringAuthorizationCodeDescriptionSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupCommunicationBarringAuthorizationCodeGetListRequest21sp1 : Br
 
     [XmlIgnore]
     public bool SearchCriteriaCommunicationBarringAuthorizationCodeDescriptionSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaNetworkClassOfServiceName> _searchCriteriaNetworkClassOfServiceName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaNetworkClassOfServiceName> _searchCriteriaNetworkClassOfServiceName;
 
     [XmlElement(ElementName = "searchCriteriaNetworkClassOfServiceName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaNetworkClassOfServiceName> SearchCriteriaNetworkClassOfServiceName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaNetworkClassOfServiceName> SearchCriteriaNetworkClassOfServiceName {
         get => _searchCriteriaNetworkClassOfServiceName;
         set {
             SearchCriteriaNetworkClassOfServiceNameSpecified = true;

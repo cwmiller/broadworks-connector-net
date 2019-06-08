@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserEnhancedCallLogsGetListResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserEnhancedCallLogsGetListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private int _totalNumberOfRows;
 
@@ -21,10 +21,10 @@ public  class UserEnhancedCallLogsGetListResponse22 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool TotalNumberOfRowsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse22LegacyEntry _legacyEntry;
+    private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse22LegacyEntry _legacyEntry;
 
     [XmlElement(ElementName = "legacyEntry", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse22LegacyEntry LegacyEntry {
+    public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse22LegacyEntry LegacyEntry {
         get => _legacyEntry;
         set {
             LegacyEntrySpecified = true;
@@ -34,10 +34,10 @@ public  class UserEnhancedCallLogsGetListResponse22 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool LegacyEntrySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse22ExtendedEntry _extendedEntry;
+    private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse22ExtendedEntry _extendedEntry;
 
     [XmlElement(ElementName = "extendedEntry", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse22ExtendedEntry ExtendedEntry {
+    public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse22ExtendedEntry ExtendedEntry {
         get => _extendedEntry;
         set {
             ExtendedEntrySpecified = true;

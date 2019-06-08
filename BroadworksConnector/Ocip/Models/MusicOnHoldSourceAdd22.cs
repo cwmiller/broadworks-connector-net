@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class MusicOnHoldSourceAdd22 
 {
-    private BroadworksConnector.Ocip.Models.AudioFileCodec22 _audioFilePreferredCodec;
+    private BroadWorksConnector.Ocip.Models.AudioFileCodec22 _audioFilePreferredCodec;
 
     [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AudioFileCodec22 AudioFilePreferredCodec {
+    public BroadWorksConnector.Ocip.Models.AudioFileCodec22 AudioFilePreferredCodec {
         get => _audioFilePreferredCodec;
         set {
             AudioFilePreferredCodecSpecified = true;
@@ -21,10 +21,10 @@ public  class MusicOnHoldSourceAdd22
 
     [XmlIgnore]
     public bool AudioFilePreferredCodecSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
 
     [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection {
         get => _messageSourceSelection;
         set {
             MessageSourceSelectionSpecified = true;
@@ -34,10 +34,10 @@ public  class MusicOnHoldSourceAdd22
 
     [XmlIgnore]
     public bool MessageSourceSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldSourceAdd22LabeledCustomSourceMediaFiles _labeledCustomSourceMediaFiles;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22LabeledCustomSourceMediaFiles _labeledCustomSourceMediaFiles;
 
     [XmlElement(ElementName = "labeledCustomSourceMediaFiles", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldSourceAdd22LabeledCustomSourceMediaFiles LabeledCustomSourceMediaFiles {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22LabeledCustomSourceMediaFiles LabeledCustomSourceMediaFiles {
         get => _labeledCustomSourceMediaFiles;
         set {
             LabeledCustomSourceMediaFilesSpecified = true;
@@ -47,10 +47,10 @@ public  class MusicOnHoldSourceAdd22
 
     [XmlIgnore]
     public bool LabeledCustomSourceMediaFilesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldSourceAdd22AnnouncementCustomSourceMediaFiles _announcementCustomSourceMediaFiles;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22AnnouncementCustomSourceMediaFiles _announcementCustomSourceMediaFiles;
 
     [XmlElement(ElementName = "announcementCustomSourceMediaFiles", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldSourceAdd22AnnouncementCustomSourceMediaFiles AnnouncementCustomSourceMediaFiles {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22AnnouncementCustomSourceMediaFiles AnnouncementCustomSourceMediaFiles {
         get => _announcementCustomSourceMediaFiles;
         set {
             AnnouncementCustomSourceMediaFilesSpecified = true;
@@ -60,10 +60,10 @@ public  class MusicOnHoldSourceAdd22
 
     [XmlIgnore]
     public bool AnnouncementCustomSourceMediaFilesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldSourceAdd22ExternalSource _externalSource;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22ExternalSource _externalSource;
 
     [XmlElement(ElementName = "externalSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldSourceAdd22ExternalSource ExternalSource {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22ExternalSource ExternalSource {
         get => _externalSource;
         set {
             ExternalSourceSpecified = true;

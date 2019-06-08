@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupTrunkGroupUserCreationTaskGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupTrunkGroupUserCreationTaskGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat _userIdFormat;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat _userIdFormat;
 
     [XmlElement(ElementName = "userIdFormat", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat UserIdFormat {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat UserIdFormat {
         get => _userIdFormat;
         set {
             UserIdFormatSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupTrunkGroupUserCreationTaskGetResponse : BroadworksConnector.O
 
     [XmlIgnore]
     public bool PopulateExtensionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _linePortFormat;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _linePortFormat;
 
     [XmlElement(ElementName = "linePortFormat", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat LinePortFormat {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat LinePortFormat {
         get => _linePortFormat;
         set {
             LinePortFormatSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupTrunkGroupUserCreationTaskGetResponse : BroadworksConnector.O
 
     [XmlIgnore]
     public bool PopulateContactSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _contactFormat;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _contactFormat;
 
     [XmlElement(ElementName = "contactFormat", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat ContactFormat {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat ContactFormat {
         get => _contactFormat;
         set {
             ContactFormatSpecified = true;
@@ -164,10 +164,10 @@ public  class GroupTrunkGroupUserCreationTaskGetResponse : BroadworksConnector.O
 
     [XmlIgnore]
     public bool ServicePackNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.UserService> _userServiceName;
+    private List<BroadWorksConnector.Ocip.Models.UserService> _userServiceName;
 
     [XmlElement(ElementName = "userServiceName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.UserService> UserServiceName {
+    public List<BroadWorksConnector.Ocip.Models.UserService> UserServiceName {
         get => _userServiceName;
         set {
             UserServiceNameSpecified = true;
@@ -177,10 +177,10 @@ public  class GroupTrunkGroupUserCreationTaskGetResponse : BroadworksConnector.O
 
     [XmlIgnore]
     public bool UserServiceNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupUserCreationTaskStatus _status;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationTaskStatus _status;
 
     [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUserCreationTaskStatus Status {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationTaskStatus Status {
         get => _status;
         set {
             StatusSpecified = true;
@@ -190,10 +190,10 @@ public  class GroupTrunkGroupUserCreationTaskGetResponse : BroadworksConnector.O
 
     [XmlIgnore]
     public bool StatusSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupUserCreationMode _userCreationMode;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationMode _userCreationMode;
 
     [XmlElement(ElementName = "userCreationMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUserCreationMode UserCreationMode {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationMode UserCreationMode {
         get => _userCreationMode;
         set {
             UserCreationModeSpecified = true;

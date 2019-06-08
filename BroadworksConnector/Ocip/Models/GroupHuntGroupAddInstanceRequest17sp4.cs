@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupHuntGroupAddInstanceRequest17sp4 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupHuntGroupAddInstanceRequest17sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupHuntGroupAddInstanceRequest17sp4 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupHuntGroupAddInstanceRequest17sp4 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HuntPolicy _policy;
+    private BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
 
     [XmlElement(ElementName = "policy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HuntPolicy Policy {
+    public BroadWorksConnector.Ocip.Models.HuntPolicy Policy {
         get => _policy;
         set {
             PolicySpecified = true;

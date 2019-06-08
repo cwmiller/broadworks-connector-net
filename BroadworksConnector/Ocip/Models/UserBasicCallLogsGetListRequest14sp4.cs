@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserBasicCallLogsGetListRequest14sp4 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserBasicCallLogsGetListRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserBasicCallLogsGetListRequest14sp4 : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallLogsType _callLogType;
+    private BroadWorksConnector.Ocip.Models.CallLogsType _callLogType;
 
     [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallLogsType CallLogType {
+    public BroadWorksConnector.Ocip.Models.CallLogsType CallLogType {
         get => _callLogType;
         set {
             CallLogTypeSpecified = true;

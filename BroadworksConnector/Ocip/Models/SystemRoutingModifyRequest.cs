@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemRoutingModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemRoutingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private bool _isRouteRoundRobin;
 
@@ -34,10 +34,10 @@ public  class SystemRoutingModifyRequest : BroadworksConnector.Ocip.Models.C.OCI
 
     [XmlIgnore]
     public bool RouteTimerSecondsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy _dnsResolvedAddressSelectionPolicy;
+    private BroadWorksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy _dnsResolvedAddressSelectionPolicy;
 
     [XmlElement(ElementName = "dnsResolvedAddressSelectionPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy DnsResolvedAddressSelectionPolicy {
+    public BroadWorksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy DnsResolvedAddressSelectionPolicy {
         get => _dnsResolvedAddressSelectionPolicy;
         set {
             DnsResolvedAddressSelectionPolicySpecified = true;

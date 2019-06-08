@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallCenterEnhancedReportingReportTemplateModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemCallCenterEnhancedReportingReportTemplateModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _name;
 
@@ -47,10 +47,10 @@ public  class SystemCallCenterEnhancedReportingReportTemplateModifyRequest : Bro
 
     [XmlIgnore]
     public bool DescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _xsltTemplate;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _xsltTemplate;
 
     [XmlElement(ElementName = "xsltTemplate", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource XsltTemplate {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource XsltTemplate {
         get => _xsltTemplate;
         set {
             XsltTemplateSpecified = true;
@@ -60,10 +60,10 @@ public  class SystemCallCenterEnhancedReportingReportTemplateModifyRequest : Bro
 
     [XmlIgnore]
     public bool XsltTemplateSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterReportTemplateAccessOption _scope;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption _scope;
 
     [XmlElement(ElementName = "scope", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportTemplateAccessOption Scope {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption Scope {
         get => _scope;
         set {
             ScopeSpecified = true;
@@ -112,10 +112,10 @@ public  class SystemCallCenterEnhancedReportingReportTemplateModifyRequest : Bro
 
     [XmlIgnore]
     public bool FilterNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterReportDataTemplateQueryFilterValueReplacementList _filterValue;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateQueryFilterValueReplacementList _filterValue;
 
     [XmlElement(ElementName = "filterValue", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportDataTemplateQueryFilterValueReplacementList FilterValue {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateQueryFilterValueReplacementList FilterValue {
         get => _filterValue;
         set {
             FilterValueSpecified = true;

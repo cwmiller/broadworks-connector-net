@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCollaborateBridgeGetInstanceResponse20sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupCollaborateBridgeGetInstanceResponse20sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -21,10 +21,10 @@ public  class GroupCollaborateBridgeGetInstanceResponse20sp1 : BroadworksConnect
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants _maximumBridgeParticipants;
+    private BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants _maximumBridgeParticipants;
 
     [XmlElement(ElementName = "maximumBridgeParticipants", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants MaximumBridgeParticipants {
+    public BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants MaximumBridgeParticipants {
         get => _maximumBridgeParticipants;
         set {
             MaximumBridgeParticipantsSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupCollaborateBridgeGetInstanceResponse20sp1 : BroadworksConnect
 
     [XmlIgnore]
     public bool SupportOutdialSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _collaborateOwnerUserTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _collaborateOwnerUserTable;
 
     [XmlElement(ElementName = "collaborateOwnerUserTable", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable CollaborateOwnerUserTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable CollaborateOwnerUserTable {
         get => _collaborateOwnerUserTable;
         set {
             CollaborateOwnerUserTableSpecified = true;

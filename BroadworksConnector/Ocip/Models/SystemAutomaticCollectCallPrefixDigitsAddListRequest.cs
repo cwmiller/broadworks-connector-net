@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemAutomaticCollectCallPrefixDigitsAddListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemAutomaticCollectCallPrefixDigitsAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private List<BroadworksConnector.Ocip.Models.AutomaticCollectCallPrefixDigitsEntry> _prefixDigitsEntry;
+    private List<BroadWorksConnector.Ocip.Models.AutomaticCollectCallPrefixDigitsEntry> _prefixDigitsEntry;
 
     [XmlElement(ElementName = "prefixDigitsEntry", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.AutomaticCollectCallPrefixDigitsEntry> PrefixDigitsEntry {
+    public List<BroadWorksConnector.Ocip.Models.AutomaticCollectCallPrefixDigitsEntry> PrefixDigitsEntry {
         get => _prefixDigitsEntry;
         set {
             PrefixDigitsEntrySpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserBroadWorksAnywhereGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserBroadWorksAnywhereGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _alertAllLocationsForClickToDialCalls;
 
@@ -21,10 +21,10 @@ public  class UserBroadWorksAnywhereGetResponse : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool AlertAllLocationsForClickToDialCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
 
     [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable PhoneNumberTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable PhoneNumberTable {
         get => _phoneNumberTable;
         set {
             PhoneNumberTableSpecified = true;

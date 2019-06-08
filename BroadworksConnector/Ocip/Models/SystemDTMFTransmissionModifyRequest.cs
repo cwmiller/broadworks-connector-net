@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDTMFTransmissionModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemDTMFTransmissionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.DTMFTransmissionMethod _transmissionMethod;
+    private BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod _transmissionMethod;
 
     [XmlElement(ElementName = "transmissionMethod", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DTMFTransmissionMethod TransmissionMethod {
+    public BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod TransmissionMethod {
         get => _transmissionMethod;
         set {
             TransmissionMethodSpecified = true;
@@ -21,10 +21,10 @@ public  class SystemDTMFTransmissionModifyRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool TransmissionMethodSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DtmfTransmissionSignalingContentType _signalingContentType;
+    private BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType _signalingContentType;
 
     [XmlElement(ElementName = "signalingContentType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DtmfTransmissionSignalingContentType SignalingContentType {
+    public BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType SignalingContentType {
         get => _signalingContentType;
         set {
             SignalingContentTypeSpecified = true;

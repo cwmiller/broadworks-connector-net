@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserVoiceMessagingUserGetVoiceManagementResponse17 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserVoiceMessagingUserGetVoiceManagementResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isActive;
 
@@ -21,10 +21,10 @@ public  class UserVoiceMessagingUserGetVoiceManagementResponse17 : BroadworksCon
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingMessageProcessing _processing;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingMessageProcessing _processing;
 
     [XmlElement(ElementName = "processing", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingMessageProcessing Processing {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingMessageProcessing Processing {
         get => _processing;
         set {
             ProcessingSpecified = true;

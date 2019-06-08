@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallParkAddInstanceRequest16sp2 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallParkAddInstanceRequest16sp2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -73,10 +73,10 @@ public  class GroupCallParkAddInstanceRequest16sp2 : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool RecallAlternateUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallParkRecallTo _recallTo;
+    private BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
 
     [XmlElement(ElementName = "recallTo", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallParkRecallTo RecallTo {
+    public BroadWorksConnector.Ocip.Models.CallParkRecallTo RecallTo {
         get => _recallTo;
         set {
             RecallToSpecified = true;

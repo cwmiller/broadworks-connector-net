@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-[XmlInclude(typeof(BroadworksConnector.Ocip.Models.SortByAnnouncementFileSize))]
+[XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByAnnouncementFileSize))]
 public abstract class SortCriteriaNumeric 
 {
     private bool _isAscending;

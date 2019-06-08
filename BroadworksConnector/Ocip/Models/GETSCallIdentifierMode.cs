@@ -1,17 +1,16 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public enum GETSCallIdentifierMode
-    {
-        [XmlEnum(Name = "Request-URI")]
-        RequestURI,
-        [XmlEnum(Name = "RPH")]
-        RPH,
-        [XmlEnum(Name = "RPH-Request-URI")]
-        RPHRequestURI,
-    }
+[Serializable]
+[XmlRoot(Namespace = "")]
+public enum GETSCallIdentifierMode{
+    [XmlEnum(Name = "Request-URI")]
+    RequestURI,
+    [XmlEnum(Name = "RPH")]
+    RPH,
+    [XmlEnum(Name = "RPH-Request-URI")]
+    RPHRequestURI,
+ }
 }

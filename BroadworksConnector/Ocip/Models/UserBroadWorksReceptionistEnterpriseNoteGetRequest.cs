@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserBroadWorksReceptionistEnterpriseNoteGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserBroadWorksReceptionistEnterpriseNoteGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _receptionistUserId;
 
@@ -34,10 +34,10 @@ public  class UserBroadWorksReceptionistEnterpriseNoteGetRequest : BroadworksCon
 
     [XmlIgnore]
     public bool ContactUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VirtualOnNetUserKey _vonUser;
+    private BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey _vonUser;
 
     [XmlElement(ElementName = "vonUser", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VirtualOnNetUserKey VonUser {
+    public BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey VonUser {
         get => _vonUser;
         set {
             VonUserSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserMusicOnHoldUserModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserMusicOnHoldUserModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserMusicOnHoldUserModifyRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModify _source;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify _source;
 
     [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModify Source {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify Source {
         get => _source;
         set {
             SourceSpecified = true;
@@ -47,10 +47,10 @@ public  class UserMusicOnHoldUserModifyRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool UseAlternateSourceForInternalCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModify _internalSource;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify _internalSource;
 
     [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModify InternalSource {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify InternalSource {
         get => _internalSource;
         set {
             InternalSourceSpecified = true;

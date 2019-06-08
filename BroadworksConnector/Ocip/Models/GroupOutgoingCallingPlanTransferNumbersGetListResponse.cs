@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupOutgoingCallingPlanTransferNumbersGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupOutgoingCallingPlanTransferNumbersGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers _groupNumbers;
+    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers _groupNumbers;
 
     [XmlElement(ElementName = "groupNumbers", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers GroupNumbers {
+    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers GroupNumbers {
         get => _groupNumbers;
         set {
             GroupNumbersSpecified = true;
@@ -21,10 +21,10 @@ public  class GroupOutgoingCallingPlanTransferNumbersGetListResponse : Broadwork
 
     [XmlIgnore]
     public bool GroupNumbersSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbers> _departmentNumbers;
+    private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbers> _departmentNumbers;
 
     [XmlElement(ElementName = "departmentNumbers", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbers> DepartmentNumbers {
+    public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbers> DepartmentNumbers {
         get => _departmentNumbers;
         set {
             DepartmentNumbersSpecified = true;

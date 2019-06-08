@@ -1,87 +1,77 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class EnterpriseVoiceVPNModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
-    {
-        private string _serviceProviderId;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class EnterpriseVoiceVPNModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+{
+    private string _serviceProviderId;
 
-        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId
-        {
-            get => _serviceProviderId;
-            set
-            {
-                ServiceProviderIdSpecified = true;
-                _serviceProviderId = value;
-            }
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
         }
-
-        [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
-        private bool _isActive;
-
-        [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive
-        {
-            get => _isActive;
-            set
-            {
-                IsActiveSpecified = true;
-                _isActive = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection _defaultSelection;
-
-        [XmlElement(ElementName = "defaultSelection", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection DefaultSelection
-        {
-            get => _defaultSelection;
-            set
-            {
-                DefaultSelectionSpecified = true;
-                _defaultSelection = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool DefaultSelectionSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection _e164Selection;
-
-        [XmlElement(ElementName = "e164Selection", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection E164Selection
-        {
-            get => _e164Selection;
-            set
-            {
-                E164SelectionSpecified = true;
-                _e164Selection = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool E164SelectionSpecified { get; set; }
-        private bool _usePhoneContext;
-
-        [XmlElement(ElementName = "usePhoneContext", IsNullable = false, Namespace = "")]
-        public bool UsePhoneContext
-        {
-            get => _usePhoneContext;
-            set
-            {
-                UsePhoneContextSpecified = true;
-                _usePhoneContext = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool UsePhoneContextSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private bool _isActive;
+
+    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+    public bool IsActive {
+        get => _isActive;
+        set {
+            IsActiveSpecified = true;
+            _isActive = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool IsActiveSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection _defaultSelection;
+
+    [XmlElement(ElementName = "defaultSelection", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection DefaultSelection {
+        get => _defaultSelection;
+        set {
+            DefaultSelectionSpecified = true;
+            _defaultSelection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool DefaultSelectionSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection _e164Selection;
+
+    [XmlElement(ElementName = "e164Selection", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection E164Selection {
+        get => _e164Selection;
+        set {
+            E164SelectionSpecified = true;
+            _e164Selection = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool E164SelectionSpecified { get; set; }
+    private bool _usePhoneContext;
+
+    [XmlElement(ElementName = "usePhoneContext", IsNullable = false, Namespace = "")]
+    public bool UsePhoneContext {
+        get => _usePhoneContext;
+        set {
+            UsePhoneContextSpecified = true;
+            _usePhoneContext = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool UsePhoneContextSpecified { get; set; }
+}
 }

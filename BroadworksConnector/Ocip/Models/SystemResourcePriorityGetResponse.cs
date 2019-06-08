@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemResourcePriorityGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemResourcePriorityGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _sendResourcePriorityToNetwork;
 
@@ -21,10 +21,10 @@ public  class SystemResourcePriorityGetResponse : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool SendResourcePriorityToNetworkSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResourcePriorityValue _resourcePriority;
+    private BroadWorksConnector.Ocip.Models.ResourcePriorityValue _resourcePriority;
 
     [XmlElement(ElementName = "resourcePriority", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResourcePriorityValue ResourcePriority {
+    public BroadWorksConnector.Ocip.Models.ResourcePriorityValue ResourcePriority {
         get => _resourcePriority;
         set {
             ResourcePrioritySpecified = true;

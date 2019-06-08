@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserPriorityAlertAddCriteriaRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserPriorityAlertAddCriteriaRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserPriorityAlertAddCriteriaRequest16 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool CriteriaNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeSchedule _timeSchedule;
+    private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
     [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+    public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule {
         get => _timeSchedule;
         set {
             TimeScheduleSpecified = true;
@@ -47,10 +47,10 @@ public  class UserPriorityAlertAddCriteriaRequest16 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool TimeScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+    private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
     [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+    public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
         get => _holidaySchedule;
         set {
             HolidayScheduleSpecified = true;
@@ -73,10 +73,10 @@ public  class UserPriorityAlertAddCriteriaRequest16 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool BlacklistedSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.PriorityAlertCriteriaFromDn _fromDnCriteria;
+    private BroadWorksConnector.Ocip.Models.PriorityAlertCriteriaFromDn _fromDnCriteria;
 
     [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.PriorityAlertCriteriaFromDn FromDnCriteria {
+    public BroadWorksConnector.Ocip.Models.PriorityAlertCriteriaFromDn FromDnCriteria {
         get => _fromDnCriteria;
         set {
             FromDnCriteriaSpecified = true;
@@ -86,10 +86,10 @@ public  class UserPriorityAlertAddCriteriaRequest16 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool FromDnCriteriaSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CallToNumber> _callToNumber;
+    private List<BroadWorksConnector.Ocip.Models.CallToNumber> _callToNumber;
 
     [XmlElement(ElementName = "callToNumber", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CallToNumber> CallToNumber {
+    public List<BroadWorksConnector.Ocip.Models.CallToNumber> CallToNumber {
         get => _callToNumber;
         set {
             CallToNumberSpecified = true;

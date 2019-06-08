@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCustomContactDirectoryAddRequest17 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCustomContactDirectoryAddRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupCustomContactDirectoryAddRequest17 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool NameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CustomContactDirectoryEntry> _entry;
+    private List<BroadWorksConnector.Ocip.Models.CustomContactDirectoryEntry> _entry;
 
     [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CustomContactDirectoryEntry> Entry {
+    public List<BroadWorksConnector.Ocip.Models.CustomContactDirectoryEntry> Entry {
         get => _entry;
         set {
             EntrySpecified = true;

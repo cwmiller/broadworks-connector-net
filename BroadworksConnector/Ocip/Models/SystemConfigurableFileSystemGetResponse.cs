@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemConfigurableFileSystemGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemConfigurableFileSystemGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _mediaDirectory;
 
@@ -21,10 +21,10 @@ public  class SystemConfigurableFileSystemGetResponse : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool MediaDirectorySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolFile _protocolFile;
+    private BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolFile _protocolFile;
 
     [XmlElement(ElementName = "protocolFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolFile ProtocolFile {
+    public BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolFile ProtocolFile {
         get => _protocolFile;
         set {
             ProtocolFileSpecified = true;
@@ -34,10 +34,10 @@ public  class SystemConfigurableFileSystemGetResponse : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool ProtocolFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolWebDAV _protocolWebDAV;
+    private BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolWebDAV _protocolWebDAV;
 
     [XmlElement(ElementName = "protocolWebDAV", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolWebDAV ProtocolWebDAV {
+    public BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolWebDAV ProtocolWebDAV {
         get => _protocolWebDAV;
         set {
             ProtocolWebDAVSpecified = true;

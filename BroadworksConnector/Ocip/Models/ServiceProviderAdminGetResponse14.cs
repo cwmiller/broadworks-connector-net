@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderAdminGetResponse14 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderAdminGetResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _serviceProviderId;
 
@@ -60,10 +60,10 @@ public  class ServiceProviderAdminGetResponse14 : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool LanguageSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderAdminType _administratorType;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderAdminType _administratorType;
 
     [XmlElement(ElementName = "administratorType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderAdminType AdministratorType {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderAdminType AdministratorType {
         get => _administratorType;
         set {
             AdministratorTypeSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupVirtualOnNetEnterpriseExtensionsAddUserRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupVirtualOnNetEnterpriseExtensionsAddUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupVirtualOnNetEnterpriseExtensionsAddUserRequest : BroadworksCo
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.VirtualOnNetUser> _virtualOnNetUser;
+    private List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser> _virtualOnNetUser;
 
     [XmlElement(ElementName = "virtualOnNetUser", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.VirtualOnNetUser> VirtualOnNetUser {
+    public List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser> VirtualOnNetUser {
         get => _virtualOnNetUser;
         set {
             VirtualOnNetUserSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupVirtualOnNetEnterpriseExtensionsAddUserRequest : BroadworksCo
 
     [XmlIgnore]
     public bool VirtualOnNetUserSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.VirtualOnNetUserRange> _virtualOnNetUserRange;
+    private List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange> _virtualOnNetUserRange;
 
     [XmlElement(ElementName = "virtualOnNetUserRange", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.VirtualOnNetUserRange> VirtualOnNetUserRange {
+    public List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange> VirtualOnNetUserRange {
         get => _virtualOnNetUserRange;
         set {
             VirtualOnNetUserRangeSpecified = true;

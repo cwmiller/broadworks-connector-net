@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderPasswordRulesModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderPasswordRulesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderPasswordRulesModifyRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool ServiceProviderIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderPasswordRulesApplyTo _rulesApplyTo;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderPasswordRulesApplyTo _rulesApplyTo;
 
     [XmlElement(ElementName = "rulesApplyTo", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderPasswordRulesApplyTo RulesApplyTo {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderPasswordRulesApplyTo RulesApplyTo {
         get => _rulesApplyTo;
         set {
             RulesApplyToSpecified = true;

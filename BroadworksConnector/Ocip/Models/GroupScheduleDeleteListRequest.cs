@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupScheduleDeleteListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupScheduleDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupScheduleDeleteListRequest : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.ScheduleKey> _scheduleKey;
+    private List<BroadWorksConnector.Ocip.Models.ScheduleKey> _scheduleKey;
 
     [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.ScheduleKey> ScheduleKey {
+    public List<BroadWorksConnector.Ocip.Models.ScheduleKey> ScheduleKey {
         get => _scheduleKey;
         set {
             ScheduleKeySpecified = true;

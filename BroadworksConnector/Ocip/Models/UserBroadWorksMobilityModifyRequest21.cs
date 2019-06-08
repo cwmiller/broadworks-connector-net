@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserBroadWorksMobilityModifyRequest21 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserBroadWorksMobilityModifyRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -60,10 +60,10 @@ public  class UserBroadWorksMobilityModifyRequest21 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool PreventCallsToOwnMobilesSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityModifyEntry> _mobileIdentity;
+    private List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityModifyEntry> _mobileIdentity;
 
     [XmlElement(ElementName = "mobileIdentity", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityModifyEntry> MobileIdentity {
+    public List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityModifyEntry> MobileIdentity {
         get => _mobileIdentity;
         set {
             MobileIdentitySpecified = true;
@@ -73,10 +73,10 @@ public  class UserBroadWorksMobilityModifyRequest21 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool MobileIdentitySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _profileIdentityDevicesToRing;
+    private BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _profileIdentityDevicesToRing;
 
     [XmlElement(ElementName = "profileIdentityDevicesToRing", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing ProfileIdentityDevicesToRing {
+    public BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing ProfileIdentityDevicesToRing {
         get => _profileIdentityDevicesToRing;
         set {
             ProfileIdentityDevicesToRingSpecified = true;
@@ -125,10 +125,10 @@ public  class UserBroadWorksMobilityModifyRequest21 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool ProfileIdentityIncludeExecutiveAssistantSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList _profileIdentityMobilityNumbersAlerted;
+    private BroadWorksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList _profileIdentityMobilityNumbersAlerted;
 
     [XmlElement(ElementName = "profileIdentityMobilityNumbersAlerted", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList ProfileIdentityMobilityNumbersAlerted {
+    public BroadWorksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList ProfileIdentityMobilityNumbersAlerted {
         get => _profileIdentityMobilityNumbersAlerted;
         set {
             ProfileIdentityMobilityNumbersAlertedSpecified = true;

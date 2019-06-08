@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDnGetUtilizationRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemDnGetUtilizationRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _phoneNumber;
 

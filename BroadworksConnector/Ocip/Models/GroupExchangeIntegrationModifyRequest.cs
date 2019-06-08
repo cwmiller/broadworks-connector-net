@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupExchangeIntegrationModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupExchangeIntegrationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -60,10 +60,10 @@ public  class GroupExchangeIntegrationModifyRequest : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool ExchangeURLSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExchangeUserNamePassword _exchangeCredentials;
+    private BroadWorksConnector.Ocip.Models.ExchangeUserNamePassword _exchangeCredentials;
 
     [XmlElement(ElementName = "exchangeCredentials", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExchangeUserNamePassword ExchangeCredentials {
+    public BroadWorksConnector.Ocip.Models.ExchangeUserNamePassword ExchangeCredentials {
         get => _exchangeCredentials;
         set {
             ExchangeCredentialsSpecified = true;

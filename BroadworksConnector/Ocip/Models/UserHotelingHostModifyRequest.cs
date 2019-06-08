@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserHotelingHostModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserHotelingHostModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -60,10 +60,10 @@ public  class UserHotelingHostModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool AssociationLimitHoursSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HotelingHostAccessLevel _accessLevel;
+    private BroadWorksConnector.Ocip.Models.HotelingHostAccessLevel _accessLevel;
 
     [XmlElement(ElementName = "accessLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HotelingHostAccessLevel AccessLevel {
+    public BroadWorksConnector.Ocip.Models.HotelingHostAccessLevel AccessLevel {
         get => _accessLevel;
         set {
             AccessLevelSpecified = true;

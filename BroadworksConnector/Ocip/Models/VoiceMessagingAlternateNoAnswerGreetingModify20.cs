@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class VoiceMessagingAlternateNoAnswerGreetingModify20
 
     [XmlIgnore]
     public bool NameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
 
     [XmlElement(ElementName = "audioFile", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile {
         get => _audioFile;
         set {
             AudioFileSpecified = true;
@@ -34,10 +34,10 @@ public  class VoiceMessagingAlternateNoAnswerGreetingModify20
 
     [XmlIgnore]
     public bool AudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
 
     [XmlElement(ElementName = "videoFile", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile {
         get => _videoFile;
         set {
             VideoFileSpecified = true;

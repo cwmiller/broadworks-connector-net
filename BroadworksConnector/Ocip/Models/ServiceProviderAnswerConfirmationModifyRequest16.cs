@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderAnswerConfirmationModifyRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderAnswerConfirmationModifyRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderAnswerConfirmationModifyRequest16 : BroadworksConne
 
     [XmlIgnore]
     public bool ServiceProviderIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection _announcementMessageSelection;
+    private BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection _announcementMessageSelection;
 
     [XmlElement(ElementName = "announcementMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection AnnouncementMessageSelection {
+    public BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection AnnouncementMessageSelection {
         get => _announcementMessageSelection;
         set {
             AnnouncementMessageSelectionSpecified = true;
@@ -34,10 +34,10 @@ public  class ServiceProviderAnswerConfirmationModifyRequest16 : BroadworksConne
 
     [XmlIgnore]
     public bool AnnouncementMessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledMediaFileResource _confirmationMessageAudioFile;
+    private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _confirmationMessageAudioFile;
 
     [XmlElement(ElementName = "confirmationMessageAudioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledMediaFileResource ConfirmationMessageAudioFile {
+    public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource ConfirmationMessageAudioFile {
         get => _confirmationMessageAudioFile;
         set {
             ConfirmationMessageAudioFileSpecified = true;

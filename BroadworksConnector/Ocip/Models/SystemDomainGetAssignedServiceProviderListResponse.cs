@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDomainGetAssignedServiceProviderListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemDomainGetAssignedServiceProviderListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _serviceProviderTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _serviceProviderTable;
 
     [XmlElement(ElementName = "serviceProviderTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ServiceProviderTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ServiceProviderTable {
         get => _serviceProviderTable;
         set {
             ServiceProviderTableSpecified = true;

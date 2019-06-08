@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPDeviceTypeFileGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemSIPDeviceTypeFileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _fileFormat;
 
@@ -34,10 +34,10 @@ public  class SystemSIPDeviceTypeFileGetResponse : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool RemoteFileFormatSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DeviceManagementFileCategory _fileCategory;
+    private BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory _fileCategory;
 
     [XmlElement(ElementName = "fileCategory", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DeviceManagementFileCategory FileCategory {
+    public BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory FileCategory {
         get => _fileCategory;
         set {
             FileCategorySpecified = true;
@@ -60,10 +60,10 @@ public  class SystemSIPDeviceTypeFileGetResponse : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool AllowFileCustomizationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode _fileSource;
+    private BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode _fileSource;
 
     [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode FileSource {
+    public BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode FileSource {
         get => _fileSource;
         set {
             FileSourceSpecified = true;

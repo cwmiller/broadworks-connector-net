@@ -1,15 +1,14 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public enum BwDiameterPeerInstance
-    {
-        [XmlEnum(Name = "XS")]
-        XS,
-        [XmlEnum(Name = "PS")]
-        PS,
-    }
+[Serializable]
+[XmlRoot(Namespace = "")]
+public enum BwDiameterPeerInstance{
+    [XmlEnum(Name = "XS")]
+    XS,
+    [XmlEnum(Name = "PS")]
+    PS,
+ }
 }

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class SystemDeviceTypeGetAvailableListResponse14sp3TypeInfo 
 {
-    private BroadworksConnector.Ocip.Models.SignalingAddressType _profile;
+    private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
     [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SignalingAddressType Profile {
+    public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
         get => _profile;
         set {
             ProfileSpecified = true;
@@ -34,10 +34,10 @@ public  class SystemDeviceTypeGetAvailableListResponse14sp3TypeInfo
 
     [XmlIgnore]
     public bool StaticRegistrationCapableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
 
     [XmlElement(ElementName = "configType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigType {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigType {
         get => _configType;
         set {
             ConfigTypeSpecified = true;
@@ -99,10 +99,10 @@ public  class SystemDeviceTypeGetAvailableListResponse14sp3TypeInfo
 
     [XmlIgnore]
     public bool IsMobilityManagerDeviceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceConfigurationOption;
+    private BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceConfigurationOption;
 
     [XmlElement(ElementName = "deviceConfigurationOption", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceConfigurationOption {
+    public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceConfigurationOption {
         get => _deviceConfigurationOption;
         set {
             DeviceConfigurationOptionSpecified = true;

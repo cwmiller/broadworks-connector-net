@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserOutgoingCallingPlanDigitPlanRedirectingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserOutgoingCallingPlanDigitPlanRedirectingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _useCustomSettings;
 
@@ -21,10 +21,10 @@ public  class UserOutgoingCallingPlanDigitPlanRedirectingGetResponse : Broadwork
 
     [XmlIgnore]
     public bool UseCustomSettingsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingPermissions _userPermissions;
+    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingPermissions _userPermissions;
 
     [XmlElement(ElementName = "userPermissions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingPermissions UserPermissions {
+    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternRedirectingPermissions UserPermissions {
         get => _userPermissions;
         set {
             UserPermissionsSpecified = true;

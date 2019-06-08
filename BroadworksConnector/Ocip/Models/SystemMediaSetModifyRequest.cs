@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemMediaSetModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemMediaSetModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _setName;
 
@@ -21,10 +21,10 @@ public  class SystemMediaSetModifyRequest : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool SetNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementMediaNameList _mediaNameList;
+    private BroadWorksConnector.Ocip.Models.ReplacementMediaNameList _mediaNameList;
 
     [XmlElement(ElementName = "mediaNameList", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementMediaNameList MediaNameList {
+    public BroadWorksConnector.Ocip.Models.ReplacementMediaNameList MediaNameList {
         get => _mediaNameList;
         set {
             MediaNameListSpecified = true;

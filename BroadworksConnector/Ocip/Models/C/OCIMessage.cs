@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models.C
+namespace BroadWorksConnector.Ocip.Models.C
 {
 [Serializable]
 [XmlRoot(Namespace = "C")]
@@ -60,10 +60,10 @@ public  class OCIMessage
 
     [XmlIgnore]
     public bool LinePortSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.C.OCICommand> _command;
+    private List<BroadWorksConnector.Ocip.Models.C.OCICommand> _command;
 
     [XmlElement(ElementName = "command", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.C.OCICommand> Command {
+    public List<BroadWorksConnector.Ocip.Models.C.OCICommand> Command {
         get => _command;
         set {
             CommandSpecified = true;

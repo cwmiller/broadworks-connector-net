@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupScheduleAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupScheduleAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupScheduleAddRequest : BroadworksConnector.Ocip.Models.C.OCIReq
 
     [XmlIgnore]
     public bool ScheduleNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ScheduleType _scheduleType;
+    private BroadWorksConnector.Ocip.Models.ScheduleType _scheduleType;
 
     [XmlElement(ElementName = "scheduleType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleType ScheduleType {
+    public BroadWorksConnector.Ocip.Models.ScheduleType ScheduleType {
         get => _scheduleType;
         set {
             ScheduleTypeSpecified = true;

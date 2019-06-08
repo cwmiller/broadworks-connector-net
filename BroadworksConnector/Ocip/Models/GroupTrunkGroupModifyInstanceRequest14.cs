@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupTrunkGroupModifyInstanceRequest14 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupTrunkGroupModifyInstanceRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -21,10 +21,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfileTrunkGroup _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfileTrunkGroup _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfileTrunkGroup ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfileTrunkGroup ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceEndpointModify _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointModify AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;
@@ -138,10 +138,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool BurstingMaxOutgoingCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupCapacityExceededAction? _capacityExceededAction;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupCapacityExceededAction? _capacityExceededAction;
 
     [XmlElement(ElementName = "capacityExceededAction", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupCapacityExceededAction? CapacityExceededAction {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupCapacityExceededAction? CapacityExceededAction {
         get => _capacityExceededAction;
         set {
             CapacityExceededActionSpecified = true;
@@ -203,10 +203,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool CapacityExceededTrapOffsetCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupUnreachableDestinationAction? _unreachableDestinationAction;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUnreachableDestinationAction? _unreachableDestinationAction;
 
     [XmlElement(ElementName = "unreachableDestinationAction", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUnreachableDestinationAction? UnreachableDestinationAction {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUnreachableDestinationAction? UnreachableDestinationAction {
         get => _unreachableDestinationAction;
         set {
             UnreachableDestinationActionSpecified = true;

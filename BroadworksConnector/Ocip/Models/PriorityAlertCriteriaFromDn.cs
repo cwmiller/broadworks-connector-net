@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class PriorityAlertCriteriaFromDn 
 {
-    private BroadworksConnector.Ocip.Models.PriorityAlertCriteriaFromDnSelection _fromDnCriteriaSelection;
+    private BroadWorksConnector.Ocip.Models.PriorityAlertCriteriaFromDnSelection _fromDnCriteriaSelection;
 
     [XmlElement(ElementName = "fromDnCriteriaSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.PriorityAlertCriteriaFromDnSelection FromDnCriteriaSelection {
+    public BroadWorksConnector.Ocip.Models.PriorityAlertCriteriaFromDnSelection FromDnCriteriaSelection {
         get => _fromDnCriteriaSelection;
         set {
             FromDnCriteriaSelectionSpecified = true;

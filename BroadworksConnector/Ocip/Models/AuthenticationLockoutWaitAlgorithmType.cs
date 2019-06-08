@@ -1,15 +1,14 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public enum AuthenticationLockoutWaitAlgorithmType
-    {
-        [XmlEnum(Name = "Double")]
-        Double,
-        [XmlEnum(Name = "Fixed")]
-        Fixed,
-    }
+[Serializable]
+[XmlRoot(Namespace = "")]
+public enum AuthenticationLockoutWaitAlgorithmType{
+    [XmlEnum(Name = "Double")]
+    Double,
+    [XmlEnum(Name = "Fixed")]
+    Fixed,
+ }
 }

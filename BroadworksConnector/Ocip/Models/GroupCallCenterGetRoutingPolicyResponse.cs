@@ -1,42 +1,38 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class GroupCallCenterGetRoutingPolicyResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private BroadworksConnector.Ocip.Models.CallCenterRoutingPolicy _routingPolicy;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupCallCenterGetRoutingPolicyResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private BroadWorksConnector.Ocip.Models.CallCenterRoutingPolicy _routingPolicy;
 
-        [XmlElement(ElementName = "routingPolicy", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.CallCenterRoutingPolicy RoutingPolicy
-        {
-            get => _routingPolicy;
-            set
-            {
-                RoutingPolicySpecified = true;
-                _routingPolicy = value;
-            }
+    [XmlElement(ElementName = "routingPolicy", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.CallCenterRoutingPolicy RoutingPolicy {
+        get => _routingPolicy;
+        set {
+            RoutingPolicySpecified = true;
+            _routingPolicy = value;
         }
-
-        [XmlIgnore]
-        public bool RoutingPolicySpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.C.OCITable _callCenterTable;
-
-        [XmlElement(ElementName = "callCenterTable", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.C.OCITable CallCenterTable
-        {
-            get => _callCenterTable;
-            set
-            {
-                CallCenterTableSpecified = true;
-                _callCenterTable = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool CallCenterTableSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool RoutingPolicySpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.C.OCITable _callCenterTable;
+
+    [XmlElement(ElementName = "callCenterTable", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.C.OCITable CallCenterTable {
+        get => _callCenterTable;
+        set {
+            CallCenterTableSpecified = true;
+            _callCenterTable = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool CallCenterTableSpecified { get; set; }
+}
 }

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupEmergencyZonesGetHomeZoneListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupEmergencyZonesGetHomeZoneListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private List<string> _homeZoneIpAddress;
 
@@ -21,10 +21,10 @@ public  class GroupEmergencyZonesGetHomeZoneListResponse : BroadworksConnector.O
 
     [XmlIgnore]
     public bool HomeZoneIpAddressSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.IPAddressRange> _homeZoneIpAddressRange;
+    private List<BroadWorksConnector.Ocip.Models.IPAddressRange> _homeZoneIpAddressRange;
 
     [XmlElement(ElementName = "homeZoneIpAddressRange", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.IPAddressRange> HomeZoneIpAddressRange {
+    public List<BroadWorksConnector.Ocip.Models.IPAddressRange> HomeZoneIpAddressRange {
         get => _homeZoneIpAddressRange;
         set {
             HomeZoneIpAddressRangeSpecified = true;

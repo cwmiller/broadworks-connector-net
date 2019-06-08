@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class MWIDeliveryToMobileEndpointTemplateBody 
 {
-    private List<BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> _line;
+    private List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> _line;
 
     [XmlElement(ElementName = "line", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> Line {
+    public List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> Line {
         get => _line;
         set {
             LineSpecified = true;

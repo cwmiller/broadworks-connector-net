@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemGETSSessionPriorityMapGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemGETSSessionPriorityMapGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _sessionPriorityTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _sessionPriorityTable;
 
     [XmlElement(ElementName = "sessionPriorityTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable SessionPriorityTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable SessionPriorityTable {
         get => _sessionPriorityTable;
         set {
             SessionPriorityTableSpecified = true;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace BroadworksConnector.Ocip
+namespace BroadWorksConnector.Ocip
 {
     public interface ITransport : IDisposable
     {

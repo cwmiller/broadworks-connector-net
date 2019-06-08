@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSelectiveServicesGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemSelectiveServicesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.ScheduleCombinationType _scheduleCombination;
+    private BroadWorksConnector.Ocip.Models.ScheduleCombinationType _scheduleCombination;
 
     [XmlElement(ElementName = "scheduleCombination", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleCombinationType ScheduleCombination {
+    public BroadWorksConnector.Ocip.Models.ScheduleCombinationType ScheduleCombination {
         get => _scheduleCombination;
         set {
             ScheduleCombinationSpecified = true;

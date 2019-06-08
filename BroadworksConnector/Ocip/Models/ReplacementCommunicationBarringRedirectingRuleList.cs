@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class ReplacementCommunicationBarringRedirectingRuleList 
 {
-    private List<BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingRule> _rule;
+    private List<BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingRule> _rule;
 
     [XmlElement(ElementName = "rule", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingRule> Rule {
+    public List<BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingRule> Rule {
         get => _rule;
         set {
             RuleSpecified = true;

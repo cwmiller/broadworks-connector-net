@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserSimultaneousRingFamilyGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserSimultaneousRingFamilyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isActive;
 
@@ -21,10 +21,10 @@ public  class UserSimultaneousRingFamilyGetResponse : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SimultaneousRingSelection _incomingCalls;
+    private BroadWorksConnector.Ocip.Models.SimultaneousRingSelection _incomingCalls;
 
     [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SimultaneousRingSelection IncomingCalls {
+    public BroadWorksConnector.Ocip.Models.SimultaneousRingSelection IncomingCalls {
         get => _incomingCalls;
         set {
             IncomingCallsSpecified = true;

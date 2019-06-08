@@ -1,15 +1,14 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public enum CallCenterReportWebStatisticsSource
-    {
-        [XmlEnum(Name = "CCRS")]
-        CCRS,
-        [XmlEnum(Name = "Enhanced")]
-        Enhanced,
-    }
+[Serializable]
+[XmlRoot(Namespace = "")]
+public enum CallCenterReportWebStatisticsSource{
+    [XmlEnum(Name = "CCRS")]
+    CCRS,
+    [XmlEnum(Name = "Enhanced")]
+    Enhanced,
+ }
 }

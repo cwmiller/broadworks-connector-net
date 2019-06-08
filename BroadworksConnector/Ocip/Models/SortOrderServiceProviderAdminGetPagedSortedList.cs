@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class SortOrderServiceProviderAdminGetPagedSortedList 
 {
-    private BroadworksConnector.Ocip.Models.SortByAdminId _sortByAdminId;
+    private BroadWorksConnector.Ocip.Models.SortByAdminId _sortByAdminId;
 
     [XmlElement(ElementName = "sortByAdminId", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByAdminId SortByAdminId {
+    public BroadWorksConnector.Ocip.Models.SortByAdminId SortByAdminId {
         get => _sortByAdminId;
         set {
             SortByAdminIdSpecified = true;
@@ -21,10 +21,10 @@ public  class SortOrderServiceProviderAdminGetPagedSortedList
 
     [XmlIgnore]
     public bool SortByAdminIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByAdminLastName _sortByAdminLastName;
+    private BroadWorksConnector.Ocip.Models.SortByAdminLastName _sortByAdminLastName;
 
     [XmlElement(ElementName = "sortByAdminLastName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByAdminLastName SortByAdminLastName {
+    public BroadWorksConnector.Ocip.Models.SortByAdminLastName SortByAdminLastName {
         get => _sortByAdminLastName;
         set {
             SortByAdminLastNameSpecified = true;
@@ -34,10 +34,10 @@ public  class SortOrderServiceProviderAdminGetPagedSortedList
 
     [XmlIgnore]
     public bool SortByAdminLastNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByAdminFirstName _sortByAdminFirstName;
+    private BroadWorksConnector.Ocip.Models.SortByAdminFirstName _sortByAdminFirstName;
 
     [XmlElement(ElementName = "sortByAdminFirstName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByAdminFirstName SortByAdminFirstName {
+    public BroadWorksConnector.Ocip.Models.SortByAdminFirstName SortByAdminFirstName {
         get => _sortByAdminFirstName;
         set {
             SortByAdminFirstNameSpecified = true;

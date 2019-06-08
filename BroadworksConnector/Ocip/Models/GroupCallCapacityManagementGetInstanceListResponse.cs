@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class GroupCallCapacityManagementGetInstanceListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private BroadworksConnector.Ocip.Models.C.OCITable _callCapacityGroupTable;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupCallCapacityManagementGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private BroadWorksConnector.Ocip.Models.C.OCITable _callCapacityGroupTable;
 
-        [XmlElement(ElementName = "callCapacityGroupTable", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.C.OCITable CallCapacityGroupTable
-        {
-            get => _callCapacityGroupTable;
-            set
-            {
-                CallCapacityGroupTableSpecified = true;
-                _callCapacityGroupTable = value;
-            }
+    [XmlElement(ElementName = "callCapacityGroupTable", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.C.OCITable CallCapacityGroupTable {
+        get => _callCapacityGroupTable;
+        set {
+            CallCapacityGroupTableSpecified = true;
+            _callCapacityGroupTable = value;
         }
-
-        [XmlIgnore]
-        public bool CallCapacityGroupTableSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool CallCapacityGroupTableSpecified { get; set; }
+}
 }

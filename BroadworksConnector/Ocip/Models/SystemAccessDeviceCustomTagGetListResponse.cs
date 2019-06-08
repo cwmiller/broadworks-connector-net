@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemAccessDeviceCustomTagGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemAccessDeviceCustomTagGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _deviceCustomTagsTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _deviceCustomTagsTable;
 
     [XmlElement(ElementName = "deviceCustomTagsTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable DeviceCustomTagsTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable DeviceCustomTagsTable {
         get => _deviceCustomTagsTable;
         set {
             DeviceCustomTagsTableSpecified = true;

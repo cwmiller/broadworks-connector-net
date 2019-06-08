@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallParkGetInstancePagedSortedListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallParkGetInstancePagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupCallParkGetInstancePagedSortedListRequest : BroadworksConnect
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupCallParkGetInstancePagedSortedListRequest : BroadworksConnect
 
     [XmlIgnore]
     public bool ResponsePagingControlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByCallParkName _sortByCallParkName;
+    private BroadWorksConnector.Ocip.Models.SortByCallParkName _sortByCallParkName;
 
     [XmlElement(ElementName = "sortByCallParkName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByCallParkName SortByCallParkName {
+    public BroadWorksConnector.Ocip.Models.SortByCallParkName SortByCallParkName {
         get => _sortByCallParkName;
         set {
             SortByCallParkNameSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupCallParkGetInstancePagedSortedListRequest : BroadworksConnect
 
     [XmlIgnore]
     public bool SortByCallParkNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaCallParkName> _searchCriteriaCallParkName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallParkName> _searchCriteriaCallParkName;
 
     [XmlElement(ElementName = "searchCriteriaCallParkName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaCallParkName> SearchCriteriaCallParkName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallParkName> SearchCriteriaCallParkName {
         get => _searchCriteriaCallParkName;
         set {
             SearchCriteriaCallParkNameSpecified = true;

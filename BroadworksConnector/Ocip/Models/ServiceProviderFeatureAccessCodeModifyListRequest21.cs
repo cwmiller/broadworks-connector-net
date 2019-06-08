@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderFeatureAccessCodeModifyListRequest21 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderFeatureAccessCodeModifyListRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderFeatureAccessCodeModifyListRequest21 : BroadworksCo
 
     [XmlIgnore]
     public bool ServiceProviderIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.FeatureAccessCodeModifyEntry> _featureAccessCode;
+    private List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeModifyEntry> _featureAccessCode;
 
     [XmlElement(ElementName = "featureAccessCode", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.FeatureAccessCodeModifyEntry> FeatureAccessCode {
+    public List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeModifyEntry> FeatureAccessCode {
         get => _featureAccessCode;
         set {
             FeatureAccessCodeSpecified = true;

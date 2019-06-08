@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserExternalCustomRingbackGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserExternalCustomRingbackGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isActive;
 
@@ -21,10 +21,10 @@ public  class UserExternalCustomRingbackGetResponse : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel _useSettingLevel;
+    private BroadWorksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel _useSettingLevel;
 
     [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel UseSettingLevel {
+    public BroadWorksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel UseSettingLevel {
         get => _useSettingLevel;
         set {
             UseSettingLevelSpecified = true;

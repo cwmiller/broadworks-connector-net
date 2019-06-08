@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemFileRepositoryDeviceGetResponse20 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemFileRepositoryDeviceGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _rootDirectory;
 
@@ -34,10 +34,10 @@ public  class SystemFileRepositoryDeviceGetResponse20 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool PortSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.FileRepositoryProtocolWebDAV20 _protocolWebDAV;
+    private BroadWorksConnector.Ocip.Models.FileRepositoryProtocolWebDAV20 _protocolWebDAV;
 
     [XmlElement(ElementName = "protocolWebDAV", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.FileRepositoryProtocolWebDAV20 ProtocolWebDAV {
+    public BroadWorksConnector.Ocip.Models.FileRepositoryProtocolWebDAV20 ProtocolWebDAV {
         get => _protocolWebDAV;
         set {
             ProtocolWebDAVSpecified = true;
@@ -47,10 +47,10 @@ public  class SystemFileRepositoryDeviceGetResponse20 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool ProtocolWebDAVSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.FileRepositoryProtocolFTP16 _protocolFTP;
+    private BroadWorksConnector.Ocip.Models.FileRepositoryProtocolFTP16 _protocolFTP;
 
     [XmlElement(ElementName = "protocolFTP", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.FileRepositoryProtocolFTP16 ProtocolFTP {
+    public BroadWorksConnector.Ocip.Models.FileRepositoryProtocolFTP16 ProtocolFTP {
         get => _protocolFTP;
         set {
             ProtocolFTPSpecified = true;

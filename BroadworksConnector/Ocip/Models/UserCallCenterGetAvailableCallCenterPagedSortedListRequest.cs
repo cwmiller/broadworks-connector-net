@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallCenterGetAvailableCallCenterPagedSortedListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserCallCenterGetAvailableCallCenterPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserCallCenterGetAvailableCallCenterPagedSortedListRequest : Broad
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;
@@ -34,10 +34,10 @@ public  class UserCallCenterGetAvailableCallCenterPagedSortedListRequest : Broad
 
     [XmlIgnore]
     public bool ResponsePagingControlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByUserId _sortByUserId;
+    private BroadWorksConnector.Ocip.Models.SortByUserId _sortByUserId;
 
     [XmlElement(ElementName = "sortByUserId", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByUserId SortByUserId {
+    public BroadWorksConnector.Ocip.Models.SortByUserId SortByUserId {
         get => _sortByUserId;
         set {
             SortByUserIdSpecified = true;
@@ -47,10 +47,10 @@ public  class UserCallCenterGetAvailableCallCenterPagedSortedListRequest : Broad
 
     [XmlIgnore]
     public bool SortByUserIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
 
     [XmlElement(ElementName = "searchCriteriaUserId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
         get => _searchCriteriaUserId;
         set {
             SearchCriteriaUserIdSpecified = true;

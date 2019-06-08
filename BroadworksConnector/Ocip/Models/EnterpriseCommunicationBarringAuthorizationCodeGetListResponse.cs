@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class EnterpriseCommunicationBarringAuthorizationCodeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private List<BroadworksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeConfiguration> _code;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class EnterpriseCommunicationBarringAuthorizationCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeConfiguration> _code;
 
-        [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        public List<BroadworksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeConfiguration> Code
-        {
-            get => _code;
-            set
-            {
-                CodeSpecified = true;
-                _code = value;
-            }
+    [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
+    public List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeConfiguration> Code {
+        get => _code;
+        set {
+            CodeSpecified = true;
+            _code = value;
         }
-
-        [XmlIgnore]
-        public bool CodeSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool CodeSpecified { get; set; }
+}
 }

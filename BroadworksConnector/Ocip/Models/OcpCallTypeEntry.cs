@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -34,10 +34,10 @@ public  class OcpCallTypeEntry
 
     [XmlIgnore]
     public bool DigitMapSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanCallType _callType;
+    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallType _callType;
 
     [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanCallType CallType {
+    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallType CallType {
         get => _callType;
         set {
             CallTypeSpecified = true;

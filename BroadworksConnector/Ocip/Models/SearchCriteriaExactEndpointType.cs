@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactEndpointType : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactEndpointType : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.EndpointType _endpointType;
+    private BroadWorksConnector.Ocip.Models.EndpointType _endpointType;
 
     [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EndpointType EndpointType {
+    public BroadWorksConnector.Ocip.Models.EndpointType EndpointType {
         get => _endpointType;
         set {
             EndpointTypeSpecified = true;

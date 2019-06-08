@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCPEConfigRebuildConfigFileRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemCPEConfigRebuildConfigFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _deviceType;
 
@@ -21,10 +21,10 @@ public  class SystemCPEConfigRebuildConfigFileRequest : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool DeviceTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CPEDeviceConfigRebuildType _rebuildType;
+    private BroadWorksConnector.Ocip.Models.CPEDeviceConfigRebuildType _rebuildType;
 
     [XmlElement(ElementName = "rebuildType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CPEDeviceConfigRebuildType RebuildType {
+    public BroadWorksConnector.Ocip.Models.CPEDeviceConfigRebuildType RebuildType {
         get => _rebuildType;
         set {
             RebuildTypeSpecified = true;

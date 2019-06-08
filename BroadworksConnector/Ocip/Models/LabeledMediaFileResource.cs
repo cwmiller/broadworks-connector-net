@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class LabeledMediaFileResource
 
     [XmlIgnore]
     public bool DescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _mediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _mediaType;
 
     [XmlElement(ElementName = "mediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType MediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType MediaType {
         get => _mediaType;
         set {
             MediaTypeSpecified = true;

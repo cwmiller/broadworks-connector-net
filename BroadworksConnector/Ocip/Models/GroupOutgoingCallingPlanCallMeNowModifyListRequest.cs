@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupOutgoingCallingPlanCallMeNowModifyListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupOutgoingCallingPlanCallMeNowModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupOutgoingCallingPlanCallMeNowModifyListRequest : BroadworksCon
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanCallMeNowPermissionsModify _groupPermissions;
+    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallMeNowPermissionsModify _groupPermissions;
 
     [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanCallMeNowPermissionsModify GroupPermissions {
+    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallMeNowPermissionsModify GroupPermissions {
         get => _groupPermissions;
         set {
             GroupPermissionsSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupOutgoingCallingPlanCallMeNowModifyListRequest : BroadworksCon
 
     [XmlIgnore]
     public bool GroupPermissionsSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanCallMeNowDepartmentPermissionsModify> _departmentPermissions;
+    private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallMeNowDepartmentPermissionsModify> _departmentPermissions;
 
     [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanCallMeNowDepartmentPermissionsModify> DepartmentPermissions {
+    public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallMeNowDepartmentPermissionsModify> DepartmentPermissions {
         get => _departmentPermissions;
         set {
             DepartmentPermissionsSpecified = true;

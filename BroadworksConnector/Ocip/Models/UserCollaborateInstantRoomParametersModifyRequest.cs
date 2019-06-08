@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCollaborateInstantRoomParametersModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserCollaborateInstantRoomParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserCollaborateInstantRoomParametersModifyRequest : BroadworksConn
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CollaborateRoomAttendeeNotification _attendeeNotification;
+    private BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification _attendeeNotification;
 
     [XmlElement(ElementName = "attendeeNotification", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CollaborateRoomAttendeeNotification AttendeeNotification {
+    public BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification AttendeeNotification {
         get => _attendeeNotification;
         set {
             AttendeeNotificationSpecified = true;

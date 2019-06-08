@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : Broad
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementSelection _busyAnnouncementSelection;
+    private BroadWorksConnector.Ocip.Models.AnnouncementSelection _busyAnnouncementSelection;
 
     [XmlElement(ElementName = "busyAnnouncementSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementSelection BusyAnnouncementSelection {
+    public BroadWorksConnector.Ocip.Models.AnnouncementSelection BusyAnnouncementSelection {
         get => _busyAnnouncementSelection;
         set {
             BusyAnnouncementSelectionSpecified = true;
@@ -34,10 +34,10 @@ public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : Broad
 
     [XmlIgnore]
     public bool BusyAnnouncementSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileNameResource _busyPersonalAudioFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _busyPersonalAudioFile;
 
     [XmlElement(ElementName = "busyPersonalAudioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileNameResource BusyPersonalAudioFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileNameResource BusyPersonalAudioFile {
         get => _busyPersonalAudioFile;
         set {
             BusyPersonalAudioFileSpecified = true;
@@ -47,10 +47,10 @@ public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : Broad
 
     [XmlIgnore]
     public bool BusyPersonalAudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileNameResource _busyPersonalVideoFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _busyPersonalVideoFile;
 
     [XmlElement(ElementName = "busyPersonalVideoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileNameResource BusyPersonalVideoFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileNameResource BusyPersonalVideoFile {
         get => _busyPersonalVideoFile;
         set {
             BusyPersonalVideoFileSpecified = true;
@@ -60,10 +60,10 @@ public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : Broad
 
     [XmlIgnore]
     public bool BusyPersonalVideoFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection _noAnswerAnnouncementSelection;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection _noAnswerAnnouncementSelection;
 
     [XmlElement(ElementName = "noAnswerAnnouncementSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection NoAnswerAnnouncementSelection {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection NoAnswerAnnouncementSelection {
         get => _noAnswerAnnouncementSelection;
         set {
             NoAnswerAnnouncementSelectionSpecified = true;
@@ -73,10 +73,10 @@ public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : Broad
 
     [XmlIgnore]
     public bool NoAnswerAnnouncementSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileNameResource _noAnswerPersonalAudioFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _noAnswerPersonalAudioFile;
 
     [XmlElement(ElementName = "noAnswerPersonalAudioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileNameResource NoAnswerPersonalAudioFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileNameResource NoAnswerPersonalAudioFile {
         get => _noAnswerPersonalAudioFile;
         set {
             NoAnswerPersonalAudioFileSpecified = true;
@@ -86,10 +86,10 @@ public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : Broad
 
     [XmlIgnore]
     public bool NoAnswerPersonalAudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileNameResource _noAnswerPersonalVideoFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _noAnswerPersonalVideoFile;
 
     [XmlElement(ElementName = "noAnswerPersonalVideoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileNameResource NoAnswerPersonalVideoFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileNameResource NoAnswerPersonalVideoFile {
         get => _noAnswerPersonalVideoFile;
         set {
             NoAnswerPersonalVideoFileSpecified = true;
@@ -99,10 +99,10 @@ public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : Broad
 
     [XmlIgnore]
     public bool NoAnswerPersonalVideoFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingNumberOfRings _noAnswerNumberOfRings;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingNumberOfRings _noAnswerNumberOfRings;
 
     [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingNumberOfRings NoAnswerNumberOfRings {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingNumberOfRings NoAnswerNumberOfRings {
         get => _noAnswerNumberOfRings;
         set {
             NoAnswerNumberOfRingsSpecified = true;
@@ -138,10 +138,10 @@ public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : Broad
 
     [XmlIgnore]
     public bool ExtendedAwayDisableMessageDepositSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileNameResource _extendedAwayAudioFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _extendedAwayAudioFile;
 
     [XmlElement(ElementName = "extendedAwayAudioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileNameResource ExtendedAwayAudioFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileNameResource ExtendedAwayAudioFile {
         get => _extendedAwayAudioFile;
         set {
             ExtendedAwayAudioFileSpecified = true;
@@ -151,10 +151,10 @@ public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : Broad
 
     [XmlIgnore]
     public bool ExtendedAwayAudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileNameResource _extendedAwayVideoFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _extendedAwayVideoFile;
 
     [XmlElement(ElementName = "extendedAwayVideoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileNameResource ExtendedAwayVideoFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileNameResource ExtendedAwayVideoFile {
         get => _extendedAwayVideoFile;
         set {
             ExtendedAwayVideoFileSpecified = true;
@@ -177,10 +177,10 @@ public  class UserVoiceMessagingUserModifyGreetingExecutionServerRequest : Broad
 
     [XmlIgnore]
     public bool DisableMessageDepositSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingDisableMessageDepositSelection _disableMessageDepositAction;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingDisableMessageDepositSelection _disableMessageDepositAction;
 
     [XmlElement(ElementName = "disableMessageDepositAction", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingDisableMessageDepositSelection DisableMessageDepositAction {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingDisableMessageDepositSelection DisableMessageDepositAction {
         get => _disableMessageDepositAction;
         set {
             DisableMessageDepositActionSpecified = true;

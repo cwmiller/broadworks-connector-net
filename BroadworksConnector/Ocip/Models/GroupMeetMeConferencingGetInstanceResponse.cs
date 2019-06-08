@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupMeetMeConferencingGetInstanceResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupMeetMeConferencingGetInstanceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -21,10 +21,10 @@ public  class GroupMeetMeConferencingGetInstanceResponse : BroadworksConnector.O
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
     [XmlElement(ElementName = "allocatedPorts", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts {
         get => _allocatedPorts;
         set {
             AllocatedPortsSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupMeetMeConferencingGetInstanceResponse : BroadworksConnector.O
 
     [XmlIgnore]
     public bool OperatorNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _conferenceHostUserTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _conferenceHostUserTable;
 
     [XmlElement(ElementName = "conferenceHostUserTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ConferenceHostUserTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ConferenceHostUserTable {
         get => _conferenceHostUserTable;
         set {
             ConferenceHostUserTableSpecified = true;

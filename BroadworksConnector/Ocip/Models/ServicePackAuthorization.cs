@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class ServicePackAuthorization
 
     [XmlIgnore]
     public bool ServicePackNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
+    private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
 
     [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedPositiveInt AuthorizedQuantity {
+    public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt AuthorizedQuantity {
         get => _authorizedQuantity;
         set {
             AuthorizedQuantitySpecified = true;

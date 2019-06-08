@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderServicePackMigrationTaskModifyGroupListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderServicePackMigrationTaskModifyGroupListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class ServiceProviderServicePackMigrationTaskModifyGroupListRequest : Br
 
     [XmlIgnore]
     public bool MigrateAllGroupsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList _groupIdList;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList _groupIdList;
 
     [XmlElement(ElementName = "groupIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList GroupIdList {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList GroupIdList {
         get => _groupIdList;
         set {
             GroupIdListSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _supervisorUserId;
 
@@ -60,10 +60,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool DescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterReportSchedule _schedule;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportSchedule _schedule;
 
     [XmlElement(ElementName = "schedule", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportSchedule Schedule {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportSchedule Schedule {
         get => _schedule;
         set {
             ScheduleSpecified = true;
@@ -73,10 +73,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool ScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterReportSamplingPeriod _samplingPeriod;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportSamplingPeriod _samplingPeriod;
 
     [XmlElement(ElementName = "samplingPeriod", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportSamplingPeriod SamplingPeriod {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportSamplingPeriod SamplingPeriod {
         get => _samplingPeriod;
         set {
             SamplingPeriodSpecified = true;
@@ -86,10 +86,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool SamplingPeriodSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DayOfWeek _startDayOfWeek;
+    private BroadWorksConnector.Ocip.Models.DayOfWeek _startDayOfWeek;
 
     [XmlElement(ElementName = "startDayOfWeek", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DayOfWeek StartDayOfWeek {
+    public BroadWorksConnector.Ocip.Models.DayOfWeek StartDayOfWeek {
         get => _startDayOfWeek;
         set {
             StartDayOfWeekSpecified = true;
@@ -112,10 +112,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool ReportTimeZoneSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterReportDateFormat _reportDateFormat;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportDateFormat _reportDateFormat;
 
     [XmlElement(ElementName = "reportDateFormat", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportDateFormat ReportDateFormat {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportDateFormat ReportDateFormat {
         get => _reportDateFormat;
         set {
             ReportDateFormatSpecified = true;
@@ -125,10 +125,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool ReportDateFormatSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterReportTimeFormat _reportTimeFormat;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportTimeFormat _reportTimeFormat;
 
     [XmlElement(ElementName = "reportTimeFormat", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportTimeFormat ReportTimeFormat {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportTimeFormat ReportTimeFormat {
         get => _reportTimeFormat;
         set {
             ReportTimeFormatSpecified = true;
@@ -138,10 +138,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool ReportTimeFormatSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterReportInterval _reportInterval;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportInterval _reportInterval;
 
     [XmlElement(ElementName = "reportInterval", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportInterval ReportInterval {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportInterval ReportInterval {
         get => _reportInterval;
         set {
             ReportIntervalSpecified = true;
@@ -151,10 +151,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool ReportIntervalSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterReportFileFormat _reportFormat;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportFileFormat _reportFormat;
 
     [XmlElement(ElementName = "reportFormat", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportFileFormat ReportFormat {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportFileFormat ReportFormat {
         get => _reportFormat;
         set {
             ReportFormatSpecified = true;
@@ -164,10 +164,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool ReportFormatSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterScheduledReportAgentSelection _agent;
+    private BroadWorksConnector.Ocip.Models.CallCenterScheduledReportAgentSelection _agent;
 
     [XmlElement(ElementName = "agent", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterScheduledReportAgentSelection Agent {
+    public BroadWorksConnector.Ocip.Models.CallCenterScheduledReportAgentSelection Agent {
         get => _agent;
         set {
             AgentSpecified = true;
@@ -177,10 +177,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool AgentSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterScheduledReportCallCenterSelection _callCenter;
+    private BroadWorksConnector.Ocip.Models.CallCenterScheduledReportCallCenterSelection _callCenter;
 
     [XmlElement(ElementName = "callCenter", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterScheduledReportCallCenterSelection CallCenter {
+    public BroadWorksConnector.Ocip.Models.CallCenterScheduledReportCallCenterSelection CallCenter {
         get => _callCenter;
         set {
             CallCenterSpecified = true;
@@ -190,10 +190,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool CallCenterSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterScheduledReportDNISSelection _dnis;
+    private BroadWorksConnector.Ocip.Models.CallCenterScheduledReportDNISSelection _dnis;
 
     [XmlElement(ElementName = "dnis", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterScheduledReportDNISSelection Dnis {
+    public BroadWorksConnector.Ocip.Models.CallCenterScheduledReportDNISSelection Dnis {
         get => _dnis;
         set {
             DnisSpecified = true;
@@ -229,10 +229,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool ShortDurationThresholdSecondsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterReportServiceLevelThresholdReplacementList _serviceLevelThresholdSeconds;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportServiceLevelThresholdReplacementList _serviceLevelThresholdSeconds;
 
     [XmlElement(ElementName = "serviceLevelThresholdSeconds", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportServiceLevelThresholdReplacementList ServiceLevelThresholdSeconds {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportServiceLevelThresholdReplacementList ServiceLevelThresholdSeconds {
         get => _serviceLevelThresholdSeconds;
         set {
             ServiceLevelThresholdSecondsSpecified = true;
@@ -242,10 +242,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool ServiceLevelThresholdSecondsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterScheduledReportServiceLevelInclusionsModify _serviceLevelInclusions;
+    private BroadWorksConnector.Ocip.Models.CallCenterScheduledReportServiceLevelInclusionsModify _serviceLevelInclusions;
 
     [XmlElement(ElementName = "serviceLevelInclusions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterScheduledReportServiceLevelInclusionsModify ServiceLevelInclusions {
+    public BroadWorksConnector.Ocip.Models.CallCenterScheduledReportServiceLevelInclusionsModify ServiceLevelInclusions {
         get => _serviceLevelInclusions;
         set {
             ServiceLevelInclusionsSpecified = true;
@@ -268,10 +268,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool ServiceLevelObjectivePercentageSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterReportAbandonedCallThresholdReplacementList _abandonedCallThresholdSeconds;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportAbandonedCallThresholdReplacementList _abandonedCallThresholdSeconds;
 
     [XmlElement(ElementName = "abandonedCallThresholdSeconds", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportAbandonedCallThresholdReplacementList AbandonedCallThresholdSeconds {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportAbandonedCallThresholdReplacementList AbandonedCallThresholdSeconds {
         get => _abandonedCallThresholdSeconds;
         set {
             AbandonedCallThresholdSecondsSpecified = true;
@@ -281,10 +281,10 @@ public  class UserCallCenterEnhancedReportingScheduledReportModifyRequest : Broa
 
     [XmlIgnore]
     public bool AbandonedCallThresholdSecondsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterReportReplacementEmailList _emailAddress;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportReplacementEmailList _emailAddress;
 
     [XmlElement(ElementName = "emailAddress", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportReplacementEmailList EmailAddress {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportReplacementEmailList EmailAddress {
         get => _emailAddress;
         set {
             EmailAddressSpecified = true;

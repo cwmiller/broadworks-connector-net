@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserBroadWorksMobilityGetResponse21sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserBroadWorksMobilityGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isActive;
 
@@ -47,10 +47,10 @@ public  class UserBroadWorksMobilityGetResponse21sp1 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool PreventCallsToOwnMobilesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _profileIdentityDevicesToRing;
+    private BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _profileIdentityDevicesToRing;
 
     [XmlElement(ElementName = "profileIdentityDevicesToRing", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing ProfileIdentityDevicesToRing {
+    public BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing ProfileIdentityDevicesToRing {
         get => _profileIdentityDevicesToRing;
         set {
             ProfileIdentityDevicesToRingSpecified = true;
@@ -99,10 +99,10 @@ public  class UserBroadWorksMobilityGetResponse21sp1 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool ProfileIdentityIncludeExecutiveAssistantSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _profileIdentityMobileNumberAlertedTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _profileIdentityMobileNumberAlertedTable;
 
     [XmlElement(ElementName = "profileIdentityMobileNumberAlertedTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ProfileIdentityMobileNumberAlertedTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ProfileIdentityMobileNumberAlertedTable {
         get => _profileIdentityMobileNumberAlertedTable;
         set {
             ProfileIdentityMobileNumberAlertedTableSpecified = true;
@@ -112,10 +112,10 @@ public  class UserBroadWorksMobilityGetResponse21sp1 : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool ProfileIdentityMobileNumberAlertedTableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _mobileIdentityTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _mobileIdentityTable;
 
     [XmlElement(ElementName = "mobileIdentityTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable MobileIdentityTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable MobileIdentityTable {
         get => _mobileIdentityTable;
         set {
             MobileIdentityTableSpecified = true;

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemOutgoingCallingPlanCallTypeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemOutgoingCallingPlanCallTypeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanCallType> _callType;
+    private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallType> _callType;
 
     [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanCallType> CallType {
+    public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallType> CallType {
         get => _callType;
         set {
             CallTypeSpecified = true;

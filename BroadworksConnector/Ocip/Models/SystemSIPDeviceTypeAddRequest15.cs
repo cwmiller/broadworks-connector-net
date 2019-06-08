@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPDeviceTypeAddRequest15 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSIPDeviceTypeAddRequest15 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _deviceType;
 
@@ -21,10 +21,10 @@ public  class SystemSIPDeviceTypeAddRequest15 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool DeviceTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
+    private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
 
     [XmlElement(ElementName = "numberOfPorts", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts {
+    public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts {
         get => _numberOfPorts;
         set {
             NumberOfPortsSpecified = true;
@@ -34,10 +34,10 @@ public  class SystemSIPDeviceTypeAddRequest15 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool NumberOfPortsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SignalingAddressType _profile;
+    private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
     [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SignalingAddressType Profile {
+    public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
         get => _profile;
         set {
             ProfileSpecified = true;
@@ -242,10 +242,10 @@ public  class SystemSIPDeviceTypeAddRequest15 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool StaticRegistrationCapableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CPEDeviceOptions14sp6 _cpeDeviceOptions;
+    private BroadWorksConnector.Ocip.Models.CPEDeviceOptions14sp6 _cpeDeviceOptions;
 
     [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CPEDeviceOptions14sp6 CpeDeviceOptions {
+    public BroadWorksConnector.Ocip.Models.CPEDeviceOptions14sp6 CpeDeviceOptions {
         get => _cpeDeviceOptions;
         set {
             CpeDeviceOptionsSpecified = true;
@@ -255,10 +255,10 @@ public  class SystemSIPDeviceTypeAddRequest15 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool CpeDeviceOptionsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EarlyMediaSupportType _earlyMediaSupport;
+    private BroadWorksConnector.Ocip.Models.EarlyMediaSupportType _earlyMediaSupport;
 
     [XmlElement(ElementName = "earlyMediaSupport", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EarlyMediaSupportType EarlyMediaSupport {
+    public BroadWorksConnector.Ocip.Models.EarlyMediaSupportType EarlyMediaSupport {
         get => _earlyMediaSupport;
         set {
             EarlyMediaSupportSpecified = true;
@@ -294,10 +294,10 @@ public  class SystemSIPDeviceTypeAddRequest15 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool AutoConfigSoftClientSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationMode _authenticationMode;
+    private BroadWorksConnector.Ocip.Models.AuthenticationMode _authenticationMode;
 
     [XmlElement(ElementName = "authenticationMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationMode AuthenticationMode {
+    public BroadWorksConnector.Ocip.Models.AuthenticationMode AuthenticationMode {
         get => _authenticationMode;
         set {
             AuthenticationModeSpecified = true;

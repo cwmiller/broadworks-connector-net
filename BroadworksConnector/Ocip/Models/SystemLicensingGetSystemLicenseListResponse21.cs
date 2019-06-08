@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemLicensingGetSystemLicenseListResponse21 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemLicensingGetSystemLicenseListResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private List<BroadworksConnector.Ocip.Models.SystemLicenseType21> _license;
+    private List<BroadWorksConnector.Ocip.Models.SystemLicenseType21> _license;
 
     [XmlElement(ElementName = "license", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SystemLicenseType21> License {
+    public List<BroadWorksConnector.Ocip.Models.SystemLicenseType21> License {
         get => _license;
         set {
             LicenseSpecified = true;

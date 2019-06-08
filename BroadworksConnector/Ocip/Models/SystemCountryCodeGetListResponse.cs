@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCountryCodeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemCountryCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _defaultCountryCode;
 
@@ -21,10 +21,10 @@ public  class SystemCountryCodeGetListResponse : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool DefaultCountryCodeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _countryCodeTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _countryCodeTable;
 
     [XmlElement(ElementName = "countryCodeTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable CountryCodeTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable CountryCodeTable {
         get => _countryCodeTable;
         set {
             CountryCodeTableSpecified = true;

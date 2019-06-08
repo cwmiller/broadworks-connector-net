@@ -1,6 +1,6 @@
-﻿using BroadworksConnector.Ocip;
-using BroadworksConnector.Ocip.Models;
-using BroadworksConnector.Ocip.Models.C;
+﻿using BroadWorksConnector.Ocip;
+using BroadWorksConnector.Ocip.Models;
+using BroadWorksConnector.Ocip.Models.C;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector
+namespace BroadWorksConnector
 {
     /// <summary>
     /// Client for communicating with BroadWorks OCI-P

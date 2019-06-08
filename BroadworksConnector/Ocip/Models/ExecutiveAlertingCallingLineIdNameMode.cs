@@ -1,21 +1,20 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public enum ExecutiveAlertingCallingLineIdNameMode
-    {
-        [XmlEnum(Name = "Executive")]
-        Executive,
-        [XmlEnum(Name = "Executive-Originator")]
-        ExecutiveOriginator,
-        [XmlEnum(Name = "Originator-Executive")]
-        OriginatorExecutive,
-        [XmlEnum(Name = "Originator")]
-        Originator,
-        [XmlEnum(Name = "Custom")]
-        Custom,
-    }
+[Serializable]
+[XmlRoot(Namespace = "")]
+public enum ExecutiveAlertingCallingLineIdNameMode{
+    [XmlEnum(Name = "Executive")]
+    Executive,
+    [XmlEnum(Name = "Executive-Originator")]
+    ExecutiveOriginator,
+    [XmlEnum(Name = "Originator-Executive")]
+    OriginatorExecutive,
+    [XmlEnum(Name = "Originator")]
+    Originator,
+    [XmlEnum(Name = "Custom")]
+    Custom,
+ }
 }

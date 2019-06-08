@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserMeetMeConferencingDeleteConferenceRecordingListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserMeetMeConferencingDeleteConferenceRecordingListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserMeetMeConferencingDeleteConferenceRecordingListRequest : Broad
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceRecordingKey> _recordingKey;
+    private List<BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceRecordingKey> _recordingKey;
 
     [XmlElement(ElementName = "recordingKey", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceRecordingKey> RecordingKey {
+    public List<BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceRecordingKey> RecordingKey {
         get => _recordingKey;
         set {
             RecordingKeySpecified = true;

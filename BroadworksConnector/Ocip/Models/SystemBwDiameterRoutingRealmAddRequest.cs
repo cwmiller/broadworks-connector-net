@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemBwDiameterRoutingRealmAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemBwDiameterRoutingRealmAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
+    private BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
 
     [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BwDiameterPeerInstance Instance {
+    public BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance Instance {
         get => _instance;
         set {
             InstanceSpecified = true;
@@ -34,10 +34,10 @@ public  class SystemBwDiameterRoutingRealmAddRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool RealmSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BwDiameterApplicationId _applicationId;
+    private BroadWorksConnector.Ocip.Models.BwDiameterApplicationId _applicationId;
 
     [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BwDiameterApplicationId ApplicationId {
+    public BroadWorksConnector.Ocip.Models.BwDiameterApplicationId ApplicationId {
         get => _applicationId;
         set {
             ApplicationIdSpecified = true;

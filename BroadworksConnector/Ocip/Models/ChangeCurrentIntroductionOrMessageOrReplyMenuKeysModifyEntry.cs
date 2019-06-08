@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class ChangeCurrentIntroductionOrMessageOrReplyMenuKeysModifyEntry
-    {
-        private string _endRecording;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class ChangeCurrentIntroductionOrMessageOrReplyMenuKeysModifyEntry 
+{
+    private string _endRecording;
 
-        [XmlElement(ElementName = "endRecording", IsNullable = false, Namespace = "")]
-        public string EndRecording
-        {
-            get => _endRecording;
-            set
-            {
-                EndRecordingSpecified = true;
-                _endRecording = value;
-            }
+    [XmlElement(ElementName = "endRecording", IsNullable = false, Namespace = "")]
+    public string EndRecording {
+        get => _endRecording;
+        set {
+            EndRecordingSpecified = true;
+            _endRecording = value;
         }
-
-        [XmlIgnore]
-        public bool EndRecordingSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool EndRecordingSpecified { get; set; }
+}
 }

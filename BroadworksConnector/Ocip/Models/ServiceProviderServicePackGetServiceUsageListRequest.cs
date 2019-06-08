@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderServicePackGetServiceUsageListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderServicePackGetServiceUsageListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderServicePackGetServiceUsageListRequest : BroadworksC
 
     [XmlIgnore]
     public bool ServiceProviderIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UserService _serviceName;
+    private BroadWorksConnector.Ocip.Models.UserService _serviceName;
 
     [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserService ServiceName {
+    public BroadWorksConnector.Ocip.Models.UserService ServiceName {
         get => _serviceName;
         set {
             ServiceNameSpecified = true;

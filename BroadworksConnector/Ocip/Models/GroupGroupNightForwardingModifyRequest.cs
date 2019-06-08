@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupGroupNightForwardingModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupGroupNightForwardingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupGroupNightForwardingModifyRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode _nightForwarding;
+    private BroadWorksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode _nightForwarding;
 
     [XmlElement(ElementName = "nightForwarding", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode NightForwarding {
+    public BroadWorksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode NightForwarding {
         get => _nightForwarding;
         set {
             NightForwardingSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupGroupNightForwardingModifyRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool NightForwardingSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeSchedule _businessHours;
+    private BroadWorksConnector.Ocip.Models.TimeSchedule _businessHours;
 
     [XmlElement(ElementName = "businessHours", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeSchedule BusinessHours {
+    public BroadWorksConnector.Ocip.Models.TimeSchedule BusinessHours {
         get => _businessHours;
         set {
             BusinessHoursSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupGroupNightForwardingModifyRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool BusinessHoursSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+    private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
     [XmlElement(ElementName = "holidaySchedule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+    public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
         get => _holidaySchedule;
         set {
             HolidayScheduleSpecified = true;

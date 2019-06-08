@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderAccessDeviceGetUserListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaLinePortUserPart> _searchCriteriaLinePortUserPart;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaLinePortUserPart> _searchCriteriaLinePortUserPart;
 
     [XmlElement(ElementName = "searchCriteriaLinePortUserPart", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaLinePortUserPart> SearchCriteriaLinePortUserPart {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaLinePortUserPart> SearchCriteriaLinePortUserPart {
         get => _searchCriteriaLinePortUserPart;
         set {
             SearchCriteriaLinePortUserPartSpecified = true;
@@ -60,10 +60,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaLinePortUserPartSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaLinePortDomain> _searchCriteriaLinePortDomain;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaLinePortDomain> _searchCriteriaLinePortDomain;
 
     [XmlElement(ElementName = "searchCriteriaLinePortDomain", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaLinePortDomain> SearchCriteriaLinePortDomain {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaLinePortDomain> SearchCriteriaLinePortDomain {
         get => _searchCriteriaLinePortDomain;
         set {
             SearchCriteriaLinePortDomainSpecified = true;
@@ -73,10 +73,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaLinePortDomainSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName;
 
     [XmlElement(ElementName = "searchCriteriaUserLastName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName {
         get => _searchCriteriaUserLastName;
         set {
             SearchCriteriaUserLastNameSpecified = true;
@@ -86,10 +86,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaUserLastNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserFirstName> _searchCriteriaUserFirstName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> _searchCriteriaUserFirstName;
 
     [XmlElement(ElementName = "searchCriteriaUserFirstName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName {
         get => _searchCriteriaUserFirstName;
         set {
             SearchCriteriaUserFirstNameSpecified = true;
@@ -99,10 +99,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaUserFirstNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
 
     [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
         get => _searchCriteriaDn;
         set {
             SearchCriteriaDnSpecified = true;
@@ -112,10 +112,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaDnSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
 
     [XmlElement(ElementName = "searchCriteriaUserId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
         get => _searchCriteriaUserId;
         set {
             SearchCriteriaUserIdSpecified = true;
@@ -125,10 +125,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaUserIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId;
 
     [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId {
         get => _searchCriteriaGroupId;
         set {
             SearchCriteriaGroupIdSpecified = true;
@@ -138,10 +138,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaGroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactEndpointType _searchCriteriaExactEndpointType;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactEndpointType _searchCriteriaExactEndpointType;
 
     [XmlElement(ElementName = "searchCriteriaExactEndpointType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactEndpointType SearchCriteriaExactEndpointType {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactEndpointType SearchCriteriaExactEndpointType {
         get => _searchCriteriaExactEndpointType;
         set {
             SearchCriteriaExactEndpointTypeSpecified = true;
@@ -151,10 +151,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaExactEndpointTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactUserType _searchCriteriaExactUserType;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserType _searchCriteriaExactUserType;
 
     [XmlElement(ElementName = "searchCriteriaExactUserType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactUserType SearchCriteriaExactUserType {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserType SearchCriteriaExactUserType {
         get => _searchCriteriaExactUserType;
         set {
             SearchCriteriaExactUserTypeSpecified = true;
@@ -164,10 +164,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaExactUserTypeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension;
 
     [XmlElement(ElementName = "searchCriteriaExtension", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension {
         get => _searchCriteriaExtension;
         set {
             SearchCriteriaExtensionSpecified = true;
@@ -177,10 +177,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaExtensionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactUserDepartment _searchCriteriaExactUserDepartment;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment _searchCriteriaExactUserDepartment;
 
     [XmlElement(ElementName = "searchCriteriaExactUserDepartment", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactUserDepartment SearchCriteriaExactUserDepartment {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment SearchCriteriaExactUserDepartment {
         get => _searchCriteriaExactUserDepartment;
         set {
             SearchCriteriaExactUserDepartmentSpecified = true;
@@ -190,10 +190,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaExactUserDepartmentSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactPortNumber _searchCriteriaExactPortNumber;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactPortNumber _searchCriteriaExactPortNumber;
 
     [XmlElement(ElementName = "searchCriteriaExactPortNumber", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactPortNumber SearchCriteriaExactPortNumber {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactPortNumber SearchCriteriaExactPortNumber {
         get => _searchCriteriaExactPortNumber;
         set {
             SearchCriteriaExactPortNumberSpecified = true;
@@ -203,10 +203,10 @@ public  class ServiceProviderAccessDeviceGetUserListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaExactPortNumberSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaAccessDeviceEndpointPrivateIdentity> _searchCriteriaAccessDeviceEndpointPrivateIdentity;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAccessDeviceEndpointPrivateIdentity> _searchCriteriaAccessDeviceEndpointPrivateIdentity;
 
     [XmlElement(ElementName = "searchCriteriaAccessDeviceEndpointPrivateIdentity", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaAccessDeviceEndpointPrivateIdentity> SearchCriteriaAccessDeviceEndpointPrivateIdentity {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAccessDeviceEndpointPrivateIdentity> SearchCriteriaAccessDeviceEndpointPrivateIdentity {
         get => _searchCriteriaAccessDeviceEndpointPrivateIdentity;
         set {
             SearchCriteriaAccessDeviceEndpointPrivateIdentitySpecified = true;

@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -34,10 +34,10 @@ public  class ProfileAndServiceSimultaneousRingPersonalInfo
 
     [XmlIgnore]
     public bool DoNotRingIfOnCallSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SimultaneousRingNumber> _simultaneousRingNumber;
+    private List<BroadWorksConnector.Ocip.Models.SimultaneousRingNumber> _simultaneousRingNumber;
 
     [XmlElement(ElementName = "simultaneousRingNumber", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SimultaneousRingNumber> SimultaneousRingNumber {
+    public List<BroadWorksConnector.Ocip.Models.SimultaneousRingNumber> SimultaneousRingNumber {
         get => _simultaneousRingNumber;
         set {
             SimultaneousRingNumberSpecified = true;
@@ -47,10 +47,10 @@ public  class ProfileAndServiceSimultaneousRingPersonalInfo
 
     [XmlIgnore]
     public bool SimultaneousRingNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _criteriaTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
     [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable CriteriaTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
         get => _criteriaTable;
         set {
             CriteriaTableSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallCenterModifySupervisorListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallCenterModifySupervisorListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -34,10 +34,10 @@ public  class GroupCallCenterModifySupervisorListRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool ReportingServerURLSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _supervisorUserIdList;
+    private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _supervisorUserIdList;
 
     [XmlElement(ElementName = "supervisorUserIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList SupervisorUserIdList {
+    public BroadWorksConnector.Ocip.Models.ReplacementUserIdList SupervisorUserIdList {
         get => _supervisorUserIdList;
         set {
             SupervisorUserIdListSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemEmergencyCallDDoSProtectionGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemEmergencyCallDDoSProtectionGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
 }
 }

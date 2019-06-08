@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallCenterGetResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemCallCenterGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _defaultFromAddress;
 
@@ -21,10 +21,10 @@ public  class SystemCallCenterGetResponse16 : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool DefaultFromAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes _statisticsSamplingPeriodMinutes;
+    private BroadWorksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes _statisticsSamplingPeriodMinutes;
 
     [XmlElement(ElementName = "statisticsSamplingPeriodMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes StatisticsSamplingPeriodMinutes {
+    public BroadWorksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes StatisticsSamplingPeriodMinutes {
         get => _statisticsSamplingPeriodMinutes;
         set {
             StatisticsSamplingPeriodMinutesSpecified = true;

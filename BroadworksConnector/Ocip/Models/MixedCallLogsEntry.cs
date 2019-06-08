@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class MixedCallLogsEntry 
 {
-    private BroadworksConnector.Ocip.Models.CallLogsType _callLogType;
+    private BroadWorksConnector.Ocip.Models.CallLogsType _callLogType;
 
     [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallLogsType CallLogType {
+    public BroadWorksConnector.Ocip.Models.CallLogsType CallLogType {
         get => _callLogType;
         set {
             CallLogTypeSpecified = true;

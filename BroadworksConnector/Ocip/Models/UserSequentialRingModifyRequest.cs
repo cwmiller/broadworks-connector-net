@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserSequentialRingModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserSequentialRingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserSequentialRingModifyRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool RingBaseLocationFirstSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingNumberOfRings _baseLocationNumberOfRings;
+    private BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings _baseLocationNumberOfRings;
 
     [XmlElement(ElementName = "baseLocationNumberOfRings", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingNumberOfRings BaseLocationNumberOfRings {
+    public BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings BaseLocationNumberOfRings {
         get => _baseLocationNumberOfRings;
         set {
             BaseLocationNumberOfRingsSpecified = true;
@@ -73,10 +73,10 @@ public  class UserSequentialRingModifyRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool CallerMayStopSearchSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingLocationModify _location01;
+    private BroadWorksConnector.Ocip.Models.SequentialRingLocationModify _location01;
 
     [XmlElement(ElementName = "Location01", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingLocationModify Location01 {
+    public BroadWorksConnector.Ocip.Models.SequentialRingLocationModify Location01 {
         get => _location01;
         set {
             Location01Specified = true;
@@ -86,10 +86,10 @@ public  class UserSequentialRingModifyRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool Location01Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingLocationModify _location02;
+    private BroadWorksConnector.Ocip.Models.SequentialRingLocationModify _location02;
 
     [XmlElement(ElementName = "Location02", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingLocationModify Location02 {
+    public BroadWorksConnector.Ocip.Models.SequentialRingLocationModify Location02 {
         get => _location02;
         set {
             Location02Specified = true;
@@ -99,10 +99,10 @@ public  class UserSequentialRingModifyRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool Location02Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingLocationModify _location03;
+    private BroadWorksConnector.Ocip.Models.SequentialRingLocationModify _location03;
 
     [XmlElement(ElementName = "Location03", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingLocationModify Location03 {
+    public BroadWorksConnector.Ocip.Models.SequentialRingLocationModify Location03 {
         get => _location03;
         set {
             Location03Specified = true;
@@ -112,10 +112,10 @@ public  class UserSequentialRingModifyRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool Location03Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingLocationModify _location04;
+    private BroadWorksConnector.Ocip.Models.SequentialRingLocationModify _location04;
 
     [XmlElement(ElementName = "Location04", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingLocationModify Location04 {
+    public BroadWorksConnector.Ocip.Models.SequentialRingLocationModify Location04 {
         get => _location04;
         set {
             Location04Specified = true;
@@ -125,10 +125,10 @@ public  class UserSequentialRingModifyRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool Location04Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingLocationModify _location05;
+    private BroadWorksConnector.Ocip.Models.SequentialRingLocationModify _location05;
 
     [XmlElement(ElementName = "Location05", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingLocationModify Location05 {
+    public BroadWorksConnector.Ocip.Models.SequentialRingLocationModify Location05 {
         get => _location05;
         set {
             Location05Specified = true;
@@ -138,10 +138,10 @@ public  class UserSequentialRingModifyRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool Location05Specified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
+    private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
 
     [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
+    public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
         get => _criteriaActivation;
         set {
             CriteriaActivationSpecified = true;

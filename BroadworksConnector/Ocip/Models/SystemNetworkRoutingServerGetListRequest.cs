@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemNetworkRoutingServerGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemNetworkRoutingServerGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
 }
 }

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallProcessingModifyPolicyRequest14 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserCallProcessingModifyPolicyRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -138,10 +138,10 @@ public  class UserCallProcessingModifyPolicyRequest14 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool MaxCallTimeForUnansweredCallsMinutesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaPolicySelection _mediaPolicySelection;
+    private BroadWorksConnector.Ocip.Models.MediaPolicySelection _mediaPolicySelection;
 
     [XmlElement(ElementName = "mediaPolicySelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaPolicySelection MediaPolicySelection {
+    public BroadWorksConnector.Ocip.Models.MediaPolicySelection MediaPolicySelection {
         get => _mediaPolicySelection;
         set {
             MediaPolicySelectionSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserSimultaneousRingPersonalGetResponse14sp4 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserSimultaneousRingPersonalGetResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isActive;
 
@@ -21,10 +21,10 @@ public  class UserSimultaneousRingPersonalGetResponse14sp4 : BroadworksConnector
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SimultaneousRingSelection _incomingCalls;
+    private BroadWorksConnector.Ocip.Models.SimultaneousRingSelection _incomingCalls;
 
     [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SimultaneousRingSelection IncomingCalls {
+    public BroadWorksConnector.Ocip.Models.SimultaneousRingSelection IncomingCalls {
         get => _incomingCalls;
         set {
             IncomingCallsSpecified = true;
@@ -34,10 +34,10 @@ public  class UserSimultaneousRingPersonalGetResponse14sp4 : BroadworksConnector
 
     [XmlIgnore]
     public bool IncomingCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
 
     [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable PhoneNumberTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable PhoneNumberTable {
         get => _phoneNumberTable;
         set {
             PhoneNumberTableSpecified = true;

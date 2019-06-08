@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderServiceGetAuthorizationRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderServiceGetAuthorizationRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderServiceGetAuthorizationRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool ServiceProviderIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UserService _userServiceName;
+    private BroadWorksConnector.Ocip.Models.UserService _userServiceName;
 
     [XmlElement(ElementName = "userServiceName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserService UserServiceName {
+    public BroadWorksConnector.Ocip.Models.UserService UserServiceName {
         get => _userServiceName;
         set {
             UserServiceNameSpecified = true;
@@ -34,10 +34,10 @@ public  class ServiceProviderServiceGetAuthorizationRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool UserServiceNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupService _groupServiceName;
+    private BroadWorksConnector.Ocip.Models.GroupService _groupServiceName;
 
     [XmlElement(ElementName = "groupServiceName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupService GroupServiceName {
+    public BroadWorksConnector.Ocip.Models.GroupService GroupServiceName {
         get => _groupServiceName;
         set {
             GroupServiceNameSpecified = true;

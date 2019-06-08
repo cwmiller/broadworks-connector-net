@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupFlexibleSeatingHostAddInstanceRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupFlexibleSeatingHostAddInstanceRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupFlexibleSeatingHostAddInstanceRequest22 : BroadworksConnector
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceAddProfileFlexibleSeatingHost _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfileFlexibleSeatingHost _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceAddProfileFlexibleSeatingHost ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfileFlexibleSeatingHost ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupFlexibleSeatingHostAddInstanceRequest22 : BroadworksConnector
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointAdd22 _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointAdd22 _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointAdd22 AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointAdd22 AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;

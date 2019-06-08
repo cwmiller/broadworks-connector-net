@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemServiceCodeGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemServiceCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private int _responseSizeLimit;
 
@@ -21,10 +21,10 @@ public  class SystemServiceCodeGetListRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceCode> _searchCriteriaServiceCode;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> _searchCriteriaServiceCode;
 
     [XmlElement(ElementName = "searchCriteriaServiceCode", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceCode> SearchCriteriaServiceCode {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> SearchCriteriaServiceCode {
         get => _searchCriteriaServiceCode;
         set {
             SearchCriteriaServiceCodeSpecified = true;
@@ -34,10 +34,10 @@ public  class SystemServiceCodeGetListRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool SearchCriteriaServiceCodeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> _searchCriteriaServiceCodeDescription;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> _searchCriteriaServiceCodeDescription;
 
     [XmlElement(ElementName = "searchCriteriaServiceCodeDescription", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> SearchCriteriaServiceCodeDescription {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> SearchCriteriaServiceCodeDescription {
         get => _searchCriteriaServiceCodeDescription;
         set {
             SearchCriteriaServiceCodeDescriptionSpecified = true;

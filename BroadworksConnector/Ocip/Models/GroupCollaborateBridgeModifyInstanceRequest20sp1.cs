@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCollaborateBridgeModifyInstanceRequest20sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCollaborateBridgeModifyInstanceRequest20sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -21,10 +21,10 @@ public  class GroupCollaborateBridgeModifyInstanceRequest20sp1 : BroadworksConne
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupCollaborateBridgeModifyInstanceRequest20sp1 : BroadworksConne
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants _maximumBridgeParticipants;
+    private BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants _maximumBridgeParticipants;
 
     [XmlElement(ElementName = "maximumBridgeParticipants", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants MaximumBridgeParticipants {
+    public BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants MaximumBridgeParticipants {
         get => _maximumBridgeParticipants;
         set {
             MaximumBridgeParticipantsSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupCollaborateBridgeModifyInstanceRequest20sp1 : BroadworksConne
 
     [XmlIgnore]
     public bool SupportOutdialSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _collaborateOwnerUserIdList;
+    private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _collaborateOwnerUserIdList;
 
     [XmlElement(ElementName = "collaborateOwnerUserIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList CollaborateOwnerUserIdList {
+    public BroadWorksConnector.Ocip.Models.ReplacementUserIdList CollaborateOwnerUserIdList {
         get => _collaborateOwnerUserIdList;
         set {
             CollaborateOwnerUserIdListSpecified = true;

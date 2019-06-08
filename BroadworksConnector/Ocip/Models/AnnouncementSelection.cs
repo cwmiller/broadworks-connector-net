@@ -1,15 +1,14 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public enum AnnouncementSelection
-    {
-        [XmlEnum(Name = "Default")]
-        Default,
-        [XmlEnum(Name = "Personal")]
-        Personal,
-    }
+[Serializable]
+[XmlRoot(Namespace = "")]
+public enum AnnouncementSelection{
+    [XmlEnum(Name = "Default")]
+    Default,
+    [XmlEnum(Name = "Personal")]
+    Personal,
+ }
 }

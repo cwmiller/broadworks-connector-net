@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemHPBXAlternateCarrierSelectionAddCarrierRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemHPBXAlternateCarrierSelectionAddCarrierRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _name;
 
@@ -47,10 +47,10 @@ public  class SystemHPBXAlternateCarrierSelectionAddCarrierRequest : BroadworksC
 
     [XmlIgnore]
     public bool DomainSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HPBXAlternateCarrierType _type;
+    private BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType _type;
 
     [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HPBXAlternateCarrierType Type {
+    public BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType Type {
         get => _type;
         set {
             TypeSpecified = true;

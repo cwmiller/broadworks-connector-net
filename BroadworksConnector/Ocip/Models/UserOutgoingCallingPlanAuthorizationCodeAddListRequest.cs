@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserOutgoingCallingPlanAuthorizationCodeAddListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserOutgoingCallingPlanAuthorizationCodeAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserOutgoingCallingPlanAuthorizationCodeAddListRequest : Broadwork
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> _codeEntry;
+    private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> _codeEntry;
 
     [XmlElement(ElementName = "codeEntry", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> CodeEntry {
+    public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> CodeEntry {
         get => _codeEntry;
         set {
             CodeEntrySpecified = true;

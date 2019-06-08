@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserExecutiveGetScreeningAlertingResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserExecutiveGetScreeningAlertingResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _enableScreening;
 
@@ -21,10 +21,10 @@ public  class UserExecutiveGetScreeningAlertingResponse : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool EnableScreeningSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExecutiveScreeningAlertType _screeningAlertType;
+    private BroadWorksConnector.Ocip.Models.ExecutiveScreeningAlertType _screeningAlertType;
 
     [XmlElement(ElementName = "screeningAlertType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExecutiveScreeningAlertType ScreeningAlertType {
+    public BroadWorksConnector.Ocip.Models.ExecutiveScreeningAlertType ScreeningAlertType {
         get => _screeningAlertType;
         set {
             ScreeningAlertTypeSpecified = true;
@@ -73,10 +73,10 @@ public  class UserExecutiveGetScreeningAlertingResponse : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool AlertSharedCallAppearanceLocationsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExecutiveAlertingMode _alertingMode;
+    private BroadWorksConnector.Ocip.Models.ExecutiveAlertingMode _alertingMode;
 
     [XmlElement(ElementName = "alertingMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExecutiveAlertingMode AlertingMode {
+    public BroadWorksConnector.Ocip.Models.ExecutiveAlertingMode AlertingMode {
         get => _alertingMode;
         set {
             AlertingModeSpecified = true;
@@ -86,10 +86,10 @@ public  class UserExecutiveGetScreeningAlertingResponse : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool AlertingModeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode _alertingCallingLineIdNameMode;
+    private BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode _alertingCallingLineIdNameMode;
 
     [XmlElement(ElementName = "alertingCallingLineIdNameMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode AlertingCallingLineIdNameMode {
+    public BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode AlertingCallingLineIdNameMode {
         get => _alertingCallingLineIdNameMode;
         set {
             AlertingCallingLineIdNameModeSpecified = true;
@@ -125,10 +125,10 @@ public  class UserExecutiveGetScreeningAlertingResponse : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool UnicodeAlertingCustomCallingLineIdNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode _alertingCallingLineIdPhoneNumberMode;
+    private BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode _alertingCallingLineIdPhoneNumberMode;
 
     [XmlElement(ElementName = "alertingCallingLineIdPhoneNumberMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode AlertingCallingLineIdPhoneNumberMode {
+    public BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode AlertingCallingLineIdPhoneNumberMode {
         get => _alertingCallingLineIdPhoneNumberMode;
         set {
             AlertingCallingLineIdPhoneNumberModeSpecified = true;
@@ -203,10 +203,10 @@ public  class UserExecutiveGetScreeningAlertingResponse : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool RolloverWaitTimeSecondsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExecutiveRolloverActionType _rolloverAction;
+    private BroadWorksConnector.Ocip.Models.ExecutiveRolloverActionType _rolloverAction;
 
     [XmlElement(ElementName = "rolloverAction", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExecutiveRolloverActionType RolloverAction {
+    public BroadWorksConnector.Ocip.Models.ExecutiveRolloverActionType RolloverAction {
         get => _rolloverAction;
         set {
             RolloverActionSpecified = true;

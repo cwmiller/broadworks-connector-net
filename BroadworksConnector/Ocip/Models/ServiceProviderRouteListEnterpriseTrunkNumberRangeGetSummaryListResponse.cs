@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderRouteListEnterpriseTrunkNumberRangeGetSummaryListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderRouteListEnterpriseTrunkNumberRangeGetSummaryListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _numberRangeSummaryTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _numberRangeSummaryTable;
 
     [XmlElement(ElementName = "numberRangeSummaryTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable NumberRangeSummaryTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable NumberRangeSummaryTable {
         get => _numberRangeSummaryTable;
         set {
             NumberRangeSummaryTableSpecified = true;

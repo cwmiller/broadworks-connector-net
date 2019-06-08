@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemBroadWorksMobilityServiceAccessCodeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemBroadWorksMobilityServiceAccessCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _serviceAccessCodeTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _serviceAccessCodeTable;
 
     [XmlElement(ElementName = "serviceAccessCodeTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ServiceAccessCodeTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ServiceAccessCodeTable {
         get => _serviceAccessCodeTable;
         set {
             ServiceAccessCodeTableSpecified = true;

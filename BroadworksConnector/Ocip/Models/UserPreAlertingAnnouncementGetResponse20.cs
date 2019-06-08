@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserPreAlertingAnnouncementGetResponse20 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserPreAlertingAnnouncementGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isActive;
 
@@ -21,10 +21,10 @@ public  class UserPreAlertingAnnouncementGetResponse20 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
 
     [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
         get => _audioSelection;
         set {
             AudioSelectionSpecified = true;
@@ -34,10 +34,10 @@ public  class UserPreAlertingAnnouncementGetResponse20 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool AudioSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
 
     [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile {
         get => _audioFile;
         set {
             AudioFileSpecified = true;
@@ -60,10 +60,10 @@ public  class UserPreAlertingAnnouncementGetResponse20 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool AudioFileUrlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
 
     [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
         get => _videoSelection;
         set {
             VideoSelectionSpecified = true;
@@ -73,10 +73,10 @@ public  class UserPreAlertingAnnouncementGetResponse20 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool VideoSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
 
     [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile {
         get => _videoFile;
         set {
             VideoFileSpecified = true;
@@ -99,10 +99,10 @@ public  class UserPreAlertingAnnouncementGetResponse20 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool VideoFileUrlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _criteriaTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
     [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable CriteriaTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
         get => _criteriaTable;
         set {
             CriteriaTableSpecified = true;

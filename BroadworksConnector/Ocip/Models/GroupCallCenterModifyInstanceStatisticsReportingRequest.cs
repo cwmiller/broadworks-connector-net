@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallCenterModifyInstanceStatisticsReportingRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallCenterModifyInstanceStatisticsReportingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -47,10 +47,10 @@ public  class GroupCallCenterModifyInstanceStatisticsReportingRequest : Broadwor
 
     [XmlIgnore]
     public bool GenerateDailyReportSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
+    private BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
 
     [XmlElement(ElementName = "collectionPeriodMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes CollectionPeriodMinutes {
+    public BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes CollectionPeriodMinutes {
         get => _collectionPeriodMinutes;
         set {
             CollectionPeriodMinutesSpecified = true;

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
 
     [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable PhoneNumberTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable PhoneNumberTable {
         get => _phoneNumberTable;
         set {
             PhoneNumberTableSpecified = true;

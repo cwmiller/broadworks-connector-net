@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupDeviceManagementEventGetListResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupDeviceManagementEventGetListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _eventTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _eventTable;
 
     [XmlElement(ElementName = "eventTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable EventTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable EventTable {
         get => _eventTable;
         set {
             EventTableSpecified = true;

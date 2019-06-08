@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemGETSResourcePriorityGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemGETSResourcePriorityGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _resourcePriorityTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _resourcePriorityTable;
 
     [XmlElement(ElementName = "resourcePriorityTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ResourcePriorityTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ResourcePriorityTable {
         get => _resourcePriorityTable;
         set {
             ResourcePriorityTableSpecified = true;

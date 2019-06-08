@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCustomRingbackGroupGetResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupCustomRingbackGroupGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isActive;
 
@@ -21,10 +21,10 @@ public  class GroupCustomRingbackGroupGetResponse16 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
 
     [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
         get => _audioSelection;
         set {
             AudioSelectionSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupCustomRingbackGroupGetResponse16 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool AudioFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _audioMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
 
     [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType AudioMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType AudioMediaType {
         get => _audioMediaType;
         set {
             AudioMediaTypeSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupCustomRingbackGroupGetResponse16 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool AudioFileUrlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
 
     [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
         get => _videoSelection;
         set {
             VideoSelectionSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupCustomRingbackGroupGetResponse16 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool VideoFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _videoMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
 
     [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType VideoMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType VideoMediaType {
         get => _videoMediaType;
         set {
             VideoMediaTypeSpecified = true;

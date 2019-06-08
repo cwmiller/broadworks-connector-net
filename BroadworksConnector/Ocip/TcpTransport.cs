@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BroadworksConnector.Ocip
+namespace BroadWorksConnector.Ocip
 {
     /// <summary>
     /// TCP transport

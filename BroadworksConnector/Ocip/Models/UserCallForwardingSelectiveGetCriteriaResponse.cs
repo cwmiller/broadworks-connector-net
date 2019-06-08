@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallForwardingSelectiveGetCriteriaResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserCallForwardingSelectiveGetCriteriaResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.TimeSchedule _timeSchedule;
+    private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
     [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+    public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule {
         get => _timeSchedule;
         set {
             TimeScheduleSpecified = true;
@@ -21,10 +21,10 @@ public  class UserCallForwardingSelectiveGetCriteriaResponse : BroadworksConnect
 
     [XmlIgnore]
     public bool TimeScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection _forwardToNumberSelection;
+    private BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection _forwardToNumberSelection;
 
     [XmlElement(ElementName = "forwardToNumberSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection ForwardToNumberSelection {
+    public BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection ForwardToNumberSelection {
         get => _forwardToNumberSelection;
         set {
             ForwardToNumberSelectionSpecified = true;
@@ -47,10 +47,10 @@ public  class UserCallForwardingSelectiveGetCriteriaResponse : BroadworksConnect
 
     [XmlIgnore]
     public bool ForwardToPhoneNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
+    private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
     [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria {
+    public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria {
         get => _fromDnCriteria;
         set {
             FromDnCriteriaSpecified = true;

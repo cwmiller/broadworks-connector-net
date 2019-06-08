@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupMusicOnHoldGetInstanceResponse14sp4 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupMusicOnHoldGetInstanceResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _serviceUserId;
 
@@ -60,10 +60,10 @@ public  class GroupMusicOnHoldGetInstanceResponse14sp4 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool IsActiveDuringBusyCampOnSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSelection;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSelection;
 
     [XmlElement(ElementName = "messageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSelection {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSelection {
         get => _messageSelection;
         set {
             MessageSelectionSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupMusicOnHoldGetInstanceResponse14sp4 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool MessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceEndpointRead14 _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointRead14 AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;

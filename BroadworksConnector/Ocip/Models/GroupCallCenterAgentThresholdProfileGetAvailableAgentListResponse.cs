@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class GroupCallCenterAgentThresholdProfileGetAvailableAgentListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private BroadworksConnector.Ocip.Models.C.OCITable _agentTable;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupCallCenterAgentThresholdProfileGetAvailableAgentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private BroadWorksConnector.Ocip.Models.C.OCITable _agentTable;
 
-        [XmlElement(ElementName = "agentTable", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.C.OCITable AgentTable
-        {
-            get => _agentTable;
-            set
-            {
-                AgentTableSpecified = true;
-                _agentTable = value;
-            }
+    [XmlElement(ElementName = "agentTable", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.C.OCITable AgentTable {
+        get => _agentTable;
+        set {
+            AgentTableSpecified = true;
+            _agentTable = value;
         }
-
-        [XmlIgnore]
-        public bool AgentTableSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool AgentTableSpecified { get; set; }
+}
 }

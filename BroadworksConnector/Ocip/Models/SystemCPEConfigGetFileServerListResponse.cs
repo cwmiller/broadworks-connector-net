@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCPEConfigGetFileServerListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemCPEConfigGetFileServerListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _fileServerTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _fileServerTable;
 
     [XmlElement(ElementName = "fileServerTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable FileServerTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable FileServerTable {
         get => _fileServerTable;
         set {
             FileServerTableSpecified = true;

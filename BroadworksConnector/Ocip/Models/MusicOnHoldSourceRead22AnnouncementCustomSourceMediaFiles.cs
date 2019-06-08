@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class MusicOnHoldSourceRead22AnnouncementCustomSourceMediaFiles 
 {
-    private BroadworksConnector.Ocip.Models.AnnouncementFileKey _audioFile;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _audioFile;
 
     [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileKey AudioFile {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileKey AudioFile {
         get => _audioFile;
         set {
             AudioFileSpecified = true;
@@ -21,10 +21,10 @@ public  class MusicOnHoldSourceRead22AnnouncementCustomSourceMediaFiles
 
     [XmlIgnore]
     public bool AudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileKey _videoFile;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _videoFile;
 
     [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileKey VideoFile {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileKey VideoFile {
         get => _videoFile;
         set {
             VideoFileSpecified = true;

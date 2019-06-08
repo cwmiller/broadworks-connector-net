@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class GroupAdminGetPolicyRequest16sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
-    {
-        private string _userId;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupAdminGetPolicyRequest16sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+{
+    private string _userId;
 
-        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId
-        {
-            get => _userId;
-            set
-            {
-                UserIdSpecified = true;
-                _userId = value;
-            }
+    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+    public string UserId {
+        get => _userId;
+        set {
+            UserIdSpecified = true;
+            _userId = value;
         }
-
-        [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool UserIdSpecified { get; set; }
+}
 }

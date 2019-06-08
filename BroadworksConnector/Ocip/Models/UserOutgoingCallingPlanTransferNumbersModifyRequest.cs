@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserOutgoingCallingPlanTransferNumbersModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserOutgoingCallingPlanTransferNumbersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserOutgoingCallingPlanTransferNumbersModifyRequest : BroadworksCo
 
     [XmlIgnore]
     public bool UseCustomSettingsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify _userNumbers;
+    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify _userNumbers;
 
     [XmlElement(ElementName = "userNumbers", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify UserNumbers {
+    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify UserNumbers {
         get => _userNumbers;
         set {
             UserNumbersSpecified = true;

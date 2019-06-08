@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupSessionAdmissionControlGroupDeleteDeviceListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupSessionAdmissionControlGroupDeleteDeviceListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupSessionAdmissionControlGroupDeleteDeviceListRequest : Broadwo
 
     [XmlIgnore]
     public bool NameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.AccessDevice> _devices;
+    private List<BroadWorksConnector.Ocip.Models.AccessDevice> _devices;
 
     [XmlElement(ElementName = "devices", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.AccessDevice> Devices {
+    public List<BroadWorksConnector.Ocip.Models.AccessDevice> Devices {
         get => _devices;
         set {
             DevicesSpecified = true;

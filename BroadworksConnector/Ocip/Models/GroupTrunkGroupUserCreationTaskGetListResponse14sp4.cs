@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupTrunkGroupUserCreationTaskGetListResponse14sp4 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupTrunkGroupUserCreationTaskGetListResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _taskTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _taskTable;
 
     [XmlElement(ElementName = "taskTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable TaskTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable TaskTable {
         get => _taskTable;
         set {
             TaskTableSpecified = true;

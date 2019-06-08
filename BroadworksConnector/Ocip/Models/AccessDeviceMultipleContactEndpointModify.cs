@@ -1,72 +1,64 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class AccessDeviceMultipleContactEndpointModify
-    {
-        private BroadworksConnector.Ocip.Models.AccessDevice _accessDevice;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class AccessDeviceMultipleContactEndpointModify 
+{
+    private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
-        [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.AccessDevice AccessDevice
-        {
-            get => _accessDevice;
-            set
-            {
-                AccessDeviceSpecified = true;
-                _accessDevice = value;
-            }
+    [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
+        get => _accessDevice;
+        set {
+            AccessDeviceSpecified = true;
+            _accessDevice = value;
         }
-
-        [XmlIgnore]
-        public bool AccessDeviceSpecified { get; set; }
-        private string _linePort;
-
-        [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        public string LinePort
-        {
-            get => _linePort;
-            set
-            {
-                LinePortSpecified = true;
-                _linePort = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool LinePortSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.ReplacementContactList _contactList;
-
-        [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.ReplacementContactList ContactList
-        {
-            get => _contactList;
-            set
-            {
-                ContactListSpecified = true;
-                _contactList = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool ContactListSpecified { get; set; }
-        private int _portNumber;
-
-        [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
-        public int PortNumber
-        {
-            get => _portNumber;
-            set
-            {
-                PortNumberSpecified = true;
-                _portNumber = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool PortNumberSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool AccessDeviceSpecified { get; set; }
+    private string _linePort;
+
+    [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
+    public string LinePort {
+        get => _linePort;
+        set {
+            LinePortSpecified = true;
+            _linePort = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LinePortSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.ReplacementContactList _contactList;
+
+    [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.ReplacementContactList ContactList {
+        get => _contactList;
+        set {
+            ContactListSpecified = true;
+            _contactList = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool ContactListSpecified { get; set; }
+    private int _portNumber;
+
+    [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
+    public int PortNumber {
+        get => _portNumber;
+        set {
+            PortNumberSpecified = true;
+            _portNumber = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PortNumberSpecified { get; set; }
+}
 }

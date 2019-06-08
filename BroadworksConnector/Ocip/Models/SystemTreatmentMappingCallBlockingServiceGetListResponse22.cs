@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemTreatmentMappingCallBlockingServiceGetListResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemTreatmentMappingCallBlockingServiceGetListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _treatmentMappingTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _treatmentMappingTable;
 
     [XmlElement(ElementName = "treatmentMappingTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable TreatmentMappingTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentMappingTable {
         get => _treatmentMappingTable;
         set {
             TreatmentMappingTableSpecified = true;

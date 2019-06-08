@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupPolicyGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupPolicyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.GroupCallingPlanAccess _callingPlanAccess;
+    private BroadWorksConnector.Ocip.Models.GroupCallingPlanAccess _callingPlanAccess;
 
     [XmlElement(ElementName = "callingPlanAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupCallingPlanAccess CallingPlanAccess {
+    public BroadWorksConnector.Ocip.Models.GroupCallingPlanAccess CallingPlanAccess {
         get => _callingPlanAccess;
         set {
             CallingPlanAccessSpecified = true;
@@ -21,10 +21,10 @@ public  class GroupPolicyGetResponse : BroadworksConnector.Ocip.Models.C.OCIData
 
     [XmlIgnore]
     public bool CallingPlanAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupExtensionAccess _extensionAccess;
+    private BroadWorksConnector.Ocip.Models.GroupExtensionAccess _extensionAccess;
 
     [XmlElement(ElementName = "extensionAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupExtensionAccess ExtensionAccess {
+    public BroadWorksConnector.Ocip.Models.GroupExtensionAccess ExtensionAccess {
         get => _extensionAccess;
         set {
             ExtensionAccessSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupPolicyGetResponse : BroadworksConnector.Ocip.Models.C.OCIData
 
     [XmlIgnore]
     public bool ExtensionAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupLDAPIntegrationAccess _ldapIntegrationAccess;
+    private BroadWorksConnector.Ocip.Models.GroupLDAPIntegrationAccess _ldapIntegrationAccess;
 
     [XmlElement(ElementName = "ldapIntegrationAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupLDAPIntegrationAccess LdapIntegrationAccess {
+    public BroadWorksConnector.Ocip.Models.GroupLDAPIntegrationAccess LdapIntegrationAccess {
         get => _ldapIntegrationAccess;
         set {
             LdapIntegrationAccessSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupPolicyGetResponse : BroadworksConnector.Ocip.Models.C.OCIData
 
     [XmlIgnore]
     public bool LdapIntegrationAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupVoiceMessagingAccess _voiceMessagingAccess;
+    private BroadWorksConnector.Ocip.Models.GroupVoiceMessagingAccess _voiceMessagingAccess;
 
     [XmlElement(ElementName = "voiceMessagingAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupVoiceMessagingAccess VoiceMessagingAccess {
+    public BroadWorksConnector.Ocip.Models.GroupVoiceMessagingAccess VoiceMessagingAccess {
         get => _voiceMessagingAccess;
         set {
             VoiceMessagingAccessSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupPolicyGetResponse : BroadworksConnector.Ocip.Models.C.OCIData
 
     [XmlIgnore]
     public bool VoiceMessagingAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupDepartmentAdminUserAccess _departmentAdminUserAccess;
+    private BroadWorksConnector.Ocip.Models.GroupDepartmentAdminUserAccess _departmentAdminUserAccess;
 
     [XmlElement(ElementName = "departmentAdminUserAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupDepartmentAdminUserAccess DepartmentAdminUserAccess {
+    public BroadWorksConnector.Ocip.Models.GroupDepartmentAdminUserAccess DepartmentAdminUserAccess {
         get => _departmentAdminUserAccess;
         set {
             DepartmentAdminUserAccessSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupPolicyGetResponse : BroadworksConnector.Ocip.Models.C.OCIData
 
     [XmlIgnore]
     public bool DepartmentAdminUserAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupUserAuthenticationAccess _userAuthenticationAccess;
+    private BroadWorksConnector.Ocip.Models.GroupUserAuthenticationAccess _userAuthenticationAccess;
 
     [XmlElement(ElementName = "userAuthenticationAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupUserAuthenticationAccess UserAuthenticationAccess {
+    public BroadWorksConnector.Ocip.Models.GroupUserAuthenticationAccess UserAuthenticationAccess {
         get => _userAuthenticationAccess;
         set {
             UserAuthenticationAccessSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupPolicyGetResponse : BroadworksConnector.Ocip.Models.C.OCIData
 
     [XmlIgnore]
     public bool UserAuthenticationAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupUserGroupDirectoryAccess _userGroupDirectoryAccess;
+    private BroadWorksConnector.Ocip.Models.GroupUserGroupDirectoryAccess _userGroupDirectoryAccess;
 
     [XmlElement(ElementName = "userGroupDirectoryAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupUserGroupDirectoryAccess UserGroupDirectoryAccess {
+    public BroadWorksConnector.Ocip.Models.GroupUserGroupDirectoryAccess UserGroupDirectoryAccess {
         get => _userGroupDirectoryAccess;
         set {
             UserGroupDirectoryAccessSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupPolicyGetResponse : BroadworksConnector.Ocip.Models.C.OCIData
 
     [XmlIgnore]
     public bool UserGroupDirectoryAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupUserProfileAccess _userProfileAccess;
+    private BroadWorksConnector.Ocip.Models.GroupUserProfileAccess _userProfileAccess;
 
     [XmlElement(ElementName = "userProfileAccess", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupUserProfileAccess UserProfileAccess {
+    public BroadWorksConnector.Ocip.Models.GroupUserProfileAccess UserProfileAccess {
         get => _userProfileAccess;
         set {
             UserProfileAccessSpecified = true;

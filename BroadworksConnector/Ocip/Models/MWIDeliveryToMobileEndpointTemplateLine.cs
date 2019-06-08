@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class MWIDeliveryToMobileEndpointTemplateLine
 
     [XmlIgnore]
     public bool PrefixSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag _tag;
+    private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag _tag;
 
     [XmlElement(ElementName = "tag", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag Tag {
+    public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag Tag {
         get => _tag;
         set {
             TagSpecified = true;

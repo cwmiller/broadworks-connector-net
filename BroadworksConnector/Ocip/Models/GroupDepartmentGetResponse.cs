@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupDepartmentGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupDepartmentGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.DepartmentKey _parentDepartmentKey;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _parentDepartmentKey;
 
     [XmlElement(ElementName = "parentDepartmentKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey ParentDepartmentKey {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey ParentDepartmentKey {
         get => _parentDepartmentKey;
         set {
             ParentDepartmentKeySpecified = true;

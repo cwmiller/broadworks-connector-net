@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ResellerNetworkClassOfServiceUnassignListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ResellerNetworkClassOfServiceUnassignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _resellerId;
 
@@ -34,10 +34,10 @@ public  class ResellerNetworkClassOfServiceUnassignListRequest : BroadworksConne
 
     [XmlIgnore]
     public bool NetworkClassOfServiceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DefaultNetworkClassOfService _defaultNetworkClassOfService;
+    private BroadWorksConnector.Ocip.Models.DefaultNetworkClassOfService _defaultNetworkClassOfService;
 
     [XmlElement(ElementName = "defaultNetworkClassOfService", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DefaultNetworkClassOfService DefaultNetworkClassOfService {
+    public BroadWorksConnector.Ocip.Models.DefaultNetworkClassOfService DefaultNetworkClassOfService {
         get => _defaultNetworkClassOfService;
         set {
             DefaultNetworkClassOfServiceSpecified = true;

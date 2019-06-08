@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupServiceGetAuthorizedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupServiceGetAuthorizedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private List<string> _servicePackName;
 
@@ -21,10 +21,10 @@ public  class GroupServiceGetAuthorizedListResponse : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool ServicePackNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.GroupService> _groupServiceName;
+    private List<BroadWorksConnector.Ocip.Models.GroupService> _groupServiceName;
 
     [XmlElement(ElementName = "groupServiceName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.GroupService> GroupServiceName {
+    public List<BroadWorksConnector.Ocip.Models.GroupService> GroupServiceName {
         get => _groupServiceName;
         set {
             GroupServiceNameSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupServiceGetAuthorizedListResponse : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool GroupServiceNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.UserService> _userServiceName;
+    private List<BroadWorksConnector.Ocip.Models.UserService> _userServiceName;
 
     [XmlElement(ElementName = "userServiceName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.UserService> UserServiceName {
+    public List<BroadWorksConnector.Ocip.Models.UserService> UserServiceName {
         get => _userServiceName;
         set {
             UserServiceNameSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallCenterQueueThresholdsModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallCenterQueueThresholdsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -177,10 +177,10 @@ public  class GroupCallCenterQueueThresholdsModifyRequest : BroadworksConnector.
 
     [XmlIgnore]
     public bool EnableNotificationEmailSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterQueueThresholdReplacementNotificationEmailList _notificationEmailAddressList;
+    private BroadWorksConnector.Ocip.Models.CallCenterQueueThresholdReplacementNotificationEmailList _notificationEmailAddressList;
 
     [XmlElement(ElementName = "notificationEmailAddressList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterQueueThresholdReplacementNotificationEmailList NotificationEmailAddressList {
+    public BroadWorksConnector.Ocip.Models.CallCenterQueueThresholdReplacementNotificationEmailList NotificationEmailAddressList {
         get => _notificationEmailAddressList;
         set {
             NotificationEmailAddressListSpecified = true;

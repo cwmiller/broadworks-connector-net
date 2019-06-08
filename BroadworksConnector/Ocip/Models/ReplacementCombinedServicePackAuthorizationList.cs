@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class ReplacementCombinedServicePackAuthorizationList 
 {
-    private List<BroadworksConnector.Ocip.Models.CombinedServicePackAuthorization> _servicePackAuthorization;
+    private List<BroadWorksConnector.Ocip.Models.CombinedServicePackAuthorization> _servicePackAuthorization;
 
     [XmlElement(ElementName = "servicePackAuthorization", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CombinedServicePackAuthorization> ServicePackAuthorization {
+    public List<BroadWorksConnector.Ocip.Models.CombinedServicePackAuthorization> ServicePackAuthorization {
         get => _servicePackAuthorization;
         set {
             ServicePackAuthorizationSpecified = true;

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemRoutePointExternalSystemGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemRoutePointExternalSystemGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _externalSystemTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _externalSystemTable;
 
     [XmlElement(ElementName = "externalSystemTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ExternalSystemTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ExternalSystemTable {
         get => _externalSystemTable;
         set {
             ExternalSystemTableSpecified = true;

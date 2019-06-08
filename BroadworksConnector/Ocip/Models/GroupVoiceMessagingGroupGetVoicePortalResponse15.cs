@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupVoiceMessagingGroupGetVoicePortalResponse15 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupVoiceMessagingGroupGetVoicePortalResponse15 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _serviceUserId;
 
@@ -21,10 +21,10 @@ public  class GroupVoiceMessagingGroupGetVoicePortalResponse15 : BroadworksConne
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupVoiceMessagingGroupGetVoicePortalResponse15 : BroadworksConne
 
     [XmlIgnore]
     public bool UseVoicePortalWizardSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoicePortalExternalRoutingScope _voicePortalExternalRoutingScope;
+    private BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope _voicePortalExternalRoutingScope;
 
     [XmlElement(ElementName = "voicePortalExternalRoutingScope", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoicePortalExternalRoutingScope VoicePortalExternalRoutingScope {
+    public BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope VoicePortalExternalRoutingScope {
         get => _voicePortalExternalRoutingScope;
         set {
             VoicePortalExternalRoutingScopeSpecified = true;

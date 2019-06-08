@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class GroupAccessDeviceTagSetGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private string _tagSetName;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupAccessDeviceTagSetGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private string _tagSetName;
 
-        [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        public string TagSetName
-        {
-            get => _tagSetName;
-            set
-            {
-                TagSetNameSpecified = true;
-                _tagSetName = value;
-            }
+    [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
+    public string TagSetName {
+        get => _tagSetName;
+        set {
+            TagSetNameSpecified = true;
+            _tagSetName = value;
         }
-
-        [XmlIgnore]
-        public bool TagSetNameSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool TagSetNameSpecified { get; set; }
+}
 }

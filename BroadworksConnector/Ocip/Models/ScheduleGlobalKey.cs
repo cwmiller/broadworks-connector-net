@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class ScheduleGlobalKey 
 {
-    private BroadworksConnector.Ocip.Models.ScheduleKey _scheduleKey;
+    private BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
 
     [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleKey ScheduleKey {
+    public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey {
         get => _scheduleKey;
         set {
             ScheduleKeySpecified = true;
@@ -21,10 +21,10 @@ public  class ScheduleGlobalKey
 
     [XmlIgnore]
     public bool ScheduleKeySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ScheduleLevel _scheduleLevel;
+    private BroadWorksConnector.Ocip.Models.ScheduleLevel _scheduleLevel;
 
     [XmlElement(ElementName = "scheduleLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleLevel ScheduleLevel {
+    public BroadWorksConnector.Ocip.Models.ScheduleLevel ScheduleLevel {
         get => _scheduleLevel;
         set {
             ScheduleLevelSpecified = true;

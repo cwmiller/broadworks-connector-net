@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallCenterModifyAnnouncementRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallCenterModifyAnnouncementRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -21,10 +21,10 @@ public  class GroupCallCenterModifyAnnouncementRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterAnnouncementSelection _entranceMessageSelection;
+    private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _entranceMessageSelection;
 
     [XmlElement(ElementName = "entranceMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterAnnouncementSelection EntranceMessageSelection {
+    public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection EntranceMessageSelection {
         get => _entranceMessageSelection;
         set {
             EntranceMessageSelectionSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupCallCenterModifyAnnouncementRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool EntranceMessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _entranceMessageAudioFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _entranceMessageAudioFile;
 
     [XmlElement(ElementName = "entranceMessageAudioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource EntranceMessageAudioFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource EntranceMessageAudioFile {
         get => _entranceMessageAudioFile;
         set {
             EntranceMessageAudioFileSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupCallCenterModifyAnnouncementRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool EntranceMessageAudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _entranceMessageVideoFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _entranceMessageVideoFile;
 
     [XmlElement(ElementName = "entranceMessageVideoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource EntranceMessageVideoFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource EntranceMessageVideoFile {
         get => _entranceMessageVideoFile;
         set {
             EntranceMessageVideoFileSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupCallCenterModifyAnnouncementRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool EntranceMessageVideoFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterAnnouncementSelection _periodicComfortMessageSelection;
+    private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _periodicComfortMessageSelection;
 
     [XmlElement(ElementName = "periodicComfortMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterAnnouncementSelection PeriodicComfortMessageSelection {
+    public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection PeriodicComfortMessageSelection {
         get => _periodicComfortMessageSelection;
         set {
             PeriodicComfortMessageSelectionSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupCallCenterModifyAnnouncementRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool PeriodicComfortMessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _periodicComfortMessageAudioFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _periodicComfortMessageAudioFile;
 
     [XmlElement(ElementName = "periodicComfortMessageAudioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource PeriodicComfortMessageAudioFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource PeriodicComfortMessageAudioFile {
         get => _periodicComfortMessageAudioFile;
         set {
             PeriodicComfortMessageAudioFileSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupCallCenterModifyAnnouncementRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool PeriodicComfortMessageAudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _periodicComfortMessageVideoFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _periodicComfortMessageVideoFile;
 
     [XmlElement(ElementName = "periodicComfortMessageVideoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource PeriodicComfortMessageVideoFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource PeriodicComfortMessageVideoFile {
         get => _periodicComfortMessageVideoFile;
         set {
             PeriodicComfortMessageVideoFileSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupCallCenterModifyAnnouncementRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool PeriodicComfortMessageVideoFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallCenterAnnouncementSelection _onHoldMessageSelection;
+    private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _onHoldMessageSelection;
 
     [XmlElement(ElementName = "onHoldMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterAnnouncementSelection OnHoldMessageSelection {
+    public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection OnHoldMessageSelection {
         get => _onHoldMessageSelection;
         set {
             OnHoldMessageSelectionSpecified = true;
@@ -112,10 +112,10 @@ public  class GroupCallCenterModifyAnnouncementRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool OnHoldMessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _onHoldMessageAudioFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _onHoldMessageAudioFile;
 
     [XmlElement(ElementName = "onHoldMessageAudioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource OnHoldMessageAudioFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource OnHoldMessageAudioFile {
         get => _onHoldMessageAudioFile;
         set {
             OnHoldMessageAudioFileSpecified = true;
@@ -125,10 +125,10 @@ public  class GroupCallCenterModifyAnnouncementRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool OnHoldMessageAudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _onHoldMessageVideoFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _onHoldMessageVideoFile;
 
     [XmlElement(ElementName = "onHoldMessageVideoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource OnHoldMessageVideoFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource OnHoldMessageVideoFile {
         get => _onHoldMessageVideoFile;
         set {
             OnHoldMessageVideoFileSpecified = true;

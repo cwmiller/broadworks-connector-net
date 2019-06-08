@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemNetworkSynchingServerGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemNetworkSynchingServerGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _preferredNetworkServerNetAddress;
 
@@ -21,10 +21,10 @@ public  class SystemNetworkSynchingServerGetListResponse : BroadworksConnector.O
 
     [XmlIgnore]
     public bool PreferredNetworkServerNetAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _networkSynchingServerTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _networkSynchingServerTable;
 
     [XmlElement(ElementName = "networkSynchingServerTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable NetworkSynchingServerTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable NetworkSynchingServerTable {
         get => _networkSynchingServerTable;
         set {
             NetworkSynchingServerTableSpecified = true;

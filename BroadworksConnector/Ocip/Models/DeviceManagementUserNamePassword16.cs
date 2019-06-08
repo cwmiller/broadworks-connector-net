@@ -1,42 +1,38 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class DeviceManagementUserNamePassword16
-    {
-        private string _userName;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class DeviceManagementUserNamePassword16 
+{
+    private string _userName;
 
-        [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
-        public string UserName
-        {
-            get => _userName;
-            set
-            {
-                UserNameSpecified = true;
-                _userName = value;
-            }
+    [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
+    public string UserName {
+        get => _userName;
+        set {
+            UserNameSpecified = true;
+            _userName = value;
         }
-
-        [XmlIgnore]
-        public bool UserNameSpecified { get; set; }
-        private string _password;
-
-        [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        public string Password
-        {
-            get => _password;
-            set
-            {
-                PasswordSpecified = true;
-                _password = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool PasswordSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool UserNameSpecified { get; set; }
+    private string _password;
+
+    [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
+    public string Password {
+        get => _password;
+        set {
+            PasswordSpecified = true;
+            _password = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool PasswordSpecified { get; set; }
+}
 }

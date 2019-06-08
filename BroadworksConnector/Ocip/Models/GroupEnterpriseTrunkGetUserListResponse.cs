@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupEnterpriseTrunkGetUserListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupEnterpriseTrunkGetUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _enterpriseTrunkUserTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _enterpriseTrunkUserTable;
 
     [XmlElement(ElementName = "enterpriseTrunkUserTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable EnterpriseTrunkUserTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable EnterpriseTrunkUserTable {
         get => _enterpriseTrunkUserTable;
         set {
             EnterpriseTrunkUserTableSpecified = true;

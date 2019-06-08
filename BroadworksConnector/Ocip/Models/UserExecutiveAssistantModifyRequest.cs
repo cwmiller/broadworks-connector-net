@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserExecutiveAssistantModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserExecutiveAssistantModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -47,10 +47,10 @@ public  class UserExecutiveAssistantModifyRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool DivertToPhoneNumberSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.ExecutiveAssistantOptInStatus> _optInStatus;
+    private List<BroadWorksConnector.Ocip.Models.ExecutiveAssistantOptInStatus> _optInStatus;
 
     [XmlElement(ElementName = "optInStatus", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.ExecutiveAssistantOptInStatus> OptInStatus {
+    public List<BroadWorksConnector.Ocip.Models.ExecutiveAssistantOptInStatus> OptInStatus {
         get => _optInStatus;
         set {
             OptInStatusSpecified = true;

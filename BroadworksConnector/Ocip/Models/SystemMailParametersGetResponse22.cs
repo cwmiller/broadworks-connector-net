@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemMailParametersGetResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemMailParametersGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _primaryServerNetAddress;
 
@@ -73,10 +73,10 @@ public  class SystemMailParametersGetResponse22 : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool SupportDNSSRVForMailServerAccessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SMTPSecureMode _secureMode;
+    private BroadWorksConnector.Ocip.Models.SMTPSecureMode _secureMode;
 
     [XmlElement(ElementName = "secureMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SMTPSecureMode SecureMode {
+    public BroadWorksConnector.Ocip.Models.SMTPSecureMode SecureMode {
         get => _secureMode;
         set {
             SecureModeSpecified = true;

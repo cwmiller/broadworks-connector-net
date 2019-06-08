@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallRecordingGetResponse20 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserCallRecordingGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.RecordingOption20 _recordingOption;
+    private BroadWorksConnector.Ocip.Models.RecordingOption20 _recordingOption;
 
     [XmlElement(ElementName = "recordingOption", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RecordingOption20 RecordingOption {
+    public BroadWorksConnector.Ocip.Models.RecordingOption20 RecordingOption {
         get => _recordingOption;
         set {
             RecordingOptionSpecified = true;
@@ -21,10 +21,10 @@ public  class UserCallRecordingGetResponse20 : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool RecordingOptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RecordingPauseResumeNotificationType _pauseResumeNotification;
+    private BroadWorksConnector.Ocip.Models.RecordingPauseResumeNotificationType _pauseResumeNotification;
 
     [XmlElement(ElementName = "pauseResumeNotification", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RecordingPauseResumeNotificationType PauseResumeNotification {
+    public BroadWorksConnector.Ocip.Models.RecordingPauseResumeNotificationType PauseResumeNotification {
         get => _pauseResumeNotification;
         set {
             PauseResumeNotificationSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDeviceManagementInProgressAndPendingEventCancelRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemDeviceManagementInProgressAndPendingEventCancelRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _cancelAllEvents;
 
@@ -21,10 +21,10 @@ public  class SystemDeviceManagementInProgressAndPendingEventCancelRequest : Bro
 
     [XmlIgnore]
     public bool CancelAllEventsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents _cancelMultipleEvents;
+    private BroadWorksConnector.Ocip.Models.SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents _cancelMultipleEvents;
 
     [XmlElement(ElementName = "cancelMultipleEvents", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents CancelMultipleEvents {
+    public BroadWorksConnector.Ocip.Models.SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents CancelMultipleEvents {
         get => _cancelMultipleEvents;
         set {
             CancelMultipleEventsSpecified = true;

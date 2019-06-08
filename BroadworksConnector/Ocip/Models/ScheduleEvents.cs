@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -47,10 +47,10 @@ public  class ScheduleEvents
 
     [XmlIgnore]
     public bool AllDayEventSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HourMinute _startTime;
+    private BroadWorksConnector.Ocip.Models.HourMinute _startTime;
 
     [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HourMinute StartTime {
+    public BroadWorksConnector.Ocip.Models.HourMinute StartTime {
         get => _startTime;
         set {
             StartTimeSpecified = true;
@@ -60,10 +60,10 @@ public  class ScheduleEvents
 
     [XmlIgnore]
     public bool StartTimeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HourMinute _endTime;
+    private BroadWorksConnector.Ocip.Models.HourMinute _endTime;
 
     [XmlElement(ElementName = "endTime", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HourMinute EndTime {
+    public BroadWorksConnector.Ocip.Models.HourMinute EndTime {
         get => _endTime;
         set {
             EndTimeSpecified = true;
@@ -86,10 +86,10 @@ public  class ScheduleEvents
 
     [XmlIgnore]
     public bool EndDateSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.Recurrence _recurrence;
+    private BroadWorksConnector.Ocip.Models.Recurrence _recurrence;
 
     [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.Recurrence Recurrence {
+    public BroadWorksConnector.Ocip.Models.Recurrence Recurrence {
         get => _recurrence;
         set {
             RecurrenceSpecified = true;

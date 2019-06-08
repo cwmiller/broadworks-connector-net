@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.TimeSchedule _timeSchedule;
+    private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
     [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+    public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule {
         get => _timeSchedule;
         set {
             TimeScheduleSpecified = true;
@@ -21,10 +21,10 @@ public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadworksConnector.
 
     [XmlIgnore]
     public bool TimeScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+    private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
     [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+    public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
         get => _holidaySchedule;
         set {
             HolidayScheduleSpecified = true;
@@ -47,10 +47,10 @@ public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadworksConnector.
 
     [XmlIgnore]
     public bool BlacklistedSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
+    private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
     [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria {
+    public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria {
         get => _fromDnCriteria;
         set {
             FromDnCriteriaSpecified = true;
@@ -60,10 +60,10 @@ public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadworksConnector.
 
     [XmlIgnore]
     public bool FromDnCriteriaSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
 
     [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
         get => _audioSelection;
         set {
             AudioSelectionSpecified = true;
@@ -86,10 +86,10 @@ public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadworksConnector.
 
     [XmlIgnore]
     public bool AudioFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _audioMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
 
     [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType AudioMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType AudioMediaType {
         get => _audioMediaType;
         set {
             AudioMediaTypeSpecified = true;
@@ -112,10 +112,10 @@ public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadworksConnector.
 
     [XmlIgnore]
     public bool AudioFileUrlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
 
     [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
         get => _videoSelection;
         set {
             VideoSelectionSpecified = true;
@@ -138,10 +138,10 @@ public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadworksConnector.
 
     [XmlIgnore]
     public bool VideoFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _videoMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
 
     [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType VideoMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType VideoMediaType {
         get => _videoMediaType;
         set {
             VideoMediaTypeSpecified = true;
@@ -164,10 +164,10 @@ public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadworksConnector.
 
     [XmlIgnore]
     public bool VideoFileUrlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingAudioSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingAudioSelection;
 
     [XmlElement(ElementName = "callWaitingAudioSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingAudioSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingAudioSelection {
         get => _callWaitingAudioSelection;
         set {
             CallWaitingAudioSelectionSpecified = true;
@@ -190,10 +190,10 @@ public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadworksConnector.
 
     [XmlIgnore]
     public bool CallWaitingAudioFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _callWaitingAudioMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _callWaitingAudioMediaType;
 
     [XmlElement(ElementName = "callWaitingAudioMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType CallWaitingAudioMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType CallWaitingAudioMediaType {
         get => _callWaitingAudioMediaType;
         set {
             CallWaitingAudioMediaTypeSpecified = true;
@@ -216,10 +216,10 @@ public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadworksConnector.
 
     [XmlIgnore]
     public bool CallWaitingAudioFileUrlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingVideoSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingVideoSelection;
 
     [XmlElement(ElementName = "callWaitingVideoSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingVideoSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingVideoSelection {
         get => _callWaitingVideoSelection;
         set {
             CallWaitingVideoSelectionSpecified = true;
@@ -242,10 +242,10 @@ public  class UserCustomRingbackUserGetCriteriaResponse16 : BroadworksConnector.
 
     [XmlIgnore]
     public bool CallWaitingVideoFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _callWaitingVideoMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _callWaitingVideoMediaType;
 
     [XmlElement(ElementName = "callWaitingVideoMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType CallWaitingVideoMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType CallWaitingVideoMediaType {
         get => _callWaitingVideoMediaType;
         set {
             CallWaitingVideoMediaTypeSpecified = true;

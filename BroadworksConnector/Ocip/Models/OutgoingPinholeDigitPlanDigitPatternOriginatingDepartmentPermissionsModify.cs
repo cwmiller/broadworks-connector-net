@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class OutgoingPinholeDigitPlanDigitPatternOriginatingDepartmentPermissionsModify 
 {
-    private BroadworksConnector.Ocip.Models.DepartmentKey _departmentKey;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
     [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey {
         get => _departmentKey;
         set {
             DepartmentKeySpecified = true;
@@ -21,10 +21,10 @@ public  class OutgoingPinholeDigitPlanDigitPatternOriginatingDepartmentPermissio
 
     [XmlIgnore]
     public bool DepartmentKeySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingPermissions _digitPatternPermissions;
+    private BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingPermissions _digitPatternPermissions;
 
     [XmlElement(ElementName = "digitPatternPermissions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingPermissions DigitPatternPermissions {
+    public BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternOriginatingPermissions DigitPatternPermissions {
         get => _digitPatternPermissions;
         set {
             DigitPatternPermissionsSpecified = true;

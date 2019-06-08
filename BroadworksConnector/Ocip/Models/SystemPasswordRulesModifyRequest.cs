@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemPasswordRulesModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemPasswordRulesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.SystemPasswordRulesApplyTo _rulesApplyTo;
+    private BroadWorksConnector.Ocip.Models.SystemPasswordRulesApplyTo _rulesApplyTo;
 
     [XmlElement(ElementName = "rulesApplyTo", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemPasswordRulesApplyTo RulesApplyTo {
+    public BroadWorksConnector.Ocip.Models.SystemPasswordRulesApplyTo RulesApplyTo {
         get => _rulesApplyTo;
         set {
             RulesApplyToSpecified = true;

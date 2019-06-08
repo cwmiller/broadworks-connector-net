@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserRouteListGetResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserRouteListGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _treatOriginationsAndPBXRedirectionsAsScreened;
 
@@ -47,10 +47,10 @@ public  class UserRouteListGetResponse22 : BroadworksConnector.Ocip.Models.C.OCI
 
     [XmlIgnore]
     public bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _assignedNumberRangeTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _assignedNumberRangeTable;
 
     [XmlElement(ElementName = "assignedNumberRangeTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable AssignedNumberRangeTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable AssignedNumberRangeTable {
         get => _assignedNumberRangeTable;
         set {
             AssignedNumberRangeTableSpecified = true;
@@ -60,10 +60,10 @@ public  class UserRouteListGetResponse22 : BroadworksConnector.Ocip.Models.C.OCI
 
     [XmlIgnore]
     public bool AssignedNumberRangeTableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _assignedNumberPrefixTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _assignedNumberPrefixTable;
 
     [XmlElement(ElementName = "assignedNumberPrefixTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable AssignedNumberPrefixTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable AssignedNumberPrefixTable {
         get => _assignedNumberPrefixTable;
         set {
             AssignedNumberPrefixTableSpecified = true;

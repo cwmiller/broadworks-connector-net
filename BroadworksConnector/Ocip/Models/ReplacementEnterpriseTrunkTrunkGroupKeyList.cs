@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class ReplacementEnterpriseTrunkTrunkGroupKeyList 
 {
-    private List<BroadworksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey> _trunkGroupList;
+    private List<BroadWorksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey> _trunkGroupList;
 
     [XmlElement(ElementName = "trunkGroupList", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey> TrunkGroupList {
+    public List<BroadWorksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey> TrunkGroupList {
         get => _trunkGroupList;
         set {
             TrunkGroupListSpecified = true;

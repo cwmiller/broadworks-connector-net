@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserRouteListGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserRouteListGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _treatOriginationsAndPBXRedirectionsAsScreened;
 
@@ -47,10 +47,10 @@ public  class UserRouteListGetResponse : BroadworksConnector.Ocip.Models.C.OCIDa
 
     [XmlIgnore]
     public bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _assignedNumberRangeTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _assignedNumberRangeTable;
 
     [XmlElement(ElementName = "assignedNumberRangeTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable AssignedNumberRangeTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable AssignedNumberRangeTable {
         get => _assignedNumberRangeTable;
         set {
             AssignedNumberRangeTableSpecified = true;

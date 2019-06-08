@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class RecurrenceRecurMonthlyByWeek
 
     [XmlIgnore]
     public bool RecurIntervalSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DayOfWeekInMonth _dayOfWeekInMonth;
+    private BroadWorksConnector.Ocip.Models.DayOfWeekInMonth _dayOfWeekInMonth;
 
     [XmlElement(ElementName = "dayOfWeekInMonth", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DayOfWeekInMonth DayOfWeekInMonth {
+    public BroadWorksConnector.Ocip.Models.DayOfWeekInMonth DayOfWeekInMonth {
         get => _dayOfWeekInMonth;
         set {
             DayOfWeekInMonthSpecified = true;
@@ -34,10 +34,10 @@ public  class RecurrenceRecurMonthlyByWeek
 
     [XmlIgnore]
     public bool DayOfWeekInMonthSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DayOfWeek _dayOfWeek;
+    private BroadWorksConnector.Ocip.Models.DayOfWeek _dayOfWeek;
 
     [XmlElement(ElementName = "dayOfWeek", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DayOfWeek DayOfWeek {
+    public BroadWorksConnector.Ocip.Models.DayOfWeek DayOfWeek {
         get => _dayOfWeek;
         set {
             DayOfWeekSpecified = true;

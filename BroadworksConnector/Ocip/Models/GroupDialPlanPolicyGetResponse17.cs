@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupDialPlanPolicyGetResponse17 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupDialPlanPolicyGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel _useSetting;
+    private BroadWorksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel _useSetting;
 
     [XmlElement(ElementName = "useSetting", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel UseSetting {
+    public BroadWorksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel UseSetting {
         get => _useSetting;
         set {
             UseSettingSpecified = true;

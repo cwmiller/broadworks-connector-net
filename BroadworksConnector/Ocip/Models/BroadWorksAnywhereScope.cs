@@ -1,15 +1,14 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public enum BroadWorksAnywhereScope
-    {
-        [XmlEnum(Name = "Service Provider")]
-        ServiceProvider,
-        [XmlEnum(Name = "Group")]
-        Group,
-    }
+[Serializable]
+[XmlRoot(Namespace = "")]
+public enum BroadWorksAnywhereScope{
+    [XmlEnum(Name = "Service Provider")]
+    ServiceProvider,
+    [XmlEnum(Name = "Group")]
+    Group,
+ }
 }

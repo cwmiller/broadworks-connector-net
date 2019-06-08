@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallCenterOverflowGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupCallCenterOverflowGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.CallCenterOverflowProcessingAction _action;
+    private BroadWorksConnector.Ocip.Models.CallCenterOverflowProcessingAction _action;
 
     [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterOverflowProcessingAction Action {
+    public BroadWorksConnector.Ocip.Models.CallCenterOverflowProcessingAction Action {
         get => _action;
         set {
             ActionSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupCallCenterOverflowGetResponse : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool PlayAnnouncementBeforeOverflowProcessingSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
 
     [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection {
         get => _audioMessageSelection;
         set {
             AudioMessageSelectionSpecified = true;
@@ -112,10 +112,10 @@ public  class GroupCallCenterOverflowGetResponse : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool AudioFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _audioMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
 
     [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType AudioMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType AudioMediaType {
         get => _audioMediaType;
         set {
             AudioMediaTypeSpecified = true;
@@ -125,10 +125,10 @@ public  class GroupCallCenterOverflowGetResponse : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool AudioMediaTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
 
     [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection {
         get => _videoMessageSelection;
         set {
             VideoMessageSelectionSpecified = true;
@@ -164,10 +164,10 @@ public  class GroupCallCenterOverflowGetResponse : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool VideoFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _videoMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
 
     [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType VideoMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType VideoMediaType {
         get => _videoMediaType;
         set {
             VideoMediaTypeSpecified = true;

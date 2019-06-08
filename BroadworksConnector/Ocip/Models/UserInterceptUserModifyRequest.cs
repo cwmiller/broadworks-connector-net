@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserInterceptUserModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserInterceptUserModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserInterceptUserModifyRequest : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
+    private BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
 
     [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection {
+    public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection {
         get => _announcementSelection;
         set {
             AnnouncementSelectionSpecified = true;
@@ -47,10 +47,10 @@ public  class UserInterceptUserModifyRequest : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool AnnouncementSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _audioFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _audioFile;
 
     [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource AudioFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource AudioFile {
         get => _audioFile;
         set {
             AudioFileSpecified = true;
@@ -60,10 +60,10 @@ public  class UserInterceptUserModifyRequest : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool AudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _videoFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _videoFile;
 
     [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource VideoFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource VideoFile {
         get => _videoFile;
         set {
             VideoFileSpecified = true;

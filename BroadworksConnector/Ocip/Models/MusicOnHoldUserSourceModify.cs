@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class MusicOnHoldUserSourceModify 
 {
-    private BroadworksConnector.Ocip.Models.MusicOnHoldUserMessageSelection _messageSourceSelection;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldUserMessageSelection _messageSourceSelection;
 
     [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldUserMessageSelection MessageSourceSelection {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldUserMessageSelection MessageSourceSelection {
         get => _messageSourceSelection;
         set {
             MessageSourceSelectionSpecified = true;
@@ -21,10 +21,10 @@ public  class MusicOnHoldUserSourceModify
 
     [XmlIgnore]
     public bool MessageSourceSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModifyCustomSource _customSource;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModifyCustomSource _customSource;
 
     [XmlElement(ElementName = "customSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceModifyCustomSource CustomSource {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModifyCustomSource CustomSource {
         get => _customSource;
         set {
             CustomSourceSpecified = true;

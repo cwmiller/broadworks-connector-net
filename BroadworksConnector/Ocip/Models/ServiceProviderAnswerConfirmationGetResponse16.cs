@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderAnswerConfirmationGetResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderAnswerConfirmationGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection _announcementMessageSelection;
+    private BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection _announcementMessageSelection;
 
     [XmlElement(ElementName = "announcementMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection AnnouncementMessageSelection {
+    public BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection AnnouncementMessageSelection {
         get => _announcementMessageSelection;
         set {
             AnnouncementMessageSelectionSpecified = true;
@@ -34,10 +34,10 @@ public  class ServiceProviderAnswerConfirmationGetResponse16 : BroadworksConnect
 
     [XmlIgnore]
     public bool ConfirmationMessageAudioFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _confirmationMessageMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _confirmationMessageMediaType;
 
     [XmlElement(ElementName = "confirmationMessageMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType ConfirmationMessageMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType ConfirmationMessageMediaType {
         get => _confirmationMessageMediaType;
         set {
             ConfirmationMessageMediaTypeSpecified = true;

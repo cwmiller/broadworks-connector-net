@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderBroadWorksMobilityGetResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderBroadWorksMobilityGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.BroadWorksMobilityServiceProviderSettingLevel _useSettingLevel;
+    private BroadWorksConnector.Ocip.Models.BroadWorksMobilityServiceProviderSettingLevel _useSettingLevel;
 
     [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityServiceProviderSettingLevel UseSettingLevel {
+    public BroadWorksConnector.Ocip.Models.BroadWorksMobilityServiceProviderSettingLevel UseSettingLevel {
         get => _useSettingLevel;
         set {
             UseSettingLevelSpecified = true;

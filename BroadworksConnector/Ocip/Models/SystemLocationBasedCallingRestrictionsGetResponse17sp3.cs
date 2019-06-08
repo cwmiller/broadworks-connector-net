@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemLocationBasedCallingRestrictionsGetResponse17sp3 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemLocationBasedCallingRestrictionsGetResponse17sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.PhysicalLocationIndicator _physicalLocationIndicator;
+    private BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator _physicalLocationIndicator;
 
     [XmlElement(ElementName = "physicalLocationIndicator", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.PhysicalLocationIndicator PhysicalLocationIndicator {
+    public BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator PhysicalLocationIndicator {
         get => _physicalLocationIndicator;
         set {
             PhysicalLocationIndicatorSpecified = true;

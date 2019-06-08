@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemBwDiameterBaseDataGetResponse17sp3 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemBwDiameterBaseDataGetResponse17sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _xsRealm;
 
@@ -164,10 +164,10 @@ public  class SystemBwDiameterBaseDataGetResponse17sp3 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool DynamicEntryInactivityTimerHoursSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOfflineBillingApplication;
+    private BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOfflineBillingApplication;
 
     [XmlElement(ElementName = "advertisedOfflineBillingApplication", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOfflineBillingApplication {
+    public BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOfflineBillingApplication {
         get => _advertisedOfflineBillingApplication;
         set {
             AdvertisedOfflineBillingApplicationSpecified = true;
@@ -177,10 +177,10 @@ public  class SystemBwDiameterBaseDataGetResponse17sp3 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool AdvertisedOfflineBillingApplicationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOnlineBillingApplication;
+    private BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOnlineBillingApplication;
 
     [XmlElement(ElementName = "advertisedOnlineBillingApplication", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOnlineBillingApplication {
+    public BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOnlineBillingApplication {
         get => _advertisedOnlineBillingApplication;
         set {
             AdvertisedOnlineBillingApplicationSpecified = true;

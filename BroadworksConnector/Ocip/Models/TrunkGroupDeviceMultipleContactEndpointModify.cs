@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -34,10 +34,10 @@ public  class TrunkGroupDeviceMultipleContactEndpointModify
 
     [XmlIgnore]
     public bool LinePortSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementContactList _contactList;
+    private BroadWorksConnector.Ocip.Models.ReplacementContactList _contactList;
 
     [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementContactList ContactList {
+    public BroadWorksConnector.Ocip.Models.ReplacementContactList ContactList {
         get => _contactList;
         set {
             ContactListSpecified = true;

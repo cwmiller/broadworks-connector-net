@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupRoutePointGetDNISListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupRoutePointGetDNISListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _displayDNISNumber;
 
@@ -34,10 +34,10 @@ public  class GroupRoutePointGetDNISListResponse : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool DisplayDNISNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _dnisTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _dnisTable;
 
     [XmlElement(ElementName = "dnisTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable DnisTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable DnisTable {
         get => _dnisTable;
         set {
             DnisTableSpecified = true;

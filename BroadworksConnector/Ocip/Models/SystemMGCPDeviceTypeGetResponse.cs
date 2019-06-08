@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemMGCPDeviceTypeGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemMGCPDeviceTypeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isObsolete;
 
@@ -21,10 +21,10 @@ public  class SystemMGCPDeviceTypeGetResponse : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool IsObsoleteSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SignalingAddressType _profile;
+    private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
     [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SignalingAddressType Profile {
+    public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
         get => _profile;
         set {
             ProfileSpecified = true;
@@ -34,10 +34,10 @@ public  class SystemMGCPDeviceTypeGetResponse : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool ProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
+    private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
 
     [XmlElement(ElementName = "numberOfPorts", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts {
+    public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts {
         get => _numberOfPorts;
         set {
             NumberOfPortsSpecified = true;

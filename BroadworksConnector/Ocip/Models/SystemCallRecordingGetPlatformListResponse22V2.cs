@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallRecordingGetPlatformListResponse22V2 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemCallRecordingGetPlatformListResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _systemDefault;
 
@@ -34,10 +34,10 @@ public  class SystemCallRecordingGetPlatformListResponse22V2 : BroadworksConnect
 
     [XmlIgnore]
     public bool ResellerDefaultSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _callRecordingPlatformTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _callRecordingPlatformTable;
 
     [XmlElement(ElementName = "callRecordingPlatformTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable CallRecordingPlatformTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable CallRecordingPlatformTable {
         get => _callRecordingPlatformTable;
         set {
             CallRecordingPlatformTableSpecified = true;

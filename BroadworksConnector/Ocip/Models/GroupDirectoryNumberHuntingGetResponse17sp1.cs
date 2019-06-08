@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupDirectoryNumberHuntingGetResponse17sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupDirectoryNumberHuntingGetResponse17sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _agentUserTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _agentUserTable;
 
     [XmlElement(ElementName = "agentUserTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable AgentUserTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable AgentUserTable {
         get => _agentUserTable;
         set {
             AgentUserTableSpecified = true;

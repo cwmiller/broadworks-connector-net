@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -34,10 +34,10 @@ public  class ServiceProviderCommunicationBarringHierarchicalRedirectingRule
 
     [XmlIgnore]
     public bool DigitPatternCriteriaSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingAction _action;
+    private BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction _action;
 
     [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingAction Action {
+    public BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction Action {
         get => _action;
         set {
             ActionSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupRoutePointQueueCallDispositionCodeSettingsModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupRoutePointQueueCallDispositionCodeSettingsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -60,10 +60,10 @@ public  class GroupRoutePointQueueCallDispositionCodeSettingsModifyRequest : Bro
 
     [XmlIgnore]
     public bool ForceUseOfCallDispositionCodesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallDispositionCodeWithLevel _defaultCallDispositionCode;
+    private BroadWorksConnector.Ocip.Models.CallDispositionCodeWithLevel _defaultCallDispositionCode;
 
     [XmlElement(ElementName = "defaultCallDispositionCode", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallDispositionCodeWithLevel DefaultCallDispositionCode {
+    public BroadWorksConnector.Ocip.Models.CallDispositionCodeWithLevel DefaultCallDispositionCode {
         get => _defaultCallDispositionCode;
         set {
             DefaultCallDispositionCodeSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupRoutePointQueueCallDispositionCodeSettingsModifyRequest : Bro
 
     [XmlIgnore]
     public bool DefaultCallDispositionCodeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CallDispositionCodeActivation> _callDispositionCodeActivation;
+    private List<BroadWorksConnector.Ocip.Models.CallDispositionCodeActivation> _callDispositionCodeActivation;
 
     [XmlElement(ElementName = "callDispositionCodeActivation", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CallDispositionCodeActivation> CallDispositionCodeActivation {
+    public List<BroadWorksConnector.Ocip.Models.CallDispositionCodeActivation> CallDispositionCodeActivation {
         get => _callDispositionCodeActivation;
         set {
             CallDispositionCodeActivationSpecified = true;

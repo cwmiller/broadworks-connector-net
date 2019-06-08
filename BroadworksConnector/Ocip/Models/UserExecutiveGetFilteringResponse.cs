@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserExecutiveGetFilteringResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserExecutiveGetFilteringResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _enableFiltering;
 
@@ -21,10 +21,10 @@ public  class UserExecutiveGetFilteringResponse : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool EnableFilteringSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExecutiveCallFilteringMode _filteringMode;
+    private BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode _filteringMode;
 
     [XmlElement(ElementName = "filteringMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExecutiveCallFilteringMode FilteringMode {
+    public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode FilteringMode {
         get => _filteringMode;
         set {
             FilteringModeSpecified = true;
@@ -34,10 +34,10 @@ public  class UserExecutiveGetFilteringResponse : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool FilteringModeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType _simpleFilterType;
+    private BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType _simpleFilterType;
 
     [XmlElement(ElementName = "simpleFilterType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType SimpleFilterType {
+    public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType SimpleFilterType {
         get => _simpleFilterType;
         set {
             SimpleFilterTypeSpecified = true;
@@ -47,10 +47,10 @@ public  class UserExecutiveGetFilteringResponse : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool SimpleFilterTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _criteriaTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
     [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable CriteriaTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
         get => _criteriaTable;
         set {
             CriteriaTableSpecified = true;

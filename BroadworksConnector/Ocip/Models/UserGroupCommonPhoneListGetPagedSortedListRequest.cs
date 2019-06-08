@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserGroupCommonPhoneListGetPagedSortedListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserGroupCommonPhoneListGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserGroupCommonPhoneListGetPagedSortedListRequest : BroadworksConn
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;
@@ -34,10 +34,10 @@ public  class UserGroupCommonPhoneListGetPagedSortedListRequest : BroadworksConn
 
     [XmlIgnore]
     public bool ResponsePagingControlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByGroupCommonPhoneListNumber _sortByGroupCommonPhoneListNumber;
+    private BroadWorksConnector.Ocip.Models.SortByGroupCommonPhoneListNumber _sortByGroupCommonPhoneListNumber;
 
     [XmlElement(ElementName = "sortByGroupCommonPhoneListNumber", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByGroupCommonPhoneListNumber SortByGroupCommonPhoneListNumber {
+    public BroadWorksConnector.Ocip.Models.SortByGroupCommonPhoneListNumber SortByGroupCommonPhoneListNumber {
         get => _sortByGroupCommonPhoneListNumber;
         set {
             SortByGroupCommonPhoneListNumberSpecified = true;
@@ -47,10 +47,10 @@ public  class UserGroupCommonPhoneListGetPagedSortedListRequest : BroadworksConn
 
     [XmlIgnore]
     public bool SortByGroupCommonPhoneListNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByGroupCommonPhoneListName _sortByGroupCommonPhoneListName;
+    private BroadWorksConnector.Ocip.Models.SortByGroupCommonPhoneListName _sortByGroupCommonPhoneListName;
 
     [XmlElement(ElementName = "sortByGroupCommonPhoneListName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByGroupCommonPhoneListName SortByGroupCommonPhoneListName {
+    public BroadWorksConnector.Ocip.Models.SortByGroupCommonPhoneListName SortByGroupCommonPhoneListName {
         get => _sortByGroupCommonPhoneListName;
         set {
             SortByGroupCommonPhoneListNameSpecified = true;
@@ -73,10 +73,10 @@ public  class UserGroupCommonPhoneListGetPagedSortedListRequest : BroadworksConn
 
     [XmlIgnore]
     public bool SearchCriteriaModeOrSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> _searchCriteriaGroupCommonPhoneListName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> _searchCriteriaGroupCommonPhoneListName;
 
     [XmlElement(ElementName = "searchCriteriaGroupCommonPhoneListName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> SearchCriteriaGroupCommonPhoneListName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> SearchCriteriaGroupCommonPhoneListName {
         get => _searchCriteriaGroupCommonPhoneListName;
         set {
             SearchCriteriaGroupCommonPhoneListNameSpecified = true;
@@ -86,10 +86,10 @@ public  class UserGroupCommonPhoneListGetPagedSortedListRequest : BroadworksConn
 
     [XmlIgnore]
     public bool SearchCriteriaGroupCommonPhoneListNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> _searchCriteriaGroupCommonPhoneListNumber;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> _searchCriteriaGroupCommonPhoneListNumber;
 
     [XmlElement(ElementName = "searchCriteriaGroupCommonPhoneListNumber", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> SearchCriteriaGroupCommonPhoneListNumber {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> SearchCriteriaGroupCommonPhoneListNumber {
         get => _searchCriteriaGroupCommonPhoneListNumber;
         set {
             SearchCriteriaGroupCommonPhoneListNumberSpecified = true;
@@ -99,10 +99,10 @@ public  class UserGroupCommonPhoneListGetPagedSortedListRequest : BroadworksConn
 
     [XmlIgnore]
     public bool SearchCriteriaGroupCommonPhoneListNumberSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupCommonMultiPartPhoneListName> _searchCriteriaGroupCommonMultiPartPhoneListName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonMultiPartPhoneListName> _searchCriteriaGroupCommonMultiPartPhoneListName;
 
     [XmlElement(ElementName = "searchCriteriaGroupCommonMultiPartPhoneListName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaGroupCommonMultiPartPhoneListName> SearchCriteriaGroupCommonMultiPartPhoneListName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonMultiPartPhoneListName> SearchCriteriaGroupCommonMultiPartPhoneListName {
         get => _searchCriteriaGroupCommonMultiPartPhoneListName;
         set {
             SearchCriteriaGroupCommonMultiPartPhoneListNameSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserIncomingCallingPlanModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserIncomingCallingPlanModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserIncomingCallingPlanModifyRequest : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool UseCustomSettingsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.IncomingCallingPlanPermissionsModify _userPermissions;
+    private BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissionsModify _userPermissions;
 
     [XmlElement(ElementName = "userPermissions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.IncomingCallingPlanPermissionsModify UserPermissions {
+    public BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissionsModify UserPermissions {
         get => _userPermissions;
         set {
             UserPermissionsSpecified = true;

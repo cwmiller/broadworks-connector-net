@@ -1,6 +1,6 @@
-﻿using BroadworksConnector.Ocip.Models;
+﻿using BroadWorksConnector.Ocip.Models;
 
-namespace BroadworksConnector.Ocip
+namespace BroadWorksConnector.Ocip
 {
     public class UserDetails
     {

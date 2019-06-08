@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCommunicationBarringCriteriaGetResponse19sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemCommunicationBarringCriteriaGetResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _description;
 
@@ -359,10 +359,10 @@ public  class SystemCommunicationBarringCriteriaGetResponse19sp1 : BroadworksCon
 
     [XmlIgnore]
     public bool MatchInternalCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LocationCriteria _matchLocation;
+    private BroadWorksConnector.Ocip.Models.LocationCriteria _matchLocation;
 
     [XmlElement(ElementName = "matchLocation", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LocationCriteria MatchLocation {
+    public BroadWorksConnector.Ocip.Models.LocationCriteria MatchLocation {
         get => _matchLocation;
         set {
             MatchLocationSpecified = true;
@@ -372,10 +372,10 @@ public  class SystemCommunicationBarringCriteriaGetResponse19sp1 : BroadworksCon
 
     [XmlIgnore]
     public bool MatchLocationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RoamingCriteria _matchRoaming;
+    private BroadWorksConnector.Ocip.Models.RoamingCriteria _matchRoaming;
 
     [XmlElement(ElementName = "matchRoaming", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RoamingCriteria MatchRoaming {
+    public BroadWorksConnector.Ocip.Models.RoamingCriteria MatchRoaming {
         get => _matchRoaming;
         set {
             MatchRoamingSpecified = true;

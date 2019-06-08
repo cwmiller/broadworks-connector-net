@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemMediaAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemMediaAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _mediaName;
 
@@ -34,10 +34,10 @@ public  class SystemMediaAddRequest : BroadworksConnector.Ocip.Models.C.OCIReque
 
     [XmlIgnore]
     public bool CodecNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaType _mediaType;
+    private BroadWorksConnector.Ocip.Models.MediaType _mediaType;
 
     [XmlElement(ElementName = "mediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaType MediaType {
+    public BroadWorksConnector.Ocip.Models.MediaType MediaType {
         get => _mediaType;
         set {
             MediaTypeSpecified = true;
@@ -47,10 +47,10 @@ public  class SystemMediaAddRequest : BroadworksConnector.Ocip.Models.C.OCIReque
 
     [XmlIgnore]
     public bool MediaTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaBandwidthEnforcementType _bandwidthEnforcementType;
+    private BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType _bandwidthEnforcementType;
 
     [XmlElement(ElementName = "bandwidthEnforcementType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaBandwidthEnforcementType BandwidthEnforcementType {
+    public BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType BandwidthEnforcementType {
         get => _bandwidthEnforcementType;
         set {
             BandwidthEnforcementTypeSpecified = true;

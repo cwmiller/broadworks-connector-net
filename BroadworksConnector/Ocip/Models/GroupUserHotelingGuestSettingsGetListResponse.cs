@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupUserHotelingGuestSettingsGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupUserHotelingGuestSettingsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _userHotelingGuestTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _userHotelingGuestTable;
 
     [XmlElement(ElementName = "userHotelingGuestTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserHotelingGuestTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable UserHotelingGuestTable {
         get => _userHotelingGuestTable;
         set {
             UserHotelingGuestTableSpecified = true;

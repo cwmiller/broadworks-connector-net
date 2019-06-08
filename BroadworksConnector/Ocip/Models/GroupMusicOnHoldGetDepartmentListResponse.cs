@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupMusicOnHoldGetDepartmentListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupMusicOnHoldGetDepartmentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _hasDepartment;
 
@@ -21,10 +21,10 @@ public  class GroupMusicOnHoldGetDepartmentListResponse : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool HasDepartmentSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.DepartmentKey> _department;
+    private List<BroadWorksConnector.Ocip.Models.DepartmentKey> _department;
 
     [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.DepartmentKey> Department {
+    public List<BroadWorksConnector.Ocip.Models.DepartmentKey> Department {
         get => _department;
         set {
             DepartmentSpecified = true;

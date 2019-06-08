@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderServicePackMigrationTaskGetResponse14sp4 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderServicePackMigrationTaskGetResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _taskName;
 
@@ -138,10 +138,10 @@ public  class ServiceProviderServicePackMigrationTaskGetResponse14sp4 : Broadwor
 
     [XmlIgnore]
     public bool ErrorCountSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServicePackMigrationTaskStatus _status;
+    private BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskStatus _status;
 
     [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServicePackMigrationTaskStatus Status {
+    public BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskStatus Status {
         get => _status;
         set {
             StatusSpecified = true;
@@ -203,10 +203,10 @@ public  class ServiceProviderServicePackMigrationTaskGetResponse14sp4 : Broadwor
 
     [XmlIgnore]
     public bool UsersTotalSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType _userSelectionType;
+    private BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType _userSelectionType;
 
     [XmlElement(ElementName = "userSelectionType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType UserSelectionType {
+    public BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType UserSelectionType {
         get => _userSelectionType;
         set {
             UserSelectionTypeSpecified = true;
@@ -242,10 +242,10 @@ public  class ServiceProviderServicePackMigrationTaskGetResponse14sp4 : Broadwor
 
     [XmlIgnore]
     public bool MigrateAllGroupsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _groupTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _groupTable;
 
     [XmlElement(ElementName = "groupTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable GroupTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable GroupTable {
         get => _groupTable;
         set {
             GroupTableSpecified = true;
@@ -268,10 +268,10 @@ public  class ServiceProviderServicePackMigrationTaskGetResponse14sp4 : Broadwor
 
     [XmlIgnore]
     public bool UserSelectionServicePackNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.UserService> _userSelectionServiceName;
+    private List<BroadWorksConnector.Ocip.Models.UserService> _userSelectionServiceName;
 
     [XmlElement(ElementName = "userSelectionServiceName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.UserService> UserSelectionServiceName {
+    public List<BroadWorksConnector.Ocip.Models.UserService> UserSelectionServiceName {
         get => _userSelectionServiceName;
         set {
             UserSelectionServiceNameSpecified = true;
@@ -294,10 +294,10 @@ public  class ServiceProviderServicePackMigrationTaskGetResponse14sp4 : Broadwor
 
     [XmlIgnore]
     public bool RemoveServicePackNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.UserService> _removeServiceName;
+    private List<BroadWorksConnector.Ocip.Models.UserService> _removeServiceName;
 
     [XmlElement(ElementName = "removeServiceName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.UserService> RemoveServiceName {
+    public List<BroadWorksConnector.Ocip.Models.UserService> RemoveServiceName {
         get => _removeServiceName;
         set {
             RemoveServiceNameSpecified = true;
@@ -320,10 +320,10 @@ public  class ServiceProviderServicePackMigrationTaskGetResponse14sp4 : Broadwor
 
     [XmlIgnore]
     public bool AssignServicePackNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.UserService> _assignServiceName;
+    private List<BroadWorksConnector.Ocip.Models.UserService> _assignServiceName;
 
     [XmlElement(ElementName = "assignServiceName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.UserService> AssignServiceName {
+    public List<BroadWorksConnector.Ocip.Models.UserService> AssignServiceName {
         get => _assignServiceName;
         set {
             AssignServiceNameSpecified = true;

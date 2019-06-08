@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallCenterGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserCallCenterGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.AgentACDState _agentACDState;
+    private BroadWorksConnector.Ocip.Models.AgentACDState _agentACDState;
 
     [XmlElement(ElementName = "agentACDState", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AgentACDState AgentACDState {
+    public BroadWorksConnector.Ocip.Models.AgentACDState AgentACDState {
         get => _agentACDState;
         set {
             AgentACDStateSpecified = true;
@@ -21,10 +21,10 @@ public  class UserCallCenterGetResponse : BroadworksConnector.Ocip.Models.C.OCID
 
     [XmlIgnore]
     public bool AgentACDStateSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _userTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
     [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable UserTable {
         get => _userTable;
         set {
             UserTableSpecified = true;

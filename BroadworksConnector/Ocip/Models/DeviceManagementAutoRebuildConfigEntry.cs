@@ -1,42 +1,38 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class DeviceManagementAutoRebuildConfigEntry
-    {
-        private string _ociRequestPrefix;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class DeviceManagementAutoRebuildConfigEntry 
+{
+    private string _ociRequestPrefix;
 
-        [XmlElement(ElementName = "ociRequestPrefix", IsNullable = false, Namespace = "")]
-        public string OciRequestPrefix
-        {
-            get => _ociRequestPrefix;
-            set
-            {
-                OciRequestPrefixSpecified = true;
-                _ociRequestPrefix = value;
-            }
+    [XmlElement(ElementName = "ociRequestPrefix", IsNullable = false, Namespace = "")]
+    public string OciRequestPrefix {
+        get => _ociRequestPrefix;
+        set {
+            OciRequestPrefixSpecified = true;
+            _ociRequestPrefix = value;
         }
-
-        [XmlIgnore]
-        public bool OciRequestPrefixSpecified { get; set; }
-        private bool _autoRebuildEnabled;
-
-        [XmlElement(ElementName = "autoRebuildEnabled", IsNullable = false, Namespace = "")]
-        public bool AutoRebuildEnabled
-        {
-            get => _autoRebuildEnabled;
-            set
-            {
-                AutoRebuildEnabledSpecified = true;
-                _autoRebuildEnabled = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool AutoRebuildEnabledSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool OciRequestPrefixSpecified { get; set; }
+    private bool _autoRebuildEnabled;
+
+    [XmlElement(ElementName = "autoRebuildEnabled", IsNullable = false, Namespace = "")]
+    public bool AutoRebuildEnabled {
+        get => _autoRebuildEnabled;
+        set {
+            AutoRebuildEnabledSpecified = true;
+            _autoRebuildEnabled = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AutoRebuildEnabledSpecified { get; set; }
+}
 }

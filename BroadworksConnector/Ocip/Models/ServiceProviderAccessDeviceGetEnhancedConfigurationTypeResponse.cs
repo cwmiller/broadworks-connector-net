@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderAccessDeviceGetEnhancedConfigurationTypeResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderAccessDeviceGetEnhancedConfigurationTypeResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _supportsEnhancedConfiguration;
 
@@ -34,10 +34,10 @@ public  class ServiceProviderAccessDeviceGetEnhancedConfigurationTypeResponse : 
 
     [XmlIgnore]
     public bool SupportsResetSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configurationType;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configurationType;
 
     [XmlElement(ElementName = "configurationType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigurationType {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigurationType {
         get => _configurationType;
         set {
             ConfigurationTypeSpecified = true;

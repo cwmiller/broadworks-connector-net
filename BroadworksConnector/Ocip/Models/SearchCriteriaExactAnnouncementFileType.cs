@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactAnnouncementFileType : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactAnnouncementFileType : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.AnnouncementFileType _type;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileType _type;
 
     [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileType Type {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileType Type {
         get => _type;
         set {
             TypeSpecified = true;

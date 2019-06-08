@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCPEConfigParametersGetResponse14sp6 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemCPEConfigParametersGetResponse14sp6 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _enableIPDeviceManagement;
 
@@ -99,10 +99,10 @@ public  class SystemCPEConfigParametersGetResponse14sp6 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool FileRebuildImmediateSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildDaily _fileRebuildDaily;
+    private BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildDaily _fileRebuildDaily;
 
     [XmlElement(ElementName = "fileRebuildDaily", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildDaily FileRebuildDaily {
+    public BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildDaily FileRebuildDaily {
         get => _fileRebuildDaily;
         set {
             FileRebuildDailySpecified = true;
@@ -112,10 +112,10 @@ public  class SystemCPEConfigParametersGetResponse14sp6 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool FileRebuildDailySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildHourly _fileRebuildHourly;
+    private BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildHourly _fileRebuildHourly;
 
     [XmlElement(ElementName = "fileRebuildHourly", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildHourly FileRebuildHourly {
+    public BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildHourly FileRebuildHourly {
         get => _fileRebuildHourly;
         set {
             FileRebuildHourlySpecified = true;

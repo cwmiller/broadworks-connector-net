@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemTreatmentMappingCallBlockingServiceModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemTreatmentMappingCallBlockingServiceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.CallBlockingService _callBlockingService;
+    private BroadWorksConnector.Ocip.Models.CallBlockingService _callBlockingService;
 
     [XmlElement(ElementName = "callBlockingService", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallBlockingService CallBlockingService {
+    public BroadWorksConnector.Ocip.Models.CallBlockingService CallBlockingService {
         get => _callBlockingService;
         set {
             CallBlockingServiceSpecified = true;

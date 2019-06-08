@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCommunicationBarringIncomingCriteriaModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemCommunicationBarringIncomingCriteriaModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _name;
 
@@ -73,10 +73,10 @@ public  class SystemCommunicationBarringIncomingCriteriaModifyRequest : Broadwor
 
     [XmlIgnore]
     public bool HolidayScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementNumberPortabilityStatusList _matchNumberPortabilityStatus;
+    private BroadWorksConnector.Ocip.Models.ReplacementNumberPortabilityStatusList _matchNumberPortabilityStatus;
 
     [XmlElement(ElementName = "matchNumberPortabilityStatus", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementNumberPortabilityStatusList MatchNumberPortabilityStatus {
+    public BroadWorksConnector.Ocip.Models.ReplacementNumberPortabilityStatusList MatchNumberPortabilityStatus {
         get => _matchNumberPortabilityStatus;
         set {
             MatchNumberPortabilityStatusSpecified = true;

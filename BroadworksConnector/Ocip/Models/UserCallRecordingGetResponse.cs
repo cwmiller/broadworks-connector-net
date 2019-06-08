@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallRecordingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserCallRecordingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.RecordingOption _recordingOption;
+    private BroadWorksConnector.Ocip.Models.RecordingOption _recordingOption;
 
     [XmlElement(ElementName = "recordingOption", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RecordingOption RecordingOption {
+    public BroadWorksConnector.Ocip.Models.RecordingOption RecordingOption {
         get => _recordingOption;
         set {
             RecordingOptionSpecified = true;

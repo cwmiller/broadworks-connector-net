@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemBroadCloudModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemBroadCloudModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _provisioningUrl;
 

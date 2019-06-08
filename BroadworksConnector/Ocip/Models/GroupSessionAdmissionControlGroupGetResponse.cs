@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupSessionAdmissionControlGroupGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupSessionAdmissionControlGroupGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private int _maxSession;
 
@@ -112,10 +112,10 @@ public  class GroupSessionAdmissionControlGroupGetResponse : BroadworksConnector
 
     [XmlIgnore]
     public bool CountIntraSACGroupSessionsSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.AccessDevice> _devices;
+    private List<BroadWorksConnector.Ocip.Models.AccessDevice> _devices;
 
     [XmlElement(ElementName = "devices", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.AccessDevice> Devices {
+    public List<BroadWorksConnector.Ocip.Models.AccessDevice> Devices {
         get => _devices;
         set {
             DevicesSpecified = true;

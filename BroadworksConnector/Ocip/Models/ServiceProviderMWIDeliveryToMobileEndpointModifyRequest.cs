@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderMWIDeliveryToMobileEndpointModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderMWIDeliveryToMobileEndpointModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderMWIDeliveryToMobileEndpointModifyRequest : Broadwor
 
     [XmlIgnore]
     public bool ServiceProviderIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateActivation> _templateActivation;
+    private List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateActivation> _templateActivation;
 
     [XmlElement(ElementName = "templateActivation", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateActivation> TemplateActivation {
+    public List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateActivation> TemplateActivation {
         get => _templateActivation;
         set {
             TemplateActivationSpecified = true;

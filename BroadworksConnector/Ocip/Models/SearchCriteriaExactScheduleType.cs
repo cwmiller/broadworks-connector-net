@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactScheduleType : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactScheduleType : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.ScheduleType _type;
+    private BroadWorksConnector.Ocip.Models.ScheduleType _type;
 
     [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleType Type {
+    public BroadWorksConnector.Ocip.Models.ScheduleType Type {
         get => _type;
         set {
             TypeSpecified = true;

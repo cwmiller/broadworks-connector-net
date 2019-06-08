@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSMDIMessageDeskModifyServerRouteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSMDIMessageDeskModifyServerRouteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _routeDestination;
 
@@ -21,10 +21,10 @@ public  class SystemSMDIMessageDeskModifyServerRouteRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool RouteDestinationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemSMDIMessageDeskModifyServerRouteRequestDeviceNameList _deviceNameList;
+    private BroadWorksConnector.Ocip.Models.SystemSMDIMessageDeskModifyServerRouteRequestDeviceNameList _deviceNameList;
 
     [XmlElement(ElementName = "deviceNameList", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemSMDIMessageDeskModifyServerRouteRequestDeviceNameList DeviceNameList {
+    public BroadWorksConnector.Ocip.Models.SystemSMDIMessageDeskModifyServerRouteRequestDeviceNameList DeviceNameList {
         get => _deviceNameList;
         set {
             DeviceNameListSpecified = true;

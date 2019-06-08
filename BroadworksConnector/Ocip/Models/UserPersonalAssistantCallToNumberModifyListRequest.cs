@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserPersonalAssistantCallToNumberModifyListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserPersonalAssistantCallToNumberModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserPersonalAssistantCallToNumberModifyListRequest : BroadworksCon
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementCallToNumberList _callToNumberList;
+    private BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList _callToNumberList;
 
     [XmlElement(ElementName = "callToNumberList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementCallToNumberList CallToNumberList {
+    public BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList CallToNumberList {
         get => _callToNumberList;
         set {
             CallToNumberListSpecified = true;

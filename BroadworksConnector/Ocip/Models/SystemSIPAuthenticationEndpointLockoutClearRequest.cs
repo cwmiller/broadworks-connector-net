@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPAuthenticationEndpointLockoutClearRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSIPAuthenticationEndpointLockoutClearRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private List<BroadworksConnector.Ocip.Models.UserEndpointKey> _userEndpointKey;
+    private List<BroadWorksConnector.Ocip.Models.UserEndpointKey> _userEndpointKey;
 
     [XmlElement(ElementName = "userEndpointKey", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.UserEndpointKey> UserEndpointKey {
+    public List<BroadWorksConnector.Ocip.Models.UserEndpointKey> UserEndpointKey {
         get => _userEndpointKey;
         set {
             UserEndpointKeySpecified = true;

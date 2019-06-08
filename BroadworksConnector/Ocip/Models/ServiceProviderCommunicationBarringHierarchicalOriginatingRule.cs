@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -34,10 +34,10 @@ public  class ServiceProviderCommunicationBarringHierarchicalOriginatingRule
 
     [XmlIgnore]
     public bool DigitPatternCriteriaSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommunicationBarringOriginatingAction _action;
+    private BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction _action;
 
     [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringOriginatingAction Action {
+    public BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction Action {
         get => _action;
         set {
             ActionSpecified = true;

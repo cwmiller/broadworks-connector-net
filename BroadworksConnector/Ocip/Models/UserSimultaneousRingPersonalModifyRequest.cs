@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserSimultaneousRingPersonalModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserSimultaneousRingPersonalModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserSimultaneousRingPersonalModifyRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SimultaneousRingSelection _incomingCalls;
+    private BroadWorksConnector.Ocip.Models.SimultaneousRingSelection _incomingCalls;
 
     [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SimultaneousRingSelection IncomingCalls {
+    public BroadWorksConnector.Ocip.Models.SimultaneousRingSelection IncomingCalls {
         get => _incomingCalls;
         set {
             IncomingCallsSpecified = true;
@@ -47,10 +47,10 @@ public  class UserSimultaneousRingPersonalModifyRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool IncomingCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList _simRingPhoneNumberList;
+    private BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList _simRingPhoneNumberList;
 
     [XmlElement(ElementName = "simRingPhoneNumberList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList SimRingPhoneNumberList {
+    public BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList SimRingPhoneNumberList {
         get => _simRingPhoneNumberList;
         set {
             SimRingPhoneNumberListSpecified = true;

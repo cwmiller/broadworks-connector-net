@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _useCLIDPolicy;
 
@@ -21,10 +21,10 @@ public  class SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22 :
 
     [XmlIgnore]
     public bool UseCLIDPolicySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupCLIDPolicy _clidPolicy;
+    private BroadWorksConnector.Ocip.Models.GroupCLIDPolicy _clidPolicy;
 
     [XmlElement(ElementName = "clidPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupCLIDPolicy ClidPolicy {
+    public BroadWorksConnector.Ocip.Models.GroupCLIDPolicy ClidPolicy {
         get => _clidPolicy;
         set {
             ClidPolicySpecified = true;
@@ -86,10 +86,10 @@ public  class SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22 :
 
     [XmlIgnore]
     public bool AllowDepartmentCLIDNameOverrideSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnterpriseInternalCallsCLIDPolicy _enterpriseCallsCLIDPolicy;
+    private BroadWorksConnector.Ocip.Models.EnterpriseInternalCallsCLIDPolicy _enterpriseCallsCLIDPolicy;
 
     [XmlElement(ElementName = "enterpriseCallsCLIDPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnterpriseInternalCallsCLIDPolicy EnterpriseCallsCLIDPolicy {
+    public BroadWorksConnector.Ocip.Models.EnterpriseInternalCallsCLIDPolicy EnterpriseCallsCLIDPolicy {
         get => _enterpriseCallsCLIDPolicy;
         set {
             EnterpriseCallsCLIDPolicySpecified = true;
@@ -99,10 +99,10 @@ public  class SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22 :
 
     [XmlIgnore]
     public bool EnterpriseCallsCLIDPolicySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnterpriseInternalCallsCLIDPolicy _enterpriseGroupCallsCLIDPolicy;
+    private BroadWorksConnector.Ocip.Models.EnterpriseInternalCallsCLIDPolicy _enterpriseGroupCallsCLIDPolicy;
 
     [XmlElement(ElementName = "enterpriseGroupCallsCLIDPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnterpriseInternalCallsCLIDPolicy EnterpriseGroupCallsCLIDPolicy {
+    public BroadWorksConnector.Ocip.Models.EnterpriseInternalCallsCLIDPolicy EnterpriseGroupCallsCLIDPolicy {
         get => _enterpriseGroupCallsCLIDPolicy;
         set {
             EnterpriseGroupCallsCLIDPolicySpecified = true;
@@ -112,10 +112,10 @@ public  class SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22 :
 
     [XmlIgnore]
     public bool EnterpriseGroupCallsCLIDPolicySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderInternalCallsCLIDPolicy _serviceProviderGroupCallsCLIDPolicy;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderInternalCallsCLIDPolicy _serviceProviderGroupCallsCLIDPolicy;
 
     [XmlElement(ElementName = "serviceProviderGroupCallsCLIDPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderInternalCallsCLIDPolicy ServiceProviderGroupCallsCLIDPolicy {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderInternalCallsCLIDPolicy ServiceProviderGroupCallsCLIDPolicy {
         get => _serviceProviderGroupCallsCLIDPolicy;
         set {
             ServiceProviderGroupCallsCLIDPolicySpecified = true;
@@ -242,10 +242,10 @@ public  class SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22 :
 
     [XmlIgnore]
     public bool UseTranslationRoutingPolicySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkUsageSelection _networkUsageSelection;
+    private BroadWorksConnector.Ocip.Models.NetworkUsageSelection _networkUsageSelection;
 
     [XmlElement(ElementName = "networkUsageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkUsageSelection NetworkUsageSelection {
+    public BroadWorksConnector.Ocip.Models.NetworkUsageSelection NetworkUsageSelection {
         get => _networkUsageSelection;
         set {
             NetworkUsageSelectionSpecified = true;

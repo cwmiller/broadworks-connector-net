@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserAttendantConsoleGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserAttendantConsoleGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _launchOnLogin;
 
@@ -47,10 +47,10 @@ public  class UserAttendantConsoleGetResponse : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool AllowUserViewCallDetailsSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.AttendantConsoleDisplayColumn> _displayColumn;
+    private List<BroadWorksConnector.Ocip.Models.AttendantConsoleDisplayColumn> _displayColumn;
 
     [XmlElement(ElementName = "displayColumn", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.AttendantConsoleDisplayColumn> DisplayColumn {
+    public List<BroadWorksConnector.Ocip.Models.AttendantConsoleDisplayColumn> DisplayColumn {
         get => _displayColumn;
         set {
             DisplayColumnSpecified = true;

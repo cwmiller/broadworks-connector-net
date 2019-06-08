@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class ProfileAndServiceCommunicationBarringUserControlInfo
 
     [XmlIgnore]
     public bool LockoutStatusSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _profileTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _profileTable;
 
     [XmlElement(ElementName = "profileTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ProfileTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ProfileTable {
         get => _profileTable;
         set {
             ProfileTableSpecified = true;

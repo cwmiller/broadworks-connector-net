@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSecurityClassificationGetClassificationResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemSecurityClassificationGetClassificationResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _audioAnnouncementFileDescription;
 
@@ -21,10 +21,10 @@ public  class SystemSecurityClassificationGetClassificationResponse : Broadworks
 
     [XmlIgnore]
     public bool AudioAnnouncementFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _audioAnnouncementFileType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _audioAnnouncementFileType;
 
     [XmlElement(ElementName = "audioAnnouncementFileType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType AudioAnnouncementFileType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType AudioAnnouncementFileType {
         get => _audioAnnouncementFileType;
         set {
             AudioAnnouncementFileTypeSpecified = true;

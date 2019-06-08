@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class EnterpriseBroadWorksMobileManagerGetDomainListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private List<string> _domainName;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class EnterpriseBroadWorksMobileManagerGetDomainListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private List<string> _domainName;
 
-        [XmlElement(ElementName = "domainName", IsNullable = false, Namespace = "")]
-        public List<string> DomainName
-        {
-            get => _domainName;
-            set
-            {
-                DomainNameSpecified = true;
-                _domainName = value;
-            }
+    [XmlElement(ElementName = "domainName", IsNullable = false, Namespace = "")]
+    public List<string> DomainName {
+        get => _domainName;
+        set {
+            DomainNameSpecified = true;
+            _domainName = value;
         }
-
-        [XmlIgnore]
-        public bool DomainNameSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool DomainNameSpecified { get; set; }
+}
 }

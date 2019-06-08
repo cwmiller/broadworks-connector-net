@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemFileRepositoryDeviceModifyRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemFileRepositoryDeviceModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _name;
 
@@ -73,10 +73,10 @@ public  class SystemFileRepositoryDeviceModifyRequest22 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool FtpPassiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.FileRepositoryProtocol22 _protocol;
+    private BroadWorksConnector.Ocip.Models.FileRepositoryProtocol22 _protocol;
 
     [XmlElement(ElementName = "protocol", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.FileRepositoryProtocol22 Protocol {
+    public BroadWorksConnector.Ocip.Models.FileRepositoryProtocol22 Protocol {
         get => _protocol;
         set {
             ProtocolSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSystemVoicePortalModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSystemVoicePortalModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _systemVoicePortalId;
 
@@ -177,10 +177,10 @@ public  class SystemSystemVoicePortalModifyRequest : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool UseVoicePortalDefaultGreetingSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledMediaFileResource _voicePortalGreetingFile;
+    private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _voicePortalGreetingFile;
 
     [XmlElement(ElementName = "voicePortalGreetingFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledMediaFileResource VoicePortalGreetingFile {
+    public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VoicePortalGreetingFile {
         get => _voicePortalGreetingFile;
         set {
             VoicePortalGreetingFileSpecified = true;
@@ -203,10 +203,10 @@ public  class SystemSystemVoicePortalModifyRequest : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool UseVoiceMessagingDefaultGreetingSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledMediaFileResource _voiceMessagingGreetingFile;
+    private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _voiceMessagingGreetingFile;
 
     [XmlElement(ElementName = "voiceMessagingGreetingFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledMediaFileResource VoiceMessagingGreetingFile {
+    public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VoiceMessagingGreetingFile {
         get => _voiceMessagingGreetingFile;
         set {
             VoiceMessagingGreetingFileSpecified = true;

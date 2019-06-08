@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class EnterpriseRouteListEnterpriseTrunkNumberRangeGetSummaryListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private BroadworksConnector.Ocip.Models.C.OCITable _numberRangeSummaryTable;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class EnterpriseRouteListEnterpriseTrunkNumberRangeGetSummaryListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private BroadWorksConnector.Ocip.Models.C.OCITable _numberRangeSummaryTable;
 
-        [XmlElement(ElementName = "numberRangeSummaryTable", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.C.OCITable NumberRangeSummaryTable
-        {
-            get => _numberRangeSummaryTable;
-            set
-            {
-                NumberRangeSummaryTableSpecified = true;
-                _numberRangeSummaryTable = value;
-            }
+    [XmlElement(ElementName = "numberRangeSummaryTable", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.C.OCITable NumberRangeSummaryTable {
+        get => _numberRangeSummaryTable;
+        set {
+            NumberRangeSummaryTableSpecified = true;
+            _numberRangeSummaryTable = value;
         }
-
-        [XmlIgnore]
-        public bool NumberRangeSummaryTableSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool NumberRangeSummaryTableSpecified { get; set; }
+}
 }

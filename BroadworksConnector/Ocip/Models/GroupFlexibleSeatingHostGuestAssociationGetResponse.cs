@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupFlexibleSeatingHostGuestAssociationGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupFlexibleSeatingHostGuestAssociationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _enforceAssociationLimit;
 
@@ -34,10 +34,10 @@ public  class GroupFlexibleSeatingHostGuestAssociationGetResponse : BroadworksCo
 
     [XmlIgnore]
     public bool AssociationLimitHoursSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.FlexibleSeatingHostAccessLevel _accessLevel;
+    private BroadWorksConnector.Ocip.Models.FlexibleSeatingHostAccessLevel _accessLevel;
 
     [XmlElement(ElementName = "accessLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.FlexibleSeatingHostAccessLevel AccessLevel {
+    public BroadWorksConnector.Ocip.Models.FlexibleSeatingHostAccessLevel AccessLevel {
         get => _accessLevel;
         set {
             AccessLevelSpecified = true;

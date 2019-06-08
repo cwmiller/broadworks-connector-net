@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemSIPDeviceTypeGetResponse22V4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isObsolete;
 
@@ -21,10 +21,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool IsObsoleteSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
+    private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
 
     [XmlElement(ElementName = "numberOfPorts", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts {
+    public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts {
         get => _numberOfPorts;
         set {
             NumberOfPortsSpecified = true;
@@ -34,10 +34,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool NumberOfPortsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SignalingAddressType _profile;
+    private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
     [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SignalingAddressType Profile {
+    public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
         get => _profile;
         set {
             ProfileSpecified = true;
@@ -99,10 +99,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool IsMusicOnHoldDeviceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HoldNormalizationMode _holdNormalization;
+    private BroadWorksConnector.Ocip.Models.HoldNormalizationMode _holdNormalization;
 
     [XmlElement(ElementName = "holdNormalization", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HoldNormalizationMode HoldNormalization {
+    public BroadWorksConnector.Ocip.Models.HoldNormalizationMode HoldNormalization {
         get => _holdNormalization;
         set {
             HoldNormalizationSpecified = true;
@@ -112,10 +112,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool HoldNormalizationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HoldAnnouncementMethodMode _holdAnnouncementMethod;
+    private BroadWorksConnector.Ocip.Models.HoldAnnouncementMethodMode _holdAnnouncementMethod;
 
     [XmlElement(ElementName = "holdAnnouncementMethod", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HoldAnnouncementMethodMode HoldAnnouncementMethod {
+    public BroadWorksConnector.Ocip.Models.HoldAnnouncementMethodMode HoldAnnouncementMethod {
         get => _holdAnnouncementMethod;
         set {
             HoldAnnouncementMethodSpecified = true;
@@ -242,10 +242,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool StaticRegistrationCapableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CPEDeviceOptionsRead22 _cpeDeviceOptions;
+    private BroadWorksConnector.Ocip.Models.CPEDeviceOptionsRead22 _cpeDeviceOptions;
 
     [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CPEDeviceOptionsRead22 CpeDeviceOptions {
+    public BroadWorksConnector.Ocip.Models.CPEDeviceOptionsRead22 CpeDeviceOptions {
         get => _cpeDeviceOptions;
         set {
             CpeDeviceOptionsSpecified = true;
@@ -268,10 +268,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool ProtocolChoiceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EarlyMediaSupportType _earlyMediaSupport;
+    private BroadWorksConnector.Ocip.Models.EarlyMediaSupportType _earlyMediaSupport;
 
     [XmlElement(ElementName = "earlyMediaSupport", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EarlyMediaSupportType EarlyMediaSupport {
+    public BroadWorksConnector.Ocip.Models.EarlyMediaSupportType EarlyMediaSupport {
         get => _earlyMediaSupport;
         set {
             EarlyMediaSupportSpecified = true;
@@ -307,10 +307,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool AutoConfigSoftClientSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationMode22 _authenticationMode;
+    private BroadWorksConnector.Ocip.Models.AuthenticationMode22 _authenticationMode;
 
     [XmlElement(ElementName = "authenticationMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationMode22 AuthenticationMode {
+    public BroadWorksConnector.Ocip.Models.AuthenticationMode22 AuthenticationMode {
         get => _authenticationMode;
         set {
             AuthenticationModeSpecified = true;
@@ -385,10 +385,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool AdviceOfChargeCapableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceResetEvent _resetEvent;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent _resetEvent;
 
     [XmlElement(ElementName = "resetEvent", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceResetEvent ResetEvent {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent ResetEvent {
         get => _resetEvent;
         set {
             ResetEventSpecified = true;
@@ -411,10 +411,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool SupportCallCenterMIMETypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkMode _trunkMode;
+    private BroadWorksConnector.Ocip.Models.TrunkMode _trunkMode;
 
     [XmlElement(ElementName = "trunkMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkMode TrunkMode {
+    public BroadWorksConnector.Ocip.Models.TrunkMode TrunkMode {
         get => _trunkMode;
         set {
             TrunkModeSpecified = true;
@@ -450,10 +450,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool SupportIdentityInUpdateAndReInviteSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnscreenedPresentationIdentityPolicy _unscreenedPresentationIdentityPolicy;
+    private BroadWorksConnector.Ocip.Models.UnscreenedPresentationIdentityPolicy _unscreenedPresentationIdentityPolicy;
 
     [XmlElement(ElementName = "unscreenedPresentationIdentityPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnscreenedPresentationIdentityPolicy UnscreenedPresentationIdentityPolicy {
+    public BroadWorksConnector.Ocip.Models.UnscreenedPresentationIdentityPolicy UnscreenedPresentationIdentityPolicy {
         get => _unscreenedPresentationIdentityPolicy;
         set {
             UnscreenedPresentationIdentityPolicySpecified = true;
@@ -489,10 +489,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool SupportEmergencyDisconnectControlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceTypeConfigurationOption;
+    private BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceTypeConfigurationOption;
 
     [XmlElement(ElementName = "deviceTypeConfigurationOption", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceTypeConfigurationOption {
+    public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceTypeConfigurationOption {
         get => _deviceTypeConfigurationOption;
         set {
             DeviceTypeConfigurationOptionSpecified = true;
@@ -632,10 +632,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool SupportCauseParameterSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LocationNetworkType _locationNetwork;
+    private BroadWorksConnector.Ocip.Models.LocationNetworkType _locationNetwork;
 
     [XmlElement(ElementName = "locationNetwork", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LocationNetworkType LocationNetwork {
+    public BroadWorksConnector.Ocip.Models.LocationNetworkType LocationNetwork {
         get => _locationNetwork;
         set {
             LocationNetworkSpecified = true;
@@ -671,10 +671,10 @@ public  class SystemSIPDeviceTypeGetResponse22V4 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool AllowTerminationBasedOnICSISpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RoamingMode _roamingMode;
+    private BroadWorksConnector.Ocip.Models.RoamingMode _roamingMode;
 
     [XmlElement(ElementName = "roamingMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RoamingMode RoamingMode {
+    public BroadWorksConnector.Ocip.Models.RoamingMode RoamingMode {
         get => _roamingMode;
         set {
             RoamingModeSpecified = true;

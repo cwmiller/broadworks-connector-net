@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupOutgoingCallingPlanOriginatingModifyListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupOutgoingCallingPlanOriginatingModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupOutgoingCallingPlanOriginatingModifyListRequest : BroadworksC
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermissionsModify _groupPermissions;
+    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermissionsModify _groupPermissions;
 
     [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermissionsModify GroupPermissions {
+    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermissionsModify GroupPermissions {
         get => _groupPermissions;
         set {
             GroupPermissionsSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupOutgoingCallingPlanOriginatingModifyListRequest : BroadworksC
 
     [XmlIgnore]
     public bool GroupPermissionsSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanOriginatingDepartmentPermissionsModify> _departmentPermissions;
+    private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingDepartmentPermissionsModify> _departmentPermissions;
 
     [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanOriginatingDepartmentPermissionsModify> DepartmentPermissions {
+    public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingDepartmentPermissionsModify> DepartmentPermissions {
         get => _departmentPermissions;
         set {
             DepartmentPermissionsSpecified = true;

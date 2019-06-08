@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserEnterpriseCommonPhoneListGetPagedSortedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserEnterpriseCommonPhoneListGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private int _totalNumberOfRows;
 
@@ -21,10 +21,10 @@ public  class UserEnterpriseCommonPhoneListGetPagedSortedListResponse : Broadwor
 
     [XmlIgnore]
     public bool TotalNumberOfRowsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _enterpriseCommonPhoneListTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _enterpriseCommonPhoneListTable;
 
     [XmlElement(ElementName = "enterpriseCommonPhoneListTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable EnterpriseCommonPhoneListTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable EnterpriseCommonPhoneListTable {
         get => _enterpriseCommonPhoneListTable;
         set {
             EnterpriseCommonPhoneListTableSpecified = true;

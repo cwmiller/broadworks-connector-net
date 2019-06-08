@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models.C
+namespace BroadWorksConnector.Ocip.Models.C
 {
 [Serializable]
 [XmlRoot(Namespace = "C")]
-public  class ErrorResponse : BroadworksConnector.Ocip.Models.C.OCIResponse
+public  class ErrorResponse : BroadWorksConnector.Ocip.Models.C.OCIResponse
 {
     private int _errorCode;
 

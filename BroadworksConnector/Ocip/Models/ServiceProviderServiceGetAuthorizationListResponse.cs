@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderServiceGetAuthorizationListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderServiceGetAuthorizationListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _groupServicesAuthorizationTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _groupServicesAuthorizationTable;
 
     [XmlElement(ElementName = "groupServicesAuthorizationTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable GroupServicesAuthorizationTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable GroupServicesAuthorizationTable {
         get => _groupServicesAuthorizationTable;
         set {
             GroupServicesAuthorizationTableSpecified = true;
@@ -21,10 +21,10 @@ public  class ServiceProviderServiceGetAuthorizationListResponse : BroadworksCon
 
     [XmlIgnore]
     public bool GroupServicesAuthorizationTableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _userServicesAuthorizationTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _userServicesAuthorizationTable;
 
     [XmlElement(ElementName = "userServicesAuthorizationTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserServicesAuthorizationTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable UserServicesAuthorizationTable {
         get => _userServicesAuthorizationTable;
         set {
             UserServicesAuthorizationTableSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCollaborateModifyRequest20sp1V2 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemCollaborateModifyRequest20sp1V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private int _collaborateRoomIdLength;
 
@@ -99,10 +99,10 @@ public  class SystemCollaborateModifyRequest20sp1V2 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool TerminateCollaborateAfterGracePeriodSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CollaborateGracePeriodDuration _collaborateGracePeriod;
+    private BroadWorksConnector.Ocip.Models.CollaborateGracePeriodDuration _collaborateGracePeriod;
 
     [XmlElement(ElementName = "collaborateGracePeriod", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CollaborateGracePeriodDuration CollaborateGracePeriod {
+    public BroadWorksConnector.Ocip.Models.CollaborateGracePeriodDuration CollaborateGracePeriod {
         get => _collaborateGracePeriod;
         set {
             CollaborateGracePeriodSpecified = true;

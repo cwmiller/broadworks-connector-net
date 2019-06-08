@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserAnnouncementFileAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserAnnouncementFileAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -34,10 +34,10 @@ public  class UserAnnouncementFileAddRequest : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool AnnouncementFileNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledMediaFileResource _announcementFile;
+    private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _announcementFile;
 
     [XmlElement(ElementName = "announcementFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledMediaFileResource AnnouncementFile {
+    public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AnnouncementFile {
         get => _announcementFile;
         set {
             AnnouncementFileSpecified = true;

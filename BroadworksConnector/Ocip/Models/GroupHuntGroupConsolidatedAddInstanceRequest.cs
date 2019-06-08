@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupHuntGroupConsolidatedAddInstanceRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupHuntGroupConsolidatedAddInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -60,10 +60,10 @@ public  class GroupHuntGroupConsolidatedAddInstanceRequest : BroadworksConnector
 
     [XmlIgnore]
     public bool AddPhoneNumberToGroupSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupHuntGroupConsolidatedAddInstanceRequest : BroadworksConnector
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HuntPolicy _policy;
+    private BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
 
     [XmlElement(ElementName = "policy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HuntPolicy Policy {
+    public BroadWorksConnector.Ocip.Models.HuntPolicy Policy {
         get => _policy;
         set {
             PolicySpecified = true;
@@ -164,10 +164,10 @@ public  class GroupHuntGroupConsolidatedAddInstanceRequest : BroadworksConnector
 
     [XmlIgnore]
     public bool AgentUserIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.HuntAgentWeight> _agentWeight;
+    private List<BroadWorksConnector.Ocip.Models.HuntAgentWeight> _agentWeight;
 
     [XmlElement(ElementName = "agentWeight", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.HuntAgentWeight> AgentWeight {
+    public List<BroadWorksConnector.Ocip.Models.HuntAgentWeight> AgentWeight {
         get => _agentWeight;
         set {
             AgentWeightSpecified = true;
@@ -307,10 +307,10 @@ public  class GroupHuntGroupConsolidatedAddInstanceRequest : BroadworksConnector
 
     [XmlIgnore]
     public bool NetworkClassOfServiceSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.ConsolidatedUserServiceAssignment> _service;
+    private List<BroadWorksConnector.Ocip.Models.ConsolidatedUserServiceAssignment> _service;
 
     [XmlElement(ElementName = "service", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.ConsolidatedUserServiceAssignment> Service {
+    public List<BroadWorksConnector.Ocip.Models.ConsolidatedUserServiceAssignment> Service {
         get => _service;
         set {
             ServiceSpecified = true;

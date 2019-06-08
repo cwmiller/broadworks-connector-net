@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallCenterModifyAgentListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCallCenterModifyAgentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -21,10 +21,10 @@ public  class GroupCallCenterModifyAgentListRequest : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
+    private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
 
     [XmlElement(ElementName = "agentUserIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList {
+    public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList {
         get => _agentUserIdList;
         set {
             AgentUserIdListSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupCallCenterModifyAgentListRequest : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool AgentUserIdListSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CallCenterReplacementSkilledAgents> _skilledAgentUserIdList;
+    private List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents> _skilledAgentUserIdList;
 
     [XmlElement(ElementName = "skilledAgentUserIdList", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CallCenterReplacementSkilledAgents> SkilledAgentUserIdList {
+    public List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents> SkilledAgentUserIdList {
         get => _skilledAgentUserIdList;
         set {
             SkilledAgentUserIdListSpecified = true;

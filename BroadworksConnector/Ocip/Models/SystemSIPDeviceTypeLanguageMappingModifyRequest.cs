@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPDeviceTypeLanguageMappingModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSIPDeviceTypeLanguageMappingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _deviceType;
 
@@ -21,10 +21,10 @@ public  class SystemSIPDeviceTypeLanguageMappingModifyRequest : BroadworksConnec
 
     [XmlIgnore]
     public bool DeviceTypeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.DeviceManagementLanguageMapping> _languageMapping;
+    private List<BroadWorksConnector.Ocip.Models.DeviceManagementLanguageMapping> _languageMapping;
 
     [XmlElement(ElementName = "languageMapping", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.DeviceManagementLanguageMapping> LanguageMapping {
+    public List<BroadWorksConnector.Ocip.Models.DeviceManagementLanguageMapping> LanguageMapping {
         get => _languageMapping;
         set {
             LanguageMappingSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemOfficeZoneModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemOfficeZoneModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _officeZoneName;
 
@@ -47,10 +47,10 @@ public  class SystemOfficeZoneModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool DescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementZoneList _replacementZoneList;
+    private BroadWorksConnector.Ocip.Models.ReplacementZoneList _replacementZoneList;
 
     [XmlElement(ElementName = "replacementZoneList", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementZoneList ReplacementZoneList {
+    public BroadWorksConnector.Ocip.Models.ReplacementZoneList ReplacementZoneList {
         get => _replacementZoneList;
         set {
             ReplacementZoneListSpecified = true;

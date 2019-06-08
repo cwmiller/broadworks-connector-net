@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactDeviceManagementEventStatusCompleted : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactDeviceManagementEventStatusCompleted : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.DeviceManagementEventStatusCompleted _dmEventStatusCompleted;
+    private BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusCompleted _dmEventStatusCompleted;
 
     [XmlElement(ElementName = "dmEventStatusCompleted", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DeviceManagementEventStatusCompleted DmEventStatusCompleted {
+    public BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusCompleted DmEventStatusCompleted {
         get => _dmEventStatusCompleted;
         set {
             DmEventStatusCompletedSpecified = true;

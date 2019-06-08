@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class ProfileAndServiceMusicOnHoldInfo
 
     [XmlIgnore]
     public bool EnableVideoSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 _source;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 _source;
 
     [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 Source {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 Source {
         get => _source;
         set {
             SourceSpecified = true;
@@ -47,10 +47,10 @@ public  class ProfileAndServiceMusicOnHoldInfo
 
     [XmlIgnore]
     public bool UseAlternateSourceForInternalCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 _internalSource;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 _internalSource;
 
     [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 InternalSource {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 InternalSource {
         get => _internalSource;
         set {
             InternalSourceSpecified = true;

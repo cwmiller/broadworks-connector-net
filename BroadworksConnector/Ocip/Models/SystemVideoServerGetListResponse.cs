@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemVideoServerGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemVideoServerGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _videoServerTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _videoServerTable;
 
     [XmlElement(ElementName = "videoServerTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable VideoServerTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable VideoServerTable {
         get => _videoServerTable;
         set {
             VideoServerTableSpecified = true;

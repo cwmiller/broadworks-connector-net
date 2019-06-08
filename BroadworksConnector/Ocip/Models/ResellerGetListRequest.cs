@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ResellerGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ResellerGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private int _responseSizeLimit;
 
@@ -21,10 +21,10 @@ public  class ResellerGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequ
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId;
 
     [XmlElement(ElementName = "searchCriteriaResellerId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId {
         get => _searchCriteriaResellerId;
         set {
             SearchCriteriaResellerIdSpecified = true;
@@ -34,10 +34,10 @@ public  class ResellerGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequ
 
     [XmlIgnore]
     public bool SearchCriteriaResellerIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaResellerName> _searchCriteriaResellerName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerName> _searchCriteriaResellerName;
 
     [XmlElement(ElementName = "searchCriteriaResellerName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaResellerName> SearchCriteriaResellerName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerName> SearchCriteriaResellerName {
         get => _searchCriteriaResellerName;
         set {
             SearchCriteriaResellerNameSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupPreferredCarrierGroupModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupPreferredCarrierGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupPreferredCarrierGroupModifyRequest : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupPreferredCarrierNameModify _intraLataCarrier;
+    private BroadWorksConnector.Ocip.Models.GroupPreferredCarrierNameModify _intraLataCarrier;
 
     [XmlElement(ElementName = "intraLataCarrier", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupPreferredCarrierNameModify IntraLataCarrier {
+    public BroadWorksConnector.Ocip.Models.GroupPreferredCarrierNameModify IntraLataCarrier {
         get => _intraLataCarrier;
         set {
             IntraLataCarrierSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupPreferredCarrierGroupModifyRequest : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool IntraLataCarrierSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupPreferredCarrierNameModify _interLataCarrier;
+    private BroadWorksConnector.Ocip.Models.GroupPreferredCarrierNameModify _interLataCarrier;
 
     [XmlElement(ElementName = "interLataCarrier", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupPreferredCarrierNameModify InterLataCarrier {
+    public BroadWorksConnector.Ocip.Models.GroupPreferredCarrierNameModify InterLataCarrier {
         get => _interLataCarrier;
         set {
             InterLataCarrierSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupPreferredCarrierGroupModifyRequest : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool InterLataCarrierSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupPreferredCarrierNameModify _internationalCarrier;
+    private BroadWorksConnector.Ocip.Models.GroupPreferredCarrierNameModify _internationalCarrier;
 
     [XmlElement(ElementName = "internationalCarrier", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupPreferredCarrierNameModify InternationalCarrier {
+    public BroadWorksConnector.Ocip.Models.GroupPreferredCarrierNameModify InternationalCarrier {
         get => _internationalCarrier;
         set {
             InternationalCarrierSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserPrivacyModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserPrivacyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -73,10 +73,10 @@ public  class UserPrivacyModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRe
 
     [XmlIgnore]
     public bool EnablePhoneStatusPrivacySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _permittedMonitorUserIdList;
+    private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _permittedMonitorUserIdList;
 
     [XmlElement(ElementName = "permittedMonitorUserIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList PermittedMonitorUserIdList {
+    public BroadWorksConnector.Ocip.Models.ReplacementUserIdList PermittedMonitorUserIdList {
         get => _permittedMonitorUserIdList;
         set {
             PermittedMonitorUserIdListSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemOCIDeleteACLEntryRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemOCIDeleteACLEntryRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _netAddress;
 

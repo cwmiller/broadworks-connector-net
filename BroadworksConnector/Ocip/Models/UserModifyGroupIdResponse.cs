@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserModifyGroupIdResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserModifyGroupIdResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private List<BroadworksConnector.Ocip.Models.UserMoveMessage> _error;
+    private List<BroadWorksConnector.Ocip.Models.UserMoveMessage> _error;
 
     [XmlElement(ElementName = "error", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.UserMoveMessage> Error {
+    public List<BroadWorksConnector.Ocip.Models.UserMoveMessage> Error {
         get => _error;
         set {
             ErrorSpecified = true;
@@ -21,10 +21,10 @@ public  class UserModifyGroupIdResponse : BroadworksConnector.Ocip.Models.C.OCID
 
     [XmlIgnore]
     public bool ErrorSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.UserMoveMessage> _impact;
+    private List<BroadWorksConnector.Ocip.Models.UserMoveMessage> _impact;
 
     [XmlElement(ElementName = "impact", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.UserMoveMessage> Impact {
+    public List<BroadWorksConnector.Ocip.Models.UserMoveMessage> Impact {
         get => _impact;
         set {
             ImpactSpecified = true;

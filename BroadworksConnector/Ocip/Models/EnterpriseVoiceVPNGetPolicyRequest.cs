@@ -1,42 +1,38 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class EnterpriseVoiceVPNGetPolicyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
-    {
-        private string _serviceProviderId;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class EnterpriseVoiceVPNGetPolicyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+{
+    private string _serviceProviderId;
 
-        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId
-        {
-            get => _serviceProviderId;
-            set
-            {
-                ServiceProviderIdSpecified = true;
-                _serviceProviderId = value;
-            }
+    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+    public string ServiceProviderId {
+        get => _serviceProviderId;
+        set {
+            ServiceProviderIdSpecified = true;
+            _serviceProviderId = value;
         }
-
-        [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
-        private string _locationDialingCode;
-
-        [XmlElement(ElementName = "locationDialingCode", IsNullable = false, Namespace = "")]
-        public string LocationDialingCode
-        {
-            get => _locationDialingCode;
-            set
-            {
-                LocationDialingCodeSpecified = true;
-                _locationDialingCode = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool LocationDialingCodeSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool ServiceProviderIdSpecified { get; set; }
+    private string _locationDialingCode;
+
+    [XmlElement(ElementName = "locationDialingCode", IsNullable = false, Namespace = "")]
+    public string LocationDialingCode {
+        get => _locationDialingCode;
+        set {
+            LocationDialingCodeSpecified = true;
+            _locationDialingCode = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool LocationDialingCodeSpecified { get; set; }
+}
 }

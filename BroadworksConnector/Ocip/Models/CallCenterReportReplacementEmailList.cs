@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class CallCenterReportReplacementEmailList
-    {
-        private List<string> _emailAddress;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class CallCenterReportReplacementEmailList 
+{
+    private List<string> _emailAddress;
 
-        [XmlElement(ElementName = "emailAddress", IsNullable = false, Namespace = "")]
-        public List<string> EmailAddress
-        {
-            get => _emailAddress;
-            set
-            {
-                EmailAddressSpecified = true;
-                _emailAddress = value;
-            }
+    [XmlElement(ElementName = "emailAddress", IsNullable = false, Namespace = "")]
+    public List<string> EmailAddress {
+        get => _emailAddress;
+        set {
+            EmailAddressSpecified = true;
+            _emailAddress = value;
         }
-
-        [XmlIgnore]
-        public bool EmailAddressSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool EmailAddressSpecified { get; set; }
+}
 }

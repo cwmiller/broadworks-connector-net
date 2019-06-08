@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallCenterGetAgentSupervisorListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserCallCenterGetAgentSupervisorListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _supervisorTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _supervisorTable;
 
     [XmlElement(ElementName = "supervisorTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable SupervisorTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable SupervisorTable {
         get => _supervisorTable;
         set {
             SupervisorTableSpecified = true;

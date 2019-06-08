@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserBroadWorksMobilityGetResponse21 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserBroadWorksMobilityGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isActive;
 
@@ -47,10 +47,10 @@ public  class UserBroadWorksMobilityGetResponse21 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool PreventCallsToOwnMobilesSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityEntry> _mobileIdentity;
+    private List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityEntry> _mobileIdentity;
 
     [XmlElement(ElementName = "mobileIdentity", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityEntry> MobileIdentity {
+    public List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityEntry> MobileIdentity {
         get => _mobileIdentity;
         set {
             MobileIdentitySpecified = true;
@@ -60,10 +60,10 @@ public  class UserBroadWorksMobilityGetResponse21 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool MobileIdentitySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _profileIdentityDevicesToRing;
+    private BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _profileIdentityDevicesToRing;
 
     [XmlElement(ElementName = "profileIdentityDevicesToRing", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing ProfileIdentityDevicesToRing {
+    public BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing ProfileIdentityDevicesToRing {
         get => _profileIdentityDevicesToRing;
         set {
             ProfileIdentityDevicesToRingSpecified = true;

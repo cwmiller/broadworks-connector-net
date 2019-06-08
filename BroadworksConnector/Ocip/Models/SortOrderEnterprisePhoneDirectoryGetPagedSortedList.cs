@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class SortOrderEnterprisePhoneDirectoryGetPagedSortedList 
 {
-    private BroadworksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
+    private BroadWorksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
 
     [XmlElement(ElementName = "sortByUserLastName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByUserLastName SortByUserLastName {
+    public BroadWorksConnector.Ocip.Models.SortByUserLastName SortByUserLastName {
         get => _sortByUserLastName;
         set {
             SortByUserLastNameSpecified = true;
@@ -21,10 +21,10 @@ public  class SortOrderEnterprisePhoneDirectoryGetPagedSortedList
 
     [XmlIgnore]
     public bool SortByUserLastNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
+    private BroadWorksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
 
     [XmlElement(ElementName = "sortByUserFirstName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByUserFirstName SortByUserFirstName {
+    public BroadWorksConnector.Ocip.Models.SortByUserFirstName SortByUserFirstName {
         get => _sortByUserFirstName;
         set {
             SortByUserFirstNameSpecified = true;
@@ -34,10 +34,10 @@ public  class SortOrderEnterprisePhoneDirectoryGetPagedSortedList
 
     [XmlIgnore]
     public bool SortByUserFirstNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByGroupLocationCode _sortByGroupLocationCode;
+    private BroadWorksConnector.Ocip.Models.SortByGroupLocationCode _sortByGroupLocationCode;
 
     [XmlElement(ElementName = "sortByGroupLocationCode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByGroupLocationCode SortByGroupLocationCode {
+    public BroadWorksConnector.Ocip.Models.SortByGroupLocationCode SortByGroupLocationCode {
         get => _sortByGroupLocationCode;
         set {
             SortByGroupLocationCodeSpecified = true;
@@ -47,10 +47,10 @@ public  class SortOrderEnterprisePhoneDirectoryGetPagedSortedList
 
     [XmlIgnore]
     public bool SortByGroupLocationCodeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByMobilePhoneNumber _sortByMobilePhoneNumber;
+    private BroadWorksConnector.Ocip.Models.SortByMobilePhoneNumber _sortByMobilePhoneNumber;
 
     [XmlElement(ElementName = "sortByMobilePhoneNumber", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByMobilePhoneNumber SortByMobilePhoneNumber {
+    public BroadWorksConnector.Ocip.Models.SortByMobilePhoneNumber SortByMobilePhoneNumber {
         get => _sortByMobilePhoneNumber;
         set {
             SortByMobilePhoneNumberSpecified = true;
@@ -60,10 +60,10 @@ public  class SortOrderEnterprisePhoneDirectoryGetPagedSortedList
 
     [XmlIgnore]
     public bool SortByMobilePhoneNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByEmailAddress _sortByEmailAddress;
+    private BroadWorksConnector.Ocip.Models.SortByEmailAddress _sortByEmailAddress;
 
     [XmlElement(ElementName = "sortByEmailAddress", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByEmailAddress SortByEmailAddress {
+    public BroadWorksConnector.Ocip.Models.SortByEmailAddress SortByEmailAddress {
         get => _sortByEmailAddress;
         set {
             SortByEmailAddressSpecified = true;
@@ -73,10 +73,10 @@ public  class SortOrderEnterprisePhoneDirectoryGetPagedSortedList
 
     [XmlIgnore]
     public bool SortByEmailAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByDepartmentName _sortByDepartmentName;
+    private BroadWorksConnector.Ocip.Models.SortByDepartmentName _sortByDepartmentName;
 
     [XmlElement(ElementName = "sortByDepartmentName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByDepartmentName SortByDepartmentName {
+    public BroadWorksConnector.Ocip.Models.SortByDepartmentName SortByDepartmentName {
         get => _sortByDepartmentName;
         set {
             SortByDepartmentNameSpecified = true;
@@ -86,10 +86,10 @@ public  class SortOrderEnterprisePhoneDirectoryGetPagedSortedList
 
     [XmlIgnore]
     public bool SortByDepartmentNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByGroupName _sortByGroupName;
+    private BroadWorksConnector.Ocip.Models.SortByGroupName _sortByGroupName;
 
     [XmlElement(ElementName = "sortByGroupName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByGroupName SortByGroupName {
+    public BroadWorksConnector.Ocip.Models.SortByGroupName SortByGroupName {
         get => _sortByGroupName;
         set {
             SortByGroupNameSpecified = true;
@@ -99,10 +99,10 @@ public  class SortOrderEnterprisePhoneDirectoryGetPagedSortedList
 
     [XmlIgnore]
     public bool SortByGroupNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByYahooId _sortByYahooId;
+    private BroadWorksConnector.Ocip.Models.SortByYahooId _sortByYahooId;
 
     [XmlElement(ElementName = "sortByYahooId", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByYahooId SortByYahooId {
+    public BroadWorksConnector.Ocip.Models.SortByYahooId SortByYahooId {
         get => _sortByYahooId;
         set {
             SortByYahooIdSpecified = true;
@@ -112,10 +112,10 @@ public  class SortOrderEnterprisePhoneDirectoryGetPagedSortedList
 
     [XmlIgnore]
     public bool SortByYahooIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByUserId _sortByUserId;
+    private BroadWorksConnector.Ocip.Models.SortByUserId _sortByUserId;
 
     [XmlElement(ElementName = "sortByUserId", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByUserId SortByUserId {
+    public BroadWorksConnector.Ocip.Models.SortByUserId SortByUserId {
         get => _sortByUserId;
         set {
             SortByUserIdSpecified = true;
@@ -125,10 +125,10 @@ public  class SortOrderEnterprisePhoneDirectoryGetPagedSortedList
 
     [XmlIgnore]
     public bool SortByUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByImpId _sortByImpId;
+    private BroadWorksConnector.Ocip.Models.SortByImpId _sortByImpId;
 
     [XmlElement(ElementName = "sortByImpId", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByImpId SortByImpId {
+    public BroadWorksConnector.Ocip.Models.SortByImpId SortByImpId {
         get => _sortByImpId;
         set {
             SortByImpIdSpecified = true;

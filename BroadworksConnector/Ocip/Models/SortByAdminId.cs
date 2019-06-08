@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SortByAdminId : BroadworksConnector.Ocip.Models.SortCriteria
+public  class SortByAdminId : BroadWorksConnector.Ocip.Models.SortCriteria
 {
 }
 }

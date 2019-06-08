@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserEnhancedCallLogsGetListRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserEnhancedCallLogsGetListRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserEnhancedCallLogsGetListRequest16 : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallLogsType _callLogType;
+    private BroadWorksConnector.Ocip.Models.CallLogsType _callLogType;
 
     [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallLogsType CallLogType {
+    public BroadWorksConnector.Ocip.Models.CallLogsType CallLogType {
         get => _callLogType;
         set {
             CallLogTypeSpecified = true;
@@ -34,10 +34,10 @@ public  class UserEnhancedCallLogsGetListRequest16 : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool CallLogTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;

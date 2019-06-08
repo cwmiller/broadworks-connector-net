@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class HolidaySchedule 
 {
-    private BroadworksConnector.Ocip.Models.ScheduleLevel _type;
+    private BroadWorksConnector.Ocip.Models.ScheduleLevel _type;
 
     [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleLevel Type {
+    public BroadWorksConnector.Ocip.Models.ScheduleLevel Type {
         get => _type;
         set {
             TypeSpecified = true;

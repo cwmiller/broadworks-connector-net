@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemHuntGroupModifyRequest21 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemHuntGroupModifyRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private bool _removeHuntGroupNameFromCLID;
 
@@ -21,10 +21,10 @@ public  class SystemHuntGroupModifyRequest21 : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool RemoveHuntGroupNameFromCLIDSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope _uniformCallDistributionPolicyScope;
+    private BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope _uniformCallDistributionPolicyScope;
 
     [XmlElement(ElementName = "uniformCallDistributionPolicyScope", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope UniformCallDistributionPolicyScope {
+    public BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope UniformCallDistributionPolicyScope {
         get => _uniformCallDistributionPolicyScope;
         set {
             UniformCallDistributionPolicyScopeSpecified = true;

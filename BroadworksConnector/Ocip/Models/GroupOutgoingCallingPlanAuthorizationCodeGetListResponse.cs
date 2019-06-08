@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupOutgoingCallingPlanAuthorizationCodeGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupOutgoingCallingPlanAuthorizationCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanGroupAuthorizationCodes _groupCodeList;
+    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanGroupAuthorizationCodes _groupCodeList;
 
     [XmlElement(ElementName = "groupCodeList", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanGroupAuthorizationCodes GroupCodeList {
+    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanGroupAuthorizationCodes GroupCodeList {
         get => _groupCodeList;
         set {
             GroupCodeListSpecified = true;
@@ -21,10 +21,10 @@ public  class GroupOutgoingCallingPlanAuthorizationCodeGetListResponse : Broadwo
 
     [XmlIgnore]
     public bool GroupCodeListSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentAuthorizationCodes> _departmentCodeList;
+    private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentAuthorizationCodes> _departmentCodeList;
 
     [XmlElement(ElementName = "departmentCodeList", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentAuthorizationCodes> DepartmentCodeList {
+    public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentAuthorizationCodes> DepartmentCodeList {
         get => _departmentCodeList;
         set {
             DepartmentCodeListSpecified = true;

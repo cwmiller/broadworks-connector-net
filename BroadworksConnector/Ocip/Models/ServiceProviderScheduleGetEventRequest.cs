@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderScheduleGetEventRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderScheduleGetEventRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderScheduleGetEventRequest : BroadworksConnector.Ocip.
 
     [XmlIgnore]
     public bool ServiceProviderIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ScheduleKey _scheduleKey;
+    private BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
 
     [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleKey ScheduleKey {
+    public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey {
         get => _scheduleKey;
         set {
             ScheduleKeySpecified = true;

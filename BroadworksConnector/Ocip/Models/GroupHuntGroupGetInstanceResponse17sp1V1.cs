@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupHuntGroupGetInstanceResponse17sp1V1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupHuntGroupGetInstanceResponse17sp1V1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile17 _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17 _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile17 ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17 ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -21,10 +21,10 @@ public  class GroupHuntGroupGetInstanceResponse17sp1V1 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HuntPolicy _policy;
+    private BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
 
     [XmlElement(ElementName = "policy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HuntPolicy Policy {
+    public BroadWorksConnector.Ocip.Models.HuntPolicy Policy {
         get => _policy;
         set {
             PolicySpecified = true;
@@ -99,10 +99,10 @@ public  class GroupHuntGroupGetInstanceResponse17sp1V1 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool ForwardToPhoneNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _agentUserTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _agentUserTable;
 
     [XmlElement(ElementName = "agentUserTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable AgentUserTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable AgentUserTable {
         get => _agentUserTable;
         set {
             AgentUserTableSpecified = true;

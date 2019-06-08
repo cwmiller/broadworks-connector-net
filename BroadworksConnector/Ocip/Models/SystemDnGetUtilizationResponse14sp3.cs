@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDnGetUtilizationResponse14sp3 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemDnGetUtilizationResponse14sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class SystemDnGetUtilizationResponse14sp3 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UserType _userType;
+    private BroadWorksConnector.Ocip.Models.UserType _userType;
 
     [XmlElement(ElementName = "userType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserType UserType {
+    public BroadWorksConnector.Ocip.Models.UserType UserType {
         get => _userType;
         set {
             UserTypeSpecified = true;

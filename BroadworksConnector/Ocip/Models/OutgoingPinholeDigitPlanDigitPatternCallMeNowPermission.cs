@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class OutgoingPinholeDigitPlanDigitPatternCallMeNowPermission
 
     [XmlIgnore]
     public bool DigitPatternNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanCallMeNowPermission _permission;
+    private BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanCallMeNowPermission _permission;
 
     [XmlElement(ElementName = "permission", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingPinholeDigitPlanCallMeNowPermission Permission {
+    public BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanCallMeNowPermission Permission {
         get => _permission;
         set {
             PermissionSpecified = true;

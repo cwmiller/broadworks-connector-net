@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDomainGetListResponse22V2 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemDomainGetListResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _systemDefaultDomain;
 
@@ -21,10 +21,10 @@ public  class SystemDomainGetListResponse22V2 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool SystemDefaultDomainSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _domainTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _domainTable;
 
     [XmlElement(ElementName = "domainTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable DomainTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable DomainTable {
         get => _domainTable;
         set {
             DomainTableSpecified = true;

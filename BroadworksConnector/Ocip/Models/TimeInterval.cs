@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class TimeInterval 
 {
-    private BroadworksConnector.Ocip.Models.DayOfWeek _startDayOfWeek;
+    private BroadWorksConnector.Ocip.Models.DayOfWeek _startDayOfWeek;
 
     [XmlElement(ElementName = "startDayOfWeek", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DayOfWeek StartDayOfWeek {
+    public BroadWorksConnector.Ocip.Models.DayOfWeek StartDayOfWeek {
         get => _startDayOfWeek;
         set {
             StartDayOfWeekSpecified = true;
@@ -47,10 +47,10 @@ public  class TimeInterval
 
     [XmlIgnore]
     public bool StartMinuteSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DayOfWeek _endDayOfWeek;
+    private BroadWorksConnector.Ocip.Models.DayOfWeek _endDayOfWeek;
 
     [XmlElement(ElementName = "endDayOfWeek", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DayOfWeek EndDayOfWeek {
+    public BroadWorksConnector.Ocip.Models.DayOfWeek EndDayOfWeek {
         get => _endDayOfWeek;
         set {
             EndDayOfWeekSpecified = true;

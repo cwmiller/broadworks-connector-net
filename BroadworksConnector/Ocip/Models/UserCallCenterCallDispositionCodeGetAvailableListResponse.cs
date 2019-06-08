@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallCenterCallDispositionCodeGetAvailableListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserCallCenterCallDispositionCodeGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _dispositionCodesTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _dispositionCodesTable;
 
     [XmlElement(ElementName = "dispositionCodesTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable DispositionCodesTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable DispositionCodesTable {
         get => _dispositionCodesTable;
         set {
             DispositionCodesTableSpecified = true;

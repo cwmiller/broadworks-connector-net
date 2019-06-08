@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDeviceTypeGetAvailableListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemDeviceTypeGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private List<string> _deviceType;
 
@@ -21,10 +21,10 @@ public  class SystemDeviceTypeGetAvailableListResponse : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool DeviceTypeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponseTypeInfo> _typeInfo;
+    private List<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponseTypeInfo> _typeInfo;
 
     [XmlElement(ElementName = "typeInfo", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponseTypeInfo> TypeInfo {
+    public List<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponseTypeInfo> TypeInfo {
         get => _typeInfo;
         set {
             TypeInfoSpecified = true;

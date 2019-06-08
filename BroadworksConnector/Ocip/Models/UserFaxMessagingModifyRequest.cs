@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserFaxMessagingModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserFaxMessagingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -60,10 +60,10 @@ public  class UserFaxMessagingModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool ExtensionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
+    private BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
 
     [XmlElement(ElementName = "sipAliasList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
+    public BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
         get => _sipAliasList;
         set {
             SipAliasListSpecified = true;

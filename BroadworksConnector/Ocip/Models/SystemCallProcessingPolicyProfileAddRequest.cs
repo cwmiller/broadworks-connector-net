@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallProcessingPolicyProfileAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemCallProcessingPolicyProfileAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _name;
 
@@ -34,10 +34,10 @@ public  class SystemCallProcessingPolicyProfileAddRequest : BroadworksConnector.
 
     [XmlIgnore]
     public bool DescriptionSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType> _assignedSubscriberType;
+    private List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType> _assignedSubscriberType;
 
     [XmlElement(ElementName = "assignedSubscriberType", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType> AssignedSubscriberType {
+    public List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType> AssignedSubscriberType {
         get => _assignedSubscriberType;
         set {
             AssignedSubscriberTypeSpecified = true;

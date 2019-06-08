@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupServiceAssignListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupServiceAssignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupServiceAssignListRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.GroupService> _serviceName;
+    private List<BroadWorksConnector.Ocip.Models.GroupService> _serviceName;
 
     [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.GroupService> ServiceName {
+    public List<BroadWorksConnector.Ocip.Models.GroupService> ServiceName {
         get => _serviceName;
         set {
             ServiceNameSpecified = true;

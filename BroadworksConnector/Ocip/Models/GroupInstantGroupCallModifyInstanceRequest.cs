@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupInstantGroupCallModifyInstanceRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupInstantGroupCallModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -21,10 +21,10 @@ public  class GroupInstantGroupCallModifyInstanceRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupInstantGroupCallModifyInstanceRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList _destinationPhoneNumberList;
+    private BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList _destinationPhoneNumberList;
 
     [XmlElement(ElementName = "destinationPhoneNumberList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList DestinationPhoneNumberList {
+    public BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList DestinationPhoneNumberList {
         get => _destinationPhoneNumberList;
         set {
             DestinationPhoneNumberListSpecified = true;

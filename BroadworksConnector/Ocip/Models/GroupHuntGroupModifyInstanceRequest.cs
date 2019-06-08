@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupHuntGroupModifyInstanceRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupHuntGroupModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceUserId;
 
@@ -21,10 +21,10 @@ public  class GroupHuntGroupModifyInstanceRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool ServiceUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupHuntGroupModifyInstanceRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HuntPolicy _policy;
+    private BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
 
     [XmlElement(ElementName = "policy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HuntPolicy Policy {
+    public BroadWorksConnector.Ocip.Models.HuntPolicy Policy {
         get => _policy;
         set {
             PolicySpecified = true;
@@ -112,10 +112,10 @@ public  class GroupHuntGroupModifyInstanceRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool ForwardToPhoneNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
+    private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
 
     [XmlElement(ElementName = "agentUserIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList {
+    public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList {
         get => _agentUserIdList;
         set {
             AgentUserIdListSpecified = true;

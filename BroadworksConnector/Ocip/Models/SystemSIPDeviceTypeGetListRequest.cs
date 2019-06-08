@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPDeviceTypeGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSIPDeviceTypeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private int _responseSizeLimit;
 
@@ -21,10 +21,10 @@ public  class SystemSIPDeviceTypeGetListRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDeviceType> _searchCriteriaDeviceType;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceType> _searchCriteriaDeviceType;
 
     [XmlElement(ElementName = "searchCriteriaDeviceType", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDeviceType> SearchCriteriaDeviceType {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceType> SearchCriteriaDeviceType {
         get => _searchCriteriaDeviceType;
         set {
             SearchCriteriaDeviceTypeSpecified = true;
@@ -34,10 +34,10 @@ public  class SystemSIPDeviceTypeGetListRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool SearchCriteriaDeviceTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactSignalingAddressType _searchCriteriaExactSignalingAddressType;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactSignalingAddressType _searchCriteriaExactSignalingAddressType;
 
     [XmlElement(ElementName = "searchCriteriaExactSignalingAddressType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactSignalingAddressType SearchCriteriaExactSignalingAddressType {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactSignalingAddressType SearchCriteriaExactSignalingAddressType {
         get => _searchCriteriaExactSignalingAddressType;
         set {
             SearchCriteriaExactSignalingAddressTypeSpecified = true;
@@ -47,10 +47,10 @@ public  class SystemSIPDeviceTypeGetListRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool SearchCriteriaExactSignalingAddressTypeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId;
 
     [XmlElement(ElementName = "searchCriteriaResellerId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId {
         get => _searchCriteriaResellerId;
         set {
             SearchCriteriaResellerIdSpecified = true;

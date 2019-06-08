@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class ReplacementAlternateUserIdEntryList 
 {
-    private List<BroadworksConnector.Ocip.Models.AlternateUserIdEntry> _alternateUserId;
+    private List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry> _alternateUserId;
 
     [XmlElement(ElementName = "alternateUserId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.AlternateUserIdEntry> AlternateUserId {
+    public List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry> AlternateUserId {
         get => _alternateUserId;
         set {
             AlternateUserIdSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupIntegratedIMPGetResponse21sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupIntegratedIMPGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _useServiceProviderSetting;
 
@@ -60,10 +60,10 @@ public  class GroupIntegratedIMPGetResponse21sp1 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool AddServiceProviderInIMPUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
+    private BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
 
     [XmlElement(ElementName = "defaultImpIdType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.IntegratedIMPUserIDType DefaultImpIdType {
+    public BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType DefaultImpIdType {
         get => _defaultImpIdType;
         set {
             DefaultImpIdTypeSpecified = true;

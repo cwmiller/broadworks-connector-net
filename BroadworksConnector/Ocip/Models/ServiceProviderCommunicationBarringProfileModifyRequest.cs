@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderCommunicationBarringProfileModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderCommunicationBarringProfileModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -60,10 +60,10 @@ public  class ServiceProviderCommunicationBarringProfileModifyRequest : Broadwor
 
     [XmlIgnore]
     public bool DescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommunicationBarringOriginatingAction _originatingDefaultAction;
+    private BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction _originatingDefaultAction;
 
     [XmlElement(ElementName = "originatingDefaultAction", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringOriginatingAction OriginatingDefaultAction {
+    public BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction OriginatingDefaultAction {
         get => _originatingDefaultAction;
         set {
             OriginatingDefaultActionSpecified = true;
@@ -112,10 +112,10 @@ public  class ServiceProviderCommunicationBarringProfileModifyRequest : Broadwor
 
     [XmlIgnore]
     public bool OriginatingDefaultCallTimeoutSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalOriginatingRuleList _originatingRule;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalOriginatingRuleList _originatingRule;
 
     [XmlElement(ElementName = "originatingRule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalOriginatingRuleList OriginatingRule {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalOriginatingRuleList OriginatingRule {
         get => _originatingRule;
         set {
             OriginatingRuleSpecified = true;
@@ -125,10 +125,10 @@ public  class ServiceProviderCommunicationBarringProfileModifyRequest : Broadwor
 
     [XmlIgnore]
     public bool OriginatingRuleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingAction _redirectingDefaultAction;
+    private BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction _redirectingDefaultAction;
 
     [XmlElement(ElementName = "redirectingDefaultAction", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringRedirectingAction RedirectingDefaultAction {
+    public BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction RedirectingDefaultAction {
         get => _redirectingDefaultAction;
         set {
             RedirectingDefaultActionSpecified = true;
@@ -151,10 +151,10 @@ public  class ServiceProviderCommunicationBarringProfileModifyRequest : Broadwor
 
     [XmlIgnore]
     public bool RedirectingDefaultCallTimeoutSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalRedirectingRuleList _redirectingRule;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalRedirectingRuleList _redirectingRule;
 
     [XmlElement(ElementName = "redirectingRule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalRedirectingRuleList RedirectingRule {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalRedirectingRuleList RedirectingRule {
         get => _redirectingRule;
         set {
             RedirectingRuleSpecified = true;
@@ -164,10 +164,10 @@ public  class ServiceProviderCommunicationBarringProfileModifyRequest : Broadwor
 
     [XmlIgnore]
     public bool RedirectingRuleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _callMeNowDefaultAction;
+    private BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _callMeNowDefaultAction;
 
     [XmlElement(ElementName = "callMeNowDefaultAction", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringCallMeNowAction CallMeNowDefaultAction {
+    public BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction CallMeNowDefaultAction {
         get => _callMeNowDefaultAction;
         set {
             CallMeNowDefaultActionSpecified = true;
@@ -190,10 +190,10 @@ public  class ServiceProviderCommunicationBarringProfileModifyRequest : Broadwor
 
     [XmlIgnore]
     public bool CallMeNowDefaultCallTimeoutSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalCallMeNowRuleList _callMeNowRule;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalCallMeNowRuleList _callMeNowRule;
 
     [XmlElement(ElementName = "callMeNowRule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalCallMeNowRuleList CallMeNowRule {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalCallMeNowRuleList CallMeNowRule {
         get => _callMeNowRule;
         set {
             CallMeNowRuleSpecified = true;
@@ -203,10 +203,10 @@ public  class ServiceProviderCommunicationBarringProfileModifyRequest : Broadwor
 
     [XmlIgnore]
     public bool CallMeNowRuleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommunicationBarringIncomingAction _incomingDefaultAction;
+    private BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction _incomingDefaultAction;
 
     [XmlElement(ElementName = "incomingDefaultAction", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringIncomingAction IncomingDefaultAction {
+    public BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction IncomingDefaultAction {
         get => _incomingDefaultAction;
         set {
             IncomingDefaultActionSpecified = true;
@@ -229,10 +229,10 @@ public  class ServiceProviderCommunicationBarringProfileModifyRequest : Broadwor
 
     [XmlIgnore]
     public bool IncomingDefaultCallTimeoutSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringIncomingRuleList19sp1 _incomingRule;
+    private BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringIncomingRuleList19sp1 _incomingRule;
 
     [XmlElement(ElementName = "incomingRule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementCommunicationBarringIncomingRuleList19sp1 IncomingRule {
+    public BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringIncomingRuleList19sp1 IncomingRule {
         get => _incomingRule;
         set {
             IncomingRuleSpecified = true;

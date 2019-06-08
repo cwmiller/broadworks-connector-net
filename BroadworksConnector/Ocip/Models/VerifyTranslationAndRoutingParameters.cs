@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class VerifyTranslationAndRoutingParameters 
 {
-    private BroadworksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination _origination;
+    private BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination _origination;
 
     [XmlElement(ElementName = "origination", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination Origination {
+    public BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination Origination {
         get => _origination;
         set {
             OriginationSpecified = true;

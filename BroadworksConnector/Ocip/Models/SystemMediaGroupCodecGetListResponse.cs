@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemMediaGroupCodecGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemMediaGroupCodecGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _codecTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _codecTable;
 
     [XmlElement(ElementName = "codecTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable CodecTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable CodecTable {
         get => _codecTable;
         set {
             CodecTableSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderServicePackModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderServicePackModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -73,10 +73,10 @@ public  class ServiceProviderServicePackModifyRequest : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool IsAvailableForUseSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedPositiveInt _servicePackQuantity;
+    private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _servicePackQuantity;
 
     [XmlElement(ElementName = "servicePackQuantity", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedPositiveInt ServicePackQuantity {
+    public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt ServicePackQuantity {
         get => _servicePackQuantity;
         set {
             ServicePackQuantitySpecified = true;

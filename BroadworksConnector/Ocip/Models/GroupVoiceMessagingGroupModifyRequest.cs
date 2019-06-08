@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupVoiceMessagingGroupModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupVoiceMessagingGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupVoiceMessagingGroupModifyRequest : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingGroupMailServerChoices _useMailServerSetting;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingGroupMailServerChoices _useMailServerSetting;
 
     [XmlElement(ElementName = "useMailServerSetting", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingGroupMailServerChoices UseMailServerSetting {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingGroupMailServerChoices UseMailServerSetting {
         get => _useMailServerSetting;
         set {
             UseMailServerSettingSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupVoiceMessagingGroupModifyRequest : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool MailServerNetAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingMailServerProtocol _mailServerProtocol;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol _mailServerProtocol;
 
     [XmlElement(ElementName = "mailServerProtocol", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingMailServerProtocol MailServerProtocol {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol MailServerProtocol {
         get => _mailServerProtocol;
         set {
             MailServerProtocolSpecified = true;
@@ -125,10 +125,10 @@ public  class GroupVoiceMessagingGroupModifyRequest : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool RealDeleteForImapSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes _maxMailboxLengthMinutes;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes _maxMailboxLengthMinutes;
 
     [XmlElement(ElementName = "maxMailboxLengthMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes MaxMailboxLengthMinutes {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes MaxMailboxLengthMinutes {
         get => _maxMailboxLengthMinutes;
         set {
             MaxMailboxLengthMinutesSpecified = true;
@@ -151,10 +151,10 @@ public  class GroupVoiceMessagingGroupModifyRequest : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool DoesMessageAgeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays _holdPeriodDays;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays _holdPeriodDays;
 
     [XmlElement(ElementName = "holdPeriodDays", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays HoldPeriodDays {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays HoldPeriodDays {
         get => _holdPeriodDays;
         set {
             HoldPeriodDaysSpecified = true;

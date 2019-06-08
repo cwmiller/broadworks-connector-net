@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class UserEnhancedCallLogsGetListResponse21LegacyEntry 
 {
-    private List<BroadworksConnector.Ocip.Models.MixedCallLogsEntry> _callLog;
+    private List<BroadWorksConnector.Ocip.Models.MixedCallLogsEntry> _callLog;
 
     [XmlElement(ElementName = "callLog", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.MixedCallLogsEntry> CallLog {
+    public List<BroadWorksConnector.Ocip.Models.MixedCallLogsEntry> CallLog {
         get => _callLog;
         set {
             CallLogSpecified = true;

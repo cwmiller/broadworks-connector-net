@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupInterceptGroupGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupInterceptGroupGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isActive;
 
@@ -21,10 +21,10 @@ public  class GroupInterceptGroupGetResponse : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
+    private BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
 
     [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection {
+    public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection {
         get => _announcementSelection;
         set {
             AnnouncementSelectionSpecified = true;

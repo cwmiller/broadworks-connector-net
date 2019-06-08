@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserFlexibleSeatingGuestModifyRequest22 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserFlexibleSeatingGuestModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -73,10 +73,10 @@ public  class UserFlexibleSeatingGuestModifyRequest22 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool UnlockPhonePINCodeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify22 _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify22 _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify22 AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify22 AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;

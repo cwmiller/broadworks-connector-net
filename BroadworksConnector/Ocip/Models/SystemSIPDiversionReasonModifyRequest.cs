@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPDiversionReasonModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSIPDiversionReasonModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.SIPDiversionReason _diversionReason;
+    private BroadWorksConnector.Ocip.Models.SIPDiversionReason _diversionReason;
 
     [XmlElement(ElementName = "diversionReason", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SIPDiversionReason DiversionReason {
+    public BroadWorksConnector.Ocip.Models.SIPDiversionReason DiversionReason {
         get => _diversionReason;
         set {
             DiversionReasonSpecified = true;

@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -34,10 +34,10 @@ public  class ProfileAndServiceCallForwardingNoAnswerInfo
 
     [XmlIgnore]
     public bool ForwardToPhoneNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings _numberOfRings;
+    private BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings _numberOfRings;
 
     [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings NumberOfRings {
+    public BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings NumberOfRings {
         get => _numberOfRings;
         set {
             NumberOfRingsSpecified = true;

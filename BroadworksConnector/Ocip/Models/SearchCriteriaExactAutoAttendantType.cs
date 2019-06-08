@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactAutoAttendantType : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactAutoAttendantType : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.AutoAttendantType _type;
+    private BroadWorksConnector.Ocip.Models.AutoAttendantType _type;
 
     [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AutoAttendantType Type {
+    public BroadWorksConnector.Ocip.Models.AutoAttendantType Type {
         get => _type;
         set {
             TypeSpecified = true;

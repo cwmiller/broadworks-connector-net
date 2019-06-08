@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserShInterfaceGetPublicIdDataResponse21sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserShInterfaceGetPublicIdDataResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserShInterfaceGetPublicIdDataResponse21sp1 : BroadworksConnector.
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UserType _userType;
+    private BroadWorksConnector.Ocip.Models.UserType _userType;
 
     [XmlElement(ElementName = "userType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserType UserType {
+    public BroadWorksConnector.Ocip.Models.UserType UserType {
         get => _userType;
         set {
             UserTypeSpecified = true;
@@ -34,10 +34,10 @@ public  class UserShInterfaceGetPublicIdDataResponse21sp1 : BroadworksConnector.
 
     [XmlIgnore]
     public bool UserTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EndpointType21sp1 _endpointType;
+    private BroadWorksConnector.Ocip.Models.EndpointType21sp1 _endpointType;
 
     [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EndpointType21sp1 EndpointType {
+    public BroadWorksConnector.Ocip.Models.EndpointType21sp1 EndpointType {
         get => _endpointType;
         set {
             EndpointTypeSpecified = true;
@@ -60,10 +60,10 @@ public  class UserShInterfaceGetPublicIdDataResponse21sp1 : BroadworksConnector.
 
     [XmlIgnore]
     public bool SCSCFNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.IMSUserState _iMSUserState;
+    private BroadWorksConnector.Ocip.Models.IMSUserState _iMSUserState;
 
     [XmlElement(ElementName = "IMSUserState", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.IMSUserState IMSUserState {
+    public BroadWorksConnector.Ocip.Models.IMSUserState IMSUserState {
         get => _iMSUserState;
         set {
             IMSUserStateSpecified = true;

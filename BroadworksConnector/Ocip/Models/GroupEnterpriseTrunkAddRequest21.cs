@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupEnterpriseTrunkAddRequest21 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupEnterpriseTrunkAddRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -60,10 +60,10 @@ public  class GroupEnterpriseTrunkAddRequest21 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool MaximumRerouteAttemptsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction _routeExhaustionAction;
+    private BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction _routeExhaustionAction;
 
     [XmlElement(ElementName = "routeExhaustionAction", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction RouteExhaustionAction {
+    public BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction RouteExhaustionAction {
         get => _routeExhaustionAction;
         set {
             RouteExhaustionActionSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupEnterpriseTrunkAddRequest21 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool RouteExhaustionForwardAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupEnterpriseTrunkAddRequest21OrderedRouting _orderedRouting;
+    private BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkAddRequest21OrderedRouting _orderedRouting;
 
     [XmlElement(ElementName = "orderedRouting", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupEnterpriseTrunkAddRequest21OrderedRouting OrderedRouting {
+    public BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkAddRequest21OrderedRouting OrderedRouting {
         get => _orderedRouting;
         set {
             OrderedRoutingSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupEnterpriseTrunkAddRequest21 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool OrderedRoutingSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupEnterpriseTrunkAddRequest21PriorityWeightedRouting _priorityWeightedRouting;
+    private BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkAddRequest21PriorityWeightedRouting _priorityWeightedRouting;
 
     [XmlElement(ElementName = "priorityWeightedRouting", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupEnterpriseTrunkAddRequest21PriorityWeightedRouting PriorityWeightedRouting {
+    public BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkAddRequest21PriorityWeightedRouting PriorityWeightedRouting {
         get => _priorityWeightedRouting;
         set {
             PriorityWeightedRoutingSpecified = true;

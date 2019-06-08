@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallParkGetInstancePagedSortedResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupCallParkGetInstancePagedSortedResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _recallAlternateUserId;
 
@@ -21,10 +21,10 @@ public  class GroupCallParkGetInstancePagedSortedResponse : BroadworksConnector.
 
     [XmlIgnore]
     public bool RecallAlternateUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallParkRecallTo _recallTo;
+    private BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
 
     [XmlElement(ElementName = "recallTo", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallParkRecallTo RecallTo {
+    public BroadWorksConnector.Ocip.Models.CallParkRecallTo RecallTo {
         get => _recallTo;
         set {
             RecallToSpecified = true;
@@ -34,10 +34,10 @@ public  class GroupCallParkGetInstancePagedSortedResponse : BroadworksConnector.
 
     [XmlIgnore]
     public bool RecallToSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _userTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
     [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable UserTable {
         get => _userTable;
         set {
             UserTableSpecified = true;

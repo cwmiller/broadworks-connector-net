@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemBroadWorksMobilityGetMobileNetworkIMRNListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemBroadWorksMobilityGetMobileNetworkIMRNListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _mobileNetworkName;
 
@@ -21,10 +21,10 @@ public  class SystemBroadWorksMobilityGetMobileNetworkIMRNListRequest : Broadwor
 
     [XmlIgnore]
     public bool MobileNetworkNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaIMRN> _searchCriteriaIMRN;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaIMRN> _searchCriteriaIMRN;
 
     [XmlElement(ElementName = "searchCriteriaIMRN", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaIMRN> SearchCriteriaIMRN {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaIMRN> SearchCriteriaIMRN {
         get => _searchCriteriaIMRN;
         set {
             SearchCriteriaIMRNSpecified = true;

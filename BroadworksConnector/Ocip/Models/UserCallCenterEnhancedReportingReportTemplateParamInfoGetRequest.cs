@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallCenterEnhancedReportingReportTemplateParamInfoGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserCallCenterEnhancedReportingReportTemplateParamInfoGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.CallCenterReportTemplateKey _reportTemplate;
+    private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateKey _reportTemplate;
 
     [XmlElement(ElementName = "reportTemplate", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallCenterReportTemplateKey ReportTemplate {
+    public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateKey ReportTemplate {
         get => _reportTemplate;
         set {
             ReportTemplateSpecified = true;

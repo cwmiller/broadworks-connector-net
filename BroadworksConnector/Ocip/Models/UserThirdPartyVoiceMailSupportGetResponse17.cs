@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserThirdPartyVoiceMailSupportGetResponse17 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserThirdPartyVoiceMailSupportGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isActive;
 
@@ -47,10 +47,10 @@ public  class UserThirdPartyVoiceMailSupportGetResponse17 : BroadworksConnector.
 
     [XmlIgnore]
     public bool NoAnswerRedirectToVoiceMailSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection _serverSelection;
+    private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection _serverSelection;
 
     [XmlElement(ElementName = "serverSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection ServerSelection {
+    public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection ServerSelection {
         get => _serverSelection;
         set {
             ServerSelectionSpecified = true;
@@ -73,10 +73,10 @@ public  class UserThirdPartyVoiceMailSupportGetResponse17 : BroadworksConnector.
 
     [XmlIgnore]
     public bool UserServerSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType _mailboxIdType;
+    private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType _mailboxIdType;
 
     [XmlElement(ElementName = "mailboxIdType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType MailboxIdType {
+    public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType MailboxIdType {
         get => _mailboxIdType;
         set {
             MailboxIdTypeSpecified = true;
@@ -99,10 +99,10 @@ public  class UserThirdPartyVoiceMailSupportGetResponse17 : BroadworksConnector.
 
     [XmlIgnore]
     public bool MailboxURLSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ThirdPartyVoiceMailSupportNumberOfRings _noAnswerNumberOfRings;
+    private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportNumberOfRings _noAnswerNumberOfRings;
 
     [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ThirdPartyVoiceMailSupportNumberOfRings NoAnswerNumberOfRings {
+    public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportNumberOfRings NoAnswerNumberOfRings {
         get => _noAnswerNumberOfRings;
         set {
             NoAnswerNumberOfRingsSpecified = true;

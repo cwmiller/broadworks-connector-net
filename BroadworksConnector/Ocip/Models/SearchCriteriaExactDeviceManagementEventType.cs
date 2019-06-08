@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactDeviceManagementEventType : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactDeviceManagementEventType : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.DeviceManagementEventType _dmEventType;
+    private BroadWorksConnector.Ocip.Models.DeviceManagementEventType _dmEventType;
 
     [XmlElement(ElementName = "dmEventType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DeviceManagementEventType DmEventType {
+    public BroadWorksConnector.Ocip.Models.DeviceManagementEventType DmEventType {
         get => _dmEventType;
         set {
             DmEventTypeSpecified = true;

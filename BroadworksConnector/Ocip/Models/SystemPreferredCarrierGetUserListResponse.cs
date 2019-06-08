@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemPreferredCarrierGetUserListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemPreferredCarrierGetUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _usersUsingCarrierTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _usersUsingCarrierTable;
 
     [XmlElement(ElementName = "usersUsingCarrierTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable UsersUsingCarrierTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable UsersUsingCarrierTable {
         get => _usersUsingCarrierTable;
         set {
             UsersUsingCarrierTableSpecified = true;

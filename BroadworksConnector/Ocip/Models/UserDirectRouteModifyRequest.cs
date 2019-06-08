@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserDirectRouteModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserDirectRouteModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserDirectRouteModifyRequest : BroadworksConnector.Ocip.Models.C.O
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy _outgoingDTGPolicy;
+    private BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy _outgoingDTGPolicy;
 
     [XmlElement(ElementName = "outgoingDTGPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy OutgoingDTGPolicy {
+    public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy OutgoingDTGPolicy {
         get => _outgoingDTGPolicy;
         set {
             OutgoingDTGPolicySpecified = true;
@@ -34,10 +34,10 @@ public  class UserDirectRouteModifyRequest : BroadworksConnector.Ocip.Models.C.O
 
     [XmlIgnore]
     public bool OutgoingDTGPolicySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy _outgoingTrunkIdentityPolicy;
+    private BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy _outgoingTrunkIdentityPolicy;
 
     [XmlElement(ElementName = "outgoingTrunkIdentityPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy OutgoingTrunkIdentityPolicy {
+    public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy OutgoingTrunkIdentityPolicy {
         get => _outgoingTrunkIdentityPolicy;
         set {
             OutgoingTrunkIdentityPolicySpecified = true;
@@ -47,10 +47,10 @@ public  class UserDirectRouteModifyRequest : BroadworksConnector.Ocip.Models.C.O
 
     [XmlIgnore]
     public bool OutgoingTrunkIdentityPolicySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DirectRouteReplacementIdentityList _directRouteIdentityList;
+    private BroadWorksConnector.Ocip.Models.DirectRouteReplacementIdentityList _directRouteIdentityList;
 
     [XmlElement(ElementName = "directRouteIdentityList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DirectRouteReplacementIdentityList DirectRouteIdentityList {
+    public BroadWorksConnector.Ocip.Models.DirectRouteReplacementIdentityList DirectRouteIdentityList {
         get => _directRouteIdentityList;
         set {
             DirectRouteIdentityListSpecified = true;

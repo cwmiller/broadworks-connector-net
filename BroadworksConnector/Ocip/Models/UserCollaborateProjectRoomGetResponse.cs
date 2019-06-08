@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCollaborateProjectRoomGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserCollaborateProjectRoomGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _roomName;
 
@@ -21,10 +21,10 @@ public  class UserCollaborateProjectRoomGetResponse : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool RoomNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CollaborateRoomAttendeeNotification _attendeeNotification;
+    private BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification _attendeeNotification;
 
     [XmlElement(ElementName = "attendeeNotification", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CollaborateRoomAttendeeNotification AttendeeNotification {
+    public BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification AttendeeNotification {
         get => _attendeeNotification;
         set {
             AttendeeNotificationSpecified = true;
@@ -60,10 +60,10 @@ public  class UserCollaborateProjectRoomGetResponse : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool OwnerRequiredSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CollaborateRoomSchedule _roomSchedule;
+    private BroadWorksConnector.Ocip.Models.CollaborateRoomSchedule _roomSchedule;
 
     [XmlElement(ElementName = "roomSchedule", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CollaborateRoomSchedule RoomSchedule {
+    public BroadWorksConnector.Ocip.Models.CollaborateRoomSchedule RoomSchedule {
         get => _roomSchedule;
         set {
             RoomScheduleSpecified = true;

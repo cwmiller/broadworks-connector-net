@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCommonPhoneListAddListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCommonPhoneListAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupCommonPhoneListAddListRequest : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.PhoneListEntry> _entry;
+    private List<BroadWorksConnector.Ocip.Models.PhoneListEntry> _entry;
 
     [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.PhoneListEntry> Entry {
+    public List<BroadWorksConnector.Ocip.Models.PhoneListEntry> Entry {
         get => _entry;
         set {
             EntrySpecified = true;

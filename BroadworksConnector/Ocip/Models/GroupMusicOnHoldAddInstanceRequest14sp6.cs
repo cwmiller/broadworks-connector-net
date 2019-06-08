@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupMusicOnHoldAddInstanceRequest14sp6 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupMusicOnHoldAddInstanceRequest14sp6 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupMusicOnHoldAddInstanceRequest14sp6 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _department;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
     [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey Department {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
         get => _department;
         set {
             DepartmentSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupMusicOnHoldAddInstanceRequest14sp6 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool IsActiveDuringBusyCampOnSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldSourceAdd _source;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd _source;
 
     [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldSourceAdd Source {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd Source {
         get => _source;
         set {
             SourceSpecified = true;
@@ -112,10 +112,10 @@ public  class GroupMusicOnHoldAddInstanceRequest14sp6 : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool UseAlternateSourceForInternalCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldSourceAdd _internalSource;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd _internalSource;
 
     [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldSourceAdd InternalSource {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd InternalSource {
         get => _internalSource;
         set {
             InternalSourceSpecified = true;

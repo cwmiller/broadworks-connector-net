@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemGETSGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemGETSGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _enabled;
 
@@ -47,10 +47,10 @@ public  class SystemGETSGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataR
 
     [XmlIgnore]
     public bool SendAccessResourcePrioritySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GETSCallIdentifierMode _callIdentifierMode;
+    private BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode _callIdentifierMode;
 
     [XmlElement(ElementName = "callIdentifierMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GETSCallIdentifierMode CallIdentifierMode {
+    public BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode CallIdentifierMode {
         get => _callIdentifierMode;
         set {
             CallIdentifierModeSpecified = true;

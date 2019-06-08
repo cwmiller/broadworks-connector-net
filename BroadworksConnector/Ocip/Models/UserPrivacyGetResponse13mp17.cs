@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserPrivacyGetResponse13mp17 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserPrivacyGetResponse13mp17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _enableDirectoryPrivacy;
 
@@ -60,10 +60,10 @@ public  class UserPrivacyGetResponse13mp17 : BroadworksConnector.Ocip.Models.C.O
 
     [XmlIgnore]
     public bool EnablePhoneStatusPrivacySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _permittedMonitorUserIdTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _permittedMonitorUserIdTable;
 
     [XmlElement(ElementName = "permittedMonitorUserIdTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable PermittedMonitorUserIdTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable PermittedMonitorUserIdTable {
         get => _permittedMonitorUserIdTable;
         set {
             PermittedMonitorUserIdTableSpecified = true;

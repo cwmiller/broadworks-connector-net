@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserHolidayScheduleGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserHolidayScheduleGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _holidayScheduleTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _holidayScheduleTable;
 
     [XmlElement(ElementName = "holidayScheduleTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable HolidayScheduleTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable HolidayScheduleTable {
         get => _holidayScheduleTable;
         set {
             HolidayScheduleTableSpecified = true;

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPAuthenticationTrunkGroupLockoutClearRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSIPAuthenticationTrunkGroupLockoutClearRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private List<BroadworksConnector.Ocip.Models.TrunkGroupKey> _trunkGroupkey;
+    private List<BroadWorksConnector.Ocip.Models.TrunkGroupKey> _trunkGroupkey;
 
     [XmlElement(ElementName = "trunkGroupkey", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.TrunkGroupKey> TrunkGroupkey {
+    public List<BroadWorksConnector.Ocip.Models.TrunkGroupKey> TrunkGroupkey {
         get => _trunkGroupkey;
         set {
             TrunkGroupkeySpecified = true;

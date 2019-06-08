@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserExecutiveGetAssistantResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserExecutiveGetAssistantResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _allowOptInOut;
 
@@ -21,10 +21,10 @@ public  class UserExecutiveGetAssistantResponse : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool AllowOptInOutSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _assistantUserTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _assistantUserTable;
 
     [XmlElement(ElementName = "assistantUserTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable AssistantUserTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable AssistantUserTable {
         get => _assistantUserTable;
         set {
             AssistantUserTableSpecified = true;

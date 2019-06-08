@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class UserModifyRequest17sp4Endpoint 
 {
-    private BroadworksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;
@@ -21,10 +21,10 @@ public  class UserModifyRequest17sp4Endpoint
 
     [XmlIgnore]
     public bool AccessDeviceEndpointSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkAddressingMultipleContactModify _trunkAddressing;
+    private BroadWorksConnector.Ocip.Models.TrunkAddressingMultipleContactModify _trunkAddressing;
 
     [XmlElement(ElementName = "trunkAddressing", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkAddressingMultipleContactModify TrunkAddressing {
+    public BroadWorksConnector.Ocip.Models.TrunkAddressingMultipleContactModify TrunkAddressing {
         get => _trunkAddressing;
         set {
             TrunkAddressingSpecified = true;

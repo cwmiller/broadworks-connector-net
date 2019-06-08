@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderDeviceProfileAuthenticationPasswordRulesModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderDeviceProfileAuthenticationPasswordRulesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -216,10 +216,10 @@ public  class ServiceProviderDeviceProfileAuthenticationPasswordRulesModifyReque
 
     [XmlIgnore]
     public bool PermanentLockoutNotifyEmailAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationLockoutType _deviceProfileAuthenticationLockoutType;
+    private BroadWorksConnector.Ocip.Models.AuthenticationLockoutType _deviceProfileAuthenticationLockoutType;
 
     [XmlElement(ElementName = "deviceProfileAuthenticationLockoutType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationLockoutType DeviceProfileAuthenticationLockoutType {
+    public BroadWorksConnector.Ocip.Models.AuthenticationLockoutType DeviceProfileAuthenticationLockoutType {
         get => _deviceProfileAuthenticationLockoutType;
         set {
             DeviceProfileAuthenticationLockoutTypeSpecified = true;
@@ -242,10 +242,10 @@ public  class ServiceProviderDeviceProfileAuthenticationPasswordRulesModifyReque
 
     [XmlIgnore]
     public bool DeviceProfileTemporaryLockoutThresholdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _deviceProfileWaitAlgorithm;
+    private BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _deviceProfileWaitAlgorithm;
 
     [XmlElement(ElementName = "deviceProfileWaitAlgorithm", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType DeviceProfileWaitAlgorithm {
+    public BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType DeviceProfileWaitAlgorithm {
         get => _deviceProfileWaitAlgorithm;
         set {
             DeviceProfileWaitAlgorithmSpecified = true;
@@ -255,10 +255,10 @@ public  class ServiceProviderDeviceProfileAuthenticationPasswordRulesModifyReque
 
     [XmlIgnore]
     public bool DeviceProfileWaitAlgorithmSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _deviceProfileLockoutFixedMinutes;
+    private BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _deviceProfileLockoutFixedMinutes;
 
     [XmlElement(ElementName = "deviceProfileLockoutFixedMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes DeviceProfileLockoutFixedMinutes {
+    public BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes DeviceProfileLockoutFixedMinutes {
         get => _deviceProfileLockoutFixedMinutes;
         set {
             DeviceProfileLockoutFixedMinutesSpecified = true;

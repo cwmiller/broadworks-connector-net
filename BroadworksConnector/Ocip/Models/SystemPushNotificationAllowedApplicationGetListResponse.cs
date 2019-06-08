@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemPushNotificationAllowedApplicationGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemPushNotificationAllowedApplicationGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _applicationTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _applicationTable;
 
     [XmlElement(ElementName = "applicationTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ApplicationTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ApplicationTable {
         get => _applicationTable;
         set {
             ApplicationTableSpecified = true;

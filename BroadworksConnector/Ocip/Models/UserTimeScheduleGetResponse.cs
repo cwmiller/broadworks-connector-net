@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserTimeScheduleGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _timeScheduleName;
 
@@ -21,10 +21,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeScheduleNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval01;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval01;
 
     [XmlElement(ElementName = "timeInterval01", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval01 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval01 {
         get => _timeInterval01;
         set {
             TimeInterval01Specified = true;
@@ -34,10 +34,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval01Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval02;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval02;
 
     [XmlElement(ElementName = "timeInterval02", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval02 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval02 {
         get => _timeInterval02;
         set {
             TimeInterval02Specified = true;
@@ -47,10 +47,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval02Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval03;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval03;
 
     [XmlElement(ElementName = "timeInterval03", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval03 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval03 {
         get => _timeInterval03;
         set {
             TimeInterval03Specified = true;
@@ -60,10 +60,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval03Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval04;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval04;
 
     [XmlElement(ElementName = "timeInterval04", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval04 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval04 {
         get => _timeInterval04;
         set {
             TimeInterval04Specified = true;
@@ -73,10 +73,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval04Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval05;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval05;
 
     [XmlElement(ElementName = "timeInterval05", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval05 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval05 {
         get => _timeInterval05;
         set {
             TimeInterval05Specified = true;
@@ -86,10 +86,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval05Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval06;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval06;
 
     [XmlElement(ElementName = "timeInterval06", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval06 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval06 {
         get => _timeInterval06;
         set {
             TimeInterval06Specified = true;
@@ -99,10 +99,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval06Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval07;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval07;
 
     [XmlElement(ElementName = "timeInterval07", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval07 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval07 {
         get => _timeInterval07;
         set {
             TimeInterval07Specified = true;
@@ -112,10 +112,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval07Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval08;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval08;
 
     [XmlElement(ElementName = "timeInterval08", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval08 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval08 {
         get => _timeInterval08;
         set {
             TimeInterval08Specified = true;
@@ -125,10 +125,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval08Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval09;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval09;
 
     [XmlElement(ElementName = "timeInterval09", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval09 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval09 {
         get => _timeInterval09;
         set {
             TimeInterval09Specified = true;
@@ -138,10 +138,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval09Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval10;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval10;
 
     [XmlElement(ElementName = "timeInterval10", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval10 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval10 {
         get => _timeInterval10;
         set {
             TimeInterval10Specified = true;
@@ -151,10 +151,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval10Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval11;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval11;
 
     [XmlElement(ElementName = "timeInterval11", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval11 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval11 {
         get => _timeInterval11;
         set {
             TimeInterval11Specified = true;
@@ -164,10 +164,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval11Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval12;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval12;
 
     [XmlElement(ElementName = "timeInterval12", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval12 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval12 {
         get => _timeInterval12;
         set {
             TimeInterval12Specified = true;
@@ -177,10 +177,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval12Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval13;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval13;
 
     [XmlElement(ElementName = "timeInterval13", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval13 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval13 {
         get => _timeInterval13;
         set {
             TimeInterval13Specified = true;
@@ -190,10 +190,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval13Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval14;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval14;
 
     [XmlElement(ElementName = "timeInterval14", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval14 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval14 {
         get => _timeInterval14;
         set {
             TimeInterval14Specified = true;
@@ -203,10 +203,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval14Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval15;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval15;
 
     [XmlElement(ElementName = "timeInterval15", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval15 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval15 {
         get => _timeInterval15;
         set {
             TimeInterval15Specified = true;
@@ -216,10 +216,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval15Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval16;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval16;
 
     [XmlElement(ElementName = "timeInterval16", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval16 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval16 {
         get => _timeInterval16;
         set {
             TimeInterval16Specified = true;
@@ -229,10 +229,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval16Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval17;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval17;
 
     [XmlElement(ElementName = "timeInterval17", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval17 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval17 {
         get => _timeInterval17;
         set {
             TimeInterval17Specified = true;
@@ -242,10 +242,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval17Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval18;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval18;
 
     [XmlElement(ElementName = "timeInterval18", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval18 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval18 {
         get => _timeInterval18;
         set {
             TimeInterval18Specified = true;
@@ -255,10 +255,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval18Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval19;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval19;
 
     [XmlElement(ElementName = "timeInterval19", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval19 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval19 {
         get => _timeInterval19;
         set {
             TimeInterval19Specified = true;
@@ -268,10 +268,10 @@ public  class UserTimeScheduleGetResponse : BroadworksConnector.Ocip.Models.C.OC
 
     [XmlIgnore]
     public bool TimeInterval19Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeInterval _timeInterval20;
+    private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval20;
 
     [XmlElement(ElementName = "timeInterval20", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeInterval TimeInterval20 {
+    public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval20 {
         get => _timeInterval20;
         set {
             TimeInterval20Specified = true;

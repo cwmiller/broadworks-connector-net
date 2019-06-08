@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserPhoneDirectoryGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -60,10 +60,10 @@ public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool SearchCriteriaModeOrSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName;
 
     [XmlElement(ElementName = "searchCriteriaUserLastName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName {
         get => _searchCriteriaUserLastName;
         set {
             SearchCriteriaUserLastNameSpecified = true;
@@ -73,10 +73,10 @@ public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool SearchCriteriaUserLastNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserFirstName> _searchCriteriaUserFirstName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> _searchCriteriaUserFirstName;
 
     [XmlElement(ElementName = "searchCriteriaUserFirstName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName {
         get => _searchCriteriaUserFirstName;
         set {
             SearchCriteriaUserFirstNameSpecified = true;
@@ -86,10 +86,10 @@ public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool SearchCriteriaUserFirstNameSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
 
     [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
         get => _searchCriteriaDn;
         set {
             SearchCriteriaDnSpecified = true;
@@ -99,10 +99,10 @@ public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool SearchCriteriaDnSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension;
 
     [XmlElement(ElementName = "searchCriteriaExtension", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension {
         get => _searchCriteriaExtension;
         set {
             SearchCriteriaExtensionSpecified = true;
@@ -112,10 +112,10 @@ public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool SearchCriteriaExtensionSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaMobilePhoneNumber> _searchCriteriaMobilePhoneNumber;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaMobilePhoneNumber> _searchCriteriaMobilePhoneNumber;
 
     [XmlElement(ElementName = "searchCriteriaMobilePhoneNumber", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaMobilePhoneNumber> SearchCriteriaMobilePhoneNumber {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaMobilePhoneNumber> SearchCriteriaMobilePhoneNumber {
         get => _searchCriteriaMobilePhoneNumber;
         set {
             SearchCriteriaMobilePhoneNumberSpecified = true;
@@ -125,10 +125,10 @@ public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool SearchCriteriaMobilePhoneNumberSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaEmailAddress> _searchCriteriaEmailAddress;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEmailAddress> _searchCriteriaEmailAddress;
 
     [XmlElement(ElementName = "searchCriteriaEmailAddress", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaEmailAddress> SearchCriteriaEmailAddress {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaEmailAddress> SearchCriteriaEmailAddress {
         get => _searchCriteriaEmailAddress;
         set {
             SearchCriteriaEmailAddressSpecified = true;
@@ -138,10 +138,10 @@ public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool SearchCriteriaEmailAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactUserDepartment _searchCriteriaExactUserDepartment;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment _searchCriteriaExactUserDepartment;
 
     [XmlElement(ElementName = "searchCriteriaExactUserDepartment", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactUserDepartment SearchCriteriaExactUserDepartment {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment SearchCriteriaExactUserDepartment {
         get => _searchCriteriaExactUserDepartment;
         set {
             SearchCriteriaExactUserDepartmentSpecified = true;
@@ -151,10 +151,10 @@ public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool SearchCriteriaExactUserDepartmentSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactUserGroup _searchCriteriaExactUserGroup;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserGroup _searchCriteriaExactUserGroup;
 
     [XmlElement(ElementName = "searchCriteriaExactUserGroup", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactUserGroup SearchCriteriaExactUserGroup {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserGroup SearchCriteriaExactUserGroup {
         get => _searchCriteriaExactUserGroup;
         set {
             SearchCriteriaExactUserGroupSpecified = true;
@@ -164,10 +164,10 @@ public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool SearchCriteriaExactUserGroupSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactCustomContactDirectory _searchCriteriaExactCustomContactDirectory;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactCustomContactDirectory _searchCriteriaExactCustomContactDirectory;
 
     [XmlElement(ElementName = "searchCriteriaExactCustomContactDirectory", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactCustomContactDirectory SearchCriteriaExactCustomContactDirectory {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactCustomContactDirectory SearchCriteriaExactCustomContactDirectory {
         get => _searchCriteriaExactCustomContactDirectory;
         set {
             SearchCriteriaExactCustomContactDirectorySpecified = true;
@@ -177,10 +177,10 @@ public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool SearchCriteriaExactCustomContactDirectorySpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
 
     [XmlElement(ElementName = "searchCriteriaUserId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
         get => _searchCriteriaUserId;
         set {
             SearchCriteriaUserIdSpecified = true;
@@ -190,10 +190,10 @@ public  class UserPhoneDirectoryGetListRequest : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool SearchCriteriaUserIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaImpId> _searchCriteriaImpId;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaImpId> _searchCriteriaImpId;
 
     [XmlElement(ElementName = "searchCriteriaImpId", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaImpId> SearchCriteriaImpId {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaImpId> SearchCriteriaImpId {
         get => _searchCriteriaImpId;
         set {
             SearchCriteriaImpIdSpecified = true;

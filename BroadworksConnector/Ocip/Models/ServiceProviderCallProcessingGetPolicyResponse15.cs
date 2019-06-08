@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderCallProcessingGetPolicyResponse15 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderCallProcessingGetPolicyResponse15 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _useMaxSimultaneousCalls;
 
@@ -112,10 +112,10 @@ public  class ServiceProviderCallProcessingGetPolicyResponse15 : BroadworksConne
 
     [XmlIgnore]
     public bool MaxCallTimeForUnansweredCallsMinutesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaPolicySelection _mediaPolicySelection;
+    private BroadWorksConnector.Ocip.Models.MediaPolicySelection _mediaPolicySelection;
 
     [XmlElement(ElementName = "mediaPolicySelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaPolicySelection MediaPolicySelection {
+    public BroadWorksConnector.Ocip.Models.MediaPolicySelection MediaPolicySelection {
         get => _mediaPolicySelection;
         set {
             MediaPolicySelectionSpecified = true;
@@ -138,10 +138,10 @@ public  class ServiceProviderCallProcessingGetPolicyResponse15 : BroadworksConne
 
     [XmlIgnore]
     public bool SupportedMediaSetNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkUsageSelection _networkUsageSelection;
+    private BroadWorksConnector.Ocip.Models.NetworkUsageSelection _networkUsageSelection;
 
     [XmlElement(ElementName = "networkUsageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkUsageSelection NetworkUsageSelection {
+    public BroadWorksConnector.Ocip.Models.NetworkUsageSelection NetworkUsageSelection {
         get => _networkUsageSelection;
         set {
             NetworkUsageSelectionSpecified = true;
@@ -242,10 +242,10 @@ public  class ServiceProviderCallProcessingGetPolicyResponse15 : BroadworksConne
 
     [XmlIgnore]
     public bool EnforceEnterpriseCallingLineIdentityRestrictionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceProviderConferenceURISettingLevel _useSettingLevel;
+    private BroadWorksConnector.Ocip.Models.ServiceProviderConferenceURISettingLevel _useSettingLevel;
 
     [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceProviderConferenceURISettingLevel UseSettingLevel {
+    public BroadWorksConnector.Ocip.Models.ServiceProviderConferenceURISettingLevel UseSettingLevel {
         get => _useSettingLevel;
         set {
             UseSettingLevelSpecified = true;

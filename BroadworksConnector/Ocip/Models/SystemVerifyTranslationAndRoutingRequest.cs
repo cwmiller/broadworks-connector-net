@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemVerifyTranslationAndRoutingRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemVerifyTranslationAndRoutingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.VerifyTranslationAndRoutingParameters _parameters;
+    private BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingParameters _parameters;
 
     [XmlElement(ElementName = "parameters", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VerifyTranslationAndRoutingParameters Parameters {
+    public BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingParameters Parameters {
         get => _parameters;
         set {
             ParametersSpecified = true;

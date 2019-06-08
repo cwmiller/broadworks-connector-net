@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupMeetMeConferencingGetInstanceResponse19 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupMeetMeConferencingGetInstanceResponse19 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -21,10 +21,10 @@ public  class GroupMeetMeConferencingGetInstanceResponse19 : BroadworksConnector
 
     [XmlIgnore]
     public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
     [XmlElement(ElementName = "allocatedPorts", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts {
         get => _allocatedPorts;
         set {
             AllocatedPortsSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupMeetMeConferencingGetInstanceResponse19 : BroadworksConnector
 
     [XmlIgnore]
     public bool OperatorNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _conferenceHostUserTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _conferenceHostUserTable;
 
     [XmlElement(ElementName = "conferenceHostUserTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable ConferenceHostUserTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable ConferenceHostUserTable {
         get => _conferenceHostUserTable;
         set {
             ConferenceHostUserTableSpecified = true;
@@ -138,10 +138,10 @@ public  class GroupMeetMeConferencingGetInstanceResponse19 : BroadworksConnector
 
     [XmlIgnore]
     public bool EnableMaxConferenceDurationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _maxConferenceDurationMinutes;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _maxConferenceDurationMinutes;
 
     [XmlElement(ElementName = "maxConferenceDurationMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration MaxConferenceDurationMinutes {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration MaxConferenceDurationMinutes {
         get => _maxConferenceDurationMinutes;
         set {
             MaxConferenceDurationMinutesSpecified = true;
@@ -151,10 +151,10 @@ public  class GroupMeetMeConferencingGetInstanceResponse19 : BroadworksConnector
 
     [XmlIgnore]
     public bool MaxConferenceDurationMinutesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _maxScheduledConferenceDurationMinutes;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _maxScheduledConferenceDurationMinutes;
 
     [XmlElement(ElementName = "maxScheduledConferenceDurationMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration MaxScheduledConferenceDurationMinutes {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration MaxScheduledConferenceDurationMinutes {
         get => _maxScheduledConferenceDurationMinutes;
         set {
             MaxScheduledConferenceDurationMinutesSpecified = true;

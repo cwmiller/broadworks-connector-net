@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCommunicationBarringProfileModifyListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupCommunicationBarringProfileModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupCommunicationBarringProfileModifyListRequest : BroadworksConn
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CommunicationBarringProfileReplacementList _profileName;
+    private BroadWorksConnector.Ocip.Models.CommunicationBarringProfileReplacementList _profileName;
 
     [XmlElement(ElementName = "profileName", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CommunicationBarringProfileReplacementList ProfileName {
+    public BroadWorksConnector.Ocip.Models.CommunicationBarringProfileReplacementList ProfileName {
         get => _profileName;
         set {
             ProfileNameSpecified = true;

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupTrunkGroupModifyInstanceRequest14sp4 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupTrunkGroupModifyInstanceRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
     [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey {
         get => _trunkGroupKey;
         set {
             TrunkGroupKeySpecified = true;
@@ -47,10 +47,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14sp4 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool PilotUserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _department;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
     [XmlElement(ElementName = "department", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey Department {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
         get => _department;
         set {
             DepartmentSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14sp4 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool DepartmentSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDevice _accessDevice;
+    private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
     [XmlElement(ElementName = "accessDevice", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDevice AccessDevice {
+    public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
         get => _accessDevice;
         set {
             AccessDeviceSpecified = true;
@@ -164,10 +164,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14sp4 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool BurstingMaxOutgoingCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupCapacityExceededAction? _capacityExceededAction;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupCapacityExceededAction? _capacityExceededAction;
 
     [XmlElement(ElementName = "capacityExceededAction", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupCapacityExceededAction? CapacityExceededAction {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupCapacityExceededAction? CapacityExceededAction {
         get => _capacityExceededAction;
         set {
             CapacityExceededActionSpecified = true;
@@ -190,10 +190,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14sp4 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool CapacityExceededForwardAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupKey _capacityExceededRerouteTrunkGroupKey;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupKey _capacityExceededRerouteTrunkGroupKey;
 
     [XmlElement(ElementName = "capacityExceededRerouteTrunkGroupKey", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupKey CapacityExceededRerouteTrunkGroupKey {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupKey CapacityExceededRerouteTrunkGroupKey {
         get => _capacityExceededRerouteTrunkGroupKey;
         set {
             CapacityExceededRerouteTrunkGroupKeySpecified = true;
@@ -229,10 +229,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14sp4 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool CapacityExceededTrapOffsetCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupUnreachableDestinationAction? _unreachableDestinationAction;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupUnreachableDestinationAction? _unreachableDestinationAction;
 
     [XmlElement(ElementName = "unreachableDestinationAction", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupUnreachableDestinationAction? UnreachableDestinationAction {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupUnreachableDestinationAction? UnreachableDestinationAction {
         get => _unreachableDestinationAction;
         set {
             UnreachableDestinationActionSpecified = true;
@@ -255,10 +255,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14sp4 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool UnreachableDestinationForwardAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupKey _unreachableDestinationRerouteTrunkGroupKey;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupKey _unreachableDestinationRerouteTrunkGroupKey;
 
     [XmlElement(ElementName = "unreachableDestinationRerouteTrunkGroupKey", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupKey UnreachableDestinationRerouteTrunkGroupKey {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupKey UnreachableDestinationRerouteTrunkGroupKey {
         get => _unreachableDestinationRerouteTrunkGroupKey;
         set {
             UnreachableDestinationRerouteTrunkGroupKeySpecified = true;
@@ -346,10 +346,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14sp4 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool SipAuthenticationPasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementUserIdList _hostedUserIdList;
+    private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _hostedUserIdList;
 
     [XmlElement(ElementName = "hostedUserIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementUserIdList HostedUserIdList {
+    public BroadWorksConnector.Ocip.Models.ReplacementUserIdList HostedUserIdList {
         get => _hostedUserIdList;
         set {
             HostedUserIdListSpecified = true;
@@ -476,10 +476,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14sp4 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool UsePilotUserChargeNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupCallForwardingAlwaysAction? _callForwardingAlwaysAction;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupCallForwardingAlwaysAction? _callForwardingAlwaysAction;
 
     [XmlElement(ElementName = "callForwardingAlwaysAction", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupCallForwardingAlwaysAction? CallForwardingAlwaysAction {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupCallForwardingAlwaysAction? CallForwardingAlwaysAction {
         get => _callForwardingAlwaysAction;
         set {
             CallForwardingAlwaysActionSpecified = true;
@@ -502,10 +502,10 @@ public  class GroupTrunkGroupModifyInstanceRequest14sp4 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool CallForwardingAlwaysForwardAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TrunkGroupKey _callForwardingAlwaysRerouteTrunkGroupKey;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupKey _callForwardingAlwaysRerouteTrunkGroupKey;
 
     [XmlElement(ElementName = "callForwardingAlwaysRerouteTrunkGroupKey", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupKey CallForwardingAlwaysRerouteTrunkGroupKey {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupKey CallForwardingAlwaysRerouteTrunkGroupKey {
         get => _callForwardingAlwaysRerouteTrunkGroupKey;
         set {
             CallForwardingAlwaysRerouteTrunkGroupKeySpecified = true;

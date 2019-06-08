@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupVoiceMessagingGroupConsolidatedModifyVoicePortalRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupVoiceMessagingGroupConsolidatedModifyVoicePortalRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupVoiceMessagingGroupConsolidatedModifyVoicePortalRequest : Bro
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
+    private BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
 
     [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers {
+    public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers {
         get => _unassignPhoneNumbers;
         set {
             UnassignPhoneNumbersSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupVoiceMessagingGroupConsolidatedModifyVoicePortalRequest : Bro
 
     [XmlIgnore]
     public bool AddPhoneNumberToGroupSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
+    private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
     [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
+    public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
         get => _serviceInstanceProfile;
         set {
             ServiceInstanceProfileSpecified = true;
@@ -125,10 +125,10 @@ public  class GroupVoiceMessagingGroupConsolidatedModifyVoicePortalRequest : Bro
 
     [XmlIgnore]
     public bool UseVoicePortalWizardSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoicePortalExternalRoutingScope _voicePortalExternalRoutingScope;
+    private BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope _voicePortalExternalRoutingScope;
 
     [XmlElement(ElementName = "voicePortalExternalRoutingScope", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoicePortalExternalRoutingScope VoicePortalExternalRoutingScope {
+    public BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope VoicePortalExternalRoutingScope {
         get => _voicePortalExternalRoutingScope;
         set {
             VoicePortalExternalRoutingScopeSpecified = true;
@@ -190,10 +190,10 @@ public  class GroupVoiceMessagingGroupConsolidatedModifyVoicePortalRequest : Bro
 
     [XmlIgnore]
     public bool NetworkClassOfServiceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voicePortalGreetingSelection;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voicePortalGreetingSelection;
 
     [XmlElement(ElementName = "voicePortalGreetingSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoicePortalGreetingSelection {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoicePortalGreetingSelection {
         get => _voicePortalGreetingSelection;
         set {
             VoicePortalGreetingSelectionSpecified = true;
@@ -203,10 +203,10 @@ public  class GroupVoiceMessagingGroupConsolidatedModifyVoicePortalRequest : Bro
 
     [XmlIgnore]
     public bool VoicePortalGreetingSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileKey _voicePortalGreetingFile;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _voicePortalGreetingFile;
 
     [XmlElement(ElementName = "voicePortalGreetingFile", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileKey VoicePortalGreetingFile {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileKey VoicePortalGreetingFile {
         get => _voicePortalGreetingFile;
         set {
             VoicePortalGreetingFileSpecified = true;
@@ -216,10 +216,10 @@ public  class GroupVoiceMessagingGroupConsolidatedModifyVoicePortalRequest : Bro
 
     [XmlIgnore]
     public bool VoicePortalGreetingFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voiceMessagingGreetingSelection;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voiceMessagingGreetingSelection;
 
     [XmlElement(ElementName = "voiceMessagingGreetingSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoiceMessagingGreetingSelection {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoiceMessagingGreetingSelection {
         get => _voiceMessagingGreetingSelection;
         set {
             VoiceMessagingGreetingSelectionSpecified = true;
@@ -229,10 +229,10 @@ public  class GroupVoiceMessagingGroupConsolidatedModifyVoicePortalRequest : Bro
 
     [XmlIgnore]
     public bool VoiceMessagingGreetingSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileKey _voiceMessagingGreetingFile;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _voiceMessagingGreetingFile;
 
     [XmlElement(ElementName = "voiceMessagingGreetingFile", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileKey VoiceMessagingGreetingFile {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileKey VoiceMessagingGreetingFile {
         get => _voiceMessagingGreetingFile;
         set {
             VoiceMessagingGreetingFileSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallNotifyModifyCriteriaRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserCallNotifyModifyCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -47,10 +47,10 @@ public  class UserCallNotifyModifyCriteriaRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool NewCriteriaNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeSchedule _timeSchedule;
+    private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
     [XmlElement(ElementName = "timeSchedule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+    public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule {
         get => _timeSchedule;
         set {
             TimeScheduleSpecified = true;
@@ -60,10 +60,10 @@ public  class UserCallNotifyModifyCriteriaRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool TimeScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CriteriaFromDnModify _fromDnCriteria;
+    private BroadWorksConnector.Ocip.Models.CriteriaFromDnModify _fromDnCriteria;
 
     [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CriteriaFromDnModify FromDnCriteria {
+    public BroadWorksConnector.Ocip.Models.CriteriaFromDnModify FromDnCriteria {
         get => _fromDnCriteria;
         set {
             FromDnCriteriaSpecified = true;
@@ -73,10 +73,10 @@ public  class UserCallNotifyModifyCriteriaRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool FromDnCriteriaSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+    private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
     [XmlElement(ElementName = "holidaySchedule", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+    public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
         get => _holidaySchedule;
         set {
             HolidayScheduleSpecified = true;
@@ -99,10 +99,10 @@ public  class UserCallNotifyModifyCriteriaRequest : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool BlacklistedSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementCallToNumberList _callToNumberList;
+    private BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList _callToNumberList;
 
     [XmlElement(ElementName = "callToNumberList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementCallToNumberList CallToNumberList {
+    public BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList CallToNumberList {
         get => _callToNumberList;
         set {
             CallToNumberListSpecified = true;

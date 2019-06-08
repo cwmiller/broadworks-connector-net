@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactHuntPolicy : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactHuntPolicy : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.HuntPolicy _huntPolicy;
+    private BroadWorksConnector.Ocip.Models.HuntPolicy _huntPolicy;
 
     [XmlElement(ElementName = "huntPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HuntPolicy HuntPolicy {
+    public BroadWorksConnector.Ocip.Models.HuntPolicy HuntPolicy {
         get => _huntPolicy;
         set {
             HuntPolicySpecified = true;

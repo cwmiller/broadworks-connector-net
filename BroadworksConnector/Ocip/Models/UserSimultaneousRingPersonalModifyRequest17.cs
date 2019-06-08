@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserSimultaneousRingPersonalModifyRequest17 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserSimultaneousRingPersonalModifyRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -47,10 +47,10 @@ public  class UserSimultaneousRingPersonalModifyRequest17 : BroadworksConnector.
 
     [XmlIgnore]
     public bool DoNotRingIfOnCallSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SimultaneousRingReplacementNumberList _simultaneousRingNumberList;
+    private BroadWorksConnector.Ocip.Models.SimultaneousRingReplacementNumberList _simultaneousRingNumberList;
 
     [XmlElement(ElementName = "simultaneousRingNumberList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SimultaneousRingReplacementNumberList SimultaneousRingNumberList {
+    public BroadWorksConnector.Ocip.Models.SimultaneousRingReplacementNumberList SimultaneousRingNumberList {
         get => _simultaneousRingNumberList;
         set {
             SimultaneousRingNumberListSpecified = true;
@@ -60,10 +60,10 @@ public  class UserSimultaneousRingPersonalModifyRequest17 : BroadworksConnector.
 
     [XmlIgnore]
     public bool SimultaneousRingNumberListSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
+    private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
 
     [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
+    public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
         get => _criteriaActivation;
         set {
             CriteriaActivationSpecified = true;

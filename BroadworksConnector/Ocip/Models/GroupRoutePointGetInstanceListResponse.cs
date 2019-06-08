@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupRoutePointGetInstanceListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupRoutePointGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _routePointTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _routePointTable;
 
     [XmlElement(ElementName = "routePointTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable RoutePointTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable RoutePointTable {
         get => _routePointTable;
         set {
             RoutePointTableSpecified = true;

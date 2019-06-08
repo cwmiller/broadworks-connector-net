@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserMeetMeConferencingGetConferenceResponse20 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserMeetMeConferencingGetConferenceResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _title;
 
@@ -151,10 +151,10 @@ public  class UserMeetMeConferencingGetConferenceResponse20 : BroadworksConnecto
 
     [XmlIgnore]
     public bool AllowUniqueIdentifierSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification _attendeeNotification;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification _attendeeNotification;
 
     [XmlElement(ElementName = "attendeeNotification", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification AttendeeNotification {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification AttendeeNotification {
         get => _attendeeNotification;
         set {
             AttendeeNotificationSpecified = true;
@@ -164,10 +164,10 @@ public  class UserMeetMeConferencingGetConferenceResponse20 : BroadworksConnecto
 
     [XmlIgnore]
     public bool AttendeeNotificationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceSchedule _conferenceSchedule;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceSchedule _conferenceSchedule;
 
     [XmlElement(ElementName = "conferenceSchedule", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceSchedule ConferenceSchedule {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceSchedule ConferenceSchedule {
         get => _conferenceSchedule;
         set {
             ConferenceScheduleSpecified = true;

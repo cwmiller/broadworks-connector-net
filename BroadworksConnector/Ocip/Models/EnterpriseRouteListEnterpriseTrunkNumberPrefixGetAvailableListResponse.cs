@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class EnterpriseRouteListEnterpriseTrunkNumberPrefixGetAvailableListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private BroadworksConnector.Ocip.Models.C.OCITable _availableNumberPrefixTable;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class EnterpriseRouteListEnterpriseTrunkNumberPrefixGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private BroadWorksConnector.Ocip.Models.C.OCITable _availableNumberPrefixTable;
 
-        [XmlElement(ElementName = "availableNumberPrefixTable", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.C.OCITable AvailableNumberPrefixTable
-        {
-            get => _availableNumberPrefixTable;
-            set
-            {
-                AvailableNumberPrefixTableSpecified = true;
-                _availableNumberPrefixTable = value;
-            }
+    [XmlElement(ElementName = "availableNumberPrefixTable", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.C.OCITable AvailableNumberPrefixTable {
+        get => _availableNumberPrefixTable;
+        set {
+            AvailableNumberPrefixTableSpecified = true;
+            _availableNumberPrefixTable = value;
         }
-
-        [XmlIgnore]
-        public bool AvailableNumberPrefixTableSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool AvailableNumberPrefixTableSpecified { get; set; }
+}
 }

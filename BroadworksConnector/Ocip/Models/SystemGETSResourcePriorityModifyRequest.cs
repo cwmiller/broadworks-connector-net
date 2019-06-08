@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemGETSResourcePriorityModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemGETSResourcePriorityModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _priorityValue;
 
@@ -47,10 +47,10 @@ public  class SystemGETSResourcePriorityModifyRequest : BroadworksConnector.Ocip
 
     [XmlIgnore]
     public bool PriorityLevelSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GETSPriorityClass _priorityClass;
+    private BroadWorksConnector.Ocip.Models.GETSPriorityClass _priorityClass;
 
     [XmlElement(ElementName = "priorityClass", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GETSPriorityClass PriorityClass {
+    public BroadWorksConnector.Ocip.Models.GETSPriorityClass PriorityClass {
         get => _priorityClass;
         set {
             PriorityClassSpecified = true;

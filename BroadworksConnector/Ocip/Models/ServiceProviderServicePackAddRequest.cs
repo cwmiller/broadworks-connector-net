@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderServicePackAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderServicePackAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -60,10 +60,10 @@ public  class ServiceProviderServicePackAddRequest : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool IsAvailableForUseSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UnboundedPositiveInt _servicePackQuantity;
+    private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _servicePackQuantity;
 
     [XmlElement(ElementName = "servicePackQuantity", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UnboundedPositiveInt ServicePackQuantity {
+    public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt ServicePackQuantity {
         get => _servicePackQuantity;
         set {
             ServicePackQuantitySpecified = true;
@@ -73,10 +73,10 @@ public  class ServiceProviderServicePackAddRequest : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool ServicePackQuantitySpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.UserService> _serviceName;
+    private List<BroadWorksConnector.Ocip.Models.UserService> _serviceName;
 
     [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.UserService> ServiceName {
+    public List<BroadWorksConnector.Ocip.Models.UserService> ServiceName {
         get => _serviceName;
         set {
             ServiceNameSpecified = true;

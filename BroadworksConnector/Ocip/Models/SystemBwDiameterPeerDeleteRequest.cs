@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemBwDiameterPeerDeleteRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemBwDiameterPeerDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
+    private BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
 
     [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BwDiameterPeerInstance Instance {
+    public BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance Instance {
         get => _instance;
         set {
             InstanceSpecified = true;

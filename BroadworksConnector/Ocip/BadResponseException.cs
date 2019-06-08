@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BroadworksConnector.Ocip
+namespace BroadWorksConnector.Ocip
 {
     /// <summary>
     /// Thrown when BroadWorks returns a response from an OCIP call that can't be handled.

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserEnhancedCallLogsGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserEnhancedCallLogsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private List<BroadworksConnector.Ocip.Models.EnhancedCallLogsEntry> _placed;
+    private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _placed;
 
     [XmlElement(ElementName = "placed", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.EnhancedCallLogsEntry> Placed {
+    public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Placed {
         get => _placed;
         set {
             PlacedSpecified = true;
@@ -21,10 +21,10 @@ public  class UserEnhancedCallLogsGetListResponse : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool PlacedSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.EnhancedCallLogsEntry> _received;
+    private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _received;
 
     [XmlElement(ElementName = "received", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.EnhancedCallLogsEntry> Received {
+    public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Received {
         get => _received;
         set {
             ReceivedSpecified = true;
@@ -34,10 +34,10 @@ public  class UserEnhancedCallLogsGetListResponse : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool ReceivedSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.EnhancedCallLogsEntry> _missed;
+    private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _missed;
 
     [XmlElement(ElementName = "missed", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.EnhancedCallLogsEntry> Missed {
+    public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Missed {
         get => _missed;
         set {
             MissedSpecified = true;

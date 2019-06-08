@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemZoneAddRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemZoneAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _zoneName;
 
@@ -34,10 +34,10 @@ public  class SystemZoneAddRequest : BroadworksConnector.Ocip.Models.C.OCIReques
 
     [XmlIgnore]
     public bool NetAddressSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.IPAddressRange> _netAddressRange;
+    private List<BroadWorksConnector.Ocip.Models.IPAddressRange> _netAddressRange;
 
     [XmlElement(ElementName = "netAddressRange", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.IPAddressRange> NetAddressRange {
+    public List<BroadWorksConnector.Ocip.Models.IPAddressRange> NetAddressRange {
         get => _netAddressRange;
         set {
             NetAddressRangeSpecified = true;

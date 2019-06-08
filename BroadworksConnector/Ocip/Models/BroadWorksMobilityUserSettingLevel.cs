@@ -1,15 +1,14 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public enum BroadWorksMobilityUserSettingLevel
-    {
-        [XmlEnum(Name = "Group")]
-        Group,
-        [XmlEnum(Name = "User")]
-        User,
-    }
+[Serializable]
+[XmlRoot(Namespace = "")]
+public enum BroadWorksMobilityUserSettingLevel{
+    [XmlEnum(Name = "Group")]
+    Group,
+    [XmlEnum(Name = "User")]
+    User,
+ }
 }

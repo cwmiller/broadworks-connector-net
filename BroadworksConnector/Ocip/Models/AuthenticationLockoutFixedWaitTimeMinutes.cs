@@ -1,21 +1,20 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public enum AuthenticationLockoutFixedWaitTimeMinutes
-    {
-        [XmlEnum(Name = "5")]
-        _5,
-        [XmlEnum(Name = "10")]
-        _10,
-        [XmlEnum(Name = "20")]
-        _20,
-        [XmlEnum(Name = "40")]
-        _40,
-        [XmlEnum(Name = "60")]
-        _60,
-    }
+[Serializable]
+[XmlRoot(Namespace = "")]
+public enum AuthenticationLockoutFixedWaitTimeMinutes{
+    [XmlEnum(Name = "5")]
+    _5,
+    [XmlEnum(Name = "10")]
+    _10,
+    [XmlEnum(Name = "20")]
+    _20,
+    [XmlEnum(Name = "40")]
+    _40,
+    [XmlEnum(Name = "60")]
+    _60,
+ }
 }

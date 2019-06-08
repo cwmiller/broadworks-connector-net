@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserAnnouncementFileModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserAnnouncementFileModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserAnnouncementFileModifyRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileKey _announcementFileKey;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _announcementFileKey;
 
     [XmlElement(ElementName = "announcementFileKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileKey AnnouncementFileKey {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileKey AnnouncementFileKey {
         get => _announcementFileKey;
         set {
             AnnouncementFileKeySpecified = true;
@@ -47,10 +47,10 @@ public  class UserAnnouncementFileModifyRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool NewAnnouncementFileNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledMediaFileResource _announcementFile;
+    private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _announcementFile;
 
     [XmlElement(ElementName = "announcementFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledMediaFileResource AnnouncementFile {
+    public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AnnouncementFile {
         get => _announcementFile;
         set {
             AnnouncementFileSpecified = true;

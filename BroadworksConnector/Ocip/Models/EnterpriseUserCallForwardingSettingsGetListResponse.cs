@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class EnterpriseUserCallForwardingSettingsGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private BroadworksConnector.Ocip.Models.C.OCITable _userCallForwardingTable;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class EnterpriseUserCallForwardingSettingsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private BroadWorksConnector.Ocip.Models.C.OCITable _userCallForwardingTable;
 
-        [XmlElement(ElementName = "userCallForwardingTable", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.C.OCITable UserCallForwardingTable
-        {
-            get => _userCallForwardingTable;
-            set
-            {
-                UserCallForwardingTableSpecified = true;
-                _userCallForwardingTable = value;
-            }
+    [XmlElement(ElementName = "userCallForwardingTable", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.C.OCITable UserCallForwardingTable {
+        get => _userCallForwardingTable;
+        set {
+            UserCallForwardingTableSpecified = true;
+            _userCallForwardingTable = value;
         }
-
-        [XmlIgnore]
-        public bool UserCallForwardingTableSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool UserCallForwardingTableSpecified { get; set; }
+}
 }

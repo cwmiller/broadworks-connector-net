@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class EnterpriseRouteListEnterpriseTrunkNumberRangeGetAvailableListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private BroadworksConnector.Ocip.Models.C.OCITable _availableNumberRangeTable;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class EnterpriseRouteListEnterpriseTrunkNumberRangeGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private BroadWorksConnector.Ocip.Models.C.OCITable _availableNumberRangeTable;
 
-        [XmlElement(ElementName = "availableNumberRangeTable", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.C.OCITable AvailableNumberRangeTable
-        {
-            get => _availableNumberRangeTable;
-            set
-            {
-                AvailableNumberRangeTableSpecified = true;
-                _availableNumberRangeTable = value;
-            }
+    [XmlElement(ElementName = "availableNumberRangeTable", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.C.OCITable AvailableNumberRangeTable {
+        get => _availableNumberRangeTable;
+        set {
+            AvailableNumberRangeTableSpecified = true;
+            _availableNumberRangeTable = value;
         }
-
-        [XmlIgnore]
-        public bool AvailableNumberRangeTableSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool AvailableNumberRangeTableSpecified { get; set; }
+}
 }

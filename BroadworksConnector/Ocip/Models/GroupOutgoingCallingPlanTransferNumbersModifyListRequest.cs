@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupOutgoingCallingPlanTransferNumbersModifyListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupOutgoingCallingPlanTransferNumbersModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupOutgoingCallingPlanTransferNumbersModifyListRequest : Broadwo
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify _groupNumbers;
+    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify _groupNumbers;
 
     [XmlElement(ElementName = "groupNumbers", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify GroupNumbers {
+    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify GroupNumbers {
         get => _groupNumbers;
         set {
             GroupNumbersSpecified = true;
@@ -47,10 +47,10 @@ public  class GroupOutgoingCallingPlanTransferNumbersModifyListRequest : Broadwo
 
     [XmlIgnore]
     public bool GroupNumbersSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify> _departmentNumbers;
+    private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify> _departmentNumbers;
 
     [XmlElement(ElementName = "departmentNumbers", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify> DepartmentNumbers {
+    public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify> DepartmentNumbers {
         get => _departmentNumbers;
         set {
             DepartmentNumbersSpecified = true;

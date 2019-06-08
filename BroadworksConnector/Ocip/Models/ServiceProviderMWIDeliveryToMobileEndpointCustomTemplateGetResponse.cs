@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderMWIDeliveryToMobileEndpointCustomTemplateGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class ServiceProviderMWIDeliveryToMobileEndpointCustomTemplateGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isEnabled;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderMWIDeliveryToMobileEndpointCustomTemplateGetRespons
 
     [XmlIgnore]
     public bool IsEnabledSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody _templateBody;
+    private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody _templateBody;
 
     [XmlElement(ElementName = "templateBody", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody TemplateBody {
+    public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody TemplateBody {
         get => _templateBody;
         set {
             TemplateBodySpecified = true;

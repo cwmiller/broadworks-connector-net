@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class VirtualOnNetUserRange 
 {
-    private BroadworksConnector.Ocip.Models.DNRange _dnRange;
+    private BroadWorksConnector.Ocip.Models.DNRange _dnRange;
 
     [XmlElement(ElementName = "dnRange", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DNRange DnRange {
+    public BroadWorksConnector.Ocip.Models.DNRange DnRange {
         get => _dnRange;
         set {
             DnRangeSpecified = true;
@@ -21,10 +21,10 @@ public  class VirtualOnNetUserRange
 
     [XmlIgnore]
     public bool DnRangeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtensionRange17 _extensionRange;
+    private BroadWorksConnector.Ocip.Models.ExtensionRange17 _extensionRange;
 
     [XmlElement(ElementName = "extensionRange", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtensionRange17 ExtensionRange {
+    public BroadWorksConnector.Ocip.Models.ExtensionRange17 ExtensionRange {
         get => _extensionRange;
         set {
             ExtensionRangeSpecified = true;

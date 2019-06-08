@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BroadworksConnector.Ocip
+namespace BroadWorksConnector.Ocip
 {
     /// <summary>
     /// Thrown when login 

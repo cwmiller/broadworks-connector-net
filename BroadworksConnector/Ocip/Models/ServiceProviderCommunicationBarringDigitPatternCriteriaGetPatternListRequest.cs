@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderCommunicationBarringDigitPatternCriteriaGetPatternListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderCommunicationBarringDigitPatternCriteriaGetPatternListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class ServiceProviderCommunicationBarringDigitPatternCriteriaGetPatternL
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaDigitPattern> _searchCriteriaDigitPattern;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDigitPattern> _searchCriteriaDigitPattern;
 
     [XmlElement(ElementName = "searchCriteriaDigitPattern", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaDigitPattern> SearchCriteriaDigitPattern {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDigitPattern> SearchCriteriaDigitPattern {
         get => _searchCriteriaDigitPattern;
         set {
             SearchCriteriaDigitPatternSpecified = true;

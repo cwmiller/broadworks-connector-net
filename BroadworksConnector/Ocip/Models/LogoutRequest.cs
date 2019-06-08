@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class LogoutRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class LogoutRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class LogoutRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LogoutRequestReason _reason;
+    private BroadWorksConnector.Ocip.Models.LogoutRequestReason _reason;
 
     [XmlElement(ElementName = "reason", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LogoutRequestReason Reason {
+    public BroadWorksConnector.Ocip.Models.LogoutRequestReason Reason {
         get => _reason;
         set {
             ReasonSpecified = true;

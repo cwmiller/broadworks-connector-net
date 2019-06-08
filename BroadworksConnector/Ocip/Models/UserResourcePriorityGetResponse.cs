@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserResourcePriorityGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserResourcePriorityGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _useDefaultResourcePriority;
 
@@ -21,10 +21,10 @@ public  class UserResourcePriorityGetResponse : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool UseDefaultResourcePrioritySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResourcePriorityValue _defaultResourcePriority;
+    private BroadWorksConnector.Ocip.Models.ResourcePriorityValue _defaultResourcePriority;
 
     [XmlElement(ElementName = "defaultResourcePriority", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResourcePriorityValue DefaultResourcePriority {
+    public BroadWorksConnector.Ocip.Models.ResourcePriorityValue DefaultResourcePriority {
         get => _defaultResourcePriority;
         set {
             DefaultResourcePrioritySpecified = true;
@@ -34,10 +34,10 @@ public  class UserResourcePriorityGetResponse : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool DefaultResourcePrioritySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResourcePriorityValue _userResourcePriority;
+    private BroadWorksConnector.Ocip.Models.ResourcePriorityValue _userResourcePriority;
 
     [XmlElement(ElementName = "userResourcePriority", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResourcePriorityValue UserResourcePriority {
+    public BroadWorksConnector.Ocip.Models.ResourcePriorityValue UserResourcePriority {
         get => _userResourcePriority;
         set {
             UserResourcePrioritySpecified = true;

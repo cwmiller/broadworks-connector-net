@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -112,10 +112,10 @@ public  class ServiceInstanceModifyProfile
 
     [XmlIgnore]
     public bool PasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _department;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
     [XmlElement(ElementName = "department", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey Department {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
         get => _department;
         set {
             DepartmentSpecified = true;
@@ -151,10 +151,10 @@ public  class ServiceInstanceModifyProfile
 
     [XmlIgnore]
     public bool TimeZoneSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
+    private BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
 
     [XmlElement(ElementName = "sipAliasList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
+    public BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
         get => _sipAliasList;
         set {
             SipAliasListSpecified = true;

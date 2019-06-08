@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemLanguageGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemLanguageGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _defaultLanguage;
 
@@ -21,10 +21,10 @@ public  class SystemLanguageGetListResponse : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool DefaultLanguageSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _languageTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _languageTable;
 
     [XmlElement(ElementName = "languageTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable LanguageTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable LanguageTable {
         get => _languageTable;
         set {
             LanguageTableSpecified = true;

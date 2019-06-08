@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupRoutePointExternalSystemGetAssignedRoutePointListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupRoutePointExternalSystemGetAssignedRoutePointListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -60,10 +60,10 @@ public  class GroupRoutePointExternalSystemGetAssignedRoutePointListRequest : Br
 
     [XmlIgnore]
     public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaRoutePointName> _searchCriteriaRoutePointName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaRoutePointName> _searchCriteriaRoutePointName;
 
     [XmlElement(ElementName = "searchCriteriaRoutePointName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaRoutePointName> SearchCriteriaRoutePointName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaRoutePointName> SearchCriteriaRoutePointName {
         get => _searchCriteriaRoutePointName;
         set {
             SearchCriteriaRoutePointNameSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupGetResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _defaultDomain;
 
@@ -138,10 +138,10 @@ public  class GroupGetResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResp
 
     [XmlIgnore]
     public bool LocationDialingCodeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.Contact _contact;
+    private BroadWorksConnector.Ocip.Models.Contact _contact;
 
     [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.Contact Contact {
+    public BroadWorksConnector.Ocip.Models.Contact Contact {
         get => _contact;
         set {
             ContactSpecified = true;
@@ -151,10 +151,10 @@ public  class GroupGetResponse22 : BroadworksConnector.Ocip.Models.C.OCIDataResp
 
     [XmlIgnore]
     public bool ContactSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.StreetAddress _address;
+    private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
     [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.StreetAddress Address {
+    public BroadWorksConnector.Ocip.Models.StreetAddress Address {
         get => _address;
         set {
             AddressSpecified = true;

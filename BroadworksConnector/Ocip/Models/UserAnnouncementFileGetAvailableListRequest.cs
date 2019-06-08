@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserAnnouncementFileGetAvailableListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserAnnouncementFileGetAvailableListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserAnnouncementFileGetAvailableListRequest : BroadworksConnector.
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileType _announcementFileType;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileType _announcementFileType;
 
     [XmlElement(ElementName = "announcementFileType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileType AnnouncementFileType {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileType AnnouncementFileType {
         get => _announcementFileType;
         set {
             AnnouncementFileTypeSpecified = true;

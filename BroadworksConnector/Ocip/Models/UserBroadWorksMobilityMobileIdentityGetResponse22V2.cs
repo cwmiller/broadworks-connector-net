@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserBroadWorksMobilityMobileIdentityGetResponse22V2 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserBroadWorksMobilityMobileIdentityGetResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _description;
 
@@ -138,10 +138,10 @@ public  class UserBroadWorksMobilityMobileIdentityGetResponse22V2 : BroadworksCo
 
     [XmlIgnore]
     public bool BroadworksCallControlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel _useSettingLevel;
+    private BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel _useSettingLevel;
 
     [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel UseSettingLevel {
+    public BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel UseSettingLevel {
         get => _useSettingLevel;
         set {
             UseSettingLevelSpecified = true;
@@ -255,10 +255,10 @@ public  class UserBroadWorksMobilityMobileIdentityGetResponse22V2 : BroadworksCo
 
     [XmlIgnore]
     public bool EffectiveDenyCallTerminationsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _devicesToRing;
+    private BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _devicesToRing;
 
     [XmlElement(ElementName = "devicesToRing", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing DevicesToRing {
+    public BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing DevicesToRing {
         get => _devicesToRing;
         set {
             DevicesToRingSpecified = true;
@@ -320,10 +320,10 @@ public  class UserBroadWorksMobilityMobileIdentityGetResponse22V2 : BroadworksCo
 
     [XmlIgnore]
     public bool EnableCallAnchoringSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ScheduleGlobalKey _timeSchedule;
+    private BroadWorksConnector.Ocip.Models.ScheduleGlobalKey _timeSchedule;
 
     [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleGlobalKey TimeSchedule {
+    public BroadWorksConnector.Ocip.Models.ScheduleGlobalKey TimeSchedule {
         get => _timeSchedule;
         set {
             TimeScheduleSpecified = true;
@@ -333,10 +333,10 @@ public  class UserBroadWorksMobilityMobileIdentityGetResponse22V2 : BroadworksCo
 
     [XmlIgnore]
     public bool TimeScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ScheduleGlobalKey _holidaySchedule;
+    private BroadWorksConnector.Ocip.Models.ScheduleGlobalKey _holidaySchedule;
 
     [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleGlobalKey HolidaySchedule {
+    public BroadWorksConnector.Ocip.Models.ScheduleGlobalKey HolidaySchedule {
         get => _holidaySchedule;
         set {
             HolidayScheduleSpecified = true;
@@ -346,10 +346,10 @@ public  class UserBroadWorksMobilityMobileIdentityGetResponse22V2 : BroadworksCo
 
     [XmlIgnore]
     public bool HolidayScheduleSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead22 _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead22 _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead22 AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead22 AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;
@@ -424,10 +424,10 @@ public  class UserBroadWorksMobilityMobileIdentityGetResponse22V2 : BroadworksCo
 
     [XmlIgnore]
     public bool NetworkTranslationIndexSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _mobileNumberAlertedTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _mobileNumberAlertedTable;
 
     [XmlElement(ElementName = "mobileNumberAlertedTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable MobileNumberAlertedTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable MobileNumberAlertedTable {
         get => _mobileNumberAlertedTable;
         set {
             MobileNumberAlertedTableSpecified = true;

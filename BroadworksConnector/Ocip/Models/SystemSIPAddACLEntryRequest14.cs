@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPAddACLEntryRequest14 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSIPAddACLEntryRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _netAddress;
 
@@ -21,10 +21,10 @@ public  class SystemSIPAddACLEntryRequest14 : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool NetAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SIPACLTransportProtocol _transportProtocol;
+    private BroadWorksConnector.Ocip.Models.SIPACLTransportProtocol _transportProtocol;
 
     [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SIPACLTransportProtocol TransportProtocol {
+    public BroadWorksConnector.Ocip.Models.SIPACLTransportProtocol TransportProtocol {
         get => _transportProtocol;
         set {
             TransportProtocolSpecified = true;

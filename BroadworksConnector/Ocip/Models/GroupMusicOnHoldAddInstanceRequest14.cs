@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupMusicOnHoldAddInstanceRequest14 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupMusicOnHoldAddInstanceRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupMusicOnHoldAddInstanceRequest14 : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _department;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
     [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey Department {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
         get => _department;
         set {
             DepartmentSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupMusicOnHoldAddInstanceRequest14 : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool IsActiveDuringCallParkSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSelection;
+    private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSelection;
 
     [XmlElement(ElementName = "messageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSelection {
+    public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSelection {
         get => _messageSelection;
         set {
             MessageSelectionSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupMusicOnHoldAddInstanceRequest14 : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool MessageSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
 
     [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint {
         get => _accessDeviceEndpoint;
         set {
             AccessDeviceEndpointSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupMusicOnHoldAddInstanceRequest14 : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool AccessDeviceEndpointSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _audioFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _audioFile;
 
     [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource AudioFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource AudioFile {
         get => _audioFile;
         set {
             AudioFileSpecified = true;
@@ -112,10 +112,10 @@ public  class GroupMusicOnHoldAddInstanceRequest14 : BroadworksConnector.Ocip.Mo
 
     [XmlIgnore]
     public bool AudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _videoFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _videoFile;
 
     [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource VideoFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource VideoFile {
         get => _videoFile;
         set {
             VideoFileSpecified = true;

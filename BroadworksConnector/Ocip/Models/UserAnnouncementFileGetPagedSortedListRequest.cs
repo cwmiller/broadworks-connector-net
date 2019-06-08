@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserAnnouncementFileGetPagedSortedListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserAnnouncementFileGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserAnnouncementFileGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
     [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
         get => _responsePagingControl;
         set {
             ResponsePagingControlSpecified = true;
@@ -34,10 +34,10 @@ public  class UserAnnouncementFileGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool ResponsePagingControlSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByAnnouncementFileName _sortByAnnouncementFileName;
+    private BroadWorksConnector.Ocip.Models.SortByAnnouncementFileName _sortByAnnouncementFileName;
 
     [XmlElement(ElementName = "sortByAnnouncementFileName", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByAnnouncementFileName SortByAnnouncementFileName {
+    public BroadWorksConnector.Ocip.Models.SortByAnnouncementFileName SortByAnnouncementFileName {
         get => _sortByAnnouncementFileName;
         set {
             SortByAnnouncementFileNameSpecified = true;
@@ -47,10 +47,10 @@ public  class UserAnnouncementFileGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SortByAnnouncementFileNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SortByAnnouncementFileSize _sortByAnnouncementFileSize;
+    private BroadWorksConnector.Ocip.Models.SortByAnnouncementFileSize _sortByAnnouncementFileSize;
 
     [XmlElement(ElementName = "sortByAnnouncementFileSize", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SortByAnnouncementFileSize SortByAnnouncementFileSize {
+    public BroadWorksConnector.Ocip.Models.SortByAnnouncementFileSize SortByAnnouncementFileSize {
         get => _sortByAnnouncementFileSize;
         set {
             SortByAnnouncementFileSizeSpecified = true;
@@ -60,10 +60,10 @@ public  class UserAnnouncementFileGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SortByAnnouncementFileSizeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> _searchCriteriaAnnouncementFileName;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> _searchCriteriaAnnouncementFileName;
 
     [XmlElement(ElementName = "searchCriteriaAnnouncementFileName", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName {
         get => _searchCriteriaAnnouncementFileName;
         set {
             SearchCriteriaAnnouncementFileNameSpecified = true;
@@ -73,10 +73,10 @@ public  class UserAnnouncementFileGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaAnnouncementFileNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SearchCriteriaExactAnnouncementFileType _searchCriteriaExactAnnouncementFileType;
+    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactAnnouncementFileType _searchCriteriaExactAnnouncementFileType;
 
     [XmlElement(ElementName = "searchCriteriaExactAnnouncementFileType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SearchCriteriaExactAnnouncementFileType SearchCriteriaExactAnnouncementFileType {
+    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactAnnouncementFileType SearchCriteriaExactAnnouncementFileType {
         get => _searchCriteriaExactAnnouncementFileType;
         set {
             SearchCriteriaExactAnnouncementFileTypeSpecified = true;
@@ -86,10 +86,10 @@ public  class UserAnnouncementFileGetPagedSortedListRequest : BroadworksConnecto
 
     [XmlIgnore]
     public bool SearchCriteriaExactAnnouncementFileTypeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaExactMediaFileType> _searchCriteriaExactMediaFileType;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactMediaFileType> _searchCriteriaExactMediaFileType;
 
     [XmlElement(ElementName = "searchCriteriaExactMediaFileType", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaExactMediaFileType> SearchCriteriaExactMediaFileType {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactMediaFileType> SearchCriteriaExactMediaFileType {
         get => _searchCriteriaExactMediaFileType;
         set {
             SearchCriteriaExactMediaFileTypeSpecified = true;

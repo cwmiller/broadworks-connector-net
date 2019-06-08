@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupMWIDeliveryToMobileEndpointCustomTemplateGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupMWIDeliveryToMobileEndpointCustomTemplateGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -47,10 +47,10 @@ public  class GroupMWIDeliveryToMobileEndpointCustomTemplateGetRequest : Broadwo
 
     [XmlIgnore]
     public bool LanguageSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
+    private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
 
     [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType Type {
+    public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType Type {
         get => _type;
         set {
             TypeSpecified = true;

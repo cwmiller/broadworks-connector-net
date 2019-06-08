@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserMeetMeConferencingGetConferenceGreetingResponse20 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserMeetMeConferencingGetConferenceGreetingResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _playEntranceGreeting;
 
@@ -21,10 +21,10 @@ public  class UserMeetMeConferencingGetConferenceGreetingResponse20 : Broadworks
 
     [XmlIgnore]
     public bool PlayEntranceGreetingSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileKey _entranceGreetingFile;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _entranceGreetingFile;
 
     [XmlElement(ElementName = "entranceGreetingFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileKey EntranceGreetingFile {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileKey EntranceGreetingFile {
         get => _entranceGreetingFile;
         set {
             EntranceGreetingFileSpecified = true;

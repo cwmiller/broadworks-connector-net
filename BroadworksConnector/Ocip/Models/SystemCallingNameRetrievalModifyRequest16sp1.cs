@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemCallingNameRetrievalModifyRequest16sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemCallingNameRetrievalModifyRequest16sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private bool _triggerCNAMQueriesForAllNetworkCalls;
 
@@ -34,10 +34,10 @@ public  class SystemCallingNameRetrievalModifyRequest16sp1 : BroadworksConnector
 
     [XmlIgnore]
     public bool TriggerCNAMQueriesForGroupAndEnterpriseCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol _queryProtocol;
+    private BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol _queryProtocol;
 
     [XmlElement(ElementName = "queryProtocol", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol QueryProtocol {
+    public BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol QueryProtocol {
         get => _queryProtocol;
         set {
             QueryProtocolSpecified = true;
@@ -86,10 +86,10 @@ public  class SystemCallingNameRetrievalModifyRequest16sp1 : BroadworksConnector
 
     [XmlIgnore]
     public bool SipExternalDatabasePortSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TransportProtocol _sipExternalDatabaseTransport;
+    private BroadWorksConnector.Ocip.Models.TransportProtocol _sipExternalDatabaseTransport;
 
     [XmlElement(ElementName = "sipExternalDatabaseTransport", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TransportProtocol SipExternalDatabaseTransport {
+    public BroadWorksConnector.Ocip.Models.TransportProtocol SipExternalDatabaseTransport {
         get => _sipExternalDatabaseTransport;
         set {
             SipExternalDatabaseTransportSpecified = true;
@@ -125,10 +125,10 @@ public  class SystemCallingNameRetrievalModifyRequest16sp1 : BroadworksConnector
 
     [XmlIgnore]
     public bool SoapSupportsDNSSRVSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity _callingNameSource;
+    private BroadWorksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity _callingNameSource;
 
     [XmlElement(ElementName = "callingNameSource", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity CallingNameSource {
+    public BroadWorksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity CallingNameSource {
         get => _callingNameSource;
         set {
             CallingNameSourceSpecified = true;

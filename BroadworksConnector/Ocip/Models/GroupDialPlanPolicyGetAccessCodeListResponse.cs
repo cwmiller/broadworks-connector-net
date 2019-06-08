@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupDialPlanPolicyGetAccessCodeListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupDialPlanPolicyGetAccessCodeListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _accessCodeTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _accessCodeTable;
 
     [XmlElement(ElementName = "accessCodeTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable AccessCodeTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable AccessCodeTable {
         get => _accessCodeTable;
         set {
             AccessCodeTableSpecified = true;

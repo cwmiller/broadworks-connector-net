@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserAuthenticationModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserAuthenticationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -47,10 +47,10 @@ public  class UserAuthenticationModifyRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool NewPasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UserAuthenticationModifyRequestPassword _password;
+    private BroadWorksConnector.Ocip.Models.UserAuthenticationModifyRequestPassword _password;
 
     [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserAuthenticationModifyRequestPassword Password {
+    public BroadWorksConnector.Ocip.Models.UserAuthenticationModifyRequestPassword Password {
         get => _password;
         set {
             PasswordSpecified = true;

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserDevicePoliciesGetResponse20 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserDevicePoliciesGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
+    private BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
 
     [XmlElement(ElementName = "lineMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserDevicePolicyLineMode LineMode {
+    public BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode LineMode {
         get => _lineMode;
         set {
             LineModeSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDeviceTypeGetResponse21sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemDeviceTypeGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isObsolete;
 
@@ -21,10 +21,10 @@ public  class SystemDeviceTypeGetResponse21sp1 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool IsObsoleteSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SignalingAddressType _profile;
+    private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
     [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SignalingAddressType Profile {
+    public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
         get => _profile;
         set {
             ProfileSpecified = true;
@@ -60,10 +60,10 @@ public  class SystemDeviceTypeGetResponse21sp1 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool StaticRegistrationCapableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CPEDeviceOptionsRead21sp1 _cpeDeviceOptions;
+    private BroadWorksConnector.Ocip.Models.CPEDeviceOptionsRead21sp1 _cpeDeviceOptions;
 
     [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CPEDeviceOptionsRead21sp1 CpeDeviceOptions {
+    public BroadWorksConnector.Ocip.Models.CPEDeviceOptionsRead21sp1 CpeDeviceOptions {
         get => _cpeDeviceOptions;
         set {
             CpeDeviceOptionsSpecified = true;
@@ -125,10 +125,10 @@ public  class SystemDeviceTypeGetResponse21sp1 : BroadworksConnector.Ocip.Models
 
     [XmlIgnore]
     public bool IsMobilityManagerDeviceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceTypeConfigurationOption;
+    private BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceTypeConfigurationOption;
 
     [XmlElement(ElementName = "deviceTypeConfigurationOption", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceTypeConfigurationOption {
+    public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceTypeConfigurationOption {
         get => _deviceTypeConfigurationOption;
         set {
             DeviceTypeConfigurationOptionSpecified = true;

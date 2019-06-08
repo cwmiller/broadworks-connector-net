@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserVoiceMessagingUserGetAdvancedVoiceManagementResponse14sp3 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserVoiceMessagingUserGetAdvancedVoiceManagementResponse14sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.VoiceMessagingUserMailServerSelection _mailServerSelection;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingUserMailServerSelection _mailServerSelection;
 
     [XmlElement(ElementName = "mailServerSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingUserMailServerSelection MailServerSelection {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingUserMailServerSelection MailServerSelection {
         get => _mailServerSelection;
         set {
             MailServerSelectionSpecified = true;
@@ -60,10 +60,10 @@ public  class UserVoiceMessagingUserGetAdvancedVoiceManagementResponse14sp3 : Br
 
     [XmlIgnore]
     public bool UseGroupDefaultMailServerFullMailboxLimitSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes _groupMailServerFullMailboxLimit;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes _groupMailServerFullMailboxLimit;
 
     [XmlElement(ElementName = "groupMailServerFullMailboxLimit", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes GroupMailServerFullMailboxLimit {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes GroupMailServerFullMailboxLimit {
         get => _groupMailServerFullMailboxLimit;
         set {
             GroupMailServerFullMailboxLimitSpecified = true;
@@ -86,10 +86,10 @@ public  class UserVoiceMessagingUserGetAdvancedVoiceManagementResponse14sp3 : Br
 
     [XmlIgnore]
     public bool PersonalMailServerNetAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.VoiceMessagingMailServerProtocol _personalMailServerProtocol;
+    private BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol _personalMailServerProtocol;
 
     [XmlElement(ElementName = "personalMailServerProtocol", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.VoiceMessagingMailServerProtocol PersonalMailServerProtocol {
+    public BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol PersonalMailServerProtocol {
         get => _personalMailServerProtocol;
         set {
             PersonalMailServerProtocolSpecified = true;

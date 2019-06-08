@@ -1,42 +1,38 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class FileRepositoryProtocolFTP
-    {
-        private bool _ftpPassive;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class FileRepositoryProtocolFTP 
+{
+    private bool _ftpPassive;
 
-        [XmlElement(ElementName = "ftpPassive", IsNullable = false, Namespace = "")]
-        public bool FtpPassive
-        {
-            get => _ftpPassive;
-            set
-            {
-                FtpPassiveSpecified = true;
-                _ftpPassive = value;
-            }
+    [XmlElement(ElementName = "ftpPassive", IsNullable = false, Namespace = "")]
+    public bool FtpPassive {
+        get => _ftpPassive;
+        set {
+            FtpPassiveSpecified = true;
+            _ftpPassive = value;
         }
-
-        [XmlIgnore]
-        public bool FtpPassiveSpecified { get; set; }
-        private string _netAddress;
-
-        [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        public string NetAddress
-        {
-            get => _netAddress;
-            set
-            {
-                NetAddressSpecified = true;
-                _netAddress = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool NetAddressSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool FtpPassiveSpecified { get; set; }
+    private string _netAddress;
+
+    [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
+    public string NetAddress {
+        get => _netAddress;
+        set {
+            NetAddressSpecified = true;
+            _netAddress = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool NetAddressSpecified { get; set; }
+}
 }

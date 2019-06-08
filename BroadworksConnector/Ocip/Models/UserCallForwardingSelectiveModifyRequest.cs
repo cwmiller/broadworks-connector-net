@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserCallForwardingSelectiveModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserCallForwardingSelectiveModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -60,10 +60,10 @@ public  class UserCallForwardingSelectiveModifyRequest : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool PlayRingReminderSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
+    private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
 
     [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
+    public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
         get => _criteriaActivation;
         set {
             CriteriaActivationSpecified = true;

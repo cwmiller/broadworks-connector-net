@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserGroupCustomContactDirectoryGetPagedSortedListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserGroupCustomContactDirectoryGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private int _totalNumberOfRows;
 
@@ -21,10 +21,10 @@ public  class UserGroupCustomContactDirectoryGetPagedSortedListResponse : Broadw
 
     [XmlIgnore]
     public bool TotalNumberOfRowsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _userTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
     [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable UserTable {
         get => _userTable;
         set {
             UserTableSpecified = true;

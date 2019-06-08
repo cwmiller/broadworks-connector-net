@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderDialableCallerIDModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderDialableCallerIDModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class ServiceProviderDialableCallerIDModifyRequest : BroadworksConnector
 
     [XmlIgnore]
     public bool UseServiceProviderCriteriaSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.NsScreeningFailurePolicy _nsScreeningFailurePolicy;
+    private BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy _nsScreeningFailurePolicy;
 
     [XmlElement(ElementName = "nsScreeningFailurePolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NsScreeningFailurePolicy NsScreeningFailurePolicy {
+    public BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy NsScreeningFailurePolicy {
         get => _nsScreeningFailurePolicy;
         set {
             NsScreeningFailurePolicySpecified = true;
@@ -47,10 +47,10 @@ public  class ServiceProviderDialableCallerIDModifyRequest : BroadworksConnector
 
     [XmlIgnore]
     public bool NsScreeningFailurePolicySpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> _criteriaPriorityOrder;
+    private List<BroadWorksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> _criteriaPriorityOrder;
 
     [XmlElement(ElementName = "criteriaPriorityOrder", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> CriteriaPriorityOrder {
+    public List<BroadWorksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> CriteriaPriorityOrder {
         get => _criteriaPriorityOrder;
         set {
             CriteriaPriorityOrderSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemBwDiameterBaseDataModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemBwDiameterBaseDataModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _xsRealm;
 
@@ -242,10 +242,10 @@ public  class SystemBwDiameterBaseDataModifyRequest : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool DynamicEntryInactivityTimerHoursSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOfflineBillingApplication;
+    private BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOfflineBillingApplication;
 
     [XmlElement(ElementName = "advertisedOfflineBillingApplication", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOfflineBillingApplication {
+    public BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOfflineBillingApplication {
         get => _advertisedOfflineBillingApplication;
         set {
             AdvertisedOfflineBillingApplicationSpecified = true;
@@ -255,10 +255,10 @@ public  class SystemBwDiameterBaseDataModifyRequest : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool AdvertisedOfflineBillingApplicationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOnlineBillingApplication;
+    private BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOnlineBillingApplication;
 
     [XmlElement(ElementName = "advertisedOnlineBillingApplication", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOnlineBillingApplication {
+    public BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOnlineBillingApplication {
         get => _advertisedOnlineBillingApplication;
         set {
             AdvertisedOnlineBillingApplicationSpecified = true;
@@ -294,10 +294,10 @@ public  class SystemBwDiameterBaseDataModifyRequest : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool DefaultSecurePortSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DiameterPeerDiscoveryMode _peerDiscoveryMode;
+    private BroadWorksConnector.Ocip.Models.DiameterPeerDiscoveryMode _peerDiscoveryMode;
 
     [XmlElement(ElementName = "peerDiscoveryMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DiameterPeerDiscoveryMode PeerDiscoveryMode {
+    public BroadWorksConnector.Ocip.Models.DiameterPeerDiscoveryMode PeerDiscoveryMode {
         get => _peerDiscoveryMode;
         set {
             PeerDiscoveryModeSpecified = true;

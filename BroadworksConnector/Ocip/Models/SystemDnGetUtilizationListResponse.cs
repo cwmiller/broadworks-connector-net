@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemDnGetUtilizationListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemDnGetUtilizationListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.C.OCITable _dnUtilizationTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _dnUtilizationTable;
 
     [XmlElement(ElementName = "dnUtilizationTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable DnUtilizationTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable DnUtilizationTable {
         get => _dnUtilizationTable;
         set {
             DnUtilizationTableSpecified = true;

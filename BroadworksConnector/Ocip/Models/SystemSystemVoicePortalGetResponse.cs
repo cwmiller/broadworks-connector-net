@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSystemVoicePortalGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemSystemVoicePortalGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private string _name;
 
@@ -164,10 +164,10 @@ public  class SystemSystemVoicePortalGetResponse : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool VoicePortalGreetingFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _voicePortalGreetingMediaFileType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _voicePortalGreetingMediaFileType;
 
     [XmlElement(ElementName = "voicePortalGreetingMediaFileType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType VoicePortalGreetingMediaFileType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType VoicePortalGreetingMediaFileType {
         get => _voicePortalGreetingMediaFileType;
         set {
             VoicePortalGreetingMediaFileTypeSpecified = true;
@@ -203,10 +203,10 @@ public  class SystemSystemVoicePortalGetResponse : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool VoiceMessagingGreetingFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _voiceMessagingGreetingMediaFileType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _voiceMessagingGreetingMediaFileType;
 
     [XmlElement(ElementName = "voiceMessagingGreetingMediaFileType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType VoiceMessagingGreetingMediaFileType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType VoiceMessagingGreetingMediaFileType {
         get => _voiceMessagingGreetingMediaFileType;
         set {
             VoiceMessagingGreetingMediaFileTypeSpecified = true;

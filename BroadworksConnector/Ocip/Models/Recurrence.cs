@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class Recurrence 
 {
-    private BroadworksConnector.Ocip.Models.RecurrenceRecurDaily _recurDaily;
+    private BroadWorksConnector.Ocip.Models.RecurrenceRecurDaily _recurDaily;
 
     [XmlElement(ElementName = "recurDaily", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RecurrenceRecurDaily RecurDaily {
+    public BroadWorksConnector.Ocip.Models.RecurrenceRecurDaily RecurDaily {
         get => _recurDaily;
         set {
             RecurDailySpecified = true;
@@ -21,10 +21,10 @@ public  class Recurrence
 
     [XmlIgnore]
     public bool RecurDailySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RecurrenceRecurWeekly _recurWeekly;
+    private BroadWorksConnector.Ocip.Models.RecurrenceRecurWeekly _recurWeekly;
 
     [XmlElement(ElementName = "recurWeekly", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RecurrenceRecurWeekly RecurWeekly {
+    public BroadWorksConnector.Ocip.Models.RecurrenceRecurWeekly RecurWeekly {
         get => _recurWeekly;
         set {
             RecurWeeklySpecified = true;
@@ -34,10 +34,10 @@ public  class Recurrence
 
     [XmlIgnore]
     public bool RecurWeeklySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RecurrenceRecurMonthlyByDay _recurMonthlyByDay;
+    private BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByDay _recurMonthlyByDay;
 
     [XmlElement(ElementName = "recurMonthlyByDay", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RecurrenceRecurMonthlyByDay RecurMonthlyByDay {
+    public BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByDay RecurMonthlyByDay {
         get => _recurMonthlyByDay;
         set {
             RecurMonthlyByDaySpecified = true;
@@ -47,10 +47,10 @@ public  class Recurrence
 
     [XmlIgnore]
     public bool RecurMonthlyByDaySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RecurrenceRecurMonthlyByWeek _recurMonthlyByWeek;
+    private BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByWeek _recurMonthlyByWeek;
 
     [XmlElement(ElementName = "recurMonthlyByWeek", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RecurrenceRecurMonthlyByWeek RecurMonthlyByWeek {
+    public BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByWeek RecurMonthlyByWeek {
         get => _recurMonthlyByWeek;
         set {
             RecurMonthlyByWeekSpecified = true;
@@ -60,10 +60,10 @@ public  class Recurrence
 
     [XmlIgnore]
     public bool RecurMonthlyByWeekSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RecurrenceRecurYearlyByDay _recurYearlyByDay;
+    private BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByDay _recurYearlyByDay;
 
     [XmlElement(ElementName = "recurYearlyByDay", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RecurrenceRecurYearlyByDay RecurYearlyByDay {
+    public BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByDay RecurYearlyByDay {
         get => _recurYearlyByDay;
         set {
             RecurYearlyByDaySpecified = true;
@@ -73,10 +73,10 @@ public  class Recurrence
 
     [XmlIgnore]
     public bool RecurYearlyByDaySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RecurrenceRecurYearlyByWeek _recurYearlyByWeek;
+    private BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByWeek _recurYearlyByWeek;
 
     [XmlElement(ElementName = "recurYearlyByWeek", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RecurrenceRecurYearlyByWeek RecurYearlyByWeek {
+    public BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByWeek RecurYearlyByWeek {
         get => _recurYearlyByWeek;
         set {
             RecurYearlyByWeekSpecified = true;

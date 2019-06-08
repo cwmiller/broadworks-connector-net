@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
@@ -21,10 +21,10 @@ public  class MeetMeConferencingConferenceScheduleScheduleOneTime
 
     [XmlIgnore]
     public bool StartTimeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _duration;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _duration;
 
     [XmlElement(ElementName = "duration", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceDuration Duration {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration Duration {
         get => _duration;
         set {
             DurationSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemEmergencyCallDDoSProtectionModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemEmergencyCallDDoSProtectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private bool _enabled;
 
@@ -47,10 +47,10 @@ public  class SystemEmergencyCallDDoSProtectionModifyRequest : BroadworksConnect
 
     [XmlIgnore]
     public bool ProtectionRateSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ProtectionAction _protectionAction;
+    private BroadWorksConnector.Ocip.Models.ProtectionAction _protectionAction;
 
     [XmlElement(ElementName = "protectionAction", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ProtectionAction ProtectionAction {
+    public BroadWorksConnector.Ocip.Models.ProtectionAction ProtectionAction {
         get => _protectionAction;
         set {
             ProtectionActionSpecified = true;

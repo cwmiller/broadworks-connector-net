@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemAccessDeviceModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemAccessDeviceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _deviceName;
 
@@ -138,10 +138,10 @@ public  class SystemAccessDeviceModifyRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool PhysicalLocationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TransportProtocol _transportProtocol;
+    private BroadWorksConnector.Ocip.Models.TransportProtocol _transportProtocol;
 
     [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TransportProtocol TransportProtocol {
+    public BroadWorksConnector.Ocip.Models.TransportProtocol TransportProtocol {
         get => _transportProtocol;
         set {
             TransportProtocolSpecified = true;
@@ -229,10 +229,10 @@ public  class SystemAccessDeviceModifyRequest : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool UseCustomUserNamePasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DeviceManagementUserNamePassword16 _accessDeviceCredentials;
+    private BroadWorksConnector.Ocip.Models.DeviceManagementUserNamePassword16 _accessDeviceCredentials;
 
     [XmlElement(ElementName = "accessDeviceCredentials", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DeviceManagementUserNamePassword16 AccessDeviceCredentials {
+    public BroadWorksConnector.Ocip.Models.DeviceManagementUserNamePassword16 AccessDeviceCredentials {
         get => _accessDeviceCredentials;
         set {
             AccessDeviceCredentialsSpecified = true;

@@ -2,7 +2,7 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models.C
+namespace BroadWorksConnector.Ocip.Models.C
 {
 [Serializable]
 [XmlRoot(Namespace = "C")]
@@ -21,10 +21,10 @@ public  class OCITable
 
     [XmlIgnore]
     public bool ColHeadingSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.C.OCITableRow> _row;
+    private List<BroadWorksConnector.Ocip.Models.C.OCITableRow> _row;
 
     [XmlElement(ElementName = "row", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.C.OCITableRow> Row {
+    public List<BroadWorksConnector.Ocip.Models.C.OCITableRow> Row {
         get => _row;
         set {
             RowSpecified = true;

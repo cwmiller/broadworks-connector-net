@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupCallProcessingGetPolicyResponse16sp2 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupCallProcessingGetPolicyResponse16sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _useGroupCLIDSetting;
 
@@ -177,10 +177,10 @@ public  class GroupCallProcessingGetPolicyResponse16sp2 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool MaxCallTimeForUnansweredCallsMinutesSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaPolicySelection _mediaPolicySelection;
+    private BroadWorksConnector.Ocip.Models.MediaPolicySelection _mediaPolicySelection;
 
     [XmlElement(ElementName = "mediaPolicySelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaPolicySelection MediaPolicySelection {
+    public BroadWorksConnector.Ocip.Models.MediaPolicySelection MediaPolicySelection {
         get => _mediaPolicySelection;
         set {
             MediaPolicySelectionSpecified = true;
@@ -203,10 +203,10 @@ public  class GroupCallProcessingGetPolicyResponse16sp2 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool SupportedMediaSetNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.NetworkUsageSelection _networkUsageSelection;
+    private BroadWorksConnector.Ocip.Models.NetworkUsageSelection _networkUsageSelection;
 
     [XmlElement(ElementName = "networkUsageSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NetworkUsageSelection NetworkUsageSelection {
+    public BroadWorksConnector.Ocip.Models.NetworkUsageSelection NetworkUsageSelection {
         get => _networkUsageSelection;
         set {
             NetworkUsageSelectionSpecified = true;
@@ -385,10 +385,10 @@ public  class GroupCallProcessingGetPolicyResponse16sp2 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool MaxConcurrentFindMeFollowMeInvocationsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupCLIDPolicy _clidPolicy;
+    private BroadWorksConnector.Ocip.Models.GroupCLIDPolicy _clidPolicy;
 
     [XmlElement(ElementName = "clidPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupCLIDPolicy ClidPolicy {
+    public BroadWorksConnector.Ocip.Models.GroupCLIDPolicy ClidPolicy {
         get => _clidPolicy;
         set {
             ClidPolicySpecified = true;
@@ -398,10 +398,10 @@ public  class GroupCallProcessingGetPolicyResponse16sp2 : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool ClidPolicySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupCLIDPolicy _emergencyClidPolicy;
+    private BroadWorksConnector.Ocip.Models.GroupCLIDPolicy _emergencyClidPolicy;
 
     [XmlElement(ElementName = "emergencyClidPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupCLIDPolicy EmergencyClidPolicy {
+    public BroadWorksConnector.Ocip.Models.GroupCLIDPolicy EmergencyClidPolicy {
         get => _emergencyClidPolicy;
         set {
             EmergencyClidPolicySpecified = true;

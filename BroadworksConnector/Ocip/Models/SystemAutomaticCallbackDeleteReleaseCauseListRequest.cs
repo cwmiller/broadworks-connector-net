@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemAutomaticCallbackDeleteReleaseCauseListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemAutomaticCallbackDeleteReleaseCauseListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private List<BroadworksConnector.Ocip.Models.AutomaticCallbackReleaseCause> _releaseCause;
+    private List<BroadWorksConnector.Ocip.Models.AutomaticCallbackReleaseCause> _releaseCause;
 
     [XmlElement(ElementName = "releaseCause", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.AutomaticCallbackReleaseCause> ReleaseCause {
+    public List<BroadWorksConnector.Ocip.Models.AutomaticCallbackReleaseCause> ReleaseCause {
         get => _releaseCause;
         set {
             ReleaseCauseSpecified = true;

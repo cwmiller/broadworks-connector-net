@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class IncomingCallingPlanDepartmentPermissionsModify 
 {
-    private BroadworksConnector.Ocip.Models.DepartmentKey _departmentKey;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
     [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey {
         get => _departmentKey;
         set {
             DepartmentKeySpecified = true;
@@ -34,10 +34,10 @@ public  class IncomingCallingPlanDepartmentPermissionsModify
 
     [XmlIgnore]
     public bool AllowFromWithinGroupSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission _allowFromOutsideGroup;
+    private BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission _allowFromOutsideGroup;
 
     [XmlElement(ElementName = "allowFromOutsideGroup", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission AllowFromOutsideGroup {
+    public BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission AllowFromOutsideGroup {
         get => _allowFromOutsideGroup;
         set {
             AllowFromOutsideGroupSpecified = true;
@@ -60,10 +60,10 @@ public  class IncomingCallingPlanDepartmentPermissionsModify
 
     [XmlIgnore]
     public bool AllowCollectCallsSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> _digitPatternPermission;
+    private List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> _digitPatternPermission;
 
     [XmlElement(ElementName = "digitPatternPermission", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> DigitPatternPermission {
+    public List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> DigitPatternPermission {
         get => _digitPatternPermission;
         set {
             DigitPatternPermissionSpecified = true;

@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemLicensingGetResponse14sp3 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemLicensingGetResponse14sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.LicenseStrictness _licenseStrictness;
+    private BroadWorksConnector.Ocip.Models.LicenseStrictness _licenseStrictness;
 
     [XmlElement(ElementName = "licenseStrictness", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LicenseStrictness LicenseStrictness {
+    public BroadWorksConnector.Ocip.Models.LicenseStrictness LicenseStrictness {
         get => _licenseStrictness;
         set {
             LicenseStrictnessSpecified = true;
@@ -86,10 +86,10 @@ public  class SystemLicensingGetResponse14sp3 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool NumberOfTrunkUsersSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _subscriberLicenseTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _subscriberLicenseTable;
 
     [XmlElement(ElementName = "subscriberLicenseTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable SubscriberLicenseTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable SubscriberLicenseTable {
         get => _subscriberLicenseTable;
         set {
             SubscriberLicenseTableSpecified = true;
@@ -99,10 +99,10 @@ public  class SystemLicensingGetResponse14sp3 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool SubscriberLicenseTableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _groupServiceLicenseTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _groupServiceLicenseTable;
 
     [XmlElement(ElementName = "groupServiceLicenseTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable GroupServiceLicenseTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable GroupServiceLicenseTable {
         get => _groupServiceLicenseTable;
         set {
             GroupServiceLicenseTableSpecified = true;
@@ -112,10 +112,10 @@ public  class SystemLicensingGetResponse14sp3 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool GroupServiceLicenseTableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _virtualServiceLicenseTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _virtualServiceLicenseTable;
 
     [XmlElement(ElementName = "virtualServiceLicenseTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable VirtualServiceLicenseTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable VirtualServiceLicenseTable {
         get => _virtualServiceLicenseTable;
         set {
             VirtualServiceLicenseTableSpecified = true;
@@ -125,10 +125,10 @@ public  class SystemLicensingGetResponse14sp3 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool VirtualServiceLicenseTableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _userServiceLicenseTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _userServiceLicenseTable;
 
     [XmlElement(ElementName = "userServiceLicenseTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable UserServiceLicenseTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable UserServiceLicenseTable {
         get => _userServiceLicenseTable;
         set {
             UserServiceLicenseTableSpecified = true;
@@ -138,10 +138,10 @@ public  class SystemLicensingGetResponse14sp3 : BroadworksConnector.Ocip.Models.
 
     [XmlIgnore]
     public bool UserServiceLicenseTableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _systemParamLicenseTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _systemParamLicenseTable;
 
     [XmlElement(ElementName = "systemParamLicenseTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable SystemParamLicenseTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable SystemParamLicenseTable {
         get => _systemParamLicenseTable;
         set {
             SystemParamLicenseTableSpecified = true;

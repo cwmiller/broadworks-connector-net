@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPAuthenticationPasswordRulesGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemSIPAuthenticationPasswordRulesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _disallowAuthenticationName;
 
@@ -190,10 +190,10 @@ public  class SystemSIPAuthenticationPasswordRulesGetResponse : BroadworksConnec
 
     [XmlIgnore]
     public bool PermanentLockoutNotifyEmailAddressSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationLockoutType _endpointAuthenticationLockoutType;
+    private BroadWorksConnector.Ocip.Models.AuthenticationLockoutType _endpointAuthenticationLockoutType;
 
     [XmlElement(ElementName = "endpointAuthenticationLockoutType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationLockoutType EndpointAuthenticationLockoutType {
+    public BroadWorksConnector.Ocip.Models.AuthenticationLockoutType EndpointAuthenticationLockoutType {
         get => _endpointAuthenticationLockoutType;
         set {
             EndpointAuthenticationLockoutTypeSpecified = true;
@@ -216,10 +216,10 @@ public  class SystemSIPAuthenticationPasswordRulesGetResponse : BroadworksConnec
 
     [XmlIgnore]
     public bool EndpointTemporaryLockoutThresholdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _endpointWaitAlgorithm;
+    private BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _endpointWaitAlgorithm;
 
     [XmlElement(ElementName = "endpointWaitAlgorithm", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType EndpointWaitAlgorithm {
+    public BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType EndpointWaitAlgorithm {
         get => _endpointWaitAlgorithm;
         set {
             EndpointWaitAlgorithmSpecified = true;
@@ -229,10 +229,10 @@ public  class SystemSIPAuthenticationPasswordRulesGetResponse : BroadworksConnec
 
     [XmlIgnore]
     public bool EndpointWaitAlgorithmSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _endpointLockoutFixedMinutes;
+    private BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _endpointLockoutFixedMinutes;
 
     [XmlElement(ElementName = "endpointLockoutFixedMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes EndpointLockoutFixedMinutes {
+    public BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes EndpointLockoutFixedMinutes {
         get => _endpointLockoutFixedMinutes;
         set {
             EndpointLockoutFixedMinutesSpecified = true;
@@ -255,10 +255,10 @@ public  class SystemSIPAuthenticationPasswordRulesGetResponse : BroadworksConnec
 
     [XmlIgnore]
     public bool EndpointPermanentLockoutThresholdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationLockoutType _trunkGroupAuthenticationLockoutType;
+    private BroadWorksConnector.Ocip.Models.AuthenticationLockoutType _trunkGroupAuthenticationLockoutType;
 
     [XmlElement(ElementName = "trunkGroupAuthenticationLockoutType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationLockoutType TrunkGroupAuthenticationLockoutType {
+    public BroadWorksConnector.Ocip.Models.AuthenticationLockoutType TrunkGroupAuthenticationLockoutType {
         get => _trunkGroupAuthenticationLockoutType;
         set {
             TrunkGroupAuthenticationLockoutTypeSpecified = true;
@@ -281,10 +281,10 @@ public  class SystemSIPAuthenticationPasswordRulesGetResponse : BroadworksConnec
 
     [XmlIgnore]
     public bool TrunkGroupTemporaryLockoutThresholdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _trunkGroupWaitAlgorithm;
+    private BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _trunkGroupWaitAlgorithm;
 
     [XmlElement(ElementName = "trunkGroupWaitAlgorithm", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType TrunkGroupWaitAlgorithm {
+    public BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType TrunkGroupWaitAlgorithm {
         get => _trunkGroupWaitAlgorithm;
         set {
             TrunkGroupWaitAlgorithmSpecified = true;
@@ -294,10 +294,10 @@ public  class SystemSIPAuthenticationPasswordRulesGetResponse : BroadworksConnec
 
     [XmlIgnore]
     public bool TrunkGroupWaitAlgorithmSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _trunkGroupLockoutFixedMinutes;
+    private BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _trunkGroupLockoutFixedMinutes;
 
     [XmlElement(ElementName = "trunkGroupLockoutFixedMinutes", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes TrunkGroupLockoutFixedMinutes {
+    public BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes TrunkGroupLockoutFixedMinutes {
         get => _trunkGroupLockoutFixedMinutes;
         set {
             TrunkGroupLockoutFixedMinutesSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemGetRegistrationContactListRequest21sp1 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemGetRegistrationContactListRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _resellerId;
 
@@ -86,10 +86,10 @@ public  class SystemGetRegistrationContactListRequest21sp1 : BroadworksConnector
 
     [XmlIgnore]
     public bool LinePortSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
+    private BroadWorksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
 
     [XmlElement(ElementName = "deviceLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDeviceLevel DeviceLevel {
+    public BroadWorksConnector.Ocip.Models.AccessDeviceLevel DeviceLevel {
         get => _deviceLevel;
         set {
             DeviceLevelSpecified = true;
@@ -125,10 +125,10 @@ public  class SystemGetRegistrationContactListRequest21sp1 : BroadworksConnector
 
     [XmlIgnore]
     public bool DeviceTypeSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaRegistrationURI> _searchCriteriaRegistrationURI;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaRegistrationURI> _searchCriteriaRegistrationURI;
 
     [XmlElement(ElementName = "searchCriteriaRegistrationURI", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaRegistrationURI> SearchCriteriaRegistrationURI {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaRegistrationURI> SearchCriteriaRegistrationURI {
         get => _searchCriteriaRegistrationURI;
         set {
             SearchCriteriaRegistrationURISpecified = true;
@@ -138,10 +138,10 @@ public  class SystemGetRegistrationContactListRequest21sp1 : BroadworksConnector
 
     [XmlIgnore]
     public bool SearchCriteriaRegistrationURISpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SearchCriteriaSIPContact> _searchCriteriaSIPContact;
+    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaSIPContact> _searchCriteriaSIPContact;
 
     [XmlElement(ElementName = "searchCriteriaSIPContact", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SearchCriteriaSIPContact> SearchCriteriaSIPContact {
+    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaSIPContact> SearchCriteriaSIPContact {
         get => _searchCriteriaSIPContact;
         set {
             SearchCriteriaSIPContactSpecified = true;
@@ -151,10 +151,10 @@ public  class SystemGetRegistrationContactListRequest21sp1 : BroadworksConnector
 
     [XmlIgnore]
     public bool SearchCriteriaSIPContactSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.RegistrationEndpointType21sp1 _endpointType;
+    private BroadWorksConnector.Ocip.Models.RegistrationEndpointType21sp1 _endpointType;
 
     [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.RegistrationEndpointType21sp1 EndpointType {
+    public BroadWorksConnector.Ocip.Models.RegistrationEndpointType21sp1 EndpointType {
         get => _endpointType;
         set {
             EndpointTypeSpecified = true;

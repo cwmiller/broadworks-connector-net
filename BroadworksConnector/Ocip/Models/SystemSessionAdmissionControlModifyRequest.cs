@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSessionAdmissionControlModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSessionAdmissionControlModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private bool _countLongConnectionsToMediaServer;
 
@@ -21,10 +21,10 @@ public  class SystemSessionAdmissionControlModifyRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool CountLongConnectionsToMediaServerSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType _sacHandlingForMoH;
+    private BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType _sacHandlingForMoH;
 
     [XmlElement(ElementName = "sacHandlingForMoH", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType SacHandlingForMoH {
+    public BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType SacHandlingForMoH {
         get => _sacHandlingForMoH;
         set {
             SacHandlingForMoHSpecified = true;
@@ -47,10 +47,10 @@ public  class SystemSessionAdmissionControlModifyRequest : BroadworksConnector.O
 
     [XmlIgnore]
     public bool BlockVMDepositDueToSACLimitsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType _sacCodecSelectionPolicy;
+    private BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType _sacCodecSelectionPolicy;
 
     [XmlElement(ElementName = "sacCodecSelectionPolicy", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType SacCodecSelectionPolicy {
+    public BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType SacCodecSelectionPolicy {
         get => _sacCodecSelectionPolicy;
         set {
             SacCodecSelectionPolicySpecified = true;

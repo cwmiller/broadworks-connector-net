@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSubscriberModifyCallProcessingParametersRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSubscriberModifyCallProcessingParametersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.SystemUserCallingLineIdSelection _userCallingLineIdSelection;
+    private BroadWorksConnector.Ocip.Models.SystemUserCallingLineIdSelection _userCallingLineIdSelection;
 
     [XmlElement(ElementName = "userCallingLineIdSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemUserCallingLineIdSelection UserCallingLineIdSelection {
+    public BroadWorksConnector.Ocip.Models.SystemUserCallingLineIdSelection UserCallingLineIdSelection {
         get => _userCallingLineIdSelection;
         set {
             UserCallingLineIdSelectionSpecified = true;

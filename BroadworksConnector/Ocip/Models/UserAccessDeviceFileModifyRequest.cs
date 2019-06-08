@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserAccessDeviceFileModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserAccessDeviceFileModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserAccessDeviceFileModifyRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AccessDevice _accessDevice;
+    private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
     [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AccessDevice AccessDevice {
+    public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
         get => _accessDevice;
         set {
             AccessDeviceSpecified = true;
@@ -47,10 +47,10 @@ public  class UserAccessDeviceFileModifyRequest : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool FileFormatSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.FileResource _uploadFile;
+    private BroadWorksConnector.Ocip.Models.FileResource _uploadFile;
 
     [XmlElement(ElementName = "uploadFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.FileResource UploadFile {
+    public BroadWorksConnector.Ocip.Models.FileResource UploadFile {
         get => _uploadFile;
         set {
             UploadFileSpecified = true;

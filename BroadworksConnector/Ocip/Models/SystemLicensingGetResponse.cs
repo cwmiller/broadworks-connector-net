@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemLicensingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class SystemLicensingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.LicenseStrictness _licenseStrictness;
+    private BroadWorksConnector.Ocip.Models.LicenseStrictness _licenseStrictness;
 
     [XmlElement(ElementName = "licenseStrictness", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LicenseStrictness LicenseStrictness {
+    public BroadWorksConnector.Ocip.Models.LicenseStrictness LicenseStrictness {
         get => _licenseStrictness;
         set {
             LicenseStrictnessSpecified = true;
@@ -73,10 +73,10 @@ public  class SystemLicensingGetResponse : BroadworksConnector.Ocip.Models.C.OCI
 
     [XmlIgnore]
     public bool LicenseNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _licenseTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _licenseTable;
 
     [XmlElement(ElementName = "licenseTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable LicenseTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable LicenseTable {
         get => _licenseTable;
         set {
             LicenseTableSpecified = true;

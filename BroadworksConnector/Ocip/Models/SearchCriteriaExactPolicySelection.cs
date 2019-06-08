@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactPolicySelection : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactPolicySelection : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection _policySelection;
+    private BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection _policySelection;
 
     [XmlElement(ElementName = "policySelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection PolicySelection {
+    public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection PolicySelection {
         get => _policySelection;
         set {
             PolicySelectionSpecified = true;

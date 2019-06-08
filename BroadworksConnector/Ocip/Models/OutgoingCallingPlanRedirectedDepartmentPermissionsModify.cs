@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class OutgoingCallingPlanRedirectedDepartmentPermissionsModify 
 {
-    private BroadworksConnector.Ocip.Models.DepartmentKey _departmentKey;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
     [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey {
         get => _departmentKey;
         set {
             DepartmentKeySpecified = true;
@@ -21,10 +21,10 @@ public  class OutgoingCallingPlanRedirectedDepartmentPermissionsModify
 
     [XmlIgnore]
     public bool DepartmentKeySpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissionsModify _permissions;
+    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissionsModify _permissions;
 
     [XmlElement(ElementName = "permissions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissionsModify Permissions {
+    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissionsModify Permissions {
         get => _permissions;
         set {
             PermissionsSpecified = true;

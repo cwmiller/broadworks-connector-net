@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserEnhancedCallLogsGetListResponse14sp4 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserEnhancedCallLogsGetListResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private List<BroadworksConnector.Ocip.Models.CallLogsEntry> _placed;
+    private List<BroadWorksConnector.Ocip.Models.CallLogsEntry> _placed;
 
     [XmlElement(ElementName = "placed", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CallLogsEntry> Placed {
+    public List<BroadWorksConnector.Ocip.Models.CallLogsEntry> Placed {
         get => _placed;
         set {
             PlacedSpecified = true;
@@ -21,10 +21,10 @@ public  class UserEnhancedCallLogsGetListResponse14sp4 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool PlacedSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CallLogsEntry> _received;
+    private List<BroadWorksConnector.Ocip.Models.CallLogsEntry> _received;
 
     [XmlElement(ElementName = "received", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CallLogsEntry> Received {
+    public List<BroadWorksConnector.Ocip.Models.CallLogsEntry> Received {
         get => _received;
         set {
             ReceivedSpecified = true;
@@ -34,10 +34,10 @@ public  class UserEnhancedCallLogsGetListResponse14sp4 : BroadworksConnector.Oci
 
     [XmlIgnore]
     public bool ReceivedSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.CallLogsEntry> _missed;
+    private List<BroadWorksConnector.Ocip.Models.CallLogsEntry> _missed;
 
     [XmlElement(ElementName = "missed", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.CallLogsEntry> Missed {
+    public List<BroadWorksConnector.Ocip.Models.CallLogsEntry> Missed {
         get => _missed;
         set {
             MissedSpecified = true;

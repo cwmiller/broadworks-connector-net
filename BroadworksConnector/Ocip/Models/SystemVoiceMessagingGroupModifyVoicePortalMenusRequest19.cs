@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private bool _useVoicePortalCustomization;
 
@@ -21,10 +21,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool UseVoicePortalCustomizationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalMainMenuKeys _voicePortalMainMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalMainMenuKeys _voicePortalMainMenuKeys;
 
     [XmlElement(ElementName = "voicePortalMainMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalMainMenuKeys VoicePortalMainMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalMainMenuKeys VoicePortalMainMenuKeys {
         get => _voicePortalMainMenuKeys;
         set {
             VoicePortalMainMenuKeysSpecified = true;
@@ -34,10 +34,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool VoicePortalMainMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AnnouncementMenuKeys _announcementMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AnnouncementMenuKeys _announcementMenuKeys;
 
     [XmlElement(ElementName = "announcementMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AnnouncementMenuKeys AnnouncementMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AnnouncementMenuKeys AnnouncementMenuKeys {
         get => _announcementMenuKeys;
         set {
             AnnouncementMenuKeysSpecified = true;
@@ -47,10 +47,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool AnnouncementMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AnnouncementRecordingMenuKeys _announcementRecordingMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AnnouncementRecordingMenuKeys _announcementRecordingMenuKeys;
 
     [XmlElement(ElementName = "announcementRecordingMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AnnouncementRecordingMenuKeys AnnouncementRecordingMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AnnouncementRecordingMenuKeys AnnouncementRecordingMenuKeys {
         get => _announcementRecordingMenuKeys;
         set {
             AnnouncementRecordingMenuKeysSpecified = true;
@@ -60,10 +60,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool AnnouncementRecordingMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19GreetingsMenuKeys _greetingsMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19GreetingsMenuKeys _greetingsMenuKeys;
 
     [XmlElement(ElementName = "greetingsMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19GreetingsMenuKeys GreetingsMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19GreetingsMenuKeys GreetingsMenuKeys {
         get => _greetingsMenuKeys;
         set {
             GreetingsMenuKeysSpecified = true;
@@ -73,10 +73,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool GreetingsMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ConferenceGreetingMenuKeys _conferenceGreetingMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ConferenceGreetingMenuKeys _conferenceGreetingMenuKeys;
 
     [XmlElement(ElementName = "conferenceGreetingMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ConferenceGreetingMenuKeys ConferenceGreetingMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ConferenceGreetingMenuKeys ConferenceGreetingMenuKeys {
         get => _conferenceGreetingMenuKeys;
         set {
             ConferenceGreetingMenuKeysSpecified = true;
@@ -86,10 +86,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool ConferenceGreetingMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoiceMessagingMenuKeys _voiceMessagingMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoiceMessagingMenuKeys _voiceMessagingMenuKeys;
 
     [XmlElement(ElementName = "voiceMessagingMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoiceMessagingMenuKeys VoiceMessagingMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoiceMessagingMenuKeys VoiceMessagingMenuKeys {
         get => _voiceMessagingMenuKeys;
         set {
             VoiceMessagingMenuKeysSpecified = true;
@@ -99,10 +99,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool VoiceMessagingMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayGreetingMenuKeys _playGreetingMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayGreetingMenuKeys _playGreetingMenuKeys;
 
     [XmlElement(ElementName = "playGreetingMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayGreetingMenuKeys PlayGreetingMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayGreetingMenuKeys PlayGreetingMenuKeys {
         get => _playGreetingMenuKeys;
         set {
             PlayGreetingMenuKeysSpecified = true;
@@ -112,10 +112,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool PlayGreetingMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeBusyOrNoAnswerGreetingMenuKeys _changeBusyOrNoAnswerGreetingMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeBusyOrNoAnswerGreetingMenuKeys _changeBusyOrNoAnswerGreetingMenuKeys;
 
     [XmlElement(ElementName = "changeBusyOrNoAnswerGreetingMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeBusyOrNoAnswerGreetingMenuKeys ChangeBusyOrNoAnswerGreetingMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeBusyOrNoAnswerGreetingMenuKeys ChangeBusyOrNoAnswerGreetingMenuKeys {
         get => _changeBusyOrNoAnswerGreetingMenuKeys;
         set {
             ChangeBusyOrNoAnswerGreetingMenuKeysSpecified = true;
@@ -125,10 +125,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool ChangeBusyOrNoAnswerGreetingMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeExtendedAwayGreetingMenuKeys _changeExtendedAwayGreetingMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeExtendedAwayGreetingMenuKeys _changeExtendedAwayGreetingMenuKeys;
 
     [XmlElement(ElementName = "changeExtendedAwayGreetingMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeExtendedAwayGreetingMenuKeys ChangeExtendedAwayGreetingMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeExtendedAwayGreetingMenuKeys ChangeExtendedAwayGreetingMenuKeys {
         get => _changeExtendedAwayGreetingMenuKeys;
         set {
             ChangeExtendedAwayGreetingMenuKeysSpecified = true;
@@ -138,10 +138,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool ChangeExtendedAwayGreetingMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19RecordNewGreetingOrPersonalizedNameMenuKeys _recordNewGreetingOrPersonalizedNameMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19RecordNewGreetingOrPersonalizedNameMenuKeys _recordNewGreetingOrPersonalizedNameMenuKeys;
 
     [XmlElement(ElementName = "recordNewGreetingOrPersonalizedNameMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19RecordNewGreetingOrPersonalizedNameMenuKeys RecordNewGreetingOrPersonalizedNameMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19RecordNewGreetingOrPersonalizedNameMenuKeys RecordNewGreetingOrPersonalizedNameMenuKeys {
         get => _recordNewGreetingOrPersonalizedNameMenuKeys;
         set {
             RecordNewGreetingOrPersonalizedNameMenuKeysSpecified = true;
@@ -151,10 +151,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool RecordNewGreetingOrPersonalizedNameMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19DeleteAllMessagesMenuKeys _deleteAllMessagesMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19DeleteAllMessagesMenuKeys _deleteAllMessagesMenuKeys;
 
     [XmlElement(ElementName = "deleteAllMessagesMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19DeleteAllMessagesMenuKeys DeleteAllMessagesMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19DeleteAllMessagesMenuKeys DeleteAllMessagesMenuKeys {
         get => _deleteAllMessagesMenuKeys;
         set {
             DeleteAllMessagesMenuKeysSpecified = true;
@@ -164,10 +164,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool DeleteAllMessagesMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19CommPilotExpressProfileMenuKeys _commPilotExpressProfileMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19CommPilotExpressProfileMenuKeys _commPilotExpressProfileMenuKeys;
 
     [XmlElement(ElementName = "commPilotExpressProfileMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19CommPilotExpressProfileMenuKeys CommPilotExpressProfileMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19CommPilotExpressProfileMenuKeys CommPilotExpressProfileMenuKeys {
         get => _commPilotExpressProfileMenuKeys;
         set {
             CommPilotExpressProfileMenuKeysSpecified = true;
@@ -177,10 +177,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool CommPilotExpressProfileMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PersonalizedNameMenuKeys _personalizedNameMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PersonalizedNameMenuKeys _personalizedNameMenuKeys;
 
     [XmlElement(ElementName = "personalizedNameMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PersonalizedNameMenuKeys PersonalizedNameMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PersonalizedNameMenuKeys PersonalizedNameMenuKeys {
         get => _personalizedNameMenuKeys;
         set {
             PersonalizedNameMenuKeysSpecified = true;
@@ -190,10 +190,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool PersonalizedNameMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19CallForwardingOptionsMenuKeys _callForwardingOptionsMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19CallForwardingOptionsMenuKeys _callForwardingOptionsMenuKeys;
 
     [XmlElement(ElementName = "callForwardingOptionsMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19CallForwardingOptionsMenuKeys CallForwardingOptionsMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19CallForwardingOptionsMenuKeys CallForwardingOptionsMenuKeys {
         get => _callForwardingOptionsMenuKeys;
         set {
             CallForwardingOptionsMenuKeysSpecified = true;
@@ -203,10 +203,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool CallForwardingOptionsMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeCallForwardingDestinationMenuKeys _changeCallForwardingDestinationMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeCallForwardingDestinationMenuKeys _changeCallForwardingDestinationMenuKeys;
 
     [XmlElement(ElementName = "changeCallForwardingDestinationMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeCallForwardingDestinationMenuKeys ChangeCallForwardingDestinationMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeCallForwardingDestinationMenuKeys ChangeCallForwardingDestinationMenuKeys {
         get => _changeCallForwardingDestinationMenuKeys;
         set {
             ChangeCallForwardingDestinationMenuKeysSpecified = true;
@@ -216,10 +216,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool ChangeCallForwardingDestinationMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalCallingMenuKeys _voicePortalCallingMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalCallingMenuKeys _voicePortalCallingMenuKeys;
 
     [XmlElement(ElementName = "voicePortalCallingMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalCallingMenuKeys VoicePortalCallingMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalCallingMenuKeys VoicePortalCallingMenuKeys {
         get => _voicePortalCallingMenuKeys;
         set {
             VoicePortalCallingMenuKeysSpecified = true;
@@ -229,10 +229,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool VoicePortalCallingMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19HotelingMenuKeys _hotelingMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19HotelingMenuKeys _hotelingMenuKeys;
 
     [XmlElement(ElementName = "hotelingMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19HotelingMenuKeys HotelingMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19HotelingMenuKeys HotelingMenuKeys {
         get => _hotelingMenuKeys;
         set {
             HotelingMenuKeysSpecified = true;
@@ -242,10 +242,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool HotelingMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PasscodeMenuKeys _passcodeMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PasscodeMenuKeys _passcodeMenuKeys;
 
     [XmlElement(ElementName = "passcodeMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PasscodeMenuKeys PasscodeMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PasscodeMenuKeys PasscodeMenuKeys {
         get => _passcodeMenuKeys;
         set {
             PasscodeMenuKeysSpecified = true;
@@ -255,10 +255,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool PasscodeMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayMessagesMenuKeys _playMessagesMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayMessagesMenuKeys _playMessagesMenuKeys;
 
     [XmlElement(ElementName = "playMessagesMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayMessagesMenuKeys PlayMessagesMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayMessagesMenuKeys PlayMessagesMenuKeys {
         get => _playMessagesMenuKeys;
         set {
             PlayMessagesMenuKeysSpecified = true;
@@ -268,10 +268,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool PlayMessagesMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayMessageMenuKeys _playMessageMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayMessageMenuKeys _playMessageMenuKeys;
 
     [XmlElement(ElementName = "playMessageMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayMessageMenuKeys PlayMessageMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayMessageMenuKeys PlayMessageMenuKeys {
         get => _playMessageMenuKeys;
         set {
             PlayMessageMenuKeysSpecified = true;
@@ -281,10 +281,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool PlayMessageMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AdditionalMessageOptionsMenuKeys _additionalMessageOptionsMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AdditionalMessageOptionsMenuKeys _additionalMessageOptionsMenuKeys;
 
     [XmlElement(ElementName = "additionalMessageOptionsMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AdditionalMessageOptionsMenuKeys AdditionalMessageOptionsMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AdditionalMessageOptionsMenuKeys AdditionalMessageOptionsMenuKeys {
         get => _additionalMessageOptionsMenuKeys;
         set {
             AdditionalMessageOptionsMenuKeysSpecified = true;
@@ -294,10 +294,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool AdditionalMessageOptionsMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ForwardOrComposeMessageMenuKeys _forwardOrComposeMessageMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ForwardOrComposeMessageMenuKeys _forwardOrComposeMessageMenuKeys;
 
     [XmlElement(ElementName = "forwardOrComposeMessageMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ForwardOrComposeMessageMenuKeys ForwardOrComposeMessageMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ForwardOrComposeMessageMenuKeys ForwardOrComposeMessageMenuKeys {
         get => _forwardOrComposeMessageMenuKeys;
         set {
             ForwardOrComposeMessageMenuKeysSpecified = true;
@@ -307,10 +307,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool ForwardOrComposeMessageMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ReplyMessageMenuKeys _replyMessageMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ReplyMessageMenuKeys _replyMessageMenuKeys;
 
     [XmlElement(ElementName = "replyMessageMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ReplyMessageMenuKeys ReplyMessageMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ReplyMessageMenuKeys ReplyMessageMenuKeys {
         get => _replyMessageMenuKeys;
         set {
             ReplyMessageMenuKeysSpecified = true;
@@ -320,10 +320,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool ReplyMessageMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToDistributionListMenuKeys _sendToDistributionListMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToDistributionListMenuKeys _sendToDistributionListMenuKeys;
 
     [XmlElement(ElementName = "sendToDistributionListMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToDistributionListMenuKeys SendToDistributionListMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToDistributionListMenuKeys SendToDistributionListMenuKeys {
         get => _sendToDistributionListMenuKeys;
         set {
             SendToDistributionListMenuKeysSpecified = true;
@@ -333,10 +333,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool SendToDistributionListMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SelectDistributionListMenuKeys _selectDistributionListMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SelectDistributionListMenuKeys _selectDistributionListMenuKeys;
 
     [XmlElement(ElementName = "selectDistributionListMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SelectDistributionListMenuKeys SelectDistributionListMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SelectDistributionListMenuKeys SelectDistributionListMenuKeys {
         get => _selectDistributionListMenuKeys;
         set {
             SelectDistributionListMenuKeysSpecified = true;
@@ -346,10 +346,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool SelectDistributionListMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ReviewSelectedDistributionListMenuKeys _reviewSelectedDistributionListMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ReviewSelectedDistributionListMenuKeys _reviewSelectedDistributionListMenuKeys;
 
     [XmlElement(ElementName = "reviewSelectedDistributionListMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ReviewSelectedDistributionListMenuKeys ReviewSelectedDistributionListMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ReviewSelectedDistributionListMenuKeys ReviewSelectedDistributionListMenuKeys {
         get => _reviewSelectedDistributionListMenuKeys;
         set {
             ReviewSelectedDistributionListMenuKeysSpecified = true;
@@ -359,10 +359,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool ReviewSelectedDistributionListMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendMessageToSelectedDistributionListMenuKeys _sendMessageToSelectedDistributionListMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendMessageToSelectedDistributionListMenuKeys _sendMessageToSelectedDistributionListMenuKeys;
 
     [XmlElement(ElementName = "sendMessageToSelectedDistributionListMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendMessageToSelectedDistributionListMenuKeys SendMessageToSelectedDistributionListMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendMessageToSelectedDistributionListMenuKeys SendMessageToSelectedDistributionListMenuKeys {
         get => _sendMessageToSelectedDistributionListMenuKeys;
         set {
             SendMessageToSelectedDistributionListMenuKeysSpecified = true;
@@ -372,10 +372,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool SendMessageToSelectedDistributionListMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToAllGroupMembersMenuKeys _sendToAllGroupMembersMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToAllGroupMembersMenuKeys _sendToAllGroupMembersMenuKeys;
 
     [XmlElement(ElementName = "sendToAllGroupMembersMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToAllGroupMembersMenuKeys SendToAllGroupMembersMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToAllGroupMembersMenuKeys SendToAllGroupMembersMenuKeys {
         get => _sendToAllGroupMembersMenuKeys;
         set {
             SendToAllGroupMembersMenuKeysSpecified = true;
@@ -385,10 +385,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool SendToAllGroupMembersMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToPersonMenuKeys _sendToPersonMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToPersonMenuKeys _sendToPersonMenuKeys;
 
     [XmlElement(ElementName = "sendToPersonMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToPersonMenuKeys SendToPersonMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToPersonMenuKeys SendToPersonMenuKeys {
         get => _sendToPersonMenuKeys;
         set {
             SendToPersonMenuKeysSpecified = true;
@@ -398,10 +398,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool SendToPersonMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeCurrentIntroductionOrMessageOrReplyMenuKeys _changeCurrentIntroductionOrMessageOrReplyMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeCurrentIntroductionOrMessageOrReplyMenuKeys _changeCurrentIntroductionOrMessageOrReplyMenuKeys;
 
     [XmlElement(ElementName = "changeCurrentIntroductionOrMessageOrReplyMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeCurrentIntroductionOrMessageOrReplyMenuKeys ChangeCurrentIntroductionOrMessageOrReplyMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ChangeCurrentIntroductionOrMessageOrReplyMenuKeys ChangeCurrentIntroductionOrMessageOrReplyMenuKeys {
         get => _changeCurrentIntroductionOrMessageOrReplyMenuKeys;
         set {
             ChangeCurrentIntroductionOrMessageOrReplyMenuKeysSpecified = true;
@@ -411,10 +411,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool ChangeCurrentIntroductionOrMessageOrReplyMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalLoginMenuKeys _voicePortalLoginMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalLoginMenuKeys _voicePortalLoginMenuKeys;
 
     [XmlElement(ElementName = "voicePortalLoginMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalLoginMenuKeys VoicePortalLoginMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19VoicePortalLoginMenuKeys VoicePortalLoginMenuKeys {
         get => _voicePortalLoginMenuKeys;
         set {
             VoicePortalLoginMenuKeysSpecified = true;
@@ -424,10 +424,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool VoicePortalLoginMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19FaxMessagingMenuKeys _faxMessagingMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19FaxMessagingMenuKeys _faxMessagingMenuKeys;
 
     [XmlElement(ElementName = "faxMessagingMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19FaxMessagingMenuKeys FaxMessagingMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19FaxMessagingMenuKeys FaxMessagingMenuKeys {
         get => _faxMessagingMenuKeys;
         set {
             FaxMessagingMenuKeysSpecified = true;
@@ -437,10 +437,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool FaxMessagingMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19MessageDepositMenuKeys _messageDepositMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19MessageDepositMenuKeys _messageDepositMenuKeys;
 
     [XmlElement(ElementName = "messageDepositMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19MessageDepositMenuKeys MessageDepositMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19MessageDepositMenuKeys MessageDepositMenuKeys {
         get => _messageDepositMenuKeys;
         set {
             MessageDepositMenuKeysSpecified = true;
@@ -450,10 +450,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool MessageDepositMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19DisableMessageDepositMenuKeys _disableMessageDepositMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19DisableMessageDepositMenuKeys _disableMessageDepositMenuKeys;
 
     [XmlElement(ElementName = "disableMessageDepositMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19DisableMessageDepositMenuKeys DisableMessageDepositMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19DisableMessageDepositMenuKeys DisableMessageDepositMenuKeys {
         get => _disableMessageDepositMenuKeys;
         set {
             DisableMessageDepositMenuKeysSpecified = true;
@@ -463,10 +463,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool DisableMessageDepositMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19GreetingOnlyForwardingDestinationMenuKeys _greetingOnlyForwardingDestinationMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19GreetingOnlyForwardingDestinationMenuKeys _greetingOnlyForwardingDestinationMenuKeys;
 
     [XmlElement(ElementName = "greetingOnlyForwardingDestinationMenuKeys", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19GreetingOnlyForwardingDestinationMenuKeys GreetingOnlyForwardingDestinationMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19GreetingOnlyForwardingDestinationMenuKeys GreetingOnlyForwardingDestinationMenuKeys {
         get => _greetingOnlyForwardingDestinationMenuKeys;
         set {
             GreetingOnlyForwardingDestinationMenuKeysSpecified = true;
@@ -476,10 +476,10 @@ public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19 : Broadwo
 
     [XmlIgnore]
     public bool GreetingOnlyForwardingDestinationMenuKeysSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PersonalAssistantMenuKeys _personalAssistantMenuKeys;
+    private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PersonalAssistantMenuKeys _personalAssistantMenuKeys;
 
     [XmlElement(ElementName = "personalAssistantMenuKeys", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PersonalAssistantMenuKeys PersonalAssistantMenuKeys {
+    public BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PersonalAssistantMenuKeys PersonalAssistantMenuKeys {
         get => _personalAssistantMenuKeys;
         set {
             PersonalAssistantMenuKeysSpecified = true;

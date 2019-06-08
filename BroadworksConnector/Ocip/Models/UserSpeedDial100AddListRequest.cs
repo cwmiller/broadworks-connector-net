@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserSpeedDial100AddListRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserSpeedDial100AddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserSpeedDial100AddListRequest : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.SpeedDial100Entry> _speedDialEntry;
+    private List<BroadWorksConnector.Ocip.Models.SpeedDial100Entry> _speedDialEntry;
 
     [XmlElement(ElementName = "speedDialEntry", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.SpeedDial100Entry> SpeedDialEntry {
+    public List<BroadWorksConnector.Ocip.Models.SpeedDial100Entry> SpeedDialEntry {
         get => _speedDialEntry;
         set {
             SpeedDialEntrySpecified = true;

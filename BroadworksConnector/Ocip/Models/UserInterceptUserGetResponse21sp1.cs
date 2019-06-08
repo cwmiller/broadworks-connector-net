@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserInterceptUserGetResponse21sp1 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserInterceptUserGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _isActive;
 
@@ -21,10 +21,10 @@ public  class UserInterceptUserGetResponse21sp1 : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool IsActiveSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
+    private BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
 
     [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection {
+    public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection {
         get => _announcementSelection;
         set {
             AnnouncementSelectionSpecified = true;
@@ -47,10 +47,10 @@ public  class UserInterceptUserGetResponse21sp1 : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool AudioFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _audioMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
 
     [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType AudioMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType AudioMediaType {
         get => _audioMediaType;
         set {
             AudioMediaTypeSpecified = true;
@@ -73,10 +73,10 @@ public  class UserInterceptUserGetResponse21sp1 : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool VideoFileDescriptionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MediaFileType _videoMediaType;
+    private BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
 
     [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MediaFileType VideoMediaType {
+    public BroadWorksConnector.Ocip.Models.MediaFileType VideoMediaType {
         get => _videoMediaType;
         set {
             VideoMediaTypeSpecified = true;
@@ -86,10 +86,10 @@ public  class UserInterceptUserGetResponse21sp1 : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool VideoMediaTypeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.InterceptInboundCall _inboundCallMode;
+    private BroadWorksConnector.Ocip.Models.InterceptInboundCall _inboundCallMode;
 
     [XmlElement(ElementName = "inboundCallMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.InterceptInboundCall InboundCallMode {
+    public BroadWorksConnector.Ocip.Models.InterceptInboundCall InboundCallMode {
         get => _inboundCallMode;
         set {
             InboundCallModeSpecified = true;
@@ -203,10 +203,10 @@ public  class UserInterceptUserGetResponse21sp1 : BroadworksConnector.Ocip.Model
 
     [XmlIgnore]
     public bool TransferPhoneNumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.InterceptOutboundCall _outboundCallMode;
+    private BroadWorksConnector.Ocip.Models.InterceptOutboundCall _outboundCallMode;
 
     [XmlElement(ElementName = "outboundCallMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.InterceptOutboundCall OutboundCallMode {
+    public BroadWorksConnector.Ocip.Models.InterceptOutboundCall OutboundCallMode {
         get => _outboundCallMode;
         set {
             OutboundCallModeSpecified = true;

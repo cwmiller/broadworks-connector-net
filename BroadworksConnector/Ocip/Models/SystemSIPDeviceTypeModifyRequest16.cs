@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSIPDeviceTypeModifyRequest16 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSIPDeviceTypeModifyRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _deviceType;
 
@@ -190,10 +190,10 @@ public  class SystemSIPDeviceTypeModifyRequest16 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool StaticRegistrationCapableSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.CPEDeviceModifyOptions16 _cpeDeviceOptions;
+    private BroadWorksConnector.Ocip.Models.CPEDeviceModifyOptions16 _cpeDeviceOptions;
 
     [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.CPEDeviceModifyOptions16 CpeDeviceOptions {
+    public BroadWorksConnector.Ocip.Models.CPEDeviceModifyOptions16 CpeDeviceOptions {
         get => _cpeDeviceOptions;
         set {
             CpeDeviceOptionsSpecified = true;
@@ -203,10 +203,10 @@ public  class SystemSIPDeviceTypeModifyRequest16 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool CpeDeviceOptionsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EarlyMediaSupportType _earlyMediaSupport;
+    private BroadWorksConnector.Ocip.Models.EarlyMediaSupportType _earlyMediaSupport;
 
     [XmlElement(ElementName = "earlyMediaSupport", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EarlyMediaSupportType EarlyMediaSupport {
+    public BroadWorksConnector.Ocip.Models.EarlyMediaSupportType EarlyMediaSupport {
         get => _earlyMediaSupport;
         set {
             EarlyMediaSupportSpecified = true;
@@ -242,10 +242,10 @@ public  class SystemSIPDeviceTypeModifyRequest16 : BroadworksConnector.Ocip.Mode
 
     [XmlIgnore]
     public bool AutoConfigSoftClientSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AuthenticationMode _authenticationMode;
+    private BroadWorksConnector.Ocip.Models.AuthenticationMode _authenticationMode;
 
     [XmlElement(ElementName = "authenticationMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AuthenticationMode AuthenticationMode {
+    public BroadWorksConnector.Ocip.Models.AuthenticationMode AuthenticationMode {
         get => _authenticationMode;
         set {
             AuthenticationModeSpecified = true;

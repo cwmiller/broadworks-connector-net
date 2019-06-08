@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserSequentialRingGetResponse13mp16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserSequentialRingGetResponse13mp16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private bool _ringBaseLocationFirst;
 
@@ -21,10 +21,10 @@ public  class UserSequentialRingGetResponse13mp16 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool RingBaseLocationFirstSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingNumberOfRings _baseLocationNumberOfRings;
+    private BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings _baseLocationNumberOfRings;
 
     [XmlElement(ElementName = "baseLocationNumberOfRings", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingNumberOfRings BaseLocationNumberOfRings {
+    public BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings BaseLocationNumberOfRings {
         get => _baseLocationNumberOfRings;
         set {
             BaseLocationNumberOfRingsSpecified = true;
@@ -60,10 +60,10 @@ public  class UserSequentialRingGetResponse13mp16 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool CallerMayStopSearchSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingLocation _location01;
+    private BroadWorksConnector.Ocip.Models.SequentialRingLocation _location01;
 
     [XmlElement(ElementName = "Location01", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingLocation Location01 {
+    public BroadWorksConnector.Ocip.Models.SequentialRingLocation Location01 {
         get => _location01;
         set {
             Location01Specified = true;
@@ -73,10 +73,10 @@ public  class UserSequentialRingGetResponse13mp16 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool Location01Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingLocation _location02;
+    private BroadWorksConnector.Ocip.Models.SequentialRingLocation _location02;
 
     [XmlElement(ElementName = "Location02", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingLocation Location02 {
+    public BroadWorksConnector.Ocip.Models.SequentialRingLocation Location02 {
         get => _location02;
         set {
             Location02Specified = true;
@@ -86,10 +86,10 @@ public  class UserSequentialRingGetResponse13mp16 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool Location02Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingLocation _location03;
+    private BroadWorksConnector.Ocip.Models.SequentialRingLocation _location03;
 
     [XmlElement(ElementName = "Location03", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingLocation Location03 {
+    public BroadWorksConnector.Ocip.Models.SequentialRingLocation Location03 {
         get => _location03;
         set {
             Location03Specified = true;
@@ -99,10 +99,10 @@ public  class UserSequentialRingGetResponse13mp16 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool Location03Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingLocation _location04;
+    private BroadWorksConnector.Ocip.Models.SequentialRingLocation _location04;
 
     [XmlElement(ElementName = "Location04", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingLocation Location04 {
+    public BroadWorksConnector.Ocip.Models.SequentialRingLocation Location04 {
         get => _location04;
         set {
             Location04Specified = true;
@@ -112,10 +112,10 @@ public  class UserSequentialRingGetResponse13mp16 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool Location04Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.SequentialRingLocation _location05;
+    private BroadWorksConnector.Ocip.Models.SequentialRingLocation _location05;
 
     [XmlElement(ElementName = "Location05", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.SequentialRingLocation Location05 {
+    public BroadWorksConnector.Ocip.Models.SequentialRingLocation Location05 {
         get => _location05;
         set {
             Location05Specified = true;
@@ -125,10 +125,10 @@ public  class UserSequentialRingGetResponse13mp16 : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool Location05Specified { get; set; }
-    private BroadworksConnector.Ocip.Models.C.OCITable _criteriaTable;
+    private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
     [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.C.OCITable CriteriaTable {
+    public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
         get => _criteriaTable;
         set {
             CriteriaTableSpecified = true;

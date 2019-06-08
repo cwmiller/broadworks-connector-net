@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserAnnouncementFileGetRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserAnnouncementFileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -21,10 +21,10 @@ public  class UserAnnouncementFileGetRequest : BroadworksConnector.Ocip.Models.C
 
     [XmlIgnore]
     public bool UserIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.AnnouncementFileKey _announcementFileKey;
+    private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _announcementFileKey;
 
     [XmlElement(ElementName = "announcementFileKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.AnnouncementFileKey AnnouncementFileKey {
+    public BroadWorksConnector.Ocip.Models.AnnouncementFileKey AnnouncementFileKey {
         get => _announcementFileKey;
         set {
             AnnouncementFileKeySpecified = true;

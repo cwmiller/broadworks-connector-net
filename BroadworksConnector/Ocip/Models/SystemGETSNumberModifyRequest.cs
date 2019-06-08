@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemGETSNumberModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemGETSNumberModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _number;
 
@@ -21,10 +21,10 @@ public  class SystemGETSNumberModifyRequest : BroadworksConnector.Ocip.Models.C.
 
     [XmlIgnore]
     public bool NumberSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GETSNumberType _type;
+    private BroadWorksConnector.Ocip.Models.GETSNumberType _type;
 
     [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GETSNumberType Type {
+    public BroadWorksConnector.Ocip.Models.GETSNumberType Type {
         get => _type;
         set {
             TypeSpecified = true;

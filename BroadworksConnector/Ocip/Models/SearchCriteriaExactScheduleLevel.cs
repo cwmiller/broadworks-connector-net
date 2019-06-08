@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactScheduleLevel : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactScheduleLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
-    private BroadworksConnector.Ocip.Models.ScheduleLevel _level;
+    private BroadWorksConnector.Ocip.Models.ScheduleLevel _level;
 
     [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ScheduleLevel Level {
+    public BroadWorksConnector.Ocip.Models.ScheduleLevel Level {
         get => _level;
         set {
             LevelSpecified = true;

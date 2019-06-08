@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserModifyRequest17sp4 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserModifyRequest17sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -73,10 +73,10 @@ public  class UserModifyRequest17sp4 : BroadworksConnector.Ocip.Models.C.OCIRequ
 
     [XmlIgnore]
     public bool CallingLineIdFirstNameSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.NameDialingName _nameDialingName;
+    private BroadWorksConnector.Ocip.Models.NameDialingName _nameDialingName;
 
     [XmlElement(ElementName = "nameDialingName", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NameDialingName NameDialingName {
+    public BroadWorksConnector.Ocip.Models.NameDialingName NameDialingName {
         get => _nameDialingName;
         set {
             NameDialingNameSpecified = true;
@@ -177,10 +177,10 @@ public  class UserModifyRequest17sp4 : BroadworksConnector.Ocip.Models.C.OCIRequ
 
     [XmlIgnore]
     public bool NewPasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.DepartmentKey _department;
+    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
     [XmlElement(ElementName = "department", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.DepartmentKey Department {
+    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
         get => _department;
         set {
             DepartmentSpecified = true;
@@ -216,10 +216,10 @@ public  class UserModifyRequest17sp4 : BroadworksConnector.Ocip.Models.C.OCIRequ
 
     [XmlIgnore]
     public bool TimeZoneSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
+    private BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
 
     [XmlElement(ElementName = "sipAliasList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
+    public BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
         get => _sipAliasList;
         set {
             SipAliasListSpecified = true;
@@ -229,10 +229,10 @@ public  class UserModifyRequest17sp4 : BroadworksConnector.Ocip.Models.C.OCIRequ
 
     [XmlIgnore]
     public bool SipAliasListSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.UserModifyRequest17sp4Endpoint _endpoint;
+    private BroadWorksConnector.Ocip.Models.UserModifyRequest17sp4Endpoint _endpoint;
 
     [XmlElement(ElementName = "endpoint", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.UserModifyRequest17sp4Endpoint Endpoint {
+    public BroadWorksConnector.Ocip.Models.UserModifyRequest17sp4Endpoint Endpoint {
         get => _endpoint;
         set {
             EndpointSpecified = true;
@@ -320,10 +320,10 @@ public  class UserModifyRequest17sp4 : BroadworksConnector.Ocip.Models.C.OCIRequ
 
     [XmlIgnore]
     public bool AddressLocationSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.StreetAddress _address;
+    private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
     [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.StreetAddress Address {
+    public BroadWorksConnector.Ocip.Models.StreetAddress Address {
         get => _address;
         set {
             AddressSpecified = true;
@@ -398,10 +398,10 @@ public  class UserModifyRequest17sp4 : BroadworksConnector.Ocip.Models.C.OCIRequ
 
     [XmlIgnore]
     public bool ImpPasswordSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList _alternateUserIdList;
+    private BroadWorksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList _alternateUserIdList;
 
     [XmlElement(ElementName = "alternateUserIdList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList AlternateUserIdList {
+    public BroadWorksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList AlternateUserIdList {
         get => _alternateUserIdList;
         set {
             AlternateUserIdListSpecified = true;

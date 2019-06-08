@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupTrunkGroupGetInstanceRequest15 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupTrunkGroupGetInstanceRequest15 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
-    private BroadworksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
+    private BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
     [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey {
+    public BroadWorksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey {
         get => _trunkGroupKey;
         set {
             TrunkGroupKeySpecified = true;

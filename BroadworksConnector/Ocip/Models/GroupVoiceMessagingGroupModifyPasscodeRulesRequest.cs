@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupVoiceMessagingGroupModifyPasscodeRulesRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupVoiceMessagingGroupModifyPasscodeRulesRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupVoiceMessagingGroupModifyPasscodeRulesRequest : BroadworksCon
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupPasscodeRulesLevel _useRuleLevel;
+    private BroadWorksConnector.Ocip.Models.GroupPasscodeRulesLevel _useRuleLevel;
 
     [XmlElement(ElementName = "useRuleLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupPasscodeRulesLevel UseRuleLevel {
+    public BroadWorksConnector.Ocip.Models.GroupPasscodeRulesLevel UseRuleLevel {
         get => _useRuleLevel;
         set {
             UseRuleLevelSpecified = true;

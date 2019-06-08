@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SystemSubscriberModifyCallProcessingParametersRequest14sp7 : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class SystemSubscriberModifyCallProcessingParametersRequest14sp7 : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private bool _isExtendedCallingLineIdActive;
 
@@ -86,10 +86,10 @@ public  class SystemSubscriberModifyCallProcessingParametersRequest14sp7 : Broad
 
     [XmlIgnore]
     public bool MinNoAnswerNumberOfRingsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.IncomingCallToUserAliasMode _incomingCallToUserAliasMode;
+    private BroadWorksConnector.Ocip.Models.IncomingCallToUserAliasMode _incomingCallToUserAliasMode;
 
     [XmlElement(ElementName = "incomingCallToUserAliasMode", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.IncomingCallToUserAliasMode IncomingCallToUserAliasMode {
+    public BroadWorksConnector.Ocip.Models.IncomingCallToUserAliasMode IncomingCallToUserAliasMode {
         get => _incomingCallToUserAliasMode;
         set {
             IncomingCallToUserAliasModeSpecified = true;

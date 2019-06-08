@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
 using Xunit;
-using BroadworksConnector.Ocip.Models;
+using BroadWorksConnector.Ocip.Models;
 using System.Diagnostics;
 using System;
 
-namespace BroadworksConnector.Tests
+namespace BroadWorksConnector.Tests
 {
     public class OcipTests
     {

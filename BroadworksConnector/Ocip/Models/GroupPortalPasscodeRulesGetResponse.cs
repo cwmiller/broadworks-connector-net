@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupPortalPasscodeRulesGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class GroupPortalPasscodeRulesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.GroupPasscodeRulesLevel _useRuleLevel;
+    private BroadWorksConnector.Ocip.Models.GroupPasscodeRulesLevel _useRuleLevel;
 
     [XmlElement(ElementName = "useRuleLevel", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupPasscodeRulesLevel UseRuleLevel {
+    public BroadWorksConnector.Ocip.Models.GroupPasscodeRulesLevel UseRuleLevel {
         get => _useRuleLevel;
         set {
             UseRuleLevelSpecified = true;

@@ -1,27 +1,25 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class GroupAccessDeviceAvailablePortGetListResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
-    {
-        private List<int> _portNumber;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class GroupAccessDeviceAvailablePortGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+{
+    private List<int> _portNumber;
 
-        [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
-        public List<int> PortNumber
-        {
-            get => _portNumber;
-            set
-            {
-                PortNumberSpecified = true;
-                _portNumber = value;
-            }
+    [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
+    public List<int> PortNumber {
+        get => _portNumber;
+        set {
+            PortNumberSpecified = true;
+            _portNumber = value;
         }
-
-        [XmlIgnore]
-        public bool PortNumberSpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool PortNumberSpecified { get; set; }
+}
 }

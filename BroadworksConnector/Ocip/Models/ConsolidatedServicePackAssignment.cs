@@ -1,42 +1,38 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
+    using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
-    [Serializable]
-    [XmlRoot(Namespace = "")]
-    public class ConsolidatedServicePackAssignment
-    {
-        private string _servicePackName;
+[Serializable]
+[XmlRoot(Namespace = "")]
+public  class ConsolidatedServicePackAssignment 
+{
+    private string _servicePackName;
 
-        [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        public string ServicePackName
-        {
-            get => _servicePackName;
-            set
-            {
-                ServicePackNameSpecified = true;
-                _servicePackName = value;
-            }
+    [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
+    public string ServicePackName {
+        get => _servicePackName;
+        set {
+            ServicePackNameSpecified = true;
+            _servicePackName = value;
         }
-
-        [XmlIgnore]
-        public bool ServicePackNameSpecified { get; set; }
-        private BroadworksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
-
-        [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
-        public BroadworksConnector.Ocip.Models.UnboundedPositiveInt AuthorizedQuantity
-        {
-            get => _authorizedQuantity;
-            set
-            {
-                AuthorizedQuantitySpecified = true;
-                _authorizedQuantity = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool AuthorizedQuantitySpecified { get; set; }
     }
+
+    [XmlIgnore]
+    public bool ServicePackNameSpecified { get; set; }
+    private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
+
+    [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
+    public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt AuthorizedQuantity {
+        get => _authorizedQuantity;
+        set {
+            AuthorizedQuantitySpecified = true;
+            _authorizedQuantity = value;
+        }
+    }
+
+    [XmlIgnore]
+    public bool AuthorizedQuantitySpecified { get; set; }
+}
 }

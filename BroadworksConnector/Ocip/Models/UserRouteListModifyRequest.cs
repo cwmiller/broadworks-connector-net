@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserRouteListModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserRouteListModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -60,10 +60,10 @@ public  class UserRouteListModifyRequest : BroadworksConnector.Ocip.Models.C.OCI
 
     [XmlIgnore]
     public bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ReplacementDNList _assignedNumberRangeStartList;
+    private BroadWorksConnector.Ocip.Models.ReplacementDNList _assignedNumberRangeStartList;
 
     [XmlElement(ElementName = "assignedNumberRangeStartList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ReplacementDNList AssignedNumberRangeStartList {
+    public BroadWorksConnector.Ocip.Models.ReplacementDNList AssignedNumberRangeStartList {
         get => _assignedNumberRangeStartList;
         set {
             AssignedNumberRangeStartListSpecified = true;
@@ -73,10 +73,10 @@ public  class UserRouteListModifyRequest : BroadworksConnector.Ocip.Models.C.OCI
 
     [XmlIgnore]
     public bool AssignedNumberRangeStartListSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.EnterpriseTrunkReplacementNumberPrefixList _assignedNumberPrefixList;
+    private BroadWorksConnector.Ocip.Models.EnterpriseTrunkReplacementNumberPrefixList _assignedNumberPrefixList;
 
     [XmlElement(ElementName = "assignedNumberPrefixList", IsNullable = true, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.EnterpriseTrunkReplacementNumberPrefixList AssignedNumberPrefixList {
+    public BroadWorksConnector.Ocip.Models.EnterpriseTrunkReplacementNumberPrefixList AssignedNumberPrefixList {
         get => _assignedNumberPrefixList;
         set {
             AssignedNumberPrefixListSpecified = true;

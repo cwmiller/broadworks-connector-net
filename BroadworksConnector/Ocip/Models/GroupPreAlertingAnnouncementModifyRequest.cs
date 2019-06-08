@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class GroupPreAlertingAnnouncementModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class GroupPreAlertingAnnouncementModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class GroupPreAlertingAnnouncementModifyRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool GroupIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt _announcementInterruption;
+    private BroadWorksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt _announcementInterruption;
 
     [XmlElement(ElementName = "announcementInterruption", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt AnnouncementInterruption {
+    public BroadWorksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt AnnouncementInterruption {
         get => _announcementInterruption;
         set {
             AnnouncementInterruptionSpecified = true;
@@ -60,10 +60,10 @@ public  class GroupPreAlertingAnnouncementModifyRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool InterruptionDigitSequenceSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
 
     [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
         get => _audioSelection;
         set {
             AudioSelectionSpecified = true;
@@ -73,10 +73,10 @@ public  class GroupPreAlertingAnnouncementModifyRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool AudioSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource _audioFile;
+    private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _audioFile;
 
     [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource AudioFile {
+    public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource AudioFile {
         get => _audioFile;
         set {
             AudioFileSpecified = true;
@@ -86,10 +86,10 @@ public  class GroupPreAlertingAnnouncementModifyRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool AudioFileSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
+    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
 
     [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
+    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
         get => _videoSelection;
         set {
             VideoSelectionSpecified = true;
@@ -99,10 +99,10 @@ public  class GroupPreAlertingAnnouncementModifyRequest : BroadworksConnector.Oc
 
     [XmlIgnore]
     public bool VideoSelectionSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.ExtendedMediaFileResource _videoFile;
+    private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _videoFile;
 
     [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.ExtendedMediaFileResource VideoFile {
+    public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource VideoFile {
         get => _videoFile;
         set {
             VideoFileSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserEnhancedCallLogsGetListResponse16 : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserEnhancedCallLogsGetListResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
     private int _totalNumberOfRows;
 
@@ -21,10 +21,10 @@ public  class UserEnhancedCallLogsGetListResponse16 : BroadworksConnector.Ocip.M
 
     [XmlIgnore]
     public bool TotalNumberOfRowsSpecified { get; set; }
-    private List<BroadworksConnector.Ocip.Models.MixedCallLogsEntry> _callLog;
+    private List<BroadWorksConnector.Ocip.Models.MixedCallLogsEntry> _callLog;
 
     [XmlElement(ElementName = "callLog", IsNullable = false, Namespace = "")]
-    public List<BroadworksConnector.Ocip.Models.MixedCallLogsEntry> CallLog {
+    public List<BroadWorksConnector.Ocip.Models.MixedCallLogsEntry> CallLog {
         get => _callLog;
         set {
             CallLogSpecified = true;

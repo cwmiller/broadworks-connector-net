@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactUserGroup : BroadworksConnector.Ocip.Models.SearchCriteria
+public  class SearchCriteriaExactUserGroup : BroadWorksConnector.Ocip.Models.SearchCriteria
 {
     private string _serviceProviderId;
 

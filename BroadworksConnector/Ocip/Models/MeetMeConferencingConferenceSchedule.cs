@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
 public  class MeetMeConferencingConferenceSchedule 
 {
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleReservationless _scheduleReservationless;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleReservationless _scheduleReservationless;
 
     [XmlElement(ElementName = "scheduleReservationless", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleReservationless ScheduleReservationless {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleReservationless ScheduleReservationless {
         get => _scheduleReservationless;
         set {
             ScheduleReservationlessSpecified = true;
@@ -21,10 +21,10 @@ public  class MeetMeConferencingConferenceSchedule
 
     [XmlIgnore]
     public bool ScheduleReservationlessSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleOneTime _scheduleOneTime;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleOneTime _scheduleOneTime;
 
     [XmlElement(ElementName = "scheduleOneTime", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleOneTime ScheduleOneTime {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleOneTime ScheduleOneTime {
         get => _scheduleOneTime;
         set {
             ScheduleOneTimeSpecified = true;
@@ -34,10 +34,10 @@ public  class MeetMeConferencingConferenceSchedule
 
     [XmlIgnore]
     public bool ScheduleOneTimeSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleRecurring _scheduleRecurring;
+    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleRecurring _scheduleRecurring;
 
     [XmlElement(ElementName = "scheduleRecurring", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleRecurring ScheduleRecurring {
+    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleRecurring ScheduleRecurring {
         get => _scheduleRecurring;
         set {
             ScheduleRecurringSpecified = true;

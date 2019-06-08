@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderMWIDeliveryToMobileEndpointCustomTemplateModifyRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderMWIDeliveryToMobileEndpointCustomTemplateModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -34,10 +34,10 @@ public  class ServiceProviderMWIDeliveryToMobileEndpointCustomTemplateModifyRequ
 
     [XmlIgnore]
     public bool LanguageSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
+    private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
 
     [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType Type {
+    public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType Type {
         get => _type;
         set {
             TypeSpecified = true;
@@ -60,10 +60,10 @@ public  class ServiceProviderMWIDeliveryToMobileEndpointCustomTemplateModifyRequ
 
     [XmlIgnore]
     public bool IsEnabledSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody _templateBody;
+    private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody _templateBody;
 
     [XmlElement(ElementName = "templateBody", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody TemplateBody {
+    public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody TemplateBody {
         get => _templateBody;
         set {
             TemplateBodySpecified = true;

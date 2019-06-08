@@ -2,16 +2,16 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserGroupNightForwardingGetResponse : BroadworksConnector.Ocip.Models.C.OCIDataResponse
+public  class UserGroupNightForwardingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
 {
-    private BroadworksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode _nightForwarding;
+    private BroadWorksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode _nightForwarding;
 
     [XmlElement(ElementName = "nightForwarding", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode NightForwarding {
+    public BroadWorksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode NightForwarding {
         get => _nightForwarding;
         set {
             NightForwardingSpecified = true;
@@ -21,10 +21,10 @@ public  class UserGroupNightForwardingGetResponse : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool NightForwardingSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode _groupNightForwarding;
+    private BroadWorksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode _groupNightForwarding;
 
     [XmlElement(ElementName = "groupNightForwarding", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode GroupNightForwarding {
+    public BroadWorksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode GroupNightForwarding {
         get => _groupNightForwarding;
         set {
             GroupNightForwardingSpecified = true;
@@ -34,10 +34,10 @@ public  class UserGroupNightForwardingGetResponse : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool GroupNightForwardingSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.TimeSchedule _businessHours;
+    private BroadWorksConnector.Ocip.Models.TimeSchedule _businessHours;
 
     [XmlElement(ElementName = "businessHours", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.TimeSchedule BusinessHours {
+    public BroadWorksConnector.Ocip.Models.TimeSchedule BusinessHours {
         get => _businessHours;
         set {
             BusinessHoursSpecified = true;
@@ -47,10 +47,10 @@ public  class UserGroupNightForwardingGetResponse : BroadworksConnector.Ocip.Mod
 
     [XmlIgnore]
     public bool BusinessHoursSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+    private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
     [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+    public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
         get => _holidaySchedule;
         set {
             HolidayScheduleSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class UserVoiceMessagingUserModifyVoicePortalRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class UserVoiceMessagingUserModifyVoicePortalRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _userId;
 
@@ -47,10 +47,10 @@ public  class UserVoiceMessagingUserModifyVoicePortalRequest : BroadworksConnect
 
     [XmlIgnore]
     public bool VoicePortalAutoLoginSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.LabeledFileResource _personalizedNameAudioFile;
+    private BroadWorksConnector.Ocip.Models.LabeledFileResource _personalizedNameAudioFile;
 
     [XmlElement(ElementName = "personalizedNameAudioFile", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.LabeledFileResource PersonalizedNameAudioFile {
+    public BroadWorksConnector.Ocip.Models.LabeledFileResource PersonalizedNameAudioFile {
         get => _personalizedNameAudioFile;
         set {
             PersonalizedNameAudioFileSpecified = true;

@@ -2,11 +2,11 @@ using System;
 using System.Xml.Serialization;
     using System.Collections.Generic;
 
-namespace BroadworksConnector.Ocip.Models
+namespace BroadWorksConnector.Ocip.Models
 {
 [Serializable]
 [XmlRoot(Namespace = "")]
-public  class ServiceProviderServicePhoneNumberLookupRequest : BroadworksConnector.Ocip.Models.C.OCIRequest
+public  class ServiceProviderServicePhoneNumberLookupRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
 {
     private string _serviceProviderId;
 
@@ -21,10 +21,10 @@ public  class ServiceProviderServicePhoneNumberLookupRequest : BroadworksConnect
 
     [XmlIgnore]
     public bool ServiceProviderIdSpecified { get; set; }
-    private BroadworksConnector.Ocip.Models.NumberLookupServiceType _serviceType;
+    private BroadWorksConnector.Ocip.Models.NumberLookupServiceType _serviceType;
 
     [XmlElement(ElementName = "serviceType", IsNullable = false, Namespace = "")]
-    public BroadworksConnector.Ocip.Models.NumberLookupServiceType ServiceType {
+    public BroadWorksConnector.Ocip.Models.NumberLookupServiceType ServiceType {
         get => _serviceType;
         set {
             ServiceTypeSpecified = true;
