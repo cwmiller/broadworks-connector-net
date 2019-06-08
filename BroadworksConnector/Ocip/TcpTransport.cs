@@ -45,8 +45,6 @@ namespace BroadWorksConnector.Ocip
 
         public async Task<string> Send(string request)
         {
-            Debug.WriteLine(request);
-
             var response = "";
             var responseData = new char[1024];
 
@@ -68,7 +66,7 @@ namespace BroadWorksConnector.Ocip
                 }
             } catch(Exception e)
             {
-                Debug.WriteLine(e.Message);
+                throw new BadResponseException("Unable to parse response", e);
             }
 
             // Remove any NULL characters that might have slipped in.
