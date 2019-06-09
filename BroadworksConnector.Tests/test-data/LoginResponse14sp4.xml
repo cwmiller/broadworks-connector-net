@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<BroadsoftDocument protocol="OCI" xmlns="C" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <sessionId xmlns="">acbdf1234567890</sessionId>
+  <command echo="" xsi:type="LoginResponse14sp4" xmlns="">
+    <loginType>Service Provider</loginType>
+    <locale>en_US</locale>
+    <encoding>ISO-8859-1</encoding>
+    <serviceProviderId>SP123</serviceProviderId>
+    <isEnterprise>false</isEnterprise>
+    <passwordExpiresDays>2147483647</passwordExpiresDays>
+    <userDomain>test.com</userDomain>
+  </command>
+</BroadsoftDocument>

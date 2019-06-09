@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BroadsoftDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" protocol="OCI" xmlns="C">
+  <sessionId xmlns="">636956952081463406</sessionId>
+  <command xsi:type="GroupOutgoingCallingPlanRedirectingModifyListRequest" xmlns="">
+    <serviceProviderId>Service Provider ID</serviceProviderId>
+    <groupId>Group ID</groupId>
+    <departmentPermissions>
+      <departmentKey xsi:type="GroupDepartmentKey">
+        <serviceProviderId>Service Provider ID</serviceProviderId>
+        <groupId>Group ID</groupId>
+        <name>Department Name</name>
+      </departmentKey>
+      <permissions>
+        <group>true</group>
+        <local>true</local>
+        <tollFree>true</tollFree>
+        <toll>true</toll>
+        <international>false</international>
+        <operatorAssisted>false</operatorAssisted>
+        <chargeableDirectoryAssisted>false</chargeableDirectoryAssisted>
+        <specialServicesI>false</specialServicesI>
+        <specialServicesII>false</specialServicesII>
+        <premiumServicesI>false</premiumServicesI>
+        <premiumServicesII>false</premiumServicesII>
+        <casual>false</casual>
+        <urlDialing>false</urlDialing>
+        <unknown>false</unknown>
+      </permissions>
+    </departmentPermissions>
+  </command>
+</BroadsoftDocument>
