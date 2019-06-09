@@ -27,7 +27,7 @@ namespace BroadWorksConnector
 
         public ITransport Transport { get; private set; }
 
-        private readonly XmlSerializer _serializer;
+        private readonly Serializer _serializer;
 
         public UserDetails UserDetails { get; private set; }
 
@@ -42,7 +42,7 @@ namespace BroadWorksConnector
             _username = username;
             _password = password;
             _sessionId = GenerateSessionId();
-            _serializer = new XmlSerializer(typeof(BroadsoftDocument), "C");
+            _serializer = new Serializer();
 
             var uri = new Uri(url);
             
@@ -155,6 +155,24 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
+        /// Serializes the given list of commands to XML
+        /// </summary>
+        /// <param name="commands"></param>
+        /// <returns></returns>
+        public string SerializeCommands(IEnumerable<OCICommand> commands)
+        {
+
+            var broadsoftDocument = new BroadsoftDocument
+            {
+                SessionId = _sessionId,
+                Protocol = "OCI",
+                Command = commands.ToList()
+            };
+
+            return _serializer.Serialize(broadsoftDocument);
+        }
+
+        /// <summary>
         /// Executes multiple commands
         /// </summary>
         /// <param name="commands"></param>
@@ -169,17 +187,12 @@ namespace BroadWorksConnector
 
             var responseXml = await Transport.Send(xml);
 
-            Debug.WriteLine(responseXml);
-
-            using (var reader = new StringReader(responseXml))
+            try
             {
-                try
-                {
-                    response = _serializer.Deserialize(reader) as BroadsoftDocument;
-                } catch(Exception e)
-                {
-                    throw new BadResponseException("Unable to deserialize response.", e);
-                }
+                response = _serializer.Deserialize(responseXml);
+            } catch(Exception e)
+            {
+                throw new BadResponseException("Unable to deserialize response.", e);
             }
 
             if (!(response is BroadsoftDocument))
@@ -195,35 +208,6 @@ namespace BroadWorksConnector
             return response.Command;
         }
 
-        /// <summary>
-        /// Serializes the given list of commands to XML
-        /// </summary>
-        /// <param name="commands"></param>
-        /// <returns></returns>
-        private string SerializeCommands(IEnumerable<OCICommand> commands)
-        {
-            string xml;
-            
-            var broadsoftDocument = new BroadsoftDocument
-            {
-                SessionId = _sessionId,
-                Protocol = "OCI",
-                Command = commands.ToList()
-            };
-
-            using (var requestStream = new MemoryStream())
-            {
-                using (var textWriter = new XmlTextWriter(requestStream, Encoding.UTF8))
-                {
-                    textWriter.Formatting = Formatting.None;
-                    _serializer.Serialize(textWriter, broadsoftDocument);
-
-                    xml = Encoding.UTF8.GetString(requestStream.ToArray());
-                }
-            }
-
-            return xml;
-        }
 
         /// <summary>
         /// Calculates the MD5 hash of a string
