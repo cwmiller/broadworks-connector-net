@@ -205,6 +205,14 @@ namespace BroadWorksConnector
                 throw new BadResponseException("Response does not include any commands.");
             }
 
+            foreach (var command in response.Command)
+            {
+                if (command is ErrorResponse)
+                {
+                    throw new ErrorResponseException(command as ErrorResponse);
+                }
+            }
+
             return response.Command;
         }
 
