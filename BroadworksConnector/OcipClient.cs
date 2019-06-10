@@ -3,14 +3,10 @@ using BroadWorksConnector.Ocip.Models;
 using BroadWorksConnector.Ocip.Models.C;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Serialization;
 
 namespace BroadWorksConnector
 {
@@ -71,7 +67,7 @@ namespace BroadWorksConnector
         /// </summary>
         /// <param name="command"></param>
         /// <returns></returns>
-        public async Task<OCIResponse> Call(OCICommand command)
+        public async Task<OCICommand> Call(OCICommand command)
         {
             if (UserDetails == null)
             {
@@ -80,7 +76,22 @@ namespace BroadWorksConnector
 
             var responses = await ExecuteCommands(new List<OCICommand> { command });
 
-            return responses.First() as OCIResponse;
+            return responses.First();
+        }
+
+        /// <summary>
+        /// Executes multiple commands in a single request
+        /// </summary>
+        /// <param name="commands"></param>
+        /// <returns></returns>
+        public async Task<IEnumerable<OCICommand>> CallAll(IEnumerable<OCICommand> commands)
+        {
+            if (UserDetails == null)
+            {
+                await Login();
+            }
+
+            return await ExecuteCommands(commands);
         }
 
         /// <summary>
@@ -176,7 +187,8 @@ namespace BroadWorksConnector
         /// Executes multiple commands
         /// </summary>
         /// <param name="commands"></param>
-        /// <exception cref="BadResponseException"></exception>
+        /// <exception cref="BadResponseException">Thrown when server returns something that isn't expected.</exception>
+        /// <exception cref="ErrorResponseException">Thrown when server returns an ErrorResponse object.</exception>
         /// <returns></returns>
         private async Task<IEnumerable<OCICommand>> ExecuteCommands(IEnumerable<OCICommand> commands)
         {
