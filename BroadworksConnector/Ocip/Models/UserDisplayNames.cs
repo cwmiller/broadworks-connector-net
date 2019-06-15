@@ -1,64 +1,75 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserDisplayNames 
-{
-    private string _lastName;
+    /// <summary>
+    /// The parts of a user's display name that a client can display in whatever way is appropriate
+    /// for the client application.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserDisplayNames 
+    {
 
-    [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
-    public string LastName {
-        get => _lastName;
-        set {
-            LastNameSpecified = true;
-            _lastName = value;
+        
+        private string _lastName;
+
+        [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
+        public string LastName {
+            get => _lastName;
+            set {
+                LastNameSpecified = true;
+                _lastName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LastNameSpecified { get; set; }
-    private string _firstName;
+        [XmlIgnore]
+        public bool LastNameSpecified { get; set; }
+        
+        private string _firstName;
 
-    [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
-    public string FirstName {
-        get => _firstName;
-        set {
-            FirstNameSpecified = true;
-            _firstName = value;
+        [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
+        public string FirstName {
+            get => _firstName;
+            set {
+                FirstNameSpecified = true;
+                _firstName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool FirstNameSpecified { get; set; }
-    private string _hiraganaLastName;
+        [XmlIgnore]
+        public bool FirstNameSpecified { get; set; }
+        
+        private string _hiraganaLastName;
 
-    [XmlElement(ElementName = "hiraganaLastName", IsNullable = false, Namespace = "")]
-    public string HiraganaLastName {
-        get => _hiraganaLastName;
-        set {
-            HiraganaLastNameSpecified = true;
-            _hiraganaLastName = value;
+        [XmlElement(ElementName = "hiraganaLastName", IsNullable = false, Namespace = "")]
+        public string HiraganaLastName {
+            get => _hiraganaLastName;
+            set {
+                HiraganaLastNameSpecified = true;
+                _hiraganaLastName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool HiraganaLastNameSpecified { get; set; }
-    private string _hiraganaFirstName;
+        [XmlIgnore]
+        public bool HiraganaLastNameSpecified { get; set; }
+        
+        private string _hiraganaFirstName;
 
-    [XmlElement(ElementName = "hiraganaFirstName", IsNullable = false, Namespace = "")]
-    public string HiraganaFirstName {
-        get => _hiraganaFirstName;
-        set {
-            HiraganaFirstNameSpecified = true;
-            _hiraganaFirstName = value;
+        [XmlElement(ElementName = "hiraganaFirstName", IsNullable = false, Namespace = "")]
+        public string HiraganaFirstName {
+            get => _hiraganaFirstName;
+            set {
+                HiraganaFirstNameSpecified = true;
+                _hiraganaFirstName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool HiraganaFirstNameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool HiraganaFirstNameSpecified { get; set; }
+        
+    }
 }

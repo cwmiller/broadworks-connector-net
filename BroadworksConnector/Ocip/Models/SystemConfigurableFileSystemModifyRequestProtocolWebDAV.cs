@@ -1,64 +1,74 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemConfigurableFileSystemModifyRequestProtocolWebDAV 
-{
-    private bool _secure;
+    /// <summary>
+    /// 
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemConfigurableFileSystemModifyRequestProtocolWebDAV 
+    {
 
-    [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
-    public bool Secure {
-        get => _secure;
-        set {
-            SecureSpecified = true;
-            _secure = value;
+        
+        private bool _secure;
+
+        [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
+        public bool Secure {
+            get => _secure;
+            set {
+                SecureSpecified = true;
+                _secure = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SecureSpecified { get; set; }
-    private string _userName;
+        [XmlIgnore]
+        public bool SecureSpecified { get; set; }
+        
+        private string _userName;
 
-    [XmlElement(ElementName = "userName", IsNullable = true, Namespace = "")]
-    public string UserName {
-        get => _userName;
-        set {
-            UserNameSpecified = true;
-            _userName = value;
+        [XmlElement(ElementName = "userName", IsNullable = true, Namespace = "")]
+        public string UserName {
+            get => _userName;
+            set {
+                UserNameSpecified = true;
+                _userName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserNameSpecified { get; set; }
-    private string _password;
+        [XmlIgnore]
+        public bool UserNameSpecified { get; set; }
+        
+        private string _password;
 
-    [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
-    public string Password {
-        get => _password;
-        set {
-            PasswordSpecified = true;
-            _password = value;
+        [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
+        public string Password {
+            get => _password;
+            set {
+                PasswordSpecified = true;
+                _password = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PasswordSpecified { get; set; }
-    private string _fileServerFQDN;
+        [XmlIgnore]
+        public bool PasswordSpecified { get; set; }
+        
+        private string _fileServerFQDN;
 
-    [XmlElement(ElementName = "fileServerFQDN", IsNullable = false, Namespace = "")]
-    public string FileServerFQDN {
-        get => _fileServerFQDN;
-        set {
-            FileServerFQDNSpecified = true;
-            _fileServerFQDN = value;
+        [XmlElement(ElementName = "fileServerFQDN", IsNullable = false, Namespace = "")]
+        public string FileServerFQDN {
+            get => _fileServerFQDN;
+            set {
+                FileServerFQDNSpecified = true;
+                _fileServerFQDN = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool FileServerFQDNSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool FileServerFQDNSpecified { get; set; }
+        
+    }
 }

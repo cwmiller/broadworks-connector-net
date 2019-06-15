@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum TrunkGroupImplicitRegistrationSetSupportPolicy{
-    [XmlEnum(Name = "Enabled")]
-    Enabled,
-    [XmlEnum(Name = "Disabled")]
-    Disabled,
- }
+    /// <summary>
+    /// Trunk Group Implicit Registration Set Support policy.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum TrunkGroupImplicitRegistrationSetSupportPolicy    {
+            [XmlEnum(Name = "Enabled")]
+        Enabled,
+            [XmlEnum(Name = "Disabled")]
+        Disabled,
+     }
 }

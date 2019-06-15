@@ -1,38 +1,51 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ProfileAndServiceCallNotifyInfo 
-{
-    private string _callNotifyEmailAddress;
+    /// <summary>
+    /// This is the configuration parameters for Call Notify service
+    /// 
+    /// The criteria table's column headings are: "Is Active",
+    /// "Criteria Name", "Time Schedule", "Calls From", "Blacklisted" ,"Holiday Schedule"
+    /// 
+    /// The "Calls From" column is a string containing call numbers
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ProfileAndServiceCallNotifyInfo 
+    {
 
-    [XmlElement(ElementName = "callNotifyEmailAddress", IsNullable = false, Namespace = "")]
-    public string CallNotifyEmailAddress {
-        get => _callNotifyEmailAddress;
-        set {
-            CallNotifyEmailAddressSpecified = true;
-            _callNotifyEmailAddress = value;
+        
+        private string _callNotifyEmailAddress;
+
+        [XmlElement(ElementName = "callNotifyEmailAddress", IsNullable = false, Namespace = "")]
+        public string CallNotifyEmailAddress {
+            get => _callNotifyEmailAddress;
+            set {
+                CallNotifyEmailAddressSpecified = true;
+                _callNotifyEmailAddress = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallNotifyEmailAddressSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
+        [XmlIgnore]
+        public bool CallNotifyEmailAddressSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
-    [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
-        get => _criteriaTable;
-        set {
-            CriteriaTableSpecified = true;
-            _criteriaTable = value;
+        [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
+            get => _criteriaTable;
+            set {
+                CriteriaTableSpecified = true;
+                _criteriaTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CriteriaTableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CriteriaTableSpecified { get; set; }
+        
+    }
 }

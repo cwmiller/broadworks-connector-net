@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemSMDIMessageDeskModifyServerRouteRequestDeviceNameList 
-{
-    private List<string> _deviceName;
+    /// <summary>
+    /// 
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemSMDIMessageDeskModifyServerRouteRequestDeviceNameList 
+    {
 
-    [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-    public List<string> DeviceName {
-        get => _deviceName;
-        set {
-            DeviceNameSpecified = true;
-            _deviceName = value;
+        
+        private List<string> _deviceName;
+
+        [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
+        public List<string> DeviceName {
+            get => _deviceName;
+            set {
+                DeviceNameSpecified = true;
+                _deviceName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DeviceNameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DeviceNameSpecified { get; set; }
+        
+    }
 }

@@ -1,12 +1,21 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemSecurityClassificationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-}
+    /// <summary>
+    /// Get a system Security Classifications parameters.
+    /// The response is either SystemSecurityClassificationGetResponse or ErrorResponse.
+        /// <see cref="SystemSecurityClassificationGetResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemSecurityClassificationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
+
+        
+    }
 }

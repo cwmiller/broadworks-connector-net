@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CallCenterScheduledReportAgentSelection 
-{
-    private bool _allAgent;
+    /// <summary>
+    /// Either all agents or list of agents.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class CallCenterScheduledReportAgentSelection 
+    {
 
-    [XmlElement(ElementName = "allAgent", IsNullable = false, Namespace = "")]
-    public bool AllAgent {
-        get => _allAgent;
-        set {
-            AllAgentSpecified = true;
-            _allAgent = value;
+        
+        private bool _allAgent;
+
+        [XmlElement(ElementName = "allAgent", IsNullable = false, Namespace = "")]
+        public bool AllAgent {
+            get => _allAgent;
+            set {
+                AllAgentSpecified = true;
+                _allAgent = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllAgentSpecified { get; set; }
-    private List<string> _agentUserId;
+        [XmlIgnore]
+        public bool AllAgentSpecified { get; set; }
+        
+        private List<string> _agentUserId;
 
-    [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
-    public List<string> AgentUserId {
-        get => _agentUserId;
-        set {
-            AgentUserIdSpecified = true;
-            _agentUserId = value;
+        [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
+        public List<string> AgentUserId {
+            get => _agentUserId;
+            set {
+                AgentUserIdSpecified = true;
+                _agentUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AgentUserIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool AgentUserIdSpecified { get; set; }
+        
+    }
 }

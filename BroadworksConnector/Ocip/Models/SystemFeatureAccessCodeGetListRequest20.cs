@@ -1,12 +1,27 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemFeatureAccessCodeGetListRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-}
+    /// <summary>
+    /// Request to get list of default Feature Access Codes defined on system
+    /// level.
+    /// The response is either SystemFeatureAccessCodeGetListResponse20 or
+    /// ErrorResponse.
+    /// In release 20 the "Call Recording" FAC name is changed to
+    /// "Call Recording - Start".
+    /// Replaced by: SystemFeatureAccessCodeGetListRequest21
+        /// <see cref="SystemFeatureAccessCodeGetListResponse20"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="SystemFeatureAccessCodeGetListRequest21"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemFeatureAccessCodeGetListRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
+
+        
+    }
 }

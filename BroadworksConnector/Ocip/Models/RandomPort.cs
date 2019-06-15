@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class RandomPort 
-{
-    private string _random;
+    /// <summary>
+    /// Represents either a random port number, or a specific port number.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class RandomPort 
+    {
 
-    [XmlElement(ElementName = "random", IsNullable = false, Namespace = "")]
-    public string Random {
-        get => _random;
-        set {
-            RandomSpecified = true;
-            _random = value;
+        
+        private string _random;
+
+        [XmlElement(ElementName = "random", IsNullable = false, Namespace = "")]
+        public string Random {
+            get => _random;
+            set {
+                RandomSpecified = true;
+                _random = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RandomSpecified { get; set; }
-    private int _port;
+        [XmlIgnore]
+        public bool RandomSpecified { get; set; }
+        
+        private int _port;
 
-    [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
-    public int Port {
-        get => _port;
-        set {
-            PortSpecified = true;
-            _port = value;
+        [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
+        public int Port {
+            get => _port;
+            set {
+                PortSpecified = true;
+                _port = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PortSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool PortSpecified { get; set; }
+        
+    }
 }

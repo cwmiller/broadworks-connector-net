@@ -1,77 +1,88 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class AccessDeviceEndpointRead14 
-{
-    private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
+    /// <summary>
+    /// Access device end point.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class AccessDeviceEndpointRead14 
+    {
 
-    [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
-        get => _accessDevice;
-        set {
-            AccessDeviceSpecified = true;
-            _accessDevice = value;
+        
+        private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
+
+        [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
+            get => _accessDevice;
+            set {
+                AccessDeviceSpecified = true;
+                _accessDevice = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AccessDeviceSpecified { get; set; }
-    private string _linePort;
+        [XmlIgnore]
+        public bool AccessDeviceSpecified { get; set; }
+        
+        private string _linePort;
 
-    [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-    public string LinePort {
-        get => _linePort;
-        set {
-            LinePortSpecified = true;
-            _linePort = value;
+        [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
+        public string LinePort {
+            get => _linePort;
+            set {
+                LinePortSpecified = true;
+                _linePort = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LinePortSpecified { get; set; }
-    private string _contact;
+        [XmlIgnore]
+        public bool LinePortSpecified { get; set; }
+        
+        private string _contact;
 
-    [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-    public string Contact {
-        get => _contact;
-        set {
-            ContactSpecified = true;
-            _contact = value;
+        [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
+        public string Contact {
+            get => _contact;
+            set {
+                ContactSpecified = true;
+                _contact = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ContactSpecified { get; set; }
-    private bool _staticRegistrationCapable;
+        [XmlIgnore]
+        public bool ContactSpecified { get; set; }
+        
+        private bool _staticRegistrationCapable;
 
-    [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-    public bool StaticRegistrationCapable {
-        get => _staticRegistrationCapable;
-        set {
-            StaticRegistrationCapableSpecified = true;
-            _staticRegistrationCapable = value;
+        [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
+        public bool StaticRegistrationCapable {
+            get => _staticRegistrationCapable;
+            set {
+                StaticRegistrationCapableSpecified = true;
+                _staticRegistrationCapable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool StaticRegistrationCapableSpecified { get; set; }
-    private bool _useDomain;
+        [XmlIgnore]
+        public bool StaticRegistrationCapableSpecified { get; set; }
+        
+        private bool _useDomain;
 
-    [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-    public bool UseDomain {
-        get => _useDomain;
-        set {
-            UseDomainSpecified = true;
-            _useDomain = value;
+        [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
+        public bool UseDomain {
+            get => _useDomain;
+            set {
+                UseDomainSpecified = true;
+                _useDomain = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseDomainSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool UseDomainSpecified { get; set; }
+        
+    }
 }

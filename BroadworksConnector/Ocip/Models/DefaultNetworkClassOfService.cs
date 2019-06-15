@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class DefaultNetworkClassOfService 
-{
-    private bool _useExisting;
+    /// <summary>
+    /// The default Network Class of Service to set during assignation/unassignation.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class DefaultNetworkClassOfService 
+    {
 
-    [XmlElement(ElementName = "useExisting", IsNullable = false, Namespace = "")]
-    public bool UseExisting {
-        get => _useExisting;
-        set {
-            UseExistingSpecified = true;
-            _useExisting = value;
+        
+        private bool _useExisting;
+
+        [XmlElement(ElementName = "useExisting", IsNullable = false, Namespace = "")]
+        public bool UseExisting {
+            get => _useExisting;
+            set {
+                UseExistingSpecified = true;
+                _useExisting = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseExistingSpecified { get; set; }
-    private string _networkClassOfServiceName;
+        [XmlIgnore]
+        public bool UseExistingSpecified { get; set; }
+        
+        private string _networkClassOfServiceName;
 
-    [XmlElement(ElementName = "networkClassOfServiceName", IsNullable = false, Namespace = "")]
-    public string NetworkClassOfServiceName {
-        get => _networkClassOfServiceName;
-        set {
-            NetworkClassOfServiceNameSpecified = true;
-            _networkClassOfServiceName = value;
+        [XmlElement(ElementName = "networkClassOfServiceName", IsNullable = false, Namespace = "")]
+        public string NetworkClassOfServiceName {
+            get => _networkClassOfServiceName;
+            set {
+                NetworkClassOfServiceNameSpecified = true;
+                _networkClassOfServiceName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NetworkClassOfServiceNameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool NetworkClassOfServiceNameSpecified { get; set; }
+        
+    }
 }

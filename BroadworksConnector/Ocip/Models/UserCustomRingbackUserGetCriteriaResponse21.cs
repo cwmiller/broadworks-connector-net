@@ -1,233 +1,257 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserCustomRingbackUserGetCriteriaResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
+    /// <summary>
+    /// Response to the UserCustomRingbackUserGetCriteriaRequest21.
+        /// <see cref="UserCustomRingbackUserGetCriteriaRequest21"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserCustomRingbackUserGetCriteriaResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule {
-        get => _timeSchedule;
-        set {
-            TimeScheduleSpecified = true;
-            _timeSchedule = value;
+        
+        private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
+
+        [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+            get => _timeSchedule;
+            set {
+                TimeScheduleSpecified = true;
+                _timeSchedule = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TimeScheduleSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+        [XmlIgnore]
+        public bool TimeScheduleSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
-    [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
-        get => _holidaySchedule;
-        set {
-            HolidayScheduleSpecified = true;
-            _holidaySchedule = value;
+        [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+            get => _holidaySchedule;
+            set {
+                HolidayScheduleSpecified = true;
+                _holidaySchedule = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool HolidayScheduleSpecified { get; set; }
-    private bool _blacklisted;
+        [XmlIgnore]
+        public bool HolidayScheduleSpecified { get; set; }
+        
+        private bool _blacklisted;
 
-    [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
-    public bool Blacklisted {
-        get => _blacklisted;
-        set {
-            BlacklistedSpecified = true;
-            _blacklisted = value;
+        [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
+        public bool Blacklisted {
+            get => _blacklisted;
+            set {
+                BlacklistedSpecified = true;
+                _blacklisted = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool BlacklistedSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
+        [XmlIgnore]
+        public bool BlacklistedSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
-    [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria {
-        get => _fromDnCriteria;
-        set {
-            FromDnCriteriaSpecified = true;
-            _fromDnCriteria = value;
+        [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria {
+            get => _fromDnCriteria;
+            set {
+                FromDnCriteriaSpecified = true;
+                _fromDnCriteria = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool FromDnCriteriaSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.CallToNumber> _callToNumber;
+        [XmlIgnore]
+        public bool FromDnCriteriaSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.CallToNumber> _callToNumber;
 
-    [XmlElement(ElementName = "callToNumber", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.CallToNumber> CallToNumber {
-        get => _callToNumber;
-        set {
-            CallToNumberSpecified = true;
-            _callToNumber = value;
+        [XmlElement(ElementName = "callToNumber", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.CallToNumber> CallToNumber {
+            get => _callToNumber;
+            set {
+                CallToNumberSpecified = true;
+                _callToNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallToNumberSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
+        [XmlIgnore]
+        public bool CallToNumberSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
 
-    [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
-        get => _audioSelection;
-        set {
-            AudioSelectionSpecified = true;
-            _audioSelection = value;
+        [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
+            get => _audioSelection;
+            set {
+                AudioSelectionSpecified = true;
+                _audioSelection = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AudioSelectionSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
+        [XmlIgnore]
+        public bool AudioSelectionSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
 
-    [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile {
-        get => _audioFile;
-        set {
-            AudioFileSpecified = true;
-            _audioFile = value;
+        [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile {
+            get => _audioFile;
+            set {
+                AudioFileSpecified = true;
+                _audioFile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AudioFileSpecified { get; set; }
-    private string _audioFileUrl;
+        [XmlIgnore]
+        public bool AudioFileSpecified { get; set; }
+        
+        private string _audioFileUrl;
 
-    [XmlElement(ElementName = "audioFileUrl", IsNullable = false, Namespace = "")]
-    public string AudioFileUrl {
-        get => _audioFileUrl;
-        set {
-            AudioFileUrlSpecified = true;
-            _audioFileUrl = value;
+        [XmlElement(ElementName = "audioFileUrl", IsNullable = false, Namespace = "")]
+        public string AudioFileUrl {
+            get => _audioFileUrl;
+            set {
+                AudioFileUrlSpecified = true;
+                _audioFileUrl = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AudioFileUrlSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
+        [XmlIgnore]
+        public bool AudioFileUrlSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
 
-    [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
-        get => _videoSelection;
-        set {
-            VideoSelectionSpecified = true;
-            _videoSelection = value;
+        [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
+            get => _videoSelection;
+            set {
+                VideoSelectionSpecified = true;
+                _videoSelection = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool VideoSelectionSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
+        [XmlIgnore]
+        public bool VideoSelectionSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
 
-    [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile {
-        get => _videoFile;
-        set {
-            VideoFileSpecified = true;
-            _videoFile = value;
+        [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile {
+            get => _videoFile;
+            set {
+                VideoFileSpecified = true;
+                _videoFile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool VideoFileSpecified { get; set; }
-    private string _videoFileUrl;
+        [XmlIgnore]
+        public bool VideoFileSpecified { get; set; }
+        
+        private string _videoFileUrl;
 
-    [XmlElement(ElementName = "videoFileUrl", IsNullable = false, Namespace = "")]
-    public string VideoFileUrl {
-        get => _videoFileUrl;
-        set {
-            VideoFileUrlSpecified = true;
-            _videoFileUrl = value;
+        [XmlElement(ElementName = "videoFileUrl", IsNullable = false, Namespace = "")]
+        public string VideoFileUrl {
+            get => _videoFileUrl;
+            set {
+                VideoFileUrlSpecified = true;
+                _videoFileUrl = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool VideoFileUrlSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingAudioSelection;
+        [XmlIgnore]
+        public bool VideoFileUrlSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingAudioSelection;
 
-    [XmlElement(ElementName = "callWaitingAudioSelection", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingAudioSelection {
-        get => _callWaitingAudioSelection;
-        set {
-            CallWaitingAudioSelectionSpecified = true;
-            _callWaitingAudioSelection = value;
+        [XmlElement(ElementName = "callWaitingAudioSelection", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingAudioSelection {
+            get => _callWaitingAudioSelection;
+            set {
+                CallWaitingAudioSelectionSpecified = true;
+                _callWaitingAudioSelection = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallWaitingAudioSelectionSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _callWaitingAudioFile;
+        [XmlIgnore]
+        public bool CallWaitingAudioSelectionSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _callWaitingAudioFile;
 
-    [XmlElement(ElementName = "callWaitingAudioFile", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey CallWaitingAudioFile {
-        get => _callWaitingAudioFile;
-        set {
-            CallWaitingAudioFileSpecified = true;
-            _callWaitingAudioFile = value;
+        [XmlElement(ElementName = "callWaitingAudioFile", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey CallWaitingAudioFile {
+            get => _callWaitingAudioFile;
+            set {
+                CallWaitingAudioFileSpecified = true;
+                _callWaitingAudioFile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallWaitingAudioFileSpecified { get; set; }
-    private string _callWaitingAudioFileUrl;
+        [XmlIgnore]
+        public bool CallWaitingAudioFileSpecified { get; set; }
+        
+        private string _callWaitingAudioFileUrl;
 
-    [XmlElement(ElementName = "callWaitingAudioFileUrl", IsNullable = false, Namespace = "")]
-    public string CallWaitingAudioFileUrl {
-        get => _callWaitingAudioFileUrl;
-        set {
-            CallWaitingAudioFileUrlSpecified = true;
-            _callWaitingAudioFileUrl = value;
+        [XmlElement(ElementName = "callWaitingAudioFileUrl", IsNullable = false, Namespace = "")]
+        public string CallWaitingAudioFileUrl {
+            get => _callWaitingAudioFileUrl;
+            set {
+                CallWaitingAudioFileUrlSpecified = true;
+                _callWaitingAudioFileUrl = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallWaitingAudioFileUrlSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingVideoSelection;
+        [XmlIgnore]
+        public bool CallWaitingAudioFileUrlSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingVideoSelection;
 
-    [XmlElement(ElementName = "callWaitingVideoSelection", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingVideoSelection {
-        get => _callWaitingVideoSelection;
-        set {
-            CallWaitingVideoSelectionSpecified = true;
-            _callWaitingVideoSelection = value;
+        [XmlElement(ElementName = "callWaitingVideoSelection", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingVideoSelection {
+            get => _callWaitingVideoSelection;
+            set {
+                CallWaitingVideoSelectionSpecified = true;
+                _callWaitingVideoSelection = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallWaitingVideoSelectionSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _callWaitingVideoFile;
+        [XmlIgnore]
+        public bool CallWaitingVideoSelectionSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _callWaitingVideoFile;
 
-    [XmlElement(ElementName = "callWaitingVideoFile", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey CallWaitingVideoFile {
-        get => _callWaitingVideoFile;
-        set {
-            CallWaitingVideoFileSpecified = true;
-            _callWaitingVideoFile = value;
+        [XmlElement(ElementName = "callWaitingVideoFile", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey CallWaitingVideoFile {
+            get => _callWaitingVideoFile;
+            set {
+                CallWaitingVideoFileSpecified = true;
+                _callWaitingVideoFile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallWaitingVideoFileSpecified { get; set; }
-    private string _callWaitingVideoFileUrl;
+        [XmlIgnore]
+        public bool CallWaitingVideoFileSpecified { get; set; }
+        
+        private string _callWaitingVideoFileUrl;
 
-    [XmlElement(ElementName = "callWaitingVideoFileUrl", IsNullable = false, Namespace = "")]
-    public string CallWaitingVideoFileUrl {
-        get => _callWaitingVideoFileUrl;
-        set {
-            CallWaitingVideoFileUrlSpecified = true;
-            _callWaitingVideoFileUrl = value;
+        [XmlElement(ElementName = "callWaitingVideoFileUrl", IsNullable = false, Namespace = "")]
+        public string CallWaitingVideoFileUrl {
+            get => _callWaitingVideoFileUrl;
+            set {
+                CallWaitingVideoFileUrlSpecified = true;
+                _callWaitingVideoFileUrl = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallWaitingVideoFileUrlSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CallWaitingVideoFileUrlSpecified { get; set; }
+        
+    }
 }

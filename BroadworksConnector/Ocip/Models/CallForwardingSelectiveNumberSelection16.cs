@@ -3,14 +3,17 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum CallForwardingSelectiveNumberSelection16{
-    [XmlEnum(Name = "Forward To Default Number")]
-    ForwardToDefaultNumber,
-    [XmlEnum(Name = "Forward To Specified Number")]
-    ForwardToSpecifiedNumber,
-    [XmlEnum(Name = "Do not forward")]
-    Donotforward,
- }
+    /// <summary>
+    /// Forward to Number Selection.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallForwardingSelectiveNumberSelection16    {
+            [XmlEnum(Name = "Forward To Default Number")]
+        ForwardToDefaultNumber,
+            [XmlEnum(Name = "Forward To Specified Number")]
+        ForwardToSpecifiedNumber,
+            [XmlEnum(Name = "Do not forward")]
+        Donotforward,
+     }
 }

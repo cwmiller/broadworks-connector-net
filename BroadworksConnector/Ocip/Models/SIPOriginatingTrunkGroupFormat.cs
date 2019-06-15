@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum SIPOriginatingTrunkGroupFormat{
-    [XmlEnum(Name = "OTG")]
-    OTG,
-    [XmlEnum(Name = "X Nortel Profile")]
-    XNortelProfile,
- }
+    /// <summary>
+    /// Choices for originating trunk group format.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum SIPOriginatingTrunkGroupFormat    {
+            [XmlEnum(Name = "OTG")]
+        OTG,
+            [XmlEnum(Name = "X Nortel Profile")]
+        XNortelProfile,
+     }
 }

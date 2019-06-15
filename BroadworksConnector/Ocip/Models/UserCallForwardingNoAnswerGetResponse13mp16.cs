@@ -1,51 +1,61 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserCallForwardingNoAnswerGetResponse13mp16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _isActive;
+    /// <summary>
+    /// Response to UserCallForwardingNoAnswerGetRequest13mp16.
+        /// <see cref="UserCallForwardingNoAnswerGetRequest13mp16"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserCallForwardingNoAnswerGetResponse13mp16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-    public bool IsActive {
-        get => _isActive;
-        set {
-            IsActiveSpecified = true;
-            _isActive = value;
+        
+        private bool _isActive;
+
+        [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+        public bool IsActive {
+            get => _isActive;
+            set {
+                IsActiveSpecified = true;
+                _isActive = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsActiveSpecified { get; set; }
-    private string _forwardToPhoneNumber;
+        [XmlIgnore]
+        public bool IsActiveSpecified { get; set; }
+        
+        private string _forwardToPhoneNumber;
 
-    [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
-    public string ForwardToPhoneNumber {
-        get => _forwardToPhoneNumber;
-        set {
-            ForwardToPhoneNumberSpecified = true;
-            _forwardToPhoneNumber = value;
+        [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
+        public string ForwardToPhoneNumber {
+            get => _forwardToPhoneNumber;
+            set {
+                ForwardToPhoneNumberSpecified = true;
+                _forwardToPhoneNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ForwardToPhoneNumberSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings _numberOfRings;
+        [XmlIgnore]
+        public bool ForwardToPhoneNumberSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings _numberOfRings;
 
-    [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings NumberOfRings {
-        get => _numberOfRings;
-        set {
-            NumberOfRingsSpecified = true;
-            _numberOfRings = value;
+        [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings NumberOfRings {
+            get => _numberOfRings;
+            set {
+                NumberOfRingsSpecified = true;
+                _numberOfRings = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NumberOfRingsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool NumberOfRingsSpecified { get; set; }
+        
+    }
 }

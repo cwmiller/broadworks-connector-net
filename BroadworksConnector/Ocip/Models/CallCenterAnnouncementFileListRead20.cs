@@ -1,64 +1,74 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CallCenterAnnouncementFileListRead20 
-{
-    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file1;
+    /// <summary>
+    /// Contains a list of announcement repository files
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class CallCenterAnnouncementFileListRead20 
+    {
 
-    [XmlElement(ElementName = "file1", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File1 {
-        get => _file1;
-        set {
-            File1Specified = true;
-            _file1 = value;
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file1;
+
+        [XmlElement(ElementName = "file1", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File1 {
+            get => _file1;
+            set {
+                File1Specified = true;
+                _file1 = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool File1Specified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file2;
+        [XmlIgnore]
+        public bool File1Specified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file2;
 
-    [XmlElement(ElementName = "file2", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File2 {
-        get => _file2;
-        set {
-            File2Specified = true;
-            _file2 = value;
+        [XmlElement(ElementName = "file2", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File2 {
+            get => _file2;
+            set {
+                File2Specified = true;
+                _file2 = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool File2Specified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file3;
+        [XmlIgnore]
+        public bool File2Specified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file3;
 
-    [XmlElement(ElementName = "file3", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File3 {
-        get => _file3;
-        set {
-            File3Specified = true;
-            _file3 = value;
+        [XmlElement(ElementName = "file3", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File3 {
+            get => _file3;
+            set {
+                File3Specified = true;
+                _file3 = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool File3Specified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file4;
+        [XmlIgnore]
+        public bool File3Specified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file4;
 
-    [XmlElement(ElementName = "file4", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File4 {
-        get => _file4;
-        set {
-            File4Specified = true;
-            _file4 = value;
+        [XmlElement(ElementName = "file4", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File4 {
+            get => _file4;
+            set {
+                File4Specified = true;
+                _file4 = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool File4Specified { get; set; }
-}
+        [XmlIgnore]
+        public bool File4Specified { get; set; }
+        
+    }
 }

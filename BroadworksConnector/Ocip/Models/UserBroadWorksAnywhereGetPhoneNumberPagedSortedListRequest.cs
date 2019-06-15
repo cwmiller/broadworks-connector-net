@@ -1,90 +1,106 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _userId;
+    /// <summary>
+    /// Get the list of all the BroadWorks Anywhere phone numbers for the user.
+    /// If no sortOrder is included the response is sorted by Phone Number ascending by default.
+    /// The response is either a UserBroadWorksAnywhereGetPhoneNumberPagedSortedListResponse or an ErrorResponse.
+        /// <see cref="UserBroadWorksAnywhereGetPhoneNumberPagedSortedListResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        
+        private string _userId;
+
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
-    [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
-        get => _responsePagingControl;
-        set {
-            ResponsePagingControlSpecified = true;
-            _responsePagingControl = value;
+        [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+            get => _responsePagingControl;
+            set {
+                ResponsePagingControlSpecified = true;
+                _responsePagingControl = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ResponsePagingControlSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.SortByLocation _sortByLocation;
+        [XmlIgnore]
+        public bool ResponsePagingControlSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.SortByLocation _sortByLocation;
 
-    [XmlElement(ElementName = "sortByLocation", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.SortByLocation SortByLocation {
-        get => _sortByLocation;
-        set {
-            SortByLocationSpecified = true;
-            _sortByLocation = value;
+        [XmlElement(ElementName = "sortByLocation", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.SortByLocation SortByLocation {
+            get => _sortByLocation;
+            set {
+                SortByLocationSpecified = true;
+                _sortByLocation = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SortByLocationSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.SortByEnabled _sortByEnabled;
+        [XmlIgnore]
+        public bool SortByLocationSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.SortByEnabled _sortByEnabled;
 
-    [XmlElement(ElementName = "sortByEnabled", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.SortByEnabled SortByEnabled {
-        get => _sortByEnabled;
-        set {
-            SortByEnabledSpecified = true;
-            _sortByEnabled = value;
+        [XmlElement(ElementName = "sortByEnabled", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.SortByEnabled SortByEnabled {
+            get => _sortByEnabled;
+            set {
+                SortByEnabledSpecified = true;
+                _sortByEnabled = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SortByEnabledSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation> _searchCriteriaLocation;
+        [XmlIgnore]
+        public bool SortByEnabledSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation> _searchCriteriaLocation;
 
-    [XmlElement(ElementName = "searchCriteriaLocation", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation> SearchCriteriaLocation {
-        get => _searchCriteriaLocation;
-        set {
-            SearchCriteriaLocationSpecified = true;
-            _searchCriteriaLocation = value;
+        [XmlElement(ElementName = "searchCriteriaLocation", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation> SearchCriteriaLocation {
+            get => _searchCriteriaLocation;
+            set {
+                SearchCriteriaLocationSpecified = true;
+                _searchCriteriaLocation = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SearchCriteriaLocationSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.SearchCriteriaExactLocationEnabled _searchCriteriaExactLocationEnabled;
+        [XmlIgnore]
+        public bool SearchCriteriaLocationSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.SearchCriteriaExactLocationEnabled _searchCriteriaExactLocationEnabled;
 
-    [XmlElement(ElementName = "searchCriteriaExactLocationEnabled", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.SearchCriteriaExactLocationEnabled SearchCriteriaExactLocationEnabled {
-        get => _searchCriteriaExactLocationEnabled;
-        set {
-            SearchCriteriaExactLocationEnabledSpecified = true;
-            _searchCriteriaExactLocationEnabled = value;
+        [XmlElement(ElementName = "searchCriteriaExactLocationEnabled", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.SearchCriteriaExactLocationEnabled SearchCriteriaExactLocationEnabled {
+            get => _searchCriteriaExactLocationEnabled;
+            set {
+                SearchCriteriaExactLocationEnabledSpecified = true;
+                _searchCriteriaExactLocationEnabled = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SearchCriteriaExactLocationEnabledSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool SearchCriteriaExactLocationEnabledSpecified { get; set; }
+        
+    }
 }

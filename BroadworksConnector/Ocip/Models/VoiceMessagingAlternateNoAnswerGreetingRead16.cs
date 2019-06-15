@@ -1,77 +1,89 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class VoiceMessagingAlternateNoAnswerGreetingRead16 
-{
-    private string _name;
+    /// <summary>
+    /// The configuration of a alternate no answer greeting.
+    /// It is used when geting a user's voice messaging greeting.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class VoiceMessagingAlternateNoAnswerGreetingRead16 
+    {
 
-    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-    public string Name {
-        get => _name;
-        set {
-            NameSpecified = true;
-            _name = value;
+        
+        private string _name;
+
+        [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+        public string Name {
+            get => _name;
+            set {
+                NameSpecified = true;
+                _name = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NameSpecified { get; set; }
-    private string _audioFile;
+        [XmlIgnore]
+        public bool NameSpecified { get; set; }
+        
+        private string _audioFile;
 
-    [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-    public string AudioFile {
-        get => _audioFile;
-        set {
-            AudioFileSpecified = true;
-            _audioFile = value;
+        [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
+        public string AudioFile {
+            get => _audioFile;
+            set {
+                AudioFileSpecified = true;
+                _audioFile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AudioFileSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
+        [XmlIgnore]
+        public bool AudioFileSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
 
-    [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MediaFileType AudioMediaType {
-        get => _audioMediaType;
-        set {
-            AudioMediaTypeSpecified = true;
-            _audioMediaType = value;
+        [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MediaFileType AudioMediaType {
+            get => _audioMediaType;
+            set {
+                AudioMediaTypeSpecified = true;
+                _audioMediaType = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AudioMediaTypeSpecified { get; set; }
-    private string _videoFile;
+        [XmlIgnore]
+        public bool AudioMediaTypeSpecified { get; set; }
+        
+        private string _videoFile;
 
-    [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
-    public string VideoFile {
-        get => _videoFile;
-        set {
-            VideoFileSpecified = true;
-            _videoFile = value;
+        [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
+        public string VideoFile {
+            get => _videoFile;
+            set {
+                VideoFileSpecified = true;
+                _videoFile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool VideoFileSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
+        [XmlIgnore]
+        public bool VideoFileSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
 
-    [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MediaFileType VideoMediaType {
-        get => _videoMediaType;
-        set {
-            VideoMediaTypeSpecified = true;
-            _videoMediaType = value;
+        [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MediaFileType VideoMediaType {
+            get => _videoMediaType;
+            set {
+                VideoMediaTypeSpecified = true;
+                _videoMediaType = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool VideoMediaTypeSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool VideoMediaTypeSpecified { get; set; }
+        
+    }
 }

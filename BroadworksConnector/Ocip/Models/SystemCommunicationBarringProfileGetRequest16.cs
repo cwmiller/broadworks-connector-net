@@ -1,25 +1,36 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemCommunicationBarringProfileGetRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _name;
+    /// <summary>
+    /// Get an existing Communication Barring Profile.
+    /// The response is either a SystemCommunicationBarringProfileGetResponse16
+    /// or an ErrorResponse.
+        /// <see cref="SystemCommunicationBarringProfileGetResponse16"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemCommunicationBarringProfileGetRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-    public string Name {
-        get => _name;
-        set {
-            NameSpecified = true;
-            _name = value;
+        
+        private string _name;
+
+        [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+        public string Name {
+            get => _name;
+            set {
+                NameSpecified = true;
+                _name = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool NameSpecified { get; set; }
+        
+    }
 }

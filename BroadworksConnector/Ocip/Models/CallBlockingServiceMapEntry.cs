@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CallBlockingServiceMapEntry 
-{
-    private BroadWorksConnector.Ocip.Models.CallBlockingService23 _callBlockingService;
+    /// <summary>
+    /// The call blocking service map entry.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class CallBlockingServiceMapEntry 
+    {
 
-    [XmlElement(ElementName = "callBlockingService", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CallBlockingService23 CallBlockingService {
-        get => _callBlockingService;
-        set {
-            CallBlockingServiceSpecified = true;
-            _callBlockingService = value;
+        
+        private BroadWorksConnector.Ocip.Models.CallBlockingService23 _callBlockingService;
+
+        [XmlElement(ElementName = "callBlockingService", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CallBlockingService23 CallBlockingService {
+            get => _callBlockingService;
+            set {
+                CallBlockingServiceSpecified = true;
+                _callBlockingService = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallBlockingServiceSpecified { get; set; }
-    private string _treatmentId;
+        [XmlIgnore]
+        public bool CallBlockingServiceSpecified { get; set; }
+        
+        private string _treatmentId;
 
-    [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
-    public string TreatmentId {
-        get => _treatmentId;
-        set {
-            TreatmentIdSpecified = true;
-            _treatmentId = value;
+        [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
+        public string TreatmentId {
+            get => _treatmentId;
+            set {
+                TreatmentIdSpecified = true;
+                _treatmentId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TreatmentIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TreatmentIdSpecified { get; set; }
+        
+    }
 }

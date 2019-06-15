@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SIPAuthenticationUserNamePassword 
-{
-    private string _sipAuthenticationUserName;
+    /// <summary>
+    /// User's authentication service information.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SIPAuthenticationUserNamePassword 
+    {
 
-    [XmlElement(ElementName = "sipAuthenticationUserName", IsNullable = false, Namespace = "")]
-    public string SipAuthenticationUserName {
-        get => _sipAuthenticationUserName;
-        set {
-            SipAuthenticationUserNameSpecified = true;
-            _sipAuthenticationUserName = value;
+        
+        private string _sipAuthenticationUserName;
+
+        [XmlElement(ElementName = "sipAuthenticationUserName", IsNullable = false, Namespace = "")]
+        public string SipAuthenticationUserName {
+            get => _sipAuthenticationUserName;
+            set {
+                SipAuthenticationUserNameSpecified = true;
+                _sipAuthenticationUserName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SipAuthenticationUserNameSpecified { get; set; }
-    private string _sipAuthenticationPassword;
+        [XmlIgnore]
+        public bool SipAuthenticationUserNameSpecified { get; set; }
+        
+        private string _sipAuthenticationPassword;
 
-    [XmlElement(ElementName = "sipAuthenticationPassword", IsNullable = false, Namespace = "")]
-    public string SipAuthenticationPassword {
-        get => _sipAuthenticationPassword;
-        set {
-            SipAuthenticationPasswordSpecified = true;
-            _sipAuthenticationPassword = value;
+        [XmlElement(ElementName = "sipAuthenticationPassword", IsNullable = false, Namespace = "")]
+        public string SipAuthenticationPassword {
+            get => _sipAuthenticationPassword;
+            set {
+                SipAuthenticationPasswordSpecified = true;
+                _sipAuthenticationPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SipAuthenticationPasswordSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool SipAuthenticationPasswordSpecified { get; set; }
+        
+    }
 }

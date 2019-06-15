@@ -1,64 +1,79 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemAccessDeviceModifyUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _deviceName;
+    /// <summary>
+    /// Request to modify attributes for line/ports assigned on the system device profile.
+    /// The response is either SuccessResponse or ErrorResponse.
+    /// The following elements are only used in XS data mode and ignored in AS data mode:
+    /// privateIdentity
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemAccessDeviceModifyUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-    public string DeviceName {
-        get => _deviceName;
-        set {
-            DeviceNameSpecified = true;
-            _deviceName = value;
+        
+        private string _deviceName;
+
+        [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
+        public string DeviceName {
+            get => _deviceName;
+            set {
+                DeviceNameSpecified = true;
+                _deviceName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DeviceNameSpecified { get; set; }
-    private string _linePort;
+        [XmlIgnore]
+        public bool DeviceNameSpecified { get; set; }
+        
+        private string _linePort;
 
-    [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-    public string LinePort {
-        get => _linePort;
-        set {
-            LinePortSpecified = true;
-            _linePort = value;
+        [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
+        public string LinePort {
+            get => _linePort;
+            set {
+                LinePortSpecified = true;
+                _linePort = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LinePortSpecified { get; set; }
-    private string _privateIdentity;
+        [XmlIgnore]
+        public bool LinePortSpecified { get; set; }
+        
+        private string _privateIdentity;
 
-    [XmlElement(ElementName = "privateIdentity", IsNullable = false, Namespace = "")]
-    public string PrivateIdentity {
-        get => _privateIdentity;
-        set {
-            PrivateIdentitySpecified = true;
-            _privateIdentity = value;
+        [XmlElement(ElementName = "privateIdentity", IsNullable = false, Namespace = "")]
+        public string PrivateIdentity {
+            get => _privateIdentity;
+            set {
+                PrivateIdentitySpecified = true;
+                _privateIdentity = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PrivateIdentitySpecified { get; set; }
-    private bool _isPrimaryLinePort;
+        [XmlIgnore]
+        public bool PrivateIdentitySpecified { get; set; }
+        
+        private bool _isPrimaryLinePort;
 
-    [XmlElement(ElementName = "isPrimaryLinePort", IsNullable = false, Namespace = "")]
-    public bool IsPrimaryLinePort {
-        get => _isPrimaryLinePort;
-        set {
-            IsPrimaryLinePortSpecified = true;
-            _isPrimaryLinePort = value;
+        [XmlElement(ElementName = "isPrimaryLinePort", IsNullable = false, Namespace = "")]
+        public bool IsPrimaryLinePort {
+            get => _isPrimaryLinePort;
+            set {
+                IsPrimaryLinePortSpecified = true;
+                _isPrimaryLinePort = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsPrimaryLinePortSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool IsPrimaryLinePortSpecified { get; set; }
+        
+    }
 }

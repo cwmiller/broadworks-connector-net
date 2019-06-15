@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactSignalingAddressType : BroadWorksConnector.Ocip.Models.SearchCriteria
-{
-    private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
+    /// <summary>
+    /// Criteria for searching for a particular fully specified SignalingAddressType.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SearchCriteriaExactSignalingAddressType : BroadWorksConnector.Ocip.Models.SearchCriteria
+    {
 
-    [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
-        get => _profile;
-        set {
-            ProfileSpecified = true;
-            _profile = value;
+        
+        private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
+
+        [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
+            get => _profile;
+            set {
+                ProfileSpecified = true;
+                _profile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ProfileSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ProfileSpecified { get; set; }
+        
+    }
 }

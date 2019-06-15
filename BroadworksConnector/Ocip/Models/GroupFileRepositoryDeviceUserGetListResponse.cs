@@ -1,25 +1,34 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupFileRepositoryDeviceUserGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.C.OCITable _fileRepositoryUserTable;
+    /// <summary>
+    /// Response to GroupFileRepositoryDeviceUserGetListRequest.
+    /// Contains a table with column headings : "User Name","Allow Delete","Allow Get","Allow Put" in a row for each file repository service provider user.
+        /// <see cref="GroupFileRepositoryDeviceUserGetListRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupFileRepositoryDeviceUserGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "fileRepositoryUserTable", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.C.OCITable FileRepositoryUserTable {
-        get => _fileRepositoryUserTable;
-        set {
-            FileRepositoryUserTableSpecified = true;
-            _fileRepositoryUserTable = value;
+        
+        private BroadWorksConnector.Ocip.Models.C.OCITable _fileRepositoryUserTable;
+
+        [XmlElement(ElementName = "fileRepositoryUserTable", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable FileRepositoryUserTable {
+            get => _fileRepositoryUserTable;
+            set {
+                FileRepositoryUserTableSpecified = true;
+                _fileRepositoryUserTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool FileRepositoryUserTableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool FileRepositoryUserTableSpecified { get; set; }
+        
+    }
 }

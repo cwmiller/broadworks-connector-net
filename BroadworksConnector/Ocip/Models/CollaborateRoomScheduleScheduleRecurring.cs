@@ -1,51 +1,60 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CollaborateRoomScheduleScheduleRecurring 
-{
-    private string _startTime;
+    /// <summary>
+    /// 
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class CollaborateRoomScheduleScheduleRecurring 
+    {
 
-    [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
-    public string StartTime {
-        get => _startTime;
-        set {
-            StartTimeSpecified = true;
-            _startTime = value;
+        
+        private string _startTime;
+
+        [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
+        public string StartTime {
+            get => _startTime;
+            set {
+                StartTimeSpecified = true;
+                _startTime = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool StartTimeSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleDuration _duration;
+        [XmlIgnore]
+        public bool StartTimeSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleDuration _duration;
 
-    [XmlElement(ElementName = "duration", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleDuration Duration {
-        get => _duration;
-        set {
-            DurationSpecified = true;
-            _duration = value;
+        [XmlElement(ElementName = "duration", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleDuration Duration {
+            get => _duration;
+            set {
+                DurationSpecified = true;
+                _duration = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DurationSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.Recurrence _recurrence;
+        [XmlIgnore]
+        public bool DurationSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.Recurrence _recurrence;
 
-    [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.Recurrence Recurrence {
-        get => _recurrence;
-        set {
-            RecurrenceSpecified = true;
-            _recurrence = value;
+        [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.Recurrence Recurrence {
+            get => _recurrence;
+            set {
+                RecurrenceSpecified = true;
+                _recurrence = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RecurrenceSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool RecurrenceSpecified { get; set; }
+        
+    }
 }

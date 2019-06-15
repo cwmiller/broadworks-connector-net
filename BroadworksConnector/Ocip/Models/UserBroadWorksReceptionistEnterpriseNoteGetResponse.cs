@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserBroadWorksReceptionistEnterpriseNoteGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private string _receptionistNote;
+    /// <summary>
+    /// Response to UserBroadWorksReceptionistEnterpriseNoteGetRequest.
+        /// <see cref="UserBroadWorksReceptionistEnterpriseNoteGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserBroadWorksReceptionistEnterpriseNoteGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "receptionistNote", IsNullable = false, Namespace = "")]
-    public string ReceptionistNote {
-        get => _receptionistNote;
-        set {
-            ReceptionistNoteSpecified = true;
-            _receptionistNote = value;
+        
+        private string _receptionistNote;
+
+        [XmlElement(ElementName = "receptionistNote", IsNullable = false, Namespace = "")]
+        public string ReceptionistNote {
+            get => _receptionistNote;
+            set {
+                ReceptionistNoteSpecified = true;
+                _receptionistNote = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ReceptionistNoteSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ReceptionistNoteSpecified { get; set; }
+        
+    }
 }

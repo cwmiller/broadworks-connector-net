@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class MWIDeliveryToMobileEndpointTemplateBody 
-{
-    private List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> _line;
+    /// <summary>
+    /// MWI Delivery To Mobile Endpoint template body.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class MWIDeliveryToMobileEndpointTemplateBody 
+    {
 
-    [XmlElement(ElementName = "line", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> Line {
-        get => _line;
-        set {
-            LineSpecified = true;
-            _line = value;
+        
+        private List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> _line;
+
+        [XmlElement(ElementName = "line", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> Line {
+            get => _line;
+            set {
+                LineSpecified = true;
+                _line = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LineSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool LineSpecified { get; set; }
+        
+    }
 }

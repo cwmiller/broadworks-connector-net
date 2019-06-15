@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class NameDialingName 
-{
-    private string _nameDialingLastName;
+    /// <summary>
+    /// Name dialing last and first names.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class NameDialingName 
+    {
 
-    [XmlElement(ElementName = "nameDialingLastName", IsNullable = false, Namespace = "")]
-    public string NameDialingLastName {
-        get => _nameDialingLastName;
-        set {
-            NameDialingLastNameSpecified = true;
-            _nameDialingLastName = value;
+        
+        private string _nameDialingLastName;
+
+        [XmlElement(ElementName = "nameDialingLastName", IsNullable = false, Namespace = "")]
+        public string NameDialingLastName {
+            get => _nameDialingLastName;
+            set {
+                NameDialingLastNameSpecified = true;
+                _nameDialingLastName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NameDialingLastNameSpecified { get; set; }
-    private string _nameDialingFirstName;
+        [XmlIgnore]
+        public bool NameDialingLastNameSpecified { get; set; }
+        
+        private string _nameDialingFirstName;
 
-    [XmlElement(ElementName = "nameDialingFirstName", IsNullable = false, Namespace = "")]
-    public string NameDialingFirstName {
-        get => _nameDialingFirstName;
-        set {
-            NameDialingFirstNameSpecified = true;
-            _nameDialingFirstName = value;
+        [XmlElement(ElementName = "nameDialingFirstName", IsNullable = false, Namespace = "")]
+        public string NameDialingFirstName {
+            get => _nameDialingFirstName;
+            set {
+                NameDialingFirstNameSpecified = true;
+                _nameDialingFirstName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NameDialingFirstNameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool NameDialingFirstNameSpecified { get; set; }
+        
+    }
 }

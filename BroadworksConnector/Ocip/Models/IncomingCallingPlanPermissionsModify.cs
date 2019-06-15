@@ -1,64 +1,75 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class IncomingCallingPlanPermissionsModify 
-{
-    private bool _allowFromWithinGroup;
+    /// <summary>
+    /// Allows or disallows various types of incoming calls for a user or group -- not any particular department.
+    /// For use when modifing settings.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class IncomingCallingPlanPermissionsModify 
+    {
 
-    [XmlElement(ElementName = "allowFromWithinGroup", IsNullable = false, Namespace = "")]
-    public bool AllowFromWithinGroup {
-        get => _allowFromWithinGroup;
-        set {
-            AllowFromWithinGroupSpecified = true;
-            _allowFromWithinGroup = value;
+        
+        private bool _allowFromWithinGroup;
+
+        [XmlElement(ElementName = "allowFromWithinGroup", IsNullable = false, Namespace = "")]
+        public bool AllowFromWithinGroup {
+            get => _allowFromWithinGroup;
+            set {
+                AllowFromWithinGroupSpecified = true;
+                _allowFromWithinGroup = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowFromWithinGroupSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission _allowFromOutsideGroup;
+        [XmlIgnore]
+        public bool AllowFromWithinGroupSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission _allowFromOutsideGroup;
 
-    [XmlElement(ElementName = "allowFromOutsideGroup", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission AllowFromOutsideGroup {
-        get => _allowFromOutsideGroup;
-        set {
-            AllowFromOutsideGroupSpecified = true;
-            _allowFromOutsideGroup = value;
+        [XmlElement(ElementName = "allowFromOutsideGroup", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission AllowFromOutsideGroup {
+            get => _allowFromOutsideGroup;
+            set {
+                AllowFromOutsideGroupSpecified = true;
+                _allowFromOutsideGroup = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowFromOutsideGroupSpecified { get; set; }
-    private bool _allowCollectCalls;
+        [XmlIgnore]
+        public bool AllowFromOutsideGroupSpecified { get; set; }
+        
+        private bool _allowCollectCalls;
 
-    [XmlElement(ElementName = "allowCollectCalls", IsNullable = false, Namespace = "")]
-    public bool AllowCollectCalls {
-        get => _allowCollectCalls;
-        set {
-            AllowCollectCallsSpecified = true;
-            _allowCollectCalls = value;
+        [XmlElement(ElementName = "allowCollectCalls", IsNullable = false, Namespace = "")]
+        public bool AllowCollectCalls {
+            get => _allowCollectCalls;
+            set {
+                AllowCollectCallsSpecified = true;
+                _allowCollectCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowCollectCallsSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> _digitPatternPermission;
+        [XmlIgnore]
+        public bool AllowCollectCallsSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> _digitPatternPermission;
 
-    [XmlElement(ElementName = "digitPatternPermission", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> DigitPatternPermission {
-        get => _digitPatternPermission;
-        set {
-            DigitPatternPermissionSpecified = true;
-            _digitPatternPermission = value;
+        [XmlElement(ElementName = "digitPatternPermission", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> DigitPatternPermission {
+            get => _digitPatternPermission;
+            set {
+                DigitPatternPermissionSpecified = true;
+                _digitPatternPermission = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DigitPatternPermissionSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DigitPatternPermissionSpecified { get; set; }
+        
+    }
 }

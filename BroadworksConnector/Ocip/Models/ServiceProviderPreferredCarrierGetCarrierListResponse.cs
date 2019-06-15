@@ -1,51 +1,62 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderPreferredCarrierGetCarrierListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private List<string> _intraLataCarrier;
+    /// <summary>
+    /// Response to a ServiceProviderPreferredCarrierGetCarrierListRequest.
+    /// Contains the lists of carriers for a specified country code for a service provider / enterprise.
+        /// <see cref="ServiceProviderPreferredCarrierGetCarrierListRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderPreferredCarrierGetCarrierListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "intraLataCarrier", IsNullable = false, Namespace = "")]
-    public List<string> IntraLataCarrier {
-        get => _intraLataCarrier;
-        set {
-            IntraLataCarrierSpecified = true;
-            _intraLataCarrier = value;
+        
+        private List<string> _intraLataCarrier;
+
+        [XmlElement(ElementName = "intraLataCarrier", IsNullable = false, Namespace = "")]
+        public List<string> IntraLataCarrier {
+            get => _intraLataCarrier;
+            set {
+                IntraLataCarrierSpecified = true;
+                _intraLataCarrier = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IntraLataCarrierSpecified { get; set; }
-    private List<string> _interLataCarrier;
+        [XmlIgnore]
+        public bool IntraLataCarrierSpecified { get; set; }
+        
+        private List<string> _interLataCarrier;
 
-    [XmlElement(ElementName = "interLataCarrier", IsNullable = false, Namespace = "")]
-    public List<string> InterLataCarrier {
-        get => _interLataCarrier;
-        set {
-            InterLataCarrierSpecified = true;
-            _interLataCarrier = value;
+        [XmlElement(ElementName = "interLataCarrier", IsNullable = false, Namespace = "")]
+        public List<string> InterLataCarrier {
+            get => _interLataCarrier;
+            set {
+                InterLataCarrierSpecified = true;
+                _interLataCarrier = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool InterLataCarrierSpecified { get; set; }
-    private List<string> _internationalCarrier;
+        [XmlIgnore]
+        public bool InterLataCarrierSpecified { get; set; }
+        
+        private List<string> _internationalCarrier;
 
-    [XmlElement(ElementName = "internationalCarrier", IsNullable = false, Namespace = "")]
-    public List<string> InternationalCarrier {
-        get => _internationalCarrier;
-        set {
-            InternationalCarrierSpecified = true;
-            _internationalCarrier = value;
+        [XmlElement(ElementName = "internationalCarrier", IsNullable = false, Namespace = "")]
+        public List<string> InternationalCarrier {
+            get => _internationalCarrier;
+            set {
+                InternationalCarrierSpecified = true;
+                _internationalCarrier = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool InternationalCarrierSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool InternationalCarrierSpecified { get; set; }
+        
+    }
 }

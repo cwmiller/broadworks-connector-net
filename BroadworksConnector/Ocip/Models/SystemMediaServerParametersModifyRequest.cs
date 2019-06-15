@@ -1,51 +1,63 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemMediaServerParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private int _mediaServerResponseTimerMilliseconds;
+    /// <summary>
+    /// Request to modify Media Server system parameters.
+    /// The response is either SuccessResponse or ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemMediaServerParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "mediaServerResponseTimerMilliseconds", IsNullable = false, Namespace = "")]
-    public int MediaServerResponseTimerMilliseconds {
-        get => _mediaServerResponseTimerMilliseconds;
-        set {
-            MediaServerResponseTimerMillisecondsSpecified = true;
-            _mediaServerResponseTimerMilliseconds = value;
+        
+        private int _mediaServerResponseTimerMilliseconds;
+
+        [XmlElement(ElementName = "mediaServerResponseTimerMilliseconds", IsNullable = false, Namespace = "")]
+        public int MediaServerResponseTimerMilliseconds {
+            get => _mediaServerResponseTimerMilliseconds;
+            set {
+                MediaServerResponseTimerMillisecondsSpecified = true;
+                _mediaServerResponseTimerMilliseconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MediaServerResponseTimerMillisecondsSpecified { get; set; }
-    private int _mediaServerSelectionRouteTimerMilliseconds;
+        [XmlIgnore]
+        public bool MediaServerResponseTimerMillisecondsSpecified { get; set; }
+        
+        private int _mediaServerSelectionRouteTimerMilliseconds;
 
-    [XmlElement(ElementName = "mediaServerSelectionRouteTimerMilliseconds", IsNullable = false, Namespace = "")]
-    public int MediaServerSelectionRouteTimerMilliseconds {
-        get => _mediaServerSelectionRouteTimerMilliseconds;
-        set {
-            MediaServerSelectionRouteTimerMillisecondsSpecified = true;
-            _mediaServerSelectionRouteTimerMilliseconds = value;
+        [XmlElement(ElementName = "mediaServerSelectionRouteTimerMilliseconds", IsNullable = false, Namespace = "")]
+        public int MediaServerSelectionRouteTimerMilliseconds {
+            get => _mediaServerSelectionRouteTimerMilliseconds;
+            set {
+                MediaServerSelectionRouteTimerMillisecondsSpecified = true;
+                _mediaServerSelectionRouteTimerMilliseconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MediaServerSelectionRouteTimerMillisecondsSpecified { get; set; }
-    private bool _useStaticMediaServerDevice;
+        [XmlIgnore]
+        public bool MediaServerSelectionRouteTimerMillisecondsSpecified { get; set; }
+        
+        private bool _useStaticMediaServerDevice;
 
-    [XmlElement(ElementName = "useStaticMediaServerDevice", IsNullable = false, Namespace = "")]
-    public bool UseStaticMediaServerDevice {
-        get => _useStaticMediaServerDevice;
-        set {
-            UseStaticMediaServerDeviceSpecified = true;
-            _useStaticMediaServerDevice = value;
+        [XmlElement(ElementName = "useStaticMediaServerDevice", IsNullable = false, Namespace = "")]
+        public bool UseStaticMediaServerDevice {
+            get => _useStaticMediaServerDevice;
+            set {
+                UseStaticMediaServerDeviceSpecified = true;
+                _useStaticMediaServerDevice = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseStaticMediaServerDeviceSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool UseStaticMediaServerDeviceSpecified { get; set; }
+        
+    }
 }

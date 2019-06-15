@@ -1,415 +1,465 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserModifyRequest17sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _userId;
+    /// <summary>
+    /// Request to modify a user.
+    /// When oldPassword is specified, all password rule applies. If oldPassword in not specified,
+    /// any password rule related to old password does not apply.
+    /// The request will fail if officeZoneName or primaryZoneName is present but the Location-Based Calling Restrictions service is not assigned to the user.
+    /// The response is either SuccessResponse or ErrorResponse.
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// contact[2]-contact[5]
+    /// nameDialingName
+    /// alternateUserIdList
+    /// The impId and impPassword are accepted when the Third-Party IMP service is assigned to the user;
+    /// when Integrated IMP service is assigned to the user and active, only the impPassword is accepted;
+    /// all other cases, the request fails if either field is changed.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserModifyRequest17sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        
+        private string _userId;
+
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-    private string _lastName;
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+        private string _lastName;
 
-    [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
-    public string LastName {
-        get => _lastName;
-        set {
-            LastNameSpecified = true;
-            _lastName = value;
+        [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
+        public string LastName {
+            get => _lastName;
+            set {
+                LastNameSpecified = true;
+                _lastName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LastNameSpecified { get; set; }
-    private string _firstName;
+        [XmlIgnore]
+        public bool LastNameSpecified { get; set; }
+        
+        private string _firstName;
 
-    [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
-    public string FirstName {
-        get => _firstName;
-        set {
-            FirstNameSpecified = true;
-            _firstName = value;
+        [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
+        public string FirstName {
+            get => _firstName;
+            set {
+                FirstNameSpecified = true;
+                _firstName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool FirstNameSpecified { get; set; }
-    private string _callingLineIdLastName;
+        [XmlIgnore]
+        public bool FirstNameSpecified { get; set; }
+        
+        private string _callingLineIdLastName;
 
-    [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
-    public string CallingLineIdLastName {
-        get => _callingLineIdLastName;
-        set {
-            CallingLineIdLastNameSpecified = true;
-            _callingLineIdLastName = value;
+        [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
+        public string CallingLineIdLastName {
+            get => _callingLineIdLastName;
+            set {
+                CallingLineIdLastNameSpecified = true;
+                _callingLineIdLastName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallingLineIdLastNameSpecified { get; set; }
-    private string _callingLineIdFirstName;
+        [XmlIgnore]
+        public bool CallingLineIdLastNameSpecified { get; set; }
+        
+        private string _callingLineIdFirstName;
 
-    [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
-    public string CallingLineIdFirstName {
-        get => _callingLineIdFirstName;
-        set {
-            CallingLineIdFirstNameSpecified = true;
-            _callingLineIdFirstName = value;
+        [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
+        public string CallingLineIdFirstName {
+            get => _callingLineIdFirstName;
+            set {
+                CallingLineIdFirstNameSpecified = true;
+                _callingLineIdFirstName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallingLineIdFirstNameSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.NameDialingName _nameDialingName;
+        [XmlIgnore]
+        public bool CallingLineIdFirstNameSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.NameDialingName _nameDialingName;
 
-    [XmlElement(ElementName = "nameDialingName", IsNullable = true, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.NameDialingName NameDialingName {
-        get => _nameDialingName;
-        set {
-            NameDialingNameSpecified = true;
-            _nameDialingName = value;
+        [XmlElement(ElementName = "nameDialingName", IsNullable = true, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.NameDialingName NameDialingName {
+            get => _nameDialingName;
+            set {
+                NameDialingNameSpecified = true;
+                _nameDialingName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NameDialingNameSpecified { get; set; }
-    private string _hiraganaLastName;
+        [XmlIgnore]
+        public bool NameDialingNameSpecified { get; set; }
+        
+        private string _hiraganaLastName;
 
-    [XmlElement(ElementName = "hiraganaLastName", IsNullable = false, Namespace = "")]
-    public string HiraganaLastName {
-        get => _hiraganaLastName;
-        set {
-            HiraganaLastNameSpecified = true;
-            _hiraganaLastName = value;
+        [XmlElement(ElementName = "hiraganaLastName", IsNullable = false, Namespace = "")]
+        public string HiraganaLastName {
+            get => _hiraganaLastName;
+            set {
+                HiraganaLastNameSpecified = true;
+                _hiraganaLastName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool HiraganaLastNameSpecified { get; set; }
-    private string _hiraganaFirstName;
+        [XmlIgnore]
+        public bool HiraganaLastNameSpecified { get; set; }
+        
+        private string _hiraganaFirstName;
 
-    [XmlElement(ElementName = "hiraganaFirstName", IsNullable = false, Namespace = "")]
-    public string HiraganaFirstName {
-        get => _hiraganaFirstName;
-        set {
-            HiraganaFirstNameSpecified = true;
-            _hiraganaFirstName = value;
+        [XmlElement(ElementName = "hiraganaFirstName", IsNullable = false, Namespace = "")]
+        public string HiraganaFirstName {
+            get => _hiraganaFirstName;
+            set {
+                HiraganaFirstNameSpecified = true;
+                _hiraganaFirstName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool HiraganaFirstNameSpecified { get; set; }
-    private string _phoneNumber;
+        [XmlIgnore]
+        public bool HiraganaFirstNameSpecified { get; set; }
+        
+        private string _phoneNumber;
 
-    [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
-    public string PhoneNumber {
-        get => _phoneNumber;
-        set {
-            PhoneNumberSpecified = true;
-            _phoneNumber = value;
+        [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
+        public string PhoneNumber {
+            get => _phoneNumber;
+            set {
+                PhoneNumberSpecified = true;
+                _phoneNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PhoneNumberSpecified { get; set; }
-    private string _extension;
+        [XmlIgnore]
+        public bool PhoneNumberSpecified { get; set; }
+        
+        private string _extension;
 
-    [XmlElement(ElementName = "extension", IsNullable = true, Namespace = "")]
-    public string Extension {
-        get => _extension;
-        set {
-            ExtensionSpecified = true;
-            _extension = value;
+        [XmlElement(ElementName = "extension", IsNullable = true, Namespace = "")]
+        public string Extension {
+            get => _extension;
+            set {
+                ExtensionSpecified = true;
+                _extension = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ExtensionSpecified { get; set; }
-    private string _callingLineIdPhoneNumber;
+        [XmlIgnore]
+        public bool ExtensionSpecified { get; set; }
+        
+        private string _callingLineIdPhoneNumber;
 
-    [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = true, Namespace = "")]
-    public string CallingLineIdPhoneNumber {
-        get => _callingLineIdPhoneNumber;
-        set {
-            CallingLineIdPhoneNumberSpecified = true;
-            _callingLineIdPhoneNumber = value;
+        [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = true, Namespace = "")]
+        public string CallingLineIdPhoneNumber {
+            get => _callingLineIdPhoneNumber;
+            set {
+                CallingLineIdPhoneNumberSpecified = true;
+                _callingLineIdPhoneNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallingLineIdPhoneNumberSpecified { get; set; }
-    private string _oldPassword;
+        [XmlIgnore]
+        public bool CallingLineIdPhoneNumberSpecified { get; set; }
+        
+        private string _oldPassword;
 
-    [XmlElement(ElementName = "oldPassword", IsNullable = false, Namespace = "")]
-    public string OldPassword {
-        get => _oldPassword;
-        set {
-            OldPasswordSpecified = true;
-            _oldPassword = value;
+        [XmlElement(ElementName = "oldPassword", IsNullable = false, Namespace = "")]
+        public string OldPassword {
+            get => _oldPassword;
+            set {
+                OldPasswordSpecified = true;
+                _oldPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool OldPasswordSpecified { get; set; }
-    private string _newPassword;
+        [XmlIgnore]
+        public bool OldPasswordSpecified { get; set; }
+        
+        private string _newPassword;
 
-    [XmlElement(ElementName = "newPassword", IsNullable = true, Namespace = "")]
-    public string NewPassword {
-        get => _newPassword;
-        set {
-            NewPasswordSpecified = true;
-            _newPassword = value;
+        [XmlElement(ElementName = "newPassword", IsNullable = true, Namespace = "")]
+        public string NewPassword {
+            get => _newPassword;
+            set {
+                NewPasswordSpecified = true;
+                _newPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NewPasswordSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
+        [XmlIgnore]
+        public bool NewPasswordSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
-    [XmlElement(ElementName = "department", IsNullable = true, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
-        get => _department;
-        set {
-            DepartmentSpecified = true;
-            _department = value;
+        [XmlElement(ElementName = "department", IsNullable = true, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
+            get => _department;
+            set {
+                DepartmentSpecified = true;
+                _department = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DepartmentSpecified { get; set; }
-    private string _language;
+        [XmlIgnore]
+        public bool DepartmentSpecified { get; set; }
+        
+        private string _language;
 
-    [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-    public string Language {
-        get => _language;
-        set {
-            LanguageSpecified = true;
-            _language = value;
+        [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
+        public string Language {
+            get => _language;
+            set {
+                LanguageSpecified = true;
+                _language = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LanguageSpecified { get; set; }
-    private string _timeZone;
+        [XmlIgnore]
+        public bool LanguageSpecified { get; set; }
+        
+        private string _timeZone;
 
-    [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
-    public string TimeZone {
-        get => _timeZone;
-        set {
-            TimeZoneSpecified = true;
-            _timeZone = value;
+        [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
+        public string TimeZone {
+            get => _timeZone;
+            set {
+                TimeZoneSpecified = true;
+                _timeZone = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TimeZoneSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
+        [XmlIgnore]
+        public bool TimeZoneSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
 
-    [XmlElement(ElementName = "sipAliasList", IsNullable = true, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
-        get => _sipAliasList;
-        set {
-            SipAliasListSpecified = true;
-            _sipAliasList = value;
+        [XmlElement(ElementName = "sipAliasList", IsNullable = true, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList {
+            get => _sipAliasList;
+            set {
+                SipAliasListSpecified = true;
+                _sipAliasList = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SipAliasListSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.UserModifyRequest17sp4Endpoint _endpoint;
+        [XmlIgnore]
+        public bool SipAliasListSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.UserModifyRequest17sp4Endpoint _endpoint;
 
-    [XmlElement(ElementName = "endpoint", IsNullable = true, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.UserModifyRequest17sp4Endpoint Endpoint {
-        get => _endpoint;
-        set {
-            EndpointSpecified = true;
-            _endpoint = value;
+        [XmlElement(ElementName = "endpoint", IsNullable = true, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.UserModifyRequest17sp4Endpoint Endpoint {
+            get => _endpoint;
+            set {
+                EndpointSpecified = true;
+                _endpoint = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EndpointSpecified { get; set; }
-    private string _title;
+        [XmlIgnore]
+        public bool EndpointSpecified { get; set; }
+        
+        private string _title;
 
-    [XmlElement(ElementName = "title", IsNullable = true, Namespace = "")]
-    public string Title {
-        get => _title;
-        set {
-            TitleSpecified = true;
-            _title = value;
+        [XmlElement(ElementName = "title", IsNullable = true, Namespace = "")]
+        public string Title {
+            get => _title;
+            set {
+                TitleSpecified = true;
+                _title = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TitleSpecified { get; set; }
-    private string _pagerPhoneNumber;
+        [XmlIgnore]
+        public bool TitleSpecified { get; set; }
+        
+        private string _pagerPhoneNumber;
 
-    [XmlElement(ElementName = "pagerPhoneNumber", IsNullable = true, Namespace = "")]
-    public string PagerPhoneNumber {
-        get => _pagerPhoneNumber;
-        set {
-            PagerPhoneNumberSpecified = true;
-            _pagerPhoneNumber = value;
+        [XmlElement(ElementName = "pagerPhoneNumber", IsNullable = true, Namespace = "")]
+        public string PagerPhoneNumber {
+            get => _pagerPhoneNumber;
+            set {
+                PagerPhoneNumberSpecified = true;
+                _pagerPhoneNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PagerPhoneNumberSpecified { get; set; }
-    private string _mobilePhoneNumber;
+        [XmlIgnore]
+        public bool PagerPhoneNumberSpecified { get; set; }
+        
+        private string _mobilePhoneNumber;
 
-    [XmlElement(ElementName = "mobilePhoneNumber", IsNullable = true, Namespace = "")]
-    public string MobilePhoneNumber {
-        get => _mobilePhoneNumber;
-        set {
-            MobilePhoneNumberSpecified = true;
-            _mobilePhoneNumber = value;
+        [XmlElement(ElementName = "mobilePhoneNumber", IsNullable = true, Namespace = "")]
+        public string MobilePhoneNumber {
+            get => _mobilePhoneNumber;
+            set {
+                MobilePhoneNumberSpecified = true;
+                _mobilePhoneNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MobilePhoneNumberSpecified { get; set; }
-    private string _emailAddress;
+        [XmlIgnore]
+        public bool MobilePhoneNumberSpecified { get; set; }
+        
+        private string _emailAddress;
 
-    [XmlElement(ElementName = "emailAddress", IsNullable = true, Namespace = "")]
-    public string EmailAddress {
-        get => _emailAddress;
-        set {
-            EmailAddressSpecified = true;
-            _emailAddress = value;
+        [XmlElement(ElementName = "emailAddress", IsNullable = true, Namespace = "")]
+        public string EmailAddress {
+            get => _emailAddress;
+            set {
+                EmailAddressSpecified = true;
+                _emailAddress = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EmailAddressSpecified { get; set; }
-    private string _yahooId;
+        [XmlIgnore]
+        public bool EmailAddressSpecified { get; set; }
+        
+        private string _yahooId;
 
-    [XmlElement(ElementName = "yahooId", IsNullable = true, Namespace = "")]
-    public string YahooId {
-        get => _yahooId;
-        set {
-            YahooIdSpecified = true;
-            _yahooId = value;
+        [XmlElement(ElementName = "yahooId", IsNullable = true, Namespace = "")]
+        public string YahooId {
+            get => _yahooId;
+            set {
+                YahooIdSpecified = true;
+                _yahooId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool YahooIdSpecified { get; set; }
-    private string _addressLocation;
+        [XmlIgnore]
+        public bool YahooIdSpecified { get; set; }
+        
+        private string _addressLocation;
 
-    [XmlElement(ElementName = "addressLocation", IsNullable = true, Namespace = "")]
-    public string AddressLocation {
-        get => _addressLocation;
-        set {
-            AddressLocationSpecified = true;
-            _addressLocation = value;
+        [XmlElement(ElementName = "addressLocation", IsNullable = true, Namespace = "")]
+        public string AddressLocation {
+            get => _addressLocation;
+            set {
+                AddressLocationSpecified = true;
+                _addressLocation = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AddressLocationSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.StreetAddress _address;
+        [XmlIgnore]
+        public bool AddressLocationSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
-    [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.StreetAddress Address {
-        get => _address;
-        set {
-            AddressSpecified = true;
-            _address = value;
+        [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.StreetAddress Address {
+            get => _address;
+            set {
+                AddressSpecified = true;
+                _address = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AddressSpecified { get; set; }
-    private string _networkClassOfService;
+        [XmlIgnore]
+        public bool AddressSpecified { get; set; }
+        
+        private string _networkClassOfService;
 
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-    public string NetworkClassOfService {
-        get => _networkClassOfService;
-        set {
-            NetworkClassOfServiceSpecified = true;
-            _networkClassOfService = value;
+        [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+        public string NetworkClassOfService {
+            get => _networkClassOfService;
+            set {
+                NetworkClassOfServiceSpecified = true;
+                _networkClassOfService = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NetworkClassOfServiceSpecified { get; set; }
-    private string _officeZoneName;
+        [XmlIgnore]
+        public bool NetworkClassOfServiceSpecified { get; set; }
+        
+        private string _officeZoneName;
 
-    [XmlElement(ElementName = "officeZoneName", IsNullable = false, Namespace = "")]
-    public string OfficeZoneName {
-        get => _officeZoneName;
-        set {
-            OfficeZoneNameSpecified = true;
-            _officeZoneName = value;
+        [XmlElement(ElementName = "officeZoneName", IsNullable = false, Namespace = "")]
+        public string OfficeZoneName {
+            get => _officeZoneName;
+            set {
+                OfficeZoneNameSpecified = true;
+                _officeZoneName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool OfficeZoneNameSpecified { get; set; }
-    private string _primaryZoneName;
+        [XmlIgnore]
+        public bool OfficeZoneNameSpecified { get; set; }
+        
+        private string _primaryZoneName;
 
-    [XmlElement(ElementName = "primaryZoneName", IsNullable = false, Namespace = "")]
-    public string PrimaryZoneName {
-        get => _primaryZoneName;
-        set {
-            PrimaryZoneNameSpecified = true;
-            _primaryZoneName = value;
+        [XmlElement(ElementName = "primaryZoneName", IsNullable = false, Namespace = "")]
+        public string PrimaryZoneName {
+            get => _primaryZoneName;
+            set {
+                PrimaryZoneNameSpecified = true;
+                _primaryZoneName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PrimaryZoneNameSpecified { get; set; }
-    private string _impId;
+        [XmlIgnore]
+        public bool PrimaryZoneNameSpecified { get; set; }
+        
+        private string _impId;
 
-    [XmlElement(ElementName = "impId", IsNullable = true, Namespace = "")]
-    public string ImpId {
-        get => _impId;
-        set {
-            ImpIdSpecified = true;
-            _impId = value;
+        [XmlElement(ElementName = "impId", IsNullable = true, Namespace = "")]
+        public string ImpId {
+            get => _impId;
+            set {
+                ImpIdSpecified = true;
+                _impId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ImpIdSpecified { get; set; }
-    private string _impPassword;
+        [XmlIgnore]
+        public bool ImpIdSpecified { get; set; }
+        
+        private string _impPassword;
 
-    [XmlElement(ElementName = "impPassword", IsNullable = true, Namespace = "")]
-    public string ImpPassword {
-        get => _impPassword;
-        set {
-            ImpPasswordSpecified = true;
-            _impPassword = value;
+        [XmlElement(ElementName = "impPassword", IsNullable = true, Namespace = "")]
+        public string ImpPassword {
+            get => _impPassword;
+            set {
+                ImpPasswordSpecified = true;
+                _impPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ImpPasswordSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList _alternateUserIdList;
+        [XmlIgnore]
+        public bool ImpPasswordSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList _alternateUserIdList;
 
-    [XmlElement(ElementName = "alternateUserIdList", IsNullable = true, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList AlternateUserIdList {
-        get => _alternateUserIdList;
-        set {
-            AlternateUserIdListSpecified = true;
-            _alternateUserIdList = value;
+        [XmlElement(ElementName = "alternateUserIdList", IsNullable = true, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList AlternateUserIdList {
+            get => _alternateUserIdList;
+            set {
+                AlternateUserIdListSpecified = true;
+                _alternateUserIdList = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AlternateUserIdListSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool AlternateUserIdListSpecified { get; set; }
+        
+    }
 }

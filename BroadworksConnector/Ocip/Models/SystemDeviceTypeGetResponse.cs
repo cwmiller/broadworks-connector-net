@@ -1,116 +1,133 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemDeviceTypeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _isObsolete;
+    /// <summary>
+    /// Response to SystemDeviceTypeGetRequest.
+    /// Replaced By: SystemDeviceTypeGetResponse14sp3
+        /// <see cref="SystemDeviceTypeGetRequest"/>
+        /// <see cref="SystemDeviceTypeGetResponse14sp3"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemDeviceTypeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "isObsolete", IsNullable = false, Namespace = "")]
-    public bool IsObsolete {
-        get => _isObsolete;
-        set {
-            IsObsoleteSpecified = true;
-            _isObsolete = value;
+        
+        private bool _isObsolete;
+
+        [XmlElement(ElementName = "isObsolete", IsNullable = false, Namespace = "")]
+        public bool IsObsolete {
+            get => _isObsolete;
+            set {
+                IsObsoleteSpecified = true;
+                _isObsolete = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsObsoleteSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
+        [XmlIgnore]
+        public bool IsObsoleteSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
-    [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
-        get => _profile;
-        set {
-            ProfileSpecified = true;
-            _profile = value;
+        [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
+            get => _profile;
+            set {
+                ProfileSpecified = true;
+                _profile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ProfileSpecified { get; set; }
-    private string _webBasedConfigURL;
+        [XmlIgnore]
+        public bool ProfileSpecified { get; set; }
+        
+        private string _webBasedConfigURL;
 
-    [XmlElement(ElementName = "webBasedConfigURL", IsNullable = false, Namespace = "")]
-    public string WebBasedConfigURL {
-        get => _webBasedConfigURL;
-        set {
-            WebBasedConfigURLSpecified = true;
-            _webBasedConfigURL = value;
+        [XmlElement(ElementName = "webBasedConfigURL", IsNullable = false, Namespace = "")]
+        public string WebBasedConfigURL {
+            get => _webBasedConfigURL;
+            set {
+                WebBasedConfigURLSpecified = true;
+                _webBasedConfigURL = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool WebBasedConfigURLSpecified { get; set; }
-    private bool _staticRegistrationCapable;
+        [XmlIgnore]
+        public bool WebBasedConfigURLSpecified { get; set; }
+        
+        private bool _staticRegistrationCapable;
 
-    [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-    public bool StaticRegistrationCapable {
-        get => _staticRegistrationCapable;
-        set {
-            StaticRegistrationCapableSpecified = true;
-            _staticRegistrationCapable = value;
+        [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
+        public bool StaticRegistrationCapable {
+            get => _staticRegistrationCapable;
+            set {
+                StaticRegistrationCapableSpecified = true;
+                _staticRegistrationCapable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool StaticRegistrationCapableSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.CPEDeviceOptions _cpeDeviceOptions;
+        [XmlIgnore]
+        public bool StaticRegistrationCapableSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.CPEDeviceOptions _cpeDeviceOptions;
 
-    [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CPEDeviceOptions CpeDeviceOptions {
-        get => _cpeDeviceOptions;
-        set {
-            CpeDeviceOptionsSpecified = true;
-            _cpeDeviceOptions = value;
+        [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CPEDeviceOptions CpeDeviceOptions {
+            get => _cpeDeviceOptions;
+            set {
+                CpeDeviceOptionsSpecified = true;
+                _cpeDeviceOptions = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CpeDeviceOptionsSpecified { get; set; }
-    private List<string> _protocolChoice;
+        [XmlIgnore]
+        public bool CpeDeviceOptionsSpecified { get; set; }
+        
+        private List<string> _protocolChoice;
 
-    [XmlElement(ElementName = "protocolChoice", IsNullable = false, Namespace = "")]
-    public List<string> ProtocolChoice {
-        get => _protocolChoice;
-        set {
-            ProtocolChoiceSpecified = true;
-            _protocolChoice = value;
+        [XmlElement(ElementName = "protocolChoice", IsNullable = false, Namespace = "")]
+        public List<string> ProtocolChoice {
+            get => _protocolChoice;
+            set {
+                ProtocolChoiceSpecified = true;
+                _protocolChoice = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ProtocolChoiceSpecified { get; set; }
-    private bool _isIpAddressOptional;
+        [XmlIgnore]
+        public bool ProtocolChoiceSpecified { get; set; }
+        
+        private bool _isIpAddressOptional;
 
-    [XmlElement(ElementName = "isIpAddressOptional", IsNullable = false, Namespace = "")]
-    public bool IsIpAddressOptional {
-        get => _isIpAddressOptional;
-        set {
-            IsIpAddressOptionalSpecified = true;
-            _isIpAddressOptional = value;
+        [XmlElement(ElementName = "isIpAddressOptional", IsNullable = false, Namespace = "")]
+        public bool IsIpAddressOptional {
+            get => _isIpAddressOptional;
+            set {
+                IsIpAddressOptionalSpecified = true;
+                _isIpAddressOptional = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsIpAddressOptionalSpecified { get; set; }
-    private bool _useDomain;
+        [XmlIgnore]
+        public bool IsIpAddressOptionalSpecified { get; set; }
+        
+        private bool _useDomain;
 
-    [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-    public bool UseDomain {
-        get => _useDomain;
-        set {
-            UseDomainSpecified = true;
-            _useDomain = value;
+        [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
+        public bool UseDomain {
+            get => _useDomain;
+            set {
+                UseDomainSpecified = true;
+                _useDomain = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseDomainSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool UseDomainSpecified { get; set; }
+        
+    }
 }

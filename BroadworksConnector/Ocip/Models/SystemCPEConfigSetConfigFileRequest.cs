@@ -1,38 +1,49 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemCPEConfigSetConfigFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _deviceType;
+    /// <summary>
+    /// Request to set a new system default configuration file for a device type.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemCPEConfigSetConfigFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-    public string DeviceType {
-        get => _deviceType;
-        set {
-            DeviceTypeSpecified = true;
-            _deviceType = value;
+        
+        private string _deviceType;
+
+        [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
+        public string DeviceType {
+            get => _deviceType;
+            set {
+                DeviceTypeSpecified = true;
+                _deviceType = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DeviceTypeSpecified { get; set; }
-    private string _configFile;
+        [XmlIgnore]
+        public bool DeviceTypeSpecified { get; set; }
+        
+        private string _configFile;
 
-    [XmlElement(ElementName = "configFile", IsNullable = false, Namespace = "")]
-    public string ConfigFile {
-        get => _configFile;
-        set {
-            ConfigFileSpecified = true;
-            _configFile = value;
+        [XmlElement(ElementName = "configFile", IsNullable = false, Namespace = "")]
+        public string ConfigFile {
+            get => _configFile;
+            set {
+                ConfigFileSpecified = true;
+                _configFile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ConfigFileSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ConfigFileSpecified { get; set; }
+        
+    }
 }

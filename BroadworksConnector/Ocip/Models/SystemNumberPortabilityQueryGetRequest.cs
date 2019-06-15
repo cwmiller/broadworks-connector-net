@@ -1,12 +1,21 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemNumberPortabilityQueryGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-}
+    /// <summary>
+    /// Get system Number Portability Query Parameters.
+    /// The response is either SystemNumberPortabilityQueryGetResponse or ErrorResponse.
+        /// <see cref="SystemNumberPortabilityQueryGetResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemNumberPortabilityQueryGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
+
+        
+    }
 }

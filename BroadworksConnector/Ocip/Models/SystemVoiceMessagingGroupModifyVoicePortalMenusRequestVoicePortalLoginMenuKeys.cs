@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestVoicePortalLoginMenuKeys 
-{
-    private string _accessUsingOtherMailboxId;
+    /// <summary>
+    /// 
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestVoicePortalLoginMenuKeys 
+    {
 
-    [XmlElement(ElementName = "accessUsingOtherMailboxId", IsNullable = true, Namespace = "")]
-    public string AccessUsingOtherMailboxId {
-        get => _accessUsingOtherMailboxId;
-        set {
-            AccessUsingOtherMailboxIdSpecified = true;
-            _accessUsingOtherMailboxId = value;
+        
+        private string _accessUsingOtherMailboxId;
+
+        [XmlElement(ElementName = "accessUsingOtherMailboxId", IsNullable = true, Namespace = "")]
+        public string AccessUsingOtherMailboxId {
+            get => _accessUsingOtherMailboxId;
+            set {
+                AccessUsingOtherMailboxIdSpecified = true;
+                _accessUsingOtherMailboxId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AccessUsingOtherMailboxIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool AccessUsingOtherMailboxIdSpecified { get; set; }
+        
+    }
 }

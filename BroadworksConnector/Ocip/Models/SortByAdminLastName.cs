@@ -1,12 +1,22 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SortByAdminLastName : BroadWorksConnector.Ocip.Models.SortCriteria
-{
-}
+    /// <summary>
+    /// The sort criteria specifies the administrator last name
+    /// as the column for the
+    /// sort, whether the
+    /// sort is ascending or
+    /// descending, and whether the sort is case sensitive.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SortByAdminLastName : BroadWorksConnector.Ocip.Models.SortCriteria
+    {
+
+        
+    }
 }

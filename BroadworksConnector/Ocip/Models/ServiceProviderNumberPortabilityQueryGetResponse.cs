@@ -1,64 +1,76 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderNumberPortabilityQueryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _enableNumberPortabilityQueryForOutgoingCalls;
+    /// <summary>
+    /// Response to the ServiceProviderNumberPortabilityQueryGetRequest.
+    /// The response contains the service provider number portability query information.
+        /// <see cref="ServiceProviderNumberPortabilityQueryGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderNumberPortabilityQueryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "enableNumberPortabilityQueryForOutgoingCalls", IsNullable = false, Namespace = "")]
-    public bool EnableNumberPortabilityQueryForOutgoingCalls {
-        get => _enableNumberPortabilityQueryForOutgoingCalls;
-        set {
-            EnableNumberPortabilityQueryForOutgoingCallsSpecified = true;
-            _enableNumberPortabilityQueryForOutgoingCalls = value;
+        
+        private bool _enableNumberPortabilityQueryForOutgoingCalls;
+
+        [XmlElement(ElementName = "enableNumberPortabilityQueryForOutgoingCalls", IsNullable = false, Namespace = "")]
+        public bool EnableNumberPortabilityQueryForOutgoingCalls {
+            get => _enableNumberPortabilityQueryForOutgoingCalls;
+            set {
+                EnableNumberPortabilityQueryForOutgoingCallsSpecified = true;
+                _enableNumberPortabilityQueryForOutgoingCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableNumberPortabilityQueryForOutgoingCallsSpecified { get; set; }
-    private bool _enableNumberPortabilityQueryForIncomingCalls;
+        [XmlIgnore]
+        public bool EnableNumberPortabilityQueryForOutgoingCallsSpecified { get; set; }
+        
+        private bool _enableNumberPortabilityQueryForIncomingCalls;
 
-    [XmlElement(ElementName = "enableNumberPortabilityQueryForIncomingCalls", IsNullable = false, Namespace = "")]
-    public bool EnableNumberPortabilityQueryForIncomingCalls {
-        get => _enableNumberPortabilityQueryForIncomingCalls;
-        set {
-            EnableNumberPortabilityQueryForIncomingCallsSpecified = true;
-            _enableNumberPortabilityQueryForIncomingCalls = value;
+        [XmlElement(ElementName = "enableNumberPortabilityQueryForIncomingCalls", IsNullable = false, Namespace = "")]
+        public bool EnableNumberPortabilityQueryForIncomingCalls {
+            get => _enableNumberPortabilityQueryForIncomingCalls;
+            set {
+                EnableNumberPortabilityQueryForIncomingCallsSpecified = true;
+                _enableNumberPortabilityQueryForIncomingCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableNumberPortabilityQueryForIncomingCallsSpecified { get; set; }
-    private bool _enableNumberPortabilityQueryForNetworkCallsOnly;
+        [XmlIgnore]
+        public bool EnableNumberPortabilityQueryForIncomingCallsSpecified { get; set; }
+        
+        private bool _enableNumberPortabilityQueryForNetworkCallsOnly;
 
-    [XmlElement(ElementName = "enableNumberPortabilityQueryForNetworkCallsOnly", IsNullable = false, Namespace = "")]
-    public bool EnableNumberPortabilityQueryForNetworkCallsOnly {
-        get => _enableNumberPortabilityQueryForNetworkCallsOnly;
-        set {
-            EnableNumberPortabilityQueryForNetworkCallsOnlySpecified = true;
-            _enableNumberPortabilityQueryForNetworkCallsOnly = value;
+        [XmlElement(ElementName = "enableNumberPortabilityQueryForNetworkCallsOnly", IsNullable = false, Namespace = "")]
+        public bool EnableNumberPortabilityQueryForNetworkCallsOnly {
+            get => _enableNumberPortabilityQueryForNetworkCallsOnly;
+            set {
+                EnableNumberPortabilityQueryForNetworkCallsOnlySpecified = true;
+                _enableNumberPortabilityQueryForNetworkCallsOnly = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableNumberPortabilityQueryForNetworkCallsOnlySpecified { get; set; }
-    private List<string> _digitPattern;
+        [XmlIgnore]
+        public bool EnableNumberPortabilityQueryForNetworkCallsOnlySpecified { get; set; }
+        
+        private List<string> _digitPattern;
 
-    [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
-    public List<string> DigitPattern {
-        get => _digitPattern;
-        set {
-            DigitPatternSpecified = true;
-            _digitPattern = value;
+        [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
+        public List<string> DigitPattern {
+            get => _digitPattern;
+            set {
+                DigitPatternSpecified = true;
+                _digitPattern = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DigitPatternSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DigitPatternSpecified { get; set; }
+        
+    }
 }

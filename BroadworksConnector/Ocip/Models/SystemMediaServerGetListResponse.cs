@@ -1,25 +1,34 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemMediaServerGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.C.OCITable _mediaServerTable;
+    /// <summary>
+    /// Response to SystemMediaServerGetListRequest. The Media Server table column
+    /// headings are: "Net Address", "Port", "Transport", "Description".
+        /// <see cref="SystemMediaServerGetListRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemMediaServerGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "mediaServerTable", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.C.OCITable MediaServerTable {
-        get => _mediaServerTable;
-        set {
-            MediaServerTableSpecified = true;
-            _mediaServerTable = value;
+        
+        private BroadWorksConnector.Ocip.Models.C.OCITable _mediaServerTable;
+
+        [XmlElement(ElementName = "mediaServerTable", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable MediaServerTable {
+            get => _mediaServerTable;
+            set {
+                MediaServerTableSpecified = true;
+                _mediaServerTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MediaServerTableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool MediaServerTableSpecified { get; set; }
+        
+    }
 }

@@ -1,25 +1,35 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemAliasDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _aliasNetAddress;
+    /// <summary>
+    /// Delete a system-level Application Server alias from the system.
+    /// The response is either SuccessResponse or ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemAliasDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "aliasNetAddress", IsNullable = false, Namespace = "")]
-    public string AliasNetAddress {
-        get => _aliasNetAddress;
-        set {
-            AliasNetAddressSpecified = true;
-            _aliasNetAddress = value;
+        
+        private string _aliasNetAddress;
+
+        [XmlElement(ElementName = "aliasNetAddress", IsNullable = false, Namespace = "")]
+        public string AliasNetAddress {
+            get => _aliasNetAddress;
+            set {
+                AliasNetAddressSpecified = true;
+                _aliasNetAddress = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AliasNetAddressSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool AliasNetAddressSpecified { get; set; }
+        
+    }
 }

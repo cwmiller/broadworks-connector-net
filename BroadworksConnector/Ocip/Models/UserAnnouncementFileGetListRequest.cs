@@ -1,77 +1,92 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserAnnouncementFileGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _userId;
+    /// <summary>
+    /// Get the list of announcement names with associated media type and filesize for a User and
+    /// given Announcement Repository Type
+    /// The response is either a UserAnnouncementFileGetListResponse or an ErrorResponse.
+        /// <see cref="UserAnnouncementFileGetListResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserAnnouncementFileGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        
+        private string _userId;
+
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AnnouncementFileType _announcementFileType;
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementFileType _announcementFileType;
 
-    [XmlElement(ElementName = "announcementFileType", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementFileType AnnouncementFileType {
-        get => _announcementFileType;
-        set {
-            AnnouncementFileTypeSpecified = true;
-            _announcementFileType = value;
+        [XmlElement(ElementName = "announcementFileType", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileType AnnouncementFileType {
+            get => _announcementFileType;
+            set {
+                AnnouncementFileTypeSpecified = true;
+                _announcementFileType = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AnnouncementFileTypeSpecified { get; set; }
-    private bool _includeAnnouncementTable;
+        [XmlIgnore]
+        public bool AnnouncementFileTypeSpecified { get; set; }
+        
+        private bool _includeAnnouncementTable;
 
-    [XmlElement(ElementName = "includeAnnouncementTable", IsNullable = false, Namespace = "")]
-    public bool IncludeAnnouncementTable {
-        get => _includeAnnouncementTable;
-        set {
-            IncludeAnnouncementTableSpecified = true;
-            _includeAnnouncementTable = value;
+        [XmlElement(ElementName = "includeAnnouncementTable", IsNullable = false, Namespace = "")]
+        public bool IncludeAnnouncementTable {
+            get => _includeAnnouncementTable;
+            set {
+                IncludeAnnouncementTableSpecified = true;
+                _includeAnnouncementTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IncludeAnnouncementTableSpecified { get; set; }
-    private int _responseSizeLimit;
+        [XmlIgnore]
+        public bool IncludeAnnouncementTableSpecified { get; set; }
+        
+        private int _responseSizeLimit;
 
-    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-    public int ResponseSizeLimit {
-        get => _responseSizeLimit;
-        set {
-            ResponseSizeLimitSpecified = true;
-            _responseSizeLimit = value;
+        [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
+        public int ResponseSizeLimit {
+            get => _responseSizeLimit;
+            set {
+                ResponseSizeLimitSpecified = true;
+                _responseSizeLimit = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> _searchCriteriaAnnouncementFileName;
+        [XmlIgnore]
+        public bool ResponseSizeLimitSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> _searchCriteriaAnnouncementFileName;
 
-    [XmlElement(ElementName = "searchCriteriaAnnouncementFileName", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName {
-        get => _searchCriteriaAnnouncementFileName;
-        set {
-            SearchCriteriaAnnouncementFileNameSpecified = true;
-            _searchCriteriaAnnouncementFileName = value;
+        [XmlElement(ElementName = "searchCriteriaAnnouncementFileName", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName {
+            get => _searchCriteriaAnnouncementFileName;
+            set {
+                SearchCriteriaAnnouncementFileNameSpecified = true;
+                _searchCriteriaAnnouncementFileName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SearchCriteriaAnnouncementFileNameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool SearchCriteriaAnnouncementFileNameSpecified { get; set; }
+        
+    }
 }

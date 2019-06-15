@@ -1,38 +1,47 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderEnhancedCallLogsGetResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private int _maxLoggedCalls;
+    /// <summary>
+    /// Response to ServiceProviderEnhancedCallLogsGetRequest17sp4.
+        /// <see cref="ServiceProviderEnhancedCallLogsGetRequest17sp4"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderEnhancedCallLogsGetResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "maxLoggedCalls", IsNullable = false, Namespace = "")]
-    public int MaxLoggedCalls {
-        get => _maxLoggedCalls;
-        set {
-            MaxLoggedCallsSpecified = true;
-            _maxLoggedCalls = value;
+        
+        private int _maxLoggedCalls;
+
+        [XmlElement(ElementName = "maxLoggedCalls", IsNullable = false, Namespace = "")]
+        public int MaxLoggedCalls {
+            get => _maxLoggedCalls;
+            set {
+                MaxLoggedCallsSpecified = true;
+                _maxLoggedCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MaxLoggedCallsSpecified { get; set; }
-    private int _callExpirationDays;
+        [XmlIgnore]
+        public bool MaxLoggedCallsSpecified { get; set; }
+        
+        private int _callExpirationDays;
 
-    [XmlElement(ElementName = "callExpirationDays", IsNullable = false, Namespace = "")]
-    public int CallExpirationDays {
-        get => _callExpirationDays;
-        set {
-            CallExpirationDaysSpecified = true;
-            _callExpirationDays = value;
+        [XmlElement(ElementName = "callExpirationDays", IsNullable = false, Namespace = "")]
+        public int CallExpirationDays {
+            get => _callExpirationDays;
+            set {
+                CallExpirationDaysSpecified = true;
+                _callExpirationDays = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallExpirationDaysSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CallExpirationDaysSpecified { get; set; }
+        
+    }
 }

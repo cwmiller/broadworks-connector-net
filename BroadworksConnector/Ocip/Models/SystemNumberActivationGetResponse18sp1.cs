@@ -1,25 +1,34 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemNumberActivationGetResponse18sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.NumberActivationMode _numberActivationMode;
+    /// <summary>
+    /// Response to SystemNumberActivationGetRequest18sp1.
+    /// Contains the system number activation setting.
+        /// <see cref="SystemNumberActivationGetRequest18sp1"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemNumberActivationGetResponse18sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "numberActivationMode", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.NumberActivationMode NumberActivationMode {
-        get => _numberActivationMode;
-        set {
-            NumberActivationModeSpecified = true;
-            _numberActivationMode = value;
+        
+        private BroadWorksConnector.Ocip.Models.NumberActivationMode _numberActivationMode;
+
+        [XmlElement(ElementName = "numberActivationMode", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.NumberActivationMode NumberActivationMode {
+            get => _numberActivationMode;
+            set {
+                NumberActivationModeSpecified = true;
+                _numberActivationMode = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NumberActivationModeSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool NumberActivationModeSpecified { get; set; }
+        
+    }
 }

@@ -1,51 +1,65 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserIntegratedIMPGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _isActive;
+    /// <summary>
+    /// Response to the UserIntegratedIMPGetRequest21sp1.
+    /// The response contains the Integrated IMP specific service attributes for the user.
+    /// The following elements are only used in AS data mode and not returned in XS data mode:
+    /// impId
+    /// isAlternateImpId
+        /// <see cref="UserIntegratedIMPGetRequest21sp1"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserIntegratedIMPGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-    public bool IsActive {
-        get => _isActive;
-        set {
-            IsActiveSpecified = true;
-            _isActive = value;
+        
+        private bool _isActive;
+
+        [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+        public bool IsActive {
+            get => _isActive;
+            set {
+                IsActiveSpecified = true;
+                _isActive = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsActiveSpecified { get; set; }
-    private string _impId;
+        [XmlIgnore]
+        public bool IsActiveSpecified { get; set; }
+        
+        private string _impId;
 
-    [XmlElement(ElementName = "impId", IsNullable = false, Namespace = "")]
-    public string ImpId {
-        get => _impId;
-        set {
-            ImpIdSpecified = true;
-            _impId = value;
+        [XmlElement(ElementName = "impId", IsNullable = false, Namespace = "")]
+        public string ImpId {
+            get => _impId;
+            set {
+                ImpIdSpecified = true;
+                _impId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ImpIdSpecified { get; set; }
-    private bool _isAlternateImpId;
+        [XmlIgnore]
+        public bool ImpIdSpecified { get; set; }
+        
+        private bool _isAlternateImpId;
 
-    [XmlElement(ElementName = "isAlternateImpId", IsNullable = false, Namespace = "")]
-    public bool IsAlternateImpId {
-        get => _isAlternateImpId;
-        set {
-            IsAlternateImpIdSpecified = true;
-            _isAlternateImpId = value;
+        [XmlElement(ElementName = "isAlternateImpId", IsNullable = false, Namespace = "")]
+        public bool IsAlternateImpId {
+            get => _isAlternateImpId;
+            set {
+                IsAlternateImpIdSpecified = true;
+                _isAlternateImpId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsAlternateImpIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool IsAlternateImpIdSpecified { get; set; }
+        
+    }
 }

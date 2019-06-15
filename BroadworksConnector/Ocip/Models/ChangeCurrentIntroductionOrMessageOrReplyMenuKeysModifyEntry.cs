@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ChangeCurrentIntroductionOrMessageOrReplyMenuKeysModifyEntry 
-{
-    private string _endRecording;
+    /// <summary>
+    /// The voice portal change current introduction or message or reply menu keys modify entry.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ChangeCurrentIntroductionOrMessageOrReplyMenuKeysModifyEntry 
+    {
 
-    [XmlElement(ElementName = "endRecording", IsNullable = false, Namespace = "")]
-    public string EndRecording {
-        get => _endRecording;
-        set {
-            EndRecordingSpecified = true;
-            _endRecording = value;
+        
+        private string _endRecording;
+
+        [XmlElement(ElementName = "endRecording", IsNullable = false, Namespace = "")]
+        public string EndRecording {
+            get => _endRecording;
+            set {
+                EndRecordingSpecified = true;
+                _endRecording = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EndRecordingSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool EndRecordingSpecified { get; set; }
+        
+    }
 }

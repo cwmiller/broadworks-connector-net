@@ -1,116 +1,133 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemAutomaticCallbackModifyRequest15 : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private int _monitorMinutes;
+    /// <summary>
+    /// Modifies the system's automatic callback attributes.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemAutomaticCallbackModifyRequest15 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "monitorMinutes", IsNullable = false, Namespace = "")]
-    public int MonitorMinutes {
-        get => _monitorMinutes;
-        set {
-            MonitorMinutesSpecified = true;
-            _monitorMinutes = value;
+        
+        private int _monitorMinutes;
+
+        [XmlElement(ElementName = "monitorMinutes", IsNullable = false, Namespace = "")]
+        public int MonitorMinutes {
+            get => _monitorMinutes;
+            set {
+                MonitorMinutesSpecified = true;
+                _monitorMinutes = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MonitorMinutesSpecified { get; set; }
-    private int _maxMonitorsPerOriginator;
+        [XmlIgnore]
+        public bool MonitorMinutesSpecified { get; set; }
+        
+        private int _maxMonitorsPerOriginator;
 
-    [XmlElement(ElementName = "maxMonitorsPerOriginator", IsNullable = false, Namespace = "")]
-    public int MaxMonitorsPerOriginator {
-        get => _maxMonitorsPerOriginator;
-        set {
-            MaxMonitorsPerOriginatorSpecified = true;
-            _maxMonitorsPerOriginator = value;
+        [XmlElement(ElementName = "maxMonitorsPerOriginator", IsNullable = false, Namespace = "")]
+        public int MaxMonitorsPerOriginator {
+            get => _maxMonitorsPerOriginator;
+            set {
+                MaxMonitorsPerOriginatorSpecified = true;
+                _maxMonitorsPerOriginator = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MaxMonitorsPerOriginatorSpecified { get; set; }
-    private int _maxCallbackRings;
+        [XmlIgnore]
+        public bool MaxMonitorsPerOriginatorSpecified { get; set; }
+        
+        private int _maxCallbackRings;
 
-    [XmlElement(ElementName = "maxCallbackRings", IsNullable = false, Namespace = "")]
-    public int MaxCallbackRings {
-        get => _maxCallbackRings;
-        set {
-            MaxCallbackRingsSpecified = true;
-            _maxCallbackRings = value;
+        [XmlElement(ElementName = "maxCallbackRings", IsNullable = false, Namespace = "")]
+        public int MaxCallbackRings {
+            get => _maxCallbackRings;
+            set {
+                MaxCallbackRingsSpecified = true;
+                _maxCallbackRings = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MaxCallbackRingsSpecified { get; set; }
-    private int _maxMonitorsPerTerminator;
+        [XmlIgnore]
+        public bool MaxCallbackRingsSpecified { get; set; }
+        
+        private int _maxMonitorsPerTerminator;
 
-    [XmlElement(ElementName = "maxMonitorsPerTerminator", IsNullable = false, Namespace = "")]
-    public int MaxMonitorsPerTerminator {
-        get => _maxMonitorsPerTerminator;
-        set {
-            MaxMonitorsPerTerminatorSpecified = true;
-            _maxMonitorsPerTerminator = value;
+        [XmlElement(ElementName = "maxMonitorsPerTerminator", IsNullable = false, Namespace = "")]
+        public int MaxMonitorsPerTerminator {
+            get => _maxMonitorsPerTerminator;
+            set {
+                MaxMonitorsPerTerminatorSpecified = true;
+                _maxMonitorsPerTerminator = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MaxMonitorsPerTerminatorSpecified { get; set; }
-    private int _terminatorIdleGuardSeconds;
+        [XmlIgnore]
+        public bool MaxMonitorsPerTerminatorSpecified { get; set; }
+        
+        private int _terminatorIdleGuardSeconds;
 
-    [XmlElement(ElementName = "terminatorIdleGuardSeconds", IsNullable = false, Namespace = "")]
-    public int TerminatorIdleGuardSeconds {
-        get => _terminatorIdleGuardSeconds;
-        set {
-            TerminatorIdleGuardSecondsSpecified = true;
-            _terminatorIdleGuardSeconds = value;
+        [XmlElement(ElementName = "terminatorIdleGuardSeconds", IsNullable = false, Namespace = "")]
+        public int TerminatorIdleGuardSeconds {
+            get => _terminatorIdleGuardSeconds;
+            set {
+                TerminatorIdleGuardSecondsSpecified = true;
+                _terminatorIdleGuardSeconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TerminatorIdleGuardSecondsSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod _callbackMethod;
+        [XmlIgnore]
+        public bool TerminatorIdleGuardSecondsSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod _callbackMethod;
 
-    [XmlElement(ElementName = "callbackMethod", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod CallbackMethod {
-        get => _callbackMethod;
-        set {
-            CallbackMethodSpecified = true;
-            _callbackMethod = value;
+        [XmlElement(ElementName = "callbackMethod", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod CallbackMethod {
+            get => _callbackMethod;
+            set {
+                CallbackMethodSpecified = true;
+                _callbackMethod = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallbackMethodSpecified { get; set; }
-    private int _pollingIntervalSeconds;
+        [XmlIgnore]
+        public bool CallbackMethodSpecified { get; set; }
+        
+        private int _pollingIntervalSeconds;
 
-    [XmlElement(ElementName = "pollingIntervalSeconds", IsNullable = false, Namespace = "")]
-    public int PollingIntervalSeconds {
-        get => _pollingIntervalSeconds;
-        set {
-            PollingIntervalSecondsSpecified = true;
-            _pollingIntervalSeconds = value;
+        [XmlElement(ElementName = "pollingIntervalSeconds", IsNullable = false, Namespace = "")]
+        public int PollingIntervalSeconds {
+            get => _pollingIntervalSeconds;
+            set {
+                PollingIntervalSecondsSpecified = true;
+                _pollingIntervalSeconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PollingIntervalSecondsSpecified { get; set; }
-    private int _activationDigit;
+        [XmlIgnore]
+        public bool PollingIntervalSecondsSpecified { get; set; }
+        
+        private int _activationDigit;
 
-    [XmlElement(ElementName = "activationDigit", IsNullable = false, Namespace = "")]
-    public int ActivationDigit {
-        get => _activationDigit;
-        set {
-            ActivationDigitSpecified = true;
-            _activationDigit = value;
+        [XmlElement(ElementName = "activationDigit", IsNullable = false, Namespace = "")]
+        public int ActivationDigit {
+            get => _activationDigit;
+            set {
+                ActivationDigitSpecified = true;
+                _activationDigit = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ActivationDigitSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ActivationDigitSpecified { get; set; }
+        
+    }
 }

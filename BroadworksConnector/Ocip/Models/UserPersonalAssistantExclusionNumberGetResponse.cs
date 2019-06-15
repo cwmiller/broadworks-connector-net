@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserPersonalAssistantExclusionNumberGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private string _description;
+    /// <summary>
+    /// Response to the UserPersonalAssistantExclusionNumberGetRequest
+        /// <see cref="UserPersonalAssistantExclusionNumberGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserPersonalAssistantExclusionNumberGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
-    public string Description {
-        get => _description;
-        set {
-            DescriptionSpecified = true;
-            _description = value;
+        
+        private string _description;
+
+        [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
+        public string Description {
+            get => _description;
+            set {
+                DescriptionSpecified = true;
+                _description = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DescriptionSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DescriptionSpecified { get; set; }
+        
+    }
 }

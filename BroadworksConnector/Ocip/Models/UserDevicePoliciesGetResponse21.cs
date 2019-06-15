@@ -1,168 +1,201 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserDevicePoliciesGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
+    /// <summary>
+    /// Response to UserDevicePoliciesGetRequest21. enableDeviceFeatureSynchronization and
+    /// enableCallDecline are ignored by the application server in Multiple User Shared mode.
+    /// The following element is only used in AS data mode:
+    /// lineMode, value “Single User Private and Shared” is returned in XS data mode
+    /// The following elements are only used in AS data mode:
+    /// enableDeviceFeatureSynchronization, value “false” is returned in XS data mode
+    /// enableDnd, value “false” is returned in XS data mode
+    /// enableCallForwardingAlways, value “false” is returned in XS data mode
+    /// enableCallForwardingBusy, value “false” is returned in XS data mode
+    /// enableCallForwardingNoAnswer, value “false” is returned in XS data mode
+    /// enableAcd, value “false” is returned in XS data mode
+    /// enableExecutive, value “false” is returned in XS data mode
+    /// enableExecutiveAssistant, value “false” is returned in XS data mode
+    /// enableSecurityClassification, value “false” is returned in XS data mode
+    /// enableCallRecording, value “false” is returned in XS data mode
+        /// <see cref="UserDevicePoliciesGetRequest21"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserDevicePoliciesGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "lineMode", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode LineMode {
-        get => _lineMode;
-        set {
-            LineModeSpecified = true;
-            _lineMode = value;
+        
+        private BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
+
+        [XmlElement(ElementName = "lineMode", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode LineMode {
+            get => _lineMode;
+            set {
+                LineModeSpecified = true;
+                _lineMode = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LineModeSpecified { get; set; }
-    private bool _enableDeviceFeatureSynchronization;
+        [XmlIgnore]
+        public bool LineModeSpecified { get; set; }
+        
+        private bool _enableDeviceFeatureSynchronization;
 
-    [XmlElement(ElementName = "enableDeviceFeatureSynchronization", IsNullable = false, Namespace = "")]
-    public bool EnableDeviceFeatureSynchronization {
-        get => _enableDeviceFeatureSynchronization;
-        set {
-            EnableDeviceFeatureSynchronizationSpecified = true;
-            _enableDeviceFeatureSynchronization = value;
+        [XmlElement(ElementName = "enableDeviceFeatureSynchronization", IsNullable = false, Namespace = "")]
+        public bool EnableDeviceFeatureSynchronization {
+            get => _enableDeviceFeatureSynchronization;
+            set {
+                EnableDeviceFeatureSynchronizationSpecified = true;
+                _enableDeviceFeatureSynchronization = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableDeviceFeatureSynchronizationSpecified { get; set; }
-    private bool _enableDnd;
+        [XmlIgnore]
+        public bool EnableDeviceFeatureSynchronizationSpecified { get; set; }
+        
+        private bool _enableDnd;
 
-    [XmlElement(ElementName = "enableDnd", IsNullable = false, Namespace = "")]
-    public bool EnableDnd {
-        get => _enableDnd;
-        set {
-            EnableDndSpecified = true;
-            _enableDnd = value;
+        [XmlElement(ElementName = "enableDnd", IsNullable = false, Namespace = "")]
+        public bool EnableDnd {
+            get => _enableDnd;
+            set {
+                EnableDndSpecified = true;
+                _enableDnd = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableDndSpecified { get; set; }
-    private bool _enableCallForwardingAlways;
+        [XmlIgnore]
+        public bool EnableDndSpecified { get; set; }
+        
+        private bool _enableCallForwardingAlways;
 
-    [XmlElement(ElementName = "enableCallForwardingAlways", IsNullable = false, Namespace = "")]
-    public bool EnableCallForwardingAlways {
-        get => _enableCallForwardingAlways;
-        set {
-            EnableCallForwardingAlwaysSpecified = true;
-            _enableCallForwardingAlways = value;
+        [XmlElement(ElementName = "enableCallForwardingAlways", IsNullable = false, Namespace = "")]
+        public bool EnableCallForwardingAlways {
+            get => _enableCallForwardingAlways;
+            set {
+                EnableCallForwardingAlwaysSpecified = true;
+                _enableCallForwardingAlways = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableCallForwardingAlwaysSpecified { get; set; }
-    private bool _enableCallForwardingBusy;
+        [XmlIgnore]
+        public bool EnableCallForwardingAlwaysSpecified { get; set; }
+        
+        private bool _enableCallForwardingBusy;
 
-    [XmlElement(ElementName = "enableCallForwardingBusy", IsNullable = false, Namespace = "")]
-    public bool EnableCallForwardingBusy {
-        get => _enableCallForwardingBusy;
-        set {
-            EnableCallForwardingBusySpecified = true;
-            _enableCallForwardingBusy = value;
+        [XmlElement(ElementName = "enableCallForwardingBusy", IsNullable = false, Namespace = "")]
+        public bool EnableCallForwardingBusy {
+            get => _enableCallForwardingBusy;
+            set {
+                EnableCallForwardingBusySpecified = true;
+                _enableCallForwardingBusy = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableCallForwardingBusySpecified { get; set; }
-    private bool _enableCallForwardingNoAnswer;
+        [XmlIgnore]
+        public bool EnableCallForwardingBusySpecified { get; set; }
+        
+        private bool _enableCallForwardingNoAnswer;
 
-    [XmlElement(ElementName = "enableCallForwardingNoAnswer", IsNullable = false, Namespace = "")]
-    public bool EnableCallForwardingNoAnswer {
-        get => _enableCallForwardingNoAnswer;
-        set {
-            EnableCallForwardingNoAnswerSpecified = true;
-            _enableCallForwardingNoAnswer = value;
+        [XmlElement(ElementName = "enableCallForwardingNoAnswer", IsNullable = false, Namespace = "")]
+        public bool EnableCallForwardingNoAnswer {
+            get => _enableCallForwardingNoAnswer;
+            set {
+                EnableCallForwardingNoAnswerSpecified = true;
+                _enableCallForwardingNoAnswer = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableCallForwardingNoAnswerSpecified { get; set; }
-    private bool _enableAcd;
+        [XmlIgnore]
+        public bool EnableCallForwardingNoAnswerSpecified { get; set; }
+        
+        private bool _enableAcd;
 
-    [XmlElement(ElementName = "enableAcd", IsNullable = false, Namespace = "")]
-    public bool EnableAcd {
-        get => _enableAcd;
-        set {
-            EnableAcdSpecified = true;
-            _enableAcd = value;
+        [XmlElement(ElementName = "enableAcd", IsNullable = false, Namespace = "")]
+        public bool EnableAcd {
+            get => _enableAcd;
+            set {
+                EnableAcdSpecified = true;
+                _enableAcd = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableAcdSpecified { get; set; }
-    private bool _enableExecutive;
+        [XmlIgnore]
+        public bool EnableAcdSpecified { get; set; }
+        
+        private bool _enableExecutive;
 
-    [XmlElement(ElementName = "enableExecutive", IsNullable = false, Namespace = "")]
-    public bool EnableExecutive {
-        get => _enableExecutive;
-        set {
-            EnableExecutiveSpecified = true;
-            _enableExecutive = value;
+        [XmlElement(ElementName = "enableExecutive", IsNullable = false, Namespace = "")]
+        public bool EnableExecutive {
+            get => _enableExecutive;
+            set {
+                EnableExecutiveSpecified = true;
+                _enableExecutive = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableExecutiveSpecified { get; set; }
-    private bool _enableExecutiveAssistant;
+        [XmlIgnore]
+        public bool EnableExecutiveSpecified { get; set; }
+        
+        private bool _enableExecutiveAssistant;
 
-    [XmlElement(ElementName = "enableExecutiveAssistant", IsNullable = false, Namespace = "")]
-    public bool EnableExecutiveAssistant {
-        get => _enableExecutiveAssistant;
-        set {
-            EnableExecutiveAssistantSpecified = true;
-            _enableExecutiveAssistant = value;
+        [XmlElement(ElementName = "enableExecutiveAssistant", IsNullable = false, Namespace = "")]
+        public bool EnableExecutiveAssistant {
+            get => _enableExecutiveAssistant;
+            set {
+                EnableExecutiveAssistantSpecified = true;
+                _enableExecutiveAssistant = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableExecutiveAssistantSpecified { get; set; }
-    private bool _enableSecurityClassification;
+        [XmlIgnore]
+        public bool EnableExecutiveAssistantSpecified { get; set; }
+        
+        private bool _enableSecurityClassification;
 
-    [XmlElement(ElementName = "enableSecurityClassification", IsNullable = false, Namespace = "")]
-    public bool EnableSecurityClassification {
-        get => _enableSecurityClassification;
-        set {
-            EnableSecurityClassificationSpecified = true;
-            _enableSecurityClassification = value;
+        [XmlElement(ElementName = "enableSecurityClassification", IsNullable = false, Namespace = "")]
+        public bool EnableSecurityClassification {
+            get => _enableSecurityClassification;
+            set {
+                EnableSecurityClassificationSpecified = true;
+                _enableSecurityClassification = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableSecurityClassificationSpecified { get; set; }
-    private bool _enableCallRecording;
+        [XmlIgnore]
+        public bool EnableSecurityClassificationSpecified { get; set; }
+        
+        private bool _enableCallRecording;
 
-    [XmlElement(ElementName = "enableCallRecording", IsNullable = false, Namespace = "")]
-    public bool EnableCallRecording {
-        get => _enableCallRecording;
-        set {
-            EnableCallRecordingSpecified = true;
-            _enableCallRecording = value;
+        [XmlElement(ElementName = "enableCallRecording", IsNullable = false, Namespace = "")]
+        public bool EnableCallRecording {
+            get => _enableCallRecording;
+            set {
+                EnableCallRecordingSpecified = true;
+                _enableCallRecording = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableCallRecordingSpecified { get; set; }
-    private bool _enableCallDecline;
+        [XmlIgnore]
+        public bool EnableCallRecordingSpecified { get; set; }
+        
+        private bool _enableCallDecline;
 
-    [XmlElement(ElementName = "enableCallDecline", IsNullable = false, Namespace = "")]
-    public bool EnableCallDecline {
-        get => _enableCallDecline;
-        set {
-            EnableCallDeclineSpecified = true;
-            _enableCallDecline = value;
+        [XmlElement(ElementName = "enableCallDecline", IsNullable = false, Namespace = "")]
+        public bool EnableCallDecline {
+            get => _enableCallDecline;
+            set {
+                EnableCallDeclineSpecified = true;
+                _enableCallDecline = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableCallDeclineSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool EnableCallDeclineSpecified { get; set; }
+        
+    }
 }

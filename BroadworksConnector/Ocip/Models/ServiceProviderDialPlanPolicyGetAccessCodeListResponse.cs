@@ -1,25 +1,35 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderDialPlanPolicyGetAccessCodeListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.C.OCITable _accessCodeTable;
+    /// <summary>
+    /// Response to ServiceProviderDialPlanPolicyGetAccessCodeListRequest.
+    /// Contains a table with column headings: "Access Code",
+    /// "Enable Secondary Dial Tone", "Description".
+        /// <see cref="ServiceProviderDialPlanPolicyGetAccessCodeListRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderDialPlanPolicyGetAccessCodeListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "accessCodeTable", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.C.OCITable AccessCodeTable {
-        get => _accessCodeTable;
-        set {
-            AccessCodeTableSpecified = true;
-            _accessCodeTable = value;
+        
+        private BroadWorksConnector.Ocip.Models.C.OCITable _accessCodeTable;
+
+        [XmlElement(ElementName = "accessCodeTable", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable AccessCodeTable {
+            get => _accessCodeTable;
+            set {
+                AccessCodeTableSpecified = true;
+                _accessCodeTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AccessCodeTableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool AccessCodeTableSpecified { get; set; }
+        
+    }
 }

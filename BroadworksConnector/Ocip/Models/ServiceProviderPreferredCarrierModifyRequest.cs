@@ -1,77 +1,97 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderPreferredCarrierModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceProviderId;
+    /// <summary>
+    /// Modify the country code preferred carriers for a service provider or enterprise. For each
+    /// combination of service provider and country code, you can assign an intra-lata, inter-lata,
+    /// and international carrier. Each of the 3 types of carriers is optional.
+    /// If an optional carrier is not specified, the assignment will not change.
+    /// To clear a preferred carrier, set the value to an empty string.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+    /// Note: At the system level, more than one carrier may be assigned to each country code.
+    /// At the service provider level, you must choose from the carriers assigned at the system level.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderPreferredCarrierModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-    public string ServiceProviderId {
-        get => _serviceProviderId;
-        set {
-            ServiceProviderIdSpecified = true;
-            _serviceProviderId = value;
+        
+        private string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        public string ServiceProviderId {
+            get => _serviceProviderId;
+            set {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceProviderIdSpecified { get; set; }
-    private string _countryCode;
+        [XmlIgnore]
+        public bool ServiceProviderIdSpecified { get; set; }
+        
+        private string _countryCode;
 
-    [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-    public string CountryCode {
-        get => _countryCode;
-        set {
-            CountryCodeSpecified = true;
-            _countryCode = value;
+        [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
+        public string CountryCode {
+            get => _countryCode;
+            set {
+                CountryCodeSpecified = true;
+                _countryCode = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CountryCodeSpecified { get; set; }
-    private string _intraLataCarrier;
+        [XmlIgnore]
+        public bool CountryCodeSpecified { get; set; }
+        
+        private string _intraLataCarrier;
 
-    [XmlElement(ElementName = "intraLataCarrier", IsNullable = true, Namespace = "")]
-    public string IntraLataCarrier {
-        get => _intraLataCarrier;
-        set {
-            IntraLataCarrierSpecified = true;
-            _intraLataCarrier = value;
+        [XmlElement(ElementName = "intraLataCarrier", IsNullable = true, Namespace = "")]
+        public string IntraLataCarrier {
+            get => _intraLataCarrier;
+            set {
+                IntraLataCarrierSpecified = true;
+                _intraLataCarrier = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IntraLataCarrierSpecified { get; set; }
-    private string _interLataCarrier;
+        [XmlIgnore]
+        public bool IntraLataCarrierSpecified { get; set; }
+        
+        private string _interLataCarrier;
 
-    [XmlElement(ElementName = "interLataCarrier", IsNullable = true, Namespace = "")]
-    public string InterLataCarrier {
-        get => _interLataCarrier;
-        set {
-            InterLataCarrierSpecified = true;
-            _interLataCarrier = value;
+        [XmlElement(ElementName = "interLataCarrier", IsNullable = true, Namespace = "")]
+        public string InterLataCarrier {
+            get => _interLataCarrier;
+            set {
+                InterLataCarrierSpecified = true;
+                _interLataCarrier = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool InterLataCarrierSpecified { get; set; }
-    private string _internationalCarrier;
+        [XmlIgnore]
+        public bool InterLataCarrierSpecified { get; set; }
+        
+        private string _internationalCarrier;
 
-    [XmlElement(ElementName = "internationalCarrier", IsNullable = true, Namespace = "")]
-    public string InternationalCarrier {
-        get => _internationalCarrier;
-        set {
-            InternationalCarrierSpecified = true;
-            _internationalCarrier = value;
+        [XmlElement(ElementName = "internationalCarrier", IsNullable = true, Namespace = "")]
+        public string InternationalCarrier {
+            get => _internationalCarrier;
+            set {
+                InternationalCarrierSpecified = true;
+                _internationalCarrier = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool InternationalCarrierSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool InternationalCarrierSpecified { get; set; }
+        
+    }
 }

@@ -1,51 +1,62 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserBroadWorksAnywhereGetResponse16sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _alertAllLocationsForClickToDialCalls;
+    /// <summary>
+    /// Response to the UserBroadWorksAnywhereGetRequest16sp2.
+    /// The phoneNumberTable contains columns: "Phone Number", "Description"
+        /// <see cref="UserBroadWorksAnywhereGetRequest16sp2"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserBroadWorksAnywhereGetResponse16sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "alertAllLocationsForClickToDialCalls", IsNullable = false, Namespace = "")]
-    public bool AlertAllLocationsForClickToDialCalls {
-        get => _alertAllLocationsForClickToDialCalls;
-        set {
-            AlertAllLocationsForClickToDialCallsSpecified = true;
-            _alertAllLocationsForClickToDialCalls = value;
+        
+        private bool _alertAllLocationsForClickToDialCalls;
+
+        [XmlElement(ElementName = "alertAllLocationsForClickToDialCalls", IsNullable = false, Namespace = "")]
+        public bool AlertAllLocationsForClickToDialCalls {
+            get => _alertAllLocationsForClickToDialCalls;
+            set {
+                AlertAllLocationsForClickToDialCallsSpecified = true;
+                _alertAllLocationsForClickToDialCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AlertAllLocationsForClickToDialCallsSpecified { get; set; }
-    private bool _alertAllLocationsForGroupPagingCalls;
+        [XmlIgnore]
+        public bool AlertAllLocationsForClickToDialCallsSpecified { get; set; }
+        
+        private bool _alertAllLocationsForGroupPagingCalls;
 
-    [XmlElement(ElementName = "alertAllLocationsForGroupPagingCalls", IsNullable = false, Namespace = "")]
-    public bool AlertAllLocationsForGroupPagingCalls {
-        get => _alertAllLocationsForGroupPagingCalls;
-        set {
-            AlertAllLocationsForGroupPagingCallsSpecified = true;
-            _alertAllLocationsForGroupPagingCalls = value;
+        [XmlElement(ElementName = "alertAllLocationsForGroupPagingCalls", IsNullable = false, Namespace = "")]
+        public bool AlertAllLocationsForGroupPagingCalls {
+            get => _alertAllLocationsForGroupPagingCalls;
+            set {
+                AlertAllLocationsForGroupPagingCallsSpecified = true;
+                _alertAllLocationsForGroupPagingCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AlertAllLocationsForGroupPagingCallsSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
+        [XmlIgnore]
+        public bool AlertAllLocationsForGroupPagingCallsSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
 
-    [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.C.OCITable PhoneNumberTable {
-        get => _phoneNumberTable;
-        set {
-            PhoneNumberTableSpecified = true;
-            _phoneNumberTable = value;
+        [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable PhoneNumberTable {
+            get => _phoneNumberTable;
+            set {
+                PhoneNumberTableSpecified = true;
+                _phoneNumberTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PhoneNumberTableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool PhoneNumberTableSpecified { get; set; }
+        
+    }
 }

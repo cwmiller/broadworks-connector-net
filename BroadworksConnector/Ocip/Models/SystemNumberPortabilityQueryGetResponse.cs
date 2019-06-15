@@ -1,38 +1,48 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemNumberPortabilityQueryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _continueCallAsDialedOnTimeoutOrError;
+    /// <summary>
+    /// Response to the SystemNumberPortabilityQueryGetRequest.
+    /// Returns system Number Portability Query Parameters.
+        /// <see cref="SystemNumberPortabilityQueryGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemNumberPortabilityQueryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "continueCallAsDialedOnTimeoutOrError", IsNullable = false, Namespace = "")]
-    public bool ContinueCallAsDialedOnTimeoutOrError {
-        get => _continueCallAsDialedOnTimeoutOrError;
-        set {
-            ContinueCallAsDialedOnTimeoutOrErrorSpecified = true;
-            _continueCallAsDialedOnTimeoutOrError = value;
+        
+        private bool _continueCallAsDialedOnTimeoutOrError;
+
+        [XmlElement(ElementName = "continueCallAsDialedOnTimeoutOrError", IsNullable = false, Namespace = "")]
+        public bool ContinueCallAsDialedOnTimeoutOrError {
+            get => _continueCallAsDialedOnTimeoutOrError;
+            set {
+                ContinueCallAsDialedOnTimeoutOrErrorSpecified = true;
+                _continueCallAsDialedOnTimeoutOrError = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ContinueCallAsDialedOnTimeoutOrErrorSpecified { get; set; }
-    private int _numberPortabilityNameLookupTimeoutMilliseconds;
+        [XmlIgnore]
+        public bool ContinueCallAsDialedOnTimeoutOrErrorSpecified { get; set; }
+        
+        private int _numberPortabilityNameLookupTimeoutMilliseconds;
 
-    [XmlElement(ElementName = "numberPortabilityNameLookupTimeoutMilliseconds", IsNullable = false, Namespace = "")]
-    public int NumberPortabilityNameLookupTimeoutMilliseconds {
-        get => _numberPortabilityNameLookupTimeoutMilliseconds;
-        set {
-            NumberPortabilityNameLookupTimeoutMillisecondsSpecified = true;
-            _numberPortabilityNameLookupTimeoutMilliseconds = value;
+        [XmlElement(ElementName = "numberPortabilityNameLookupTimeoutMilliseconds", IsNullable = false, Namespace = "")]
+        public int NumberPortabilityNameLookupTimeoutMilliseconds {
+            get => _numberPortabilityNameLookupTimeoutMilliseconds;
+            set {
+                NumberPortabilityNameLookupTimeoutMillisecondsSpecified = true;
+                _numberPortabilityNameLookupTimeoutMilliseconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NumberPortabilityNameLookupTimeoutMillisecondsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool NumberPortabilityNameLookupTimeoutMillisecondsSpecified { get; set; }
+        
+    }
 }

@@ -1,38 +1,48 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupPreferredCarrierNameModify 
-{
-    private bool _useServiceProviderPreferredCarrier;
+    /// <summary>
+    /// Group can either use it's service provider/enterprise's preferred carrier or use it's own.
+    /// You can use the Service Provider preferred carrier without clearing the group
+    /// carrier name -- in this case, the group carrier name is retained.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupPreferredCarrierNameModify 
+    {
 
-    [XmlElement(ElementName = "useServiceProviderPreferredCarrier", IsNullable = false, Namespace = "")]
-    public bool UseServiceProviderPreferredCarrier {
-        get => _useServiceProviderPreferredCarrier;
-        set {
-            UseServiceProviderPreferredCarrierSpecified = true;
-            _useServiceProviderPreferredCarrier = value;
+        
+        private bool _useServiceProviderPreferredCarrier;
+
+        [XmlElement(ElementName = "useServiceProviderPreferredCarrier", IsNullable = false, Namespace = "")]
+        public bool UseServiceProviderPreferredCarrier {
+            get => _useServiceProviderPreferredCarrier;
+            set {
+                UseServiceProviderPreferredCarrierSpecified = true;
+                _useServiceProviderPreferredCarrier = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseServiceProviderPreferredCarrierSpecified { get; set; }
-    private string _carrier;
+        [XmlIgnore]
+        public bool UseServiceProviderPreferredCarrierSpecified { get; set; }
+        
+        private string _carrier;
 
-    [XmlElement(ElementName = "carrier", IsNullable = true, Namespace = "")]
-    public string Carrier {
-        get => _carrier;
-        set {
-            CarrierSpecified = true;
-            _carrier = value;
+        [XmlElement(ElementName = "carrier", IsNullable = true, Namespace = "")]
+        public string Carrier {
+            get => _carrier;
+            set {
+                CarrierSpecified = true;
+                _carrier = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CarrierSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CarrierSpecified { get; set; }
+        
+    }
 }

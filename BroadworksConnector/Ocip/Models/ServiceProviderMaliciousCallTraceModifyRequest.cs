@@ -1,51 +1,63 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderMaliciousCallTraceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceProviderId;
+    /// <summary>
+    /// Modify the service provider's Malicious Call Trace settings.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderMaliciousCallTraceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-    public string ServiceProviderId {
-        get => _serviceProviderId;
-        set {
-            ServiceProviderIdSpecified = true;
-            _serviceProviderId = value;
+        
+        private string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        public string ServiceProviderId {
+            get => _serviceProviderId;
+            set {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceProviderIdSpecified { get; set; }
-    private bool _useSystemPlayMCTWarningAnnouncement;
+        [XmlIgnore]
+        public bool ServiceProviderIdSpecified { get; set; }
+        
+        private bool _useSystemPlayMCTWarningAnnouncement;
 
-    [XmlElement(ElementName = "useSystemPlayMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
-    public bool UseSystemPlayMCTWarningAnnouncement {
-        get => _useSystemPlayMCTWarningAnnouncement;
-        set {
-            UseSystemPlayMCTWarningAnnouncementSpecified = true;
-            _useSystemPlayMCTWarningAnnouncement = value;
+        [XmlElement(ElementName = "useSystemPlayMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
+        public bool UseSystemPlayMCTWarningAnnouncement {
+            get => _useSystemPlayMCTWarningAnnouncement;
+            set {
+                UseSystemPlayMCTWarningAnnouncementSpecified = true;
+                _useSystemPlayMCTWarningAnnouncement = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseSystemPlayMCTWarningAnnouncementSpecified { get; set; }
-    private bool _playMCTWarningAnnouncement;
+        [XmlIgnore]
+        public bool UseSystemPlayMCTWarningAnnouncementSpecified { get; set; }
+        
+        private bool _playMCTWarningAnnouncement;
 
-    [XmlElement(ElementName = "playMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
-    public bool PlayMCTWarningAnnouncement {
-        get => _playMCTWarningAnnouncement;
-        set {
-            PlayMCTWarningAnnouncementSpecified = true;
-            _playMCTWarningAnnouncement = value;
+        [XmlElement(ElementName = "playMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
+        public bool PlayMCTWarningAnnouncement {
+            get => _playMCTWarningAnnouncement;
+            set {
+                PlayMCTWarningAnnouncementSpecified = true;
+                _playMCTWarningAnnouncement = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PlayMCTWarningAnnouncementSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool PlayMCTWarningAnnouncementSpecified { get; set; }
+        
+    }
 }

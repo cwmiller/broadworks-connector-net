@@ -1,51 +1,60 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class FileRepositoryProtocolWebDAV20 
-{
-    private bool _secure;
+    /// <summary>
+    /// Attributes of the WebDav protocol when the file repository interface is using WebDav.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class FileRepositoryProtocolWebDAV20 
+    {
 
-    [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
-    public bool Secure {
-        get => _secure;
-        set {
-            SecureSpecified = true;
-            _secure = value;
+        
+        private bool _secure;
+
+        [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
+        public bool Secure {
+            get => _secure;
+            set {
+                SecureSpecified = true;
+                _secure = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SecureSpecified { get; set; }
-    private string _netAddress;
+        [XmlIgnore]
+        public bool SecureSpecified { get; set; }
+        
+        private string _netAddress;
 
-    [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-    public string NetAddress {
-        get => _netAddress;
-        set {
-            NetAddressSpecified = true;
-            _netAddress = value;
+        [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
+        public string NetAddress {
+            get => _netAddress;
+            set {
+                NetAddressSpecified = true;
+                _netAddress = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NetAddressSpecified { get; set; }
-    private bool _extendedFileCaptureSupport;
+        [XmlIgnore]
+        public bool NetAddressSpecified { get; set; }
+        
+        private bool _extendedFileCaptureSupport;
 
-    [XmlElement(ElementName = "extendedFileCaptureSupport", IsNullable = false, Namespace = "")]
-    public bool ExtendedFileCaptureSupport {
-        get => _extendedFileCaptureSupport;
-        set {
-            ExtendedFileCaptureSupportSpecified = true;
-            _extendedFileCaptureSupport = value;
+        [XmlElement(ElementName = "extendedFileCaptureSupport", IsNullable = false, Namespace = "")]
+        public bool ExtendedFileCaptureSupport {
+            get => _extendedFileCaptureSupport;
+            set {
+                ExtendedFileCaptureSupportSpecified = true;
+                _extendedFileCaptureSupport = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ExtendedFileCaptureSupportSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ExtendedFileCaptureSupportSpecified { get; set; }
+        
+    }
 }

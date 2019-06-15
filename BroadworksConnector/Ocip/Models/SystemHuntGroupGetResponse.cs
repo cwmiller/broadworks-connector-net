@@ -1,38 +1,49 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemHuntGroupGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _anonymousInsteadOfPrivateCLID;
+    /// <summary>
+    /// Response to SystemHuntGroupGetRequest.
+    /// Replaced by: SystemHuntGroupGetResponse17
+        /// <see cref="SystemHuntGroupGetRequest"/>
+        /// <see cref="SystemHuntGroupGetResponse17"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemHuntGroupGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "anonymousInsteadOfPrivateCLID", IsNullable = false, Namespace = "")]
-    public bool AnonymousInsteadOfPrivateCLID {
-        get => _anonymousInsteadOfPrivateCLID;
-        set {
-            AnonymousInsteadOfPrivateCLIDSpecified = true;
-            _anonymousInsteadOfPrivateCLID = value;
+        
+        private bool _anonymousInsteadOfPrivateCLID;
+
+        [XmlElement(ElementName = "anonymousInsteadOfPrivateCLID", IsNullable = false, Namespace = "")]
+        public bool AnonymousInsteadOfPrivateCLID {
+            get => _anonymousInsteadOfPrivateCLID;
+            set {
+                AnonymousInsteadOfPrivateCLIDSpecified = true;
+                _anonymousInsteadOfPrivateCLID = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AnonymousInsteadOfPrivateCLIDSpecified { get; set; }
-    private bool _removeHuntGroupNameFromCLID;
+        [XmlIgnore]
+        public bool AnonymousInsteadOfPrivateCLIDSpecified { get; set; }
+        
+        private bool _removeHuntGroupNameFromCLID;
 
-    [XmlElement(ElementName = "removeHuntGroupNameFromCLID", IsNullable = false, Namespace = "")]
-    public bool RemoveHuntGroupNameFromCLID {
-        get => _removeHuntGroupNameFromCLID;
-        set {
-            RemoveHuntGroupNameFromCLIDSpecified = true;
-            _removeHuntGroupNameFromCLID = value;
+        [XmlElement(ElementName = "removeHuntGroupNameFromCLID", IsNullable = false, Namespace = "")]
+        public bool RemoveHuntGroupNameFromCLID {
+            get => _removeHuntGroupNameFromCLID;
+            set {
+                RemoveHuntGroupNameFromCLIDSpecified = true;
+                _removeHuntGroupNameFromCLID = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RemoveHuntGroupNameFromCLIDSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool RemoveHuntGroupNameFromCLIDSpecified { get; set; }
+        
+    }
 }

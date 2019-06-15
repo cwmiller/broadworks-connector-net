@@ -1,90 +1,104 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class PasswordForUser 
-{
-    private string _serviceProviderId;
+    /// <summary>
+    /// Passwords, passcode and SIP authentication passwords to be generated for a user. If the userId is not
+    /// included or included but is not an existing user in the group, a password will be generated based on only
+    /// the rules applicable for a new user.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class PasswordForUser 
+    {
 
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-    public string ServiceProviderId {
-        get => _serviceProviderId;
-        set {
-            ServiceProviderIdSpecified = true;
-            _serviceProviderId = value;
+        
+        private string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        public string ServiceProviderId {
+            get => _serviceProviderId;
+            set {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceProviderIdSpecified { get; set; }
-    private string _groupId;
+        [XmlIgnore]
+        public bool ServiceProviderIdSpecified { get; set; }
+        
+        private string _groupId;
 
-    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-    public string GroupId {
-        get => _groupId;
-        set {
-            GroupIdSpecified = true;
-            _groupId = value;
+        [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+        public string GroupId {
+            get => _groupId;
+            set {
+                GroupIdSpecified = true;
+                _groupId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GroupIdSpecified { get; set; }
-    private string _userId;
+        [XmlIgnore]
+        public bool GroupIdSpecified { get; set; }
+        
+        private string _userId;
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-    private bool _generatePassword;
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+        private bool _generatePassword;
 
-    [XmlElement(ElementName = "generatePassword", IsNullable = false, Namespace = "")]
-    public bool GeneratePassword {
-        get => _generatePassword;
-        set {
-            GeneratePasswordSpecified = true;
-            _generatePassword = value;
+        [XmlElement(ElementName = "generatePassword", IsNullable = false, Namespace = "")]
+        public bool GeneratePassword {
+            get => _generatePassword;
+            set {
+                GeneratePasswordSpecified = true;
+                _generatePassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GeneratePasswordSpecified { get; set; }
-    private bool _generatePasscode;
+        [XmlIgnore]
+        public bool GeneratePasswordSpecified { get; set; }
+        
+        private bool _generatePasscode;
 
-    [XmlElement(ElementName = "generatePasscode", IsNullable = false, Namespace = "")]
-    public bool GeneratePasscode {
-        get => _generatePasscode;
-        set {
-            GeneratePasscodeSpecified = true;
-            _generatePasscode = value;
+        [XmlElement(ElementName = "generatePasscode", IsNullable = false, Namespace = "")]
+        public bool GeneratePasscode {
+            get => _generatePasscode;
+            set {
+                GeneratePasscodeSpecified = true;
+                _generatePasscode = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GeneratePasscodeSpecified { get; set; }
-    private bool _generateSipPassword;
+        [XmlIgnore]
+        public bool GeneratePasscodeSpecified { get; set; }
+        
+        private bool _generateSipPassword;
 
-    [XmlElement(ElementName = "generateSipPassword", IsNullable = false, Namespace = "")]
-    public bool GenerateSipPassword {
-        get => _generateSipPassword;
-        set {
-            GenerateSipPasswordSpecified = true;
-            _generateSipPassword = value;
+        [XmlElement(ElementName = "generateSipPassword", IsNullable = false, Namespace = "")]
+        public bool GenerateSipPassword {
+            get => _generateSipPassword;
+            set {
+                GenerateSipPasswordSpecified = true;
+                _generateSipPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GenerateSipPasswordSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool GenerateSipPasswordSpecified { get; set; }
+        
+    }
 }

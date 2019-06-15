@@ -1,38 +1,49 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserOutgoingCallingPlanAuthorizationCodeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _userId;
+    /// <summary>
+    /// Modify the authorization setting for a user.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserOutgoingCallingPlanAuthorizationCodeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        
+        private string _userId;
+
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-    private bool _useCustomSettings;
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+        private bool _useCustomSettings;
 
-    [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
-    public bool UseCustomSettings {
-        get => _useCustomSettings;
-        set {
-            UseCustomSettingsSpecified = true;
-            _useCustomSettings = value;
+        [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
+        public bool UseCustomSettings {
+            get => _useCustomSettings;
+            set {
+                UseCustomSettingsSpecified = true;
+                _useCustomSettings = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseCustomSettingsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool UseCustomSettingsSpecified { get; set; }
+        
+    }
 }

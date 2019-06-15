@@ -1,90 +1,106 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupMeetMeConferencingGetInstanceResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 _serviceInstanceProfile;
+    /// <summary>
+    /// Response to GroupMeetMeConferencingGetInstanceRequest17sp4.
+    /// Contains the service profile information and a table of assigned hosts.
+    /// The table has column headings: "User Id", "Last Name", "First Name", "Hiragana Last Name", and "Hiragana
+    /// First Name".
+        /// <see cref="GroupMeetMeConferencingGetInstanceRequest17sp4"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupMeetMeConferencingGetInstanceResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 ServiceInstanceProfile {
-        get => _serviceInstanceProfile;
-        set {
-            ServiceInstanceProfileSpecified = true;
-            _serviceInstanceProfile = value;
+        
+        private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 _serviceInstanceProfile;
+
+        [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 ServiceInstanceProfile {
+            get => _serviceInstanceProfile;
+            set {
+                ServiceInstanceProfileSpecified = true;
+                _serviceInstanceProfile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceInstanceProfileSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
+        [XmlIgnore]
+        public bool ServiceInstanceProfileSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
-    [XmlElement(ElementName = "allocatedPorts", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts {
-        get => _allocatedPorts;
-        set {
-            AllocatedPortsSpecified = true;
-            _allocatedPorts = value;
+        [XmlElement(ElementName = "allocatedPorts", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts {
+            get => _allocatedPorts;
+            set {
+                AllocatedPortsSpecified = true;
+                _allocatedPorts = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllocatedPortsSpecified { get; set; }
-    private string _networkClassOfService;
+        [XmlIgnore]
+        public bool AllocatedPortsSpecified { get; set; }
+        
+        private string _networkClassOfService;
 
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-    public string NetworkClassOfService {
-        get => _networkClassOfService;
-        set {
-            NetworkClassOfServiceSpecified = true;
-            _networkClassOfService = value;
+        [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+        public string NetworkClassOfService {
+            get => _networkClassOfService;
+            set {
+                NetworkClassOfServiceSpecified = true;
+                _networkClassOfService = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NetworkClassOfServiceSpecified { get; set; }
-    private bool _allowIndividualOutDial;
+        [XmlIgnore]
+        public bool NetworkClassOfServiceSpecified { get; set; }
+        
+        private bool _allowIndividualOutDial;
 
-    [XmlElement(ElementName = "allowIndividualOutDial", IsNullable = false, Namespace = "")]
-    public bool AllowIndividualOutDial {
-        get => _allowIndividualOutDial;
-        set {
-            AllowIndividualOutDialSpecified = true;
-            _allowIndividualOutDial = value;
+        [XmlElement(ElementName = "allowIndividualOutDial", IsNullable = false, Namespace = "")]
+        public bool AllowIndividualOutDial {
+            get => _allowIndividualOutDial;
+            set {
+                AllowIndividualOutDialSpecified = true;
+                _allowIndividualOutDial = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowIndividualOutDialSpecified { get; set; }
-    private string _operatorNumber;
+        [XmlIgnore]
+        public bool AllowIndividualOutDialSpecified { get; set; }
+        
+        private string _operatorNumber;
 
-    [XmlElement(ElementName = "operatorNumber", IsNullable = false, Namespace = "")]
-    public string OperatorNumber {
-        get => _operatorNumber;
-        set {
-            OperatorNumberSpecified = true;
-            _operatorNumber = value;
+        [XmlElement(ElementName = "operatorNumber", IsNullable = false, Namespace = "")]
+        public string OperatorNumber {
+            get => _operatorNumber;
+            set {
+                OperatorNumberSpecified = true;
+                _operatorNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool OperatorNumberSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.C.OCITable _conferenceHostUserTable;
+        [XmlIgnore]
+        public bool OperatorNumberSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.C.OCITable _conferenceHostUserTable;
 
-    [XmlElement(ElementName = "conferenceHostUserTable", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.C.OCITable ConferenceHostUserTable {
-        get => _conferenceHostUserTable;
-        set {
-            ConferenceHostUserTableSpecified = true;
-            _conferenceHostUserTable = value;
+        [XmlElement(ElementName = "conferenceHostUserTable", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable ConferenceHostUserTable {
+            get => _conferenceHostUserTable;
+            set {
+                ConferenceHostUserTableSpecified = true;
+                _conferenceHostUserTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ConferenceHostUserTableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ConferenceHostUserTableSpecified { get; set; }
+        
+    }
 }

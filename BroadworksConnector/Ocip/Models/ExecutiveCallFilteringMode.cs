@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum ExecutiveCallFilteringMode{
-    [XmlEnum(Name = "Simple")]
-    Simple,
-    [XmlEnum(Name = "Advanced")]
-    Advanced,
- }
+    /// <summary>
+    /// Executive call filtering mode.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum ExecutiveCallFilteringMode    {
+            [XmlEnum(Name = "Simple")]
+        Simple,
+            [XmlEnum(Name = "Advanced")]
+        Advanced,
+     }
 }

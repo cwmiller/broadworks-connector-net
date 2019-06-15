@@ -1,38 +1,48 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ProfileAndServiceCommunicationBarringUserControlInfo 
-{
-    private bool _lockoutStatus;
+    /// <summary>
+    /// This is the configuration parameters for Communication Barring User Control service
+    /// 
+    /// profileTable has column headings: "Name", "Code", "Activated" and "Primary".
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ProfileAndServiceCommunicationBarringUserControlInfo 
+    {
 
-    [XmlElement(ElementName = "lockoutStatus", IsNullable = false, Namespace = "")]
-    public bool LockoutStatus {
-        get => _lockoutStatus;
-        set {
-            LockoutStatusSpecified = true;
-            _lockoutStatus = value;
+        
+        private bool _lockoutStatus;
+
+        [XmlElement(ElementName = "lockoutStatus", IsNullable = false, Namespace = "")]
+        public bool LockoutStatus {
+            get => _lockoutStatus;
+            set {
+                LockoutStatusSpecified = true;
+                _lockoutStatus = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LockoutStatusSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.C.OCITable _profileTable;
+        [XmlIgnore]
+        public bool LockoutStatusSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.C.OCITable _profileTable;
 
-    [XmlElement(ElementName = "profileTable", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.C.OCITable ProfileTable {
-        get => _profileTable;
-        set {
-            ProfileTableSpecified = true;
-            _profileTable = value;
+        [XmlElement(ElementName = "profileTable", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable ProfileTable {
+            get => _profileTable;
+            set {
+                ProfileTableSpecified = true;
+                _profileTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ProfileTableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ProfileTableSpecified { get; set; }
+        
+    }
 }

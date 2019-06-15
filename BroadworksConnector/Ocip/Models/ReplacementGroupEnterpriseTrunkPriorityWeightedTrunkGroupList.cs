@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList 
-{
-    private List<BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkPriorityWeightedTrunkGroup> _trunkGroup;
+    /// <summary>
+    /// A list of enterprise trunk priority weighted trunk groups in a group that replaces a previously configured list.
+    /// By convention, an element of this type may be set nill to clear the list.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList 
+    {
 
-    [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkPriorityWeightedTrunkGroup> TrunkGroup {
-        get => _trunkGroup;
-        set {
-            TrunkGroupSpecified = true;
-            _trunkGroup = value;
+        
+        private List<BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkPriorityWeightedTrunkGroup> _trunkGroup;
+
+        [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkPriorityWeightedTrunkGroup> TrunkGroup {
+            get => _trunkGroup;
+            set {
+                TrunkGroupSpecified = true;
+                _trunkGroup = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TrunkGroupSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TrunkGroupSpecified { get; set; }
+        
+    }
 }

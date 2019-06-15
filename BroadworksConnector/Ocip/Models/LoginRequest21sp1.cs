@@ -1,51 +1,67 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class LoginRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _userId;
+    /// <summary>
+    /// LoginRequest21sp1 is 2nd stage of the 2 stage OCI login process.
+    /// The signedPassword is not required for external authentication login from a trusted host (ACL).
+    /// The response is either LoginResponse21sp1 or ErrorResponse
+    /// Replaced by LoginRequest22V3 in AS data mode.
+        /// <see cref="LoginRequest21sp1"/>
+        /// <see cref="LoginResponse21sp1"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="LoginRequest22V3"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class LoginRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        
+        private string _userId;
+
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-    private string _signedPassword;
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+        private string _signedPassword;
 
-    [XmlElement(ElementName = "signedPassword", IsNullable = false, Namespace = "")]
-    public string SignedPassword {
-        get => _signedPassword;
-        set {
-            SignedPasswordSpecified = true;
-            _signedPassword = value;
+        [XmlElement(ElementName = "signedPassword", IsNullable = false, Namespace = "")]
+        public string SignedPassword {
+            get => _signedPassword;
+            set {
+                SignedPasswordSpecified = true;
+                _signedPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SignedPasswordSpecified { get; set; }
-    private string _plainTextPassword;
+        [XmlIgnore]
+        public bool SignedPasswordSpecified { get; set; }
+        
+        private string _plainTextPassword;
 
-    [XmlElement(ElementName = "plainTextPassword", IsNullable = false, Namespace = "")]
-    public string PlainTextPassword {
-        get => _plainTextPassword;
-        set {
-            PlainTextPasswordSpecified = true;
-            _plainTextPassword = value;
+        [XmlElement(ElementName = "plainTextPassword", IsNullable = false, Namespace = "")]
+        public string PlainTextPassword {
+            get => _plainTextPassword;
+            set {
+                PlainTextPasswordSpecified = true;
+                _plainTextPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PlainTextPasswordSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool PlainTextPasswordSpecified { get; set; }
+        
+    }
 }

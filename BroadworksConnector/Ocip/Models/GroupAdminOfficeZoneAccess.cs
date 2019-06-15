@@ -3,12 +3,16 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum GroupAdminOfficeZoneAccess{
-    [XmlEnum(Name = "Full")]
-    Full,
-    [XmlEnum(Name = "Read-Only")]
-    ReadOnly,
- }
+    /// <summary>
+    /// Group Administrator's policy for accessing
+    /// the Office Zone information.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum GroupAdminOfficeZoneAccess    {
+            [XmlEnum(Name = "Full")]
+        Full,
+            [XmlEnum(Name = "Read-Only")]
+        ReadOnly,
+     }
 }

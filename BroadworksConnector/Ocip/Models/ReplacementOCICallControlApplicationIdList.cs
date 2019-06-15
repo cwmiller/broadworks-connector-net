@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ReplacementOCICallControlApplicationIdList 
-{
-    private List<string> _applicationId;
+    /// <summary>
+    /// A list of applicationIds that replaces a previously configured list.
+    /// By convention, an element of this type may be set nill to clear the list.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ReplacementOCICallControlApplicationIdList 
+    {
 
-    [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
-    public List<string> ApplicationId {
-        get => _applicationId;
-        set {
-            ApplicationIdSpecified = true;
-            _applicationId = value;
+        
+        private List<string> _applicationId;
+
+        [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
+        public List<string> ApplicationId {
+            get => _applicationId;
+            set {
+                ApplicationIdSpecified = true;
+                _applicationId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ApplicationIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ApplicationIdSpecified { get; set; }
+        
+    }
 }

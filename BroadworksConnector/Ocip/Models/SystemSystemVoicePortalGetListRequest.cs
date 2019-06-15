@@ -1,12 +1,21 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemSystemVoicePortalGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-}
+    /// <summary>
+    /// Request to get the list of the system voice portals.
+    /// The response is either SystemSystemVoicePortalGetListResponse or ErrorResponse.
+        /// <see cref="SystemSystemVoicePortalGetListResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemSystemVoicePortalGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
+
+        
+    }
 }

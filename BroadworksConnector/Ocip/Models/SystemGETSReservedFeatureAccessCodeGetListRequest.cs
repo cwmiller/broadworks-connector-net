@@ -1,12 +1,21 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemGETSReservedFeatureAccessCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-}
+    /// <summary>
+    /// Get a list of GETS reserved FAC.
+    /// The response is either SystemGETSReservedFeatureAccessCodeGetListResponse or ErrorResponse.
+        /// <see cref="SystemGETSReservedFeatureAccessCodeGetListResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemGETSReservedFeatureAccessCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
+
+        
+    }
 }

@@ -1,194 +1,219 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ProfileAndServiceSharedCallAppearanceInfo 
-{
-    private bool _alertAllAppearancesForClickToDialCalls;
+    /// <summary>
+    /// This is the configuration parameters for shared call appearance service
+    /// The endpointTable contains columns:
+    /// "Device Level", "Device Name", "Device Type", "Line/Port", "SIP Contact", "Port Number". "Private Identity" .
+    /// 
+    /// The "Device Level" column contains one of the AccessDeviceLevel enumerated constants.
+    /// Port numbers are only used by devices with static line ordering.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ProfileAndServiceSharedCallAppearanceInfo 
+    {
 
-    [XmlElement(ElementName = "alertAllAppearancesForClickToDialCalls", IsNullable = false, Namespace = "")]
-    public bool AlertAllAppearancesForClickToDialCalls {
-        get => _alertAllAppearancesForClickToDialCalls;
-        set {
-            AlertAllAppearancesForClickToDialCallsSpecified = true;
-            _alertAllAppearancesForClickToDialCalls = value;
+        
+        private bool _alertAllAppearancesForClickToDialCalls;
+
+        [XmlElement(ElementName = "alertAllAppearancesForClickToDialCalls", IsNullable = false, Namespace = "")]
+        public bool AlertAllAppearancesForClickToDialCalls {
+            get => _alertAllAppearancesForClickToDialCalls;
+            set {
+                AlertAllAppearancesForClickToDialCallsSpecified = true;
+                _alertAllAppearancesForClickToDialCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AlertAllAppearancesForClickToDialCallsSpecified { get; set; }
-    private bool _alertAllAppearancesForGroupPagingCalls;
+        [XmlIgnore]
+        public bool AlertAllAppearancesForClickToDialCallsSpecified { get; set; }
+        
+        private bool _alertAllAppearancesForGroupPagingCalls;
 
-    [XmlElement(ElementName = "alertAllAppearancesForGroupPagingCalls", IsNullable = false, Namespace = "")]
-    public bool AlertAllAppearancesForGroupPagingCalls {
-        get => _alertAllAppearancesForGroupPagingCalls;
-        set {
-            AlertAllAppearancesForGroupPagingCallsSpecified = true;
-            _alertAllAppearancesForGroupPagingCalls = value;
+        [XmlElement(ElementName = "alertAllAppearancesForGroupPagingCalls", IsNullable = false, Namespace = "")]
+        public bool AlertAllAppearancesForGroupPagingCalls {
+            get => _alertAllAppearancesForGroupPagingCalls;
+            set {
+                AlertAllAppearancesForGroupPagingCallsSpecified = true;
+                _alertAllAppearancesForGroupPagingCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AlertAllAppearancesForGroupPagingCallsSpecified { get; set; }
-    private int _maxAppearances;
+        [XmlIgnore]
+        public bool AlertAllAppearancesForGroupPagingCallsSpecified { get; set; }
+        
+        private int _maxAppearances;
 
-    [XmlElement(ElementName = "maxAppearances", IsNullable = false, Namespace = "")]
-    public int MaxAppearances {
-        get => _maxAppearances;
-        set {
-            MaxAppearancesSpecified = true;
-            _maxAppearances = value;
+        [XmlElement(ElementName = "maxAppearances", IsNullable = false, Namespace = "")]
+        public int MaxAppearances {
+            get => _maxAppearances;
+            set {
+                MaxAppearancesSpecified = true;
+                _maxAppearances = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MaxAppearancesSpecified { get; set; }
-    private bool _allowSCACallRetrieve;
+        [XmlIgnore]
+        public bool MaxAppearancesSpecified { get; set; }
+        
+        private bool _allowSCACallRetrieve;
 
-    [XmlElement(ElementName = "allowSCACallRetrieve", IsNullable = false, Namespace = "")]
-    public bool AllowSCACallRetrieve {
-        get => _allowSCACallRetrieve;
-        set {
-            AllowSCACallRetrieveSpecified = true;
-            _allowSCACallRetrieve = value;
+        [XmlElement(ElementName = "allowSCACallRetrieve", IsNullable = false, Namespace = "")]
+        public bool AllowSCACallRetrieve {
+            get => _allowSCACallRetrieve;
+            set {
+                AllowSCACallRetrieveSpecified = true;
+                _allowSCACallRetrieve = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowSCACallRetrieveSpecified { get; set; }
-    private bool _enableMultipleCallArrangement;
+        [XmlIgnore]
+        public bool AllowSCACallRetrieveSpecified { get; set; }
+        
+        private bool _enableMultipleCallArrangement;
 
-    [XmlElement(ElementName = "enableMultipleCallArrangement", IsNullable = false, Namespace = "")]
-    public bool EnableMultipleCallArrangement {
-        get => _enableMultipleCallArrangement;
-        set {
-            EnableMultipleCallArrangementSpecified = true;
-            _enableMultipleCallArrangement = value;
+        [XmlElement(ElementName = "enableMultipleCallArrangement", IsNullable = false, Namespace = "")]
+        public bool EnableMultipleCallArrangement {
+            get => _enableMultipleCallArrangement;
+            set {
+                EnableMultipleCallArrangementSpecified = true;
+                _enableMultipleCallArrangement = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableMultipleCallArrangementSpecified { get; set; }
-    private bool _multipleCallArrangementIsActive;
+        [XmlIgnore]
+        public bool EnableMultipleCallArrangementSpecified { get; set; }
+        
+        private bool _multipleCallArrangementIsActive;
 
-    [XmlElement(ElementName = "multipleCallArrangementIsActive", IsNullable = false, Namespace = "")]
-    public bool MultipleCallArrangementIsActive {
-        get => _multipleCallArrangementIsActive;
-        set {
-            MultipleCallArrangementIsActiveSpecified = true;
-            _multipleCallArrangementIsActive = value;
+        [XmlElement(ElementName = "multipleCallArrangementIsActive", IsNullable = false, Namespace = "")]
+        public bool MultipleCallArrangementIsActive {
+            get => _multipleCallArrangementIsActive;
+            set {
+                MultipleCallArrangementIsActiveSpecified = true;
+                _multipleCallArrangementIsActive = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MultipleCallArrangementIsActiveSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.C.OCITable _endpointTable;
+        [XmlIgnore]
+        public bool MultipleCallArrangementIsActiveSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.C.OCITable _endpointTable;
 
-    [XmlElement(ElementName = "endpointTable", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.C.OCITable EndpointTable {
-        get => _endpointTable;
-        set {
-            EndpointTableSpecified = true;
-            _endpointTable = value;
+        [XmlElement(ElementName = "endpointTable", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable EndpointTable {
+            get => _endpointTable;
+            set {
+                EndpointTableSpecified = true;
+                _endpointTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EndpointTableSpecified { get; set; }
-    private bool _allowBridgingBetweenLocations;
+        [XmlIgnore]
+        public bool EndpointTableSpecified { get; set; }
+        
+        private bool _allowBridgingBetweenLocations;
 
-    [XmlElement(ElementName = "allowBridgingBetweenLocations", IsNullable = false, Namespace = "")]
-    public bool AllowBridgingBetweenLocations {
-        get => _allowBridgingBetweenLocations;
-        set {
-            AllowBridgingBetweenLocationsSpecified = true;
-            _allowBridgingBetweenLocations = value;
+        [XmlElement(ElementName = "allowBridgingBetweenLocations", IsNullable = false, Namespace = "")]
+        public bool AllowBridgingBetweenLocations {
+            get => _allowBridgingBetweenLocations;
+            set {
+                AllowBridgingBetweenLocationsSpecified = true;
+                _allowBridgingBetweenLocations = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowBridgingBetweenLocationsSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
+        [XmlIgnore]
+        public bool AllowBridgingBetweenLocationsSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
 
-    [XmlElement(ElementName = "bridgeWarningTone", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone {
-        get => _bridgeWarningTone;
-        set {
-            BridgeWarningToneSpecified = true;
-            _bridgeWarningTone = value;
+        [XmlElement(ElementName = "bridgeWarningTone", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone {
+            get => _bridgeWarningTone;
+            set {
+                BridgeWarningToneSpecified = true;
+                _bridgeWarningTone = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool BridgeWarningToneSpecified { get; set; }
-    private bool _enableCallParkNotification;
+        [XmlIgnore]
+        public bool BridgeWarningToneSpecified { get; set; }
+        
+        private bool _enableCallParkNotification;
 
-    [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
-    public bool EnableCallParkNotification {
-        get => _enableCallParkNotification;
-        set {
-            EnableCallParkNotificationSpecified = true;
-            _enableCallParkNotification = value;
+        [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
+        public bool EnableCallParkNotification {
+            get => _enableCallParkNotification;
+            set {
+                EnableCallParkNotificationSpecified = true;
+                _enableCallParkNotification = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableCallParkNotificationSpecified { get; set; }
-    private bool _useUserPrimaryWithAlternateCallsSetting;
+        [XmlIgnore]
+        public bool EnableCallParkNotificationSpecified { get; set; }
+        
+        private bool _useUserPrimaryWithAlternateCallsSetting;
 
-    [XmlElement(ElementName = "useUserPrimaryWithAlternateCallsSetting", IsNullable = false, Namespace = "")]
-    public bool UseUserPrimaryWithAlternateCallsSetting {
-        get => _useUserPrimaryWithAlternateCallsSetting;
-        set {
-            UseUserPrimaryWithAlternateCallsSettingSpecified = true;
-            _useUserPrimaryWithAlternateCallsSetting = value;
+        [XmlElement(ElementName = "useUserPrimaryWithAlternateCallsSetting", IsNullable = false, Namespace = "")]
+        public bool UseUserPrimaryWithAlternateCallsSetting {
+            get => _useUserPrimaryWithAlternateCallsSetting;
+            set {
+                UseUserPrimaryWithAlternateCallsSettingSpecified = true;
+                _useUserPrimaryWithAlternateCallsSetting = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseUserPrimaryWithAlternateCallsSettingSpecified { get; set; }
-    private bool _allowSimultaneousPrimaryAndAlternate;
+        [XmlIgnore]
+        public bool UseUserPrimaryWithAlternateCallsSettingSpecified { get; set; }
+        
+        private bool _allowSimultaneousPrimaryAndAlternate;
 
-    [XmlElement(ElementName = "allowSimultaneousPrimaryAndAlternate", IsNullable = false, Namespace = "")]
-    public bool AllowSimultaneousPrimaryAndAlternate {
-        get => _allowSimultaneousPrimaryAndAlternate;
-        set {
-            AllowSimultaneousPrimaryAndAlternateSpecified = true;
-            _allowSimultaneousPrimaryAndAlternate = value;
+        [XmlElement(ElementName = "allowSimultaneousPrimaryAndAlternate", IsNullable = false, Namespace = "")]
+        public bool AllowSimultaneousPrimaryAndAlternate {
+            get => _allowSimultaneousPrimaryAndAlternate;
+            set {
+                AllowSimultaneousPrimaryAndAlternateSpecified = true;
+                _allowSimultaneousPrimaryAndAlternate = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowSimultaneousPrimaryAndAlternateSpecified { get; set; }
-    private bool _restrictCallRetrieveOfPrimary;
+        [XmlIgnore]
+        public bool AllowSimultaneousPrimaryAndAlternateSpecified { get; set; }
+        
+        private bool _restrictCallRetrieveOfPrimary;
 
-    [XmlElement(ElementName = "restrictCallRetrieveOfPrimary", IsNullable = false, Namespace = "")]
-    public bool RestrictCallRetrieveOfPrimary {
-        get => _restrictCallRetrieveOfPrimary;
-        set {
-            RestrictCallRetrieveOfPrimarySpecified = true;
-            _restrictCallRetrieveOfPrimary = value;
+        [XmlElement(ElementName = "restrictCallRetrieveOfPrimary", IsNullable = false, Namespace = "")]
+        public bool RestrictCallRetrieveOfPrimary {
+            get => _restrictCallRetrieveOfPrimary;
+            set {
+                RestrictCallRetrieveOfPrimarySpecified = true;
+                _restrictCallRetrieveOfPrimary = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RestrictCallRetrieveOfPrimarySpecified { get; set; }
-    private bool _restrictCallBridgingOfPrimary;
+        [XmlIgnore]
+        public bool RestrictCallRetrieveOfPrimarySpecified { get; set; }
+        
+        private bool _restrictCallBridgingOfPrimary;
 
-    [XmlElement(ElementName = "restrictCallBridgingOfPrimary", IsNullable = false, Namespace = "")]
-    public bool RestrictCallBridgingOfPrimary {
-        get => _restrictCallBridgingOfPrimary;
-        set {
-            RestrictCallBridgingOfPrimarySpecified = true;
-            _restrictCallBridgingOfPrimary = value;
+        [XmlElement(ElementName = "restrictCallBridgingOfPrimary", IsNullable = false, Namespace = "")]
+        public bool RestrictCallBridgingOfPrimary {
+            get => _restrictCallBridgingOfPrimary;
+            set {
+                RestrictCallBridgingOfPrimarySpecified = true;
+                _restrictCallBridgingOfPrimary = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RestrictCallBridgingOfPrimarySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool RestrictCallBridgingOfPrimarySpecified { get; set; }
+        
+    }
 }

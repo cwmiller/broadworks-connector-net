@@ -1,25 +1,36 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserBroadWorksAnywhereGetAvailablePortalListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.C.OCITable _portalTable;
+    /// <summary>
+    /// Response to the UserBroadWorksAnywhereGetAvailablePortalListRequest.
+    /// Contains a table with column headings: "Portal ID", "Phone Number", "Extension", "Language".
+    /// Replaced by UserBroadWorksAnywhereGetAvailablePortalListResponse21sp1
+        /// <see cref="UserBroadWorksAnywhereGetAvailablePortalListRequest"/>
+        /// <see cref="UserBroadWorksAnywhereGetAvailablePortalListResponse21sp1"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserBroadWorksAnywhereGetAvailablePortalListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "portalTable", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.C.OCITable PortalTable {
-        get => _portalTable;
-        set {
-            PortalTableSpecified = true;
-            _portalTable = value;
+        
+        private BroadWorksConnector.Ocip.Models.C.OCITable _portalTable;
+
+        [XmlElement(ElementName = "portalTable", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable PortalTable {
+            get => _portalTable;
+            set {
+                PortalTableSpecified = true;
+                _portalTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PortalTableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool PortalTableSpecified { get; set; }
+        
+    }
 }

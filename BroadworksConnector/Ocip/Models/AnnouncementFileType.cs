@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum AnnouncementFileType{
-    [XmlEnum(Name = "Audio")]
-    Audio,
-    [XmlEnum(Name = "Video")]
-    Video,
- }
+    /// <summary>
+    /// Announcement types - audio or video
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum AnnouncementFileType    {
+            [XmlEnum(Name = "Audio")]
+        Audio,
+            [XmlEnum(Name = "Video")]
+        Video,
+     }
 }

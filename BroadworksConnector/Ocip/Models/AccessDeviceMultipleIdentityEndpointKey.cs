@@ -1,51 +1,63 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class AccessDeviceMultipleIdentityEndpointKey 
-{
-    private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
+    /// <summary>
+    /// Access device end point in the context of a modify or delete command.
+    /// The endpoint is identified by its linePort (public Identity) and possibly a private Identity.
+    /// The following elements are only used in XS data mode and ignored in AS data mode:
+    /// privateIdentity
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class AccessDeviceMultipleIdentityEndpointKey 
+    {
 
-    [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
-        get => _accessDevice;
-        set {
-            AccessDeviceSpecified = true;
-            _accessDevice = value;
+        
+        private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
+
+        [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
+            get => _accessDevice;
+            set {
+                AccessDeviceSpecified = true;
+                _accessDevice = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AccessDeviceSpecified { get; set; }
-    private string _linePort;
+        [XmlIgnore]
+        public bool AccessDeviceSpecified { get; set; }
+        
+        private string _linePort;
 
-    [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-    public string LinePort {
-        get => _linePort;
-        set {
-            LinePortSpecified = true;
-            _linePort = value;
+        [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
+        public string LinePort {
+            get => _linePort;
+            set {
+                LinePortSpecified = true;
+                _linePort = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LinePortSpecified { get; set; }
-    private string _privateIdentity;
+        [XmlIgnore]
+        public bool LinePortSpecified { get; set; }
+        
+        private string _privateIdentity;
 
-    [XmlElement(ElementName = "privateIdentity", IsNullable = false, Namespace = "")]
-    public string PrivateIdentity {
-        get => _privateIdentity;
-        set {
-            PrivateIdentitySpecified = true;
-            _privateIdentity = value;
+        [XmlElement(ElementName = "privateIdentity", IsNullable = false, Namespace = "")]
+        public string PrivateIdentity {
+            get => _privateIdentity;
+            set {
+                PrivateIdentitySpecified = true;
+                _privateIdentity = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PrivateIdentitySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool PrivateIdentitySpecified { get; set; }
+        
+    }
 }

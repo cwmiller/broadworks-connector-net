@@ -1,51 +1,60 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class FileRepositoryProtocolFTP16 
-{
-    private bool _ftpPassive;
+    /// <summary>
+    /// Attributes of the FTP protocol when the file repository interface is using FTP.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class FileRepositoryProtocolFTP16 
+    {
 
-    [XmlElement(ElementName = "ftpPassive", IsNullable = false, Namespace = "")]
-    public bool FtpPassive {
-        get => _ftpPassive;
-        set {
-            FtpPassiveSpecified = true;
-            _ftpPassive = value;
+        
+        private bool _ftpPassive;
+
+        [XmlElement(ElementName = "ftpPassive", IsNullable = false, Namespace = "")]
+        public bool FtpPassive {
+            get => _ftpPassive;
+            set {
+                FtpPassiveSpecified = true;
+                _ftpPassive = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool FtpPassiveSpecified { get; set; }
-    private string _netAddress;
+        [XmlIgnore]
+        public bool FtpPassiveSpecified { get; set; }
+        
+        private string _netAddress;
 
-    [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-    public string NetAddress {
-        get => _netAddress;
-        set {
-            NetAddressSpecified = true;
-            _netAddress = value;
+        [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
+        public string NetAddress {
+            get => _netAddress;
+            set {
+                NetAddressSpecified = true;
+                _netAddress = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NetAddressSpecified { get; set; }
-    private bool _ftpRemoteVerification;
+        [XmlIgnore]
+        public bool NetAddressSpecified { get; set; }
+        
+        private bool _ftpRemoteVerification;
 
-    [XmlElement(ElementName = "ftpRemoteVerification", IsNullable = false, Namespace = "")]
-    public bool FtpRemoteVerification {
-        get => _ftpRemoteVerification;
-        set {
-            FtpRemoteVerificationSpecified = true;
-            _ftpRemoteVerification = value;
+        [XmlElement(ElementName = "ftpRemoteVerification", IsNullable = false, Namespace = "")]
+        public bool FtpRemoteVerification {
+            get => _ftpRemoteVerification;
+            set {
+                FtpRemoteVerificationSpecified = true;
+                _ftpRemoteVerification = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool FtpRemoteVerificationSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool FtpRemoteVerificationSpecified { get; set; }
+        
+    }
 }

@@ -1,12 +1,24 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemLocationBasedCallingRestrictionsGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-}
+    /// <summary>
+    /// Gets system level the Location Based Calling Restrictions attributes.
+    /// The response is either a SystemLocationBasedCallingRestrictionsGetResponse or an ErrorResponse.
+    /// 
+    /// Replaced by: SystemLocationBasedCallingRestrictionsGetRequest17sp3
+        /// <see cref="SystemLocationBasedCallingRestrictionsGetResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="SystemLocationBasedCallingRestrictionsGetRequest17sp3"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemLocationBasedCallingRestrictionsGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
+
+        
+    }
 }

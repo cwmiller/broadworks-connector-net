@@ -1,116 +1,131 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderAccessDeviceFileGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode _fileSource;
+    /// <summary>
+    /// Response to ServiceProviderAccessDeviceFileGetRequest21.
+        /// <see cref="ServiceProviderAccessDeviceFileGetRequest21"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderAccessDeviceFileGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource {
-        get => _fileSource;
-        set {
-            FileSourceSpecified = true;
-            _fileSource = value;
+        
+        private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode _fileSource;
+
+        [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource {
+            get => _fileSource;
+            set {
+                FileSourceSpecified = true;
+                _fileSource = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool FileSourceSpecified { get; set; }
-    private string _configurationFileName;
+        [XmlIgnore]
+        public bool FileSourceSpecified { get; set; }
+        
+        private string _configurationFileName;
 
-    [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
-    public string ConfigurationFileName {
-        get => _configurationFileName;
-        set {
-            ConfigurationFileNameSpecified = true;
-            _configurationFileName = value;
+        [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
+        public string ConfigurationFileName {
+            get => _configurationFileName;
+            set {
+                ConfigurationFileNameSpecified = true;
+                _configurationFileName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ConfigurationFileNameSpecified { get; set; }
-    private string _accessUrl;
+        [XmlIgnore]
+        public bool ConfigurationFileNameSpecified { get; set; }
+        
+        private string _accessUrl;
 
-    [XmlElement(ElementName = "accessUrl", IsNullable = false, Namespace = "")]
-    public string AccessUrl {
-        get => _accessUrl;
-        set {
-            AccessUrlSpecified = true;
-            _accessUrl = value;
+        [XmlElement(ElementName = "accessUrl", IsNullable = false, Namespace = "")]
+        public string AccessUrl {
+            get => _accessUrl;
+            set {
+                AccessUrlSpecified = true;
+                _accessUrl = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AccessUrlSpecified { get; set; }
-    private string _repositoryUrl;
+        [XmlIgnore]
+        public bool AccessUrlSpecified { get; set; }
+        
+        private string _repositoryUrl;
 
-    [XmlElement(ElementName = "repositoryUrl", IsNullable = false, Namespace = "")]
-    public string RepositoryUrl {
-        get => _repositoryUrl;
-        set {
-            RepositoryUrlSpecified = true;
-            _repositoryUrl = value;
+        [XmlElement(ElementName = "repositoryUrl", IsNullable = false, Namespace = "")]
+        public string RepositoryUrl {
+            get => _repositoryUrl;
+            set {
+                RepositoryUrlSpecified = true;
+                _repositoryUrl = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RepositoryUrlSpecified { get; set; }
-    private string _templateUrl;
+        [XmlIgnore]
+        public bool RepositoryUrlSpecified { get; set; }
+        
+        private string _templateUrl;
 
-    [XmlElement(ElementName = "templateUrl", IsNullable = false, Namespace = "")]
-    public string TemplateUrl {
-        get => _templateUrl;
-        set {
-            TemplateUrlSpecified = true;
-            _templateUrl = value;
+        [XmlElement(ElementName = "templateUrl", IsNullable = false, Namespace = "")]
+        public string TemplateUrl {
+            get => _templateUrl;
+            set {
+                TemplateUrlSpecified = true;
+                _templateUrl = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TemplateUrlSpecified { get; set; }
-    private bool _extendedCaptureEnabled;
+        [XmlIgnore]
+        public bool TemplateUrlSpecified { get; set; }
+        
+        private bool _extendedCaptureEnabled;
 
-    [XmlElement(ElementName = "extendedCaptureEnabled", IsNullable = false, Namespace = "")]
-    public bool ExtendedCaptureEnabled {
-        get => _extendedCaptureEnabled;
-        set {
-            ExtendedCaptureEnabledSpecified = true;
-            _extendedCaptureEnabled = value;
+        [XmlElement(ElementName = "extendedCaptureEnabled", IsNullable = false, Namespace = "")]
+        public bool ExtendedCaptureEnabled {
+            get => _extendedCaptureEnabled;
+            set {
+                ExtendedCaptureEnabledSpecified = true;
+                _extendedCaptureEnabled = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ExtendedCaptureEnabledSpecified { get; set; }
-    private string _extendedCaptureURL;
+        [XmlIgnore]
+        public bool ExtendedCaptureEnabledSpecified { get; set; }
+        
+        private string _extendedCaptureURL;
 
-    [XmlElement(ElementName = "extendedCaptureURL", IsNullable = false, Namespace = "")]
-    public string ExtendedCaptureURL {
-        get => _extendedCaptureURL;
-        set {
-            ExtendedCaptureURLSpecified = true;
-            _extendedCaptureURL = value;
+        [XmlElement(ElementName = "extendedCaptureURL", IsNullable = false, Namespace = "")]
+        public string ExtendedCaptureURL {
+            get => _extendedCaptureURL;
+            set {
+                ExtendedCaptureURLSpecified = true;
+                _extendedCaptureURL = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ExtendedCaptureURLSpecified { get; set; }
-    private bool _allowUploadFromDevice;
+        [XmlIgnore]
+        public bool ExtendedCaptureURLSpecified { get; set; }
+        
+        private bool _allowUploadFromDevice;
 
-    [XmlElement(ElementName = "allowUploadFromDevice", IsNullable = false, Namespace = "")]
-    public bool AllowUploadFromDevice {
-        get => _allowUploadFromDevice;
-        set {
-            AllowUploadFromDeviceSpecified = true;
-            _allowUploadFromDevice = value;
+        [XmlElement(ElementName = "allowUploadFromDevice", IsNullable = false, Namespace = "")]
+        public bool AllowUploadFromDevice {
+            get => _allowUploadFromDevice;
+            set {
+                AllowUploadFromDeviceSpecified = true;
+                _allowUploadFromDevice = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowUploadFromDeviceSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool AllowUploadFromDeviceSpecified { get; set; }
+        
+    }
 }

@@ -1,38 +1,49 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ResellerModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _resellerId;
+    /// <summary>
+    /// Modify the reseller profile.
+    /// The response is either SuccessResponse or ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ResellerModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-    public string ResellerId {
-        get => _resellerId;
-        set {
-            ResellerIdSpecified = true;
-            _resellerId = value;
+        
+        private string _resellerId;
+
+        [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
+        public string ResellerId {
+            get => _resellerId;
+            set {
+                ResellerIdSpecified = true;
+                _resellerId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ResellerIdSpecified { get; set; }
-    private string _resellerName;
+        [XmlIgnore]
+        public bool ResellerIdSpecified { get; set; }
+        
+        private string _resellerName;
 
-    [XmlElement(ElementName = "resellerName", IsNullable = true, Namespace = "")]
-    public string ResellerName {
-        get => _resellerName;
-        set {
-            ResellerNameSpecified = true;
-            _resellerName = value;
+        [XmlElement(ElementName = "resellerName", IsNullable = true, Namespace = "")]
+        public string ResellerName {
+            get => _resellerName;
+            set {
+                ResellerNameSpecified = true;
+                _resellerName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ResellerNameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ResellerNameSpecified { get; set; }
+        
+    }
 }

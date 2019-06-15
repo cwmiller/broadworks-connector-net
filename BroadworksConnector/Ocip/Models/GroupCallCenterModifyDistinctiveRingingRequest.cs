@@ -1,64 +1,77 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupCallCenterModifyDistinctiveRingingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceUserId;
+    /// <summary>
+    /// Modify the distinctive ringing configuration values for call center.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupCallCenterModifyDistinctiveRingingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-    public string ServiceUserId {
-        get => _serviceUserId;
-        set {
-            ServiceUserIdSpecified = true;
-            _serviceUserId = value;
+        
+        private string _serviceUserId;
+
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        public string ServiceUserId {
+            get => _serviceUserId;
+            set {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceUserIdSpecified { get; set; }
-    private bool _distinctiveRingingCallCenterCalls;
+        [XmlIgnore]
+        public bool ServiceUserIdSpecified { get; set; }
+        
+        private bool _distinctiveRingingCallCenterCalls;
 
-    [XmlElement(ElementName = "distinctiveRingingCallCenterCalls", IsNullable = false, Namespace = "")]
-    public bool DistinctiveRingingCallCenterCalls {
-        get => _distinctiveRingingCallCenterCalls;
-        set {
-            DistinctiveRingingCallCenterCallsSpecified = true;
-            _distinctiveRingingCallCenterCalls = value;
+        [XmlElement(ElementName = "distinctiveRingingCallCenterCalls", IsNullable = false, Namespace = "")]
+        public bool DistinctiveRingingCallCenterCalls {
+            get => _distinctiveRingingCallCenterCalls;
+            set {
+                DistinctiveRingingCallCenterCallsSpecified = true;
+                _distinctiveRingingCallCenterCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DistinctiveRingingCallCenterCallsSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingRingPatternForCallCenter;
+        [XmlIgnore]
+        public bool DistinctiveRingingCallCenterCallsSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingRingPatternForCallCenter;
 
-    [XmlElement(ElementName = "distinctiveRingingRingPatternForCallCenter", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.RingPattern DistinctiveRingingRingPatternForCallCenter {
-        get => _distinctiveRingingRingPatternForCallCenter;
-        set {
-            DistinctiveRingingRingPatternForCallCenterSpecified = true;
-            _distinctiveRingingRingPatternForCallCenter = value;
+        [XmlElement(ElementName = "distinctiveRingingRingPatternForCallCenter", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.RingPattern DistinctiveRingingRingPatternForCallCenter {
+            get => _distinctiveRingingRingPatternForCallCenter;
+            set {
+                DistinctiveRingingRingPatternForCallCenterSpecified = true;
+                _distinctiveRingingRingPatternForCallCenter = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DistinctiveRingingRingPatternForCallCenterSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingForceDeliveryRingPattern;
+        [XmlIgnore]
+        public bool DistinctiveRingingRingPatternForCallCenterSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingForceDeliveryRingPattern;
 
-    [XmlElement(ElementName = "distinctiveRingingForceDeliveryRingPattern", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.RingPattern DistinctiveRingingForceDeliveryRingPattern {
-        get => _distinctiveRingingForceDeliveryRingPattern;
-        set {
-            DistinctiveRingingForceDeliveryRingPatternSpecified = true;
-            _distinctiveRingingForceDeliveryRingPattern = value;
+        [XmlElement(ElementName = "distinctiveRingingForceDeliveryRingPattern", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.RingPattern DistinctiveRingingForceDeliveryRingPattern {
+            get => _distinctiveRingingForceDeliveryRingPattern;
+            set {
+                DistinctiveRingingForceDeliveryRingPatternSpecified = true;
+                _distinctiveRingingForceDeliveryRingPattern = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DistinctiveRingingForceDeliveryRingPatternSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DistinctiveRingingForceDeliveryRingPatternSpecified { get; set; }
+        
+    }
 }

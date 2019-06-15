@@ -1,38 +1,52 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class EnterpriseDepartmentGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _enterpriseId;
+    /// <summary>
+    /// Request a list of departments in an enterprise. You may request only the
+    /// list of departments defined at the enterprise-level, or you may request
+    /// the list of all departments in the enterprise including all the departments
+    /// defined within the groups inside the enterprise.
+    /// The response is either EnterpriseDepartmentGetListResponse or ErrorResponse.
+        /// <see cref="EnterpriseDepartmentGetListResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class EnterpriseDepartmentGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "enterpriseId", IsNullable = false, Namespace = "")]
-    public string EnterpriseId {
-        get => _enterpriseId;
-        set {
-            EnterpriseIdSpecified = true;
-            _enterpriseId = value;
+        
+        private string _enterpriseId;
+
+        [XmlElement(ElementName = "enterpriseId", IsNullable = false, Namespace = "")]
+        public string EnterpriseId {
+            get => _enterpriseId;
+            set {
+                EnterpriseIdSpecified = true;
+                _enterpriseId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnterpriseIdSpecified { get; set; }
-    private bool _includeGroupDepartments;
+        [XmlIgnore]
+        public bool EnterpriseIdSpecified { get; set; }
+        
+        private bool _includeGroupDepartments;
 
-    [XmlElement(ElementName = "includeGroupDepartments", IsNullable = false, Namespace = "")]
-    public bool IncludeGroupDepartments {
-        get => _includeGroupDepartments;
-        set {
-            IncludeGroupDepartmentsSpecified = true;
-            _includeGroupDepartments = value;
+        [XmlElement(ElementName = "includeGroupDepartments", IsNullable = false, Namespace = "")]
+        public bool IncludeGroupDepartments {
+            get => _includeGroupDepartments;
+            set {
+                IncludeGroupDepartmentsSpecified = true;
+                _includeGroupDepartments = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IncludeGroupDepartmentsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool IncludeGroupDepartmentsSpecified { get; set; }
+        
+    }
 }

@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemGroupNightForwardingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _nightForwardInterGroupCallsWithinEnterprise;
+    /// <summary>
+    /// Response to SystemGroupNightForwardingGetRequest.
+        /// <see cref="SystemGroupNightForwardingGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemGroupNightForwardingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "nightForwardInterGroupCallsWithinEnterprise", IsNullable = false, Namespace = "")]
-    public bool NightForwardInterGroupCallsWithinEnterprise {
-        get => _nightForwardInterGroupCallsWithinEnterprise;
-        set {
-            NightForwardInterGroupCallsWithinEnterpriseSpecified = true;
-            _nightForwardInterGroupCallsWithinEnterprise = value;
+        
+        private bool _nightForwardInterGroupCallsWithinEnterprise;
+
+        [XmlElement(ElementName = "nightForwardInterGroupCallsWithinEnterprise", IsNullable = false, Namespace = "")]
+        public bool NightForwardInterGroupCallsWithinEnterprise {
+            get => _nightForwardInterGroupCallsWithinEnterprise;
+            set {
+                NightForwardInterGroupCallsWithinEnterpriseSpecified = true;
+                _nightForwardInterGroupCallsWithinEnterprise = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NightForwardInterGroupCallsWithinEnterpriseSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool NightForwardInterGroupCallsWithinEnterpriseSpecified { get; set; }
+        
+    }
 }

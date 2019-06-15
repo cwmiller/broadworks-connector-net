@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserOutgoingCallingPlanAuthorizationCodeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _useCustomSettings;
+    /// <summary>
+    /// Response to UserOutgoingCallingPlanAuthorizationCodeGetRequest.
+        /// <see cref="UserOutgoingCallingPlanAuthorizationCodeGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserOutgoingCallingPlanAuthorizationCodeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
-    public bool UseCustomSettings {
-        get => _useCustomSettings;
-        set {
-            UseCustomSettingsSpecified = true;
-            _useCustomSettings = value;
+        
+        private bool _useCustomSettings;
+
+        [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
+        public bool UseCustomSettings {
+            get => _useCustomSettings;
+            set {
+                UseCustomSettingsSpecified = true;
+                _useCustomSettings = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseCustomSettingsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool UseCustomSettingsSpecified { get; set; }
+        
+    }
 }

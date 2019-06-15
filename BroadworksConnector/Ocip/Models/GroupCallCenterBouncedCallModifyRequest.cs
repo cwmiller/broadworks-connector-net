@@ -1,142 +1,170 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupCallCenterBouncedCallModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceUserId;
+    /// <summary>
+    /// Modify a call center's bounced call settings.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// enableTransfer
+    /// transferPhoneNumber
+    /// bounceCallWhenAgentUnavailable
+    /// alertCallCenterCallOnHold
+    /// alertCallCenterCallOnHoldSeconds
+    /// bounceCallCenterCallOnHold
+    /// bounceCallCenterCallOnHoldSeconds
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupCallCenterBouncedCallModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-    public string ServiceUserId {
-        get => _serviceUserId;
-        set {
-            ServiceUserIdSpecified = true;
-            _serviceUserId = value;
+        
+        private string _serviceUserId;
+
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        public string ServiceUserId {
+            get => _serviceUserId;
+            set {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceUserIdSpecified { get; set; }
-    private bool _isActive;
+        [XmlIgnore]
+        public bool ServiceUserIdSpecified { get; set; }
+        
+        private bool _isActive;
 
-    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-    public bool IsActive {
-        get => _isActive;
-        set {
-            IsActiveSpecified = true;
-            _isActive = value;
+        [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+        public bool IsActive {
+            get => _isActive;
+            set {
+                IsActiveSpecified = true;
+                _isActive = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsActiveSpecified { get; set; }
-    private int _numberOfRingsBeforeBouncingCall;
+        [XmlIgnore]
+        public bool IsActiveSpecified { get; set; }
+        
+        private int _numberOfRingsBeforeBouncingCall;
 
-    [XmlElement(ElementName = "numberOfRingsBeforeBouncingCall", IsNullable = false, Namespace = "")]
-    public int NumberOfRingsBeforeBouncingCall {
-        get => _numberOfRingsBeforeBouncingCall;
-        set {
-            NumberOfRingsBeforeBouncingCallSpecified = true;
-            _numberOfRingsBeforeBouncingCall = value;
+        [XmlElement(ElementName = "numberOfRingsBeforeBouncingCall", IsNullable = false, Namespace = "")]
+        public int NumberOfRingsBeforeBouncingCall {
+            get => _numberOfRingsBeforeBouncingCall;
+            set {
+                NumberOfRingsBeforeBouncingCallSpecified = true;
+                _numberOfRingsBeforeBouncingCall = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NumberOfRingsBeforeBouncingCallSpecified { get; set; }
-    private bool _enableTransfer;
+        [XmlIgnore]
+        public bool NumberOfRingsBeforeBouncingCallSpecified { get; set; }
+        
+        private bool _enableTransfer;
 
-    [XmlElement(ElementName = "enableTransfer", IsNullable = false, Namespace = "")]
-    public bool EnableTransfer {
-        get => _enableTransfer;
-        set {
-            EnableTransferSpecified = true;
-            _enableTransfer = value;
+        [XmlElement(ElementName = "enableTransfer", IsNullable = false, Namespace = "")]
+        public bool EnableTransfer {
+            get => _enableTransfer;
+            set {
+                EnableTransferSpecified = true;
+                _enableTransfer = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableTransferSpecified { get; set; }
-    private string _transferPhoneNumber;
+        [XmlIgnore]
+        public bool EnableTransferSpecified { get; set; }
+        
+        private string _transferPhoneNumber;
 
-    [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
-    public string TransferPhoneNumber {
-        get => _transferPhoneNumber;
-        set {
-            TransferPhoneNumberSpecified = true;
-            _transferPhoneNumber = value;
+        [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
+        public string TransferPhoneNumber {
+            get => _transferPhoneNumber;
+            set {
+                TransferPhoneNumberSpecified = true;
+                _transferPhoneNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TransferPhoneNumberSpecified { get; set; }
-    private bool _bounceCallWhenAgentUnavailable;
+        [XmlIgnore]
+        public bool TransferPhoneNumberSpecified { get; set; }
+        
+        private bool _bounceCallWhenAgentUnavailable;
 
-    [XmlElement(ElementName = "bounceCallWhenAgentUnavailable", IsNullable = false, Namespace = "")]
-    public bool BounceCallWhenAgentUnavailable {
-        get => _bounceCallWhenAgentUnavailable;
-        set {
-            BounceCallWhenAgentUnavailableSpecified = true;
-            _bounceCallWhenAgentUnavailable = value;
+        [XmlElement(ElementName = "bounceCallWhenAgentUnavailable", IsNullable = false, Namespace = "")]
+        public bool BounceCallWhenAgentUnavailable {
+            get => _bounceCallWhenAgentUnavailable;
+            set {
+                BounceCallWhenAgentUnavailableSpecified = true;
+                _bounceCallWhenAgentUnavailable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool BounceCallWhenAgentUnavailableSpecified { get; set; }
-    private bool _alertCallCenterCallOnHold;
+        [XmlIgnore]
+        public bool BounceCallWhenAgentUnavailableSpecified { get; set; }
+        
+        private bool _alertCallCenterCallOnHold;
 
-    [XmlElement(ElementName = "alertCallCenterCallOnHold", IsNullable = false, Namespace = "")]
-    public bool AlertCallCenterCallOnHold {
-        get => _alertCallCenterCallOnHold;
-        set {
-            AlertCallCenterCallOnHoldSpecified = true;
-            _alertCallCenterCallOnHold = value;
+        [XmlElement(ElementName = "alertCallCenterCallOnHold", IsNullable = false, Namespace = "")]
+        public bool AlertCallCenterCallOnHold {
+            get => _alertCallCenterCallOnHold;
+            set {
+                AlertCallCenterCallOnHoldSpecified = true;
+                _alertCallCenterCallOnHold = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AlertCallCenterCallOnHoldSpecified { get; set; }
-    private int _alertCallCenterCallOnHoldSeconds;
+        [XmlIgnore]
+        public bool AlertCallCenterCallOnHoldSpecified { get; set; }
+        
+        private int _alertCallCenterCallOnHoldSeconds;
 
-    [XmlElement(ElementName = "alertCallCenterCallOnHoldSeconds", IsNullable = false, Namespace = "")]
-    public int AlertCallCenterCallOnHoldSeconds {
-        get => _alertCallCenterCallOnHoldSeconds;
-        set {
-            AlertCallCenterCallOnHoldSecondsSpecified = true;
-            _alertCallCenterCallOnHoldSeconds = value;
+        [XmlElement(ElementName = "alertCallCenterCallOnHoldSeconds", IsNullable = false, Namespace = "")]
+        public int AlertCallCenterCallOnHoldSeconds {
+            get => _alertCallCenterCallOnHoldSeconds;
+            set {
+                AlertCallCenterCallOnHoldSecondsSpecified = true;
+                _alertCallCenterCallOnHoldSeconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AlertCallCenterCallOnHoldSecondsSpecified { get; set; }
-    private bool _bounceCallCenterCallOnHold;
+        [XmlIgnore]
+        public bool AlertCallCenterCallOnHoldSecondsSpecified { get; set; }
+        
+        private bool _bounceCallCenterCallOnHold;
 
-    [XmlElement(ElementName = "bounceCallCenterCallOnHold", IsNullable = false, Namespace = "")]
-    public bool BounceCallCenterCallOnHold {
-        get => _bounceCallCenterCallOnHold;
-        set {
-            BounceCallCenterCallOnHoldSpecified = true;
-            _bounceCallCenterCallOnHold = value;
+        [XmlElement(ElementName = "bounceCallCenterCallOnHold", IsNullable = false, Namespace = "")]
+        public bool BounceCallCenterCallOnHold {
+            get => _bounceCallCenterCallOnHold;
+            set {
+                BounceCallCenterCallOnHoldSpecified = true;
+                _bounceCallCenterCallOnHold = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool BounceCallCenterCallOnHoldSpecified { get; set; }
-    private int _bounceCallCenterCallOnHoldSeconds;
+        [XmlIgnore]
+        public bool BounceCallCenterCallOnHoldSpecified { get; set; }
+        
+        private int _bounceCallCenterCallOnHoldSeconds;
 
-    [XmlElement(ElementName = "bounceCallCenterCallOnHoldSeconds", IsNullable = false, Namespace = "")]
-    public int BounceCallCenterCallOnHoldSeconds {
-        get => _bounceCallCenterCallOnHoldSeconds;
-        set {
-            BounceCallCenterCallOnHoldSecondsSpecified = true;
-            _bounceCallCenterCallOnHoldSeconds = value;
+        [XmlElement(ElementName = "bounceCallCenterCallOnHoldSeconds", IsNullable = false, Namespace = "")]
+        public int BounceCallCenterCallOnHoldSeconds {
+            get => _bounceCallCenterCallOnHoldSeconds;
+            set {
+                BounceCallCenterCallOnHoldSecondsSpecified = true;
+                _bounceCallCenterCallOnHoldSeconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool BounceCallCenterCallOnHoldSecondsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool BounceCallCenterCallOnHoldSecondsSpecified { get; set; }
+        
+    }
 }

@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum CallingNameRetrievalQueryProtocol{
-    [XmlEnum(Name = "Sip")]
-    Sip,
-    [XmlEnum(Name = "Soap")]
-    Soap,
- }
+    /// <summary>
+    /// Query Protocol.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallingNameRetrievalQueryProtocol    {
+            [XmlEnum(Name = "Sip")]
+        Sip,
+            [XmlEnum(Name = "Soap")]
+        Soap,
+     }
 }

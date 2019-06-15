@@ -3,14 +3,17 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum RecordingPauseResumeNotificationType{
-    [XmlEnum(Name = "None")]
-    None,
-    [XmlEnum(Name = "Beep")]
-    Beep,
-    [XmlEnum(Name = "Play Announcement")]
-    PlayAnnouncement,
- }
+    /// <summary>
+    /// Recording Service Play Resume Notidication Type.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum RecordingPauseResumeNotificationType    {
+            [XmlEnum(Name = "None")]
+        None,
+            [XmlEnum(Name = "Beep")]
+        Beep,
+            [XmlEnum(Name = "Play Announcement")]
+        PlayAnnouncement,
+     }
 }

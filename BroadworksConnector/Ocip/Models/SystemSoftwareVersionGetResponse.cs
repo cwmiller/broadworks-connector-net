@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemSoftwareVersionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private string _version;
+    /// <summary>
+    /// Response to the SystemSoftwareVersionGetRequest.
+        /// <see cref="SystemSoftwareVersionGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemSoftwareVersionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "version", IsNullable = false, Namespace = "")]
-    public string Version {
-        get => _version;
-        set {
-            VersionSpecified = true;
-            _version = value;
+        
+        private string _version;
+
+        [XmlElement(ElementName = "version", IsNullable = false, Namespace = "")]
+        public string Version {
+            get => _version;
+            set {
+                VersionSpecified = true;
+                _version = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool VersionSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool VersionSpecified { get; set; }
+        
+    }
 }

@@ -1,38 +1,49 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ResellerCallNotifyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _resellerId;
+    /// <summary>
+    /// Modify the reseller level data associated with Call Notify.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ResellerCallNotifyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-    public string ResellerId {
-        get => _resellerId;
-        set {
-            ResellerIdSpecified = true;
-            _resellerId = value;
+        
+        private string _resellerId;
+
+        [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
+        public string ResellerId {
+            get => _resellerId;
+            set {
+                ResellerIdSpecified = true;
+                _resellerId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ResellerIdSpecified { get; set; }
-    private string _defaultFromAddress;
+        [XmlIgnore]
+        public bool ResellerIdSpecified { get; set; }
+        
+        private string _defaultFromAddress;
 
-    [XmlElement(ElementName = "defaultFromAddress", IsNullable = true, Namespace = "")]
-    public string DefaultFromAddress {
-        get => _defaultFromAddress;
-        set {
-            DefaultFromAddressSpecified = true;
-            _defaultFromAddress = value;
+        [XmlElement(ElementName = "defaultFromAddress", IsNullable = true, Namespace = "")]
+        public string DefaultFromAddress {
+            get => _defaultFromAddress;
+            set {
+                DefaultFromAddressSpecified = true;
+                _defaultFromAddress = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DefaultFromAddressSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DefaultFromAddressSpecified { get; set; }
+        
+    }
 }

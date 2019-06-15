@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CallCenterScheduledReportCallCenterSelection 
-{
-    private bool _allCallCenter;
+    /// <summary>
+    /// Either all call centers or list of call centers.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class CallCenterScheduledReportCallCenterSelection 
+    {
 
-    [XmlElement(ElementName = "allCallCenter", IsNullable = false, Namespace = "")]
-    public bool AllCallCenter {
-        get => _allCallCenter;
-        set {
-            AllCallCenterSpecified = true;
-            _allCallCenter = value;
+        
+        private bool _allCallCenter;
+
+        [XmlElement(ElementName = "allCallCenter", IsNullable = false, Namespace = "")]
+        public bool AllCallCenter {
+            get => _allCallCenter;
+            set {
+                AllCallCenterSpecified = true;
+                _allCallCenter = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllCallCenterSpecified { get; set; }
-    private List<string> _serviceUserId;
+        [XmlIgnore]
+        public bool AllCallCenterSpecified { get; set; }
+        
+        private List<string> _serviceUserId;
 
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-    public List<string> ServiceUserId {
-        get => _serviceUserId;
-        set {
-            ServiceUserIdSpecified = true;
-            _serviceUserId = value;
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        public List<string> ServiceUserId {
+            get => _serviceUserId;
+            set {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceUserIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ServiceUserIdSpecified { get; set; }
+        
+    }
 }

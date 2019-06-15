@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CommPilotExpressEmailNotifyModify 
-{
-    private bool _sendEmail;
+    /// <summary>
+    /// CommPilot Express Email Notify configuration used in the context of a modify.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class CommPilotExpressEmailNotifyModify 
+    {
 
-    [XmlElement(ElementName = "sendEmail", IsNullable = false, Namespace = "")]
-    public bool SendEmail {
-        get => _sendEmail;
-        set {
-            SendEmailSpecified = true;
-            _sendEmail = value;
+        
+        private bool _sendEmail;
+
+        [XmlElement(ElementName = "sendEmail", IsNullable = false, Namespace = "")]
+        public bool SendEmail {
+            get => _sendEmail;
+            set {
+                SendEmailSpecified = true;
+                _sendEmail = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SendEmailSpecified { get; set; }
-    private string _emailAddress;
+        [XmlIgnore]
+        public bool SendEmailSpecified { get; set; }
+        
+        private string _emailAddress;
 
-    [XmlElement(ElementName = "emailAddress", IsNullable = true, Namespace = "")]
-    public string EmailAddress {
-        get => _emailAddress;
-        set {
-            EmailAddressSpecified = true;
-            _emailAddress = value;
+        [XmlElement(ElementName = "emailAddress", IsNullable = true, Namespace = "")]
+        public string EmailAddress {
+            get => _emailAddress;
+            set {
+                EmailAddressSpecified = true;
+                _emailAddress = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EmailAddressSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool EmailAddressSpecified { get; set; }
+        
+    }
 }

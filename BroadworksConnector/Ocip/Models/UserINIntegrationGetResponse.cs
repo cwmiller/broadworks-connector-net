@@ -1,38 +1,47 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserINIntegrationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private int _originatingServiceKey;
+    /// <summary>
+    /// Response to UserINIntegrationGetRequest
+        /// <see cref="UserINIntegrationGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserINIntegrationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "originatingServiceKey", IsNullable = false, Namespace = "")]
-    public int OriginatingServiceKey {
-        get => _originatingServiceKey;
-        set {
-            OriginatingServiceKeySpecified = true;
-            _originatingServiceKey = value;
+        
+        private int _originatingServiceKey;
+
+        [XmlElement(ElementName = "originatingServiceKey", IsNullable = false, Namespace = "")]
+        public int OriginatingServiceKey {
+            get => _originatingServiceKey;
+            set {
+                OriginatingServiceKeySpecified = true;
+                _originatingServiceKey = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool OriginatingServiceKeySpecified { get; set; }
-    private int _terminatingServiceKey;
+        [XmlIgnore]
+        public bool OriginatingServiceKeySpecified { get; set; }
+        
+        private int _terminatingServiceKey;
 
-    [XmlElement(ElementName = "terminatingServiceKey", IsNullable = false, Namespace = "")]
-    public int TerminatingServiceKey {
-        get => _terminatingServiceKey;
-        set {
-            TerminatingServiceKeySpecified = true;
-            _terminatingServiceKey = value;
+        [XmlElement(ElementName = "terminatingServiceKey", IsNullable = false, Namespace = "")]
+        public int TerminatingServiceKey {
+            get => _terminatingServiceKey;
+            set {
+                TerminatingServiceKeySpecified = true;
+                _terminatingServiceKey = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TerminatingServiceKeySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TerminatingServiceKeySpecified { get; set; }
+        
+    }
 }

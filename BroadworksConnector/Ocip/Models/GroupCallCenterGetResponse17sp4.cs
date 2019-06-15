@@ -1,129 +1,153 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupCallCenterGetResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _useSystemDefaultGuardTimer;
+    /// <summary>
+    /// Response to GroupCallCenterGetRequest17sp4.
+    /// 
+    /// The following elements are only used in AS data mode and not returned in XS data mode:
+    /// useSystemDefaultUnavailableSettings
+    /// forceAgentUnavailableOnDNDActivation
+    /// forceAgentUnavailableOnPersonalCalls
+    /// forceAgentUnavailableOnBouncedCallLimit
+    /// numberConsecutiveBouncedCallsToForceAgentUnavailable
+    /// forceAgentUnavailableOnNotReachable
+        /// <see cref="GroupCallCenterGetRequest17sp4"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupCallCenterGetResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "useSystemDefaultGuardTimer", IsNullable = false, Namespace = "")]
-    public bool UseSystemDefaultGuardTimer {
-        get => _useSystemDefaultGuardTimer;
-        set {
-            UseSystemDefaultGuardTimerSpecified = true;
-            _useSystemDefaultGuardTimer = value;
+        
+        private bool _useSystemDefaultGuardTimer;
+
+        [XmlElement(ElementName = "useSystemDefaultGuardTimer", IsNullable = false, Namespace = "")]
+        public bool UseSystemDefaultGuardTimer {
+            get => _useSystemDefaultGuardTimer;
+            set {
+                UseSystemDefaultGuardTimerSpecified = true;
+                _useSystemDefaultGuardTimer = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseSystemDefaultGuardTimerSpecified { get; set; }
-    private bool _enableGuardTimer;
+        [XmlIgnore]
+        public bool UseSystemDefaultGuardTimerSpecified { get; set; }
+        
+        private bool _enableGuardTimer;
 
-    [XmlElement(ElementName = "enableGuardTimer", IsNullable = false, Namespace = "")]
-    public bool EnableGuardTimer {
-        get => _enableGuardTimer;
-        set {
-            EnableGuardTimerSpecified = true;
-            _enableGuardTimer = value;
+        [XmlElement(ElementName = "enableGuardTimer", IsNullable = false, Namespace = "")]
+        public bool EnableGuardTimer {
+            get => _enableGuardTimer;
+            set {
+                EnableGuardTimerSpecified = true;
+                _enableGuardTimer = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableGuardTimerSpecified { get; set; }
-    private int _guardTimerSeconds;
+        [XmlIgnore]
+        public bool EnableGuardTimerSpecified { get; set; }
+        
+        private int _guardTimerSeconds;
 
-    [XmlElement(ElementName = "guardTimerSeconds", IsNullable = false, Namespace = "")]
-    public int GuardTimerSeconds {
-        get => _guardTimerSeconds;
-        set {
-            GuardTimerSecondsSpecified = true;
-            _guardTimerSeconds = value;
+        [XmlElement(ElementName = "guardTimerSeconds", IsNullable = false, Namespace = "")]
+        public int GuardTimerSeconds {
+            get => _guardTimerSeconds;
+            set {
+                GuardTimerSecondsSpecified = true;
+                _guardTimerSeconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GuardTimerSecondsSpecified { get; set; }
-    private bool _useSystemDefaultUnavailableSettings;
+        [XmlIgnore]
+        public bool GuardTimerSecondsSpecified { get; set; }
+        
+        private bool _useSystemDefaultUnavailableSettings;
 
-    [XmlElement(ElementName = "useSystemDefaultUnavailableSettings", IsNullable = false, Namespace = "")]
-    public bool UseSystemDefaultUnavailableSettings {
-        get => _useSystemDefaultUnavailableSettings;
-        set {
-            UseSystemDefaultUnavailableSettingsSpecified = true;
-            _useSystemDefaultUnavailableSettings = value;
+        [XmlElement(ElementName = "useSystemDefaultUnavailableSettings", IsNullable = false, Namespace = "")]
+        public bool UseSystemDefaultUnavailableSettings {
+            get => _useSystemDefaultUnavailableSettings;
+            set {
+                UseSystemDefaultUnavailableSettingsSpecified = true;
+                _useSystemDefaultUnavailableSettings = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseSystemDefaultUnavailableSettingsSpecified { get; set; }
-    private bool _forceAgentUnavailableOnDNDActivation;
+        [XmlIgnore]
+        public bool UseSystemDefaultUnavailableSettingsSpecified { get; set; }
+        
+        private bool _forceAgentUnavailableOnDNDActivation;
 
-    [XmlElement(ElementName = "forceAgentUnavailableOnDNDActivation", IsNullable = false, Namespace = "")]
-    public bool ForceAgentUnavailableOnDNDActivation {
-        get => _forceAgentUnavailableOnDNDActivation;
-        set {
-            ForceAgentUnavailableOnDNDActivationSpecified = true;
-            _forceAgentUnavailableOnDNDActivation = value;
+        [XmlElement(ElementName = "forceAgentUnavailableOnDNDActivation", IsNullable = false, Namespace = "")]
+        public bool ForceAgentUnavailableOnDNDActivation {
+            get => _forceAgentUnavailableOnDNDActivation;
+            set {
+                ForceAgentUnavailableOnDNDActivationSpecified = true;
+                _forceAgentUnavailableOnDNDActivation = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ForceAgentUnavailableOnDNDActivationSpecified { get; set; }
-    private bool _forceAgentUnavailableOnPersonalCalls;
+        [XmlIgnore]
+        public bool ForceAgentUnavailableOnDNDActivationSpecified { get; set; }
+        
+        private bool _forceAgentUnavailableOnPersonalCalls;
 
-    [XmlElement(ElementName = "forceAgentUnavailableOnPersonalCalls", IsNullable = false, Namespace = "")]
-    public bool ForceAgentUnavailableOnPersonalCalls {
-        get => _forceAgentUnavailableOnPersonalCalls;
-        set {
-            ForceAgentUnavailableOnPersonalCallsSpecified = true;
-            _forceAgentUnavailableOnPersonalCalls = value;
+        [XmlElement(ElementName = "forceAgentUnavailableOnPersonalCalls", IsNullable = false, Namespace = "")]
+        public bool ForceAgentUnavailableOnPersonalCalls {
+            get => _forceAgentUnavailableOnPersonalCalls;
+            set {
+                ForceAgentUnavailableOnPersonalCallsSpecified = true;
+                _forceAgentUnavailableOnPersonalCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ForceAgentUnavailableOnPersonalCallsSpecified { get; set; }
-    private bool _forceAgentUnavailableOnBouncedCallLimit;
+        [XmlIgnore]
+        public bool ForceAgentUnavailableOnPersonalCallsSpecified { get; set; }
+        
+        private bool _forceAgentUnavailableOnBouncedCallLimit;
 
-    [XmlElement(ElementName = "forceAgentUnavailableOnBouncedCallLimit", IsNullable = false, Namespace = "")]
-    public bool ForceAgentUnavailableOnBouncedCallLimit {
-        get => _forceAgentUnavailableOnBouncedCallLimit;
-        set {
-            ForceAgentUnavailableOnBouncedCallLimitSpecified = true;
-            _forceAgentUnavailableOnBouncedCallLimit = value;
+        [XmlElement(ElementName = "forceAgentUnavailableOnBouncedCallLimit", IsNullable = false, Namespace = "")]
+        public bool ForceAgentUnavailableOnBouncedCallLimit {
+            get => _forceAgentUnavailableOnBouncedCallLimit;
+            set {
+                ForceAgentUnavailableOnBouncedCallLimitSpecified = true;
+                _forceAgentUnavailableOnBouncedCallLimit = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ForceAgentUnavailableOnBouncedCallLimitSpecified { get; set; }
-    private int _numberConsecutiveBouncedCallsToForceAgentUnavailable;
+        [XmlIgnore]
+        public bool ForceAgentUnavailableOnBouncedCallLimitSpecified { get; set; }
+        
+        private int _numberConsecutiveBouncedCallsToForceAgentUnavailable;
 
-    [XmlElement(ElementName = "numberConsecutiveBouncedCallsToForceAgentUnavailable", IsNullable = false, Namespace = "")]
-    public int NumberConsecutiveBouncedCallsToForceAgentUnavailable {
-        get => _numberConsecutiveBouncedCallsToForceAgentUnavailable;
-        set {
-            NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified = true;
-            _numberConsecutiveBouncedCallsToForceAgentUnavailable = value;
+        [XmlElement(ElementName = "numberConsecutiveBouncedCallsToForceAgentUnavailable", IsNullable = false, Namespace = "")]
+        public int NumberConsecutiveBouncedCallsToForceAgentUnavailable {
+            get => _numberConsecutiveBouncedCallsToForceAgentUnavailable;
+            set {
+                NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified = true;
+                _numberConsecutiveBouncedCallsToForceAgentUnavailable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified { get; set; }
-    private bool _forceAgentUnavailableOnNotReachable;
+        [XmlIgnore]
+        public bool NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified { get; set; }
+        
+        private bool _forceAgentUnavailableOnNotReachable;
 
-    [XmlElement(ElementName = "forceAgentUnavailableOnNotReachable", IsNullable = false, Namespace = "")]
-    public bool ForceAgentUnavailableOnNotReachable {
-        get => _forceAgentUnavailableOnNotReachable;
-        set {
-            ForceAgentUnavailableOnNotReachableSpecified = true;
-            _forceAgentUnavailableOnNotReachable = value;
+        [XmlElement(ElementName = "forceAgentUnavailableOnNotReachable", IsNullable = false, Namespace = "")]
+        public bool ForceAgentUnavailableOnNotReachable {
+            get => _forceAgentUnavailableOnNotReachable;
+            set {
+                ForceAgentUnavailableOnNotReachableSpecified = true;
+                _forceAgentUnavailableOnNotReachable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ForceAgentUnavailableOnNotReachableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ForceAgentUnavailableOnNotReachableSpecified { get; set; }
+        
+    }
 }

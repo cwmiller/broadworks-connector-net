@@ -1,64 +1,78 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderServicePackMigrationTaskModifyGroupListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceProviderId;
+    /// <summary>
+    /// Replace the list of groups to be migrated for a specified service pack migration task.
+    /// Modification is only allowed prior to task execution.
+    /// The response is either SuccessResponse or ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderServicePackMigrationTaskModifyGroupListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-    public string ServiceProviderId {
-        get => _serviceProviderId;
-        set {
-            ServiceProviderIdSpecified = true;
-            _serviceProviderId = value;
+        
+        private string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        public string ServiceProviderId {
+            get => _serviceProviderId;
+            set {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceProviderIdSpecified { get; set; }
-    private string _taskName;
+        [XmlIgnore]
+        public bool ServiceProviderIdSpecified { get; set; }
+        
+        private string _taskName;
 
-    [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-    public string TaskName {
-        get => _taskName;
-        set {
-            TaskNameSpecified = true;
-            _taskName = value;
+        [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
+        public string TaskName {
+            get => _taskName;
+            set {
+                TaskNameSpecified = true;
+                _taskName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TaskNameSpecified { get; set; }
-    private bool _migrateAllGroups;
+        [XmlIgnore]
+        public bool TaskNameSpecified { get; set; }
+        
+        private bool _migrateAllGroups;
 
-    [XmlElement(ElementName = "migrateAllGroups", IsNullable = false, Namespace = "")]
-    public bool MigrateAllGroups {
-        get => _migrateAllGroups;
-        set {
-            MigrateAllGroupsSpecified = true;
-            _migrateAllGroups = value;
+        [XmlElement(ElementName = "migrateAllGroups", IsNullable = false, Namespace = "")]
+        public bool MigrateAllGroups {
+            get => _migrateAllGroups;
+            set {
+                MigrateAllGroupsSpecified = true;
+                _migrateAllGroups = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MigrateAllGroupsSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList _groupIdList;
+        [XmlIgnore]
+        public bool MigrateAllGroupsSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList _groupIdList;
 
-    [XmlElement(ElementName = "groupIdList", IsNullable = true, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList GroupIdList {
-        get => _groupIdList;
-        set {
-            GroupIdListSpecified = true;
-            _groupIdList = value;
+        [XmlElement(ElementName = "groupIdList", IsNullable = true, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList GroupIdList {
+            get => _groupIdList;
+            set {
+                GroupIdListSpecified = true;
+                _groupIdList = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GroupIdListSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool GroupIdListSpecified { get; set; }
+        
+    }
 }

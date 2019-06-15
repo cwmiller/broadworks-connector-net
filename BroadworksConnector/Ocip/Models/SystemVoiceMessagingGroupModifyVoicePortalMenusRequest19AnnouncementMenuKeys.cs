@@ -1,64 +1,74 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AnnouncementMenuKeys 
-{
-    private string _recordAudio;
+    /// <summary>
+    /// 
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19AnnouncementMenuKeys 
+    {
 
-    [XmlElement(ElementName = "recordAudio", IsNullable = true, Namespace = "")]
-    public string RecordAudio {
-        get => _recordAudio;
-        set {
-            RecordAudioSpecified = true;
-            _recordAudio = value;
+        
+        private string _recordAudio;
+
+        [XmlElement(ElementName = "recordAudio", IsNullable = true, Namespace = "")]
+        public string RecordAudio {
+            get => _recordAudio;
+            set {
+                RecordAudioSpecified = true;
+                _recordAudio = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RecordAudioSpecified { get; set; }
-    private string _recordAudioVideo;
+        [XmlIgnore]
+        public bool RecordAudioSpecified { get; set; }
+        
+        private string _recordAudioVideo;
 
-    [XmlElement(ElementName = "recordAudioVideo", IsNullable = true, Namespace = "")]
-    public string RecordAudioVideo {
-        get => _recordAudioVideo;
-        set {
-            RecordAudioVideoSpecified = true;
-            _recordAudioVideo = value;
+        [XmlElement(ElementName = "recordAudioVideo", IsNullable = true, Namespace = "")]
+        public string RecordAudioVideo {
+            get => _recordAudioVideo;
+            set {
+                RecordAudioVideoSpecified = true;
+                _recordAudioVideo = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RecordAudioVideoSpecified { get; set; }
-    private string _returnToPreviousMenu;
+        [XmlIgnore]
+        public bool RecordAudioVideoSpecified { get; set; }
+        
+        private string _returnToPreviousMenu;
 
-    [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-    public string ReturnToPreviousMenu {
-        get => _returnToPreviousMenu;
-        set {
-            ReturnToPreviousMenuSpecified = true;
-            _returnToPreviousMenu = value;
+        [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
+        public string ReturnToPreviousMenu {
+            get => _returnToPreviousMenu;
+            set {
+                ReturnToPreviousMenuSpecified = true;
+                _returnToPreviousMenu = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ReturnToPreviousMenuSpecified { get; set; }
-    private string _repeatMenu;
+        [XmlIgnore]
+        public bool ReturnToPreviousMenuSpecified { get; set; }
+        
+        private string _repeatMenu;
 
-    [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
-    public string RepeatMenu {
-        get => _repeatMenu;
-        set {
-            RepeatMenuSpecified = true;
-            _repeatMenu = value;
+        [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
+        public string RepeatMenu {
+            get => _repeatMenu;
+            set {
+                RepeatMenuSpecified = true;
+                _repeatMenu = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RepeatMenuSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool RepeatMenuSpecified { get; set; }
+        
+    }
 }

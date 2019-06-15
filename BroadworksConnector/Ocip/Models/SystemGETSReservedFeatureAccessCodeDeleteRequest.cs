@@ -1,25 +1,35 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemGETSReservedFeatureAccessCodeDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _code;
+    /// <summary>
+    /// Delete a GETS reserved FAC.
+    /// The response is either SuccessResponse or ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemGETSReservedFeatureAccessCodeDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-    public string Code {
-        get => _code;
-        set {
-            CodeSpecified = true;
-            _code = value;
+        
+        private string _code;
+
+        [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
+        public string Code {
+            get => _code;
+            set {
+                CodeSpecified = true;
+                _code = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CodeSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CodeSpecified { get; set; }
+        
+    }
 }

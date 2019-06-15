@@ -1,51 +1,62 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class AnnouncementFileLevelKey 
-{
-    private string _name;
+    /// <summary>
+    /// Uniquely identifies a file within a group or user repository.
+    /// Includes level to distinguish between group and user announcements
+    /// in scenarios where both are listed.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class AnnouncementFileLevelKey 
+    {
 
-    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-    public string Name {
-        get => _name;
-        set {
-            NameSpecified = true;
-            _name = value;
+        
+        private string _name;
+
+        [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+        public string Name {
+            get => _name;
+            set {
+                NameSpecified = true;
+                _name = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NameSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MediaFileType _mediaFileType;
+        [XmlIgnore]
+        public bool NameSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MediaFileType _mediaFileType;
 
-    [XmlElement(ElementName = "mediaFileType", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MediaFileType MediaFileType {
-        get => _mediaFileType;
-        set {
-            MediaFileTypeSpecified = true;
-            _mediaFileType = value;
+        [XmlElement(ElementName = "mediaFileType", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MediaFileType MediaFileType {
+            get => _mediaFileType;
+            set {
+                MediaFileTypeSpecified = true;
+                _mediaFileType = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MediaFileTypeSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AnnouncementRepositoryType _level;
+        [XmlIgnore]
+        public bool MediaFileTypeSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementRepositoryType _level;
 
-    [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementRepositoryType Level {
-        get => _level;
-        set {
-            LevelSpecified = true;
-            _level = value;
+        [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementRepositoryType Level {
+            get => _level;
+            set {
+                LevelSpecified = true;
+                _level = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LevelSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool LevelSpecified { get; set; }
+        
+    }
 }

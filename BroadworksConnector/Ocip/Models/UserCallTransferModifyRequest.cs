@@ -1,103 +1,119 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserCallTransferModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _userId;
+    /// <summary>
+    /// Modify the user level data associated with Call Transfer.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserCallTransferModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        
+        private string _userId;
+
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-    private bool _isRecallActive;
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+        private bool _isRecallActive;
 
-    [XmlElement(ElementName = "isRecallActive", IsNullable = false, Namespace = "")]
-    public bool IsRecallActive {
-        get => _isRecallActive;
-        set {
-            IsRecallActiveSpecified = true;
-            _isRecallActive = value;
+        [XmlElement(ElementName = "isRecallActive", IsNullable = false, Namespace = "")]
+        public bool IsRecallActive {
+            get => _isRecallActive;
+            set {
+                IsRecallActiveSpecified = true;
+                _isRecallActive = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsRecallActiveSpecified { get; set; }
-    private int _recallNumberOfRings;
+        [XmlIgnore]
+        public bool IsRecallActiveSpecified { get; set; }
+        
+        private int _recallNumberOfRings;
 
-    [XmlElement(ElementName = "recallNumberOfRings", IsNullable = false, Namespace = "")]
-    public int RecallNumberOfRings {
-        get => _recallNumberOfRings;
-        set {
-            RecallNumberOfRingsSpecified = true;
-            _recallNumberOfRings = value;
+        [XmlElement(ElementName = "recallNumberOfRings", IsNullable = false, Namespace = "")]
+        public int RecallNumberOfRings {
+            get => _recallNumberOfRings;
+            set {
+                RecallNumberOfRingsSpecified = true;
+                _recallNumberOfRings = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RecallNumberOfRingsSpecified { get; set; }
-    private bool _useDiversionInhibitorForBlindTransfer;
+        [XmlIgnore]
+        public bool RecallNumberOfRingsSpecified { get; set; }
+        
+        private bool _useDiversionInhibitorForBlindTransfer;
 
-    [XmlElement(ElementName = "useDiversionInhibitorForBlindTransfer", IsNullable = false, Namespace = "")]
-    public bool UseDiversionInhibitorForBlindTransfer {
-        get => _useDiversionInhibitorForBlindTransfer;
-        set {
-            UseDiversionInhibitorForBlindTransferSpecified = true;
-            _useDiversionInhibitorForBlindTransfer = value;
+        [XmlElement(ElementName = "useDiversionInhibitorForBlindTransfer", IsNullable = false, Namespace = "")]
+        public bool UseDiversionInhibitorForBlindTransfer {
+            get => _useDiversionInhibitorForBlindTransfer;
+            set {
+                UseDiversionInhibitorForBlindTransferSpecified = true;
+                _useDiversionInhibitorForBlindTransfer = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseDiversionInhibitorForBlindTransferSpecified { get; set; }
-    private bool _useDiversionInhibitorForConsultativeCalls;
+        [XmlIgnore]
+        public bool UseDiversionInhibitorForBlindTransferSpecified { get; set; }
+        
+        private bool _useDiversionInhibitorForConsultativeCalls;
 
-    [XmlElement(ElementName = "useDiversionInhibitorForConsultativeCalls", IsNullable = false, Namespace = "")]
-    public bool UseDiversionInhibitorForConsultativeCalls {
-        get => _useDiversionInhibitorForConsultativeCalls;
-        set {
-            UseDiversionInhibitorForConsultativeCallsSpecified = true;
-            _useDiversionInhibitorForConsultativeCalls = value;
+        [XmlElement(ElementName = "useDiversionInhibitorForConsultativeCalls", IsNullable = false, Namespace = "")]
+        public bool UseDiversionInhibitorForConsultativeCalls {
+            get => _useDiversionInhibitorForConsultativeCalls;
+            set {
+                UseDiversionInhibitorForConsultativeCallsSpecified = true;
+                _useDiversionInhibitorForConsultativeCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseDiversionInhibitorForConsultativeCallsSpecified { get; set; }
-    private bool _enableBusyCampOn;
+        [XmlIgnore]
+        public bool UseDiversionInhibitorForConsultativeCallsSpecified { get; set; }
+        
+        private bool _enableBusyCampOn;
 
-    [XmlElement(ElementName = "enableBusyCampOn", IsNullable = false, Namespace = "")]
-    public bool EnableBusyCampOn {
-        get => _enableBusyCampOn;
-        set {
-            EnableBusyCampOnSpecified = true;
-            _enableBusyCampOn = value;
+        [XmlElement(ElementName = "enableBusyCampOn", IsNullable = false, Namespace = "")]
+        public bool EnableBusyCampOn {
+            get => _enableBusyCampOn;
+            set {
+                EnableBusyCampOnSpecified = true;
+                _enableBusyCampOn = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableBusyCampOnSpecified { get; set; }
-    private int _busyCampOnSeconds;
+        [XmlIgnore]
+        public bool EnableBusyCampOnSpecified { get; set; }
+        
+        private int _busyCampOnSeconds;
 
-    [XmlElement(ElementName = "busyCampOnSeconds", IsNullable = false, Namespace = "")]
-    public int BusyCampOnSeconds {
-        get => _busyCampOnSeconds;
-        set {
-            BusyCampOnSecondsSpecified = true;
-            _busyCampOnSeconds = value;
+        [XmlElement(ElementName = "busyCampOnSeconds", IsNullable = false, Namespace = "")]
+        public int BusyCampOnSeconds {
+            get => _busyCampOnSeconds;
+            set {
+                BusyCampOnSecondsSpecified = true;
+                _busyCampOnSeconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool BusyCampOnSecondsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool BusyCampOnSecondsSpecified { get; set; }
+        
+    }
 }

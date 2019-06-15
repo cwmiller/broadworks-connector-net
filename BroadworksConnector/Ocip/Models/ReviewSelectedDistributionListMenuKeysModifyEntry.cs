@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ReviewSelectedDistributionListMenuKeysModifyEntry 
-{
-    private string _interruptPlaybackAndReturnToPreviousMenu;
+    /// <summary>
+    /// The voice portal review selected distribution list menu keys modify entry.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ReviewSelectedDistributionListMenuKeysModifyEntry 
+    {
 
-    [XmlElement(ElementName = "interruptPlaybackAndReturnToPreviousMenu", IsNullable = false, Namespace = "")]
-    public string InterruptPlaybackAndReturnToPreviousMenu {
-        get => _interruptPlaybackAndReturnToPreviousMenu;
-        set {
-            InterruptPlaybackAndReturnToPreviousMenuSpecified = true;
-            _interruptPlaybackAndReturnToPreviousMenu = value;
+        
+        private string _interruptPlaybackAndReturnToPreviousMenu;
+
+        [XmlElement(ElementName = "interruptPlaybackAndReturnToPreviousMenu", IsNullable = false, Namespace = "")]
+        public string InterruptPlaybackAndReturnToPreviousMenu {
+            get => _interruptPlaybackAndReturnToPreviousMenu;
+            set {
+                InterruptPlaybackAndReturnToPreviousMenuSpecified = true;
+                _interruptPlaybackAndReturnToPreviousMenu = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool InterruptPlaybackAndReturnToPreviousMenuSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool InterruptPlaybackAndReturnToPreviousMenuSpecified { get; set; }
+        
+    }
 }

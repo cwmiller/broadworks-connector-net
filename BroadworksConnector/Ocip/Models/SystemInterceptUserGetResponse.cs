@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemInterceptUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _emergencyAndRepairIntercept;
+    /// <summary>
+    /// Response to the SystemInterceptUserGetRequest.
+        /// <see cref="SystemInterceptUserGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemInterceptUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "emergencyAndRepairIntercept", IsNullable = false, Namespace = "")]
-    public bool EmergencyAndRepairIntercept {
-        get => _emergencyAndRepairIntercept;
-        set {
-            EmergencyAndRepairInterceptSpecified = true;
-            _emergencyAndRepairIntercept = value;
+        
+        private bool _emergencyAndRepairIntercept;
+
+        [XmlElement(ElementName = "emergencyAndRepairIntercept", IsNullable = false, Namespace = "")]
+        public bool EmergencyAndRepairIntercept {
+            get => _emergencyAndRepairIntercept;
+            set {
+                EmergencyAndRepairInterceptSpecified = true;
+                _emergencyAndRepairIntercept = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EmergencyAndRepairInterceptSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool EmergencyAndRepairInterceptSpecified { get; set; }
+        
+    }
 }

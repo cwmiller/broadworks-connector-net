@@ -1,51 +1,63 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserEnhancedCallLogsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _placed;
+    /// <summary>
+    /// Response to UserEnhancedCallLogsGetListRequest.
+    /// Replaced By: UserEnhancedCallLogsGetListResponse14sp4
+        /// <see cref="UserEnhancedCallLogsGetListRequest"/>
+        /// <see cref="UserEnhancedCallLogsGetListResponse14sp4"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserEnhancedCallLogsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "placed", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Placed {
-        get => _placed;
-        set {
-            PlacedSpecified = true;
-            _placed = value;
+        
+        private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _placed;
+
+        [XmlElement(ElementName = "placed", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Placed {
+            get => _placed;
+            set {
+                PlacedSpecified = true;
+                _placed = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PlacedSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _received;
+        [XmlIgnore]
+        public bool PlacedSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _received;
 
-    [XmlElement(ElementName = "received", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Received {
-        get => _received;
-        set {
-            ReceivedSpecified = true;
-            _received = value;
+        [XmlElement(ElementName = "received", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Received {
+            get => _received;
+            set {
+                ReceivedSpecified = true;
+                _received = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ReceivedSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _missed;
+        [XmlIgnore]
+        public bool ReceivedSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _missed;
 
-    [XmlElement(ElementName = "missed", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Missed {
-        get => _missed;
-        set {
-            MissedSpecified = true;
-            _missed = value;
+        [XmlElement(ElementName = "missed", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Missed {
+            get => _missed;
+            set {
+                MissedSpecified = true;
+                _missed = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MissedSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool MissedSpecified { get; set; }
+        
+    }
 }

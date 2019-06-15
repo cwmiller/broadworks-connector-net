@@ -1,38 +1,47 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemNetworkProgressionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _isActive;
+    /// <summary>
+    /// Response to SystemNetworkProgressionGetRequest.
+        /// <see cref="SystemNetworkProgressionGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemNetworkProgressionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-    public bool IsActive {
-        get => _isActive;
-        set {
-            IsActiveSpecified = true;
-            _isActive = value;
+        
+        private bool _isActive;
+
+        [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+        public bool IsActive {
+            get => _isActive;
+            set {
+                IsActiveSpecified = true;
+                _isActive = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsActiveSpecified { get; set; }
-    private int _waitPeriodSeconds;
+        [XmlIgnore]
+        public bool IsActiveSpecified { get; set; }
+        
+        private int _waitPeriodSeconds;
 
-    [XmlElement(ElementName = "waitPeriodSeconds", IsNullable = false, Namespace = "")]
-    public int WaitPeriodSeconds {
-        get => _waitPeriodSeconds;
-        set {
-            WaitPeriodSecondsSpecified = true;
-            _waitPeriodSeconds = value;
+        [XmlElement(ElementName = "waitPeriodSeconds", IsNullable = false, Namespace = "")]
+        public int WaitPeriodSeconds {
+            get => _waitPeriodSeconds;
+            set {
+                WaitPeriodSecondsSpecified = true;
+                _waitPeriodSeconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool WaitPeriodSecondsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool WaitPeriodSecondsSpecified { get; set; }
+        
+    }
 }

@@ -1,51 +1,64 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemShInterfaceParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private string _hssRealm;
+    /// <summary>
+    /// Response to SystemShInterfaceParametersGetRequest. Contains the Sh Interface system parameters.
+    /// 
+    /// Replaced by: SystemShInterfaceParametersGetResponse17
+        /// <see cref="SystemShInterfaceParametersGetRequest"/>
+        /// <see cref="SystemShInterfaceParametersGetResponse17"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemShInterfaceParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "hssRealm", IsNullable = false, Namespace = "")]
-    public string HssRealm {
-        get => _hssRealm;
-        set {
-            HssRealmSpecified = true;
-            _hssRealm = value;
+        
+        private string _hssRealm;
+
+        [XmlElement(ElementName = "hssRealm", IsNullable = false, Namespace = "")]
+        public string HssRealm {
+            get => _hssRealm;
+            set {
+                HssRealmSpecified = true;
+                _hssRealm = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool HssRealmSpecified { get; set; }
-    private int _requestTimeoutSeconds;
+        [XmlIgnore]
+        public bool HssRealmSpecified { get; set; }
+        
+        private int _requestTimeoutSeconds;
 
-    [XmlElement(ElementName = "requestTimeoutSeconds", IsNullable = false, Namespace = "")]
-    public int RequestTimeoutSeconds {
-        get => _requestTimeoutSeconds;
-        set {
-            RequestTimeoutSecondsSpecified = true;
-            _requestTimeoutSeconds = value;
+        [XmlElement(ElementName = "requestTimeoutSeconds", IsNullable = false, Namespace = "")]
+        public int RequestTimeoutSeconds {
+            get => _requestTimeoutSeconds;
+            set {
+                RequestTimeoutSecondsSpecified = true;
+                _requestTimeoutSeconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RequestTimeoutSecondsSpecified { get; set; }
-    private int _publicIdentityRefreshDelaySeconds;
+        [XmlIgnore]
+        public bool RequestTimeoutSecondsSpecified { get; set; }
+        
+        private int _publicIdentityRefreshDelaySeconds;
 
-    [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
-    public int PublicIdentityRefreshDelaySeconds {
-        get => _publicIdentityRefreshDelaySeconds;
-        set {
-            PublicIdentityRefreshDelaySecondsSpecified = true;
-            _publicIdentityRefreshDelaySeconds = value;
+        [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
+        public int PublicIdentityRefreshDelaySeconds {
+            get => _publicIdentityRefreshDelaySeconds;
+            set {
+                PublicIdentityRefreshDelaySecondsSpecified = true;
+                _publicIdentityRefreshDelaySeconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PublicIdentityRefreshDelaySecondsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool PublicIdentityRefreshDelaySecondsSpecified { get; set; }
+        
+    }
 }

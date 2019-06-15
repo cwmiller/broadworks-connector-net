@@ -3,14 +3,17 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum MediaType{
-    [XmlEnum(Name = "Audio")]
-    Audio,
-    [XmlEnum(Name = "Video")]
-    Video,
-    [XmlEnum(Name = "Image")]
-    Image,
- }
+    /// <summary>
+    /// Media types.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum MediaType    {
+            [XmlEnum(Name = "Audio")]
+        Audio,
+            [XmlEnum(Name = "Video")]
+        Video,
+            [XmlEnum(Name = "Image")]
+        Image,
+     }
 }

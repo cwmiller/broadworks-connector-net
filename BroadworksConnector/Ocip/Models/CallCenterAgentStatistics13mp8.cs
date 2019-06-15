@@ -1,77 +1,88 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CallCenterAgentStatistics13mp8 
-{
-    private string _agentUserId;
+    /// <summary>
+    /// Contains Call Center statistics for a specified agent.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class CallCenterAgentStatistics13mp8 
+    {
 
-    [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
-    public string AgentUserId {
-        get => _agentUserId;
-        set {
-            AgentUserIdSpecified = true;
-            _agentUserId = value;
+        
+        private string _agentUserId;
+
+        [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
+        public string AgentUserId {
+            get => _agentUserId;
+            set {
+                AgentUserIdSpecified = true;
+                _agentUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AgentUserIdSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.UserDisplayNames _agentDisplayNames;
+        [XmlIgnore]
+        public bool AgentUserIdSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.UserDisplayNames _agentDisplayNames;
 
-    [XmlElement(ElementName = "agentDisplayNames", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.UserDisplayNames AgentDisplayNames {
-        get => _agentDisplayNames;
-        set {
-            AgentDisplayNamesSpecified = true;
-            _agentDisplayNames = value;
+        [XmlElement(ElementName = "agentDisplayNames", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.UserDisplayNames AgentDisplayNames {
+            get => _agentDisplayNames;
+            set {
+                AgentDisplayNamesSpecified = true;
+                _agentDisplayNames = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AgentDisplayNamesSpecified { get; set; }
-    private bool _available;
+        [XmlIgnore]
+        public bool AgentDisplayNamesSpecified { get; set; }
+        
+        private bool _available;
 
-    [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
-    public bool Available {
-        get => _available;
-        set {
-            AvailableSpecified = true;
-            _available = value;
+        [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
+        public bool Available {
+            get => _available;
+            set {
+                AvailableSpecified = true;
+                _available = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AvailableSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 _statisticsYesterday;
+        [XmlIgnore]
+        public bool AvailableSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 _statisticsYesterday;
 
-    [XmlElement(ElementName = "statisticsYesterday", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 StatisticsYesterday {
-        get => _statisticsYesterday;
-        set {
-            StatisticsYesterdaySpecified = true;
-            _statisticsYesterday = value;
+        [XmlElement(ElementName = "statisticsYesterday", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 StatisticsYesterday {
+            get => _statisticsYesterday;
+            set {
+                StatisticsYesterdaySpecified = true;
+                _statisticsYesterday = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool StatisticsYesterdaySpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 _statisticsToday;
+        [XmlIgnore]
+        public bool StatisticsYesterdaySpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 _statisticsToday;
 
-    [XmlElement(ElementName = "statisticsToday", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 StatisticsToday {
-        get => _statisticsToday;
-        set {
-            StatisticsTodaySpecified = true;
-            _statisticsToday = value;
+        [XmlElement(ElementName = "statisticsToday", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 StatisticsToday {
+            get => _statisticsToday;
+            set {
+                StatisticsTodaySpecified = true;
+                _statisticsToday = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool StatisticsTodaySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool StatisticsTodaySpecified { get; set; }
+        
+    }
 }

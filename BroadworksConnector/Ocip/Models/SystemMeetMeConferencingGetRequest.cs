@@ -1,12 +1,24 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemMeetMeConferencingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-}
+    /// <summary>
+    /// Request the system level data associated with Meet-Me Conferencing functions.
+    /// The response is either a SystemMeetMeConferencingGetResponse or an ErrorResponse.
+    /// 
+    /// Replaced by: SystemMeetMeConferencingGetRequest17sp3
+        /// <see cref="SystemMeetMeConferencingGetResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="SystemMeetMeConferencingGetRequest17sp3"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemMeetMeConferencingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
+
+        
+    }
 }

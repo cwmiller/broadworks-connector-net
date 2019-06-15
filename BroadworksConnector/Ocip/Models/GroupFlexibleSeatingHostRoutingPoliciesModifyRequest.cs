@@ -1,51 +1,63 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupFlexibleSeatingHostRoutingPoliciesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceUserId;
+    /// <summary>
+    /// Modify a flexible seating host’s routing policies
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupFlexibleSeatingHostRoutingPoliciesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-    public string ServiceUserId {
-        get => _serviceUserId;
-        set {
-            ServiceUserIdSpecified = true;
-            _serviceUserId = value;
+        
+        private string _serviceUserId;
+
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        public string ServiceUserId {
+            get => _serviceUserId;
+            set {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceUserIdSpecified { get; set; }
-    private bool _allowEmergencyCalls;
+        [XmlIgnore]
+        public bool ServiceUserIdSpecified { get; set; }
+        
+        private bool _allowEmergencyCalls;
 
-    [XmlElement(ElementName = "allowEmergencyCalls", IsNullable = false, Namespace = "")]
-    public bool AllowEmergencyCalls {
-        get => _allowEmergencyCalls;
-        set {
-            AllowEmergencyCallsSpecified = true;
-            _allowEmergencyCalls = value;
+        [XmlElement(ElementName = "allowEmergencyCalls", IsNullable = false, Namespace = "")]
+        public bool AllowEmergencyCalls {
+            get => _allowEmergencyCalls;
+            set {
+                AllowEmergencyCallsSpecified = true;
+                _allowEmergencyCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowEmergencyCallsSpecified { get; set; }
-    private bool _allowCallsToVoicePortal;
+        [XmlIgnore]
+        public bool AllowEmergencyCallsSpecified { get; set; }
+        
+        private bool _allowCallsToVoicePortal;
 
-    [XmlElement(ElementName = "allowCallsToVoicePortal", IsNullable = false, Namespace = "")]
-    public bool AllowCallsToVoicePortal {
-        get => _allowCallsToVoicePortal;
-        set {
-            AllowCallsToVoicePortalSpecified = true;
-            _allowCallsToVoicePortal = value;
+        [XmlElement(ElementName = "allowCallsToVoicePortal", IsNullable = false, Namespace = "")]
+        public bool AllowCallsToVoicePortal {
+            get => _allowCallsToVoicePortal;
+            set {
+                AllowCallsToVoicePortalSpecified = true;
+                _allowCallsToVoicePortal = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowCallsToVoicePortalSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool AllowCallsToVoicePortalSpecified { get; set; }
+        
+    }
 }

@@ -1,25 +1,39 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemSIPDeviceTypeGetRequest20sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _deviceType;
+    /// <summary>
+    /// Request to get a sip device type.
+    /// See Also: SystemDeviceTypeGetRequest
+    /// The response is either SystemSIPDeviceTypeGetResponse20 or ErrorResponse.
+    /// Replaced by: SystemSIPDeviceTypeGetRequest21sp1V2.
+        /// <see cref="SystemDeviceTypeGetRequest"/>
+        /// <see cref="SystemSIPDeviceTypeGetResponse20"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="SystemSIPDeviceTypeGetRequest21sp1V2"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemSIPDeviceTypeGetRequest20sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-    public string DeviceType {
-        get => _deviceType;
-        set {
-            DeviceTypeSpecified = true;
-            _deviceType = value;
+        
+        private string _deviceType;
+
+        [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
+        public string DeviceType {
+            get => _deviceType;
+            set {
+                DeviceTypeSpecified = true;
+                _deviceType = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DeviceTypeSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DeviceTypeSpecified { get; set; }
+        
+    }
 }

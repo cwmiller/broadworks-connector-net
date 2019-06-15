@@ -1,51 +1,63 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemNumberPortabilityQueryDigitPatternGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityQueryDigitPattern> _searchCriteriaNumberPortabilityQueryDigitPattern;
+    /// <summary>
+    /// Request to get the System Number Portability Query Digit Pattern List information.
+    /// The response is either a SystemNumberPortabilityQueryDigitPatternGetListResponse or an ErrorResponse.
+        /// <see cref="SystemNumberPortabilityQueryDigitPatternGetListResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemNumberPortabilityQueryDigitPatternGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "searchCriteriaNumberPortabilityQueryDigitPattern", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityQueryDigitPattern> SearchCriteriaNumberPortabilityQueryDigitPattern {
-        get => _searchCriteriaNumberPortabilityQueryDigitPattern;
-        set {
-            SearchCriteriaNumberPortabilityQueryDigitPatternSpecified = true;
-            _searchCriteriaNumberPortabilityQueryDigitPattern = value;
+        
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityQueryDigitPattern> _searchCriteriaNumberPortabilityQueryDigitPattern;
+
+        [XmlElement(ElementName = "searchCriteriaNumberPortabilityQueryDigitPattern", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityQueryDigitPattern> SearchCriteriaNumberPortabilityQueryDigitPattern {
+            get => _searchCriteriaNumberPortabilityQueryDigitPattern;
+            set {
+                SearchCriteriaNumberPortabilityQueryDigitPatternSpecified = true;
+                _searchCriteriaNumberPortabilityQueryDigitPattern = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SearchCriteriaNumberPortabilityQueryDigitPatternSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityStatus> _searchCriteriaNumberPortabilityStatus;
+        [XmlIgnore]
+        public bool SearchCriteriaNumberPortabilityQueryDigitPatternSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityStatus> _searchCriteriaNumberPortabilityStatus;
 
-    [XmlElement(ElementName = "searchCriteriaNumberPortabilityStatus", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityStatus> SearchCriteriaNumberPortabilityStatus {
-        get => _searchCriteriaNumberPortabilityStatus;
-        set {
-            SearchCriteriaNumberPortabilityStatusSpecified = true;
-            _searchCriteriaNumberPortabilityStatus = value;
+        [XmlElement(ElementName = "searchCriteriaNumberPortabilityStatus", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityStatus> SearchCriteriaNumberPortabilityStatus {
+            get => _searchCriteriaNumberPortabilityStatus;
+            set {
+                SearchCriteriaNumberPortabilityStatusSpecified = true;
+                _searchCriteriaNumberPortabilityStatus = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SearchCriteriaNumberPortabilityStatusSpecified { get; set; }
-    private int _responseSizeLimit;
+        [XmlIgnore]
+        public bool SearchCriteriaNumberPortabilityStatusSpecified { get; set; }
+        
+        private int _responseSizeLimit;
 
-    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-    public int ResponseSizeLimit {
-        get => _responseSizeLimit;
-        set {
-            ResponseSizeLimitSpecified = true;
-            _responseSizeLimit = value;
+        [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
+        public int ResponseSizeLimit {
+            get => _responseSizeLimit;
+            set {
+                ResponseSizeLimitSpecified = true;
+                _responseSizeLimit = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ResponseSizeLimitSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ResponseSizeLimitSpecified { get; set; }
+        
+    }
 }

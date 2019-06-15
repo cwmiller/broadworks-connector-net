@@ -3,14 +3,17 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum RoamingMode{
-    [XmlEnum(Name = "CDMA")]
-    CDMA,
-    [XmlEnum(Name = "GSM")]
-    GSM,
-    [XmlEnum(Name = "None")]
-    None,
- }
+    /// <summary>
+    /// The device configured roaming mode.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum RoamingMode    {
+            [XmlEnum(Name = "CDMA")]
+        CDMA,
+            [XmlEnum(Name = "GSM")]
+        GSM,
+            [XmlEnum(Name = "None")]
+        None,
+     }
 }

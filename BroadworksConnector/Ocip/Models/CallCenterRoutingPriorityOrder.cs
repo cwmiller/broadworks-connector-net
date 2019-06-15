@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class CallCenterRoutingPriorityOrder 
-{
-    private string _serviceUserId;
+    /// <summary>
+    /// Call center routing order
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class CallCenterRoutingPriorityOrder 
+    {
 
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-    public string ServiceUserId {
-        get => _serviceUserId;
-        set {
-            ServiceUserIdSpecified = true;
-            _serviceUserId = value;
+        
+        private string _serviceUserId;
+
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        public string ServiceUserId {
+            get => _serviceUserId;
+            set {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceUserIdSpecified { get; set; }
-    private decimal _priority;
+        [XmlIgnore]
+        public bool ServiceUserIdSpecified { get; set; }
+        
+        private decimal _priority;
 
-    [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-    public decimal Priority {
-        get => _priority;
-        set {
-            PrioritySpecified = true;
-            _priority = value;
+        [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
+        public decimal Priority {
+            get => _priority;
+            set {
+                PrioritySpecified = true;
+                _priority = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PrioritySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool PrioritySpecified { get; set; }
+        
+    }
 }

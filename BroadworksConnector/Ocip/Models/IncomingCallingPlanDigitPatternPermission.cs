@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class IncomingCallingPlanDigitPatternPermission 
-{
-    private string _digitPatternName;
+    /// <summary>
+    /// Indicates whether calls from specified digit patterns are permitted.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class IncomingCallingPlanDigitPatternPermission 
+    {
 
-    [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
-    public string DigitPatternName {
-        get => _digitPatternName;
-        set {
-            DigitPatternNameSpecified = true;
-            _digitPatternName = value;
+        
+        private string _digitPatternName;
+
+        [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
+        public string DigitPatternName {
+            get => _digitPatternName;
+            set {
+                DigitPatternNameSpecified = true;
+                _digitPatternName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DigitPatternNameSpecified { get; set; }
-    private bool _allow;
+        [XmlIgnore]
+        public bool DigitPatternNameSpecified { get; set; }
+        
+        private bool _allow;
 
-    [XmlElement(ElementName = "allow", IsNullable = false, Namespace = "")]
-    public bool Allow {
-        get => _allow;
-        set {
-            AllowSpecified = true;
-            _allow = value;
+        [XmlElement(ElementName = "allow", IsNullable = false, Namespace = "")]
+        public bool Allow {
+            get => _allow;
+            set {
+                AllowSpecified = true;
+                _allow = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool AllowSpecified { get; set; }
+        
+    }
 }

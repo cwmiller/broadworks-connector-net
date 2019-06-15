@@ -1,51 +1,60 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupEnterpriseTrunkPriorityWeightedTrunkGroup 
-{
-    private string _trunkGroup;
+    /// <summary>
+    /// Trunk group details (order and weight) for each trunk group
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupEnterpriseTrunkPriorityWeightedTrunkGroup 
+    {
 
-    [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
-    public string TrunkGroup {
-        get => _trunkGroup;
-        set {
-            TrunkGroupSpecified = true;
-            _trunkGroup = value;
+        
+        private string _trunkGroup;
+
+        [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
+        public string TrunkGroup {
+            get => _trunkGroup;
+            set {
+                TrunkGroupSpecified = true;
+                _trunkGroup = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TrunkGroupSpecified { get; set; }
-    private int _priority;
+        [XmlIgnore]
+        public bool TrunkGroupSpecified { get; set; }
+        
+        private int _priority;
 
-    [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-    public int Priority {
-        get => _priority;
-        set {
-            PrioritySpecified = true;
-            _priority = value;
+        [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
+        public int Priority {
+            get => _priority;
+            set {
+                PrioritySpecified = true;
+                _priority = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PrioritySpecified { get; set; }
-    private int _weight;
+        [XmlIgnore]
+        public bool PrioritySpecified { get; set; }
+        
+        private int _weight;
 
-    [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
-    public int Weight {
-        get => _weight;
-        set {
-            WeightSpecified = true;
-            _weight = value;
+        [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
+        public int Weight {
+            get => _weight;
+            set {
+                WeightSpecified = true;
+                _weight = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool WeightSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool WeightSpecified { get; set; }
+        
+    }
 }

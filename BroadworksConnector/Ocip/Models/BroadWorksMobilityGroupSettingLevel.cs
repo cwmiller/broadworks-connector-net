@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum BroadWorksMobilityGroupSettingLevel{
-    [XmlEnum(Name = "Group")]
-    Group,
-    [XmlEnum(Name = "ServiceProvider")]
-    ServiceProvider,
- }
+    /// <summary>
+    /// BroadWorks Mobility setting for the group level.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum BroadWorksMobilityGroupSettingLevel    {
+            [XmlEnum(Name = "Group")]
+        Group,
+            [XmlEnum(Name = "ServiceProvider")]
+        ServiceProvider,
+     }
 }

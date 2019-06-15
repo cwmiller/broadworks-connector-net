@@ -1,51 +1,60 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class TrunkGroupDeviceMultipleContactEndpointModify 
-{
-    private string _name;
+    /// <summary>
+    /// Trunk group device endpoint used in the context of modify that can have multiple contacts.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class TrunkGroupDeviceMultipleContactEndpointModify 
+    {
 
-    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-    public string Name {
-        get => _name;
-        set {
-            NameSpecified = true;
-            _name = value;
+        
+        private string _name;
+
+        [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+        public string Name {
+            get => _name;
+            set {
+                NameSpecified = true;
+                _name = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NameSpecified { get; set; }
-    private string _linePort;
+        [XmlIgnore]
+        public bool NameSpecified { get; set; }
+        
+        private string _linePort;
 
-    [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-    public string LinePort {
-        get => _linePort;
-        set {
-            LinePortSpecified = true;
-            _linePort = value;
+        [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
+        public string LinePort {
+            get => _linePort;
+            set {
+                LinePortSpecified = true;
+                _linePort = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LinePortSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.ReplacementContactList _contactList;
+        [XmlIgnore]
+        public bool LinePortSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.ReplacementContactList _contactList;
 
-    [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ReplacementContactList ContactList {
-        get => _contactList;
-        set {
-            ContactListSpecified = true;
-            _contactList = value;
+        [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ReplacementContactList ContactList {
+            get => _contactList;
+            set {
+                ContactListSpecified = true;
+                _contactList = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ContactListSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ContactListSpecified { get; set; }
+        
+    }
 }

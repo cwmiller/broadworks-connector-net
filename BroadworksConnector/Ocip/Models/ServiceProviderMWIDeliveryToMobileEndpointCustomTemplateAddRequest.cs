@@ -1,77 +1,91 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderMWIDeliveryToMobileEndpointCustomTemplateAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceProviderId;
+    /// <summary>
+    /// Create a MWI Delivery to Mobile Endpoint Custom Template.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderMWIDeliveryToMobileEndpointCustomTemplateAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-    public string ServiceProviderId {
-        get => _serviceProviderId;
-        set {
-            ServiceProviderIdSpecified = true;
-            _serviceProviderId = value;
+        
+        private string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        public string ServiceProviderId {
+            get => _serviceProviderId;
+            set {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceProviderIdSpecified { get; set; }
-    private string _language;
+        [XmlIgnore]
+        public bool ServiceProviderIdSpecified { get; set; }
+        
+        private string _language;
 
-    [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-    public string Language {
-        get => _language;
-        set {
-            LanguageSpecified = true;
-            _language = value;
+        [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
+        public string Language {
+            get => _language;
+            set {
+                LanguageSpecified = true;
+                _language = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LanguageSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
+        [XmlIgnore]
+        public bool LanguageSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
 
-    [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType Type {
-        get => _type;
-        set {
-            TypeSpecified = true;
-            _type = value;
+        [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType Type {
+            get => _type;
+            set {
+                TypeSpecified = true;
+                _type = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TypeSpecified { get; set; }
-    private bool _isEnabled;
+        [XmlIgnore]
+        public bool TypeSpecified { get; set; }
+        
+        private bool _isEnabled;
 
-    [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
-    public bool IsEnabled {
-        get => _isEnabled;
-        set {
-            IsEnabledSpecified = true;
-            _isEnabled = value;
+        [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
+        public bool IsEnabled {
+            get => _isEnabled;
+            set {
+                IsEnabledSpecified = true;
+                _isEnabled = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsEnabledSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody _templateBody;
+        [XmlIgnore]
+        public bool IsEnabledSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody _templateBody;
 
-    [XmlElement(ElementName = "templateBody", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody TemplateBody {
-        get => _templateBody;
-        set {
-            TemplateBodySpecified = true;
-            _templateBody = value;
+        [XmlElement(ElementName = "templateBody", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody TemplateBody {
+            get => _templateBody;
+            set {
+                TemplateBodySpecified = true;
+                _templateBody = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TemplateBodySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TemplateBodySpecified { get; set; }
+        
+    }
 }

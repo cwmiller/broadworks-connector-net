@@ -1,90 +1,109 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class AutoAttendantKeyConfigurationModifyEntry20 
-{
-    private string _description;
+    /// <summary>
+    /// The modify configuration entry of a key for Auto Attendant.
+    /// The following data elements are only used in AS data mode:
+    /// audioFile
+    /// videoFile
+    /// submenuId
+    /// The following data elements are only valid for Standard Auto
+    /// Attendants:
+    /// submenuId
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class AutoAttendantKeyConfigurationModifyEntry20 
+    {
 
-    [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
-    public string Description {
-        get => _description;
-        set {
-            DescriptionSpecified = true;
-            _description = value;
+        
+        private string _description;
+
+        [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
+        public string Description {
+            get => _description;
+            set {
+                DescriptionSpecified = true;
+                _description = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DescriptionSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AutoAttendantKeyAction _action;
+        [XmlIgnore]
+        public bool DescriptionSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AutoAttendantKeyAction _action;
 
-    [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AutoAttendantKeyAction Action {
-        get => _action;
-        set {
-            ActionSpecified = true;
-            _action = value;
+        [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantKeyAction Action {
+            get => _action;
+            set {
+                ActionSpecified = true;
+                _action = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ActionSpecified { get; set; }
-    private string _phoneNumber;
+        [XmlIgnore]
+        public bool ActionSpecified { get; set; }
+        
+        private string _phoneNumber;
 
-    [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
-    public string PhoneNumber {
-        get => _phoneNumber;
-        set {
-            PhoneNumberSpecified = true;
-            _phoneNumber = value;
+        [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
+        public string PhoneNumber {
+            get => _phoneNumber;
+            set {
+                PhoneNumberSpecified = true;
+                _phoneNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PhoneNumberSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
+        [XmlIgnore]
+        public bool PhoneNumberSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
 
-    [XmlElement(ElementName = "audioFile", IsNullable = true, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile {
-        get => _audioFile;
-        set {
-            AudioFileSpecified = true;
-            _audioFile = value;
+        [XmlElement(ElementName = "audioFile", IsNullable = true, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile {
+            get => _audioFile;
+            set {
+                AudioFileSpecified = true;
+                _audioFile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AudioFileSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
+        [XmlIgnore]
+        public bool AudioFileSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
 
-    [XmlElement(ElementName = "videoFile", IsNullable = true, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile {
-        get => _videoFile;
-        set {
-            VideoFileSpecified = true;
-            _videoFile = value;
+        [XmlElement(ElementName = "videoFile", IsNullable = true, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile {
+            get => _videoFile;
+            set {
+                VideoFileSpecified = true;
+                _videoFile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool VideoFileSpecified { get; set; }
-    private string _submenuId;
+        [XmlIgnore]
+        public bool VideoFileSpecified { get; set; }
+        
+        private string _submenuId;
 
-    [XmlElement(ElementName = "submenuId", IsNullable = true, Namespace = "")]
-    public string SubmenuId {
-        get => _submenuId;
-        set {
-            SubmenuIdSpecified = true;
-            _submenuId = value;
+        [XmlElement(ElementName = "submenuId", IsNullable = true, Namespace = "")]
+        public string SubmenuId {
+            get => _submenuId;
+            set {
+                SubmenuIdSpecified = true;
+                _submenuId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SubmenuIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool SubmenuIdSpecified { get; set; }
+        
+    }
 }

@@ -1,51 +1,61 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemFileRepositoryDeviceUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _allowPut;
+    /// <summary>
+    /// Response to SystemFileRepositoryDeviceUserGetRequest.
+        /// <see cref="SystemFileRepositoryDeviceUserGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemFileRepositoryDeviceUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "allowPut", IsNullable = false, Namespace = "")]
-    public bool AllowPut {
-        get => _allowPut;
-        set {
-            AllowPutSpecified = true;
-            _allowPut = value;
+        
+        private bool _allowPut;
+
+        [XmlElement(ElementName = "allowPut", IsNullable = false, Namespace = "")]
+        public bool AllowPut {
+            get => _allowPut;
+            set {
+                AllowPutSpecified = true;
+                _allowPut = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowPutSpecified { get; set; }
-    private bool _allowDelete;
+        [XmlIgnore]
+        public bool AllowPutSpecified { get; set; }
+        
+        private bool _allowDelete;
 
-    [XmlElement(ElementName = "allowDelete", IsNullable = false, Namespace = "")]
-    public bool AllowDelete {
-        get => _allowDelete;
-        set {
-            AllowDeleteSpecified = true;
-            _allowDelete = value;
+        [XmlElement(ElementName = "allowDelete", IsNullable = false, Namespace = "")]
+        public bool AllowDelete {
+            get => _allowDelete;
+            set {
+                AllowDeleteSpecified = true;
+                _allowDelete = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowDeleteSpecified { get; set; }
-    private bool _allowGet;
+        [XmlIgnore]
+        public bool AllowDeleteSpecified { get; set; }
+        
+        private bool _allowGet;
 
-    [XmlElement(ElementName = "allowGet", IsNullable = false, Namespace = "")]
-    public bool AllowGet {
-        get => _allowGet;
-        set {
-            AllowGetSpecified = true;
-            _allowGet = value;
+        [XmlElement(ElementName = "allowGet", IsNullable = false, Namespace = "")]
+        public bool AllowGet {
+            get => _allowGet;
+            set {
+                AllowGetSpecified = true;
+                _allowGet = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AllowGetSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool AllowGetSpecified { get; set; }
+        
+    }
 }

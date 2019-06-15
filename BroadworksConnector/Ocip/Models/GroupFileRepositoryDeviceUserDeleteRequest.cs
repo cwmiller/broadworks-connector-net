@@ -1,64 +1,77 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupFileRepositoryDeviceUserDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceProviderId;
+    /// <summary>
+    /// Delete a group file repository user.
+    /// The response is either SuccessResponse or ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupFileRepositoryDeviceUserDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-    public string ServiceProviderId {
-        get => _serviceProviderId;
-        set {
-            ServiceProviderIdSpecified = true;
-            _serviceProviderId = value;
+        
+        private string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        public string ServiceProviderId {
+            get => _serviceProviderId;
+            set {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceProviderIdSpecified { get; set; }
-    private string _groupId;
+        [XmlIgnore]
+        public bool ServiceProviderIdSpecified { get; set; }
+        
+        private string _groupId;
 
-    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-    public string GroupId {
-        get => _groupId;
-        set {
-            GroupIdSpecified = true;
-            _groupId = value;
+        [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+        public string GroupId {
+            get => _groupId;
+            set {
+                GroupIdSpecified = true;
+                _groupId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GroupIdSpecified { get; set; }
-    private string _fileRepositoryName;
+        [XmlIgnore]
+        public bool GroupIdSpecified { get; set; }
+        
+        private string _fileRepositoryName;
 
-    [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
-    public string FileRepositoryName {
-        get => _fileRepositoryName;
-        set {
-            FileRepositoryNameSpecified = true;
-            _fileRepositoryName = value;
+        [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
+        public string FileRepositoryName {
+            get => _fileRepositoryName;
+            set {
+                FileRepositoryNameSpecified = true;
+                _fileRepositoryName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool FileRepositoryNameSpecified { get; set; }
-    private string _userName;
+        [XmlIgnore]
+        public bool FileRepositoryNameSpecified { get; set; }
+        
+        private string _userName;
 
-    [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
-    public string UserName {
-        get => _userName;
-        set {
-            UserNameSpecified = true;
-            _userName = value;
+        [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
+        public string UserName {
+            get => _userName;
+            set {
+                UserNameSpecified = true;
+                _userName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserNameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool UserNameSpecified { get; set; }
+        
+    }
 }

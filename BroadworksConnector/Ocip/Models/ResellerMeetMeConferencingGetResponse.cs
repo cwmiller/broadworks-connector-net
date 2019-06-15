@@ -1,38 +1,47 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ResellerMeetMeConferencingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private string _conferenceFromAddress;
+    /// <summary>
+    /// Response to ResellerMeetMeConferencingGetRequest.
+        /// <see cref="ResellerMeetMeConferencingGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ResellerMeetMeConferencingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "conferenceFromAddress", IsNullable = false, Namespace = "")]
-    public string ConferenceFromAddress {
-        get => _conferenceFromAddress;
-        set {
-            ConferenceFromAddressSpecified = true;
-            _conferenceFromAddress = value;
+        
+        private string _conferenceFromAddress;
+
+        [XmlElement(ElementName = "conferenceFromAddress", IsNullable = false, Namespace = "")]
+        public string ConferenceFromAddress {
+            get => _conferenceFromAddress;
+            set {
+                ConferenceFromAddressSpecified = true;
+                _conferenceFromAddress = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ConferenceFromAddressSpecified { get; set; }
-    private int _maxAllocatedPorts;
+        [XmlIgnore]
+        public bool ConferenceFromAddressSpecified { get; set; }
+        
+        private int _maxAllocatedPorts;
 
-    [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false, Namespace = "")]
-    public int MaxAllocatedPorts {
-        get => _maxAllocatedPorts;
-        set {
-            MaxAllocatedPortsSpecified = true;
-            _maxAllocatedPorts = value;
+        [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false, Namespace = "")]
+        public int MaxAllocatedPorts {
+            get => _maxAllocatedPorts;
+            set {
+                MaxAllocatedPortsSpecified = true;
+                _maxAllocatedPorts = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MaxAllocatedPortsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool MaxAllocatedPortsSpecified { get; set; }
+        
+    }
 }

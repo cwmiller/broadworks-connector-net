@@ -1,38 +1,48 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderAdviceOfChargeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _useSPLevelAoCSettings;
+    /// <summary>
+    /// Response to ServiceProviderAdviceOfChargeGetRequest.
+    /// Contains a list of Advice of Charge service provider parameters.
+        /// <see cref="ServiceProviderAdviceOfChargeGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderAdviceOfChargeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "useSPLevelAoCSettings", IsNullable = false, Namespace = "")]
-    public bool UseSPLevelAoCSettings {
-        get => _useSPLevelAoCSettings;
-        set {
-            UseSPLevelAoCSettingsSpecified = true;
-            _useSPLevelAoCSettings = value;
+        
+        private bool _useSPLevelAoCSettings;
+
+        [XmlElement(ElementName = "useSPLevelAoCSettings", IsNullable = false, Namespace = "")]
+        public bool UseSPLevelAoCSettings {
+            get => _useSPLevelAoCSettings;
+            set {
+                UseSPLevelAoCSettingsSpecified = true;
+                _useSPLevelAoCSettings = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseSPLevelAoCSettingsSpecified { get; set; }
-    private int _delayBetweenNotificationSeconds;
+        [XmlIgnore]
+        public bool UseSPLevelAoCSettingsSpecified { get; set; }
+        
+        private int _delayBetweenNotificationSeconds;
 
-    [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
-    public int DelayBetweenNotificationSeconds {
-        get => _delayBetweenNotificationSeconds;
-        set {
-            DelayBetweenNotificationSecondsSpecified = true;
-            _delayBetweenNotificationSeconds = value;
+        [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
+        public int DelayBetweenNotificationSeconds {
+            get => _delayBetweenNotificationSeconds;
+            set {
+                DelayBetweenNotificationSecondsSpecified = true;
+                _delayBetweenNotificationSeconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DelayBetweenNotificationSecondsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DelayBetweenNotificationSecondsSpecified { get; set; }
+        
+    }
 }

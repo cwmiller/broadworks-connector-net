@@ -1,38 +1,51 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserCollaborateProjectRoomGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _userId;
+    /// <summary>
+    /// Request collaborate room settings for a project room.
+    /// The request fails when requesting collaborate room settings for instant rooms or My Room.
+    /// The response is either UserCollaborateProjectRoomGetResponse or
+    /// ErrorResponse.
+        /// <see cref="UserCollaborateProjectRoomGetResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserCollaborateProjectRoomGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        
+        private string _userId;
+
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-    private string _roomId;
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+        private string _roomId;
 
-    [XmlElement(ElementName = "roomId", IsNullable = false, Namespace = "")]
-    public string RoomId {
-        get => _roomId;
-        set {
-            RoomIdSpecified = true;
-            _roomId = value;
+        [XmlElement(ElementName = "roomId", IsNullable = false, Namespace = "")]
+        public string RoomId {
+            get => _roomId;
+            set {
+                RoomIdSpecified = true;
+                _roomId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RoomIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool RoomIdSpecified { get; set; }
+        
+    }
 }

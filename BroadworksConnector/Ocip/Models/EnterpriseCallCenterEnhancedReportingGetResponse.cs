@@ -1,38 +1,50 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class EnterpriseCallCenterEnhancedReportingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice _reportingServer;
+    /// <summary>
+    /// Response to EnterpriseCallCenterEnhancedReportingGetRequest.
+    /// 
+    /// Replaced by EnterpriseCallCenterEnhancedReportingGetResponse19
+        /// <see cref="EnterpriseCallCenterEnhancedReportingGetRequest"/>
+        /// <see cref="EnterpriseCallCenterEnhancedReportingGetResponse19"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class EnterpriseCallCenterEnhancedReportingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "reportingServer", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice ReportingServer {
-        get => _reportingServer;
-        set {
-            ReportingServerSpecified = true;
-            _reportingServer = value;
+        
+        private BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice _reportingServer;
+
+        [XmlElement(ElementName = "reportingServer", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice ReportingServer {
+            get => _reportingServer;
+            set {
+                ReportingServerSpecified = true;
+                _reportingServer = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ReportingServerSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource _webStatisticSource;
+        [XmlIgnore]
+        public bool ReportingServerSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource _webStatisticSource;
 
-    [XmlElement(ElementName = "webStatisticSource", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource WebStatisticSource {
-        get => _webStatisticSource;
-        set {
-            WebStatisticSourceSpecified = true;
-            _webStatisticSource = value;
+        [XmlElement(ElementName = "webStatisticSource", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource WebStatisticSource {
+            get => _webStatisticSource;
+            set {
+                WebStatisticSourceSpecified = true;
+                _webStatisticSource = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool WebStatisticSourceSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool WebStatisticSourceSpecified { get; set; }
+        
+    }
 }

@@ -1,90 +1,105 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupCallCenterQueueStatusNotificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceUserId;
+    /// <summary>
+    /// Set the status configuration for a given call center.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupCallCenterQueueStatusNotificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-    public string ServiceUserId {
-        get => _serviceUserId;
-        set {
-            ServiceUserIdSpecified = true;
-            _serviceUserId = value;
+        
+        private string _serviceUserId;
+
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        public string ServiceUserId {
+            get => _serviceUserId;
+            set {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceUserIdSpecified { get; set; }
-    private bool _enableQueueStatusNotification;
+        [XmlIgnore]
+        public bool ServiceUserIdSpecified { get; set; }
+        
+        private bool _enableQueueStatusNotification;
 
-    [XmlElement(ElementName = "enableQueueStatusNotification", IsNullable = false, Namespace = "")]
-    public bool EnableQueueStatusNotification {
-        get => _enableQueueStatusNotification;
-        set {
-            EnableQueueStatusNotificationSpecified = true;
-            _enableQueueStatusNotification = value;
+        [XmlElement(ElementName = "enableQueueStatusNotification", IsNullable = false, Namespace = "")]
+        public bool EnableQueueStatusNotification {
+            get => _enableQueueStatusNotification;
+            set {
+                EnableQueueStatusNotificationSpecified = true;
+                _enableQueueStatusNotification = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableQueueStatusNotificationSpecified { get; set; }
-    private bool _enableQueueDepthThreshold;
+        [XmlIgnore]
+        public bool EnableQueueStatusNotificationSpecified { get; set; }
+        
+        private bool _enableQueueDepthThreshold;
 
-    [XmlElement(ElementName = "enableQueueDepthThreshold", IsNullable = false, Namespace = "")]
-    public bool EnableQueueDepthThreshold {
-        get => _enableQueueDepthThreshold;
-        set {
-            EnableQueueDepthThresholdSpecified = true;
-            _enableQueueDepthThreshold = value;
+        [XmlElement(ElementName = "enableQueueDepthThreshold", IsNullable = false, Namespace = "")]
+        public bool EnableQueueDepthThreshold {
+            get => _enableQueueDepthThreshold;
+            set {
+                EnableQueueDepthThresholdSpecified = true;
+                _enableQueueDepthThreshold = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableQueueDepthThresholdSpecified { get; set; }
-    private bool _enableWaitingTimeThreshold;
+        [XmlIgnore]
+        public bool EnableQueueDepthThresholdSpecified { get; set; }
+        
+        private bool _enableWaitingTimeThreshold;
 
-    [XmlElement(ElementName = "enableWaitingTimeThreshold", IsNullable = false, Namespace = "")]
-    public bool EnableWaitingTimeThreshold {
-        get => _enableWaitingTimeThreshold;
-        set {
-            EnableWaitingTimeThresholdSpecified = true;
-            _enableWaitingTimeThreshold = value;
+        [XmlElement(ElementName = "enableWaitingTimeThreshold", IsNullable = false, Namespace = "")]
+        public bool EnableWaitingTimeThreshold {
+            get => _enableWaitingTimeThreshold;
+            set {
+                EnableWaitingTimeThresholdSpecified = true;
+                _enableWaitingTimeThreshold = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableWaitingTimeThresholdSpecified { get; set; }
-    private int _numberOfCallsThreshold;
+        [XmlIgnore]
+        public bool EnableWaitingTimeThresholdSpecified { get; set; }
+        
+        private int _numberOfCallsThreshold;
 
-    [XmlElement(ElementName = "numberOfCallsThreshold", IsNullable = false, Namespace = "")]
-    public int NumberOfCallsThreshold {
-        get => _numberOfCallsThreshold;
-        set {
-            NumberOfCallsThresholdSpecified = true;
-            _numberOfCallsThreshold = value;
+        [XmlElement(ElementName = "numberOfCallsThreshold", IsNullable = false, Namespace = "")]
+        public int NumberOfCallsThreshold {
+            get => _numberOfCallsThreshold;
+            set {
+                NumberOfCallsThresholdSpecified = true;
+                _numberOfCallsThreshold = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NumberOfCallsThresholdSpecified { get; set; }
-    private int _waitingTimeOfCallsThreshold;
+        [XmlIgnore]
+        public bool NumberOfCallsThresholdSpecified { get; set; }
+        
+        private int _waitingTimeOfCallsThreshold;
 
-    [XmlElement(ElementName = "waitingTimeOfCallsThreshold", IsNullable = false, Namespace = "")]
-    public int WaitingTimeOfCallsThreshold {
-        get => _waitingTimeOfCallsThreshold;
-        set {
-            WaitingTimeOfCallsThresholdSpecified = true;
-            _waitingTimeOfCallsThreshold = value;
+        [XmlElement(ElementName = "waitingTimeOfCallsThreshold", IsNullable = false, Namespace = "")]
+        public int WaitingTimeOfCallsThreshold {
+            get => _waitingTimeOfCallsThreshold;
+            set {
+                WaitingTimeOfCallsThresholdSpecified = true;
+                _waitingTimeOfCallsThreshold = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool WaitingTimeOfCallsThresholdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool WaitingTimeOfCallsThresholdSpecified { get; set; }
+        
+    }
 }

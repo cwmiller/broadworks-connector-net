@@ -1,129 +1,147 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class EnterpriseVoiceVPNAddPolicyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceProviderId;
+    /// <summary>
+    /// Add the enterprise level data associated with a Voice VPN location code.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class EnterpriseVoiceVPNAddPolicyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-    public string ServiceProviderId {
-        get => _serviceProviderId;
-        set {
-            ServiceProviderIdSpecified = true;
-            _serviceProviderId = value;
+        
+        private string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        public string ServiceProviderId {
+            get => _serviceProviderId;
+            set {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceProviderIdSpecified { get; set; }
-    private string _locationDialingCode;
+        [XmlIgnore]
+        public bool ServiceProviderIdSpecified { get; set; }
+        
+        private string _locationDialingCode;
 
-    [XmlElement(ElementName = "locationDialingCode", IsNullable = false, Namespace = "")]
-    public string LocationDialingCode {
-        get => _locationDialingCode;
-        set {
-            LocationDialingCodeSpecified = true;
-            _locationDialingCode = value;
+        [XmlElement(ElementName = "locationDialingCode", IsNullable = false, Namespace = "")]
+        public string LocationDialingCode {
+            get => _locationDialingCode;
+            set {
+                LocationDialingCodeSpecified = true;
+                _locationDialingCode = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LocationDialingCodeSpecified { get; set; }
-    private int _minExtensionLength;
+        [XmlIgnore]
+        public bool LocationDialingCodeSpecified { get; set; }
+        
+        private int _minExtensionLength;
 
-    [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
-    public int MinExtensionLength {
-        get => _minExtensionLength;
-        set {
-            MinExtensionLengthSpecified = true;
-            _minExtensionLength = value;
+        [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
+        public int MinExtensionLength {
+            get => _minExtensionLength;
+            set {
+                MinExtensionLengthSpecified = true;
+                _minExtensionLength = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MinExtensionLengthSpecified { get; set; }
-    private int _maxExtensionLength;
+        [XmlIgnore]
+        public bool MinExtensionLengthSpecified { get; set; }
+        
+        private int _maxExtensionLength;
 
-    [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
-    public int MaxExtensionLength {
-        get => _maxExtensionLength;
-        set {
-            MaxExtensionLengthSpecified = true;
-            _maxExtensionLength = value;
+        [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
+        public int MaxExtensionLength {
+            get => _maxExtensionLength;
+            set {
+                MaxExtensionLengthSpecified = true;
+                _maxExtensionLength = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MaxExtensionLengthSpecified { get; set; }
-    private string _description;
+        [XmlIgnore]
+        public bool MaxExtensionLengthSpecified { get; set; }
+        
+        private string _description;
 
-    [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-    public string Description {
-        get => _description;
-        set {
-            DescriptionSpecified = true;
-            _description = value;
+        [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
+        public string Description {
+            get => _description;
+            set {
+                DescriptionSpecified = true;
+                _description = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DescriptionSpecified { get; set; }
-    private string _routeGroupId;
+        [XmlIgnore]
+        public bool DescriptionSpecified { get; set; }
+        
+        private string _routeGroupId;
 
-    [XmlElement(ElementName = "routeGroupId", IsNullable = false, Namespace = "")]
-    public string RouteGroupId {
-        get => _routeGroupId;
-        set {
-            RouteGroupIdSpecified = true;
-            _routeGroupId = value;
+        [XmlElement(ElementName = "routeGroupId", IsNullable = false, Namespace = "")]
+        public string RouteGroupId {
+            get => _routeGroupId;
+            set {
+                RouteGroupIdSpecified = true;
+                _routeGroupId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RouteGroupIdSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection _policySelection;
+        [XmlIgnore]
+        public bool RouteGroupIdSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection _policySelection;
 
-    [XmlElement(ElementName = "policySelection", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection PolicySelection {
-        get => _policySelection;
-        set {
-            PolicySelectionSpecified = true;
-            _policySelection = value;
+        [XmlElement(ElementName = "policySelection", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection PolicySelection {
+            get => _policySelection;
+            set {
+                PolicySelectionSpecified = true;
+                _policySelection = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PolicySelectionSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation> _digitManipulation;
+        [XmlIgnore]
+        public bool PolicySelectionSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation> _digitManipulation;
 
-    [XmlElement(ElementName = "digitManipulation", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation> DigitManipulation {
-        get => _digitManipulation;
-        set {
-            DigitManipulationSpecified = true;
-            _digitManipulation = value;
+        [XmlElement(ElementName = "digitManipulation", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation> DigitManipulation {
+            get => _digitManipulation;
+            set {
+                DigitManipulationSpecified = true;
+                _digitManipulation = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DigitManipulationSpecified { get; set; }
-    private string _treatmentId;
+        [XmlIgnore]
+        public bool DigitManipulationSpecified { get; set; }
+        
+        private string _treatmentId;
 
-    [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
-    public string TreatmentId {
-        get => _treatmentId;
-        set {
-            TreatmentIdSpecified = true;
-            _treatmentId = value;
+        [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
+        public string TreatmentId {
+            get => _treatmentId;
+            set {
+                TreatmentIdSpecified = true;
+                _treatmentId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TreatmentIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TreatmentIdSpecified { get; set; }
+        
+    }
 }

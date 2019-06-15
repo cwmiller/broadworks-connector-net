@@ -1,38 +1,47 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserNetworkConferencingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private string _conferenceURI;
+    /// <summary>
+    /// Response to UserNetworkConferencingGetRequest.
+        /// <see cref="UserNetworkConferencingGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserNetworkConferencingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "conferenceURI", IsNullable = false, Namespace = "")]
-    public string ConferenceURI {
-        get => _conferenceURI;
-        set {
-            ConferenceURISpecified = true;
-            _conferenceURI = value;
+        
+        private string _conferenceURI;
+
+        [XmlElement(ElementName = "conferenceURI", IsNullable = false, Namespace = "")]
+        public string ConferenceURI {
+            get => _conferenceURI;
+            set {
+                ConferenceURISpecified = true;
+                _conferenceURI = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ConferenceURISpecified { get; set; }
-    private int _maxConferenceParties;
+        [XmlIgnore]
+        public bool ConferenceURISpecified { get; set; }
+        
+        private int _maxConferenceParties;
 
-    [XmlElement(ElementName = "maxConferenceParties", IsNullable = false, Namespace = "")]
-    public int MaxConferenceParties {
-        get => _maxConferenceParties;
-        set {
-            MaxConferencePartiesSpecified = true;
-            _maxConferenceParties = value;
+        [XmlElement(ElementName = "maxConferenceParties", IsNullable = false, Namespace = "")]
+        public int MaxConferenceParties {
+            get => _maxConferenceParties;
+            set {
+                MaxConferencePartiesSpecified = true;
+                _maxConferenceParties = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MaxConferencePartiesSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool MaxConferencePartiesSpecified { get; set; }
+        
+    }
 }

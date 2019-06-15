@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class OutgoingCallingPlanGroupAuthorizationCodes 
-{
-    private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> _codeEntry;
+    /// <summary>
+    /// Outgoing Calling Plan Authorization Code for the group default.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class OutgoingCallingPlanGroupAuthorizationCodes 
+    {
 
-    [XmlElement(ElementName = "codeEntry", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> CodeEntry {
-        get => _codeEntry;
-        set {
-            CodeEntrySpecified = true;
-            _codeEntry = value;
+        
+        private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> _codeEntry;
+
+        [XmlElement(ElementName = "codeEntry", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> CodeEntry {
+            get => _codeEntry;
+            set {
+                CodeEntrySpecified = true;
+                _codeEntry = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CodeEntrySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CodeEntrySpecified { get; set; }
+        
+    }
 }

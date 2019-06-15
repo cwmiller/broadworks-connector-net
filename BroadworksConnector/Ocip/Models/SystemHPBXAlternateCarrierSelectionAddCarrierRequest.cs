@@ -1,64 +1,77 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemHPBXAlternateCarrierSelectionAddCarrierRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _name;
+    /// <summary>
+    /// Add a new alternate carrier for CbC and Preselection.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemHPBXAlternateCarrierSelectionAddCarrierRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-    public string Name {
-        get => _name;
-        set {
-            NameSpecified = true;
-            _name = value;
+        
+        private string _name;
+
+        [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+        public string Name {
+            get => _name;
+            set {
+                NameSpecified = true;
+                _name = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NameSpecified { get; set; }
-    private string _prefix;
+        [XmlIgnore]
+        public bool NameSpecified { get; set; }
+        
+        private string _prefix;
 
-    [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
-    public string Prefix {
-        get => _prefix;
-        set {
-            PrefixSpecified = true;
-            _prefix = value;
+        [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
+        public string Prefix {
+            get => _prefix;
+            set {
+                PrefixSpecified = true;
+                _prefix = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PrefixSpecified { get; set; }
-    private string _domain;
+        [XmlIgnore]
+        public bool PrefixSpecified { get; set; }
+        
+        private string _domain;
 
-    [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
-    public string Domain {
-        get => _domain;
-        set {
-            DomainSpecified = true;
-            _domain = value;
+        [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
+        public string Domain {
+            get => _domain;
+            set {
+                DomainSpecified = true;
+                _domain = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DomainSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType _type;
+        [XmlIgnore]
+        public bool DomainSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType _type;
 
-    [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType Type {
-        get => _type;
-        set {
-            TypeSpecified = true;
-            _type = value;
+        [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType Type {
+            get => _type;
+            set {
+                TypeSpecified = true;
+                _type = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TypeSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TypeSpecified { get; set; }
+        
+    }
 }

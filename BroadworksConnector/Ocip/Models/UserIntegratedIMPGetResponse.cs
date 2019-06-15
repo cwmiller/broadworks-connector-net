@@ -1,25 +1,37 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserIntegratedIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _isActive;
+    /// <summary>
+    /// Response to the UserIntegratedIMPGetRequest.
+    /// The response contains the Integrated IMP specific service attributes for the user.
+    /// 
+    /// Replaced by: UserIntegratedIMPGetResponse21sp1
+        /// <see cref="UserIntegratedIMPGetRequest"/>
+        /// <see cref="UserIntegratedIMPGetResponse21sp1"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserIntegratedIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-    public bool IsActive {
-        get => _isActive;
-        set {
-            IsActiveSpecified = true;
-            _isActive = value;
+        
+        private bool _isActive;
+
+        [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+        public bool IsActive {
+            get => _isActive;
+            set {
+                IsActiveSpecified = true;
+                _isActive = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsActiveSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool IsActiveSpecified { get; set; }
+        
+    }
 }

@@ -1,12 +1,23 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemCPEConfigGetFileServerListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-}
+    /// <summary>
+    /// Requests the list of device CPE config file servers.
+    /// The response is either SystemCPEConfigGetFileServerListResponse or ErrorResponse.
+    /// Replaced By: SystemCPEConfigGetFileServerListRequest14sp6
+        /// <see cref="SystemCPEConfigGetFileServerListResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="SystemCPEConfigGetFileServerListRequest14sp6"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemCPEConfigGetFileServerListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
+
+        
+    }
 }

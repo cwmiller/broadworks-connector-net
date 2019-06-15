@@ -1,129 +1,149 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupVirtualOnNetEnterpriseExtensionsModifyUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceProviderId;
+    /// <summary>
+    /// Modify an existing Virtual On-Net user of a Group.
+    /// The serviceProviderId, groupId and phoneNumber combination uniquely
+    /// identifies a Virtual On-Net User.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupVirtualOnNetEnterpriseExtensionsModifyUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-    public string ServiceProviderId {
-        get => _serviceProviderId;
-        set {
-            ServiceProviderIdSpecified = true;
-            _serviceProviderId = value;
+        
+        private string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        public string ServiceProviderId {
+            get => _serviceProviderId;
+            set {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceProviderIdSpecified { get; set; }
-    private string _groupId;
+        [XmlIgnore]
+        public bool ServiceProviderIdSpecified { get; set; }
+        
+        private string _groupId;
 
-    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-    public string GroupId {
-        get => _groupId;
-        set {
-            GroupIdSpecified = true;
-            _groupId = value;
+        [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+        public string GroupId {
+            get => _groupId;
+            set {
+                GroupIdSpecified = true;
+                _groupId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GroupIdSpecified { get; set; }
-    private string _phoneNumber;
+        [XmlIgnore]
+        public bool GroupIdSpecified { get; set; }
+        
+        private string _phoneNumber;
 
-    [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-    public string PhoneNumber {
-        get => _phoneNumber;
-        set {
-            PhoneNumberSpecified = true;
-            _phoneNumber = value;
+        [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
+        public string PhoneNumber {
+            get => _phoneNumber;
+            set {
+                PhoneNumberSpecified = true;
+                _phoneNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PhoneNumberSpecified { get; set; }
-    private string _extension;
+        [XmlIgnore]
+        public bool PhoneNumberSpecified { get; set; }
+        
+        private string _extension;
 
-    [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
-    public string Extension {
-        get => _extension;
-        set {
-            ExtensionSpecified = true;
-            _extension = value;
+        [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
+        public string Extension {
+            get => _extension;
+            set {
+                ExtensionSpecified = true;
+                _extension = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ExtensionSpecified { get; set; }
-    private string _firstName;
+        [XmlIgnore]
+        public bool ExtensionSpecified { get; set; }
+        
+        private string _firstName;
 
-    [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
-    public string FirstName {
-        get => _firstName;
-        set {
-            FirstNameSpecified = true;
-            _firstName = value;
+        [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
+        public string FirstName {
+            get => _firstName;
+            set {
+                FirstNameSpecified = true;
+                _firstName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool FirstNameSpecified { get; set; }
-    private string _lastName;
+        [XmlIgnore]
+        public bool FirstNameSpecified { get; set; }
+        
+        private string _lastName;
 
-    [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
-    public string LastName {
-        get => _lastName;
-        set {
-            LastNameSpecified = true;
-            _lastName = value;
+        [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
+        public string LastName {
+            get => _lastName;
+            set {
+                LastNameSpecified = true;
+                _lastName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LastNameSpecified { get; set; }
-    private string _callingLineIdFirstName;
+        [XmlIgnore]
+        public bool LastNameSpecified { get; set; }
+        
+        private string _callingLineIdFirstName;
 
-    [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
-    public string CallingLineIdFirstName {
-        get => _callingLineIdFirstName;
-        set {
-            CallingLineIdFirstNameSpecified = true;
-            _callingLineIdFirstName = value;
+        [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
+        public string CallingLineIdFirstName {
+            get => _callingLineIdFirstName;
+            set {
+                CallingLineIdFirstNameSpecified = true;
+                _callingLineIdFirstName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallingLineIdFirstNameSpecified { get; set; }
-    private string _callingLineIdLastName;
+        [XmlIgnore]
+        public bool CallingLineIdFirstNameSpecified { get; set; }
+        
+        private string _callingLineIdLastName;
 
-    [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
-    public string CallingLineIdLastName {
-        get => _callingLineIdLastName;
-        set {
-            CallingLineIdLastNameSpecified = true;
-            _callingLineIdLastName = value;
+        [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
+        public string CallingLineIdLastName {
+            get => _callingLineIdLastName;
+            set {
+                CallingLineIdLastNameSpecified = true;
+                _callingLineIdLastName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallingLineIdLastNameSpecified { get; set; }
-    private string _virtualOnNetCallTypeName;
+        [XmlIgnore]
+        public bool CallingLineIdLastNameSpecified { get; set; }
+        
+        private string _virtualOnNetCallTypeName;
 
-    [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
-    public string VirtualOnNetCallTypeName {
-        get => _virtualOnNetCallTypeName;
-        set {
-            VirtualOnNetCallTypeNameSpecified = true;
-            _virtualOnNetCallTypeName = value;
+        [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
+        public string VirtualOnNetCallTypeName {
+            get => _virtualOnNetCallTypeName;
+            set {
+                VirtualOnNetCallTypeNameSpecified = true;
+                _virtualOnNetCallTypeName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool VirtualOnNetCallTypeNameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool VirtualOnNetCallTypeNameSpecified { get; set; }
+        
+    }
 }

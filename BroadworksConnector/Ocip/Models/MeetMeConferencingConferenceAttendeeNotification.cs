@@ -3,14 +3,17 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum MeetMeConferencingConferenceAttendeeNotification{
-    [XmlEnum(Name = "Play Tone")]
-    PlayTone,
-    [XmlEnum(Name = "Play Recorded Name")]
-    PlayRecordedName,
-    [XmlEnum(Name = "No Notification")]
-    NoNotification,
- }
+    /// <summary>
+    /// Choices for the notification when attendees join or leave the conferecne.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum MeetMeConferencingConferenceAttendeeNotification    {
+            [XmlEnum(Name = "Play Tone")]
+        PlayTone,
+            [XmlEnum(Name = "Play Recorded Name")]
+        PlayRecordedName,
+            [XmlEnum(Name = "No Notification")]
+        NoNotification,
+     }
 }

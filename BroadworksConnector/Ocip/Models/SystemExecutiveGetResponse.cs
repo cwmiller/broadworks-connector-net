@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemExecutiveGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _treatVirtualOnNetCallsAsInternal;
+    /// <summary>
+    /// Response to SystemExecutiveGetRequest.
+        /// <see cref="SystemExecutiveGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemExecutiveGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "treatVirtualOnNetCallsAsInternal", IsNullable = false, Namespace = "")]
-    public bool TreatVirtualOnNetCallsAsInternal {
-        get => _treatVirtualOnNetCallsAsInternal;
-        set {
-            TreatVirtualOnNetCallsAsInternalSpecified = true;
-            _treatVirtualOnNetCallsAsInternal = value;
+        
+        private bool _treatVirtualOnNetCallsAsInternal;
+
+        [XmlElement(ElementName = "treatVirtualOnNetCallsAsInternal", IsNullable = false, Namespace = "")]
+        public bool TreatVirtualOnNetCallsAsInternal {
+            get => _treatVirtualOnNetCallsAsInternal;
+            set {
+                TreatVirtualOnNetCallsAsInternalSpecified = true;
+                _treatVirtualOnNetCallsAsInternal = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TreatVirtualOnNetCallsAsInternalSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TreatVirtualOnNetCallsAsInternalSpecified { get; set; }
+        
+    }
 }

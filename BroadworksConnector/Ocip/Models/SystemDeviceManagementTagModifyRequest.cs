@@ -1,90 +1,109 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemDeviceManagementTagModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private bool _systemDefaultTagSet;
+    /// <summary>
+    /// Request to modify a static configuration tag.
+    /// 
+    /// The following elements are only used in XS data mode and ignored in AS data mode:
+    /// tagValueToEncrypt
+    /// 
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemDeviceManagementTagModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "systemDefaultTagSet", IsNullable = false, Namespace = "")]
-    public bool SystemDefaultTagSet {
-        get => _systemDefaultTagSet;
-        set {
-            SystemDefaultTagSetSpecified = true;
-            _systemDefaultTagSet = value;
+        
+        private bool _systemDefaultTagSet;
+
+        [XmlElement(ElementName = "systemDefaultTagSet", IsNullable = false, Namespace = "")]
+        public bool SystemDefaultTagSet {
+            get => _systemDefaultTagSet;
+            set {
+                SystemDefaultTagSetSpecified = true;
+                _systemDefaultTagSet = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SystemDefaultTagSetSpecified { get; set; }
-    private string _tagSetName;
+        [XmlIgnore]
+        public bool SystemDefaultTagSetSpecified { get; set; }
+        
+        private string _tagSetName;
 
-    [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-    public string TagSetName {
-        get => _tagSetName;
-        set {
-            TagSetNameSpecified = true;
-            _tagSetName = value;
+        [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
+        public string TagSetName {
+            get => _tagSetName;
+            set {
+                TagSetNameSpecified = true;
+                _tagSetName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TagSetNameSpecified { get; set; }
-    private string _tagName;
+        [XmlIgnore]
+        public bool TagSetNameSpecified { get; set; }
+        
+        private string _tagName;
 
-    [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-    public string TagName {
-        get => _tagName;
-        set {
-            TagNameSpecified = true;
-            _tagName = value;
+        [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
+        public string TagName {
+            get => _tagName;
+            set {
+                TagNameSpecified = true;
+                _tagName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TagNameSpecified { get; set; }
-    private string _tagValue;
+        [XmlIgnore]
+        public bool TagNameSpecified { get; set; }
+        
+        private string _tagValue;
 
-    [XmlElement(ElementName = "tagValue", IsNullable = true, Namespace = "")]
-    public string TagValue {
-        get => _tagValue;
-        set {
-            TagValueSpecified = true;
-            _tagValue = value;
+        [XmlElement(ElementName = "tagValue", IsNullable = true, Namespace = "")]
+        public string TagValue {
+            get => _tagValue;
+            set {
+                TagValueSpecified = true;
+                _tagValue = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TagValueSpecified { get; set; }
-    private string _tagValueToEncrypt;
+        [XmlIgnore]
+        public bool TagValueSpecified { get; set; }
+        
+        private string _tagValueToEncrypt;
 
-    [XmlElement(ElementName = "tagValueToEncrypt", IsNullable = true, Namespace = "")]
-    public string TagValueToEncrypt {
-        get => _tagValueToEncrypt;
-        set {
-            TagValueToEncryptSpecified = true;
-            _tagValueToEncrypt = value;
+        [XmlElement(ElementName = "tagValueToEncrypt", IsNullable = true, Namespace = "")]
+        public string TagValueToEncrypt {
+            get => _tagValueToEncrypt;
+            set {
+                TagValueToEncryptSpecified = true;
+                _tagValueToEncrypt = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TagValueToEncryptSpecified { get; set; }
-    private bool _isTagValueOverridable;
+        [XmlIgnore]
+        public bool TagValueToEncryptSpecified { get; set; }
+        
+        private bool _isTagValueOverridable;
 
-    [XmlElement(ElementName = "isTagValueOverridable", IsNullable = false, Namespace = "")]
-    public bool IsTagValueOverridable {
-        get => _isTagValueOverridable;
-        set {
-            IsTagValueOverridableSpecified = true;
-            _isTagValueOverridable = value;
+        [XmlElement(ElementName = "isTagValueOverridable", IsNullable = false, Namespace = "")]
+        public bool IsTagValueOverridable {
+            get => _isTagValueOverridable;
+            set {
+                IsTagValueOverridableSpecified = true;
+                _isTagValueOverridable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsTagValueOverridableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool IsTagValueOverridableSpecified { get; set; }
+        
+    }
 }

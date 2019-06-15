@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum LineOrderingMode{
-    [XmlEnum(Name = "Dynamic")]
-    Dynamic,
-    [XmlEnum(Name = "Static")]
-    Static,
- }
+    /// <summary>
+    /// Line ordering value.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum LineOrderingMode    {
+            [XmlEnum(Name = "Dynamic")]
+        Dynamic,
+            [XmlEnum(Name = "Static")]
+        Static,
+     }
 }

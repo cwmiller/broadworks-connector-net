@@ -1,77 +1,92 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class MusicOnHoldSourceAdd22 
-{
-    private BroadWorksConnector.Ocip.Models.AudioFileCodec22 _audioFilePreferredCodec;
+    /// <summary>
+    /// Contains the music on hold source configuration.
+    /// The following elements are only used in HSS data mode and ignored in AS data mode:
+    /// labeledMediaFiles
+    /// The following elements are only used in AS data mode and ignored in HSS data mode:
+    /// announcementMediaFiles
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class MusicOnHoldSourceAdd22 
+    {
 
-    [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AudioFileCodec22 AudioFilePreferredCodec {
-        get => _audioFilePreferredCodec;
-        set {
-            AudioFilePreferredCodecSpecified = true;
-            _audioFilePreferredCodec = value;
+        
+        private BroadWorksConnector.Ocip.Models.AudioFileCodec22 _audioFilePreferredCodec;
+
+        [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AudioFileCodec22 AudioFilePreferredCodec {
+            get => _audioFilePreferredCodec;
+            set {
+                AudioFilePreferredCodecSpecified = true;
+                _audioFilePreferredCodec = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AudioFilePreferredCodecSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
+        [XmlIgnore]
+        public bool AudioFilePreferredCodecSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
 
-    [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection {
-        get => _messageSourceSelection;
-        set {
-            MessageSourceSelectionSpecified = true;
-            _messageSourceSelection = value;
+        [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection {
+            get => _messageSourceSelection;
+            set {
+                MessageSourceSelectionSpecified = true;
+                _messageSourceSelection = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MessageSourceSelectionSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22LabeledCustomSourceMediaFiles _labeledCustomSourceMediaFiles;
+        [XmlIgnore]
+        public bool MessageSourceSelectionSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22LabeledCustomSourceMediaFiles _labeledCustomSourceMediaFiles;
 
-    [XmlElement(ElementName = "labeledCustomSourceMediaFiles", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22LabeledCustomSourceMediaFiles LabeledCustomSourceMediaFiles {
-        get => _labeledCustomSourceMediaFiles;
-        set {
-            LabeledCustomSourceMediaFilesSpecified = true;
-            _labeledCustomSourceMediaFiles = value;
+        [XmlElement(ElementName = "labeledCustomSourceMediaFiles", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22LabeledCustomSourceMediaFiles LabeledCustomSourceMediaFiles {
+            get => _labeledCustomSourceMediaFiles;
+            set {
+                LabeledCustomSourceMediaFilesSpecified = true;
+                _labeledCustomSourceMediaFiles = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LabeledCustomSourceMediaFilesSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22AnnouncementCustomSourceMediaFiles _announcementCustomSourceMediaFiles;
+        [XmlIgnore]
+        public bool LabeledCustomSourceMediaFilesSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22AnnouncementCustomSourceMediaFiles _announcementCustomSourceMediaFiles;
 
-    [XmlElement(ElementName = "announcementCustomSourceMediaFiles", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22AnnouncementCustomSourceMediaFiles AnnouncementCustomSourceMediaFiles {
-        get => _announcementCustomSourceMediaFiles;
-        set {
-            AnnouncementCustomSourceMediaFilesSpecified = true;
-            _announcementCustomSourceMediaFiles = value;
+        [XmlElement(ElementName = "announcementCustomSourceMediaFiles", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22AnnouncementCustomSourceMediaFiles AnnouncementCustomSourceMediaFiles {
+            get => _announcementCustomSourceMediaFiles;
+            set {
+                AnnouncementCustomSourceMediaFilesSpecified = true;
+                _announcementCustomSourceMediaFiles = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AnnouncementCustomSourceMediaFilesSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22ExternalSource _externalSource;
+        [XmlIgnore]
+        public bool AnnouncementCustomSourceMediaFilesSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22ExternalSource _externalSource;
 
-    [XmlElement(ElementName = "externalSource", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22ExternalSource ExternalSource {
-        get => _externalSource;
-        set {
-            ExternalSourceSpecified = true;
-            _externalSource = value;
+        [XmlElement(ElementName = "externalSource", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd22ExternalSource ExternalSource {
+            get => _externalSource;
+            set {
+                ExternalSourceSpecified = true;
+                _externalSource = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ExternalSourceSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ExternalSourceSpecified { get; set; }
+        
+    }
 }

@@ -1,51 +1,63 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemNumberPortabilityQueryStatusModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _statusName;
+    /// <summary>
+    /// Modify the system number portability status information.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemNumberPortabilityQueryStatusModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "statusName", IsNullable = false, Namespace = "")]
-    public string StatusName {
-        get => _statusName;
-        set {
-            StatusNameSpecified = true;
-            _statusName = value;
+        
+        private string _statusName;
+
+        [XmlElement(ElementName = "statusName", IsNullable = false, Namespace = "")]
+        public string StatusName {
+            get => _statusName;
+            set {
+                StatusNameSpecified = true;
+                _statusName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool StatusNameSpecified { get; set; }
-    private string _newStatusName;
+        [XmlIgnore]
+        public bool StatusNameSpecified { get; set; }
+        
+        private string _newStatusName;
 
-    [XmlElement(ElementName = "newStatusName", IsNullable = false, Namespace = "")]
-    public string NewStatusName {
-        get => _newStatusName;
-        set {
-            NewStatusNameSpecified = true;
-            _newStatusName = value;
+        [XmlElement(ElementName = "newStatusName", IsNullable = false, Namespace = "")]
+        public string NewStatusName {
+            get => _newStatusName;
+            set {
+                NewStatusNameSpecified = true;
+                _newStatusName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NewStatusNameSpecified { get; set; }
-    private string _treatmentFileName;
+        [XmlIgnore]
+        public bool NewStatusNameSpecified { get; set; }
+        
+        private string _treatmentFileName;
 
-    [XmlElement(ElementName = "treatmentFileName", IsNullable = true, Namespace = "")]
-    public string TreatmentFileName {
-        get => _treatmentFileName;
-        set {
-            TreatmentFileNameSpecified = true;
-            _treatmentFileName = value;
+        [XmlElement(ElementName = "treatmentFileName", IsNullable = true, Namespace = "")]
+        public string TreatmentFileName {
+            get => _treatmentFileName;
+            set {
+                TreatmentFileNameSpecified = true;
+                _treatmentFileName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TreatmentFileNameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TreatmentFileNameSpecified { get; set; }
+        
+    }
 }

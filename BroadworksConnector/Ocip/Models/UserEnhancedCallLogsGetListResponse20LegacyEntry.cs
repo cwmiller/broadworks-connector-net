@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserEnhancedCallLogsGetListResponse20LegacyEntry 
-{
-    private List<BroadWorksConnector.Ocip.Models.MixedCallLogsEntry> _callLog;
+    /// <summary>
+    /// 
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserEnhancedCallLogsGetListResponse20LegacyEntry 
+    {
 
-    [XmlElement(ElementName = "callLog", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.MixedCallLogsEntry> CallLog {
-        get => _callLog;
-        set {
-            CallLogSpecified = true;
-            _callLog = value;
+        
+        private List<BroadWorksConnector.Ocip.Models.MixedCallLogsEntry> _callLog;
+
+        [XmlElement(ElementName = "callLog", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.MixedCallLogsEntry> CallLog {
+            get => _callLog;
+            set {
+                CallLogSpecified = true;
+                _callLog = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallLogSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CallLogSpecified { get; set; }
+        
+    }
 }

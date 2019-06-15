@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum ForkingSupport{
-    [XmlEnum(Name = "Single Dialog")]
-    SingleDialog,
-    [XmlEnum(Name = "Multiple Dialogs")]
-    MultipleDialogs,
- }
+    /// <summary>
+    /// Choices for Forking Dialog Support Method
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum ForkingSupport    {
+            [XmlEnum(Name = "Single Dialog")]
+        SingleDialog,
+            [XmlEnum(Name = "Multiple Dialogs")]
+        MultipleDialogs,
+     }
 }

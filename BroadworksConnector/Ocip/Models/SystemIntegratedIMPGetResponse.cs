@@ -1,51 +1,65 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemIntegratedIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private string _serviceDomain;
+    /// <summary>
+    /// Response to the SystemIntegratedIMPGetRequest.
+    /// The response contains the system Integrated IMP service attributes.
+    /// 
+    /// Replaced by SystemIntegratedIMPGetResponse19.
+        /// <see cref="SystemIntegratedIMPGetRequest"/>
+        /// <see cref="SystemIntegratedIMPGetResponse19"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemIntegratedIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
-    public string ServiceDomain {
-        get => _serviceDomain;
-        set {
-            ServiceDomainSpecified = true;
-            _serviceDomain = value;
+        
+        private string _serviceDomain;
+
+        [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
+        public string ServiceDomain {
+            get => _serviceDomain;
+            set {
+                ServiceDomainSpecified = true;
+                _serviceDomain = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceDomainSpecified { get; set; }
-    private int _servicePort;
+        [XmlIgnore]
+        public bool ServiceDomainSpecified { get; set; }
+        
+        private int _servicePort;
 
-    [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
-    public int ServicePort {
-        get => _servicePort;
-        set {
-            ServicePortSpecified = true;
-            _servicePort = value;
+        [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
+        public int ServicePort {
+            get => _servicePort;
+            set {
+                ServicePortSpecified = true;
+                _servicePort = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServicePortSpecified { get; set; }
-    private bool _addServiceProviderInIMPUserId;
+        [XmlIgnore]
+        public bool ServicePortSpecified { get; set; }
+        
+        private bool _addServiceProviderInIMPUserId;
 
-    [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
-    public bool AddServiceProviderInIMPUserId {
-        get => _addServiceProviderInIMPUserId;
-        set {
-            AddServiceProviderInIMPUserIdSpecified = true;
-            _addServiceProviderInIMPUserId = value;
+        [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
+        public bool AddServiceProviderInIMPUserId {
+            get => _addServiceProviderInIMPUserId;
+            set {
+                AddServiceProviderInIMPUserIdSpecified = true;
+                _addServiceProviderInIMPUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AddServiceProviderInIMPUserIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool AddServiceProviderInIMPUserIdSpecified { get; set; }
+        
+    }
 }

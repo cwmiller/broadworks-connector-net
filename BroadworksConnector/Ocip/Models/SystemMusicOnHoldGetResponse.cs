@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemMusicOnHoldGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private int _delayMilliseconds;
+    /// <summary>
+    /// Response to SystemMusicOnHoldGetRequest.
+        /// <see cref="SystemMusicOnHoldGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemMusicOnHoldGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "delayMilliseconds", IsNullable = false, Namespace = "")]
-    public int DelayMilliseconds {
-        get => _delayMilliseconds;
-        set {
-            DelayMillisecondsSpecified = true;
-            _delayMilliseconds = value;
+        
+        private int _delayMilliseconds;
+
+        [XmlElement(ElementName = "delayMilliseconds", IsNullable = false, Namespace = "")]
+        public int DelayMilliseconds {
+            get => _delayMilliseconds;
+            set {
+                DelayMillisecondsSpecified = true;
+                _delayMilliseconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DelayMillisecondsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DelayMillisecondsSpecified { get; set; }
+        
+    }
 }

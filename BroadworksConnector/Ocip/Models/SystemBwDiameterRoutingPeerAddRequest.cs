@@ -1,90 +1,105 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemBwDiameterRoutingPeerAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
+    /// <summary>
+    /// Add a Diameter routing peer.  The realm must refer to a Diameter routing realm whose action is relay.  The destinationPeerIdentity must refer to an existing Diameter peer whose mode is active.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemBwDiameterRoutingPeerAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance Instance {
-        get => _instance;
-        set {
-            InstanceSpecified = true;
-            _instance = value;
+        
+        private BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
+
+        [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance Instance {
+            get => _instance;
+            set {
+                InstanceSpecified = true;
+                _instance = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool InstanceSpecified { get; set; }
-    private string _realm;
+        [XmlIgnore]
+        public bool InstanceSpecified { get; set; }
+        
+        private string _realm;
 
-    [XmlElement(ElementName = "realm", IsNullable = false, Namespace = "")]
-    public string Realm {
-        get => _realm;
-        set {
-            RealmSpecified = true;
-            _realm = value;
+        [XmlElement(ElementName = "realm", IsNullable = false, Namespace = "")]
+        public string Realm {
+            get => _realm;
+            set {
+                RealmSpecified = true;
+                _realm = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RealmSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.BwDiameterApplicationId _applicationId;
+        [XmlIgnore]
+        public bool RealmSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.BwDiameterApplicationId _applicationId;
 
-    [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.BwDiameterApplicationId ApplicationId {
-        get => _applicationId;
-        set {
-            ApplicationIdSpecified = true;
-            _applicationId = value;
+        [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.BwDiameterApplicationId ApplicationId {
+            get => _applicationId;
+            set {
+                ApplicationIdSpecified = true;
+                _applicationId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ApplicationIdSpecified { get; set; }
-    private string _identity;
+        [XmlIgnore]
+        public bool ApplicationIdSpecified { get; set; }
+        
+        private string _identity;
 
-    [XmlElement(ElementName = "identity", IsNullable = false, Namespace = "")]
-    public string Identity {
-        get => _identity;
-        set {
-            IdentitySpecified = true;
-            _identity = value;
+        [XmlElement(ElementName = "identity", IsNullable = false, Namespace = "")]
+        public string Identity {
+            get => _identity;
+            set {
+                IdentitySpecified = true;
+                _identity = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IdentitySpecified { get; set; }
-    private int _priority;
+        [XmlIgnore]
+        public bool IdentitySpecified { get; set; }
+        
+        private int _priority;
 
-    [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-    public int Priority {
-        get => _priority;
-        set {
-            PrioritySpecified = true;
-            _priority = value;
+        [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
+        public int Priority {
+            get => _priority;
+            set {
+                PrioritySpecified = true;
+                _priority = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PrioritySpecified { get; set; }
-    private int _weight;
+        [XmlIgnore]
+        public bool PrioritySpecified { get; set; }
+        
+        private int _weight;
 
-    [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
-    public int Weight {
-        get => _weight;
-        set {
-            WeightSpecified = true;
-            _weight = value;
+        [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
+        public int Weight {
+            get => _weight;
+            set {
+                WeightSpecified = true;
+                _weight = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool WeightSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool WeightSpecified { get; set; }
+        
+    }
 }

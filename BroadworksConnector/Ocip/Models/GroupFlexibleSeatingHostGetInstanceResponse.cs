@@ -1,64 +1,76 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupFlexibleSeatingHostGetInstanceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
+    /// <summary>
+    /// Response to GroupFlexibleSeatingHostGetInstanceRequest.
+    /// Contains the service profile and access device information.
+        /// <see cref="GroupFlexibleSeatingHostGetInstanceRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupFlexibleSeatingHostGetInstanceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile {
-        get => _serviceInstanceProfile;
-        set {
-            ServiceInstanceProfileSpecified = true;
-            _serviceInstanceProfile = value;
+        
+        private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
+
+        [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile {
+            get => _serviceInstanceProfile;
+            set {
+                ServiceInstanceProfileSpecified = true;
+                _serviceInstanceProfile = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceInstanceProfileSpecified { get; set; }
-    private string _defaultAlias;
+        [XmlIgnore]
+        public bool ServiceInstanceProfileSpecified { get; set; }
+        
+        private string _defaultAlias;
 
-    [XmlElement(ElementName = "defaultAlias", IsNullable = false, Namespace = "")]
-    public string DefaultAlias {
-        get => _defaultAlias;
-        set {
-            DefaultAliasSpecified = true;
-            _defaultAlias = value;
+        [XmlElement(ElementName = "defaultAlias", IsNullable = false, Namespace = "")]
+        public string DefaultAlias {
+            get => _defaultAlias;
+            set {
+                DefaultAliasSpecified = true;
+                _defaultAlias = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DefaultAliasSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointRead20 _accessDeviceEndpoint;
+        [XmlIgnore]
+        public bool DefaultAliasSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointRead20 _accessDeviceEndpoint;
 
-    [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointRead20 AccessDeviceEndpoint {
-        get => _accessDeviceEndpoint;
-        set {
-            AccessDeviceEndpointSpecified = true;
-            _accessDeviceEndpoint = value;
+        [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointRead20 AccessDeviceEndpoint {
+            get => _accessDeviceEndpoint;
+            set {
+                AccessDeviceEndpointSpecified = true;
+                _accessDeviceEndpoint = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AccessDeviceEndpointSpecified { get; set; }
-    private string _networkClassOfService;
+        [XmlIgnore]
+        public bool AccessDeviceEndpointSpecified { get; set; }
+        
+        private string _networkClassOfService;
 
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-    public string NetworkClassOfService {
-        get => _networkClassOfService;
-        set {
-            NetworkClassOfServiceSpecified = true;
-            _networkClassOfService = value;
+        [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+        public string NetworkClassOfService {
+            get => _networkClassOfService;
+            set {
+                NetworkClassOfServiceSpecified = true;
+                _networkClassOfService = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NetworkClassOfServiceSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool NetworkClassOfServiceSpecified { get; set; }
+        
+    }
 }

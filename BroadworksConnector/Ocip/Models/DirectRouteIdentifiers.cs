@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class DirectRouteIdentifiers 
-{
-    private string _dtgIdentity;
+    /// <summary>
+    /// Direct Route identifiers.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class DirectRouteIdentifiers 
+    {
 
-    [XmlElement(ElementName = "dtgIdentity", IsNullable = false, Namespace = "")]
-    public string DtgIdentity {
-        get => _dtgIdentity;
-        set {
-            DtgIdentitySpecified = true;
-            _dtgIdentity = value;
+        
+        private string _dtgIdentity;
+
+        [XmlElement(ElementName = "dtgIdentity", IsNullable = false, Namespace = "")]
+        public string DtgIdentity {
+            get => _dtgIdentity;
+            set {
+                DtgIdentitySpecified = true;
+                _dtgIdentity = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DtgIdentitySpecified { get; set; }
-    private string _trunkIdentity;
+        [XmlIgnore]
+        public bool DtgIdentitySpecified { get; set; }
+        
+        private string _trunkIdentity;
 
-    [XmlElement(ElementName = "trunkIdentity", IsNullable = false, Namespace = "")]
-    public string TrunkIdentity {
-        get => _trunkIdentity;
-        set {
-            TrunkIdentitySpecified = true;
-            _trunkIdentity = value;
+        [XmlElement(ElementName = "trunkIdentity", IsNullable = false, Namespace = "")]
+        public string TrunkIdentity {
+            get => _trunkIdentity;
+            set {
+                TrunkIdentitySpecified = true;
+                _trunkIdentity = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TrunkIdentitySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TrunkIdentitySpecified { get; set; }
+        
+    }
 }

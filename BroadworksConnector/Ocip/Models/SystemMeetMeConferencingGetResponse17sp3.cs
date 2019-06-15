@@ -1,116 +1,134 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemMeetMeConferencingGetResponse17sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private int _conferenceIdLength;
+    /// <summary>
+    /// Response to SystemMeetMeConferencingGetRequest17sp3.
+    /// 
+    /// Replaced by: SystemMeetMeConferencingGetResponse18
+        /// <see cref="SystemMeetMeConferencingGetRequest17sp3"/>
+        /// <see cref="SystemMeetMeConferencingGetResponse18"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemMeetMeConferencingGetResponse17sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "conferenceIdLength", IsNullable = false, Namespace = "")]
-    public int ConferenceIdLength {
-        get => _conferenceIdLength;
-        set {
-            ConferenceIdLengthSpecified = true;
-            _conferenceIdLength = value;
+        
+        private int _conferenceIdLength;
+
+        [XmlElement(ElementName = "conferenceIdLength", IsNullable = false, Namespace = "")]
+        public int ConferenceIdLength {
+            get => _conferenceIdLength;
+            set {
+                ConferenceIdLengthSpecified = true;
+                _conferenceIdLength = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ConferenceIdLengthSpecified { get; set; }
-    private int _moderatorPinLength;
+        [XmlIgnore]
+        public bool ConferenceIdLengthSpecified { get; set; }
+        
+        private int _moderatorPinLength;
 
-    [XmlElement(ElementName = "moderatorPinLength", IsNullable = false, Namespace = "")]
-    public int ModeratorPinLength {
-        get => _moderatorPinLength;
-        set {
-            ModeratorPinLengthSpecified = true;
-            _moderatorPinLength = value;
+        [XmlElement(ElementName = "moderatorPinLength", IsNullable = false, Namespace = "")]
+        public int ModeratorPinLength {
+            get => _moderatorPinLength;
+            set {
+                ModeratorPinLengthSpecified = true;
+                _moderatorPinLength = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ModeratorPinLengthSpecified { get; set; }
-    private bool _enableConferenceEndDateRestriction;
+        [XmlIgnore]
+        public bool ModeratorPinLengthSpecified { get; set; }
+        
+        private bool _enableConferenceEndDateRestriction;
 
-    [XmlElement(ElementName = "enableConferenceEndDateRestriction", IsNullable = false, Namespace = "")]
-    public bool EnableConferenceEndDateRestriction {
-        get => _enableConferenceEndDateRestriction;
-        set {
-            EnableConferenceEndDateRestrictionSpecified = true;
-            _enableConferenceEndDateRestriction = value;
+        [XmlElement(ElementName = "enableConferenceEndDateRestriction", IsNullable = false, Namespace = "")]
+        public bool EnableConferenceEndDateRestriction {
+            get => _enableConferenceEndDateRestriction;
+            set {
+                EnableConferenceEndDateRestrictionSpecified = true;
+                _enableConferenceEndDateRestriction = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableConferenceEndDateRestrictionSpecified { get; set; }
-    private int _conferenceEndDateRestrictionMonths;
+        [XmlIgnore]
+        public bool EnableConferenceEndDateRestrictionSpecified { get; set; }
+        
+        private int _conferenceEndDateRestrictionMonths;
 
-    [XmlElement(ElementName = "conferenceEndDateRestrictionMonths", IsNullable = false, Namespace = "")]
-    public int ConferenceEndDateRestrictionMonths {
-        get => _conferenceEndDateRestrictionMonths;
-        set {
-            ConferenceEndDateRestrictionMonthsSpecified = true;
-            _conferenceEndDateRestrictionMonths = value;
+        [XmlElement(ElementName = "conferenceEndDateRestrictionMonths", IsNullable = false, Namespace = "")]
+        public int ConferenceEndDateRestrictionMonths {
+            get => _conferenceEndDateRestrictionMonths;
+            set {
+                ConferenceEndDateRestrictionMonthsSpecified = true;
+                _conferenceEndDateRestrictionMonths = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ConferenceEndDateRestrictionMonthsSpecified { get; set; }
-    private bool _deleteExpiredConferencesAfterHoldPeriod;
+        [XmlIgnore]
+        public bool ConferenceEndDateRestrictionMonthsSpecified { get; set; }
+        
+        private bool _deleteExpiredConferencesAfterHoldPeriod;
 
-    [XmlElement(ElementName = "deleteExpiredConferencesAfterHoldPeriod", IsNullable = false, Namespace = "")]
-    public bool DeleteExpiredConferencesAfterHoldPeriod {
-        get => _deleteExpiredConferencesAfterHoldPeriod;
-        set {
-            DeleteExpiredConferencesAfterHoldPeriodSpecified = true;
-            _deleteExpiredConferencesAfterHoldPeriod = value;
+        [XmlElement(ElementName = "deleteExpiredConferencesAfterHoldPeriod", IsNullable = false, Namespace = "")]
+        public bool DeleteExpiredConferencesAfterHoldPeriod {
+            get => _deleteExpiredConferencesAfterHoldPeriod;
+            set {
+                DeleteExpiredConferencesAfterHoldPeriodSpecified = true;
+                _deleteExpiredConferencesAfterHoldPeriod = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DeleteExpiredConferencesAfterHoldPeriodSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays _expiredConferenceHoldPeriodDays;
+        [XmlIgnore]
+        public bool DeleteExpiredConferencesAfterHoldPeriodSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays _expiredConferenceHoldPeriodDays;
 
-    [XmlElement(ElementName = "expiredConferenceHoldPeriodDays", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays ExpiredConferenceHoldPeriodDays {
-        get => _expiredConferenceHoldPeriodDays;
-        set {
-            ExpiredConferenceHoldPeriodDaysSpecified = true;
-            _expiredConferenceHoldPeriodDays = value;
+        [XmlElement(ElementName = "expiredConferenceHoldPeriodDays", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays ExpiredConferenceHoldPeriodDays {
+            get => _expiredConferenceHoldPeriodDays;
+            set {
+                ExpiredConferenceHoldPeriodDaysSpecified = true;
+                _expiredConferenceHoldPeriodDays = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ExpiredConferenceHoldPeriodDaysSpecified { get; set; }
-    private string _recordingWebAppURL;
+        [XmlIgnore]
+        public bool ExpiredConferenceHoldPeriodDaysSpecified { get; set; }
+        
+        private string _recordingWebAppURL;
 
-    [XmlElement(ElementName = "recordingWebAppURL", IsNullable = false, Namespace = "")]
-    public string RecordingWebAppURL {
-        get => _recordingWebAppURL;
-        set {
-            RecordingWebAppURLSpecified = true;
-            _recordingWebAppURL = value;
+        [XmlElement(ElementName = "recordingWebAppURL", IsNullable = false, Namespace = "")]
+        public string RecordingWebAppURL {
+            get => _recordingWebAppURL;
+            set {
+                RecordingWebAppURLSpecified = true;
+                _recordingWebAppURL = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RecordingWebAppURLSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat _recordingFileFormat;
+        [XmlIgnore]
+        public bool RecordingWebAppURLSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat _recordingFileFormat;
 
-    [XmlElement(ElementName = "recordingFileFormat", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat RecordingFileFormat {
-        get => _recordingFileFormat;
-        set {
-            RecordingFileFormatSpecified = true;
-            _recordingFileFormat = value;
+        [XmlElement(ElementName = "recordingFileFormat", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat RecordingFileFormat {
+            get => _recordingFileFormat;
+            set {
+                RecordingFileFormatSpecified = true;
+                _recordingFileFormat = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RecordingFileFormatSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool RecordingFileFormatSpecified { get; set; }
+        
+    }
 }

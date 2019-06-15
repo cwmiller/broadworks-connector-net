@@ -1,51 +1,65 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemServiceCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private int _responseSizeLimit;
+    /// <summary>
+    /// Request to get all service codes that have been defined in the system.
+    /// It is possible to search by various criteria to restrict the number of rows returned.
+    /// Multiple search criteria are logically ANDed together.
+    /// The response is either SystemServiceCodeGetListResponse or ErrorResponse.
+        /// <see cref="SystemServiceCodeGetListResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemServiceCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-    public int ResponseSizeLimit {
-        get => _responseSizeLimit;
-        set {
-            ResponseSizeLimitSpecified = true;
-            _responseSizeLimit = value;
+        
+        private int _responseSizeLimit;
+
+        [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
+        public int ResponseSizeLimit {
+            get => _responseSizeLimit;
+            set {
+                ResponseSizeLimitSpecified = true;
+                _responseSizeLimit = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> _searchCriteriaServiceCode;
+        [XmlIgnore]
+        public bool ResponseSizeLimitSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> _searchCriteriaServiceCode;
 
-    [XmlElement(ElementName = "searchCriteriaServiceCode", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> SearchCriteriaServiceCode {
-        get => _searchCriteriaServiceCode;
-        set {
-            SearchCriteriaServiceCodeSpecified = true;
-            _searchCriteriaServiceCode = value;
+        [XmlElement(ElementName = "searchCriteriaServiceCode", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> SearchCriteriaServiceCode {
+            get => _searchCriteriaServiceCode;
+            set {
+                SearchCriteriaServiceCodeSpecified = true;
+                _searchCriteriaServiceCode = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SearchCriteriaServiceCodeSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> _searchCriteriaServiceCodeDescription;
+        [XmlIgnore]
+        public bool SearchCriteriaServiceCodeSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> _searchCriteriaServiceCodeDescription;
 
-    [XmlElement(ElementName = "searchCriteriaServiceCodeDescription", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> SearchCriteriaServiceCodeDescription {
-        get => _searchCriteriaServiceCodeDescription;
-        set {
-            SearchCriteriaServiceCodeDescriptionSpecified = true;
-            _searchCriteriaServiceCodeDescription = value;
+        [XmlElement(ElementName = "searchCriteriaServiceCodeDescription", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> SearchCriteriaServiceCodeDescription {
+            get => _searchCriteriaServiceCodeDescription;
+            set {
+                SearchCriteriaServiceCodeDescriptionSpecified = true;
+                _searchCriteriaServiceCodeDescription = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SearchCriteriaServiceCodeDescriptionSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool SearchCriteriaServiceCodeDescriptionSpecified { get; set; }
+        
+    }
 }

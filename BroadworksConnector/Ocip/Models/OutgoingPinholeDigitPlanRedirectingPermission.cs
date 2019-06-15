@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum OutgoingPinholeDigitPlanRedirectingPermission{
-    [XmlEnum(Name = "Ignore")]
-    Ignore,
-    [XmlEnum(Name = "Allow")]
-    Allow,
- }
+    /// <summary>
+    /// Permission choices for Pinhole digit patterns on redirecting calls.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum OutgoingPinholeDigitPlanRedirectingPermission    {
+            [XmlEnum(Name = "Ignore")]
+        Ignore,
+            [XmlEnum(Name = "Allow")]
+        Allow,
+     }
 }

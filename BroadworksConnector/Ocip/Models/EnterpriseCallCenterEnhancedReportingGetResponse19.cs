@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class EnterpriseCallCenterEnhancedReportingGetResponse19 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19 _reportingServer;
+    /// <summary>
+    /// Response to EnterpriseCallCenterEnhancedReportingGetRequest19.
+        /// <see cref="EnterpriseCallCenterEnhancedReportingGetRequest19"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class EnterpriseCallCenterEnhancedReportingGetResponse19 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "reportingServer", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19 ReportingServer {
-        get => _reportingServer;
-        set {
-            ReportingServerSpecified = true;
-            _reportingServer = value;
+        
+        private BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19 _reportingServer;
+
+        [XmlElement(ElementName = "reportingServer", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19 ReportingServer {
+            get => _reportingServer;
+            set {
+                ReportingServerSpecified = true;
+                _reportingServer = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ReportingServerSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ReportingServerSpecified { get; set; }
+        
+    }
 }

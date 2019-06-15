@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class AccessDeviceEndpointKey 
-{
-    private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
+    /// <summary>
+    /// Access device end point in the context of a modify or delete command.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class AccessDeviceEndpointKey 
+    {
 
-    [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
-        get => _accessDevice;
-        set {
-            AccessDeviceSpecified = true;
-            _accessDevice = value;
+        
+        private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
+
+        [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
+            get => _accessDevice;
+            set {
+                AccessDeviceSpecified = true;
+                _accessDevice = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AccessDeviceSpecified { get; set; }
-    private string _linePort;
+        [XmlIgnore]
+        public bool AccessDeviceSpecified { get; set; }
+        
+        private string _linePort;
 
-    [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-    public string LinePort {
-        get => _linePort;
-        set {
-            LinePortSpecified = true;
-            _linePort = value;
+        [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
+        public string LinePort {
+            get => _linePort;
+            set {
+                LinePortSpecified = true;
+                _linePort = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LinePortSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool LinePortSpecified { get; set; }
+        
+    }
 }

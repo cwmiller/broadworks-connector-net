@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum DiameterRouteAction{
-    [XmlEnum(Name = "Local")]
-    Local,
-    [XmlEnum(Name = "Relay")]
-    Relay,
- }
+    /// <summary>
+    /// Choices for the action of a Diameter Route.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum DiameterRouteAction    {
+            [XmlEnum(Name = "Local")]
+        Local,
+            [XmlEnum(Name = "Relay")]
+        Relay,
+     }
 }

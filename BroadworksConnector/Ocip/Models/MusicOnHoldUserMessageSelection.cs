@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum MusicOnHoldUserMessageSelection{
-    [XmlEnum(Name = "Group")]
-    Group,
-    [XmlEnum(Name = "Custom")]
-    Custom,
- }
+    /// <summary>
+    /// Music On Hold User Message Selection.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum MusicOnHoldUserMessageSelection    {
+            [XmlEnum(Name = "Group")]
+        Group,
+            [XmlEnum(Name = "Custom")]
+        Custom,
+     }
 }

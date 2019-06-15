@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderIMRNGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private List<string> _imrn;
+    /// <summary>
+    /// Response to ServiceProviderIMRNGetListRequest.
+        /// <see cref="ServiceProviderIMRNGetListRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderIMRNGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "imrn", IsNullable = false, Namespace = "")]
-    public List<string> Imrn {
-        get => _imrn;
-        set {
-            ImrnSpecified = true;
-            _imrn = value;
+        
+        private List<string> _imrn;
+
+        [XmlElement(ElementName = "imrn", IsNullable = false, Namespace = "")]
+        public List<string> Imrn {
+            get => _imrn;
+            set {
+                ImrnSpecified = true;
+                _imrn = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ImrnSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ImrnSpecified { get; set; }
+        
+    }
 }

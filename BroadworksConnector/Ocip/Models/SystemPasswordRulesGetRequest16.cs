@@ -1,12 +1,26 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemPasswordRulesGetRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-}
+    /// <summary>
+    /// Requests the system's password rules setting applicable to
+    /// System administrator, Provisioning Administrator,
+    /// and/or Service Provider Administrator, Group Administrator, Department Administrator, user.
+    /// The response is either SystemPasswordRulesGetResponse16 or ErrorResponse.
+    /// 
+    /// Replaced by: SystemPasswordRulesGetRequest22 in AS data mode.
+        /// <see cref="SystemPasswordRulesGetResponse16"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="SystemPasswordRulesGetRequest22"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemPasswordRulesGetRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
+
+        
+    }
 }

@@ -1,51 +1,64 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemSecurityClassificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private int _meetMeAnncThreshold;
+    /// <summary>
+    /// Modify security classification parameters.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+    /// NOTE: The security classifications must be specified in order of priority. The command fails if all the security classifications defined for the system are not provided.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemSecurityClassificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "meetMeAnncThreshold", IsNullable = false, Namespace = "")]
-    public int MeetMeAnncThreshold {
-        get => _meetMeAnncThreshold;
-        set {
-            MeetMeAnncThresholdSpecified = true;
-            _meetMeAnncThreshold = value;
+        
+        private int _meetMeAnncThreshold;
+
+        [XmlElement(ElementName = "meetMeAnncThreshold", IsNullable = false, Namespace = "")]
+        public int MeetMeAnncThreshold {
+            get => _meetMeAnncThreshold;
+            set {
+                MeetMeAnncThresholdSpecified = true;
+                _meetMeAnncThreshold = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MeetMeAnncThresholdSpecified { get; set; }
-    private bool _playTrunkUserSecurityClassificationAnnouncement;
+        [XmlIgnore]
+        public bool MeetMeAnncThresholdSpecified { get; set; }
+        
+        private bool _playTrunkUserSecurityClassificationAnnouncement;
 
-    [XmlElement(ElementName = "playTrunkUserSecurityClassificationAnnouncement", IsNullable = false, Namespace = "")]
-    public bool PlayTrunkUserSecurityClassificationAnnouncement {
-        get => _playTrunkUserSecurityClassificationAnnouncement;
-        set {
-            PlayTrunkUserSecurityClassificationAnnouncementSpecified = true;
-            _playTrunkUserSecurityClassificationAnnouncement = value;
+        [XmlElement(ElementName = "playTrunkUserSecurityClassificationAnnouncement", IsNullable = false, Namespace = "")]
+        public bool PlayTrunkUserSecurityClassificationAnnouncement {
+            get => _playTrunkUserSecurityClassificationAnnouncement;
+            set {
+                PlayTrunkUserSecurityClassificationAnnouncementSpecified = true;
+                _playTrunkUserSecurityClassificationAnnouncement = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PlayTrunkUserSecurityClassificationAnnouncementSpecified { get; set; }
-    private List<string> _securityClassificationName;
+        [XmlIgnore]
+        public bool PlayTrunkUserSecurityClassificationAnnouncementSpecified { get; set; }
+        
+        private List<string> _securityClassificationName;
 
-    [XmlElement(ElementName = "securityClassificationName", IsNullable = false, Namespace = "")]
-    public List<string> SecurityClassificationName {
-        get => _securityClassificationName;
-        set {
-            SecurityClassificationNameSpecified = true;
-            _securityClassificationName = value;
+        [XmlElement(ElementName = "securityClassificationName", IsNullable = false, Namespace = "")]
+        public List<string> SecurityClassificationName {
+            get => _securityClassificationName;
+            set {
+                SecurityClassificationNameSpecified = true;
+                _securityClassificationName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SecurityClassificationNameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool SecurityClassificationNameSpecified { get; set; }
+        
+    }
 }

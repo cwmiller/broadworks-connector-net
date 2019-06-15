@@ -1,38 +1,49 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemHomeNetworkGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private int _responseSizeLimit;
+    /// <summary>
+    /// Get the list of all Home Networks.
+    /// The response is either a SystemHomeNetworkGetListResponse or an ErrorResponse.
+        /// <see cref="SystemHomeNetworkGetListResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemHomeNetworkGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-    public int ResponseSizeLimit {
-        get => _responseSizeLimit;
-        set {
-            ResponseSizeLimitSpecified = true;
-            _responseSizeLimit = value;
+        
+        private int _responseSizeLimit;
+
+        [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
+        public int ResponseSizeLimit {
+            get => _responseSizeLimit;
+            set {
+                ResponseSizeLimitSpecified = true;
+                _responseSizeLimit = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ResponseSizeLimitSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.SearchCriteriaHomeMscAddress> _searchCriteriaHomeMscAddress;
+        [XmlIgnore]
+        public bool ResponseSizeLimitSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaHomeMscAddress> _searchCriteriaHomeMscAddress;
 
-    [XmlElement(ElementName = "searchCriteriaHomeMscAddress", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.SearchCriteriaHomeMscAddress> SearchCriteriaHomeMscAddress {
-        get => _searchCriteriaHomeMscAddress;
-        set {
-            SearchCriteriaHomeMscAddressSpecified = true;
-            _searchCriteriaHomeMscAddress = value;
+        [XmlElement(ElementName = "searchCriteriaHomeMscAddress", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaHomeMscAddress> SearchCriteriaHomeMscAddress {
+            get => _searchCriteriaHomeMscAddress;
+            set {
+                SearchCriteriaHomeMscAddressSpecified = true;
+                _searchCriteriaHomeMscAddress = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SearchCriteriaHomeMscAddressSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool SearchCriteriaHomeMscAddressSpecified { get; set; }
+        
+    }
 }

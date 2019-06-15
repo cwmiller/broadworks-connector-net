@@ -1,51 +1,66 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupCommunicationBarringAuthorizationCodeAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceProviderId;
+    /// <summary>
+    /// Add a list of Communication Barring Authorization codes to a group.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// Replaced by: GroupCommunicationBarringAuthorizationCodeAddListRequest21sp1 in AS data mode
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="GroupCommunicationBarringAuthorizationCodeAddListRequest21sp1"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupCommunicationBarringAuthorizationCodeAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-    public string ServiceProviderId {
-        get => _serviceProviderId;
-        set {
-            ServiceProviderIdSpecified = true;
-            _serviceProviderId = value;
+        
+        private string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        public string ServiceProviderId {
+            get => _serviceProviderId;
+            set {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceProviderIdSpecified { get; set; }
-    private string _groupId;
+        [XmlIgnore]
+        public bool ServiceProviderIdSpecified { get; set; }
+        
+        private string _groupId;
 
-    [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-    public string GroupId {
-        get => _groupId;
-        set {
-            GroupIdSpecified = true;
-            _groupId = value;
+        [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
+        public string GroupId {
+            get => _groupId;
+            set {
+                GroupIdSpecified = true;
+                _groupId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GroupIdSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> _code;
+        [XmlIgnore]
+        public bool GroupIdSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> _code;
 
-    [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> Code {
-        get => _code;
-        set {
-            CodeSpecified = true;
-            _code = value;
+        [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> Code {
+            get => _code;
+            set {
+                CodeSpecified = true;
+                _code = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CodeSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CodeSpecified { get; set; }
+        
+    }
 }

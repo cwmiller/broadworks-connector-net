@@ -1,25 +1,34 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemGeographicRedundancyProxyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _enabled;
+    /// <summary>
+    /// Response to SystemGeographicRedundancyProxyGetRequest.
+    /// Contains a list of Geographic Redundancy Proxy system parameters.
+        /// <see cref="SystemGeographicRedundancyProxyGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemGeographicRedundancyProxyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
-    public bool Enabled {
-        get => _enabled;
-        set {
-            EnabledSpecified = true;
-            _enabled = value;
+        
+        private bool _enabled;
+
+        [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
+        public bool Enabled {
+            get => _enabled;
+            set {
+                EnabledSpecified = true;
+                _enabled = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnabledSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool EnabledSpecified { get; set; }
+        
+    }
 }

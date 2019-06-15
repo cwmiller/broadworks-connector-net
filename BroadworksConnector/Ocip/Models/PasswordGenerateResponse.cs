@@ -1,116 +1,132 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class PasswordGenerateResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private string _systemAdministratorPassword;
+    /// <summary>
+    /// Response to the PasswordGenerateRequest.
+    /// The response contains the requested passwords.
+        /// <see cref="PasswordGenerateRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class PasswordGenerateResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "systemAdministratorPassword", IsNullable = false, Namespace = "")]
-    public string SystemAdministratorPassword {
-        get => _systemAdministratorPassword;
-        set {
-            SystemAdministratorPasswordSpecified = true;
-            _systemAdministratorPassword = value;
+        
+        private string _systemAdministratorPassword;
+
+        [XmlElement(ElementName = "systemAdministratorPassword", IsNullable = false, Namespace = "")]
+        public string SystemAdministratorPassword {
+            get => _systemAdministratorPassword;
+            set {
+                SystemAdministratorPasswordSpecified = true;
+                _systemAdministratorPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SystemAdministratorPasswordSpecified { get; set; }
-    private string _serviceProviderAdministratorPassword;
+        [XmlIgnore]
+        public bool SystemAdministratorPasswordSpecified { get; set; }
+        
+        private string _serviceProviderAdministratorPassword;
 
-    [XmlElement(ElementName = "serviceProviderAdministratorPassword", IsNullable = false, Namespace = "")]
-    public string ServiceProviderAdministratorPassword {
-        get => _serviceProviderAdministratorPassword;
-        set {
-            ServiceProviderAdministratorPasswordSpecified = true;
-            _serviceProviderAdministratorPassword = value;
+        [XmlElement(ElementName = "serviceProviderAdministratorPassword", IsNullable = false, Namespace = "")]
+        public string ServiceProviderAdministratorPassword {
+            get => _serviceProviderAdministratorPassword;
+            set {
+                ServiceProviderAdministratorPasswordSpecified = true;
+                _serviceProviderAdministratorPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceProviderAdministratorPasswordSpecified { get; set; }
-    private string _groupAdministratorPassword;
+        [XmlIgnore]
+        public bool ServiceProviderAdministratorPasswordSpecified { get; set; }
+        
+        private string _groupAdministratorPassword;
 
-    [XmlElement(ElementName = "groupAdministratorPassword", IsNullable = false, Namespace = "")]
-    public string GroupAdministratorPassword {
-        get => _groupAdministratorPassword;
-        set {
-            GroupAdministratorPasswordSpecified = true;
-            _groupAdministratorPassword = value;
+        [XmlElement(ElementName = "groupAdministratorPassword", IsNullable = false, Namespace = "")]
+        public string GroupAdministratorPassword {
+            get => _groupAdministratorPassword;
+            set {
+                GroupAdministratorPasswordSpecified = true;
+                _groupAdministratorPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GroupAdministratorPasswordSpecified { get; set; }
-    private string _userPassword;
+        [XmlIgnore]
+        public bool GroupAdministratorPasswordSpecified { get; set; }
+        
+        private string _userPassword;
 
-    [XmlElement(ElementName = "userPassword", IsNullable = false, Namespace = "")]
-    public string UserPassword {
-        get => _userPassword;
-        set {
-            UserPasswordSpecified = true;
-            _userPassword = value;
+        [XmlElement(ElementName = "userPassword", IsNullable = false, Namespace = "")]
+        public string UserPassword {
+            get => _userPassword;
+            set {
+                UserPasswordSpecified = true;
+                _userPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserPasswordSpecified { get; set; }
-    private string _userPasscode;
+        [XmlIgnore]
+        public bool UserPasswordSpecified { get; set; }
+        
+        private string _userPasscode;
 
-    [XmlElement(ElementName = "userPasscode", IsNullable = false, Namespace = "")]
-    public string UserPasscode {
-        get => _userPasscode;
-        set {
-            UserPasscodeSpecified = true;
-            _userPasscode = value;
+        [XmlElement(ElementName = "userPasscode", IsNullable = false, Namespace = "")]
+        public string UserPasscode {
+            get => _userPasscode;
+            set {
+                UserPasscodeSpecified = true;
+                _userPasscode = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserPasscodeSpecified { get; set; }
-    private string _userSIPAuthenticationPassword;
+        [XmlIgnore]
+        public bool UserPasscodeSpecified { get; set; }
+        
+        private string _userSIPAuthenticationPassword;
 
-    [XmlElement(ElementName = "userSIPAuthenticationPassword", IsNullable = false, Namespace = "")]
-    public string UserSIPAuthenticationPassword {
-        get => _userSIPAuthenticationPassword;
-        set {
-            UserSIPAuthenticationPasswordSpecified = true;
-            _userSIPAuthenticationPassword = value;
+        [XmlElement(ElementName = "userSIPAuthenticationPassword", IsNullable = false, Namespace = "")]
+        public string UserSIPAuthenticationPassword {
+            get => _userSIPAuthenticationPassword;
+            set {
+                UserSIPAuthenticationPasswordSpecified = true;
+                _userSIPAuthenticationPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserSIPAuthenticationPasswordSpecified { get; set; }
-    private string _accessDeviceAuthenticationPassword;
+        [XmlIgnore]
+        public bool UserSIPAuthenticationPasswordSpecified { get; set; }
+        
+        private string _accessDeviceAuthenticationPassword;
 
-    [XmlElement(ElementName = "accessDeviceAuthenticationPassword", IsNullable = false, Namespace = "")]
-    public string AccessDeviceAuthenticationPassword {
-        get => _accessDeviceAuthenticationPassword;
-        set {
-            AccessDeviceAuthenticationPasswordSpecified = true;
-            _accessDeviceAuthenticationPassword = value;
+        [XmlElement(ElementName = "accessDeviceAuthenticationPassword", IsNullable = false, Namespace = "")]
+        public string AccessDeviceAuthenticationPassword {
+            get => _accessDeviceAuthenticationPassword;
+            set {
+                AccessDeviceAuthenticationPasswordSpecified = true;
+                _accessDeviceAuthenticationPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AccessDeviceAuthenticationPasswordSpecified { get; set; }
-    private string _trunkGroupAuthenticationPassword;
+        [XmlIgnore]
+        public bool AccessDeviceAuthenticationPasswordSpecified { get; set; }
+        
+        private string _trunkGroupAuthenticationPassword;
 
-    [XmlElement(ElementName = "trunkGroupAuthenticationPassword", IsNullable = false, Namespace = "")]
-    public string TrunkGroupAuthenticationPassword {
-        get => _trunkGroupAuthenticationPassword;
-        set {
-            TrunkGroupAuthenticationPasswordSpecified = true;
-            _trunkGroupAuthenticationPassword = value;
+        [XmlElement(ElementName = "trunkGroupAuthenticationPassword", IsNullable = false, Namespace = "")]
+        public string TrunkGroupAuthenticationPassword {
+            get => _trunkGroupAuthenticationPassword;
+            set {
+                TrunkGroupAuthenticationPasswordSpecified = true;
+                _trunkGroupAuthenticationPassword = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TrunkGroupAuthenticationPasswordSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TrunkGroupAuthenticationPasswordSpecified { get; set; }
+        
+    }
 }

@@ -1,51 +1,65 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemHuntGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private bool _anonymousInsteadOfPrivateCLID;
+    /// <summary>
+    /// Modify the system level data associated with Hunt Group.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+    /// Replaced by: SystemHuntGroupModifyRequest21 in AS data mode
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="SystemHuntGroupModifyRequest21"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemHuntGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "anonymousInsteadOfPrivateCLID", IsNullable = false, Namespace = "")]
-    public bool AnonymousInsteadOfPrivateCLID {
-        get => _anonymousInsteadOfPrivateCLID;
-        set {
-            AnonymousInsteadOfPrivateCLIDSpecified = true;
-            _anonymousInsteadOfPrivateCLID = value;
+        
+        private bool _anonymousInsteadOfPrivateCLID;
+
+        [XmlElement(ElementName = "anonymousInsteadOfPrivateCLID", IsNullable = false, Namespace = "")]
+        public bool AnonymousInsteadOfPrivateCLID {
+            get => _anonymousInsteadOfPrivateCLID;
+            set {
+                AnonymousInsteadOfPrivateCLIDSpecified = true;
+                _anonymousInsteadOfPrivateCLID = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AnonymousInsteadOfPrivateCLIDSpecified { get; set; }
-    private bool _removeHuntGroupNameFromCLID;
+        [XmlIgnore]
+        public bool AnonymousInsteadOfPrivateCLIDSpecified { get; set; }
+        
+        private bool _removeHuntGroupNameFromCLID;
 
-    [XmlElement(ElementName = "removeHuntGroupNameFromCLID", IsNullable = false, Namespace = "")]
-    public bool RemoveHuntGroupNameFromCLID {
-        get => _removeHuntGroupNameFromCLID;
-        set {
-            RemoveHuntGroupNameFromCLIDSpecified = true;
-            _removeHuntGroupNameFromCLID = value;
+        [XmlElement(ElementName = "removeHuntGroupNameFromCLID", IsNullable = false, Namespace = "")]
+        public bool RemoveHuntGroupNameFromCLID {
+            get => _removeHuntGroupNameFromCLID;
+            set {
+                RemoveHuntGroupNameFromCLIDSpecified = true;
+                _removeHuntGroupNameFromCLID = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RemoveHuntGroupNameFromCLIDSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope _uniformCallDistributionPolicyScope;
+        [XmlIgnore]
+        public bool RemoveHuntGroupNameFromCLIDSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope _uniformCallDistributionPolicyScope;
 
-    [XmlElement(ElementName = "uniformCallDistributionPolicyScope", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope UniformCallDistributionPolicyScope {
-        get => _uniformCallDistributionPolicyScope;
-        set {
-            UniformCallDistributionPolicyScopeSpecified = true;
-            _uniformCallDistributionPolicyScope = value;
+        [XmlElement(ElementName = "uniformCallDistributionPolicyScope", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope UniformCallDistributionPolicyScope {
+            get => _uniformCallDistributionPolicyScope;
+            set {
+                UniformCallDistributionPolicyScopeSpecified = true;
+                _uniformCallDistributionPolicyScope = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UniformCallDistributionPolicyScopeSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool UniformCallDistributionPolicyScopeSpecified { get; set; }
+        
+    }
 }

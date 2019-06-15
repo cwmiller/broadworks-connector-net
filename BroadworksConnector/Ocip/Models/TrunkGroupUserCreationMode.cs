@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum TrunkGroupUserCreationMode{
-    [XmlEnum(Name = "Extension")]
-    Extension,
-    [XmlEnum(Name = "Phone Number")]
-    PhoneNumber,
- }
+    /// <summary>
+    /// Trunk Group user creation mode.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum TrunkGroupUserCreationMode    {
+            [XmlEnum(Name = "Extension")]
+        Extension,
+            [XmlEnum(Name = "Phone Number")]
+        PhoneNumber,
+     }
 }

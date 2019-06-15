@@ -1,51 +1,72 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserBroadWorksMobilityMobileIdentityConsolidatedDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _userId;
+    /// <summary>
+    /// Delete a mobile identity from the user's list of mobile identities.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// An ErrorResponse will be returned if any device cannot be deleted because of insufficient privilege.
+    /// When a delete request is attempted on the primary mobile identity, the delete will fail unless it is the last mobile identity in the user's list.
+    /// 
+    /// If deleteExistingDevices is set to true, after the mobile identity is deleted, any device that is only used by the deleted mobile identity prior to the deletion will be deleted if the command is executed with the correct priviledge.
+    /// Group administrator or above running this command can delete any group level devices. Service provider administrator or above can delete any service provider and group devices. Provisioning administrator or above can delete any devices.
+    /// An ErrorResponse with the type warning will be returned if any device cannot be deleted because of insufficient privilege.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserBroadWorksMobilityMobileIdentityConsolidatedDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        
+        private string _userId;
+
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-    private string _mobileNumber;
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+        private string _mobileNumber;
 
-    [XmlElement(ElementName = "mobileNumber", IsNullable = false, Namespace = "")]
-    public string MobileNumber {
-        get => _mobileNumber;
-        set {
-            MobileNumberSpecified = true;
-            _mobileNumber = value;
+        [XmlElement(ElementName = "mobileNumber", IsNullable = false, Namespace = "")]
+        public string MobileNumber {
+            get => _mobileNumber;
+            set {
+                MobileNumberSpecified = true;
+                _mobileNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool MobileNumberSpecified { get; set; }
-    private bool _deleteExistingDevices;
+        [XmlIgnore]
+        public bool MobileNumberSpecified { get; set; }
+        
+        private bool _deleteExistingDevices;
 
-    [XmlElement(ElementName = "deleteExistingDevices", IsNullable = false, Namespace = "")]
-    public bool DeleteExistingDevices {
-        get => _deleteExistingDevices;
-        set {
-            DeleteExistingDevicesSpecified = true;
-            _deleteExistingDevices = value;
+        [XmlElement(ElementName = "deleteExistingDevices", IsNullable = false, Namespace = "")]
+        public bool DeleteExistingDevices {
+            get => _deleteExistingDevices;
+            set {
+                DeleteExistingDevicesSpecified = true;
+                _deleteExistingDevices = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DeleteExistingDevicesSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DeleteExistingDevicesSpecified { get; set; }
+        
+    }
 }

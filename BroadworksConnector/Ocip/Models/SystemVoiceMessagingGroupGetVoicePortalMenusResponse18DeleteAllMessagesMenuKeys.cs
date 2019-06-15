@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18DeleteAllMessagesMenuKeys 
-{
-    private string _confirmDeletion;
+    /// <summary>
+    /// 
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18DeleteAllMessagesMenuKeys 
+    {
 
-    [XmlElement(ElementName = "confirmDeletion", IsNullable = false, Namespace = "")]
-    public string ConfirmDeletion {
-        get => _confirmDeletion;
-        set {
-            ConfirmDeletionSpecified = true;
-            _confirmDeletion = value;
+        
+        private string _confirmDeletion;
+
+        [XmlElement(ElementName = "confirmDeletion", IsNullable = false, Namespace = "")]
+        public string ConfirmDeletion {
+            get => _confirmDeletion;
+            set {
+                ConfirmDeletionSpecified = true;
+                _confirmDeletion = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ConfirmDeletionSpecified { get; set; }
-    private string _cancelDeletion;
+        [XmlIgnore]
+        public bool ConfirmDeletionSpecified { get; set; }
+        
+        private string _cancelDeletion;
 
-    [XmlElement(ElementName = "cancelDeletion", IsNullable = false, Namespace = "")]
-    public string CancelDeletion {
-        get => _cancelDeletion;
-        set {
-            CancelDeletionSpecified = true;
-            _cancelDeletion = value;
+        [XmlElement(ElementName = "cancelDeletion", IsNullable = false, Namespace = "")]
+        public string CancelDeletion {
+            get => _cancelDeletion;
+            set {
+                CancelDeletionSpecified = true;
+                _cancelDeletion = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CancelDeletionSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CancelDeletionSpecified { get; set; }
+        
+    }
 }

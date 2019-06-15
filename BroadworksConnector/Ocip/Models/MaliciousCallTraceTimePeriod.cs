@@ -1,38 +1,49 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class MaliciousCallTraceTimePeriod 
-{
-    private string _startDateTime;
+    /// <summary>
+    /// Modify the user level data associated with Malicious Call Trace.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class MaliciousCallTraceTimePeriod 
+    {
 
-    [XmlElement(ElementName = "startDateTime", IsNullable = false, Namespace = "")]
-    public string StartDateTime {
-        get => _startDateTime;
-        set {
-            StartDateTimeSpecified = true;
-            _startDateTime = value;
+        
+        private string _startDateTime;
+
+        [XmlElement(ElementName = "startDateTime", IsNullable = false, Namespace = "")]
+        public string StartDateTime {
+            get => _startDateTime;
+            set {
+                StartDateTimeSpecified = true;
+                _startDateTime = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool StartDateTimeSpecified { get; set; }
-    private string _stopDateTime;
+        [XmlIgnore]
+        public bool StartDateTimeSpecified { get; set; }
+        
+        private string _stopDateTime;
 
-    [XmlElement(ElementName = "stopDateTime", IsNullable = false, Namespace = "")]
-    public string StopDateTime {
-        get => _stopDateTime;
-        set {
-            StopDateTimeSpecified = true;
-            _stopDateTime = value;
+        [XmlElement(ElementName = "stopDateTime", IsNullable = false, Namespace = "")]
+        public string StopDateTime {
+            get => _stopDateTime;
+            set {
+                StopDateTimeSpecified = true;
+                _stopDateTime = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool StopDateTimeSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool StopDateTimeSpecified { get; set; }
+        
+    }
 }

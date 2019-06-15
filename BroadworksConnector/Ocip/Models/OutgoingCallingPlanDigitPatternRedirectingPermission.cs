@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class OutgoingCallingPlanDigitPatternRedirectingPermission 
-{
-    private string _digitPatternName;
+    /// <summary>
+    /// Indicates whether redirecting calls using specified digit patterns are permitted.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class OutgoingCallingPlanDigitPatternRedirectingPermission 
+    {
 
-    [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
-    public string DigitPatternName {
-        get => _digitPatternName;
-        set {
-            DigitPatternNameSpecified = true;
-            _digitPatternName = value;
+        
+        private string _digitPatternName;
+
+        [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
+        public string DigitPatternName {
+            get => _digitPatternName;
+            set {
+                DigitPatternNameSpecified = true;
+                _digitPatternName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DigitPatternNameSpecified { get; set; }
-    private bool _permission;
+        [XmlIgnore]
+        public bool DigitPatternNameSpecified { get; set; }
+        
+        private bool _permission;
 
-    [XmlElement(ElementName = "permission", IsNullable = false, Namespace = "")]
-    public bool Permission {
-        get => _permission;
-        set {
-            PermissionSpecified = true;
-            _permission = value;
+        [XmlElement(ElementName = "permission", IsNullable = false, Namespace = "")]
+        public bool Permission {
+            get => _permission;
+            set {
+                PermissionSpecified = true;
+                _permission = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PermissionSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool PermissionSpecified { get; set; }
+        
+    }
 }

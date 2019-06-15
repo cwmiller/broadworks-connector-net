@@ -1,64 +1,75 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderAnswerConfirmationGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection _announcementMessageSelection;
+    /// <summary>
+    /// Response to the ServiceProviderAnswerConfirmationGetRequest16.
+        /// <see cref="ServiceProviderAnswerConfirmationGetRequest16"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderAnswerConfirmationGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "announcementMessageSelection", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection AnnouncementMessageSelection {
-        get => _announcementMessageSelection;
-        set {
-            AnnouncementMessageSelectionSpecified = true;
-            _announcementMessageSelection = value;
+        
+        private BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection _announcementMessageSelection;
+
+        [XmlElement(ElementName = "announcementMessageSelection", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection AnnouncementMessageSelection {
+            get => _announcementMessageSelection;
+            set {
+                AnnouncementMessageSelectionSpecified = true;
+                _announcementMessageSelection = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AnnouncementMessageSelectionSpecified { get; set; }
-    private string _confirmationMessageAudioFileDescription;
+        [XmlIgnore]
+        public bool AnnouncementMessageSelectionSpecified { get; set; }
+        
+        private string _confirmationMessageAudioFileDescription;
 
-    [XmlElement(ElementName = "confirmationMessageAudioFileDescription", IsNullable = false, Namespace = "")]
-    public string ConfirmationMessageAudioFileDescription {
-        get => _confirmationMessageAudioFileDescription;
-        set {
-            ConfirmationMessageAudioFileDescriptionSpecified = true;
-            _confirmationMessageAudioFileDescription = value;
+        [XmlElement(ElementName = "confirmationMessageAudioFileDescription", IsNullable = false, Namespace = "")]
+        public string ConfirmationMessageAudioFileDescription {
+            get => _confirmationMessageAudioFileDescription;
+            set {
+                ConfirmationMessageAudioFileDescriptionSpecified = true;
+                _confirmationMessageAudioFileDescription = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ConfirmationMessageAudioFileDescriptionSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.MediaFileType _confirmationMessageMediaType;
+        [XmlIgnore]
+        public bool ConfirmationMessageAudioFileDescriptionSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.MediaFileType _confirmationMessageMediaType;
 
-    [XmlElement(ElementName = "confirmationMessageMediaType", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.MediaFileType ConfirmationMessageMediaType {
-        get => _confirmationMessageMediaType;
-        set {
-            ConfirmationMessageMediaTypeSpecified = true;
-            _confirmationMessageMediaType = value;
+        [XmlElement(ElementName = "confirmationMessageMediaType", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.MediaFileType ConfirmationMessageMediaType {
+            get => _confirmationMessageMediaType;
+            set {
+                ConfirmationMessageMediaTypeSpecified = true;
+                _confirmationMessageMediaType = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ConfirmationMessageMediaTypeSpecified { get; set; }
-    private int _confirmationTimoutSeconds;
+        [XmlIgnore]
+        public bool ConfirmationMessageMediaTypeSpecified { get; set; }
+        
+        private int _confirmationTimoutSeconds;
 
-    [XmlElement(ElementName = "confirmationTimoutSeconds", IsNullable = false, Namespace = "")]
-    public int ConfirmationTimoutSeconds {
-        get => _confirmationTimoutSeconds;
-        set {
-            ConfirmationTimoutSecondsSpecified = true;
-            _confirmationTimoutSeconds = value;
+        [XmlElement(ElementName = "confirmationTimoutSeconds", IsNullable = false, Namespace = "")]
+        public int ConfirmationTimoutSeconds {
+            get => _confirmationTimoutSeconds;
+            set {
+                ConfirmationTimoutSecondsSpecified = true;
+                _confirmationTimoutSeconds = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ConfirmationTimoutSecondsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ConfirmationTimoutSecondsSpecified { get; set; }
+        
+    }
 }

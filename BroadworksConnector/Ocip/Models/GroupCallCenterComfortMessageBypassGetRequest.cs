@@ -1,25 +1,35 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupCallCenterComfortMessageBypassGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceUserId;
+    /// <summary>
+    /// Get a call center's comfort message bypass settings.
+    /// The response is either a GroupCallCenterComfortMessageBypassGetResponse or an ErrorResponse.
+        /// <see cref="GroupCallCenterComfortMessageBypassGetResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupCallCenterComfortMessageBypassGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-    public string ServiceUserId {
-        get => _serviceUserId;
-        set {
-            ServiceUserIdSpecified = true;
-            _serviceUserId = value;
+        
+        private string _serviceUserId;
+
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        public string ServiceUserId {
+            get => _serviceUserId;
+            set {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceUserIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ServiceUserIdSpecified { get; set; }
+        
+    }
 }

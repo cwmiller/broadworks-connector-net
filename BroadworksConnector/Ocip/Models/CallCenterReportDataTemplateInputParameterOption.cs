@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum CallCenterReportDataTemplateInputParameterOption{
-    [XmlEnum(Name = "Required")]
-    Required,
-    [XmlEnum(Name = "Does Not Apply")]
-    DoesNotApply,
- }
+    /// <summary>
+    /// Options for call center enhanced reporting data template input parameters.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum CallCenterReportDataTemplateInputParameterOption    {
+            [XmlEnum(Name = "Required")]
+        Required,
+            [XmlEnum(Name = "Does Not Apply")]
+        DoesNotApply,
+     }
 }

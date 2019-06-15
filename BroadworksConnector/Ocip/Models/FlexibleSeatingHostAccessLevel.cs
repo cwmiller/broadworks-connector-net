@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum FlexibleSeatingHostAccessLevel{
-    [XmlEnum(Name = "Enterprise")]
-    Enterprise,
-    [XmlEnum(Name = "Group")]
-    Group,
- }
+    /// <summary>
+    /// Access level of a flexible seating host
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum FlexibleSeatingHostAccessLevel    {
+            [XmlEnum(Name = "Enterprise")]
+        Enterprise,
+            [XmlEnum(Name = "Group")]
+        Group,
+     }
 }

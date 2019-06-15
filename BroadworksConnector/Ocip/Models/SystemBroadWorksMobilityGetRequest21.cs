@@ -1,12 +1,24 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemBroadWorksMobilityGetRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-}
+    /// <summary>
+    /// Get the broadworks mobility system parameters.
+    /// The response is either a SystemBroadWorksMobilityGetResponse21 or an ErrorResponse.
+    /// 
+    /// Replaced by: SystemBroadWorksMobilityGetRequest22 in AS data mode
+        /// <see cref="SystemBroadWorksMobilityGetResponse21"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="SystemBroadWorksMobilityGetRequest22"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemBroadWorksMobilityGetRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
+
+        
+    }
 }

@@ -1,25 +1,34 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemRoutingGetTranslationListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.C.OCITable _routingTable;
+    /// <summary>
+    /// Response to SystemRoutingGetTranslationListRequest. The column headings are "Routing Digits"
+    /// and "Route".
+        /// <see cref="SystemRoutingGetTranslationListRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemRoutingGetTranslationListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "routingTable", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.C.OCITable RoutingTable {
-        get => _routingTable;
-        set {
-            RoutingTableSpecified = true;
-            _routingTable = value;
+        
+        private BroadWorksConnector.Ocip.Models.C.OCITable _routingTable;
+
+        [XmlElement(ElementName = "routingTable", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable RoutingTable {
+            get => _routingTable;
+            set {
+                RoutingTableSpecified = true;
+                _routingTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RoutingTableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool RoutingTableSpecified { get; set; }
+        
+    }
 }

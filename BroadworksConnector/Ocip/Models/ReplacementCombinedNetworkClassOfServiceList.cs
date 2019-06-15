@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ReplacementCombinedNetworkClassOfServiceList 
-{
-    private List<string> _networkClassOfService;
+    /// <summary>
+    /// A list of network class of services that replaces a previously network class of services.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ReplacementCombinedNetworkClassOfServiceList 
+    {
 
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-    public List<string> NetworkClassOfService {
-        get => _networkClassOfService;
-        set {
-            NetworkClassOfServiceSpecified = true;
-            _networkClassOfService = value;
+        
+        private List<string> _networkClassOfService;
+
+        [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+        public List<string> NetworkClassOfService {
+            get => _networkClassOfService;
+            set {
+                NetworkClassOfServiceSpecified = true;
+                _networkClassOfService = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NetworkClassOfServiceSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool NetworkClassOfServiceSpecified { get; set; }
+        
+    }
 }

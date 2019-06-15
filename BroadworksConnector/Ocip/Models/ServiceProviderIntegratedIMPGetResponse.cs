@@ -1,38 +1,50 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ServiceProviderIntegratedIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _useSystemServiceDomain;
+    /// <summary>
+    /// Response to the ServiceProviderIntegratedIMPGetRequest.
+    /// The response contains the service provider Integrated IMP service attributes.
+    /// Replaced by: ServiceProviderIntegratedIMPGetResponse21 in AS data mode
+        /// <see cref="ServiceProviderIntegratedIMPGetRequest"/>
+        /// <see cref="ServiceProviderIntegratedIMPGetResponse21"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ServiceProviderIntegratedIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "useSystemServiceDomain", IsNullable = false, Namespace = "")]
-    public bool UseSystemServiceDomain {
-        get => _useSystemServiceDomain;
-        set {
-            UseSystemServiceDomainSpecified = true;
-            _useSystemServiceDomain = value;
+        
+        private bool _useSystemServiceDomain;
+
+        [XmlElement(ElementName = "useSystemServiceDomain", IsNullable = false, Namespace = "")]
+        public bool UseSystemServiceDomain {
+            get => _useSystemServiceDomain;
+            set {
+                UseSystemServiceDomainSpecified = true;
+                _useSystemServiceDomain = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseSystemServiceDomainSpecified { get; set; }
-    private string _serviceDomain;
+        [XmlIgnore]
+        public bool UseSystemServiceDomainSpecified { get; set; }
+        
+        private string _serviceDomain;
 
-    [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
-    public string ServiceDomain {
-        get => _serviceDomain;
-        set {
-            ServiceDomainSpecified = true;
-            _serviceDomain = value;
+        [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
+        public string ServiceDomain {
+            get => _serviceDomain;
+            set {
+                ServiceDomainSpecified = true;
+                _serviceDomain = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceDomainSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ServiceDomainSpecified { get; set; }
+        
+    }
 }

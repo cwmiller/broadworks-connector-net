@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class OutgoingCallingPlanDigitPatternOriginatingPermissions 
-{
-    private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternOriginatingPermission> _digitPatternPermissions;
+    /// <summary>
+    /// Outgoing Calling Plan originating call permissions for specified digit patterns.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class OutgoingCallingPlanDigitPatternOriginatingPermissions 
+    {
 
-    [XmlElement(ElementName = "digitPatternPermissions", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternOriginatingPermission> DigitPatternPermissions {
-        get => _digitPatternPermissions;
-        set {
-            DigitPatternPermissionsSpecified = true;
-            _digitPatternPermissions = value;
+        
+        private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternOriginatingPermission> _digitPatternPermissions;
+
+        [XmlElement(ElementName = "digitPatternPermissions", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternOriginatingPermission> DigitPatternPermissions {
+            get => _digitPatternPermissions;
+            set {
+                DigitPatternPermissionsSpecified = true;
+                _digitPatternPermissions = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DigitPatternPermissionsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DigitPatternPermissionsSpecified { get; set; }
+        
+    }
 }

@@ -1,38 +1,49 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserTimeScheduleDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _userId;
+    /// <summary>
+    /// Delete a user time schedule.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserTimeScheduleDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        
+        private string _userId;
+
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-    private string _timeScheduleName;
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+        private string _timeScheduleName;
 
-    [XmlElement(ElementName = "timeScheduleName", IsNullable = false, Namespace = "")]
-    public string TimeScheduleName {
-        get => _timeScheduleName;
-        set {
-            TimeScheduleNameSpecified = true;
-            _timeScheduleName = value;
+        [XmlElement(ElementName = "timeScheduleName", IsNullable = false, Namespace = "")]
+        public string TimeScheduleName {
+            get => _timeScheduleName;
+            set {
+                TimeScheduleNameSpecified = true;
+                _timeScheduleName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TimeScheduleNameSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TimeScheduleNameSpecified { get; set; }
+        
+    }
 }

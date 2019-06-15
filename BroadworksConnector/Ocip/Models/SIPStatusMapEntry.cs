@@ -1,38 +1,46 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SIPStatusMapEntry 
-{
-    private int _sipStatusCode;
+    /// <summary>
+    /// The access SIP status map entry.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SIPStatusMapEntry 
+    {
 
-    [XmlElement(ElementName = "sipStatusCode", IsNullable = false, Namespace = "")]
-    public int SipStatusCode {
-        get => _sipStatusCode;
-        set {
-            SipStatusCodeSpecified = true;
-            _sipStatusCode = value;
+        
+        private int _sipStatusCode;
+
+        [XmlElement(ElementName = "sipStatusCode", IsNullable = false, Namespace = "")]
+        public int SipStatusCode {
+            get => _sipStatusCode;
+            set {
+                SipStatusCodeSpecified = true;
+                _sipStatusCode = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SipStatusCodeSpecified { get; set; }
-    private string _treatmentId;
+        [XmlIgnore]
+        public bool SipStatusCodeSpecified { get; set; }
+        
+        private string _treatmentId;
 
-    [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
-    public string TreatmentId {
-        get => _treatmentId;
-        set {
-            TreatmentIdSpecified = true;
-            _treatmentId = value;
+        [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
+        public string TreatmentId {
+            get => _treatmentId;
+            set {
+                TreatmentIdSpecified = true;
+                _treatmentId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TreatmentIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool TreatmentIdSpecified { get; set; }
+        
+    }
 }

@@ -1,25 +1,38 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemSIPDeviceTypeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.C.OCITable _deviceTypeTable;
+    /// <summary>
+    /// Response to SystemSIPDeviceTypeGetListRequest.
+    /// Contains a table of identity/ device profile types configured in the system.
+    /// The column headings are: "Device Type", "Profile", "Is Obsolete" and "Reseller Id".
+    /// 
+    /// The following columns are only returned in AS data mode:
+    /// "Reseller Id"
+        /// <see cref="SystemSIPDeviceTypeGetListRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemSIPDeviceTypeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "deviceTypeTable", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.C.OCITable DeviceTypeTable {
-        get => _deviceTypeTable;
-        set {
-            DeviceTypeTableSpecified = true;
-            _deviceTypeTable = value;
+        
+        private BroadWorksConnector.Ocip.Models.C.OCITable _deviceTypeTable;
+
+        [XmlElement(ElementName = "deviceTypeTable", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable DeviceTypeTable {
+            get => _deviceTypeTable;
+            set {
+                DeviceTypeTableSpecified = true;
+                _deviceTypeTable = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DeviceTypeTableSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DeviceTypeTableSpecified { get; set; }
+        
+    }
 }

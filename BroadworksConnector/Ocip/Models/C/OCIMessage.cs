@@ -1,77 +1,89 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models.C
 {
-[Serializable]
-[XmlRoot(Namespace = "C")]
-public  class OCIMessage 
-{
-    private string _sessionId;
+    /// <summary>
+    /// A message contains a list of requests or responses. The server processes all the requests
+    /// and returns a message with a corresponding list of responses.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "C")]
+     
+    public class OCIMessage 
+    {
 
-    [XmlElement(ElementName = "sessionId", IsNullable = false, Namespace = "")]
-    public string SessionId {
-        get => _sessionId;
-        set {
-            SessionIdSpecified = true;
-            _sessionId = value;
+        
+        private string _sessionId;
+
+        [XmlElement(ElementName = "sessionId", IsNullable = false, Namespace = "")]
+        public string SessionId {
+            get => _sessionId;
+            set {
+                SessionIdSpecified = true;
+                _sessionId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SessionIdSpecified { get; set; }
-    private string _userId;
+        [XmlIgnore]
+        public bool SessionIdSpecified { get; set; }
+        
+        private string _userId;
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-    private string _phoneNumber;
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+        private string _phoneNumber;
 
-    [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-    public string PhoneNumber {
-        get => _phoneNumber;
-        set {
-            PhoneNumberSpecified = true;
-            _phoneNumber = value;
+        [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
+        public string PhoneNumber {
+            get => _phoneNumber;
+            set {
+                PhoneNumberSpecified = true;
+                _phoneNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PhoneNumberSpecified { get; set; }
-    private string _linePort;
+        [XmlIgnore]
+        public bool PhoneNumberSpecified { get; set; }
+        
+        private string _linePort;
 
-    [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-    public string LinePort {
-        get => _linePort;
-        set {
-            LinePortSpecified = true;
-            _linePort = value;
+        [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
+        public string LinePort {
+            get => _linePort;
+            set {
+                LinePortSpecified = true;
+                _linePort = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LinePortSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.C.OCICommand> _command;
+        [XmlIgnore]
+        public bool LinePortSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.C.OCICommand> _command;
 
-    [XmlElement(ElementName = "command", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.C.OCICommand> Command {
-        get => _command;
-        set {
-            CommandSpecified = true;
-            _command = value;
+        [XmlElement(ElementName = "command", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.C.OCICommand> Command {
+            get => _command;
+            set {
+                CommandSpecified = true;
+                _command = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CommandSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CommandSpecified { get; set; }
+        
+    }
 }

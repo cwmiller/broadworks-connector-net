@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum SliceType{
-    [XmlEnum(Name = "Call Processing")]
-    CallProcessing,
-    [XmlEnum(Name = "Provisioning")]
-    Provisioning,
- }
+    /// <summary>
+    /// Choices for the Slice type.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum SliceType    {
+            [XmlEnum(Name = "Call Processing")]
+        CallProcessing,
+            [XmlEnum(Name = "Provisioning")]
+        Provisioning,
+     }
 }

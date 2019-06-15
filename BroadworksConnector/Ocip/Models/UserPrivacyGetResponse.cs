@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserPrivacyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _enableDirectoryPrivacy;
+    /// <summary>
+    /// Response to UserPrivacyGetRequest.
+        /// <see cref="UserPrivacyGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserPrivacyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
-    public bool EnableDirectoryPrivacy {
-        get => _enableDirectoryPrivacy;
-        set {
-            EnableDirectoryPrivacySpecified = true;
-            _enableDirectoryPrivacy = value;
+        
+        private bool _enableDirectoryPrivacy;
+
+        [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
+        public bool EnableDirectoryPrivacy {
+            get => _enableDirectoryPrivacy;
+            set {
+                EnableDirectoryPrivacySpecified = true;
+                _enableDirectoryPrivacy = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableDirectoryPrivacySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool EnableDirectoryPrivacySpecified { get; set; }
+        
+    }
 }

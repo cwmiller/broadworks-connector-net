@@ -1,64 +1,77 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupRoutePointQueueCallDispositionCodeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceUserId;
+    /// <summary>
+    /// Modify a Route Point Call Disposition Code.
+    /// The response is either SuccessResponse or ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupRoutePointQueueCallDispositionCodeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-    public string ServiceUserId {
-        get => _serviceUserId;
-        set {
-            ServiceUserIdSpecified = true;
-            _serviceUserId = value;
+        
+        private string _serviceUserId;
+
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        public string ServiceUserId {
+            get => _serviceUserId;
+            set {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceUserIdSpecified { get; set; }
-    private string _code;
+        [XmlIgnore]
+        public bool ServiceUserIdSpecified { get; set; }
+        
+        private string _code;
 
-    [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-    public string Code {
-        get => _code;
-        set {
-            CodeSpecified = true;
-            _code = value;
+        [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
+        public string Code {
+            get => _code;
+            set {
+                CodeSpecified = true;
+                _code = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CodeSpecified { get; set; }
-    private bool _isActive;
+        [XmlIgnore]
+        public bool CodeSpecified { get; set; }
+        
+        private bool _isActive;
 
-    [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-    public bool IsActive {
-        get => _isActive;
-        set {
-            IsActiveSpecified = true;
-            _isActive = value;
+        [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
+        public bool IsActive {
+            get => _isActive;
+            set {
+                IsActiveSpecified = true;
+                _isActive = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsActiveSpecified { get; set; }
-    private string _description;
+        [XmlIgnore]
+        public bool IsActiveSpecified { get; set; }
+        
+        private string _description;
 
-    [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
-    public string Description {
-        get => _description;
-        set {
-            DescriptionSpecified = true;
-            _description = value;
+        [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
+        public string Description {
+            get => _description;
+            set {
+                DescriptionSpecified = true;
+                _description = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DescriptionSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool DescriptionSpecified { get; set; }
+        
+    }
 }

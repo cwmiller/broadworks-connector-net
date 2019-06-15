@@ -1,168 +1,186 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ConsolidatedGroupProperties 
-{
-    private string _defaultDomain;
+    /// <summary>
+    /// 
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ConsolidatedGroupProperties 
+    {
 
-    [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
-    public string DefaultDomain {
-        get => _defaultDomain;
-        set {
-            DefaultDomainSpecified = true;
-            _defaultDomain = value;
+        
+        private string _defaultDomain;
+
+        [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
+        public string DefaultDomain {
+            get => _defaultDomain;
+            set {
+                DefaultDomainSpecified = true;
+                _defaultDomain = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DefaultDomainSpecified { get; set; }
-    private int _userLimit;
+        [XmlIgnore]
+        public bool DefaultDomainSpecified { get; set; }
+        
+        private int _userLimit;
 
-    [XmlElement(ElementName = "userLimit", IsNullable = false, Namespace = "")]
-    public int UserLimit {
-        get => _userLimit;
-        set {
-            UserLimitSpecified = true;
-            _userLimit = value;
+        [XmlElement(ElementName = "userLimit", IsNullable = false, Namespace = "")]
+        public int UserLimit {
+            get => _userLimit;
+            set {
+                UserLimitSpecified = true;
+                _userLimit = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserLimitSpecified { get; set; }
-    private string _groupName;
+        [XmlIgnore]
+        public bool UserLimitSpecified { get; set; }
+        
+        private string _groupName;
 
-    [XmlElement(ElementName = "groupName", IsNullable = false, Namespace = "")]
-    public string GroupName {
-        get => _groupName;
-        set {
-            GroupNameSpecified = true;
-            _groupName = value;
+        [XmlElement(ElementName = "groupName", IsNullable = false, Namespace = "")]
+        public string GroupName {
+            get => _groupName;
+            set {
+                GroupNameSpecified = true;
+                _groupName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GroupNameSpecified { get; set; }
-    private string _callingLineIdName;
+        [XmlIgnore]
+        public bool GroupNameSpecified { get; set; }
+        
+        private string _callingLineIdName;
 
-    [XmlElement(ElementName = "callingLineIdName", IsNullable = false, Namespace = "")]
-    public string CallingLineIdName {
-        get => _callingLineIdName;
-        set {
-            CallingLineIdNameSpecified = true;
-            _callingLineIdName = value;
+        [XmlElement(ElementName = "callingLineIdName", IsNullable = false, Namespace = "")]
+        public string CallingLineIdName {
+            get => _callingLineIdName;
+            set {
+                CallingLineIdNameSpecified = true;
+                _callingLineIdName = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallingLineIdNameSpecified { get; set; }
-    private string _timeZone;
+        [XmlIgnore]
+        public bool CallingLineIdNameSpecified { get; set; }
+        
+        private string _timeZone;
 
-    [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
-    public string TimeZone {
-        get => _timeZone;
-        set {
-            TimeZoneSpecified = true;
-            _timeZone = value;
+        [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
+        public string TimeZone {
+            get => _timeZone;
+            set {
+                TimeZoneSpecified = true;
+                _timeZone = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool TimeZoneSpecified { get; set; }
-    private string _locationDialingCode;
+        [XmlIgnore]
+        public bool TimeZoneSpecified { get; set; }
+        
+        private string _locationDialingCode;
 
-    [XmlElement(ElementName = "locationDialingCode", IsNullable = false, Namespace = "")]
-    public string LocationDialingCode {
-        get => _locationDialingCode;
-        set {
-            LocationDialingCodeSpecified = true;
-            _locationDialingCode = value;
+        [XmlElement(ElementName = "locationDialingCode", IsNullable = false, Namespace = "")]
+        public string LocationDialingCode {
+            get => _locationDialingCode;
+            set {
+                LocationDialingCodeSpecified = true;
+                _locationDialingCode = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool LocationDialingCodeSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.Contact _contact;
+        [XmlIgnore]
+        public bool LocationDialingCodeSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.Contact _contact;
 
-    [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.Contact Contact {
-        get => _contact;
-        set {
-            ContactSpecified = true;
-            _contact = value;
+        [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.Contact Contact {
+            get => _contact;
+            set {
+                ContactSpecified = true;
+                _contact = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ContactSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.StreetAddress _address;
+        [XmlIgnore]
+        public bool ContactSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
-    [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.StreetAddress Address {
-        get => _address;
-        set {
-            AddressSpecified = true;
-            _address = value;
+        [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.StreetAddress Address {
+            get => _address;
+            set {
+                AddressSpecified = true;
+                _address = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool AddressSpecified { get; set; }
-    private List<string> _networkClassOfService;
+        [XmlIgnore]
+        public bool AddressSpecified { get; set; }
+        
+        private List<string> _networkClassOfService;
 
-    [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-    public List<string> NetworkClassOfService {
-        get => _networkClassOfService;
-        set {
-            NetworkClassOfServiceSpecified = true;
-            _networkClassOfService = value;
+        [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+        public List<string> NetworkClassOfService {
+            get => _networkClassOfService;
+            set {
+                NetworkClassOfServiceSpecified = true;
+                _networkClassOfService = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool NetworkClassOfServiceSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.DefaultNetworkClassOfService _defaultNetworkClassOfService;
+        [XmlIgnore]
+        public bool NetworkClassOfServiceSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.DefaultNetworkClassOfService _defaultNetworkClassOfService;
 
-    [XmlElement(ElementName = "defaultNetworkClassOfService", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.DefaultNetworkClassOfService DefaultNetworkClassOfService {
-        get => _defaultNetworkClassOfService;
-        set {
-            DefaultNetworkClassOfServiceSpecified = true;
-            _defaultNetworkClassOfService = value;
+        [XmlElement(ElementName = "defaultNetworkClassOfService", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.DefaultNetworkClassOfService DefaultNetworkClassOfService {
+            get => _defaultNetworkClassOfService;
+            set {
+                DefaultNetworkClassOfServiceSpecified = true;
+                _defaultNetworkClassOfService = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool DefaultNetworkClassOfServiceSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.ConsolidatedGroupServiceAssignment> _groupService;
+        [XmlIgnore]
+        public bool DefaultNetworkClassOfServiceSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.ConsolidatedGroupServiceAssignment> _groupService;
 
-    [XmlElement(ElementName = "groupService", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.ConsolidatedGroupServiceAssignment> GroupService {
-        get => _groupService;
-        set {
-            GroupServiceSpecified = true;
-            _groupService = value;
+        [XmlElement(ElementName = "groupService", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.ConsolidatedGroupServiceAssignment> GroupService {
+            get => _groupService;
+            set {
+                GroupServiceSpecified = true;
+                _groupService = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool GroupServiceSpecified { get; set; }
-    private string _servicePolicy;
+        [XmlIgnore]
+        public bool GroupServiceSpecified { get; set; }
+        
+        private string _servicePolicy;
 
-    [XmlElement(ElementName = "servicePolicy", IsNullable = false, Namespace = "")]
-    public string ServicePolicy {
-        get => _servicePolicy;
-        set {
-            ServicePolicySpecified = true;
-            _servicePolicy = value;
+        [XmlElement(ElementName = "servicePolicy", IsNullable = false, Namespace = "")]
+        public string ServicePolicy {
+            get => _servicePolicy;
+            set {
+                ServicePolicySpecified = true;
+                _servicePolicy = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServicePolicySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool ServicePolicySpecified { get; set; }
+        
+    }
 }

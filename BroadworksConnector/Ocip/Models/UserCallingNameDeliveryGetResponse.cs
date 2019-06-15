@@ -1,38 +1,47 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserCallingNameDeliveryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _isActiveForExternalCalls;
+    /// <summary>
+    /// Response to UserCallingNameDeliveryGetRequest.
+        /// <see cref="UserCallingNameDeliveryGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserCallingNameDeliveryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "isActiveForExternalCalls", IsNullable = false, Namespace = "")]
-    public bool IsActiveForExternalCalls {
-        get => _isActiveForExternalCalls;
-        set {
-            IsActiveForExternalCallsSpecified = true;
-            _isActiveForExternalCalls = value;
+        
+        private bool _isActiveForExternalCalls;
+
+        [XmlElement(ElementName = "isActiveForExternalCalls", IsNullable = false, Namespace = "")]
+        public bool IsActiveForExternalCalls {
+            get => _isActiveForExternalCalls;
+            set {
+                IsActiveForExternalCallsSpecified = true;
+                _isActiveForExternalCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsActiveForExternalCallsSpecified { get; set; }
-    private bool _isActiveForInternalCalls;
+        [XmlIgnore]
+        public bool IsActiveForExternalCallsSpecified { get; set; }
+        
+        private bool _isActiveForInternalCalls;
 
-    [XmlElement(ElementName = "isActiveForInternalCalls", IsNullable = false, Namespace = "")]
-    public bool IsActiveForInternalCalls {
-        get => _isActiveForInternalCalls;
-        set {
-            IsActiveForInternalCallsSpecified = true;
-            _isActiveForInternalCalls = value;
+        [XmlElement(ElementName = "isActiveForInternalCalls", IsNullable = false, Namespace = "")]
+        public bool IsActiveForInternalCalls {
+            get => _isActiveForInternalCalls;
+            set {
+                IsActiveForInternalCallsSpecified = true;
+                _isActiveForInternalCalls = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool IsActiveForInternalCallsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool IsActiveForInternalCallsSpecified { get; set; }
+        
+    }
 }

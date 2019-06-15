@@ -3,12 +3,15 @@ using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public enum AutoAttendantType{
-    [XmlEnum(Name = "Basic")]
-    Basic,
-    [XmlEnum(Name = "Standard")]
-    Standard,
- }
+    /// <summary>
+    /// Auto Attendant type.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+    public enum AutoAttendantType    {
+            [XmlEnum(Name = "Basic")]
+        Basic,
+            [XmlEnum(Name = "Standard")]
+        Standard,
+     }
 }

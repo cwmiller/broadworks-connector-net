@@ -1,64 +1,77 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupServiceInstancePrivacyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _serviceUserId;
+    /// <summary>
+    /// Modify the data associated with Privacy for a service instance.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupServiceInstancePrivacyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-    public string ServiceUserId {
-        get => _serviceUserId;
-        set {
-            ServiceUserIdSpecified = true;
-            _serviceUserId = value;
+        
+        private string _serviceUserId;
+
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        public string ServiceUserId {
+            get => _serviceUserId;
+            set {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool ServiceUserIdSpecified { get; set; }
-    private bool _enableDirectoryPrivacy;
+        [XmlIgnore]
+        public bool ServiceUserIdSpecified { get; set; }
+        
+        private bool _enableDirectoryPrivacy;
 
-    [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
-    public bool EnableDirectoryPrivacy {
-        get => _enableDirectoryPrivacy;
-        set {
-            EnableDirectoryPrivacySpecified = true;
-            _enableDirectoryPrivacy = value;
+        [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
+        public bool EnableDirectoryPrivacy {
+            get => _enableDirectoryPrivacy;
+            set {
+                EnableDirectoryPrivacySpecified = true;
+                _enableDirectoryPrivacy = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableDirectoryPrivacySpecified { get; set; }
-    private bool _enableAutoAttendantExtensionDialingPrivacy;
+        [XmlIgnore]
+        public bool EnableDirectoryPrivacySpecified { get; set; }
+        
+        private bool _enableAutoAttendantExtensionDialingPrivacy;
 
-    [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false, Namespace = "")]
-    public bool EnableAutoAttendantExtensionDialingPrivacy {
-        get => _enableAutoAttendantExtensionDialingPrivacy;
-        set {
-            EnableAutoAttendantExtensionDialingPrivacySpecified = true;
-            _enableAutoAttendantExtensionDialingPrivacy = value;
+        [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false, Namespace = "")]
+        public bool EnableAutoAttendantExtensionDialingPrivacy {
+            get => _enableAutoAttendantExtensionDialingPrivacy;
+            set {
+                EnableAutoAttendantExtensionDialingPrivacySpecified = true;
+                _enableAutoAttendantExtensionDialingPrivacy = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableAutoAttendantExtensionDialingPrivacySpecified { get; set; }
-    private bool _enableAutoAttendantNameDialingPrivacy;
+        [XmlIgnore]
+        public bool EnableAutoAttendantExtensionDialingPrivacySpecified { get; set; }
+        
+        private bool _enableAutoAttendantNameDialingPrivacy;
 
-    [XmlElement(ElementName = "enableAutoAttendantNameDialingPrivacy", IsNullable = false, Namespace = "")]
-    public bool EnableAutoAttendantNameDialingPrivacy {
-        get => _enableAutoAttendantNameDialingPrivacy;
-        set {
-            EnableAutoAttendantNameDialingPrivacySpecified = true;
-            _enableAutoAttendantNameDialingPrivacy = value;
+        [XmlElement(ElementName = "enableAutoAttendantNameDialingPrivacy", IsNullable = false, Namespace = "")]
+        public bool EnableAutoAttendantNameDialingPrivacy {
+            get => _enableAutoAttendantNameDialingPrivacy;
+            set {
+                EnableAutoAttendantNameDialingPrivacySpecified = true;
+                _enableAutoAttendantNameDialingPrivacy = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool EnableAutoAttendantNameDialingPrivacySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool EnableAutoAttendantNameDialingPrivacySpecified { get; set; }
+        
+    }
 }

@@ -1,38 +1,50 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserCallPoliciesGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private BroadWorksConnector.Ocip.Models.ConnectedLineIdentificationPrivacyOnRedirectedCalls _redirectedCallsCOLPPrivacy;
+    /// <summary>
+    /// Response to UserCallPoliciesGetRequest17.
+    /// 
+    /// Replaced by: UserCallPoliciesGetResponse19sp1 in AS data mode
+        /// <see cref="UserCallPoliciesGetRequest17"/>
+        /// <see cref="UserCallPoliciesGetResponse19sp1"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserCallPoliciesGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "redirectedCallsCOLPPrivacy", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.ConnectedLineIdentificationPrivacyOnRedirectedCalls RedirectedCallsCOLPPrivacy {
-        get => _redirectedCallsCOLPPrivacy;
-        set {
-            RedirectedCallsCOLPPrivacySpecified = true;
-            _redirectedCallsCOLPPrivacy = value;
+        
+        private BroadWorksConnector.Ocip.Models.ConnectedLineIdentificationPrivacyOnRedirectedCalls _redirectedCallsCOLPPrivacy;
+
+        [XmlElement(ElementName = "redirectedCallsCOLPPrivacy", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.ConnectedLineIdentificationPrivacyOnRedirectedCalls RedirectedCallsCOLPPrivacy {
+            get => _redirectedCallsCOLPPrivacy;
+            set {
+                RedirectedCallsCOLPPrivacySpecified = true;
+                _redirectedCallsCOLPPrivacy = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool RedirectedCallsCOLPPrivacySpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.CallBeingForwardedResponseCallType _callBeingForwardedResponseCallType;
+        [XmlIgnore]
+        public bool RedirectedCallsCOLPPrivacySpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.CallBeingForwardedResponseCallType _callBeingForwardedResponseCallType;
 
-    [XmlElement(ElementName = "callBeingForwardedResponseCallType", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CallBeingForwardedResponseCallType CallBeingForwardedResponseCallType {
-        get => _callBeingForwardedResponseCallType;
-        set {
-            CallBeingForwardedResponseCallTypeSpecified = true;
-            _callBeingForwardedResponseCallType = value;
+        [XmlElement(ElementName = "callBeingForwardedResponseCallType", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CallBeingForwardedResponseCallType CallBeingForwardedResponseCallType {
+            get => _callBeingForwardedResponseCallType;
+            set {
+                CallBeingForwardedResponseCallTypeSpecified = true;
+                _callBeingForwardedResponseCallType = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallBeingForwardedResponseCallTypeSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CallBeingForwardedResponseCallTypeSpecified { get; set; }
+        
+    }
 }

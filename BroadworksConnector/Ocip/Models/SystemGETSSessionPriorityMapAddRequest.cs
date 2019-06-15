@@ -1,38 +1,49 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SystemGETSSessionPriorityMapAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private int _priorityLevel;
+    /// <summary>
+    /// Add a GETS Session Priority map.  It maps a priority level with a session priority AVP value.
+    /// The response is either SuccessResponse or ErrorResponse.
+        /// <see cref="SuccessResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SystemGETSSessionPriorityMapAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "priorityLevel", IsNullable = false, Namespace = "")]
-    public int PriorityLevel {
-        get => _priorityLevel;
-        set {
-            PriorityLevelSpecified = true;
-            _priorityLevel = value;
+        
+        private int _priorityLevel;
+
+        [XmlElement(ElementName = "priorityLevel", IsNullable = false, Namespace = "")]
+        public int PriorityLevel {
+            get => _priorityLevel;
+            set {
+                PriorityLevelSpecified = true;
+                _priorityLevel = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool PriorityLevelSpecified { get; set; }
-    private int _sessionPriority;
+        [XmlIgnore]
+        public bool PriorityLevelSpecified { get; set; }
+        
+        private int _sessionPriority;
 
-    [XmlElement(ElementName = "sessionPriority", IsNullable = false, Namespace = "")]
-    public int SessionPriority {
-        get => _sessionPriority;
-        set {
-            SessionPrioritySpecified = true;
-            _sessionPriority = value;
+        [XmlElement(ElementName = "sessionPriority", IsNullable = false, Namespace = "")]
+        public int SessionPriority {
+            get => _sessionPriority;
+            set {
+                SessionPrioritySpecified = true;
+                _sessionPriority = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool SessionPrioritySpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool SessionPrioritySpecified { get; set; }
+        
+    }
 }

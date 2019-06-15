@@ -1,25 +1,38 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserCallWaitingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
-{
-    private string _userId;
+    /// <summary>
+    /// Request the user level data associated with Call Waiting.
+    /// The response is either a UserCallWaitingGetResponse or an
+    /// ErrorResponse.
+    /// Replaced by: UserCallWaitingGetRequest17sp4
+        /// <see cref="UserCallWaitingGetResponse"/>
+        /// <see cref="ErrorResponse"/>
+        /// <see cref="UserCallWaitingGetRequest17sp4"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserCallWaitingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
 
-    [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-    public string UserId {
-        get => _userId;
-        set {
-            UserIdSpecified = true;
-            _userId = value;
+        
+        private string _userId;
+
+        [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
+        public string UserId {
+            get => _userId;
+            set {
+                UserIdSpecified = true;
+                _userId = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserIdSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool UserIdSpecified { get; set; }
+        
+    }
 }

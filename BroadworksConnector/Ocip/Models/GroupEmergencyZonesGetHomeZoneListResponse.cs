@@ -1,38 +1,47 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class GroupEmergencyZonesGetHomeZoneListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private List<string> _homeZoneIpAddress;
+    /// <summary>
+    /// Response to GroupEmergencyZonesGetHomeZoneListRequest.
+        /// <see cref="GroupEmergencyZonesGetHomeZoneListRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class GroupEmergencyZonesGetHomeZoneListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "homeZoneIpAddress", IsNullable = false, Namespace = "")]
-    public List<string> HomeZoneIpAddress {
-        get => _homeZoneIpAddress;
-        set {
-            HomeZoneIpAddressSpecified = true;
-            _homeZoneIpAddress = value;
+        
+        private List<string> _homeZoneIpAddress;
+
+        [XmlElement(ElementName = "homeZoneIpAddress", IsNullable = false, Namespace = "")]
+        public List<string> HomeZoneIpAddress {
+            get => _homeZoneIpAddress;
+            set {
+                HomeZoneIpAddressSpecified = true;
+                _homeZoneIpAddress = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool HomeZoneIpAddressSpecified { get; set; }
-    private List<BroadWorksConnector.Ocip.Models.IPAddressRange> _homeZoneIpAddressRange;
+        [XmlIgnore]
+        public bool HomeZoneIpAddressSpecified { get; set; }
+        
+        private List<BroadWorksConnector.Ocip.Models.IPAddressRange> _homeZoneIpAddressRange;
 
-    [XmlElement(ElementName = "homeZoneIpAddressRange", IsNullable = false, Namespace = "")]
-    public List<BroadWorksConnector.Ocip.Models.IPAddressRange> HomeZoneIpAddressRange {
-        get => _homeZoneIpAddressRange;
-        set {
-            HomeZoneIpAddressRangeSpecified = true;
-            _homeZoneIpAddressRange = value;
+        [XmlElement(ElementName = "homeZoneIpAddressRange", IsNullable = false, Namespace = "")]
+        public List<BroadWorksConnector.Ocip.Models.IPAddressRange> HomeZoneIpAddressRange {
+            get => _homeZoneIpAddressRange;
+            set {
+                HomeZoneIpAddressRangeSpecified = true;
+                _homeZoneIpAddressRange = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool HomeZoneIpAddressRangeSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool HomeZoneIpAddressRangeSpecified { get; set; }
+        
+    }
 }

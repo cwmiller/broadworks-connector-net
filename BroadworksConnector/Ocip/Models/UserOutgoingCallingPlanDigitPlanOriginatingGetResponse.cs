@@ -1,38 +1,47 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class UserOutgoingCallingPlanDigitPlanOriginatingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
-{
-    private bool _useCustomSettings;
+    /// <summary>
+    /// Response to UserOutgoingCallingPlanDigitPlanOriginatingGetRequest.
+        /// <see cref="UserOutgoingCallingPlanDigitPlanOriginatingGetRequest"/>
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class UserOutgoingCallingPlanDigitPlanOriginatingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
 
-    [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
-    public bool UseCustomSettings {
-        get => _useCustomSettings;
-        set {
-            UseCustomSettingsSpecified = true;
-            _useCustomSettings = value;
+        
+        private bool _useCustomSettings;
+
+        [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
+        public bool UseCustomSettings {
+            get => _useCustomSettings;
+            set {
+                UseCustomSettingsSpecified = true;
+                _useCustomSettings = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UseCustomSettingsSpecified { get; set; }
-    private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternOriginatingPermissions _userPermissions;
+        [XmlIgnore]
+        public bool UseCustomSettingsSpecified { get; set; }
+        
+        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternOriginatingPermissions _userPermissions;
 
-    [XmlElement(ElementName = "userPermissions", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternOriginatingPermissions UserPermissions {
-        get => _userPermissions;
-        set {
-            UserPermissionsSpecified = true;
-            _userPermissions = value;
+        [XmlElement(ElementName = "userPermissions", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternOriginatingPermissions UserPermissions {
+            get => _userPermissions;
+            set {
+                UserPermissionsSpecified = true;
+                _userPermissions = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool UserPermissionsSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool UserPermissionsSpecified { get; set; }
+        
+    }
 }

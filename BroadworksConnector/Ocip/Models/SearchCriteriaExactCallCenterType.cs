@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class SearchCriteriaExactCallCenterType : BroadWorksConnector.Ocip.Models.SearchCriteria
-{
-    private BroadWorksConnector.Ocip.Models.CallCenterType _callCenterType;
+    /// <summary>
+    /// Criteria for searching for a particular fully specified call center type.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class SearchCriteriaExactCallCenterType : BroadWorksConnector.Ocip.Models.SearchCriteria
+    {
 
-    [XmlElement(ElementName = "callCenterType", IsNullable = false, Namespace = "")]
-    public BroadWorksConnector.Ocip.Models.CallCenterType CallCenterType {
-        get => _callCenterType;
-        set {
-            CallCenterTypeSpecified = true;
-            _callCenterType = value;
+        
+        private BroadWorksConnector.Ocip.Models.CallCenterType _callCenterType;
+
+        [XmlElement(ElementName = "callCenterType", IsNullable = false, Namespace = "")]
+        public BroadWorksConnector.Ocip.Models.CallCenterType CallCenterType {
+            get => _callCenterType;
+            set {
+                CallCenterTypeSpecified = true;
+                _callCenterType = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool CallCenterTypeSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool CallCenterTypeSpecified { get; set; }
+        
+    }
 }

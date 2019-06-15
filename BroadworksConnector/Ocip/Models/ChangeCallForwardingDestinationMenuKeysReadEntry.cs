@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
-    using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
-[Serializable]
-[XmlRoot(Namespace = "")]
-public  class ChangeCallForwardingDestinationMenuKeysReadEntry 
-{
-    private string _finishEnteringNewDestinationNumber;
+    /// <summary>
+    /// The voice portal change call forwarding destination menu keys.
+        /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+     
+    public class ChangeCallForwardingDestinationMenuKeysReadEntry 
+    {
 
-    [XmlElement(ElementName = "finishEnteringNewDestinationNumber", IsNullable = false, Namespace = "")]
-    public string FinishEnteringNewDestinationNumber {
-        get => _finishEnteringNewDestinationNumber;
-        set {
-            FinishEnteringNewDestinationNumberSpecified = true;
-            _finishEnteringNewDestinationNumber = value;
+        
+        private string _finishEnteringNewDestinationNumber;
+
+        [XmlElement(ElementName = "finishEnteringNewDestinationNumber", IsNullable = false, Namespace = "")]
+        public string FinishEnteringNewDestinationNumber {
+            get => _finishEnteringNewDestinationNumber;
+            set {
+                FinishEnteringNewDestinationNumberSpecified = true;
+                _finishEnteringNewDestinationNumber = value;
+            }
         }
-    }
 
-    [XmlIgnore]
-    public bool FinishEnteringNewDestinationNumberSpecified { get; set; }
-}
+        [XmlIgnore]
+        public bool FinishEnteringNewDestinationNumberSpecified { get; set; }
+        
+    }
 }
