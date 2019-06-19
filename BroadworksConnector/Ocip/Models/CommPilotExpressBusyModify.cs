@@ -1,25 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// CommPilot Express Available In Office Configuration used in the context of a modify.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CommPilotExpressBusyModify 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8c204d784d1904d9eeea996d46de69be:165""}]")]
+    public class CommPilotExpressBusyModify
     {
 
-        
         private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithExceptionModify _incomingCalls;
 
         [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithExceptionModify IncomingCalls {
+        [Optional]
+        [Group(@"8c204d784d1904d9eeea996d46de69be:165")]
+        public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithExceptionModify IncomingCalls
+        {
             get => _incomingCalls;
-            set {
+            set
+            {
                 IncomingCallsSpecified = true;
                 _incomingCalls = value;
             }
@@ -27,13 +33,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncomingCallsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotifyModify _voiceMailNotify;
 
         [XmlElement(ElementName = "voiceMailNotify", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotifyModify VoiceMailNotify {
+        [Optional]
+        [Group(@"8c204d784d1904d9eeea996d46de69be:165")]
+        public BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotifyModify VoiceMailNotify
+        {
             get => _voiceMailNotify;
-            set {
+            set
+            {
                 VoiceMailNotifySpecified = true;
                 _voiceMailNotify = value;
             }
@@ -41,6 +51,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VoiceMailNotifySpecified { get; set; }
-        
+
     }
 }

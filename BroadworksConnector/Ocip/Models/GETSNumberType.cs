@@ -7,13 +7,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// The GETS Reserved Number type.
     /// AN - GETS-AN
     /// NT - GETS-NT
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GETSNumberType    {
-            [XmlEnum(Name = "AN")]
+    public enum GETSNumberType
+    {
+        [XmlEnum(Name = "AN")]
         AN,
-            [XmlEnum(Name = "NT")]
+        [XmlEnum(Name = "NT")]
         NT,
-     }
+    }
 }

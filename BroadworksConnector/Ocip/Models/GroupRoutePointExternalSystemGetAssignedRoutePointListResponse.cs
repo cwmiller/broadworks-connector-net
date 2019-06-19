@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table with column headings:
     /// "Service User Id", "Name", "Video", "Phone Number", "Extension", "Department".
     /// The column values for "Video" can either be "true", or "false".
-        /// <see cref="GroupRoutePointExternalSystemGetAssignedRoutePointListRequest"/>
-        /// </summary>
+    /// <see cref="GroupRoutePointExternalSystemGetAssignedRoutePointListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:6217""}]")]
     public class GroupRoutePointExternalSystemGetAssignedRoutePointListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _routePointTable;
 
         [XmlElement(ElementName = "routePointTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable RoutePointTable {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6217")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable RoutePointTable
+        {
             get => _routePointTable;
-            set {
+            set
+            {
                 RoutePointTableSpecified = true;
                 _routePointTable = value;
             }
@@ -31,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RoutePointTableSpecified { get; set; }
-        
+
     }
 }

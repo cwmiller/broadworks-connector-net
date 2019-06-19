@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Calling Line ID Policy Selections.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CLIDPolicy    {
-            [XmlEnum(Name = "Use DN")]
+    public enum CLIDPolicy
+    {
+        [XmlEnum(Name = "Use DN")]
         UseDN,
-            [XmlEnum(Name = "Use Configurable CLID")]
+        [XmlEnum(Name = "Use Configurable CLID")]
         UseConfigurableCLID,
-     }
+    }
 }

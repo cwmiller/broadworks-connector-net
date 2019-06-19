@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Get a list of Trunk Groups for the group or enterprise.
     /// It is possible to restrict the results to a particular department, or expand the list to the entire enterprise.
     /// The response is either a GroupTrunkGroupGetInstanceListResponse14sp4 or an ErrorResponse.
-        /// <see cref="GroupTrunkGroupGetInstanceListResponse14sp4"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="GroupTrunkGroupGetInstanceListResponse14sp4"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1091"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1094"",""optional"":true}]}]")]
     public class GroupTrunkGroupGetInstanceListRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1091")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -31,13 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1091")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -45,13 +57,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _groupDepartmentName;
 
         [XmlElement(ElementName = "groupDepartmentName", IsNullable = false, Namespace = "")]
-        public string GroupDepartmentName {
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1094")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string GroupDepartmentName
+        {
             get => _groupDepartmentName;
-            set {
+            set
+            {
                 GroupDepartmentNameSpecified = true;
                 _groupDepartmentName = value;
             }
@@ -59,13 +76,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupDepartmentNameSpecified { get; set; }
-        
+
         private bool _includeEnterpriseTrunkGroups;
 
         [XmlElement(ElementName = "includeEnterpriseTrunkGroups", IsNullable = false, Namespace = "")]
-        public bool IncludeEnterpriseTrunkGroups {
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1094")]
+        public bool IncludeEnterpriseTrunkGroups
+        {
             get => _includeEnterpriseTrunkGroups;
-            set {
+            set
+            {
                 IncludeEnterpriseTrunkGroupsSpecified = true;
                 _includeEnterpriseTrunkGroups = value;
             }
@@ -73,13 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeEnterpriseTrunkGroupsSpecified { get; set; }
-        
+
         private bool _onlyTrunkGroupsWithDevice;
 
         [XmlElement(ElementName = "onlyTrunkGroupsWithDevice", IsNullable = false, Namespace = "")]
-        public bool OnlyTrunkGroupsWithDevice {
+        [Optional]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1091")]
+        public bool OnlyTrunkGroupsWithDevice
+        {
             get => _onlyTrunkGroupsWithDevice;
-            set {
+            set
+            {
                 OnlyTrunkGroupsWithDeviceSpecified = true;
                 _onlyTrunkGroupsWithDevice = value;
             }
@@ -87,6 +111,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OnlyTrunkGroupsWithDeviceSpecified { get; set; }
-        
+
     }
 }

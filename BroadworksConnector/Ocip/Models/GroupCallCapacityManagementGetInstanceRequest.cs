@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Gets a Call Capacity Management group.
     /// The response is either GroupCallCapacityManagementGetInstanceResponse or ErrorResponse.
-        /// <see cref="GroupCallCapacityManagementGetInstanceResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="GroupCallCapacityManagementGetInstanceResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dfcd2b22f2e2b3540d286342087ce042:206""}]")]
     public class GroupCallCapacityManagementGetInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"dfcd2b22f2e2b3540d286342087ce042:206")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"dfcd2b22f2e2b3540d286342087ce042:206")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -44,13 +56,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Group(@"dfcd2b22f2e2b3540d286342087ce042:206")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -58,6 +75,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
     }
 }

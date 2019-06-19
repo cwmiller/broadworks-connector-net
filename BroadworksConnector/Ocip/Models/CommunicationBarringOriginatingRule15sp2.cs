@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Communication Barring Originating Rule
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CommunicationBarringOriginatingRule15sp2 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43485""}]")]
+    public class CommunicationBarringOriginatingRule15sp2
     {
 
-        
         private string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
-        public string Criteria {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43485")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Criteria
+        {
             get => _criteria;
-            set {
+            set
+            {
                 CriteriaSpecified = true;
                 _criteria = value;
             }
@@ -27,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction15sp2 _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction15sp2 Action {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43485")]
+        public BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction15sp2 Action
+        {
             get => _action;
-            set {
+            set
+            {
                 ActionSpecified = true;
                 _action = value;
             }
@@ -41,13 +51,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActionSpecified { get; set; }
-        
+
         private string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = true, Namespace = "")]
-        public string TreatmentId {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43485")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string TreatmentId
+        {
             get => _treatmentId;
-            set {
+            set
+            {
                 TreatmentIdSpecified = true;
                 _treatmentId = value;
             }
@@ -55,13 +71,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TreatmentIdSpecified { get; set; }
-        
+
         private string _transferNumber;
 
         [XmlElement(ElementName = "transferNumber", IsNullable = true, Namespace = "")]
-        public string TransferNumber {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43485")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string TransferNumber
+        {
             get => _transferNumber;
-            set {
+            set
+            {
                 TransferNumberSpecified = true;
                 _transferNumber = value;
             }
@@ -69,6 +91,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TransferNumberSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,20 +11,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// the group, it will be authorized.
     /// The authorizedQuantity will be used at the group level if provided; otherwise, the service quantity will be set to unlimited.
     /// The command will fail if the authorized quantity set at the service provider level is insufficient.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ConsolidatedServicePackAssignment 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1557""}]")]
+    public class ConsolidatedServicePackAssignment
     {
 
-        
         private string _servicePackName;
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        public string ServicePackName {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1557")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServicePackName
+        {
             get => _servicePackName;
-            set {
+            set
+            {
                 ServicePackNameSpecified = true;
                 _servicePackName = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePackNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
 
         [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt AuthorizedQuantity {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1557")]
+        public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt AuthorizedQuantity
+        {
             get => _authorizedQuantity;
-            set {
+            set
+            {
                 AuthorizedQuantitySpecified = true;
                 _authorizedQuantity = value;
             }
@@ -44,6 +55,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AuthorizedQuantitySpecified { get; set; }
-        
+
     }
 }

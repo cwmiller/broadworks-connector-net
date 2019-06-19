@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class RecurrenceRecurMonthlyByDay 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3023""}]")]
+    public class RecurrenceRecurMonthlyByDay
     {
 
-        
         private int _recurInterval;
 
         [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
-        public int RecurInterval {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3023")]
+        [MinInclusive(1)]
+        [MaxInclusive(99)]
+        public int RecurInterval
+        {
             get => _recurInterval;
-            set {
+            set
+            {
                 RecurIntervalSpecified = true;
                 _recurInterval = value;
             }
@@ -27,13 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RecurIntervalSpecified { get; set; }
-        
+
         private int _dayOfMonth;
 
         [XmlElement(ElementName = "dayOfMonth", IsNullable = false, Namespace = "")]
-        public int DayOfMonth {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3023")]
+        [MinInclusive(1)]
+        [MaxInclusive(31)]
+        public int DayOfMonth
+        {
             get => _dayOfMonth;
-            set {
+            set
+            {
                 DayOfMonthSpecified = true;
                 _dayOfMonth = value;
             }
@@ -41,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DayOfMonthSpecified { get; set; }
-        
+
     }
 }

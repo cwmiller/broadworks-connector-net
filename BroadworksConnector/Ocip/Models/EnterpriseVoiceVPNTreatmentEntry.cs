@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Enterprise Voice VPN Treatment entry
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class EnterpriseVoiceVPNTreatmentEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1653""}]")]
+    public class EnterpriseVoiceVPNTreatmentEntry
     {
 
-        
         private string _id;
 
         [XmlElement(ElementName = "id", IsNullable = false, Namespace = "")]
-        public string Id {
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1653")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string Id
+        {
             get => _id;
-            set {
+            set
+            {
                 IdSpecified = true;
                 _id = value;
             }
@@ -27,13 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IdSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1653")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -41,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -15,22 +17,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// is assigned to a user.
     /// 
     /// Replaced by: GroupDnGetAssignmentListResponse18
-        /// <see cref="GroupDnGetAssignmentListRequest"/>
-        /// <see cref="GroupDnGetAssignmentListResponse18"/>
-        /// </summary>
+    /// <see cref="GroupDnGetAssignmentListRequest"/>
+    /// <see cref="GroupDnGetAssignmentListResponse18"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19497""}]")]
     public class GroupDnGetAssignmentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _dnTable;
 
         [XmlElement(ElementName = "dnTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable DnTable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19497")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable DnTable
+        {
             get => _dnTable;
-            set {
+            set
+            {
                 DnTableSpecified = true;
                 _dnTable = value;
             }
@@ -38,6 +43,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DnTableSpecified { get; set; }
-        
+
     }
 }

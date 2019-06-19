@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Requests to unassign the user services and service packs for a user.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3850""}]")]
     public class UserServiceUnassignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3850")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.UserService> _serviceName;
+
+        private List<BroadWorksConnector.Ocip.Models.UserService> _serviceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.UserService> ServiceName {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3850")]
+        public List<BroadWorksConnector.Ocip.Models.UserService> ServiceName
+        {
             get => _serviceName;
-            set {
+            set
+            {
                 ServiceNameSpecified = true;
                 _serviceName = value;
             }
@@ -44,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceNameSpecified { get; set; }
-        
-        private List<string> _servicePackName;
+
+        private List<string> _servicePackName = new List<string>();
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        public List<string> ServicePackName {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3850")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> ServicePackName
+        {
             get => _servicePackName;
-            set {
+            set
+            {
                 ServicePackNameSpecified = true;
                 _servicePackName = value;
             }
@@ -58,6 +75,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePackNameSpecified { get; set; }
-        
+
     }
 }

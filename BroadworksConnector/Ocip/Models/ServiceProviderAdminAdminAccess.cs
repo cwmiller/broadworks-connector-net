@@ -6,15 +6,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Service Provider Administrator's policy for accessing other
     /// Service Provider Administrator's within the same service provider.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServiceProviderAdminAdminAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum ServiceProviderAdminAdminAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

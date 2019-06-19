@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// In release 20 the "Call Recording" FAC name is changed to
     /// "Call Recording - Start".
-        /// <see cref="GroupFeatureAccessCodeGetRequest21"/>
-        /// </summary>
+    /// <see cref="GroupFeatureAccessCodeGetRequest21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4918""}]")]
     public class GroupFeatureAccessCodeGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.GroupFeatureAccessCodeLevel _useFeatureAccessCodeLevel;
 
         [XmlElement(ElementName = "useFeatureAccessCodeLevel", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.GroupFeatureAccessCodeLevel UseFeatureAccessCodeLevel {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4918")]
+        public BroadWorksConnector.Ocip.Models.GroupFeatureAccessCodeLevel UseFeatureAccessCodeLevel
+        {
             get => _useFeatureAccessCodeLevel;
-            set {
+            set
+            {
                 UseFeatureAccessCodeLevelSpecified = true;
                 _useFeatureAccessCodeLevel = value;
             }
@@ -31,13 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseFeatureAccessCodeLevelSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeReadEntry> _featureAccessCode;
+
+        private List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeReadEntry> _featureAccessCode = new List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeReadEntry>();
 
         [XmlElement(ElementName = "featureAccessCode", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeReadEntry> FeatureAccessCode {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4918")]
+        public List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeReadEntry> FeatureAccessCode
+        {
             get => _featureAccessCode;
-            set {
+            set
+            {
                 FeatureAccessCodeSpecified = true;
                 _featureAccessCode = value;
             }
@@ -45,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FeatureAccessCodeSpecified { get; set; }
-        
+
     }
 }

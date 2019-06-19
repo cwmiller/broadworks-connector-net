@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Contains a table with column headings:
     /// "External System", "Description".
-        /// <see cref="SystemRoutePointExternalSystemGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemRoutePointExternalSystemGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14043""}]")]
     public class SystemRoutePointExternalSystemGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _externalSystemTable;
 
         [XmlElement(ElementName = "externalSystemTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable ExternalSystemTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14043")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable ExternalSystemTable
+        {
             get => _externalSystemTable;
-            set {
+            set
+            {
                 ExternalSystemTableSpecified = true;
                 _externalSystemTable = value;
             }
@@ -31,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExternalSystemTableSpecified { get; set; }
-        
+
     }
 }

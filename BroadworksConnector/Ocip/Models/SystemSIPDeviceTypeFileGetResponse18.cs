@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -14,21 +16,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// or "Error Access Context Name Not Provisioned" when the context name is not set.
     /// 2. repositoryUrl may be set to "DEVICE_CONFIGURATION_FILE_REPOSITORY_MISSING", if there is no file
     /// repository defined.
-        /// <see cref="SystemSIPDeviceTypeFileGetRequest18"/>
-        /// </summary>
+    /// <see cref="SystemSIPDeviceTypeFileGetRequest18"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26639""}]")]
     public class SystemSIPDeviceTypeFileGetResponse18 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _remoteFileFormat;
 
         [XmlElement(ElementName = "remoteFileFormat", IsNullable = false, Namespace = "")]
-        public string RemoteFileFormat {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        [MinLength(1)]
+        [MaxLength(128)]
+        public string RemoteFileFormat
+        {
             get => _remoteFileFormat;
-            set {
+            set
+            {
                 RemoteFileFormatSpecified = true;
                 _remoteFileFormat = value;
             }
@@ -36,13 +43,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RemoteFileFormatSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory _fileCategory;
 
         [XmlElement(ElementName = "fileCategory", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory FileCategory {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        public BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory FileCategory
+        {
             get => _fileCategory;
-            set {
+            set
+            {
                 FileCategorySpecified = true;
                 _fileCategory = value;
             }
@@ -50,13 +60,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FileCategorySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DeviceManagementFileCustomization _fileCustomization;
 
         [XmlElement(ElementName = "fileCustomization", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DeviceManagementFileCustomization FileCustomization {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        public BroadWorksConnector.Ocip.Models.DeviceManagementFileCustomization FileCustomization
+        {
             get => _fileCustomization;
-            set {
+            set
+            {
                 FileCustomizationSpecified = true;
                 _fileCustomization = value;
             }
@@ -64,13 +77,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FileCustomizationSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode _fileSource;
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode FileSource {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        public BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode FileSource
+        {
             get => _fileSource;
-            set {
+            set
+            {
                 FileSourceSpecified = true;
                 _fileSource = value;
             }
@@ -78,13 +94,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FileSourceSpecified { get; set; }
-        
+
         private string _configurationFileName;
 
         [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
-        public string ConfigurationFileName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string ConfigurationFileName
+        {
             get => _configurationFileName;
-            set {
+            set
+            {
                 ConfigurationFileNameSpecified = true;
                 _configurationFileName = value;
             }
@@ -92,13 +114,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfigurationFileNameSpecified { get; set; }
-        
+
         private bool _useHttpDigestAuthentication;
 
         [XmlElement(ElementName = "useHttpDigestAuthentication", IsNullable = false, Namespace = "")]
-        public bool UseHttpDigestAuthentication {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        public bool UseHttpDigestAuthentication
+        {
             get => _useHttpDigestAuthentication;
-            set {
+            set
+            {
                 UseHttpDigestAuthenticationSpecified = true;
                 _useHttpDigestAuthentication = value;
             }
@@ -106,13 +131,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseHttpDigestAuthenticationSpecified { get; set; }
-        
+
         private bool _macBasedFileAuthentication;
 
         [XmlElement(ElementName = "macBasedFileAuthentication", IsNullable = false, Namespace = "")]
-        public bool MacBasedFileAuthentication {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        public bool MacBasedFileAuthentication
+        {
             get => _macBasedFileAuthentication;
-            set {
+            set
+            {
                 MacBasedFileAuthenticationSpecified = true;
                 _macBasedFileAuthentication = value;
             }
@@ -120,13 +148,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MacBasedFileAuthenticationSpecified { get; set; }
-        
+
         private bool _userNamePasswordFileAuthentication;
 
         [XmlElement(ElementName = "userNamePasswordFileAuthentication", IsNullable = false, Namespace = "")]
-        public bool UserNamePasswordFileAuthentication {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        public bool UserNamePasswordFileAuthentication
+        {
             get => _userNamePasswordFileAuthentication;
-            set {
+            set
+            {
                 UserNamePasswordFileAuthenticationSpecified = true;
                 _userNamePasswordFileAuthentication = value;
             }
@@ -134,13 +165,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserNamePasswordFileAuthenticationSpecified { get; set; }
-        
+
         private bool _macInNonRequestURI;
 
         [XmlElement(ElementName = "macInNonRequestURI", IsNullable = false, Namespace = "")]
-        public bool MacInNonRequestURI {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        public bool MacInNonRequestURI
+        {
             get => _macInNonRequestURI;
-            set {
+            set
+            {
                 MacInNonRequestURISpecified = true;
                 _macInNonRequestURI = value;
             }
@@ -148,13 +182,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MacInNonRequestURISpecified { get; set; }
-        
+
         private string _macFormatInNonRequestURI;
 
         [XmlElement(ElementName = "macFormatInNonRequestURI", IsNullable = false, Namespace = "")]
-        public string MacFormatInNonRequestURI {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string MacFormatInNonRequestURI
+        {
             get => _macFormatInNonRequestURI;
-            set {
+            set
+            {
                 MacFormatInNonRequestURISpecified = true;
                 _macFormatInNonRequestURI = value;
             }
@@ -162,13 +202,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MacFormatInNonRequestURISpecified { get; set; }
-        
+
         private string _accessUrl;
 
         [XmlElement(ElementName = "accessUrl", IsNullable = false, Namespace = "")]
-        public string AccessUrl {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string AccessUrl
+        {
             get => _accessUrl;
-            set {
+            set
+            {
                 AccessUrlSpecified = true;
                 _accessUrl = value;
             }
@@ -176,13 +221,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessUrlSpecified { get; set; }
-        
+
         private string _repositoryUrl;
 
         [XmlElement(ElementName = "repositoryUrl", IsNullable = false, Namespace = "")]
-        public string RepositoryUrl {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string RepositoryUrl
+        {
             get => _repositoryUrl;
-            set {
+            set
+            {
                 RepositoryUrlSpecified = true;
                 _repositoryUrl = value;
             }
@@ -190,13 +241,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RepositoryUrlSpecified { get; set; }
-        
+
         private string _templateUrl;
 
         [XmlElement(ElementName = "templateUrl", IsNullable = false, Namespace = "")]
-        public string TemplateUrl {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string TemplateUrl
+        {
             get => _templateUrl;
-            set {
+            set
+            {
                 TemplateUrlSpecified = true;
                 _templateUrl = value;
             }
@@ -204,13 +261,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TemplateUrlSpecified { get; set; }
-        
+
         private bool _allowHttp;
 
         [XmlElement(ElementName = "allowHttp", IsNullable = false, Namespace = "")]
-        public bool AllowHttp {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        public bool AllowHttp
+        {
             get => _allowHttp;
-            set {
+            set
+            {
                 AllowHttpSpecified = true;
                 _allowHttp = value;
             }
@@ -218,13 +278,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowHttpSpecified { get; set; }
-        
+
         private bool _allowHttps;
 
         [XmlElement(ElementName = "allowHttps", IsNullable = false, Namespace = "")]
-        public bool AllowHttps {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        public bool AllowHttps
+        {
             get => _allowHttps;
-            set {
+            set
+            {
                 AllowHttpsSpecified = true;
                 _allowHttps = value;
             }
@@ -232,13 +295,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowHttpsSpecified { get; set; }
-        
+
         private bool _allowTftp;
 
         [XmlElement(ElementName = "allowTftp", IsNullable = false, Namespace = "")]
-        public bool AllowTftp {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        public bool AllowTftp
+        {
             get => _allowTftp;
-            set {
+            set
+            {
                 AllowTftpSpecified = true;
                 _allowTftp = value;
             }
@@ -246,13 +312,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowTftpSpecified { get; set; }
-        
+
         private bool _enableCaching;
 
         [XmlElement(ElementName = "enableCaching", IsNullable = false, Namespace = "")]
-        public bool EnableCaching {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26639")]
+        public bool EnableCaching
+        {
             get => _enableCaching;
-            set {
+            set
+            {
                 EnableCachingSpecified = true;
                 _enableCaching = value;
             }
@@ -260,6 +329,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableCachingSpecified { get; set; }
-        
+
     }
 }

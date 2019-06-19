@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemCPEConfigParametersModifyRequestFileRebuildHourly 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:34614""}]")]
+    public class SystemCPEConfigParametersModifyRequestFileRebuildHourly
     {
 
-        
         private int _startMinute;
 
         [XmlElement(ElementName = "startMinute", IsNullable = false, Namespace = "")]
-        public int StartMinute {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34614")]
+        [MinInclusive(0)]
+        [MaxInclusive(59)]
+        public int StartMinute
+        {
             get => _startMinute;
-            set {
+            set
+            {
                 StartMinuteSpecified = true;
                 _startMinute = value;
             }
@@ -27,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartMinuteSpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Uniquely identifies Holiday and Time Schedules throughout all System, Service Provider, Group and User level.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ScheduleGlobalKey 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3449""}]")]
+    public class ScheduleGlobalKey
     {
 
-        
         private BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
 
         [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3449")]
+        public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey
+        {
             get => _scheduleKey;
-            set {
+            set
+            {
                 ScheduleKeySpecified = true;
                 _scheduleKey = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleKeySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ScheduleLevel _scheduleLevel;
 
         [XmlElement(ElementName = "scheduleLevel", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ScheduleLevel ScheduleLevel {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3449")]
+        public BroadWorksConnector.Ocip.Models.ScheduleLevel ScheduleLevel
+        {
             get => _scheduleLevel;
-            set {
+            set
+            {
                 ScheduleLevelSpecified = true;
                 _scheduleLevel = value;
             }
@@ -41,6 +49,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleLevelSpecified { get; set; }
-        
+
     }
 }

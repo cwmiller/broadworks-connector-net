@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Maps a BroadWorks language to a device-equivalent language.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class DeviceManagementLanguageMapping 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2064""}]")]
+    public class DeviceManagementLanguageMapping
     {
 
-        
         private string _broadWorksLanguage;
 
         [XmlElement(ElementName = "broadWorksLanguage", IsNullable = false, Namespace = "")]
-        public string BroadWorksLanguage {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2064")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string BroadWorksLanguage
+        {
             get => _broadWorksLanguage;
-            set {
+            set
+            {
                 BroadWorksLanguageSpecified = true;
                 _broadWorksLanguage = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BroadWorksLanguageSpecified { get; set; }
-        
+
         private string _deviceLanguage;
 
         [XmlElement(ElementName = "deviceLanguage", IsNullable = true, Namespace = "")]
-        public string DeviceLanguage {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2064")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceLanguage
+        {
             get => _deviceLanguage;
-            set {
+            set
+            {
                 DeviceLanguageSpecified = true;
                 _deviceLanguage = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceLanguageSpecified { get; set; }
-        
+
     }
 }

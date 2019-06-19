@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,24 +12,29 @@ namespace BroadWorksConnector.Ocip.Models
     /// in the alerting list, the identity is deleted and ErrorResponse is returned. The ErrorResponse is info type and  contains the affected mobile numbers
     /// in the summary.
     /// When a delete request is attempted on the primary mobile identity, the delete will fail unless it is the last mobile identity in the user's list.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:1538""}]")]
     public class UserBroadWorksMobilityMobileIdentityDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1538")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -35,13 +42,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _mobileNumber;
 
         [XmlElement(ElementName = "mobileNumber", IsNullable = false, Namespace = "")]
-        public string MobileNumber {
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1538")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string MobileNumber
+        {
             get => _mobileNumber;
-            set {
+            set
+            {
                 MobileNumberSpecified = true;
                 _mobileNumber = value;
             }
@@ -49,6 +61,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobileNumberSpecified { get; set; }
-        
+
     }
 }

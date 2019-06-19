@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request to get all the current and past call centers for the enterprise.
     /// The searchCriteriaExactUserGroup does not apply to past call centers.
     /// The response is either EnterpriseCallCenterCurrentAndPastCallCenterGetListResponse or ErrorResponse.
-        /// <see cref="EnterpriseCallCenterCurrentAndPastCallCenterGetListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="EnterpriseCallCenterCurrentAndPastCallCenterGetListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1130""}]")]
     public class EnterpriseCallCenterCurrentAndPastCallCenterGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1130")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -31,13 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private bool _isPremiumOnly;
 
         [XmlElement(ElementName = "isPremiumOnly", IsNullable = false, Namespace = "")]
-        public bool IsPremiumOnly {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1130")]
+        public bool IsPremiumOnly
+        {
             get => _isPremiumOnly;
-            set {
+            set
+            {
                 IsPremiumOnlySpecified = true;
                 _isPremiumOnly = value;
             }
@@ -45,13 +56,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsPremiumOnlySpecified { get; set; }
-        
+
         private int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-        public int ResponseSizeLimit {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1130")]
+        [MinInclusive(1)]
+        public int ResponseSizeLimit
+        {
             get => _responseSizeLimit;
-            set {
+            set
+            {
                 ResponseSizeLimitSpecified = true;
                 _responseSizeLimit = value;
             }
@@ -59,13 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponseSizeLimitSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserGroup _searchCriteriaExactUserGroup;
 
         [XmlElement(ElementName = "searchCriteriaExactUserGroup", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserGroup SearchCriteriaExactUserGroup {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1130")]
+        public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserGroup SearchCriteriaExactUserGroup
+        {
             get => _searchCriteriaExactUserGroup;
-            set {
+            set
+            {
                 SearchCriteriaExactUserGroupSpecified = true;
                 _searchCriteriaExactUserGroup = value;
             }
@@ -73,13 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaExactUserGroupSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SearchCriteriaCallCenterName _searchCriteriaCallCenterName;
 
         [XmlElement(ElementName = "searchCriteriaCallCenterName", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SearchCriteriaCallCenterName SearchCriteriaCallCenterName {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1130")]
+        public BroadWorksConnector.Ocip.Models.SearchCriteriaCallCenterName SearchCriteriaCallCenterName
+        {
             get => _searchCriteriaCallCenterName;
-            set {
+            set
+            {
                 SearchCriteriaCallCenterNameSpecified = true;
                 _searchCriteriaCallCenterName = value;
             }
@@ -87,6 +111,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaCallCenterNameSpecified { get; set; }
-        
+
     }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The type of inbound calls to Intercept or allow.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum InterceptInboundCall    {
-            [XmlEnum(Name = "Intercept All")]
+    public enum InterceptInboundCall
+    {
+        [XmlEnum(Name = "Intercept All")]
         InterceptAll,
-            [XmlEnum(Name = "Allow All")]
+        [XmlEnum(Name = "Allow All")]
         AllowAll,
-            [XmlEnum(Name = "Allow System Dns")]
+        [XmlEnum(Name = "Allow System Dns")]
         AllowSystemDns,
-     }
+    }
 }

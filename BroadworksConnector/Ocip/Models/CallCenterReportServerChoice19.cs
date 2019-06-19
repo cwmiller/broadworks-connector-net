@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call center report server choice.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterReportServerChoice19    {
-            [XmlEnum(Name = "Enhanced")]
+    public enum CallCenterReportServerChoice19
+    {
+        [XmlEnum(Name = "Enhanced")]
         Enhanced,
-            [XmlEnum(Name = "Off")]
+        [XmlEnum(Name = "Off")]
         Off,
-     }
+    }
 }

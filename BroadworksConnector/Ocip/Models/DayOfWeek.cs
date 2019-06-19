@@ -5,23 +5,24 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Days of the week (Sunday-Saturday).
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DayOfWeek    {
-            [XmlEnum(Name = "Sunday")]
+    public enum DayOfWeek
+    {
+        [XmlEnum(Name = "Sunday")]
         Sunday,
-            [XmlEnum(Name = "Monday")]
+        [XmlEnum(Name = "Monday")]
         Monday,
-            [XmlEnum(Name = "Tuesday")]
+        [XmlEnum(Name = "Tuesday")]
         Tuesday,
-            [XmlEnum(Name = "Wednesday")]
+        [XmlEnum(Name = "Wednesday")]
         Wednesday,
-            [XmlEnum(Name = "Thursday")]
+        [XmlEnum(Name = "Thursday")]
         Thursday,
-            [XmlEnum(Name = "Friday")]
+        [XmlEnum(Name = "Friday")]
         Friday,
-            [XmlEnum(Name = "Saturday")]
+        [XmlEnum(Name = "Saturday")]
         Saturday,
-     }
+    }
 }

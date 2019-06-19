@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -21,21 +23,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The Endpoint Type is empty when the registration is against a TELURI.
     /// The table is sorted by: telURI (after SIPURI), Line/Port, static (after dynamic), order.
     /// Lockout times are shown in GMT offset. When a permanent lockout is shown, the "Lockout Expires" column is empty and the "Lockout Count" column contains the word Permanent.
-        /// <see cref="UserGetRegistrationListRequest"/>
-        /// </summary>
+    /// <see cref="UserGetRegistrationListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1974""}]")]
     public class UserGetRegistrationListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _registrationTable;
 
         [XmlElement(ElementName = "registrationTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable RegistrationTable {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1974")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable RegistrationTable
+        {
             get => _registrationTable;
-            set {
+            set
+            {
                 RegistrationTableSpecified = true;
                 _registrationTable = value;
             }
@@ -43,6 +48,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RegistrationTableSpecified { get; set; }
-        
+
     }
 }

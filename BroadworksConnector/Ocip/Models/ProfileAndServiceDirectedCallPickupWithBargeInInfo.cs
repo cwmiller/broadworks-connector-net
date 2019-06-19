@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// This is the configuration parameters for Directed Call Pickup With Barge In service
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ProfileAndServiceDirectedCallPickupWithBargeInInfo 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4225""}]")]
+    public class ProfileAndServiceDirectedCallPickupWithBargeInInfo
     {
 
-        
         private bool _enableBargeInWarningTone;
 
         [XmlElement(ElementName = "enableBargeInWarningTone", IsNullable = false, Namespace = "")]
-        public bool EnableBargeInWarningTone {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4225")]
+        public bool EnableBargeInWarningTone
+        {
             get => _enableBargeInWarningTone;
-            set {
+            set
+            {
                 EnableBargeInWarningToneSpecified = true;
                 _enableBargeInWarningTone = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableBargeInWarningToneSpecified { get; set; }
-        
+
         private bool _enableAutomaticTargetSelection;
 
         [XmlElement(ElementName = "enableAutomaticTargetSelection", IsNullable = false, Namespace = "")]
-        public bool EnableAutomaticTargetSelection {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4225")]
+        public bool EnableAutomaticTargetSelection
+        {
             get => _enableAutomaticTargetSelection;
-            set {
+            set
+            {
                 EnableAutomaticTargetSelectionSpecified = true;
                 _enableAutomaticTargetSelection = value;
             }
@@ -41,6 +49,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableAutomaticTargetSelectionSpecified { get; set; }
-        
+
     }
 }

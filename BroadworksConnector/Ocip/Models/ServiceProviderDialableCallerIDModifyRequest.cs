@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the service provider?s Dialable Caller ID settings and criteria list.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:2872""}]")]
     public class ServiceProviderDialableCallerIDModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2872")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private bool _useServiceProviderCriteria;
 
         [XmlElement(ElementName = "useServiceProviderCriteria", IsNullable = false, Namespace = "")]
-        public bool UseServiceProviderCriteria {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2872")]
+        public bool UseServiceProviderCriteria
+        {
             get => _useServiceProviderCriteria;
-            set {
+            set
+            {
                 UseServiceProviderCriteriaSpecified = true;
                 _useServiceProviderCriteria = value;
             }
@@ -44,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseServiceProviderCriteriaSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy _nsScreeningFailurePolicy;
 
         [XmlElement(ElementName = "nsScreeningFailurePolicy", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy NsScreeningFailurePolicy {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2872")]
+        public BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy NsScreeningFailurePolicy
+        {
             get => _nsScreeningFailurePolicy;
-            set {
+            set
+            {
                 NsScreeningFailurePolicySpecified = true;
                 _nsScreeningFailurePolicy = value;
             }
@@ -58,13 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NsScreeningFailurePolicySpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> _criteriaPriorityOrder;
+
+        private List<BroadWorksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> _criteriaPriorityOrder = new List<BroadWorksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder>();
 
         [XmlElement(ElementName = "criteriaPriorityOrder", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> CriteriaPriorityOrder {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2872")]
+        public List<BroadWorksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> CriteriaPriorityOrder
+        {
             get => _criteriaPriorityOrder;
-            set {
+            set
+            {
                 CriteriaPriorityOrderSpecified = true;
                 _criteriaPriorityOrder = value;
             }
@@ -72,6 +91,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaPriorityOrderSpecified { get; set; }
-        
+
     }
 }

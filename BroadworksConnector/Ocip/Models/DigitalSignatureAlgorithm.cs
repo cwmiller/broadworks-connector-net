@@ -5,11 +5,12 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Possible algorithms for digital signatures supported by the provisioning server.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DigitalSignatureAlgorithm    {
-            [XmlEnum(Name = "MD5")]
+    public enum DigitalSignatureAlgorithm
+    {
+        [XmlEnum(Name = "MD5")]
         MD5,
-     }
+    }
 }

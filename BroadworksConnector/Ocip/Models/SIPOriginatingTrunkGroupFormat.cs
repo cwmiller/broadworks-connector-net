@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for originating trunk group format.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SIPOriginatingTrunkGroupFormat    {
-            [XmlEnum(Name = "OTG")]
+    public enum SIPOriginatingTrunkGroupFormat
+    {
+        [XmlEnum(Name = "OTG")]
         OTG,
-            [XmlEnum(Name = "X Nortel Profile")]
+        [XmlEnum(Name = "X Nortel Profile")]
         XNortelProfile,
-     }
+    }
 }

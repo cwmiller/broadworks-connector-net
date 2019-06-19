@@ -19,47 +19,48 @@ namespace BroadWorksConnector.Ocip.Models
     /// Incoming Hierarchical Communication Barring
     /// 
     /// Replaced by: CallBlockingService22
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallBlockingService    {
-            [XmlEnum(Name = "OCP")]
+    public enum CallBlockingService
+    {
+        [XmlEnum(Name = "OCP")]
         OCP,
-            [XmlEnum(Name = "EOCP")]
+        [XmlEnum(Name = "EOCP")]
         EOCP,
-            [XmlEnum(Name = "ICP")]
+        [XmlEnum(Name = "ICP")]
         ICP,
-            [XmlEnum(Name = "ACR")]
+        [XmlEnum(Name = "ACR")]
         ACR,
-            [XmlEnum(Name = "SCR")]
+        [XmlEnum(Name = "SCR")]
         SCR,
-            [XmlEnum(Name = "SCA")]
+        [XmlEnum(Name = "SCA")]
         SCA,
-            [XmlEnum(Name = "AAC")]
+        [XmlEnum(Name = "AAC")]
         AAC,
-            [XmlEnum(Name = "Intercept")]
+        [XmlEnum(Name = "Intercept")]
         Intercept,
-            [XmlEnum(Name = "PTT")]
+        [XmlEnum(Name = "PTT")]
         PTT,
-            [XmlEnum(Name = "Communication Barring")]
+        [XmlEnum(Name = "Communication Barring")]
         CommunicationBarring,
-            [XmlEnum(Name = "SAC")]
+        [XmlEnum(Name = "SAC")]
         SAC,
-            [XmlEnum(Name = "Incoming Communication Barring")]
+        [XmlEnum(Name = "Incoming Communication Barring")]
         IncomingCommunicationBarring,
-            [XmlEnum(Name = "Hierarchical Communication Barring")]
+        [XmlEnum(Name = "Hierarchical Communication Barring")]
         HierarchicalCommunicationBarring,
-            [XmlEnum(Name = "Incoming Hierarchical Communication Barring")]
+        [XmlEnum(Name = "Incoming Hierarchical Communication Barring")]
         IncomingHierarchicalCommunicationBarring,
-            [XmlEnum(Name = "BroadWorks Mobility Deny Originations")]
+        [XmlEnum(Name = "BroadWorks Mobility Deny Originations")]
         BroadWorksMobilityDenyOriginations,
-            [XmlEnum(Name = "BroadWorks Mobility Deny Terminations")]
+        [XmlEnum(Name = "BroadWorks Mobility Deny Terminations")]
         BroadWorksMobilityDenyTerminations,
-            [XmlEnum(Name = "Enterprise Trunk Route Exhaust")]
+        [XmlEnum(Name = "Enterprise Trunk Route Exhaust")]
         EnterpriseTrunkRouteExhaust,
-            [XmlEnum(Name = "Call Park")]
+        [XmlEnum(Name = "Call Park")]
         CallPark,
-            [XmlEnum(Name = "Number Portability")]
+        [XmlEnum(Name = "Number Portability")]
         NumberPortability,
-     }
+    }
 }

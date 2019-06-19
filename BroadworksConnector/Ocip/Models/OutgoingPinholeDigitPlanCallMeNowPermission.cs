@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Permission choices for Pinhole digit patterns on Call Me Now calls.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum OutgoingPinholeDigitPlanCallMeNowPermission    {
-            [XmlEnum(Name = "Ignore")]
+    public enum OutgoingPinholeDigitPlanCallMeNowPermission
+    {
+        [XmlEnum(Name = "Ignore")]
         Ignore,
-            [XmlEnum(Name = "Allow")]
+        [XmlEnum(Name = "Allow")]
         Allow,
-     }
+    }
 }

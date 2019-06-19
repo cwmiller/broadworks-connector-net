@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,16 +11,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SystemBroadWorksMobilityGetResponse22 or an ErrorResponse.
     /// 
     /// Replaced by SystemBroadWorksMobilityGetRequest22V2.
-        /// <see cref="SystemBroadWorksMobilityGetResponse22"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemBroadWorksMobilityGetRequest22V2"/>
-        /// </summary>
+    /// <see cref="SystemBroadWorksMobilityGetResponse22"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemBroadWorksMobilityGetRequest22V2"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41589""}]")]
     public class SystemBroadWorksMobilityGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
     }
 }

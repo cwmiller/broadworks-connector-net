@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a new alternate carrier for CbC and Preselection.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10238""}]")]
     public class SystemHPBXAlternateCarrierSelectionAddCarrierRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10238")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
         private string _prefix;
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
-        public string Prefix {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10238")]
+        [MinLength(5)]
+        [MaxLength(6)]
+        public string Prefix
+        {
             get => _prefix;
-            set {
+            set
+            {
                 PrefixSpecified = true;
                 _prefix = value;
             }
@@ -44,13 +56,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrefixSpecified { get; set; }
-        
+
         private string _domain;
 
         [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
-        public string Domain {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10238")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Domain
+        {
             get => _domain;
-            set {
+            set
+            {
                 DomainSpecified = true;
                 _domain = value;
             }
@@ -58,13 +75,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DomainSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType Type {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10238")]
+        public BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType Type
+        {
             get => _type;
-            set {
+            set
+            {
                 TypeSpecified = true;
                 _type = value;
             }
@@ -72,6 +92,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TypeSpecified { get; set; }
-        
+
     }
 }

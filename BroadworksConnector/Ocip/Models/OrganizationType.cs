@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Types of organizations.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum OrganizationType    {
-            [XmlEnum(Name = "Service Provider")]
+    public enum OrganizationType
+    {
+        [XmlEnum(Name = "Service Provider")]
         ServiceProvider,
-            [XmlEnum(Name = "Enterprise")]
+        [XmlEnum(Name = "Enterprise")]
         Enterprise,
-     }
+    }
 }

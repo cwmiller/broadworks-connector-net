@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Automatic Callback methods.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AutomaticCallbackMethod    {
-            [XmlEnum(Name = "Notify Only")]
+    public enum AutomaticCallbackMethod
+    {
+        [XmlEnum(Name = "Notify Only")]
         NotifyOnly,
-            [XmlEnum(Name = "Notify If Possible And Polling Otherwise")]
+        [XmlEnum(Name = "Notify If Possible And Polling Otherwise")]
         NotifyIfPossibleAndPollingOtherwise,
-     }
+    }
 }

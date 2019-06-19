@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Trunk Group user creation task status.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupUserCreationTaskStatus    {
-            [XmlEnum(Name = "Pending")]
+    public enum TrunkGroupUserCreationTaskStatus
+    {
+        [XmlEnum(Name = "Pending")]
         Pending,
-            [XmlEnum(Name = "Processing")]
+        [XmlEnum(Name = "Processing")]
         Processing,
-            [XmlEnum(Name = "Completed")]
+        [XmlEnum(Name = "Completed")]
         Completed,
-            [XmlEnum(Name = "Failed")]
+        [XmlEnum(Name = "Failed")]
         Failed,
-     }
+    }
 }

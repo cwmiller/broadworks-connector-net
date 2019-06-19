@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,16 +12,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// ErrorResponse.
     /// 
     /// Replaced by: SystemCallRecordingGetRequest22
-        /// <see cref="SystemCallRecordingGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemCallRecordingGetRequest22"/>
-        /// </summary>
+    /// <see cref="SystemCallRecordingGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemCallRecordingGetRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4639""}]")]
     public class SystemCallRecordingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Get a list of users that can be assigned as a delegate to a Meet-Me Conference.
     /// Searching for users, who are host on a Meet-Me Conferencing bridge.
     /// The response is either UserMeetMeConferencingGetAvailableDelegateListResponse or ErrorResponse.
-        /// <see cref="UserMeetMeConferencingGetAvailableDelegateListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="UserMeetMeConferencingGetAvailableDelegateListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:644""}]")]
     public class UserMeetMeConferencingGetAvailableDelegateListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:644")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -31,13 +38,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
 
         [XmlElement(ElementName = "conferenceKey", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey {
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:644")]
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey
+        {
             get => _conferenceKey;
-            set {
+            set
+            {
                 ConferenceKeySpecified = true;
                 _conferenceKey = value;
             }
@@ -45,13 +55,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConferenceKeySpecified { get; set; }
-        
+
         private int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-        public int ResponseSizeLimit {
+        [Optional]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:644")]
+        [MinInclusive(1)]
+        public int ResponseSizeLimit
+        {
             get => _responseSizeLimit;
-            set {
+            set
+            {
                 ResponseSizeLimitSpecified = true;
                 _responseSizeLimit = value;
             }
@@ -59,13 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponseSizeLimitSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName>();
 
         [XmlElement(ElementName = "searchCriteriaUserLastName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName {
+        [Optional]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:644")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName
+        {
             get => _searchCriteriaUserLastName;
-            set {
+            set
+            {
                 SearchCriteriaUserLastNameSpecified = true;
                 _searchCriteriaUserLastName = value;
             }
@@ -73,13 +92,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaUserLastNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> _searchCriteriaUserFirstName;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> _searchCriteriaUserFirstName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName>();
 
         [XmlElement(ElementName = "searchCriteriaUserFirstName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName {
+        [Optional]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:644")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName
+        {
             get => _searchCriteriaUserFirstName;
-            set {
+            set
+            {
                 SearchCriteriaUserFirstNameSpecified = true;
                 _searchCriteriaUserFirstName = value;
             }
@@ -87,13 +110,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaUserFirstNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId>();
 
         [XmlElement(ElementName = "searchCriteriaUserId", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId {
+        [Optional]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:644")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId
+        {
             get => _searchCriteriaUserId;
-            set {
+            set
+            {
                 SearchCriteriaUserIdSpecified = true;
                 _searchCriteriaUserId = value;
             }
@@ -101,13 +128,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaUserIdSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn>();
 
         [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn {
+        [Optional]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:644")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn
+        {
             get => _searchCriteriaDn;
-            set {
+            set
+            {
                 SearchCriteriaDnSpecified = true;
                 _searchCriteriaDn = value;
             }
@@ -115,13 +146,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaDnSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension>();
 
         [XmlElement(ElementName = "searchCriteriaExtension", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension {
+        [Optional]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:644")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension
+        {
             get => _searchCriteriaExtension;
-            set {
+            set
+            {
                 SearchCriteriaExtensionSpecified = true;
                 _searchCriteriaExtension = value;
             }
@@ -129,13 +164,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaExtensionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment _searchCriteriaExactUserDepartment;
 
         [XmlElement(ElementName = "searchCriteriaExactUserDepartment", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment SearchCriteriaExactUserDepartment {
+        [Optional]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:644")]
+        public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment SearchCriteriaExactUserDepartment
+        {
             get => _searchCriteriaExactUserDepartment;
-            set {
+            set
+            {
                 SearchCriteriaExactUserDepartmentSpecified = true;
                 _searchCriteriaExactUserDepartment = value;
             }
@@ -143,6 +182,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaExactUserDepartmentSpecified { get; set; }
-        
+
     }
 }

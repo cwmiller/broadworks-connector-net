@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the Third Party Voice Mail Support settings for a group.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3c311aa5c89c0cf5b46e1cdefd5bc387:86""}]")]
     public class GroupThirdPartyVoiceMailSupportModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:86")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:86")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -44,13 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Optional]
+        [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:86")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -58,13 +74,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private string _groupServer;
 
         [XmlElement(ElementName = "groupServer", IsNullable = true, Namespace = "")]
-        public string GroupServer {
+        [Optional]
+        [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:86")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string GroupServer
+        {
             get => _groupServer;
-            set {
+            set
+            {
                 GroupServerSpecified = true;
                 _groupServer = value;
             }
@@ -72,6 +94,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupServerSpecified { get; set; }
-        
+
     }
 }

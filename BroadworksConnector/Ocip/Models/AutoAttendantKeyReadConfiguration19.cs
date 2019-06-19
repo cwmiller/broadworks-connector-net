@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// The read configuration of a key for Auto
     /// Attendant.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class AutoAttendantKeyReadConfiguration19 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:742""}]")]
+    public class AutoAttendantKeyReadConfiguration19
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey _key;
 
         [XmlElement(ElementName = "key", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey Key {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:742")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey Key
+        {
             get => _key;
-            set {
+            set
+            {
                 KeySpecified = true;
                 _key = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool KeySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationReadEntry19 _entry;
 
         [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationReadEntry19 Entry {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:742")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationReadEntry19 Entry
+        {
             get => _entry;
-            set {
+            set
+            {
                 EntrySpecified = true;
                 _entry = value;
             }
@@ -42,6 +50,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EntrySpecified { get; set; }
-        
+
     }
 }

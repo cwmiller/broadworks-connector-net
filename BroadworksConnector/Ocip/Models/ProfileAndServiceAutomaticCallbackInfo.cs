@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// This is the configuration parameters for anonymous Call Rejection service
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ProfileAndServiceAutomaticCallbackInfo 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4040""}]")]
+    public class ProfileAndServiceAutomaticCallbackInfo
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4040")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -27,6 +32,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
     }
 }

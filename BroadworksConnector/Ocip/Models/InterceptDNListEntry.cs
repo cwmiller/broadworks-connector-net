@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Intercept User Entry containing the phone number and a Description.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class InterceptDNListEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""88893c72abbbb9aaf5aecca970191d94:365""}]")]
+    public class InterceptDNListEntry
     {
 
-        
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        public string PhoneNumber {
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:365")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string PhoneNumber
+        {
             get => _phoneNumber;
-            set {
+            set
+            {
                 PhoneNumberSpecified = true;
                 _phoneNumber = value;
             }
@@ -27,13 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneNumberSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:365")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -41,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// This is the configuration parameters for Speed Dial 100 service
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ProfileAndServiceSpeedDial100Info 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4373""}]")]
+    public class ProfileAndServiceSpeedDial100Info
     {
 
-        
         private string _prefix;
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
-        public string Prefix {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4373")]
+        [MinLength(1)]
+        [MaxLength(2)]
+        public string Prefix
+        {
             get => _prefix;
-            set {
+            set
+            {
                 PrefixSpecified = true;
                 _prefix = value;
             }
@@ -27,13 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrefixSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SpeedDial100Entry> _speedDialEntry;
+
+        private List<BroadWorksConnector.Ocip.Models.SpeedDial100Entry> _speedDialEntry = new List<BroadWorksConnector.Ocip.Models.SpeedDial100Entry>();
 
         [XmlElement(ElementName = "speedDialEntry", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SpeedDial100Entry> SpeedDialEntry {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4373")]
+        public List<BroadWorksConnector.Ocip.Models.SpeedDial100Entry> SpeedDialEntry
+        {
             get => _speedDialEntry;
-            set {
+            set
+            {
                 SpeedDialEntrySpecified = true;
                 _speedDialEntry = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SpeedDialEntrySpecified { get; set; }
-        
+
     }
 }

@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Group's policy for a user's access to the name dialing override fields.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupUserAutoAttendantNameDialingAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupUserAutoAttendantNameDialingAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

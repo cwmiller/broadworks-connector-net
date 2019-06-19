@@ -6,15 +6,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Service Provider Administrator's policy for accessing phone numbers or
     /// extensions.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServiceProviderAdminPhoneNumberExtensionAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum ServiceProviderAdminPhoneNumberExtensionAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Assign To Services and Users")]
+        [XmlEnum(Name = "Assign To Services and Users")]
         AssignToServicesandUsers,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-     }
+    }
 }

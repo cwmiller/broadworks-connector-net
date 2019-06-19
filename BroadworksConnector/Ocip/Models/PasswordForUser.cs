@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,20 +10,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// Passwords, passcode and SIP authentication passwords to be generated for a user. If the userId is not
     /// included or included but is not an existing user in the group, a password will be generated based on only
     /// the rules applicable for a new user.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class PasswordForUser 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:853""}]")]
+    public class PasswordForUser
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -29,13 +36,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -43,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -57,13 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private bool _generatePassword;
 
         [XmlElement(ElementName = "generatePassword", IsNullable = false, Namespace = "")]
-        public bool GeneratePassword {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        public bool GeneratePassword
+        {
             get => _generatePassword;
-            set {
+            set
+            {
                 GeneratePasswordSpecified = true;
                 _generatePassword = value;
             }
@@ -71,13 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GeneratePasswordSpecified { get; set; }
-        
+
         private bool _generatePasscode;
 
         [XmlElement(ElementName = "generatePasscode", IsNullable = false, Namespace = "")]
-        public bool GeneratePasscode {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        public bool GeneratePasscode
+        {
             get => _generatePasscode;
-            set {
+            set
+            {
                 GeneratePasscodeSpecified = true;
                 _generatePasscode = value;
             }
@@ -85,13 +111,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GeneratePasscodeSpecified { get; set; }
-        
+
         private bool _generateSipPassword;
 
         [XmlElement(ElementName = "generateSipPassword", IsNullable = false, Namespace = "")]
-        public bool GenerateSipPassword {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        public bool GenerateSipPassword
+        {
             get => _generateSipPassword;
-            set {
+            set
+            {
                 GenerateSipPasswordSpecified = true;
                 _generateSipPassword = value;
             }
@@ -99,6 +129,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GenerateSipPasswordSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,23 +12,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// 
     /// Replaced by UserHotelingGuestModifyRequest21 in AS data mode
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="UserHotelingGuestModifyRequest21"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="UserHotelingGuestModifyRequest21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3496""}]")]
     public class UserHotelingGuestModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:3496")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -34,13 +41,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:3496")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -48,13 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private bool _enableAssociationLimit;
 
         [XmlElement(ElementName = "enableAssociationLimit", IsNullable = false, Namespace = "")]
-        public bool EnableAssociationLimit {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:3496")]
+        public bool EnableAssociationLimit
+        {
             get => _enableAssociationLimit;
-            set {
+            set
+            {
                 EnableAssociationLimitSpecified = true;
                 _enableAssociationLimit = value;
             }
@@ -62,13 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableAssociationLimitSpecified { get; set; }
-        
+
         private int _associationLimitHours;
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
-        public int AssociationLimitHours {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:3496")]
+        [MinInclusive(1)]
+        [MaxInclusive(999)]
+        public int AssociationLimitHours
+        {
             get => _associationLimitHours;
-            set {
+            set
+            {
                 AssociationLimitHoursSpecified = true;
                 _associationLimitHours = value;
             }
@@ -76,13 +97,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AssociationLimitHoursSpecified { get; set; }
-        
+
         private string _hostUserId;
 
         [XmlElement(ElementName = "hostUserId", IsNullable = true, Namespace = "")]
-        public string HostUserId {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:3496")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string HostUserId
+        {
             get => _hostUserId;
-            set {
+            set
+            {
                 HostUserIdSpecified = true;
                 _hostUserId = value;
             }
@@ -90,6 +117,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HostUserIdSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to GroupAdviceOfChargeGetRequest.
     /// Contains a list of Advice of Charge group parameters.
-        /// <see cref="GroupAdviceOfChargeGetRequest"/>
-        /// </summary>
+    /// <see cref="GroupAdviceOfChargeGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a69fde15f3aa7494d83b57461a7a70bb:68""}]")]
     public class GroupAdviceOfChargeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _useGroupLevelAoCSettings;
 
         [XmlElement(ElementName = "useGroupLevelAoCSettings", IsNullable = false, Namespace = "")]
-        public bool UseGroupLevelAoCSettings {
+        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:68")]
+        public bool UseGroupLevelAoCSettings
+        {
             get => _useGroupLevelAoCSettings;
-            set {
+            set
+            {
                 UseGroupLevelAoCSettingsSpecified = true;
                 _useGroupLevelAoCSettings = value;
             }
@@ -29,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseGroupLevelAoCSettingsSpecified { get; set; }
-        
+
         private int _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
-        public int DelayBetweenNotificationSeconds {
+        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:68")]
+        [MinInclusive(5)]
+        [MaxInclusive(1800)]
+        public int DelayBetweenNotificationSeconds
+        {
             get => _delayBetweenNotificationSeconds;
-            set {
+            set
+            {
                 DelayBetweenNotificationSecondsSpecified = true;
                 _delayBetweenNotificationSeconds = value;
             }
@@ -43,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DelayBetweenNotificationSecondsSpecified { get; set; }
-        
+
     }
 }

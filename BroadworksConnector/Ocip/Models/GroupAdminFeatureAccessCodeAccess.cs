@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Policy for a group administrator's access to feature access codes.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupAdminFeatureAccessCodeAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupAdminFeatureAccessCodeAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-     }
+    }
 }

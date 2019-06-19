@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The voice portal commPilot express profile menu keys modify entry.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CommPilotExpressProfileMenuKeysModifyEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2505""}]")]
+    public class CommPilotExpressProfileMenuKeysModifyEntry
     {
 
-        
         private string _activateAvailableInOfficeProfile;
 
         [XmlElement(ElementName = "activateAvailableInOfficeProfile", IsNullable = true, Namespace = "")]
-        public string ActivateAvailableInOfficeProfile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2505")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ActivateAvailableInOfficeProfile
+        {
             get => _activateAvailableInOfficeProfile;
-            set {
+            set
+            {
                 ActivateAvailableInOfficeProfileSpecified = true;
                 _activateAvailableInOfficeProfile = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActivateAvailableInOfficeProfileSpecified { get; set; }
-        
+
         private string _activateAvailableOutOfOfficeProfile;
 
         [XmlElement(ElementName = "activateAvailableOutOfOfficeProfile", IsNullable = true, Namespace = "")]
-        public string ActivateAvailableOutOfOfficeProfile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2505")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ActivateAvailableOutOfOfficeProfile
+        {
             get => _activateAvailableOutOfOfficeProfile;
-            set {
+            set
+            {
                 ActivateAvailableOutOfOfficeProfileSpecified = true;
                 _activateAvailableOutOfOfficeProfile = value;
             }
@@ -41,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActivateAvailableOutOfOfficeProfileSpecified { get; set; }
-        
+
         private string _activateBusyProfile;
 
         [XmlElement(ElementName = "activateBusyProfile", IsNullable = true, Namespace = "")]
-        public string ActivateBusyProfile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2505")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ActivateBusyProfile
+        {
             get => _activateBusyProfile;
-            set {
+            set
+            {
                 ActivateBusyProfileSpecified = true;
                 _activateBusyProfile = value;
             }
@@ -55,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActivateBusyProfileSpecified { get; set; }
-        
+
         private string _activateUnavailableProfile;
 
         [XmlElement(ElementName = "activateUnavailableProfile", IsNullable = true, Namespace = "")]
-        public string ActivateUnavailableProfile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2505")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ActivateUnavailableProfile
+        {
             get => _activateUnavailableProfile;
-            set {
+            set
+            {
                 ActivateUnavailableProfileSpecified = true;
                 _activateUnavailableProfile = value;
             }
@@ -69,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActivateUnavailableProfileSpecified { get; set; }
-        
+
         private string _noProfile;
 
         [XmlElement(ElementName = "noProfile", IsNullable = true, Namespace = "")]
-        public string NoProfile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2505")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string NoProfile
+        {
             get => _noProfile;
-            set {
+            set
+            {
                 NoProfileSpecified = true;
                 _noProfile = value;
             }
@@ -83,13 +115,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoProfileSpecified { get; set; }
-        
+
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        public string ReturnToPreviousMenu {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2505")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ReturnToPreviousMenu
+        {
             get => _returnToPreviousMenu;
-            set {
+            set
+            {
                 ReturnToPreviousMenuSpecified = true;
                 _returnToPreviousMenu = value;
             }
@@ -97,13 +135,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReturnToPreviousMenuSpecified { get; set; }
-        
+
         private string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
-        public string RepeatMenu {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2505")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string RepeatMenu
+        {
             get => _repeatMenu;
-            set {
+            set
+            {
                 RepeatMenuSpecified = true;
                 _repeatMenu = value;
             }
@@ -111,6 +155,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RepeatMenuSpecified { get; set; }
-        
+
     }
 }

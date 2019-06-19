@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Hunt group Uniform Call Distribution Policy Scope.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum HuntGroupUniformCallDistributionPolicyScope    {
-            [XmlEnum(Name = "Agent")]
+    public enum HuntGroupUniformCallDistributionPolicyScope
+    {
+        [XmlEnum(Name = "Agent")]
         Agent,
-            [XmlEnum(Name = "Hunt Group")]
+        [XmlEnum(Name = "Hunt Group")]
         HuntGroup,
-     }
+    }
 }

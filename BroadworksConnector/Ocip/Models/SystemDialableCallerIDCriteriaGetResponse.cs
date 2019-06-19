@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the SystemDialableCallerIDCriteriaGetRequest.
     /// The response contains the Dialable Caller ID Criteria information.
-        /// <see cref="SystemDialableCallerIDCriteriaGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemDialableCallerIDCriteriaGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7888""}]")]
     public class SystemDialableCallerIDCriteriaGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -29,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
         private string _prefixDigits;
 
         [XmlElement(ElementName = "prefixDigits", IsNullable = false, Namespace = "")]
-        public string PrefixDigits {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        [MinLength(1)]
+        [MaxLength(10)]
+        public string PrefixDigits
+        {
             get => _prefixDigits;
-            set {
+            set
+            {
                 PrefixDigitsSpecified = true;
                 _prefixDigits = value;
             }
@@ -43,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrefixDigitsSpecified { get; set; }
-        
-        private List<string> _matchCallType;
+
+        private List<string> _matchCallType = new List<string>();
 
         [XmlElement(ElementName = "matchCallType", IsNullable = false, Namespace = "")]
-        public List<string> MatchCallType {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> MatchCallType
+        {
             get => _matchCallType;
-            set {
+            set
+            {
                 MatchCallTypeSpecified = true;
                 _matchCallType = value;
             }
@@ -57,13 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchCallTypeSpecified { get; set; }
-        
-        private List<string> _matchAlternateCallIndicator;
+
+        private List<string> _matchAlternateCallIndicator = new List<string>();
 
         [XmlElement(ElementName = "matchAlternateCallIndicator", IsNullable = false, Namespace = "")]
-        public List<string> MatchAlternateCallIndicator {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> MatchAlternateCallIndicator
+        {
             get => _matchAlternateCallIndicator;
-            set {
+            set
+            {
                 MatchAlternateCallIndicatorSpecified = true;
                 _matchAlternateCallIndicator = value;
             }
@@ -71,13 +97,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchAlternateCallIndicatorSpecified { get; set; }
-        
+
         private bool _matchLocalCategory;
 
         [XmlElement(ElementName = "matchLocalCategory", IsNullable = false, Namespace = "")]
-        public bool MatchLocalCategory {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        public bool MatchLocalCategory
+        {
             get => _matchLocalCategory;
-            set {
+            set
+            {
                 MatchLocalCategorySpecified = true;
                 _matchLocalCategory = value;
             }
@@ -85,13 +114,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchLocalCategorySpecified { get; set; }
-        
+
         private bool _matchNationalCategory;
 
         [XmlElement(ElementName = "matchNationalCategory", IsNullable = false, Namespace = "")]
-        public bool MatchNationalCategory {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        public bool MatchNationalCategory
+        {
             get => _matchNationalCategory;
-            set {
+            set
+            {
                 MatchNationalCategorySpecified = true;
                 _matchNationalCategory = value;
             }
@@ -99,13 +131,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchNationalCategorySpecified { get; set; }
-        
+
         private bool _matchInterlataCategory;
 
         [XmlElement(ElementName = "matchInterlataCategory", IsNullable = false, Namespace = "")]
-        public bool MatchInterlataCategory {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        public bool MatchInterlataCategory
+        {
             get => _matchInterlataCategory;
-            set {
+            set
+            {
                 MatchInterlataCategorySpecified = true;
                 _matchInterlataCategory = value;
             }
@@ -113,13 +148,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchInterlataCategorySpecified { get; set; }
-        
+
         private bool _matchIntralataCategory;
 
         [XmlElement(ElementName = "matchIntralataCategory", IsNullable = false, Namespace = "")]
-        public bool MatchIntralataCategory {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        public bool MatchIntralataCategory
+        {
             get => _matchIntralataCategory;
-            set {
+            set
+            {
                 MatchIntralataCategorySpecified = true;
                 _matchIntralataCategory = value;
             }
@@ -127,13 +165,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchIntralataCategorySpecified { get; set; }
-        
+
         private bool _matchInternationalCategory;
 
         [XmlElement(ElementName = "matchInternationalCategory", IsNullable = false, Namespace = "")]
-        public bool MatchInternationalCategory {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        public bool MatchInternationalCategory
+        {
             get => _matchInternationalCategory;
-            set {
+            set
+            {
                 MatchInternationalCategorySpecified = true;
                 _matchInternationalCategory = value;
             }
@@ -141,13 +182,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchInternationalCategorySpecified { get; set; }
-        
+
         private bool _matchPrivateCategory;
 
         [XmlElement(ElementName = "matchPrivateCategory", IsNullable = false, Namespace = "")]
-        public bool MatchPrivateCategory {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        public bool MatchPrivateCategory
+        {
             get => _matchPrivateCategory;
-            set {
+            set
+            {
                 MatchPrivateCategorySpecified = true;
                 _matchPrivateCategory = value;
             }
@@ -155,13 +199,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchPrivateCategorySpecified { get; set; }
-        
+
         private bool _matchEmergencyCategory;
 
         [XmlElement(ElementName = "matchEmergencyCategory", IsNullable = false, Namespace = "")]
-        public bool MatchEmergencyCategory {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        public bool MatchEmergencyCategory
+        {
             get => _matchEmergencyCategory;
-            set {
+            set
+            {
                 MatchEmergencyCategorySpecified = true;
                 _matchEmergencyCategory = value;
             }
@@ -169,13 +216,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchEmergencyCategorySpecified { get; set; }
-        
+
         private bool _matchOtherCategory;
 
         [XmlElement(ElementName = "matchOtherCategory", IsNullable = false, Namespace = "")]
-        public bool MatchOtherCategory {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7888")]
+        public bool MatchOtherCategory
+        {
             get => _matchOtherCategory;
-            set {
+            set
+            {
                 MatchOtherCategorySpecified = true;
                 _matchOtherCategory = value;
             }
@@ -183,6 +233,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchOtherCategorySpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19PasscodeMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:28061""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19PasscodeMenuKeys
     {
 
-        
         private string _finishEnteringOrReenteringPasscode;
 
         [XmlElement(ElementName = "finishEnteringOrReenteringPasscode", IsNullable = false, Namespace = "")]
-        public string FinishEnteringOrReenteringPasscode {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28061")]
+        [Length(1)]
+        [RegularExpression(@"\*|#")]
+        public string FinishEnteringOrReenteringPasscode
+        {
             get => _finishEnteringOrReenteringPasscode;
-            set {
+            set
+            {
                 FinishEnteringOrReenteringPasscodeSpecified = true;
                 _finishEnteringOrReenteringPasscode = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FinishEnteringOrReenteringPasscodeSpecified { get; set; }
-        
+
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        public string ReturnToPreviousMenu {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28061")]
+        [Length(1)]
+        [RegularExpression(@"\*|#")]
+        public string ReturnToPreviousMenu
+        {
             get => _returnToPreviousMenu;
-            set {
+            set
+            {
                 ReturnToPreviousMenuSpecified = true;
                 _returnToPreviousMenu = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReturnToPreviousMenuSpecified { get; set; }
-        
+
     }
 }

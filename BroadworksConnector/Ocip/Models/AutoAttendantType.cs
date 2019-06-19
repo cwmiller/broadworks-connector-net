@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Auto Attendant type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AutoAttendantType    {
-            [XmlEnum(Name = "Basic")]
+    public enum AutoAttendantType
+    {
+        [XmlEnum(Name = "Basic")]
         Basic,
-            [XmlEnum(Name = "Standard")]
+        [XmlEnum(Name = "Standard")]
         Standard,
-     }
+    }
 }

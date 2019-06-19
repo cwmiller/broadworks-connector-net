@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Outgoing Calling Plan Authorization Code.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class OutgoingCallingPlanAuthorizationCodeEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1736""}]")]
+    public class OutgoingCallingPlanAuthorizationCodeEntry
     {
 
-        
         private string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        public string Code {
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1736")]
+        [MinLength(2)]
+        [MaxLength(14)]
+        public string Code
+        {
             get => _code;
-            set {
+            set
+            {
                 CodeSpecified = true;
                 _code = value;
             }
@@ -27,13 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CodeSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1736")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -41,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
     }
 }

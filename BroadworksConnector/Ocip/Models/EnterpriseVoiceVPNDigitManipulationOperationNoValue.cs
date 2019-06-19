@@ -5,11 +5,12 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Enterprise Voice VPN Digit Manipulation Operations that have no value.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum EnterpriseVoiceVPNDigitManipulationOperationNoValue    {
-            [XmlEnum(Name = "End")]
+    public enum EnterpriseVoiceVPNDigitManipulationOperationNoValue
+    {
+        [XmlEnum(Name = "End")]
         End,
-     }
+    }
 }

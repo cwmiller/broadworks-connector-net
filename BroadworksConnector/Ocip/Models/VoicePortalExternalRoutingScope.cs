@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for the voice portal's external routing to decide which settings to use.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum VoicePortalExternalRoutingScope    {
-            [XmlEnum(Name = "System")]
+    public enum VoicePortalExternalRoutingScope
+    {
+        [XmlEnum(Name = "System")]
         System,
-            [XmlEnum(Name = "Group")]
+        [XmlEnum(Name = "Group")]
         Group,
-     }
+    }
 }

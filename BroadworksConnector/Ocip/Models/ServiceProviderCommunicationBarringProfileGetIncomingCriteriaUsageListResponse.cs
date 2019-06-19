@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to ServiceProviderCommunicationBarringProfileGetIncomingCriteriaUsageListRequest.
     /// Contains a table of profiles that have the Communication Barring Incoming Criteria assigned.
     /// The column headings are: "Name" and "Description".
-        /// <see cref="ServiceProviderCommunicationBarringProfileGetIncomingCriteriaUsageListRequest"/>
-        /// </summary>
+    /// <see cref="ServiceProviderCommunicationBarringProfileGetIncomingCriteriaUsageListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:1947""}]")]
     public class ServiceProviderCommunicationBarringProfileGetIncomingCriteriaUsageListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _profileTable;
 
         [XmlElement(ElementName = "profileTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable ProfileTable {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:1947")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable ProfileTable
+        {
             get => _profileTable;
-            set {
+            set
+            {
                 ProfileTableSpecified = true;
                 _profileTable = value;
             }
@@ -30,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProfileTableSpecified { get; set; }
-        
+
     }
 }

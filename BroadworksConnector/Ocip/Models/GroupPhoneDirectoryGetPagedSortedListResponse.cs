@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -24,21 +26,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following columns are populated in AS data mode only:
     /// "IMP Id"
-        /// <see cref="GroupPhoneDirectoryGetPagedSortedListRequest"/>
-        /// </summary>
+    /// <see cref="GroupPhoneDirectoryGetPagedSortedListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:5945""}]")]
     public class GroupPhoneDirectoryGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private int _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
-        public int TotalNumberOfRows {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5945")]
+        public int TotalNumberOfRows
+        {
             get => _totalNumberOfRows;
-            set {
+            set
+            {
                 TotalNumberOfRowsSpecified = true;
                 _totalNumberOfRows = value;
             }
@@ -46,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TotalNumberOfRowsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _directoryTable;
 
         [XmlElement(ElementName = "directoryTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable DirectoryTable {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5945")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable DirectoryTable
+        {
             get => _directoryTable;
-            set {
+            set
+            {
                 DirectoryTableSpecified = true;
                 _directoryTable = value;
             }
@@ -60,6 +68,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DirectoryTableSpecified { get; set; }
-        
+
     }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Possible type of answer confirmation for Call Me Now.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallMeNowAnswerConfirmation    {
-            [XmlEnum(Name = "None")]
+    public enum CallMeNowAnswerConfirmation
+    {
+        [XmlEnum(Name = "None")]
         None,
-            [XmlEnum(Name = "Any Key")]
+        [XmlEnum(Name = "Any Key")]
         AnyKey,
-            [XmlEnum(Name = "Passcode")]
+        [XmlEnum(Name = "Passcode")]
         Passcode,
-     }
+    }
 }

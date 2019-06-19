@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to UserMeetMeConferencingGetConferenceRequest.
     /// Contains the information of a conference.
-        /// <see cref="UserMeetMeConferencingGetConferenceRequest"/>
-        /// </summary>
+    /// <see cref="UserMeetMeConferencingGetConferenceRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:29045"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:29049""}]}]")]
     public class UserMeetMeConferencingGetConferenceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _title;
 
         [XmlElement(ElementName = "title", IsNullable = false, Namespace = "")]
-        public string Title {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29045")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Title
+        {
             get => _title;
-            set {
+            set
+            {
                 TitleSpecified = true;
                 _title = value;
             }
@@ -29,13 +36,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TitleSpecified { get; set; }
-        
+
         private int _estimatedParticipants;
 
         [XmlElement(ElementName = "estimatedParticipants", IsNullable = false, Namespace = "")]
-        public int EstimatedParticipants {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29045")]
+        [MinInclusive(1)]
+        [MaxInclusive(294)]
+        public int EstimatedParticipants
+        {
             get => _estimatedParticipants;
-            set {
+            set
+            {
                 EstimatedParticipantsSpecified = true;
                 _estimatedParticipants = value;
             }
@@ -43,13 +56,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EstimatedParticipantsSpecified { get; set; }
-        
+
         private bool _restrictParticipants;
 
         [XmlElement(ElementName = "restrictParticipants", IsNullable = false, Namespace = "")]
-        public bool RestrictParticipants {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29049")]
+        public bool RestrictParticipants
+        {
             get => _restrictParticipants;
-            set {
+            set
+            {
                 RestrictParticipantsSpecified = true;
                 _restrictParticipants = value;
             }
@@ -57,13 +73,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RestrictParticipantsSpecified { get; set; }
-        
+
         private int _maxParticipants;
 
         [XmlElement(ElementName = "maxParticipants", IsNullable = false, Namespace = "")]
-        public int MaxParticipants {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29049")]
+        [MinInclusive(1)]
+        [MaxInclusive(294)]
+        public int MaxParticipants
+        {
             get => _maxParticipants;
-            set {
+            set
+            {
                 MaxParticipantsSpecified = true;
                 _maxParticipants = value;
             }
@@ -71,13 +92,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxParticipantsSpecified { get; set; }
-        
+
         private string _accountCode;
 
         [XmlElement(ElementName = "accountCode", IsNullable = false, Namespace = "")]
-        public string AccountCode {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29045")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string AccountCode
+        {
             get => _accountCode;
-            set {
+            set
+            {
                 AccountCodeSpecified = true;
                 _accountCode = value;
             }
@@ -85,13 +112,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccountCodeSpecified { get; set; }
-        
+
         private bool _muteAllAttendeesOnEntry;
 
         [XmlElement(ElementName = "muteAllAttendeesOnEntry", IsNullable = false, Namespace = "")]
-        public bool MuteAllAttendeesOnEntry {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29045")]
+        public bool MuteAllAttendeesOnEntry
+        {
             get => _muteAllAttendeesOnEntry;
-            set {
+            set
+            {
                 MuteAllAttendeesOnEntrySpecified = true;
                 _muteAllAttendeesOnEntry = value;
             }
@@ -99,13 +129,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MuteAllAttendeesOnEntrySpecified { get; set; }
-        
+
         private bool _endConferenceOnModeratorExit;
 
         [XmlElement(ElementName = "endConferenceOnModeratorExit", IsNullable = false, Namespace = "")]
-        public bool EndConferenceOnModeratorExit {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29045")]
+        public bool EndConferenceOnModeratorExit
+        {
             get => _endConferenceOnModeratorExit;
-            set {
+            set
+            {
                 EndConferenceOnModeratorExitSpecified = true;
                 _endConferenceOnModeratorExit = value;
             }
@@ -113,13 +146,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndConferenceOnModeratorExitSpecified { get; set; }
-        
+
         private bool _moderatorRequired;
 
         [XmlElement(ElementName = "moderatorRequired", IsNullable = false, Namespace = "")]
-        public bool ModeratorRequired {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29045")]
+        public bool ModeratorRequired
+        {
             get => _moderatorRequired;
-            set {
+            set
+            {
                 ModeratorRequiredSpecified = true;
                 _moderatorRequired = value;
             }
@@ -127,13 +163,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ModeratorRequiredSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification _attendeeNotification;
 
         [XmlElement(ElementName = "attendeeNotification", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification AttendeeNotification {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29045")]
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification AttendeeNotification
+        {
             get => _attendeeNotification;
-            set {
+            set
+            {
                 AttendeeNotificationSpecified = true;
                 _attendeeNotification = value;
             }
@@ -141,13 +180,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AttendeeNotificationSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceSchedule _conferenceSchedule;
 
         [XmlElement(ElementName = "conferenceSchedule", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceSchedule ConferenceSchedule {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29045")]
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceSchedule ConferenceSchedule
+        {
             get => _conferenceSchedule;
-            set {
+            set
+            {
                 ConferenceScheduleSpecified = true;
                 _conferenceSchedule = value;
             }
@@ -155,13 +197,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConferenceScheduleSpecified { get; set; }
-        
+
         private string _moderatorPin;
 
         [XmlElement(ElementName = "moderatorPin", IsNullable = false, Namespace = "")]
-        public string ModeratorPin {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29045")]
+        [MinLength(6)]
+        [MaxLength(12)]
+        public string ModeratorPin
+        {
             get => _moderatorPin;
-            set {
+            set
+            {
                 ModeratorPinSpecified = true;
                 _moderatorPin = value;
             }
@@ -169,6 +216,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ModeratorPinSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a Diameter routing peer.  The realm must refer to a Diameter routing realm whose action is relay.  The destinationPeerIdentity must refer to an existing Diameter peer whose mode is active.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2444""}]")]
     public class SystemBwDiameterRoutingPeerAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
 
         [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance Instance {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        public BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance Instance
+        {
             get => _instance;
-            set {
+            set
+            {
                 InstanceSpecified = true;
                 _instance = value;
             }
@@ -30,13 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool InstanceSpecified { get; set; }
-        
+
         private string _realm;
 
         [XmlElement(ElementName = "realm", IsNullable = false, Namespace = "")]
-        public string Realm {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Realm
+        {
             get => _realm;
-            set {
+            set
+            {
                 RealmSpecified = true;
                 _realm = value;
             }
@@ -44,13 +54,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RealmSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.BwDiameterApplicationId _applicationId;
 
         [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.BwDiameterApplicationId ApplicationId {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        public BroadWorksConnector.Ocip.Models.BwDiameterApplicationId ApplicationId
+        {
             get => _applicationId;
-            set {
+            set
+            {
                 ApplicationIdSpecified = true;
                 _applicationId = value;
             }
@@ -58,13 +71,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ApplicationIdSpecified { get; set; }
-        
+
         private string _identity;
 
         [XmlElement(ElementName = "identity", IsNullable = false, Namespace = "")]
-        public string Identity {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Identity
+        {
             get => _identity;
-            set {
+            set
+            {
                 IdentitySpecified = true;
                 _identity = value;
             }
@@ -72,13 +90,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IdentitySpecified { get; set; }
-        
+
         private int _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        public int Priority {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        [MinInclusive(0)]
+        [MaxInclusive(65535)]
+        public int Priority
+        {
             get => _priority;
-            set {
+            set
+            {
                 PrioritySpecified = true;
                 _priority = value;
             }
@@ -86,13 +109,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrioritySpecified { get; set; }
-        
+
         private int _weight;
 
         [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
-        public int Weight {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        [MinInclusive(0)]
+        [MaxInclusive(65535)]
+        public int Weight
+        {
             get => _weight;
-            set {
+            set
+            {
                 WeightSpecified = true;
                 _weight = value;
             }
@@ -100,6 +128,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool WeightSpecified { get; set; }
-        
+
     }
 }

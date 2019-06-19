@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Recording Service Configuration.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum RecordingOption    {
-            [XmlEnum(Name = "Always")]
+    public enum RecordingOption
+    {
+        [XmlEnum(Name = "Always")]
         Always,
-            [XmlEnum(Name = "Never")]
+        [XmlEnum(Name = "Never")]
         Never,
-            [XmlEnum(Name = "On Demand")]
+        [XmlEnum(Name = "On Demand")]
         OnDemand,
-     }
+    }
 }

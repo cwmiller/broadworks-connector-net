@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// A list of CallProcessingPolicyProfileSubscriberType20. The list replaces a previously configured list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ReplacementCallProcessingPolicyProfileSubscriberTypeList20 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44974""}]")]
+    public class ReplacementCallProcessingPolicyProfileSubscriberTypeList20
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType20> _subscriberType;
+        private List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType20> _subscriberType = new List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType20>();
 
         [XmlElement(ElementName = "subscriberType", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType20> SubscriberType {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44974")]
+        public List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType20> SubscriberType
+        {
             get => _subscriberType;
-            set {
+            set
+            {
                 SubscriberTypeSpecified = true;
                 _subscriberType = value;
             }
@@ -27,6 +32,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SubscriberTypeSpecified { get; set; }
-        
+
     }
 }

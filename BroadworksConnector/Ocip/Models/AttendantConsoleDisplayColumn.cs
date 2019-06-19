@@ -5,29 +5,30 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Attendant Console Display Columns.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AttendantConsoleDisplayColumn    {
-            [XmlEnum(Name = "Action")]
+    public enum AttendantConsoleDisplayColumn
+    {
+        [XmlEnum(Name = "Action")]
         Action,
-            [XmlEnum(Name = "Department")]
+        [XmlEnum(Name = "Department")]
         Department,
-            [XmlEnum(Name = "Email")]
+        [XmlEnum(Name = "Email")]
         Email,
-            [XmlEnum(Name = "Extension")]
+        [XmlEnum(Name = "Extension")]
         Extension,
-            [XmlEnum(Name = "Mobile")]
+        [XmlEnum(Name = "Mobile")]
         Mobile,
-            [XmlEnum(Name = "Name")]
+        [XmlEnum(Name = "Name")]
         Name,
-            [XmlEnum(Name = "Phone Number")]
+        [XmlEnum(Name = "Phone Number")]
         PhoneNumber,
-            [XmlEnum(Name = "Pager")]
+        [XmlEnum(Name = "Pager")]
         Pager,
-            [XmlEnum(Name = "Status")]
+        [XmlEnum(Name = "Status")]
         Status,
-            [XmlEnum(Name = "Title")]
+        [XmlEnum(Name = "Title")]
         Title,
-     }
+    }
 }

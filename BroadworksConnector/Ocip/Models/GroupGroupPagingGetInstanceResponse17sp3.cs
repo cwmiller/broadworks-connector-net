@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains the service profile information.
     /// 
     /// Replaced by: GroupGroupPagingGetInstanceResponse19sp1
-        /// <see cref="GroupGroupPagingGetInstanceRequest17sp3"/>
-        /// <see cref="GroupGroupPagingGetInstanceResponse19sp1"/>
-        /// </summary>
+    /// <see cref="GroupGroupPagingGetInstanceRequest17sp3"/>
+    /// <see cref="GroupGroupPagingGetInstanceResponse19sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:30108""}]")]
     public class GroupGroupPagingGetInstanceResponse17sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17 ServiceInstanceProfile {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30108")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17 ServiceInstanceProfile
+        {
             get => _serviceInstanceProfile;
-            set {
+            set
+            {
                 ServiceInstanceProfileSpecified = true;
                 _serviceInstanceProfile = value;
             }
@@ -32,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceInstanceProfileSpecified { get; set; }
-        
+
         private int _confirmationToneTimeoutSeconds;
 
         [XmlElement(ElementName = "confirmationToneTimeoutSeconds", IsNullable = false, Namespace = "")]
-        public int ConfirmationToneTimeoutSeconds {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30108")]
+        [MinInclusive(1)]
+        [MaxInclusive(20)]
+        public int ConfirmationToneTimeoutSeconds
+        {
             get => _confirmationToneTimeoutSeconds;
-            set {
+            set
+            {
                 ConfirmationToneTimeoutSecondsSpecified = true;
                 _confirmationToneTimeoutSeconds = value;
             }
@@ -46,13 +56,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfirmationToneTimeoutSecondsSpecified { get; set; }
-        
+
         private bool _deliverOriginatorCLIDInstead;
 
         [XmlElement(ElementName = "deliverOriginatorCLIDInstead", IsNullable = false, Namespace = "")]
-        public bool DeliverOriginatorCLIDInstead {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30108")]
+        public bool DeliverOriginatorCLIDInstead
+        {
             get => _deliverOriginatorCLIDInstead;
-            set {
+            set
+            {
                 DeliverOriginatorCLIDInsteadSpecified = true;
                 _deliverOriginatorCLIDInstead = value;
             }
@@ -60,13 +73,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeliverOriginatorCLIDInsteadSpecified { get; set; }
-        
+
         private string _originatorCLIDPrefix;
 
         [XmlElement(ElementName = "originatorCLIDPrefix", IsNullable = false, Namespace = "")]
-        public string OriginatorCLIDPrefix {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30108")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string OriginatorCLIDPrefix
+        {
             get => _originatorCLIDPrefix;
-            set {
+            set
+            {
                 OriginatorCLIDPrefixSpecified = true;
                 _originatorCLIDPrefix = value;
             }
@@ -74,6 +93,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OriginatorCLIDPrefixSpecified { get; set; }
-        
+
     }
 }

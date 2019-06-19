@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The Receptionist User (or VON User) and Receptionist Notes.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ReceptionistContactUserAndNote 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2980"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2981""}]}]")]
+    public class ReceptionistContactUserAndNote
     {
 
-        
         private string _contactUserId;
 
         [XmlElement(ElementName = "contactUserId", IsNullable = false, Namespace = "")]
-        public string ContactUserId {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2981")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ContactUserId
+        {
             get => _contactUserId;
-            set {
+            set
+            {
                 ContactUserIdSpecified = true;
                 _contactUserId = value;
             }
@@ -27,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactUserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey _vonUser;
 
         [XmlElement(ElementName = "vonUser", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey VonUser {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2981")]
+        public BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey VonUser
+        {
             get => _vonUser;
-            set {
+            set
+            {
                 VonUserSpecified = true;
                 _vonUser = value;
             }
@@ -41,13 +51,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VonUserSpecified { get; set; }
-        
+
         private string _note;
 
         [XmlElement(ElementName = "note", IsNullable = true, Namespace = "")]
-        public string Note {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2980")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string Note
+        {
             get => _note;
-            set {
+            set
+            {
                 NoteSpecified = true;
                 _note = value;
             }
@@ -55,6 +70,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoteSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Add a carrier to the system.
     /// More than one carrier may be assigned to each country code.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:319""}]")]
     public class SystemPreferredCarrierAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _carrier;
 
         [XmlElement(ElementName = "carrier", IsNullable = false, Namespace = "")]
-        public string Carrier {
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:319")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Carrier
+        {
             get => _carrier;
-            set {
+            set
+            {
                 CarrierSpecified = true;
                 _carrier = value;
             }
@@ -31,13 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CarrierSpecified { get; set; }
-        
+
         private string _cic;
 
         [XmlElement(ElementName = "cic", IsNullable = false, Namespace = "")]
-        public string Cic {
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:319")]
+        [MinLength(1)]
+        [MaxLength(6)]
+        public string Cic
+        {
             get => _cic;
-            set {
+            set
+            {
                 CicSpecified = true;
                 _cic = value;
             }
@@ -45,13 +57,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CicSpecified { get; set; }
-        
+
         private string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        public string CountryCode {
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:319")]
+        [MaxLength(3)]
+        [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
+        public string CountryCode
+        {
             get => _countryCode;
-            set {
+            set
+            {
                 CountryCodeSpecified = true;
                 _countryCode = value;
             }
@@ -59,13 +76,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CountryCodeSpecified { get; set; }
-        
+
         private bool _isIntraLata;
 
         [XmlElement(ElementName = "isIntraLata", IsNullable = false, Namespace = "")]
-        public bool IsIntraLata {
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:319")]
+        public bool IsIntraLata
+        {
             get => _isIntraLata;
-            set {
+            set
+            {
                 IsIntraLataSpecified = true;
                 _isIntraLata = value;
             }
@@ -73,13 +93,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsIntraLataSpecified { get; set; }
-        
+
         private bool _isInterLata;
 
         [XmlElement(ElementName = "isInterLata", IsNullable = false, Namespace = "")]
-        public bool IsInterLata {
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:319")]
+        public bool IsInterLata
+        {
             get => _isInterLata;
-            set {
+            set
+            {
                 IsInterLataSpecified = true;
                 _isInterLata = value;
             }
@@ -87,13 +110,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsInterLataSpecified { get; set; }
-        
+
         private bool _isInternational;
 
         [XmlElement(ElementName = "isInternational", IsNullable = false, Namespace = "")]
-        public bool IsInternational {
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:319")]
+        public bool IsInternational
+        {
             get => _isInternational;
-            set {
+            set
+            {
                 IsInternationalSpecified = true;
                 _isInternational = value;
             }
@@ -101,6 +127,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsInternationalSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,23 +13,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// When omitted, the number(s) will be left assigned to the group.
     /// An ErrorResponse will be returned if any number cannot be unassigned because of insufficient privilege.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ed0640d8ef49eb8b4eaa14d7c6f6c033:148""}]")]
     public class GroupAutoAttendantConsolidatedDeleteInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:148")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -35,13 +42,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
 
         [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers {
+        [Optional]
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:148")]
+        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers
+        {
             get => _unassignPhoneNumbers;
-            set {
+            set
+            {
                 UnassignPhoneNumbersSpecified = true;
                 _unassignPhoneNumbers = value;
             }
@@ -49,6 +60,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UnassignPhoneNumbersSpecified { get; set; }
-        
+
     }
 }

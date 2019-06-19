@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to GroupBroadWorksAnywhereGetInstanceRequest19sp1.
     /// Contains the service profile information.
-        /// <see cref="GroupBroadWorksAnywhereGetInstanceRequest19sp1"/>
-        /// </summary>
+    /// <see cref="GroupBroadWorksAnywhereGetInstanceRequest19sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:157""}]")]
     public class GroupBroadWorksAnywhereGetInstanceResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile {
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:157")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile
+        {
             get => _serviceInstanceProfile;
-            set {
+            set
+            {
                 ServiceInstanceProfileSpecified = true;
                 _serviceInstanceProfile = value;
             }
@@ -29,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceInstanceProfileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope _broadWorksAnywhereScope;
 
         [XmlElement(ElementName = "broadWorksAnywhereScope", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope BroadWorksAnywhereScope {
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:157")]
+        public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope BroadWorksAnywhereScope
+        {
             get => _broadWorksAnywhereScope;
-            set {
+            set
+            {
                 BroadWorksAnywhereScopeSpecified = true;
                 _broadWorksAnywhereScope = value;
             }
@@ -43,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BroadWorksAnywhereScopeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt _promptForCLID;
 
         [XmlElement(ElementName = "promptForCLID", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt PromptForCLID {
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:157")]
+        public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt PromptForCLID
+        {
             get => _promptForCLID;
-            set {
+            set
+            {
                 PromptForCLIDSpecified = true;
                 _promptForCLID = value;
             }
@@ -57,13 +68,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PromptForCLIDSpecified { get; set; }
-        
+
         private bool _silentPromptMode;
 
         [XmlElement(ElementName = "silentPromptMode", IsNullable = false, Namespace = "")]
-        public bool SilentPromptMode {
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:157")]
+        public bool SilentPromptMode
+        {
             get => _silentPromptMode;
-            set {
+            set
+            {
                 SilentPromptModeSpecified = true;
                 _silentPromptMode = value;
             }
@@ -71,13 +85,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SilentPromptModeSpecified { get; set; }
-        
+
         private bool _promptForPasscode;
 
         [XmlElement(ElementName = "promptForPasscode", IsNullable = false, Namespace = "")]
-        public bool PromptForPasscode {
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:157")]
+        public bool PromptForPasscode
+        {
             get => _promptForPasscode;
-            set {
+            set
+            {
                 PromptForPasscodeSpecified = true;
                 _promptForPasscode = value;
             }
@@ -85,13 +102,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PromptForPasscodeSpecified { get; set; }
-        
+
         private string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        public string NetworkClassOfService {
+        [Optional]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:157")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string NetworkClassOfService
+        {
             get => _networkClassOfService;
-            set {
+            set
+            {
                 NetworkClassOfServiceSpecified = true;
                 _networkClassOfService = value;
             }
@@ -99,6 +122,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetworkClassOfServiceSpecified { get; set; }
-        
+
     }
 }

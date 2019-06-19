@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,21 +13,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following columns are only returned in AS data mode:
     /// "Locale" and "Encoding"
-        /// <see cref="ServiceProviderAdminGetListRequest14"/>
-        /// </summary>
+    /// <see cref="ServiceProviderAdminGetListRequest14"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:926""}]")]
     public class ServiceProviderAdminGetListResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _serviceProviderAdminTable;
 
         [XmlElement(ElementName = "serviceProviderAdminTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable ServiceProviderAdminTable {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:926")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable ServiceProviderAdminTable
+        {
             get => _serviceProviderAdminTable;
-            set {
+            set
+            {
                 ServiceProviderAdminTableSpecified = true;
                 _serviceProviderAdminTable = value;
             }
@@ -33,6 +38,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderAdminTableSpecified { get; set; }
-        
+
     }
 }

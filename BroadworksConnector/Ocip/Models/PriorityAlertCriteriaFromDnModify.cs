@@ -1,25 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The from dn criteria used within a modify request.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class PriorityAlertCriteriaFromDnModify 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""750c600a9467af6ee77c0dbca839453e:219""}]")]
+    public class PriorityAlertCriteriaFromDnModify
     {
 
-        
         private BroadWorksConnector.Ocip.Models.PriorityAlertCriteriaFromDnSelection _fromDnCriteriaSelection;
 
         [XmlElement(ElementName = "fromDnCriteriaSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.PriorityAlertCriteriaFromDnSelection FromDnCriteriaSelection {
+        [Optional]
+        [Group(@"750c600a9467af6ee77c0dbca839453e:219")]
+        public BroadWorksConnector.Ocip.Models.PriorityAlertCriteriaFromDnSelection FromDnCriteriaSelection
+        {
             get => _fromDnCriteriaSelection;
-            set {
+            set
+            {
                 FromDnCriteriaSelectionSpecified = true;
                 _fromDnCriteriaSelection = value;
             }
@@ -27,13 +33,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FromDnCriteriaSelectionSpecified { get; set; }
-        
+
         private bool _includeAnonymousCallers;
 
         [XmlElement(ElementName = "includeAnonymousCallers", IsNullable = false, Namespace = "")]
-        public bool IncludeAnonymousCallers {
+        [Optional]
+        [Group(@"750c600a9467af6ee77c0dbca839453e:219")]
+        public bool IncludeAnonymousCallers
+        {
             get => _includeAnonymousCallers;
-            set {
+            set
+            {
                 IncludeAnonymousCallersSpecified = true;
                 _includeAnonymousCallers = value;
             }
@@ -41,13 +51,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeAnonymousCallersSpecified { get; set; }
-        
+
         private bool _includeUnavailableCallers;
 
         [XmlElement(ElementName = "includeUnavailableCallers", IsNullable = false, Namespace = "")]
-        public bool IncludeUnavailableCallers {
+        [Optional]
+        [Group(@"750c600a9467af6ee77c0dbca839453e:219")]
+        public bool IncludeUnavailableCallers
+        {
             get => _includeUnavailableCallers;
-            set {
+            set
+            {
                 IncludeUnavailableCallersSpecified = true;
                 _includeUnavailableCallers = value;
             }
@@ -55,13 +69,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeUnavailableCallersSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList _phoneNumberList;
 
         [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList PhoneNumberList {
+        [Optional]
+        [Group(@"750c600a9467af6ee77c0dbca839453e:219")]
+        public BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList PhoneNumberList
+        {
             get => _phoneNumberList;
-            set {
+            set
+            {
                 PhoneNumberListSpecified = true;
                 _phoneNumberList = value;
             }
@@ -69,6 +87,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneNumberListSpecified { get; set; }
-        
+
     }
 }

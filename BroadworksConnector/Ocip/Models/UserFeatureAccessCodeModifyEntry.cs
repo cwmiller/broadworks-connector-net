@@ -1,25 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Feature Access Code Entry to be used in all user modify command.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class UserFeatureAccessCodeModifyEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4548""}]")]
+    public class UserFeatureAccessCodeModifyEntry
     {
 
-        
         private string _featureAccessCodeName;
 
         [XmlElement(ElementName = "featureAccessCodeName", IsNullable = false, Namespace = "")]
-        public string FeatureAccessCodeName {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4548")]
+        [MinLength(1)]
+        public string FeatureAccessCodeName
+        {
             get => _featureAccessCodeName;
-            set {
+            set
+            {
                 FeatureAccessCodeNameSpecified = true;
                 _featureAccessCodeName = value;
             }
@@ -27,13 +33,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FeatureAccessCodeNameSpecified { get; set; }
-        
+
         private bool _enableFAC;
 
         [XmlElement(ElementName = "enableFAC", IsNullable = false, Namespace = "")]
-        public bool EnableFAC {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4548")]
+        public bool EnableFAC
+        {
             get => _enableFAC;
-            set {
+            set
+            {
                 EnableFACSpecified = true;
                 _enableFAC = value;
             }
@@ -41,6 +51,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableFACSpecified { get; set; }
-        
+
     }
 }

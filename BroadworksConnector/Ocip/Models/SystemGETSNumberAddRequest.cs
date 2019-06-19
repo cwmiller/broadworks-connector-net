@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a GETS reserved Number.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9856""}]")]
     public class SystemGETSNumberAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _number;
 
         [XmlElement(ElementName = "number", IsNullable = false, Namespace = "")]
-        public string Number {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9856")]
+        [MinLength(4)]
+        [MaxLength(10)]
+        public string Number
+        {
             get => _number;
-            set {
+            set
+            {
                 NumberSpecified = true;
                 _number = value;
             }
@@ -30,13 +37,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.GETSNumberType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.GETSNumberType Type {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9856")]
+        public BroadWorksConnector.Ocip.Models.GETSNumberType Type
+        {
             get => _type;
-            set {
+            set
+            {
                 TypeSpecified = true;
                 _type = value;
             }
@@ -44,13 +54,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TypeSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9856")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -58,6 +74,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
     }
 }

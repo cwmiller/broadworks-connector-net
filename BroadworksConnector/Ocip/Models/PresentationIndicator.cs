@@ -5,21 +5,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Presentation Indicator
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum PresentationIndicator    {
-            [XmlEnum(Name = "Anonymous")]
+    public enum PresentationIndicator
+    {
+        [XmlEnum(Name = "Anonymous")]
         Anonymous,
-            [XmlEnum(Name = "Anonymous Name")]
+        [XmlEnum(Name = "Anonymous Name")]
         AnonymousName,
-            [XmlEnum(Name = "Anonymous URI")]
+        [XmlEnum(Name = "Anonymous URI")]
         AnonymousURI,
-            [XmlEnum(Name = "Anonymous Unavailable")]
+        [XmlEnum(Name = "Anonymous Unavailable")]
         AnonymousUnavailable,
-            [XmlEnum(Name = "Public")]
+        [XmlEnum(Name = "Public")]
         Public,
-            [XmlEnum(Name = "Unavailable")]
+        [XmlEnum(Name = "Unavailable")]
         Unavailable,
-     }
+    }
 }

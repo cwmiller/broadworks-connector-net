@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Push to talk outgoing connection type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum PushToTalkOutgoingConnectionSelection    {
-            [XmlEnum(Name = "One Way")]
+    public enum PushToTalkOutgoingConnectionSelection
+    {
+        [XmlEnum(Name = "One Way")]
         OneWay,
-            [XmlEnum(Name = "Two Way")]
+        [XmlEnum(Name = "Two Way")]
         TwoWay,
-     }
+    }
 }

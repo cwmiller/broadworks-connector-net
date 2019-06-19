@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,22 +14,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// enableCustomMessageControl
     /// customNumberOfUsersPerMessage
     /// customMessageIntervalMilliseconds
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2007""}]")]
     public class SystemASRParametersModifyRequest14sp7 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private int _maxTransmissions;
 
         [XmlElement(ElementName = "maxTransmissions", IsNullable = false, Namespace = "")]
-        public int MaxTransmissions {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2007")]
+        [MinInclusive(1)]
+        [MaxInclusive(10)]
+        public int MaxTransmissions
+        {
             get => _maxTransmissions;
-            set {
+            set
+            {
                 MaxTransmissionsSpecified = true;
                 _maxTransmissions = value;
             }
@@ -35,13 +43,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxTransmissionsSpecified { get; set; }
-        
+
         private int _retransmissionDelayMilliSeconds;
 
         [XmlElement(ElementName = "retransmissionDelayMilliSeconds", IsNullable = false, Namespace = "")]
-        public int RetransmissionDelayMilliSeconds {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2007")]
+        [MinInclusive(100)]
+        [MaxInclusive(2000)]
+        public int RetransmissionDelayMilliSeconds
+        {
             get => _retransmissionDelayMilliSeconds;
-            set {
+            set
+            {
                 RetransmissionDelayMilliSecondsSpecified = true;
                 _retransmissionDelayMilliSeconds = value;
             }
@@ -49,13 +63,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RetransmissionDelayMilliSecondsSpecified { get; set; }
-        
+
         private int _listeningPort;
 
         [XmlElement(ElementName = "listeningPort", IsNullable = false, Namespace = "")]
-        public int ListeningPort {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2007")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int ListeningPort
+        {
             get => _listeningPort;
-            set {
+            set
+            {
                 ListeningPortSpecified = true;
                 _listeningPort = value;
             }
@@ -63,13 +83,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ListeningPortSpecified { get; set; }
-        
+
         private bool _enableCustomMessageControl;
 
         [XmlElement(ElementName = "enableCustomMessageControl", IsNullable = false, Namespace = "")]
-        public bool EnableCustomMessageControl {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2007")]
+        public bool EnableCustomMessageControl
+        {
             get => _enableCustomMessageControl;
-            set {
+            set
+            {
                 EnableCustomMessageControlSpecified = true;
                 _enableCustomMessageControl = value;
             }
@@ -77,13 +101,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableCustomMessageControlSpecified { get; set; }
-        
+
         private int _customNumberOfUsersPerMessage;
 
         [XmlElement(ElementName = "customNumberOfUsersPerMessage", IsNullable = false, Namespace = "")]
-        public int CustomNumberOfUsersPerMessage {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2007")]
+        [MinInclusive(1)]
+        [MaxInclusive(20)]
+        public int CustomNumberOfUsersPerMessage
+        {
             get => _customNumberOfUsersPerMessage;
-            set {
+            set
+            {
                 CustomNumberOfUsersPerMessageSpecified = true;
                 _customNumberOfUsersPerMessage = value;
             }
@@ -91,13 +121,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CustomNumberOfUsersPerMessageSpecified { get; set; }
-        
+
         private int _customMessageIntervalMilliseconds;
 
         [XmlElement(ElementName = "customMessageIntervalMilliseconds", IsNullable = false, Namespace = "")]
-        public int CustomMessageIntervalMilliseconds {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2007")]
+        [MinInclusive(50)]
+        [MaxInclusive(1000)]
+        public int CustomMessageIntervalMilliseconds
+        {
             get => _customMessageIntervalMilliseconds;
-            set {
+            set
+            {
                 CustomMessageIntervalMillisecondsSpecified = true;
                 _customMessageIntervalMilliseconds = value;
             }
@@ -105,6 +141,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CustomMessageIntervalMillisecondsSpecified { get; set; }
-        
+
     }
 }

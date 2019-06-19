@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Access level of a flexible seating host
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum FlexibleSeatingHostAccessLevel    {
-            [XmlEnum(Name = "Enterprise")]
+    public enum FlexibleSeatingHostAccessLevel
+    {
+        [XmlEnum(Name = "Enterprise")]
         Enterprise,
-            [XmlEnum(Name = "Group")]
+        [XmlEnum(Name = "Group")]
         Group,
-     }
+    }
 }

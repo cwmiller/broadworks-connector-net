@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for the Voice Messaging Storage mode.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum VoiceMessagingStorageMode    {
-            [XmlEnum(Name = "Cloud")]
+    public enum VoiceMessagingStorageMode
+    {
+        [XmlEnum(Name = "Cloud")]
         Cloud,
-            [XmlEnum(Name = "Mail Server")]
+        [XmlEnum(Name = "Mail Server")]
         MailServer,
-     }
+    }
 }

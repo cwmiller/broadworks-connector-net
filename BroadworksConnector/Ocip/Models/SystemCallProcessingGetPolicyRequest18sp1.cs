@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,16 +11,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// ErrorResponse.
     /// 
     /// Replaced by: SystemCallProcessingGetPolicyRequest19sp1
-        /// <see cref="SystemCallProcessingGetPolicyResponse18sp1"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemCallProcessingGetPolicyRequest19sp1"/>
-        /// </summary>
+    /// <see cref="SystemCallProcessingGetPolicyResponse18sp1"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemCallProcessingGetPolicyRequest19sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:37172""}]")]
     public class SystemCallProcessingGetPolicyRequest18sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
     }
 }

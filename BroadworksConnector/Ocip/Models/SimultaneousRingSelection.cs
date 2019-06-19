@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Simultaneous Ring Selection.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SimultaneousRingSelection    {
-            [XmlEnum(Name = "Do not Ring if on a Call")]
+    public enum SimultaneousRingSelection
+    {
+        [XmlEnum(Name = "Do not Ring if on a Call")]
         DonotRingifonaCall,
-            [XmlEnum(Name = "Ring for all Incoming Calls")]
+        [XmlEnum(Name = "Ring for all Incoming Calls")]
         RingforallIncomingCalls,
-     }
+    }
 }

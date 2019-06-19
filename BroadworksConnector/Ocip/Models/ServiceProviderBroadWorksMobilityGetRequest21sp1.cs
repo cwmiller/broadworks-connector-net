@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,23 +11,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a ServiceProviderBroadWorksMobilityGetResponse21sp1 or an ErrorResponse.
     /// 
     /// Replaced by ServiceProviderBroadWorksMobilityGetRequest22V2.
-        /// <see cref="ServiceProviderBroadWorksMobilityGetResponse21sp1"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="ServiceProviderBroadWorksMobilityGetRequest22V2"/>
-        /// </summary>
+    /// <see cref="ServiceProviderBroadWorksMobilityGetResponse21sp1"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="ServiceProviderBroadWorksMobilityGetRequest22V2"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41196""}]")]
     public class ServiceProviderBroadWorksMobilityGetRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41196")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -33,6 +40,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
     }
 }

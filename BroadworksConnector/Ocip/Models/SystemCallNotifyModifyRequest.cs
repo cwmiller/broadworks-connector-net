@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the system level data associated with Call Notify.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""26f62134ab1693f4bdddc7c70b20d2eb:130""}]")]
     public class SystemCallNotifyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _defaultFromAddress;
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
-        public string DefaultFromAddress {
+        [Optional]
+        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:130")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string DefaultFromAddress
+        {
             get => _defaultFromAddress;
-            set {
+            set
+            {
                 DefaultFromAddressSpecified = true;
                 _defaultFromAddress = value;
             }
@@ -30,13 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultFromAddressSpecified { get; set; }
-        
+
         private bool _useShortSubjectLine;
 
         [XmlElement(ElementName = "useShortSubjectLine", IsNullable = false, Namespace = "")]
-        public bool UseShortSubjectLine {
+        [Optional]
+        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:130")]
+        public bool UseShortSubjectLine
+        {
             get => _useShortSubjectLine;
-            set {
+            set
+            {
                 UseShortSubjectLineSpecified = true;
                 _useShortSubjectLine = value;
             }
@@ -44,13 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseShortSubjectLineSpecified { get; set; }
-        
+
         private bool _useDnInMailBody;
 
         [XmlElement(ElementName = "useDnInMailBody", IsNullable = false, Namespace = "")]
-        public bool UseDnInMailBody {
+        [Optional]
+        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:130")]
+        public bool UseDnInMailBody
+        {
             get => _useDnInMailBody;
-            set {
+            set
+            {
                 UseDnInMailBodySpecified = true;
                 _useDnInMailBody = value;
             }
@@ -58,6 +74,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseDnInMailBodySpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -15,21 +17,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The "Submenu ID" Column will be left blank when the "Type" Column contains one
     /// of the base menu types (Business Hours Menu, After Hours Menu or Holiday Menu),
     /// and will contain the Submenu ID when the "Type" Column contains type Submenu.
-        /// <see cref="GroupAutoAttendantSubmenuGetUsageListRequest"/>
-        /// </summary>
+    /// <see cref="GroupAutoAttendantSubmenuGetUsageListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ed0640d8ef49eb8b4eaa14d7c6f6c033:579""}]")]
     public class GroupAutoAttendantSubmenuGetUsageListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _submenuTable;
 
         [XmlElement(ElementName = "submenuTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable SubmenuTable {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:579")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable SubmenuTable
+        {
             get => _submenuTable;
-            set {
+            set
+            {
                 SubmenuTableSpecified = true;
                 _submenuTable = value;
             }
@@ -37,6 +42,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SubmenuTableSpecified { get; set; }
-        
+
     }
 }

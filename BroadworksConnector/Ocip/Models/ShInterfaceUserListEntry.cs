@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// ShInterface User List Entry.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ShInterfaceUserListEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3893""}]")]
+    public class ShInterfaceUserListEntry
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3893")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -27,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UserType _userType;
 
         [XmlElement(ElementName = "userType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UserType UserType {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3893")]
+        public BroadWorksConnector.Ocip.Models.UserType UserType
+        {
             get => _userType;
-            set {
+            set
+            {
                 UserTypeSpecified = true;
                 _userType = value;
             }
@@ -41,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserTypeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
 
         [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.PublicUserIdentity PublicUserIdentity {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3893")]
+        public BroadWorksConnector.Ocip.Models.PublicUserIdentity PublicUserIdentity
+        {
             get => _publicUserIdentity;
-            set {
+            set
+            {
                 PublicUserIdentitySpecified = true;
                 _publicUserIdentity = value;
             }
@@ -55,13 +68,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PublicUserIdentitySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.EndpointType _endpointType;
 
         [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.EndpointType EndpointType {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3893")]
+        public BroadWorksConnector.Ocip.Models.EndpointType EndpointType
+        {
             get => _endpointType;
-            set {
+            set
+            {
                 EndpointTypeSpecified = true;
                 _endpointType = value;
             }
@@ -69,13 +85,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndpointTypeSpecified { get; set; }
-        
+
         private string _sCSCFName;
 
         [XmlElement(ElementName = "SCSCFName", IsNullable = false, Namespace = "")]
-        public string SCSCFName {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3893")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string SCSCFName
+        {
             get => _sCSCFName;
-            set {
+            set
+            {
                 SCSCFNameSpecified = true;
                 _sCSCFName = value;
             }
@@ -83,13 +105,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SCSCFNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.IMSUserState _iMSUserState;
 
         [XmlElement(ElementName = "IMSUserState", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.IMSUserState IMSUserState {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3893")]
+        public BroadWorksConnector.Ocip.Models.IMSUserState IMSUserState
+        {
             get => _iMSUserState;
-            set {
+            set
+            {
                 IMSUserStateSpecified = true;
                 _iMSUserState = value;
             }
@@ -97,6 +122,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IMSUserStateSpecified { get; set; }
-        
+
     }
 }

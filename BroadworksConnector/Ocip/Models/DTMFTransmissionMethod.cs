@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The DTMF transmission method.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DTMFTransmissionMethod    {
-            [XmlEnum(Name = "Signaling")]
+    public enum DTMFTransmissionMethod
+    {
+        [XmlEnum(Name = "Signaling")]
         Signaling,
-            [XmlEnum(Name = "RTP")]
+        [XmlEnum(Name = "RTP")]
         RTP,
-     }
+    }
 }

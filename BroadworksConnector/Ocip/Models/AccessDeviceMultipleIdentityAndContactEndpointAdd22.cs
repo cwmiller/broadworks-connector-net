@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,20 +13,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// Port numbers are only used by devices with static line ordering.
     /// The following elements are only used in XS data mode and ignored in AS data mode:
     /// privateIdentity
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class AccessDeviceMultipleIdentityAndContactEndpointAdd22 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:278""}]")]
+    public class AccessDeviceMultipleIdentityAndContactEndpointAdd22
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:278")]
+        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
+        {
             get => _accessDevice;
-            set {
+            set
+            {
                 AccessDeviceSpecified = true;
                 _accessDevice = value;
             }
@@ -32,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessDeviceSpecified { get; set; }
-        
+
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        public string LinePort {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:278")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string LinePort
+        {
             get => _linePort;
-            set {
+            set
+            {
                 LinePortSpecified = true;
                 _linePort = value;
             }
@@ -46,13 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LinePortSpecified { get; set; }
-        
+
         private string _privateIdentity;
 
         [XmlElement(ElementName = "privateIdentity", IsNullable = false, Namespace = "")]
-        public string PrivateIdentity {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:278")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string PrivateIdentity
+        {
             get => _privateIdentity;
-            set {
+            set
+            {
                 PrivateIdentitySpecified = true;
                 _privateIdentity = value;
             }
@@ -60,13 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrivateIdentitySpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SIPContactInfo> _contact;
+
+        private List<BroadWorksConnector.Ocip.Models.SIPContactInfo> _contact = new List<BroadWorksConnector.Ocip.Models.SIPContactInfo>();
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SIPContactInfo> Contact {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:278")]
+        public List<BroadWorksConnector.Ocip.Models.SIPContactInfo> Contact
+        {
             get => _contact;
-            set {
+            set
+            {
                 ContactSpecified = true;
                 _contact = value;
             }
@@ -74,13 +94,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactSpecified { get; set; }
-        
+
         private int _portNumber;
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
-        public int PortNumber {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:278")]
+        [MinInclusive(1)]
+        [MaxInclusive(1024)]
+        public int PortNumber
+        {
             get => _portNumber;
-            set {
+            set
+            {
                 PortNumberSpecified = true;
                 _portNumber = value;
             }
@@ -88,6 +114,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PortNumberSpecified { get; set; }
-        
+
     }
 }

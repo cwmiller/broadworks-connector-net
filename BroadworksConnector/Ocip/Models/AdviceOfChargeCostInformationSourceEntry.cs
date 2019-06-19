@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The advice of charge cost information source entry.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class AdviceOfChargeCostInformationSourceEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18460""}]")]
+    public class AdviceOfChargeCostInformationSourceEntry
     {
 
-        
         private string _peerIdentity;
 
         [XmlElement(ElementName = "peerIdentity", IsNullable = false, Namespace = "")]
-        public string PeerIdentity {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18460")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string PeerIdentity
+        {
             get => _peerIdentity;
-            set {
+            set
+            {
                 PeerIdentitySpecified = true;
                 _peerIdentity = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PeerIdentitySpecified { get; set; }
-        
+
         private int _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        public int Priority {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18460")]
+        [MinInclusive(0)]
+        [MaxInclusive(9)]
+        public int Priority
+        {
             get => _priority;
-            set {
+            set
+            {
                 PrioritySpecified = true;
                 _priority = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrioritySpecified { get; set; }
-        
+
     }
 }

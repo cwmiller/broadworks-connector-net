@@ -1,26 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the UserBroadWorksAnywhereGetSelectiveCriteriaRequest.
-        /// <see cref="UserBroadWorksAnywhereGetSelectiveCriteriaRequest"/>
-        /// </summary>
+    /// <see cref="UserBroadWorksAnywhereGetSelectiveCriteriaRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10847""}]")]
     public class UserBroadWorksAnywhereGetSelectiveCriteriaResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10847")]
+        public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
+        {
             get => _timeSchedule;
-            set {
+            set
+            {
                 TimeScheduleSpecified = true;
                 _timeSchedule = value;
             }
@@ -28,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeScheduleSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10847")]
+        public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria
+        {
             get => _fromDnCriteria;
-            set {
+            set
+            {
                 FromDnCriteriaSpecified = true;
                 _fromDnCriteria = value;
             }
@@ -42,6 +51,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FromDnCriteriaSpecified { get; set; }
-        
+
     }
 }

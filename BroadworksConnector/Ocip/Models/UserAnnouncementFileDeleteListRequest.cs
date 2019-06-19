@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Delete one or more announcements from the user announcement repository
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:495""}]")]
     public class UserAnnouncementFileDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:495")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.AnnouncementFileKey> _announcementFileKey;
+
+        private List<BroadWorksConnector.Ocip.Models.AnnouncementFileKey> _announcementFileKey = new List<BroadWorksConnector.Ocip.Models.AnnouncementFileKey>();
 
         [XmlElement(ElementName = "announcementFileKey", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.AnnouncementFileKey> AnnouncementFileKey {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:495")]
+        public List<BroadWorksConnector.Ocip.Models.AnnouncementFileKey> AnnouncementFileKey
+        {
             get => _announcementFileKey;
-            set {
+            set
+            {
                 AnnouncementFileKeySpecified = true;
                 _announcementFileKey = value;
             }
@@ -44,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnnouncementFileKeySpecified { get; set; }
-        
+
     }
 }

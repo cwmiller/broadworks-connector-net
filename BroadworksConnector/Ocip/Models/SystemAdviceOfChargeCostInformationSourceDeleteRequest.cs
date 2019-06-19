@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Delete a cost information source.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a69fde15f3aa7494d83b57461a7a70bb:171""}]")]
     public class SystemAdviceOfChargeCostInformationSourceDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _peerIdentity;
 
         [XmlElement(ElementName = "peerIdentity", IsNullable = false, Namespace = "")]
-        public string PeerIdentity {
+        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:171")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string PeerIdentity
+        {
             get => _peerIdentity;
-            set {
+            set
+            {
                 PeerIdentitySpecified = true;
                 _peerIdentity = value;
             }
@@ -30,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PeerIdentitySpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add an announcement to the group announcement repository
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1391""}]")]
     public class GroupAnnouncementFileAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1391")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1391")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -44,13 +56,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _announcementFileName;
 
         [XmlElement(ElementName = "announcementFileName", IsNullable = false, Namespace = "")]
-        public string AnnouncementFileName {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1391")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string AnnouncementFileName
+        {
             get => _announcementFileName;
-            set {
+            set
+            {
                 AnnouncementFileNameSpecified = true;
                 _announcementFileName = value;
             }
@@ -58,13 +75,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnnouncementFileNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _announcementFile;
 
         [XmlElement(ElementName = "announcementFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AnnouncementFile {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1391")]
+        public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AnnouncementFile
+        {
             get => _announcementFile;
-            set {
+            set
+            {
                 AnnouncementFileSpecified = true;
                 _announcementFile = value;
             }
@@ -72,6 +92,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnnouncementFileSpecified { get; set; }
-        
+
     }
 }

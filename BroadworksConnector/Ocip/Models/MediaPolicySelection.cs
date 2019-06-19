@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Media Policy Selections.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum MediaPolicySelection    {
-            [XmlEnum(Name = "Use Uncompressed Codec")]
+    public enum MediaPolicySelection
+    {
+        [XmlEnum(Name = "Use Uncompressed Codec")]
         UseUncompressedCodec,
-            [XmlEnum(Name = "Use Supported Media Set")]
+        [XmlEnum(Name = "Use Supported Media Set")]
         UseSupportedMediaSet,
-            [XmlEnum(Name = "No Restrictions")]
+        [XmlEnum(Name = "No Restrictions")]
         NoRestrictions,
-     }
+    }
 }

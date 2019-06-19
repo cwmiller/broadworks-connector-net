@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// IP Address Range.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class IPAddressRange 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2483""}]")]
+    public class IPAddressRange
     {
 
-        
         private string _minIpAddress;
 
         [XmlElement(ElementName = "minIpAddress", IsNullable = false, Namespace = "")]
-        public string MinIpAddress {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2483")]
+        [MinLength(1)]
+        [MaxLength(39)]
+        public string MinIpAddress
+        {
             get => _minIpAddress;
-            set {
+            set
+            {
                 MinIpAddressSpecified = true;
                 _minIpAddress = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MinIpAddressSpecified { get; set; }
-        
+
         private string _maxIpAddress;
 
         [XmlElement(ElementName = "maxIpAddress", IsNullable = false, Namespace = "")]
-        public string MaxIpAddress {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2483")]
+        [MinLength(1)]
+        [MaxLength(39)]
+        public string MaxIpAddress
+        {
             get => _maxIpAddress;
-            set {
+            set
+            {
                 MaxIpAddressSpecified = true;
                 _maxIpAddress = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxIpAddressSpecified { get; set; }
-        
+
     }
 }

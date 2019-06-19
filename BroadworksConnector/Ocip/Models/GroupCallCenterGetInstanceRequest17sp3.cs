@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,23 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request to get all the information of a Call Center instance.
     /// The response is either GroupCallCenterGetInstanceResponse17sp3 or ErrorResponse.
     /// Replaced by GroupCallCenterGetInstanceRequest19
-        /// <see cref="GroupCallCenterGetInstanceResponse17sp3"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="GroupCallCenterGetInstanceRequest19"/>
-        /// </summary>
+    /// <see cref="GroupCallCenterGetInstanceResponse17sp3"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupCallCenterGetInstanceRequest19"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24930""}]")]
     public class GroupCallCenterGetInstanceRequest17sp3 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24930")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -32,6 +39,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Service Provider Communication Barring Hierarchical Call Me Now Rule
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ServiceProviderCommunicationBarringHierarchicalCallMeNowRule 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3768"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3769""}]}]")]
+    public class ServiceProviderCommunicationBarringHierarchicalCallMeNowRule
     {
 
-        
         private string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
-        public string Criteria {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3769")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Criteria
+        {
             get => _criteria;
-            set {
+            set
+            {
                 CriteriaSpecified = true;
                 _criteria = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaSpecified { get; set; }
-        
+
         private string _digitPatternCriteria;
 
         [XmlElement(ElementName = "digitPatternCriteria", IsNullable = false, Namespace = "")]
-        public string DigitPatternCriteria {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3769")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DigitPatternCriteria
+        {
             get => _digitPatternCriteria;
-            set {
+            set
+            {
                 DigitPatternCriteriaSpecified = true;
                 _digitPatternCriteria = value;
             }
@@ -41,13 +53,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DigitPatternCriteriaSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction Action {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3768")]
+        public BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction Action
+        {
             get => _action;
-            set {
+            set
+            {
                 ActionSpecified = true;
                 _action = value;
             }
@@ -55,13 +70,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActionSpecified { get; set; }
-        
+
         private int _callTimeoutSeconds;
 
         [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = false, Namespace = "")]
-        public int CallTimeoutSeconds {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3768")]
+        [MinInclusive(60)]
+        [MaxInclusive(86400)]
+        public int CallTimeoutSeconds
+        {
             get => _callTimeoutSeconds;
-            set {
+            set
+            {
                 CallTimeoutSecondsSpecified = true;
                 _callTimeoutSeconds = value;
             }
@@ -69,13 +90,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallTimeoutSecondsSpecified { get; set; }
-        
+
         private string _timeSchedule;
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
-        public string TimeSchedule {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3768")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string TimeSchedule
+        {
             get => _timeSchedule;
-            set {
+            set
+            {
                 TimeScheduleSpecified = true;
                 _timeSchedule = value;
             }
@@ -83,13 +110,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeScheduleSpecified { get; set; }
-        
+
         private string _holidaySchedule;
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
-        public string HolidaySchedule {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3768")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string HolidaySchedule
+        {
             get => _holidaySchedule;
-            set {
+            set
+            {
                 HolidayScheduleSpecified = true;
                 _holidaySchedule = value;
             }
@@ -97,13 +130,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HolidayScheduleSpecified { get; set; }
-        
+
         private decimal _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        public decimal Priority {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3768")]
+        [MinInclusive(0)]
+        [MaxInclusive(1000000)]
+        public decimal Priority
+        {
             get => _priority;
-            set {
+            set
+            {
                 PrioritySpecified = true;
                 _priority = value;
             }
@@ -111,6 +149,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrioritySpecified { get; set; }
-        
+
     }
 }

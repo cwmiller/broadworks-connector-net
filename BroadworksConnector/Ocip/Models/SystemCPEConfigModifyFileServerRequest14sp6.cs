@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Modify a device CPE config file server.
     /// 
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6697""}]")]
     public class SystemCPEConfigModifyFileServerRequest14sp6 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        public string DeviceType {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6697")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceType
+        {
             get => _deviceType;
-            set {
+            set
+            {
                 DeviceTypeSpecified = true;
                 _deviceType = value;
             }
@@ -31,13 +38,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceTypeSpecified { get; set; }
-        
+
         private string _fileRepositoryName;
 
         [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
-        public string FileRepositoryName {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6697")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string FileRepositoryName
+        {
             get => _fileRepositoryName;
-            set {
+            set
+            {
                 FileRepositoryNameSpecified = true;
                 _fileRepositoryName = value;
             }
@@ -45,13 +58,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FileRepositoryNameSpecified { get; set; }
-        
+
         private string _cpeFileDirectory;
 
         [XmlElement(ElementName = "cpeFileDirectory", IsNullable = true, Namespace = "")]
-        public string CpeFileDirectory {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6697")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string CpeFileDirectory
+        {
             get => _cpeFileDirectory;
-            set {
+            set
+            {
                 CpeFileDirectorySpecified = true;
                 _cpeFileDirectory = value;
             }
@@ -59,13 +78,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CpeFileDirectorySpecified { get; set; }
-        
+
         private string _extendedCaptureFileRepositoryName;
 
         [XmlElement(ElementName = "extendedCaptureFileRepositoryName", IsNullable = true, Namespace = "")]
-        public string ExtendedCaptureFileRepositoryName {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6697")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string ExtendedCaptureFileRepositoryName
+        {
             get => _extendedCaptureFileRepositoryName;
-            set {
+            set
+            {
                 ExtendedCaptureFileRepositoryNameSpecified = true;
                 _extendedCaptureFileRepositoryName = value;
             }
@@ -73,6 +98,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtendedCaptureFileRepositoryNameSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemPhysicalLocationGetRequest.
     /// Contains a list of system Physical Location parameters.
-        /// <see cref="SystemPhysicalLocationGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemPhysicalLocationGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4a26e5fa0592a0fd3b4e60e9432f8588:57""}]")]
     public class SystemPhysicalLocationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _alwaysAllowEmergencyCalls;
 
         [XmlElement(ElementName = "alwaysAllowEmergencyCalls", IsNullable = false, Namespace = "")]
-        public bool AlwaysAllowEmergencyCalls {
+        [Group(@"4a26e5fa0592a0fd3b4e60e9432f8588:57")]
+        public bool AlwaysAllowEmergencyCalls
+        {
             get => _alwaysAllowEmergencyCalls;
-            set {
+            set
+            {
                 AlwaysAllowEmergencyCallsSpecified = true;
                 _alwaysAllowEmergencyCalls = value;
             }
@@ -29,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlwaysAllowEmergencyCallsSpecified { get; set; }
-        
+
     }
 }

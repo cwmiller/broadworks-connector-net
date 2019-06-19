@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Group's policy for a user's access to his profile.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupUserProfileAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupUserProfileAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

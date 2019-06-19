@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the UserCallMeNowGetRequest. The criteria table's column headings are:
     /// "Is Active", "Criteria Name", "Time Schedule", "Call To", "Reject Call" and "Holiday Schedule".
-        /// <see cref="UserCallMeNowGetRequest"/>
-        /// </summary>
+    /// <see cref="UserCallMeNowGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1f0f230fee2817fe00157925859dc28e:183""}]")]
     public class UserCallMeNowGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"1f0f230fee2817fe00157925859dc28e:183")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -29,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation _answerConfirmation;
 
         [XmlElement(ElementName = "answerConfirmation", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation AnswerConfirmation {
+        [Group(@"1f0f230fee2817fe00157925859dc28e:183")]
+        public BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation AnswerConfirmation
+        {
             get => _answerConfirmation;
-            set {
+            set
+            {
                 AnswerConfirmationSpecified = true;
                 _answerConfirmation = value;
             }
@@ -43,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnswerConfirmationSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
+        [Group(@"1f0f230fee2817fe00157925859dc28e:183")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
+        {
             get => _criteriaTable;
-            set {
+            set
+            {
                 CriteriaTableSpecified = true;
                 _criteriaTable = value;
             }
@@ -57,6 +68,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaTableSpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Filter criteria based on the transferred/forwarded number.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class EnhancedCallLogsRedirectedNumberFilter 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44869"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44870""}]}]")]
+    public class EnhancedCallLogsRedirectedNumberFilter
     {
 
-        
         private BroadWorksConnector.Ocip.Models.EnhancedCallLogsRedirectedCallSelection _redirectedCall;
 
         [XmlElement(ElementName = "redirectedCall", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.EnhancedCallLogsRedirectedCallSelection RedirectedCall {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44870")]
+        public BroadWorksConnector.Ocip.Models.EnhancedCallLogsRedirectedCallSelection RedirectedCall
+        {
             get => _redirectedCall;
-            set {
+            set
+            {
                 RedirectedCallSpecified = true;
                 _redirectedCall = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RedirectedCallSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.BasicCallType> _includeServiceInvocationBasicCallType;
+
+        private List<BroadWorksConnector.Ocip.Models.BasicCallType> _includeServiceInvocationBasicCallType = new List<BroadWorksConnector.Ocip.Models.BasicCallType>();
 
         [XmlElement(ElementName = "includeServiceInvocationBasicCallType", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.BasicCallType> IncludeServiceInvocationBasicCallType {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44870")]
+        public List<BroadWorksConnector.Ocip.Models.BasicCallType> IncludeServiceInvocationBasicCallType
+        {
             get => _includeServiceInvocationBasicCallType;
-            set {
+            set
+            {
                 IncludeServiceInvocationBasicCallTypeSpecified = true;
                 _includeServiceInvocationBasicCallType = value;
             }
@@ -41,13 +49,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeServiceInvocationBasicCallTypeSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.CallCategory> _includeServiceInvocationCallCategory;
+
+        private List<BroadWorksConnector.Ocip.Models.CallCategory> _includeServiceInvocationCallCategory = new List<BroadWorksConnector.Ocip.Models.CallCategory>();
 
         [XmlElement(ElementName = "includeServiceInvocationCallCategory", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CallCategory> IncludeServiceInvocationCallCategory {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44870")]
+        public List<BroadWorksConnector.Ocip.Models.CallCategory> IncludeServiceInvocationCallCategory
+        {
             get => _includeServiceInvocationCallCategory;
-            set {
+            set
+            {
                 IncludeServiceInvocationCallCategorySpecified = true;
                 _includeServiceInvocationCallCategory = value;
             }
@@ -55,13 +66,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeServiceInvocationCallCategorySpecified { get; set; }
-        
-        private List<string> _includeServiceInvocationConfigurableCallType;
+
+        private List<string> _includeServiceInvocationConfigurableCallType = new List<string>();
 
         [XmlElement(ElementName = "includeServiceInvocationConfigurableCallType", IsNullable = false, Namespace = "")]
-        public List<string> IncludeServiceInvocationConfigurableCallType {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44870")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> IncludeServiceInvocationConfigurableCallType
+        {
             get => _includeServiceInvocationConfigurableCallType;
-            set {
+            set
+            {
                 IncludeServiceInvocationConfigurableCallTypeSpecified = true;
                 _includeServiceInvocationConfigurableCallType = value;
             }
@@ -69,13 +85,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeServiceInvocationConfigurableCallTypeSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationDialedNumber;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationDialedNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
 
         [XmlElement(ElementName = "searchCriteriaServiceInvocationDialedNumber", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationDialedNumber {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44870")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationDialedNumber
+        {
             get => _searchCriteriaServiceInvocationDialedNumber;
-            set {
+            set
+            {
                 SearchCriteriaServiceInvocationDialedNumberSpecified = true;
                 _searchCriteriaServiceInvocationDialedNumber = value;
             }
@@ -83,13 +102,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaServiceInvocationDialedNumberSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationCalledNumber;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationCalledNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
 
         [XmlElement(ElementName = "searchCriteriaServiceInvocationCalledNumber", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationCalledNumber {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44870")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationCalledNumber
+        {
             get => _searchCriteriaServiceInvocationCalledNumber;
-            set {
+            set
+            {
                 SearchCriteriaServiceInvocationCalledNumberSpecified = true;
                 _searchCriteriaServiceInvocationCalledNumber = value;
             }
@@ -97,13 +119,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaServiceInvocationCalledNumberSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationNetworkTranslatedNumber;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationNetworkTranslatedNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
 
         [XmlElement(ElementName = "searchCriteriaServiceInvocationNetworkTranslatedNumber", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationNetworkTranslatedNumber {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44870")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> SearchCriteriaServiceInvocationNetworkTranslatedNumber
+        {
             get => _searchCriteriaServiceInvocationNetworkTranslatedNumber;
-            set {
+            set
+            {
                 SearchCriteriaServiceInvocationNetworkTranslatedNumberSpecified = true;
                 _searchCriteriaServiceInvocationNetworkTranslatedNumber = value;
             }
@@ -111,6 +136,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaServiceInvocationNetworkTranslatedNumberSpecified { get; set; }
-        
+
     }
 }

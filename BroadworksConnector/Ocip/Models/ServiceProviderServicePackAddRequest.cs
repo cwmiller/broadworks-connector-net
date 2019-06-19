@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to add a service pack to a service provider.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5221""}]")]
     public class ServiceProviderServicePackAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5221")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _servicePackName;
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        public string ServicePackName {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5221")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServicePackName
+        {
             get => _servicePackName;
-            set {
+            set
+            {
                 ServicePackNameSpecified = true;
                 _servicePackName = value;
             }
@@ -44,13 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePackNameSpecified { get; set; }
-        
+
         private string _servicePackDescription;
 
         [XmlElement(ElementName = "servicePackDescription", IsNullable = false, Namespace = "")]
-        public string ServicePackDescription {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5221")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string ServicePackDescription
+        {
             get => _servicePackDescription;
-            set {
+            set
+            {
                 ServicePackDescriptionSpecified = true;
                 _servicePackDescription = value;
             }
@@ -58,13 +76,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePackDescriptionSpecified { get; set; }
-        
+
         private bool _isAvailableForUse;
 
         [XmlElement(ElementName = "isAvailableForUse", IsNullable = false, Namespace = "")]
-        public bool IsAvailableForUse {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5221")]
+        public bool IsAvailableForUse
+        {
             get => _isAvailableForUse;
-            set {
+            set
+            {
                 IsAvailableForUseSpecified = true;
                 _isAvailableForUse = value;
             }
@@ -72,13 +93,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsAvailableForUseSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _servicePackQuantity;
 
         [XmlElement(ElementName = "servicePackQuantity", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt ServicePackQuantity {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5221")]
+        public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt ServicePackQuantity
+        {
             get => _servicePackQuantity;
-            set {
+            set
+            {
                 ServicePackQuantitySpecified = true;
                 _servicePackQuantity = value;
             }
@@ -86,13 +110,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePackQuantitySpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.UserService> _serviceName;
+
+        private List<BroadWorksConnector.Ocip.Models.UserService> _serviceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.UserService> ServiceName {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5221")]
+        public List<BroadWorksConnector.Ocip.Models.UserService> ServiceName
+        {
             get => _serviceName;
-            set {
+            set
+            {
                 ServiceNameSpecified = true;
                 _serviceName = value;
             }
@@ -100,6 +128,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceNameSpecified { get; set; }
-        
+
     }
 }

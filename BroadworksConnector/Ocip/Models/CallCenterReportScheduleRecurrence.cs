@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// A recurring schedule for call center enhanced reporting scheduled report.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterReportScheduleRecurrence 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7496""}]")]
+    public class CallCenterReportScheduleRecurrence
     {
 
-        
         private string _timeZone;
 
         [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
-        public string TimeZone {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7496")]
+        [MinLength(1)]
+        [MaxLength(127)]
+        public string TimeZone
+        {
             get => _timeZone;
-            set {
+            set
+            {
                 TimeZoneSpecified = true;
                 _timeZone = value;
             }
@@ -27,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeZoneSpecified { get; set; }
-        
+
         private string _startDate;
 
         [XmlElement(ElementName = "startDate", IsNullable = false, Namespace = "")]
-        public string StartDate {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7496")]
+        public string StartDate
+        {
             get => _startDate;
-            set {
+            set
+            {
                 StartDateSpecified = true;
                 _startDate = value;
             }
@@ -41,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartDateSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.HourMinute _scheduleTime;
 
         [XmlElement(ElementName = "scheduleTime", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.HourMinute ScheduleTime {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7496")]
+        public BroadWorksConnector.Ocip.Models.HourMinute ScheduleTime
+        {
             get => _scheduleTime;
-            set {
+            set
+            {
                 ScheduleTimeSpecified = true;
                 _scheduleTime = value;
             }
@@ -55,13 +68,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleTimeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Recurrence _recurrence;
 
         [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Recurrence Recurrence {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7496")]
+        public BroadWorksConnector.Ocip.Models.Recurrence Recurrence
+        {
             get => _recurrence;
-            set {
+            set
+            {
                 RecurrenceSpecified = true;
                 _recurrence = value;
             }
@@ -69,6 +85,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RecurrenceSpecified { get; set; }
-        
+
     }
 }

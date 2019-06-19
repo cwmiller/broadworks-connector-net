@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for Forking Dialog Support Method
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ForkingSupport    {
-            [XmlEnum(Name = "Single Dialog")]
+    public enum ForkingSupport
+    {
+        [XmlEnum(Name = "Single Dialog")]
         SingleDialog,
-            [XmlEnum(Name = "Multiple Dialogs")]
+        [XmlEnum(Name = "Multiple Dialogs")]
         MultipleDialogs,
-     }
+    }
 }

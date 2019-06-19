@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,23 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Get all the attributes of a configurable treatment.
     /// The response is either a SystemConfigurableTreatmentGetResponse or an ErrorResponse.
     /// Replaced By: SystemConfigurableTreatmentGetRequest16
-        /// <see cref="SystemConfigurableTreatmentGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemConfigurableTreatmentGetRequest16"/>
-        /// </summary>
+    /// <see cref="SystemConfigurableTreatmentGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemConfigurableTreatmentGetRequest16"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10243""}]")]
     public class SystemConfigurableTreatmentGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
-        public string TreatmentId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10243")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string TreatmentId
+        {
             get => _treatmentId;
-            set {
+            set
+            {
                 TreatmentIdSpecified = true;
                 _treatmentId = value;
             }
@@ -32,6 +39,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TreatmentIdSpecified { get; set; }
-        
+
     }
 }

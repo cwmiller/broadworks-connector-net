@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify a Find-me/Follow-me instance.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:493""}]")]
     public class GroupFindMeFollowMeModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:493")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
+        [Optional]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:493")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
+        {
             get => _serviceInstanceProfile;
-            set {
+            set
+            {
                 ServiceInstanceProfileSpecified = true;
                 _serviceInstanceProfile = value;
             }
@@ -44,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceInstanceProfileSpecified { get; set; }
-        
+
         private string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        public string NetworkClassOfService {
+        [Optional]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:493")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string NetworkClassOfService
+        {
             get => _networkClassOfService;
-            set {
+            set
+            {
                 NetworkClassOfServiceSpecified = true;
                 _networkClassOfService = value;
             }
@@ -58,6 +75,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetworkClassOfServiceSpecified { get; set; }
-        
+
     }
 }

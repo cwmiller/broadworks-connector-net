@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -17,22 +19,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// resellerId
     /// responseSizeLimit
     /// searchCriteriaDomainName
-        /// <see cref="SystemDomainGetListResponse22V2"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SystemDomainGetListResponse22V2"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8468"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8469""}]}]")]
     public class SystemDomainGetListRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private bool _excludeReseller;
 
         [XmlElement(ElementName = "excludeReseller", IsNullable = false, Namespace = "")]
-        public bool ExcludeReseller {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8469")]
+        public bool ExcludeReseller
+        {
             get => _excludeReseller;
-            set {
+            set
+            {
                 ExcludeResellerSpecified = true;
                 _excludeReseller = value;
             }
@@ -40,13 +46,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExcludeResellerSpecified { get; set; }
-        
+
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        public string ResellerId {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8469")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ResellerId
+        {
             get => _resellerId;
-            set {
+            set
+            {
                 ResellerIdSpecified = true;
                 _resellerId = value;
             }
@@ -54,13 +66,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResellerIdSpecified { get; set; }
-        
+
         private int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-        public int ResponseSizeLimit {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8468")]
+        [MinInclusive(1)]
+        public int ResponseSizeLimit
+        {
             get => _responseSizeLimit;
-            set {
+            set
+            {
                 ResponseSizeLimitSpecified = true;
                 _responseSizeLimit = value;
             }
@@ -68,13 +85,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponseSizeLimitSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDomainName> _searchCriteriaDomainName;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDomainName> _searchCriteriaDomainName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDomainName>();
 
         [XmlElement(ElementName = "searchCriteriaDomainName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDomainName> SearchCriteriaDomainName {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8468")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDomainName> SearchCriteriaDomainName
+        {
             get => _searchCriteriaDomainName;
-            set {
+            set
+            {
                 SearchCriteriaDomainNameSpecified = true;
                 _searchCriteriaDomainName = value;
             }
@@ -82,6 +103,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaDomainNameSpecified { get; set; }
-        
+
     }
 }

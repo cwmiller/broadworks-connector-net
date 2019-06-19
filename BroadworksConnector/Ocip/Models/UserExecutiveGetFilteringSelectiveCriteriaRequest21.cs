@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Get a filtering criteria for an executive user.
     /// Both executive and the executive assistant can run this command.
     /// The response is either UserExecutiveGetFilteringSelectiveCriteriaResponse21 or ErrorResponse.
-        /// <see cref="UserExecutiveGetFilteringSelectiveCriteriaResponse21"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="UserExecutiveGetFilteringSelectiveCriteriaResponse21"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9a6dbade05624033cf7fe782b7c9a9a7:269""}]")]
     public class UserExecutiveGetFilteringSelectiveCriteriaRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:269")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -31,13 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        public string CriteriaName {
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:269")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string CriteriaName
+        {
             get => _criteriaName;
-            set {
+            set
+            {
                 CriteriaNameSpecified = true;
                 _criteriaName = value;
             }
@@ -45,6 +57,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaNameSpecified { get; set; }
-        
+
     }
 }

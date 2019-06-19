@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Selection criteria for a from dn.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum PriorityAlertCriteriaFromDnSelection    {
-            [XmlEnum(Name = "Any External")]
+    public enum PriorityAlertCriteriaFromDnSelection
+    {
+        [XmlEnum(Name = "Any External")]
         AnyExternal,
-            [XmlEnum(Name = "Specified Only")]
+        [XmlEnum(Name = "Specified Only")]
         SpecifiedOnly,
-     }
+    }
 }

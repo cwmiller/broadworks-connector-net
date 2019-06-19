@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,22 +12,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// command will return an error if the group has over 500 users.  The recommended way to bulk
     /// assign/unassign services is Service Pack Migration.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4820""}]")]
     public class GroupExistingUsersUnassignUserServiceListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4820")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -33,13 +40,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4820")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -47,13 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.UserService> _serviceName;
+
+        private List<BroadWorksConnector.Ocip.Models.UserService> _serviceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.UserService> ServiceName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4820")]
+        public List<BroadWorksConnector.Ocip.Models.UserService> ServiceName
+        {
             get => _serviceName;
-            set {
+            set
+            {
                 ServiceNameSpecified = true;
                 _serviceName = value;
             }
@@ -61,13 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceNameSpecified { get; set; }
-        
-        private List<string> _servicePackName;
+
+        private List<string> _servicePackName = new List<string>();
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        public List<string> ServicePackName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4820")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> ServicePackName
+        {
             get => _servicePackName;
-            set {
+            set
+            {
                 ServicePackNameSpecified = true;
                 _servicePackName = value;
             }
@@ -75,6 +97,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePackNameSpecified { get; set; }
-        
+
     }
 }

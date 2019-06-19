@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Session Admission Control handling for Music On Hold types.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SessionAdmissionControlForMusicOnHoldType    {
-            [XmlEnum(Name = "Do Not Play")]
+    public enum SessionAdmissionControlForMusicOnHoldType
+    {
+        [XmlEnum(Name = "Do Not Play")]
         DoNotPlay,
-            [XmlEnum(Name = "Play And Count")]
+        [XmlEnum(Name = "Play And Count")]
         PlayAndCount,
-     }
+    }
 }

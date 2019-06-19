@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify a Service Access Code list.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:1166""}]")]
     public class SystemBroadWorksMobilityServiceAccessCodeListModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1166")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -30,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
         private string _newName;
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
-        public string NewName {
+        [Optional]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1166")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string NewName
+        {
             get => _newName;
-            set {
+            set
+            {
                 NewNameSpecified = true;
                 _newName = value;
             }
@@ -44,6 +57,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewNameSpecified { get; set; }
-        
+
     }
 }

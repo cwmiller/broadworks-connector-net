@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,20 +10,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// Access device end point that can have multiple contacts.
     /// 
     /// Replaced by AccessDeviceMultipleContactEndpointRead19.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class AccessDeviceMultipleContactEndpointRead 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44242""}]")]
+    public class AccessDeviceMultipleContactEndpointRead
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44242")]
+        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
+        {
             get => _accessDevice;
-            set {
+            set
+            {
                 AccessDeviceSpecified = true;
                 _accessDevice = value;
             }
@@ -29,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessDeviceSpecified { get; set; }
-        
+
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        public string LinePort {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44242")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string LinePort
+        {
             get => _linePort;
-            set {
+            set
+            {
                 LinePortSpecified = true;
                 _linePort = value;
             }
@@ -43,13 +53,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LinePortSpecified { get; set; }
-        
-        private List<string> _contact;
+
+        private List<string> _contact = new List<string>();
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-        public List<string> Contact {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44242")]
+        [MinLength(1)]
+        [MaxLength(1020)]
+        public List<string> Contact
+        {
             get => _contact;
-            set {
+            set
+            {
                 ContactSpecified = true;
                 _contact = value;
             }
@@ -57,13 +73,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactSpecified { get; set; }
-        
+
         private bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        public bool StaticRegistrationCapable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44242")]
+        public bool StaticRegistrationCapable
+        {
             get => _staticRegistrationCapable;
-            set {
+            set
+            {
                 StaticRegistrationCapableSpecified = true;
                 _staticRegistrationCapable = value;
             }
@@ -71,13 +90,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StaticRegistrationCapableSpecified { get; set; }
-        
+
         private bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        public bool UseDomain {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44242")]
+        public bool UseDomain
+        {
             get => _useDomain;
-            set {
+            set
+            {
                 UseDomainSpecified = true;
                 _useDomain = value;
             }
@@ -85,6 +107,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseDomainSpecified { get; set; }
-        
+
     }
 }

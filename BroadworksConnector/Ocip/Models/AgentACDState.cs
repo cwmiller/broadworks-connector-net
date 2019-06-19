@@ -5,19 +5,20 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Agent Automatic Call Distribution (ACD) State.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AgentACDState    {
-            [XmlEnum(Name = "Sign-In")]
+    public enum AgentACDState
+    {
+        [XmlEnum(Name = "Sign-In")]
         SignIn,
-            [XmlEnum(Name = "Sign-Out")]
+        [XmlEnum(Name = "Sign-Out")]
         SignOut,
-            [XmlEnum(Name = "Available")]
+        [XmlEnum(Name = "Available")]
         Available,
-            [XmlEnum(Name = "Unavailable")]
+        [XmlEnum(Name = "Unavailable")]
         Unavailable,
-            [XmlEnum(Name = "Wrap-Up")]
+        [XmlEnum(Name = "Wrap-Up")]
         WrapUp,
-     }
+    }
 }

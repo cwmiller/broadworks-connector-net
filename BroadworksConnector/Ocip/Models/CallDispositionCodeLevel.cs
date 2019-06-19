@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Identifies at which level in the system an call center call disposition code is created.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallDispositionCodeLevel    {
-            [XmlEnum(Name = "Enterprise")]
+    public enum CallDispositionCodeLevel
+    {
+        [XmlEnum(Name = "Enterprise")]
         Enterprise,
-            [XmlEnum(Name = "Group")]
+        [XmlEnum(Name = "Group")]
         Group,
-            [XmlEnum(Name = "Queue")]
+        [XmlEnum(Name = "Queue")]
         Queue,
-     }
+    }
 }

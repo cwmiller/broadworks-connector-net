@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call to Number.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallToNumber 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1003""}]")]
+    public class CallToNumber
     {
 
-        
         private BroadWorksConnector.Ocip.Models.CallToNumberType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallToNumberType Type {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1003")]
+        public BroadWorksConnector.Ocip.Models.CallToNumberType Type
+        {
             get => _type;
-            set {
+            set
+            {
                 TypeSpecified = true;
                 _type = value;
             }
@@ -27,13 +32,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TypeSpecified { get; set; }
-        
+
         private string _number;
 
         [XmlElement(ElementName = "number", IsNullable = false, Namespace = "")]
-        public string Number {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1003")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string Number
+        {
             get => _number;
-            set {
+            set
+            {
                 NumberSpecified = true;
                 _number = value;
             }
@@ -41,13 +52,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberSpecified { get; set; }
-        
+
         private string _extension;
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
-        public string Extension {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1003")]
+        [MinLength(2)]
+        [MaxLength(20)]
+        public string Extension
+        {
             get => _extension;
-            set {
+            set
+            {
                 ExtensionSpecified = true;
                 _extension = value;
             }
@@ -55,6 +72,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtensionSpecified { get; set; }
-        
+
     }
 }

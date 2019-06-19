@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19sp1FaxMessagingMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32399""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19sp1FaxMessagingMenuKeys
     {
 
-        
         private string _saveFaxMessageAndSkipToNext;
 
         [XmlElement(ElementName = "saveFaxMessageAndSkipToNext", IsNullable = false, Namespace = "")]
-        public string SaveFaxMessageAndSkipToNext {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32399")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string SaveFaxMessageAndSkipToNext
+        {
             get => _saveFaxMessageAndSkipToNext;
-            set {
+            set
+            {
                 SaveFaxMessageAndSkipToNextSpecified = true;
                 _saveFaxMessageAndSkipToNext = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SaveFaxMessageAndSkipToNextSpecified { get; set; }
-        
+
         private string _previousFaxMessage;
 
         [XmlElement(ElementName = "previousFaxMessage", IsNullable = false, Namespace = "")]
-        public string PreviousFaxMessage {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32399")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string PreviousFaxMessage
+        {
             get => _previousFaxMessage;
-            set {
+            set
+            {
                 PreviousFaxMessageSpecified = true;
                 _previousFaxMessage = value;
             }
@@ -41,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PreviousFaxMessageSpecified { get; set; }
-        
+
         private string _playEnvelope;
 
         [XmlElement(ElementName = "playEnvelope", IsNullable = false, Namespace = "")]
-        public string PlayEnvelope {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32399")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string PlayEnvelope
+        {
             get => _playEnvelope;
-            set {
+            set
+            {
                 PlayEnvelopeSpecified = true;
                 _playEnvelope = value;
             }
@@ -55,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayEnvelopeSpecified { get; set; }
-        
+
         private string _nextFaxMessage;
 
         [XmlElement(ElementName = "nextFaxMessage", IsNullable = false, Namespace = "")]
-        public string NextFaxMessage {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32399")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string NextFaxMessage
+        {
             get => _nextFaxMessage;
-            set {
+            set
+            {
                 NextFaxMessageSpecified = true;
                 _nextFaxMessage = value;
             }
@@ -69,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NextFaxMessageSpecified { get; set; }
-        
+
         private string _deleteFaxMessage;
 
         [XmlElement(ElementName = "deleteFaxMessage", IsNullable = false, Namespace = "")]
-        public string DeleteFaxMessage {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32399")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string DeleteFaxMessage
+        {
             get => _deleteFaxMessage;
-            set {
+            set
+            {
                 DeleteFaxMessageSpecified = true;
                 _deleteFaxMessage = value;
             }
@@ -83,13 +115,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeleteFaxMessageSpecified { get; set; }
-        
+
         private string _printFaxMessage;
 
         [XmlElement(ElementName = "printFaxMessage", IsNullable = false, Namespace = "")]
-        public string PrintFaxMessage {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32399")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string PrintFaxMessage
+        {
             get => _printFaxMessage;
-            set {
+            set
+            {
                 PrintFaxMessageSpecified = true;
                 _printFaxMessage = value;
             }
@@ -97,13 +135,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrintFaxMessageSpecified { get; set; }
-        
+
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        public string ReturnToPreviousMenu {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32399")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ReturnToPreviousMenu
+        {
             get => _returnToPreviousMenu;
-            set {
+            set
+            {
                 ReturnToPreviousMenuSpecified = true;
                 _returnToPreviousMenu = value;
             }
@@ -111,6 +155,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReturnToPreviousMenuSpecified { get; set; }
-        
+
     }
 }

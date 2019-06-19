@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class MeetMeConferencingConferenceScheduleScheduleReservationless 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:1080""}]")]
+    public class MeetMeConferencingConferenceScheduleScheduleReservationless
     {
 
-        
         private string _startTime;
 
         [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
-        public string StartTime {
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:1080")]
+        public string StartTime
+        {
             get => _startTime;
-            set {
+            set
+            {
                 StartTimeSpecified = true;
                 _startTime = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartTimeSpecified { get; set; }
-        
+
         private string _endTime;
 
         [XmlElement(ElementName = "endTime", IsNullable = true, Namespace = "")]
-        public string EndTime {
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:1080")]
+        public string EndTime
+        {
             get => _endTime;
-            set {
+            set
+            {
                 EndTimeSpecified = true;
                 _endTime = value;
             }
@@ -41,6 +49,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndTimeSpecified { get; set; }
-        
+
     }
 }

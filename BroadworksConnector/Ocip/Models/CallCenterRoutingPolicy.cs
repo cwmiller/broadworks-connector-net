@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call center routing policy.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterRoutingPolicy    {
-            [XmlEnum(Name = "Longest Wait Time")]
+    public enum CallCenterRoutingPolicy
+    {
+        [XmlEnum(Name = "Longest Wait Time")]
         LongestWaitTime,
-            [XmlEnum(Name = "Priority")]
+        [XmlEnum(Name = "Priority")]
         Priority,
-     }
+    }
 }

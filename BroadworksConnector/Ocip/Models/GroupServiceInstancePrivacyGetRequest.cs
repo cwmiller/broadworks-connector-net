@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request the data associated with Privacy for a service instance.
     /// The response is either a GroupServiceInstancePrivacyGetResponse.
     /// Replaced by: GroupServiceInstancePrivacyGetRequest17sp4
-        /// <see cref="GroupServiceInstancePrivacyGetResponse"/>
-        /// <see cref="GroupServiceInstancePrivacyGetRequest17sp4"/>
-        /// </summary>
+    /// <see cref="GroupServiceInstancePrivacyGetResponse"/>
+    /// <see cref="GroupServiceInstancePrivacyGetRequest17sp4"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:20186""}]")]
     public class GroupServiceInstancePrivacyGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20186")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -31,6 +38,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
     }
 }

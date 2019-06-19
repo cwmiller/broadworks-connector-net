@@ -5,37 +5,38 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Legacy Automatic Callback line type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum LegacyAutomaticCallbackLineType    {
-            [XmlEnum(Name = "Individual")]
+    public enum LegacyAutomaticCallbackLineType
+    {
+        [XmlEnum(Name = "Individual")]
         Individual,
-            [XmlEnum(Name = "Coin")]
+        [XmlEnum(Name = "Coin")]
         Coin,
-            [XmlEnum(Name = "Series")]
+        [XmlEnum(Name = "Series")]
         Series,
-            [XmlEnum(Name = "Hunt")]
+        [XmlEnum(Name = "Hunt")]
         Hunt,
-            [XmlEnum(Name = "Unassigned")]
+        [XmlEnum(Name = "Unassigned")]
         Unassigned,
-            [XmlEnum(Name = "PBX")]
+        [XmlEnum(Name = "PBX")]
         PBX,
-            [XmlEnum(Name = "Multiparty")]
+        [XmlEnum(Name = "Multiparty")]
         Multiparty,
-            [XmlEnum(Name = "Choke")]
+        [XmlEnum(Name = "Choke")]
         Choke,
-            [XmlEnum(Name = "Oos")]
+        [XmlEnum(Name = "Oos")]
         Oos,
-            [XmlEnum(Name = "Nonspecific")]
+        [XmlEnum(Name = "Nonspecific")]
         Nonspecific,
-            [XmlEnum(Name = "Telecampus")]
+        [XmlEnum(Name = "Telecampus")]
         Telecampus,
-            [XmlEnum(Name = "ISDN")]
+        [XmlEnum(Name = "ISDN")]
         ISDN,
-            [XmlEnum(Name = "Telekibutz")]
+        [XmlEnum(Name = "Telekibutz")]
         Telekibutz,
-            [XmlEnum(Name = "Spare")]
+        [XmlEnum(Name = "Spare")]
         Spare,
-     }
+    }
 }

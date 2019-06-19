@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the GroupTrunkGroupGetRequest14sp1.
     /// The response contains the maximum and bursting maximum permissible active trunk group calls for the
     /// group.
-        /// <see cref="GroupTrunkGroupGetRequest14sp1"/>
-        /// </summary>
+    /// <see cref="GroupTrunkGroupGetRequest14sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2825""}]")]
     public class GroupTrunkGroupGetResponse14sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _maxActiveCalls;
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt MaxActiveCalls {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2825")]
+        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt MaxActiveCalls
+        {
             get => _maxActiveCalls;
-            set {
+            set
+            {
                 MaxActiveCallsSpecified = true;
                 _maxActiveCalls = value;
             }
@@ -30,13 +35,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxActiveCallsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _maxAvailableActiveCalls;
 
         [XmlElement(ElementName = "maxAvailableActiveCalls", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt MaxAvailableActiveCalls {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2825")]
+        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt MaxAvailableActiveCalls
+        {
             get => _maxAvailableActiveCalls;
-            set {
+            set
+            {
                 MaxAvailableActiveCallsSpecified = true;
                 _maxAvailableActiveCalls = value;
             }
@@ -44,13 +52,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxAvailableActiveCallsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _burstingMaxActiveCalls;
 
         [XmlElement(ElementName = "burstingMaxActiveCalls", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt BurstingMaxActiveCalls {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2825")]
+        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt BurstingMaxActiveCalls
+        {
             get => _burstingMaxActiveCalls;
-            set {
+            set
+            {
                 BurstingMaxActiveCallsSpecified = true;
                 _burstingMaxActiveCalls = value;
             }
@@ -58,13 +69,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BurstingMaxActiveCallsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _burstingMaxAvailableActiveCalls;
 
         [XmlElement(ElementName = "burstingMaxAvailableActiveCalls", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt BurstingMaxAvailableActiveCalls {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2825")]
+        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt BurstingMaxAvailableActiveCalls
+        {
             get => _burstingMaxAvailableActiveCalls;
-            set {
+            set
+            {
                 BurstingMaxAvailableActiveCallsSpecified = true;
                 _burstingMaxAvailableActiveCalls = value;
             }
@@ -72,6 +86,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BurstingMaxAvailableActiveCallsSpecified { get; set; }
-        
+
     }
 }

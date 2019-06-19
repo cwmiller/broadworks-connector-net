@@ -7,15 +7,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// Call center report server choice.
     /// 
     /// Replaced by CallCenterReportServerChoice19
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterReportServerChoice    {
-            [XmlEnum(Name = "CCRS")]
+    public enum CallCenterReportServerChoice
+    {
+        [XmlEnum(Name = "CCRS")]
         CCRS,
-            [XmlEnum(Name = "Enhanced")]
+        [XmlEnum(Name = "Enhanced")]
         Enhanced,
-            [XmlEnum(Name = "Both")]
+        [XmlEnum(Name = "Both")]
         Both,
-     }
+    }
 }

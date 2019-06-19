@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Time Interval.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class TimeInterval 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43910""}]")]
+    public class TimeInterval
     {
 
-        
         private BroadWorksConnector.Ocip.Models.DayOfWeek _startDayOfWeek;
 
         [XmlElement(ElementName = "startDayOfWeek", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DayOfWeek StartDayOfWeek {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        public BroadWorksConnector.Ocip.Models.DayOfWeek StartDayOfWeek
+        {
             get => _startDayOfWeek;
-            set {
+            set
+            {
                 StartDayOfWeekSpecified = true;
                 _startDayOfWeek = value;
             }
@@ -27,13 +32,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartDayOfWeekSpecified { get; set; }
-        
+
         private int _startHour;
 
         [XmlElement(ElementName = "startHour", IsNullable = false, Namespace = "")]
-        public int StartHour {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        [MinInclusive(0)]
+        [MaxInclusive(23)]
+        public int StartHour
+        {
             get => _startHour;
-            set {
+            set
+            {
                 StartHourSpecified = true;
                 _startHour = value;
             }
@@ -41,13 +51,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartHourSpecified { get; set; }
-        
+
         private int _startMinute;
 
         [XmlElement(ElementName = "startMinute", IsNullable = false, Namespace = "")]
-        public int StartMinute {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        [MinInclusive(0)]
+        [MaxInclusive(59)]
+        public int StartMinute
+        {
             get => _startMinute;
-            set {
+            set
+            {
                 StartMinuteSpecified = true;
                 _startMinute = value;
             }
@@ -55,13 +70,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartMinuteSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DayOfWeek _endDayOfWeek;
 
         [XmlElement(ElementName = "endDayOfWeek", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DayOfWeek EndDayOfWeek {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        public BroadWorksConnector.Ocip.Models.DayOfWeek EndDayOfWeek
+        {
             get => _endDayOfWeek;
-            set {
+            set
+            {
                 EndDayOfWeekSpecified = true;
                 _endDayOfWeek = value;
             }
@@ -69,13 +87,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndDayOfWeekSpecified { get; set; }
-        
+
         private int _endHour;
 
         [XmlElement(ElementName = "endHour", IsNullable = false, Namespace = "")]
-        public int EndHour {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        [MinInclusive(0)]
+        [MaxInclusive(23)]
+        public int EndHour
+        {
             get => _endHour;
-            set {
+            set
+            {
                 EndHourSpecified = true;
                 _endHour = value;
             }
@@ -83,13 +106,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndHourSpecified { get; set; }
-        
+
         private int _endMinute;
 
         [XmlElement(ElementName = "endMinute", IsNullable = false, Namespace = "")]
-        public int EndMinute {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        [MinInclusive(0)]
+        [MaxInclusive(59)]
+        public int EndMinute
+        {
             get => _endMinute;
-            set {
+            set
+            {
                 EndMinuteSpecified = true;
                 _endMinute = value;
             }
@@ -97,6 +125,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndMinuteSpecified { get; set; }
-        
+
     }
 }

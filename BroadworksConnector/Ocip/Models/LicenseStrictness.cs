@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// License type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum LicenseStrictness    {
-            [XmlEnum(Name = "Hard")]
+    public enum LicenseStrictness
+    {
+        [XmlEnum(Name = "Hard")]
         Hard,
-            [XmlEnum(Name = "Soft")]
+        [XmlEnum(Name = "Soft")]
         Soft,
-     }
+    }
 }

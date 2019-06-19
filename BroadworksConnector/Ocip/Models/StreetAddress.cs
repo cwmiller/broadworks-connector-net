@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Street address information.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class StreetAddress 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4015""}]")]
+    public class StreetAddress
     {
 
-        
         private string _addressLine1;
 
         [XmlElement(ElementName = "addressLine1", IsNullable = true, Namespace = "")]
-        public string AddressLine1 {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4015")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string AddressLine1
+        {
             get => _addressLine1;
-            set {
+            set
+            {
                 AddressLine1Specified = true;
                 _addressLine1 = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AddressLine1Specified { get; set; }
-        
+
         private string _addressLine2;
 
         [XmlElement(ElementName = "addressLine2", IsNullable = true, Namespace = "")]
-        public string AddressLine2 {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4015")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string AddressLine2
+        {
             get => _addressLine2;
-            set {
+            set
+            {
                 AddressLine2Specified = true;
                 _addressLine2 = value;
             }
@@ -41,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AddressLine2Specified { get; set; }
-        
+
         private string _city;
 
         [XmlElement(ElementName = "city", IsNullable = true, Namespace = "")]
-        public string City {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4015")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string City
+        {
             get => _city;
-            set {
+            set
+            {
                 CitySpecified = true;
                 _city = value;
             }
@@ -55,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CitySpecified { get; set; }
-        
+
         private string _stateOrProvince;
 
         [XmlElement(ElementName = "stateOrProvince", IsNullable = true, Namespace = "")]
-        public string StateOrProvince {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4015")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string StateOrProvince
+        {
             get => _stateOrProvince;
-            set {
+            set
+            {
                 StateOrProvinceSpecified = true;
                 _stateOrProvince = value;
             }
@@ -69,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StateOrProvinceSpecified { get; set; }
-        
+
         private string _stateOrProvinceDisplayName;
 
         [XmlElement(ElementName = "stateOrProvinceDisplayName", IsNullable = false, Namespace = "")]
-        public string StateOrProvinceDisplayName {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4015")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string StateOrProvinceDisplayName
+        {
             get => _stateOrProvinceDisplayName;
-            set {
+            set
+            {
                 StateOrProvinceDisplayNameSpecified = true;
                 _stateOrProvinceDisplayName = value;
             }
@@ -83,13 +115,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StateOrProvinceDisplayNameSpecified { get; set; }
-        
+
         private string _zipOrPostalCode;
 
         [XmlElement(ElementName = "zipOrPostalCode", IsNullable = true, Namespace = "")]
-        public string ZipOrPostalCode {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4015")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string ZipOrPostalCode
+        {
             get => _zipOrPostalCode;
-            set {
+            set
+            {
                 ZipOrPostalCodeSpecified = true;
                 _zipOrPostalCode = value;
             }
@@ -97,13 +135,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ZipOrPostalCodeSpecified { get; set; }
-        
+
         private string _country;
 
         [XmlElement(ElementName = "country", IsNullable = true, Namespace = "")]
-        public string Country {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4015")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string Country
+        {
             get => _country;
-            set {
+            set
+            {
                 CountrySpecified = true;
                 _country = value;
             }
@@ -111,6 +155,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CountrySpecified { get; set; }
-        
+
     }
 }

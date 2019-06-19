@@ -8,15 +8,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Full" indicates full access to departments.
     /// "Read-Only" indicates read-only access to the department list
     /// "None" indicates no access to the department list
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupAdminDepartmentAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupAdminDepartmentAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

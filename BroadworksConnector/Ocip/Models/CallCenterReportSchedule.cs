@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// A schedule for call center enhanced reporting scheduled report. It can either be a fixed time schedule
     /// or recurring schedule
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterReportSchedule 
+
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7484""}]")]
+    public class CallCenterReportSchedule
     {
 
-        
         private BroadWorksConnector.Ocip.Models.CallCenterReportScheduleTime _scheduleTime;
 
         [XmlElement(ElementName = "scheduleTime", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportScheduleTime ScheduleTime {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7484")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportScheduleTime ScheduleTime
+        {
             get => _scheduleTime;
-            set {
+            set
+            {
                 ScheduleTimeSpecified = true;
                 _scheduleTime = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleTimeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterReportScheduleRecurrence _recurrence;
 
         [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportScheduleRecurrence Recurrence {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7484")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportScheduleRecurrence Recurrence
+        {
             get => _recurrence;
-            set {
+            set
+            {
                 RecurrenceSpecified = true;
                 _recurrence = value;
             }
@@ -42,6 +50,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RecurrenceSpecified { get; set; }
-        
+
     }
 }

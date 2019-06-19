@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Indicates whether calls from specified digit patterns are permitted.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class IncomingCallingPlanDigitPatternPermission 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3dd296d55b56269ae23d86a934b8b35c:184""}]")]
+    public class IncomingCallingPlanDigitPatternPermission
     {
 
-        
         private string _digitPatternName;
 
         [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
-        public string DigitPatternName {
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:184")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string DigitPatternName
+        {
             get => _digitPatternName;
-            set {
+            set
+            {
                 DigitPatternNameSpecified = true;
                 _digitPatternName = value;
             }
@@ -27,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DigitPatternNameSpecified { get; set; }
-        
+
         private bool _allow;
 
         [XmlElement(ElementName = "allow", IsNullable = false, Namespace = "")]
-        public bool Allow {
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:184")]
+        public bool Allow
+        {
             get => _allow;
-            set {
+            set
+            {
                 AllowSpecified = true;
                 _allow = value;
             }
@@ -41,6 +51,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowSpecified { get; set; }
-        
+
     }
 }

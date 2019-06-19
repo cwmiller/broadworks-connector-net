@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -27,21 +29,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// contains false.  The Receptionist Note column is only populated, if the
     /// user sending the request is the owner of this Receptionist Note and a
     /// Note exists.
-        /// <see cref="UserGroupCustomContactDirectoryGetPagedSortedListRequest"/>
-        /// </summary>
+    /// <see cref="UserGroupCustomContactDirectoryGetPagedSortedListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2398""}]")]
     public class UserGroupCustomContactDirectoryGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private int _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
-        public int TotalNumberOfRows {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2398")]
+        public int TotalNumberOfRows
+        {
             get => _totalNumberOfRows;
-            set {
+            set
+            {
                 TotalNumberOfRowsSpecified = true;
                 _totalNumberOfRows = value;
             }
@@ -49,13 +54,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TotalNumberOfRowsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2398")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
+        {
             get => _userTable;
-            set {
+            set
+            {
                 UserTableSpecified = true;
                 _userTable = value;
             }
@@ -63,6 +71,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserTableSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to a SystemConfigurableTreatmentGetListRequest. Contains a table with one row per treatment.
     /// The table columns are: "Treatment Id", "Description".
-        /// <see cref="SystemConfigurableTreatmentGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemConfigurableTreatmentGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6414""}]")]
     public class SystemConfigurableTreatmentGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _treatmentTable;
 
         [XmlElement(ElementName = "treatmentTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6414")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentTable
+        {
             get => _treatmentTable;
-            set {
+            set
+            {
                 TreatmentTableSpecified = true;
                 _treatmentTable = value;
             }
@@ -29,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TreatmentTableSpecified { get; set; }
-        
+
     }
 }

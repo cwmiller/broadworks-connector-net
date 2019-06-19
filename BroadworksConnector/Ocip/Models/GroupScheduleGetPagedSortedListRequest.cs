@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -13,22 +15,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// responsePageSize by default.
     /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option
     /// is included. Then the search criteria are logically ORed together.
-        /// <see cref="GroupScheduleGetPagedSortedListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="GroupScheduleGetPagedSortedListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:6542""}]")]
     public class GroupScheduleGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6542")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -36,13 +43,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6542")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -50,13 +62,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6542")]
+        public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
+        {
             get => _responsePagingControl;
-            set {
+            set
+            {
                 ResponsePagingControlSpecified = true;
                 _responsePagingControl = value;
             }
@@ -64,13 +80,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponsePagingControlSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByScheduleName _sortByScheduleName;
 
         [XmlElement(ElementName = "sortByScheduleName", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByScheduleName SortByScheduleName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6542")]
+        public BroadWorksConnector.Ocip.Models.SortByScheduleName SortByScheduleName
+        {
             get => _sortByScheduleName;
-            set {
+            set
+            {
                 SortByScheduleNameSpecified = true;
                 _sortByScheduleName = value;
             }
@@ -78,13 +98,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByScheduleNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName> _searchCriteriaScheduleName;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName> _searchCriteriaScheduleName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName>();
 
         [XmlElement(ElementName = "searchCriteriaScheduleName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName> SearchCriteriaScheduleName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6542")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName> SearchCriteriaScheduleName
+        {
             get => _searchCriteriaScheduleName;
-            set {
+            set
+            {
                 SearchCriteriaScheduleNameSpecified = true;
                 _searchCriteriaScheduleName = value;
             }
@@ -92,13 +116,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaScheduleNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType> _searchCriteriaExactScheduleType;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType> _searchCriteriaExactScheduleType = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType>();
 
         [XmlElement(ElementName = "searchCriteriaExactScheduleType", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType> SearchCriteriaExactScheduleType {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6542")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType> SearchCriteriaExactScheduleType
+        {
             get => _searchCriteriaExactScheduleType;
-            set {
+            set
+            {
                 SearchCriteriaExactScheduleTypeSpecified = true;
                 _searchCriteriaExactScheduleType = value;
             }
@@ -106,13 +134,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaExactScheduleTypeSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel> _searchCriteriaExactScheduleLevel;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel> _searchCriteriaExactScheduleLevel = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel>();
 
         [XmlElement(ElementName = "searchCriteriaExactScheduleLevel", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel> SearchCriteriaExactScheduleLevel {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6542")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel> SearchCriteriaExactScheduleLevel
+        {
             get => _searchCriteriaExactScheduleLevel;
-            set {
+            set
+            {
                 SearchCriteriaExactScheduleLevelSpecified = true;
                 _searchCriteriaExactScheduleLevel = value;
             }
@@ -120,13 +152,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaExactScheduleLevelSpecified { get; set; }
-        
+
         private bool _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
-        public bool SearchCriteriaModeOr {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6542")]
+        public bool SearchCriteriaModeOr
+        {
             get => _searchCriteriaModeOr;
-            set {
+            set
+            {
                 SearchCriteriaModeOrSpecified = true;
                 _searchCriteriaModeOr = value;
             }
@@ -134,6 +170,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaModeOrSpecified { get; set; }
-        
+
     }
 }

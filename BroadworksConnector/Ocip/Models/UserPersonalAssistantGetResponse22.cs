@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the UserPersonalAssistantGetRequest22.
     /// The response contains the user Personal Assistant information".
-        /// <see cref="UserPersonalAssistantGetRequest22"/>
-        /// </summary>
+    /// <see cref="UserPersonalAssistantGetRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:316""}]")]
     public class UserPersonalAssistantGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.PersonalAssistantPresence _presence;
 
         [XmlElement(ElementName = "presence", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.PersonalAssistantPresence Presence {
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:316")]
+        public BroadWorksConnector.Ocip.Models.PersonalAssistantPresence Presence
+        {
             get => _presence;
-            set {
+            set
+            {
                 PresenceSpecified = true;
                 _presence = value;
             }
@@ -29,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PresenceSpecified { get; set; }
-        
+
         private bool _enableTransferToAttendant;
 
         [XmlElement(ElementName = "enableTransferToAttendant", IsNullable = false, Namespace = "")]
-        public bool EnableTransferToAttendant {
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:316")]
+        public bool EnableTransferToAttendant
+        {
             get => _enableTransferToAttendant;
-            set {
+            set
+            {
                 EnableTransferToAttendantSpecified = true;
                 _enableTransferToAttendant = value;
             }
@@ -43,13 +51,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableTransferToAttendantSpecified { get; set; }
-        
+
         private string _attendantNumber;
 
         [XmlElement(ElementName = "attendantNumber", IsNullable = false, Namespace = "")]
-        public string AttendantNumber {
+        [Optional]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:316")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string AttendantNumber
+        {
             get => _attendantNumber;
-            set {
+            set
+            {
                 AttendantNumberSpecified = true;
                 _attendantNumber = value;
             }
@@ -57,13 +71,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AttendantNumberSpecified { get; set; }
-        
+
         private bool _enableRingSplash;
 
         [XmlElement(ElementName = "enableRingSplash", IsNullable = false, Namespace = "")]
-        public bool EnableRingSplash {
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:316")]
+        public bool EnableRingSplash
+        {
             get => _enableRingSplash;
-            set {
+            set
+            {
                 EnableRingSplashSpecified = true;
                 _enableRingSplash = value;
             }
@@ -71,13 +88,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableRingSplashSpecified { get; set; }
-        
+
         private bool _enableExpirationTime;
 
         [XmlElement(ElementName = "enableExpirationTime", IsNullable = false, Namespace = "")]
-        public bool EnableExpirationTime {
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:316")]
+        public bool EnableExpirationTime
+        {
             get => _enableExpirationTime;
-            set {
+            set
+            {
                 EnableExpirationTimeSpecified = true;
                 _enableExpirationTime = value;
             }
@@ -85,13 +105,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableExpirationTimeSpecified { get; set; }
-        
+
         private string _expirationTime;
 
         [XmlElement(ElementName = "expirationTime", IsNullable = false, Namespace = "")]
-        public string ExpirationTime {
+        [Optional]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:316")]
+        public string ExpirationTime
+        {
             get => _expirationTime;
-            set {
+            set
+            {
                 ExpirationTimeSpecified = true;
                 _expirationTime = value;
             }
@@ -99,13 +123,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExpirationTimeSpecified { get; set; }
-        
+
         private bool _alertMeFirst;
 
         [XmlElement(ElementName = "alertMeFirst", IsNullable = false, Namespace = "")]
-        public bool AlertMeFirst {
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:316")]
+        public bool AlertMeFirst
+        {
             get => _alertMeFirst;
-            set {
+            set
+            {
                 AlertMeFirstSpecified = true;
                 _alertMeFirst = value;
             }
@@ -113,13 +140,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlertMeFirstSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings _alertMeFirstNumberOfRings;
 
         [XmlElement(ElementName = "alertMeFirstNumberOfRings", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings AlertMeFirstNumberOfRings {
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:316")]
+        public BroadWorksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings AlertMeFirstNumberOfRings
+        {
             get => _alertMeFirstNumberOfRings;
-            set {
+            set
+            {
                 AlertMeFirstNumberOfRingsSpecified = true;
                 _alertMeFirstNumberOfRings = value;
             }
@@ -127,6 +157,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlertMeFirstNumberOfRingsSpecified { get; set; }
-        
+
     }
 }

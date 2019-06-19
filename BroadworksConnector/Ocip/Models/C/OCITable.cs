@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models.C
@@ -10,20 +12,23 @@ namespace BroadWorksConnector.Ocip.Models.C
     /// heading. Clients should search the column headings to find a particular
     /// column. Clients should not assume any particular column order as future
     /// revisions of the protocol may move or add columns.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "C")]
-     
-    public class OCITable 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:214""}]")]
+    public class OCITable
     {
 
-        
-        private List<string> _colHeading;
+        private List<string> _colHeading = new List<string>();
 
         [XmlElement(ElementName = "colHeading", IsNullable = false, Namespace = "")]
-        public List<string> ColHeading {
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:214")]
+        public List<string> ColHeading
+        {
             get => _colHeading;
-            set {
+            set
+            {
                 ColHeadingSpecified = true;
                 _colHeading = value;
             }
@@ -31,13 +36,17 @@ namespace BroadWorksConnector.Ocip.Models.C
 
         [XmlIgnore]
         public bool ColHeadingSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.C.OCITableRow> _row;
+
+        private List<BroadWorksConnector.Ocip.Models.C.OCITableRow> _row = new List<BroadWorksConnector.Ocip.Models.C.OCITableRow>();
 
         [XmlElement(ElementName = "row", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.C.OCITableRow> Row {
+        [Optional]
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:214")]
+        public List<BroadWorksConnector.Ocip.Models.C.OCITableRow> Row
+        {
             get => _row;
-            set {
+            set
+            {
                 RowSpecified = true;
                 _row = value;
             }
@@ -45,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models.C
 
         [XmlIgnore]
         public bool RowSpecified { get; set; }
-        
+
     }
 }

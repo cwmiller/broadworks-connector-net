@@ -5,19 +5,20 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Announcement Selection.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum VoiceMessagingNoAnswerGreetingSelection    {
-            [XmlEnum(Name = "Default")]
+    public enum VoiceMessagingNoAnswerGreetingSelection
+    {
+        [XmlEnum(Name = "Default")]
         Default,
-            [XmlEnum(Name = "Personal")]
+        [XmlEnum(Name = "Personal")]
         Personal,
-            [XmlEnum(Name = "Alternate01")]
+        [XmlEnum(Name = "Alternate01")]
         Alternate01,
-            [XmlEnum(Name = "Alternate02")]
+        [XmlEnum(Name = "Alternate02")]
         Alternate02,
-            [XmlEnum(Name = "Alternate03")]
+        [XmlEnum(Name = "Alternate03")]
         Alternate03,
-     }
+    }
 }

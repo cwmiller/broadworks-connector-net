@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the GroupVoiceMessagingGroupGetVoicePortalBrandingRequest20.
-        /// <see cref="GroupVoiceMessagingGroupGetVoicePortalBrandingRequest20"/>
-        /// </summary>
+    /// <see cref="GroupVoiceMessagingGroupGetVoicePortalBrandingRequest20"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:171""}]")]
     public class GroupVoiceMessagingGroupGetVoicePortalBrandingResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voicePortalGreetingSelection;
 
         [XmlElement(ElementName = "voicePortalGreetingSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoicePortalGreetingSelection {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:171")]
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoicePortalGreetingSelection
+        {
             get => _voicePortalGreetingSelection;
-            set {
+            set
+            {
                 VoicePortalGreetingSelectionSpecified = true;
                 _voicePortalGreetingSelection = value;
             }
@@ -28,13 +33,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VoicePortalGreetingSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _voicePortalGreetingFile;
 
         [XmlElement(ElementName = "voicePortalGreetingFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileKey VoicePortalGreetingFile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:171")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileKey VoicePortalGreetingFile
+        {
             get => _voicePortalGreetingFile;
-            set {
+            set
+            {
                 VoicePortalGreetingFileSpecified = true;
                 _voicePortalGreetingFile = value;
             }
@@ -42,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VoicePortalGreetingFileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voiceMessagingGreetingSelection;
 
         [XmlElement(ElementName = "voiceMessagingGreetingSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoiceMessagingGreetingSelection {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:171")]
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoiceMessagingGreetingSelection
+        {
             get => _voiceMessagingGreetingSelection;
-            set {
+            set
+            {
                 VoiceMessagingGreetingSelectionSpecified = true;
                 _voiceMessagingGreetingSelection = value;
             }
@@ -56,13 +68,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VoiceMessagingGreetingSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _voiceMessagingGreetingFile;
 
         [XmlElement(ElementName = "voiceMessagingGreetingFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileKey VoiceMessagingGreetingFile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:171")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileKey VoiceMessagingGreetingFile
+        {
             get => _voiceMessagingGreetingFile;
-            set {
+            set
+            {
                 VoiceMessagingGreetingFileSpecified = true;
                 _voiceMessagingGreetingFile = value;
             }
@@ -70,6 +86,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VoiceMessagingGreetingFileSpecified { get; set; }
-        
+
     }
 }

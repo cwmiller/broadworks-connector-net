@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Enterprise Voice VPN Selector for Non Matching E164 Number.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum EnterpriseVoiceVPNNonMatchingE164NumberSelection    {
-            [XmlEnum(Name = "Public")]
+    public enum EnterpriseVoiceVPNNonMatchingE164NumberSelection
+    {
+        [XmlEnum(Name = "Public")]
         Public,
-            [XmlEnum(Name = "Default")]
+        [XmlEnum(Name = "Default")]
         Default,
-     }
+    }
 }

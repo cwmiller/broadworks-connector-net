@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,22 +14,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// If neither excludeReseller nor resellerId is specified, all system level and reseller level tag sets are returned.
     /// 
     /// The response is either SystemDeviceManagementTagSetGetListResponse22 or ErrorResponse.
-        /// <see cref="SystemDeviceManagementTagSetGetListResponse22"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SystemDeviceManagementTagSetGetListResponse22"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7407"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7408""}]}]")]
     public class SystemDeviceManagementTagSetGetListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private bool _excludeReseller;
 
         [XmlElement(ElementName = "excludeReseller", IsNullable = false, Namespace = "")]
-        public bool ExcludeReseller {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7408")]
+        public bool ExcludeReseller
+        {
             get => _excludeReseller;
-            set {
+            set
+            {
                 ExcludeResellerSpecified = true;
                 _excludeReseller = value;
             }
@@ -35,13 +41,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExcludeResellerSpecified { get; set; }
-        
+
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        public string ResellerId {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7408")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ResellerId
+        {
             get => _resellerId;
-            set {
+            set
+            {
                 ResellerIdSpecified = true;
                 _resellerId = value;
             }
@@ -49,6 +61,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResellerIdSpecified { get; set; }
-        
+
     }
 }

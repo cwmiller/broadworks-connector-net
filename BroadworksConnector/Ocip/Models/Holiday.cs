@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Holiday entry.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class Holiday 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43872""}]")]
+    public class Holiday
     {
 
-        
         private string _holidayName;
 
         [XmlElement(ElementName = "holidayName", IsNullable = false, Namespace = "")]
-        public string HolidayName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43872")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string HolidayName
+        {
             get => _holidayName;
-            set {
+            set
+            {
                 HolidayNameSpecified = true;
                 _holidayName = value;
             }
@@ -27,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HolidayNameSpecified { get; set; }
-        
+
         private string _startDate;
 
         [XmlElement(ElementName = "startDate", IsNullable = false, Namespace = "")]
-        public string StartDate {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43872")]
+        public string StartDate
+        {
             get => _startDate;
-            set {
+            set
+            {
                 StartDateSpecified = true;
                 _startDate = value;
             }
@@ -41,13 +51,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartDateSpecified { get; set; }
-        
+
         private string _endDate;
 
         [XmlElement(ElementName = "endDate", IsNullable = false, Namespace = "")]
-        public string EndDate {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43872")]
+        public string EndDate
+        {
             get => _endDate;
-            set {
+            set
+            {
                 EndDateSpecified = true;
                 _endDate = value;
             }
@@ -55,6 +69,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndDateSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -15,22 +17,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// BWMobilityDenyOrig, BWMobilityDenyTerm, ETRouteExhaust, CallPark, NumberPortability.
     /// 
     /// Replaced by: SystemTreatmentMappingCallBlockingServiceGetListResponse22
-        /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListRequest19sp1"/>
-        /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListResponse22"/>
-        /// </summary>
+    /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListRequest19sp1"/>
+    /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListResponse22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:39989""}]")]
     public class SystemTreatmentMappingCallBlockingServiceGetListResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _treatmentMappingTable;
 
         [XmlElement(ElementName = "treatmentMappingTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentMappingTable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39989")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentMappingTable
+        {
             get => _treatmentMappingTable;
-            set {
+            set
+            {
                 TreatmentMappingTableSpecified = true;
                 _treatmentMappingTable = value;
             }
@@ -38,6 +43,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TreatmentMappingTableSpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse14ReplyMessageMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:22912""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse14ReplyMessageMenuKeys
     {
 
-        
         private string _sendReplyToCaller;
 
         [XmlElement(ElementName = "sendReplyToCaller", IsNullable = false, Namespace = "")]
-        public string SendReplyToCaller {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22912")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string SendReplyToCaller
+        {
             get => _sendReplyToCaller;
-            set {
+            set
+            {
                 SendReplyToCallerSpecified = true;
                 _sendReplyToCaller = value;
             }
@@ -27,13 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SendReplyToCallerSpecified { get; set; }
-        
+
         private string _changeCurrentReply;
 
         [XmlElement(ElementName = "changeCurrentReply", IsNullable = false, Namespace = "")]
-        public string ChangeCurrentReply {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22912")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ChangeCurrentReply
+        {
             get => _changeCurrentReply;
-            set {
+            set
+            {
                 ChangeCurrentReplySpecified = true;
                 _changeCurrentReply = value;
             }
@@ -41,13 +54,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ChangeCurrentReplySpecified { get; set; }
-        
+
         private string _listenToCurrentReply;
 
         [XmlElement(ElementName = "listenToCurrentReply", IsNullable = false, Namespace = "")]
-        public string ListenToCurrentReply {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22912")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ListenToCurrentReply
+        {
             get => _listenToCurrentReply;
-            set {
+            set
+            {
                 ListenToCurrentReplySpecified = true;
                 _listenToCurrentReply = value;
             }
@@ -55,13 +74,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ListenToCurrentReplySpecified { get; set; }
-        
+
         private string _setOrClearUrgentIndicator;
 
         [XmlElement(ElementName = "setOrClearUrgentIndicator", IsNullable = false, Namespace = "")]
-        public string SetOrClearUrgentIndicator {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22912")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string SetOrClearUrgentIndicator
+        {
             get => _setOrClearUrgentIndicator;
-            set {
+            set
+            {
                 SetOrClearUrgentIndicatorSpecified = true;
                 _setOrClearUrgentIndicator = value;
             }
@@ -69,13 +94,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SetOrClearUrgentIndicatorSpecified { get; set; }
-        
+
         private string _setOrClearConfidentialIndicator;
 
         [XmlElement(ElementName = "setOrClearConfidentialIndicator", IsNullable = false, Namespace = "")]
-        public string SetOrClearConfidentialIndicator {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22912")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string SetOrClearConfidentialIndicator
+        {
             get => _setOrClearConfidentialIndicator;
-            set {
+            set
+            {
                 SetOrClearConfidentialIndicatorSpecified = true;
                 _setOrClearConfidentialIndicator = value;
             }
@@ -83,13 +114,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SetOrClearConfidentialIndicatorSpecified { get; set; }
-        
+
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        public string ReturnToPreviousMenu {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22912")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ReturnToPreviousMenu
+        {
             get => _returnToPreviousMenu;
-            set {
+            set
+            {
                 ReturnToPreviousMenuSpecified = true;
                 _returnToPreviousMenu = value;
             }
@@ -97,13 +133,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReturnToPreviousMenuSpecified { get; set; }
-        
+
         private string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
-        public string RepeatMenu {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22912")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string RepeatMenu
+        {
             get => _repeatMenu;
-            set {
+            set
+            {
                 RepeatMenuSpecified = true;
                 _repeatMenu = value;
             }
@@ -111,6 +153,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RepeatMenuSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,20 +10,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// Access device end point that can have multiple contacts.
     /// The endpoint is identified by its linePort (public Identity) and possibly a private Identity.
     /// Port numbers are only used by devices with static line ordering.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class AccessDeviceMultipleIdentityEndpointWithType 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:418""}]")]
+    public class AccessDeviceMultipleIdentityEndpointWithType
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:418")]
+        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
+        {
             get => _accessDevice;
-            set {
+            set
+            {
                 AccessDeviceSpecified = true;
                 _accessDevice = value;
             }
@@ -29,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessDeviceSpecified { get; set; }
-        
+
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        public string DeviceType {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:418")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceType
+        {
             get => _deviceType;
-            set {
+            set
+            {
                 DeviceTypeSpecified = true;
                 _deviceType = value;
             }
@@ -43,13 +53,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceTypeSpecified { get; set; }
-        
+
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        public string LinePort {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:418")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string LinePort
+        {
             get => _linePort;
-            set {
+            set
+            {
                 LinePortSpecified = true;
                 _linePort = value;
             }
@@ -57,13 +72,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LinePortSpecified { get; set; }
-        
+
         private string _privateIdentity;
 
         [XmlElement(ElementName = "privateIdentity", IsNullable = false, Namespace = "")]
-        public string PrivateIdentity {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:418")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string PrivateIdentity
+        {
             get => _privateIdentity;
-            set {
+            set
+            {
                 PrivateIdentitySpecified = true;
                 _privateIdentity = value;
             }
@@ -71,13 +92,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrivateIdentitySpecified { get; set; }
-        
+
         private string _contact;
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-        public string Contact {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:418")]
+        [MinLength(1)]
+        [MaxLength(1020)]
+        public string Contact
+        {
             get => _contact;
-            set {
+            set
+            {
                 ContactSpecified = true;
                 _contact = value;
             }
@@ -85,13 +112,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactSpecified { get; set; }
-        
+
         private int _portNumber;
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
-        public int PortNumber {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:418")]
+        [MinInclusive(1)]
+        [MaxInclusive(1024)]
+        public int PortNumber
+        {
             get => _portNumber;
-            set {
+            set
+            {
                 PortNumberSpecified = true;
                 _portNumber = value;
             }
@@ -99,13 +132,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PortNumberSpecified { get; set; }
-        
+
         private string _macAddress;
 
         [XmlElement(ElementName = "macAddress", IsNullable = false, Namespace = "")]
-        public string MacAddress {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:418")]
+        [MinLength(1)]
+        [MaxLength(12)]
+        public string MacAddress
+        {
             get => _macAddress;
-            set {
+            set
+            {
                 MacAddressSpecified = true;
                 _macAddress = value;
             }
@@ -113,6 +152,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MacAddressSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to GroupTrunkGroupGetInstanceRequest.
     /// The publicUserIdentity in the ServiceInstanceReadProfile is not used for trunk groups.
     /// Returns the profile information for the Trunk Group.
-        /// <see cref="GroupTrunkGroupGetInstanceRequest"/>
-        /// </summary>
+    /// <see cref="GroupTrunkGroupGetInstanceRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2479""}]")]
     public class GroupTrunkGroupGetInstanceResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2479")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile
+        {
             get => _serviceInstanceProfile;
-            set {
+            set
+            {
                 ServiceInstanceProfileSpecified = true;
                 _serviceInstanceProfile = value;
             }
@@ -30,13 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceInstanceProfileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 AccessDeviceEndpoint {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2479")]
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 AccessDeviceEndpoint
+        {
             get => _accessDeviceEndpoint;
-            set {
+            set
+            {
                 AccessDeviceEndpointSpecified = true;
                 _accessDeviceEndpoint = value;
             }
@@ -44,13 +53,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessDeviceEndpointSpecified { get; set; }
-        
+
         private int _maxActiveCalls;
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = false, Namespace = "")]
-        public int MaxActiveCalls {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2479")]
+        [MinInclusive(1)]
+        public int MaxActiveCalls
+        {
             get => _maxActiveCalls;
-            set {
+            set
+            {
                 MaxActiveCallsSpecified = true;
                 _maxActiveCalls = value;
             }
@@ -58,13 +71,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxActiveCallsSpecified { get; set; }
-        
+
         private int _maxIncomingCalls;
 
         [XmlElement(ElementName = "maxIncomingCalls", IsNullable = false, Namespace = "")]
-        public int MaxIncomingCalls {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2479")]
+        [MinInclusive(1)]
+        [MaxInclusive(999999)]
+        public int MaxIncomingCalls
+        {
             get => _maxIncomingCalls;
-            set {
+            set
+            {
                 MaxIncomingCallsSpecified = true;
                 _maxIncomingCalls = value;
             }
@@ -72,13 +91,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxIncomingCallsSpecified { get; set; }
-        
+
         private int _maxOutgoingCalls;
 
         [XmlElement(ElementName = "maxOutgoingCalls", IsNullable = false, Namespace = "")]
-        public int MaxOutgoingCalls {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2479")]
+        [MinInclusive(1)]
+        [MaxInclusive(999999)]
+        public int MaxOutgoingCalls
+        {
             get => _maxOutgoingCalls;
-            set {
+            set
+            {
                 MaxOutgoingCallsSpecified = true;
                 _maxOutgoingCalls = value;
             }
@@ -86,13 +111,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxOutgoingCallsSpecified { get; set; }
-        
+
         private bool _requireAuthentication;
 
         [XmlElement(ElementName = "requireAuthentication", IsNullable = false, Namespace = "")]
-        public bool RequireAuthentication {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2479")]
+        public bool RequireAuthentication
+        {
             get => _requireAuthentication;
-            set {
+            set
+            {
                 RequireAuthenticationSpecified = true;
                 _requireAuthentication = value;
             }
@@ -100,13 +128,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RequireAuthenticationSpecified { get; set; }
-        
+
         private string _sipAuthenticationUserName;
 
         [XmlElement(ElementName = "sipAuthenticationUserName", IsNullable = false, Namespace = "")]
-        public string SipAuthenticationUserName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2479")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string SipAuthenticationUserName
+        {
             get => _sipAuthenticationUserName;
-            set {
+            set
+            {
                 SipAuthenticationUserNameSpecified = true;
                 _sipAuthenticationUserName = value;
             }
@@ -114,6 +148,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SipAuthenticationUserNameSpecified { get; set; }
-        
+
     }
 }

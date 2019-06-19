@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for SIP Device Authentication
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AuthenticationMode22    {
-            [XmlEnum(Name = "Enabled")]
+    public enum AuthenticationMode22
+    {
+        [XmlEnum(Name = "Enabled")]
         Enabled,
-            [XmlEnum(Name = "Disabled")]
+        [XmlEnum(Name = "Disabled")]
         Disabled,
-     }
+    }
 }

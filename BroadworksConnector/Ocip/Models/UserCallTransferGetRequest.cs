@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,23 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request the user level data associated with Call Transfer.
     /// The response is either a UserCallTransferGetResponse or an ErrorResponse.
     /// Replaced By: UserCallTransferGetRequest14Sp4
-        /// <see cref="UserCallTransferGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="UserCallTransferGetRequest14Sp4"/>
-        /// </summary>
+    /// <see cref="UserCallTransferGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="UserCallTransferGetRequest14Sp4"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:7063""}]")]
     public class UserCallTransferGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7063")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -32,6 +39,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
     }
 }

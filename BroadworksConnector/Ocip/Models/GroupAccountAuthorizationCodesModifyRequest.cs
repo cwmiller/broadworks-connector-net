@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Change the group's account/authorization codes setting.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65df37199ec43e5d21a187db39d63158:196""}]")]
     public class GroupAccountAuthorizationCodesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -44,13 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType _codeType;
 
         [XmlElement(ElementName = "codeType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType CodeType {
+        [Optional]
+        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        public BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType CodeType
+        {
             get => _codeType;
-            set {
+            set
+            {
                 CodeTypeSpecified = true;
                 _codeType = value;
             }
@@ -58,13 +74,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CodeTypeSpecified { get; set; }
-        
+
         private int _numberOfDigits;
 
         [XmlElement(ElementName = "numberOfDigits", IsNullable = false, Namespace = "")]
-        public int NumberOfDigits {
+        [Optional]
+        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        [MinInclusive(2)]
+        [MaxInclusive(14)]
+        public int NumberOfDigits
+        {
             get => _numberOfDigits;
-            set {
+            set
+            {
                 NumberOfDigitsSpecified = true;
                 _numberOfDigits = value;
             }
@@ -72,13 +94,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberOfDigitsSpecified { get; set; }
-        
+
         private bool _allowLocalAndTollFreeCalls;
 
         [XmlElement(ElementName = "allowLocalAndTollFreeCalls", IsNullable = false, Namespace = "")]
-        public bool AllowLocalAndTollFreeCalls {
+        [Optional]
+        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        public bool AllowLocalAndTollFreeCalls
+        {
             get => _allowLocalAndTollFreeCalls;
-            set {
+            set
+            {
                 AllowLocalAndTollFreeCallsSpecified = true;
                 _allowLocalAndTollFreeCalls = value;
             }
@@ -86,13 +112,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowLocalAndTollFreeCallsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _mandatoryUsageUserIdList;
 
         [XmlElement(ElementName = "mandatoryUsageUserIdList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList MandatoryUsageUserIdList {
+        [Optional]
+        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList MandatoryUsageUserIdList
+        {
             get => _mandatoryUsageUserIdList;
-            set {
+            set
+            {
                 MandatoryUsageUserIdListSpecified = true;
                 _mandatoryUsageUserIdList = value;
             }
@@ -100,13 +130,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MandatoryUsageUserIdListSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _optionalUsageUserIdList;
 
         [XmlElement(ElementName = "optionalUsageUserIdList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList OptionalUsageUserIdList {
+        [Optional]
+        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList OptionalUsageUserIdList
+        {
             get => _optionalUsageUserIdList;
-            set {
+            set
+            {
                 OptionalUsageUserIdListSpecified = true;
                 _optionalUsageUserIdList = value;
             }
@@ -114,6 +148,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OptionalUsageUserIdListSpecified { get; set; }
-        
+
     }
 }

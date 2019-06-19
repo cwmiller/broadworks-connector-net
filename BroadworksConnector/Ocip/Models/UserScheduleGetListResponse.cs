@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to UserScheduleGetListRequest.
     /// The response contains a list of system schedules.
-        /// <see cref="UserScheduleGetListRequest"/>
-        /// </summary>
+    /// <see cref="UserScheduleGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:23844""}]")]
     public class UserScheduleGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _scheduleName;
+        private List<string> _scheduleName = new List<string>();
 
         [XmlElement(ElementName = "scheduleName", IsNullable = false, Namespace = "")]
-        public List<string> ScheduleName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23844")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> ScheduleName
+        {
             get => _scheduleName;
-            set {
+            set
+            {
                 ScheduleNameSpecified = true;
                 _scheduleName = value;
             }
@@ -29,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.ScheduleType> _scheduleType;
+
+        private List<BroadWorksConnector.Ocip.Models.ScheduleType> _scheduleType = new List<BroadWorksConnector.Ocip.Models.ScheduleType>();
 
         [XmlElement(ElementName = "scheduleType", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.ScheduleType> ScheduleType {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23844")]
+        public List<BroadWorksConnector.Ocip.Models.ScheduleType> ScheduleType
+        {
             get => _scheduleType;
-            set {
+            set
+            {
                 ScheduleTypeSpecified = true;
                 _scheduleType = value;
             }
@@ -43,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleTypeSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.ScheduleLevel> _scheduleLevel;
+
+        private List<BroadWorksConnector.Ocip.Models.ScheduleLevel> _scheduleLevel = new List<BroadWorksConnector.Ocip.Models.ScheduleLevel>();
 
         [XmlElement(ElementName = "scheduleLevel", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.ScheduleLevel> ScheduleLevel {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23844")]
+        public List<BroadWorksConnector.Ocip.Models.ScheduleLevel> ScheduleLevel
+        {
             get => _scheduleLevel;
-            set {
+            set
+            {
                 ScheduleLevelSpecified = true;
                 _scheduleLevel = value;
             }
@@ -57,6 +73,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleLevelSpecified { get; set; }
-        
+
     }
 }

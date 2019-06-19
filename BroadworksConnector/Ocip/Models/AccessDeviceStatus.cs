@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for the access device status.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AccessDeviceStatus    {
-            [XmlEnum(Name = "Online")]
+    public enum AccessDeviceStatus
+    {
+        [XmlEnum(Name = "Online")]
         Online,
-            [XmlEnum(Name = "Offline")]
+        [XmlEnum(Name = "Offline")]
         Offline,
-            [XmlEnum(Name = "Unavailable")]
+        [XmlEnum(Name = "Unavailable")]
         Unavailable,
-            [XmlEnum(Name = "Unknown")]
+        [XmlEnum(Name = "Unknown")]
         Unknown,
-     }
+    }
 }

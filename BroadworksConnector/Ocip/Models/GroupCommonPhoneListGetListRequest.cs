@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -14,24 +16,29 @@ namespace BroadWorksConnector.Ocip.Models
     /// Specifying searchCriteriaModeOr without any search criteria results in an ErrorResponse.
     /// In all cases, if a responseSizeLimit is specified and the number of matching results is more than this limit, then an
     /// ErrorResponse is returned.
-        /// <see cref="GroupCommonPhoneListGetListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="GroupCommonPhoneListGetListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:2294""}]")]
     public class GroupCommonPhoneListGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2294")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -39,13 +46,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2294")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -53,13 +65,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-        public int ResponseSizeLimit {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2294")]
+        [MinInclusive(1)]
+        public int ResponseSizeLimit
+        {
             get => _responseSizeLimit;
-            set {
+            set
+            {
                 ResponseSizeLimitSpecified = true;
                 _responseSizeLimit = value;
             }
@@ -67,13 +84,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponseSizeLimitSpecified { get; set; }
-        
+
         private bool _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
-        public bool SearchCriteriaModeOr {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2294")]
+        public bool SearchCriteriaModeOr
+        {
             get => _searchCriteriaModeOr;
-            set {
+            set
+            {
                 SearchCriteriaModeOrSpecified = true;
                 _searchCriteriaModeOr = value;
             }
@@ -81,13 +102,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaModeOrSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> _searchCriteriaGroupCommonPhoneListName;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> _searchCriteriaGroupCommonPhoneListName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName>();
 
         [XmlElement(ElementName = "searchCriteriaGroupCommonPhoneListName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> SearchCriteriaGroupCommonPhoneListName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2294")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> SearchCriteriaGroupCommonPhoneListName
+        {
             get => _searchCriteriaGroupCommonPhoneListName;
-            set {
+            set
+            {
                 SearchCriteriaGroupCommonPhoneListNameSpecified = true;
                 _searchCriteriaGroupCommonPhoneListName = value;
             }
@@ -95,13 +120,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaGroupCommonPhoneListNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> _searchCriteriaGroupCommonPhoneListNumber;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> _searchCriteriaGroupCommonPhoneListNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber>();
 
         [XmlElement(ElementName = "searchCriteriaGroupCommonPhoneListNumber", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> SearchCriteriaGroupCommonPhoneListNumber {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2294")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> SearchCriteriaGroupCommonPhoneListNumber
+        {
             get => _searchCriteriaGroupCommonPhoneListNumber;
-            set {
+            set
+            {
                 SearchCriteriaGroupCommonPhoneListNumberSpecified = true;
                 _searchCriteriaGroupCommonPhoneListNumber = value;
             }
@@ -109,6 +138,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaGroupCommonPhoneListNumberSpecified { get; set; }
-        
+
     }
 }

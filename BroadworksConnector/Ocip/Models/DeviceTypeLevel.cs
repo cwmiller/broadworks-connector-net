@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Identifies at which level in the system an identity/device profile type is created.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DeviceTypeLevel    {
-            [XmlEnum(Name = "System")]
+    public enum DeviceTypeLevel
+    {
+        [XmlEnum(Name = "System")]
         System,
-            [XmlEnum(Name = "Reseller")]
+        [XmlEnum(Name = "Reseller")]
         Reseller,
-     }
+    }
 }

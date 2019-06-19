@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,23 +12,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// Element "reportingServerURL"" will always be ignored.
     /// Replaced By: GroupCallCenterSupervisorReportingModifyRequest
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="GroupCallCenterSupervisorReportingModifyRequest"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupCallCenterSupervisorReportingModifyRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1129""}]")]
     public class GroupCallCenterModifySupervisorListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1129")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -34,13 +41,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private string _reportingServerURL;
 
         [XmlElement(ElementName = "reportingServerURL", IsNullable = true, Namespace = "")]
-        public string ReportingServerURL {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1129")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string ReportingServerURL
+        {
             get => _reportingServerURL;
-            set {
+            set
+            {
                 ReportingServerURLSpecified = true;
                 _reportingServerURL = value;
             }
@@ -48,13 +61,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportingServerURLSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _supervisorUserIdList;
 
         [XmlElement(ElementName = "supervisorUserIdList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList SupervisorUserIdList {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1129")]
+        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList SupervisorUserIdList
+        {
             get => _supervisorUserIdList;
-            set {
+            set
+            {
                 SupervisorUserIdListSpecified = true;
                 _supervisorUserIdList = value;
             }
@@ -62,6 +79,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SupervisorUserIdListSpecified { get; set; }
-        
+
     }
 }

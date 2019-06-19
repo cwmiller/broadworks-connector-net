@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupRoutingProfileGetRequest.
-        /// <see cref="GroupRoutingProfileGetRequest"/>
-        /// </summary>
+    /// <see cref="GroupRoutingProfileGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:6267""}]")]
     public class GroupRoutingProfileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _routingProfile;
 
         [XmlElement(ElementName = "routingProfile", IsNullable = false, Namespace = "")]
-        public string RoutingProfile {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6267")]
+        [MinLength(4)]
+        [MaxLength(12)]
+        public string RoutingProfile
+        {
             get => _routingProfile;
-            set {
+            set
+            {
                 RoutingProfileSpecified = true;
                 _routingProfile = value;
             }
@@ -28,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RoutingProfileSpecified { get; set; }
-        
+
     }
 }

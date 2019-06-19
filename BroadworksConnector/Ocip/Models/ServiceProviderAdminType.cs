@@ -8,15 +8,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Normal" indicates the service provider admin is a normal admin.
     /// "Customer" indicates the service provider admin is a customer admin.
     /// "Password Reset Only" indicates the service provider admin is a password reset only admin.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServiceProviderAdminType    {
-            [XmlEnum(Name = "Normal")]
+    public enum ServiceProviderAdminType
+    {
+        [XmlEnum(Name = "Normal")]
         Normal,
-            [XmlEnum(Name = "Customer")]
+        [XmlEnum(Name = "Customer")]
         Customer,
-            [XmlEnum(Name = "Password Reset Only")]
+        [XmlEnum(Name = "Password Reset Only")]
         PasswordResetOnly,
-     }
+    }
 }

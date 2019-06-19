@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// It is possible to search by various criteria to restrict the number of rows returned.
     /// Multiple search criteria are logically ANDed together.
     /// The response is either SystemServiceCodeGetListResponse or ErrorResponse.
-        /// <see cref="SystemServiceCodeGetListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SystemServiceCodeGetListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14965""}]")]
     public class SystemServiceCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-        public int ResponseSizeLimit {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14965")]
+        [MinInclusive(1)]
+        public int ResponseSizeLimit
+        {
             get => _responseSizeLimit;
-            set {
+            set
+            {
                 ResponseSizeLimitSpecified = true;
                 _responseSizeLimit = value;
             }
@@ -32,13 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponseSizeLimitSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> _searchCriteriaServiceCode;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> _searchCriteriaServiceCode = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode>();
 
         [XmlElement(ElementName = "searchCriteriaServiceCode", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> SearchCriteriaServiceCode {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14965")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> SearchCriteriaServiceCode
+        {
             get => _searchCriteriaServiceCode;
-            set {
+            set
+            {
                 SearchCriteriaServiceCodeSpecified = true;
                 _searchCriteriaServiceCode = value;
             }
@@ -46,13 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaServiceCodeSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> _searchCriteriaServiceCodeDescription;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> _searchCriteriaServiceCodeDescription = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription>();
 
         [XmlElement(ElementName = "searchCriteriaServiceCodeDescription", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> SearchCriteriaServiceCodeDescription {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14965")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> SearchCriteriaServiceCodeDescription
+        {
             get => _searchCriteriaServiceCodeDescription;
-            set {
+            set
+            {
                 SearchCriteriaServiceCodeDescriptionSpecified = true;
                 _searchCriteriaServiceCodeDescription = value;
             }
@@ -60,6 +75,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaServiceCodeDescriptionSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify session admission control capacity for the service provider.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5843""}]")]
     public class ServiceProviderSessionAdmissionControlModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5843")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private bool _restrictAggregateSessions;
 
         [XmlElement(ElementName = "restrictAggregateSessions", IsNullable = false, Namespace = "")]
-        public bool RestrictAggregateSessions {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5843")]
+        public bool RestrictAggregateSessions
+        {
             get => _restrictAggregateSessions;
-            set {
+            set
+            {
                 RestrictAggregateSessionsSpecified = true;
                 _restrictAggregateSessions = value;
             }
@@ -44,13 +55,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RestrictAggregateSessionsSpecified { get; set; }
-        
+
         private int? _maxSessions;
 
         [XmlElement(ElementName = "maxSessions", IsNullable = true, Namespace = "")]
-        public int? MaxSessions {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5843")]
+        [MinInclusive(0)]
+        public int? MaxSessions
+        {
             get => _maxSessions;
-            set {
+            set
+            {
                 MaxSessionsSpecified = true;
                 _maxSessions = value;
             }
@@ -58,13 +74,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxSessionsSpecified { get; set; }
-        
+
         private int? _maxUserOriginatingSessions;
 
         [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = true, Namespace = "")]
-        public int? MaxUserOriginatingSessions {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5843")]
+        [MinInclusive(0)]
+        public int? MaxUserOriginatingSessions
+        {
             get => _maxUserOriginatingSessions;
-            set {
+            set
+            {
                 MaxUserOriginatingSessionsSpecified = true;
                 _maxUserOriginatingSessions = value;
             }
@@ -72,13 +93,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxUserOriginatingSessionsSpecified { get; set; }
-        
+
         private int? _maxUserTerminatingSessions;
 
         [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = true, Namespace = "")]
-        public int? MaxUserTerminatingSessions {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5843")]
+        [MinInclusive(0)]
+        public int? MaxUserTerminatingSessions
+        {
             get => _maxUserTerminatingSessions;
-            set {
+            set
+            {
                 MaxUserTerminatingSessionsSpecified = true;
                 _maxUserTerminatingSessions = value;
             }
@@ -86,13 +112,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxUserTerminatingSessionsSpecified { get; set; }
-        
+
         private bool _countIntraServiceProviderSessions;
 
         [XmlElement(ElementName = "countIntraServiceProviderSessions", IsNullable = false, Namespace = "")]
-        public bool CountIntraServiceProviderSessions {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5843")]
+        public bool CountIntraServiceProviderSessions
+        {
             get => _countIntraServiceProviderSessions;
-            set {
+            set
+            {
                 CountIntraServiceProviderSessionsSpecified = true;
                 _countIntraServiceProviderSessions = value;
             }
@@ -100,6 +130,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CountIntraServiceProviderSessionsSpecified { get; set; }
-        
+
     }
 }

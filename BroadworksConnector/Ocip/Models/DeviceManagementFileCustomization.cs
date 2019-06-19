@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Controls the file customization privileges.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DeviceManagementFileCustomization    {
-            [XmlEnum(Name = "Disallow")]
+    public enum DeviceManagementFileCustomization
+    {
+        [XmlEnum(Name = "Disallow")]
         Disallow,
-            [XmlEnum(Name = "Administrator")]
+        [XmlEnum(Name = "Administrator")]
         Administrator,
-            [XmlEnum(Name = "Administrator and User")]
+        [XmlEnum(Name = "Administrator and User")]
         AdministratorandUser,
-     }
+    }
 }

@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Network Transport Protocol.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ExtendedTransportProtocol    {
-            [XmlEnum(Name = "UDP")]
+    public enum ExtendedTransportProtocol
+    {
+        [XmlEnum(Name = "UDP")]
         UDP,
-            [XmlEnum(Name = "TCP")]
+        [XmlEnum(Name = "TCP")]
         TCP,
-            [XmlEnum(Name = "TLS")]
+        [XmlEnum(Name = "TLS")]
         TLS,
-            [XmlEnum(Name = "Unspecified")]
+        [XmlEnum(Name = "Unspecified")]
         Unspecified,
-     }
+    }
 }

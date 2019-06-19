@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -16,22 +18,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following elements are only valid for Standard Auto
     /// Attendants:
     /// holidayMenu
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ed0640d8ef49eb8b4eaa14d7c6f6c033:66""}]")]
     public class GroupAutoAttendantAddInstanceRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -39,13 +46,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -53,13 +65,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -67,13 +84,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile
+        {
             get => _serviceInstanceProfile;
-            set {
+            set
+            {
                 ServiceInstanceProfileSpecified = true;
                 _serviceInstanceProfile = value;
             }
@@ -81,13 +101,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceInstanceProfileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AutoAttendantType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantType Type {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantType Type
+        {
             get => _type;
-            set {
+            set
+            {
                 TypeSpecified = true;
                 _type = value;
             }
@@ -95,13 +118,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TypeSpecified { get; set; }
-        
+
         private int _firstDigitTimeoutSeconds;
 
         [XmlElement(ElementName = "firstDigitTimeoutSeconds", IsNullable = false, Namespace = "")]
-        public int FirstDigitTimeoutSeconds {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        [MinInclusive(1)]
+        [MaxInclusive(60)]
+        public int FirstDigitTimeoutSeconds
+        {
             get => _firstDigitTimeoutSeconds;
-            set {
+            set
+            {
                 FirstDigitTimeoutSecondsSpecified = true;
                 _firstDigitTimeoutSeconds = value;
             }
@@ -109,13 +137,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FirstDigitTimeoutSecondsSpecified { get; set; }
-        
+
         private bool _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
-        public bool EnableVideo {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        public bool EnableVideo
+        {
             get => _enableVideo;
-            set {
+            set
+            {
                 EnableVideoSpecified = true;
                 _enableVideo = value;
             }
@@ -123,13 +154,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableVideoSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.TimeSchedule _businessHours;
 
         [XmlElement(ElementName = "businessHours", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TimeSchedule BusinessHours {
+        [Optional]
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        public BroadWorksConnector.Ocip.Models.TimeSchedule BusinessHours
+        {
             get => _businessHours;
-            set {
+            set
+            {
                 BusinessHoursSpecified = true;
                 _businessHours = value;
             }
@@ -137,13 +172,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BusinessHoursSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+        [Optional]
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
+        {
             get => _holidaySchedule;
-            set {
+            set
+            {
                 HolidayScheduleSpecified = true;
                 _holidaySchedule = value;
             }
@@ -151,13 +190,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HolidayScheduleSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope _extensionDialingScope;
 
         [XmlElement(ElementName = "extensionDialingScope", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope ExtensionDialingScope {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope ExtensionDialingScope
+        {
             get => _extensionDialingScope;
-            set {
+            set
+            {
                 ExtensionDialingScopeSpecified = true;
                 _extensionDialingScope = value;
             }
@@ -165,13 +207,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtensionDialingScopeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope _nameDialingScope;
 
         [XmlElement(ElementName = "nameDialingScope", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope NameDialingScope {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope NameDialingScope
+        {
             get => _nameDialingScope;
-            set {
+            set
+            {
                 NameDialingScopeSpecified = true;
                 _nameDialingScope = value;
             }
@@ -179,13 +224,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameDialingScopeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AutoAttendantNameDialingEntry _nameDialingEntries;
 
         [XmlElement(ElementName = "nameDialingEntries", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantNameDialingEntry NameDialingEntries {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantNameDialingEntry NameDialingEntries
+        {
             get => _nameDialingEntries;
-            set {
+            set
+            {
                 NameDialingEntriesSpecified = true;
                 _nameDialingEntries = value;
             }
@@ -193,13 +241,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameDialingEntriesSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AutoAttendantAddMenu20 _businessHoursMenu;
 
         [XmlElement(ElementName = "businessHoursMenu", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantAddMenu20 BusinessHoursMenu {
+        [Optional]
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantAddMenu20 BusinessHoursMenu
+        {
             get => _businessHoursMenu;
-            set {
+            set
+            {
                 BusinessHoursMenuSpecified = true;
                 _businessHoursMenu = value;
             }
@@ -207,13 +259,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BusinessHoursMenuSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AutoAttendantAddMenu20 _afterHoursMenu;
 
         [XmlElement(ElementName = "afterHoursMenu", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantAddMenu20 AfterHoursMenu {
+        [Optional]
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantAddMenu20 AfterHoursMenu
+        {
             get => _afterHoursMenu;
-            set {
+            set
+            {
                 AfterHoursMenuSpecified = true;
                 _afterHoursMenu = value;
             }
@@ -221,13 +277,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AfterHoursMenuSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AutoAttendantAddMenu20 _holidayMenu;
 
         [XmlElement(ElementName = "holidayMenu", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantAddMenu20 HolidayMenu {
+        [Optional]
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantAddMenu20 HolidayMenu
+        {
             get => _holidayMenu;
-            set {
+            set
+            {
                 HolidayMenuSpecified = true;
                 _holidayMenu = value;
             }
@@ -235,13 +295,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HolidayMenuSpecified { get; set; }
-        
+
         private string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        public string NetworkClassOfService {
+        [Optional]
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:66")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string NetworkClassOfService
+        {
             get => _networkClassOfService;
-            set {
+            set
+            {
                 NetworkClassOfServiceSpecified = true;
                 _networkClassOfService = value;
             }
@@ -249,6 +315,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetworkClassOfServiceSpecified { get; set; }
-        
+
     }
 }

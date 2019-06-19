@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -19,21 +21,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Service Level Threshold Parameter", "Service Level Inclusions Parameter", "Service Level Objective Threshold Parameter"
     /// and "Abandoned Call Threshold Parameter" are "Required", "Hidden" and "Does Not Apply".
     /// The possible values for "Scope" are "Supervisor Only" and "Supervisor and Agent".
-        /// <see cref="EnterpriseCallCenterEnhancedReportingGetAvailableReportTemplateListRequest"/>
-        /// </summary>
+    /// <see cref="EnterpriseCallCenterEnhancedReportingGetAvailableReportTemplateListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1277""}]")]
     public class EnterpriseCallCenterEnhancedReportingGetAvailableReportTemplateListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _reportTemplateTable;
 
         [XmlElement(ElementName = "reportTemplateTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable ReportTemplateTable {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1277")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable ReportTemplateTable
+        {
             get => _reportTemplateTable;
-            set {
+            set
+            {
                 ReportTemplateTableSpecified = true;
                 _reportTemplateTable = value;
             }
@@ -41,6 +46,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportTemplateTableSpecified { get; set; }
-        
+
     }
 }

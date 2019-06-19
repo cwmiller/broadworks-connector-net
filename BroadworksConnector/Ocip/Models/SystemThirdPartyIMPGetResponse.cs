@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response contains the system Third-Party IMP service attributes.
     /// 
     /// Replaced by SystemThirdPartyIMPGetResponse19.
-        /// <see cref="SystemThirdPartyIMPGetRequest"/>
-        /// <see cref="SystemThirdPartyIMPGetResponse19"/>
-        /// </summary>
+    /// <see cref="SystemThirdPartyIMPGetRequest"/>
+    /// <see cref="SystemThirdPartyIMPGetResponse19"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27017""}]")]
     public class SystemThirdPartyIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _serviceNetAddress;
 
         [XmlElement(ElementName = "serviceNetAddress", IsNullable = false, Namespace = "")]
-        public string ServiceNetAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27017")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServiceNetAddress
+        {
             get => _serviceNetAddress;
-            set {
+            set
+            {
                 ServiceNetAddressSpecified = true;
                 _serviceNetAddress = value;
             }
@@ -32,13 +40,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceNetAddressSpecified { get; set; }
-        
+
         private int _servicePort;
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
-        public int ServicePort {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27017")]
+        [MinInclusive(1)]
+        [MaxInclusive(65535)]
+        public int ServicePort
+        {
             get => _servicePort;
-            set {
+            set
+            {
                 ServicePortSpecified = true;
                 _servicePort = value;
             }
@@ -46,6 +60,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePortSpecified { get; set; }
-        
+
     }
 }

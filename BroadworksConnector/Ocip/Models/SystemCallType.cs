@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// System Call Type
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SystemCallType    {
-            [XmlEnum(Name = "Emergency")]
+    public enum SystemCallType
+    {
+        [XmlEnum(Name = "Emergency")]
         Emergency,
-            [XmlEnum(Name = "Repair")]
+        [XmlEnum(Name = "Repair")]
         Repair,
-     }
+    }
 }

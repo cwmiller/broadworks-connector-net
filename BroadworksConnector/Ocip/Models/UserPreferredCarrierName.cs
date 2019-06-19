@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// User can either use it's group's preferred carrier or use it's own.
     /// The user carrier name is exposed if it was previously configured.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class UserPreferredCarrierName 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:621""}]")]
+    public class UserPreferredCarrierName
     {
 
-        
         private bool _useGroupPreferredCarrier;
 
         [XmlElement(ElementName = "useGroupPreferredCarrier", IsNullable = false, Namespace = "")]
-        public bool UseGroupPreferredCarrier {
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:621")]
+        public bool UseGroupPreferredCarrier
+        {
             get => _useGroupPreferredCarrier;
-            set {
+            set
+            {
                 UseGroupPreferredCarrierSpecified = true;
                 _useGroupPreferredCarrier = value;
             }
@@ -28,13 +33,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseGroupPreferredCarrierSpecified { get; set; }
-        
+
         private string _carrier;
 
         [XmlElement(ElementName = "carrier", IsNullable = false, Namespace = "")]
-        public string Carrier {
+        [Optional]
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:621")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Carrier
+        {
             get => _carrier;
-            set {
+            set
+            {
                 CarrierSpecified = true;
                 _carrier = value;
             }
@@ -42,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CarrierSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,21 +13,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Extension", "Department", "In Trunk Group", "Email Address", "Is Active".
     /// "Is Active" is "true" or "false".
     /// "Phone Number" is presented in the E164 format.
-        /// <see cref="GroupUserHotelingGuestSettingsGetListRequest"/>
-        /// </summary>
+    /// <see cref="GroupUserHotelingGuestSettingsGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7544""}]")]
     public class GroupUserHotelingGuestSettingsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _userHotelingGuestTable;
 
         [XmlElement(ElementName = "userHotelingGuestTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable UserHotelingGuestTable {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7544")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable UserHotelingGuestTable
+        {
             get => _userHotelingGuestTable;
-            set {
+            set
+            {
                 UserHotelingGuestTableSpecified = true;
                 _userHotelingGuestTable = value;
             }
@@ -33,6 +38,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserHotelingGuestTableSpecified { get; set; }
-        
+
     }
 }

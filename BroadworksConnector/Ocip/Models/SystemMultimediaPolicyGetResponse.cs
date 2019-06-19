@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemMultimediaPolicyGetRequest
-        /// <see cref="SystemMultimediaPolicyGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemMultimediaPolicyGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11262""}]")]
     public class SystemMultimediaPolicyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _restrictNonAudioVideoMediaTypes;
 
         [XmlElement(ElementName = "restrictNonAudioVideoMediaTypes", IsNullable = false, Namespace = "")]
-        public bool RestrictNonAudioVideoMediaTypes {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11262")]
+        public bool RestrictNonAudioVideoMediaTypes
+        {
             get => _restrictNonAudioVideoMediaTypes;
-            set {
+            set
+            {
                 RestrictNonAudioVideoMediaTypesSpecified = true;
                 _restrictNonAudioVideoMediaTypes = value;
             }
@@ -28,6 +33,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RestrictNonAudioVideoMediaTypesSpecified { get; set; }
-        
+
     }
 }

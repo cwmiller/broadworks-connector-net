@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Change the push to talk service settings.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f32f4b57593f3e1ac6ed1cf45ed62b7c:123""}]")]
     public class UserPushToTalkModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:123")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private bool _allowAutoAnswer;
 
         [XmlElement(ElementName = "allowAutoAnswer", IsNullable = false, Namespace = "")]
-        public bool AllowAutoAnswer {
+        [Optional]
+        [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:123")]
+        public bool AllowAutoAnswer
+        {
             get => _allowAutoAnswer;
-            set {
+            set
+            {
                 AllowAutoAnswerSpecified = true;
                 _allowAutoAnswer = value;
             }
@@ -44,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowAutoAnswerSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection _outgoingConnectionSelection;
 
         [XmlElement(ElementName = "outgoingConnectionSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection OutgoingConnectionSelection {
+        [Optional]
+        [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:123")]
+        public BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection OutgoingConnectionSelection
+        {
             get => _outgoingConnectionSelection;
-            set {
+            set
+            {
                 OutgoingConnectionSelectionSpecified = true;
                 _outgoingConnectionSelection = value;
             }
@@ -58,13 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OutgoingConnectionSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection _accessListSelection;
 
         [XmlElement(ElementName = "accessListSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection AccessListSelection {
+        [Optional]
+        [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:123")]
+        public BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection AccessListSelection
+        {
             get => _accessListSelection;
-            set {
+            set
+            {
                 AccessListSelectionSpecified = true;
                 _accessListSelection = value;
             }
@@ -72,13 +91,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessListSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _selectedUserIdList;
 
         [XmlElement(ElementName = "selectedUserIdList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList SelectedUserIdList {
+        [Optional]
+        [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:123")]
+        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList SelectedUserIdList
+        {
             get => _selectedUserIdList;
-            set {
+            set
+            {
                 SelectedUserIdListSpecified = true;
                 _selectedUserIdList = value;
             }
@@ -86,6 +109,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SelectedUserIdListSpecified { get; set; }
-        
+
     }
 }

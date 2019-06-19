@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// This is the configuration parameters for Do Not Disturb service
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ProfileAndServiceDoNotDisturbInfo 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4237""}]")]
+    public class ProfileAndServiceDoNotDisturbInfo
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4237")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private bool _ringSplash;
 
         [XmlElement(ElementName = "ringSplash", IsNullable = false, Namespace = "")]
-        public bool RingSplash {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4237")]
+        public bool RingSplash
+        {
             get => _ringSplash;
-            set {
+            set
+            {
                 RingSplashSpecified = true;
                 _ringSplash = value;
             }
@@ -41,6 +49,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RingSplashSpecified { get; set; }
-        
+
     }
 }

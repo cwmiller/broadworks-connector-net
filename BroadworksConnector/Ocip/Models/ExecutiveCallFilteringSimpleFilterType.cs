@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Executive call filtering filter type in simple filtering mode.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ExecutiveCallFilteringSimpleFilterType    {
-            [XmlEnum(Name = "All Calls")]
+    public enum ExecutiveCallFilteringSimpleFilterType
+    {
+        [XmlEnum(Name = "All Calls")]
         AllCalls,
-            [XmlEnum(Name = "All Internal Calls")]
+        [XmlEnum(Name = "All Internal Calls")]
         AllInternalCalls,
-            [XmlEnum(Name = "All External Calls")]
+        [XmlEnum(Name = "All External Calls")]
         AllExternalCalls,
-     }
+    }
 }

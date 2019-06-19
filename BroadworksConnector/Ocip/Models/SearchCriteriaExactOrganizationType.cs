@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Criteria for searching for an organization type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1030""}]")]
     public class SearchCriteriaExactOrganizationType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        
         private BroadWorksConnector.Ocip.Models.OrganizationType _organizationType;
 
         [XmlElement(ElementName = "organizationType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.OrganizationType OrganizationType {
+        [Group(@"f0ada2681ca347fa83b464734259b304:1030")]
+        public BroadWorksConnector.Ocip.Models.OrganizationType OrganizationType
+        {
             get => _organizationType;
-            set {
+            set
+            {
                 OrganizationTypeSpecified = true;
                 _organizationType = value;
             }
@@ -27,6 +32,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OrganizationTypeSpecified { get; set; }
-        
+
     }
 }

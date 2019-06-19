@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The presentation indicator for the last redirecting party
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum RedirectingPresentationIndicator    {
-            [XmlEnum(Name = "Anonymous")]
+    public enum RedirectingPresentationIndicator
+    {
+        [XmlEnum(Name = "Anonymous")]
         Anonymous,
-            [XmlEnum(Name = "Anonymous Name")]
+        [XmlEnum(Name = "Anonymous Name")]
         AnonymousName,
-            [XmlEnum(Name = "Anonymous URI")]
+        [XmlEnum(Name = "Anonymous URI")]
         AnonymousURI,
-            [XmlEnum(Name = "Public")]
+        [XmlEnum(Name = "Public")]
         Public,
-     }
+    }
 }

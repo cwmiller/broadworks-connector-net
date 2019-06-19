@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemOCIReportingParametersGetRequest14sp1.
     /// Contains a list of system OCI Reporting parameters.
-        /// <see cref="SystemOCIReportingParametersGetRequest14sp1"/>
-        /// </summary>
+    /// <see cref="SystemOCIReportingParametersGetRequest14sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12694""}]")]
     public class SystemOCIReportingParametersGetResponse14sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private int _serverPort;
 
         [XmlElement(ElementName = "serverPort", IsNullable = false, Namespace = "")]
-        public int ServerPort {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12694")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int ServerPort
+        {
             get => _serverPort;
-            set {
+            set
+            {
                 ServerPortSpecified = true;
                 _serverPort = value;
             }
@@ -29,13 +36,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerPortSpecified { get; set; }
-        
+
         private bool _enableConnectionPing;
 
         [XmlElement(ElementName = "enableConnectionPing", IsNullable = false, Namespace = "")]
-        public bool EnableConnectionPing {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12694")]
+        public bool EnableConnectionPing
+        {
             get => _enableConnectionPing;
-            set {
+            set
+            {
                 EnableConnectionPingSpecified = true;
                 _enableConnectionPing = value;
             }
@@ -43,13 +53,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableConnectionPingSpecified { get; set; }
-        
+
         private int _connectionPingIntervalSeconds;
 
         [XmlElement(ElementName = "connectionPingIntervalSeconds", IsNullable = false, Namespace = "")]
-        public int ConnectionPingIntervalSeconds {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12694")]
+        [MinInclusive(1)]
+        [MaxInclusive(86400)]
+        public int ConnectionPingIntervalSeconds
+        {
             get => _connectionPingIntervalSeconds;
-            set {
+            set
+            {
                 ConnectionPingIntervalSecondsSpecified = true;
                 _connectionPingIntervalSeconds = value;
             }
@@ -57,13 +72,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConnectionPingIntervalSecondsSpecified { get; set; }
-        
+
         private bool _alterPasswords;
 
         [XmlElement(ElementName = "alterPasswords", IsNullable = false, Namespace = "")]
-        public bool AlterPasswords {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12694")]
+        public bool AlterPasswords
+        {
             get => _alterPasswords;
-            set {
+            set
+            {
                 AlterPasswordsSpecified = true;
                 _alterPasswords = value;
             }
@@ -71,13 +89,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlterPasswordsSpecified { get; set; }
-        
+
         private bool _enablePublicIdentityReporting;
 
         [XmlElement(ElementName = "enablePublicIdentityReporting", IsNullable = false, Namespace = "")]
-        public bool EnablePublicIdentityReporting {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12694")]
+        public bool EnablePublicIdentityReporting
+        {
             get => _enablePublicIdentityReporting;
-            set {
+            set
+            {
                 EnablePublicIdentityReportingSpecified = true;
                 _enablePublicIdentityReporting = value;
             }
@@ -85,6 +106,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnablePublicIdentityReportingSpecified { get; set; }
-        
+
     }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call Types that are traced for malicious calls
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum MaliciousCallTraceCallTypeSelection    {
-            [XmlEnum(Name = "All Incoming")]
+    public enum MaliciousCallTraceCallTypeSelection
+    {
+        [XmlEnum(Name = "All Incoming")]
         AllIncoming,
-            [XmlEnum(Name = "Answered Incoming")]
+        [XmlEnum(Name = "Answered Incoming")]
         AnsweredIncoming,
-            [XmlEnum(Name = "All Incoming And Outgoing")]
+        [XmlEnum(Name = "All Incoming And Outgoing")]
         AllIncomingAndOutgoing,
-     }
+    }
 }

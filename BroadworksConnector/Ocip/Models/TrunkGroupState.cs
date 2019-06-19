@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// State of a trunk group.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupState    {
-            [XmlEnum(Name = "Available")]
+    public enum TrunkGroupState
+    {
+        [XmlEnum(Name = "Available")]
         Available,
-            [XmlEnum(Name = "Unavailable")]
+        [XmlEnum(Name = "Unavailable")]
         Unavailable,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a criteria to the user's call forwarding selective service.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10902""}]")]
     public class UserCallForwardingSelectiveAddCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10902")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        public string CriteriaName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10902")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string CriteriaName
+        {
             get => _criteriaName;
-            set {
+            set
+            {
                 CriteriaNameSpecified = true;
                 _criteriaName = value;
             }
@@ -44,13 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10902")]
+        public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
+        {
             get => _timeSchedule;
-            set {
+            set
+            {
                 TimeScheduleSpecified = true;
                 _timeSchedule = value;
             }
@@ -58,13 +74,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeScheduleSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection _forwardToNumberSelection;
 
         [XmlElement(ElementName = "forwardToNumberSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection ForwardToNumberSelection {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10902")]
+        public BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection ForwardToNumberSelection
+        {
             get => _forwardToNumberSelection;
-            set {
+            set
+            {
                 ForwardToNumberSelectionSpecified = true;
                 _forwardToNumberSelection = value;
             }
@@ -72,13 +91,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ForwardToNumberSelectionSpecified { get; set; }
-        
+
         private string _forwardToPhoneNumber;
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
-        public string ForwardToPhoneNumber {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10902")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ForwardToPhoneNumber
+        {
             get => _forwardToPhoneNumber;
-            set {
+            set
+            {
                 ForwardToPhoneNumberSpecified = true;
                 _forwardToPhoneNumber = value;
             }
@@ -86,13 +111,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ForwardToPhoneNumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10902")]
+        public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria
+        {
             get => _fromDnCriteria;
-            set {
+            set
+            {
                 FromDnCriteriaSpecified = true;
                 _fromDnCriteria = value;
             }
@@ -100,6 +128,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FromDnCriteriaSpecified { get; set; }
-        
+
     }
 }

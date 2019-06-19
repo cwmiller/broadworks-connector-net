@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Announcement Selection.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AnnouncementSelection    {
-            [XmlEnum(Name = "Default")]
+    public enum AnnouncementSelection
+    {
+        [XmlEnum(Name = "Default")]
         Default,
-            [XmlEnum(Name = "Personal")]
+        [XmlEnum(Name = "Personal")]
         Personal,
-     }
+    }
 }

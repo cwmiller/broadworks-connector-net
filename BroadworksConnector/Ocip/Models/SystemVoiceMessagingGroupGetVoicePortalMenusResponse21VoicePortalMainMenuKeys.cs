@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21VoicePortalMainMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:689""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21VoicePortalMainMenuKeys
     {
 
-        
         private string _voiceMessaging;
 
         [XmlElement(ElementName = "voiceMessaging", IsNullable = false, Namespace = "")]
-        public string VoiceMessaging {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string VoiceMessaging
+        {
             get => _voiceMessaging;
-            set {
+            set
+            {
                 VoiceMessagingSpecified = true;
                 _voiceMessaging = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VoiceMessagingSpecified { get; set; }
-        
+
         private string _commPilotExpressProfile;
 
         [XmlElement(ElementName = "commPilotExpressProfile", IsNullable = false, Namespace = "")]
-        public string CommPilotExpressProfile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string CommPilotExpressProfile
+        {
             get => _commPilotExpressProfile;
-            set {
+            set
+            {
                 CommPilotExpressProfileSpecified = true;
                 _commPilotExpressProfile = value;
             }
@@ -41,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CommPilotExpressProfileSpecified { get; set; }
-        
+
         private string _greetings;
 
         [XmlElement(ElementName = "greetings", IsNullable = false, Namespace = "")]
-        public string Greetings {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string Greetings
+        {
             get => _greetings;
-            set {
+            set
+            {
                 GreetingsSpecified = true;
                 _greetings = value;
             }
@@ -55,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GreetingsSpecified { get; set; }
-        
+
         private string _callForwardingOptions;
 
         [XmlElement(ElementName = "callForwardingOptions", IsNullable = false, Namespace = "")]
-        public string CallForwardingOptions {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string CallForwardingOptions
+        {
             get => _callForwardingOptions;
-            set {
+            set
+            {
                 CallForwardingOptionsSpecified = true;
                 _callForwardingOptions = value;
             }
@@ -69,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallForwardingOptionsSpecified { get; set; }
-        
+
         private string _voicePortalCalling;
 
         [XmlElement(ElementName = "voicePortalCalling", IsNullable = false, Namespace = "")]
-        public string VoicePortalCalling {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string VoicePortalCalling
+        {
             get => _voicePortalCalling;
-            set {
+            set
+            {
                 VoicePortalCallingSpecified = true;
                 _voicePortalCalling = value;
             }
@@ -83,13 +115,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VoicePortalCallingSpecified { get; set; }
-        
+
         private string _hoteling;
 
         [XmlElement(ElementName = "hoteling", IsNullable = false, Namespace = "")]
-        public string Hoteling {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string Hoteling
+        {
             get => _hoteling;
-            set {
+            set
+            {
                 HotelingSpecified = true;
                 _hoteling = value;
             }
@@ -97,13 +135,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HotelingSpecified { get; set; }
-        
+
         private string _passcode;
 
         [XmlElement(ElementName = "passcode", IsNullable = false, Namespace = "")]
-        public string Passcode {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string Passcode
+        {
             get => _passcode;
-            set {
+            set
+            {
                 PasscodeSpecified = true;
                 _passcode = value;
             }
@@ -111,13 +155,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PasscodeSpecified { get; set; }
-        
+
         private string _exitVoicePortal;
 
         [XmlElement(ElementName = "exitVoicePortal", IsNullable = false, Namespace = "")]
-        public string ExitVoicePortal {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ExitVoicePortal
+        {
             get => _exitVoicePortal;
-            set {
+            set
+            {
                 ExitVoicePortalSpecified = true;
                 _exitVoicePortal = value;
             }
@@ -125,13 +175,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExitVoicePortalSpecified { get; set; }
-        
+
         private string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
-        public string RepeatMenu {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string RepeatMenu
+        {
             get => _repeatMenu;
-            set {
+            set
+            {
                 RepeatMenuSpecified = true;
                 _repeatMenu = value;
             }
@@ -139,13 +195,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RepeatMenuSpecified { get; set; }
-        
+
         private string _externalRouting;
 
         [XmlElement(ElementName = "externalRouting", IsNullable = false, Namespace = "")]
-        public string ExternalRouting {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ExternalRouting
+        {
             get => _externalRouting;
-            set {
+            set
+            {
                 ExternalRoutingSpecified = true;
                 _externalRouting = value;
             }
@@ -153,13 +215,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExternalRoutingSpecified { get; set; }
-        
+
         private string _announcement;
 
         [XmlElement(ElementName = "announcement", IsNullable = false, Namespace = "")]
-        public string Announcement {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string Announcement
+        {
             get => _announcement;
-            set {
+            set
+            {
                 AnnouncementSpecified = true;
                 _announcement = value;
             }
@@ -167,13 +235,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnnouncementSpecified { get; set; }
-        
+
         private string _personalAssistant;
 
         [XmlElement(ElementName = "personalAssistant", IsNullable = false, Namespace = "")]
-        public string PersonalAssistant {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:689")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string PersonalAssistant
+        {
             get => _personalAssistant;
-            set {
+            set
+            {
                 PersonalAssistantSpecified = true;
                 _personalAssistant = value;
             }
@@ -181,6 +255,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PersonalAssistantSpecified { get; set; }
-        
+
     }
 }

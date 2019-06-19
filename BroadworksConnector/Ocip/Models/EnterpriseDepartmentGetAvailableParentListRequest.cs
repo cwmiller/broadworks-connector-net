@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// specified department. The department itself and all its decendents are not eligible to be
     /// the parent department.
     /// The response is either EnterpriseDepartmentGetAvailableParentListResponse or ErrorResponse.
-        /// <see cref="EnterpriseDepartmentGetAvailableParentListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="EnterpriseDepartmentGetAvailableParentListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:669""}]")]
     public class EnterpriseDepartmentGetAvailableParentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _enterpriseId;
 
         [XmlElement(ElementName = "enterpriseId", IsNullable = false, Namespace = "")]
-        public string EnterpriseId {
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:669")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string EnterpriseId
+        {
             get => _enterpriseId;
-            set {
+            set
+            {
                 EnterpriseIdSpecified = true;
                 _enterpriseId = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnterpriseIdSpecified { get; set; }
-        
+
         private string _departmentName;
 
         [XmlElement(ElementName = "departmentName", IsNullable = false, Namespace = "")]
-        public string DepartmentName {
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:669")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string DepartmentName
+        {
             get => _departmentName;
-            set {
+            set
+            {
                 DepartmentNameSpecified = true;
                 _departmentName = value;
             }
@@ -46,6 +58,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentNameSpecified { get; set; }
-        
+
     }
 }

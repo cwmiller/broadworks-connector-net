@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the GroupCallCenterGetDistinctiveRingingRequest.
-        /// <see cref="GroupCallCenterGetDistinctiveRingingRequest"/>
-        /// </summary>
+    /// <see cref="GroupCallCenterGetDistinctiveRingingRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4279""}]")]
     public class GroupCallCenterGetDistinctiveRingingResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _distinctiveRingingCallCenterCalls;
 
         [XmlElement(ElementName = "distinctiveRingingCallCenterCalls", IsNullable = false, Namespace = "")]
-        public bool DistinctiveRingingCallCenterCalls {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4279")]
+        public bool DistinctiveRingingCallCenterCalls
+        {
             get => _distinctiveRingingCallCenterCalls;
-            set {
+            set
+            {
                 DistinctiveRingingCallCenterCallsSpecified = true;
                 _distinctiveRingingCallCenterCalls = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DistinctiveRingingCallCenterCallsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingRingPatternForCallCenter;
 
         [XmlElement(ElementName = "distinctiveRingingRingPatternForCallCenter", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.RingPattern DistinctiveRingingRingPatternForCallCenter {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4279")]
+        public BroadWorksConnector.Ocip.Models.RingPattern DistinctiveRingingRingPatternForCallCenter
+        {
             get => _distinctiveRingingRingPatternForCallCenter;
-            set {
+            set
+            {
                 DistinctiveRingingRingPatternForCallCenterSpecified = true;
                 _distinctiveRingingRingPatternForCallCenter = value;
             }
@@ -42,13 +50,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DistinctiveRingingRingPatternForCallCenterSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingForceDeliveryRingPattern;
 
         [XmlElement(ElementName = "distinctiveRingingForceDeliveryRingPattern", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.RingPattern DistinctiveRingingForceDeliveryRingPattern {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4279")]
+        public BroadWorksConnector.Ocip.Models.RingPattern DistinctiveRingingForceDeliveryRingPattern
+        {
             get => _distinctiveRingingForceDeliveryRingPattern;
-            set {
+            set
+            {
                 DistinctiveRingingForceDeliveryRingPatternSpecified = true;
                 _distinctiveRingingForceDeliveryRingPattern = value;
             }
@@ -56,6 +68,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DistinctiveRingingForceDeliveryRingPatternSpecified { get; set; }
-        
+
     }
 }

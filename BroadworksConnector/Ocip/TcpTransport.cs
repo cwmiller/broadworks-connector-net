@@ -82,7 +82,8 @@ namespace BroadWorksConnector.Ocip
                         break;
                     }
                 } while (bytesRead != 0);
-            } catch(Exception e)
+            }
+            catch (Exception e)
             {
                 throw new BadResponseException("Unable to parse response", e);
             }

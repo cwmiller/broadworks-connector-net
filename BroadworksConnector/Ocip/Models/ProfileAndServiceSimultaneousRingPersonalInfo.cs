@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,20 +12,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a criteria table with column heading: "Is Active", "Criteria Name", "Time Schedule", "Holiday Schedule", "Calls From" and "Blacklisted".
     /// 
     /// The "Calls From" column is a string containing call numbers
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ProfileAndServiceSimultaneousRingPersonalInfo 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4359""}]")]
+    public class ProfileAndServiceSimultaneousRingPersonalInfo
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4359")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -31,13 +36,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private bool _doNotRingIfOnCall;
 
         [XmlElement(ElementName = "doNotRingIfOnCall", IsNullable = false, Namespace = "")]
-        public bool DoNotRingIfOnCall {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4359")]
+        public bool DoNotRingIfOnCall
+        {
             get => _doNotRingIfOnCall;
-            set {
+            set
+            {
                 DoNotRingIfOnCallSpecified = true;
                 _doNotRingIfOnCall = value;
             }
@@ -45,13 +53,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DoNotRingIfOnCallSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SimultaneousRingNumber> _simultaneousRingNumber;
+
+        private List<BroadWorksConnector.Ocip.Models.SimultaneousRingNumber> _simultaneousRingNumber = new List<BroadWorksConnector.Ocip.Models.SimultaneousRingNumber>();
 
         [XmlElement(ElementName = "simultaneousRingNumber", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SimultaneousRingNumber> SimultaneousRingNumber {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4359")]
+        public List<BroadWorksConnector.Ocip.Models.SimultaneousRingNumber> SimultaneousRingNumber
+        {
             get => _simultaneousRingNumber;
-            set {
+            set
+            {
                 SimultaneousRingNumberSpecified = true;
                 _simultaneousRingNumber = value;
             }
@@ -59,13 +71,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SimultaneousRingNumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4359")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
+        {
             get => _criteriaTable;
-            set {
+            set
+            {
                 CriteriaTableSpecified = true;
                 _criteriaTable = value;
             }
@@ -73,6 +88,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaTableSpecified { get; set; }
-        
+
     }
 }

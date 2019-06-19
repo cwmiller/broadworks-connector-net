@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a system or provisioning administrator.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1627""}]")]
     public class SystemAdminAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1627")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _firstName;
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
-        public string FirstName {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1627")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string FirstName
+        {
             get => _firstName;
-            set {
+            set
+            {
                 FirstNameSpecified = true;
                 _firstName = value;
             }
@@ -44,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FirstNameSpecified { get; set; }
-        
+
         private string _lastName;
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
-        public string LastName {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1627")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string LastName
+        {
             get => _lastName;
-            set {
+            set
+            {
                 LastNameSpecified = true;
                 _lastName = value;
             }
@@ -58,13 +77,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LastNameSpecified { get; set; }
-        
+
         private string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        public string Password {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1627")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string Password
+        {
             get => _password;
-            set {
+            set
+            {
                 PasswordSpecified = true;
                 _password = value;
             }
@@ -72,13 +96,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PasswordSpecified { get; set; }
-        
+
         private string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        public string Language {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1627")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Language
+        {
             get => _language;
-            set {
+            set
+            {
                 LanguageSpecified = true;
                 _language = value;
             }
@@ -86,13 +116,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LanguageSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SystemAdminType _adminType;
 
         [XmlElement(ElementName = "adminType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SystemAdminType AdminType {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1627")]
+        public BroadWorksConnector.Ocip.Models.SystemAdminType AdminType
+        {
             get => _adminType;
-            set {
+            set
+            {
                 AdminTypeSpecified = true;
                 _adminType = value;
             }
@@ -100,13 +133,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AdminTypeSpecified { get; set; }
-        
+
         private bool _readOnly;
 
         [XmlElement(ElementName = "readOnly", IsNullable = false, Namespace = "")]
-        public bool ReadOnly {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1627")]
+        public bool ReadOnly
+        {
             get => _readOnly;
-            set {
+            set
+            {
                 ReadOnlySpecified = true;
                 _readOnly = value;
             }
@@ -114,6 +150,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReadOnlySpecified { get; set; }
-        
+
     }
 }

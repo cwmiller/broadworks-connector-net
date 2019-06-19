@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call Center statistics sampling period.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterStatisticsSamplingPeriodMinutes    {
-            [XmlEnum(Name = "15")]
+    public enum CallCenterStatisticsSamplingPeriodMinutes
+    {
+        [XmlEnum(Name = "15")]
         _15,
-            [XmlEnum(Name = "30")]
+        [XmlEnum(Name = "30")]
         _30,
-     }
+    }
 }

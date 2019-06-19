@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Identifier for conference.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class MeetMeConferencingConferenceKey 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2542""}]")]
+    public class MeetMeConferencingConferenceKey
     {
 
-        
         private string _bridgeId;
 
         [XmlElement(ElementName = "bridgeId", IsNullable = false, Namespace = "")]
-        public string BridgeId {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2542")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string BridgeId
+        {
             get => _bridgeId;
-            set {
+            set
+            {
                 BridgeIdSpecified = true;
                 _bridgeId = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BridgeIdSpecified { get; set; }
-        
+
         private string _conferenceId;
 
         [XmlElement(ElementName = "conferenceId", IsNullable = false, Namespace = "")]
-        public string ConferenceId {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2542")]
+        [MinLength(6)]
+        [MaxLength(12)]
+        public string ConferenceId
+        {
             get => _conferenceId;
-            set {
+            set
+            {
                 ConferenceIdSpecified = true;
                 _conferenceId = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConferenceIdSpecified { get; set; }
-        
+
     }
 }

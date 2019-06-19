@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Uniquely identifies a call center report template created in the system.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterReportTemplateKey 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:976""}]")]
+    public class CallCenterReportTemplateKey
     {
 
-        
         private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateLevel _templateLevel;
 
         [XmlElement(ElementName = "templateLevel", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateLevel TemplateLevel {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:976")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateLevel TemplateLevel
+        {
             get => _templateLevel;
-            set {
+            set
+            {
                 TemplateLevelSpecified = true;
                 _templateLevel = value;
             }
@@ -27,13 +32,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TemplateLevelSpecified { get; set; }
-        
+
         private string _templateName;
 
         [XmlElement(ElementName = "templateName", IsNullable = false, Namespace = "")]
-        public string TemplateName {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:976")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string TemplateName
+        {
             get => _templateName;
-            set {
+            set
+            {
                 TemplateNameSpecified = true;
                 _templateName = value;
             }
@@ -41,6 +51,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TemplateNameSpecified { get; set; }
-        
+
     }
 }

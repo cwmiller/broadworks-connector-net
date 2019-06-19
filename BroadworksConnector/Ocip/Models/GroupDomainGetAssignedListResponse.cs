@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Contains a simple list of all group domain names.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4562""}]")]
     public class GroupDomainGetAssignedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _groupDefaultDomain;
 
         [XmlElement(ElementName = "groupDefaultDomain", IsNullable = false, Namespace = "")]
-        public string GroupDefaultDomain {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4562")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string GroupDefaultDomain
+        {
             get => _groupDefaultDomain;
-            set {
+            set
+            {
                 GroupDefaultDomainSpecified = true;
                 _groupDefaultDomain = value;
             }
@@ -27,13 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupDefaultDomainSpecified { get; set; }
-        
-        private List<string> _domain;
+
+        private List<string> _domain = new List<string>();
 
         [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
-        public List<string> Domain {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4562")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> Domain
+        {
             get => _domain;
-            set {
+            set
+            {
                 DomainSpecified = true;
                 _domain = value;
             }
@@ -41,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DomainSpecified { get; set; }
-        
+
     }
 }

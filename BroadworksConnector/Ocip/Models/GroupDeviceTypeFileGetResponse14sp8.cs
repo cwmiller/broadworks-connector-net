@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to GroupDeviceTypeFileGetRequest14sp8.
     /// Replaced by: GroupDeviceTypeFileGetResponse16sp1
-        /// <see cref="GroupDeviceTypeFileGetRequest14sp8"/>
-        /// <see cref="GroupDeviceTypeFileGetResponse16sp1"/>
-        /// </summary>
+    /// <see cref="GroupDeviceTypeFileGetRequest14sp8"/>
+    /// <see cref="GroupDeviceTypeFileGetResponse16sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:13542""}]")]
     public class GroupDeviceTypeFileGetResponse14sp8 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode _fileSource;
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13542")]
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource
+        {
             get => _fileSource;
-            set {
+            set
+            {
                 FileSourceSpecified = true;
                 _fileSource = value;
             }
@@ -30,13 +36,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FileSourceSpecified { get; set; }
-        
+
         private string _configurationFileName;
 
         [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
-        public string ConfigurationFileName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13542")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string ConfigurationFileName
+        {
             get => _configurationFileName;
-            set {
+            set
+            {
                 ConfigurationFileNameSpecified = true;
                 _configurationFileName = value;
             }
@@ -44,6 +56,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfigurationFileNameSpecified { get; set; }
-        
+
     }
 }

@@ -6,15 +6,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Service Provider Administrator's policy for accessing
     /// the Session Admission Control information.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServiceProviderAdminSessionAdmissionControlAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum ServiceProviderAdminSessionAdmissionControlAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

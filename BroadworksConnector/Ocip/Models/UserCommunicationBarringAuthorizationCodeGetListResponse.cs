@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to UserCommunicationBarringAuthorizationCodeGetListRequest.
     /// Contains a list of Communication Barring Authorization Codes
     /// assigned to the user.
-        /// <see cref="UserCommunicationBarringAuthorizationCodeGetListRequest"/>
-        /// </summary>
+    /// <see cref="UserCommunicationBarringAuthorizationCodeGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1137""}]")]
     public class UserCommunicationBarringAuthorizationCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> _code;
+        private List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> _code = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry>();
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> Code {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1137")]
+        public List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> Code
+        {
             get => _code;
-            set {
+            set
+            {
                 CodeSpecified = true;
                 _code = value;
             }
@@ -30,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CodeSpecified { get; set; }
-        
+
     }
 }

@@ -5,19 +5,20 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Defines the day of week in the month (First, Second, Third, Fourth, or Last).
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DayOfWeekInMonth    {
-            [XmlEnum(Name = "First")]
+    public enum DayOfWeekInMonth
+    {
+        [XmlEnum(Name = "First")]
         First,
-            [XmlEnum(Name = "Second")]
+        [XmlEnum(Name = "Second")]
         Second,
-            [XmlEnum(Name = "Third")]
+        [XmlEnum(Name = "Third")]
         Third,
-            [XmlEnum(Name = "Fourth")]
+        [XmlEnum(Name = "Fourth")]
         Fourth,
-            [XmlEnum(Name = "Last")]
+        [XmlEnum(Name = "Last")]
         Last,
-     }
+    }
 }

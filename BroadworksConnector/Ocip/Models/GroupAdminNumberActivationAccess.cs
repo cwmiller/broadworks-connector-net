@@ -6,15 +6,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Group Administrator's policy for accessing
     /// the Number Activation Control information.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupAdminNumberActivationAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupAdminNumberActivationAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

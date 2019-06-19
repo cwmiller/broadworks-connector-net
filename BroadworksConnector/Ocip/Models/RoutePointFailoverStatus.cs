@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The Route Point failover status.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum RoutePointFailoverStatus    {
-            [XmlEnum(Name = "Normal")]
+    public enum RoutePointFailoverStatus
+    {
+        [XmlEnum(Name = "Normal")]
         Normal,
-            [XmlEnum(Name = "Failover")]
+        [XmlEnum(Name = "Failover")]
         Failover,
-     }
+    }
 }

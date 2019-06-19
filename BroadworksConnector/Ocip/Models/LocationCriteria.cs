@@ -5,19 +5,20 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Identifies the location zone criteria to be matched.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum LocationCriteria    {
-            [XmlEnum(Name = "In Office Zone")]
+    public enum LocationCriteria
+    {
+        [XmlEnum(Name = "In Office Zone")]
         InOfficeZone,
-            [XmlEnum(Name = "In Primary Zone")]
+        [XmlEnum(Name = "In Primary Zone")]
         InPrimaryZone,
-            [XmlEnum(Name = "In Office Zone, Outside of Primary Zone")]
+        [XmlEnum(Name = "In Office Zone, Outside of Primary Zone")]
         InOfficeZoneOutsideofPrimaryZone,
-            [XmlEnum(Name = "Outside of Office Zone")]
+        [XmlEnum(Name = "Outside of Office Zone")]
         OutsideofOfficeZone,
-            [XmlEnum(Name = "Disregard Zones")]
+        [XmlEnum(Name = "Disregard Zones")]
         DisregardZones,
-     }
+    }
 }

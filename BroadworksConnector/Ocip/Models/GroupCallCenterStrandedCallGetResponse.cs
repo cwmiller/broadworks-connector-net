@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the GroupCallCenterStrandedCallGetRequest.
-        /// <see cref="GroupCallCenterStrandedCallGetRequest"/>
-        /// </summary>
+    /// <see cref="GroupCallCenterStrandedCallGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:13187""}]")]
     public class GroupCallCenterStrandedCallGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.CallCenterStrandedCallProcessingAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterStrandedCallProcessingAction Action {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13187")]
+        public BroadWorksConnector.Ocip.Models.CallCenterStrandedCallProcessingAction Action
+        {
             get => _action;
-            set {
+            set
+            {
                 ActionSpecified = true;
                 _action = value;
             }
@@ -28,13 +33,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActionSpecified { get; set; }
-        
+
         private string _transferPhoneNumber;
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = false, Namespace = "")]
-        public string TransferPhoneNumber {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13187")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string TransferPhoneNumber
+        {
             get => _transferPhoneNumber;
-            set {
+            set
+            {
                 TransferPhoneNumberSpecified = true;
                 _transferPhoneNumber = value;
             }
@@ -42,13 +53,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TransferPhoneNumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
 
         [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13187")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection
+        {
             get => _audioMessageSelection;
-            set {
+            set
+            {
                 AudioMessageSelectionSpecified = true;
                 _audioMessageSelection = value;
             }
@@ -56,13 +71,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioMessageSelectionSpecified { get; set; }
-        
+
         private string _audioFileUrl;
 
         [XmlElement(ElementName = "audioFileUrl", IsNullable = false, Namespace = "")]
-        public string AudioFileUrl {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13187")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string AudioFileUrl
+        {
             get => _audioFileUrl;
-            set {
+            set
+            {
                 AudioFileUrlSpecified = true;
                 _audioFileUrl = value;
             }
@@ -70,13 +91,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioFileUrlSpecified { get; set; }
-        
+
         private string _audioFileDescription;
 
         [XmlElement(ElementName = "audioFileDescription", IsNullable = false, Namespace = "")]
-        public string AudioFileDescription {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13187")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string AudioFileDescription
+        {
             get => _audioFileDescription;
-            set {
+            set
+            {
                 AudioFileDescriptionSpecified = true;
                 _audioFileDescription = value;
             }
@@ -84,13 +111,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioFileDescriptionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
 
         [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType AudioMediaType {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13187")]
+        public BroadWorksConnector.Ocip.Models.MediaFileType AudioMediaType
+        {
             get => _audioMediaType;
-            set {
+            set
+            {
                 AudioMediaTypeSpecified = true;
                 _audioMediaType = value;
             }
@@ -98,13 +129,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioMediaTypeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
 
         [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13187")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection
+        {
             get => _videoMessageSelection;
-            set {
+            set
+            {
                 VideoMessageSelectionSpecified = true;
                 _videoMessageSelection = value;
             }
@@ -112,13 +147,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoMessageSelectionSpecified { get; set; }
-        
+
         private string _videoFileUrl;
 
         [XmlElement(ElementName = "videoFileUrl", IsNullable = false, Namespace = "")]
-        public string VideoFileUrl {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13187")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string VideoFileUrl
+        {
             get => _videoFileUrl;
-            set {
+            set
+            {
                 VideoFileUrlSpecified = true;
                 _videoFileUrl = value;
             }
@@ -126,13 +167,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoFileUrlSpecified { get; set; }
-        
+
         private string _videoFileDescription;
 
         [XmlElement(ElementName = "videoFileDescription", IsNullable = false, Namespace = "")]
-        public string VideoFileDescription {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13187")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string VideoFileDescription
+        {
             get => _videoFileDescription;
-            set {
+            set
+            {
                 VideoFileDescriptionSpecified = true;
                 _videoFileDescription = value;
             }
@@ -140,13 +187,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoFileDescriptionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
 
         [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType VideoMediaType {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13187")]
+        public BroadWorksConnector.Ocip.Models.MediaFileType VideoMediaType
+        {
             get => _videoMediaType;
-            set {
+            set
+            {
                 VideoMediaTypeSpecified = true;
                 _videoMediaType = value;
             }
@@ -154,6 +205,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoMediaTypeSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -17,21 +19,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// extendedAwayAudioMediaType
     /// extendedAwayVideoFile
     /// extendedAwayVideoMediaTyp
-        /// <see cref="UserVoiceMessagingUserGetGreetingRequest20"/>
-        /// </summary>
+    /// <see cref="UserVoiceMessagingUserGetGreetingRequest20"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:1824""}]")]
     public class UserVoiceMessagingUserGetGreetingResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AnnouncementSelection _busyAnnouncementSelection;
 
         [XmlElement(ElementName = "busyAnnouncementSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementSelection BusyAnnouncementSelection {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementSelection BusyAnnouncementSelection
+        {
             get => _busyAnnouncementSelection;
-            set {
+            set
+            {
                 BusyAnnouncementSelectionSpecified = true;
                 _busyAnnouncementSelection = value;
             }
@@ -39,13 +44,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BusyAnnouncementSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _busyPersonalAudioFile;
 
         [XmlElement(ElementName = "busyPersonalAudioFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey BusyPersonalAudioFile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey BusyPersonalAudioFile
+        {
             get => _busyPersonalAudioFile;
-            set {
+            set
+            {
                 BusyPersonalAudioFileSpecified = true;
                 _busyPersonalAudioFile = value;
             }
@@ -53,13 +62,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BusyPersonalAudioFileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _busyPersonalVideoFile;
 
         [XmlElement(ElementName = "busyPersonalVideoFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey BusyPersonalVideoFile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey BusyPersonalVideoFile
+        {
             get => _busyPersonalVideoFile;
-            set {
+            set
+            {
                 BusyPersonalVideoFileSpecified = true;
                 _busyPersonalVideoFile = value;
             }
@@ -67,13 +80,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BusyPersonalVideoFileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection _noAnswerAnnouncementSelection;
 
         [XmlElement(ElementName = "noAnswerAnnouncementSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection NoAnswerAnnouncementSelection {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection NoAnswerAnnouncementSelection
+        {
             get => _noAnswerAnnouncementSelection;
-            set {
+            set
+            {
                 NoAnswerAnnouncementSelectionSpecified = true;
                 _noAnswerAnnouncementSelection = value;
             }
@@ -81,13 +97,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoAnswerAnnouncementSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _noAnswerPersonalAudioFile;
 
         [XmlElement(ElementName = "noAnswerPersonalAudioFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey NoAnswerPersonalAudioFile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey NoAnswerPersonalAudioFile
+        {
             get => _noAnswerPersonalAudioFile;
-            set {
+            set
+            {
                 NoAnswerPersonalAudioFileSpecified = true;
                 _noAnswerPersonalAudioFile = value;
             }
@@ -95,13 +115,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoAnswerPersonalAudioFileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _noAnswerPersonalVideoFile;
 
         [XmlElement(ElementName = "noAnswerPersonalVideoFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey NoAnswerPersonalVideoFile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey NoAnswerPersonalVideoFile
+        {
             get => _noAnswerPersonalVideoFile;
-            set {
+            set
+            {
                 NoAnswerPersonalVideoFileSpecified = true;
                 _noAnswerPersonalVideoFile = value;
             }
@@ -109,13 +133,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoAnswerPersonalVideoFileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead20 _noAnswerAlternateGreeting01;
 
         [XmlElement(ElementName = "noAnswerAlternateGreeting01", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead20 NoAnswerAlternateGreeting01 {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead20 NoAnswerAlternateGreeting01
+        {
             get => _noAnswerAlternateGreeting01;
-            set {
+            set
+            {
                 NoAnswerAlternateGreeting01Specified = true;
                 _noAnswerAlternateGreeting01 = value;
             }
@@ -123,13 +151,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoAnswerAlternateGreeting01Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead20 _noAnswerAlternateGreeting02;
 
         [XmlElement(ElementName = "noAnswerAlternateGreeting02", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead20 NoAnswerAlternateGreeting02 {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead20 NoAnswerAlternateGreeting02
+        {
             get => _noAnswerAlternateGreeting02;
-            set {
+            set
+            {
                 NoAnswerAlternateGreeting02Specified = true;
                 _noAnswerAlternateGreeting02 = value;
             }
@@ -137,13 +169,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoAnswerAlternateGreeting02Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead20 _noAnswerAlternateGreeting03;
 
         [XmlElement(ElementName = "noAnswerAlternateGreeting03", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead20 NoAnswerAlternateGreeting03 {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead20 NoAnswerAlternateGreeting03
+        {
             get => _noAnswerAlternateGreeting03;
-            set {
+            set
+            {
                 NoAnswerAlternateGreeting03Specified = true;
                 _noAnswerAlternateGreeting03 = value;
             }
@@ -151,13 +187,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoAnswerAlternateGreeting03Specified { get; set; }
-        
+
         private bool _extendedAwayEnabled;
 
         [XmlElement(ElementName = "extendedAwayEnabled", IsNullable = false, Namespace = "")]
-        public bool ExtendedAwayEnabled {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public bool ExtendedAwayEnabled
+        {
             get => _extendedAwayEnabled;
-            set {
+            set
+            {
                 ExtendedAwayEnabledSpecified = true;
                 _extendedAwayEnabled = value;
             }
@@ -165,13 +204,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtendedAwayEnabledSpecified { get; set; }
-        
+
         private bool _extendedAwayDisableMessageDeposit;
 
         [XmlElement(ElementName = "extendedAwayDisableMessageDeposit", IsNullable = false, Namespace = "")]
-        public bool ExtendedAwayDisableMessageDeposit {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public bool ExtendedAwayDisableMessageDeposit
+        {
             get => _extendedAwayDisableMessageDeposit;
-            set {
+            set
+            {
                 ExtendedAwayDisableMessageDepositSpecified = true;
                 _extendedAwayDisableMessageDeposit = value;
             }
@@ -179,13 +221,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtendedAwayDisableMessageDepositSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _extendedAwayAudioFile;
 
         [XmlElement(ElementName = "extendedAwayAudioFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey ExtendedAwayAudioFile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey ExtendedAwayAudioFile
+        {
             get => _extendedAwayAudioFile;
-            set {
+            set
+            {
                 ExtendedAwayAudioFileSpecified = true;
                 _extendedAwayAudioFile = value;
             }
@@ -193,13 +239,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtendedAwayAudioFileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _extendedAwayVideoFile;
 
         [XmlElement(ElementName = "extendedAwayVideoFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey ExtendedAwayVideoFile {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey ExtendedAwayVideoFile
+        {
             get => _extendedAwayVideoFile;
-            set {
+            set
+            {
                 ExtendedAwayVideoFileSpecified = true;
                 _extendedAwayVideoFile = value;
             }
@@ -207,13 +257,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtendedAwayVideoFileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.VoiceMessagingNumberOfRings _noAnswerNumberOfRings;
 
         [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingNumberOfRings NoAnswerNumberOfRings {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingNumberOfRings NoAnswerNumberOfRings
+        {
             get => _noAnswerNumberOfRings;
-            set {
+            set
+            {
                 NoAnswerNumberOfRingsSpecified = true;
                 _noAnswerNumberOfRings = value;
             }
@@ -221,13 +274,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoAnswerNumberOfRingsSpecified { get; set; }
-        
+
         private bool _disableMessageDeposit;
 
         [XmlElement(ElementName = "disableMessageDeposit", IsNullable = false, Namespace = "")]
-        public bool DisableMessageDeposit {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public bool DisableMessageDeposit
+        {
             get => _disableMessageDeposit;
-            set {
+            set
+            {
                 DisableMessageDepositSpecified = true;
                 _disableMessageDeposit = value;
             }
@@ -235,13 +291,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DisableMessageDepositSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.VoiceMessagingDisableMessageDepositSelection _disableMessageDepositAction;
 
         [XmlElement(ElementName = "disableMessageDepositAction", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingDisableMessageDepositSelection DisableMessageDepositAction {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingDisableMessageDepositSelection DisableMessageDepositAction
+        {
             get => _disableMessageDepositAction;
-            set {
+            set
+            {
                 DisableMessageDepositActionSpecified = true;
                 _disableMessageDepositAction = value;
             }
@@ -249,13 +308,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DisableMessageDepositActionSpecified { get; set; }
-        
+
         private string _greetingOnlyForwardDestination;
 
         [XmlElement(ElementName = "greetingOnlyForwardDestination", IsNullable = false, Namespace = "")]
-        public string GreetingOnlyForwardDestination {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1824")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string GreetingOnlyForwardDestination
+        {
             get => _greetingOnlyForwardDestination;
-            set {
+            set
+            {
                 GreetingOnlyForwardDestinationSpecified = true;
                 _greetingOnlyForwardDestination = value;
             }
@@ -263,6 +328,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GreetingOnlyForwardDestinationSpecified { get; set; }
-        
+
     }
 }

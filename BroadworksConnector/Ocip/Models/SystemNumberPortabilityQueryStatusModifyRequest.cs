@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the system number portability status information.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12173""}]")]
     public class SystemNumberPortabilityQueryStatusModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _statusName;
 
         [XmlElement(ElementName = "statusName", IsNullable = false, Namespace = "")]
-        public string StatusName {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12173")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string StatusName
+        {
             get => _statusName;
-            set {
+            set
+            {
                 StatusNameSpecified = true;
                 _statusName = value;
             }
@@ -30,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StatusNameSpecified { get; set; }
-        
+
         private string _newStatusName;
 
         [XmlElement(ElementName = "newStatusName", IsNullable = false, Namespace = "")]
-        public string NewStatusName {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12173")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string NewStatusName
+        {
             get => _newStatusName;
-            set {
+            set
+            {
                 NewStatusNameSpecified = true;
                 _newStatusName = value;
             }
@@ -44,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewStatusNameSpecified { get; set; }
-        
+
         private string _treatmentFileName;
 
         [XmlElement(ElementName = "treatmentFileName", IsNullable = true, Namespace = "")]
-        public string TreatmentFileName {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12173")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string TreatmentFileName
+        {
             get => _treatmentFileName;
-            set {
+            set
+            {
                 TreatmentFileNameSpecified = true;
                 _treatmentFileName = value;
             }
@@ -58,6 +77,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TreatmentFileNameSpecified { get; set; }
-        
+
     }
 }

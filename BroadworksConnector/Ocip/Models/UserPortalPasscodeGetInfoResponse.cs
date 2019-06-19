@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to UserPortalPasscodeGetInfoRequest.
-        /// <see cref="UserPortalPasscodeGetInfoRequest"/>
-        /// </summary>
+    /// <see cref="UserPortalPasscodeGetInfoRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3229"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3231""}]}]")]
     public class UserPortalPasscodeGetInfoResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isLoginDisabled;
 
         [XmlElement(ElementName = "isLoginDisabled", IsNullable = false, Namespace = "")]
-        public bool IsLoginDisabled {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3229")]
+        public bool IsLoginDisabled
+        {
             get => _isLoginDisabled;
-            set {
+            set
+            {
                 IsLoginDisabledSpecified = true;
                 _isLoginDisabled = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsLoginDisabledSpecified { get; set; }
-        
+
         private int _expirationDays;
 
         [XmlElement(ElementName = "expirationDays", IsNullable = false, Namespace = "")]
-        public int ExpirationDays {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3231")]
+        public int ExpirationDays
+        {
             get => _expirationDays;
-            set {
+            set
+            {
                 ExpirationDaysSpecified = true;
                 _expirationDays = value;
             }
@@ -42,13 +50,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExpirationDaysSpecified { get; set; }
-        
+
         private bool _doesNotExpire;
 
         [XmlElement(ElementName = "doesNotExpire", IsNullable = false, Namespace = "")]
-        public bool DoesNotExpire {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3231")]
+        public bool DoesNotExpire
+        {
             get => _doesNotExpire;
-            set {
+            set
+            {
                 DoesNotExpireSpecified = true;
                 _doesNotExpire = value;
             }
@@ -56,13 +67,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DoesNotExpireSpecified { get; set; }
-        
+
         private string _passcode;
 
         [XmlElement(ElementName = "passcode", IsNullable = false, Namespace = "")]
-        public string Passcode {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3229")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string Passcode
+        {
             get => _passcode;
-            set {
+            set
+            {
                 PasscodeSpecified = true;
                 _passcode = value;
             }
@@ -70,6 +86,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PasscodeSpecified { get; set; }
-        
+
     }
 }

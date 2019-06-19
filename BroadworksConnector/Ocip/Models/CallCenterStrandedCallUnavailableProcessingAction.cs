@@ -5,21 +5,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call center stranded calls - unavailable routing policy processing action.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterStrandedCallUnavailableProcessingAction    {
-            [XmlEnum(Name = "None")]
+    public enum CallCenterStrandedCallUnavailableProcessingAction
+    {
+        [XmlEnum(Name = "None")]
         None,
-            [XmlEnum(Name = "Busy")]
+        [XmlEnum(Name = "Busy")]
         Busy,
-            [XmlEnum(Name = "Transfer")]
+        [XmlEnum(Name = "Transfer")]
         Transfer,
-            [XmlEnum(Name = "Night Service")]
+        [XmlEnum(Name = "Night Service")]
         NightService,
-            [XmlEnum(Name = "Ringing")]
+        [XmlEnum(Name = "Ringing")]
         Ringing,
-            [XmlEnum(Name = "Announcement")]
+        [XmlEnum(Name = "Announcement")]
         Announcement,
-     }
+    }
 }

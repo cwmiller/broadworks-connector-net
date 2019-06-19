@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,21 +12,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// If the service pack is not available for use or is not authorized, then "authorized" is false and the remaining elements are not returned.
     /// "authorizedQuantity" can be unlimited or a quantity. In the case of a service pack, "authorizedQuantity" is the service pack's quantity.
     /// "authorizable" is applicable for user services and group services; it is not returned for service packs.
-        /// <see cref="GroupServiceGetAuthorizationRequest"/>
-        /// </summary>
+    /// <see cref="GroupServiceGetAuthorizationRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:6790""}]")]
     public class GroupServiceGetAuthorizationResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _authorized;
 
         [XmlElement(ElementName = "authorized", IsNullable = false, Namespace = "")]
-        public bool Authorized {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6790")]
+        public bool Authorized
+        {
             get => _authorized;
-            set {
+            set
+            {
                 AuthorizedSpecified = true;
                 _authorized = value;
             }
@@ -32,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AuthorizedSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _authorizedQuantity;
 
         [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt AuthorizedQuantity {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6790")]
+        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt AuthorizedQuantity
+        {
             get => _authorizedQuantity;
-            set {
+            set
+            {
                 AuthorizedQuantitySpecified = true;
                 _authorizedQuantity = value;
             }
@@ -46,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AuthorizedQuantitySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _usedQuantity;
 
         [XmlElement(ElementName = "usedQuantity", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt UsedQuantity {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6790")]
+        public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt UsedQuantity
+        {
             get => _usedQuantity;
-            set {
+            set
+            {
                 UsedQuantitySpecified = true;
                 _usedQuantity = value;
             }
@@ -60,13 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UsedQuantitySpecified { get; set; }
-        
+
         private bool _authorizable;
 
         [XmlElement(ElementName = "authorizable", IsNullable = false, Namespace = "")]
-        public bool Authorizable {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6790")]
+        public bool Authorizable
+        {
             get => _authorizable;
-            set {
+            set
+            {
                 AuthorizableSpecified = true;
                 _authorizable = value;
             }
@@ -74,6 +91,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AuthorizableSpecified { get; set; }
-        
+
     }
 }

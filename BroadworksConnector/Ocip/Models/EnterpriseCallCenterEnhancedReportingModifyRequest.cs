@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,23 +11,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// 
     /// Replaced by EnterpriseCallCenterEnhancedReportingModifyRequest19
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="EnterpriseCallCenterEnhancedReportingModifyRequest19"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="EnterpriseCallCenterEnhancedReportingModifyRequest19"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24209""}]")]
     public class EnterpriseCallCenterEnhancedReportingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24209")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -33,13 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice _reportingServer;
 
         [XmlElement(ElementName = "reportingServer", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice ReportingServer {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24209")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice ReportingServer
+        {
             get => _reportingServer;
-            set {
+            set
+            {
                 ReportingServerSpecified = true;
                 _reportingServer = value;
             }
@@ -47,13 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportingServerSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource _webStatisticSource;
 
         [XmlElement(ElementName = "webStatisticSource", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource WebStatisticSource {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24209")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource WebStatisticSource
+        {
             get => _webStatisticSource;
-            set {
+            set
+            {
                 WebStatisticSourceSpecified = true;
                 _webStatisticSource = value;
             }
@@ -61,6 +76,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool WebStatisticSourceSpecified { get; set; }
-        
+
     }
 }

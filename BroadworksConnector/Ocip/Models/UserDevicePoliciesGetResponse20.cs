@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to UserDevicePoliciesGetRequest201. enableDeviceFeatureSynchronization is ignored by the
     /// application server in Multiple User Shared mode.
-        /// <see cref="UserDevicePoliciesGetRequest201"/>
-        /// </summary>
+    /// <see cref="UserDevicePoliciesGetRequest201"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35712""}]")]
     public class UserDevicePoliciesGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
 
         [XmlElement(ElementName = "lineMode", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode LineMode {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35712")]
+        public BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode LineMode
+        {
             get => _lineMode;
-            set {
+            set
+            {
                 LineModeSpecified = true;
                 _lineMode = value;
             }
@@ -29,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LineModeSpecified { get; set; }
-        
+
         private bool _enableDeviceFeatureSynchronization;
 
         [XmlElement(ElementName = "enableDeviceFeatureSynchronization", IsNullable = false, Namespace = "")]
-        public bool EnableDeviceFeatureSynchronization {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35712")]
+        public bool EnableDeviceFeatureSynchronization
+        {
             get => _enableDeviceFeatureSynchronization;
-            set {
+            set
+            {
                 EnableDeviceFeatureSynchronizationSpecified = true;
                 _enableDeviceFeatureSynchronization = value;
             }
@@ -43,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableDeviceFeatureSynchronizationSpecified { get; set; }
-        
+
         private bool _enableDnd;
 
         [XmlElement(ElementName = "enableDnd", IsNullable = false, Namespace = "")]
-        public bool EnableDnd {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35712")]
+        public bool EnableDnd
+        {
             get => _enableDnd;
-            set {
+            set
+            {
                 EnableDndSpecified = true;
                 _enableDnd = value;
             }
@@ -57,13 +68,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableDndSpecified { get; set; }
-        
+
         private bool _enableCallForwardingAlways;
 
         [XmlElement(ElementName = "enableCallForwardingAlways", IsNullable = false, Namespace = "")]
-        public bool EnableCallForwardingAlways {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35712")]
+        public bool EnableCallForwardingAlways
+        {
             get => _enableCallForwardingAlways;
-            set {
+            set
+            {
                 EnableCallForwardingAlwaysSpecified = true;
                 _enableCallForwardingAlways = value;
             }
@@ -71,13 +85,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableCallForwardingAlwaysSpecified { get; set; }
-        
+
         private bool _enableCallForwardingBusy;
 
         [XmlElement(ElementName = "enableCallForwardingBusy", IsNullable = false, Namespace = "")]
-        public bool EnableCallForwardingBusy {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35712")]
+        public bool EnableCallForwardingBusy
+        {
             get => _enableCallForwardingBusy;
-            set {
+            set
+            {
                 EnableCallForwardingBusySpecified = true;
                 _enableCallForwardingBusy = value;
             }
@@ -85,13 +102,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableCallForwardingBusySpecified { get; set; }
-        
+
         private bool _enableCallForwardingNoAnswer;
 
         [XmlElement(ElementName = "enableCallForwardingNoAnswer", IsNullable = false, Namespace = "")]
-        public bool EnableCallForwardingNoAnswer {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35712")]
+        public bool EnableCallForwardingNoAnswer
+        {
             get => _enableCallForwardingNoAnswer;
-            set {
+            set
+            {
                 EnableCallForwardingNoAnswerSpecified = true;
                 _enableCallForwardingNoAnswer = value;
             }
@@ -99,13 +119,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableCallForwardingNoAnswerSpecified { get; set; }
-        
+
         private bool _enableAcd;
 
         [XmlElement(ElementName = "enableAcd", IsNullable = false, Namespace = "")]
-        public bool EnableAcd {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35712")]
+        public bool EnableAcd
+        {
             get => _enableAcd;
-            set {
+            set
+            {
                 EnableAcdSpecified = true;
                 _enableAcd = value;
             }
@@ -113,13 +136,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableAcdSpecified { get; set; }
-        
+
         private bool _enableExecutive;
 
         [XmlElement(ElementName = "enableExecutive", IsNullable = false, Namespace = "")]
-        public bool EnableExecutive {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35712")]
+        public bool EnableExecutive
+        {
             get => _enableExecutive;
-            set {
+            set
+            {
                 EnableExecutiveSpecified = true;
                 _enableExecutive = value;
             }
@@ -127,13 +153,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableExecutiveSpecified { get; set; }
-        
+
         private bool _enableExecutiveAssistant;
 
         [XmlElement(ElementName = "enableExecutiveAssistant", IsNullable = false, Namespace = "")]
-        public bool EnableExecutiveAssistant {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35712")]
+        public bool EnableExecutiveAssistant
+        {
             get => _enableExecutiveAssistant;
-            set {
+            set
+            {
                 EnableExecutiveAssistantSpecified = true;
                 _enableExecutiveAssistant = value;
             }
@@ -141,13 +170,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableExecutiveAssistantSpecified { get; set; }
-        
+
         private bool _enableSecurityClassification;
 
         [XmlElement(ElementName = "enableSecurityClassification", IsNullable = false, Namespace = "")]
-        public bool EnableSecurityClassification {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35712")]
+        public bool EnableSecurityClassification
+        {
             get => _enableSecurityClassification;
-            set {
+            set
+            {
                 EnableSecurityClassificationSpecified = true;
                 _enableSecurityClassification = value;
             }
@@ -155,13 +187,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableSecurityClassificationSpecified { get; set; }
-        
+
         private bool _enableCallRecording;
 
         [XmlElement(ElementName = "enableCallRecording", IsNullable = false, Namespace = "")]
-        public bool EnableCallRecording {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35712")]
+        public bool EnableCallRecording
+        {
             get => _enableCallRecording;
-            set {
+            set
+            {
                 EnableCallRecordingSpecified = true;
                 _enableCallRecording = value;
             }
@@ -169,6 +204,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableCallRecordingSpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// User's Mobile Identity Modify Entry
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class BroadWorksMobilityUserMobileIdentityModifyEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:1768""}]")]
+    public class BroadWorksMobilityUserMobileIdentityModifyEntry
     {
 
-        
         private string _mobileNumber;
 
         [XmlElement(ElementName = "mobileNumber", IsNullable = false, Namespace = "")]
-        public string MobileNumber {
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1768")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string MobileNumber
+        {
             get => _mobileNumber;
-            set {
+            set
+            {
                 MobileNumberSpecified = true;
                 _mobileNumber = value;
             }
@@ -27,13 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobileNumberSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1768")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -41,13 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
         private bool _isPrimary;
 
         [XmlElement(ElementName = "isPrimary", IsNullable = false, Namespace = "")]
-        public bool IsPrimary {
+        [Optional]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1768")]
+        public bool IsPrimary
+        {
             get => _isPrimary;
-            set {
+            set
+            {
                 IsPrimarySpecified = true;
                 _isPrimary = value;
             }
@@ -55,13 +72,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsPrimarySpecified { get; set; }
-        
+
         private bool _enableAlerting;
 
         [XmlElement(ElementName = "enableAlerting", IsNullable = false, Namespace = "")]
-        public bool EnableAlerting {
+        [Optional]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1768")]
+        public bool EnableAlerting
+        {
             get => _enableAlerting;
-            set {
+            set
+            {
                 EnableAlertingSpecified = true;
                 _enableAlerting = value;
             }
@@ -69,6 +90,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableAlertingSpecified { get; set; }
-        
+
     }
 }

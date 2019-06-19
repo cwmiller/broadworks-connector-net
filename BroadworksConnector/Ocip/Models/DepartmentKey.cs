@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,15 +14,15 @@ namespace BroadWorksConnector.Ocip.Models
     /// a group and its parent enterprise. Therefore, to uniquely identify a department, we must know
     /// the department name and which enterprise or group contains the department.
     /// This type is extended by group and enterprise department keys.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-        [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey))]
-        [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.GroupDepartmentKey))]
-     
-    public abstract class DepartmentKey 
+    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey))]
+    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.GroupDepartmentKey))]
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1833""}]")]
+    public abstract class DepartmentKey
     {
 
-        
     }
 }

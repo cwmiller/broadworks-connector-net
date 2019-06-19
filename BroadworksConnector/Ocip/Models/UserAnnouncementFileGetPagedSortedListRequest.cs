@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -15,22 +17,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Then the search criteria are logically ORed together.
     /// The response is either a UserAnnouncementFileGetPagedSortedListResponse or an
     /// ErrorResponse.
-        /// <see cref="UserAnnouncementFileGetPagedSortedListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="UserAnnouncementFileGetPagedSortedListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:611"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:614"",""optional"":true}]}]")]
     public class UserAnnouncementFileGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:611")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -38,13 +45,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:611")]
+        public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
+        {
             get => _responsePagingControl;
-            set {
+            set
+            {
                 ResponsePagingControlSpecified = true;
                 _responsePagingControl = value;
             }
@@ -52,13 +63,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponsePagingControlSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByAnnouncementFileName _sortByAnnouncementFileName;
 
         [XmlElement(ElementName = "sortByAnnouncementFileName", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByAnnouncementFileName SortByAnnouncementFileName {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:614")]
+        public BroadWorksConnector.Ocip.Models.SortByAnnouncementFileName SortByAnnouncementFileName
+        {
             get => _sortByAnnouncementFileName;
-            set {
+            set
+            {
                 SortByAnnouncementFileNameSpecified = true;
                 _sortByAnnouncementFileName = value;
             }
@@ -66,13 +80,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByAnnouncementFileNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByAnnouncementFileSize _sortByAnnouncementFileSize;
 
         [XmlElement(ElementName = "sortByAnnouncementFileSize", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByAnnouncementFileSize SortByAnnouncementFileSize {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:614")]
+        public BroadWorksConnector.Ocip.Models.SortByAnnouncementFileSize SortByAnnouncementFileSize
+        {
             get => _sortByAnnouncementFileSize;
-            set {
+            set
+            {
                 SortByAnnouncementFileSizeSpecified = true;
                 _sortByAnnouncementFileSize = value;
             }
@@ -80,13 +97,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByAnnouncementFileSizeSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> _searchCriteriaAnnouncementFileName;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> _searchCriteriaAnnouncementFileName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName>();
 
         [XmlElement(ElementName = "searchCriteriaAnnouncementFileName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:611")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName
+        {
             get => _searchCriteriaAnnouncementFileName;
-            set {
+            set
+            {
                 SearchCriteriaAnnouncementFileNameSpecified = true;
                 _searchCriteriaAnnouncementFileName = value;
             }
@@ -94,13 +115,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaAnnouncementFileNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactAnnouncementFileType _searchCriteriaExactAnnouncementFileType;
 
         [XmlElement(ElementName = "searchCriteriaExactAnnouncementFileType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SearchCriteriaExactAnnouncementFileType SearchCriteriaExactAnnouncementFileType {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:611")]
+        public BroadWorksConnector.Ocip.Models.SearchCriteriaExactAnnouncementFileType SearchCriteriaExactAnnouncementFileType
+        {
             get => _searchCriteriaExactAnnouncementFileType;
-            set {
+            set
+            {
                 SearchCriteriaExactAnnouncementFileTypeSpecified = true;
                 _searchCriteriaExactAnnouncementFileType = value;
             }
@@ -108,13 +133,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaExactAnnouncementFileTypeSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactMediaFileType> _searchCriteriaExactMediaFileType;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactMediaFileType> _searchCriteriaExactMediaFileType = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactMediaFileType>();
 
         [XmlElement(ElementName = "searchCriteriaExactMediaFileType", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactMediaFileType> SearchCriteriaExactMediaFileType {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:611")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactMediaFileType> SearchCriteriaExactMediaFileType
+        {
             get => _searchCriteriaExactMediaFileType;
-            set {
+            set
+            {
                 SearchCriteriaExactMediaFileTypeSpecified = true;
                 _searchCriteriaExactMediaFileType = value;
             }
@@ -122,13 +151,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaExactMediaFileTypeSpecified { get; set; }
-        
+
         private bool _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
-        public bool SearchCriteriaModeOr {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:611")]
+        public bool SearchCriteriaModeOr
+        {
             get => _searchCriteriaModeOr;
-            set {
+            set
+            {
                 SearchCriteriaModeOrSpecified = true;
                 _searchCriteriaModeOr = value;
             }
@@ -136,6 +169,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaModeOrSpecified { get; set; }
-        
+
     }
 }

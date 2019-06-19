@@ -5,21 +5,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices indicates how originating calls are permitted.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum OutgoingCallingPlanOriginatingPermission    {
-            [XmlEnum(Name = "Disallow")]
+    public enum OutgoingCallingPlanOriginatingPermission
+    {
+        [XmlEnum(Name = "Disallow")]
         Disallow,
-            [XmlEnum(Name = "Allow")]
+        [XmlEnum(Name = "Allow")]
         Allow,
-            [XmlEnum(Name = "Authorization Code Required")]
+        [XmlEnum(Name = "Authorization Code Required")]
         AuthorizationCodeRequired,
-            [XmlEnum(Name = "Transfer To First Transfer Number")]
+        [XmlEnum(Name = "Transfer To First Transfer Number")]
         TransferToFirstTransferNumber,
-            [XmlEnum(Name = "Transfer To Second Transfer Number")]
+        [XmlEnum(Name = "Transfer To Second Transfer Number")]
         TransferToSecondTransferNumber,
-            [XmlEnum(Name = "Transfer To Third Transfer Number")]
+        [XmlEnum(Name = "Transfer To Third Transfer Number")]
         TransferToThirdTransferNumber,
-     }
+    }
 }

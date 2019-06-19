@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get an event from a system schedule.
     /// The response is either a SystemScheduleGetEventResponse or an ErrorResponse.
-        /// <see cref="SystemScheduleGetEventResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SystemScheduleGetEventResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14596""}]")]
     public class SystemScheduleGetEventRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
 
         [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14596")]
+        public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey
+        {
             get => _scheduleKey;
-            set {
+            set
+            {
                 ScheduleKeySpecified = true;
                 _scheduleKey = value;
             }
@@ -30,13 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleKeySpecified { get; set; }
-        
+
         private string _eventName;
 
         [XmlElement(ElementName = "eventName", IsNullable = false, Namespace = "")]
-        public string EventName {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14596")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string EventName
+        {
             get => _eventName;
-            set {
+            set
+            {
                 EventNameSpecified = true;
                 _eventName = value;
             }
@@ -44,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EventNameSpecified { get; set; }
-        
+
     }
 }

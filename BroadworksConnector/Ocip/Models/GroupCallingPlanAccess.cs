@@ -10,13 +10,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// 1) not to provide access to group-level calling plan configuration,
     /// 2) to provide access to only collect calls for user level incoming calling plan,
     /// 3) to provide access to only international, operator assisted, 700/900, 976, and casual calls for user level outgoing calling plan.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupCallingPlanAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupCallingPlanAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Restricted")]
+        [XmlEnum(Name = "Restricted")]
         Restricted,
-     }
+    }
 }

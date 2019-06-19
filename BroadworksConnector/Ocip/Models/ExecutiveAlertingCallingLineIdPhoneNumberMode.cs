@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Executive alerting calling line Id phone number mode.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ExecutiveAlertingCallingLineIdPhoneNumberMode    {
-            [XmlEnum(Name = "Executive")]
+    public enum ExecutiveAlertingCallingLineIdPhoneNumberMode
+    {
+        [XmlEnum(Name = "Executive")]
         Executive,
-            [XmlEnum(Name = "Originator")]
+        [XmlEnum(Name = "Originator")]
         Originator,
-            [XmlEnum(Name = "Custom")]
+        [XmlEnum(Name = "Custom")]
         Custom,
-     }
+    }
 }

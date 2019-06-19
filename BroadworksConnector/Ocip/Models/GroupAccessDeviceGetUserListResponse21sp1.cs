@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -14,21 +16,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The Endpoint Type column contains one of the enumerated EndpointType21sp1 values.
     /// The value Mobility in Endpoint Type column is only applicable in AS data mode.
     /// The Private Identity column is empty is AS mode.
-        /// <see cref="GroupAccessDeviceGetUserListRequest21sp1"/>
-        /// </summary>
+    /// <see cref="GroupAccessDeviceGetUserListRequest21sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:861""}]")]
     public class GroupAccessDeviceGetUserListResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _deviceUserTable;
 
         [XmlElement(ElementName = "deviceUserTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable DeviceUserTable {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:861")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable DeviceUserTable
+        {
             get => _deviceUserTable;
-            set {
+            set
+            {
                 DeviceUserTableSpecified = true;
                 _deviceUserTable = value;
             }
@@ -36,6 +41,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceUserTableSpecified { get; set; }
-        
+
     }
 }

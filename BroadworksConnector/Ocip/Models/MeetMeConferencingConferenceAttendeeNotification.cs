@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for the notification when attendees join or leave the conferecne.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum MeetMeConferencingConferenceAttendeeNotification    {
-            [XmlEnum(Name = "Play Tone")]
+    public enum MeetMeConferencingConferenceAttendeeNotification
+    {
+        [XmlEnum(Name = "Play Tone")]
         PlayTone,
-            [XmlEnum(Name = "Play Recorded Name")]
+        [XmlEnum(Name = "Play Recorded Name")]
         PlayRecordedName,
-            [XmlEnum(Name = "No Notification")]
+        [XmlEnum(Name = "No Notification")]
         NoNotification,
-     }
+    }
 }

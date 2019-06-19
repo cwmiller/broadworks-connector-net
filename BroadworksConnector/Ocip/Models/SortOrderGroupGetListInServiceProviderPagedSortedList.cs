@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Used to sort the GroupGetListInServiceProviderPagedSortedListRequest request.
-        /// <see cref="GroupGetListInServiceProviderPagedSortedListRequest"/>
-        /// </summary>
+    /// <see cref="GroupGetListInServiceProviderPagedSortedListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SortOrderGroupGetListInServiceProviderPagedSortedList 
+
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7629""}]")]
+    public class SortOrderGroupGetListInServiceProviderPagedSortedList
     {
 
-        
         private BroadWorksConnector.Ocip.Models.SortByGroupId _sortByGroupId;
 
         [XmlElement(ElementName = "sortByGroupId", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByGroupId SortByGroupId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7629")]
+        public BroadWorksConnector.Ocip.Models.SortByGroupId SortByGroupId
+        {
             get => _sortByGroupId;
-            set {
+            set
+            {
                 SortByGroupIdSpecified = true;
                 _sortByGroupId = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByGroupIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByGroupName _sortByGroupName;
 
         [XmlElement(ElementName = "sortByGroupName", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByGroupName SortByGroupName {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7629")]
+        public BroadWorksConnector.Ocip.Models.SortByGroupName SortByGroupName
+        {
             get => _sortByGroupName;
-            set {
+            set
+            {
                 SortByGroupNameSpecified = true;
                 _sortByGroupName = value;
             }
@@ -42,6 +50,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByGroupNameSpecified { get; set; }
-        
+
     }
 }

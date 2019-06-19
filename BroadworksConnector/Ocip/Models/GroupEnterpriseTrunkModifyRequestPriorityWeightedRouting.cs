@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class GroupEnterpriseTrunkModifyRequestPriorityWeightedRouting 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:827""}]")]
+    public class GroupEnterpriseTrunkModifyRequestPriorityWeightedRouting
     {
 
-        
         private int _maximumRerouteAttemptsWithinPriority;
 
         [XmlElement(ElementName = "maximumRerouteAttemptsWithinPriority", IsNullable = false, Namespace = "")]
-        public int MaximumRerouteAttemptsWithinPriority {
+        [Optional]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:827")]
+        [MinInclusive(1)]
+        [MaxInclusive(10)]
+        public int MaximumRerouteAttemptsWithinPriority
+        {
             get => _maximumRerouteAttemptsWithinPriority;
-            set {
+            set
+            {
                 MaximumRerouteAttemptsWithinPrioritySpecified = true;
                 _maximumRerouteAttemptsWithinPriority = value;
             }
@@ -27,13 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaximumRerouteAttemptsWithinPrioritySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList _priorityWeightedTrunkGroupList;
 
         [XmlElement(ElementName = "priorityWeightedTrunkGroupList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList PriorityWeightedTrunkGroupList {
+        [Optional]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:827")]
+        public BroadWorksConnector.Ocip.Models.ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList PriorityWeightedTrunkGroupList
+        {
             get => _priorityWeightedTrunkGroupList;
-            set {
+            set
+            {
                 PriorityWeightedTrunkGroupListSpecified = true;
                 _priorityWeightedTrunkGroupList = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PriorityWeightedTrunkGroupListSpecified { get; set; }
-        
+
     }
 }

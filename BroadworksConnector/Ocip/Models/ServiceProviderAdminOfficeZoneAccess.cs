@@ -6,13 +6,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Service Provider Administrator's policy for accessing
     /// the Office Zone information.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServiceProviderAdminOfficeZoneAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum ServiceProviderAdminOfficeZoneAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-     }
+    }
 }

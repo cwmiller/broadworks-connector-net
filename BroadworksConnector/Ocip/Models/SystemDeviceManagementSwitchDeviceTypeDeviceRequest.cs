@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,22 +12,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// To switch a service provider level device profile, only serviceProviderId should be specified.
     /// To switch a group level device profile, serviceProviderId and groupId should specified.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7196"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7197"",""optional"":true,""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7199""}]}]}]")]
     public class SystemDeviceManagementSwitchDeviceTypeDeviceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7197")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -33,13 +40,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _svcProviderId;
 
         [XmlElement(ElementName = "svcProviderId", IsNullable = false, Namespace = "")]
-        public string SvcProviderId {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7199")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string SvcProviderId
+        {
             get => _svcProviderId;
-            set {
+            set
+            {
                 SvcProviderIdSpecified = true;
                 _svcProviderId = value;
             }
@@ -47,13 +59,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SvcProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7199")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -61,13 +78,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        public string DeviceName {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7196")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceName
+        {
             get => _deviceName;
-            set {
+            set
+            {
                 DeviceNameSpecified = true;
                 _deviceName = value;
             }
@@ -75,13 +97,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceNameSpecified { get; set; }
-        
+
         private string _toDeviceType;
 
         [XmlElement(ElementName = "toDeviceType", IsNullable = false, Namespace = "")]
-        public string ToDeviceType {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7196")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string ToDeviceType
+        {
             get => _toDeviceType;
-            set {
+            set
+            {
                 ToDeviceTypeSpecified = true;
                 _toDeviceType = value;
             }
@@ -89,6 +116,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ToDeviceTypeSpecified { get; set; }
-        
+
     }
 }

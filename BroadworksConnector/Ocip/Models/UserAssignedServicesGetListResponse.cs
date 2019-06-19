@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to UserAssignedServicesGetListRequest.
     /// A user can have both user services and group services because of music on hold.
-        /// <see cref="UserAssignedServicesGetListRequest"/>
-        /// </summary>
+    /// <see cref="UserAssignedServicesGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:778""}]")]
     public class UserAssignedServicesGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.AssignedGroupServicesEntry> _groupServiceEntry;
+        private List<BroadWorksConnector.Ocip.Models.AssignedGroupServicesEntry> _groupServiceEntry = new List<BroadWorksConnector.Ocip.Models.AssignedGroupServicesEntry>();
 
         [XmlElement(ElementName = "groupServiceEntry", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.AssignedGroupServicesEntry> GroupServiceEntry {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:778")]
+        public List<BroadWorksConnector.Ocip.Models.AssignedGroupServicesEntry> GroupServiceEntry
+        {
             get => _groupServiceEntry;
-            set {
+            set
+            {
                 GroupServiceEntrySpecified = true;
                 _groupServiceEntry = value;
             }
@@ -29,13 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupServiceEntrySpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry> _userServiceEntry;
+
+        private List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry> _userServiceEntry = new List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry>();
 
         [XmlElement(ElementName = "userServiceEntry", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry> UserServiceEntry {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:778")]
+        public List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry> UserServiceEntry
+        {
             get => _userServiceEntry;
-            set {
+            set
+            {
                 UserServiceEntrySpecified = true;
                 _userServiceEntry = value;
             }
@@ -43,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserServiceEntrySpecified { get; set; }
-        
+
     }
 }

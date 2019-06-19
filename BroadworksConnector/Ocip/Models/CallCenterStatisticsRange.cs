@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Statistics Range
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterStatisticsRange 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7691""}]")]
+    public class CallCenterStatisticsRange
     {
 
-        
         private string _start;
 
         [XmlElement(ElementName = "start", IsNullable = false, Namespace = "")]
-        public string Start {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7691")]
+        public string Start
+        {
             get => _start;
-            set {
+            set
+            {
                 StartSpecified = true;
                 _start = value;
             }
@@ -27,13 +32,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartSpecified { get; set; }
-        
+
         private string _end;
 
         [XmlElement(ElementName = "end", IsNullable = false, Namespace = "")]
-        public string End {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7691")]
+        public string End
+        {
             get => _end;
-            set {
+            set
+            {
                 EndSpecified = true;
                 _end = value;
             }
@@ -41,6 +50,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndSpecified { get; set; }
-        
+
     }
 }

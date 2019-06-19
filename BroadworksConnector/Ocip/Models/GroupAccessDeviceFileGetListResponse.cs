@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table of device files managed by the Device Management System on a per-device profile basis.
     /// The column headings are: "File Type", "File Format", "Is Authenticated".
     /// Replaced By: GroupAccessDeviceFileGetListResponse14sp8
-        /// <see cref="GroupAccessDeviceFileGetListRequest"/>
-        /// <see cref="GroupAccessDeviceFileGetListResponse14sp8"/>
-        /// </summary>
+    /// <see cref="GroupAccessDeviceFileGetListRequest"/>
+    /// <see cref="GroupAccessDeviceFileGetListResponse14sp8"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:546""}]")]
     public class GroupAccessDeviceFileGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _deviceFilesTable;
 
         [XmlElement(ElementName = "deviceFilesTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable DeviceFilesTable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:546")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable DeviceFilesTable
+        {
             get => _deviceFilesTable;
-            set {
+            set
+            {
                 DeviceFilesTableSpecified = true;
                 _deviceFilesTable = value;
             }
@@ -32,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceFilesTableSpecified { get; set; }
-        
+
     }
 }

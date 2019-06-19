@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Verification Translation and Routing origination
     /// value.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class VerifyTranslationAndRoutingOrigination 
+
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4576""}]")]
+    public class VerifyTranslationAndRoutingOrigination
     {
 
-        
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        public string LinePort {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4576")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string LinePort
+        {
             get => _linePort;
-            set {
+            set
+            {
                 LinePortSpecified = true;
                 _linePort = value;
             }
@@ -28,13 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LinePortSpecified { get; set; }
-        
+
         private string _phone;
 
         [XmlElement(ElementName = "phone", IsNullable = false, Namespace = "")]
-        public string Phone {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4576")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string Phone
+        {
             get => _phone;
-            set {
+            set
+            {
                 PhoneSpecified = true;
                 _phone = value;
             }
@@ -42,13 +54,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneSpecified { get; set; }
-        
+
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4576")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -56,13 +73,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _url;
 
         [XmlElement(ElementName = "url", IsNullable = false, Namespace = "")]
-        public string Url {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4576")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string Url
+        {
             get => _url;
-            set {
+            set
+            {
                 UrlSpecified = true;
                 _url = value;
             }
@@ -70,6 +92,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UrlSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the password security settings for the system.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13089""}]")]
     public class SystemPasswordSecurityParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private bool _useExistingHashing;
 
         [XmlElement(ElementName = "useExistingHashing", IsNullable = false, Namespace = "")]
-        public bool UseExistingHashing {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13089")]
+        public bool UseExistingHashing
+        {
             get => _useExistingHashing;
-            set {
+            set
+            {
                 UseExistingHashingSpecified = true;
                 _useExistingHashing = value;
             }
@@ -30,13 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseExistingHashingSpecified { get; set; }
-        
+
         private bool _enforcePasswordChangeOnExpiry;
 
         [XmlElement(ElementName = "enforcePasswordChangeOnExpiry", IsNullable = false, Namespace = "")]
-        public bool EnforcePasswordChangeOnExpiry {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13089")]
+        public bool EnforcePasswordChangeOnExpiry
+        {
             get => _enforcePasswordChangeOnExpiry;
-            set {
+            set
+            {
                 EnforcePasswordChangeOnExpirySpecified = true;
                 _enforcePasswordChangeOnExpiry = value;
             }
@@ -44,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnforcePasswordChangeOnExpirySpecified { get; set; }
-        
+
     }
 }

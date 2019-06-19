@@ -11,41 +11,42 @@ namespace BroadWorksConnector.Ocip.Models
     /// ChargeNumber
     /// Integrated IMP
     /// Voice Portal Calling
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServiceCategory    {
-            [XmlEnum(Name = "Call Transfer")]
+    public enum ServiceCategory
+    {
+        [XmlEnum(Name = "Call Transfer")]
         CallTransfer,
-            [XmlEnum(Name = "Call Waiting")]
+        [XmlEnum(Name = "Call Waiting")]
         CallWaiting,
-            [XmlEnum(Name = "Calling Name Retrieval")]
+        [XmlEnum(Name = "Calling Name Retrieval")]
         CallingNameRetrieval,
-            [XmlEnum(Name = "Charge Number")]
+        [XmlEnum(Name = "Charge Number")]
         ChargeNumber,
-            [XmlEnum(Name = "External Calling Line ID Delivery")]
+        [XmlEnum(Name = "External Calling Line ID Delivery")]
         ExternalCallingLineIDDelivery,
-            [XmlEnum(Name = "Group Night Forwarding")]
+        [XmlEnum(Name = "Group Night Forwarding")]
         GroupNightForwarding,
-            [XmlEnum(Name = "Integrated IMP")]
+        [XmlEnum(Name = "Integrated IMP")]
         IntegratedIMP,
-            [XmlEnum(Name = "Intercept Group")]
+        [XmlEnum(Name = "Intercept Group")]
         InterceptGroup,
-            [XmlEnum(Name = "Internal Calling Line ID Delivery")]
+        [XmlEnum(Name = "Internal Calling Line ID Delivery")]
         InternalCallingLineIDDelivery,
-            [XmlEnum(Name = "Music On Hold")]
+        [XmlEnum(Name = "Music On Hold")]
         MusicOnHold,
-            [XmlEnum(Name = "OMA Presence")]
+        [XmlEnum(Name = "OMA Presence")]
         OMAPresence,
-            [XmlEnum(Name = "Prepaid")]
+        [XmlEnum(Name = "Prepaid")]
         Prepaid,
-            [XmlEnum(Name = "Shared Call Appearance")]
+        [XmlEnum(Name = "Shared Call Appearance")]
         SharedCallAppearance,
-            [XmlEnum(Name = "Third-Party Voice Mail Support")]
+        [XmlEnum(Name = "Third-Party Voice Mail Support")]
         ThirdPartyVoiceMailSupport,
-            [XmlEnum(Name = "User")]
+        [XmlEnum(Name = "User")]
         User,
-            [XmlEnum(Name = "Voice Portal Calling")]
+        [XmlEnum(Name = "Voice Portal Calling")]
         VoicePortalCalling,
-     }
+    }
 }

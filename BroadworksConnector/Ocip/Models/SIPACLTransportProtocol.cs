@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// SIP ACL Network Transport Protocol.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SIPACLTransportProtocol    {
-            [XmlEnum(Name = "UDP")]
+    public enum SIPACLTransportProtocol
+    {
+        [XmlEnum(Name = "UDP")]
         UDP,
-            [XmlEnum(Name = "TCP")]
+        [XmlEnum(Name = "TCP")]
         TCP,
-            [XmlEnum(Name = "All")]
+        [XmlEnum(Name = "All")]
         All,
-     }
+    }
 }

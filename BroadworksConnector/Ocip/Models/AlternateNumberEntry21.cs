@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Alternate Number Entry.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class AlternateNumberEntry21 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:449""}]")]
+    public class AlternateNumberEntry21
     {
 
-        
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
-        public string PhoneNumber {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:449")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string PhoneNumber
+        {
             get => _phoneNumber;
-            set {
+            set
+            {
                 PhoneNumberSpecified = true;
                 _phoneNumber = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneNumberSpecified { get; set; }
-        
+
         private string _extension;
 
         [XmlElement(ElementName = "extension", IsNullable = true, Namespace = "")]
-        public string Extension {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:449")]
+        [MinLength(2)]
+        [MaxLength(20)]
+        public string Extension
+        {
             get => _extension;
-            set {
+            set
+            {
                 ExtensionSpecified = true;
                 _extension = value;
             }
@@ -41,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtensionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.RingPattern? _ringPattern;
 
         [XmlElement(ElementName = "ringPattern", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.RingPattern? RingPattern {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:449")]
+        public BroadWorksConnector.Ocip.Models.RingPattern? RingPattern
+        {
             get => _ringPattern;
-            set {
+            set
+            {
                 RingPatternSpecified = true;
                 _ringPattern = value;
             }
@@ -55,13 +73,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RingPatternSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:449")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -69,6 +93,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
     }
 }

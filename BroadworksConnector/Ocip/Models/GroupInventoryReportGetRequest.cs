@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request the group's inventory report.
     /// The response is either a GroupInventoryReportGetResponse or an ErrorResponse.
-        /// <see cref="GroupInventoryReportGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="GroupInventoryReportGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5c0fc3a03773b4f430e938115770c82d:42""}]")]
     public class GroupInventoryReportGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -44,13 +56,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private bool _includeUsers;
 
         [XmlElement(ElementName = "includeUsers", IsNullable = false, Namespace = "")]
-        public bool IncludeUsers {
+        [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
+        public bool IncludeUsers
+        {
             get => _includeUsers;
-            set {
+            set
+            {
                 IncludeUsersSpecified = true;
                 _includeUsers = value;
             }
@@ -58,13 +73,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeUsersSpecified { get; set; }
-        
+
         private bool _includeServices;
 
         [XmlElement(ElementName = "includeServices", IsNullable = false, Namespace = "")]
-        public bool IncludeServices {
+        [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
+        public bool IncludeServices
+        {
             get => _includeServices;
-            set {
+            set
+            {
                 IncludeServicesSpecified = true;
                 _includeServices = value;
             }
@@ -72,13 +90,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeServicesSpecified { get; set; }
-        
+
         private bool _includeDns;
 
         [XmlElement(ElementName = "includeDns", IsNullable = false, Namespace = "")]
-        public bool IncludeDns {
+        [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
+        public bool IncludeDns
+        {
             get => _includeDns;
-            set {
+            set
+            {
                 IncludeDnsSpecified = true;
                 _includeDns = value;
             }
@@ -86,13 +107,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeDnsSpecified { get; set; }
-        
+
         private bool _includeAccessDevices;
 
         [XmlElement(ElementName = "includeAccessDevices", IsNullable = false, Namespace = "")]
-        public bool IncludeAccessDevices {
+        [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
+        public bool IncludeAccessDevices
+        {
             get => _includeAccessDevices;
-            set {
+            set
+            {
                 IncludeAccessDevicesSpecified = true;
                 _includeAccessDevices = value;
             }
@@ -100,13 +124,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeAccessDevicesSpecified { get; set; }
-        
+
         private bool _includeDepartments;
 
         [XmlElement(ElementName = "includeDepartments", IsNullable = false, Namespace = "")]
-        public bool IncludeDepartments {
+        [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
+        public bool IncludeDepartments
+        {
             get => _includeDepartments;
-            set {
+            set
+            {
                 IncludeDepartmentsSpecified = true;
                 _includeDepartments = value;
             }
@@ -114,13 +141,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeDepartmentsSpecified { get; set; }
-        
+
         private string _reportDeliveryEmailAddress;
 
         [XmlElement(ElementName = "reportDeliveryEmailAddress", IsNullable = false, Namespace = "")]
-        public string ReportDeliveryEmailAddress {
+        [Optional]
+        [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ReportDeliveryEmailAddress
+        {
             get => _reportDeliveryEmailAddress;
-            set {
+            set
+            {
                 ReportDeliveryEmailAddressSpecified = true;
                 _reportDeliveryEmailAddress = value;
             }
@@ -128,6 +161,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportDeliveryEmailAddressSpecified { get; set; }
-        
+
     }
 }

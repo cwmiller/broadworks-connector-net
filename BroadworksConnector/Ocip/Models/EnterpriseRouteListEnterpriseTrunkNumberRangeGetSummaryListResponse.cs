@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -13,21 +15,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Extension", "Department" and "Email Address" columns contains the corresponding attributes of the user possessing the number range.
     /// The "Enterprise Trunk" column contains the enterprise trunk the user possessing the number range belongs to.
     /// The "Is Active" column indicates if the number range has been activated.
-        /// <see cref="EnterpriseRouteListEnterpriseTrunkNumberRangeGetSummaryListRequest"/>
-        /// </summary>
+    /// <see cref="EnterpriseRouteListEnterpriseTrunkNumberRangeGetSummaryListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3f28429898a57a7f7846d3877b22df9f:194""}]")]
     public class EnterpriseRouteListEnterpriseTrunkNumberRangeGetSummaryListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _numberRangeSummaryTable;
 
         [XmlElement(ElementName = "numberRangeSummaryTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable NumberRangeSummaryTable {
+        [Group(@"3f28429898a57a7f7846d3877b22df9f:194")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable NumberRangeSummaryTable
+        {
             get => _numberRangeSummaryTable;
-            set {
+            set
+            {
                 NumberRangeSummaryTableSpecified = true;
                 _numberRangeSummaryTable = value;
             }
@@ -35,6 +40,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberRangeSummaryTableSpecified { get; set; }
-        
+
     }
 }

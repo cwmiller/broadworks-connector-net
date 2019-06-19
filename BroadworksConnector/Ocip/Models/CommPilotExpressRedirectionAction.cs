@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// CommPilot Express Transfer or Forward Options.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CommPilotExpressRedirectionAction    {
-            [XmlEnum(Name = "Transfer To Voice Mail")]
+    public enum CommPilotExpressRedirectionAction
+    {
+        [XmlEnum(Name = "Transfer To Voice Mail")]
         TransferToVoiceMail,
-            [XmlEnum(Name = "Forward")]
+        [XmlEnum(Name = "Forward")]
         Forward,
-     }
+    }
 }

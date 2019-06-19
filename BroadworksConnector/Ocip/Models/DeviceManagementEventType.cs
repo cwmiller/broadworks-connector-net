@@ -9,13 +9,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// system following a provisioning event from the user.
     /// Manual means that the user triggered the event directly.  The event
     /// was not a result of an indirect provisioning event.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DeviceManagementEventType    {
-            [XmlEnum(Name = "Automatic")]
+    public enum DeviceManagementEventType
+    {
+        [XmlEnum(Name = "Automatic")]
         Automatic,
-            [XmlEnum(Name = "Manual")]
+        [XmlEnum(Name = "Manual")]
         Manual,
-     }
+    }
 }

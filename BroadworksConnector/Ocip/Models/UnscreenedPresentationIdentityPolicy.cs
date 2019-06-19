@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Unscreened Presentation Identity Policy Options
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum UnscreenedPresentationIdentityPolicy    {
-            [XmlEnum(Name = "Profile Presentation Identity")]
+    public enum UnscreenedPresentationIdentityPolicy
+    {
+        [XmlEnum(Name = "Profile Presentation Identity")]
         ProfilePresentationIdentity,
-            [XmlEnum(Name = "Unscreened Presentation Identity")]
+        [XmlEnum(Name = "Unscreened Presentation Identity")]
         UnscreenedPresentationIdentity,
-            [XmlEnum(Name = "Unscreened Presentation Identity With Profile Domain")]
+        [XmlEnum(Name = "Unscreened Presentation Identity With Profile Domain")]
         UnscreenedPresentationIdentityWithProfileDomain,
-     }
+    }
 }

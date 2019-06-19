@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -15,21 +17,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table with a row for each registration and token with column headings :
     /// "User Id",  "Registration Id",  "Application Id",  "Application Version",  "Device Os Type",
     /// "Device Os Version",  "Registration Date",  "Token",  "Events"
-        /// <see cref="UserPushNotificationRegistrationGetListRequest"/>
-        /// </summary>
+    /// <see cref="UserPushNotificationRegistrationGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3468""}]")]
     public class UserPushNotificationRegistrationGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _registrationsTable;
 
         [XmlElement(ElementName = "registrationsTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable RegistrationsTable {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3468")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable RegistrationsTable
+        {
             get => _registrationsTable;
-            set {
+            set
+            {
                 RegistrationsTableSpecified = true;
                 _registrationsTable = value;
             }
@@ -37,6 +42,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RegistrationsTableSpecified { get; set; }
-        
+
     }
 }

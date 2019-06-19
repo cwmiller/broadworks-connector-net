@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Both executive and the executive assistant can run this command.
     /// For the callToNumber, the extension element is not used and the number element is only used when the type is BroadWorks Mobility.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9a6dbade05624033cf7fe782b7c9a9a7:100""}]")]
     public class UserExecutiveAddFilteringSelectiveCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:100")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        public string CriteriaName {
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:100")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string CriteriaName
+        {
             get => _criteriaName;
-            set {
+            set
+            {
                 CriteriaNameSpecified = true;
                 _criteriaName = value;
             }
@@ -46,13 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+        [Optional]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:100")]
+        public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
+        {
             get => _timeSchedule;
-            set {
+            set
+            {
                 TimeScheduleSpecified = true;
                 _timeSchedule = value;
             }
@@ -60,13 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeScheduleSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+        [Optional]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:100")]
+        public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
+        {
             get => _holidaySchedule;
-            set {
+            set
+            {
                 HolidayScheduleSpecified = true;
                 _holidaySchedule = value;
             }
@@ -74,13 +94,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HolidayScheduleSpecified { get; set; }
-        
+
         private bool _filter;
 
         [XmlElement(ElementName = "filter", IsNullable = false, Namespace = "")]
-        public bool Filter {
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:100")]
+        public bool Filter
+        {
             get => _filter;
-            set {
+            set
+            {
                 FilterSpecified = true;
                 _filter = value;
             }
@@ -88,13 +111,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FilterSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringCriteriaFromDn _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringCriteriaFromDn FromDnCriteria {
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:100")]
+        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringCriteriaFromDn FromDnCriteria
+        {
             get => _fromDnCriteria;
-            set {
+            set
+            {
                 FromDnCriteriaSpecified = true;
                 _fromDnCriteria = value;
             }
@@ -102,13 +128,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FromDnCriteriaSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.CallToNumber> _callToNumber;
+
+        private List<BroadWorksConnector.Ocip.Models.CallToNumber> _callToNumber = new List<BroadWorksConnector.Ocip.Models.CallToNumber>();
 
         [XmlElement(ElementName = "callToNumber", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CallToNumber> CallToNumber {
+        [Optional]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:100")]
+        public List<BroadWorksConnector.Ocip.Models.CallToNumber> CallToNumber
+        {
             get => _callToNumber;
-            set {
+            set
+            {
                 CallToNumberSpecified = true;
                 _callToNumber = value;
             }
@@ -116,6 +146,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallToNumberSpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Criteria for searching for a particular fully specified hunt policy.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:955""}]")]
     public class SearchCriteriaExactHuntPolicy : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        
         private BroadWorksConnector.Ocip.Models.HuntPolicy _huntPolicy;
 
         [XmlElement(ElementName = "huntPolicy", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.HuntPolicy HuntPolicy {
+        [Group(@"f0ada2681ca347fa83b464734259b304:955")]
+        public BroadWorksConnector.Ocip.Models.HuntPolicy HuntPolicy
+        {
             get => _huntPolicy;
-            set {
+            set
+            {
                 HuntPolicySpecified = true;
                 _huntPolicy = value;
             }
@@ -27,6 +32,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HuntPolicySpecified { get; set; }
-        
+
     }
 }

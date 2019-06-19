@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The voice portal select distribution list menu keys modify entry.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SelectDistributionListMenuKeysModifyEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3095""}]")]
+    public class SelectDistributionListMenuKeysModifyEntry
     {
 
-        
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        public string ReturnToPreviousMenu {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3095")]
+        [Length(1)]
+        [RegularExpression(@"\*|#")]
+        public string ReturnToPreviousMenu
+        {
             get => _returnToPreviousMenu;
-            set {
+            set
+            {
                 ReturnToPreviousMenuSpecified = true;
                 _returnToPreviousMenu = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReturnToPreviousMenuSpecified { get; set; }
-        
+
         private string _repeatMenuOrFinishEnteringDistributionListNumber;
 
         [XmlElement(ElementName = "repeatMenuOrFinishEnteringDistributionListNumber", IsNullable = true, Namespace = "")]
-        public string RepeatMenuOrFinishEnteringDistributionListNumber {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3095")]
+        [Length(1)]
+        [RegularExpression(@"\*|#")]
+        public string RepeatMenuOrFinishEnteringDistributionListNumber
+        {
             get => _repeatMenuOrFinishEnteringDistributionListNumber;
-            set {
+            set
+            {
                 RepeatMenuOrFinishEnteringDistributionListNumberSpecified = true;
                 _repeatMenuOrFinishEnteringDistributionListNumber = value;
             }
@@ -41,6 +55,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RepeatMenuOrFinishEnteringDistributionListNumberSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -14,21 +16,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The "Group Id"   column contains the Group Id of the user.
     /// The "Department" column contains the department of the user if it is part of a department.
     /// The "Mobile Network" column contains the Mobile Network the number belongs to.
-        /// <see cref="EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentListRequest"/>
-        /// </summary>
+    /// <see cref="EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:123""}]")]
     public class EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _mobileSubscriberDirectoryNumbersAssignmentTable;
 
         [XmlElement(ElementName = "mobileSubscriberDirectoryNumbersAssignmentTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable MobileSubscriberDirectoryNumbersAssignmentTable {
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:123")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable MobileSubscriberDirectoryNumbersAssignmentTable
+        {
             get => _mobileSubscriberDirectoryNumbersAssignmentTable;
-            set {
+            set
+            {
                 MobileSubscriberDirectoryNumbersAssignmentTableSpecified = true;
                 _mobileSubscriberDirectoryNumbersAssignmentTable = value;
             }
@@ -36,6 +41,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobileSubscriberDirectoryNumbersAssignmentTableSpecified { get; set; }
-        
+
     }
 }

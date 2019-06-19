@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Schedule access level.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ScheduleLevel    {
-            [XmlEnum(Name = "Service Provider")]
+    public enum ScheduleLevel
+    {
+        [XmlEnum(Name = "Service Provider")]
         ServiceProvider,
-            [XmlEnum(Name = "Group")]
+        [XmlEnum(Name = "Group")]
         Group,
-            [XmlEnum(Name = "User")]
+        [XmlEnum(Name = "User")]
         User,
-     }
+    }
 }

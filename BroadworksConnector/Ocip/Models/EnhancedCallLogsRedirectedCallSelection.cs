@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,20 +14,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// If none included, any call has a ServiceInvocationDisposition value defined in
     /// ServiceInvocationDisposition
     /// is considered as a redirected call.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class EnhancedCallLogsRedirectedCallSelection 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44857""}]")]
+    public class EnhancedCallLogsRedirectedCallSelection
     {
 
-        
         private bool _redirectedCall;
 
         [XmlElement(ElementName = "redirectedCall", IsNullable = false, Namespace = "")]
-        public bool RedirectedCall {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44857")]
+        public bool RedirectedCall
+        {
             get => _redirectedCall;
-            set {
+            set
+            {
                 RedirectedCallSpecified = true;
                 _redirectedCall = value;
             }
@@ -33,13 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RedirectedCallSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition> _redirectType;
+
+        private List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition> _redirectType = new List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition>();
 
         [XmlElement(ElementName = "redirectType", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition> RedirectType {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44857")]
+        public List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition> RedirectType
+        {
             get => _redirectType;
-            set {
+            set
+            {
                 RedirectTypeSpecified = true;
                 _redirectType = value;
             }
@@ -47,6 +56,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RedirectTypeSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// A list of Mobile Numbers to be alerted.
     /// By convention, an element of this type may be set nil to clear the list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class BroadWorksMobilityAlertingMobileNumberReplacementList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:813""}]")]
+    public class BroadWorksMobilityAlertingMobileNumberReplacementList
     {
 
-        
-        private List<string> _mobileNumber;
+        private List<string> _mobileNumber = new List<string>();
 
         [XmlElement(ElementName = "mobileNumber", IsNullable = false, Namespace = "")]
-        public List<string> MobileNumber {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:813")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public List<string> MobileNumber
+        {
             get => _mobileNumber;
-            set {
+            set
+            {
                 MobileNumberSpecified = true;
                 _mobileNumber = value;
             }
@@ -28,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobileNumberSpecified { get; set; }
-        
+
     }
 }

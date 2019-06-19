@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Possible status values of a service pack migration task.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServicePackMigrationTaskUserSelectionType    {
-            [XmlEnum(Name = "All")]
+    public enum ServicePackMigrationTaskUserSelectionType
+    {
+        [XmlEnum(Name = "All")]
         All,
-            [XmlEnum(Name = "Any")]
+        [XmlEnum(Name = "Any")]
         Any,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

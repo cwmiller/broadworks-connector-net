@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the ServiceProviderAnswerConfirmationGetRequest.
     /// Replaced By: ServiceProviderAnswerConfirmationGetResponse16
-        /// <see cref="ServiceProviderAnswerConfirmationGetRequest"/>
-        /// <see cref="ServiceProviderAnswerConfirmationGetResponse16"/>
-        /// </summary>
+    /// <see cref="ServiceProviderAnswerConfirmationGetRequest"/>
+    /// <see cref="ServiceProviderAnswerConfirmationGetResponse16"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:9550""}]")]
     public class ServiceProviderAnswerConfirmationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection _announcementMessageSelection;
 
         [XmlElement(ElementName = "announcementMessageSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection AnnouncementMessageSelection {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9550")]
+        public BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection AnnouncementMessageSelection
+        {
             get => _announcementMessageSelection;
-            set {
+            set
+            {
                 AnnouncementMessageSelectionSpecified = true;
                 _announcementMessageSelection = value;
             }
@@ -30,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnnouncementMessageSelectionSpecified { get; set; }
-        
+
         private string _confirmationMessageAudioFileDescription;
 
         [XmlElement(ElementName = "confirmationMessageAudioFileDescription", IsNullable = false, Namespace = "")]
-        public string ConfirmationMessageAudioFileDescription {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9550")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string ConfirmationMessageAudioFileDescription
+        {
             get => _confirmationMessageAudioFileDescription;
-            set {
+            set
+            {
                 ConfirmationMessageAudioFileDescriptionSpecified = true;
                 _confirmationMessageAudioFileDescription = value;
             }
@@ -44,13 +55,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfirmationMessageAudioFileDescriptionSpecified { get; set; }
-        
+
         private int _confirmationTimoutSeconds;
 
         [XmlElement(ElementName = "confirmationTimoutSeconds", IsNullable = false, Namespace = "")]
-        public int ConfirmationTimoutSeconds {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9550")]
+        [MinInclusive(2)]
+        [MaxInclusive(30)]
+        public int ConfirmationTimoutSeconds
+        {
             get => _confirmationTimoutSeconds;
-            set {
+            set
+            {
                 ConfirmationTimoutSecondsSpecified = true;
                 _confirmationTimoutSeconds = value;
             }
@@ -58,6 +74,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfirmationTimoutSecondsSpecified { get; set; }
-        
+
     }
 }

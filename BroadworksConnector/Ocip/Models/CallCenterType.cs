@@ -9,15 +9,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following values are only used in AS data mode and will fail in XS data mode:
     /// Standard
     /// Premium
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterType    {
-            [XmlEnum(Name = "Basic")]
+    public enum CallCenterType
+    {
+        [XmlEnum(Name = "Basic")]
         Basic,
-            [XmlEnum(Name = "Standard")]
+        [XmlEnum(Name = "Standard")]
         Standard,
-            [XmlEnum(Name = "Premium")]
+        [XmlEnum(Name = "Premium")]
         Premium,
-     }
+    }
 }

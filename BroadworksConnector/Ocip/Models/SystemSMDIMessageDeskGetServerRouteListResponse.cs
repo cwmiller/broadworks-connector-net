@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemSMDIMessageDeskGetServerRouteListRequest.
     /// The SMDI Server route table column headings are: "Destination" and "SMDI Servers".
-        /// <see cref="SystemSMDIMessageDeskGetServerRouteListRequest"/>
-        /// </summary>
+    /// <see cref="SystemSMDIMessageDeskGetServerRouteListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ee7bb69368e23a56a82c5d9cf07b5433:164""}]")]
     public class SystemSMDIMessageDeskGetServerRouteListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _smdiServerRouteTable;
 
         [XmlElement(ElementName = "smdiServerRouteTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable SmdiServerRouteTable {
+        [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:164")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable SmdiServerRouteTable
+        {
             get => _smdiServerRouteTable;
-            set {
+            set
+            {
                 SmdiServerRouteTableSpecified = true;
                 _smdiServerRouteTable = value;
             }
@@ -29,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SmdiServerRouteTableSpecified { get; set; }
-        
+
     }
 }

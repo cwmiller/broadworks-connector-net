@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for the access device configuration mode.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AccessDeviceEnhancedConfigurationMode    {
-            [XmlEnum(Name = "Default")]
+    public enum AccessDeviceEnhancedConfigurationMode
+    {
+        [XmlEnum(Name = "Default")]
         Default,
-            [XmlEnum(Name = "Manual")]
+        [XmlEnum(Name = "Manual")]
         Manual,
-            [XmlEnum(Name = "Custom")]
+        [XmlEnum(Name = "Custom")]
         Custom,
-     }
+    }
 }

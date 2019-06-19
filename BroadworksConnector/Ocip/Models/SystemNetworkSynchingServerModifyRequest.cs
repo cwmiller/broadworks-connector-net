@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,23 +14,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following elements are only used in XS data mode and ignored in AS data mode:
     /// order
     /// Replaced by SystemNetworkSynchingServerModifyRequest22
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemNetworkSynchingServerModifyRequest22"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemNetworkSynchingServerModifyRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5317""}]")]
     public class SystemNetworkSynchingServerModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        public string NetAddress {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5317")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string NetAddress
+        {
             get => _netAddress;
-            set {
+            set
+            {
                 NetAddressSpecified = true;
                 _netAddress = value;
             }
@@ -36,13 +43,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetAddressSpecified { get; set; }
-        
+
         private int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
-        public int? Port {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5317")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int? Port
+        {
             get => _port;
-            set {
+            set
+            {
                 PortSpecified = true;
                 _port = value;
             }
@@ -50,13 +63,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PortSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5317")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -64,13 +83,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
         private bool _becomePreferred;
 
         [XmlElement(ElementName = "becomePreferred", IsNullable = false, Namespace = "")]
-        public bool BecomePreferred {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5317")]
+        public bool BecomePreferred
+        {
             get => _becomePreferred;
-            set {
+            set
+            {
                 BecomePreferredSpecified = true;
                 _becomePreferred = value;
             }
@@ -78,13 +101,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BecomePreferredSpecified { get; set; }
-        
+
         private int _order;
 
         [XmlElement(ElementName = "order", IsNullable = false, Namespace = "")]
-        public int Order {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5317")]
+        [MinInclusive(1)]
+        [MaxInclusive(32767)]
+        public int Order
+        {
             get => _order;
-            set {
+            set
+            {
                 OrderSpecified = true;
                 _order = value;
             }
@@ -92,6 +121,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OrderSpecified { get; set; }
-        
+
     }
 }

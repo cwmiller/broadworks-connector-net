@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify a group level call center report template.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:3547""}]")]
     public class GroupCallCenterEnhancedReportingReportTemplateModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3547")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3547")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -44,13 +56,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3547")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -58,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
         private string _newName;
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
-        public string NewName {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3547")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string NewName
+        {
             get => _newName;
-            set {
+            set
+            {
                 NewNameSpecified = true;
                 _newName = value;
             }
@@ -72,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewNameSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3547")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -86,13 +115,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.LabeledFileResource _xsltTemplate;
 
         [XmlElement(ElementName = "xsltTemplate", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.LabeledFileResource XsltTemplate {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3547")]
+        public BroadWorksConnector.Ocip.Models.LabeledFileResource XsltTemplate
+        {
             get => _xsltTemplate;
-            set {
+            set
+            {
                 XsltTemplateSpecified = true;
                 _xsltTemplate = value;
             }
@@ -100,13 +133,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool XsltTemplateSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption _scope;
 
         [XmlElement(ElementName = "scope", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption Scope {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3547")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption Scope
+        {
             get => _scope;
-            set {
+            set
+            {
                 ScopeSpecified = true;
                 _scope = value;
             }
@@ -114,13 +151,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScopeSpecified { get; set; }
-        
+
         private bool _isEnabled;
 
         [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
-        public bool IsEnabled {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3547")]
+        public bool IsEnabled
+        {
             get => _isEnabled;
-            set {
+            set
+            {
                 IsEnabledSpecified = true;
                 _isEnabled = value;
             }
@@ -128,13 +169,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsEnabledSpecified { get; set; }
-        
+
         private bool _isRealtimeReport;
 
         [XmlElement(ElementName = "isRealtimeReport", IsNullable = false, Namespace = "")]
-        public bool IsRealtimeReport {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3547")]
+        public bool IsRealtimeReport
+        {
             get => _isRealtimeReport;
-            set {
+            set
+            {
                 IsRealtimeReportSpecified = true;
                 _isRealtimeReport = value;
             }
@@ -142,13 +187,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsRealtimeReportSpecified { get; set; }
-        
+
         private int? _filterNumber;
 
         [XmlElement(ElementName = "filterNumber", IsNullable = true, Namespace = "")]
-        public int? FilterNumber {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3547")]
+        [MinInclusive(1)]
+        [MaxInclusive(999)]
+        public int? FilterNumber
+        {
             get => _filterNumber;
-            set {
+            set
+            {
                 FilterNumberSpecified = true;
                 _filterNumber = value;
             }
@@ -156,13 +207,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FilterNumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateQueryFilterValueReplacementList _filterValue;
 
         [XmlElement(ElementName = "filterValue", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateQueryFilterValueReplacementList FilterValue {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3547")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateQueryFilterValueReplacementList FilterValue
+        {
             get => _filterValue;
-            set {
+            set
+            {
                 FilterValueSpecified = true;
                 _filterValue = value;
             }
@@ -170,6 +225,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FilterValueSpecified { get; set; }
-        
+
     }
 }

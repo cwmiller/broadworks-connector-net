@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Trunk Group pilot user information used when adding a Trunk Group.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class TrunkGroupMultipleContactPilotUser 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4412""}]")]
+    public class TrunkGroupMultipleContactPilotUser
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _lastName;
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
-        public string LastName {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string LastName
+        {
             get => _lastName;
-            set {
+            set
+            {
                 LastNameSpecified = true;
                 _lastName = value;
             }
@@ -41,13 +53,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LastNameSpecified { get; set; }
-        
+
         private string _firstName;
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
-        public string FirstName {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string FirstName
+        {
             get => _firstName;
-            set {
+            set
+            {
                 FirstNameSpecified = true;
                 _firstName = value;
             }
@@ -55,13 +72,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FirstNameSpecified { get; set; }
-        
+
         private string _callingLineIdLastName;
 
         [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
-        public string CallingLineIdLastName {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string CallingLineIdLastName
+        {
             get => _callingLineIdLastName;
-            set {
+            set
+            {
                 CallingLineIdLastNameSpecified = true;
                 _callingLineIdLastName = value;
             }
@@ -69,13 +91,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallingLineIdLastNameSpecified { get; set; }
-        
+
         private string _callingLineIdFirstName;
 
         [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
-        public string CallingLineIdFirstName {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string CallingLineIdFirstName
+        {
             get => _callingLineIdFirstName;
-            set {
+            set
+            {
                 CallingLineIdFirstNameSpecified = true;
                 _callingLineIdFirstName = value;
             }
@@ -83,13 +110,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallingLineIdFirstNameSpecified { get; set; }
-        
+
         private string _hiraganaLastName;
 
         [XmlElement(ElementName = "hiraganaLastName", IsNullable = false, Namespace = "")]
-        public string HiraganaLastName {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string HiraganaLastName
+        {
             get => _hiraganaLastName;
-            set {
+            set
+            {
                 HiraganaLastNameSpecified = true;
                 _hiraganaLastName = value;
             }
@@ -97,13 +130,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HiraganaLastNameSpecified { get; set; }
-        
+
         private string _hiraganaFirstName;
 
         [XmlElement(ElementName = "hiraganaFirstName", IsNullable = false, Namespace = "")]
-        public string HiraganaFirstName {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string HiraganaFirstName
+        {
             get => _hiraganaFirstName;
-            set {
+            set
+            {
                 HiraganaFirstNameSpecified = true;
                 _hiraganaFirstName = value;
             }
@@ -111,13 +150,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HiraganaFirstNameSpecified { get; set; }
-        
+
         private string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        public string Password {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string Password
+        {
             get => _password;
-            set {
+            set
+            {
                 PasswordSpecified = true;
                 _password = value;
             }
@@ -125,13 +170,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PasswordSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
         [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        public BroadWorksConnector.Ocip.Models.DepartmentKey Department
+        {
             get => _department;
-            set {
+            set
+            {
                 DepartmentSpecified = true;
                 _department = value;
             }
@@ -139,13 +188,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentSpecified { get; set; }
-        
+
         private string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        public string Language {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Language
+        {
             get => _language;
-            set {
+            set
+            {
                 LanguageSpecified = true;
                 _language = value;
             }
@@ -153,13 +208,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LanguageSpecified { get; set; }
-        
+
         private string _timeZone;
 
         [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
-        public string TimeZone {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(127)]
+        public string TimeZone
+        {
             get => _timeZone;
-            set {
+            set
+            {
                 TimeZoneSpecified = true;
                 _timeZone = value;
             }
@@ -167,13 +228,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeZoneSpecified { get; set; }
-        
+
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        public string LinePort {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string LinePort
+        {
             get => _linePort;
-            set {
+            set
+            {
                 LinePortSpecified = true;
                 _linePort = value;
             }
@@ -181,13 +247,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LinePortSpecified { get; set; }
-        
-        private List<string> _contact;
+
+        private List<string> _contact = new List<string>();
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-        public List<string> Contact {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(1020)]
+        public List<string> Contact
+        {
             get => _contact;
-            set {
+            set
+            {
                 ContactSpecified = true;
                 _contact = value;
             }
@@ -195,13 +267,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactSpecified { get; set; }
-        
+
         private string _callingLineIdPhoneNumber;
 
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
-        public string CallingLineIdPhoneNumber {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4412")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string CallingLineIdPhoneNumber
+        {
             get => _callingLineIdPhoneNumber;
-            set {
+            set
+            {
                 CallingLineIdPhoneNumberSpecified = true;
                 _callingLineIdPhoneNumber = value;
             }
@@ -209,6 +287,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallingLineIdPhoneNumberSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -20,23 +22,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following elements are only used in AS data mode and ignored in XS data
     /// mode:
     /// searchCriteriaEnterpriseCommonMultiPartPhoneListName
-        /// <see cref="UserEnterpriseCommonPhoneListGetPagedSortedListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="UserEnterpriseCommonPhoneListGetPagedSortedListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1627"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1630""}]}]")]
     public class UserEnterpriseCommonPhoneListGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1627")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -44,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1627")]
+        public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
+        {
             get => _responsePagingControl;
-            set {
+            set
+            {
                 ResponsePagingControlSpecified = true;
                 _responsePagingControl = value;
             }
@@ -58,13 +68,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponsePagingControlSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByEnterpriseCommonPhoneListNumber _sortByEnterpriseCommonPhoneListNumber;
 
         [XmlElement(ElementName = "sortByEnterpriseCommonPhoneListNumber", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByEnterpriseCommonPhoneListNumber SortByEnterpriseCommonPhoneListNumber {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1630")]
+        public BroadWorksConnector.Ocip.Models.SortByEnterpriseCommonPhoneListNumber SortByEnterpriseCommonPhoneListNumber
+        {
             get => _sortByEnterpriseCommonPhoneListNumber;
-            set {
+            set
+            {
                 SortByEnterpriseCommonPhoneListNumberSpecified = true;
                 _sortByEnterpriseCommonPhoneListNumber = value;
             }
@@ -72,13 +85,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByEnterpriseCommonPhoneListNumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByEnterpriseCommonPhoneListName _sortByEnterpriseCommonPhoneListName;
 
         [XmlElement(ElementName = "sortByEnterpriseCommonPhoneListName", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByEnterpriseCommonPhoneListName SortByEnterpriseCommonPhoneListName {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1630")]
+        public BroadWorksConnector.Ocip.Models.SortByEnterpriseCommonPhoneListName SortByEnterpriseCommonPhoneListName
+        {
             get => _sortByEnterpriseCommonPhoneListName;
-            set {
+            set
+            {
                 SortByEnterpriseCommonPhoneListNameSpecified = true;
                 _sortByEnterpriseCommonPhoneListName = value;
             }
@@ -86,13 +102,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByEnterpriseCommonPhoneListNameSpecified { get; set; }
-        
+
         private bool _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
-        public bool SearchCriteriaModeOr {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1627")]
+        public bool SearchCriteriaModeOr
+        {
             get => _searchCriteriaModeOr;
-            set {
+            set
+            {
                 SearchCriteriaModeOrSpecified = true;
                 _searchCriteriaModeOr = value;
             }
@@ -100,13 +120,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaModeOrSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListName> _searchCriteriaEnterpriseCommonPhoneListName;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListName> _searchCriteriaEnterpriseCommonPhoneListName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListName>();
 
         [XmlElement(ElementName = "searchCriteriaEnterpriseCommonPhoneListName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListName> SearchCriteriaEnterpriseCommonPhoneListName {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1627")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListName> SearchCriteriaEnterpriseCommonPhoneListName
+        {
             get => _searchCriteriaEnterpriseCommonPhoneListName;
-            set {
+            set
+            {
                 SearchCriteriaEnterpriseCommonPhoneListNameSpecified = true;
                 _searchCriteriaEnterpriseCommonPhoneListName = value;
             }
@@ -114,13 +138,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaEnterpriseCommonPhoneListNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListNumber> _searchCriteriaEnterpriseCommonPhoneListNumber;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListNumber> _searchCriteriaEnterpriseCommonPhoneListNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListNumber>();
 
         [XmlElement(ElementName = "searchCriteriaEnterpriseCommonPhoneListNumber", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListNumber> SearchCriteriaEnterpriseCommonPhoneListNumber {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1627")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListNumber> SearchCriteriaEnterpriseCommonPhoneListNumber
+        {
             get => _searchCriteriaEnterpriseCommonPhoneListNumber;
-            set {
+            set
+            {
                 SearchCriteriaEnterpriseCommonPhoneListNumberSpecified = true;
                 _searchCriteriaEnterpriseCommonPhoneListNumber = value;
             }
@@ -128,13 +156,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaEnterpriseCommonPhoneListNumberSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonMultiPartPhoneListName> _searchCriteriaEnterpriseCommonMultiPartPhoneListName;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonMultiPartPhoneListName> _searchCriteriaEnterpriseCommonMultiPartPhoneListName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonMultiPartPhoneListName>();
 
         [XmlElement(ElementName = "searchCriteriaEnterpriseCommonMultiPartPhoneListName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonMultiPartPhoneListName> SearchCriteriaEnterpriseCommonMultiPartPhoneListName {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1627")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonMultiPartPhoneListName> SearchCriteriaEnterpriseCommonMultiPartPhoneListName
+        {
             get => _searchCriteriaEnterpriseCommonMultiPartPhoneListName;
-            set {
+            set
+            {
                 SearchCriteriaEnterpriseCommonMultiPartPhoneListNameSpecified = true;
                 _searchCriteriaEnterpriseCommonMultiPartPhoneListName = value;
             }
@@ -142,6 +174,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaEnterpriseCommonMultiPartPhoneListNameSpecified { get; set; }
-        
+
     }
 }

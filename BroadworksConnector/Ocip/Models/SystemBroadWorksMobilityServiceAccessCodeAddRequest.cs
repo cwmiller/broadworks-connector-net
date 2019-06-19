@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,23 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Add a system service access code.
     /// The response is either SuccessResponse or ErrorResponse.
     /// Replaced by SystemBroadWorksMobilityServiceAccessCodeAddRequest21.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemBroadWorksMobilityServiceAccessCodeAddRequest21"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemBroadWorksMobilityServiceAccessCodeAddRequest21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:34232""}]")]
     public class SystemBroadWorksMobilityServiceAccessCodeAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceAccessCode;
 
         [XmlElement(ElementName = "serviceAccessCode", IsNullable = false, Namespace = "")]
-        public string ServiceAccessCode {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34232")]
+        [MinLength(1)]
+        [MaxLength(10)]
+        public string ServiceAccessCode
+        {
             get => _serviceAccessCode;
-            set {
+            set
+            {
                 ServiceAccessCodeSpecified = true;
                 _serviceAccessCode = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceAccessCodeSpecified { get; set; }
-        
+
         private string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        public string CountryCode {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34232")]
+        [MaxLength(3)]
+        [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
+        public string CountryCode
+        {
             get => _countryCode;
-            set {
+            set
+            {
                 CountryCodeSpecified = true;
                 _countryCode = value;
             }
@@ -46,13 +58,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CountryCodeSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34232")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -60,6 +78,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
     }
 }

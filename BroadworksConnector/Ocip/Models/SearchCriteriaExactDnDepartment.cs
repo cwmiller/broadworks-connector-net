@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Criteria for searching for a particular fully specified DN's department.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:910""}]")]
     public class SearchCriteriaExactDnDepartment : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        
         private BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+        [Group(@"f0ada2681ca347fa83b464734259b304:910")]
+        public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey
+        {
             get => _departmentKey;
-            set {
+            set
+            {
                 DepartmentKeySpecified = true;
                 _departmentKey = value;
             }
@@ -27,6 +32,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentKeySpecified { get; set; }
-        
+
     }
 }

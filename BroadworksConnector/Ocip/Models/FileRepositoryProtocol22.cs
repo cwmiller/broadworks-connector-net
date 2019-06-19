@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// File repository protocol.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum FileRepositoryProtocol22    {
-            [XmlEnum(Name = "WebDAV")]
+    public enum FileRepositoryProtocol22
+    {
+        [XmlEnum(Name = "WebDAV")]
         WebDAV,
-            [XmlEnum(Name = "FTP")]
+        [XmlEnum(Name = "FTP")]
         FTP,
-            [XmlEnum(Name = "FTPS")]
+        [XmlEnum(Name = "FTPS")]
         FTPS,
-            [XmlEnum(Name = "SFTP")]
+        [XmlEnum(Name = "SFTP")]
         SFTP,
-     }
+    }
 }

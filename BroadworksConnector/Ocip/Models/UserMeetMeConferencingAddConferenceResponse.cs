@@ -1,26 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to UserMeetMeConferencingAddConferenceRequest.
-        /// <see cref="UserMeetMeConferencingAddConferenceRequest"/>
-        /// </summary>
+    /// <see cref="UserMeetMeConferencingAddConferenceRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:29011""}]")]
     public class UserMeetMeConferencingAddConferenceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _conferenceId;
 
         [XmlElement(ElementName = "conferenceId", IsNullable = false, Namespace = "")]
-        public string ConferenceId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29011")]
+        [MinLength(6)]
+        [MaxLength(12)]
+        public string ConferenceId
+        {
             get => _conferenceId;
-            set {
+            set
+            {
                 ConferenceIdSpecified = true;
                 _conferenceId = value;
             }
@@ -28,13 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConferenceIdSpecified { get; set; }
-        
+
         private string _moderatorPin;
 
         [XmlElement(ElementName = "moderatorPin", IsNullable = false, Namespace = "")]
-        public string ModeratorPin {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29011")]
+        [MinLength(6)]
+        [MaxLength(12)]
+        public string ModeratorPin
+        {
             get => _moderatorPin;
-            set {
+            set
+            {
                 ModeratorPinSpecified = true;
                 _moderatorPin = value;
             }
@@ -42,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ModeratorPinSpecified { get; set; }
-        
+
     }
 }

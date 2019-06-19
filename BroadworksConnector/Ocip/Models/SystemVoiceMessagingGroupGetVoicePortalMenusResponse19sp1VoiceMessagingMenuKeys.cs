@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19sp1VoiceMessagingMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32089""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19sp1VoiceMessagingMenuKeys
     {
 
-        
         private string _playMessages;
 
         [XmlElement(ElementName = "playMessages", IsNullable = false, Namespace = "")]
-        public string PlayMessages {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32089")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string PlayMessages
+        {
             get => _playMessages;
-            set {
+            set
+            {
                 PlayMessagesSpecified = true;
                 _playMessages = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayMessagesSpecified { get; set; }
-        
+
         private string _changeBusyGreeting;
 
         [XmlElement(ElementName = "changeBusyGreeting", IsNullable = false, Namespace = "")]
-        public string ChangeBusyGreeting {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32089")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ChangeBusyGreeting
+        {
             get => _changeBusyGreeting;
-            set {
+            set
+            {
                 ChangeBusyGreetingSpecified = true;
                 _changeBusyGreeting = value;
             }
@@ -41,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ChangeBusyGreetingSpecified { get; set; }
-        
+
         private string _changeNoAnswerGreeting;
 
         [XmlElement(ElementName = "changeNoAnswerGreeting", IsNullable = false, Namespace = "")]
-        public string ChangeNoAnswerGreeting {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32089")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ChangeNoAnswerGreeting
+        {
             get => _changeNoAnswerGreeting;
-            set {
+            set
+            {
                 ChangeNoAnswerGreetingSpecified = true;
                 _changeNoAnswerGreeting = value;
             }
@@ -55,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ChangeNoAnswerGreetingSpecified { get; set; }
-        
+
         private string _changeExtendedAwayGreeting;
 
         [XmlElement(ElementName = "changeExtendedAwayGreeting", IsNullable = false, Namespace = "")]
-        public string ChangeExtendedAwayGreeting {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32089")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ChangeExtendedAwayGreeting
+        {
             get => _changeExtendedAwayGreeting;
-            set {
+            set
+            {
                 ChangeExtendedAwayGreetingSpecified = true;
                 _changeExtendedAwayGreeting = value;
             }
@@ -69,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ChangeExtendedAwayGreetingSpecified { get; set; }
-        
+
         private string _composeMessage;
 
         [XmlElement(ElementName = "composeMessage", IsNullable = false, Namespace = "")]
-        public string ComposeMessage {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32089")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ComposeMessage
+        {
             get => _composeMessage;
-            set {
+            set
+            {
                 ComposeMessageSpecified = true;
                 _composeMessage = value;
             }
@@ -83,13 +115,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ComposeMessageSpecified { get; set; }
-        
+
         private string _deleteAllMessages;
 
         [XmlElement(ElementName = "deleteAllMessages", IsNullable = false, Namespace = "")]
-        public string DeleteAllMessages {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32089")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string DeleteAllMessages
+        {
             get => _deleteAllMessages;
-            set {
+            set
+            {
                 DeleteAllMessagesSpecified = true;
                 _deleteAllMessages = value;
             }
@@ -97,13 +135,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeleteAllMessagesSpecified { get; set; }
-        
+
         private string _passcode;
 
         [XmlElement(ElementName = "passcode", IsNullable = false, Namespace = "")]
-        public string Passcode {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32089")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string Passcode
+        {
             get => _passcode;
-            set {
+            set
+            {
                 PasscodeSpecified = true;
                 _passcode = value;
             }
@@ -111,13 +155,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PasscodeSpecified { get; set; }
-        
+
         private string _personalizedName;
 
         [XmlElement(ElementName = "personalizedName", IsNullable = false, Namespace = "")]
-        public string PersonalizedName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32089")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string PersonalizedName
+        {
             get => _personalizedName;
-            set {
+            set
+            {
                 PersonalizedNameSpecified = true;
                 _personalizedName = value;
             }
@@ -125,13 +175,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PersonalizedNameSpecified { get; set; }
-        
+
         private string _messageDeposit;
 
         [XmlElement(ElementName = "messageDeposit", IsNullable = false, Namespace = "")]
-        public string MessageDeposit {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32089")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string MessageDeposit
+        {
             get => _messageDeposit;
-            set {
+            set
+            {
                 MessageDepositSpecified = true;
                 _messageDeposit = value;
             }
@@ -139,13 +195,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MessageDepositSpecified { get; set; }
-        
+
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        public string ReturnToPreviousMenu {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32089")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ReturnToPreviousMenu
+        {
             get => _returnToPreviousMenu;
-            set {
+            set
+            {
                 ReturnToPreviousMenuSpecified = true;
                 _returnToPreviousMenu = value;
             }
@@ -153,13 +214,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReturnToPreviousMenuSpecified { get; set; }
-        
+
         private string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
-        public string RepeatMenu {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32089")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string RepeatMenu
+        {
             get => _repeatMenu;
-            set {
+            set
+            {
                 RepeatMenuSpecified = true;
                 _repeatMenu = value;
             }
@@ -167,6 +234,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RepeatMenuSpecified { get; set; }
-        
+
     }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for extended file resource usage.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ExtendedFileResourceSelection    {
-            [XmlEnum(Name = "File")]
+    public enum ExtendedFileResourceSelection
+    {
+        [XmlEnum(Name = "File")]
         File,
-            [XmlEnum(Name = "URL")]
+        [XmlEnum(Name = "URL")]
         URL,
-            [XmlEnum(Name = "Default")]
+        [XmlEnum(Name = "Default")]
         Default,
-     }
+    }
 }

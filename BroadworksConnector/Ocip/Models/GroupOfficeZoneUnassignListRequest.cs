@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Unassign a list of OfficeZones from a group.  Note: a new default must be provided if unassigning the current default.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:5755""}]")]
     public class GroupOfficeZoneUnassignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5755")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5755")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -44,13 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
-        private List<string> _officeZoneName;
+
+        private List<string> _officeZoneName = new List<string>();
 
         [XmlElement(ElementName = "officeZoneName", IsNullable = false, Namespace = "")]
-        public List<string> OfficeZoneName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5755")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> OfficeZoneName
+        {
             get => _officeZoneName;
-            set {
+            set
+            {
                 OfficeZoneNameSpecified = true;
                 _officeZoneName = value;
             }
@@ -58,13 +76,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OfficeZoneNameSpecified { get; set; }
-        
+
         private string _defaultOfficeZoneName;
 
         [XmlElement(ElementName = "defaultOfficeZoneName", IsNullable = false, Namespace = "")]
-        public string DefaultOfficeZoneName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5755")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DefaultOfficeZoneName
+        {
             get => _defaultOfficeZoneName;
-            set {
+            set
+            {
                 DefaultOfficeZoneNameSpecified = true;
                 _defaultOfficeZoneName = value;
             }
@@ -72,6 +96,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultOfficeZoneNameSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// When oldPassword is specified, password rule applies. If oldPassword in not specified,
     /// any password rule related to old password does not apply.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:484""}]")]
     public class PasswordModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"6b27fcc79475236456fc113a42b75543:484")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -32,13 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _oldPassword;
 
         [XmlElement(ElementName = "oldPassword", IsNullable = false, Namespace = "")]
-        public string OldPassword {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:484")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string OldPassword
+        {
             get => _oldPassword;
-            set {
+            set
+            {
                 OldPasswordSpecified = true;
                 _oldPassword = value;
             }
@@ -46,13 +59,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OldPasswordSpecified { get; set; }
-        
+
         private string _newPassword;
 
         [XmlElement(ElementName = "newPassword", IsNullable = false, Namespace = "")]
-        public string NewPassword {
+        [Group(@"6b27fcc79475236456fc113a42b75543:484")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string NewPassword
+        {
             get => _newPassword;
-            set {
+            set
+            {
                 NewPasswordSpecified = true;
                 _newPassword = value;
             }
@@ -60,6 +78,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewPasswordSpecified { get; set; }
-        
+
     }
 }

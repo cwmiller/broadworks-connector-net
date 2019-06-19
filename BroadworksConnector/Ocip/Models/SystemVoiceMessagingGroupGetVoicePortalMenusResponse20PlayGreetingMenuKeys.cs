@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse20PlayGreetingMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35297""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse20PlayGreetingMenuKeys
     {
 
-        
         private string _skipBackward;
 
         [XmlElement(ElementName = "skipBackward", IsNullable = false, Namespace = "")]
-        public string SkipBackward {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35297")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string SkipBackward
+        {
             get => _skipBackward;
-            set {
+            set
+            {
                 SkipBackwardSpecified = true;
                 _skipBackward = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SkipBackwardSpecified { get; set; }
-        
+
         private string _pauseOrResume;
 
         [XmlElement(ElementName = "pauseOrResume", IsNullable = false, Namespace = "")]
-        public string PauseOrResume {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35297")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string PauseOrResume
+        {
             get => _pauseOrResume;
-            set {
+            set
+            {
                 PauseOrResumeSpecified = true;
                 _pauseOrResume = value;
             }
@@ -41,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PauseOrResumeSpecified { get; set; }
-        
+
         private string _skipForward;
 
         [XmlElement(ElementName = "skipForward", IsNullable = false, Namespace = "")]
-        public string SkipForward {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35297")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string SkipForward
+        {
             get => _skipForward;
-            set {
+            set
+            {
                 SkipForwardSpecified = true;
                 _skipForward = value;
             }
@@ -55,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SkipForwardSpecified { get; set; }
-        
+
         private string _jumpToBegin;
 
         [XmlElement(ElementName = "jumpToBegin", IsNullable = false, Namespace = "")]
-        public string JumpToBegin {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35297")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string JumpToBegin
+        {
             get => _jumpToBegin;
-            set {
+            set
+            {
                 JumpToBeginSpecified = true;
                 _jumpToBegin = value;
             }
@@ -69,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool JumpToBeginSpecified { get; set; }
-        
+
         private string _jumpToEnd;
 
         [XmlElement(ElementName = "jumpToEnd", IsNullable = false, Namespace = "")]
-        public string JumpToEnd {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35297")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string JumpToEnd
+        {
             get => _jumpToEnd;
-            set {
+            set
+            {
                 JumpToEndSpecified = true;
                 _jumpToEnd = value;
             }
@@ -83,6 +115,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool JumpToEndSpecified { get; set; }
-        
+
     }
 }

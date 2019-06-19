@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Sent when a Web or CLI user logs in using external authentication.
     /// The hashed password value in the request is supported only when the request is sent from the CommPilot web portal.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:300""}]")]
     public class ExternalAuthenticationAuthorizeTokenRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"6b27fcc79475236456fc113a42b75543:300")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -32,13 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        public string Password {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:300")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string Password
+        {
             get => _password;
-            set {
+            set
+            {
                 PasswordSpecified = true;
                 _password = value;
             }
@@ -46,13 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PasswordSpecified { get; set; }
-        
+
         private bool _isPasswordHashed;
 
         [XmlElement(ElementName = "isPasswordHashed", IsNullable = false, Namespace = "")]
-        public bool IsPasswordHashed {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:300")]
+        public bool IsPasswordHashed
+        {
             get => _isPasswordHashed;
-            set {
+            set
+            {
                 IsPasswordHashedSpecified = true;
                 _isPasswordHashed = value;
             }
@@ -60,13 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsPasswordHashedSpecified { get; set; }
-        
+
         private string _loginToken;
 
         [XmlElement(ElementName = "loginToken", IsNullable = false, Namespace = "")]
-        public string LoginToken {
+        [Group(@"6b27fcc79475236456fc113a42b75543:300")]
+        [MinLength(1)]
+        public string LoginToken
+        {
             get => _loginToken;
-            set {
+            set
+            {
                 LoginTokenSpecified = true;
                 _loginToken = value;
             }
@@ -74,6 +95,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LoginTokenSpecified { get; set; }
-        
+
     }
 }

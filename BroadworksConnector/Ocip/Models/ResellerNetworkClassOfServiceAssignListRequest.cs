@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Assign a list of Network Classes of Service to a reseller.
     /// A default Network Class of Service is optional.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:466""}]")]
     public class ResellerNetworkClassOfServiceAssignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        public string ResellerId {
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:466")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ResellerId
+        {
             get => _resellerId;
-            set {
+            set
+            {
                 ResellerIdSpecified = true;
                 _resellerId = value;
             }
@@ -31,13 +38,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResellerIdSpecified { get; set; }
-        
-        private List<string> _networkClassOfService;
+
+        private List<string> _networkClassOfService = new List<string>();
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        public List<string> NetworkClassOfService {
+        [Optional]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:466")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> NetworkClassOfService
+        {
             get => _networkClassOfService;
-            set {
+            set
+            {
                 NetworkClassOfServiceSpecified = true;
                 _networkClassOfService = value;
             }
@@ -45,13 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetworkClassOfServiceSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DefaultNetworkClassOfService _defaultNetworkClassOfService;
 
         [XmlElement(ElementName = "defaultNetworkClassOfService", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DefaultNetworkClassOfService DefaultNetworkClassOfService {
+        [Optional]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:466")]
+        public BroadWorksConnector.Ocip.Models.DefaultNetworkClassOfService DefaultNetworkClassOfService
+        {
             get => _defaultNetworkClassOfService;
-            set {
+            set
+            {
                 DefaultNetworkClassOfServiceSpecified = true;
                 _defaultNetworkClassOfService = value;
             }
@@ -59,6 +76,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultNetworkClassOfServiceSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a user creation task for a trunk group.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3058"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3069""}]}]")]
     public class GroupTrunkGroupUserCreationTaskAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-        public string TaskName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string TaskName
+        {
             get => _taskName;
-            set {
+            set
+            {
                 TaskNameSpecified = true;
                 _taskName = value;
             }
@@ -44,13 +56,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TaskNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat _userIdFormat;
 
         [XmlElement(ElementName = "userIdFormat", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat UserIdFormat {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat UserIdFormat
+        {
             get => _userIdFormat;
-            set {
+            set
+            {
                 UserIdFormatSpecified = true;
                 _userIdFormat = value;
             }
@@ -58,13 +73,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdFormatSpecified { get; set; }
-        
+
         private string _userIdDomain;
 
         [XmlElement(ElementName = "userIdDomain", IsNullable = false, Namespace = "")]
-        public string UserIdDomain {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string UserIdDomain
+        {
             get => _userIdDomain;
-            set {
+            set
+            {
                 UserIdDomainSpecified = true;
                 _userIdDomain = value;
             }
@@ -72,13 +92,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdDomainSpecified { get; set; }
-        
+
         private bool _populateExtension;
 
         [XmlElement(ElementName = "populateExtension", IsNullable = false, Namespace = "")]
-        public bool PopulateExtension {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        public bool PopulateExtension
+        {
             get => _populateExtension;
-            set {
+            set
+            {
                 PopulateExtensionSpecified = true;
                 _populateExtension = value;
             }
@@ -86,13 +109,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PopulateExtensionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _linePortFormat;
 
         [XmlElement(ElementName = "linePortFormat", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat LinePortFormat {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat LinePortFormat
+        {
             get => _linePortFormat;
-            set {
+            set
+            {
                 LinePortFormatSpecified = true;
                 _linePortFormat = value;
             }
@@ -100,13 +126,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LinePortFormatSpecified { get; set; }
-        
+
         private string _linePortDomain;
 
         [XmlElement(ElementName = "linePortDomain", IsNullable = false, Namespace = "")]
-        public string LinePortDomain {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string LinePortDomain
+        {
             get => _linePortDomain;
-            set {
+            set
+            {
                 LinePortDomainSpecified = true;
                 _linePortDomain = value;
             }
@@ -114,13 +145,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LinePortDomainSpecified { get; set; }
-        
+
         private bool _populateContact;
 
         [XmlElement(ElementName = "populateContact", IsNullable = false, Namespace = "")]
-        public bool PopulateContact {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        public bool PopulateContact
+        {
             get => _populateContact;
-            set {
+            set
+            {
                 PopulateContactSpecified = true;
                 _populateContact = value;
             }
@@ -128,13 +162,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PopulateContactSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _contactFormat;
 
         [XmlElement(ElementName = "contactFormat", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat ContactFormat {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat ContactFormat
+        {
             get => _contactFormat;
-            set {
+            set
+            {
                 ContactFormatSpecified = true;
                 _contactFormat = value;
             }
@@ -142,13 +180,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactFormatSpecified { get; set; }
-        
+
         private string _contactDomain;
 
         [XmlElement(ElementName = "contactDomain", IsNullable = false, Namespace = "")]
-        public string ContactDomain {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ContactDomain
+        {
             get => _contactDomain;
-            set {
+            set
+            {
                 ContactDomainSpecified = true;
                 _contactDomain = value;
             }
@@ -156,13 +200,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactDomainSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserPhoneNumbers _userPhoneNumbers;
 
         [XmlElement(ElementName = "userPhoneNumbers", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserPhoneNumbers UserPhoneNumbers {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3069")]
+        public BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserPhoneNumbers UserPhoneNumbers
+        {
             get => _userPhoneNumbers;
-            set {
+            set
+            {
                 UserPhoneNumbersSpecified = true;
                 _userPhoneNumbers = value;
             }
@@ -170,13 +217,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserPhoneNumbersSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserExtensions _userExtensions;
 
         [XmlElement(ElementName = "userExtensions", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserExtensions UserExtensions {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3069")]
+        public BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserExtensions UserExtensions
+        {
             get => _userExtensions;
-            set {
+            set
+            {
                 UserExtensionsSpecified = true;
                 _userExtensions = value;
             }
@@ -184,13 +234,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserExtensionsSpecified { get; set; }
-        
-        private List<string> _servicePackName;
+
+        private List<string> _servicePackName = new List<string>();
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        public List<string> ServicePackName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> ServicePackName
+        {
             get => _servicePackName;
-            set {
+            set
+            {
                 ServicePackNameSpecified = true;
                 _servicePackName = value;
             }
@@ -198,13 +254,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePackNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.UserService> _userService;
+
+        private List<BroadWorksConnector.Ocip.Models.UserService> _userService = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
         [XmlElement(ElementName = "userService", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.UserService> UserService {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3058")]
+        public List<BroadWorksConnector.Ocip.Models.UserService> UserService
+        {
             get => _userService;
-            set {
+            set
+            {
                 UserServiceSpecified = true;
                 _userService = value;
             }
@@ -212,6 +272,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserServiceSpecified { get; set; }
-        
+
     }
 }

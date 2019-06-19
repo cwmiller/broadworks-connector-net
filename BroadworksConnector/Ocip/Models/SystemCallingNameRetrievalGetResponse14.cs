@@ -1,26 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemCallingNameRetrievalGetRequest14.
-        /// <see cref="SystemCallingNameRetrievalGetRequest14"/>
-        /// </summary>
+    /// <see cref="SystemCallingNameRetrievalGetRequest14"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:14892""}]")]
     public class SystemCallingNameRetrievalGetResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private int _queryTimerMilliSeconds;
 
         [XmlElement(ElementName = "queryTimerMilliSeconds", IsNullable = false, Namespace = "")]
-        public int QueryTimerMilliSeconds {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14892")]
+        [MinInclusive(500)]
+        [MaxInclusive(5000)]
+        public int QueryTimerMilliSeconds
+        {
             get => _queryTimerMilliSeconds;
-            set {
+            set
+            {
                 QueryTimerMilliSecondsSpecified = true;
                 _queryTimerMilliSeconds = value;
             }
@@ -28,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool QueryTimerMilliSecondsSpecified { get; set; }
-        
+
         private string _serverNetAddress;
 
         [XmlElement(ElementName = "serverNetAddress", IsNullable = false, Namespace = "")]
-        public string ServerNetAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14892")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServerNetAddress
+        {
             get => _serverNetAddress;
-            set {
+            set
+            {
                 ServerNetAddressSpecified = true;
                 _serverNetAddress = value;
             }
@@ -42,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerNetAddressSpecified { get; set; }
-        
+
         private int _serverPort;
 
         [XmlElement(ElementName = "serverPort", IsNullable = false, Namespace = "")]
-        public int ServerPort {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14892")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int ServerPort
+        {
             get => _serverPort;
-            set {
+            set
+            {
                 ServerPortSpecified = true;
                 _serverPort = value;
             }
@@ -56,13 +75,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerPortSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.TransportProtocol _serverTransportProtocol;
 
         [XmlElement(ElementName = "serverTransportProtocol", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TransportProtocol ServerTransportProtocol {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14892")]
+        public BroadWorksConnector.Ocip.Models.TransportProtocol ServerTransportProtocol
+        {
             get => _serverTransportProtocol;
-            set {
+            set
+            {
                 ServerTransportProtocolSpecified = true;
                 _serverTransportProtocol = value;
             }
@@ -70,6 +92,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerTransportProtocolSpecified { get; set; }
-        
+
     }
 }

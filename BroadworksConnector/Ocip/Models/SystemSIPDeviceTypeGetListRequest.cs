@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,24 +14,29 @@ namespace BroadWorksConnector.Ocip.Models
     /// types and the device types in the administrator's reseller meeting the search criteria are returned.
     /// See Also: SystemDeviceTypeGetAvailableListRequest22 in AS data mode, SystemDeviceTypeGetAvailableListRequest19 in XS data mode.
     /// The response is either SystemSIPDeviceTypeGetListResponse or ErrorResponse.
-        /// <see cref="SystemDeviceTypeGetAvailableListRequest22"/>
-        /// <see cref="SystemDeviceTypeGetAvailableListRequest19"/>
-        /// <see cref="SystemSIPDeviceTypeGetListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SystemDeviceTypeGetAvailableListRequest22"/>
+    /// <see cref="SystemDeviceTypeGetAvailableListRequest19"/>
+    /// <see cref="SystemSIPDeviceTypeGetListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16058""}]")]
     public class SystemSIPDeviceTypeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-        public int ResponseSizeLimit {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16058")]
+        [MinInclusive(1)]
+        public int ResponseSizeLimit
+        {
             get => _responseSizeLimit;
-            set {
+            set
+            {
                 ResponseSizeLimitSpecified = true;
                 _responseSizeLimit = value;
             }
@@ -37,13 +44,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponseSizeLimitSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceType> _searchCriteriaDeviceType;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceType> _searchCriteriaDeviceType = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceType>();
 
         [XmlElement(ElementName = "searchCriteriaDeviceType", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceType> SearchCriteriaDeviceType {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16058")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceType> SearchCriteriaDeviceType
+        {
             get => _searchCriteriaDeviceType;
-            set {
+            set
+            {
                 SearchCriteriaDeviceTypeSpecified = true;
                 _searchCriteriaDeviceType = value;
             }
@@ -51,13 +62,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaDeviceTypeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactSignalingAddressType _searchCriteriaExactSignalingAddressType;
 
         [XmlElement(ElementName = "searchCriteriaExactSignalingAddressType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SearchCriteriaExactSignalingAddressType SearchCriteriaExactSignalingAddressType {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16058")]
+        public BroadWorksConnector.Ocip.Models.SearchCriteriaExactSignalingAddressType SearchCriteriaExactSignalingAddressType
+        {
             get => _searchCriteriaExactSignalingAddressType;
-            set {
+            set
+            {
                 SearchCriteriaExactSignalingAddressTypeSpecified = true;
                 _searchCriteriaExactSignalingAddressType = value;
             }
@@ -65,13 +80,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaExactSignalingAddressTypeSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId>();
 
         [XmlElement(ElementName = "searchCriteriaResellerId", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16058")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId
+        {
             get => _searchCriteriaResellerId;
-            set {
+            set
+            {
                 SearchCriteriaResellerIdSpecified = true;
                 _searchCriteriaResellerId = value;
             }
@@ -79,13 +98,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaResellerIdSpecified { get; set; }
-        
+
         private bool _includeSystemLevel;
 
         [XmlElement(ElementName = "includeSystemLevel", IsNullable = false, Namespace = "")]
-        public bool IncludeSystemLevel {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16058")]
+        public bool IncludeSystemLevel
+        {
             get => _includeSystemLevel;
-            set {
+            set
+            {
                 IncludeSystemLevelSpecified = true;
                 _includeSystemLevel = value;
             }
@@ -93,6 +116,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeSystemLevelSpecified { get; set; }
-        
+
     }
 }

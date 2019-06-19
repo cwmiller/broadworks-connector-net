@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Delete a device CPE config file server.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6650""}]")]
     public class SystemCPEConfigDeleteFileServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        public string DeviceType {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6650")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceType
+        {
             get => _deviceType;
-            set {
+            set
+            {
                 DeviceTypeSpecified = true;
                 _deviceType = value;
             }
@@ -30,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceTypeSpecified { get; set; }
-        
+
     }
 }

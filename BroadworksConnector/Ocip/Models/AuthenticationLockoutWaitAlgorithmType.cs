@@ -7,13 +7,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// Wait algorithm type for device profile/SIP authentication password rules.  Possible values:
     /// Double: Double the previous lockout time (Starting with 5 minutes)
     /// Fixed: Wait a fixed amount of time
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AuthenticationLockoutWaitAlgorithmType    {
-            [XmlEnum(Name = "Double")]
+    public enum AuthenticationLockoutWaitAlgorithmType
+    {
+        [XmlEnum(Name = "Double")]
         Double,
-            [XmlEnum(Name = "Fixed")]
+        [XmlEnum(Name = "Fixed")]
         Fixed,
-     }
+    }
 }

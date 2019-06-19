@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Network Server types.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum NetworkServerType    {
-            [XmlEnum(Name = "Lookup")]
+    public enum NetworkServerType
+    {
+        [XmlEnum(Name = "Lookup")]
         Lookup,
-            [XmlEnum(Name = "Update")]
+        [XmlEnum(Name = "Update")]
         Update,
-            [XmlEnum(Name = "Both")]
+        [XmlEnum(Name = "Both")]
         Both,
-     }
+    }
 }

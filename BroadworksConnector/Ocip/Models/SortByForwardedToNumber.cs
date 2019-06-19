@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -15,15 +17,15 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following Call Forwarding services are compatible for this search:
     /// Call Forwarding Always, Call Forwarding Always Secondary, Call Forwarding Busy,
     /// Call Forwarding No Answer, Call Forwarding Not Reachable, Call Forwarding Selective.
-        /// <see cref="EnterpriseUserCallForwardingSettingsGetListRequest"/>
-        /// <see cref="GroupUserCallForwardingSettingsGetListRequest"/>
-        /// </summary>
+    /// <see cref="EnterpriseUserCallForwardingSettingsGetListRequest"/>
+    /// <see cref="GroupUserCallForwardingSettingsGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""58293b6da8bb02a6430b3eb1beb91194:384""}]")]
     public class SortByForwardedToNumber : BroadWorksConnector.Ocip.Models.SortCriteria
     {
 
-        
     }
 }

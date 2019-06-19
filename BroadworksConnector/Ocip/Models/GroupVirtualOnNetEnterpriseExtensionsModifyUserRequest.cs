@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// The serviceProviderId, groupId and phoneNumber combination uniquely
     /// identifies a Virtual On-Net User.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:221""}]")]
     public class GroupVirtualOnNetEnterpriseExtensionsModifyUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:221")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:221")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -46,13 +58,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        public string PhoneNumber {
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:221")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string PhoneNumber
+        {
             get => _phoneNumber;
-            set {
+            set
+            {
                 PhoneNumberSpecified = true;
                 _phoneNumber = value;
             }
@@ -60,13 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneNumberSpecified { get; set; }
-        
+
         private string _extension;
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
-        public string Extension {
+        [Optional]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:221")]
+        [MinLength(2)]
+        [MaxLength(20)]
+        public string Extension
+        {
             get => _extension;
-            set {
+            set
+            {
                 ExtensionSpecified = true;
                 _extension = value;
             }
@@ -74,13 +97,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtensionSpecified { get; set; }
-        
+
         private string _firstName;
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
-        public string FirstName {
+        [Optional]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:221")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string FirstName
+        {
             get => _firstName;
-            set {
+            set
+            {
                 FirstNameSpecified = true;
                 _firstName = value;
             }
@@ -88,13 +117,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FirstNameSpecified { get; set; }
-        
+
         private string _lastName;
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
-        public string LastName {
+        [Optional]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:221")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string LastName
+        {
             get => _lastName;
-            set {
+            set
+            {
                 LastNameSpecified = true;
                 _lastName = value;
             }
@@ -102,13 +137,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LastNameSpecified { get; set; }
-        
+
         private string _callingLineIdFirstName;
 
         [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
-        public string CallingLineIdFirstName {
+        [Optional]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:221")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string CallingLineIdFirstName
+        {
             get => _callingLineIdFirstName;
-            set {
+            set
+            {
                 CallingLineIdFirstNameSpecified = true;
                 _callingLineIdFirstName = value;
             }
@@ -116,13 +157,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallingLineIdFirstNameSpecified { get; set; }
-        
+
         private string _callingLineIdLastName;
 
         [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
-        public string CallingLineIdLastName {
+        [Optional]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:221")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string CallingLineIdLastName
+        {
             get => _callingLineIdLastName;
-            set {
+            set
+            {
                 CallingLineIdLastNameSpecified = true;
                 _callingLineIdLastName = value;
             }
@@ -130,13 +177,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallingLineIdLastNameSpecified { get; set; }
-        
+
         private string _virtualOnNetCallTypeName;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
-        public string VirtualOnNetCallTypeName {
+        [Optional]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:221")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string VirtualOnNetCallTypeName
+        {
             get => _virtualOnNetCallTypeName;
-            set {
+            set
+            {
                 VirtualOnNetCallTypeNameSpecified = true;
                 _virtualOnNetCallTypeName = value;
             }
@@ -144,6 +197,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VirtualOnNetCallTypeNameSpecified { get; set; }
-        
+
     }
 }

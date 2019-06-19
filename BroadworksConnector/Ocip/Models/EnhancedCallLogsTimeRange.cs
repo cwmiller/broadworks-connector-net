@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Time range used to filter call logs.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class EnhancedCallLogsTimeRange 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2178""}]")]
+    public class EnhancedCallLogsTimeRange
     {
 
-        
         private string _startDateTime;
 
         [XmlElement(ElementName = "startDateTime", IsNullable = false, Namespace = "")]
-        public string StartDateTime {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2178")]
+        public string StartDateTime
+        {
             get => _startDateTime;
-            set {
+            set
+            {
                 StartDateTimeSpecified = true;
                 _startDateTime = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartDateTimeSpecified { get; set; }
-        
+
         private string _endDateTime;
 
         [XmlElement(ElementName = "endDateTime", IsNullable = false, Namespace = "")]
-        public string EndDateTime {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2178")]
+        public string EndDateTime
+        {
             get => _endDateTime;
-            set {
+            set
+            {
                 EndDateTimeSpecified = true;
                 _endDateTime = value;
             }
@@ -41,6 +49,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndDateTimeSpecified { get; set; }
-        
+
     }
 }

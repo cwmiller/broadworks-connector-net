@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table of devices defined at the System-level.
     /// The column headings are:
     /// "Device Name", "Device Type", "Available Ports", "Net Address" and "MAC Address", "Status", "Version".
-        /// <see cref="SystemAccessDeviceGetListRequest14"/>
-        /// </summary>
+    /// <see cref="SystemAccessDeviceGetListRequest14"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:954""}]")]
     public class SystemAccessDeviceGetListResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _accessDeviceTable;
 
         [XmlElement(ElementName = "accessDeviceTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable AccessDeviceTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:954")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable AccessDeviceTable
+        {
             get => _accessDeviceTable;
-            set {
+            set
+            {
                 AccessDeviceTableSpecified = true;
                 _accessDeviceTable = value;
             }
@@ -31,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessDeviceTableSpecified { get; set; }
-        
+
     }
 }

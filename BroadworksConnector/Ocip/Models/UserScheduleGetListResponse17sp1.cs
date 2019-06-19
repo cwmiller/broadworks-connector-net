@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response contains a list of schedules viewable by the user. It contains the schedules
     /// defined for the user and the group the user belongs to. If the user belongs to an enterprise,
     /// the list also contains the schedules defined for the enterprise.
-        /// <see cref="UserScheduleGetListRequest17sp1"/>
-        /// </summary>
+    /// <see cref="UserScheduleGetListRequest17sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3696""}]")]
     public class UserScheduleGetListResponse17sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.ScheduleGlobalKey> _scheduleGlobalKey;
+        private List<BroadWorksConnector.Ocip.Models.ScheduleGlobalKey> _scheduleGlobalKey = new List<BroadWorksConnector.Ocip.Models.ScheduleGlobalKey>();
 
         [XmlElement(ElementName = "scheduleGlobalKey", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.ScheduleGlobalKey> ScheduleGlobalKey {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3696")]
+        public List<BroadWorksConnector.Ocip.Models.ScheduleGlobalKey> ScheduleGlobalKey
+        {
             get => _scheduleGlobalKey;
-            set {
+            set
+            {
                 ScheduleGlobalKeySpecified = true;
                 _scheduleGlobalKey = value;
             }
@@ -31,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleGlobalKeySpecified { get; set; }
-        
+
     }
 }

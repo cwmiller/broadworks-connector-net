@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,20 +10,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// Estimated Wait Message Options
     /// 
     /// Replaced by EstimatedWaitMessageOptionsRead17sp4
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class EstimatedWaitMessageOptionsRead 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44379""}]")]
+    public class EstimatedWaitMessageOptionsRead
     {
 
-        
         private bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
-        public bool Enabled {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44379")]
+        public bool Enabled
+        {
             get => _enabled;
-            set {
+            set
+            {
                 EnabledSpecified = true;
                 _enabled = value;
             }
@@ -29,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnabledSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.EstimatedWaitMessageOperatingMode _operatingMode;
 
         [XmlElement(ElementName = "operatingMode", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.EstimatedWaitMessageOperatingMode OperatingMode {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44379")]
+        public BroadWorksConnector.Ocip.Models.EstimatedWaitMessageOperatingMode OperatingMode
+        {
             get => _operatingMode;
-            set {
+            set
+            {
                 OperatingModeSpecified = true;
                 _operatingMode = value;
             }
@@ -43,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OperatingModeSpecified { get; set; }
-        
+
         private bool _playPositionHighVolume;
 
         [XmlElement(ElementName = "playPositionHighVolume", IsNullable = false, Namespace = "")]
-        public bool PlayPositionHighVolume {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44379")]
+        public bool PlayPositionHighVolume
+        {
             get => _playPositionHighVolume;
-            set {
+            set
+            {
                 PlayPositionHighVolumeSpecified = true;
                 _playPositionHighVolume = value;
             }
@@ -57,13 +68,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayPositionHighVolumeSpecified { get; set; }
-        
+
         private bool _playTimeHighVolume;
 
         [XmlElement(ElementName = "playTimeHighVolume", IsNullable = false, Namespace = "")]
-        public bool PlayTimeHighVolume {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44379")]
+        public bool PlayTimeHighVolume
+        {
             get => _playTimeHighVolume;
-            set {
+            set
+            {
                 PlayTimeHighVolumeSpecified = true;
                 _playTimeHighVolume = value;
             }
@@ -71,13 +85,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayTimeHighVolumeSpecified { get; set; }
-        
+
         private int _maximumPositions;
 
         [XmlElement(ElementName = "maximumPositions", IsNullable = false, Namespace = "")]
-        public int MaximumPositions {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44379")]
+        [MinInclusive(1)]
+        [MaxInclusive(100)]
+        public int MaximumPositions
+        {
             get => _maximumPositions;
-            set {
+            set
+            {
                 MaximumPositionsSpecified = true;
                 _maximumPositions = value;
             }
@@ -85,13 +104,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaximumPositionsSpecified { get; set; }
-        
+
         private int _maximumWaitingMinutes;
 
         [XmlElement(ElementName = "maximumWaitingMinutes", IsNullable = false, Namespace = "")]
-        public int MaximumWaitingMinutes {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44379")]
+        [MinInclusive(1)]
+        [MaxInclusive(100)]
+        public int MaximumWaitingMinutes
+        {
             get => _maximumWaitingMinutes;
-            set {
+            set
+            {
                 MaximumWaitingMinutesSpecified = true;
                 _maximumWaitingMinutes = value;
             }
@@ -99,13 +123,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaximumWaitingMinutesSpecified { get; set; }
-        
+
         private int _defaultCallHandlingMinutes;
 
         [XmlElement(ElementName = "defaultCallHandlingMinutes", IsNullable = false, Namespace = "")]
-        public int DefaultCallHandlingMinutes {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44379")]
+        [MinInclusive(1)]
+        [MaxInclusive(100)]
+        public int DefaultCallHandlingMinutes
+        {
             get => _defaultCallHandlingMinutes;
-            set {
+            set
+            {
                 DefaultCallHandlingMinutesSpecified = true;
                 _defaultCallHandlingMinutes = value;
             }
@@ -113,6 +142,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultCallHandlingMinutesSpecified { get; set; }
-        
+
     }
 }

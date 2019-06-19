@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Enterprise Trunk Route Exhaustion Action
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum EnterpriseTrunkRouteExhaustionAction    {
-            [XmlEnum(Name = "None")]
+    public enum EnterpriseTrunkRouteExhaustionAction
+    {
+        [XmlEnum(Name = "None")]
         None,
-            [XmlEnum(Name = "Forward")]
+        [XmlEnum(Name = "Forward")]
         Forward,
-     }
+    }
 }

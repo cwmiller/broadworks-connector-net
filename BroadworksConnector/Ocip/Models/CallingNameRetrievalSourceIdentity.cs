@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Query Protocol.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallingNameRetrievalSourceIdentity    {
-            [XmlEnum(Name = "Presentation Identity")]
+    public enum CallingNameRetrievalSourceIdentity
+    {
+        [XmlEnum(Name = "Presentation Identity")]
         PresentationIdentity,
-            [XmlEnum(Name = "Asserted Identity")]
+        [XmlEnum(Name = "Asserted Identity")]
         AssertedIdentity,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22 or an
     /// ErrorResponse.
     /// The response contains the call processing policy profile setting for Auto Attendant.
-        /// <see cref="SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2814""}]")]
     public class SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        public string CallProcessingPolicyProfileName {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2814")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string CallProcessingPolicyProfileName
+        {
             get => _callProcessingPolicyProfileName;
-            set {
+            set
+            {
                 CallProcessingPolicyProfileNameSpecified = true;
                 _callProcessingPolicyProfileName = value;
             }
@@ -32,6 +39,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallProcessingPolicyProfileNameSpecified { get; set; }
-        
+
     }
 }

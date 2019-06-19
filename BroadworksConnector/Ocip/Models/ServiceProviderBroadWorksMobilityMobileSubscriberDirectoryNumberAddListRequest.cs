@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,23 +11,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// or a list of DNs.
     /// The response is either SuccessResponse or ErrorResponse.
     /// Replaced by ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberAddListRequest21.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberAddListRequest21"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberAddListRequest21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:34025""}]")]
     public class ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34025")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -33,13 +40,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
-        private List<string> _mobileSubscriberDirectoryNumber;
+
+        private List<string> _mobileSubscriberDirectoryNumber = new List<string>();
 
         [XmlElement(ElementName = "mobileSubscriberDirectoryNumber", IsNullable = false, Namespace = "")]
-        public List<string> MobileSubscriberDirectoryNumber {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34025")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public List<string> MobileSubscriberDirectoryNumber
+        {
             get => _mobileSubscriberDirectoryNumber;
-            set {
+            set
+            {
                 MobileSubscriberDirectoryNumberSpecified = true;
                 _mobileSubscriberDirectoryNumber = value;
             }
@@ -47,6 +60,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobileSubscriberDirectoryNumberSpecified { get; set; }
-        
+
     }
 }

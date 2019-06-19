@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The GETS session priority map entry.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class GETSSessionPriorityMapEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18546""}]")]
+    public class GETSSessionPriorityMapEntry
     {
 
-        
         private int _priorityLevel;
 
         [XmlElement(ElementName = "priorityLevel", IsNullable = false, Namespace = "")]
-        public int PriorityLevel {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18546")]
+        [MinInclusive(1)]
+        [MaxInclusive(5)]
+        public int PriorityLevel
+        {
             get => _priorityLevel;
-            set {
+            set
+            {
                 PriorityLevelSpecified = true;
                 _priorityLevel = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PriorityLevelSpecified { get; set; }
-        
+
         private int _sessionPriority;
 
         [XmlElement(ElementName = "sessionPriority", IsNullable = false, Namespace = "")]
-        public int SessionPriority {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18546")]
+        [MinInclusive(0)]
+        [MaxInclusive(4)]
+        public int SessionPriority
+        {
             get => _sessionPriority;
-            set {
+            set
+            {
                 SessionPrioritySpecified = true;
                 _sessionPriority = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SessionPrioritySpecified { get; set; }
-        
+
     }
 }

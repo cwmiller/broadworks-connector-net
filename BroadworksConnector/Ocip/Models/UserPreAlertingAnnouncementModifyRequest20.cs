@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the user's pre-alerting service setting.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6165f2b4cd549de71fe8f3171488fdd8:332""}]")]
     public class UserPreAlertingAnnouncementModifyRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:332")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Optional]
+        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:332")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -44,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
 
         [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection {
+        [Optional]
+        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:332")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection
+        {
             get => _audioSelection;
-            set {
+            set
+            {
                 AudioSelectionSpecified = true;
                 _audioSelection = value;
             }
@@ -58,13 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExtendedMediaFileLevelResource20 _audioFile;
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExtendedMediaFileLevelResource20 AudioFile {
+        [Optional]
+        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:332")]
+        public BroadWorksConnector.Ocip.Models.ExtendedMediaFileLevelResource20 AudioFile
+        {
             get => _audioFile;
-            set {
+            set
+            {
                 AudioFileSpecified = true;
                 _audioFile = value;
             }
@@ -72,13 +91,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioFileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
 
         [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection {
+        [Optional]
+        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:332")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection
+        {
             get => _videoSelection;
-            set {
+            set
+            {
                 VideoSelectionSpecified = true;
                 _videoSelection = value;
             }
@@ -86,13 +109,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExtendedMediaFileLevelResource20 _videoFile;
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExtendedMediaFileLevelResource20 VideoFile {
+        [Optional]
+        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:332")]
+        public BroadWorksConnector.Ocip.Models.ExtendedMediaFileLevelResource20 VideoFile
+        {
             get => _videoFile;
-            set {
+            set
+            {
                 VideoFileSpecified = true;
                 _videoFile = value;
             }
@@ -100,13 +127,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoFileSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
+
+        private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation = new List<BroadWorksConnector.Ocip.Models.CriteriaActivation>();
 
         [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
+        [Optional]
+        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:332")]
+        public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation
+        {
             get => _criteriaActivation;
-            set {
+            set
+            {
                 CriteriaActivationSpecified = true;
                 _criteriaActivation = value;
             }
@@ -114,6 +145,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaActivationSpecified { get; set; }
-        
+
     }
 }

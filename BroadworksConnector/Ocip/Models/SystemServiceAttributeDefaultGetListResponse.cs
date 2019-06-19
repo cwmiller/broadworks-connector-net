@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemServiceAttributeDefaultGetListRequest.
     /// Contains an array Service Attribute entries.
-        /// <see cref="SystemServiceAttributeDefaultGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemServiceAttributeDefaultGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14897""}]")]
     public class SystemServiceAttributeDefaultGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntryRead> _serviceAttributeEntry;
+        private List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntryRead> _serviceAttributeEntry = new List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntryRead>();
 
         [XmlElement(ElementName = "serviceAttributeEntry", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntryRead> ServiceAttributeEntry {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14897")]
+        public List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntryRead> ServiceAttributeEntry
+        {
             get => _serviceAttributeEntry;
-            set {
+            set
+            {
                 ServiceAttributeEntrySpecified = true;
                 _serviceAttributeEntry = value;
             }
@@ -29,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceAttributeEntrySpecified { get; set; }
-        
+
     }
 }

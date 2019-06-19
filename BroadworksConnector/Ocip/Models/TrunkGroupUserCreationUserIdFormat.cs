@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// User Id format for Trunk Group User Creation.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupUserCreationUserIdFormat    {
-            [XmlEnum(Name = "Extension")]
+    public enum TrunkGroupUserCreationUserIdFormat
+    {
+        [XmlEnum(Name = "Extension")]
         Extension,
-            [XmlEnum(Name = "National DN")]
+        [XmlEnum(Name = "National DN")]
         NationalDN,
-            [XmlEnum(Name = "E164 Format No Plus")]
+        [XmlEnum(Name = "E164 Format No Plus")]
         E164FormatNoPlus,
-     }
+    }
 }

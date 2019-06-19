@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to UserMeetMeConferencingGetConferenceGreetingRequest.
     /// Contains the information of a conference custom greeting.
-        /// <see cref="UserMeetMeConferencingGetConferenceGreetingRequest"/>
-        /// </summary>
+    /// <see cref="UserMeetMeConferencingGetConferenceGreetingRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32742""}]")]
     public class UserMeetMeConferencingGetConferenceGreetingResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _playEntranceGreeting;
 
         [XmlElement(ElementName = "playEntranceGreeting", IsNullable = false, Namespace = "")]
-        public bool PlayEntranceGreeting {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32742")]
+        public bool PlayEntranceGreeting
+        {
             get => _playEntranceGreeting;
-            set {
+            set
+            {
                 PlayEntranceGreetingSpecified = true;
                 _playEntranceGreeting = value;
             }
@@ -29,13 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayEntranceGreetingSpecified { get; set; }
-        
+
         private string _entranceGreetingAudioFile;
 
         [XmlElement(ElementName = "entranceGreetingAudioFile", IsNullable = false, Namespace = "")]
-        public string EntranceGreetingAudioFile {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32742")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string EntranceGreetingAudioFile
+        {
             get => _entranceGreetingAudioFile;
-            set {
+            set
+            {
                 EntranceGreetingAudioFileSpecified = true;
                 _entranceGreetingAudioFile = value;
             }
@@ -43,13 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EntranceGreetingAudioFileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MediaFileType _entranceGreetingMediaType;
 
         [XmlElement(ElementName = "entranceGreetingMediaType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType EntranceGreetingMediaType {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32742")]
+        public BroadWorksConnector.Ocip.Models.MediaFileType EntranceGreetingMediaType
+        {
             get => _entranceGreetingMediaType;
-            set {
+            set
+            {
                 EntranceGreetingMediaTypeSpecified = true;
                 _entranceGreetingMediaType = value;
             }
@@ -57,6 +72,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EntranceGreetingMediaTypeSpecified { get; set; }
-        
+
     }
 }

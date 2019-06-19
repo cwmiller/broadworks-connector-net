@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Type of Alternate Carriers available for CbC and Preselection.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum HPBXAlternateCarrierType    {
-            [XmlEnum(Name = "Local And Distant")]
+    public enum HPBXAlternateCarrierType
+    {
+        [XmlEnum(Name = "Local And Distant")]
         LocalAndDistant,
-            [XmlEnum(Name = "Distant")]
+        [XmlEnum(Name = "Distant")]
         Distant,
-     }
+    }
 }

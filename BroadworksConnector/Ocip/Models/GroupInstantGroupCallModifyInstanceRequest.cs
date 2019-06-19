@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify an Instant Group Call service instance.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f41dea4708922d4a3f0e26f198cc953f:174""}]")]
     public class GroupInstantGroupCallModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"f41dea4708922d4a3f0e26f198cc953f:174")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
+        [Optional]
+        [Group(@"f41dea4708922d4a3f0e26f198cc953f:174")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
+        {
             get => _serviceInstanceProfile;
-            set {
+            set
+            {
                 ServiceInstanceProfileSpecified = true;
                 _serviceInstanceProfile = value;
             }
@@ -44,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceInstanceProfileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList _destinationPhoneNumberList;
 
         [XmlElement(ElementName = "destinationPhoneNumberList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList DestinationPhoneNumberList {
+        [Optional]
+        [Group(@"f41dea4708922d4a3f0e26f198cc953f:174")]
+        public BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList DestinationPhoneNumberList
+        {
             get => _destinationPhoneNumberList;
-            set {
+            set
+            {
                 DestinationPhoneNumberListSpecified = true;
                 _destinationPhoneNumberList = value;
             }
@@ -58,13 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DestinationPhoneNumberListSpecified { get; set; }
-        
+
         private bool _isAnswerTimeoutEnabled;
 
         [XmlElement(ElementName = "isAnswerTimeoutEnabled", IsNullable = false, Namespace = "")]
-        public bool IsAnswerTimeoutEnabled {
+        [Optional]
+        [Group(@"f41dea4708922d4a3f0e26f198cc953f:174")]
+        public bool IsAnswerTimeoutEnabled
+        {
             get => _isAnswerTimeoutEnabled;
-            set {
+            set
+            {
                 IsAnswerTimeoutEnabledSpecified = true;
                 _isAnswerTimeoutEnabled = value;
             }
@@ -72,13 +91,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsAnswerTimeoutEnabledSpecified { get; set; }
-        
+
         private int? _answerTimeoutMinutes;
 
         [XmlElement(ElementName = "answerTimeoutMinutes", IsNullable = true, Namespace = "")]
-        public int? AnswerTimeoutMinutes {
+        [Optional]
+        [Group(@"f41dea4708922d4a3f0e26f198cc953f:174")]
+        [MinInclusive(1)]
+        [MaxInclusive(60)]
+        public int? AnswerTimeoutMinutes
+        {
             get => _answerTimeoutMinutes;
-            set {
+            set
+            {
                 AnswerTimeoutMinutesSpecified = true;
                 _answerTimeoutMinutes = value;
             }
@@ -86,13 +111,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnswerTimeoutMinutesSpecified { get; set; }
-        
+
         private string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        public string NetworkClassOfService {
+        [Optional]
+        [Group(@"f41dea4708922d4a3f0e26f198cc953f:174")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string NetworkClassOfService
+        {
             get => _networkClassOfService;
-            set {
+            set
+            {
                 NetworkClassOfServiceSpecified = true;
                 _networkClassOfService = value;
             }
@@ -100,6 +131,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetworkClassOfServiceSpecified { get; set; }
-        
+
     }
 }

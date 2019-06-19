@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Response to SystemRedundancyParametersGetRequest.
     /// Contains a list of system Redundancy parameters.
-        /// <see cref="SystemRedundancyParametersGetResponse16sp2"/>
-        /// <see cref="SystemRedundancyParametersGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemRedundancyParametersGetResponse16sp2"/>
+    /// <see cref="SystemRedundancyParametersGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:22167""}]")]
     public class SystemRedundancyParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private int _rollBackTimerMinutes;
 
         [XmlElement(ElementName = "rollBackTimerMinutes", IsNullable = false, Namespace = "")]
-        public int RollBackTimerMinutes {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22167")]
+        [MinInclusive(0)]
+        [MaxInclusive(3600)]
+        public int RollBackTimerMinutes
+        {
             get => _rollBackTimerMinutes;
-            set {
+            set
+            {
                 RollBackTimerMinutesSpecified = true;
                 _rollBackTimerMinutes = value;
             }
@@ -32,6 +39,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RollBackTimerMinutesSpecified { get; set; }
-        
+
     }
 }

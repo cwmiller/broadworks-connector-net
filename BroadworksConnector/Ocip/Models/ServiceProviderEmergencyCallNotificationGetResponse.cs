@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to ServiceProviderEmergencyCallNotificationGetRequest.
-        /// <see cref="ServiceProviderEmergencyCallNotificationGetRequest"/>
-        /// </summary>
+    /// <see cref="ServiceProviderEmergencyCallNotificationGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3397""}]")]
     public class ServiceProviderEmergencyCallNotificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _sendEmergencyCallNotificationEmail;
 
         [XmlElement(ElementName = "sendEmergencyCallNotificationEmail", IsNullable = false, Namespace = "")]
-        public bool SendEmergencyCallNotificationEmail {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3397")]
+        public bool SendEmergencyCallNotificationEmail
+        {
             get => _sendEmergencyCallNotificationEmail;
-            set {
+            set
+            {
                 SendEmergencyCallNotificationEmailSpecified = true;
                 _sendEmergencyCallNotificationEmail = value;
             }
@@ -28,13 +33,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SendEmergencyCallNotificationEmailSpecified { get; set; }
-        
+
         private string _emergencyCallNotifyEmailAddress;
 
         [XmlElement(ElementName = "emergencyCallNotifyEmailAddress", IsNullable = false, Namespace = "")]
-        public string EmergencyCallNotifyEmailAddress {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3397")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string EmergencyCallNotifyEmailAddress
+        {
             get => _emergencyCallNotifyEmailAddress;
-            set {
+            set
+            {
                 EmergencyCallNotifyEmailAddressSpecified = true;
                 _emergencyCallNotifyEmailAddress = value;
             }
@@ -42,13 +53,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EmergencyCallNotifyEmailAddressSpecified { get; set; }
-        
+
         private bool _allowGroupOverride;
 
         [XmlElement(ElementName = "allowGroupOverride", IsNullable = false, Namespace = "")]
-        public bool AllowGroupOverride {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3397")]
+        public bool AllowGroupOverride
+        {
             get => _allowGroupOverride;
-            set {
+            set
+            {
                 AllowGroupOverrideSpecified = true;
                 _allowGroupOverride = value;
             }
@@ -56,6 +70,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowGroupOverrideSpecified { get; set; }
-        
+
     }
 }

@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call Log type used by enhanced call logs requests
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum EnhancedCallLogsCallLogsRequestType    {
-            [XmlEnum(Name = "Placed")]
+    public enum EnhancedCallLogsCallLogsRequestType
+    {
+        [XmlEnum(Name = "Placed")]
         Placed,
-            [XmlEnum(Name = "Received")]
+        [XmlEnum(Name = "Received")]
         Received,
-            [XmlEnum(Name = "Missed")]
+        [XmlEnum(Name = "Missed")]
         Missed,
-            [XmlEnum(Name = "ReceivedOrMissed")]
+        [XmlEnum(Name = "ReceivedOrMissed")]
         ReceivedOrMissed,
-     }
+    }
 }

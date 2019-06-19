@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response contains the current total file size (KB) for the user across
     /// all media types and the maximum total file size (MB) allowed for the user.
     /// It also indicates the maximum file size for individual audio and video files.
-        /// <see cref="UserAnnouncementRepositoryGetSettingsRequest"/>
-        /// </summary>
+    /// <see cref="UserAnnouncementRepositoryGetSettingsRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:743""}]")]
     public class UserAnnouncementRepositoryGetSettingsResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private int _totalFileSize;
 
         [XmlElement(ElementName = "totalFileSize", IsNullable = false, Namespace = "")]
-        public int TotalFileSize {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:743")]
+        public int TotalFileSize
+        {
             get => _totalFileSize;
-            set {
+            set
+            {
                 TotalFileSizeSpecified = true;
                 _totalFileSize = value;
             }
@@ -31,13 +36,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TotalFileSizeSpecified { get; set; }
-        
+
         private int _maxAudioFileSize;
 
         [XmlElement(ElementName = "maxAudioFileSize", IsNullable = false, Namespace = "")]
-        public int MaxAudioFileSize {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:743")]
+        public int MaxAudioFileSize
+        {
             get => _maxAudioFileSize;
-            set {
+            set
+            {
                 MaxAudioFileSizeSpecified = true;
                 _maxAudioFileSize = value;
             }
@@ -45,13 +53,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxAudioFileSizeSpecified { get; set; }
-        
+
         private int _maxVideoFileSize;
 
         [XmlElement(ElementName = "maxVideoFileSize", IsNullable = false, Namespace = "")]
-        public int MaxVideoFileSize {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:743")]
+        public int MaxVideoFileSize
+        {
             get => _maxVideoFileSize;
-            set {
+            set
+            {
                 MaxVideoFileSizeSpecified = true;
                 _maxVideoFileSize = value;
             }
@@ -59,13 +70,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxVideoFileSizeSpecified { get; set; }
-        
+
         private int _maxFileSize;
 
         [XmlElement(ElementName = "maxFileSize", IsNullable = false, Namespace = "")]
-        public int MaxFileSize {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:743")]
+        [MinInclusive(1)]
+        [MaxInclusive(999999)]
+        public int MaxFileSize
+        {
             get => _maxFileSize;
-            set {
+            set
+            {
                 MaxFileSizeSpecified = true;
                 _maxFileSize = value;
             }
@@ -73,6 +89,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxFileSizeSpecified { get; set; }
-        
+
     }
 }

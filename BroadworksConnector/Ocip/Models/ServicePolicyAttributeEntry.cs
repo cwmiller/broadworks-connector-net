@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The service policy attributes name and value pair.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ServicePolicyAttributeEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3756""}]")]
+    public class ServicePolicyAttributeEntry
     {
 
-        
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3756")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -27,13 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
         private string _value;
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
-        public string Value {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3756")]
+        [MinLength(1)]
+        [MaxLength(2048)]
+        public string Value
+        {
             get => _value;
-            set {
+            set
+            {
                 ValueSpecified = true;
                 _value = value;
             }
@@ -41,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ValueSpecified { get; set; }
-        
+
     }
 }

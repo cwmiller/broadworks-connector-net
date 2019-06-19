@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,23 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request to get an enterprise trunk
     /// The response is either an GroupEnterpriseTrunkGetResponse or an ErrorResponse.
     /// Replaced by: GroupEnterpriseTrunkGetRequest21.
-        /// <see cref="GroupEnterpriseTrunkGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="GroupEnterpriseTrunkGetRequest21"/>
-        /// </summary>
+    /// <see cref="GroupEnterpriseTrunkGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupEnterpriseTrunkGetRequest21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:33201""}]")]
     public class GroupEnterpriseTrunkGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33201")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33201")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -46,13 +58,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _enterpriseTrunkName;
 
         [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false, Namespace = "")]
-        public string EnterpriseTrunkName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33201")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string EnterpriseTrunkName
+        {
             get => _enterpriseTrunkName;
-            set {
+            set
+            {
                 EnterpriseTrunkNameSpecified = true;
                 _enterpriseTrunkName = value;
             }
@@ -60,6 +77,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnterpriseTrunkNameSpecified { get; set; }
-        
+
     }
 }

@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to UserNetworkConferencingGetRequest.
-        /// <see cref="UserNetworkConferencingGetRequest"/>
-        /// </summary>
+    /// <see cref="UserNetworkConferencingGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2652""}]")]
     public class UserNetworkConferencingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _conferenceURI;
 
         [XmlElement(ElementName = "conferenceURI", IsNullable = false, Namespace = "")]
-        public string ConferenceURI {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2652")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ConferenceURI
+        {
             get => _conferenceURI;
-            set {
+            set
+            {
                 ConferenceURISpecified = true;
                 _conferenceURI = value;
             }
@@ -28,13 +36,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConferenceURISpecified { get; set; }
-        
+
         private int _maxConferenceParties;
 
         [XmlElement(ElementName = "maxConferenceParties", IsNullable = false, Namespace = "")]
-        public int MaxConferenceParties {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2652")]
+        [MinInclusive(4)]
+        [MaxInclusive(15)]
+        public int MaxConferenceParties
+        {
             get => _maxConferenceParties;
-            set {
+            set
+            {
                 MaxConferencePartiesSpecified = true;
                 _maxConferenceParties = value;
             }
@@ -42,6 +55,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxConferencePartiesSpecified { get; set; }
-        
+
     }
 }

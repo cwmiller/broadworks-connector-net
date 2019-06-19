@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to ServiceProviderExternalCustomRingbackGetRequest.
-        /// <see cref="ServiceProviderExternalCustomRingbackGetRequest"/>
-        /// </summary>
+    /// <see cref="ServiceProviderExternalCustomRingbackGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8df43dca23d99d8ab44c0082aadfbe0:61""}]")]
     public class ServiceProviderExternalCustomRingbackGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _prefixDigits;
 
         [XmlElement(ElementName = "prefixDigits", IsNullable = false, Namespace = "")]
-        public string PrefixDigits {
+        [Optional]
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:61")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string PrefixDigits
+        {
             get => _prefixDigits;
-            set {
+            set
+            {
                 PrefixDigitsSpecified = true;
                 _prefixDigits = value;
             }
@@ -28,13 +36,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrefixDigitsSpecified { get; set; }
-        
+
         private string _serverNetAddress;
 
         [XmlElement(ElementName = "serverNetAddress", IsNullable = false, Namespace = "")]
-        public string ServerNetAddress {
+        [Optional]
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:61")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServerNetAddress
+        {
             get => _serverNetAddress;
-            set {
+            set
+            {
                 ServerNetAddressSpecified = true;
                 _serverNetAddress = value;
             }
@@ -42,13 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerNetAddressSpecified { get; set; }
-        
+
         private int _serverPort;
 
         [XmlElement(ElementName = "serverPort", IsNullable = false, Namespace = "")]
-        public int ServerPort {
+        [Optional]
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:61")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int ServerPort
+        {
             get => _serverPort;
-            set {
+            set
+            {
                 ServerPortSpecified = true;
                 _serverPort = value;
             }
@@ -56,13 +76,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerPortSpecified { get; set; }
-        
+
         private int _timeoutSeconds;
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
-        public int TimeoutSeconds {
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:61")]
+        [MinInclusive(1)]
+        [MaxInclusive(20)]
+        public int TimeoutSeconds
+        {
             get => _timeoutSeconds;
-            set {
+            set
+            {
                 TimeoutSecondsSpecified = true;
                 _timeoutSeconds = value;
             }
@@ -70,6 +95,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeoutSecondsSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify the system branding configuration.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6041""}]")]
     public class SystemCallCenterEnhancedReportingBrandingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice _brandingChoice;
 
         [XmlElement(ElementName = "brandingChoice", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice BrandingChoice {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6041")]
+        public BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice BrandingChoice
+        {
             get => _brandingChoice;
-            set {
+            set
+            {
                 BrandingChoiceSpecified = true;
                 _brandingChoice = value;
             }
@@ -30,13 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BrandingChoiceSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.LabeledFileResource _customBrandingFile;
 
         [XmlElement(ElementName = "customBrandingFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.LabeledFileResource CustomBrandingFile {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6041")]
+        public BroadWorksConnector.Ocip.Models.LabeledFileResource CustomBrandingFile
+        {
             get => _customBrandingFile;
-            set {
+            set
+            {
                 CustomBrandingFileSpecified = true;
                 _customBrandingFile = value;
             }
@@ -44,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CustomBrandingFileSpecified { get; set; }
-        
+
     }
 }

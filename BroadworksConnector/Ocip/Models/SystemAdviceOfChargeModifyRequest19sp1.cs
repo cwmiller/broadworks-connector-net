@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify Advice of Charge system parameters.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a69fde15f3aa7494d83b57461a7a70bb:267""}]")]
     public class SystemAdviceOfChargeModifyRequest19sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private int _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
-        public int DelayBetweenNotificationSeconds {
+        [Optional]
+        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:267")]
+        [MinInclusive(5)]
+        [MaxInclusive(1800)]
+        public int DelayBetweenNotificationSeconds
+        {
             get => _delayBetweenNotificationSeconds;
-            set {
+            set
+            {
                 DelayBetweenNotificationSecondsSpecified = true;
                 _delayBetweenNotificationSeconds = value;
             }
@@ -30,13 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DelayBetweenNotificationSecondsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
 
         [XmlElement(ElementName = "incomingAocHandling", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling {
+        [Optional]
+        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:267")]
+        public BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling
+        {
             get => _incomingAocHandling;
-            set {
+            set
+            {
                 IncomingAocHandlingSpecified = true;
                 _incomingAocHandling = value;
             }
@@ -44,13 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncomingAocHandlingSpecified { get; set; }
-        
+
         private bool _useOCSEnquiry;
 
         [XmlElement(ElementName = "useOCSEnquiry", IsNullable = false, Namespace = "")]
-        public bool UseOCSEnquiry {
+        [Optional]
+        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:267")]
+        public bool UseOCSEnquiry
+        {
             get => _useOCSEnquiry;
-            set {
+            set
+            {
                 UseOCSEnquirySpecified = true;
                 _useOCSEnquiry = value;
             }
@@ -58,13 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseOCSEnquirySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType _oCSEnquiryType;
 
         [XmlElement(ElementName = "OCSEnquiryType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType OCSEnquiryType {
+        [Optional]
+        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:267")]
+        public BroadWorksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType OCSEnquiryType
+        {
             get => _oCSEnquiryType;
-            set {
+            set
+            {
                 OCSEnquiryTypeSpecified = true;
                 _oCSEnquiryType = value;
             }
@@ -72,6 +92,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OCSEnquiryTypeSpecified { get; set; }
-        
+
     }
 }

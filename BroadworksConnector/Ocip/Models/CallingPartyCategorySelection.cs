@@ -5,21 +5,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Calling Party Category Selection
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallingPartyCategorySelection    {
-            [XmlEnum(Name = "Special")]
+    public enum CallingPartyCategorySelection
+    {
+        [XmlEnum(Name = "Special")]
         Special,
-            [XmlEnum(Name = "Hospital")]
+        [XmlEnum(Name = "Hospital")]
         Hospital,
-            [XmlEnum(Name = "Hotel")]
+        [XmlEnum(Name = "Hotel")]
         Hotel,
-            [XmlEnum(Name = "Prison")]
+        [XmlEnum(Name = "Prison")]
         Prison,
-            [XmlEnum(Name = "Payphone")]
+        [XmlEnum(Name = "Payphone")]
         Payphone,
-            [XmlEnum(Name = "Ordinary")]
+        [XmlEnum(Name = "Ordinary")]
         Ordinary,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to: GroupAccessDeviceGetRequest14sp6
     /// Replaced by: GroupAccessDeviceGetResponse16
-        /// <see cref="GroupAccessDeviceGetRequest14sp6"/>
-        /// <see cref="GroupAccessDeviceGetResponse16"/>
-        /// </summary>
+    /// <see cref="GroupAccessDeviceGetRequest14sp6"/>
+    /// <see cref="GroupAccessDeviceGetResponse16"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:8104""}]")]
     public class GroupAccessDeviceGetResponse14sp6 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        public string DeviceType {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceType
+        {
             get => _deviceType;
-            set {
+            set
+            {
                 DeviceTypeSpecified = true;
                 _deviceType = value;
             }
@@ -30,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceTypeSpecified { get; set; }
-        
+
         private string _protocol;
 
         [XmlElement(ElementName = "protocol", IsNullable = false, Namespace = "")]
-        public string Protocol {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(20)]
+        public string Protocol
+        {
             get => _protocol;
-            set {
+            set
+            {
                 ProtocolSpecified = true;
                 _protocol = value;
             }
@@ -44,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProtocolSpecified { get; set; }
-        
+
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        public string NetAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string NetAddress
+        {
             get => _netAddress;
-            set {
+            set
+            {
                 NetAddressSpecified = true;
                 _netAddress = value;
             }
@@ -58,13 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetAddressSpecified { get; set; }
-        
+
         private int _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
-        public int Port {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int Port
+        {
             get => _port;
-            set {
+            set
+            {
                 PortSpecified = true;
                 _port = value;
             }
@@ -72,13 +97,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PortSpecified { get; set; }
-        
+
         private string _outboundProxyServerNetAddress;
 
         [XmlElement(ElementName = "outboundProxyServerNetAddress", IsNullable = false, Namespace = "")]
-        public string OutboundProxyServerNetAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string OutboundProxyServerNetAddress
+        {
             get => _outboundProxyServerNetAddress;
-            set {
+            set
+            {
                 OutboundProxyServerNetAddressSpecified = true;
                 _outboundProxyServerNetAddress = value;
             }
@@ -86,13 +117,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OutboundProxyServerNetAddressSpecified { get; set; }
-        
+
         private string _stunServerNetAddress;
 
         [XmlElement(ElementName = "stunServerNetAddress", IsNullable = false, Namespace = "")]
-        public string StunServerNetAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string StunServerNetAddress
+        {
             get => _stunServerNetAddress;
-            set {
+            set
+            {
                 StunServerNetAddressSpecified = true;
                 _stunServerNetAddress = value;
             }
@@ -100,13 +137,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StunServerNetAddressSpecified { get; set; }
-        
+
         private string _macAddress;
 
         [XmlElement(ElementName = "macAddress", IsNullable = false, Namespace = "")]
-        public string MacAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(12)]
+        public string MacAddress
+        {
             get => _macAddress;
-            set {
+            set
+            {
                 MacAddressSpecified = true;
                 _macAddress = value;
             }
@@ -114,13 +157,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MacAddressSpecified { get; set; }
-        
+
         private string _serialNumber;
 
         [XmlElement(ElementName = "serialNumber", IsNullable = false, Namespace = "")]
-        public string SerialNumber {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string SerialNumber
+        {
             get => _serialNumber;
-            set {
+            set
+            {
                 SerialNumberSpecified = true;
                 _serialNumber = value;
             }
@@ -128,13 +177,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SerialNumberSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -142,13 +197,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
 
         [XmlElement(ElementName = "numberOfPorts", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts
+        {
             get => _numberOfPorts;
-            set {
+            set
+            {
                 NumberOfPortsSpecified = true;
                 _numberOfPorts = value;
             }
@@ -156,13 +214,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberOfPortsSpecified { get; set; }
-        
+
         private int _numberOfAssignedPorts;
 
         [XmlElement(ElementName = "numberOfAssignedPorts", IsNullable = false, Namespace = "")]
-        public int NumberOfAssignedPorts {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        public int NumberOfAssignedPorts
+        {
             get => _numberOfAssignedPorts;
-            set {
+            set
+            {
                 NumberOfAssignedPortsSpecified = true;
                 _numberOfAssignedPorts = value;
             }
@@ -170,13 +231,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberOfAssignedPortsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AccessDeviceStatus _status;
 
         [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceStatus Status {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        public BroadWorksConnector.Ocip.Models.AccessDeviceStatus Status
+        {
             get => _status;
-            set {
+            set
+            {
                 StatusSpecified = true;
                 _status = value;
             }
@@ -184,13 +248,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StatusSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode _configurationMode;
 
         [XmlElement(ElementName = "configurationMode", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode ConfigurationMode {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode ConfigurationMode
+        {
             get => _configurationMode;
-            set {
+            set
+            {
                 ConfigurationModeSpecified = true;
                 _configurationMode = value;
             }
@@ -198,13 +266,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfigurationModeSpecified { get; set; }
-        
+
         private string _configurationFileName;
 
         [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
-        public string ConfigurationFileName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string ConfigurationFileName
+        {
             get => _configurationFileName;
-            set {
+            set
+            {
                 ConfigurationFileNameSpecified = true;
                 _configurationFileName = value;
             }
@@ -212,13 +286,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfigurationFileNameSpecified { get; set; }
-        
+
         private string _physicalLocation;
 
         [XmlElement(ElementName = "physicalLocation", IsNullable = false, Namespace = "")]
-        public string PhysicalLocation {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(1024)]
+        public string PhysicalLocation
+        {
             get => _physicalLocation;
-            set {
+            set
+            {
                 PhysicalLocationSpecified = true;
                 _physicalLocation = value;
             }
@@ -226,13 +306,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhysicalLocationSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.TransportProtocol _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TransportProtocol TransportProtocol {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        public BroadWorksConnector.Ocip.Models.TransportProtocol TransportProtocol
+        {
             get => _transportProtocol;
-            set {
+            set
+            {
                 TransportProtocolSpecified = true;
                 _transportProtocol = value;
             }
@@ -240,13 +324,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TransportProtocolSpecified { get; set; }
-        
+
         private string _mobilityManagerProvisioningURL;
 
         [XmlElement(ElementName = "mobilityManagerProvisioningURL", IsNullable = false, Namespace = "")]
-        public string MobilityManagerProvisioningURL {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string MobilityManagerProvisioningURL
+        {
             get => _mobilityManagerProvisioningURL;
-            set {
+            set
+            {
                 MobilityManagerProvisioningURLSpecified = true;
                 _mobilityManagerProvisioningURL = value;
             }
@@ -254,13 +344,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobilityManagerProvisioningURLSpecified { get; set; }
-        
+
         private string _mobilityManagerProvisioningUserName;
 
         [XmlElement(ElementName = "mobilityManagerProvisioningUserName", IsNullable = false, Namespace = "")]
-        public string MobilityManagerProvisioningUserName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(15)]
+        public string MobilityManagerProvisioningUserName
+        {
             get => _mobilityManagerProvisioningUserName;
-            set {
+            set
+            {
                 MobilityManagerProvisioningUserNameSpecified = true;
                 _mobilityManagerProvisioningUserName = value;
             }
@@ -268,13 +364,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobilityManagerProvisioningUserNameSpecified { get; set; }
-        
+
         private int _mobilityManagerDefaultOriginatingServiceKey;
 
         [XmlElement(ElementName = "mobilityManagerDefaultOriginatingServiceKey", IsNullable = false, Namespace = "")]
-        public int MobilityManagerDefaultOriginatingServiceKey {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinInclusive(0)]
+        [MaxInclusive(999)]
+        public int MobilityManagerDefaultOriginatingServiceKey
+        {
             get => _mobilityManagerDefaultOriginatingServiceKey;
-            set {
+            set
+            {
                 MobilityManagerDefaultOriginatingServiceKeySpecified = true;
                 _mobilityManagerDefaultOriginatingServiceKey = value;
             }
@@ -282,13 +384,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobilityManagerDefaultOriginatingServiceKeySpecified { get; set; }
-        
+
         private int _mobilityManagerDefaultTerminatingServiceKey;
 
         [XmlElement(ElementName = "mobilityManagerDefaultTerminatingServiceKey", IsNullable = false, Namespace = "")]
-        public int MobilityManagerDefaultTerminatingServiceKey {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinInclusive(0)]
+        [MaxInclusive(999)]
+        public int MobilityManagerDefaultTerminatingServiceKey
+        {
             get => _mobilityManagerDefaultTerminatingServiceKey;
-            set {
+            set
+            {
                 MobilityManagerDefaultTerminatingServiceKeySpecified = true;
                 _mobilityManagerDefaultTerminatingServiceKey = value;
             }
@@ -296,13 +404,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobilityManagerDefaultTerminatingServiceKeySpecified { get; set; }
-        
+
         private bool _useCustomUserNamePassword;
 
         [XmlElement(ElementName = "useCustomUserNamePassword", IsNullable = false, Namespace = "")]
-        public bool UseCustomUserNamePassword {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        public bool UseCustomUserNamePassword
+        {
             get => _useCustomUserNamePassword;
-            set {
+            set
+            {
                 UseCustomUserNamePasswordSpecified = true;
                 _useCustomUserNamePassword = value;
             }
@@ -310,13 +422,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseCustomUserNamePasswordSpecified { get; set; }
-        
+
         private string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
-        public string UserName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8104")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string UserName
+        {
             get => _userName;
-            set {
+            set
+            {
                 UserNameSpecified = true;
                 _userName = value;
             }
@@ -324,6 +442,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserNameSpecified { get; set; }
-        
+
     }
 }

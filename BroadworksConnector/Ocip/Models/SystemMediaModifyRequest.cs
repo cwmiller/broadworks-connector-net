@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify a media.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10865""}]")]
     public class SystemMediaModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _mediaName;
 
         [XmlElement(ElementName = "mediaName", IsNullable = false, Namespace = "")]
-        public string MediaName {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10865")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string MediaName
+        {
             get => _mediaName;
-            set {
+            set
+            {
                 MediaNameSpecified = true;
                 _mediaName = value;
             }
@@ -30,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MediaNameSpecified { get; set; }
-        
+
         private string _codecName;
 
         [XmlElement(ElementName = "codecName", IsNullable = false, Namespace = "")]
-        public string CodecName {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10865")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string CodecName
+        {
             get => _codecName;
-            set {
+            set
+            {
                 CodecNameSpecified = true;
                 _codecName = value;
             }
@@ -44,13 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CodecNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType _bandwidthEnforcementType;
 
         [XmlElement(ElementName = "bandwidthEnforcementType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType BandwidthEnforcementType {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10865")]
+        public BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType BandwidthEnforcementType
+        {
             get => _bandwidthEnforcementType;
-            set {
+            set
+            {
                 BandwidthEnforcementTypeSpecified = true;
                 _bandwidthEnforcementType = value;
             }
@@ -58,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BandwidthEnforcementTypeSpecified { get; set; }
-        
+
         private int? _mediaBandwidth;
 
         [XmlElement(ElementName = "mediaBandwidth", IsNullable = true, Namespace = "")]
-        public int? MediaBandwidth {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10865")]
+        [MinInclusive(1)]
+        [MaxInclusive(100000000)]
+        public int? MediaBandwidth
+        {
             get => _mediaBandwidth;
-            set {
+            set
+            {
                 MediaBandwidthSpecified = true;
                 _mediaBandwidth = value;
             }
@@ -72,6 +95,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MediaBandwidthSpecified { get; set; }
-        
+
     }
 }

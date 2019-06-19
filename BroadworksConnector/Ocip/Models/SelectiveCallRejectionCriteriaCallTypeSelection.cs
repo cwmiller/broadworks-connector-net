@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Selection criteria for a call type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SelectiveCallRejectionCriteriaCallTypeSelection    {
-            [XmlEnum(Name = "Any")]
+    public enum SelectiveCallRejectionCriteriaCallTypeSelection
+    {
+        [XmlEnum(Name = "Any")]
         Any,
-            [XmlEnum(Name = "Forwarded")]
+        [XmlEnum(Name = "Forwarded")]
         Forwarded,
-            [XmlEnum(Name = "Specified Only")]
+        [XmlEnum(Name = "Specified Only")]
         SpecifiedOnly,
-     }
+    }
 }

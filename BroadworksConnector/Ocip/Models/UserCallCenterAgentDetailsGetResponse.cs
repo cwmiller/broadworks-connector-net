@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the UserCallCenterAgentDetailsGetRequest.
     /// Contains the detail information for a Call Center Agent.
-        /// <see cref="UserCallCenterAgentDetailsGetRequest"/>
-        /// </summary>
+    /// <see cref="UserCallCenterAgentDetailsGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6627""}]")]
     public class UserCallCenterAgentDetailsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isCallCenterBasicAssigned;
 
         [XmlElement(ElementName = "isCallCenterBasicAssigned", IsNullable = false, Namespace = "")]
-        public bool IsCallCenterBasicAssigned {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6627")]
+        public bool IsCallCenterBasicAssigned
+        {
             get => _isCallCenterBasicAssigned;
-            set {
+            set
+            {
                 IsCallCenterBasicAssignedSpecified = true;
                 _isCallCenterBasicAssigned = value;
             }
@@ -29,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsCallCenterBasicAssignedSpecified { get; set; }
-        
+
         private bool _isCallCenterStandardAssigned;
 
         [XmlElement(ElementName = "isCallCenterStandardAssigned", IsNullable = false, Namespace = "")]
-        public bool IsCallCenterStandardAssigned {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6627")]
+        public bool IsCallCenterStandardAssigned
+        {
             get => _isCallCenterStandardAssigned;
-            set {
+            set
+            {
                 IsCallCenterStandardAssignedSpecified = true;
                 _isCallCenterStandardAssigned = value;
             }
@@ -43,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsCallCenterStandardAssignedSpecified { get; set; }
-        
+
         private bool _isCallCenterPremiumAssigned;
 
         [XmlElement(ElementName = "isCallCenterPremiumAssigned", IsNullable = false, Namespace = "")]
-        public bool IsCallCenterPremiumAssigned {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6627")]
+        public bool IsCallCenterPremiumAssigned
+        {
             get => _isCallCenterPremiumAssigned;
-            set {
+            set
+            {
                 IsCallCenterPremiumAssignedSpecified = true;
                 _isCallCenterPremiumAssigned = value;
             }
@@ -57,6 +68,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsCallCenterPremiumAssignedSpecified { get; set; }
-        
+
     }
 }

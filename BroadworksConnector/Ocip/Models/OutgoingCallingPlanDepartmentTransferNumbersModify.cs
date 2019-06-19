@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Outgoing Calling Plan transfer numbers for a department.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class OutgoingCallingPlanDepartmentTransferNumbersModify 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1847""}]")]
+    public class OutgoingCallingPlanDepartmentTransferNumbersModify
     {
 
-        
         private BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1847")]
+        public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey
+        {
             get => _departmentKey;
-            set {
+            set
+            {
                 DepartmentKeySpecified = true;
                 _departmentKey = value;
             }
@@ -27,13 +32,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentKeySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify _transferNumbers;
 
         [XmlElement(ElementName = "transferNumbers", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify TransferNumbers {
+        [Optional]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1847")]
+        public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify TransferNumbers
+        {
             get => _transferNumbers;
-            set {
+            set
+            {
                 TransferNumbersSpecified = true;
                 _transferNumbers = value;
             }
@@ -41,6 +50,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TransferNumbersSpecified { get; set; }
-        
+
     }
 }

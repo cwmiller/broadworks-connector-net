@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,20 +10,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// A list of service packs that replaces existing service packs assgined to the user.
     /// 
     /// If a service pack is already assigned to the user, the service quantitiy will be updated if included.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ReplacementCombinedServicePackAssignmentList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3147""}]")]
+    public class ReplacementCombinedServicePackAssignmentList
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.CombinedServicePackAssignment> _servicePack;
+        private List<BroadWorksConnector.Ocip.Models.CombinedServicePackAssignment> _servicePack = new List<BroadWorksConnector.Ocip.Models.CombinedServicePackAssignment>();
 
         [XmlElement(ElementName = "servicePack", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CombinedServicePackAssignment> ServicePack {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3147")]
+        public List<BroadWorksConnector.Ocip.Models.CombinedServicePackAssignment> ServicePack
+        {
             get => _servicePack;
-            set {
+            set
+            {
                 ServicePackSpecified = true;
                 _servicePack = value;
             }
@@ -29,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePackSpecified { get; set; }
-        
+
     }
 }

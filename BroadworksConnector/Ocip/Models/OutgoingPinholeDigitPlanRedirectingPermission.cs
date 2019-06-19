@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Permission choices for Pinhole digit patterns on redirecting calls.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum OutgoingPinholeDigitPlanRedirectingPermission    {
-            [XmlEnum(Name = "Ignore")]
+    public enum OutgoingPinholeDigitPlanRedirectingPermission
+    {
+        [XmlEnum(Name = "Ignore")]
         Ignore,
-            [XmlEnum(Name = "Allow")]
+        [XmlEnum(Name = "Allow")]
         Allow,
-     }
+    }
 }

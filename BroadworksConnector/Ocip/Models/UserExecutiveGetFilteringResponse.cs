@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -21,21 +23,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// - The value of the extension for the corresponding Calls To Type, when the extension is available. i.e. Primary may have number, but no extension.
     /// - For Mobility Calls To Type, this is always blank.
     /// - When no extension is available a blank space is provided instead.
-        /// <see cref="UserExecutiveGetFilteringRequest"/>
-        /// </summary>
+    /// <see cref="UserExecutiveGetFilteringRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9a6dbade05624033cf7fe782b7c9a9a7:249""}]")]
     public class UserExecutiveGetFilteringResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _enableFiltering;
 
         [XmlElement(ElementName = "enableFiltering", IsNullable = false, Namespace = "")]
-        public bool EnableFiltering {
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:249")]
+        public bool EnableFiltering
+        {
             get => _enableFiltering;
-            set {
+            set
+            {
                 EnableFilteringSpecified = true;
                 _enableFiltering = value;
             }
@@ -43,13 +48,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableFilteringSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode _filteringMode;
 
         [XmlElement(ElementName = "filteringMode", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode FilteringMode {
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:249")]
+        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode FilteringMode
+        {
             get => _filteringMode;
-            set {
+            set
+            {
                 FilteringModeSpecified = true;
                 _filteringMode = value;
             }
@@ -57,13 +65,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FilteringModeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType _simpleFilterType;
 
         [XmlElement(ElementName = "simpleFilterType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType SimpleFilterType {
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:249")]
+        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType SimpleFilterType
+        {
             get => _simpleFilterType;
-            set {
+            set
+            {
                 SimpleFilterTypeSpecified = true;
                 _simpleFilterType = value;
             }
@@ -71,13 +82,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SimpleFilterTypeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:249")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
+        {
             get => _criteriaTable;
-            set {
+            set
+            {
                 CriteriaTableSpecified = true;
                 _criteriaTable = value;
             }
@@ -85,6 +99,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaTableSpecified { get; set; }
-        
+
     }
 }

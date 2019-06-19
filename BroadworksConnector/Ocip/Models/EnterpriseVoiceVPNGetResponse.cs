@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to EnterpriseVoiceVPNGetRequest.
     /// Replaced By: EnterpriseVoiceVPNGetResponse14sp3
-        /// <see cref="EnterpriseVoiceVPNGetRequest"/>
-        /// <see cref="EnterpriseVoiceVPNGetResponse14sp3"/>
-        /// </summary>
+    /// <see cref="EnterpriseVoiceVPNGetRequest"/>
+    /// <see cref="EnterpriseVoiceVPNGetResponse14sp3"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:506""}]")]
     public class EnterpriseVoiceVPNGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:506")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -30,13 +35,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection _defaultSelection;
 
         [XmlElement(ElementName = "defaultSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection DefaultSelection {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:506")]
+        public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection DefaultSelection
+        {
             get => _defaultSelection;
-            set {
+            set
+            {
                 DefaultSelectionSpecified = true;
                 _defaultSelection = value;
             }
@@ -44,13 +52,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection _e164Selection;
 
         [XmlElement(ElementName = "e164Selection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection E164Selection {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:506")]
+        public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection E164Selection
+        {
             get => _e164Selection;
-            set {
+            set
+            {
                 E164SelectionSpecified = true;
                 _e164Selection = value;
             }
@@ -58,6 +69,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool E164SelectionSpecified { get; set; }
-        
+
     }
 }

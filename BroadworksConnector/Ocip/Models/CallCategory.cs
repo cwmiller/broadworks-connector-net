@@ -5,25 +5,26 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The Call Category for the call provided in the most significant contact from the NS
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCategory    {
-            [XmlEnum(Name = "Local")]
+    public enum CallCategory
+    {
+        [XmlEnum(Name = "Local")]
         Local,
-            [XmlEnum(Name = "National")]
+        [XmlEnum(Name = "National")]
         National,
-            [XmlEnum(Name = "Interlata")]
+        [XmlEnum(Name = "Interlata")]
         Interlata,
-            [XmlEnum(Name = "Intralata")]
+        [XmlEnum(Name = "Intralata")]
         Intralata,
-            [XmlEnum(Name = "International")]
+        [XmlEnum(Name = "International")]
         International,
-            [XmlEnum(Name = "Private")]
+        [XmlEnum(Name = "Private")]
         Private,
-            [XmlEnum(Name = "Emergency")]
+        [XmlEnum(Name = "Emergency")]
         Emergency,
-            [XmlEnum(Name = "Other")]
+        [XmlEnum(Name = "Other")]
         Other,
-     }
+    }
 }

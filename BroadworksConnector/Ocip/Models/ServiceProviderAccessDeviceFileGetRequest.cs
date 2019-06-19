@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,23 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request to get a service provider device profile file.
     /// The response is either ServiceProviderAccessDeviceFileGetResponse or ErrorResponse.
     /// Replaced By: ServiceProviderAccessDeviceFileGetRequest14sp8
-        /// <see cref="ServiceProviderAccessDeviceFileGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="ServiceProviderAccessDeviceFileGetRequest14sp8"/>
-        /// </summary>
+    /// <see cref="ServiceProviderAccessDeviceFileGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="ServiceProviderAccessDeviceFileGetRequest14sp8"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3400""}]")]
     public class ServiceProviderAccessDeviceFileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3400")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        public string DeviceName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3400")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceName
+        {
             get => _deviceName;
-            set {
+            set
+            {
                 DeviceNameSpecified = true;
                 _deviceName = value;
             }
@@ -46,13 +58,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceNameSpecified { get; set; }
-        
+
         private string _fileType;
 
         [XmlElement(ElementName = "fileType", IsNullable = false, Namespace = "")]
-        public string FileType {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3400")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string FileType
+        {
             get => _fileType;
-            set {
+            set
+            {
                 FileTypeSpecified = true;
                 _fileType = value;
             }
@@ -60,6 +77,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FileTypeSpecified { get; set; }
-        
+
     }
 }

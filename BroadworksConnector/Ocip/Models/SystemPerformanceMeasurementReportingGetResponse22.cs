@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemPerformanceMeasurementReportingGetRequest22.
-        /// <see cref="SystemPerformanceMeasurementReportingGetRequest22"/>
-        /// </summary>
+    /// <see cref="SystemPerformanceMeasurementReportingGetRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13263""}]")]
     public class SystemPerformanceMeasurementReportingGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -28,13 +33,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private int _reportingInterval;
 
         [XmlElement(ElementName = "reportingInterval", IsNullable = false, Namespace = "")]
-        public int ReportingInterval {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        [MinInclusive(5)]
+        [MaxInclusive(45000)]
+        public int ReportingInterval
+        {
             get => _reportingInterval;
-            set {
+            set
+            {
                 ReportingIntervalSpecified = true;
                 _reportingInterval = value;
             }
@@ -42,13 +52,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportingIntervalSpecified { get; set; }
-        
+
         private bool _resetMeasurementsAfterEachReport;
 
         [XmlElement(ElementName = "resetMeasurementsAfterEachReport", IsNullable = false, Namespace = "")]
-        public bool ResetMeasurementsAfterEachReport {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        public bool ResetMeasurementsAfterEachReport
+        {
             get => _resetMeasurementsAfterEachReport;
-            set {
+            set
+            {
                 ResetMeasurementsAfterEachReportSpecified = true;
                 _resetMeasurementsAfterEachReport = value;
             }
@@ -56,13 +69,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResetMeasurementsAfterEachReportSpecified { get; set; }
-        
+
         private bool _reportEnterprise;
 
         [XmlElement(ElementName = "reportEnterprise", IsNullable = false, Namespace = "")]
-        public bool ReportEnterprise {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        public bool ReportEnterprise
+        {
             get => _reportEnterprise;
-            set {
+            set
+            {
                 ReportEnterpriseSpecified = true;
                 _reportEnterprise = value;
             }
@@ -70,13 +86,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportEnterpriseSpecified { get; set; }
-        
+
         private bool _reportServiceProvider;
 
         [XmlElement(ElementName = "reportServiceProvider", IsNullable = false, Namespace = "")]
-        public bool ReportServiceProvider {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        public bool ReportServiceProvider
+        {
             get => _reportServiceProvider;
-            set {
+            set
+            {
                 ReportServiceProviderSpecified = true;
                 _reportServiceProvider = value;
             }
@@ -84,13 +103,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportServiceProviderSpecified { get; set; }
-        
+
         private bool _reportDevice;
 
         [XmlElement(ElementName = "reportDevice", IsNullable = false, Namespace = "")]
-        public bool ReportDevice {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        public bool ReportDevice
+        {
             get => _reportDevice;
-            set {
+            set
+            {
                 ReportDeviceSpecified = true;
                 _reportDevice = value;
             }
@@ -98,13 +120,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportDeviceSpecified { get; set; }
-        
+
         private bool _reportTable;
 
         [XmlElement(ElementName = "reportTable", IsNullable = false, Namespace = "")]
-        public bool ReportTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        public bool ReportTable
+        {
             get => _reportTable;
-            set {
+            set
+            {
                 ReportTableSpecified = true;
                 _reportTable = value;
             }
@@ -112,6 +137,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportTableSpecified { get; set; }
-        
+
     }
 }

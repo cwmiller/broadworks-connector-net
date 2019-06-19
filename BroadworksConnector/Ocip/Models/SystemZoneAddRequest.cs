@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a Zone and optional Net Addresses and Physical Locations.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18205""}]")]
     public class SystemZoneAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        public string ZoneName {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18205")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ZoneName
+        {
             get => _zoneName;
-            set {
+            set
+            {
                 ZoneNameSpecified = true;
                 _zoneName = value;
             }
@@ -30,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ZoneNameSpecified { get; set; }
-        
-        private List<string> _netAddress;
+
+        private List<string> _netAddress = new List<string>();
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        public List<string> NetAddress {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18205")]
+        [MinLength(1)]
+        [MaxLength(39)]
+        public List<string> NetAddress
+        {
             get => _netAddress;
-            set {
+            set
+            {
                 NetAddressSpecified = true;
                 _netAddress = value;
             }
@@ -44,13 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetAddressSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.IPAddressRange> _netAddressRange;
+
+        private List<BroadWorksConnector.Ocip.Models.IPAddressRange> _netAddressRange = new List<BroadWorksConnector.Ocip.Models.IPAddressRange>();
 
         [XmlElement(ElementName = "netAddressRange", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.IPAddressRange> NetAddressRange {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18205")]
+        public List<BroadWorksConnector.Ocip.Models.IPAddressRange> NetAddressRange
+        {
             get => _netAddressRange;
-            set {
+            set
+            {
                 NetAddressRangeSpecified = true;
                 _netAddressRange = value;
             }
@@ -58,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetAddressRangeSpecified { get; set; }
-        
-        private List<string> _locationBasedPhysicalLocation;
+
+        private List<string> _locationBasedPhysicalLocation = new List<string>();
 
         [XmlElement(ElementName = "locationBasedPhysicalLocation", IsNullable = false, Namespace = "")]
-        public List<string> LocationBasedPhysicalLocation {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18205")]
+        [MinLength(1)]
+        [MaxLength(1024)]
+        public List<string> LocationBasedPhysicalLocation
+        {
             get => _locationBasedPhysicalLocation;
-            set {
+            set
+            {
                 LocationBasedPhysicalLocationSpecified = true;
                 _locationBasedPhysicalLocation = value;
             }
@@ -72,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LocationBasedPhysicalLocationSpecified { get; set; }
-        
+
         private string _callingZonePhysicalLocation;
 
         [XmlElement(ElementName = "callingZonePhysicalLocation", IsNullable = false, Namespace = "")]
-        public string CallingZonePhysicalLocation {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18205")]
+        [MinLength(1)]
+        [MaxLength(1024)]
+        public string CallingZonePhysicalLocation
+        {
             get => _callingZonePhysicalLocation;
-            set {
+            set
+            {
                 CallingZonePhysicalLocationSpecified = true;
                 _callingZonePhysicalLocation = value;
             }
@@ -86,6 +115,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallingZonePhysicalLocationSpecified { get; set; }
-        
+
     }
 }

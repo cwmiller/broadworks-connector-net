@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18sp1SendToPersonMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27801""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18sp1SendToPersonMenuKeys
     {
 
-        
         private string _confirmSendingMessage;
 
         [XmlElement(ElementName = "confirmSendingMessage", IsNullable = false, Namespace = "")]
-        public string ConfirmSendingMessage {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27801")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ConfirmSendingMessage
+        {
             get => _confirmSendingMessage;
-            set {
+            set
+            {
                 ConfirmSendingMessageSpecified = true;
                 _confirmSendingMessage = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfirmSendingMessageSpecified { get; set; }
-        
+
         private string _cancelSendingMessage;
 
         [XmlElement(ElementName = "cancelSendingMessage", IsNullable = false, Namespace = "")]
-        public string CancelSendingMessage {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27801")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string CancelSendingMessage
+        {
             get => _cancelSendingMessage;
-            set {
+            set
+            {
                 CancelSendingMessageSpecified = true;
                 _cancelSendingMessage = value;
             }
@@ -41,13 +53,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CancelSendingMessageSpecified { get; set; }
-        
+
         private string _finishEnteringNumberWhereToSendMessageTo;
 
         [XmlElement(ElementName = "finishEnteringNumberWhereToSendMessageTo", IsNullable = false, Namespace = "")]
-        public string FinishEnteringNumberWhereToSendMessageTo {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27801")]
+        [Length(1)]
+        [RegularExpression(@"\*|#")]
+        public string FinishEnteringNumberWhereToSendMessageTo
+        {
             get => _finishEnteringNumberWhereToSendMessageTo;
-            set {
+            set
+            {
                 FinishEnteringNumberWhereToSendMessageToSpecified = true;
                 _finishEnteringNumberWhereToSendMessageTo = value;
             }
@@ -55,13 +72,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FinishEnteringNumberWhereToSendMessageToSpecified { get; set; }
-        
+
         private string _finishForwardingOrSendingMessage;
 
         [XmlElement(ElementName = "finishForwardingOrSendingMessage", IsNullable = false, Namespace = "")]
-        public string FinishForwardingOrSendingMessage {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27801")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string FinishForwardingOrSendingMessage
+        {
             get => _finishForwardingOrSendingMessage;
-            set {
+            set
+            {
                 FinishForwardingOrSendingMessageSpecified = true;
                 _finishForwardingOrSendingMessage = value;
             }
@@ -69,6 +91,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FinishForwardingOrSendingMessageSpecified { get; set; }
-        
+
     }
 }

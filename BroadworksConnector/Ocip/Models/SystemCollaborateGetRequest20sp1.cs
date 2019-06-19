@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,16 +11,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SystemCollaborateGetResponse20sp1 or an ErrorResponse.
     /// 
     /// Replaced by: SystemCollaborateGetRequest20sp1V2
-        /// <see cref="SystemCollaborateGetResponse20sp1"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemCollaborateGetRequest20sp1V2"/>
-        /// </summary>
+    /// <see cref="SystemCollaborateGetResponse20sp1"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemCollaborateGetRequest20sp1V2"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38622""}]")]
     public class SystemCollaborateGetRequest20sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
     }
 }

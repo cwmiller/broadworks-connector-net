@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -18,21 +20,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// The possible values for the "Calls To Extension" column are the following or a combination of them separated by comma:
     /// - The value of the extension for the corresponding Calls To Type, when the extension is available. i.e. Primary may have number, but no extension.
     /// - When no extension is available a blank space is provided instead.
-        /// <see cref="GroupFindMeFollowMeGetAlertingGroupRequest"/>
-        /// </summary>
+    /// <see cref="GroupFindMeFollowMeGetAlertingGroupRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:280""}]")]
     public class GroupFindMeFollowMeGetAlertingGroupResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _alertingGroupDescription;
 
         [XmlElement(ElementName = "alertingGroupDescription", IsNullable = false, Namespace = "")]
-        public string AlertingGroupDescription {
+        [Optional]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string AlertingGroupDescription
+        {
             get => _alertingGroupDescription;
-            set {
+            set
+            {
                 AlertingGroupDescriptionSpecified = true;
                 _alertingGroupDescription = value;
             }
@@ -40,13 +48,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlertingGroupDescriptionSpecified { get; set; }
-        
+
         private bool _useDiversionInhibitor;
 
         [XmlElement(ElementName = "useDiversionInhibitor", IsNullable = false, Namespace = "")]
-        public bool UseDiversionInhibitor {
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        public bool UseDiversionInhibitor
+        {
             get => _useDiversionInhibitor;
-            set {
+            set
+            {
                 UseDiversionInhibitorSpecified = true;
                 _useDiversionInhibitor = value;
             }
@@ -54,13 +65,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseDiversionInhibitorSpecified { get; set; }
-        
+
         private bool _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
-        public bool AnswerConfirmationRequired {
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        public bool AnswerConfirmationRequired
+        {
             get => _answerConfirmationRequired;
-            set {
+            set
+            {
                 AnswerConfirmationRequiredSpecified = true;
                 _answerConfirmationRequired = value;
             }
@@ -68,13 +82,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnswerConfirmationRequiredSpecified { get; set; }
-        
+
         private int _numberOfRings;
 
         [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
-        public int NumberOfRings {
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        [MinInclusive(2)]
+        [MaxInclusive(20)]
+        public int NumberOfRings
+        {
             get => _numberOfRings;
-            set {
+            set
+            {
                 NumberOfRingsSpecified = true;
                 _numberOfRings = value;
             }
@@ -82,13 +101,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberOfRingsSpecified { get; set; }
-        
-        private List<string> _phoneNumber;
+
+        private List<string> _phoneNumber = new List<string>();
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        public List<string> PhoneNumber {
+        [Optional]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public List<string> PhoneNumber
+        {
             get => _phoneNumber;
-            set {
+            set
+            {
                 PhoneNumberSpecified = true;
                 _phoneNumber = value;
             }
@@ -96,13 +121,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneNumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable {
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
+        {
             get => _userTable;
-            set {
+            set
+            {
                 UserTableSpecified = true;
                 _userTable = value;
             }
@@ -110,13 +138,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserTableSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
+        {
             get => _criteriaTable;
-            set {
+            set
+            {
                 CriteriaTableSpecified = true;
                 _criteriaTable = value;
             }
@@ -124,6 +155,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaTableSpecified { get; set; }
-        
+
     }
 }

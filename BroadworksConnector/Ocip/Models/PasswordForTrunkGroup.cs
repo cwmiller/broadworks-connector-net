@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,20 +12,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// find the trunk group if it exists. If the trunk group doesn't exist yet,
     /// then the serviceProviderId and groupId will be used to choose the password
     /// rules with which to generate the trunk group password.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class PasswordForTrunkGroup 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:837""}]")]
+    public class PasswordForTrunkGroup
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"6b27fcc79475236456fc113a42b75543:837")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -31,13 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"6b27fcc79475236456fc113a42b75543:837")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -45,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:837")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -59,13 +77,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
         private bool _generateTrunkGroupAuthenticationPassword;
 
         [XmlElement(ElementName = "generateTrunkGroupAuthenticationPassword", IsNullable = false, Namespace = "")]
-        public bool GenerateTrunkGroupAuthenticationPassword {
+        [Group(@"6b27fcc79475236456fc113a42b75543:837")]
+        public bool GenerateTrunkGroupAuthenticationPassword
+        {
             get => _generateTrunkGroupAuthenticationPassword;
-            set {
+            set
+            {
                 GenerateTrunkGroupAuthenticationPasswordSpecified = true;
                 _generateTrunkGroupAuthenticationPassword = value;
             }
@@ -73,6 +94,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GenerateTrunkGroupAuthenticationPasswordSpecified { get; set; }
-        
+
     }
 }

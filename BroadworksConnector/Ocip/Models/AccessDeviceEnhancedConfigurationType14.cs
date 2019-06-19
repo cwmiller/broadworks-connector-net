@@ -7,15 +7,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// Type of enhanced configuration supported by an access device.
     /// "2 File Configuration" was formerly called "CPE Type 1"
     /// "3 File Configuration" was formerly called "CPE Type 2"
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AccessDeviceEnhancedConfigurationType14    {
-            [XmlEnum(Name = "2 File Configuration")]
+    public enum AccessDeviceEnhancedConfigurationType14
+    {
+        [XmlEnum(Name = "2 File Configuration")]
         _2FileConfiguration,
-            [XmlEnum(Name = "3 File Configuration")]
+        [XmlEnum(Name = "3 File Configuration")]
         _3FileConfiguration,
-            [XmlEnum(Name = "SNAP")]
+        [XmlEnum(Name = "SNAP")]
         SNAP,
-     }
+    }
 }

@@ -1,26 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupFlexibleSeatingAccessDeviceGetListRequest
-        /// <see cref="GroupFlexibleSeatingAccessDeviceGetListRequest"/>
-        /// </summary>
+    /// <see cref="GroupFlexibleSeatingAccessDeviceGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""43afb2158d313a1d1a148124d7caba1e:75""}]")]
     public class GroupFlexibleSeatingAccessDeviceGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.GroupFlexibleSeatingAccessDeviceGetListResponseAvailableAccessDevice> _availableAccessDevice;
+        private List<BroadWorksConnector.Ocip.Models.GroupFlexibleSeatingAccessDeviceGetListResponseAvailableAccessDevice> _availableAccessDevice = new List<BroadWorksConnector.Ocip.Models.GroupFlexibleSeatingAccessDeviceGetListResponseAvailableAccessDevice>();
 
         [XmlElement(ElementName = "availableAccessDevice", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.GroupFlexibleSeatingAccessDeviceGetListResponseAvailableAccessDevice> AvailableAccessDevice {
+        [Optional]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:75")]
+        public List<BroadWorksConnector.Ocip.Models.GroupFlexibleSeatingAccessDeviceGetListResponseAvailableAccessDevice> AvailableAccessDevice
+        {
             get => _availableAccessDevice;
-            set {
+            set
+            {
                 AvailableAccessDeviceSpecified = true;
                 _availableAccessDevice = value;
             }
@@ -28,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AvailableAccessDeviceSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the ServiceProviderNumberPortabilityQueryGetRequest.
     /// The response contains the service provider number portability query information.
-        /// <see cref="ServiceProviderNumberPortabilityQueryGetRequest"/>
-        /// </summary>
+    /// <see cref="ServiceProviderNumberPortabilityQueryGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4316""}]")]
     public class ServiceProviderNumberPortabilityQueryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _enableNumberPortabilityQueryForOutgoingCalls;
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForOutgoingCalls", IsNullable = false, Namespace = "")]
-        public bool EnableNumberPortabilityQueryForOutgoingCalls {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4316")]
+        public bool EnableNumberPortabilityQueryForOutgoingCalls
+        {
             get => _enableNumberPortabilityQueryForOutgoingCalls;
-            set {
+            set
+            {
                 EnableNumberPortabilityQueryForOutgoingCallsSpecified = true;
                 _enableNumberPortabilityQueryForOutgoingCalls = value;
             }
@@ -29,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableNumberPortabilityQueryForOutgoingCallsSpecified { get; set; }
-        
+
         private bool _enableNumberPortabilityQueryForIncomingCalls;
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForIncomingCalls", IsNullable = false, Namespace = "")]
-        public bool EnableNumberPortabilityQueryForIncomingCalls {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4316")]
+        public bool EnableNumberPortabilityQueryForIncomingCalls
+        {
             get => _enableNumberPortabilityQueryForIncomingCalls;
-            set {
+            set
+            {
                 EnableNumberPortabilityQueryForIncomingCallsSpecified = true;
                 _enableNumberPortabilityQueryForIncomingCalls = value;
             }
@@ -43,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableNumberPortabilityQueryForIncomingCallsSpecified { get; set; }
-        
+
         private bool _enableNumberPortabilityQueryForNetworkCallsOnly;
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForNetworkCallsOnly", IsNullable = false, Namespace = "")]
-        public bool EnableNumberPortabilityQueryForNetworkCallsOnly {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4316")]
+        public bool EnableNumberPortabilityQueryForNetworkCallsOnly
+        {
             get => _enableNumberPortabilityQueryForNetworkCallsOnly;
-            set {
+            set
+            {
                 EnableNumberPortabilityQueryForNetworkCallsOnlySpecified = true;
                 _enableNumberPortabilityQueryForNetworkCallsOnly = value;
             }
@@ -57,13 +68,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableNumberPortabilityQueryForNetworkCallsOnlySpecified { get; set; }
-        
-        private List<string> _digitPattern;
+
+        private List<string> _digitPattern = new List<string>();
 
         [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
-        public List<string> DigitPattern {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4316")]
+        [MinLength(1)]
+        [MaxLength(160)]
+        public List<string> DigitPattern
+        {
             get => _digitPattern;
-            set {
+            set
+            {
                 DigitPatternSpecified = true;
                 _digitPattern = value;
             }
@@ -71,6 +88,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DigitPatternSpecified { get; set; }
-        
+
     }
 }

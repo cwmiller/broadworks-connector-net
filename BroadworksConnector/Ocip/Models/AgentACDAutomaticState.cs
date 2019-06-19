@@ -6,15 +6,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Agent Automatic Call Distribution (ACD) State.
     /// States available for Wrap-Up agent state management.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AgentACDAutomaticState    {
-            [XmlEnum(Name = "Available")]
+    public enum AgentACDAutomaticState
+    {
+        [XmlEnum(Name = "Available")]
         Available,
-            [XmlEnum(Name = "Unavailable")]
+        [XmlEnum(Name = "Unavailable")]
         Unavailable,
-            [XmlEnum(Name = "Wrap-Up")]
+        [XmlEnum(Name = "Wrap-Up")]
         WrapUp,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -15,22 +17,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Then the search criteria are logically ORed together.
     /// 
     /// The response is either GroupCallParkGetInstancePagedSortedListResponse or ErrorResponse.
-        /// <see cref="GroupCallParkGetInstancePagedSortedListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="GroupCallParkGetInstancePagedSortedListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7a925e891158dfa3cb1319e045608894:326""}]")]
     public class GroupCallParkGetInstancePagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -38,13 +45,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -52,13 +64,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl {
+        [Optional]
+        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
+        {
             get => _responsePagingControl;
-            set {
+            set
+            {
                 ResponsePagingControlSpecified = true;
                 _responsePagingControl = value;
             }
@@ -66,13 +82,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponsePagingControlSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByCallParkName _sortByCallParkName;
 
         [XmlElement(ElementName = "sortByCallParkName", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByCallParkName SortByCallParkName {
+        [Optional]
+        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        public BroadWorksConnector.Ocip.Models.SortByCallParkName SortByCallParkName
+        {
             get => _sortByCallParkName;
-            set {
+            set
+            {
                 SortByCallParkNameSpecified = true;
                 _sortByCallParkName = value;
             }
@@ -80,13 +100,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByCallParkNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallParkName> _searchCriteriaCallParkName;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallParkName> _searchCriteriaCallParkName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallParkName>();
 
         [XmlElement(ElementName = "searchCriteriaCallParkName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallParkName> SearchCriteriaCallParkName {
+        [Optional]
+        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallParkName> SearchCriteriaCallParkName
+        {
             get => _searchCriteriaCallParkName;
-            set {
+            set
+            {
                 SearchCriteriaCallParkNameSpecified = true;
                 _searchCriteriaCallParkName = value;
             }
@@ -94,13 +118,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaCallParkNameSpecified { get; set; }
-        
+
         private bool _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
-        public bool SearchCriteriaModeOr {
+        [Optional]
+        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        public bool SearchCriteriaModeOr
+        {
             get => _searchCriteriaModeOr;
-            set {
+            set
+            {
                 SearchCriteriaModeOrSpecified = true;
                 _searchCriteriaModeOr = value;
             }
@@ -108,6 +136,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaModeOrSpecified { get; set; }
-        
+
     }
 }

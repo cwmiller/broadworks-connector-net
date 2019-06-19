@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,23 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request to get all the information of a specific Find-me/Follow-me alerting group selective criteria.
     /// The response is either GroupFindMeFollowMeGetAlertingGroupResponse or ErrorResponse.
     /// Replaced by: GroupFindMeFollowMeGetAlertingGroupSelectiveCriteriaRequest21
-        /// <see cref="GroupFindMeFollowMeGetAlertingGroupResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="GroupFindMeFollowMeGetAlertingGroupSelectiveCriteriaRequest21"/>
-        /// </summary>
+    /// <see cref="GroupFindMeFollowMeGetAlertingGroupResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupFindMeFollowMeGetAlertingGroupSelectiveCriteriaRequest21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:33334""}]")]
     public class GroupFindMeFollowMeGetAlertingGroupSelectiveCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33334")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private string _alertingGroupName;
 
         [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
-        public string AlertingGroupName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33334")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string AlertingGroupName
+        {
             get => _alertingGroupName;
-            set {
+            set
+            {
                 AlertingGroupNameSpecified = true;
                 _alertingGroupName = value;
             }
@@ -46,13 +58,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlertingGroupNameSpecified { get; set; }
-        
+
         private string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        public string CriteriaName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33334")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string CriteriaName
+        {
             get => _criteriaName;
-            set {
+            set
+            {
                 CriteriaNameSpecified = true;
                 _criteriaName = value;
             }
@@ -60,6 +77,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaNameSpecified { get; set; }
-        
+
     }
 }

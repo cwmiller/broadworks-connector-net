@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,21 +13,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Extension", "Department", "In Trunk Group", "Email Address", "Use Custom Settings".
     /// "Use Custom Settings" is "true" or "false".
     /// "Phone Number" is presented in the E164 format.
-        /// <see cref="GroupUserCallingPlanSettingsGetListRequest"/>
-        /// </summary>
+    /// <see cref="GroupUserCallingPlanSettingsGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7429""}]")]
     public class GroupUserCallingPlanSettingsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _userCallingPlanTable;
 
         [XmlElement(ElementName = "userCallingPlanTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable UserCallingPlanTable {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7429")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable UserCallingPlanTable
+        {
             get => _userCallingPlanTable;
-            set {
+            set
+            {
                 UserCallingPlanTableSpecified = true;
                 _userCallingPlanTable = value;
             }
@@ -33,6 +38,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserCallingPlanTableSpecified { get; set; }
-        
+
     }
 }

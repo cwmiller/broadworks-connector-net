@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Line ordering task status value.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum LineOrderingTaskStatus    {
-            [XmlEnum(Name = "NotStarted")]
+    public enum LineOrderingTaskStatus
+    {
+        [XmlEnum(Name = "NotStarted")]
         NotStarted,
-            [XmlEnum(Name = "Pending")]
+        [XmlEnum(Name = "Pending")]
         Pending,
-            [XmlEnum(Name = "Processing")]
+        [XmlEnum(Name = "Processing")]
         Processing,
-     }
+    }
 }

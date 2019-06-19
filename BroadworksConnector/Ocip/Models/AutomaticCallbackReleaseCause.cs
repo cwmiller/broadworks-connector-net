@@ -5,27 +5,28 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Callback Release Cause.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AutomaticCallbackReleaseCause    {
-            [XmlEnum(Name = "Busy")]
+    public enum AutomaticCallbackReleaseCause
+    {
+        [XmlEnum(Name = "Busy")]
         Busy,
-            [XmlEnum(Name = "Forbidden")]
+        [XmlEnum(Name = "Forbidden")]
         Forbidden,
-            [XmlEnum(Name = "Global Failure")]
+        [XmlEnum(Name = "Global Failure")]
         GlobalFailure,
-            [XmlEnum(Name = "Request Failure")]
+        [XmlEnum(Name = "Request Failure")]
         RequestFailure,
-            [XmlEnum(Name = "Server Failure")]
+        [XmlEnum(Name = "Server Failure")]
         ServerFailure,
-            [XmlEnum(Name = "Translation Failure")]
+        [XmlEnum(Name = "Translation Failure")]
         TranslationFailure,
-            [XmlEnum(Name = "Temporarily Unavailable")]
+        [XmlEnum(Name = "Temporarily Unavailable")]
         TemporarilyUnavailable,
-            [XmlEnum(Name = "User Not Found")]
+        [XmlEnum(Name = "User Not Found")]
         UserNotFound,
-            [XmlEnum(Name = "Request Timeout")]
+        [XmlEnum(Name = "Request Timeout")]
         RequestTimeout,
-     }
+    }
 }

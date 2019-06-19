@@ -5,33 +5,34 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Defines the month (January - December).
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum Month    {
-            [XmlEnum(Name = "January")]
+    public enum Month
+    {
+        [XmlEnum(Name = "January")]
         January,
-            [XmlEnum(Name = "February")]
+        [XmlEnum(Name = "February")]
         February,
-            [XmlEnum(Name = "March")]
+        [XmlEnum(Name = "March")]
         March,
-            [XmlEnum(Name = "April")]
+        [XmlEnum(Name = "April")]
         April,
-            [XmlEnum(Name = "May")]
+        [XmlEnum(Name = "May")]
         May,
-            [XmlEnum(Name = "June")]
+        [XmlEnum(Name = "June")]
         June,
-            [XmlEnum(Name = "July")]
+        [XmlEnum(Name = "July")]
         July,
-            [XmlEnum(Name = "August")]
+        [XmlEnum(Name = "August")]
         August,
-            [XmlEnum(Name = "September")]
+        [XmlEnum(Name = "September")]
         September,
-            [XmlEnum(Name = "October")]
+        [XmlEnum(Name = "October")]
         October,
-            [XmlEnum(Name = "November")]
+        [XmlEnum(Name = "November")]
         November,
-            [XmlEnum(Name = "December")]
+        [XmlEnum(Name = "December")]
         December,
-     }
+    }
 }

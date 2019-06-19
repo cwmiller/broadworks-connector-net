@@ -9,15 +9,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Extended" indicates the lookup is performed in the precedence order of P-Preferred-Identity header,
     /// P-Asserted-Identity header, Remote-Party-ID header, and FROM header.
     /// "Basic Lookup Prefer From"
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupUserLookupPolicy    {
-            [XmlEnum(Name = "Basic")]
+    public enum TrunkGroupUserLookupPolicy
+    {
+        [XmlEnum(Name = "Basic")]
         Basic,
-            [XmlEnum(Name = "Extended")]
+        [XmlEnum(Name = "Extended")]
         Extended,
-            [XmlEnum(Name = "Basic Lookup Prefer From")]
+        [XmlEnum(Name = "Basic Lookup Prefer From")]
         BasicLookupPreferFrom,
-     }
+    }
 }

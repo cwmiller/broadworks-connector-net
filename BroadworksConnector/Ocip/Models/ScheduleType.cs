@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Schedule type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ScheduleType    {
-            [XmlEnum(Name = "Holiday")]
+    public enum ScheduleType
+    {
+        [XmlEnum(Name = "Holiday")]
         Holiday,
-            [XmlEnum(Name = "Time")]
+        [XmlEnum(Name = "Time")]
         Time,
-     }
+    }
 }

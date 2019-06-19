@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify a Calling Party Category in system.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""89aa8c9a341a3cccb2453b1ee467bf94:160""}]")]
     public class SystemCallingPartyCategoryModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _category;
 
         [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
-        public string Category {
+        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:160")]
+        [MinLength(1)]
+        [MaxLength(20)]
+        public string Category
+        {
             get => _category;
-            set {
+            set
+            {
                 CategorySpecified = true;
                 _category = value;
             }
@@ -30,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CategorySpecified { get; set; }
-        
+
         private string _cpcValue;
 
         [XmlElement(ElementName = "cpcValue", IsNullable = true, Namespace = "")]
-        public string CpcValue {
+        [Optional]
+        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:160")]
+        [MinLength(1)]
+        [MaxLength(20)]
+        public string CpcValue
+        {
             get => _cpcValue;
-            set {
+            set
+            {
                 CpcValueSpecified = true;
                 _cpcValue = value;
             }
@@ -44,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CpcValueSpecified { get; set; }
-        
+
         private int? _isupOliValue;
 
         [XmlElement(ElementName = "isupOliValue", IsNullable = true, Namespace = "")]
-        public int? IsupOliValue {
+        [Optional]
+        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:160")]
+        [MinInclusive(0)]
+        [MaxInclusive(255)]
+        public int? IsupOliValue
+        {
             get => _isupOliValue;
-            set {
+            set
+            {
                 IsupOliValueSpecified = true;
                 _isupOliValue = value;
             }
@@ -58,13 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsupOliValueSpecified { get; set; }
-        
+
         private string _gtdOliValue;
 
         [XmlElement(ElementName = "gtdOliValue", IsNullable = true, Namespace = "")]
-        public string GtdOliValue {
+        [Optional]
+        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:160")]
+        [MinLength(1)]
+        [MaxLength(3)]
+        public string GtdOliValue
+        {
             get => _gtdOliValue;
-            set {
+            set
+            {
                 GtdOliValueSpecified = true;
                 _gtdOliValue = value;
             }
@@ -72,13 +97,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GtdOliValueSpecified { get; set; }
-        
+
         private bool _userCategory;
 
         [XmlElement(ElementName = "userCategory", IsNullable = false, Namespace = "")]
-        public bool UserCategory {
+        [Optional]
+        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:160")]
+        public bool UserCategory
+        {
             get => _userCategory;
-            set {
+            set
+            {
                 UserCategorySpecified = true;
                 _userCategory = value;
             }
@@ -86,13 +115,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserCategorySpecified { get; set; }
-        
+
         private bool _payPhone;
 
         [XmlElement(ElementName = "payPhone", IsNullable = false, Namespace = "")]
-        public bool PayPhone {
+        [Optional]
+        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:160")]
+        public bool PayPhone
+        {
             get => _payPhone;
-            set {
+            set
+            {
                 PayPhoneSpecified = true;
                 _payPhone = value;
             }
@@ -100,13 +133,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PayPhoneSpecified { get; set; }
-        
+
         private bool _operator;
 
         [XmlElement(ElementName = "operator", IsNullable = false, Namespace = "")]
-        public bool Operator {
+        [Optional]
+        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:160")]
+        public bool Operator
+        {
             get => _operator;
-            set {
+            set
+            {
                 OperatorSpecified = true;
                 _operator = value;
             }
@@ -114,13 +151,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OperatorSpecified { get; set; }
-        
+
         private bool _becomeDefault;
 
         [XmlElement(ElementName = "becomeDefault", IsNullable = false, Namespace = "")]
-        public bool BecomeDefault {
+        [Optional]
+        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:160")]
+        public bool BecomeDefault
+        {
             get => _becomeDefault;
-            set {
+            set
+            {
                 BecomeDefaultSpecified = true;
                 _becomeDefault = value;
             }
@@ -128,13 +169,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BecomeDefaultSpecified { get; set; }
-        
+
         private bool _collectCall;
 
         [XmlElement(ElementName = "collectCall", IsNullable = false, Namespace = "")]
-        public bool CollectCall {
+        [Optional]
+        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:160")]
+        public bool CollectCall
+        {
             get => _collectCall;
-            set {
+            set
+            {
                 CollectCallSpecified = true;
                 _collectCall = value;
             }
@@ -142,13 +187,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CollectCallSpecified { get; set; }
-        
+
         private string _webDisplayKey;
 
         [XmlElement(ElementName = "webDisplayKey", IsNullable = true, Namespace = "")]
-        public string WebDisplayKey {
+        [Optional]
+        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:160")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string WebDisplayKey
+        {
             get => _webDisplayKey;
-            set {
+            set
+            {
                 WebDisplayKeySpecified = true;
                 _webDisplayKey = value;
             }
@@ -156,6 +207,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool WebDisplayKeySpecified { get; set; }
-        
+
     }
 }

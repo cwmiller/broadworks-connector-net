@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for destination trunk group format.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SIPDestinationTrunkGroupFormat    {
-            [XmlEnum(Name = "DTG")]
+    public enum SIPDestinationTrunkGroupFormat
+    {
+        [XmlEnum(Name = "DTG")]
         DTG,
-            [XmlEnum(Name = "Tgrp In Contact")]
+        [XmlEnum(Name = "Tgrp In Contact")]
         TgrpInContact,
-            [XmlEnum(Name = "Tgrp In Request URI")]
+        [XmlEnum(Name = "Tgrp In Request URI")]
         TgrpInRequestURI,
-            [XmlEnum(Name = "X Nortel Profile")]
+        [XmlEnum(Name = "X Nortel Profile")]
         XNortelProfile,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify a trunk group's Security Classification configuration
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b3afea8308b7fdaab8d385357ca9c2d:85""}]")]
     public class GroupTrunkGroupSecurityClassificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey {
+        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:85")]
+        public BroadWorksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey
+        {
             get => _trunkGroupKey;
-            set {
+            set
+            {
                 TrunkGroupKeySpecified = true;
                 _trunkGroupKey = value;
             }
@@ -30,13 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TrunkGroupKeySpecified { get; set; }
-        
+
         private string _defaultSecurityClassification;
 
         [XmlElement(ElementName = "defaultSecurityClassification", IsNullable = true, Namespace = "")]
-        public string DefaultSecurityClassification {
+        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:85")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DefaultSecurityClassification
+        {
             get => _defaultSecurityClassification;
-            set {
+            set
+            {
                 DefaultSecurityClassificationSpecified = true;
                 _defaultSecurityClassification = value;
             }
@@ -44,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultSecurityClassificationSpecified { get; set; }
-        
+
     }
 }

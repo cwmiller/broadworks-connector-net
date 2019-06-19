@@ -1,26 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the UserCallForwardingSelectiveGetCriteriaRequest21.
-        /// <see cref="UserCallForwardingSelectiveGetCriteriaRequest21"/>
-        /// </summary>
+    /// <see cref="UserCallForwardingSelectiveGetCriteriaRequest21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""543304bb75006bfa60814c897fa03ec0:107""}]")]
     public class UserCallForwardingSelectiveGetCriteriaResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule {
+        [Optional]
+        [Group(@"543304bb75006bfa60814c897fa03ec0:107")]
+        public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
+        {
             get => _timeSchedule;
-            set {
+            set
+            {
                 TimeScheduleSpecified = true;
                 _timeSchedule = value;
             }
@@ -28,13 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeScheduleSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule {
+        [Optional]
+        [Group(@"543304bb75006bfa60814c897fa03ec0:107")]
+        public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
+        {
             get => _holidaySchedule;
-            set {
+            set
+            {
                 HolidayScheduleSpecified = true;
                 _holidaySchedule = value;
             }
@@ -42,13 +52,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HolidayScheduleSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16 _forwardToNumberSelection;
 
         [XmlElement(ElementName = "forwardToNumberSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16 ForwardToNumberSelection {
+        [Group(@"543304bb75006bfa60814c897fa03ec0:107")]
+        public BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16 ForwardToNumberSelection
+        {
             get => _forwardToNumberSelection;
-            set {
+            set
+            {
                 ForwardToNumberSelectionSpecified = true;
                 _forwardToNumberSelection = value;
             }
@@ -56,13 +69,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ForwardToNumberSelectionSpecified { get; set; }
-        
+
         private string _forwardToPhoneNumber;
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
-        public string ForwardToPhoneNumber {
+        [Optional]
+        [Group(@"543304bb75006bfa60814c897fa03ec0:107")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ForwardToPhoneNumber
+        {
             get => _forwardToPhoneNumber;
-            set {
+            set
+            {
                 ForwardToPhoneNumberSpecified = true;
                 _forwardToPhoneNumber = value;
             }
@@ -70,13 +89,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ForwardToPhoneNumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria {
+        [Group(@"543304bb75006bfa60814c897fa03ec0:107")]
+        public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria
+        {
             get => _fromDnCriteria;
-            set {
+            set
+            {
                 FromDnCriteriaSpecified = true;
                 _fromDnCriteria = value;
             }
@@ -84,13 +106,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FromDnCriteriaSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.CallToNumber> _callToNumber;
+
+        private List<BroadWorksConnector.Ocip.Models.CallToNumber> _callToNumber = new List<BroadWorksConnector.Ocip.Models.CallToNumber>();
 
         [XmlElement(ElementName = "callToNumber", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CallToNumber> CallToNumber {
+        [Optional]
+        [Group(@"543304bb75006bfa60814c897fa03ec0:107")]
+        public List<BroadWorksConnector.Ocip.Models.CallToNumber> CallToNumber
+        {
             get => _callToNumber;
-            set {
+            set
+            {
                 CallToNumberSpecified = true;
                 _callToNumber = value;
             }
@@ -98,6 +124,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallToNumberSpecified { get; set; }
-        
+
     }
 }

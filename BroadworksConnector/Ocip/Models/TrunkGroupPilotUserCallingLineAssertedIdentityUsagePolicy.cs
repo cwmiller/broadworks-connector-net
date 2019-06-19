@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Trunk Group Pilot User Calling Line Identity policy
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy    {
-            [XmlEnum(Name = "All Originating Calls")]
+    public enum TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy
+    {
+        [XmlEnum(Name = "All Originating Calls")]
         AllOriginatingCalls,
-            [XmlEnum(Name = "Unscreened Originating Calls")]
+        [XmlEnum(Name = "Unscreened Originating Calls")]
         UnscreenedOriginatingCalls,
-     }
+    }
 }

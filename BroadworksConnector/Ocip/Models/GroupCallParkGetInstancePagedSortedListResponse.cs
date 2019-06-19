@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the GroupCallParkGetInstancePagedSortedListRequest.
-        /// <see cref="GroupCallParkGetInstancePagedSortedListRequest"/>
-        /// </summary>
+    /// <see cref="GroupCallParkGetInstancePagedSortedListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7a925e891158dfa3cb1319e045608894:346""}]")]
     public class GroupCallParkGetInstancePagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _name;
+        private List<string> _name = new List<string>();
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public List<string> Name {
+        [Optional]
+        [Group(@"7a925e891158dfa3cb1319e045608894:346")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -28,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
     }
 }

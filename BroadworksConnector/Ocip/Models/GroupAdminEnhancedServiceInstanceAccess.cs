@@ -10,13 +10,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Modify-Only" indicates
     /// 1) the group administrator is restricted from adding or removing enhanced service instances, but
     /// 2) may modify existing instances.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupAdminEnhancedServiceInstanceAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupAdminEnhancedServiceInstanceAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Modify-Only")]
+        [XmlEnum(Name = "Modify-Only")]
         ModifyOnly,
-     }
+    }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Executive rollover action.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ExecutiveRolloverActionType    {
-            [XmlEnum(Name = "Voice Messaging")]
+    public enum ExecutiveRolloverActionType
+    {
+        [XmlEnum(Name = "Voice Messaging")]
         VoiceMessaging,
-            [XmlEnum(Name = "Forward")]
+        [XmlEnum(Name = "Forward")]
         Forward,
-            [XmlEnum(Name = "No Answer Processing")]
+        [XmlEnum(Name = "No Answer Processing")]
         NoAnswerProcessing,
-     }
+    }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call type choices for sending call being forward response on Redirected Calls
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallBeingForwardedResponseCallType    {
-            [XmlEnum(Name = "Never")]
+    public enum CallBeingForwardedResponseCallType
+    {
+        [XmlEnum(Name = "Never")]
         Never,
-            [XmlEnum(Name = "Internal Calls")]
+        [XmlEnum(Name = "Internal Calls")]
         InternalCalls,
-            [XmlEnum(Name = "All Calls")]
+        [XmlEnum(Name = "All Calls")]
         AllCalls,
-     }
+    }
 }

@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupExchangeIntegrationGetRequest.
-        /// <see cref="GroupExchangeIntegrationGetRequest"/>
-        /// </summary>
+    /// <see cref="GroupExchangeIntegrationGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4757""}]")]
     public class GroupExchangeIntegrationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _enableExchangeIntegration;
 
         [XmlElement(ElementName = "enableExchangeIntegration", IsNullable = false, Namespace = "")]
-        public bool EnableExchangeIntegration {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4757")]
+        public bool EnableExchangeIntegration
+        {
             get => _enableExchangeIntegration;
-            set {
+            set
+            {
                 EnableExchangeIntegrationSpecified = true;
                 _enableExchangeIntegration = value;
             }
@@ -28,13 +33,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableExchangeIntegrationSpecified { get; set; }
-        
+
         private string _exchangeURL;
 
         [XmlElement(ElementName = "exchangeURL", IsNullable = false, Namespace = "")]
-        public string ExchangeURL {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4757")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string ExchangeURL
+        {
             get => _exchangeURL;
-            set {
+            set
+            {
                 ExchangeURLSpecified = true;
                 _exchangeURL = value;
             }
@@ -42,13 +53,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExchangeURLSpecified { get; set; }
-        
+
         private string _exchangeUserName;
 
         [XmlElement(ElementName = "exchangeUserName", IsNullable = false, Namespace = "")]
-        public string ExchangeUserName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4757")]
+        [MinLength(1)]
+        [MaxLength(64)]
+        public string ExchangeUserName
+        {
             get => _exchangeUserName;
-            set {
+            set
+            {
                 ExchangeUserNameSpecified = true;
                 _exchangeUserName = value;
             }
@@ -56,6 +73,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExchangeUserNameSpecified { get; set; }
-        
+
     }
 }

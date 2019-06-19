@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -22,21 +24,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following data elements are only used in AS data mode and not returned
     /// in XS data mode:
     /// resellerId.
-        /// <see cref="ServiceProviderGetRequest22V2"/>
-        /// </summary>
+    /// <see cref="ServiceProviderGetRequest22V2"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3794"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3795""}]}]")]
     public class ServiceProviderGetResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isEnterprise;
 
         [XmlElement(ElementName = "isEnterprise", IsNullable = false, Namespace = "")]
-        public bool IsEnterprise {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3795")]
+        public bool IsEnterprise
+        {
             get => _isEnterprise;
-            set {
+            set
+            {
                 IsEnterpriseSpecified = true;
                 _isEnterprise = value;
             }
@@ -44,13 +49,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsEnterpriseSpecified { get; set; }
-        
+
         private bool _useCustomRoutingProfile;
 
         [XmlElement(ElementName = "useCustomRoutingProfile", IsNullable = false, Namespace = "")]
-        public bool UseCustomRoutingProfile {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3795")]
+        public bool UseCustomRoutingProfile
+        {
             get => _useCustomRoutingProfile;
-            set {
+            set
+            {
                 UseCustomRoutingProfileSpecified = true;
                 _useCustomRoutingProfile = value;
             }
@@ -58,13 +66,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseCustomRoutingProfileSpecified { get; set; }
-        
+
         private string _defaultDomain;
 
         [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
-        public string DefaultDomain {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string DefaultDomain
+        {
             get => _defaultDomain;
-            set {
+            set
+            {
                 DefaultDomainSpecified = true;
                 _defaultDomain = value;
             }
@@ -72,13 +85,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultDomainSpecified { get; set; }
-        
+
         private string _serviceProviderName;
 
         [XmlElement(ElementName = "serviceProviderName", IsNullable = false, Namespace = "")]
-        public string ServiceProviderName {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServiceProviderName
+        {
             get => _serviceProviderName;
-            set {
+            set
+            {
                 ServiceProviderNameSpecified = true;
                 _serviceProviderName = value;
             }
@@ -86,13 +105,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderNameSpecified { get; set; }
-        
+
         private string _supportEmail;
 
         [XmlElement(ElementName = "supportEmail", IsNullable = false, Namespace = "")]
-        public string SupportEmail {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string SupportEmail
+        {
             get => _supportEmail;
-            set {
+            set
+            {
                 SupportEmailSpecified = true;
                 _supportEmail = value;
             }
@@ -100,13 +125,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SupportEmailSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Contact _contact;
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Contact Contact {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        public BroadWorksConnector.Ocip.Models.Contact Contact
+        {
             get => _contact;
-            set {
+            set
+            {
                 ContactSpecified = true;
                 _contact = value;
             }
@@ -114,13 +143,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
         [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.StreetAddress Address {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        public BroadWorksConnector.Ocip.Models.StreetAddress Address
+        {
             get => _address;
-            set {
+            set
+            {
                 AddressSpecified = true;
                 _address = value;
             }
@@ -128,13 +161,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AddressSpecified { get; set; }
-        
+
         private bool _useServiceProviderLanguages;
 
         [XmlElement(ElementName = "useServiceProviderLanguages", IsNullable = false, Namespace = "")]
-        public bool UseServiceProviderLanguages {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        public bool UseServiceProviderLanguages
+        {
             get => _useServiceProviderLanguages;
-            set {
+            set
+            {
                 UseServiceProviderLanguagesSpecified = true;
                 _useServiceProviderLanguages = value;
             }
@@ -142,13 +178,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseServiceProviderLanguagesSpecified { get; set; }
-        
+
         private string _servicePolicy;
 
         [XmlElement(ElementName = "servicePolicy", IsNullable = false, Namespace = "")]
-        public string ServicePolicy {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServicePolicy
+        {
             get => _servicePolicy;
-            set {
+            set
+            {
                 ServicePolicySpecified = true;
                 _servicePolicy = value;
             }
@@ -156,13 +198,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePolicySpecified { get; set; }
-        
+
         private string _callProcessingSliceId;
 
         [XmlElement(ElementName = "callProcessingSliceId", IsNullable = false, Namespace = "")]
-        public string CallProcessingSliceId {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string CallProcessingSliceId
+        {
             get => _callProcessingSliceId;
-            set {
+            set
+            {
                 CallProcessingSliceIdSpecified = true;
                 _callProcessingSliceId = value;
             }
@@ -170,13 +218,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallProcessingSliceIdSpecified { get; set; }
-        
+
         private string _provisioningSliceId;
 
         [XmlElement(ElementName = "provisioningSliceId", IsNullable = false, Namespace = "")]
-        public string ProvisioningSliceId {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ProvisioningSliceId
+        {
             get => _provisioningSliceId;
-            set {
+            set
+            {
                 ProvisioningSliceIdSpecified = true;
                 _provisioningSliceId = value;
             }
@@ -184,13 +238,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProvisioningSliceIdSpecified { get; set; }
-        
+
         private string _subscriberPartition;
 
         [XmlElement(ElementName = "subscriberPartition", IsNullable = false, Namespace = "")]
-        public string SubscriberPartition {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string SubscriberPartition
+        {
             get => _subscriberPartition;
-            set {
+            set
+            {
                 SubscriberPartitionSpecified = true;
                 _subscriberPartition = value;
             }
@@ -198,13 +258,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SubscriberPartitionSpecified { get; set; }
-        
+
         private string _preferredDataCenter;
 
         [XmlElement(ElementName = "preferredDataCenter", IsNullable = false, Namespace = "")]
-        public string PreferredDataCenter {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string PreferredDataCenter
+        {
             get => _preferredDataCenter;
-            set {
+            set
+            {
                 PreferredDataCenterSpecified = true;
                 _preferredDataCenter = value;
             }
@@ -212,13 +278,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PreferredDataCenterSpecified { get; set; }
-        
+
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        public string ResellerId {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3794")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ResellerId
+        {
             get => _resellerId;
-            set {
+            set
+            {
                 ResellerIdSpecified = true;
                 _resellerId = value;
             }
@@ -226,6 +298,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResellerIdSpecified { get; set; }
-        
+
     }
 }

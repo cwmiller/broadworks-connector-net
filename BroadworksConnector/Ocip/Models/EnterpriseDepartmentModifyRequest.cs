@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify a department of an enterprise.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:740""}]")]
     public class EnterpriseDepartmentModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _enterpriseId;
 
         [XmlElement(ElementName = "enterpriseId", IsNullable = false, Namespace = "")]
-        public string EnterpriseId {
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:740")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string EnterpriseId
+        {
             get => _enterpriseId;
-            set {
+            set
+            {
                 EnterpriseIdSpecified = true;
                 _enterpriseId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnterpriseIdSpecified { get; set; }
-        
+
         private string _departmentName;
 
         [XmlElement(ElementName = "departmentName", IsNullable = false, Namespace = "")]
-        public string DepartmentName {
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:740")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string DepartmentName
+        {
             get => _departmentName;
-            set {
+            set
+            {
                 DepartmentNameSpecified = true;
                 _departmentName = value;
             }
@@ -44,13 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentNameSpecified { get; set; }
-        
+
         private string _newDepartmentName;
 
         [XmlElement(ElementName = "newDepartmentName", IsNullable = false, Namespace = "")]
-        public string NewDepartmentName {
+        [Optional]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:740")]
+        [MinLength(1)]
+        [MaxLength(50)]
+        public string NewDepartmentName
+        {
             get => _newDepartmentName;
-            set {
+            set
+            {
                 NewDepartmentNameSpecified = true;
                 _newDepartmentName = value;
             }
@@ -58,13 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewDepartmentNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey _newParentDepartmentKey;
 
         [XmlElement(ElementName = "newParentDepartmentKey", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey NewParentDepartmentKey {
+        [Optional]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:740")]
+        public BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey NewParentDepartmentKey
+        {
             get => _newParentDepartmentKey;
-            set {
+            set
+            {
                 NewParentDepartmentKeySpecified = true;
                 _newParentDepartmentKey = value;
             }
@@ -72,6 +94,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewParentDepartmentKeySpecified { get; set; }
-        
+
     }
 }

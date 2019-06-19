@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class RecurrenceRecurMonthlyByWeek 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3032""}]")]
+    public class RecurrenceRecurMonthlyByWeek
     {
 
-        
         private int _recurInterval;
 
         [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
-        public int RecurInterval {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3032")]
+        [MinInclusive(1)]
+        [MaxInclusive(99)]
+        public int RecurInterval
+        {
             get => _recurInterval;
-            set {
+            set
+            {
                 RecurIntervalSpecified = true;
                 _recurInterval = value;
             }
@@ -27,13 +35,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RecurIntervalSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DayOfWeekInMonth _dayOfWeekInMonth;
 
         [XmlElement(ElementName = "dayOfWeekInMonth", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DayOfWeekInMonth DayOfWeekInMonth {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3032")]
+        public BroadWorksConnector.Ocip.Models.DayOfWeekInMonth DayOfWeekInMonth
+        {
             get => _dayOfWeekInMonth;
-            set {
+            set
+            {
                 DayOfWeekInMonthSpecified = true;
                 _dayOfWeekInMonth = value;
             }
@@ -41,13 +52,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DayOfWeekInMonthSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DayOfWeek _dayOfWeek;
 
         [XmlElement(ElementName = "dayOfWeek", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DayOfWeek DayOfWeek {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3032")]
+        public BroadWorksConnector.Ocip.Models.DayOfWeek DayOfWeek
+        {
             get => _dayOfWeek;
-            set {
+            set
+            {
                 DayOfWeekSpecified = true;
                 _dayOfWeek = value;
             }
@@ -55,6 +69,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DayOfWeekSpecified { get; set; }
-        
+
     }
 }

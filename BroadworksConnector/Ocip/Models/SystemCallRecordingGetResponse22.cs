@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemCallRecordingGetRequest22.
-        /// <see cref="SystemCallRecordingGetRequest22"/>
-        /// </summary>
+    /// <see cref="SystemCallRecordingGetRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:259""}]")]
     public class SystemCallRecordingGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _continueCallAfterRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterRecordingFailure", IsNullable = false, Namespace = "")]
-        public bool ContinueCallAfterRecordingFailure {
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:259")]
+        public bool ContinueCallAfterRecordingFailure
+        {
             get => _continueCallAfterRecordingFailure;
-            set {
+            set
+            {
                 ContinueCallAfterRecordingFailureSpecified = true;
                 _continueCallAfterRecordingFailure = value;
             }
@@ -28,13 +33,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContinueCallAfterRecordingFailureSpecified { get; set; }
-        
+
         private int _maxResponseWaitTimeMilliseconds;
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
-        public int MaxResponseWaitTimeMilliseconds {
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:259")]
+        [MinInclusive(1000)]
+        [MaxInclusive(10000)]
+        public int MaxResponseWaitTimeMilliseconds
+        {
             get => _maxResponseWaitTimeMilliseconds;
-            set {
+            set
+            {
                 MaxResponseWaitTimeMillisecondsSpecified = true;
                 _maxResponseWaitTimeMilliseconds = value;
             }
@@ -42,13 +52,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
-        
+
         private bool _continueCallAfterVideoRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterVideoRecordingFailure", IsNullable = false, Namespace = "")]
-        public bool ContinueCallAfterVideoRecordingFailure {
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:259")]
+        public bool ContinueCallAfterVideoRecordingFailure
+        {
             get => _continueCallAfterVideoRecordingFailure;
-            set {
+            set
+            {
                 ContinueCallAfterVideoRecordingFailureSpecified = true;
                 _continueCallAfterVideoRecordingFailure = value;
             }
@@ -56,6 +69,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContinueCallAfterVideoRecordingFailureSpecified { get; set; }
-        
+
     }
 }

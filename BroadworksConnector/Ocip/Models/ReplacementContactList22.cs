@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// A list of SIP contacts that replaces a previously configured list.
     /// By convention, an element of this type may be set nill to clear the list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ReplacementContactList22 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3293""}]")]
+    public class ReplacementContactList22
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.SIPContactInfo> _contact;
+        private List<BroadWorksConnector.Ocip.Models.SIPContactInfo> _contact = new List<BroadWorksConnector.Ocip.Models.SIPContactInfo>();
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SIPContactInfo> Contact {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3293")]
+        public List<BroadWorksConnector.Ocip.Models.SIPContactInfo> Contact
+        {
             get => _contact;
-            set {
+            set
+            {
                 ContactSpecified = true;
                 _contact = value;
             }
@@ -28,6 +33,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactSpecified { get; set; }
-        
+
     }
 }

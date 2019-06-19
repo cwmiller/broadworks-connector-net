@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a new service provider file repository user.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3540""}]")]
     public class ServiceProviderFileRepositoryDeviceUserAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3540")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _fileRepositoryName;
 
         [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
-        public string FileRepositoryName {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3540")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string FileRepositoryName
+        {
             get => _fileRepositoryName;
-            set {
+            set
+            {
                 FileRepositoryNameSpecified = true;
                 _fileRepositoryName = value;
             }
@@ -44,13 +56,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FileRepositoryNameSpecified { get; set; }
-        
+
         private string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
-        public string UserName {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3540")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string UserName
+        {
             get => _userName;
-            set {
+            set
+            {
                 UserNameSpecified = true;
                 _userName = value;
             }
@@ -58,13 +75,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserNameSpecified { get; set; }
-        
+
         private string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        public string Password {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3540")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string Password
+        {
             get => _password;
-            set {
+            set
+            {
                 PasswordSpecified = true;
                 _password = value;
             }
@@ -72,13 +94,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PasswordSpecified { get; set; }
-        
+
         private bool _allowPut;
 
         [XmlElement(ElementName = "allowPut", IsNullable = false, Namespace = "")]
-        public bool AllowPut {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3540")]
+        public bool AllowPut
+        {
             get => _allowPut;
-            set {
+            set
+            {
                 AllowPutSpecified = true;
                 _allowPut = value;
             }
@@ -86,13 +111,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowPutSpecified { get; set; }
-        
+
         private bool _allowDelete;
 
         [XmlElement(ElementName = "allowDelete", IsNullable = false, Namespace = "")]
-        public bool AllowDelete {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3540")]
+        public bool AllowDelete
+        {
             get => _allowDelete;
-            set {
+            set
+            {
                 AllowDeleteSpecified = true;
                 _allowDelete = value;
             }
@@ -100,13 +128,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowDeleteSpecified { get; set; }
-        
+
         private bool _allowGet;
 
         [XmlElement(ElementName = "allowGet", IsNullable = false, Namespace = "")]
-        public bool AllowGet {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3540")]
+        public bool AllowGet
+        {
             get => _allowGet;
-            set {
+            set
+            {
                 AllowGetSpecified = true;
                 _allowGet = value;
             }
@@ -114,6 +145,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowGetSpecified { get; set; }
-        
+
     }
 }

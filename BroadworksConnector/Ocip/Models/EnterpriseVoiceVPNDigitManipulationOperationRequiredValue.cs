@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Enterprise Voice VPN Digit Manipulation Operations that have a value.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum EnterpriseVoiceVPNDigitManipulationOperationRequiredValue    {
-            [XmlEnum(Name = "Position")]
+    public enum EnterpriseVoiceVPNDigitManipulationOperationRequiredValue
+    {
+        [XmlEnum(Name = "Position")]
         Position,
-            [XmlEnum(Name = "Delete")]
+        [XmlEnum(Name = "Delete")]
         Delete,
-            [XmlEnum(Name = "Move")]
+        [XmlEnum(Name = "Move")]
         Move,
-     }
+    }
 }

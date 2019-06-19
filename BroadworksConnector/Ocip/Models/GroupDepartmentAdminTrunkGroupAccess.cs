@@ -7,13 +7,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// Group's policy for department administrator's access to trunk group configuration.
     /// "Full" indicates full access to trunk groups in the department.
     /// "None" indicates no access to trunk groups in the department.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupDepartmentAdminTrunkGroupAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupDepartmentAdminTrunkGroupAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

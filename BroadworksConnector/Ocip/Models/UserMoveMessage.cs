@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The message describes the impact made when moving a user from one group to another group within the enterprise. The message could also contain the error condition that prevents the user move.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class UserMoveMessage 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4445""}]")]
+    public class UserMoveMessage
     {
 
-        
         private int _messageCode;
 
         [XmlElement(ElementName = "messageCode", IsNullable = false, Namespace = "")]
-        public int MessageCode {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4445")]
+        public int MessageCode
+        {
             get => _messageCode;
-            set {
+            set
+            {
                 MessageCodeSpecified = true;
                 _messageCode = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MessageCodeSpecified { get; set; }
-        
+
         private string _summary;
 
         [XmlElement(ElementName = "summary", IsNullable = false, Namespace = "")]
-        public string Summary {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4445")]
+        public string Summary
+        {
             get => _summary;
-            set {
+            set
+            {
                 SummarySpecified = true;
                 _summary = value;
             }
@@ -41,13 +49,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SummarySpecified { get; set; }
-        
+
         private string _summaryEnglish;
 
         [XmlElement(ElementName = "summaryEnglish", IsNullable = false, Namespace = "")]
-        public string SummaryEnglish {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4445")]
+        public string SummaryEnglish
+        {
             get => _summaryEnglish;
-            set {
+            set
+            {
                 SummaryEnglishSpecified = true;
                 _summaryEnglish = value;
             }
@@ -55,6 +66,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SummaryEnglishSpecified { get; set; }
-        
+
     }
 }

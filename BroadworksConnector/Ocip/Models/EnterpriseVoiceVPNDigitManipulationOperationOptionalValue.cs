@@ -5,25 +5,26 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Enterprise Voice VPN Digit Manipulation Operations that may or may not have a value.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum EnterpriseVoiceVPNDigitManipulationOperationOptionalValue    {
-            [XmlEnum(Name = "Prepend")]
+    public enum EnterpriseVoiceVPNDigitManipulationOperationOptionalValue
+    {
+        [XmlEnum(Name = "Prepend")]
         Prepend,
-            [XmlEnum(Name = "Overwrite")]
+        [XmlEnum(Name = "Overwrite")]
         Overwrite,
-            [XmlEnum(Name = "Right Trim")]
+        [XmlEnum(Name = "Right Trim")]
         RightTrim,
-            [XmlEnum(Name = "Replace All")]
+        [XmlEnum(Name = "Replace All")]
         ReplaceAll,
-            [XmlEnum(Name = "Left Trim")]
+        [XmlEnum(Name = "Left Trim")]
         LeftTrim,
-            [XmlEnum(Name = "Append")]
+        [XmlEnum(Name = "Append")]
         Append,
-            [XmlEnum(Name = "Insert")]
+        [XmlEnum(Name = "Insert")]
         Insert,
-            [XmlEnum(Name = "Trim")]
+        [XmlEnum(Name = "Trim")]
         Trim,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,22 +12,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// vmCallbackScreening
     /// 
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:5892""}]")]
     public class SystemCommunicationBarringModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private bool _directTransferScreening;
 
         [XmlElement(ElementName = "directTransferScreening", IsNullable = false, Namespace = "")]
-        public bool DirectTransferScreening {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5892")]
+        public bool DirectTransferScreening
+        {
             get => _directTransferScreening;
-            set {
+            set
+            {
                 DirectTransferScreeningSpecified = true;
                 _directTransferScreening = value;
             }
@@ -33,13 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DirectTransferScreeningSpecified { get; set; }
-        
+
         private bool _vmCallbackScreening;
 
         [XmlElement(ElementName = "vmCallbackScreening", IsNullable = false, Namespace = "")]
-        public bool VmCallbackScreening {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5892")]
+        public bool VmCallbackScreening
+        {
             get => _vmCallbackScreening;
-            set {
+            set
+            {
                 VmCallbackScreeningSpecified = true;
                 _vmCallbackScreening = value;
             }
@@ -47,6 +57,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VmCallbackScreeningSpecified { get; set; }
-        
+
     }
 }

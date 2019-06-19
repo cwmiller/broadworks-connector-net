@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table with column headings: "User Id", "Last Name",
     /// "First Name", "Hiragana Last Name", "Hiragana First Name",
     /// "Phone Number", "Extension", "Department", "Email Address".
-        /// <see cref="GroupGroupPagingGetTargetListRequest"/>
-        /// </summary>
+    /// <see cref="GroupGroupPagingGetTargetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:379""}]")]
     public class GroupGroupPagingGetTargetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _targetTable;
 
         [XmlElement(ElementName = "targetTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable TargetTable {
+        [Group(@"0d36df8c109e3ea7324f79031368c661:379")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable TargetTable
+        {
             get => _targetTable;
-            set {
+            set
+            {
                 TargetTableSpecified = true;
                 _targetTable = value;
             }
@@ -31,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TargetTableSpecified { get; set; }
-        
+
     }
 }

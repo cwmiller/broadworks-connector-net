@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,16 +11,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SystemCallCenterGetResponse or an
     /// ErrorResponse.
     /// Replaced By: SystemCallCenterGetRequest14sp9
-        /// <see cref="SystemCallCenterGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemCallCenterGetRequest14sp9"/>
-        /// </summary>
+    /// <see cref="SystemCallCenterGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemCallCenterGetRequest14sp9"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4392""}]")]
     public class SystemCallCenterGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
     }
 }

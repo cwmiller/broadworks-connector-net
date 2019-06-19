@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Outgoing Pinhole Digit Plan Call Me Now call permissions for a department.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class OutgoingPinholeDigitPlanDigitPatternCallMeNowDepartmentPermissions 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:2233""}]")]
+    public class OutgoingPinholeDigitPlanDigitPatternCallMeNowDepartmentPermissions
     {
 
-        
         private BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2233")]
+        public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey
+        {
             get => _departmentKey;
-            set {
+            set
+            {
                 DepartmentKeySpecified = true;
                 _departmentKey = value;
             }
@@ -27,13 +32,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentKeySpecified { get; set; }
-        
+
         private string _departmentName;
 
         [XmlElement(ElementName = "departmentName", IsNullable = false, Namespace = "")]
-        public string DepartmentName {
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2233")]
+        [MinLength(1)]
+        public string DepartmentName
+        {
             get => _departmentName;
-            set {
+            set
+            {
                 DepartmentNameSpecified = true;
                 _departmentName = value;
             }
@@ -41,13 +50,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternCallMeNowPermissions _permissions;
 
         [XmlElement(ElementName = "permissions", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternCallMeNowPermissions Permissions {
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2233")]
+        public BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternCallMeNowPermissions Permissions
+        {
             get => _permissions;
-            set {
+            set
+            {
                 PermissionsSpecified = true;
                 _permissions = value;
             }
@@ -55,6 +67,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PermissionsSpecified { get; set; }
-        
+
     }
 }

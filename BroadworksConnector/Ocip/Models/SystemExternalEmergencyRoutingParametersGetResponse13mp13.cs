@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemExternalEmergencyRoutingParametersGetRequest13mp13.
     /// Contains a list of system External Emergency Routing parameters.
-        /// <see cref="SystemExternalEmergencyRoutingParametersGetRequest13mp13"/>
-        /// </summary>
+    /// <see cref="SystemExternalEmergencyRoutingParametersGetRequest13mp13"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9093""}]")]
     public class SystemExternalEmergencyRoutingParametersGetResponse13mp13 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _serviceURI;
 
         [XmlElement(ElementName = "serviceURI", IsNullable = false, Namespace = "")]
-        public string ServiceURI {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9093")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServiceURI
+        {
             get => _serviceURI;
-            set {
+            set
+            {
                 ServiceURISpecified = true;
                 _serviceURI = value;
             }
@@ -29,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceURISpecified { get; set; }
-        
+
         private string _defaultEmergencyNumber;
 
         [XmlElement(ElementName = "defaultEmergencyNumber", IsNullable = false, Namespace = "")]
-        public string DefaultEmergencyNumber {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9093")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string DefaultEmergencyNumber
+        {
             get => _defaultEmergencyNumber;
-            set {
+            set
+            {
                 DefaultEmergencyNumberSpecified = true;
                 _defaultEmergencyNumber = value;
             }
@@ -43,13 +57,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultEmergencyNumberSpecified { get; set; }
-        
+
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9093")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -57,13 +74,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private bool _supportsDNSSRV;
 
         [XmlElement(ElementName = "supportsDNSSRV", IsNullable = false, Namespace = "")]
-        public bool SupportsDNSSRV {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9093")]
+        public bool SupportsDNSSRV
+        {
             get => _supportsDNSSRV;
-            set {
+            set
+            {
                 SupportsDNSSRVSpecified = true;
                 _supportsDNSSRV = value;
             }
@@ -71,13 +91,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SupportsDNSSRVSpecified { get; set; }
-        
+
         private int _connectionTimeoutSeconds;
 
         [XmlElement(ElementName = "connectionTimeoutSeconds", IsNullable = false, Namespace = "")]
-        public int ConnectionTimeoutSeconds {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9093")]
+        [MinInclusive(1)]
+        [MaxInclusive(10)]
+        public int ConnectionTimeoutSeconds
+        {
             get => _connectionTimeoutSeconds;
-            set {
+            set
+            {
                 ConnectionTimeoutSecondsSpecified = true;
                 _connectionTimeoutSeconds = value;
             }
@@ -85,6 +110,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConnectionTimeoutSecondsSpecified { get; set; }
-        
+
     }
 }

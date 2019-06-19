@@ -41,7 +41,7 @@ namespace BroadWorksConnector
             _serializer = new Serializer();
 
             var uri = new Uri(url);
-            
+
             switch (uri.Scheme)
             {
                 case "http":
@@ -202,7 +202,8 @@ namespace BroadWorksConnector
             try
             {
                 response = _serializer.Deserialize(responseXml);
-            } catch(Exception e)
+            }
+            catch (Exception e)
             {
                 throw new BadResponseException("Unable to deserialize response.", e);
             }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// For the callToNumbers in the callToNumberList, the extension element
     /// is not used and the number element is only used when the type is BroadWorks Mobility.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:162""}]")]
     public class UserPersonalAssistantCallToNumberModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:162")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -32,13 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList _callToNumberList;
 
         [XmlElement(ElementName = "callToNumberList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList CallToNumberList {
+        [Optional]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:162")]
+        public BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList CallToNumberList
+        {
             get => _callToNumberList;
-            set {
+            set
+            {
                 CallToNumberListSpecified = true;
                 _callToNumberList = value;
             }
@@ -46,6 +57,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallToNumberListSpecified { get; set; }
-        
+
     }
 }

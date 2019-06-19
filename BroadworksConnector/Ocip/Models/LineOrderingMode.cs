@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Line ordering value.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum LineOrderingMode    {
-            [XmlEnum(Name = "Dynamic")]
+    public enum LineOrderingMode
+    {
+        [XmlEnum(Name = "Dynamic")]
         Dynamic,
-            [XmlEnum(Name = "Static")]
+        [XmlEnum(Name = "Static")]
         Static,
-     }
+    }
 }

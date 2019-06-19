@@ -12,19 +12,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// processed on another host.
     /// It can be 'Stale', meaning that it should currently be queued in
     /// the internal Device Management queue but is not.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DeviceManagementEventStatusInProgressOrPending    {
-            [XmlEnum(Name = "Pending")]
+    public enum DeviceManagementEventStatusInProgressOrPending
+    {
+        [XmlEnum(Name = "Pending")]
         Pending,
-            [XmlEnum(Name = "Queued")]
+        [XmlEnum(Name = "Queued")]
         Queued,
-            [XmlEnum(Name = "In Progress")]
+        [XmlEnum(Name = "In Progress")]
         InProgress,
-            [XmlEnum(Name = "Process On Other Host")]
+        [XmlEnum(Name = "Process On Other Host")]
         ProcessOnOtherHost,
-            [XmlEnum(Name = "Stale")]
+        [XmlEnum(Name = "Stale")]
         Stale,
-     }
+    }
 }

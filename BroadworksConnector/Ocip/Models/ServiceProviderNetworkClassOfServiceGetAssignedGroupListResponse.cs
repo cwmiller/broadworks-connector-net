@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to ServiceProviderNetworkClassOfServiceGetAssignedGroupListRequest.
     /// Contains a table of groups that have the Network Class of Service
     /// assigned. The column headings are: "Group Id" and "Group Name".
-        /// <see cref="ServiceProviderNetworkClassOfServiceGetAssignedGroupListRequest"/>
-        /// </summary>
+    /// <see cref="ServiceProviderNetworkClassOfServiceGetAssignedGroupListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4193""}]")]
     public class ServiceProviderNetworkClassOfServiceGetAssignedGroupListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _groupTable;
 
         [XmlElement(ElementName = "groupTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable GroupTable {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4193")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable GroupTable
+        {
             get => _groupTable;
-            set {
+            set
+            {
                 GroupTableSpecified = true;
                 _groupTable = value;
             }
@@ -30,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupTableSpecified { get; set; }
-        
+
     }
 }

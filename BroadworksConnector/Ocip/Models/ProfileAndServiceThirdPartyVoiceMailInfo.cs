@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// This is the configuration parameters for Third Party Voice Mail service
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ProfileAndServiceThirdPartyVoiceMailInfo 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4396""}]")]
+    public class ProfileAndServiceThirdPartyVoiceMailInfo
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4396")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private bool _busyRedirectToVoiceMail;
 
         [XmlElement(ElementName = "busyRedirectToVoiceMail", IsNullable = false, Namespace = "")]
-        public bool BusyRedirectToVoiceMail {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4396")]
+        public bool BusyRedirectToVoiceMail
+        {
             get => _busyRedirectToVoiceMail;
-            set {
+            set
+            {
                 BusyRedirectToVoiceMailSpecified = true;
                 _busyRedirectToVoiceMail = value;
             }
@@ -41,13 +49,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BusyRedirectToVoiceMailSpecified { get; set; }
-        
+
         private bool _noAnswerRedirectToVoiceMail;
 
         [XmlElement(ElementName = "noAnswerRedirectToVoiceMail", IsNullable = false, Namespace = "")]
-        public bool NoAnswerRedirectToVoiceMail {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4396")]
+        public bool NoAnswerRedirectToVoiceMail
+        {
             get => _noAnswerRedirectToVoiceMail;
-            set {
+            set
+            {
                 NoAnswerRedirectToVoiceMailSpecified = true;
                 _noAnswerRedirectToVoiceMail = value;
             }
@@ -55,13 +66,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoAnswerRedirectToVoiceMailSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection _serverSelection;
 
         [XmlElement(ElementName = "serverSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection ServerSelection {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4396")]
+        public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection ServerSelection
+        {
             get => _serverSelection;
-            set {
+            set
+            {
                 ServerSelectionSpecified = true;
                 _serverSelection = value;
             }
@@ -69,13 +83,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerSelectionSpecified { get; set; }
-        
+
         private string _userServer;
 
         [XmlElement(ElementName = "userServer", IsNullable = false, Namespace = "")]
-        public string UserServer {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4396")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserServer
+        {
             get => _userServer;
-            set {
+            set
+            {
                 UserServerSpecified = true;
                 _userServer = value;
             }
@@ -83,13 +103,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserServerSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType _mailboxIdType;
 
         [XmlElement(ElementName = "mailboxIdType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType MailboxIdType {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4396")]
+        public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType MailboxIdType
+        {
             get => _mailboxIdType;
-            set {
+            set
+            {
                 MailboxIdTypeSpecified = true;
                 _mailboxIdType = value;
             }
@@ -97,13 +120,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MailboxIdTypeSpecified { get; set; }
-        
+
         private string _mailboxURL;
 
         [XmlElement(ElementName = "mailboxURL", IsNullable = false, Namespace = "")]
-        public string MailboxURL {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4396")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string MailboxURL
+        {
             get => _mailboxURL;
-            set {
+            set
+            {
                 MailboxURLSpecified = true;
                 _mailboxURL = value;
             }
@@ -111,13 +140,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MailboxURLSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportNumberOfRings _noAnswerNumberOfRings;
 
         [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportNumberOfRings NoAnswerNumberOfRings {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4396")]
+        public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportNumberOfRings NoAnswerNumberOfRings
+        {
             get => _noAnswerNumberOfRings;
-            set {
+            set
+            {
                 NoAnswerNumberOfRingsSpecified = true;
                 _noAnswerNumberOfRings = value;
             }
@@ -125,13 +157,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoAnswerNumberOfRingsSpecified { get; set; }
-        
+
         private bool _alwaysRedirectToVoiceMail;
 
         [XmlElement(ElementName = "alwaysRedirectToVoiceMail", IsNullable = false, Namespace = "")]
-        public bool AlwaysRedirectToVoiceMail {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4396")]
+        public bool AlwaysRedirectToVoiceMail
+        {
             get => _alwaysRedirectToVoiceMail;
-            set {
+            set
+            {
                 AlwaysRedirectToVoiceMailSpecified = true;
                 _alwaysRedirectToVoiceMail = value;
             }
@@ -139,13 +174,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlwaysRedirectToVoiceMailSpecified { get; set; }
-        
+
         private bool _outOfPrimaryZoneRedirectToVoiceMail;
 
         [XmlElement(ElementName = "outOfPrimaryZoneRedirectToVoiceMail", IsNullable = false, Namespace = "")]
-        public bool OutOfPrimaryZoneRedirectToVoiceMail {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4396")]
+        public bool OutOfPrimaryZoneRedirectToVoiceMail
+        {
             get => _outOfPrimaryZoneRedirectToVoiceMail;
-            set {
+            set
+            {
                 OutOfPrimaryZoneRedirectToVoiceMailSpecified = true;
                 _outOfPrimaryZoneRedirectToVoiceMail = value;
             }
@@ -153,6 +191,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OutOfPrimaryZoneRedirectToVoiceMailSpecified { get; set; }
-        
+
     }
 }

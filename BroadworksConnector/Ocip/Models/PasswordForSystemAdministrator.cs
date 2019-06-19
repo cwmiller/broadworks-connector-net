@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,20 +11,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// not included, or included but is not an exiting administrator for the
     /// service provider, a password will be generated
     /// based on only the rules applicable for a new user.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class PasswordForSystemAdministrator 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:821""}]")]
+    public class PasswordForSystemAdministrator
     {
 
-        
         private string _administratorId;
 
         [XmlElement(ElementName = "administratorId", IsNullable = false, Namespace = "")]
-        public string AdministratorId {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:821")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string AdministratorId
+        {
             get => _administratorId;
-            set {
+            set
+            {
                 AdministratorIdSpecified = true;
                 _administratorId = value;
             }
@@ -30,13 +38,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AdministratorIdSpecified { get; set; }
-        
+
         private bool _generatePassword;
 
         [XmlElement(ElementName = "generatePassword", IsNullable = false, Namespace = "")]
-        public bool GeneratePassword {
+        [Group(@"6b27fcc79475236456fc113a42b75543:821")]
+        public bool GeneratePassword
+        {
             get => _generatePassword;
-            set {
+            set
+            {
                 GeneratePasswordSpecified = true;
                 _generatePassword = value;
             }
@@ -44,6 +55,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GeneratePasswordSpecified { get; set; }
-        
+
     }
 }

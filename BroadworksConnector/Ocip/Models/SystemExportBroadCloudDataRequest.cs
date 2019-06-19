@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// user profile information and BroadCloud services related information for that user
     /// to a file so they can be uploaded to a Messaging Server/BroadCloud.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8920""}]")]
     public class SystemExportBroadCloudDataRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _fileName;
 
         [XmlElement(ElementName = "fileName", IsNullable = false, Namespace = "")]
-        public string FileName {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8920")]
+        [MinLength(1)]
+        public string FileName
+        {
             get => _fileName;
-            set {
+            set
+            {
                 FileNameSpecified = true;
                 _fileName = value;
             }
@@ -32,6 +38,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FileNameSpecified { get; set; }
-        
+
     }
 }

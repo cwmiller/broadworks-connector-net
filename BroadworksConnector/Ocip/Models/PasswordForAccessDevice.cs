@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,20 +12,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// to find the device if it exists. If the device doesn't exist yet, then
     /// the serviceProviderId and groupId will be used to choose the password
     /// rules with which to generate the device password.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class PasswordForAccessDevice 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:773""}]")]
+    public class PasswordForAccessDevice
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:773")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -31,13 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:773")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -45,13 +59,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        public string DeviceName {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:773")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceName
+        {
             get => _deviceName;
-            set {
+            set
+            {
                 DeviceNameSpecified = true;
                 _deviceName = value;
             }
@@ -59,13 +79,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceNameSpecified { get; set; }
-        
+
         private bool _generateDeviceAuthenticationPassword;
 
         [XmlElement(ElementName = "generateDeviceAuthenticationPassword", IsNullable = false, Namespace = "")]
-        public bool GenerateDeviceAuthenticationPassword {
+        [Group(@"6b27fcc79475236456fc113a42b75543:773")]
+        public bool GenerateDeviceAuthenticationPassword
+        {
             get => _generateDeviceAuthenticationPassword;
-            set {
+            set
+            {
                 GenerateDeviceAuthenticationPasswordSpecified = true;
                 _generateDeviceAuthenticationPassword = value;
             }
@@ -73,6 +96,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GenerateDeviceAuthenticationPasswordSpecified { get; set; }
-        
+
     }
 }

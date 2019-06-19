@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,21 +14,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following columns are only returned in AS data mode:
     /// "Country Code", "National Prefix
-        /// <see cref="UserGetListInGroupRequest"/>
-        /// </summary>
+    /// <see cref="UserGetListInGroupRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1826""}]")]
     public class UserGetListInGroupResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1826")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
+        {
             get => _userTable;
-            set {
+            set
+            {
                 UserTableSpecified = true;
                 _userTable = value;
             }
@@ -34,6 +39,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserTableSpecified { get; set; }
-        
+
     }
 }

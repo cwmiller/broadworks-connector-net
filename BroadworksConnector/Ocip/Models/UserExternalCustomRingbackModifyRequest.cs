@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,22 +14,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// the Request URI is constructed using the prefix, address, port and the user DN.
     /// The timeout value is the only SP configuration used when the user SIP URI is selected.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8df43dca23d99d8ab44c0082aadfbe0:139""}]")]
     public class UserExternalCustomRingbackModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:139")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -35,13 +42,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Optional]
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:139")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -49,13 +60,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel _useSettingLevel;
 
         [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel UseSettingLevel {
+        [Optional]
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:139")]
+        public BroadWorksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel UseSettingLevel
+        {
             get => _useSettingLevel;
-            set {
+            set
+            {
                 UseSettingLevelSpecified = true;
                 _useSettingLevel = value;
             }
@@ -63,13 +78,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseSettingLevelSpecified { get; set; }
-        
+
         private string _sipRequestURI;
 
         [XmlElement(ElementName = "sipRequestURI", IsNullable = true, Namespace = "")]
-        public string SipRequestURI {
+        [Optional]
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:139")]
+        [MinLength(1)]
+        [MaxLength(1020)]
+        public string SipRequestURI
+        {
             get => _sipRequestURI;
-            set {
+            set
+            {
                 SipRequestURISpecified = true;
                 _sipRequestURI = value;
             }
@@ -77,6 +98,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SipRequestURISpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the PasswordGenerateRequest.
     /// The response contains the requested passwords.
-        /// <see cref="PasswordGenerateRequest"/>
-        /// </summary>
+    /// <see cref="PasswordGenerateRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:459""}]")]
     public class PasswordGenerateResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _systemAdministratorPassword;
 
         [XmlElement(ElementName = "systemAdministratorPassword", IsNullable = false, Namespace = "")]
-        public string SystemAdministratorPassword {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string SystemAdministratorPassword
+        {
             get => _systemAdministratorPassword;
-            set {
+            set
+            {
                 SystemAdministratorPasswordSpecified = true;
                 _systemAdministratorPassword = value;
             }
@@ -29,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SystemAdministratorPasswordSpecified { get; set; }
-        
+
         private string _serviceProviderAdministratorPassword;
 
         [XmlElement(ElementName = "serviceProviderAdministratorPassword", IsNullable = false, Namespace = "")]
-        public string ServiceProviderAdministratorPassword {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string ServiceProviderAdministratorPassword
+        {
             get => _serviceProviderAdministratorPassword;
-            set {
+            set
+            {
                 ServiceProviderAdministratorPasswordSpecified = true;
                 _serviceProviderAdministratorPassword = value;
             }
@@ -43,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderAdministratorPasswordSpecified { get; set; }
-        
+
         private string _groupAdministratorPassword;
 
         [XmlElement(ElementName = "groupAdministratorPassword", IsNullable = false, Namespace = "")]
-        public string GroupAdministratorPassword {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string GroupAdministratorPassword
+        {
             get => _groupAdministratorPassword;
-            set {
+            set
+            {
                 GroupAdministratorPasswordSpecified = true;
                 _groupAdministratorPassword = value;
             }
@@ -57,13 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupAdministratorPasswordSpecified { get; set; }
-        
+
         private string _userPassword;
 
         [XmlElement(ElementName = "userPassword", IsNullable = false, Namespace = "")]
-        public string UserPassword {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string UserPassword
+        {
             get => _userPassword;
-            set {
+            set
+            {
                 UserPasswordSpecified = true;
                 _userPassword = value;
             }
@@ -71,13 +97,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserPasswordSpecified { get; set; }
-        
+
         private string _userPasscode;
 
         [XmlElement(ElementName = "userPasscode", IsNullable = false, Namespace = "")]
-        public string UserPasscode {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string UserPasscode
+        {
             get => _userPasscode;
-            set {
+            set
+            {
                 UserPasscodeSpecified = true;
                 _userPasscode = value;
             }
@@ -85,13 +117,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserPasscodeSpecified { get; set; }
-        
+
         private string _userSIPAuthenticationPassword;
 
         [XmlElement(ElementName = "userSIPAuthenticationPassword", IsNullable = false, Namespace = "")]
-        public string UserSIPAuthenticationPassword {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string UserSIPAuthenticationPassword
+        {
             get => _userSIPAuthenticationPassword;
-            set {
+            set
+            {
                 UserSIPAuthenticationPasswordSpecified = true;
                 _userSIPAuthenticationPassword = value;
             }
@@ -99,13 +137,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserSIPAuthenticationPasswordSpecified { get; set; }
-        
+
         private string _accessDeviceAuthenticationPassword;
 
         [XmlElement(ElementName = "accessDeviceAuthenticationPassword", IsNullable = false, Namespace = "")]
-        public string AccessDeviceAuthenticationPassword {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string AccessDeviceAuthenticationPassword
+        {
             get => _accessDeviceAuthenticationPassword;
-            set {
+            set
+            {
                 AccessDeviceAuthenticationPasswordSpecified = true;
                 _accessDeviceAuthenticationPassword = value;
             }
@@ -113,13 +157,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessDeviceAuthenticationPasswordSpecified { get; set; }
-        
+
         private string _trunkGroupAuthenticationPassword;
 
         [XmlElement(ElementName = "trunkGroupAuthenticationPassword", IsNullable = false, Namespace = "")]
-        public string TrunkGroupAuthenticationPassword {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string TrunkGroupAuthenticationPassword
+        {
             get => _trunkGroupAuthenticationPassword;
-            set {
+            set
+            {
                 TrunkGroupAuthenticationPasswordSpecified = true;
                 _trunkGroupAuthenticationPassword = value;
             }
@@ -127,6 +177,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TrunkGroupAuthenticationPasswordSpecified { get; set; }
-        
+
     }
 }

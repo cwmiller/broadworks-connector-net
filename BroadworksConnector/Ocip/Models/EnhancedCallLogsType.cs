@@ -6,15 +6,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Call Log type.
     /// Replaced By: CallLogsType
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum EnhancedCallLogsType    {
-            [XmlEnum(Name = "Placed")]
+    public enum EnhancedCallLogsType
+    {
+        [XmlEnum(Name = "Placed")]
         Placed,
-            [XmlEnum(Name = "Received")]
+        [XmlEnum(Name = "Received")]
         Received,
-            [XmlEnum(Name = "Missed")]
+        [XmlEnum(Name = "Missed")]
         Missed,
-     }
+    }
 }

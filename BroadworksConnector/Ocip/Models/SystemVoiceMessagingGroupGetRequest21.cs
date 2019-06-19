@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,16 +11,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SystemVoiceMessagingGroupGetResponse21 or an ErrorResponse.
     /// 
     /// Replaced by: SystemVoiceMessagingGroupGetRequest22 in AS data mode
-        /// <see cref="SystemVoiceMessagingGroupGetResponse21"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemVoiceMessagingGroupGetRequest22"/>
-        /// </summary>
+    /// <see cref="SystemVoiceMessagingGroupGetResponse21"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemVoiceMessagingGroupGetRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6764""}]")]
     public class SystemVoiceMessagingGroupGetRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
     }
 }

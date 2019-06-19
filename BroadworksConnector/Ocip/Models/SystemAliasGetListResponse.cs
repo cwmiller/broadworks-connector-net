@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemAliasGetListRequest. Contains the list of all network alias' for
     /// the Application Server.
-        /// <see cref="SystemAliasGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemAliasGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1800""}]")]
     public class SystemAliasGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _aliasNetAddress;
+        private List<string> _aliasNetAddress = new List<string>();
 
         [XmlElement(ElementName = "aliasNetAddress", IsNullable = false, Namespace = "")]
-        public List<string> AliasNetAddress {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1800")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> AliasNetAddress
+        {
             get => _aliasNetAddress;
-            set {
+            set
+            {
                 AliasNetAddressSpecified = true;
                 _aliasNetAddress = value;
             }
@@ -29,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AliasNetAddressSpecified { get; set; }
-        
+
     }
 }

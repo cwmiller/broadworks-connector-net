@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for calling party category format.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SIPCallingPartyCategoryFormat    {
-            [XmlEnum(Name = "CPC")]
+    public enum SIPCallingPartyCategoryFormat
+    {
+        [XmlEnum(Name = "CPC")]
         CPC,
-            [XmlEnum(Name = "ISUP OLI")]
+        [XmlEnum(Name = "ISUP OLI")]
         ISUPOLI,
-            [XmlEnum(Name = "CPC GTD")]
+        [XmlEnum(Name = "CPC GTD")]
         CPCGTD,
-     }
+    }
 }

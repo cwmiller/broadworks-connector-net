@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Trunk Group user creation mode.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupUserCreationMode    {
-            [XmlEnum(Name = "Extension")]
+    public enum TrunkGroupUserCreationMode
+    {
+        [XmlEnum(Name = "Extension")]
         Extension,
-            [XmlEnum(Name = "Phone Number")]
+        [XmlEnum(Name = "Phone Number")]
         PhoneNumber,
-     }
+    }
 }

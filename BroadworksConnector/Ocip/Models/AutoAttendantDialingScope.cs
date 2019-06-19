@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The scope of extension or name dialing.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AutoAttendantDialingScope    {
-            [XmlEnum(Name = "Enterprise")]
+    public enum AutoAttendantDialingScope
+    {
+        [XmlEnum(Name = "Enterprise")]
         Enterprise,
-            [XmlEnum(Name = "Group")]
+        [XmlEnum(Name = "Group")]
         Group,
-            [XmlEnum(Name = "Department")]
+        [XmlEnum(Name = "Department")]
         Department,
-     }
+    }
 }

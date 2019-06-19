@@ -10,19 +10,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// Error        = Respond to the message with 503
     /// Redirect     = Respond to the message with 302
     /// Unavailable  = Respond to the message with 480 + Retry-After
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ProtectionAction    {
-            [XmlEnum(Name = "Decline")]
+    public enum ProtectionAction
+    {
+        [XmlEnum(Name = "Decline")]
         Decline,
-            [XmlEnum(Name = "Drop")]
+        [XmlEnum(Name = "Drop")]
         Drop,
-            [XmlEnum(Name = "Error")]
+        [XmlEnum(Name = "Error")]
         Error,
-            [XmlEnum(Name = "Redirect")]
+        [XmlEnum(Name = "Redirect")]
         Redirect,
-            [XmlEnum(Name = "Unavailable")]
+        [XmlEnum(Name = "Unavailable")]
         Unavailable,
-     }
+    }
 }

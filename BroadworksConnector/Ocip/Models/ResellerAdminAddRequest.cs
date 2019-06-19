@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a reseller administrator.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:79""}]")]
     public class ResellerAdminAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        public string ResellerId {
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:79")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ResellerId
+        {
             get => _resellerId;
-            set {
+            set
+            {
                 ResellerIdSpecified = true;
                 _resellerId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResellerIdSpecified { get; set; }
-        
+
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:79")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -44,13 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _firstName;
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
-        public string FirstName {
+        [Optional]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:79")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string FirstName
+        {
             get => _firstName;
-            set {
+            set
+            {
                 FirstNameSpecified = true;
                 _firstName = value;
             }
@@ -58,13 +76,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FirstNameSpecified { get; set; }
-        
+
         private string _lastName;
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
-        public string LastName {
+        [Optional]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:79")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string LastName
+        {
             get => _lastName;
-            set {
+            set
+            {
                 LastNameSpecified = true;
                 _lastName = value;
             }
@@ -72,13 +96,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LastNameSpecified { get; set; }
-        
+
         private string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        public string Password {
+        [Optional]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:79")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string Password
+        {
             get => _password;
-            set {
+            set
+            {
                 PasswordSpecified = true;
                 _password = value;
             }
@@ -86,13 +116,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PasswordSpecified { get; set; }
-        
+
         private string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        public string Language {
+        [Optional]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:79")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Language
+        {
             get => _language;
-            set {
+            set
+            {
                 LanguageSpecified = true;
                 _language = value;
             }
@@ -100,6 +136,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LanguageSpecified { get; set; }
-        
+
     }
 }

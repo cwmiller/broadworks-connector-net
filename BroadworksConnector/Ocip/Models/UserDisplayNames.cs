@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// The parts of a user's display name that a client can display in whatever way is appropriate
     /// for the client application.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class UserDisplayNames 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4522""}]")]
+    public class UserDisplayNames
     {
 
-        
         private string _lastName;
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
-        public string LastName {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4522")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string LastName
+        {
             get => _lastName;
-            set {
+            set
+            {
                 LastNameSpecified = true;
                 _lastName = value;
             }
@@ -28,13 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LastNameSpecified { get; set; }
-        
+
         private string _firstName;
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
-        public string FirstName {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4522")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string FirstName
+        {
             get => _firstName;
-            set {
+            set
+            {
                 FirstNameSpecified = true;
                 _firstName = value;
             }
@@ -42,13 +54,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FirstNameSpecified { get; set; }
-        
+
         private string _hiraganaLastName;
 
         [XmlElement(ElementName = "hiraganaLastName", IsNullable = false, Namespace = "")]
-        public string HiraganaLastName {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4522")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string HiraganaLastName
+        {
             get => _hiraganaLastName;
-            set {
+            set
+            {
                 HiraganaLastNameSpecified = true;
                 _hiraganaLastName = value;
             }
@@ -56,13 +74,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HiraganaLastNameSpecified { get; set; }
-        
+
         private string _hiraganaFirstName;
 
         [XmlElement(ElementName = "hiraganaFirstName", IsNullable = false, Namespace = "")]
-        public string HiraganaFirstName {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4522")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string HiraganaFirstName
+        {
             get => _hiraganaFirstName;
-            set {
+            set
+            {
                 HiraganaFirstNameSpecified = true;
                 _hiraganaFirstName = value;
             }
@@ -70,6 +94,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HiraganaFirstNameSpecified { get; set; }
-        
+
     }
 }

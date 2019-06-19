@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table of custom configuration tags managed by the Device Management System.
     /// In AS data mode, the column headings are: "Tag Name", "Tag Value", "Is Overridable".
     /// In XS data mode, the column headings are: "Tag Name", "Tag Value", "Is Overridable", "Is Encrypted".
-        /// <see cref="SystemDeviceManagementTagGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemDeviceManagementTagGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7319""}]")]
     public class SystemDeviceManagementTagGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _tagsTable;
 
         [XmlElement(ElementName = "tagsTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable TagsTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7319")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable TagsTable
+        {
             get => _tagsTable;
-            set {
+            set
+            {
                 TagsTableSpecified = true;
                 _tagsTable = value;
             }
@@ -31,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TagsTableSpecified { get; set; }
-        
+
     }
 }

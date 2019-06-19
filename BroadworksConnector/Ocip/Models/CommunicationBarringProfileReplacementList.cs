@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// A list of communication barring profiles that replaces a previously configured list.
     /// By convention, an element of this type may be set nil to clear the list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CommunicationBarringProfileReplacementList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1415""}]")]
+    public class CommunicationBarringProfileReplacementList
     {
 
-        
-        private List<string> _profileName;
+        private List<string> _profileName = new List<string>();
 
         [XmlElement(ElementName = "profileName", IsNullable = false, Namespace = "")]
-        public List<string> ProfileName {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1415")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> ProfileName
+        {
             get => _profileName;
-            set {
+            set
+            {
                 ProfileNameSpecified = true;
                 _profileName = value;
             }
@@ -28,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProfileNameSpecified { get; set; }
-        
+
     }
 }

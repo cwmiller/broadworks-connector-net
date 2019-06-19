@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -16,21 +18,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The "File Size" is in Kilobytes.
     /// The "Repository Type" column contains the type of repository for the announcement file such as "User" or "Group"
     /// The "File Size" column contains the file size in kB of the announcement file.
-        /// <see cref="UserAnnouncementFileGetAvailableListRequest"/>
-        /// </summary>
+    /// <see cref="UserAnnouncementFileGetAvailableListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:539""}]")]
     public class UserAnnouncementFileGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _announcementTable;
 
         [XmlElement(ElementName = "announcementTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable AnnouncementTable {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:539")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable AnnouncementTable
+        {
             get => _announcementTable;
-            set {
+            set
+            {
                 AnnouncementTableSpecified = true;
                 _announcementTable = value;
             }
@@ -38,6 +43,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnnouncementTableSpecified { get; set; }
-        
+
     }
 }

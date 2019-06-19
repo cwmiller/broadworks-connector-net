@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemClassmarkGetListRequest.
     /// Contains a table of with the column headings: "Class Mark", "Value" and "Web Display Key".
-        /// <see cref="SystemClassmarkGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemClassmarkGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d0e878cbc947aebb19ad489b2ffef11:95""}]")]
     public class SystemClassmarkGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _classmarkTable;
 
         [XmlElement(ElementName = "classmarkTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable ClassmarkTable {
+        [Group(@"0d0e878cbc947aebb19ad489b2ffef11:95")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable ClassmarkTable
+        {
             get => _classmarkTable;
-            set {
+            set
+            {
                 ClassmarkTableSpecified = true;
                 _classmarkTable = value;
             }
@@ -29,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ClassmarkTableSpecified { get; set; }
-        
+
     }
 }

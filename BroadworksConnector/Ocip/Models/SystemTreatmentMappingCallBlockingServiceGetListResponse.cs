@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// The table columns are: "Service", "Treatment Id".
     /// 
     /// Replaced by: SystemTreatmentMappingCallBlockingServiceGetListResponse19sp1 in AS data mode
-        /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListRequest"/>
-        /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListResponse19sp1"/>
-        /// </summary>
+    /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListRequest"/>
+    /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListResponse19sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6671""}]")]
     public class SystemTreatmentMappingCallBlockingServiceGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _treatmentMappingTable;
 
         [XmlElement(ElementName = "treatmentMappingTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentMappingTable {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6671")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentMappingTable
+        {
             get => _treatmentMappingTable;
-            set {
+            set
+            {
                 TreatmentMappingTableSpecified = true;
                 _treatmentMappingTable = value;
             }
@@ -32,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TreatmentMappingTableSpecified { get; set; }
-        
+
     }
 }

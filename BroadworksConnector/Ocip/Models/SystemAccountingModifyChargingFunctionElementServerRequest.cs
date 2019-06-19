@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify a ChargingFunctionElementServer in the system.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1573""}]")]
     public class SystemAccountingModifyChargingFunctionElementServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _address;
 
         [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-        public string Address {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1573")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string Address
+        {
             get => _address;
-            set {
+            set
+            {
                 AddressSpecified = true;
                 _address = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AddressSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType Type {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1573")]
+        public BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType Type
+        {
             get => _type;
-            set {
+            set
+            {
                 TypeSpecified = true;
                 _type = value;
             }
@@ -44,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TypeSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1573")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -58,6 +75,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
     }
 }

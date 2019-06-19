@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// It is possible to search by various criteria to restrict the number of rows returned.
     /// Multiple search criteria are logically ANDed together.
     /// The response is either a ResellerGetListResponse or an ErrorResponse.
-        /// <see cref="ResellerGetListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="ResellerGetListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:334""}]")]
     public class ResellerGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-        public int ResponseSizeLimit {
+        [Optional]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:334")]
+        [MinInclusive(1)]
+        public int ResponseSizeLimit
+        {
             get => _responseSizeLimit;
-            set {
+            set
+            {
                 ResponseSizeLimitSpecified = true;
                 _responseSizeLimit = value;
             }
@@ -32,13 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponseSizeLimitSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId>();
 
         [XmlElement(ElementName = "searchCriteriaResellerId", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId {
+        [Optional]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:334")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId
+        {
             get => _searchCriteriaResellerId;
-            set {
+            set
+            {
                 SearchCriteriaResellerIdSpecified = true;
                 _searchCriteriaResellerId = value;
             }
@@ -46,13 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaResellerIdSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerName> _searchCriteriaResellerName;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerName> _searchCriteriaResellerName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerName>();
 
         [XmlElement(ElementName = "searchCriteriaResellerName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerName> SearchCriteriaResellerName {
+        [Optional]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:334")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerName> SearchCriteriaResellerName
+        {
             get => _searchCriteriaResellerName;
-            set {
+            set
+            {
                 SearchCriteriaResellerNameSpecified = true;
                 _searchCriteriaResellerName = value;
             }
@@ -60,6 +75,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaResellerNameSpecified { get; set; }
-        
+
     }
 }

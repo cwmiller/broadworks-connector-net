@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call center media on hold message selection.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterMediaOnHoldMessageSelection    {
-            [XmlEnum(Name = "Default")]
+    public enum CallCenterMediaOnHoldMessageSelection
+    {
+        [XmlEnum(Name = "Default")]
         Default,
-            [XmlEnum(Name = "URL")]
+        [XmlEnum(Name = "URL")]
         URL,
-            [XmlEnum(Name = "Custom")]
+        [XmlEnum(Name = "Custom")]
         Custom,
-            [XmlEnum(Name = "External")]
+        [XmlEnum(Name = "External")]
         External,
-     }
+    }
 }

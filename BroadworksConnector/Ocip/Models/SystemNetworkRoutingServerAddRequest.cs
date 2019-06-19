@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to add a routing Network Server to the system.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11621""}]")]
     public class SystemNetworkRoutingServerAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        public string NetAddress {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11621")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string NetAddress
+        {
             get => _netAddress;
-            set {
+            set
+            {
                 NetAddressSpecified = true;
                 _netAddress = value;
             }
@@ -30,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetAddressSpecified { get; set; }
-        
+
         private int _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
-        public int Port {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11621")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int Port
+        {
             get => _port;
-            set {
+            set
+            {
                 PortSpecified = true;
                 _port = value;
             }
@@ -44,13 +57,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PortSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.TransportProtocol _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TransportProtocol TransportProtocol {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11621")]
+        public BroadWorksConnector.Ocip.Models.TransportProtocol TransportProtocol
+        {
             get => _transportProtocol;
-            set {
+            set
+            {
                 TransportProtocolSpecified = true;
                 _transportProtocol = value;
             }
@@ -58,13 +74,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TransportProtocolSpecified { get; set; }
-        
+
         private bool _poll;
 
         [XmlElement(ElementName = "poll", IsNullable = false, Namespace = "")]
-        public bool Poll {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11621")]
+        public bool Poll
+        {
             get => _poll;
-            set {
+            set
+            {
                 PollSpecified = true;
                 _poll = value;
             }
@@ -72,13 +91,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PollSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11621")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -86,6 +111,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
     }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// BroadWorks Anywhere Prompt for CLID options.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum BroadWorksAnywhereCLIDPrompt    {
-            [XmlEnum(Name = "Always Prompt")]
+    public enum BroadWorksAnywhereCLIDPrompt
+    {
+        [XmlEnum(Name = "Always Prompt")]
         AlwaysPrompt,
-            [XmlEnum(Name = "Never Prompt")]
+        [XmlEnum(Name = "Never Prompt")]
         NeverPrompt,
-            [XmlEnum(Name = "Prompt When Not Available")]
+        [XmlEnum(Name = "Prompt When Not Available")]
         PromptWhenNotAvailable,
-     }
+    }
 }

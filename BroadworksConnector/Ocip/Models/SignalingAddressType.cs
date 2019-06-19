@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Device type signaling address types.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SignalingAddressType    {
-            [XmlEnum(Name = "Non-intelligent Device Addressing")]
+    public enum SignalingAddressType
+    {
+        [XmlEnum(Name = "Non-intelligent Device Addressing")]
         NonintelligentDeviceAddressing,
-            [XmlEnum(Name = "Non-intelligent Proxy Addressing")]
+        [XmlEnum(Name = "Non-intelligent Proxy Addressing")]
         NonintelligentProxyAddressing,
-            [XmlEnum(Name = "Intelligent Device Addressing")]
+        [XmlEnum(Name = "Intelligent Device Addressing")]
         IntelligentDeviceAddressing,
-            [XmlEnum(Name = "Intelligent Proxy Addressing")]
+        [XmlEnum(Name = "Intelligent Proxy Addressing")]
         IntelligentProxyAddressing,
-     }
+    }
 }

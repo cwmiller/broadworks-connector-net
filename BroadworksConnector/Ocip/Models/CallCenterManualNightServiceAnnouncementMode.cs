@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call center manual night service announcement mode.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterManualNightServiceAnnouncementMode    {
-            [XmlEnum(Name = "Normal Announcement")]
+    public enum CallCenterManualNightServiceAnnouncementMode
+    {
+        [XmlEnum(Name = "Normal Announcement")]
         NormalAnnouncement,
-            [XmlEnum(Name = "Manual Announcement")]
+        [XmlEnum(Name = "Manual Announcement")]
         ManualAnnouncement,
-     }
+    }
 }

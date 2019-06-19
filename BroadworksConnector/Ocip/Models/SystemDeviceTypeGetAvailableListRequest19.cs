@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,25 +13,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// but gets both SIP and MGCP types.
     /// The response is either SystemDeviceTypeGetAvailableListResponse19 or ErrorResponse.
     /// Replaced by SystemDeviceTypeGetAvailableListRequest22 in AS data mode.
-        /// <see cref="SystemSIPDeviceTypeGetListRequest"/>
-        /// <see cref="SystemMGCPDeviceTypeGetListRequest"/>
-        /// <see cref="SystemDeviceTypeGetAvailableListResponse19"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemDeviceTypeGetAvailableListRequest22"/>
-        /// </summary>
+    /// <see cref="SystemSIPDeviceTypeGetListRequest"/>
+    /// <see cref="SystemMGCPDeviceTypeGetListRequest"/>
+    /// <see cref="SystemDeviceTypeGetAvailableListResponse19"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemDeviceTypeGetAvailableListRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6223""}]")]
     public class SystemDeviceTypeGetAvailableListRequest19 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private bool _allowConference;
 
         [XmlElement(ElementName = "allowConference", IsNullable = false, Namespace = "")]
-        public bool AllowConference {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6223")]
+        public bool AllowConference
+        {
             get => _allowConference;
-            set {
+            set
+            {
                 AllowConferenceSpecified = true;
                 _allowConference = value;
             }
@@ -37,13 +42,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowConferenceSpecified { get; set; }
-        
+
         private bool _allowMusicOnHold;
 
         [XmlElement(ElementName = "allowMusicOnHold", IsNullable = false, Namespace = "")]
-        public bool AllowMusicOnHold {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6223")]
+        public bool AllowMusicOnHold
+        {
             get => _allowMusicOnHold;
-            set {
+            set
+            {
                 AllowMusicOnHoldSpecified = true;
                 _allowMusicOnHold = value;
             }
@@ -51,13 +59,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowMusicOnHoldSpecified { get; set; }
-        
+
         private bool _onlyConference;
 
         [XmlElement(ElementName = "onlyConference", IsNullable = false, Namespace = "")]
-        public bool OnlyConference {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6223")]
+        public bool OnlyConference
+        {
             get => _onlyConference;
-            set {
+            set
+            {
                 OnlyConferenceSpecified = true;
                 _onlyConference = value;
             }
@@ -65,13 +76,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OnlyConferenceSpecified { get; set; }
-        
+
         private bool _onlyVideoCapable;
 
         [XmlElement(ElementName = "onlyVideoCapable", IsNullable = false, Namespace = "")]
-        public bool OnlyVideoCapable {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6223")]
+        public bool OnlyVideoCapable
+        {
             get => _onlyVideoCapable;
-            set {
+            set
+            {
                 OnlyVideoCapableSpecified = true;
                 _onlyVideoCapable = value;
             }
@@ -79,13 +93,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OnlyVideoCapableSpecified { get; set; }
-        
+
         private bool _onlyOptionalIpAddress;
 
         [XmlElement(ElementName = "onlyOptionalIpAddress", IsNullable = false, Namespace = "")]
-        public bool OnlyOptionalIpAddress {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6223")]
+        public bool OnlyOptionalIpAddress
+        {
             get => _onlyOptionalIpAddress;
-            set {
+            set
+            {
                 OnlyOptionalIpAddressSpecified = true;
                 _onlyOptionalIpAddress = value;
             }
@@ -93,6 +110,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OnlyOptionalIpAddressSpecified { get; set; }
-        
+
     }
 }

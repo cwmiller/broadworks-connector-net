@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,23 +13,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// In release 20 the "Call Recording" FAC name is changed to
     /// "Call Recording - Start".
     /// Replaced by: ServiceProviderFeatureAccessCodeGetListRequest21
-        /// <see cref="ServiceProviderFeatureAccessCodeGetListResponse20"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="ServiceProviderFeatureAccessCodeGetListRequest21"/>
-        /// </summary>
+    /// <see cref="ServiceProviderFeatureAccessCodeGetListResponse20"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="ServiceProviderFeatureAccessCodeGetListRequest21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:34046""}]")]
     public class ServiceProviderFeatureAccessCodeGetListRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34046")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -35,6 +42,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
     }
 }

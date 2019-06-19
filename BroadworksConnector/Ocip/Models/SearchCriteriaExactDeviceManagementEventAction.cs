@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Criteria for searching for a particular fully specified DeviceManagement event action.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:775""}]")]
     public class SearchCriteriaExactDeviceManagementEventAction : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        
         private BroadWorksConnector.Ocip.Models.DeviceManagementEventAction _dmEventAction;
 
         [XmlElement(ElementName = "dmEventAction", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DeviceManagementEventAction DmEventAction {
+        [Group(@"f0ada2681ca347fa83b464734259b304:775")]
+        public BroadWorksConnector.Ocip.Models.DeviceManagementEventAction DmEventAction
+        {
             get => _dmEventAction;
-            set {
+            set
+            {
                 DmEventActionSpecified = true;
                 _dmEventAction = value;
             }
@@ -27,6 +32,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DmEventActionSpecified { get; set; }
-        
+
     }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Protocols that an access device can use to fetch files from BroadWorks.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DeviceAccessProtocol    {
-            [XmlEnum(Name = "Http")]
+    public enum DeviceAccessProtocol
+    {
+        [XmlEnum(Name = "Http")]
         Http,
-            [XmlEnum(Name = "Https")]
+        [XmlEnum(Name = "Https")]
         Https,
-            [XmlEnum(Name = "FTP")]
+        [XmlEnum(Name = "FTP")]
         FTP,
-     }
+    }
 }

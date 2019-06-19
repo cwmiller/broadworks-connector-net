@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response contains the group Integrated IMP service attributes.
     /// 
     /// Replaced by: GroupIntegratedIMPGetResponse21sp1 in AS data mode
-        /// <see cref="GroupIntegratedIMPGetRequest"/>
-        /// <see cref="GroupIntegratedIMPGetResponse21sp1"/>
-        /// </summary>
+    /// <see cref="GroupIntegratedIMPGetRequest"/>
+    /// <see cref="GroupIntegratedIMPGetResponse21sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4652""}]")]
     public class GroupIntegratedIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _useServiceProviderSetting;
 
         [XmlElement(ElementName = "useServiceProviderSetting", IsNullable = false, Namespace = "")]
-        public bool UseServiceProviderSetting {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4652")]
+        public bool UseServiceProviderSetting
+        {
             get => _useServiceProviderSetting;
-            set {
+            set
+            {
                 UseServiceProviderSettingSpecified = true;
                 _useServiceProviderSetting = value;
             }
@@ -32,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseServiceProviderSettingSpecified { get; set; }
-        
+
         private string _serviceDomain;
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
-        public string ServiceDomain {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4652")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServiceDomain
+        {
             get => _serviceDomain;
-            set {
+            set
+            {
                 ServiceDomainSpecified = true;
                 _serviceDomain = value;
             }
@@ -46,6 +57,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceDomainSpecified { get; set; }
-        
+
     }
 }

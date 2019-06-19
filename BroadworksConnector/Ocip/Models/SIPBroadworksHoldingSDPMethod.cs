@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for BroadWorks Holding SDP Method
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SIPBroadworksHoldingSDPMethod    {
-            [XmlEnum(Name = "Hold SDP")]
+    public enum SIPBroadworksHoldingSDPMethod
+    {
+        [XmlEnum(Name = "Hold SDP")]
         HoldSDP,
-            [XmlEnum(Name = "Modified Address SDP")]
+        [XmlEnum(Name = "Modified Address SDP")]
         ModifiedAddressSDP,
-     }
+    }
 }

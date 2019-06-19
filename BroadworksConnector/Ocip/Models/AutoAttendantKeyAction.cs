@@ -16,31 +16,32 @@ namespace BroadWorksConnector.Ocip.Models
     /// Return to Previous Menu
     /// The following data elements are only valid for submenus:
     /// Return to Previous Menu
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AutoAttendantKeyAction    {
-            [XmlEnum(Name = "Transfer With Prompt")]
+    public enum AutoAttendantKeyAction
+    {
+        [XmlEnum(Name = "Transfer With Prompt")]
         TransferWithPrompt,
-            [XmlEnum(Name = "Transfer Without Prompt")]
+        [XmlEnum(Name = "Transfer Without Prompt")]
         TransferWithoutPrompt,
-            [XmlEnum(Name = "Transfer To Operator")]
+        [XmlEnum(Name = "Transfer To Operator")]
         TransferToOperator,
-            [XmlEnum(Name = "Name Dialing")]
+        [XmlEnum(Name = "Name Dialing")]
         NameDialing,
-            [XmlEnum(Name = "Extension Dialing")]
+        [XmlEnum(Name = "Extension Dialing")]
         ExtensionDialing,
-            [XmlEnum(Name = "Repeat Menu")]
+        [XmlEnum(Name = "Repeat Menu")]
         RepeatMenu,
-            [XmlEnum(Name = "Exit")]
+        [XmlEnum(Name = "Exit")]
         Exit,
-            [XmlEnum(Name = "Transfer To Mailbox")]
+        [XmlEnum(Name = "Transfer To Mailbox")]
         TransferToMailbox,
-            [XmlEnum(Name = "Transfer To Submenu")]
+        [XmlEnum(Name = "Transfer To Submenu")]
         TransferToSubmenu,
-            [XmlEnum(Name = "Return to Previous Menu")]
+        [XmlEnum(Name = "Return to Previous Menu")]
         ReturntoPreviousMenu,
-            [XmlEnum(Name = "Play Announcement")]
+        [XmlEnum(Name = "Play Announcement")]
         PlayAnnouncement,
-     }
+    }
 }

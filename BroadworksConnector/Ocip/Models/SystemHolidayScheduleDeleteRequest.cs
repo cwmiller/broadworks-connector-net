@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Delete a system holiday schedule.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:15381""}]")]
     public class SystemHolidayScheduleDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _holidayScheduleName;
 
         [XmlElement(ElementName = "holidayScheduleName", IsNullable = false, Namespace = "")]
-        public string HolidayScheduleName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15381")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string HolidayScheduleName
+        {
             get => _holidayScheduleName;
-            set {
+            set
+            {
                 HolidayScheduleNameSpecified = true;
                 _holidayScheduleName = value;
             }
@@ -30,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HolidayScheduleNameSpecified { get; set; }
-        
+
     }
 }

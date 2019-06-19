@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the ServiceProviderRoutePointExternalSystemGetAssignedListRequest.
     /// Contains a table of all Route Point External Systems assigned to the
     /// service provider.  The column headings are: "Name" and "Description".
-        /// <see cref="ServiceProviderRoutePointExternalSystemGetAssignedListRequest"/>
-        /// </summary>
+    /// <see cref="ServiceProviderRoutePointExternalSystemGetAssignedListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4735""}]")]
     public class ServiceProviderRoutePointExternalSystemGetAssignedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _externalSystemTable;
 
         [XmlElement(ElementName = "externalSystemTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable ExternalSystemTable {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4735")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable ExternalSystemTable
+        {
             get => _externalSystemTable;
-            set {
+            set
+            {
                 ExternalSystemTableSpecified = true;
                 _externalSystemTable = value;
             }
@@ -30,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExternalSystemTableSpecified { get; set; }
-        
+
     }
 }

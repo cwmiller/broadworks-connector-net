@@ -5,31 +5,32 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Possible values for administrative access policy settings.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum PolicyAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum PolicyAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Restricted-FullProfile")]
+        [XmlEnum(Name = "Restricted-FullProfile")]
         RestrictedFullProfile,
-            [XmlEnum(Name = "Restricted")]
+        [XmlEnum(Name = "Restricted")]
         Restricted,
-            [XmlEnum(Name = "Restricted-NoAuthorize")]
+        [XmlEnum(Name = "Restricted-NoAuthorize")]
         RestrictedNoAuthorize,
-            [XmlEnum(Name = "Restricted-NoUserAssociation")]
+        [XmlEnum(Name = "Restricted-NoUserAssociation")]
         RestrictedNoUserAssociation,
-            [XmlEnum(Name = "Restricted-ReadProfile")]
+        [XmlEnum(Name = "Restricted-ReadProfile")]
         RestrictedReadProfile,
-            [XmlEnum(Name = "Restricted-NoProfile")]
+        [XmlEnum(Name = "Restricted-NoProfile")]
         RestrictedNoProfile,
-            [XmlEnum(Name = "Restricted-NoGroup")]
+        [XmlEnum(Name = "Restricted-NoGroup")]
         RestrictedNoGroup,
-            [XmlEnum(Name = "Restricted-FullResource")]
+        [XmlEnum(Name = "Restricted-FullResource")]
         RestrictedFullResource,
-            [XmlEnum(Name = "Restricted-ReadResource")]
+        [XmlEnum(Name = "Restricted-ReadResource")]
         RestrictedReadResource,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

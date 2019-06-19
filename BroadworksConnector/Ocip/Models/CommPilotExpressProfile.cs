@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// CommPilot Express Profile Type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CommPilotExpressProfile    {
-            [XmlEnum(Name = "Available In Office")]
+    public enum CommPilotExpressProfile
+    {
+        [XmlEnum(Name = "Available In Office")]
         AvailableInOffice,
-            [XmlEnum(Name = "Available Out Of Office")]
+        [XmlEnum(Name = "Available Out Of Office")]
         AvailableOutOfOffice,
-            [XmlEnum(Name = "Busy")]
+        [XmlEnum(Name = "Busy")]
         Busy,
-            [XmlEnum(Name = "Unavailable")]
+        [XmlEnum(Name = "Unavailable")]
         Unavailable,
-     }
+    }
 }

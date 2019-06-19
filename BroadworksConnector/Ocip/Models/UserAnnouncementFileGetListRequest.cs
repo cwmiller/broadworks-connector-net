@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Get the list of announcement names with associated media type and filesize for a User and
     /// given Announcement Repository Type
     /// The response is either a UserAnnouncementFileGetListResponse or an ErrorResponse.
-        /// <see cref="UserAnnouncementFileGetListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="UserAnnouncementFileGetListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:556""}]")]
     public class UserAnnouncementFileGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:556")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -31,13 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementFileType _announcementFileType;
 
         [XmlElement(ElementName = "announcementFileType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileType AnnouncementFileType {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:556")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileType AnnouncementFileType
+        {
             get => _announcementFileType;
-            set {
+            set
+            {
                 AnnouncementFileTypeSpecified = true;
                 _announcementFileType = value;
             }
@@ -45,13 +56,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnnouncementFileTypeSpecified { get; set; }
-        
+
         private bool _includeAnnouncementTable;
 
         [XmlElement(ElementName = "includeAnnouncementTable", IsNullable = false, Namespace = "")]
-        public bool IncludeAnnouncementTable {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:556")]
+        public bool IncludeAnnouncementTable
+        {
             get => _includeAnnouncementTable;
-            set {
+            set
+            {
                 IncludeAnnouncementTableSpecified = true;
                 _includeAnnouncementTable = value;
             }
@@ -59,13 +73,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeAnnouncementTableSpecified { get; set; }
-        
+
         private int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-        public int ResponseSizeLimit {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:556")]
+        [MinInclusive(1)]
+        public int ResponseSizeLimit
+        {
             get => _responseSizeLimit;
-            set {
+            set
+            {
                 ResponseSizeLimitSpecified = true;
                 _responseSizeLimit = value;
             }
@@ -73,13 +92,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponseSizeLimitSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> _searchCriteriaAnnouncementFileName;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> _searchCriteriaAnnouncementFileName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName>();
 
         [XmlElement(ElementName = "searchCriteriaAnnouncementFileName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:556")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName
+        {
             get => _searchCriteriaAnnouncementFileName;
-            set {
+            set
+            {
                 SearchCriteriaAnnouncementFileNameSpecified = true;
                 _searchCriteriaAnnouncementFileName = value;
             }
@@ -87,6 +110,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaAnnouncementFileNameSpecified { get; set; }
-        
+
     }
 }

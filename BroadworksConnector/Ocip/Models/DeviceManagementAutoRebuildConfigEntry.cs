@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Contains one automatic rebuild configuration list entry.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class DeviceManagementAutoRebuildConfigEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18509""}]")]
+    public class DeviceManagementAutoRebuildConfigEntry
     {
 
-        
         private string _ociRequestPrefix;
 
         [XmlElement(ElementName = "ociRequestPrefix", IsNullable = false, Namespace = "")]
-        public string OciRequestPrefix {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18509")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string OciRequestPrefix
+        {
             get => _ociRequestPrefix;
-            set {
+            set
+            {
                 OciRequestPrefixSpecified = true;
                 _ociRequestPrefix = value;
             }
@@ -27,13 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OciRequestPrefixSpecified { get; set; }
-        
+
         private bool _autoRebuildEnabled;
 
         [XmlElement(ElementName = "autoRebuildEnabled", IsNullable = false, Namespace = "")]
-        public bool AutoRebuildEnabled {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18509")]
+        public bool AutoRebuildEnabled
+        {
             get => _autoRebuildEnabled;
-            set {
+            set
+            {
                 AutoRebuildEnabledSpecified = true;
                 _autoRebuildEnabled = value;
             }
@@ -41,6 +52,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AutoRebuildEnabledSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,24 +14,29 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is a UserGetLoginInfoResponse or an ErrorResponse
     /// 
     /// Replaced by UserGetLoginInfoRequest22.
-        /// <see cref="UserGetLoginInfoRequest"/>
-        /// <see cref="UserGetLoginInfoResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="UserGetLoginInfoRequest22"/>
-        /// </summary>
+    /// <see cref="UserGetLoginInfoRequest"/>
+    /// <see cref="UserGetLoginInfoResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="UserGetLoginInfoRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:42464"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:42465""}]}]")]
     public class UserGetLoginInfoRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42465")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -37,13 +44,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        public string PhoneNumber {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42465")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string PhoneNumber
+        {
             get => _phoneNumber;
-            set {
+            set
+            {
                 PhoneNumberSpecified = true;
                 _phoneNumber = value;
             }
@@ -51,6 +63,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneNumberSpecified { get; set; }
-        
+
     }
 }

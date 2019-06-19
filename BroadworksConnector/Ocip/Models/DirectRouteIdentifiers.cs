@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Direct Route identifiers.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class DirectRouteIdentifiers 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4e1b40cd187e65e0dc647394b1e74e3c:99"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4e1b40cd187e65e0dc647394b1e74e3c:100""}]}]")]
+    public class DirectRouteIdentifiers
     {
 
-        
         private string _dtgIdentity;
 
         [XmlElement(ElementName = "dtgIdentity", IsNullable = false, Namespace = "")]
-        public string DtgIdentity {
+        [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:100")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string DtgIdentity
+        {
             get => _dtgIdentity;
-            set {
+            set
+            {
                 DtgIdentitySpecified = true;
                 _dtgIdentity = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DtgIdentitySpecified { get; set; }
-        
+
         private string _trunkIdentity;
 
         [XmlElement(ElementName = "trunkIdentity", IsNullable = false, Namespace = "")]
-        public string TrunkIdentity {
+        [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:100")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string TrunkIdentity
+        {
             get => _trunkIdentity;
-            set {
+            set
+            {
                 TrunkIdentitySpecified = true;
                 _trunkIdentity = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TrunkIdentitySpecified { get; set; }
-        
+
     }
 }

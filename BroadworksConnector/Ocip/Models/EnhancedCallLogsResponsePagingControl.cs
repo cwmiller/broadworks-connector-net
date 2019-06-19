@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,20 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// rows when making a request that can result in a large dataset. The client specifies the
     /// starting row and the number of rows requested.
     /// The server only provides those rows in results, if available.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class EnhancedCallLogsResponsePagingControl 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2166""}]")]
+    public class EnhancedCallLogsResponsePagingControl
     {
 
-        
         private int _responseStartIndex;
 
         [XmlElement(ElementName = "responseStartIndex", IsNullable = false, Namespace = "")]
-        public int ResponseStartIndex {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2166")]
+        [MinInclusive(1)]
+        public int ResponseStartIndex
+        {
             get => _responseStartIndex;
-            set {
+            set
+            {
                 ResponseStartIndexSpecified = true;
                 _responseStartIndex = value;
             }
@@ -30,13 +36,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponseStartIndexSpecified { get; set; }
-        
+
         private int _responsePageSize;
 
         [XmlElement(ElementName = "responsePageSize", IsNullable = false, Namespace = "")]
-        public int ResponsePageSize {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2166")]
+        [MinInclusive(1)]
+        [MaxInclusive(1000)]
+        public int ResponsePageSize
+        {
             get => _responsePageSize;
-            set {
+            set
+            {
                 ResponsePageSizeSpecified = true;
                 _responsePageSize = value;
             }
@@ -44,6 +55,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponsePageSizeSpecified { get; set; }
-        
+
     }
 }

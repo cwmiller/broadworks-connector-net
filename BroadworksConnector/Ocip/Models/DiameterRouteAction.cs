@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for the action of a Diameter Route.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DiameterRouteAction    {
-            [XmlEnum(Name = "Local")]
+    public enum DiameterRouteAction
+    {
+        [XmlEnum(Name = "Local")]
         Local,
-            [XmlEnum(Name = "Relay")]
+        [XmlEnum(Name = "Relay")]
         Relay,
-     }
+    }
 }

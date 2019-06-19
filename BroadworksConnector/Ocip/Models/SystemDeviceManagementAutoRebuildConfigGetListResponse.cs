@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -13,21 +15,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// version.
     /// "Auto Rebuild Enabled": 'True' if the request prefix triggers DM events
     /// automatically.  Otherwise, automatic DM events are not generated.
-        /// <see cref="SystemDeviceManagementAutoRebuildConfigGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemDeviceManagementAutoRebuildConfigGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6974""}]")]
     public class SystemDeviceManagementAutoRebuildConfigGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _autoRebuildConfigTable;
 
         [XmlElement(ElementName = "autoRebuildConfigTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable AutoRebuildConfigTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6974")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable AutoRebuildConfigTable
+        {
             get => _autoRebuildConfigTable;
-            set {
+            set
+            {
                 AutoRebuildConfigTableSpecified = true;
                 _autoRebuildConfigTable = value;
             }
@@ -35,6 +40,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AutoRebuildConfigTableSpecified { get; set; }
-        
+
     }
 }

@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to PublicClusterGetFullyQualifiedDomainNameRequest.
-        /// <see cref="PublicClusterGetFullyQualifiedDomainNameRequest"/>
-        /// </summary>
+    /// <see cref="PublicClusterGetFullyQualifiedDomainNameRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:584""}]")]
     public class PublicClusterGetFullyQualifiedDomainNameResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _publicClusterFQDN;
 
         [XmlElement(ElementName = "publicClusterFQDN", IsNullable = false, Namespace = "")]
-        public string PublicClusterFQDN {
+        [Optional]
+        [Group(@"6b27fcc79475236456fc113a42b75543:584")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string PublicClusterFQDN
+        {
             get => _publicClusterFQDN;
-            set {
+            set
+            {
                 PublicClusterFQDNSpecified = true;
                 _publicClusterFQDN = value;
             }
@@ -28,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PublicClusterFQDNSpecified { get; set; }
-        
+
     }
 }

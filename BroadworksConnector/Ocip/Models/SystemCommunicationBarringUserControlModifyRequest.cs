@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modifies the system's Communication Barring User-Control settings.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4277c572e54919d6e29f4c0fa69aaad1:77""}]")]
     public class SystemCommunicationBarringUserControlModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private bool _enableLockout;
 
         [XmlElement(ElementName = "enableLockout", IsNullable = false, Namespace = "")]
-        public bool EnableLockout {
+        [Optional]
+        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:77")]
+        public bool EnableLockout
+        {
             get => _enableLockout;
-            set {
+            set
+            {
                 EnableLockoutSpecified = true;
                 _enableLockout = value;
             }
@@ -30,13 +36,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableLockoutSpecified { get; set; }
-        
+
         private int _maxNumberOfFailedAttempts;
 
         [XmlElement(ElementName = "maxNumberOfFailedAttempts", IsNullable = false, Namespace = "")]
-        public int MaxNumberOfFailedAttempts {
+        [Optional]
+        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:77")]
+        [MinInclusive(1)]
+        [MaxInclusive(10)]
+        public int MaxNumberOfFailedAttempts
+        {
             get => _maxNumberOfFailedAttempts;
-            set {
+            set
+            {
                 MaxNumberOfFailedAttemptsSpecified = true;
                 _maxNumberOfFailedAttempts = value;
             }
@@ -44,13 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxNumberOfFailedAttemptsSpecified { get; set; }
-        
+
         private int _lockoutMinutes;
 
         [XmlElement(ElementName = "lockoutMinutes", IsNullable = false, Namespace = "")]
-        public int LockoutMinutes {
+        [Optional]
+        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:77")]
+        [MinInclusive(1)]
+        [MaxInclusive(600)]
+        public int LockoutMinutes
+        {
             get => _lockoutMinutes;
-            set {
+            set
+            {
                 LockoutMinutesSpecified = true;
                 _lockoutMinutes = value;
             }
@@ -58,6 +76,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LockoutMinutesSpecified { get; set; }
-        
+
     }
 }

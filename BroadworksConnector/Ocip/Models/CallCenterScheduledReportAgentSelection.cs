@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Either all agents or list of agents.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterScheduledReportAgentSelection 
+
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7546""}]")]
+    public class CallCenterScheduledReportAgentSelection
     {
 
-        
         private bool _allAgent;
 
         [XmlElement(ElementName = "allAgent", IsNullable = false, Namespace = "")]
-        public bool AllAgent {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7546")]
+        public bool AllAgent
+        {
             get => _allAgent;
-            set {
+            set
+            {
                 AllAgentSpecified = true;
                 _allAgent = value;
             }
@@ -27,13 +32,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllAgentSpecified { get; set; }
-        
-        private List<string> _agentUserId;
+
+        private List<string> _agentUserId = new List<string>();
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
-        public List<string> AgentUserId {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7546")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public List<string> AgentUserId
+        {
             get => _agentUserId;
-            set {
+            set
+            {
                 AgentUserIdSpecified = true;
                 _agentUserId = value;
             }
@@ -41,6 +51,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AgentUserIdSpecified { get; set; }
-        
+
     }
 }

@@ -5,19 +5,20 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Possible originating actions for Communication Barring.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CommunicationBarringOriginatingAction15sp2    {
-            [XmlEnum(Name = "Allow")]
+    public enum CommunicationBarringOriginatingAction15sp2
+    {
+        [XmlEnum(Name = "Allow")]
         Allow,
-            [XmlEnum(Name = "Block")]
+        [XmlEnum(Name = "Block")]
         Block,
-            [XmlEnum(Name = "Authorization Code")]
+        [XmlEnum(Name = "Authorization Code")]
         AuthorizationCode,
-            [XmlEnum(Name = "Treatment")]
+        [XmlEnum(Name = "Treatment")]
         Treatment,
-            [XmlEnum(Name = "Transfer")]
+        [XmlEnum(Name = "Transfer")]
         Transfer,
-     }
+    }
 }

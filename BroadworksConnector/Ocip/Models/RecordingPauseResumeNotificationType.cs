@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Recording Service Play Resume Notidication Type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum RecordingPauseResumeNotificationType    {
-            [XmlEnum(Name = "None")]
+    public enum RecordingPauseResumeNotificationType
+    {
+        [XmlEnum(Name = "None")]
         None,
-            [XmlEnum(Name = "Beep")]
+        [XmlEnum(Name = "Beep")]
         Beep,
-            [XmlEnum(Name = "Play Announcement")]
+        [XmlEnum(Name = "Play Announcement")]
         PlayAnnouncement,
-     }
+    }
 }

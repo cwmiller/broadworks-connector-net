@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Conference schedule.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class MeetMeConferencingConferenceSchedule 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:1075"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:1076""}]}]")]
+    public class MeetMeConferencingConferenceSchedule
     {
 
-        
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleReservationless _scheduleReservationless;
 
         [XmlElement(ElementName = "scheduleReservationless", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleReservationless ScheduleReservationless {
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:1076")]
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleReservationless ScheduleReservationless
+        {
             get => _scheduleReservationless;
-            set {
+            set
+            {
                 ScheduleReservationlessSpecified = true;
                 _scheduleReservationless = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleReservationlessSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleOneTime _scheduleOneTime;
 
         [XmlElement(ElementName = "scheduleOneTime", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleOneTime ScheduleOneTime {
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:1076")]
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleOneTime ScheduleOneTime
+        {
             get => _scheduleOneTime;
-            set {
+            set
+            {
                 ScheduleOneTimeSpecified = true;
                 _scheduleOneTime = value;
             }
@@ -41,13 +49,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleOneTimeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleRecurring _scheduleRecurring;
 
         [XmlElement(ElementName = "scheduleRecurring", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleRecurring ScheduleRecurring {
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:1076")]
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleRecurring ScheduleRecurring
+        {
             get => _scheduleRecurring;
-            set {
+            set
+            {
                 ScheduleRecurringSpecified = true;
                 _scheduleRecurring = value;
             }
@@ -55,6 +66,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleRecurringSpecified { get; set; }
-        
+
     }
 }

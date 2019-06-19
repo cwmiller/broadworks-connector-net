@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// The startDate element is adjusted to the first occurrence of the recurrent schedule that comes at or after the startDate.
     /// The endDate element is set to the sum of the adjusted starDate element value and the event duration.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3714"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3720"",""optional"":true,""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3722""}]}]}]")]
     public class UserScheduleModifyEventRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3714")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -32,13 +39,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
 
         [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3714")]
+        public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey
+        {
             get => _scheduleKey;
-            set {
+            set
+            {
                 ScheduleKeySpecified = true;
                 _scheduleKey = value;
             }
@@ -46,13 +56,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ScheduleKeySpecified { get; set; }
-        
+
         private string _eventName;
 
         [XmlElement(ElementName = "eventName", IsNullable = false, Namespace = "")]
-        public string EventName {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3714")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string EventName
+        {
             get => _eventName;
-            set {
+            set
+            {
                 EventNameSpecified = true;
                 _eventName = value;
             }
@@ -60,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EventNameSpecified { get; set; }
-        
+
         private string _newEventName;
 
         [XmlElement(ElementName = "newEventName", IsNullable = false, Namespace = "")]
-        public string NewEventName {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3714")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string NewEventName
+        {
             get => _newEventName;
-            set {
+            set
+            {
                 NewEventNameSpecified = true;
                 _newEventName = value;
             }
@@ -74,13 +95,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewEventNameSpecified { get; set; }
-        
+
         private string _startDate;
 
         [XmlElement(ElementName = "startDate", IsNullable = false, Namespace = "")]
-        public string StartDate {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3714")]
+        public string StartDate
+        {
             get => _startDate;
-            set {
+            set
+            {
                 StartDateSpecified = true;
                 _startDate = value;
             }
@@ -88,13 +113,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartDateSpecified { get; set; }
-        
+
         private bool _allDayEvent;
 
         [XmlElement(ElementName = "allDayEvent", IsNullable = false, Namespace = "")]
-        public bool AllDayEvent {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3720")]
+        public bool AllDayEvent
+        {
             get => _allDayEvent;
-            set {
+            set
+            {
                 AllDayEventSpecified = true;
                 _allDayEvent = value;
             }
@@ -102,13 +130,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllDayEventSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.HourMinute _startTime;
 
         [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.HourMinute StartTime {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3722")]
+        public BroadWorksConnector.Ocip.Models.HourMinute StartTime
+        {
             get => _startTime;
-            set {
+            set
+            {
                 StartTimeSpecified = true;
                 _startTime = value;
             }
@@ -116,13 +147,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartTimeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.HourMinute _endTime;
 
         [XmlElement(ElementName = "endTime", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.HourMinute EndTime {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3722")]
+        public BroadWorksConnector.Ocip.Models.HourMinute EndTime
+        {
             get => _endTime;
-            set {
+            set
+            {
                 EndTimeSpecified = true;
                 _endTime = value;
             }
@@ -130,13 +164,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndTimeSpecified { get; set; }
-        
+
         private string _endDate;
 
         [XmlElement(ElementName = "endDate", IsNullable = false, Namespace = "")]
-        public string EndDate {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3714")]
+        public string EndDate
+        {
             get => _endDate;
-            set {
+            set
+            {
                 EndDateSpecified = true;
                 _endDate = value;
             }
@@ -144,13 +182,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndDateSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Recurrence _recurrence;
 
         [XmlElement(ElementName = "recurrence", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Recurrence Recurrence {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3714")]
+        public BroadWorksConnector.Ocip.Models.Recurrence Recurrence
+        {
             get => _recurrence;
-            set {
+            set
+            {
                 RecurrenceSpecified = true;
                 _recurrence = value;
             }
@@ -158,6 +200,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RecurrenceSpecified { get; set; }
-        
+
     }
 }

@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Privacy Version.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SIPPrivacyVersion    {
-            [XmlEnum(Name = "RFC3323")]
+    public enum SIPPrivacyVersion
+    {
+        [XmlEnum(Name = "RFC3323")]
         RFC3323,
-            [XmlEnum(Name = "RFC3323 Japan")]
+        [XmlEnum(Name = "RFC3323 Japan")]
         RFC3323Japan,
-            [XmlEnum(Name = "Privacy 03")]
+        [XmlEnum(Name = "Privacy 03")]
         Privacy03,
-            [XmlEnum(Name = "Privacy 00")]
+        [XmlEnum(Name = "Privacy 00")]
         Privacy00,
-     }
+    }
 }

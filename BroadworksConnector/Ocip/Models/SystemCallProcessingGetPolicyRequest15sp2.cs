@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,15 +10,15 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request the system level data associated with Call Processing Policy.
     /// The response is either a SystemCallProcessingGetPolicyResponse15sp2 or an
     /// ErrorResponse.
-        /// <see cref="SystemCallProcessingGetPolicyResponse15sp2"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SystemCallProcessingGetPolicyResponse15sp2"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10048""}]")]
     public class SystemCallProcessingGetPolicyRequest15sp2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
     }
 }

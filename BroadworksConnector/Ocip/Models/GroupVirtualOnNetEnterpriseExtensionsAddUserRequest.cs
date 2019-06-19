@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// either: a single user,  or a list of users, or a range of users,
     /// or any combination thereof.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:97""}]")]
     public class GroupVirtualOnNetEnterpriseExtensionsAddUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:97")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:97")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -46,13 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser> _virtualOnNetUser;
+
+        private List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser> _virtualOnNetUser = new List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser>();
 
         [XmlElement(ElementName = "virtualOnNetUser", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser> VirtualOnNetUser {
+        [Optional]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:97")]
+        public List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser> VirtualOnNetUser
+        {
             get => _virtualOnNetUser;
-            set {
+            set
+            {
                 VirtualOnNetUserSpecified = true;
                 _virtualOnNetUser = value;
             }
@@ -60,13 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VirtualOnNetUserSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange> _virtualOnNetUserRange;
+
+        private List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange> _virtualOnNetUserRange = new List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange>();
 
         [XmlElement(ElementName = "virtualOnNetUserRange", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange> VirtualOnNetUserRange {
+        [Optional]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:97")]
+        public List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange> VirtualOnNetUserRange
+        {
             get => _virtualOnNetUserRange;
-            set {
+            set
+            {
                 VirtualOnNetUserRangeSpecified = true;
                 _virtualOnNetUserRange = value;
             }
@@ -74,6 +94,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VirtualOnNetUserRangeSpecified { get; set; }
-        
+
     }
 }

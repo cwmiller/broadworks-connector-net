@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemBwDiameterBaseDataGetRequest.
     /// Contains a list of System Diameter base parameters.
-        /// <see cref="SystemBwDiameterBaseDataGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemBwDiameterBaseDataGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:21157""}]")]
     public class SystemBwDiameterBaseDataGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _xsRealm;
 
         [XmlElement(ElementName = "xsRealm", IsNullable = false, Namespace = "")]
-        public string XsRealm {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string XsRealm
+        {
             get => _xsRealm;
-            set {
+            set
+            {
                 XsRealmSpecified = true;
                 _xsRealm = value;
             }
@@ -29,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool XsRealmSpecified { get; set; }
-        
+
         private int _xsListeningPort;
 
         [XmlElement(ElementName = "xsListeningPort", IsNullable = false, Namespace = "")]
-        public int XsListeningPort {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int XsListeningPort
+        {
             get => _xsListeningPort;
-            set {
+            set
+            {
                 XsListeningPortSpecified = true;
                 _xsListeningPort = value;
             }
@@ -43,13 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool XsListeningPortSpecified { get; set; }
-        
+
         private string _psRealm;
 
         [XmlElement(ElementName = "psRealm", IsNullable = false, Namespace = "")]
-        public string PsRealm {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string PsRealm
+        {
             get => _psRealm;
-            set {
+            set
+            {
                 PsRealmSpecified = true;
                 _psRealm = value;
             }
@@ -57,13 +76,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PsRealmSpecified { get; set; }
-        
+
         private int _psListeningPort;
 
         [XmlElement(ElementName = "psListeningPort", IsNullable = false, Namespace = "")]
-        public int PsListeningPort {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int PsListeningPort
+        {
             get => _psListeningPort;
-            set {
+            set
+            {
                 PsListeningPortSpecified = true;
                 _psListeningPort = value;
             }
@@ -71,13 +95,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PsListeningPortSpecified { get; set; }
-        
+
         private bool _psRelayThroughXs;
 
         [XmlElement(ElementName = "psRelayThroughXs", IsNullable = false, Namespace = "")]
-        public bool PsRelayThroughXs {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        public bool PsRelayThroughXs
+        {
             get => _psRelayThroughXs;
-            set {
+            set
+            {
                 PsRelayThroughXsSpecified = true;
                 _psRelayThroughXs = value;
             }
@@ -85,13 +112,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PsRelayThroughXsSpecified { get; set; }
-        
+
         private int _xsRelayListeningPort;
 
         [XmlElement(ElementName = "xsRelayListeningPort", IsNullable = false, Namespace = "")]
-        public int XsRelayListeningPort {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int XsRelayListeningPort
+        {
             get => _xsRelayListeningPort;
-            set {
+            set
+            {
                 XsRelayListeningPortSpecified = true;
                 _xsRelayListeningPort = value;
             }
@@ -99,13 +131,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool XsRelayListeningPortSpecified { get; set; }
-        
+
         private int _tcTimerSeconds;
 
         [XmlElement(ElementName = "tcTimerSeconds", IsNullable = false, Namespace = "")]
-        public int TcTimerSeconds {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        [MinInclusive(1)]
+        [MaxInclusive(3600)]
+        public int TcTimerSeconds
+        {
             get => _tcTimerSeconds;
-            set {
+            set
+            {
                 TcTimerSecondsSpecified = true;
                 _tcTimerSeconds = value;
             }
@@ -113,13 +150,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TcTimerSecondsSpecified { get; set; }
-        
+
         private int _twTimerSeconds;
 
         [XmlElement(ElementName = "twTimerSeconds", IsNullable = false, Namespace = "")]
-        public int TwTimerSeconds {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        [MinInclusive(6)]
+        [MaxInclusive(60)]
+        public int TwTimerSeconds
+        {
             get => _twTimerSeconds;
-            set {
+            set
+            {
                 TwTimerSecondsSpecified = true;
                 _twTimerSeconds = value;
             }
@@ -127,13 +169,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TwTimerSecondsSpecified { get; set; }
-        
+
         private int _requestTimerSeconds;
 
         [XmlElement(ElementName = "requestTimerSeconds", IsNullable = false, Namespace = "")]
-        public int RequestTimerSeconds {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        [MinInclusive(1)]
+        [MaxInclusive(600)]
+        public int RequestTimerSeconds
+        {
             get => _requestTimerSeconds;
-            set {
+            set
+            {
                 RequestTimerSecondsSpecified = true;
                 _requestTimerSeconds = value;
             }
@@ -141,13 +188,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RequestTimerSecondsSpecified { get; set; }
-        
+
         private int _busyPeerDetectionOutstandingTxnCount;
 
         [XmlElement(ElementName = "busyPeerDetectionOutstandingTxnCount", IsNullable = false, Namespace = "")]
-        public int BusyPeerDetectionOutstandingTxnCount {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        [MinInclusive(1)]
+        [MaxInclusive(1000000)]
+        public int BusyPeerDetectionOutstandingTxnCount
+        {
             get => _busyPeerDetectionOutstandingTxnCount;
-            set {
+            set
+            {
                 BusyPeerDetectionOutstandingTxnCountSpecified = true;
                 _busyPeerDetectionOutstandingTxnCount = value;
             }
@@ -155,13 +207,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BusyPeerDetectionOutstandingTxnCountSpecified { get; set; }
-        
+
         private int _busyPeerRestoreOutstandingTxnCount;
 
         [XmlElement(ElementName = "busyPeerRestoreOutstandingTxnCount", IsNullable = false, Namespace = "")]
-        public int BusyPeerRestoreOutstandingTxnCount {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        [MinInclusive(1)]
+        [MaxInclusive(1000000)]
+        public int BusyPeerRestoreOutstandingTxnCount
+        {
             get => _busyPeerRestoreOutstandingTxnCount;
-            set {
+            set
+            {
                 BusyPeerRestoreOutstandingTxnCountSpecified = true;
                 _busyPeerRestoreOutstandingTxnCount = value;
             }
@@ -169,13 +226,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BusyPeerRestoreOutstandingTxnCountSpecified { get; set; }
-        
+
         private int _dynamicEntryInactivityTimerHours;
 
         [XmlElement(ElementName = "dynamicEntryInactivityTimerHours", IsNullable = false, Namespace = "")]
-        public int DynamicEntryInactivityTimerHours {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21157")]
+        [MinInclusive(1)]
+        [MaxInclusive(168)]
+        public int DynamicEntryInactivityTimerHours
+        {
             get => _dynamicEntryInactivityTimerHours;
-            set {
+            set
+            {
                 DynamicEntryInactivityTimerHoursSpecified = true;
                 _dynamicEntryInactivityTimerHours = value;
             }
@@ -183,6 +245,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DynamicEntryInactivityTimerHoursSpecified { get; set; }
-        
+
     }
 }

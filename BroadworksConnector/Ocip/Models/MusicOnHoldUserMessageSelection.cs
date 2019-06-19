@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Music On Hold User Message Selection.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum MusicOnHoldUserMessageSelection    {
-            [XmlEnum(Name = "Group")]
+    public enum MusicOnHoldUserMessageSelection
+    {
+        [XmlEnum(Name = "Group")]
         Group,
-            [XmlEnum(Name = "Custom")]
+        [XmlEnum(Name = "Custom")]
         Custom,
-     }
+    }
 }

@@ -1,26 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupOutgoingCallingPlanDigitPlanCallMeNowGetListRequest.
-        /// <see cref="GroupOutgoingCallingPlanDigitPlanCallMeNowGetListRequest"/>
-        /// </summary>
+    /// <see cref="GroupOutgoingCallingPlanDigitPlanCallMeNowGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:282""}]")]
     public class GroupOutgoingCallingPlanDigitPlanCallMeNowGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions _groupPermissions;
 
         [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions GroupPermissions {
+        [Optional]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:282")]
+        public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions GroupPermissions
+        {
             get => _groupPermissions;
-            set {
+            set
+            {
                 GroupPermissionsSpecified = true;
                 _groupPermissions = value;
             }
@@ -28,13 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupPermissionsSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowDepartmentPermissions> _departmentPermissions;
+
+        private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowDepartmentPermissions> _departmentPermissions = new List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowDepartmentPermissions>();
 
         [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowDepartmentPermissions> DepartmentPermissions {
+        [Optional]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:282")]
+        public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowDepartmentPermissions> DepartmentPermissions
+        {
             get => _departmentPermissions;
-            set {
+            set
+            {
                 DepartmentPermissionsSpecified = true;
                 _departmentPermissions = value;
             }
@@ -42,6 +52,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentPermissionsSpecified { get; set; }
-        
+
     }
 }

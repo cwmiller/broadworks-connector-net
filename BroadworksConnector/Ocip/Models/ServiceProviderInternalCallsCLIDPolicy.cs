@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Internal Call CLID Policy applicable to service providers.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServiceProviderInternalCallsCLIDPolicy    {
-            [XmlEnum(Name = "Use Extension")]
+    public enum ServiceProviderInternalCallsCLIDPolicy
+    {
+        [XmlEnum(Name = "Use Extension")]
         UseExtension,
-            [XmlEnum(Name = "Use External Calls Policy")]
+        [XmlEnum(Name = "Use External Calls Policy")]
         UseExternalCallsPolicy,
-     }
+    }
 }

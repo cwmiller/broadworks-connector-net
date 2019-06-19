@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Requests to change the group's service authorization status.
     /// The boolean flags are used to authorize or unauthorize services and packs.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:6878""}]")]
     public class GroupServiceModifyAuthorizationListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6878")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -31,13 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6878")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -45,13 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.ServicePackAuthorization> _servicePackAuthorization;
+
+        private List<BroadWorksConnector.Ocip.Models.ServicePackAuthorization> _servicePackAuthorization = new List<BroadWorksConnector.Ocip.Models.ServicePackAuthorization>();
 
         [XmlElement(ElementName = "servicePackAuthorization", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.ServicePackAuthorization> ServicePackAuthorization {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6878")]
+        public List<BroadWorksConnector.Ocip.Models.ServicePackAuthorization> ServicePackAuthorization
+        {
             get => _servicePackAuthorization;
-            set {
+            set
+            {
                 ServicePackAuthorizationSpecified = true;
                 _servicePackAuthorization = value;
             }
@@ -59,13 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePackAuthorizationSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.GroupServiceAuthorization> _groupServiceAuthorization;
+
+        private List<BroadWorksConnector.Ocip.Models.GroupServiceAuthorization> _groupServiceAuthorization = new List<BroadWorksConnector.Ocip.Models.GroupServiceAuthorization>();
 
         [XmlElement(ElementName = "groupServiceAuthorization", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.GroupServiceAuthorization> GroupServiceAuthorization {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6878")]
+        public List<BroadWorksConnector.Ocip.Models.GroupServiceAuthorization> GroupServiceAuthorization
+        {
             get => _groupServiceAuthorization;
-            set {
+            set
+            {
                 GroupServiceAuthorizationSpecified = true;
                 _groupServiceAuthorization = value;
             }
@@ -73,13 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupServiceAuthorizationSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.UserServiceAuthorization> _userServiceAuthorization;
+
+        private List<BroadWorksConnector.Ocip.Models.UserServiceAuthorization> _userServiceAuthorization = new List<BroadWorksConnector.Ocip.Models.UserServiceAuthorization>();
 
         [XmlElement(ElementName = "userServiceAuthorization", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.UserServiceAuthorization> UserServiceAuthorization {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6878")]
+        public List<BroadWorksConnector.Ocip.Models.UserServiceAuthorization> UserServiceAuthorization
+        {
             get => _userServiceAuthorization;
-            set {
+            set
+            {
                 UserServiceAuthorizationSpecified = true;
                 _userServiceAuthorization = value;
             }
@@ -87,6 +111,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserServiceAuthorizationSpecified { get; set; }
-        
+
     }
 }

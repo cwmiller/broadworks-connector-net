@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,22 +14,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// exemptInboundMobilityCalls
     /// exemptOutboundMobilityCalls
     /// disableParallelRingingToNetworkLocations
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""88893c72abbbb9aaf5aecca970191d94:327""}]")]
     public class UserInterceptUserModifyRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -35,13 +42,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -49,13 +60,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection
+        {
             get => _announcementSelection;
-            set {
+            set
+            {
                 AnnouncementSelectionSpecified = true;
                 _announcementSelection = value;
             }
@@ -63,13 +78,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnnouncementSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _audioFile;
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AudioFile {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AudioFile
+        {
             get => _audioFile;
-            set {
+            set
+            {
                 AudioFileSpecified = true;
                 _audioFile = value;
             }
@@ -77,13 +96,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioFileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _videoFile;
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VideoFile {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VideoFile
+        {
             get => _videoFile;
-            set {
+            set
+            {
                 VideoFileSpecified = true;
                 _videoFile = value;
             }
@@ -91,13 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoFileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.InterceptInboundCall _inboundCallMode;
 
         [XmlElement(ElementName = "inboundCallMode", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.InterceptInboundCall InboundCallMode {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public BroadWorksConnector.Ocip.Models.InterceptInboundCall InboundCallMode
+        {
             get => _inboundCallMode;
-            set {
+            set
+            {
                 InboundCallModeSpecified = true;
                 _inboundCallMode = value;
             }
@@ -105,13 +132,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool InboundCallModeSpecified { get; set; }
-        
+
         private bool _alternateBlockingAnnouncement;
 
         [XmlElement(ElementName = "alternateBlockingAnnouncement", IsNullable = false, Namespace = "")]
-        public bool AlternateBlockingAnnouncement {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public bool AlternateBlockingAnnouncement
+        {
             get => _alternateBlockingAnnouncement;
-            set {
+            set
+            {
                 AlternateBlockingAnnouncementSpecified = true;
                 _alternateBlockingAnnouncement = value;
             }
@@ -119,13 +150,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlternateBlockingAnnouncementSpecified { get; set; }
-        
+
         private bool _exemptInboundMobilityCalls;
 
         [XmlElement(ElementName = "exemptInboundMobilityCalls", IsNullable = false, Namespace = "")]
-        public bool ExemptInboundMobilityCalls {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public bool ExemptInboundMobilityCalls
+        {
             get => _exemptInboundMobilityCalls;
-            set {
+            set
+            {
                 ExemptInboundMobilityCallsSpecified = true;
                 _exemptInboundMobilityCalls = value;
             }
@@ -133,13 +168,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExemptInboundMobilityCallsSpecified { get; set; }
-        
+
         private bool _disableParallelRingingToNetworkLocations;
 
         [XmlElement(ElementName = "disableParallelRingingToNetworkLocations", IsNullable = false, Namespace = "")]
-        public bool DisableParallelRingingToNetworkLocations {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public bool DisableParallelRingingToNetworkLocations
+        {
             get => _disableParallelRingingToNetworkLocations;
-            set {
+            set
+            {
                 DisableParallelRingingToNetworkLocationsSpecified = true;
                 _disableParallelRingingToNetworkLocations = value;
             }
@@ -147,13 +186,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DisableParallelRingingToNetworkLocationsSpecified { get; set; }
-        
+
         private bool _routeToVoiceMail;
 
         [XmlElement(ElementName = "routeToVoiceMail", IsNullable = false, Namespace = "")]
-        public bool RouteToVoiceMail {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public bool RouteToVoiceMail
+        {
             get => _routeToVoiceMail;
-            set {
+            set
+            {
                 RouteToVoiceMailSpecified = true;
                 _routeToVoiceMail = value;
             }
@@ -161,13 +204,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RouteToVoiceMailSpecified { get; set; }
-        
+
         private bool _playNewPhoneNumber;
 
         [XmlElement(ElementName = "playNewPhoneNumber", IsNullable = false, Namespace = "")]
-        public bool PlayNewPhoneNumber {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public bool PlayNewPhoneNumber
+        {
             get => _playNewPhoneNumber;
-            set {
+            set
+            {
                 PlayNewPhoneNumberSpecified = true;
                 _playNewPhoneNumber = value;
             }
@@ -175,13 +222,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayNewPhoneNumberSpecified { get; set; }
-        
+
         private string _newPhoneNumber;
 
         [XmlElement(ElementName = "newPhoneNumber", IsNullable = true, Namespace = "")]
-        public string NewPhoneNumber {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string NewPhoneNumber
+        {
             get => _newPhoneNumber;
-            set {
+            set
+            {
                 NewPhoneNumberSpecified = true;
                 _newPhoneNumber = value;
             }
@@ -189,13 +242,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewPhoneNumberSpecified { get; set; }
-        
+
         private bool _transferOnZeroToPhoneNumber;
 
         [XmlElement(ElementName = "transferOnZeroToPhoneNumber", IsNullable = false, Namespace = "")]
-        public bool TransferOnZeroToPhoneNumber {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public bool TransferOnZeroToPhoneNumber
+        {
             get => _transferOnZeroToPhoneNumber;
-            set {
+            set
+            {
                 TransferOnZeroToPhoneNumberSpecified = true;
                 _transferOnZeroToPhoneNumber = value;
             }
@@ -203,13 +260,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TransferOnZeroToPhoneNumberSpecified { get; set; }
-        
+
         private string _transferPhoneNumber;
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
-        public string TransferPhoneNumber {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string TransferPhoneNumber
+        {
             get => _transferPhoneNumber;
-            set {
+            set
+            {
                 TransferPhoneNumberSpecified = true;
                 _transferPhoneNumber = value;
             }
@@ -217,13 +280,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TransferPhoneNumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.InterceptOutboundCall _outboundCallMode;
 
         [XmlElement(ElementName = "outboundCallMode", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.InterceptOutboundCall OutboundCallMode {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public BroadWorksConnector.Ocip.Models.InterceptOutboundCall OutboundCallMode
+        {
             get => _outboundCallMode;
-            set {
+            set
+            {
                 OutboundCallModeSpecified = true;
                 _outboundCallMode = value;
             }
@@ -231,13 +298,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OutboundCallModeSpecified { get; set; }
-        
+
         private bool _exemptOutboundMobilityCalls;
 
         [XmlElement(ElementName = "exemptOutboundMobilityCalls", IsNullable = false, Namespace = "")]
-        public bool ExemptOutboundMobilityCalls {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public bool ExemptOutboundMobilityCalls
+        {
             get => _exemptOutboundMobilityCalls;
-            set {
+            set
+            {
                 ExemptOutboundMobilityCallsSpecified = true;
                 _exemptOutboundMobilityCalls = value;
             }
@@ -245,13 +316,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExemptOutboundMobilityCallsSpecified { get; set; }
-        
+
         private bool _rerouteOutboundCalls;
 
         [XmlElement(ElementName = "rerouteOutboundCalls", IsNullable = false, Namespace = "")]
-        public bool RerouteOutboundCalls {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        public bool RerouteOutboundCalls
+        {
             get => _rerouteOutboundCalls;
-            set {
+            set
+            {
                 RerouteOutboundCallsSpecified = true;
                 _rerouteOutboundCalls = value;
             }
@@ -259,13 +334,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RerouteOutboundCallsSpecified { get; set; }
-        
+
         private string _outboundReroutePhoneNumber;
 
         [XmlElement(ElementName = "outboundReroutePhoneNumber", IsNullable = true, Namespace = "")]
-        public string OutboundReroutePhoneNumber {
+        [Optional]
+        [Group(@"88893c72abbbb9aaf5aecca970191d94:327")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string OutboundReroutePhoneNumber
+        {
             get => _outboundReroutePhoneNumber;
-            set {
+            set
+            {
                 OutboundReroutePhoneNumberSpecified = true;
                 _outboundReroutePhoneNumber = value;
             }
@@ -273,6 +354,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OutboundReroutePhoneNumberSpecified { get; set; }
-        
+
     }
 }

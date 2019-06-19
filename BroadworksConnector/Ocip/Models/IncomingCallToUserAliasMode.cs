@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// User alias usage mode for AS translations on incoming calls.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum IncomingCallToUserAliasMode    {
-            [XmlEnum(Name = "Enabled")]
+    public enum IncomingCallToUserAliasMode
+    {
+        [XmlEnum(Name = "Enabled")]
         Enabled,
-            [XmlEnum(Name = "ExplicitAlias")]
+        [XmlEnum(Name = "ExplicitAlias")]
         ExplicitAlias,
-            [XmlEnum(Name = "Disabled")]
+        [XmlEnum(Name = "Disabled")]
         Disabled,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,16 +11,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SystemMaliciousCallTraceGetUserListResponse or an
     /// ErrorResponse.
     /// Replaced By: SystemMaliciousCallTraceGetRequest
-        /// <see cref="SystemMaliciousCallTraceGetUserListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemMaliciousCallTraceGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemMaliciousCallTraceGetUserListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemMaliciousCallTraceGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:15599""}]")]
     public class SystemMaliciousCallTraceGetUserListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,13 +10,13 @@ namespace BroadWorksConnector.Ocip.Models
     /// The sort criteria specifies the extension as the column for
     /// the sort, whether the sort is ascending or descending, and whether the
     /// sort is case sensitive.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""58293b6da8bb02a6430b3eb1beb91194:362""}]")]
     public class SortByExtension : BroadWorksConnector.Ocip.Models.SortCriteria
     {
 
-        
     }
 }

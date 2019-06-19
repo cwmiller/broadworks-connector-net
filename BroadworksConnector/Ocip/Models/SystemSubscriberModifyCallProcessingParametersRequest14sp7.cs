@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -20,22 +22,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// bypassTerminationLoopDetection
     /// honorCLIDBlockingForEmergencyCalls
     /// useUnicodeIdentityName
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:17111""}]")]
     public class SystemSubscriberModifyCallProcessingParametersRequest14sp7 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private bool _isExtendedCallingLineIdActive;
 
         [XmlElement(ElementName = "isExtendedCallingLineIdActive", IsNullable = false, Namespace = "")]
-        public bool IsExtendedCallingLineIdActive {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17111")]
+        public bool IsExtendedCallingLineIdActive
+        {
             get => _isExtendedCallingLineIdActive;
-            set {
+            set
+            {
                 IsExtendedCallingLineIdActiveSpecified = true;
                 _isExtendedCallingLineIdActive = value;
             }
@@ -43,13 +49,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsExtendedCallingLineIdActiveSpecified { get; set; }
-        
+
         private bool _isRingTimeOutActive;
 
         [XmlElement(ElementName = "isRingTimeOutActive", IsNullable = false, Namespace = "")]
-        public bool IsRingTimeOutActive {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17111")]
+        public bool IsRingTimeOutActive
+        {
             get => _isRingTimeOutActive;
-            set {
+            set
+            {
                 IsRingTimeOutActiveSpecified = true;
                 _isRingTimeOutActive = value;
             }
@@ -57,13 +67,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsRingTimeOutActiveSpecified { get; set; }
-        
+
         private int _ringTimeoutSeconds;
 
         [XmlElement(ElementName = "ringTimeoutSeconds", IsNullable = false, Namespace = "")]
-        public int RingTimeoutSeconds {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17111")]
+        [MinInclusive(1)]
+        [MaxInclusive(180)]
+        public int RingTimeoutSeconds
+        {
             get => _ringTimeoutSeconds;
-            set {
+            set
+            {
                 RingTimeoutSecondsSpecified = true;
                 _ringTimeoutSeconds = value;
             }
@@ -71,13 +87,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RingTimeoutSecondsSpecified { get; set; }
-        
+
         private bool _allowEmergencyRemoteOfficeOriginations;
 
         [XmlElement(ElementName = "allowEmergencyRemoteOfficeOriginations", IsNullable = false, Namespace = "")]
-        public bool AllowEmergencyRemoteOfficeOriginations {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17111")]
+        public bool AllowEmergencyRemoteOfficeOriginations
+        {
             get => _allowEmergencyRemoteOfficeOriginations;
-            set {
+            set
+            {
                 AllowEmergencyRemoteOfficeOriginationsSpecified = true;
                 _allowEmergencyRemoteOfficeOriginations = value;
             }
@@ -85,13 +105,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowEmergencyRemoteOfficeOriginationsSpecified { get; set; }
-        
+
         private int _maxNoAnswerNumberOfRings;
 
         [XmlElement(ElementName = "maxNoAnswerNumberOfRings", IsNullable = false, Namespace = "")]
-        public int MaxNoAnswerNumberOfRings {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17111")]
+        [MinInclusive(6)]
+        [MaxInclusive(20)]
+        public int MaxNoAnswerNumberOfRings
+        {
             get => _maxNoAnswerNumberOfRings;
-            set {
+            set
+            {
                 MaxNoAnswerNumberOfRingsSpecified = true;
                 _maxNoAnswerNumberOfRings = value;
             }
@@ -99,13 +125,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxNoAnswerNumberOfRingsSpecified { get; set; }
-        
+
         private int _minNoAnswerNumberOfRings;
 
         [XmlElement(ElementName = "minNoAnswerNumberOfRings", IsNullable = false, Namespace = "")]
-        public int MinNoAnswerNumberOfRings {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17111")]
+        [MinInclusive(2)]
+        [MaxInclusive(20)]
+        public int MinNoAnswerNumberOfRings
+        {
             get => _minNoAnswerNumberOfRings;
-            set {
+            set
+            {
                 MinNoAnswerNumberOfRingsSpecified = true;
                 _minNoAnswerNumberOfRings = value;
             }
@@ -113,13 +145,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MinNoAnswerNumberOfRingsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.IncomingCallToUserAliasMode _incomingCallToUserAliasMode;
 
         [XmlElement(ElementName = "incomingCallToUserAliasMode", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.IncomingCallToUserAliasMode IncomingCallToUserAliasMode {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17111")]
+        public BroadWorksConnector.Ocip.Models.IncomingCallToUserAliasMode IncomingCallToUserAliasMode
+        {
             get => _incomingCallToUserAliasMode;
-            set {
+            set
+            {
                 IncomingCallToUserAliasModeSpecified = true;
                 _incomingCallToUserAliasMode = value;
             }
@@ -127,13 +163,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncomingCallToUserAliasModeSpecified { get; set; }
-        
+
         private bool _bypassTerminationLoopDetection;
 
         [XmlElement(ElementName = "bypassTerminationLoopDetection", IsNullable = false, Namespace = "")]
-        public bool BypassTerminationLoopDetection {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17111")]
+        public bool BypassTerminationLoopDetection
+        {
             get => _bypassTerminationLoopDetection;
-            set {
+            set
+            {
                 BypassTerminationLoopDetectionSpecified = true;
                 _bypassTerminationLoopDetection = value;
             }
@@ -141,13 +181,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BypassTerminationLoopDetectionSpecified { get; set; }
-        
+
         private bool _honorCLIDBlockingForEmergencyCalls;
 
         [XmlElement(ElementName = "honorCLIDBlockingForEmergencyCalls", IsNullable = false, Namespace = "")]
-        public bool HonorCLIDBlockingForEmergencyCalls {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17111")]
+        public bool HonorCLIDBlockingForEmergencyCalls
+        {
             get => _honorCLIDBlockingForEmergencyCalls;
-            set {
+            set
+            {
                 HonorCLIDBlockingForEmergencyCallsSpecified = true;
                 _honorCLIDBlockingForEmergencyCalls = value;
             }
@@ -155,13 +199,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HonorCLIDBlockingForEmergencyCallsSpecified { get; set; }
-        
+
         private bool _useUnicodeIdentityName;
 
         [XmlElement(ElementName = "useUnicodeIdentityName", IsNullable = false, Namespace = "")]
-        public bool UseUnicodeIdentityName {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17111")]
+        public bool UseUnicodeIdentityName
+        {
             get => _useUnicodeIdentityName;
-            set {
+            set
+            {
                 UseUnicodeIdentityNameSpecified = true;
                 _useUnicodeIdentityName = value;
             }
@@ -169,6 +217,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseUnicodeIdentityNameSpecified { get; set; }
-        
+
     }
 }

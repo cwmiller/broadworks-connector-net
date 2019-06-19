@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Service Provider Administrator's policy for accessing access devices.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServiceProviderAdminAccessDeviceAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum ServiceProviderAdminAccessDeviceAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Associate User With Device")]
+        [XmlEnum(Name = "Associate User With Device")]
         AssociateUserWithDevice,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-     }
+    }
 }

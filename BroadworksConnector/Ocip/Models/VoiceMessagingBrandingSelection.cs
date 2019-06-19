@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Branding Selection.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum VoiceMessagingBrandingSelection    {
-            [XmlEnum(Name = "Default")]
+    public enum VoiceMessagingBrandingSelection
+    {
+        [XmlEnum(Name = "Default")]
         Default,
-            [XmlEnum(Name = "Branded")]
+        [XmlEnum(Name = "Branded")]
         Branded,
-     }
+    }
 }

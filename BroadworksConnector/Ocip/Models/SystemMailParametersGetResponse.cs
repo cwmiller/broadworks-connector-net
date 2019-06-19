@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemMailParametersGetListRequest.
     /// Contains a list of system Mail parameters.
-        /// <see cref="SystemMailParametersGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemMailParametersGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38852""}]")]
     public class SystemMailParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _primaryServerNetAddress;
 
         [XmlElement(ElementName = "primaryServerNetAddress", IsNullable = false, Namespace = "")]
-        public string PrimaryServerNetAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38852")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string PrimaryServerNetAddress
+        {
             get => _primaryServerNetAddress;
-            set {
+            set
+            {
                 PrimaryServerNetAddressSpecified = true;
                 _primaryServerNetAddress = value;
             }
@@ -29,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrimaryServerNetAddressSpecified { get; set; }
-        
+
         private string _secondaryServerNetAddress;
 
         [XmlElement(ElementName = "secondaryServerNetAddress", IsNullable = false, Namespace = "")]
-        public string SecondaryServerNetAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38852")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string SecondaryServerNetAddress
+        {
             get => _secondaryServerNetAddress;
-            set {
+            set
+            {
                 SecondaryServerNetAddressSpecified = true;
                 _secondaryServerNetAddress = value;
             }
@@ -43,13 +57,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SecondaryServerNetAddressSpecified { get; set; }
-        
+
         private string _defaultFromAddress;
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
-        public string DefaultFromAddress {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38852")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string DefaultFromAddress
+        {
             get => _defaultFromAddress;
-            set {
+            set
+            {
                 DefaultFromAddressSpecified = true;
                 _defaultFromAddress = value;
             }
@@ -57,13 +76,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultFromAddressSpecified { get; set; }
-        
+
         private string _defaultSubject;
 
         [XmlElement(ElementName = "defaultSubject", IsNullable = false, Namespace = "")]
-        public string DefaultSubject {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38852")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string DefaultSubject
+        {
             get => _defaultSubject;
-            set {
+            set
+            {
                 DefaultSubjectSpecified = true;
                 _defaultSubject = value;
             }
@@ -71,13 +96,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultSubjectSpecified { get; set; }
-        
+
         private bool _supportDNSSRVForMailServerAccess;
 
         [XmlElement(ElementName = "supportDNSSRVForMailServerAccess", IsNullable = false, Namespace = "")]
-        public bool SupportDNSSRVForMailServerAccess {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38852")]
+        public bool SupportDNSSRVForMailServerAccess
+        {
             get => _supportDNSSRVForMailServerAccess;
-            set {
+            set
+            {
                 SupportDNSSRVForMailServerAccessSpecified = true;
                 _supportDNSSRVForMailServerAccess = value;
             }
@@ -85,6 +113,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SupportDNSSRVForMailServerAccessSpecified { get; set; }
-        
+
     }
 }

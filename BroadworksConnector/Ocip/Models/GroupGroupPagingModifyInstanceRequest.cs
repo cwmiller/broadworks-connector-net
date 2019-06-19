@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify a Group Paging instance.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:411""}]")]
     public class GroupGroupPagingModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"0d36df8c109e3ea7324f79031368c661:411")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
+        [Optional]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:411")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
+        {
             get => _serviceInstanceProfile;
-            set {
+            set
+            {
                 ServiceInstanceProfileSpecified = true;
                 _serviceInstanceProfile = value;
             }
@@ -44,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceInstanceProfileSpecified { get; set; }
-        
+
         private int _confirmationToneTimeoutSeconds;
 
         [XmlElement(ElementName = "confirmationToneTimeoutSeconds", IsNullable = false, Namespace = "")]
-        public int ConfirmationToneTimeoutSeconds {
+        [Optional]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:411")]
+        [MinInclusive(1)]
+        [MaxInclusive(20)]
+        public int ConfirmationToneTimeoutSeconds
+        {
             get => _confirmationToneTimeoutSeconds;
-            set {
+            set
+            {
                 ConfirmationToneTimeoutSecondsSpecified = true;
                 _confirmationToneTimeoutSeconds = value;
             }
@@ -58,13 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfirmationToneTimeoutSecondsSpecified { get; set; }
-        
+
         private bool _deliverOriginatorCLIDInstead;
 
         [XmlElement(ElementName = "deliverOriginatorCLIDInstead", IsNullable = false, Namespace = "")]
-        public bool DeliverOriginatorCLIDInstead {
+        [Optional]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:411")]
+        public bool DeliverOriginatorCLIDInstead
+        {
             get => _deliverOriginatorCLIDInstead;
-            set {
+            set
+            {
                 DeliverOriginatorCLIDInsteadSpecified = true;
                 _deliverOriginatorCLIDInstead = value;
             }
@@ -72,13 +93,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeliverOriginatorCLIDInsteadSpecified { get; set; }
-        
+
         private string _originatorCLIDPrefix;
 
         [XmlElement(ElementName = "originatorCLIDPrefix", IsNullable = true, Namespace = "")]
-        public string OriginatorCLIDPrefix {
+        [Optional]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:411")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string OriginatorCLIDPrefix
+        {
             get => _originatorCLIDPrefix;
-            set {
+            set
+            {
                 OriginatorCLIDPrefixSpecified = true;
                 _originatorCLIDPrefix = value;
             }
@@ -86,13 +113,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OriginatorCLIDPrefixSpecified { get; set; }
-        
+
         private string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        public string NetworkClassOfService {
+        [Optional]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:411")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string NetworkClassOfService
+        {
             get => _networkClassOfService;
-            set {
+            set
+            {
                 NetworkClassOfServiceSpecified = true;
                 _networkClassOfService = value;
             }
@@ -100,6 +133,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetworkClassOfServiceSpecified { get; set; }
-        
+
     }
 }

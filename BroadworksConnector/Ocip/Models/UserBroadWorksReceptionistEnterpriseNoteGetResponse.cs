@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to UserBroadWorksReceptionistEnterpriseNoteGetRequest.
-        /// <see cref="UserBroadWorksReceptionistEnterpriseNoteGetRequest"/>
-        /// </summary>
+    /// <see cref="UserBroadWorksReceptionistEnterpriseNoteGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb12998f4f9e45cedde01f08569f4c7c:254""}]")]
     public class UserBroadWorksReceptionistEnterpriseNoteGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _receptionistNote;
 
         [XmlElement(ElementName = "receptionistNote", IsNullable = false, Namespace = "")]
-        public string ReceptionistNote {
+        [Optional]
+        [Group(@"fb12998f4f9e45cedde01f08569f4c7c:254")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string ReceptionistNote
+        {
             get => _receptionistNote;
-            set {
+            set
+            {
                 ReceptionistNoteSpecified = true;
                 _receptionistNote = value;
             }
@@ -28,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReceptionistNoteSpecified { get; set; }
-        
+
     }
 }

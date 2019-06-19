@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify BroadWorks Receptionist - Enterprise settings.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb12998f4f9e45cedde01f08569f4c7c:81""}]")]
     public class SystemBroadWorksReceptionistEnterpriseModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private int _maxMonitoredUsers;
 
         [XmlElement(ElementName = "maxMonitoredUsers", IsNullable = false, Namespace = "")]
-        public int MaxMonitoredUsers {
+        [Optional]
+        [Group(@"fb12998f4f9e45cedde01f08569f4c7c:81")]
+        [MinInclusive(1)]
+        [MaxInclusive(1000)]
+        public int MaxMonitoredUsers
+        {
             get => _maxMonitoredUsers;
-            set {
+            set
+            {
                 MaxMonitoredUsersSpecified = true;
                 _maxMonitoredUsers = value;
             }
@@ -30,6 +38,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxMonitoredUsersSpecified { get; set; }
-        
+
     }
 }

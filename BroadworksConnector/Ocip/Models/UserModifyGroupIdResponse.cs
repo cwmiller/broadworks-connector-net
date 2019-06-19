@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to UserModifyGroupIdRequest.
     /// error indicates the failing conditions preventing the user move.
     /// impact indicates any change to user and group as the result of a user move.
-        /// <see cref="UserModifyGroupIdRequest"/>
-        /// </summary>
+    /// <see cref="UserModifyGroupIdRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2534""}]")]
     public class UserModifyGroupIdResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.UserMoveMessage> _error;
+        private List<BroadWorksConnector.Ocip.Models.UserMoveMessage> _error = new List<BroadWorksConnector.Ocip.Models.UserMoveMessage>();
 
         [XmlElement(ElementName = "error", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.UserMoveMessage> Error {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2534")]
+        public List<BroadWorksConnector.Ocip.Models.UserMoveMessage> Error
+        {
             get => _error;
-            set {
+            set
+            {
                 ErrorSpecified = true;
                 _error = value;
             }
@@ -30,13 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ErrorSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.UserMoveMessage> _impact;
+
+        private List<BroadWorksConnector.Ocip.Models.UserMoveMessage> _impact = new List<BroadWorksConnector.Ocip.Models.UserMoveMessage>();
 
         [XmlElement(ElementName = "impact", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.UserMoveMessage> Impact {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2534")]
+        public List<BroadWorksConnector.Ocip.Models.UserMoveMessage> Impact
+        {
             get => _impact;
-            set {
+            set
+            {
                 ImpactSpecified = true;
                 _impact = value;
             }
@@ -44,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ImpactSpecified { get; set; }
-        
+
     }
 }

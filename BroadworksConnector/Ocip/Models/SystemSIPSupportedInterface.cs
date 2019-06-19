@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Network Server types.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SystemSIPSupportedInterface    {
-            [XmlEnum(Name = "Access")]
+    public enum SystemSIPSupportedInterface
+    {
+        [XmlEnum(Name = "Access")]
         Access,
-            [XmlEnum(Name = "Network")]
+        [XmlEnum(Name = "Network")]
         Network,
-            [XmlEnum(Name = "Both")]
+        [XmlEnum(Name = "Both")]
         Both,
-     }
+    }
 }

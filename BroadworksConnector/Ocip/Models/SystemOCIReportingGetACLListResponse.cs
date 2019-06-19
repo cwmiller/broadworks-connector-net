@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to SystemOCIReportingACLListGetRequest.
     /// Contains a table with one row per access control list entry.
     /// The table columns are "Net Address", "Description" and "Restrict Messages".
-        /// <see cref="SystemOCIReportingACLListGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemOCIReportingACLListGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12614""}]")]
     public class SystemOCIReportingGetACLListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _ociReportingACLTable;
 
         [XmlElement(ElementName = "ociReportingACLTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable OciReportingACLTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12614")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable OciReportingACLTable
+        {
             get => _ociReportingACLTable;
-            set {
+            set
+            {
                 OciReportingACLTableSpecified = true;
                 _ociReportingACLTable = value;
             }
@@ -30,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OciReportingACLTableSpecified { get; set; }
-        
+
     }
 }

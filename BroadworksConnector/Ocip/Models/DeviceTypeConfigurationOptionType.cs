@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Device Type Configuration Option Type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DeviceTypeConfigurationOptionType    {
-            [XmlEnum(Name = "Not Supported")]
+    public enum DeviceTypeConfigurationOptionType
+    {
+        [XmlEnum(Name = "Not Supported")]
         NotSupported,
-            [XmlEnum(Name = "Device Management")]
+        [XmlEnum(Name = "Device Management")]
         DeviceManagement,
-            [XmlEnum(Name = "Legacy")]
+        [XmlEnum(Name = "Legacy")]
         Legacy,
-     }
+    }
 }

@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Date format for a call center enhanced reporting report.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterReportDateFormat    {
-            [XmlEnum(Name = "MMDDYYYY")]
+    public enum CallCenterReportDateFormat
+    {
+        [XmlEnum(Name = "MMDDYYYY")]
         MMDDYYYY,
-            [XmlEnum(Name = "DDMMYYYY")]
+        [XmlEnum(Name = "DDMMYYYY")]
         DDMMYYYY,
-     }
+    }
 }

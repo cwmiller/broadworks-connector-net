@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// CommPilot Express Voice Messaging Greeting Choices.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CommPilotExpressVoiceMailGreeting    {
-            [XmlEnum(Name = "No Answer")]
+    public enum CommPilotExpressVoiceMailGreeting
+    {
+        [XmlEnum(Name = "No Answer")]
         NoAnswer,
-            [XmlEnum(Name = "Unavailable")]
+        [XmlEnum(Name = "Unavailable")]
         Unavailable,
-     }
+    }
 }

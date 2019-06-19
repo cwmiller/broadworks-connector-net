@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to UserCollaborateInstantRoomGetRequest.
-        /// <see cref="UserCollaborateInstantRoomGetRequest"/>
-        /// </summary>
+    /// <see cref="UserCollaborateInstantRoomGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:684""}]")]
     public class UserCollaborateInstantRoomGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _roomName;
 
         [XmlElement(ElementName = "roomName", IsNullable = false, Namespace = "")]
-        public string RoomName {
+        [Optional]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:684")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string RoomName
+        {
             get => _roomName;
-            set {
+            set
+            {
                 RoomNameSpecified = true;
                 _roomName = value;
             }
@@ -28,13 +36,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RoomNameSpecified { get; set; }
-        
+
         private string _instantRoomStartTime;
 
         [XmlElement(ElementName = "instantRoomStartTime", IsNullable = false, Namespace = "")]
-        public string InstantRoomStartTime {
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:684")]
+        public string InstantRoomStartTime
+        {
             get => _instantRoomStartTime;
-            set {
+            set
+            {
                 InstantRoomStartTimeSpecified = true;
                 _instantRoomStartTime = value;
             }
@@ -42,13 +53,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool InstantRoomStartTimeSpecified { get; set; }
-        
+
         private string _instantRoomEndTime;
 
         [XmlElement(ElementName = "instantRoomEndTime", IsNullable = false, Namespace = "")]
-        public string InstantRoomEndTime {
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:684")]
+        public string InstantRoomEndTime
+        {
             get => _instantRoomEndTime;
-            set {
+            set
+            {
                 InstantRoomEndTimeSpecified = true;
                 _instantRoomEndTime = value;
             }
@@ -56,6 +70,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool InstantRoomEndTimeSpecified { get; set; }
-        
+
     }
 }

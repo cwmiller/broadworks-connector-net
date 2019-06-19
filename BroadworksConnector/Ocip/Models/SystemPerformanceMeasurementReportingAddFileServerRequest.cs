@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a performance measurements reporting ftp server.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13120""}]")]
     public class SystemPerformanceMeasurementReportingAddFileServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _ftpHostNetAddress;
 
         [XmlElement(ElementName = "ftpHostNetAddress", IsNullable = false, Namespace = "")]
-        public string FtpHostNetAddress {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13120")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string FtpHostNetAddress
+        {
             get => _ftpHostNetAddress;
-            set {
+            set
+            {
                 FtpHostNetAddressSpecified = true;
                 _ftpHostNetAddress = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FtpHostNetAddressSpecified { get; set; }
-        
+
         private string _ftpUserId;
 
         [XmlElement(ElementName = "ftpUserId", IsNullable = false, Namespace = "")]
-        public string FtpUserId {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13120")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string FtpUserId
+        {
             get => _ftpUserId;
-            set {
+            set
+            {
                 FtpUserIdSpecified = true;
                 _ftpUserId = value;
             }
@@ -44,13 +56,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FtpUserIdSpecified { get; set; }
-        
+
         private string _ftpUserPassword;
 
         [XmlElement(ElementName = "ftpUserPassword", IsNullable = false, Namespace = "")]
-        public string FtpUserPassword {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13120")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string FtpUserPassword
+        {
             get => _ftpUserPassword;
-            set {
+            set
+            {
                 FtpUserPasswordSpecified = true;
                 _ftpUserPassword = value;
             }
@@ -58,13 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FtpUserPasswordSpecified { get; set; }
-        
+
         private bool _passiveFTP;
 
         [XmlElement(ElementName = "passiveFTP", IsNullable = false, Namespace = "")]
-        public bool PassiveFTP {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13120")]
+        public bool PassiveFTP
+        {
             get => _passiveFTP;
-            set {
+            set
+            {
                 PassiveFTPSpecified = true;
                 _passiveFTP = value;
             }
@@ -72,6 +93,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PassiveFTPSpecified { get; set; }
-        
+
     }
 }

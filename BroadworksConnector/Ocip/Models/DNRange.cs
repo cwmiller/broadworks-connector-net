@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Directory number range. The minimum and maximum values are inclusive.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class DNRange 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2112""}]")]
+    public class DNRange
     {
 
-        
         private string _minPhoneNumber;
 
         [XmlElement(ElementName = "minPhoneNumber", IsNullable = false, Namespace = "")]
-        public string MinPhoneNumber {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2112")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string MinPhoneNumber
+        {
             get => _minPhoneNumber;
-            set {
+            set
+            {
                 MinPhoneNumberSpecified = true;
                 _minPhoneNumber = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MinPhoneNumberSpecified { get; set; }
-        
+
         private string _maxPhoneNumber;
 
         [XmlElement(ElementName = "maxPhoneNumber", IsNullable = false, Namespace = "")]
-        public string MaxPhoneNumber {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2112")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string MaxPhoneNumber
+        {
             get => _maxPhoneNumber;
-            set {
+            set
+            {
                 MaxPhoneNumberSpecified = true;
                 _maxPhoneNumber = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxPhoneNumberSpecified { get; set; }
-        
+
     }
 }

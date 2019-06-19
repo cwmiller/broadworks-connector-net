@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for Single Dialog Behavior
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SIPSingleDialogBehavior    {
-            [XmlEnum(Name = "Single Dialog")]
+    public enum SIPSingleDialogBehavior
+    {
+        [XmlEnum(Name = "Single Dialog")]
         SingleDialog,
-            [XmlEnum(Name = "Single Dialog With UPDATE")]
+        [XmlEnum(Name = "Single Dialog With UPDATE")]
         SingleDialogWithUPDATE,
-            [XmlEnum(Name = "Single Dialog With UPDATE If Allowed")]
+        [XmlEnum(Name = "Single Dialog With UPDATE If Allowed")]
         SingleDialogWithUPDATEIfAllowed,
-     }
+    }
 }

@@ -10,13 +10,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// or enterprise.
     /// The Group option keeps groups completely independent. Users can only log in to their voice portal
     /// using the access number for their group.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServiceProviderVoicePortalScope    {
-            [XmlEnum(Name = "Group")]
+    public enum ServiceProviderVoicePortalScope
+    {
+        [XmlEnum(Name = "Group")]
         Group,
-            [XmlEnum(Name = "Service Provider")]
+        [XmlEnum(Name = "Service Provider")]
         ServiceProvider,
-     }
+    }
 }

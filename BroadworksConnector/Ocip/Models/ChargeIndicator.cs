@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Possible values for Charge Indicator.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ChargeIndicator    {
-            [XmlEnum(Name = "Charge")]
+    public enum ChargeIndicator
+    {
+        [XmlEnum(Name = "Charge")]
         Charge,
-            [XmlEnum(Name = "No Charge")]
+        [XmlEnum(Name = "No Charge")]
         NoCharge,
-     }
+    }
 }

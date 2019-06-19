@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Extension range. The minimum and maximum values are inclusive.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ExtensionRange17 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2324""}]")]
+    public class ExtensionRange17
     {
 
-        
         private string _minExtension;
 
         [XmlElement(ElementName = "minExtension", IsNullable = false, Namespace = "")]
-        public string MinExtension {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2324")]
+        [MinLength(2)]
+        [MaxLength(20)]
+        public string MinExtension
+        {
             get => _minExtension;
-            set {
+            set
+            {
                 MinExtensionSpecified = true;
                 _minExtension = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MinExtensionSpecified { get; set; }
-        
+
         private string _maxExtension;
 
         [XmlElement(ElementName = "maxExtension", IsNullable = false, Namespace = "")]
-        public string MaxExtension {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2324")]
+        [MinLength(2)]
+        [MaxLength(20)]
+        public string MaxExtension
+        {
             get => _maxExtension;
-            set {
+            set
+            {
                 MaxExtensionSpecified = true;
                 _maxExtension = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxExtensionSpecified { get; set; }
-        
+
     }
 }

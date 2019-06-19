@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// CommPilot Express type to transfer to voice mail or forward to a number
     /// with certain exceptions used in the context of a modify.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CommPilotExpressRedirectionWithExceptionModify 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8c204d784d1904d9eeea996d46de69be:244""}]")]
+    public class CommPilotExpressRedirectionWithExceptionModify
     {
 
-        
         private bool _sendCallsToVoiceMailExceptExcludedNumbers;
 
         [XmlElement(ElementName = "sendCallsToVoiceMailExceptExcludedNumbers", IsNullable = false, Namespace = "")]
-        public bool SendCallsToVoiceMailExceptExcludedNumbers {
+        [Optional]
+        [Group(@"8c204d784d1904d9eeea996d46de69be:244")]
+        public bool SendCallsToVoiceMailExceptExcludedNumbers
+        {
             get => _sendCallsToVoiceMailExceptExcludedNumbers;
-            set {
+            set
+            {
                 SendCallsToVoiceMailExceptExcludedNumbersSpecified = true;
                 _sendCallsToVoiceMailExceptExcludedNumbers = value;
             }
@@ -28,13 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SendCallsToVoiceMailExceptExcludedNumbersSpecified { get; set; }
-        
+
         private string _excludedPhoneNumber01;
 
         [XmlElement(ElementName = "excludedPhoneNumber01", IsNullable = true, Namespace = "")]
-        public string ExcludedPhoneNumber01 {
+        [Optional]
+        [Group(@"8c204d784d1904d9eeea996d46de69be:244")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string ExcludedPhoneNumber01
+        {
             get => _excludedPhoneNumber01;
-            set {
+            set
+            {
                 ExcludedPhoneNumber01Specified = true;
                 _excludedPhoneNumber01 = value;
             }
@@ -42,13 +54,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExcludedPhoneNumber01Specified { get; set; }
-        
+
         private string _excludedPhoneNumber02;
 
         [XmlElement(ElementName = "excludedPhoneNumber02", IsNullable = true, Namespace = "")]
-        public string ExcludedPhoneNumber02 {
+        [Optional]
+        [Group(@"8c204d784d1904d9eeea996d46de69be:244")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string ExcludedPhoneNumber02
+        {
             get => _excludedPhoneNumber02;
-            set {
+            set
+            {
                 ExcludedPhoneNumber02Specified = true;
                 _excludedPhoneNumber02 = value;
             }
@@ -56,13 +74,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExcludedPhoneNumber02Specified { get; set; }
-        
+
         private string _excludedPhoneNumber03;
 
         [XmlElement(ElementName = "excludedPhoneNumber03", IsNullable = true, Namespace = "")]
-        public string ExcludedPhoneNumber03 {
+        [Optional]
+        [Group(@"8c204d784d1904d9eeea996d46de69be:244")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string ExcludedPhoneNumber03
+        {
             get => _excludedPhoneNumber03;
-            set {
+            set
+            {
                 ExcludedPhoneNumber03Specified = true;
                 _excludedPhoneNumber03 = value;
             }
@@ -70,13 +94,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExcludedPhoneNumber03Specified { get; set; }
-        
+
         private string _forwardExcludedNumbersTo;
 
         [XmlElement(ElementName = "forwardExcludedNumbersTo", IsNullable = true, Namespace = "")]
-        public string ForwardExcludedNumbersTo {
+        [Optional]
+        [Group(@"8c204d784d1904d9eeea996d46de69be:244")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ForwardExcludedNumbersTo
+        {
             get => _forwardExcludedNumbersTo;
-            set {
+            set
+            {
                 ForwardExcludedNumbersToSpecified = true;
                 _forwardExcludedNumbersTo = value;
             }
@@ -84,6 +114,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ForwardExcludedNumbersToSpecified { get; set; }
-        
+
     }
 }

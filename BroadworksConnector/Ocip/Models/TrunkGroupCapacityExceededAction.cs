@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Trunk Group capacity exceeded action.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupCapacityExceededAction    {
-            [XmlEnum(Name = "Forward")]
+    public enum TrunkGroupCapacityExceededAction
+    {
+        [XmlEnum(Name = "Forward")]
         Forward,
-            [XmlEnum(Name = "Reroute")]
+        [XmlEnum(Name = "Reroute")]
         Reroute,
-     }
+    }
 }

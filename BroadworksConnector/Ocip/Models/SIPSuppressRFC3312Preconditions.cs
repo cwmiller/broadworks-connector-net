@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for SIP Suppress RFC3312 Preconditions
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SIPSuppressRFC3312Preconditions    {
-            [XmlEnum(Name = "Always")]
+    public enum SIPSuppressRFC3312Preconditions
+    {
+        [XmlEnum(Name = "Always")]
         Always,
-            [XmlEnum(Name = "Never")]
+        [XmlEnum(Name = "Never")]
         Never,
-            [XmlEnum(Name = "Suppress If Single Dialog")]
+        [XmlEnum(Name = "Suppress If Single Dialog")]
         SuppressIfSingleDialog,
-     }
+    }
 }

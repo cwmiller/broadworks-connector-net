@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Direct Route Outgoing DTG policy to access devices.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DirectRouteOutgoingDTGPolicy    {
-            [XmlEnum(Name = "Direct Route DTG")]
+    public enum DirectRouteOutgoingDTGPolicy
+    {
+        [XmlEnum(Name = "Direct Route DTG")]
         DirectRouteDTG,
-            [XmlEnum(Name = "Trunk Group DTG")]
+        [XmlEnum(Name = "Trunk Group DTG")]
         TrunkGroupDTG,
-     }
+    }
 }

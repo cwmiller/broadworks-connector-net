@@ -1,25 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemConfigurableFileSystemModifyRequestProtocolWebDAV 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6328""}]")]
+    public class SystemConfigurableFileSystemModifyRequestProtocolWebDAV
     {
 
-        
         private bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
-        public bool Secure {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6328")]
+        public bool Secure
+        {
             get => _secure;
-            set {
+            set
+            {
                 SecureSpecified = true;
                 _secure = value;
             }
@@ -27,13 +33,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SecureSpecified { get; set; }
-        
+
         private string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = true, Namespace = "")]
-        public string UserName {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6328")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string UserName
+        {
             get => _userName;
-            set {
+            set
+            {
                 UserNameSpecified = true;
                 _userName = value;
             }
@@ -41,13 +53,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserNameSpecified { get; set; }
-        
+
         private string _password;
 
         [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
-        public string Password {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6328")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Password
+        {
             get => _password;
-            set {
+            set
+            {
                 PasswordSpecified = true;
                 _password = value;
             }
@@ -55,13 +73,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PasswordSpecified { get; set; }
-        
+
         private string _fileServerFQDN;
 
         [XmlElement(ElementName = "fileServerFQDN", IsNullable = false, Namespace = "")]
-        public string FileServerFQDN {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6328")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string FileServerFQDN
+        {
             get => _fileServerFQDN;
-            set {
+            set
+            {
                 FileServerFQDNSpecified = true;
                 _fileServerFQDN = value;
             }
@@ -69,6 +93,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FileServerFQDNSpecified { get; set; }
-        
+
     }
 }

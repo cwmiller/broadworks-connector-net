@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The device configured roaming mode.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum RoamingMode    {
-            [XmlEnum(Name = "CDMA")]
+    public enum RoamingMode
+    {
+        [XmlEnum(Name = "CDMA")]
         CDMA,
-            [XmlEnum(Name = "GSM")]
+        [XmlEnum(Name = "GSM")]
         GSM,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

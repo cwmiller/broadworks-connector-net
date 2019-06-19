@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Location Network Device Option Type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum LocationNetworkType    {
-            [XmlEnum(Name = "Fixed")]
+    public enum LocationNetworkType
+    {
+        [XmlEnum(Name = "Fixed")]
         Fixed,
-            [XmlEnum(Name = "Mobile")]
+        [XmlEnum(Name = "Mobile")]
         Mobile,
-     }
+    }
 }

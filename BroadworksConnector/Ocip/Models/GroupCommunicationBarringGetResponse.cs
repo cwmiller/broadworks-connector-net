@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupCommunicationBarringGetRequest.
-        /// <see cref="GroupCommunicationBarringGetRequest"/>
-        /// </summary>
+    /// <see cref="GroupCommunicationBarringGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:2494""}]")]
     public class GroupCommunicationBarringGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _useDefaultServiceProviderProfile;
 
         [XmlElement(ElementName = "useDefaultServiceProviderProfile", IsNullable = false, Namespace = "")]
-        public bool UseDefaultServiceProviderProfile {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2494")]
+        public bool UseDefaultServiceProviderProfile
+        {
             get => _useDefaultServiceProviderProfile;
-            set {
+            set
+            {
                 UseDefaultServiceProviderProfileSpecified = true;
                 _useDefaultServiceProviderProfile = value;
             }
@@ -28,13 +33,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseDefaultServiceProviderProfileSpecified { get; set; }
-        
+
         private string _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-        public string Profile {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2494")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Profile
+        {
             get => _profile;
-            set {
+            set
+            {
                 ProfileSpecified = true;
                 _profile = value;
             }
@@ -42,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProfileSpecified { get; set; }
-        
+
     }
 }

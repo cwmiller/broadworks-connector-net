@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Modify security classification parameters.
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// NOTE: The security classifications must be specified in order of priority. The command fails if all the security classifications defined for the system are not provided.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b3afea8308b7fdaab8d385357ca9c2d:294""}]")]
     public class SystemSecurityClassificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private int _meetMeAnncThreshold;
 
         [XmlElement(ElementName = "meetMeAnncThreshold", IsNullable = false, Namespace = "")]
-        public int MeetMeAnncThreshold {
+        [Optional]
+        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:294")]
+        [MinInclusive(1)]
+        [MaxInclusive(30)]
+        public int MeetMeAnncThreshold
+        {
             get => _meetMeAnncThreshold;
-            set {
+            set
+            {
                 MeetMeAnncThresholdSpecified = true;
                 _meetMeAnncThreshold = value;
             }
@@ -31,13 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MeetMeAnncThresholdSpecified { get; set; }
-        
+
         private bool _playTrunkUserSecurityClassificationAnnouncement;
 
         [XmlElement(ElementName = "playTrunkUserSecurityClassificationAnnouncement", IsNullable = false, Namespace = "")]
-        public bool PlayTrunkUserSecurityClassificationAnnouncement {
+        [Optional]
+        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:294")]
+        public bool PlayTrunkUserSecurityClassificationAnnouncement
+        {
             get => _playTrunkUserSecurityClassificationAnnouncement;
-            set {
+            set
+            {
                 PlayTrunkUserSecurityClassificationAnnouncementSpecified = true;
                 _playTrunkUserSecurityClassificationAnnouncement = value;
             }
@@ -45,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayTrunkUserSecurityClassificationAnnouncementSpecified { get; set; }
-        
-        private List<string> _securityClassificationName;
+
+        private List<string> _securityClassificationName = new List<string>();
 
         [XmlElement(ElementName = "securityClassificationName", IsNullable = false, Namespace = "")]
-        public List<string> SecurityClassificationName {
+        [Optional]
+        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:294")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> SecurityClassificationName
+        {
             get => _securityClassificationName;
-            set {
+            set
+            {
                 SecurityClassificationNameSpecified = true;
                 _securityClassificationName = value;
             }
@@ -59,6 +77,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SecurityClassificationNameSpecified { get; set; }
-        
+
     }
 }

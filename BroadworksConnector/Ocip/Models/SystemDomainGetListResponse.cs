@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,21 +13,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// systemDefaultDomain
     /// 
     /// Replaced by SystemDomainGetListResponse22 in AS data mode.
-        /// <see cref="SystemDomainGetListResponse22"/>
-        /// </summary>
+    /// <see cref="SystemDomainGetListResponse22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6297""}]")]
     public class SystemDomainGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _systemDefaultDomain;
 
         [XmlElement(ElementName = "systemDefaultDomain", IsNullable = false, Namespace = "")]
-        public string SystemDefaultDomain {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6297")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string SystemDefaultDomain
+        {
             get => _systemDefaultDomain;
-            set {
+            set
+            {
                 SystemDefaultDomainSpecified = true;
                 _systemDefaultDomain = value;
             }
@@ -33,13 +41,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SystemDefaultDomainSpecified { get; set; }
-        
-        private List<string> _domain;
+
+        private List<string> _domain = new List<string>();
 
         [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
-        public List<string> Domain {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6297")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> Domain
+        {
             get => _domain;
-            set {
+            set
+            {
                 DomainSpecified = true;
                 _domain = value;
             }
@@ -47,6 +61,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DomainSpecified { get; set; }
-        
+
     }
 }

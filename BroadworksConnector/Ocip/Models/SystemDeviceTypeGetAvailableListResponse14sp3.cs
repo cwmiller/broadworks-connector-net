@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemDeviceTypeGetAvailableListRequest14sp3.
-        /// <see cref="SystemDeviceTypeGetAvailableListRequest14sp3"/>
-        /// </summary>
+    /// <see cref="SystemDeviceTypeGetAvailableListRequest14sp3"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26077""}]")]
     public class SystemDeviceTypeGetAvailableListResponse14sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _deviceType;
+        private List<string> _deviceType = new List<string>();
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        public List<string> DeviceType {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26077")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> DeviceType
+        {
             get => _deviceType;
-            set {
+            set
+            {
                 DeviceTypeSpecified = true;
                 _deviceType = value;
             }
@@ -28,13 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceTypeSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponse14sp3TypeInfo> _typeInfo;
+
+        private List<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponse14sp3TypeInfo> _typeInfo = new List<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponse14sp3TypeInfo>();
 
         [XmlElement(ElementName = "typeInfo", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponse14sp3TypeInfo> TypeInfo {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26077")]
+        public List<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponse14sp3TypeInfo> TypeInfo
+        {
             get => _typeInfo;
-            set {
+            set
+            {
                 TypeInfoSpecified = true;
                 _typeInfo = value;
             }
@@ -42,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TypeInfoSpecified { get; set; }
-        
+
     }
 }

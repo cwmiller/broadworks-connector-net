@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// The request fails when the collaborateOwnerUserIdList is included in the request for the default collaborate bridge.
     /// The request fails when the supportOutdial is included in the request and the system-level collaborate supportOutdial setting is disabled.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:440""}]")]
     public class GroupCollaborateBridgeModifyInstanceRequest20sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:440")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -32,13 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
+        [Optional]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:440")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
+        {
             get => _serviceInstanceProfile;
-            set {
+            set
+            {
                 ServiceInstanceProfileSpecified = true;
                 _serviceInstanceProfile = value;
             }
@@ -46,13 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceInstanceProfileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants _maximumBridgeParticipants;
 
         [XmlElement(ElementName = "maximumBridgeParticipants", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants MaximumBridgeParticipants {
+        [Optional]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:440")]
+        public BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants MaximumBridgeParticipants
+        {
             get => _maximumBridgeParticipants;
-            set {
+            set
+            {
                 MaximumBridgeParticipantsSpecified = true;
                 _maximumBridgeParticipants = value;
             }
@@ -60,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaximumBridgeParticipantsSpecified { get; set; }
-        
+
         private string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        public string NetworkClassOfService {
+        [Optional]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:440")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string NetworkClassOfService
+        {
             get => _networkClassOfService;
-            set {
+            set
+            {
                 NetworkClassOfServiceSpecified = true;
                 _networkClassOfService = value;
             }
@@ -74,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetworkClassOfServiceSpecified { get; set; }
-        
+
         private int _maxCollaborateRoomParticipants;
 
         [XmlElement(ElementName = "maxCollaborateRoomParticipants", IsNullable = false, Namespace = "")]
-        public int MaxCollaborateRoomParticipants {
+        [Optional]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:440")]
+        [MinInclusive(3)]
+        [MaxInclusive(145)]
+        public int MaxCollaborateRoomParticipants
+        {
             get => _maxCollaborateRoomParticipants;
-            set {
+            set
+            {
                 MaxCollaborateRoomParticipantsSpecified = true;
                 _maxCollaborateRoomParticipants = value;
             }
@@ -88,13 +115,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxCollaborateRoomParticipantsSpecified { get; set; }
-        
+
         private bool _supportOutdial;
 
         [XmlElement(ElementName = "supportOutdial", IsNullable = false, Namespace = "")]
-        public bool SupportOutdial {
+        [Optional]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:440")]
+        public bool SupportOutdial
+        {
             get => _supportOutdial;
-            set {
+            set
+            {
                 SupportOutdialSpecified = true;
                 _supportOutdial = value;
             }
@@ -102,13 +133,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SupportOutdialSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _collaborateOwnerUserIdList;
 
         [XmlElement(ElementName = "collaborateOwnerUserIdList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList CollaborateOwnerUserIdList {
+        [Optional]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:440")]
+        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList CollaborateOwnerUserIdList
+        {
             get => _collaborateOwnerUserIdList;
-            set {
+            set
+            {
                 CollaborateOwnerUserIdListSpecified = true;
                 _collaborateOwnerUserIdList = value;
             }
@@ -116,6 +151,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CollaborateOwnerUserIdListSpecified { get; set; }
-        
+
     }
 }

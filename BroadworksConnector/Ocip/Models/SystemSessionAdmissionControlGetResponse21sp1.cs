@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response contains the session admission control settings for the system.
     /// 
     /// Replaced by: SystemSessionAdmissionControlGetResponse22.
-        /// <see cref="SystemSessionAdmissionControlGetRequest21sp1"/>
-        /// <see cref="SystemSessionAdmissionControlGetResponse22"/>
-        /// </summary>
+    /// <see cref="SystemSessionAdmissionControlGetRequest21sp1"/>
+    /// <see cref="SystemSessionAdmissionControlGetResponse22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5641""}]")]
     public class SystemSessionAdmissionControlGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _countLongConnectionsToMediaServer;
 
         [XmlElement(ElementName = "countLongConnectionsToMediaServer", IsNullable = false, Namespace = "")]
-        public bool CountLongConnectionsToMediaServer {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5641")]
+        public bool CountLongConnectionsToMediaServer
+        {
             get => _countLongConnectionsToMediaServer;
-            set {
+            set
+            {
                 CountLongConnectionsToMediaServerSpecified = true;
                 _countLongConnectionsToMediaServer = value;
             }
@@ -32,13 +37,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CountLongConnectionsToMediaServerSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType _sacHandlingForMoH;
 
         [XmlElement(ElementName = "sacHandlingForMoH", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType SacHandlingForMoH {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5641")]
+        public BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType SacHandlingForMoH
+        {
             get => _sacHandlingForMoH;
-            set {
+            set
+            {
                 SacHandlingForMoHSpecified = true;
                 _sacHandlingForMoH = value;
             }
@@ -46,13 +54,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SacHandlingForMoHSpecified { get; set; }
-        
+
         private bool _blockVMDepositDueToSACLimits;
 
         [XmlElement(ElementName = "blockVMDepositDueToSACLimits", IsNullable = false, Namespace = "")]
-        public bool BlockVMDepositDueToSACLimits {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5641")]
+        public bool BlockVMDepositDueToSACLimits
+        {
             get => _blockVMDepositDueToSACLimits;
-            set {
+            set
+            {
                 BlockVMDepositDueToSACLimitsSpecified = true;
                 _blockVMDepositDueToSACLimits = value;
             }
@@ -60,13 +71,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BlockVMDepositDueToSACLimitsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType _sacCodecSelectionPolicy;
 
         [XmlElement(ElementName = "sacCodecSelectionPolicy", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType SacCodecSelectionPolicy {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5641")]
+        public BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType SacCodecSelectionPolicy
+        {
             get => _sacCodecSelectionPolicy;
-            set {
+            set
+            {
                 SacCodecSelectionPolicySpecified = true;
                 _sacCodecSelectionPolicy = value;
             }
@@ -74,6 +88,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SacCodecSelectionPolicySpecified { get; set; }
-        
+
     }
 }

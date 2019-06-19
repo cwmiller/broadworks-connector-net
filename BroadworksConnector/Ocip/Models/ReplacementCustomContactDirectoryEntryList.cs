@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// A list of userIds and/or Virtual On-Net user DNs that replaces a previously configured list.
     /// By convention, an element of this type may be set nill to clear the list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ReplacementCustomContactDirectoryEntryList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7586""}]")]
+    public class ReplacementCustomContactDirectoryEntryList
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.CustomContactDirectoryEntry> _entry;
+        private List<BroadWorksConnector.Ocip.Models.CustomContactDirectoryEntry> _entry = new List<BroadWorksConnector.Ocip.Models.CustomContactDirectoryEntry>();
 
         [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CustomContactDirectoryEntry> Entry {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7586")]
+        public List<BroadWorksConnector.Ocip.Models.CustomContactDirectoryEntry> Entry
+        {
             get => _entry;
-            set {
+            set
+            {
                 EntrySpecified = true;
                 _entry = value;
             }
@@ -28,6 +33,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EntrySpecified { get; set; }
-        
+
     }
 }

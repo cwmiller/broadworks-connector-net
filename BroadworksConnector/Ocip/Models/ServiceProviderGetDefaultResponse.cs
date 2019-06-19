@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,21 +12,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following elements are only used in AS and XS data mode and not returned in Amplify data mode.
     /// defaultDomain
-        /// <see cref="ServiceProviderGetDefaultRequest"/>
-        /// </summary>
+    /// <see cref="ServiceProviderGetDefaultRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3653""}]")]
     public class ServiceProviderGetDefaultResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isEnterprise;
 
         [XmlElement(ElementName = "isEnterprise", IsNullable = false, Namespace = "")]
-        public bool IsEnterprise {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3653")]
+        public bool IsEnterprise
+        {
             get => _isEnterprise;
-            set {
+            set
+            {
                 IsEnterpriseSpecified = true;
                 _isEnterprise = value;
             }
@@ -32,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsEnterpriseSpecified { get; set; }
-        
+
         private string _defaultDomain;
 
         [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
-        public string DefaultDomain {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3653")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string DefaultDomain
+        {
             get => _defaultDomain;
-            set {
+            set
+            {
                 DefaultDomainSpecified = true;
                 _defaultDomain = value;
             }
@@ -46,6 +57,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultDomainSpecified { get; set; }
-        
+
     }
 }

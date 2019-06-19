@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// BroadWorks Mobility setting for the group level.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum BroadWorksMobilityGroupSettingLevel    {
-            [XmlEnum(Name = "Group")]
+    public enum BroadWorksMobilityGroupSettingLevel
+    {
+        [XmlEnum(Name = "Group")]
         Group,
-            [XmlEnum(Name = "ServiceProvider")]
+        [XmlEnum(Name = "ServiceProvider")]
         ServiceProvider,
-     }
+    }
 }

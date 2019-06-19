@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,23 +14,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// deviceToken
     /// 
     /// Replaced by: DeviceManagementFileAuthLocationGetRequest21sp1.
-        /// <see cref="DeviceManagementFileAuthLocationGetResponse21"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="DeviceManagementFileAuthLocationGetRequest21sp1"/>
-        /// </summary>
+    /// <see cref="DeviceManagementFileAuthLocationGetResponse21"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="DeviceManagementFileAuthLocationGetRequest21sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32955""}]")]
     public class DeviceManagementFileAuthLocationGetRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private BroadWorksConnector.Ocip.Models.DeviceAccessProtocol16 _deviceAccessProtocol;
 
         [XmlElement(ElementName = "deviceAccessProtocol", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DeviceAccessProtocol16 DeviceAccessProtocol {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32955")]
+        public BroadWorksConnector.Ocip.Models.DeviceAccessProtocol16 DeviceAccessProtocol
+        {
             get => _deviceAccessProtocol;
-            set {
+            set
+            {
                 DeviceAccessProtocolSpecified = true;
                 _deviceAccessProtocol = value;
             }
@@ -36,13 +41,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceAccessProtocolSpecified { get; set; }
-        
+
         private string _deviceAccessMethod;
 
         [XmlElement(ElementName = "deviceAccessMethod", IsNullable = false, Namespace = "")]
-        public string DeviceAccessMethod {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32955")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceAccessMethod
+        {
             get => _deviceAccessMethod;
-            set {
+            set
+            {
                 DeviceAccessMethodSpecified = true;
                 _deviceAccessMethod = value;
             }
@@ -50,13 +60,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceAccessMethodSpecified { get; set; }
-        
+
         private string _deviceAccessURI;
 
         [XmlElement(ElementName = "deviceAccessURI", IsNullable = false, Namespace = "")]
-        public string DeviceAccessURI {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32955")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string DeviceAccessURI
+        {
             get => _deviceAccessURI;
-            set {
+            set
+            {
                 DeviceAccessURISpecified = true;
                 _deviceAccessURI = value;
             }
@@ -64,13 +79,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceAccessURISpecified { get; set; }
-        
+
         private string _accessDeviceUserName;
 
         [XmlElement(ElementName = "accessDeviceUserName", IsNullable = false, Namespace = "")]
-        public string AccessDeviceUserName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32955")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string AccessDeviceUserName
+        {
             get => _accessDeviceUserName;
-            set {
+            set
+            {
                 AccessDeviceUserNameSpecified = true;
                 _accessDeviceUserName = value;
             }
@@ -78,13 +99,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessDeviceUserNameSpecified { get; set; }
-        
+
         private string _accessDeviceUserPassword;
 
         [XmlElement(ElementName = "accessDeviceUserPassword", IsNullable = false, Namespace = "")]
-        public string AccessDeviceUserPassword {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32955")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string AccessDeviceUserPassword
+        {
             get => _accessDeviceUserPassword;
-            set {
+            set
+            {
                 AccessDeviceUserPasswordSpecified = true;
                 _accessDeviceUserPassword = value;
             }
@@ -92,13 +119,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessDeviceUserPasswordSpecified { get; set; }
-        
+
         private string _deviceToken;
 
         [XmlElement(ElementName = "deviceToken", IsNullable = false, Namespace = "")]
-        public string DeviceToken {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32955")]
+        [MinLength(1)]
+        public string DeviceToken
+        {
             get => _deviceToken;
-            set {
+            set
+            {
                 DeviceTokenSpecified = true;
                 _deviceToken = value;
             }
@@ -106,13 +138,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceTokenSpecified { get; set; }
-        
+
         private string _signedPassword;
 
         [XmlElement(ElementName = "signedPassword", IsNullable = false, Namespace = "")]
-        public string SignedPassword {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32955")]
+        [MinLength(1)]
+        public string SignedPassword
+        {
             get => _signedPassword;
-            set {
+            set
+            {
                 SignedPasswordSpecified = true;
                 _signedPassword = value;
             }
@@ -120,13 +157,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SignedPasswordSpecified { get; set; }
-        
+
         private string _macAddress;
 
         [XmlElement(ElementName = "macAddress", IsNullable = false, Namespace = "")]
-        public string MacAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32955")]
+        [MinLength(1)]
+        [MaxLength(12)]
+        public string MacAddress
+        {
             get => _macAddress;
-            set {
+            set
+            {
                 MacAddressSpecified = true;
                 _macAddress = value;
             }
@@ -134,13 +177,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MacAddressSpecified { get; set; }
-        
+
         private string _realmName;
 
         [XmlElement(ElementName = "realmName", IsNullable = false, Namespace = "")]
-        public string RealmName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32955")]
+        [MinLength(1)]
+        [MaxLength(265)]
+        public string RealmName
+        {
             get => _realmName;
-            set {
+            set
+            {
                 RealmNameSpecified = true;
                 _realmName = value;
             }
@@ -148,13 +197,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RealmNameSpecified { get; set; }
-        
+
         private string _digestHa1Complement;
 
         [XmlElement(ElementName = "digestHa1Complement", IsNullable = false, Namespace = "")]
-        public string DigestHa1Complement {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32955")]
+        [MinLength(32)]
+        [MaxLength(256)]
+        public string DigestHa1Complement
+        {
             get => _digestHa1Complement;
-            set {
+            set
+            {
                 DigestHa1ComplementSpecified = true;
                 _digestHa1Complement = value;
             }
@@ -162,13 +217,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DigestHa1ComplementSpecified { get; set; }
-        
+
         private string _digestResponse;
 
         [XmlElement(ElementName = "digestResponse", IsNullable = false, Namespace = "")]
-        public string DigestResponse {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32955")]
+        [MinLength(32)]
+        [MaxLength(32)]
+        public string DigestResponse
+        {
             get => _digestResponse;
-            set {
+            set
+            {
                 DigestResponseSpecified = true;
                 _digestResponse = value;
             }
@@ -176,6 +237,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DigestResponseSpecified { get; set; }
-        
+
     }
 }

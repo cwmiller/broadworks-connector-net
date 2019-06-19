@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for SMTP secure mode.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SMTPSecureMode    {
-            [XmlEnum(Name = "Disabled")]
+    public enum SMTPSecureMode
+    {
+        [XmlEnum(Name = "Disabled")]
         Disabled,
-            [XmlEnum(Name = "SMTPS")]
+        [XmlEnum(Name = "SMTPS")]
         SMTPS,
-            [XmlEnum(Name = "STARTTLS")]
+        [XmlEnum(Name = "STARTTLS")]
         STARTTLS,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemSMDIParametersGetListRequest.
     /// Contains a list of system SMDI parameters.
-        /// <see cref="SystemSMDIParametersGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemSMDIParametersGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16825""}]")]
     public class SystemSMDIParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _enableSMDI;
 
         [XmlElement(ElementName = "enableSMDI", IsNullable = false, Namespace = "")]
-        public bool EnableSMDI {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16825")]
+        public bool EnableSMDI
+        {
             get => _enableSMDI;
-            set {
+            set
+            {
                 EnableSMDISpecified = true;
                 _enableSMDI = value;
             }
@@ -29,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableSMDISpecified { get; set; }
-        
+
         private int _listeningPort;
 
         [XmlElement(ElementName = "listeningPort", IsNullable = false, Namespace = "")]
-        public int ListeningPort {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16825")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int ListeningPort
+        {
             get => _listeningPort;
-            set {
+            set
+            {
                 ListeningPortSpecified = true;
                 _listeningPort = value;
             }
@@ -43,13 +53,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ListeningPortSpecified { get; set; }
-        
+
         private int _maxConnections;
 
         [XmlElement(ElementName = "maxConnections", IsNullable = false, Namespace = "")]
-        public int MaxConnections {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16825")]
+        [MinInclusive(0)]
+        [MaxInclusive(64)]
+        public int MaxConnections
+        {
             get => _maxConnections;
-            set {
+            set
+            {
                 MaxConnectionsSpecified = true;
                 _maxConnections = value;
             }
@@ -57,6 +72,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxConnectionsSpecified { get; set; }
-        
+
     }
 }

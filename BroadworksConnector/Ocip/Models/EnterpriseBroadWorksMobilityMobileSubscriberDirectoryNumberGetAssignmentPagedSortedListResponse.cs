@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -23,21 +25,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The "Available" column indicates if the Mobile Number is available.
     /// The "Mobile Country Code" column indicates the dialing prefix for the mobile number.
     /// The "Mobile National Prefix" column indicates the digit sequence to be dialed before the mobile number.
-        /// <see cref="EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentListRequest"/>
-        /// </summary>
+    /// <see cref="EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:190""}]")]
     public class EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _mobileSubscriberDirectoryNumbersAssignmentTable;
 
         [XmlElement(ElementName = "mobileSubscriberDirectoryNumbersAssignmentTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable MobileSubscriberDirectoryNumbersAssignmentTable {
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:190")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable MobileSubscriberDirectoryNumbersAssignmentTable
+        {
             get => _mobileSubscriberDirectoryNumbersAssignmentTable;
-            set {
+            set
+            {
                 MobileSubscriberDirectoryNumbersAssignmentTableSpecified = true;
                 _mobileSubscriberDirectoryNumbersAssignmentTable = value;
             }
@@ -45,6 +50,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobileSubscriberDirectoryNumbersAssignmentTableSpecified { get; set; }
-        
+
     }
 }

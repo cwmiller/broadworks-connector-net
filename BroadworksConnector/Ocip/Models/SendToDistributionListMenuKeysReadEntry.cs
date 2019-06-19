@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The voice portal send to distribution list menu keys.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SendToDistributionListMenuKeysReadEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3182""}]")]
+    public class SendToDistributionListMenuKeysReadEntry
     {
 
-        
         private string _sendMessageToSelectedDistributionList;
 
         [XmlElement(ElementName = "sendMessageToSelectedDistributionList", IsNullable = false, Namespace = "")]
-        public string SendMessageToSelectedDistributionList {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3182")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string SendMessageToSelectedDistributionList
+        {
             get => _sendMessageToSelectedDistributionList;
-            set {
+            set
+            {
                 SendMessageToSelectedDistributionListSpecified = true;
                 _sendMessageToSelectedDistributionList = value;
             }
@@ -27,13 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SendMessageToSelectedDistributionListSpecified { get; set; }
-        
+
         private string _selectDistributionList;
 
         [XmlElement(ElementName = "selectDistributionList", IsNullable = false, Namespace = "")]
-        public string SelectDistributionList {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3182")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string SelectDistributionList
+        {
             get => _selectDistributionList;
-            set {
+            set
+            {
                 SelectDistributionListSpecified = true;
                 _selectDistributionList = value;
             }
@@ -41,13 +54,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SelectDistributionListSpecified { get; set; }
-        
+
         private string _reviewSelectedDistributionList;
 
         [XmlElement(ElementName = "reviewSelectedDistributionList", IsNullable = false, Namespace = "")]
-        public string ReviewSelectedDistributionList {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3182")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ReviewSelectedDistributionList
+        {
             get => _reviewSelectedDistributionList;
-            set {
+            set
+            {
                 ReviewSelectedDistributionListSpecified = true;
                 _reviewSelectedDistributionList = value;
             }
@@ -55,13 +74,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReviewSelectedDistributionListSpecified { get; set; }
-        
+
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        public string ReturnToPreviousMenu {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3182")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ReturnToPreviousMenu
+        {
             get => _returnToPreviousMenu;
-            set {
+            set
+            {
                 ReturnToPreviousMenuSpecified = true;
                 _returnToPreviousMenu = value;
             }
@@ -69,13 +93,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReturnToPreviousMenuSpecified { get; set; }
-        
+
         private string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
-        public string RepeatMenu {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3182")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string RepeatMenu
+        {
             get => _repeatMenu;
-            set {
+            set
+            {
                 RepeatMenuSpecified = true;
                 _repeatMenu = value;
             }
@@ -83,6 +113,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RepeatMenuSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Set the status configuration for a given call center.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:5739""}]")]
     public class GroupCallCenterQueueStatusNotificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5739")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private bool _enableQueueStatusNotification;
 
         [XmlElement(ElementName = "enableQueueStatusNotification", IsNullable = false, Namespace = "")]
-        public bool EnableQueueStatusNotification {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5739")]
+        public bool EnableQueueStatusNotification
+        {
             get => _enableQueueStatusNotification;
-            set {
+            set
+            {
                 EnableQueueStatusNotificationSpecified = true;
                 _enableQueueStatusNotification = value;
             }
@@ -44,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableQueueStatusNotificationSpecified { get; set; }
-        
+
         private bool _enableQueueDepthThreshold;
 
         [XmlElement(ElementName = "enableQueueDepthThreshold", IsNullable = false, Namespace = "")]
-        public bool EnableQueueDepthThreshold {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5739")]
+        public bool EnableQueueDepthThreshold
+        {
             get => _enableQueueDepthThreshold;
-            set {
+            set
+            {
                 EnableQueueDepthThresholdSpecified = true;
                 _enableQueueDepthThreshold = value;
             }
@@ -58,13 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableQueueDepthThresholdSpecified { get; set; }
-        
+
         private bool _enableWaitingTimeThreshold;
 
         [XmlElement(ElementName = "enableWaitingTimeThreshold", IsNullable = false, Namespace = "")]
-        public bool EnableWaitingTimeThreshold {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5739")]
+        public bool EnableWaitingTimeThreshold
+        {
             get => _enableWaitingTimeThreshold;
-            set {
+            set
+            {
                 EnableWaitingTimeThresholdSpecified = true;
                 _enableWaitingTimeThreshold = value;
             }
@@ -72,13 +91,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableWaitingTimeThresholdSpecified { get; set; }
-        
+
         private int _numberOfCallsThreshold;
 
         [XmlElement(ElementName = "numberOfCallsThreshold", IsNullable = false, Namespace = "")]
-        public int NumberOfCallsThreshold {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5739")]
+        [MinInclusive(1)]
+        [MaxInclusive(525)]
+        public int NumberOfCallsThreshold
+        {
             get => _numberOfCallsThreshold;
-            set {
+            set
+            {
                 NumberOfCallsThresholdSpecified = true;
                 _numberOfCallsThreshold = value;
             }
@@ -86,13 +111,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberOfCallsThresholdSpecified { get; set; }
-        
+
         private int _waitingTimeOfCallsThreshold;
 
         [XmlElement(ElementName = "waitingTimeOfCallsThreshold", IsNullable = false, Namespace = "")]
-        public int WaitingTimeOfCallsThreshold {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5739")]
+        [MinInclusive(1)]
+        [MaxInclusive(7200)]
+        public int WaitingTimeOfCallsThreshold
+        {
             get => _waitingTimeOfCallsThreshold;
-            set {
+            set
+            {
                 WaitingTimeOfCallsThresholdSpecified = true;
                 _waitingTimeOfCallsThreshold = value;
             }
@@ -100,6 +131,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool WaitingTimeOfCallsThresholdSpecified { get; set; }
-        
+
     }
 }

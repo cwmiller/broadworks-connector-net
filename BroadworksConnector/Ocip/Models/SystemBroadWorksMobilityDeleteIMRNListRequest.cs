@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Removes a BroadWorks Mobility IMRN number from the system.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:688""}]")]
     public class SystemBroadWorksMobilityDeleteIMRNListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
-        private List<string> _imrnNumber;
+        private List<string> _imrnNumber = new List<string>();
 
         [XmlElement(ElementName = "imrnNumber", IsNullable = false, Namespace = "")]
-        public List<string> ImrnNumber {
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:688")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public List<string> ImrnNumber
+        {
             get => _imrnNumber;
-            set {
+            set
+            {
                 ImrnNumberSpecified = true;
                 _imrnNumber = value;
             }
@@ -30,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ImrnNumberSpecified { get; set; }
-        
+
     }
 }

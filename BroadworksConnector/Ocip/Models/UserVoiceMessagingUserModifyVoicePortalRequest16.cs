@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SuccessResponse
     /// or an ErrorResponse.
     /// Engineering Note: This command is used internally by Call Processing.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8b2edcd7d6936a8b76653949ae59623:534""}]")]
     public class UserVoiceMessagingUserModifyVoicePortalRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"a8b2edcd7d6936a8b76653949ae59623:534")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -32,13 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private bool _usePersonalizedName;
 
         [XmlElement(ElementName = "usePersonalizedName", IsNullable = false, Namespace = "")]
-        public bool UsePersonalizedName {
+        [Optional]
+        [Group(@"a8b2edcd7d6936a8b76653949ae59623:534")]
+        public bool UsePersonalizedName
+        {
             get => _usePersonalizedName;
-            set {
+            set
+            {
                 UsePersonalizedNameSpecified = true;
                 _usePersonalizedName = value;
             }
@@ -46,13 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UsePersonalizedNameSpecified { get; set; }
-        
+
         private bool _voicePortalAutoLogin;
 
         [XmlElement(ElementName = "voicePortalAutoLogin", IsNullable = false, Namespace = "")]
-        public bool VoicePortalAutoLogin {
+        [Optional]
+        [Group(@"a8b2edcd7d6936a8b76653949ae59623:534")]
+        public bool VoicePortalAutoLogin
+        {
             get => _voicePortalAutoLogin;
-            set {
+            set
+            {
                 VoicePortalAutoLoginSpecified = true;
                 _voicePortalAutoLogin = value;
             }
@@ -60,13 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VoicePortalAutoLoginSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _personalizedNameAudioFile;
 
         [XmlElement(ElementName = "personalizedNameAudioFile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource PersonalizedNameAudioFile {
+        [Optional]
+        [Group(@"a8b2edcd7d6936a8b76653949ae59623:534")]
+        public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource PersonalizedNameAudioFile
+        {
             get => _personalizedNameAudioFile;
-            set {
+            set
+            {
                 PersonalizedNameAudioFileSpecified = true;
                 _personalizedNameAudioFile = value;
             }
@@ -74,6 +93,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PersonalizedNameAudioFileSpecified { get; set; }
-        
+
     }
 }

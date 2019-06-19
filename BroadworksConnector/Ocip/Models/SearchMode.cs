@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Search mode when searching for string data.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SearchMode    {
-            [XmlEnum(Name = "Starts With")]
+    public enum SearchMode
+    {
+        [XmlEnum(Name = "Starts With")]
         StartsWith,
-            [XmlEnum(Name = "Contains")]
+        [XmlEnum(Name = "Contains")]
         Contains,
-            [XmlEnum(Name = "Equal To")]
+        [XmlEnum(Name = "Equal To")]
         EqualTo,
-     }
+    }
 }

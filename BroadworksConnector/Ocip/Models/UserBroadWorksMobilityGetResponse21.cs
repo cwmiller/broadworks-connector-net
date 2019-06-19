@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to a UserBroadWorksMobilityGetRequest21.
-        /// <see cref="UserBroadWorksMobilityGetRequest21"/>
-        /// </summary>
+    /// <see cref="UserBroadWorksMobilityGetRequest21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:40020""}]")]
     public class UserBroadWorksMobilityGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40020")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private bool _useMobileIdentityCallAnchoring;
 
         [XmlElement(ElementName = "useMobileIdentityCallAnchoring", IsNullable = false, Namespace = "")]
-        public bool UseMobileIdentityCallAnchoring {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40020")]
+        public bool UseMobileIdentityCallAnchoring
+        {
             get => _useMobileIdentityCallAnchoring;
-            set {
+            set
+            {
                 UseMobileIdentityCallAnchoringSpecified = true;
                 _useMobileIdentityCallAnchoring = value;
             }
@@ -42,13 +50,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseMobileIdentityCallAnchoringSpecified { get; set; }
-        
+
         private bool _preventCallsToOwnMobiles;
 
         [XmlElement(ElementName = "preventCallsToOwnMobiles", IsNullable = false, Namespace = "")]
-        public bool PreventCallsToOwnMobiles {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40020")]
+        public bool PreventCallsToOwnMobiles
+        {
             get => _preventCallsToOwnMobiles;
-            set {
+            set
+            {
                 PreventCallsToOwnMobilesSpecified = true;
                 _preventCallsToOwnMobiles = value;
             }
@@ -56,13 +67,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PreventCallsToOwnMobilesSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityEntry> _mobileIdentity;
+
+        private List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityEntry> _mobileIdentity = new List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityEntry>();
 
         [XmlElement(ElementName = "mobileIdentity", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityEntry> MobileIdentity {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40020")]
+        public List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityEntry> MobileIdentity
+        {
             get => _mobileIdentity;
-            set {
+            set
+            {
                 MobileIdentitySpecified = true;
                 _mobileIdentity = value;
             }
@@ -70,13 +85,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobileIdentitySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _profileIdentityDevicesToRing;
 
         [XmlElement(ElementName = "profileIdentityDevicesToRing", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing ProfileIdentityDevicesToRing {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40020")]
+        public BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing ProfileIdentityDevicesToRing
+        {
             get => _profileIdentityDevicesToRing;
-            set {
+            set
+            {
                 ProfileIdentityDevicesToRingSpecified = true;
                 _profileIdentityDevicesToRing = value;
             }
@@ -84,13 +102,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProfileIdentityDevicesToRingSpecified { get; set; }
-        
+
         private bool _profileIdentityIncludeSharedCallAppearance;
 
         [XmlElement(ElementName = "profileIdentityIncludeSharedCallAppearance", IsNullable = false, Namespace = "")]
-        public bool ProfileIdentityIncludeSharedCallAppearance {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40020")]
+        public bool ProfileIdentityIncludeSharedCallAppearance
+        {
             get => _profileIdentityIncludeSharedCallAppearance;
-            set {
+            set
+            {
                 ProfileIdentityIncludeSharedCallAppearanceSpecified = true;
                 _profileIdentityIncludeSharedCallAppearance = value;
             }
@@ -98,13 +119,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProfileIdentityIncludeSharedCallAppearanceSpecified { get; set; }
-        
+
         private bool _profileIdentityIncludeBroadworksAnywhere;
 
         [XmlElement(ElementName = "profileIdentityIncludeBroadworksAnywhere", IsNullable = false, Namespace = "")]
-        public bool ProfileIdentityIncludeBroadworksAnywhere {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40020")]
+        public bool ProfileIdentityIncludeBroadworksAnywhere
+        {
             get => _profileIdentityIncludeBroadworksAnywhere;
-            set {
+            set
+            {
                 ProfileIdentityIncludeBroadworksAnywhereSpecified = true;
                 _profileIdentityIncludeBroadworksAnywhere = value;
             }
@@ -112,13 +136,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProfileIdentityIncludeBroadworksAnywhereSpecified { get; set; }
-        
+
         private bool _profileIdentityIncludeExecutiveAssistant;
 
         [XmlElement(ElementName = "profileIdentityIncludeExecutiveAssistant", IsNullable = false, Namespace = "")]
-        public bool ProfileIdentityIncludeExecutiveAssistant {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40020")]
+        public bool ProfileIdentityIncludeExecutiveAssistant
+        {
             get => _profileIdentityIncludeExecutiveAssistant;
-            set {
+            set
+            {
                 ProfileIdentityIncludeExecutiveAssistantSpecified = true;
                 _profileIdentityIncludeExecutiveAssistant = value;
             }
@@ -126,13 +153,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProfileIdentityIncludeExecutiveAssistantSpecified { get; set; }
-        
-        private List<string> _profileIdentityMobileNumberAlerted;
+
+        private List<string> _profileIdentityMobileNumberAlerted = new List<string>();
 
         [XmlElement(ElementName = "profileIdentityMobileNumberAlerted", IsNullable = false, Namespace = "")]
-        public List<string> ProfileIdentityMobileNumberAlerted {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40020")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public List<string> ProfileIdentityMobileNumberAlerted
+        {
             get => _profileIdentityMobileNumberAlerted;
-            set {
+            set
+            {
                 ProfileIdentityMobileNumberAlertedSpecified = true;
                 _profileIdentityMobileNumberAlerted = value;
             }
@@ -140,6 +173,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProfileIdentityMobileNumberAlertedSpecified { get; set; }
-        
+
     }
 }

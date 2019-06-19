@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Returns the available group security classifications.
     /// Contains a table with column headings:
     /// "SystemSecurityClassification", "CustomizedSecurityClassification"
-        /// <see cref="GroupClassificationCustomizationGetAvailableListRequest"/>
-        /// </summary>
+    /// <see cref="GroupClassificationCustomizationGetAvailableListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:6689""}]")]
     public class GroupSecurityClassificationCustomizationGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _securityClassificationNameTable;
 
         [XmlElement(ElementName = "securityClassificationNameTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable SecurityClassificationNameTable {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6689")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable SecurityClassificationNameTable
+        {
             get => _securityClassificationNameTable;
-            set {
+            set
+            {
                 SecurityClassificationNameTableSpecified = true;
                 _securityClassificationNameTable = value;
             }
@@ -31,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SecurityClassificationNameTableSpecified { get; set; }
-        
+
     }
 }

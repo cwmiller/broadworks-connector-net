@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Options for call center enhanced reporting input parameters.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterReportInputParameterOption    {
-            [XmlEnum(Name = "Required")]
+    public enum CallCenterReportInputParameterOption
+    {
+        [XmlEnum(Name = "Required")]
         Required,
-            [XmlEnum(Name = "Hidden")]
+        [XmlEnum(Name = "Hidden")]
         Hidden,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// A list of prefixes that replaces a previously configured list.
     /// By convention, an element of this type may be set nill to clear the list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class EnterpriseTrunkReplacementNumberPrefixList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3f28429898a57a7f7846d3877b22df9f:840""}]")]
+    public class EnterpriseTrunkReplacementNumberPrefixList
     {
 
-        
-        private List<string> _numberPrefix;
+        private List<string> _numberPrefix = new List<string>();
 
         [XmlElement(ElementName = "numberPrefix", IsNullable = false, Namespace = "")]
-        public List<string> NumberPrefix {
+        [Group(@"3f28429898a57a7f7846d3877b22df9f:840")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public List<string> NumberPrefix
+        {
             get => _numberPrefix;
-            set {
+            set
+            {
                 NumberPrefixSpecified = true;
                 _numberPrefix = value;
             }
@@ -28,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberPrefixSpecified { get; set; }
-        
+
     }
 }

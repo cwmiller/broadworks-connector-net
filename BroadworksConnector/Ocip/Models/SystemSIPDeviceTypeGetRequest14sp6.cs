@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,24 +11,29 @@ namespace BroadWorksConnector.Ocip.Models
     /// See Also: SystemDeviceTypeGetRequest
     /// The response is either SystemSIPDeviceTypeGetResponse14sp6 or ErrorResponse.
     /// Replaced By : SystemSIPDeviceTypeGetRequest15
-        /// <see cref="SystemDeviceTypeGetRequest"/>
-        /// <see cref="SystemSIPDeviceTypeGetResponse14sp6"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemSIPDeviceTypeGetRequest15"/>
-        /// </summary>
+    /// <see cref="SystemDeviceTypeGetRequest"/>
+    /// <see cref="SystemSIPDeviceTypeGetResponse14sp6"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemSIPDeviceTypeGetRequest15"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:6164""}]")]
     public class SystemSIPDeviceTypeGetRequest14sp6 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        public string DeviceType {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6164")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceType
+        {
             get => _deviceType;
-            set {
+            set
+            {
                 DeviceTypeSpecified = true;
                 _deviceType = value;
             }
@@ -34,6 +41,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceTypeSpecified { get; set; }
-        
+
     }
 }

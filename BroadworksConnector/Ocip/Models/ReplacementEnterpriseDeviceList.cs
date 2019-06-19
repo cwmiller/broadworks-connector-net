@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// A list of enterprise accessible devices that replaces a previously configured list.
     /// By convention, an element of this type may be set nill to clear the list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ReplacementEnterpriseDeviceList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1666""}]")]
+    public class ReplacementEnterpriseDeviceList
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> _device;
+        private List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> _device = new List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice>();
 
         [XmlElement(ElementName = "device", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> Device {
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1666")]
+        public List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> Device
+        {
             get => _device;
-            set {
+            set
+            {
                 DeviceSpecified = true;
                 _device = value;
             }
@@ -28,6 +33,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceSpecified { get; set; }
-        
+
     }
 }

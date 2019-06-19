@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Represents either an existing file for the application server to use, or
     /// the contents of a file to transfer with a description.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class LabeledFileResource 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2510"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2512""}]}]")]
+    public class LabeledFileResource
     {
 
-        
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        public string Description {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2510")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -28,13 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
         private string _sourceFileName;
 
         [XmlElement(ElementName = "sourceFileName", IsNullable = false, Namespace = "")]
-        public string SourceFileName {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2512")]
+        [MinLength(1)]
+        public string SourceFileName
+        {
             get => _sourceFileName;
-            set {
+            set
+            {
                 SourceFileNameSpecified = true;
                 _sourceFileName = value;
             }
@@ -42,13 +53,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SourceFileNameSpecified { get; set; }
-        
+
         private string _content;
 
         [XmlElement(ElementName = "content", IsNullable = false, Namespace = "")]
-        public string Content {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2512")]
+        public string Content
+        {
             get => _content;
-            set {
+            set
+            {
                 ContentSpecified = true;
                 _content = value;
             }
@@ -56,6 +70,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContentSpecified { get; set; }
-        
+
     }
 }

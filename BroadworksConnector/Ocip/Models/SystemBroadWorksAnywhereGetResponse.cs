@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The response to a SystemBroadWorksAnywhereGetRequest.
-        /// <see cref="SystemBroadWorksAnywhereGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemBroadWorksAnywhereGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:231""}]")]
     public class SystemBroadWorksAnywhereGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _enableTransferNotification;
 
         [XmlElement(ElementName = "enableTransferNotification", IsNullable = false, Namespace = "")]
-        public bool EnableTransferNotification {
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:231")]
+        public bool EnableTransferNotification
+        {
             get => _enableTransferNotification;
-            set {
+            set
+            {
                 EnableTransferNotificationSpecified = true;
                 _enableTransferNotification = value;
             }
@@ -28,6 +33,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableTransferNotificationSpecified { get; set; }
-        
+
     }
 }

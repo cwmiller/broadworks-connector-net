@@ -1,201 +1,220 @@
 using System.Threading.Tasks;
-    using BroadWorksConnector.Ocip.Models;
-    using BroadWorksConnector.Ocip.Models.C;
+using BroadWorksConnector.Ocip.Models;
+using BroadWorksConnector.Ocip.Models.C;
 
-namespace BroadWorksConnector.Ocip.Extensions
+namespace BroadWorksConnector.Ocip
 {
-public static class OCISchemaLoginExtensions
-{
+    public static class OCISchemaLoginExtensions
+    {
 
-    /// <summary>
-    /// AuthenticationVerifyRequest22V2 is used to authenticate a user either by userId/password, userId/sip username/sip password,
-    /// dn/passcode, lineport/password or a token previously authorized with the ExternalAuthenticationAuthorizeTokenRequest.
-    /// The phone number may be any DN associated with a user.
-    /// The lineport may be any lineport associated with a user.
-    /// The password used for the lineport is the user's password associated with userId.
-    /// 
-    /// The response is a AuthenticationVerifyResponse22V2 or an ErrorResponse
-    /// </summary>
-    public static async Task<AuthenticationVerifyResponse22V2> AuthenticationVerifyRequest22V2(this OcipClient client, AuthenticationVerifyRequest22V2 request) {
-        return await client.Call(request) as AuthenticationVerifyResponse22V2;
+        /// <summary>
+        /// AuthenticationVerifyRequest22V2 is used to authenticate a user either by userId/password, userId/sip username/sip password,
+        /// dn/passcode, lineport/password or a token previously authorized with the ExternalAuthenticationAuthorizeTokenRequest.
+        /// The phone number may be any DN associated with a user.
+        /// The lineport may be any lineport associated with a user.
+        /// The password used for the lineport is the user's password associated with userId.
+        /// 
+        /// The response is a AuthenticationVerifyResponse22V2 or an ErrorResponse
+        /// </summary>
+        public static async Task<AuthenticationVerifyResponse22V2> AuthenticationVerifyRequest22V2(this OcipClient client, AuthenticationVerifyRequest22V2 request)
+        {
+            return await client.Call(request) as AuthenticationVerifyResponse22V2;
+        }
+
+        /// <summary>
+        /// AvailabilityTestRequest is for high-availability support. The response is either SuccessResponse
+        /// or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> AvailabilityTestRequest(this OcipClient client, AvailabilityTestRequest request)
+        {
+            return await client.Call(request) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Get the address and credentials of the File Repository hosting the requested access device file.
+        /// Also get the file name and path on the File Repository.
+        /// The response is either DeviceManagementFileAuthLocationGetResponse21sp1 or ErrorResponse.
+        /// The following elements are only used in AS data mode and will fail in XS data mode:
+        /// deviceToken
+        /// </summary>
+        public static async Task<DeviceManagementFileAuthLocationGetResponse21sp1> DeviceManagementFileAuthLocationGetRequest21sp1(this OcipClient client, DeviceManagementFileAuthLocationGetRequest21sp1 request)
+        {
+            return await client.Call(request) as DeviceManagementFileAuthLocationGetResponse21sp1;
+        }
+
+        /// <summary>
+        /// Get the address and credentials of the File Repository hosting the requested access device file.
+        /// Also get the file name and path on the File Repository.
+        /// The response is either DeviceManagementFileAuthLocationGetResponse22V2 or ErrorResponse.
+        /// The following elements are only used in AS data mode and will fail in XS data mode:
+        /// deviceToken
+        /// The following elements are only used in XS data mode and will be ignored in AS data mode:
+        /// fileNameLookup
+        /// fileNameOnDisk
+        /// </summary>
+        public static async Task<DeviceManagementFileAuthLocationGetResponse22V2> DeviceManagementFileAuthLocationGetRequest22V2(this OcipClient client, DeviceManagementFileAuthLocationGetRequest22V2 request)
+        {
+            return await client.Call(request) as DeviceManagementFileAuthLocationGetResponse22V2;
+        }
+
+        /// <summary>
+        /// Informs BroadWorks that a file was uploaded to the repository. The response is always a SuccessResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> DeviceManagementPutFileRequest(this OcipClient client, DeviceManagementPutFileRequest request)
+        {
+            return await client.Call(request) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// This command is part of the Portal API.
+        /// Sent when a Web or CLI user logs in using external authentication.
+        /// The hashed password value in the request is supported only when the request is sent from the CommPilot web portal.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> ExternalAuthenticationAuthorizeTokenRequest22(this OcipClient client, ExternalAuthenticationAuthorizeTokenRequest22 request)
+        {
+            return await client.Call(request) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// This command allows a BroadWorks or Third-Party Client Application to
+        /// create a Single Sign-On token for a user.
+        /// The response is either ExternalAuthenticationCreateLoginTokenResponse
+        /// or ErrorResponse.
+        /// </summary>
+        public static async Task<ExternalAuthenticationCreateLoginTokenResponse> ExternalAuthenticationCreateLoginTokenRequest(this OcipClient client, ExternalAuthenticationCreateLoginTokenRequest request)
+        {
+            return await client.Call(request) as ExternalAuthenticationCreateLoginTokenResponse;
+        }
+
+        /// <summary>
+        /// Request to login to OCI.
+        /// password is not required for external authentication login from a trusted host (ACL).
+        /// The response is LoginResponse22V3 or ErrorResponse
+        /// </summary>
+        public static async Task<LoginResponse22V3> LoginRequest22V3(this OcipClient client, LoginRequest22V3 request)
+        {
+            return await client.Call(request) as LoginResponse22V3;
+        }
+
+        /// <summary>
+        /// LogoutRequest is sent when an OCI user logs out or when connection is lost.
+        /// This command can be sent either to the server, or to the client from OCS.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> LogoutRequest(this OcipClient client, LogoutRequest request)
+        {
+            return await client.Call(request) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Revoke all previously issued long lived tokens.
+        /// If the userId is not specified, revoke all tokens in the system.
+        /// If the userId is specified, revoke all tokens issued to the user.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> LongLivedTokenRevokeRequest(this OcipClient client, LongLivedTokenRevokeRequest request)
+        {
+            return await client.Call(request) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Generate passwords based on the corresponding password/passcode rules.
+        /// The response is either PasswordGenerateResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<PasswordGenerateResponse> PasswordGenerateRequest(this OcipClient client, PasswordGenerateRequest request)
+        {
+            return await client.Call(request) as PasswordGenerateResponse;
+        }
+
+        /// <summary>
+        /// Modify the password for a user/administrator.
+        /// When oldPassword is specified, password rule applies. If oldPassword in not specified,
+        /// any password rule related to old password does not apply.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> PasswordModifyRequest(this OcipClient client, PasswordModifyRequest request)
+        {
+            return await client.Call(request) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Requests information about the primary server for high-availability support.
+        /// The response is either PrimaryInfoGetResponse or ErrorResponse
+        /// </summary>
+        public static async Task<PrimaryInfoGetResponse> PrimaryInfoGetRequest(this OcipClient client, PrimaryInfoGetRequest request)
+        {
+            return await client.Call(request) as PrimaryInfoGetResponse;
+        }
+
+        /// <summary>
+        /// Get the public cluster fully qualified domain name (FQDN).
+        /// The response is either a PublicClusterGetFullyQualifiedDomainNameResponse
+        /// or an ErrorResponse.
+        /// </summary>
+        public static async Task<PublicClusterGetFullyQualifiedDomainNameResponse> PublicClusterGetFullyQualifiedDomainNameRequest(this OcipClient client, PublicClusterGetFullyQualifiedDomainNameRequest request)
+        {
+            return await client.Call(request) as PublicClusterGetFullyQualifiedDomainNameResponse;
+        }
+
+        /// <summary>
+        /// Get the tutorial flag setting for a user or admin.
+        /// The response is either a TutorialFlagGetResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<TutorialFlagGetResponse> TutorialFlagGetRequest(this OcipClient client, TutorialFlagGetRequest request)
+        {
+            return await client.Call(request) as TutorialFlagGetResponse;
+        }
+
+        /// <summary>
+        /// Modify the tutorial flag setting for a user or admin.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> TutorialFlagModifyRequest(this OcipClient client, TutorialFlagModifyRequest request)
+        {
+            return await client.Call(request) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// UserGetLoginInfoRequest22V2 is used to access login information for a user
+        /// either by a userId, dn or lineport.
+        /// The phone number may be any DN associated with a user.
+        /// The lineport may be any lineport associated with a user.
+        /// 
+        /// The response is a UserGetLoginInfoResponse22V2 or an ErrorResponse
+        /// </summary>
+        public static async Task<UserGetLoginInfoResponse22V2> UserGetLoginInfoRequest22V2(this OcipClient client, UserGetLoginInfoRequest22V2 request)
+        {
+            return await client.Call(request) as UserGetLoginInfoResponse22V2;
+        }
+
+        /// <summary>
+        /// This command allows a BroadWorks or Third-Party Client Application to
+        /// create a Single Sign-On token for a device of a user.
+        /// The token is created only if:
+        /// 1. the specified user is the owner of a lineport on the specified device
+        /// (including a trunk user on a trunk device).
+        /// 2. and, the specified device is not in locked state.
+        /// 3. and, the device type of the device does support Device Management.
+        /// The response is either UserSingleSignOnCreateDeviceTokenResponse
+        /// or ErrorResponse.
+        /// </summary>
+        public static async Task<UserSingleSignOnCreateDeviceTokenResponse> UserSingleSignOnCreateDeviceTokenRequest(this OcipClient client, UserSingleSignOnCreateDeviceTokenRequest request)
+        {
+            return await client.Call(request) as UserSingleSignOnCreateDeviceTokenResponse;
+        }
+
+        /// <summary>
+        /// Query the provisioning server to verify the session is authorized. Most
+        /// applications should not need this command, because the provisioning server
+        /// verifies the session is authorized for all commands.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> VerifySessionIsValidRequest(this OcipClient client, VerifySessionIsValidRequest request)
+        {
+            return await client.Call(request) as SuccessResponse;
+        }
+
+
     }
-
-    /// <summary>
-    /// AvailabilityTestRequest is for high-availability support. The response is either SuccessResponse
-    /// or ErrorResponse.
-    /// </summary>
-    public static async Task<SuccessResponse> AvailabilityTestRequest(this OcipClient client, AvailabilityTestRequest request) {
-        return await client.Call(request) as SuccessResponse;
-    }
-
-    /// <summary>
-    /// Get the address and credentials of the File Repository hosting the requested access device file.
-    /// Also get the file name and path on the File Repository.
-    /// The response is either DeviceManagementFileAuthLocationGetResponse21sp1 or ErrorResponse.
-    /// The following elements are only used in AS data mode and will fail in XS data mode:
-    /// deviceToken
-    /// </summary>
-    public static async Task<DeviceManagementFileAuthLocationGetResponse21sp1> DeviceManagementFileAuthLocationGetRequest21sp1(this OcipClient client, DeviceManagementFileAuthLocationGetRequest21sp1 request) {
-        return await client.Call(request) as DeviceManagementFileAuthLocationGetResponse21sp1;
-    }
-
-    /// <summary>
-    /// Get the address and credentials of the File Repository hosting the requested access device file.
-    /// Also get the file name and path on the File Repository.
-    /// The response is either DeviceManagementFileAuthLocationGetResponse22V2 or ErrorResponse.
-    /// The following elements are only used in AS data mode and will fail in XS data mode:
-    /// deviceToken
-    /// The following elements are only used in XS data mode and will be ignored in AS data mode:
-    /// fileNameLookup
-    /// fileNameOnDisk
-    /// </summary>
-    public static async Task<DeviceManagementFileAuthLocationGetResponse22V2> DeviceManagementFileAuthLocationGetRequest22V2(this OcipClient client, DeviceManagementFileAuthLocationGetRequest22V2 request) {
-        return await client.Call(request) as DeviceManagementFileAuthLocationGetResponse22V2;
-    }
-
-    /// <summary>
-    /// Informs BroadWorks that a file was uploaded to the repository. The response is always a SuccessResponse.
-    /// </summary>
-    public static async Task<SuccessResponse> DeviceManagementPutFileRequest(this OcipClient client, DeviceManagementPutFileRequest request) {
-        return await client.Call(request) as SuccessResponse;
-    }
-
-    /// <summary>
-    /// This command is part of the Portal API.
-    /// Sent when a Web or CLI user logs in using external authentication.
-    /// The hashed password value in the request is supported only when the request is sent from the CommPilot web portal.
-    /// The response is either SuccessResponse or ErrorResponse.
-    /// </summary>
-    public static async Task<SuccessResponse> ExternalAuthenticationAuthorizeTokenRequest22(this OcipClient client, ExternalAuthenticationAuthorizeTokenRequest22 request) {
-        return await client.Call(request) as SuccessResponse;
-    }
-
-    /// <summary>
-    /// This command allows a BroadWorks or Third-Party Client Application to
-    /// create a Single Sign-On token for a user.
-    /// The response is either ExternalAuthenticationCreateLoginTokenResponse
-    /// or ErrorResponse.
-    /// </summary>
-    public static async Task<ExternalAuthenticationCreateLoginTokenResponse> ExternalAuthenticationCreateLoginTokenRequest(this OcipClient client, ExternalAuthenticationCreateLoginTokenRequest request) {
-        return await client.Call(request) as ExternalAuthenticationCreateLoginTokenResponse;
-    }
-
-    /// <summary>
-    /// Request to login to OCI.
-    /// password is not required for external authentication login from a trusted host (ACL).
-    /// The response is LoginResponse22V3 or ErrorResponse
-    /// </summary>
-    public static async Task<LoginResponse22V3> LoginRequest22V3(this OcipClient client, LoginRequest22V3 request) {
-        return await client.Call(request) as LoginResponse22V3;
-    }
-
-    /// <summary>
-    /// LogoutRequest is sent when an OCI user logs out or when connection is lost.
-    /// This command can be sent either to the server, or to the client from OCS.
-    /// The response is either SuccessResponse or ErrorResponse.
-    /// </summary>
-    public static async Task<SuccessResponse> LogoutRequest(this OcipClient client, LogoutRequest request) {
-        return await client.Call(request) as SuccessResponse;
-    }
-
-    /// <summary>
-    /// Revoke all previously issued long lived tokens.
-    /// If the userId is not specified, revoke all tokens in the system.
-    /// If the userId is specified, revoke all tokens issued to the user.
-    /// The response is either a SuccessResponse or an ErrorResponse.
-    /// </summary>
-    public static async Task<SuccessResponse> LongLivedTokenRevokeRequest(this OcipClient client, LongLivedTokenRevokeRequest request) {
-        return await client.Call(request) as SuccessResponse;
-    }
-
-    /// <summary>
-    /// Generate passwords based on the corresponding password/passcode rules.
-    /// The response is either PasswordGenerateResponse or ErrorResponse.
-    /// </summary>
-    public static async Task<PasswordGenerateResponse> PasswordGenerateRequest(this OcipClient client, PasswordGenerateRequest request) {
-        return await client.Call(request) as PasswordGenerateResponse;
-    }
-
-    /// <summary>
-    /// Modify the password for a user/administrator.
-    /// When oldPassword is specified, password rule applies. If oldPassword in not specified,
-    /// any password rule related to old password does not apply.
-    /// The response is either a SuccessResponse or an ErrorResponse.
-    /// </summary>
-    public static async Task<SuccessResponse> PasswordModifyRequest(this OcipClient client, PasswordModifyRequest request) {
-        return await client.Call(request) as SuccessResponse;
-    }
-
-    /// <summary>
-    /// Requests information about the primary server for high-availability support.
-    /// The response is either PrimaryInfoGetResponse or ErrorResponse
-    /// </summary>
-    public static async Task<PrimaryInfoGetResponse> PrimaryInfoGetRequest(this OcipClient client, PrimaryInfoGetRequest request) {
-        return await client.Call(request) as PrimaryInfoGetResponse;
-    }
-
-    /// <summary>
-    /// Get the public cluster fully qualified domain name (FQDN).
-    /// The response is either a PublicClusterGetFullyQualifiedDomainNameResponse
-    /// or an ErrorResponse.
-    /// </summary>
-    public static async Task<PublicClusterGetFullyQualifiedDomainNameResponse> PublicClusterGetFullyQualifiedDomainNameRequest(this OcipClient client, PublicClusterGetFullyQualifiedDomainNameRequest request) {
-        return await client.Call(request) as PublicClusterGetFullyQualifiedDomainNameResponse;
-    }
-
-    /// <summary>
-    /// Get the tutorial flag setting for a user or admin.
-    /// The response is either a TutorialFlagGetResponse or an ErrorResponse.
-    /// </summary>
-    public static async Task<TutorialFlagGetResponse> TutorialFlagGetRequest(this OcipClient client, TutorialFlagGetRequest request) {
-        return await client.Call(request) as TutorialFlagGetResponse;
-    }
-
-    /// <summary>
-    /// Modify the tutorial flag setting for a user or admin.
-    /// The response is either a SuccessResponse or an ErrorResponse.
-    /// </summary>
-    public static async Task<SuccessResponse> TutorialFlagModifyRequest(this OcipClient client, TutorialFlagModifyRequest request) {
-        return await client.Call(request) as SuccessResponse;
-    }
-
-    /// <summary>
-    /// UserGetLoginInfoRequest22V2 is used to access login information for a user
-    /// either by a userId, dn or lineport.
-    /// The phone number may be any DN associated with a user.
-    /// The lineport may be any lineport associated with a user.
-    /// 
-    /// The response is a UserGetLoginInfoResponse22V2 or an ErrorResponse
-    /// </summary>
-    public static async Task<UserGetLoginInfoResponse22V2> UserGetLoginInfoRequest22V2(this OcipClient client, UserGetLoginInfoRequest22V2 request) {
-        return await client.Call(request) as UserGetLoginInfoResponse22V2;
-    }
-
-    /// <summary>
-    /// This command allows a BroadWorks or Third-Party Client Application to
-    /// create a Single Sign-On token for a device of a user.
-    /// The token is created only if:
-    /// 1. the specified user is the owner of a lineport on the specified device
-    /// (including a trunk user on a trunk device).
-    /// 2. and, the specified device is not in locked state.
-    /// 3. and, the device type of the device does support Device Management.
-    /// The response is either UserSingleSignOnCreateDeviceTokenResponse
-    /// or ErrorResponse.
-    /// </summary>
-    public static async Task<UserSingleSignOnCreateDeviceTokenResponse> UserSingleSignOnCreateDeviceTokenRequest(this OcipClient client, UserSingleSignOnCreateDeviceTokenRequest request) {
-        return await client.Call(request) as UserSingleSignOnCreateDeviceTokenResponse;
-    }
-
-    /// <summary>
-    /// Query the provisioning server to verify the session is authorized. Most
-    /// applications should not need this command, because the provisioning server
-    /// verifies the session is authorized for all commands.
-    /// The response is either a SuccessResponse or an ErrorResponse.
-    /// </summary>
-    public static async Task<SuccessResponse> VerifySessionIsValidRequest(this OcipClient client, VerifySessionIsValidRequest request) {
-        return await client.Call(request) as SuccessResponse;
-    }
-
-
-}
 }

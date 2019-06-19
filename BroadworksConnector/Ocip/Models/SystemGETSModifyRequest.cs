@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following elements are only used in AS data mode and ignored in the Amplify data mode:
     /// callIdentifierMode
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9833""}]")]
     public class SystemGETSModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
-        public bool Enabled {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9833")]
+        public bool Enabled
+        {
             get => _enabled;
-            set {
+            set
+            {
                 EnabledSpecified = true;
                 _enabled = value;
             }
@@ -32,13 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnabledSpecified { get; set; }
-        
+
         private bool _enableRequireResourcePriority;
 
         [XmlElement(ElementName = "enableRequireResourcePriority", IsNullable = false, Namespace = "")]
-        public bool EnableRequireResourcePriority {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9833")]
+        public bool EnableRequireResourcePriority
+        {
             get => _enableRequireResourcePriority;
-            set {
+            set
+            {
                 EnableRequireResourcePrioritySpecified = true;
                 _enableRequireResourcePriority = value;
             }
@@ -46,13 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableRequireResourcePrioritySpecified { get; set; }
-        
+
         private bool _sendAccessResourcePriority;
 
         [XmlElement(ElementName = "sendAccessResourcePriority", IsNullable = false, Namespace = "")]
-        public bool SendAccessResourcePriority {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9833")]
+        public bool SendAccessResourcePriority
+        {
             get => _sendAccessResourcePriority;
-            set {
+            set
+            {
                 SendAccessResourcePrioritySpecified = true;
                 _sendAccessResourcePriority = value;
             }
@@ -60,13 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SendAccessResourcePrioritySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode _callIdentifierMode;
 
         [XmlElement(ElementName = "callIdentifierMode", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode CallIdentifierMode {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9833")]
+        public BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode CallIdentifierMode
+        {
             get => _callIdentifierMode;
-            set {
+            set
+            {
                 CallIdentifierModeSpecified = true;
                 _callIdentifierMode = value;
             }
@@ -74,13 +92,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallIdentifierModeSpecified { get; set; }
-        
+
         private int _defaultPriorityAVP;
 
         [XmlElement(ElementName = "defaultPriorityAVP", IsNullable = false, Namespace = "")]
-        public int DefaultPriorityAVP {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9833")]
+        [MinInclusive(0)]
+        [MaxInclusive(4)]
+        public int DefaultPriorityAVP
+        {
             get => _defaultPriorityAVP;
-            set {
+            set
+            {
                 DefaultPriorityAVPSpecified = true;
                 _defaultPriorityAVP = value;
             }
@@ -88,13 +112,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultPriorityAVPSpecified { get; set; }
-        
+
         private int _signalingDSCP;
 
         [XmlElement(ElementName = "signalingDSCP", IsNullable = false, Namespace = "")]
-        public int SignalingDSCP {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9833")]
+        [MinInclusive(0)]
+        [MaxInclusive(63)]
+        public int SignalingDSCP
+        {
             get => _signalingDSCP;
-            set {
+            set
+            {
                 SignalingDSCPSpecified = true;
                 _signalingDSCP = value;
             }
@@ -102,13 +132,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SignalingDSCPSpecified { get; set; }
-        
+
         private string _defaultRValue;
 
         [XmlElement(ElementName = "defaultRValue", IsNullable = false, Namespace = "")]
-        public string DefaultRValue {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9833")]
+        [MinLength(3)]
+        [MaxLength(80)]
+        public string DefaultRValue
+        {
             get => _defaultRValue;
-            set {
+            set
+            {
                 DefaultRValueSpecified = true;
                 _defaultRValue = value;
             }
@@ -116,13 +152,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultRValueSpecified { get; set; }
-        
+
         private bool _bypassRoRelease;
 
         [XmlElement(ElementName = "bypassRoRelease", IsNullable = false, Namespace = "")]
-        public bool BypassRoRelease {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9833")]
+        public bool BypassRoRelease
+        {
             get => _bypassRoRelease;
-            set {
+            set
+            {
                 BypassRoReleaseSpecified = true;
                 _bypassRoRelease = value;
             }
@@ -130,6 +170,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BypassRoReleaseSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// A list of voice mail distribution lists
     /// It is used when setting a user's voice messaging distribution lists
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class VoiceMessagingDistributionListModify 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3277""}]")]
+    public class VoiceMessagingDistributionListModify
     {
 
-        
         private int _listId;
 
         [XmlElement(ElementName = "listId", IsNullable = false, Namespace = "")]
-        public int ListId {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3277")]
+        [MinInclusive(0)]
+        [MaxInclusive(14)]
+        public int ListId
+        {
             get => _listId;
-            set {
+            set
+            {
                 ListIdSpecified = true;
                 _listId = value;
             }
@@ -28,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ListIdSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3277")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -42,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList _phoneNumberList;
 
         [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList PhoneNumberList {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3277")]
+        public BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList PhoneNumberList
+        {
             get => _phoneNumberList;
-            set {
+            set
+            {
                 PhoneNumberListSpecified = true;
                 _phoneNumberList = value;
             }
@@ -56,6 +73,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneNumberListSpecified { get; set; }
-        
+
     }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Identifies at which level in the system a call center report template is created.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterReportTemplateLevel    {
-            [XmlEnum(Name = "System")]
+    public enum CallCenterReportTemplateLevel
+    {
+        [XmlEnum(Name = "System")]
         System,
-            [XmlEnum(Name = "Enterprise")]
+        [XmlEnum(Name = "Enterprise")]
         Enterprise,
-            [XmlEnum(Name = "Group")]
+        [XmlEnum(Name = "Group")]
         Group,
-     }
+    }
 }

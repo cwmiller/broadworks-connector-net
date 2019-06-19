@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,22 +12,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following elements are only used in AS data mode:
     /// stripDiversionOnVMDestinationRetrieval
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3c311aa5c89c0cf5b46e1cdefd5bc387:224""}]")]
     public class SystemThirdPartyVoiceMailSupportModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private bool _overrideAltCallerIdForVMRetrieval;
 
         [XmlElement(ElementName = "overrideAltCallerIdForVMRetrieval", IsNullable = false, Namespace = "")]
-        public bool OverrideAltCallerIdForVMRetrieval {
+        [Optional]
+        [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:224")]
+        public bool OverrideAltCallerIdForVMRetrieval
+        {
             get => _overrideAltCallerIdForVMRetrieval;
-            set {
+            set
+            {
                 OverrideAltCallerIdForVMRetrievalSpecified = true;
                 _overrideAltCallerIdForVMRetrieval = value;
             }
@@ -33,13 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OverrideAltCallerIdForVMRetrievalSpecified { get; set; }
-        
+
         private bool _stripDiversionOnVMDestinationRetrieval;
 
         [XmlElement(ElementName = "stripDiversionOnVMDestinationRetrieval", IsNullable = false, Namespace = "")]
-        public bool StripDiversionOnVMDestinationRetrieval {
+        [Optional]
+        [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:224")]
+        public bool StripDiversionOnVMDestinationRetrieval
+        {
             get => _stripDiversionOnVMDestinationRetrieval;
-            set {
+            set
+            {
                 StripDiversionOnVMDestinationRetrievalSpecified = true;
                 _stripDiversionOnVMDestinationRetrieval = value;
             }
@@ -47,6 +57,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StripDiversionOnVMDestinationRetrievalSpecified { get; set; }
-        
+
     }
 }

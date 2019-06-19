@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// System Administrator types.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SystemAdminType    {
-            [XmlEnum(Name = "System")]
+    public enum SystemAdminType
+    {
+        [XmlEnum(Name = "System")]
         System,
-            [XmlEnum(Name = "Provisioning")]
+        [XmlEnum(Name = "Provisioning")]
         Provisioning,
-     }
+    }
 }

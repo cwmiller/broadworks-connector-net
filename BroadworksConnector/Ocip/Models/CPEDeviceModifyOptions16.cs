@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,20 +12,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// configType
     /// systemFileName
     /// deviceFileFormat
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CPEDeviceModifyOptions16 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43824""}]")]
+    public class CPEDeviceModifyOptions16
     {
 
-        
         private bool _enableMonitoring;
 
         [XmlElement(ElementName = "enableMonitoring", IsNullable = false, Namespace = "")]
-        public bool EnableMonitoring {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43824")]
+        public bool EnableMonitoring
+        {
             get => _enableMonitoring;
-            set {
+            set
+            {
                 EnableMonitoringSpecified = true;
                 _enableMonitoring = value;
             }
@@ -31,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableMonitoringSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType? _resetEvent;
 
         [XmlElement(ElementName = "resetEvent", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType? ResetEvent {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43824")]
+        public BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType? ResetEvent
+        {
             get => _resetEvent;
-            set {
+            set
+            {
                 ResetEventSpecified = true;
                 _resetEvent = value;
             }
@@ -45,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResetEventSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeModifyOptions16 _deviceManagementDeviceTypeOptions;
 
         [XmlElement(ElementName = "deviceManagementDeviceTypeOptions", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeModifyOptions16 DeviceManagementDeviceTypeOptions {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43824")]
+        public BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeModifyOptions16 DeviceManagementDeviceTypeOptions
+        {
             get => _deviceManagementDeviceTypeOptions;
-            set {
+            set
+            {
                 DeviceManagementDeviceTypeOptionsSpecified = true;
                 _deviceManagementDeviceTypeOptions = value;
             }
@@ -59,6 +73,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceManagementDeviceTypeOptionsSpecified { get; set; }
-        
+
     }
 }

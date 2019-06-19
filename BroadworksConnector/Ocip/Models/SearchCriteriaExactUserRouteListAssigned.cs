@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Criteria for searching for users with/without Route List feature assigned.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1241""}]")]
     public class SearchCriteriaExactUserRouteListAssigned : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        
         private bool _routeListAssigned;
 
         [XmlElement(ElementName = "routeListAssigned", IsNullable = false, Namespace = "")]
-        public bool RouteListAssigned {
+        [Group(@"f0ada2681ca347fa83b464734259b304:1241")]
+        public bool RouteListAssigned
+        {
             get => _routeListAssigned;
-            set {
+            set
+            {
                 RouteListAssignedSpecified = true;
                 _routeListAssigned = value;
             }
@@ -27,6 +32,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RouteListAssignedSpecified { get; set; }
-        
+
     }
 }

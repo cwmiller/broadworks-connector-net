@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,22 +12,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Admins only need to populate the newPasscode field when changing the passcode.
     /// Users must populate both the oldPasscode and new Passcode fields when changing the passcode.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4277c572e54919d6e29f4c0fa69aaad1:134""}]")]
     public class UserCommunicationBarringUserControlModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:134")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -33,13 +40,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private int? _enableProfile;
 
         [XmlElement(ElementName = "enableProfile", IsNullable = true, Namespace = "")]
-        public int? EnableProfile {
+        [Optional]
+        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:134")]
+        [MinInclusive(0)]
+        [MaxInclusive(9)]
+        public int? EnableProfile
+        {
             get => _enableProfile;
-            set {
+            set
+            {
                 EnableProfileSpecified = true;
                 _enableProfile = value;
             }
@@ -47,13 +60,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableProfileSpecified { get; set; }
-        
+
         private string _oldPasscode;
 
         [XmlElement(ElementName = "oldPasscode", IsNullable = false, Namespace = "")]
-        public string OldPasscode {
+        [Optional]
+        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:134")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string OldPasscode
+        {
             get => _oldPasscode;
-            set {
+            set
+            {
                 OldPasscodeSpecified = true;
                 _oldPasscode = value;
             }
@@ -61,13 +80,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OldPasscodeSpecified { get; set; }
-        
+
         private string _newPasscode;
 
         [XmlElement(ElementName = "newPasscode", IsNullable = false, Namespace = "")]
-        public string NewPasscode {
+        [Optional]
+        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:134")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string NewPasscode
+        {
             get => _newPasscode;
-            set {
+            set
+            {
                 NewPasscodeSpecified = true;
                 _newPasscode = value;
             }
@@ -75,13 +100,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewPasscodeSpecified { get; set; }
-        
+
         private bool _resetLockout;
 
         [XmlElement(ElementName = "resetLockout", IsNullable = false, Namespace = "")]
-        public bool ResetLockout {
+        [Optional]
+        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:134")]
+        public bool ResetLockout
+        {
             get => _resetLockout;
-            set {
+            set
+            {
                 ResetLockoutSpecified = true;
                 _resetLockout = value;
             }
@@ -89,6 +118,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResetLockoutSpecified { get; set; }
-        
+
     }
 }

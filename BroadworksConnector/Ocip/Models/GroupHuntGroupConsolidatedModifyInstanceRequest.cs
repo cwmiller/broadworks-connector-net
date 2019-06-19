@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -18,23 +20,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following elements are only used in AS data mode:
     /// useSystemHuntGroupCLIDSetting
     /// includeHuntGroupNameInCLID
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc829065f9d696d3ca7084121d57f8c0:184"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""bc829065f9d696d3ca7084121d57f8c0:195""}]}]")]
     public class GroupHuntGroupConsolidatedModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -42,13 +49,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
 
         [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers
+        {
             get => _unassignPhoneNumbers;
-            set {
+            set
+            {
                 UnassignPhoneNumbersSpecified = true;
                 _unassignPhoneNumbers = value;
             }
@@ -56,13 +67,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UnassignPhoneNumbersSpecified { get; set; }
-        
+
         private bool _addPhoneNumberToGroup;
 
         [XmlElement(ElementName = "addPhoneNumberToGroup", IsNullable = false, Namespace = "")]
-        public bool AddPhoneNumberToGroup {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool AddPhoneNumberToGroup
+        {
             get => _addPhoneNumberToGroup;
-            set {
+            set
+            {
                 AddPhoneNumberToGroupSpecified = true;
                 _addPhoneNumberToGroup = value;
             }
@@ -70,13 +85,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AddPhoneNumberToGroupSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
+        {
             get => _serviceInstanceProfile;
-            set {
+            set
+            {
                 ServiceInstanceProfileSpecified = true;
                 _serviceInstanceProfile = value;
             }
@@ -84,13 +103,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceInstanceProfileSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
 
         [XmlElement(ElementName = "policy", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.HuntPolicy Policy {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public BroadWorksConnector.Ocip.Models.HuntPolicy Policy
+        {
             get => _policy;
-            set {
+            set
+            {
                 PolicySpecified = true;
                 _policy = value;
             }
@@ -98,13 +121,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PolicySpecified { get; set; }
-        
+
         private bool _huntAfterNoAnswer;
 
         [XmlElement(ElementName = "huntAfterNoAnswer", IsNullable = false, Namespace = "")]
-        public bool HuntAfterNoAnswer {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool HuntAfterNoAnswer
+        {
             get => _huntAfterNoAnswer;
-            set {
+            set
+            {
                 HuntAfterNoAnswerSpecified = true;
                 _huntAfterNoAnswer = value;
             }
@@ -112,13 +139,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HuntAfterNoAnswerSpecified { get; set; }
-        
+
         private int _noAnswerNumberOfRings;
 
         [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false, Namespace = "")]
-        public int NoAnswerNumberOfRings {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        [MinInclusive(1)]
+        [MaxInclusive(20)]
+        public int NoAnswerNumberOfRings
+        {
             get => _noAnswerNumberOfRings;
-            set {
+            set
+            {
                 NoAnswerNumberOfRingsSpecified = true;
                 _noAnswerNumberOfRings = value;
             }
@@ -126,13 +159,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoAnswerNumberOfRingsSpecified { get; set; }
-        
+
         private bool _forwardAfterTimeout;
 
         [XmlElement(ElementName = "forwardAfterTimeout", IsNullable = false, Namespace = "")]
-        public bool ForwardAfterTimeout {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool ForwardAfterTimeout
+        {
             get => _forwardAfterTimeout;
-            set {
+            set
+            {
                 ForwardAfterTimeoutSpecified = true;
                 _forwardAfterTimeout = value;
             }
@@ -140,13 +177,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ForwardAfterTimeoutSpecified { get; set; }
-        
+
         private int _forwardTimeoutSeconds;
 
         [XmlElement(ElementName = "forwardTimeoutSeconds", IsNullable = false, Namespace = "")]
-        public int ForwardTimeoutSeconds {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        [MinInclusive(0)]
+        [MaxInclusive(7200)]
+        public int ForwardTimeoutSeconds
+        {
             get => _forwardTimeoutSeconds;
-            set {
+            set
+            {
                 ForwardTimeoutSecondsSpecified = true;
                 _forwardTimeoutSeconds = value;
             }
@@ -154,13 +197,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ForwardTimeoutSecondsSpecified { get; set; }
-        
+
         private string _forwardToPhoneNumber;
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = true, Namespace = "")]
-        public string ForwardToPhoneNumber {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ForwardToPhoneNumber
+        {
             get => _forwardToPhoneNumber;
-            set {
+            set
+            {
                 ForwardToPhoneNumberSpecified = true;
                 _forwardToPhoneNumber = value;
             }
@@ -168,13 +217,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ForwardToPhoneNumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
 
         [XmlElement(ElementName = "agentUserIdList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:195")]
+        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList
+        {
             get => _agentUserIdList;
-            set {
+            set
+            {
                 AgentUserIdListSpecified = true;
                 _agentUserIdList = value;
             }
@@ -182,13 +235,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AgentUserIdListSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementAgentWeightList _agentWeightList;
 
         [XmlElement(ElementName = "agentWeightList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementAgentWeightList AgentWeightList {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:195")]
+        public BroadWorksConnector.Ocip.Models.ReplacementAgentWeightList AgentWeightList
+        {
             get => _agentWeightList;
-            set {
+            set
+            {
                 AgentWeightListSpecified = true;
                 _agentWeightList = value;
             }
@@ -196,13 +253,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AgentWeightListSpecified { get; set; }
-        
+
         private bool _allowCallWaitingForAgents;
 
         [XmlElement(ElementName = "allowCallWaitingForAgents", IsNullable = false, Namespace = "")]
-        public bool AllowCallWaitingForAgents {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool AllowCallWaitingForAgents
+        {
             get => _allowCallWaitingForAgents;
-            set {
+            set
+            {
                 AllowCallWaitingForAgentsSpecified = true;
                 _allowCallWaitingForAgents = value;
             }
@@ -210,13 +271,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowCallWaitingForAgentsSpecified { get; set; }
-        
+
         private bool _useSystemHuntGroupCLIDSetting;
 
         [XmlElement(ElementName = "useSystemHuntGroupCLIDSetting", IsNullable = false, Namespace = "")]
-        public bool UseSystemHuntGroupCLIDSetting {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool UseSystemHuntGroupCLIDSetting
+        {
             get => _useSystemHuntGroupCLIDSetting;
-            set {
+            set
+            {
                 UseSystemHuntGroupCLIDSettingSpecified = true;
                 _useSystemHuntGroupCLIDSetting = value;
             }
@@ -224,13 +289,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseSystemHuntGroupCLIDSettingSpecified { get; set; }
-        
+
         private bool _includeHuntGroupNameInCLID;
 
         [XmlElement(ElementName = "includeHuntGroupNameInCLID", IsNullable = false, Namespace = "")]
-        public bool IncludeHuntGroupNameInCLID {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool IncludeHuntGroupNameInCLID
+        {
             get => _includeHuntGroupNameInCLID;
-            set {
+            set
+            {
                 IncludeHuntGroupNameInCLIDSpecified = true;
                 _includeHuntGroupNameInCLID = value;
             }
@@ -238,13 +307,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeHuntGroupNameInCLIDSpecified { get; set; }
-        
+
         private bool _enableNotReachableForwarding;
 
         [XmlElement(ElementName = "enableNotReachableForwarding", IsNullable = false, Namespace = "")]
-        public bool EnableNotReachableForwarding {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool EnableNotReachableForwarding
+        {
             get => _enableNotReachableForwarding;
-            set {
+            set
+            {
                 EnableNotReachableForwardingSpecified = true;
                 _enableNotReachableForwarding = value;
             }
@@ -252,13 +325,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableNotReachableForwardingSpecified { get; set; }
-        
+
         private string _notReachableForwardToPhoneNumber;
 
         [XmlElement(ElementName = "notReachableForwardToPhoneNumber", IsNullable = true, Namespace = "")]
-        public string NotReachableForwardToPhoneNumber {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string NotReachableForwardToPhoneNumber
+        {
             get => _notReachableForwardToPhoneNumber;
-            set {
+            set
+            {
                 NotReachableForwardToPhoneNumberSpecified = true;
                 _notReachableForwardToPhoneNumber = value;
             }
@@ -266,13 +345,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NotReachableForwardToPhoneNumberSpecified { get; set; }
-        
+
         private bool _makeBusyWhenNotReachable;
 
         [XmlElement(ElementName = "makeBusyWhenNotReachable", IsNullable = false, Namespace = "")]
-        public bool MakeBusyWhenNotReachable {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool MakeBusyWhenNotReachable
+        {
             get => _makeBusyWhenNotReachable;
-            set {
+            set
+            {
                 MakeBusyWhenNotReachableSpecified = true;
                 _makeBusyWhenNotReachable = value;
             }
@@ -280,13 +363,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MakeBusyWhenNotReachableSpecified { get; set; }
-        
+
         private bool _allowMembersToControlGroupBusy;
 
         [XmlElement(ElementName = "allowMembersToControlGroupBusy", IsNullable = false, Namespace = "")]
-        public bool AllowMembersToControlGroupBusy {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool AllowMembersToControlGroupBusy
+        {
             get => _allowMembersToControlGroupBusy;
-            set {
+            set
+            {
                 AllowMembersToControlGroupBusySpecified = true;
                 _allowMembersToControlGroupBusy = value;
             }
@@ -294,13 +381,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowMembersToControlGroupBusySpecified { get; set; }
-        
+
         private bool _enableGroupBusy;
 
         [XmlElement(ElementName = "enableGroupBusy", IsNullable = false, Namespace = "")]
-        public bool EnableGroupBusy {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool EnableGroupBusy
+        {
             get => _enableGroupBusy;
-            set {
+            set
+            {
                 EnableGroupBusySpecified = true;
                 _enableGroupBusy = value;
             }
@@ -308,13 +399,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableGroupBusySpecified { get; set; }
-        
+
         private bool _applyGroupBusyWhenTerminatingToAgent;
 
         [XmlElement(ElementName = "applyGroupBusyWhenTerminatingToAgent", IsNullable = false, Namespace = "")]
-        public bool ApplyGroupBusyWhenTerminatingToAgent {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool ApplyGroupBusyWhenTerminatingToAgent
+        {
             get => _applyGroupBusyWhenTerminatingToAgent;
-            set {
+            set
+            {
                 ApplyGroupBusyWhenTerminatingToAgentSpecified = true;
                 _applyGroupBusyWhenTerminatingToAgent = value;
             }
@@ -322,13 +417,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ApplyGroupBusyWhenTerminatingToAgentSpecified { get; set; }
-        
+
         private string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        public string NetworkClassOfService {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string NetworkClassOfService
+        {
             get => _networkClassOfService;
-            set {
+            set
+            {
                 NetworkClassOfServiceSpecified = true;
                 _networkClassOfService = value;
             }
@@ -336,13 +437,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetworkClassOfServiceSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementConsolidatedUserServiceAssignmentList _serviceList;
 
         [XmlElement(ElementName = "serviceList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementConsolidatedUserServiceAssignmentList ServiceList {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public BroadWorksConnector.Ocip.Models.ReplacementConsolidatedUserServiceAssignmentList ServiceList
+        {
             get => _serviceList;
-            set {
+            set
+            {
                 ServiceListSpecified = true;
                 _serviceList = value;
             }
@@ -350,13 +455,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceListSpecified { get; set; }
-        
+
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -364,13 +473,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _directoryNumberHuntingAgentUserIdList;
 
         [XmlElement(ElementName = "directoryNumberHuntingAgentUserIdList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList DirectoryNumberHuntingAgentUserIdList {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList DirectoryNumberHuntingAgentUserIdList
+        {
             get => _directoryNumberHuntingAgentUserIdList;
-            set {
+            set
+            {
                 DirectoryNumberHuntingAgentUserIdListSpecified = true;
                 _directoryNumberHuntingAgentUserIdList = value;
             }
@@ -378,13 +491,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DirectoryNumberHuntingAgentUserIdListSpecified { get; set; }
-        
+
         private bool _directoryNumberHuntingUseTerminateCallToAgentFirst;
 
         [XmlElement(ElementName = "directoryNumberHuntingUseTerminateCallToAgentFirst", IsNullable = false, Namespace = "")]
-        public bool DirectoryNumberHuntingUseTerminateCallToAgentFirst {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool DirectoryNumberHuntingUseTerminateCallToAgentFirst
+        {
             get => _directoryNumberHuntingUseTerminateCallToAgentFirst;
-            set {
+            set
+            {
                 DirectoryNumberHuntingUseTerminateCallToAgentFirstSpecified = true;
                 _directoryNumberHuntingUseTerminateCallToAgentFirst = value;
             }
@@ -392,13 +509,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DirectoryNumberHuntingUseTerminateCallToAgentFirstSpecified { get; set; }
-        
+
         private bool _directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls;
 
         [XmlElement(ElementName = "directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls", IsNullable = false, Namespace = "")]
-        public bool DirectoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:184")]
+        public bool DirectoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls
+        {
             get => _directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls;
-            set {
+            set
+            {
                 DirectoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified = true;
                 _directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls = value;
             }
@@ -406,6 +527,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DirectoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified { get; set; }
-        
+
     }
 }

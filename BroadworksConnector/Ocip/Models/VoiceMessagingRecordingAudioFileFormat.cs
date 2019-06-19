@@ -7,13 +7,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// The media type of a voice message.
     /// WAV - A WAV file
     /// MP3 - an MP3 file
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum VoiceMessagingRecordingAudioFileFormat    {
-            [XmlEnum(Name = "WAV")]
+    public enum VoiceMessagingRecordingAudioFileFormat
+    {
+        [XmlEnum(Name = "WAV")]
         WAV,
-            [XmlEnum(Name = "MP3")]
+        [XmlEnum(Name = "MP3")]
         MP3,
-     }
+    }
 }

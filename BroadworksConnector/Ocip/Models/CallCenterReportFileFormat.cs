@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call center enhanced reporting report file format.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterReportFileFormat    {
-            [XmlEnum(Name = "PDF")]
+    public enum CallCenterReportFileFormat
+    {
+        [XmlEnum(Name = "PDF")]
         PDF,
-            [XmlEnum(Name = "XLS")]
+        [XmlEnum(Name = "XLS")]
         XLS,
-     }
+    }
 }

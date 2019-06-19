@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemRoutingProfileGetListRequest.
     /// Returns a list of routing profiles defined in the system.
-        /// <see cref="SystemRoutingProfileGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemRoutingProfileGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14415""}]")]
     public class SystemRoutingProfileGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _routingProfile;
+        private List<string> _routingProfile = new List<string>();
 
         [XmlElement(ElementName = "routingProfile", IsNullable = false, Namespace = "")]
-        public List<string> RoutingProfile {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14415")]
+        [MinLength(4)]
+        [MaxLength(12)]
+        public List<string> RoutingProfile
+        {
             get => _routingProfile;
-            set {
+            set
+            {
                 RoutingProfileSpecified = true;
                 _routingProfile = value;
             }
@@ -29,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RoutingProfileSpecified { get; set; }
-        
+
     }
 }

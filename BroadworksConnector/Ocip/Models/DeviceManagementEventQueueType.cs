@@ -6,13 +6,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Device Management queues available in the system.
     /// They contain events at various stage of processing.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DeviceManagementEventQueueType    {
-            [XmlEnum(Name = "Completed")]
+    public enum DeviceManagementEventQueueType
+    {
+        [XmlEnum(Name = "Completed")]
         Completed,
-            [XmlEnum(Name = "In Progress Or Pending")]
+        [XmlEnum(Name = "In Progress Or Pending")]
         InProgressOrPending,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to GroupOfficeZoneGetAssignedListRequest.
     /// Contains a table of all Office Zones assigned to the
     /// group. The column headings are: "Name", "Description" and "Default".
-        /// <see cref="GroupOfficeZoneGetAssignedListRequest"/>
-        /// </summary>
+    /// <see cref="GroupOfficeZoneGetAssignedListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:5694""}]")]
     public class GroupOfficeZoneGetAssignedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _officeZoneTable;
 
         [XmlElement(ElementName = "officeZoneTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable OfficeZoneTable {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5694")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable OfficeZoneTable
+        {
             get => _officeZoneTable;
-            set {
+            set
+            {
                 OfficeZoneTableSpecified = true;
                 _officeZoneTable = value;
             }
@@ -30,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OfficeZoneTableSpecified { get; set; }
-        
+
     }
 }

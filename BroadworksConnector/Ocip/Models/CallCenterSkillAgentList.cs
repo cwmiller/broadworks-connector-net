@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// A list of agents for a particular skill Level.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterSkillAgentList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7679""}]")]
+    public class CallCenterSkillAgentList
     {
 
-        
         private int _skillLevel;
 
         [XmlElement(ElementName = "skillLevel", IsNullable = false, Namespace = "")]
-        public int SkillLevel {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7679")]
+        [MinInclusive(1)]
+        [MaxInclusive(20)]
+        public int SkillLevel
+        {
             get => _skillLevel;
-            set {
+            set
+            {
                 SkillLevelSpecified = true;
                 _skillLevel = value;
             }
@@ -27,13 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SkillLevelSpecified { get; set; }
-        
-        private List<string> _agent;
+
+        private List<string> _agent = new List<string>();
 
         [XmlElement(ElementName = "agent", IsNullable = false, Namespace = "")]
-        public List<string> Agent {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7679")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public List<string> Agent
+        {
             get => _agent;
-            set {
+            set
+            {
                 AgentSpecified = true;
                 _agent = value;
             }
@@ -41,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AgentSpecified { get; set; }
-        
+
     }
 }

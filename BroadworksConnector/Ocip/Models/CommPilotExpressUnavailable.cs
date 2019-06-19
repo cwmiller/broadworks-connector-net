@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// CommPilot Express Unavailable Configuration used in the context of a get.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CommPilotExpressUnavailable 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8c204d784d1904d9eeea996d46de69be:259""}]")]
+    public class CommPilotExpressUnavailable
     {
 
-        
         private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithException _incomingCalls;
 
         [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithException IncomingCalls {
+        [Group(@"8c204d784d1904d9eeea996d46de69be:259")]
+        public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithException IncomingCalls
+        {
             get => _incomingCalls;
-            set {
+            set
+            {
                 IncomingCallsSpecified = true;
                 _incomingCalls = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncomingCallsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CommPilotExpressVoiceMailGreeting _voiceMailGreeting;
 
         [XmlElement(ElementName = "voiceMailGreeting", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CommPilotExpressVoiceMailGreeting VoiceMailGreeting {
+        [Group(@"8c204d784d1904d9eeea996d46de69be:259")]
+        public BroadWorksConnector.Ocip.Models.CommPilotExpressVoiceMailGreeting VoiceMailGreeting
+        {
             get => _voiceMailGreeting;
-            set {
+            set
+            {
                 VoiceMailGreetingSpecified = true;
                 _voiceMailGreeting = value;
             }
@@ -41,6 +49,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VoiceMailGreetingSpecified { get; set; }
-        
+
     }
 }

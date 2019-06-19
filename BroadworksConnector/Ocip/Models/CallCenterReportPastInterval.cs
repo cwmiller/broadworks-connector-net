@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The call center enhanced reporting report past interval, for example, last 24 month.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterReportPastInterval 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7460""}]")]
+    public class CallCenterReportPastInterval
     {
 
-        
         private int _number;
 
         [XmlElement(ElementName = "number", IsNullable = false, Namespace = "")]
-        public int Number {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7460")]
+        [MinInclusive(1)]
+        [MaxInclusive(99)]
+        public int Number
+        {
             get => _number;
-            set {
+            set
+            {
                 NumberSpecified = true;
                 _number = value;
             }
@@ -27,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterReportIntervalTimeUnit _timeUnit;
 
         [XmlElement(ElementName = "timeUnit", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportIntervalTimeUnit TimeUnit {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7460")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportIntervalTimeUnit TimeUnit
+        {
             get => _timeUnit;
-            set {
+            set
+            {
                 TimeUnitSpecified = true;
                 _timeUnit = value;
             }
@@ -41,6 +51,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeUnitSpecified { get; set; }
-        
+
     }
 }

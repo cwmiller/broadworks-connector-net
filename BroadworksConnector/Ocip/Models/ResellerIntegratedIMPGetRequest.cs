@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,23 +11,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either ResellerIntegratedIMPGetResponse or ErrorResponse.
     /// 
     /// Replaced by: ResellerIntegratedIMPGetRequest22 in AS data mode
-        /// <see cref="ResellerIntegratedIMPGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="ResellerIntegratedIMPGetRequest22"/>
-        /// </summary>
+    /// <see cref="ResellerIntegratedIMPGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="ResellerIntegratedIMPGetRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:5367""}]")]
     public class ResellerIntegratedIMPGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        public string ResellerId {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:5367")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ResellerId
+        {
             get => _resellerId;
-            set {
+            set
+            {
                 ResellerIdSpecified = true;
                 _resellerId = value;
             }
@@ -33,6 +40,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResellerIdSpecified { get; set; }
-        
+
     }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for collaborate room type
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CollaborateRoomType    {
-            [XmlEnum(Name = "Instant Room")]
+    public enum CollaborateRoomType
+    {
+        [XmlEnum(Name = "Instant Room")]
         InstantRoom,
-            [XmlEnum(Name = "My Room")]
+        [XmlEnum(Name = "My Room")]
         MyRoom,
-            [XmlEnum(Name = "Project Room")]
+        [XmlEnum(Name = "Project Room")]
         ProjectRoom,
-     }
+    }
 }

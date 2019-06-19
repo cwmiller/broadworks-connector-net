@@ -1,26 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemEnhancedCallLogsGetRequest22.
-        /// <see cref="SystemEnhancedCallLogsGetRequest22"/>
-        /// </summary>
+    /// <see cref="SystemEnhancedCallLogsGetRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f6b3702edb5f67fa12c2c426d98657db:210""}]")]
     public class SystemEnhancedCallLogsGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private int _maxNonPagedResponseSize;
 
         [XmlElement(ElementName = "maxNonPagedResponseSize", IsNullable = false, Namespace = "")]
-        public int MaxNonPagedResponseSize {
+        [Group(@"f6b3702edb5f67fa12c2c426d98657db:210")]
+        [MinInclusive(100)]
+        [MaxInclusive(1000)]
+        public int MaxNonPagedResponseSize
+        {
             get => _maxNonPagedResponseSize;
-            set {
+            set
+            {
                 MaxNonPagedResponseSizeSpecified = true;
                 _maxNonPagedResponseSize = value;
             }
@@ -28,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxNonPagedResponseSizeSpecified { get; set; }
-        
+
         private string _eclQueryApplicationURL;
 
         [XmlElement(ElementName = "eclQueryApplicationURL", IsNullable = false, Namespace = "")]
-        public string EclQueryApplicationURL {
+        [Optional]
+        [Group(@"f6b3702edb5f67fa12c2c426d98657db:210")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string EclQueryApplicationURL
+        {
             get => _eclQueryApplicationURL;
-            set {
+            set
+            {
                 EclQueryApplicationURLSpecified = true;
                 _eclQueryApplicationURL = value;
             }
@@ -42,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EclQueryApplicationURLSpecified { get; set; }
-        
+
         private string _eclQueryDataRepositoryURL;
 
         [XmlElement(ElementName = "eclQueryDataRepositoryURL", IsNullable = false, Namespace = "")]
-        public string EclQueryDataRepositoryURL {
+        [Optional]
+        [Group(@"f6b3702edb5f67fa12c2c426d98657db:210")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string EclQueryDataRepositoryURL
+        {
             get => _eclQueryDataRepositoryURL;
-            set {
+            set
+            {
                 EclQueryDataRepositoryURLSpecified = true;
                 _eclQueryDataRepositoryURL = value;
             }
@@ -56,6 +75,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EclQueryDataRepositoryURLSpecified { get; set; }
-        
+
     }
 }

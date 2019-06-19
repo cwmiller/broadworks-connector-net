@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Policy for a department administrator's access to assigning phone numbers and extensions.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupDepartmentAdminPhoneNumberExtensionAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupDepartmentAdminPhoneNumberExtensionAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-     }
+    }
 }

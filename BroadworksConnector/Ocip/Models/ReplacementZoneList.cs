@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Contains an ordered list of zones to use to replace the current list of zones in an Office Zone.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ReplacementZoneList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18657""}]")]
+    public class ReplacementZoneList
     {
 
-        
-        private List<string> _zoneName;
+        private List<string> _zoneName = new List<string>();
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        public List<string> ZoneName {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18657")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> ZoneName
+        {
             get => _zoneName;
-            set {
+            set
+            {
                 ZoneNameSpecified = true;
                 _zoneName = value;
             }
@@ -27,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ZoneNameSpecified { get; set; }
-        
+
     }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Forward to Number Selection.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallForwardingSelectiveNumberSelection16    {
-            [XmlEnum(Name = "Forward To Default Number")]
+    public enum CallForwardingSelectiveNumberSelection16
+    {
+        [XmlEnum(Name = "Forward To Default Number")]
         ForwardToDefaultNumber,
-            [XmlEnum(Name = "Forward To Specified Number")]
+        [XmlEnum(Name = "Forward To Specified Number")]
         ForwardToSpecifiedNumber,
-            [XmlEnum(Name = "Do not forward")]
+        [XmlEnum(Name = "Do not forward")]
         Donotforward,
-     }
+    }
 }

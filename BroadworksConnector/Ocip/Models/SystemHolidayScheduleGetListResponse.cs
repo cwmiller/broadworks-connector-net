@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the SystemHolidayScheduleGetListRequest.
     /// The response contains all the system holiday schedule names.
-        /// <see cref="SystemHolidayScheduleGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemHolidayScheduleGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:15411""}]")]
     public class SystemHolidayScheduleGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _holidayScheduleName;
+        private List<string> _holidayScheduleName = new List<string>();
 
         [XmlElement(ElementName = "holidayScheduleName", IsNullable = false, Namespace = "")]
-        public List<string> HolidayScheduleName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15411")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> HolidayScheduleName
+        {
             get => _holidayScheduleName;
-            set {
+            set
+            {
                 HolidayScheduleNameSpecified = true;
                 _holidayScheduleName = value;
             }
@@ -29,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HolidayScheduleNameSpecified { get; set; }
-        
+
     }
 }

@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for the mode of a Diameter Peer.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DiameterPeerMode    {
-            [XmlEnum(Name = "Active")]
+    public enum DiameterPeerMode
+    {
+        [XmlEnum(Name = "Active")]
         Active,
-            [XmlEnum(Name = "Standby")]
+        [XmlEnum(Name = "Standby")]
         Standby,
-     }
+    }
 }

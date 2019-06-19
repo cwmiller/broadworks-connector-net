@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table with column headings:
     /// "Virtual On-Net Call Type Name", "Virtual On-Net Call Type CDR Value"
     /// in a row for each Virtual On-Net Call Type.
-        /// <see cref="SystemVirtualOnNetCallTypeGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemVirtualOnNetCallTypeGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:295""}]")]
     public class SystemVirtualOnNetCallTypeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _virtualOnNetCallTypeTable;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable VirtualOnNetCallTypeTable {
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:295")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable VirtualOnNetCallTypeTable
+        {
             get => _virtualOnNetCallTypeTable;
-            set {
+            set
+            {
                 VirtualOnNetCallTypeTableSpecified = true;
                 _virtualOnNetCallTypeTable = value;
             }
@@ -31,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VirtualOnNetCallTypeTableSpecified { get; set; }
-        
+
     }
 }

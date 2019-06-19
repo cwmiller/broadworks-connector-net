@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Modify the filtering setting for an executive user.
     /// Both executive and the executive assistant can run this command.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9a6dbade05624033cf7fe782b7c9a9a7:372""}]")]
     public class UserExecutiveModifyFilteringRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:372")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -31,13 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private bool _enableFiltering;
 
         [XmlElement(ElementName = "enableFiltering", IsNullable = false, Namespace = "")]
-        public bool EnableFiltering {
+        [Optional]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:372")]
+        public bool EnableFiltering
+        {
             get => _enableFiltering;
-            set {
+            set
+            {
                 EnableFilteringSpecified = true;
                 _enableFiltering = value;
             }
@@ -45,13 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableFilteringSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode _filteringMode;
 
         [XmlElement(ElementName = "filteringMode", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode FilteringMode {
+        [Optional]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:372")]
+        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode FilteringMode
+        {
             get => _filteringMode;
-            set {
+            set
+            {
                 FilteringModeSpecified = true;
                 _filteringMode = value;
             }
@@ -59,13 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FilteringModeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType _simpleFilterType;
 
         [XmlElement(ElementName = "simpleFilterType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType SimpleFilterType {
+        [Optional]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:372")]
+        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType SimpleFilterType
+        {
             get => _simpleFilterType;
-            set {
+            set
+            {
                 SimpleFilterTypeSpecified = true;
                 _simpleFilterType = value;
             }
@@ -73,13 +92,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SimpleFilterTypeSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
+
+        private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation = new List<BroadWorksConnector.Ocip.Models.CriteriaActivation>();
 
         [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
+        [Optional]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:372")]
+        public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation
+        {
             get => _criteriaActivation;
-            set {
+            set
+            {
                 CriteriaActivationSpecified = true;
                 _criteriaActivation = value;
             }
@@ -87,6 +110,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaActivationSpecified { get; set; }
-        
+
     }
 }

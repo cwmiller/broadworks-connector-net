@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// A list of user services that replaces a previously authorized user services.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ReplacementCombinedUserServiceAuthorizationList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3193""}]")]
+    public class ReplacementCombinedUserServiceAuthorizationList
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAuthorization> _userServiceAuthorization;
+        private List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAuthorization> _userServiceAuthorization = new List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAuthorization>();
 
         [XmlElement(ElementName = "userServiceAuthorization", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAuthorization> UserServiceAuthorization {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3193")]
+        public List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAuthorization> UserServiceAuthorization
+        {
             get => _userServiceAuthorization;
-            set {
+            set
+            {
                 UserServiceAuthorizationSpecified = true;
                 _userServiceAuthorization = value;
             }
@@ -27,6 +32,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserServiceAuthorizationSpecified { get; set; }
-        
+
     }
 }

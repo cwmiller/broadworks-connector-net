@@ -6,13 +6,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Session Admission Control codec selection policy.
     /// Determines which codec is selected from the SDP offer when using SAC weight count.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SessionAdmissionControlCodecSelectionPolicyType    {
-            [XmlEnum(Name = "Highest Weight")]
+    public enum SessionAdmissionControlCodecSelectionPolicyType
+    {
+        [XmlEnum(Name = "Highest Weight")]
         HighestWeight,
-            [XmlEnum(Name = "Preferred Codec")]
+        [XmlEnum(Name = "Preferred Codec")]
         PreferredCodec,
-     }
+    }
 }

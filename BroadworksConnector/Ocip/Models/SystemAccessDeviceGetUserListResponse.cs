@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -16,22 +18,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// The Private Identity column is empty is AS mode.
     /// 
     /// Replaced by: SystemAccessDeviceGetUserListResponse21sp1 in AS data mode.
-        /// <see cref="SystemAccessDeviceGetUserListRequest"/>
-        /// <see cref="SystemAccessDeviceGetUserListResponse21sp1"/>
-        /// </summary>
+    /// <see cref="SystemAccessDeviceGetUserListRequest"/>
+    /// <see cref="SystemAccessDeviceGetUserListResponse21sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:5869""}]")]
     public class SystemAccessDeviceGetUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _deviceUserTable;
 
         [XmlElement(ElementName = "deviceUserTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable DeviceUserTable {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:5869")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable DeviceUserTable
+        {
             get => _deviceUserTable;
-            set {
+            set
+            {
                 DeviceUserTableSpecified = true;
                 _deviceUserTable = value;
             }
@@ -39,6 +44,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceUserTableSpecified { get; set; }
-        
+
     }
 }

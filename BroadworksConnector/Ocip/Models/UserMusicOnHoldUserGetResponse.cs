@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to UserMusicOnHoldUserGetRequest.
     /// Replaced By: UserMusicOnHoldUserGetResponse16
-        /// <see cref="UserMusicOnHoldUserGetRequest"/>
-        /// <see cref="UserMusicOnHoldUserGetResponse16"/>
-        /// </summary>
+    /// <see cref="UserMusicOnHoldUserGetRequest"/>
+    /// <see cref="UserMusicOnHoldUserGetResponse16"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11580""}]")]
     public class UserMusicOnHoldUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
-        public bool EnableVideo {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11580")]
+        public bool EnableVideo
+        {
             get => _enableVideo;
-            set {
+            set
+            {
                 EnableVideoSpecified = true;
                 _enableVideo = value;
             }
@@ -30,13 +35,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableVideoSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead _source;
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead Source {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11580")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead Source
+        {
             get => _source;
-            set {
+            set
+            {
                 SourceSpecified = true;
                 _source = value;
             }
@@ -44,13 +52,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SourceSpecified { get; set; }
-        
+
         private bool _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
-        public bool UseAlternateSourceForInternalCalls {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11580")]
+        public bool UseAlternateSourceForInternalCalls
+        {
             get => _useAlternateSourceForInternalCalls;
-            set {
+            set
+            {
                 UseAlternateSourceForInternalCallsSpecified = true;
                 _useAlternateSourceForInternalCalls = value;
             }
@@ -58,13 +69,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseAlternateSourceForInternalCallsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead _internalSource;
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead InternalSource {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11580")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead InternalSource
+        {
             get => _internalSource;
-            set {
+            set
+            {
                 InternalSourceSpecified = true;
                 _internalSource = value;
             }
@@ -72,6 +87,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool InternalSourceSpecified { get; set; }
-        
+
     }
 }

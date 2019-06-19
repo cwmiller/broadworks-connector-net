@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemBusyLampFieldGetRequest.
-        /// <see cref="SystemBusyLampFieldGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemBusyLampFieldGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:21127""}]")]
     public class SystemBusyLampFieldGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _displayLocalUserIdentityLastNameFirst;
 
         [XmlElement(ElementName = "displayLocalUserIdentityLastNameFirst", IsNullable = false, Namespace = "")]
-        public bool DisplayLocalUserIdentityLastNameFirst {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21127")]
+        public bool DisplayLocalUserIdentityLastNameFirst
+        {
             get => _displayLocalUserIdentityLastNameFirst;
-            set {
+            set
+            {
                 DisplayLocalUserIdentityLastNameFirstSpecified = true;
                 _displayLocalUserIdentityLastNameFirst = value;
             }
@@ -28,6 +33,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DisplayLocalUserIdentityLastNameFirstSpecified { get; set; }
-        
+
     }
 }

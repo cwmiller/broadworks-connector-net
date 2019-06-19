@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// CommPilot Express Available Out Of Office Configuration used in the context of a get.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CommPilotExpressAvailableOutOfOffice 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8c204d784d1904d9eeea996d46de69be:129""}]")]
+    public class CommPilotExpressAvailableOutOfOffice
     {
 
-        
         private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirection _incomingCalls;
 
         [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirection IncomingCalls {
+        [Group(@"8c204d784d1904d9eeea996d46de69be:129")]
+        public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirection IncomingCalls
+        {
             get => _incomingCalls;
-            set {
+            set
+            {
                 IncomingCallsSpecified = true;
                 _incomingCalls = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncomingCallsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotify _incomingCallNotify;
 
         [XmlElement(ElementName = "incomingCallNotify", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotify IncomingCallNotify {
+        [Group(@"8c204d784d1904d9eeea996d46de69be:129")]
+        public BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotify IncomingCallNotify
+        {
             get => _incomingCallNotify;
-            set {
+            set
+            {
                 IncomingCallNotifySpecified = true;
                 _incomingCallNotify = value;
             }
@@ -41,6 +49,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncomingCallNotifySpecified { get; set; }
-        
+
     }
 }

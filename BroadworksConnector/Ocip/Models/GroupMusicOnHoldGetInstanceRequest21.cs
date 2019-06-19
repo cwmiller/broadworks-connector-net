@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,23 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Get a Music On Hold data for a group or department instance.
     /// The response is either GroupMusicOnHoldGetInstanceResponse21 or ErrorResponse.
     /// Replaced by GroupMusicOnHoldGetInstanceRequest22
-        /// <see cref="GroupMusicOnHoldGetInstanceResponse21"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="GroupMusicOnHoldGetInstanceRequest22"/>
-        /// </summary>
+    /// <see cref="GroupMusicOnHoldGetInstanceResponse21"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupMusicOnHoldGetInstanceRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4779""}]")]
     public class GroupMusicOnHoldGetInstanceRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4779")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4779")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -46,13 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
         [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4779")]
+        public BroadWorksConnector.Ocip.Models.DepartmentKey Department
+        {
             get => _department;
-            set {
+            set
+            {
                 DepartmentSpecified = true;
                 _department = value;
             }
@@ -60,6 +76,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentSpecified { get; set; }
-        
+
     }
 }

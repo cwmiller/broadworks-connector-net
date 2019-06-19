@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,20 +10,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// A list of Communication Barring Incoming Rules that replaces a
     /// previously configured list. By convention, an element of this type
     /// may be set nill to clear the list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ReplacementCommunicationBarringIncomingRuleList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44777""}]")]
+    public class ReplacementCommunicationBarringIncomingRuleList
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule> _rule;
+        private List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule> _rule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule>();
 
         [XmlElement(ElementName = "rule", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule> Rule {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44777")]
+        public List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule> Rule
+        {
             get => _rule;
-            set {
+            set
+            {
                 RuleSpecified = true;
                 _rule = value;
             }
@@ -29,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RuleSpecified { get; set; }
-        
+
     }
 }

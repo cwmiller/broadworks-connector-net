@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse20SendToAllGroupMembersMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35552""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse20SendToAllGroupMembersMenuKeys
     {
 
-        
         private string _confirmSendingToEntireGroup;
 
         [XmlElement(ElementName = "confirmSendingToEntireGroup", IsNullable = false, Namespace = "")]
-        public string ConfirmSendingToEntireGroup {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35552")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ConfirmSendingToEntireGroup
+        {
             get => _confirmSendingToEntireGroup;
-            set {
+            set
+            {
                 ConfirmSendingToEntireGroupSpecified = true;
                 _confirmSendingToEntireGroup = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfirmSendingToEntireGroupSpecified { get; set; }
-        
+
         private string _cancelSendingToEntireGroup;
 
         [XmlElement(ElementName = "cancelSendingToEntireGroup", IsNullable = false, Namespace = "")]
-        public string CancelSendingToEntireGroup {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35552")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string CancelSendingToEntireGroup
+        {
             get => _cancelSendingToEntireGroup;
-            set {
+            set
+            {
                 CancelSendingToEntireGroupSpecified = true;
                 _cancelSendingToEntireGroup = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CancelSendingToEntireGroupSpecified { get; set; }
-        
+
     }
 }

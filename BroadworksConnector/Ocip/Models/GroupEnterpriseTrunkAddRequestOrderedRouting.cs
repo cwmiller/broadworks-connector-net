@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class GroupEnterpriseTrunkAddRequestOrderedRouting 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:33167""}]")]
+    public class GroupEnterpriseTrunkAddRequestOrderedRouting
     {
 
-        
-        private List<string> _trunkGroup;
+        private List<string> _trunkGroup = new List<string>();
 
         [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
-        public List<string> TrunkGroup {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33167")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public List<string> TrunkGroup
+        {
             get => _trunkGroup;
-            set {
+            set
+            {
                 TrunkGroupSpecified = true;
                 _trunkGroup = value;
             }
@@ -27,13 +35,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TrunkGroupSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm _orderingAlgorithm;
 
         [XmlElement(ElementName = "orderingAlgorithm", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm OrderingAlgorithm {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33167")]
+        public BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm OrderingAlgorithm
+        {
             get => _orderingAlgorithm;
-            set {
+            set
+            {
                 OrderingAlgorithmSpecified = true;
                 _orderingAlgorithm = value;
             }
@@ -41,6 +52,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OrderingAlgorithmSpecified { get; set; }
-        
+
     }
 }

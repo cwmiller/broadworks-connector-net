@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Policy for a group administrator's access to Verify Translation and Routing feature.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupAdminVerifyTranslationAndRoutingAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupAdminVerifyTranslationAndRoutingAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

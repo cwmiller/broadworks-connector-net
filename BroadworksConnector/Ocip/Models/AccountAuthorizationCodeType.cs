@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Account/Authorization Code Type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AccountAuthorizationCodeType    {
-            [XmlEnum(Name = "Account Code")]
+    public enum AccountAuthorizationCodeType
+    {
+        [XmlEnum(Name = "Account Code")]
         AccountCode,
-            [XmlEnum(Name = "Authorization Code")]
+        [XmlEnum(Name = "Authorization Code")]
         AuthorizationCode,
-            [XmlEnum(Name = "Deactivated")]
+        [XmlEnum(Name = "Deactivated")]
         Deactivated,
-     }
+    }
 }

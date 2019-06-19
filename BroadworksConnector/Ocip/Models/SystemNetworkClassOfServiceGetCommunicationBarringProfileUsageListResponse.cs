@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response contains a table of all Network Classes of Service that
     /// contain the specific Communication Barring Profile. The column headings
     /// are "Name" and "Description"
-        /// <see cref="SystemNetworkClassOfServiceGetCommunicationBarringProfileUsageListRequest"/>
-        /// </summary>
+    /// <see cref="SystemNetworkClassOfServiceGetCommunicationBarringProfileUsageListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11399""}]")]
     public class SystemNetworkClassOfServiceGetCommunicationBarringProfileUsageListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _networkClassOfServiceTable;
 
         [XmlElement(ElementName = "networkClassOfServiceTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable NetworkClassOfServiceTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11399")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable NetworkClassOfServiceTable
+        {
             get => _networkClassOfServiceTable;
-            set {
+            set
+            {
                 NetworkClassOfServiceTableSpecified = true;
                 _networkClassOfServiceTable = value;
             }
@@ -31,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetworkClassOfServiceTableSpecified { get; set; }
-        
+
     }
 }

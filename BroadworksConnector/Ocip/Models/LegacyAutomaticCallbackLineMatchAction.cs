@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Legacy Automatic Callback line type match action.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum LegacyAutomaticCallbackLineMatchAction    {
-            [XmlEnum(Name = "Accept")]
+    public enum LegacyAutomaticCallbackLineMatchAction
+    {
+        [XmlEnum(Name = "Accept")]
         Accept,
-            [XmlEnum(Name = "Deny")]
+        [XmlEnum(Name = "Deny")]
         Deny,
-     }
+    }
 }

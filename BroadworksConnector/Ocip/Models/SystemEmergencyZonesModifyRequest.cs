@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the system level data associated with Emergency Zones.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e71c2205fb31894f87810b330a85ede2:290""}]")]
     public class SystemEmergencyZonesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _defaultFromAddress;
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
-        public string DefaultFromAddress {
+        [Optional]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:290")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string DefaultFromAddress
+        {
             get => _defaultFromAddress;
-            set {
+            set
+            {
                 DefaultFromAddressSpecified = true;
                 _defaultFromAddress = value;
             }
@@ -30,6 +38,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultFromAddressSpecified { get; set; }
-        
+
     }
 }

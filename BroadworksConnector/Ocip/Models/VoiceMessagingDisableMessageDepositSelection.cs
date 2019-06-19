@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Announcement Selection.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum VoiceMessagingDisableMessageDepositSelection    {
-            [XmlEnum(Name = "Disconnect")]
+    public enum VoiceMessagingDisableMessageDepositSelection
+    {
+        [XmlEnum(Name = "Disconnect")]
         Disconnect,
-            [XmlEnum(Name = "Forward")]
+        [XmlEnum(Name = "Forward")]
         Forward,
-     }
+    }
 }

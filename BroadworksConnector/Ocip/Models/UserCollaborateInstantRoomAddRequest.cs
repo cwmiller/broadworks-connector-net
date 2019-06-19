@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to add collaborate instant room.
     /// The response is either a UserCollaborateInstantRoomAddResponse or an ErrorResponse.
-        /// <see cref="UserCollaborateInstantRoomAddResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="UserCollaborateInstantRoomAddResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:631"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:633""}]}]")]
     public class UserCollaborateInstantRoomAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:631")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _roomName;
 
         [XmlElement(ElementName = "roomName", IsNullable = false, Namespace = "")]
-        public string RoomName {
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:633")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string RoomName
+        {
             get => _roomName;
-            set {
+            set
+            {
                 RoomNameSpecified = true;
                 _roomName = value;
             }
@@ -44,13 +56,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RoomNameSpecified { get; set; }
-        
+
         private bool _useRoomIdAsRoomName;
 
         [XmlElement(ElementName = "useRoomIdAsRoomName", IsNullable = false, Namespace = "")]
-        public bool UseRoomIdAsRoomName {
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:633")]
+        public bool UseRoomIdAsRoomName
+        {
             get => _useRoomIdAsRoomName;
-            set {
+            set
+            {
                 UseRoomIdAsRoomNameSpecified = true;
                 _useRoomIdAsRoomName = value;
             }
@@ -58,6 +73,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseRoomIdAsRoomNameSpecified { get; set; }
-        
+
     }
 }

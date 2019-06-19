@@ -10,23 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// linked to a service provider, all devices linked to a device type, all devices
     /// linked to a device type and group or all devices
     /// linked to a device type and service provider.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DeviceManagementEventLevel    {
-            [XmlEnum(Name = "Device")]
+    public enum DeviceManagementEventLevel
+    {
+        [XmlEnum(Name = "Device")]
         Device,
-            [XmlEnum(Name = "Device Type")]
+        [XmlEnum(Name = "Device Type")]
         DeviceType,
-            [XmlEnum(Name = "Device Type Group")]
+        [XmlEnum(Name = "Device Type Group")]
         DeviceTypeGroup,
-            [XmlEnum(Name = "Group")]
+        [XmlEnum(Name = "Group")]
         Group,
-            [XmlEnum(Name = "User")]
+        [XmlEnum(Name = "User")]
         User,
-            [XmlEnum(Name = "Device Type Service Provider")]
+        [XmlEnum(Name = "Device Type Service Provider")]
         DeviceTypeServiceProvider,
-            [XmlEnum(Name = "Service Provider")]
+        [XmlEnum(Name = "Service Provider")]
         ServiceProvider,
-     }
+    }
 }

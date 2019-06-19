@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Simultaneous Ring number entry.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SimultaneousRingNumber 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3925""}]")]
+    public class SimultaneousRingNumber
     {
 
-        
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        public string PhoneNumber {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3925")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string PhoneNumber
+        {
             get => _phoneNumber;
-            set {
+            set
+            {
                 PhoneNumberSpecified = true;
                 _phoneNumber = value;
             }
@@ -27,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneNumberSpecified { get; set; }
-        
+
         private bool _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
-        public bool AnswerConfirmationRequired {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3925")]
+        public bool AnswerConfirmationRequired
+        {
             get => _answerConfirmationRequired;
-            set {
+            set
+            {
                 AnswerConfirmationRequiredSpecified = true;
                 _answerConfirmationRequired = value;
             }
@@ -41,6 +51,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnswerConfirmationRequiredSpecified { get; set; }
-        
+
     }
 }

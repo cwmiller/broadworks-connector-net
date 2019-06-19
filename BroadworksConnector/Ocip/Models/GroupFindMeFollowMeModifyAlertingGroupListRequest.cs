@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Modify the priorities assigned to alerting groups
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// NOTE: The command fails if all the alerting groups defined for the user are not provided.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:427""}]")]
     public class GroupFindMeFollowMeModifyAlertingGroupListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:427")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -31,13 +38,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
-        private List<string> _alertingGroupName;
+
+        private List<string> _alertingGroupName = new List<string>();
 
         [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
-        public List<string> AlertingGroupName {
+        [Optional]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:427")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> AlertingGroupName
+        {
             get => _alertingGroupName;
-            set {
+            set
+            {
                 AlertingGroupNameSpecified = true;
                 _alertingGroupName = value;
             }
@@ -45,6 +58,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlertingGroupNameSpecified { get; set; }
-        
+
     }
 }

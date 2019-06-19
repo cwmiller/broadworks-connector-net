@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The SMPP Protocol Version.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SMPPVersion    {
-            [XmlEnum(Name = "3.3")]
+    public enum SMPPVersion
+    {
+        [XmlEnum(Name = "3.3")]
         _33,
-            [XmlEnum(Name = "3.4")]
+        [XmlEnum(Name = "3.4")]
         _34,
-            [XmlEnum(Name = "5.0")]
+        [XmlEnum(Name = "5.0")]
         _50,
-     }
+    }
 }

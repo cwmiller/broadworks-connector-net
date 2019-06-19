@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,22 +12,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// the list of all departments in the enterprise including all the departments
     /// defined within the groups inside the enterprise.
     /// The response is either EnterpriseDepartmentGetListResponse or ErrorResponse.
-        /// <see cref="EnterpriseDepartmentGetListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="EnterpriseDepartmentGetListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:706""}]")]
     public class EnterpriseDepartmentGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _enterpriseId;
 
         [XmlElement(ElementName = "enterpriseId", IsNullable = false, Namespace = "")]
-        public string EnterpriseId {
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:706")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string EnterpriseId
+        {
             get => _enterpriseId;
-            set {
+            set
+            {
                 EnterpriseIdSpecified = true;
                 _enterpriseId = value;
             }
@@ -33,13 +40,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnterpriseIdSpecified { get; set; }
-        
+
         private bool _includeGroupDepartments;
 
         [XmlElement(ElementName = "includeGroupDepartments", IsNullable = false, Namespace = "")]
-        public bool IncludeGroupDepartments {
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:706")]
+        public bool IncludeGroupDepartments
+        {
             get => _includeGroupDepartments;
-            set {
+            set
+            {
                 IncludeGroupDepartmentsSpecified = true;
                 _includeGroupDepartments = value;
             }
@@ -47,6 +57,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeGroupDepartmentsSpecified { get; set; }
-        
+
     }
 }

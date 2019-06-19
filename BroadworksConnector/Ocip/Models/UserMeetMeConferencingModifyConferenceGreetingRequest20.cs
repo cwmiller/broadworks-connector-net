@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify an existing custom greeting audio file.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:972""}]")]
     public class UserMeetMeConferencingModifyConferenceGreetingRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:972")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
 
         [XmlElement(ElementName = "conferenceKey", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey {
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:972")]
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey
+        {
             get => _conferenceKey;
-            set {
+            set
+            {
                 ConferenceKeySpecified = true;
                 _conferenceKey = value;
             }
@@ -44,13 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConferenceKeySpecified { get; set; }
-        
+
         private bool _playEntranceGreeting;
 
         [XmlElement(ElementName = "playEntranceGreeting", IsNullable = false, Namespace = "")]
-        public bool PlayEntranceGreeting {
+        [Optional]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:972")]
+        public bool PlayEntranceGreeting
+        {
             get => _playEntranceGreeting;
-            set {
+            set
+            {
                 PlayEntranceGreetingSpecified = true;
                 _playEntranceGreeting = value;
             }
@@ -58,13 +72,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayEntranceGreetingSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _entranceGreetingFile;
 
         [XmlElement(ElementName = "entranceGreetingFile", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileKey EntranceGreetingFile {
+        [Optional]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:972")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileKey EntranceGreetingFile
+        {
             get => _entranceGreetingFile;
-            set {
+            set
+            {
                 EntranceGreetingFileSpecified = true;
                 _entranceGreetingFile = value;
             }
@@ -72,6 +90,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EntranceGreetingFileSpecified { get; set; }
-        
+
     }
 }

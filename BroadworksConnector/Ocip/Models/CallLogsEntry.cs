@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call Log entry describing a placed, received, or missed call.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallLogsEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:988""}]")]
+    public class CallLogsEntry
     {
 
-        
         private string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        public string CountryCode {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:988")]
+        [MaxLength(3)]
+        [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
+        public string CountryCode
+        {
             get => _countryCode;
-            set {
+            set
+            {
                 CountryCodeSpecified = true;
                 _countryCode = value;
             }
@@ -27,13 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CountryCodeSpecified { get; set; }
-        
+
         private string _callLogId;
 
         [XmlElement(ElementName = "callLogId", IsNullable = false, Namespace = "")]
-        public string CallLogId {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:988")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string CallLogId
+        {
             get => _callLogId;
-            set {
+            set
+            {
                 CallLogIdSpecified = true;
                 _callLogId = value;
             }
@@ -41,13 +54,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallLogIdSpecified { get; set; }
-        
+
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        public string PhoneNumber {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:988")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string PhoneNumber
+        {
             get => _phoneNumber;
-            set {
+            set
+            {
                 PhoneNumberSpecified = true;
                 _phoneNumber = value;
             }
@@ -55,13 +73,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneNumberSpecified { get; set; }
-        
+
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:988")]
+        [MinLength(1)]
+        [MaxLength(62)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -69,13 +92,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
         private string _time;
 
         [XmlElement(ElementName = "time", IsNullable = false, Namespace = "")]
-        public string Time {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:988")]
+        public string Time
+        {
             get => _time;
-            set {
+            set
+            {
                 TimeSpecified = true;
                 _time = value;
             }
@@ -83,6 +109,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeSpecified { get; set; }
-        
+
     }
 }

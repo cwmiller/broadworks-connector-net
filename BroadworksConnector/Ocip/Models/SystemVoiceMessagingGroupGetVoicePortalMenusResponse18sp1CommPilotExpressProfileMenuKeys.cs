@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18sp1CommPilotExpressProfileMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27592""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18sp1CommPilotExpressProfileMenuKeys
     {
 
-        
         private string _activateAvailableInOfficeProfile;
 
         [XmlElement(ElementName = "activateAvailableInOfficeProfile", IsNullable = false, Namespace = "")]
-        public string ActivateAvailableInOfficeProfile {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27592")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ActivateAvailableInOfficeProfile
+        {
             get => _activateAvailableInOfficeProfile;
-            set {
+            set
+            {
                 ActivateAvailableInOfficeProfileSpecified = true;
                 _activateAvailableInOfficeProfile = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActivateAvailableInOfficeProfileSpecified { get; set; }
-        
+
         private string _activateAvailableOutOfOfficeProfile;
 
         [XmlElement(ElementName = "activateAvailableOutOfOfficeProfile", IsNullable = false, Namespace = "")]
-        public string ActivateAvailableOutOfOfficeProfile {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27592")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ActivateAvailableOutOfOfficeProfile
+        {
             get => _activateAvailableOutOfOfficeProfile;
-            set {
+            set
+            {
                 ActivateAvailableOutOfOfficeProfileSpecified = true;
                 _activateAvailableOutOfOfficeProfile = value;
             }
@@ -41,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActivateAvailableOutOfOfficeProfileSpecified { get; set; }
-        
+
         private string _activateBusyProfile;
 
         [XmlElement(ElementName = "activateBusyProfile", IsNullable = false, Namespace = "")]
-        public string ActivateBusyProfile {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27592")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ActivateBusyProfile
+        {
             get => _activateBusyProfile;
-            set {
+            set
+            {
                 ActivateBusyProfileSpecified = true;
                 _activateBusyProfile = value;
             }
@@ -55,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActivateBusyProfileSpecified { get; set; }
-        
+
         private string _activateUnavailableProfile;
 
         [XmlElement(ElementName = "activateUnavailableProfile", IsNullable = false, Namespace = "")]
-        public string ActivateUnavailableProfile {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27592")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ActivateUnavailableProfile
+        {
             get => _activateUnavailableProfile;
-            set {
+            set
+            {
                 ActivateUnavailableProfileSpecified = true;
                 _activateUnavailableProfile = value;
             }
@@ -69,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActivateUnavailableProfileSpecified { get; set; }
-        
+
         private string _noProfile;
 
         [XmlElement(ElementName = "noProfile", IsNullable = false, Namespace = "")]
-        public string NoProfile {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27592")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string NoProfile
+        {
             get => _noProfile;
-            set {
+            set
+            {
                 NoProfileSpecified = true;
                 _noProfile = value;
             }
@@ -83,13 +115,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NoProfileSpecified { get; set; }
-        
+
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        public string ReturnToPreviousMenu {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27592")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ReturnToPreviousMenu
+        {
             get => _returnToPreviousMenu;
-            set {
+            set
+            {
                 ReturnToPreviousMenuSpecified = true;
                 _returnToPreviousMenu = value;
             }
@@ -97,13 +134,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReturnToPreviousMenuSpecified { get; set; }
-        
+
         private string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
-        public string RepeatMenu {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27592")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string RepeatMenu
+        {
             get => _repeatMenu;
-            set {
+            set
+            {
                 RepeatMenuSpecified = true;
                 _repeatMenu = value;
             }
@@ -111,6 +154,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RepeatMenuSpecified { get; set; }
-        
+
     }
 }

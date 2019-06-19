@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Access level of the Hoteling Host Service
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum HotelingHostAccessLevel    {
-            [XmlEnum(Name = "Enterprise")]
+    public enum HotelingHostAccessLevel
+    {
+        [XmlEnum(Name = "Enterprise")]
         Enterprise,
-            [XmlEnum(Name = "Group")]
+        [XmlEnum(Name = "Group")]
         Group,
-     }
+    }
 }

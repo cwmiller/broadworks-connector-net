@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemClientSessionParametersGetRequest.
     /// Contains a list of system Client Session (web and CLI) parameters.
-        /// <see cref="SystemClientSessionParametersGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemClientSessionParametersGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:5101""}]")]
     public class SystemClientSessionParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _enableInactivityTimeout;
 
         [XmlElement(ElementName = "enableInactivityTimeout", IsNullable = false, Namespace = "")]
-        public bool EnableInactivityTimeout {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5101")]
+        public bool EnableInactivityTimeout
+        {
             get => _enableInactivityTimeout;
-            set {
+            set
+            {
                 EnableInactivityTimeoutSpecified = true;
                 _enableInactivityTimeout = value;
             }
@@ -29,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableInactivityTimeoutSpecified { get; set; }
-        
+
         private int _inactivityTimeoutMinutes;
 
         [XmlElement(ElementName = "inactivityTimeoutMinutes", IsNullable = false, Namespace = "")]
-        public int InactivityTimeoutMinutes {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5101")]
+        [MinInclusive(10)]
+        [MaxInclusive(360)]
+        public int InactivityTimeoutMinutes
+        {
             get => _inactivityTimeoutMinutes;
-            set {
+            set
+            {
                 InactivityTimeoutMinutesSpecified = true;
                 _inactivityTimeoutMinutes = value;
             }
@@ -43,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool InactivityTimeoutMinutesSpecified { get; set; }
-        
+
     }
 }

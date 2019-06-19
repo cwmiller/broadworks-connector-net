@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the GroupHolidayScheduleGetRequest.
     /// The response contains the group's holiday schedule information.
-        /// <see cref="GroupHolidayScheduleGetRequest"/>
-        /// </summary>
+    /// <see cref="GroupHolidayScheduleGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:13756""}]")]
     public class GroupHolidayScheduleGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _holidayScheduleName;
 
         [XmlElement(ElementName = "holidayScheduleName", IsNullable = false, Namespace = "")]
-        public string HolidayScheduleName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string HolidayScheduleName
+        {
             get => _holidayScheduleName;
-            set {
+            set
+            {
                 HolidayScheduleNameSpecified = true;
                 _holidayScheduleName = value;
             }
@@ -29,13 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HolidayScheduleNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday01;
 
         [XmlElement(ElementName = "holiday01", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday01 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday01
+        {
             get => _holiday01;
-            set {
+            set
+            {
                 Holiday01Specified = true;
                 _holiday01 = value;
             }
@@ -43,13 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday01Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday02;
 
         [XmlElement(ElementName = "holiday02", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday02 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday02
+        {
             get => _holiday02;
-            set {
+            set
+            {
                 Holiday02Specified = true;
                 _holiday02 = value;
             }
@@ -57,13 +72,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday02Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday03;
 
         [XmlElement(ElementName = "holiday03", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday03 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday03
+        {
             get => _holiday03;
-            set {
+            set
+            {
                 Holiday03Specified = true;
                 _holiday03 = value;
             }
@@ -71,13 +90,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday03Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday04;
 
         [XmlElement(ElementName = "holiday04", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday04 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday04
+        {
             get => _holiday04;
-            set {
+            set
+            {
                 Holiday04Specified = true;
                 _holiday04 = value;
             }
@@ -85,13 +108,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday04Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday05;
 
         [XmlElement(ElementName = "holiday05", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday05 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday05
+        {
             get => _holiday05;
-            set {
+            set
+            {
                 Holiday05Specified = true;
                 _holiday05 = value;
             }
@@ -99,13 +126,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday05Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday06;
 
         [XmlElement(ElementName = "holiday06", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday06 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday06
+        {
             get => _holiday06;
-            set {
+            set
+            {
                 Holiday06Specified = true;
                 _holiday06 = value;
             }
@@ -113,13 +144,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday06Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday07;
 
         [XmlElement(ElementName = "holiday07", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday07 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday07
+        {
             get => _holiday07;
-            set {
+            set
+            {
                 Holiday07Specified = true;
                 _holiday07 = value;
             }
@@ -127,13 +162,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday07Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday08;
 
         [XmlElement(ElementName = "holiday08", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday08 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday08
+        {
             get => _holiday08;
-            set {
+            set
+            {
                 Holiday08Specified = true;
                 _holiday08 = value;
             }
@@ -141,13 +180,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday08Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday09;
 
         [XmlElement(ElementName = "holiday09", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday09 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday09
+        {
             get => _holiday09;
-            set {
+            set
+            {
                 Holiday09Specified = true;
                 _holiday09 = value;
             }
@@ -155,13 +198,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday09Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday10;
 
         [XmlElement(ElementName = "holiday10", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday10 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday10
+        {
             get => _holiday10;
-            set {
+            set
+            {
                 Holiday10Specified = true;
                 _holiday10 = value;
             }
@@ -169,13 +216,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday10Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday11;
 
         [XmlElement(ElementName = "holiday11", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday11 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday11
+        {
             get => _holiday11;
-            set {
+            set
+            {
                 Holiday11Specified = true;
                 _holiday11 = value;
             }
@@ -183,13 +234,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday11Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday12;
 
         [XmlElement(ElementName = "holiday12", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday12 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday12
+        {
             get => _holiday12;
-            set {
+            set
+            {
                 Holiday12Specified = true;
                 _holiday12 = value;
             }
@@ -197,13 +252,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday12Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday13;
 
         [XmlElement(ElementName = "holiday13", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday13 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday13
+        {
             get => _holiday13;
-            set {
+            set
+            {
                 Holiday13Specified = true;
                 _holiday13 = value;
             }
@@ -211,13 +270,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday13Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday14;
 
         [XmlElement(ElementName = "holiday14", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday14 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday14
+        {
             get => _holiday14;
-            set {
+            set
+            {
                 Holiday14Specified = true;
                 _holiday14 = value;
             }
@@ -225,13 +288,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday14Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday15;
 
         [XmlElement(ElementName = "holiday15", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday15 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday15
+        {
             get => _holiday15;
-            set {
+            set
+            {
                 Holiday15Specified = true;
                 _holiday15 = value;
             }
@@ -239,13 +306,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday15Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday16;
 
         [XmlElement(ElementName = "holiday16", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday16 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday16
+        {
             get => _holiday16;
-            set {
+            set
+            {
                 Holiday16Specified = true;
                 _holiday16 = value;
             }
@@ -253,13 +324,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday16Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday17;
 
         [XmlElement(ElementName = "holiday17", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday17 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday17
+        {
             get => _holiday17;
-            set {
+            set
+            {
                 Holiday17Specified = true;
                 _holiday17 = value;
             }
@@ -267,13 +342,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday17Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday18;
 
         [XmlElement(ElementName = "holiday18", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday18 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday18
+        {
             get => _holiday18;
-            set {
+            set
+            {
                 Holiday18Specified = true;
                 _holiday18 = value;
             }
@@ -281,13 +360,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday18Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday19;
 
         [XmlElement(ElementName = "holiday19", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday19 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday19
+        {
             get => _holiday19;
-            set {
+            set
+            {
                 Holiday19Specified = true;
                 _holiday19 = value;
             }
@@ -295,13 +378,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday19Specified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.Holiday _holiday20;
 
         [XmlElement(ElementName = "holiday20", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.Holiday Holiday20 {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13756")]
+        public BroadWorksConnector.Ocip.Models.Holiday Holiday20
+        {
             get => _holiday20;
-            set {
+            set
+            {
                 Holiday20Specified = true;
                 _holiday20 = value;
             }
@@ -309,6 +396,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Holiday20Specified { get; set; }
-        
+
     }
 }

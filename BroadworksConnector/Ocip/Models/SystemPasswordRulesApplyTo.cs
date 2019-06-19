@@ -9,15 +9,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// (1) System, Provisioning Administrator
     /// (2) System, Provisioning, Service Provider Administrator
     /// (3) Administrator (System, Provisioning, Service Provider, Group and Department) and Users.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SystemPasswordRulesApplyTo    {
-            [XmlEnum(Name = "System, Provisioning Administrator")]
+    public enum SystemPasswordRulesApplyTo
+    {
+        [XmlEnum(Name = "System, Provisioning Administrator")]
         SystemProvisioningAdministrator,
-            [XmlEnum(Name = "System, Provisioning, Service Provider Administrator")]
+        [XmlEnum(Name = "System, Provisioning, Service Provider Administrator")]
         SystemProvisioningServiceProviderAdministrator,
-            [XmlEnum(Name = "Administrator and User")]
+        [XmlEnum(Name = "Administrator and User")]
         AdministratorandUser,
-     }
+    }
 }

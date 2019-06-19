@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for Support Connected Identity Policy
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupSupportConnectedIdentityPolicy    {
-            [XmlEnum(Name = "Enabled")]
+    public enum TrunkGroupSupportConnectedIdentityPolicy
+    {
+        [XmlEnum(Name = "Enabled")]
         Enabled,
-            [XmlEnum(Name = "Disabled")]
+        [XmlEnum(Name = "Disabled")]
         Disabled,
-     }
+    }
 }

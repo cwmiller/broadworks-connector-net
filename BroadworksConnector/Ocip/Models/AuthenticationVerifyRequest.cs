@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,24 +10,29 @@ namespace BroadWorksConnector.Ocip.Models
     /// AuthenticationVerifyRequest is used to authenticate a user using the user Id and password.
     /// The response is a AuthenticationVerifyResponse or an ErrorResponse
     /// Replaced By: AuthenticationVerifyRequest14sp8
-        /// <see cref="AuthenticationVerifyRequest"/>
-        /// <see cref="AuthenticationVerifyResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="AuthenticationVerifyRequest14sp8"/>
-        /// </summary>
+    /// <see cref="AuthenticationVerifyRequest"/>
+    /// <see cref="AuthenticationVerifyResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="AuthenticationVerifyRequest14sp8"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:358""}]")]
     public class AuthenticationVerifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:358")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -33,13 +40,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        public string Password {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:358")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string Password
+        {
             get => _password;
-            set {
+            set
+            {
                 PasswordSpecified = true;
                 _password = value;
             }
@@ -47,6 +59,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PasswordSpecified { get; set; }
-        
+
     }
 }

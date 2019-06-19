@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the user's simultaneous ring family service setting.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""239d22a382d3190a183f2ff4efdc404f:177""}]")]
     public class UserSimultaneousRingFamilyModifyRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"239d22a382d3190a183f2ff4efdc404f:177")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Optional]
+        [Group(@"239d22a382d3190a183f2ff4efdc404f:177")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -44,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private bool _doNotRingIfOnCall;
 
         [XmlElement(ElementName = "doNotRingIfOnCall", IsNullable = false, Namespace = "")]
-        public bool DoNotRingIfOnCall {
+        [Optional]
+        [Group(@"239d22a382d3190a183f2ff4efdc404f:177")]
+        public bool DoNotRingIfOnCall
+        {
             get => _doNotRingIfOnCall;
-            set {
+            set
+            {
                 DoNotRingIfOnCallSpecified = true;
                 _doNotRingIfOnCall = value;
             }
@@ -58,13 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DoNotRingIfOnCallSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SimultaneousRingReplacementNumberList _simultaneousRingNumberList;
 
         [XmlElement(ElementName = "simultaneousRingNumberList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SimultaneousRingReplacementNumberList SimultaneousRingNumberList {
+        [Optional]
+        [Group(@"239d22a382d3190a183f2ff4efdc404f:177")]
+        public BroadWorksConnector.Ocip.Models.SimultaneousRingReplacementNumberList SimultaneousRingNumberList
+        {
             get => _simultaneousRingNumberList;
-            set {
+            set
+            {
                 SimultaneousRingNumberListSpecified = true;
                 _simultaneousRingNumberList = value;
             }
@@ -72,13 +91,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SimultaneousRingNumberListSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation;
+
+        private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation = new List<BroadWorksConnector.Ocip.Models.CriteriaActivation>();
 
         [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation {
+        [Optional]
+        [Group(@"239d22a382d3190a183f2ff4efdc404f:177")]
+        public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation
+        {
             get => _criteriaActivation;
-            set {
+            set
+            {
                 CriteriaActivationSpecified = true;
                 _criteriaActivation = value;
             }
@@ -86,6 +109,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaActivationSpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Either all call centers or list of call centers.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterScheduledReportCallCenterSelection 
+
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7590""}]")]
+    public class CallCenterScheduledReportCallCenterSelection
     {
 
-        
         private bool _allCallCenter;
 
         [XmlElement(ElementName = "allCallCenter", IsNullable = false, Namespace = "")]
-        public bool AllCallCenter {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7590")]
+        public bool AllCallCenter
+        {
             get => _allCallCenter;
-            set {
+            set
+            {
                 AllCallCenterSpecified = true;
                 _allCallCenter = value;
             }
@@ -27,13 +32,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllCallCenterSpecified { get; set; }
-        
-        private List<string> _serviceUserId;
+
+        private List<string> _serviceUserId = new List<string>();
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public List<string> ServiceUserId {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7590")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public List<string> ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -41,6 +51,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
     }
 }

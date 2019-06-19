@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replace the list of groups to be migrated for a specified service pack migration task.
     /// Modification is only allowed prior to task execution.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5636"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5639""}]}]")]
     public class ServiceProviderServicePackMigrationTaskModifyGroupListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5636")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -31,13 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-        public string TaskName {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5636")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string TaskName
+        {
             get => _taskName;
-            set {
+            set
+            {
                 TaskNameSpecified = true;
                 _taskName = value;
             }
@@ -45,13 +57,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TaskNameSpecified { get; set; }
-        
+
         private bool _migrateAllGroups;
 
         [XmlElement(ElementName = "migrateAllGroups", IsNullable = false, Namespace = "")]
-        public bool MigrateAllGroups {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5639")]
+        public bool MigrateAllGroups
+        {
             get => _migrateAllGroups;
-            set {
+            set
+            {
                 MigrateAllGroupsSpecified = true;
                 _migrateAllGroups = value;
             }
@@ -59,13 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MigrateAllGroupsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList _groupIdList;
 
         [XmlElement(ElementName = "groupIdList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList GroupIdList {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5639")]
+        public BroadWorksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList GroupIdList
+        {
             get => _groupIdList;
-            set {
+            set
+            {
                 GroupIdListSpecified = true;
                 _groupIdList = value;
             }
@@ -73,6 +92,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdListSpecified { get; set; }
-        
+
     }
 }

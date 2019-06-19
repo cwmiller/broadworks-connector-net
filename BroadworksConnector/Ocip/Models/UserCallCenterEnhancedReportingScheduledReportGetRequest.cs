@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get a call center reporting scheduled report created by supervisor.
     /// The response is either a UserCallCenterEnhancedReportingScheduledReportGetResponse or an ErrorResponse.
-        /// <see cref="UserCallCenterEnhancedReportingScheduledReportGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="UserCallCenterEnhancedReportingScheduledReportGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6798""}]")]
     public class UserCallCenterEnhancedReportingScheduledReportGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _supervisorUserId;
 
         [XmlElement(ElementName = "supervisorUserId", IsNullable = false, Namespace = "")]
-        public string SupervisorUserId {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6798")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string SupervisorUserId
+        {
             get => _supervisorUserId;
-            set {
+            set
+            {
                 SupervisorUserIdSpecified = true;
                 _supervisorUserId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SupervisorUserIdSpecified { get; set; }
-        
+
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6798")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -44,6 +56,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
     }
 }

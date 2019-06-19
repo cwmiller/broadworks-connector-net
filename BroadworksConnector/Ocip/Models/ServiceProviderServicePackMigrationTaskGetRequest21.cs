@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Requests the details of a specified service pack migration task.
     /// The response is either ServiceProviderServicePackMigrationTaskGetResponse21
     /// or ErrorResponse.
-        /// <see cref="ServiceProviderServicePackMigrationTaskGetResponse21"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="ServiceProviderServicePackMigrationTaskGetResponse21"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5554""}]")]
     public class ServiceProviderServicePackMigrationTaskGetRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5554")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -31,13 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-        public string TaskName {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5554")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string TaskName
+        {
             get => _taskName;
-            set {
+            set
+            {
                 TaskNameSpecified = true;
                 _taskName = value;
             }
@@ -45,6 +57,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TaskNameSpecified { get; set; }
-        
+
     }
 }

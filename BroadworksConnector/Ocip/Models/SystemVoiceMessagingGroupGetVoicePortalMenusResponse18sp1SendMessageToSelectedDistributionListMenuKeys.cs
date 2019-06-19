@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18sp1SendMessageToSelectedDistributionListMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27782""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18sp1SendMessageToSelectedDistributionListMenuKeys
     {
 
-        
         private string _confirmSendingToDistributionList;
 
         [XmlElement(ElementName = "confirmSendingToDistributionList", IsNullable = false, Namespace = "")]
-        public string ConfirmSendingToDistributionList {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27782")]
+        [Length(1)]
+        [RegularExpression(@"\*|#")]
+        public string ConfirmSendingToDistributionList
+        {
             get => _confirmSendingToDistributionList;
-            set {
+            set
+            {
                 ConfirmSendingToDistributionListSpecified = true;
                 _confirmSendingToDistributionList = value;
             }
@@ -27,13 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfirmSendingToDistributionListSpecified { get; set; }
-        
+
         private string _cancelSendingToDistributionList;
 
         [XmlElement(ElementName = "cancelSendingToDistributionList", IsNullable = false, Namespace = "")]
-        public string CancelSendingToDistributionList {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27782")]
+        [Length(1)]
+        [RegularExpression(@"\*|#")]
+        public string CancelSendingToDistributionList
+        {
             get => _cancelSendingToDistributionList;
-            set {
+            set
+            {
                 CancelSendingToDistributionListSpecified = true;
                 _cancelSendingToDistributionList = value;
             }
@@ -41,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CancelSendingToDistributionListSpecified { get; set; }
-        
+
     }
 }

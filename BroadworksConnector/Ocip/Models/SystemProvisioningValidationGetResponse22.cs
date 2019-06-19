@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the SystemProvisioningValidationGetRequest22.
-        /// <see cref="SystemProvisioningValidationGetRequest22"/>
-        /// </summary>
+    /// <see cref="SystemProvisioningValidationGetRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13609""}]")]
     public class SystemProvisioningValidationGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13609")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private bool _isNetworkServerQueryActive;
 
         [XmlElement(ElementName = "isNetworkServerQueryActive", IsNullable = false, Namespace = "")]
-        public bool IsNetworkServerQueryActive {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13609")]
+        public bool IsNetworkServerQueryActive
+        {
             get => _isNetworkServerQueryActive;
-            set {
+            set
+            {
                 IsNetworkServerQueryActiveSpecified = true;
                 _isNetworkServerQueryActive = value;
             }
@@ -42,13 +50,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsNetworkServerQueryActiveSpecified { get; set; }
-        
+
         private int _timeoutSeconds;
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
-        public int TimeoutSeconds {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13609")]
+        [MinInclusive(1)]
+        [MaxInclusive(30)]
+        public int TimeoutSeconds
+        {
             get => _timeoutSeconds;
-            set {
+            set
+            {
                 TimeoutSecondsSpecified = true;
                 _timeoutSeconds = value;
             }
@@ -56,13 +69,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeoutSecondsSpecified { get; set; }
-        
+
         private bool _denyMobilityNumberAsRedirectionDestination;
 
         [XmlElement(ElementName = "denyMobilityNumberAsRedirectionDestination", IsNullable = false, Namespace = "")]
-        public bool DenyMobilityNumberAsRedirectionDestination {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13609")]
+        public bool DenyMobilityNumberAsRedirectionDestination
+        {
             get => _denyMobilityNumberAsRedirectionDestination;
-            set {
+            set
+            {
                 DenyMobilityNumberAsRedirectionDestinationSpecified = true;
                 _denyMobilityNumberAsRedirectionDestination = value;
             }
@@ -70,13 +86,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DenyMobilityNumberAsRedirectionDestinationSpecified { get; set; }
-        
+
         private bool _denyEnterpriseNumberAsNetworkLocationDestination;
 
         [XmlElement(ElementName = "denyEnterpriseNumberAsNetworkLocationDestination", IsNullable = false, Namespace = "")]
-        public bool DenyEnterpriseNumberAsNetworkLocationDestination {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13609")]
+        public bool DenyEnterpriseNumberAsNetworkLocationDestination
+        {
             get => _denyEnterpriseNumberAsNetworkLocationDestination;
-            set {
+            set
+            {
                 DenyEnterpriseNumberAsNetworkLocationDestinationSpecified = true;
                 _denyEnterpriseNumberAsNetworkLocationDestination = value;
             }
@@ -84,6 +103,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DenyEnterpriseNumberAsNetworkLocationDestinationSpecified { get; set; }
-        
+
     }
 }

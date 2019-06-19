@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call Log type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallLogsType    {
-            [XmlEnum(Name = "Placed")]
+    public enum CallLogsType
+    {
+        [XmlEnum(Name = "Placed")]
         Placed,
-            [XmlEnum(Name = "Received")]
+        [XmlEnum(Name = "Received")]
         Received,
-            [XmlEnum(Name = "Missed")]
+        [XmlEnum(Name = "Missed")]
         Missed,
-     }
+    }
 }

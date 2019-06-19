@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to SystemNetworkServerSyncParametersGetRequest14sp2.
     /// Contains a list of system Network Server Sync parameters.
     /// Replaced By: SystemNetworkServerSyncParametersGetResponse16
-        /// <see cref="SystemNetworkServerSyncParametersGetRequest14sp2"/>
-        /// <see cref="SystemNetworkServerSyncParametersGetResponse16"/>
-        /// </summary>
+    /// <see cref="SystemNetworkServerSyncParametersGetRequest14sp2"/>
+    /// <see cref="SystemNetworkServerSyncParametersGetResponse16"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10432""}]")]
     public class SystemNetworkServerSyncParametersGetResponse14sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _enableSync;
 
         [XmlElement(ElementName = "enableSync", IsNullable = false, Namespace = "")]
-        public bool EnableSync {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10432")]
+        public bool EnableSync
+        {
             get => _enableSync;
-            set {
+            set
+            {
                 EnableSyncSpecified = true;
                 _enableSync = value;
             }
@@ -31,13 +36,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableSyncSpecified { get; set; }
-        
+
         private bool _syncLinePorts;
 
         [XmlElement(ElementName = "syncLinePorts", IsNullable = false, Namespace = "")]
-        public bool SyncLinePorts {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10432")]
+        public bool SyncLinePorts
+        {
             get => _syncLinePorts;
-            set {
+            set
+            {
                 SyncLinePortsSpecified = true;
                 _syncLinePorts = value;
             }
@@ -45,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SyncLinePortsSpecified { get; set; }
-        
+
     }
 }

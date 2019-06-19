@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -16,23 +18,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// The logs are sorted by date/time of the call.
     /// Replaced by UserEnhancedCallLogsGetListResponse17sp4V2.
     /// Originally deprecated in release 20.
-        /// <see cref="UserEnhancedCallLogsGetListRequest17sp4"/>
-        /// <see cref="UserEnhancedCallLogsGetListRequest17sp4"/>
-        /// <see cref="UserEnhancedCallLogsGetListResponse17sp4V2"/>
-        /// </summary>
+    /// <see cref="UserEnhancedCallLogsGetListRequest17sp4"/>
+    /// <see cref="UserEnhancedCallLogsGetListRequest17sp4"/>
+    /// <see cref="UserEnhancedCallLogsGetListResponse17sp4V2"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:23472"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:23474""}]}]")]
     public class UserEnhancedCallLogsGetListResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private int _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
-        public int TotalNumberOfRows {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23472")]
+        public int TotalNumberOfRows
+        {
             get => _totalNumberOfRows;
-            set {
+            set
+            {
                 TotalNumberOfRowsSpecified = true;
                 _totalNumberOfRows = value;
             }
@@ -40,13 +45,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TotalNumberOfRowsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse17sp4LegacyEntry _legacyEntry;
 
         [XmlElement(ElementName = "legacyEntry", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse17sp4LegacyEntry LegacyEntry {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23474")]
+        public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse17sp4LegacyEntry LegacyEntry
+        {
             get => _legacyEntry;
-            set {
+            set
+            {
                 LegacyEntrySpecified = true;
                 _legacyEntry = value;
             }
@@ -54,13 +62,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LegacyEntrySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse17sp4ExtendedEntry _extendedEntry;
 
         [XmlElement(ElementName = "extendedEntry", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse17sp4ExtendedEntry ExtendedEntry {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23474")]
+        public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse17sp4ExtendedEntry ExtendedEntry
+        {
             get => _extendedEntry;
-            set {
+            set
+            {
                 ExtendedEntrySpecified = true;
                 _extendedEntry = value;
             }
@@ -68,6 +79,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtendedEntrySpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the SystemCommunicationBarringIncomingCriteriaGetRequest.
     /// The response contains the Communication Barring Incoming Criteria information.
-        /// <see cref="SystemCommunicationBarringIncomingCriteriaGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemCommunicationBarringIncomingCriteriaGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:5849""}]")]
     public class SystemCommunicationBarringIncomingCriteriaGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5849")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -29,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
         private string _timeSchedule;
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
-        public string TimeSchedule {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5849")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string TimeSchedule
+        {
             get => _timeSchedule;
-            set {
+            set
+            {
                 TimeScheduleSpecified = true;
                 _timeSchedule = value;
             }
@@ -43,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeScheduleSpecified { get; set; }
-        
+
         private string _holidaySchedule;
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
-        public string HolidaySchedule {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5849")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string HolidaySchedule
+        {
             get => _holidaySchedule;
-            set {
+            set
+            {
                 HolidayScheduleSpecified = true;
                 _holidaySchedule = value;
             }
@@ -57,13 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HolidayScheduleSpecified { get; set; }
-        
-        private List<string> _matchNumberPortabilityStatus;
+
+        private List<string> _matchNumberPortabilityStatus = new List<string>();
 
         [XmlElement(ElementName = "matchNumberPortabilityStatus", IsNullable = false, Namespace = "")]
-        public List<string> MatchNumberPortabilityStatus {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5849")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> MatchNumberPortabilityStatus
+        {
             get => _matchNumberPortabilityStatus;
-            set {
+            set
+            {
                 MatchNumberPortabilityStatusSpecified = true;
                 _matchNumberPortabilityStatus = value;
             }
@@ -71,6 +97,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchNumberPortabilityStatusSpecified { get; set; }
-        
+
     }
 }

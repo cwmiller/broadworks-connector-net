@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to SystemSIPDeviceTypeLanguageMappingGetListRequest.
     /// Contains a table of device type languages mapped to equivalent BroadWorks languages.
     /// The column headings are: "BroadWorks Language", "Device Language".
-        /// <see cref="SystemSIPDeviceTypeLanguageMappingGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemSIPDeviceTypeLanguageMappingGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16317""}]")]
     public class SystemSIPDeviceTypeLanguageMappingGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _deviceTypeLanguagesTable;
 
         [XmlElement(ElementName = "deviceTypeLanguagesTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable DeviceTypeLanguagesTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16317")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable DeviceTypeLanguagesTable
+        {
             get => _deviceTypeLanguagesTable;
-            set {
+            set
+            {
                 DeviceTypeLanguagesTableSpecified = true;
                 _deviceTypeLanguagesTable = value;
             }
@@ -30,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceTypeLanguagesTableSpecified { get; set; }
-        
+
     }
 }

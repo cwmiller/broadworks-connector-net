@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemLocationBasedCallingRestrictionsGetRequest17sp3.
-        /// <see cref="SystemLocationBasedCallingRestrictionsGetRequest17sp3"/>
-        /// </summary>
+    /// <see cref="SystemLocationBasedCallingRestrictionsGetRequest17sp3"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7770900887d4397dd29272c7b9c55bc4:56""}]")]
     public class SystemLocationBasedCallingRestrictionsGetResponse17sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator _physicalLocationIndicator;
 
         [XmlElement(ElementName = "physicalLocationIndicator", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator PhysicalLocationIndicator {
+        [Group(@"7770900887d4397dd29272c7b9c55bc4:56")]
+        public BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator PhysicalLocationIndicator
+        {
             get => _physicalLocationIndicator;
-            set {
+            set
+            {
                 PhysicalLocationIndicatorSpecified = true;
                 _physicalLocationIndicator = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhysicalLocationIndicatorSpecified { get; set; }
-        
+
         private bool _enforceMscValidation;
 
         [XmlElement(ElementName = "enforceMscValidation", IsNullable = false, Namespace = "")]
-        public bool EnforceMscValidation {
+        [Group(@"7770900887d4397dd29272c7b9c55bc4:56")]
+        public bool EnforceMscValidation
+        {
             get => _enforceMscValidation;
-            set {
+            set
+            {
                 EnforceMscValidationSpecified = true;
                 _enforceMscValidation = value;
             }
@@ -42,13 +50,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnforceMscValidationSpecified { get; set; }
-        
+
         private bool _enableOfficeZoneAnnouncement;
 
         [XmlElement(ElementName = "enableOfficeZoneAnnouncement", IsNullable = false, Namespace = "")]
-        public bool EnableOfficeZoneAnnouncement {
+        [Group(@"7770900887d4397dd29272c7b9c55bc4:56")]
+        public bool EnableOfficeZoneAnnouncement
+        {
             get => _enableOfficeZoneAnnouncement;
-            set {
+            set
+            {
                 EnableOfficeZoneAnnouncementSpecified = true;
                 _enableOfficeZoneAnnouncement = value;
             }
@@ -56,13 +67,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableOfficeZoneAnnouncementSpecified { get; set; }
-        
+
         private bool _enhanceOfficeZone;
 
         [XmlElement(ElementName = "enhanceOfficeZone", IsNullable = false, Namespace = "")]
-        public bool EnhanceOfficeZone {
+        [Group(@"7770900887d4397dd29272c7b9c55bc4:56")]
+        public bool EnhanceOfficeZone
+        {
             get => _enhanceOfficeZone;
-            set {
+            set
+            {
                 EnhanceOfficeZoneSpecified = true;
                 _enhanceOfficeZone = value;
             }
@@ -70,6 +84,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnhanceOfficeZoneSpecified { get; set; }
-        
+
     }
 }

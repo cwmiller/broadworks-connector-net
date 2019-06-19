@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the service provider level data associated with External Custom Ringback.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8df43dca23d99d8ab44c0082aadfbe0:80""}]")]
     public class ServiceProviderExternalCustomRingbackModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:80")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _prefixDigits;
 
         [XmlElement(ElementName = "prefixDigits", IsNullable = true, Namespace = "")]
-        public string PrefixDigits {
+        [Optional]
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:80")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string PrefixDigits
+        {
             get => _prefixDigits;
-            set {
+            set
+            {
                 PrefixDigitsSpecified = true;
                 _prefixDigits = value;
             }
@@ -44,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrefixDigitsSpecified { get; set; }
-        
+
         private string _serverNetAddress;
 
         [XmlElement(ElementName = "serverNetAddress", IsNullable = true, Namespace = "")]
-        public string ServerNetAddress {
+        [Optional]
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:80")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServerNetAddress
+        {
             get => _serverNetAddress;
-            set {
+            set
+            {
                 ServerNetAddressSpecified = true;
                 _serverNetAddress = value;
             }
@@ -58,13 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerNetAddressSpecified { get; set; }
-        
+
         private int? _serverPort;
 
         [XmlElement(ElementName = "serverPort", IsNullable = true, Namespace = "")]
-        public int? ServerPort {
+        [Optional]
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:80")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int? ServerPort
+        {
             get => _serverPort;
-            set {
+            set
+            {
                 ServerPortSpecified = true;
                 _serverPort = value;
             }
@@ -72,13 +97,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerPortSpecified { get; set; }
-        
+
         private int _timeoutSeconds;
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
-        public int TimeoutSeconds {
+        [Optional]
+        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:80")]
+        [MinInclusive(1)]
+        [MaxInclusive(20)]
+        public int TimeoutSeconds
+        {
             get => _timeoutSeconds;
-            set {
+            set
+            {
                 TimeoutSecondsSpecified = true;
                 _timeoutSeconds = value;
             }
@@ -86,6 +117,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TimeoutSecondsSpecified { get; set; }
-        
+
     }
 }

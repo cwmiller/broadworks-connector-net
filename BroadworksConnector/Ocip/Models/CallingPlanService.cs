@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for Calling Plan Service type
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallingPlanService    {
-            [XmlEnum(Name = "Incoming Calling Plan")]
+    public enum CallingPlanService
+    {
+        [XmlEnum(Name = "Incoming Calling Plan")]
         IncomingCallingPlan,
-            [XmlEnum(Name = "Outgoing Calling Plan")]
+        [XmlEnum(Name = "Outgoing Calling Plan")]
         OutgoingCallingPlan,
-     }
+    }
 }

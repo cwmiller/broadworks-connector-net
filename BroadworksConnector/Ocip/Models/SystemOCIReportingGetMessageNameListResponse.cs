@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemOCIReportingGetMessageNameListRequest.
-        /// <see cref="SystemOCIReportingGetMessageNameListRequest"/>
-        /// </summary>
+    /// <see cref="SystemOCIReportingGetMessageNameListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12645""}]")]
     public class SystemOCIReportingGetMessageNameListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _messageNameStartsWith;
+        private List<string> _messageNameStartsWith = new List<string>();
 
         [XmlElement(ElementName = "messageNameStartsWith", IsNullable = false, Namespace = "")]
-        public List<string> MessageNameStartsWith {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12645")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public List<string> MessageNameStartsWith
+        {
             get => _messageNameStartsWith;
-            set {
+            set
+            {
                 MessageNameStartsWithSpecified = true;
                 _messageNameStartsWith = value;
             }
@@ -28,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MessageNameStartsWithSpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Contact information.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class Contact 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1624""}]")]
+    public class Contact
     {
 
-        
         private string _contactName;
 
         [XmlElement(ElementName = "contactName", IsNullable = true, Namespace = "")]
-        public string ContactName {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1624")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ContactName
+        {
             get => _contactName;
-            set {
+            set
+            {
                 ContactNameSpecified = true;
                 _contactName = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactNameSpecified { get; set; }
-        
+
         private string _contactNumber;
 
         [XmlElement(ElementName = "contactNumber", IsNullable = true, Namespace = "")]
-        public string ContactNumber {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1624")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ContactNumber
+        {
             get => _contactNumber;
-            set {
+            set
+            {
                 ContactNumberSpecified = true;
                 _contactNumber = value;
             }
@@ -41,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactNumberSpecified { get; set; }
-        
+
         private string _contactEmail;
 
         [XmlElement(ElementName = "contactEmail", IsNullable = true, Namespace = "")]
-        public string ContactEmail {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1624")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ContactEmail
+        {
             get => _contactEmail;
-            set {
+            set
+            {
                 ContactEmailSpecified = true;
                 _contactEmail = value;
             }
@@ -55,6 +75,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactEmailSpecified { get; set; }
-        
+
     }
 }

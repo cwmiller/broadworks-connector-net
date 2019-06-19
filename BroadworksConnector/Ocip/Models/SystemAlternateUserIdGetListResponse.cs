@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,21 +14,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following columns are only returned in AS data mode:
     /// "Reseller Id"
-        /// <see cref="SystemAlternateUserIdGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemAlternateUserIdGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1848""}]")]
     public class SystemAlternateUserIdGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _alternateUserIdTable;
 
         [XmlElement(ElementName = "alternateUserIdTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable AlternateUserIdTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1848")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable AlternateUserIdTable
+        {
             get => _alternateUserIdTable;
-            set {
+            set
+            {
                 AlternateUserIdTableSpecified = true;
                 _alternateUserIdTable = value;
             }
@@ -34,6 +39,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlternateUserIdTableSpecified { get; set; }
-        
+
     }
 }

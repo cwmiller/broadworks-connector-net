@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class GroupAccessDeviceGetAvailableDetailListResponse14AvailableAccessDevice 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24297""}]")]
+    public class GroupAccessDeviceGetAvailableDetailListResponse14AvailableAccessDevice
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24297")]
+        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
+        {
             get => _accessDevice;
-            set {
+            set
+            {
                 AccessDeviceSpecified = true;
                 _accessDevice = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessDeviceSpecified { get; set; }
-        
+
         private bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        public bool StaticRegistrationCapable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24297")]
+        public bool StaticRegistrationCapable
+        {
             get => _staticRegistrationCapable;
-            set {
+            set
+            {
                 StaticRegistrationCapableSpecified = true;
                 _staticRegistrationCapable = value;
             }
@@ -41,13 +49,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StaticRegistrationCapableSpecified { get; set; }
-        
+
         private bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        public bool UseDomain {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24297")]
+        public bool UseDomain
+        {
             get => _useDomain;
-            set {
+            set
+            {
                 UseDomainSpecified = true;
                 _useDomain = value;
             }
@@ -55,6 +66,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseDomainSpecified { get; set; }
-        
+
     }
 }

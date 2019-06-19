@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Mailbox Id type on Third Party Voice Mail platform.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ThirdPartyVoiceMailSupportMailboxIdType    {
-            [XmlEnum(Name = "User Or Group Phone Number")]
+    public enum ThirdPartyVoiceMailSupportMailboxIdType
+    {
+        [XmlEnum(Name = "User Or Group Phone Number")]
         UserOrGroupPhoneNumber,
-            [XmlEnum(Name = "URL")]
+        [XmlEnum(Name = "URL")]
         URL,
-     }
+    }
 }

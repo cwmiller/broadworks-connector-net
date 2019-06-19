@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the EnterpriseCallCenterCurrentAndPastDNISGetListRequest.
-        /// <see cref="EnterpriseCallCenterCurrentAndPastDNISGetListRequest"/>
-        /// </summary>
+    /// <see cref="EnterpriseCallCenterCurrentAndPastDNISGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1182""}]")]
     public class EnterpriseCallCenterCurrentAndPastDNISGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _name;
+        private List<string> _name = new List<string>();
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public List<string> Name {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1182")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -28,13 +36,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
-        private List<string> _deletedName;
+
+        private List<string> _deletedName = new List<string>();
 
         [XmlElement(ElementName = "deletedName", IsNullable = false, Namespace = "")]
-        public List<string> DeletedName {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1182")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> DeletedName
+        {
             get => _deletedName;
-            set {
+            set
+            {
                 DeletedNameSpecified = true;
                 _deletedName = value;
             }
@@ -42,6 +56,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeletedNameSpecified { get; set; }
-        
+
     }
 }

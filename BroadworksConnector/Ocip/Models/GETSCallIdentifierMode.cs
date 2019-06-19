@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The GETS Call Identifier Mode.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GETSCallIdentifierMode    {
-            [XmlEnum(Name = "Request-URI")]
+    public enum GETSCallIdentifierMode
+    {
+        [XmlEnum(Name = "Request-URI")]
         RequestURI,
-            [XmlEnum(Name = "RPH")]
+        [XmlEnum(Name = "RPH")]
         RPH,
-            [XmlEnum(Name = "RPH-Request-URI")]
+        [XmlEnum(Name = "RPH-Request-URI")]
         RPHRequestURI,
-     }
+    }
 }

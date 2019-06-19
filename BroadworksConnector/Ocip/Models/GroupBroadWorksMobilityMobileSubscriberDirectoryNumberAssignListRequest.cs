@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// add a single DN,or a list of DNs.
     /// .       This command is applicable only for group in a service provider and will fail for a group in an enterprise.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:329""}]")]
     public class GroupBroadWorksMobilityMobileSubscriberDirectoryNumberAssignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:329")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:329")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -46,13 +58,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
-        private List<string> _mobileSubscriberDirectoryNumber;
+
+        private List<string> _mobileSubscriberDirectoryNumber = new List<string>();
 
         [XmlElement(ElementName = "mobileSubscriberDirectoryNumber", IsNullable = false, Namespace = "")]
-        public List<string> MobileSubscriberDirectoryNumber {
+        [Optional]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:329")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public List<string> MobileSubscriberDirectoryNumber
+        {
             get => _mobileSubscriberDirectoryNumber;
-            set {
+            set
+            {
                 MobileSubscriberDirectoryNumberSpecified = true;
                 _mobileSubscriberDirectoryNumber = value;
             }
@@ -60,6 +78,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobileSubscriberDirectoryNumberSpecified { get; set; }
-        
+
     }
 }

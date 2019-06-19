@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,20 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Access device end point used in the context of modify that can have more than one contact defined.
     /// Only Static Registration capable devices may have more than one contact defined.
     /// Port numbers are only used by devices with static line ordering.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class AccessDeviceMultipleContactEndpointModify22 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:203""}]")]
+    public class AccessDeviceMultipleContactEndpointModify22
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:203")]
+        public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
+        {
             get => _accessDevice;
-            set {
+            set
+            {
                 AccessDeviceSpecified = true;
                 _accessDevice = value;
             }
@@ -29,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessDeviceSpecified { get; set; }
-        
+
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        public string LinePort {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:203")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string LinePort
+        {
             get => _linePort;
-            set {
+            set
+            {
                 LinePortSpecified = true;
                 _linePort = value;
             }
@@ -43,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LinePortSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementContactList22 _contactList;
 
         [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementContactList22 ContactList {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:203")]
+        public BroadWorksConnector.Ocip.Models.ReplacementContactList22 ContactList
+        {
             get => _contactList;
-            set {
+            set
+            {
                 ContactListSpecified = true;
                 _contactList = value;
             }
@@ -57,13 +73,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactListSpecified { get; set; }
-        
+
         private int _portNumber;
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
-        public int PortNumber {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:203")]
+        [MinInclusive(1)]
+        [MaxInclusive(1024)]
+        public int PortNumber
+        {
             get => _portNumber;
-            set {
+            set
+            {
                 PortNumberSpecified = true;
                 _portNumber = value;
             }
@@ -71,6 +93,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PortNumberSpecified { get; set; }
-        
+
     }
 }

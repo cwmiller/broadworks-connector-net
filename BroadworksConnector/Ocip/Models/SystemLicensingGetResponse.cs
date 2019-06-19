@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to SystemLicensingGetRequest. The license table columns are: "Name", "Licensed", "Used",
     /// "Available" and "Expiration Date".
     /// Replaced By: SystemLicensingGetResponse14sp3
-        /// <see cref="SystemLicensingGetRequest"/>
-        /// <see cref="SystemLicensingGetResponse14sp3"/>
-        /// </summary>
+    /// <see cref="SystemLicensingGetRequest"/>
+    /// <see cref="SystemLicensingGetResponse14sp3"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5221""}]")]
     public class SystemLicensingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.LicenseStrictness _licenseStrictness;
 
         [XmlElement(ElementName = "licenseStrictness", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.LicenseStrictness LicenseStrictness {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5221")]
+        public BroadWorksConnector.Ocip.Models.LicenseStrictness LicenseStrictness
+        {
             get => _licenseStrictness;
-            set {
+            set
+            {
                 LicenseStrictnessSpecified = true;
                 _licenseStrictness = value;
             }
@@ -31,13 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LicenseStrictnessSpecified { get; set; }
-        
+
         private int _groupUserlimit;
 
         [XmlElement(ElementName = "groupUserlimit", IsNullable = false, Namespace = "")]
-        public int GroupUserlimit {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5221")]
+        [MinInclusive(1)]
+        public int GroupUserlimit
+        {
             get => _groupUserlimit;
-            set {
+            set
+            {
                 GroupUserlimitSpecified = true;
                 _groupUserlimit = value;
             }
@@ -45,13 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupUserlimitSpecified { get; set; }
-        
+
         private string _expirationDate;
 
         [XmlElement(ElementName = "expirationDate", IsNullable = false, Namespace = "")]
-        public string ExpirationDate {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5221")]
+        public string ExpirationDate
+        {
             get => _expirationDate;
-            set {
+            set
+            {
                 ExpirationDateSpecified = true;
                 _expirationDate = value;
             }
@@ -59,13 +72,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExpirationDateSpecified { get; set; }
-        
-        private List<string> _hostId;
+
+        private List<string> _hostId = new List<string>();
 
         [XmlElement(ElementName = "hostId", IsNullable = false, Namespace = "")]
-        public List<string> HostId {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5221")]
+        [MinLength(1)]
+        public List<string> HostId
+        {
             get => _hostId;
-            set {
+            set
+            {
                 HostIdSpecified = true;
                 _hostId = value;
             }
@@ -73,13 +91,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HostIdSpecified { get; set; }
-        
-        private List<string> _licenseName;
+
+        private List<string> _licenseName = new List<string>();
 
         [XmlElement(ElementName = "licenseName", IsNullable = false, Namespace = "")]
-        public List<string> LicenseName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5221")]
+        [MinLength(1)]
+        public List<string> LicenseName
+        {
             get => _licenseName;
-            set {
+            set
+            {
                 LicenseNameSpecified = true;
                 _licenseName = value;
             }
@@ -87,13 +110,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LicenseNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _licenseTable;
 
         [XmlElement(ElementName = "licenseTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable LicenseTable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5221")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable LicenseTable
+        {
             get => _licenseTable;
-            set {
+            set
+            {
                 LicenseTableSpecified = true;
                 _licenseTable = value;
             }
@@ -101,6 +127,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LicenseTableSpecified { get; set; }
-        
+
     }
 }

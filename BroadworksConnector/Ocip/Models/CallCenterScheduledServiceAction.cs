@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call center scheduled service (Night Services, Holiday Services, etc.) processing action.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterScheduledServiceAction    {
-            [XmlEnum(Name = "None")]
+    public enum CallCenterScheduledServiceAction
+    {
+        [XmlEnum(Name = "None")]
         None,
-            [XmlEnum(Name = "Busy")]
+        [XmlEnum(Name = "Busy")]
         Busy,
-            [XmlEnum(Name = "Transfer")]
+        [XmlEnum(Name = "Transfer")]
         Transfer,
-     }
+    }
 }

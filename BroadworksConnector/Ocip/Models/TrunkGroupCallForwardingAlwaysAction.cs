@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Trunk Group call forwarding always action.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupCallForwardingAlwaysAction    {
-            [XmlEnum(Name = "Forward")]
+    public enum TrunkGroupCallForwardingAlwaysAction
+    {
+        [XmlEnum(Name = "Forward")]
         Forward,
-            [XmlEnum(Name = "Reroute")]
+        [XmlEnum(Name = "Reroute")]
         Reroute,
-     }
+    }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Pre-alerting Announcement interrupt type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum PreAlertingAnnouncementInterrupt    {
-            [XmlEnum(Name = "Not Allowed")]
+    public enum PreAlertingAnnouncementInterrupt
+    {
+        [XmlEnum(Name = "Not Allowed")]
         NotAllowed,
-            [XmlEnum(Name = "Any Digit")]
+        [XmlEnum(Name = "Any Digit")]
         AnyDigit,
-            [XmlEnum(Name = "Digit Sequence")]
+        [XmlEnum(Name = "Digit Sequence")]
         DigitSequence,
-     }
+    }
 }

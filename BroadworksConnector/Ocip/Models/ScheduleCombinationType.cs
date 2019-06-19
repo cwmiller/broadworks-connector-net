@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Schedule Combination.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ScheduleCombinationType    {
-            [XmlEnum(Name = "UNION")]
+    public enum ScheduleCombinationType
+    {
+        [XmlEnum(Name = "UNION")]
         UNION,
-            [XmlEnum(Name = "INTERSECTION")]
+        [XmlEnum(Name = "INTERSECTION")]
         INTERSECTION,
-     }
+    }
 }

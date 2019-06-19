@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the system level data associated with Cr Interface.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6931""}]")]
     public class SystemCrInterfaceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private bool _crAuditEnabled;
 
         [XmlElement(ElementName = "crAuditEnabled", IsNullable = false, Namespace = "")]
-        public bool CrAuditEnabled {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6931")]
+        public bool CrAuditEnabled
+        {
             get => _crAuditEnabled;
-            set {
+            set
+            {
                 CrAuditEnabledSpecified = true;
                 _crAuditEnabled = value;
             }
@@ -30,13 +36,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CrAuditEnabledSpecified { get; set; }
-        
+
         private int _crAuditIntervalMilliseconds;
 
         [XmlElement(ElementName = "crAuditIntervalMilliseconds", IsNullable = false, Namespace = "")]
-        public int CrAuditIntervalMilliseconds {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6931")]
+        [MinInclusive(500)]
+        [MaxInclusive(60000)]
+        public int CrAuditIntervalMilliseconds
+        {
             get => _crAuditIntervalMilliseconds;
-            set {
+            set
+            {
                 CrAuditIntervalMillisecondsSpecified = true;
                 _crAuditIntervalMilliseconds = value;
             }
@@ -44,13 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CrAuditIntervalMillisecondsSpecified { get; set; }
-        
+
         private int _crAuditTimeoutMilliseconds;
 
         [XmlElement(ElementName = "crAuditTimeoutMilliseconds", IsNullable = false, Namespace = "")]
-        public int CrAuditTimeoutMilliseconds {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6931")]
+        [MinInclusive(500)]
+        [MaxInclusive(10000)]
+        public int CrAuditTimeoutMilliseconds
+        {
             get => _crAuditTimeoutMilliseconds;
-            set {
+            set
+            {
                 CrAuditTimeoutMillisecondsSpecified = true;
                 _crAuditTimeoutMilliseconds = value;
             }
@@ -58,13 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CrAuditTimeoutMillisecondsSpecified { get; set; }
-        
+
         private bool _crConnectionEnabled;
 
         [XmlElement(ElementName = "crConnectionEnabled", IsNullable = false, Namespace = "")]
-        public bool CrConnectionEnabled {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6931")]
+        public bool CrConnectionEnabled
+        {
             get => _crConnectionEnabled;
-            set {
+            set
+            {
                 CrConnectionEnabledSpecified = true;
                 _crConnectionEnabled = value;
             }
@@ -72,13 +94,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CrConnectionEnabledSpecified { get; set; }
-        
+
         private int _crConnectionTimeoutMilliseconds;
 
         [XmlElement(ElementName = "crConnectionTimeoutMilliseconds", IsNullable = false, Namespace = "")]
-        public int CrConnectionTimeoutMilliseconds {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6931")]
+        [MinInclusive(1000)]
+        [MaxInclusive(32000)]
+        public int CrConnectionTimeoutMilliseconds
+        {
             get => _crConnectionTimeoutMilliseconds;
-            set {
+            set
+            {
                 CrConnectionTimeoutMillisecondsSpecified = true;
                 _crConnectionTimeoutMilliseconds = value;
             }
@@ -86,13 +114,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CrConnectionTimeoutMillisecondsSpecified { get; set; }
-        
+
         private int _crTcpConnectionTimeoutSeconds;
 
         [XmlElement(ElementName = "crTcpConnectionTimeoutSeconds", IsNullable = false, Namespace = "")]
-        public int CrTcpConnectionTimeoutSeconds {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6931")]
+        [MinInclusive(1)]
+        [MaxInclusive(120)]
+        public int CrTcpConnectionTimeoutSeconds
+        {
             get => _crTcpConnectionTimeoutSeconds;
-            set {
+            set
+            {
                 CrTcpConnectionTimeoutSecondsSpecified = true;
                 _crTcpConnectionTimeoutSeconds = value;
             }
@@ -100,13 +134,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CrTcpConnectionTimeoutSecondsSpecified { get; set; }
-        
+
         private int _crNumberOfReconnectionAttempts;
 
         [XmlElement(ElementName = "crNumberOfReconnectionAttempts", IsNullable = false, Namespace = "")]
-        public int CrNumberOfReconnectionAttempts {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6931")]
+        [MinInclusive(0)]
+        [MaxInclusive(100)]
+        public int CrNumberOfReconnectionAttempts
+        {
             get => _crNumberOfReconnectionAttempts;
-            set {
+            set
+            {
                 CrNumberOfReconnectionAttemptsSpecified = true;
                 _crNumberOfReconnectionAttempts = value;
             }
@@ -114,6 +154,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CrNumberOfReconnectionAttemptsSpecified { get; set; }
-        
+
     }
 }

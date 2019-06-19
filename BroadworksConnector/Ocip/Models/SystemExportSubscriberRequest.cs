@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -13,15 +15,15 @@ namespace BroadWorksConnector.Ocip.Models
     /// This activity should only be done during non-busy hours on the secondary
     /// provisioning server because this may cause large amounts of data to be
     /// dumped to disk and it may take some time to execute.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+
     public class SystemExportSubscriberRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
     }
 }

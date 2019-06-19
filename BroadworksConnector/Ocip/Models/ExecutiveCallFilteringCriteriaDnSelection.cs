@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Eecutive call filtering criteria selection for a dn.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ExecutiveCallFilteringCriteriaDnSelection    {
-            [XmlEnum(Name = "Any")]
+    public enum ExecutiveCallFilteringCriteriaDnSelection
+    {
+        [XmlEnum(Name = "Any")]
         Any,
-            [XmlEnum(Name = "Any Internal")]
+        [XmlEnum(Name = "Any Internal")]
         AnyInternal,
-            [XmlEnum(Name = "Any External")]
+        [XmlEnum(Name = "Any External")]
         AnyExternal,
-            [XmlEnum(Name = "Specified Only")]
+        [XmlEnum(Name = "Specified Only")]
         SpecifiedOnly,
-     }
+    }
 }

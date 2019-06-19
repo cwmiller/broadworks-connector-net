@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the user level data associated with Calling Number Delivery.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2739e54a6c7a2ab6abe092f89482573e:75""}]")]
     public class UserCallingNumberDeliveryModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"2739e54a6c7a2ab6abe092f89482573e:75")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private bool _isActiveForExternalCalls;
 
         [XmlElement(ElementName = "isActiveForExternalCalls", IsNullable = false, Namespace = "")]
-        public bool IsActiveForExternalCalls {
+        [Optional]
+        [Group(@"2739e54a6c7a2ab6abe092f89482573e:75")]
+        public bool IsActiveForExternalCalls
+        {
             get => _isActiveForExternalCalls;
-            set {
+            set
+            {
                 IsActiveForExternalCallsSpecified = true;
                 _isActiveForExternalCalls = value;
             }
@@ -44,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveForExternalCallsSpecified { get; set; }
-        
+
         private bool _isActiveForInternalCalls;
 
         [XmlElement(ElementName = "isActiveForInternalCalls", IsNullable = false, Namespace = "")]
-        public bool IsActiveForInternalCalls {
+        [Optional]
+        [Group(@"2739e54a6c7a2ab6abe092f89482573e:75")]
+        public bool IsActiveForInternalCalls
+        {
             get => _isActiveForInternalCalls;
-            set {
+            set
+            {
                 IsActiveForInternalCallsSpecified = true;
                 _isActiveForInternalCalls = value;
             }
@@ -58,6 +73,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveForInternalCallsSpecified { get; set; }
-        
+
     }
 }

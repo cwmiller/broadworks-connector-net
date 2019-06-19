@@ -7,13 +7,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// Group Administrator type
     /// "Group" indicates the group admin is a group admin.
     /// "Department" indicates the group admin is a department admin.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupAdminType    {
-            [XmlEnum(Name = "Group")]
+    public enum GroupAdminType
+    {
+        [XmlEnum(Name = "Group")]
         Group,
-            [XmlEnum(Name = "Department")]
+        [XmlEnum(Name = "Department")]
         Department,
-     }
+    }
 }

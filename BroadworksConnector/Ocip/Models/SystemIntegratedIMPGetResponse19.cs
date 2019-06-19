@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,22 +13,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// boshURL
     /// 
     /// Replaced by: SystemIntegratedIMPGetResponse21 in AS data mode
-        /// <see cref="SystemIntegratedIMPGetRequest19"/>
-        /// <see cref="SystemIntegratedIMPGetResponse21"/>
-        /// </summary>
+    /// <see cref="SystemIntegratedIMPGetRequest19"/>
+    /// <see cref="SystemIntegratedIMPGetResponse21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3113""}]")]
     public class SystemIntegratedIMPGetResponse19 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _serviceDomain;
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
-        public string ServiceDomain {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:3113")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServiceDomain
+        {
             get => _serviceDomain;
-            set {
+            set
+            {
                 ServiceDomainSpecified = true;
                 _serviceDomain = value;
             }
@@ -34,13 +42,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceDomainSpecified { get; set; }
-        
+
         private int _servicePort;
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
-        public int ServicePort {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:3113")]
+        [MinInclusive(1)]
+        [MaxInclusive(65535)]
+        public int ServicePort
+        {
             get => _servicePort;
-            set {
+            set
+            {
                 ServicePortSpecified = true;
                 _servicePort = value;
             }
@@ -48,13 +62,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePortSpecified { get; set; }
-        
+
         private bool _addServiceProviderInIMPUserId;
 
         [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
-        public bool AddServiceProviderInIMPUserId {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:3113")]
+        public bool AddServiceProviderInIMPUserId
+        {
             get => _addServiceProviderInIMPUserId;
-            set {
+            set
+            {
                 AddServiceProviderInIMPUserIdSpecified = true;
                 _addServiceProviderInIMPUserId = value;
             }
@@ -62,13 +79,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AddServiceProviderInIMPUserIdSpecified { get; set; }
-        
+
         private string _boshURL;
 
         [XmlElement(ElementName = "boshURL", IsNullable = false, Namespace = "")]
-        public string BoshURL {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:3113")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string BoshURL
+        {
             get => _boshURL;
-            set {
+            set
+            {
                 BoshURLSpecified = true;
                 _boshURL = value;
             }
@@ -76,6 +99,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BoshURLSpecified { get; set; }
-        
+
     }
 }

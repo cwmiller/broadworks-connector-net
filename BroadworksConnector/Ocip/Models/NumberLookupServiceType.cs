@@ -5,11 +5,12 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Phone number lookup service type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum NumberLookupServiceType    {
-            [XmlEnum(Name = "BroadWorks Anywhere")]
+    public enum NumberLookupServiceType
+    {
+        [XmlEnum(Name = "BroadWorks Anywhere")]
         BroadWorksAnywhere,
-     }
+    }
 }

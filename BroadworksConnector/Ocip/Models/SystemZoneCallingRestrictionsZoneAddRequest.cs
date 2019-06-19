@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,23 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Add a zone.
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// Replaced by: SystemZoneAddRequest
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemZoneAddRequest"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemZoneAddRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16679""}]")]
     public class SystemZoneCallingRestrictionsZoneAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        public string ZoneName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16679")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ZoneName
+        {
             get => _zoneName;
-            set {
+            set
+            {
                 ZoneNameSpecified = true;
                 _zoneName = value;
             }
@@ -32,13 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ZoneNameSpecified { get; set; }
-        
+
         private string _physicalLocation;
 
         [XmlElement(ElementName = "physicalLocation", IsNullable = false, Namespace = "")]
-        public string PhysicalLocation {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16679")]
+        [MinLength(1)]
+        [MaxLength(1024)]
+        public string PhysicalLocation
+        {
             get => _physicalLocation;
-            set {
+            set
+            {
                 PhysicalLocationSpecified = true;
                 _physicalLocation = value;
             }
@@ -46,6 +59,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhysicalLocationSpecified { get; set; }
-        
+
     }
 }

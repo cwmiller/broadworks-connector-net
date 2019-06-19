@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,20 +10,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// Communication Barring Profile defined as part of the Network Class
     /// Of Service. There can be only one primary profile within a Network
     /// Class Of Service.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class NetworkClassOfServiceCommunicationBarringProfile 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2920""}]")]
+    public class NetworkClassOfServiceCommunicationBarringProfile
     {
 
-        
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2920")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -29,13 +36,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
         private bool _isPrimary;
 
         [XmlElement(ElementName = "isPrimary", IsNullable = false, Namespace = "")]
-        public bool IsPrimary {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2920")]
+        public bool IsPrimary
+        {
             get => _isPrimary;
-            set {
+            set
+            {
                 IsPrimarySpecified = true;
                 _isPrimary = value;
             }
@@ -43,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsPrimarySpecified { get; set; }
-        
+
     }
 }

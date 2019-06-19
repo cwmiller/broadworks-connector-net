@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to UserChargeNumberGetRequest14sp9.
-        /// <see cref="UserChargeNumberGetRequest14sp9"/>
-        /// </summary>
+    /// <see cref="UserChargeNumberGetRequest14sp9"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9e6c3cffd40902dc6325620cc5e3adef:56""}]")]
     public class UserChargeNumberGetResponse14sp9 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        public string PhoneNumber {
+        [Optional]
+        [Group(@"9e6c3cffd40902dc6325620cc5e3adef:56")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string PhoneNumber
+        {
             get => _phoneNumber;
-            set {
+            set
+            {
                 PhoneNumberSpecified = true;
                 _phoneNumber = value;
             }
@@ -28,13 +36,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneNumberSpecified { get; set; }
-        
+
         private bool _useChargeNumberForEnhancedTranslations;
 
         [XmlElement(ElementName = "useChargeNumberForEnhancedTranslations", IsNullable = false, Namespace = "")]
-        public bool UseChargeNumberForEnhancedTranslations {
+        [Group(@"9e6c3cffd40902dc6325620cc5e3adef:56")]
+        public bool UseChargeNumberForEnhancedTranslations
+        {
             get => _useChargeNumberForEnhancedTranslations;
-            set {
+            set
+            {
                 UseChargeNumberForEnhancedTranslationsSpecified = true;
                 _useChargeNumberForEnhancedTranslations = value;
             }
@@ -42,13 +53,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseChargeNumberForEnhancedTranslationsSpecified { get; set; }
-        
+
         private bool _sendChargeNumberToNetwork;
 
         [XmlElement(ElementName = "sendChargeNumberToNetwork", IsNullable = false, Namespace = "")]
-        public bool SendChargeNumberToNetwork {
+        [Group(@"9e6c3cffd40902dc6325620cc5e3adef:56")]
+        public bool SendChargeNumberToNetwork
+        {
             get => _sendChargeNumberToNetwork;
-            set {
+            set
+            {
                 SendChargeNumberToNetworkSpecified = true;
                 _sendChargeNumberToNetwork = value;
             }
@@ -56,6 +70,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SendChargeNumberToNetworkSpecified { get; set; }
-        
+
     }
 }

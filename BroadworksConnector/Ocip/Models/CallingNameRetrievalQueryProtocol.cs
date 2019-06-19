@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Query Protocol.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallingNameRetrievalQueryProtocol    {
-            [XmlEnum(Name = "Sip")]
+    public enum CallingNameRetrievalQueryProtocol
+    {
+        [XmlEnum(Name = "Sip")]
         Sip,
-            [XmlEnum(Name = "Soap")]
+        [XmlEnum(Name = "Soap")]
         Soap,
-     }
+    }
 }

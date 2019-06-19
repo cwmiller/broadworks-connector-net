@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class RecurrenceRecurWeekly 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3008""}]")]
+    public class RecurrenceRecurWeekly
     {
 
-        
         private int _recurInterval;
 
         [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
-        public int RecurInterval {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        [MinInclusive(1)]
+        [MaxInclusive(999)]
+        public int RecurInterval
+        {
             get => _recurInterval;
-            set {
+            set
+            {
                 RecurIntervalSpecified = true;
                 _recurInterval = value;
             }
@@ -27,13 +35,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RecurIntervalSpecified { get; set; }
-        
+
         private bool _sunday;
 
         [XmlElement(ElementName = "sunday", IsNullable = false, Namespace = "")]
-        public bool Sunday {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        public bool Sunday
+        {
             get => _sunday;
-            set {
+            set
+            {
                 SundaySpecified = true;
                 _sunday = value;
             }
@@ -41,13 +52,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SundaySpecified { get; set; }
-        
+
         private bool _monday;
 
         [XmlElement(ElementName = "monday", IsNullable = false, Namespace = "")]
-        public bool Monday {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        public bool Monday
+        {
             get => _monday;
-            set {
+            set
+            {
                 MondaySpecified = true;
                 _monday = value;
             }
@@ -55,13 +69,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MondaySpecified { get; set; }
-        
+
         private bool _tuesday;
 
         [XmlElement(ElementName = "tuesday", IsNullable = false, Namespace = "")]
-        public bool Tuesday {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        public bool Tuesday
+        {
             get => _tuesday;
-            set {
+            set
+            {
                 TuesdaySpecified = true;
                 _tuesday = value;
             }
@@ -69,13 +86,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TuesdaySpecified { get; set; }
-        
+
         private bool _wednesday;
 
         [XmlElement(ElementName = "wednesday", IsNullable = false, Namespace = "")]
-        public bool Wednesday {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        public bool Wednesday
+        {
             get => _wednesday;
-            set {
+            set
+            {
                 WednesdaySpecified = true;
                 _wednesday = value;
             }
@@ -83,13 +103,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool WednesdaySpecified { get; set; }
-        
+
         private bool _thursday;
 
         [XmlElement(ElementName = "thursday", IsNullable = false, Namespace = "")]
-        public bool Thursday {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        public bool Thursday
+        {
             get => _thursday;
-            set {
+            set
+            {
                 ThursdaySpecified = true;
                 _thursday = value;
             }
@@ -97,13 +120,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ThursdaySpecified { get; set; }
-        
+
         private bool _friday;
 
         [XmlElement(ElementName = "friday", IsNullable = false, Namespace = "")]
-        public bool Friday {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        public bool Friday
+        {
             get => _friday;
-            set {
+            set
+            {
                 FridaySpecified = true;
                 _friday = value;
             }
@@ -111,13 +137,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FridaySpecified { get; set; }
-        
+
         private bool _saturday;
 
         [XmlElement(ElementName = "saturday", IsNullable = false, Namespace = "")]
-        public bool Saturday {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        public bool Saturday
+        {
             get => _saturday;
-            set {
+            set
+            {
                 SaturdaySpecified = true;
                 _saturday = value;
             }
@@ -125,6 +154,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SaturdaySpecified { get; set; }
-        
+
     }
 }

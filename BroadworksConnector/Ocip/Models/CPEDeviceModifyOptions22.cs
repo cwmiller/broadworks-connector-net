@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,20 +12,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// configType
     /// systemFileName
     /// deviceFileFormat
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CPEDeviceModifyOptions22 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1673""}]")]
+    public class CPEDeviceModifyOptions22
     {
 
-        
         private bool _enableMonitoring;
 
         [XmlElement(ElementName = "enableMonitoring", IsNullable = false, Namespace = "")]
-        public bool EnableMonitoring {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1673")]
+        public bool EnableMonitoring
+        {
             get => _enableMonitoring;
-            set {
+            set
+            {
                 EnableMonitoringSpecified = true;
                 _enableMonitoring = value;
             }
@@ -31,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableMonitoringSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeModifyOptions22 _deviceManagementDeviceTypeOptions;
 
         [XmlElement(ElementName = "deviceManagementDeviceTypeOptions", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeModifyOptions22 DeviceManagementDeviceTypeOptions {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1673")]
+        public BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeModifyOptions22 DeviceManagementDeviceTypeOptions
+        {
             get => _deviceManagementDeviceTypeOptions;
-            set {
+            set
+            {
                 DeviceManagementDeviceTypeOptionsSpecified = true;
                 _deviceManagementDeviceTypeOptions = value;
             }
@@ -45,6 +55,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceManagementDeviceTypeOptionsSpecified { get; set; }
-        
+
     }
 }

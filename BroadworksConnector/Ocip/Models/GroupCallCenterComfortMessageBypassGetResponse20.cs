@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the GroupCallCenterComfortMessageBypassGetRequest20.
-        /// <see cref="GroupCallCenterComfortMessageBypassGetRequest20"/>
-        /// </summary>
+    /// <see cref="GroupCallCenterComfortMessageBypassGetRequest20"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:2980""}]")]
     public class GroupCallCenterComfortMessageBypassGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:2980")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -28,13 +33,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private int _callWaitingAgeThresholdSeconds;
 
         [XmlElement(ElementName = "callWaitingAgeThresholdSeconds", IsNullable = false, Namespace = "")]
-        public int CallWaitingAgeThresholdSeconds {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:2980")]
+        [MinInclusive(1)]
+        [MaxInclusive(120)]
+        public int CallWaitingAgeThresholdSeconds
+        {
             get => _callWaitingAgeThresholdSeconds;
-            set {
+            set
+            {
                 CallWaitingAgeThresholdSecondsSpecified = true;
                 _callWaitingAgeThresholdSeconds = value;
             }
@@ -42,13 +52,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallWaitingAgeThresholdSecondsSpecified { get; set; }
-        
+
         private bool _playAnnouncementAfterRinging;
 
         [XmlElement(ElementName = "playAnnouncementAfterRinging", IsNullable = false, Namespace = "")]
-        public bool PlayAnnouncementAfterRinging {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:2980")]
+        public bool PlayAnnouncementAfterRinging
+        {
             get => _playAnnouncementAfterRinging;
-            set {
+            set
+            {
                 PlayAnnouncementAfterRingingSpecified = true;
                 _playAnnouncementAfterRinging = value;
             }
@@ -56,13 +69,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayAnnouncementAfterRingingSpecified { get; set; }
-        
+
         private int _ringTimeBeforePlayingAnnouncementSeconds;
 
         [XmlElement(ElementName = "ringTimeBeforePlayingAnnouncementSeconds", IsNullable = false, Namespace = "")]
-        public int RingTimeBeforePlayingAnnouncementSeconds {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:2980")]
+        [MinInclusive(0)]
+        [MaxInclusive(120)]
+        public int RingTimeBeforePlayingAnnouncementSeconds
+        {
             get => _ringTimeBeforePlayingAnnouncementSeconds;
-            set {
+            set
+            {
                 RingTimeBeforePlayingAnnouncementSecondsSpecified = true;
                 _ringTimeBeforePlayingAnnouncementSeconds = value;
             }
@@ -70,13 +88,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RingTimeBeforePlayingAnnouncementSecondsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
 
         [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:2980")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection
+        {
             get => _audioMessageSelection;
-            set {
+            set
+            {
                 AudioMessageSelectionSpecified = true;
                 _audioMessageSelection = value;
             }
@@ -84,13 +105,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioMessageSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList _audioUrlList;
 
         [XmlElement(ElementName = "audioUrlList", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList AudioUrlList {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:2980")]
+        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList AudioUrlList
+        {
             get => _audioUrlList;
-            set {
+            set
+            {
                 AudioUrlListSpecified = true;
                 _audioUrlList = value;
             }
@@ -98,13 +123,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioUrlListSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 _audioFileList;
 
         [XmlElement(ElementName = "audioFileList", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 AudioFileList {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:2980")]
+        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 AudioFileList
+        {
             get => _audioFileList;
-            set {
+            set
+            {
                 AudioFileListSpecified = true;
                 _audioFileList = value;
             }
@@ -112,13 +141,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioFileListSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
 
         [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:2980")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection
+        {
             get => _videoMessageSelection;
-            set {
+            set
+            {
                 VideoMessageSelectionSpecified = true;
                 _videoMessageSelection = value;
             }
@@ -126,13 +158,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoMessageSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList _videoUrlList;
 
         [XmlElement(ElementName = "videoUrlList", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList VideoUrlList {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:2980")]
+        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList VideoUrlList
+        {
             get => _videoUrlList;
-            set {
+            set
+            {
                 VideoUrlListSpecified = true;
                 _videoUrlList = value;
             }
@@ -140,13 +176,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoUrlListSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 _videoFileList;
 
         [XmlElement(ElementName = "videoFileList", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 VideoFileList {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:2980")]
+        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 VideoFileList
+        {
             get => _videoFileList;
-            set {
+            set
+            {
                 VideoFileListSpecified = true;
                 _videoFileList = value;
             }
@@ -154,6 +194,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoFileListSpecified { get; set; }
-        
+
     }
 }

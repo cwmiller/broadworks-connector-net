@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,22 +12,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// NOTE: Prior to release 14, any agents who were not in the list kept their
     /// existing weight setting. In release 14, any agents who are not in the list
     /// will have their weight set to 0.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc829065f9d696d3ca7084121d57f8c0:563""}]")]
     public class GroupHuntGroupModifyInstanceWeightedCallDistributionRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:563")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -33,13 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.HuntAgentWeight> _agentWeight;
+
+        private List<BroadWorksConnector.Ocip.Models.HuntAgentWeight> _agentWeight = new List<BroadWorksConnector.Ocip.Models.HuntAgentWeight>();
 
         [XmlElement(ElementName = "agentWeight", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.HuntAgentWeight> AgentWeight {
+        [Optional]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:563")]
+        public List<BroadWorksConnector.Ocip.Models.HuntAgentWeight> AgentWeight
+        {
             get => _agentWeight;
-            set {
+            set
+            {
                 AgentWeightSpecified = true;
                 _agentWeight = value;
             }
@@ -47,6 +58,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AgentWeightSpecified { get; set; }
-        
+
     }
 }

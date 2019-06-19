@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,23 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Get the user's voice messaging advanced voice management service setting.
     /// The response is either a UserVoiceMessagingUserGetAdvancedVoiceManagementResponse or an ErrorResponse.
     /// Replaced By: UserVoiceMessagingUserGetAdvancedVoiceManagementRequest14sp3
-        /// <see cref="UserVoiceMessagingUserGetAdvancedVoiceManagementResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="UserVoiceMessagingUserGetAdvancedVoiceManagementRequest14sp3"/>
-        /// </summary>
+    /// <see cref="UserVoiceMessagingUserGetAdvancedVoiceManagementResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="UserVoiceMessagingUserGetAdvancedVoiceManagementRequest14sp3"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:7811""}]")]
     public class UserVoiceMessagingUserGetAdvancedVoiceManagementRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7811")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -32,6 +39,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
     }
 }

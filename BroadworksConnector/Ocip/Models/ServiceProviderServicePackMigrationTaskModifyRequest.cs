@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Modify the properties of a specified service pack migration task.
     /// Modification is only allowed prior to task execution.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5685""}]")]
     public class ServiceProviderServicePackMigrationTaskModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -31,13 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-        public string TaskName {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string TaskName
+        {
             get => _taskName;
-            set {
+            set
+            {
                 TaskNameSpecified = true;
                 _taskName = value;
             }
@@ -45,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TaskNameSpecified { get; set; }
-        
+
         private string _newTaskName;
 
         [XmlElement(ElementName = "newTaskName", IsNullable = false, Namespace = "")]
-        public string NewTaskName {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string NewTaskName
+        {
             get => _newTaskName;
-            set {
+            set
+            {
                 NewTaskNameSpecified = true;
                 _newTaskName = value;
             }
@@ -59,13 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewTaskNameSpecified { get; set; }
-        
+
         private string _startTimestamp;
 
         [XmlElement(ElementName = "startTimestamp", IsNullable = false, Namespace = "")]
-        public string StartTimestamp {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        public string StartTimestamp
+        {
             get => _startTimestamp;
-            set {
+            set
+            {
                 StartTimestampSpecified = true;
                 _startTimestamp = value;
             }
@@ -73,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartTimestampSpecified { get; set; }
-        
+
         private int _expireAfterNumHours;
 
         [XmlElement(ElementName = "expireAfterNumHours", IsNullable = false, Namespace = "")]
-        public int ExpireAfterNumHours {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        [MinInclusive(1)]
+        [MaxInclusive(168)]
+        public int ExpireAfterNumHours
+        {
             get => _expireAfterNumHours;
-            set {
+            set
+            {
                 ExpireAfterNumHoursSpecified = true;
                 _expireAfterNumHours = value;
             }
@@ -87,13 +115,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExpireAfterNumHoursSpecified { get; set; }
-        
+
         private int _maxDurationHours;
 
         [XmlElement(ElementName = "maxDurationHours", IsNullable = false, Namespace = "")]
-        public int MaxDurationHours {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        [MinInclusive(1)]
+        [MaxInclusive(9)]
+        public int MaxDurationHours
+        {
             get => _maxDurationHours;
-            set {
+            set
+            {
                 MaxDurationHoursSpecified = true;
                 _maxDurationHours = value;
             }
@@ -101,13 +135,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxDurationHoursSpecified { get; set; }
-        
+
         private bool _sendReportEmail;
 
         [XmlElement(ElementName = "sendReportEmail", IsNullable = false, Namespace = "")]
-        public bool SendReportEmail {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        public bool SendReportEmail
+        {
             get => _sendReportEmail;
-            set {
+            set
+            {
                 SendReportEmailSpecified = true;
                 _sendReportEmail = value;
             }
@@ -115,13 +153,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SendReportEmailSpecified { get; set; }
-        
+
         private string _reportDeliveryEmailAddress;
 
         [XmlElement(ElementName = "reportDeliveryEmailAddress", IsNullable = true, Namespace = "")]
-        public string ReportDeliveryEmailAddress {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ReportDeliveryEmailAddress
+        {
             get => _reportDeliveryEmailAddress;
-            set {
+            set
+            {
                 ReportDeliveryEmailAddressSpecified = true;
                 _reportDeliveryEmailAddress = value;
             }
@@ -129,13 +173,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportDeliveryEmailAddressSpecified { get; set; }
-        
+
         private bool _abortOnError;
 
         [XmlElement(ElementName = "abortOnError", IsNullable = false, Namespace = "")]
-        public bool AbortOnError {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        public bool AbortOnError
+        {
             get => _abortOnError;
-            set {
+            set
+            {
                 AbortOnErrorSpecified = true;
                 _abortOnError = value;
             }
@@ -143,13 +191,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AbortOnErrorSpecified { get; set; }
-        
+
         private int? _abortErrorThreshold;
 
         [XmlElement(ElementName = "abortErrorThreshold", IsNullable = true, Namespace = "")]
-        public int? AbortErrorThreshold {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        [MinInclusive(1)]
+        public int? AbortErrorThreshold
+        {
             get => _abortErrorThreshold;
-            set {
+            set
+            {
                 AbortErrorThresholdSpecified = true;
                 _abortErrorThreshold = value;
             }
@@ -157,13 +210,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AbortErrorThresholdSpecified { get; set; }
-        
+
         private bool _reportAllUsers;
 
         [XmlElement(ElementName = "reportAllUsers", IsNullable = false, Namespace = "")]
-        public bool ReportAllUsers {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        public bool ReportAllUsers
+        {
             get => _reportAllUsers;
-            set {
+            set
+            {
                 ReportAllUsersSpecified = true;
                 _reportAllUsers = value;
             }
@@ -171,13 +228,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportAllUsersSpecified { get; set; }
-        
+
         private bool _automaticallyIncrementServiceQuantity;
 
         [XmlElement(ElementName = "automaticallyIncrementServiceQuantity", IsNullable = false, Namespace = "")]
-        public bool AutomaticallyIncrementServiceQuantity {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5685")]
+        public bool AutomaticallyIncrementServiceQuantity
+        {
             get => _automaticallyIncrementServiceQuantity;
-            set {
+            set
+            {
                 AutomaticallyIncrementServiceQuantitySpecified = true;
                 _automaticallyIncrementServiceQuantity = value;
             }
@@ -185,6 +246,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AutomaticallyIncrementServiceQuantitySpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the ServiceProviderSessionAdmissionControlWhiteListGetRequest.
     /// The response contains the White List information.
-        /// <see cref="ServiceProviderSessionAdmissionControlWhiteListGetRequest"/>
-        /// </summary>
+    /// <see cref="ServiceProviderSessionAdmissionControlWhiteListGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5880""}]")]
     public class ServiceProviderSessionAdmissionControlWhiteListGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _matchDigitPattern;
+        private List<string> _matchDigitPattern = new List<string>();
 
         [XmlElement(ElementName = "matchDigitPattern", IsNullable = false, Namespace = "")]
-        public List<string> MatchDigitPattern {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5880")]
+        [MinLength(1)]
+        [MaxLength(160)]
+        public List<string> MatchDigitPattern
+        {
             get => _matchDigitPattern;
-            set {
+            set
+            {
                 MatchDigitPatternSpecified = true;
                 _matchDigitPattern = value;
             }
@@ -29,13 +37,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MatchDigitPatternSpecified { get; set; }
-        
+
         private bool _enableWhiteList;
 
         [XmlElement(ElementName = "enableWhiteList", IsNullable = false, Namespace = "")]
-        public bool EnableWhiteList {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5880")]
+        public bool EnableWhiteList
+        {
             get => _enableWhiteList;
-            set {
+            set
+            {
                 EnableWhiteListSpecified = true;
                 _enableWhiteList = value;
             }
@@ -43,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableWhiteListSpecified { get; set; }
-        
+
     }
 }

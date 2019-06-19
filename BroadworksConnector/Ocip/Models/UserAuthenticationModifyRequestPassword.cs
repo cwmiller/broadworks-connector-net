@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class UserAuthenticationModifyRequestPassword 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9db4d5fa1bbf70f2626f52a5d6e3420e:80""}]")]
+    public class UserAuthenticationModifyRequestPassword
     {
 
-        
         private string _old;
 
         [XmlElement(ElementName = "old", IsNullable = false, Namespace = "")]
-        public string Old {
+        [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:80")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string Old
+        {
             get => _old;
-            set {
+            set
+            {
                 OldSpecified = true;
                 _old = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OldSpecified { get; set; }
-        
+
         private string _new;
 
         [XmlElement(ElementName = "new", IsNullable = false, Namespace = "")]
-        public string New {
+        [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:80")]
+        [MinLength(1)]
+        [MaxLength(60)]
+        public string New
+        {
             get => _new;
-            set {
+            set
+            {
                 NewSpecified = true;
                 _new = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewSpecified { get; set; }
-        
+
     }
 }

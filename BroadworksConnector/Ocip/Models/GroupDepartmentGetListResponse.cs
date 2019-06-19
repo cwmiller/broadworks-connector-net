@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response includes two parallel arrays of department keys and department display names.
     /// 
     /// Replaced by: GroupDepartmentGetListResponse18
-        /// <see cref="GroupDepartmentGetListRequest"/>
-        /// <see cref="GroupDepartmentGetListResponse18"/>
-        /// </summary>
+    /// <see cref="GroupDepartmentGetListRequest"/>
+    /// <see cref="GroupDepartmentGetListResponse18"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19441""}]")]
     public class GroupDepartmentGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.DepartmentKey> _departmentKey;
+        private List<BroadWorksConnector.Ocip.Models.DepartmentKey> _departmentKey = new List<BroadWorksConnector.Ocip.Models.DepartmentKey>();
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.DepartmentKey> DepartmentKey {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19441")]
+        public List<BroadWorksConnector.Ocip.Models.DepartmentKey> DepartmentKey
+        {
             get => _departmentKey;
-            set {
+            set
+            {
                 DepartmentKeySpecified = true;
                 _departmentKey = value;
             }
@@ -32,13 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentKeySpecified { get; set; }
-        
-        private List<string> _fullPathName;
+
+        private List<string> _fullPathName = new List<string>();
 
         [XmlElement(ElementName = "fullPathName", IsNullable = false, Namespace = "")]
-        public List<string> FullPathName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19441")]
+        [MinLength(1)]
+        public List<string> FullPathName
+        {
             get => _fullPathName;
-            set {
+            set
+            {
                 FullPathNameSpecified = true;
                 _fullPathName = value;
             }
@@ -46,6 +57,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FullPathNameSpecified { get; set; }
-        
+
     }
 }

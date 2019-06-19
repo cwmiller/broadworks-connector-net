@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modifies the system's digit collection attributes.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8194""}]")]
     public class SystemDigitCollectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _accessCode;
 
         [XmlElement(ElementName = "accessCode", IsNullable = true, Namespace = "")]
-        public string AccessCode {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8194")]
+        [MinLength(1)]
+        [MaxLength(1)]
+        public string AccessCode
+        {
             get => _accessCode;
-            set {
+            set
+            {
                 AccessCodeSpecified = true;
                 _accessCode = value;
             }
@@ -30,13 +38,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessCodeSpecified { get; set; }
-        
+
         private string _publicDigitMap;
 
         [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
-        public string PublicDigitMap {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8194")]
+        [MinLength(1)]
+        [MaxLength(2048)]
+        public string PublicDigitMap
+        {
             get => _publicDigitMap;
-            set {
+            set
+            {
                 PublicDigitMapSpecified = true;
                 _publicDigitMap = value;
             }
@@ -44,13 +58,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PublicDigitMapSpecified { get; set; }
-        
+
         private string _privateDigitMap;
 
         [XmlElement(ElementName = "privateDigitMap", IsNullable = true, Namespace = "")]
-        public string PrivateDigitMap {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8194")]
+        [MinLength(1)]
+        [MaxLength(2048)]
+        public string PrivateDigitMap
+        {
             get => _privateDigitMap;
-            set {
+            set
+            {
                 PrivateDigitMapSpecified = true;
                 _privateDigitMap = value;
             }
@@ -58,6 +78,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrivateDigitMapSpecified { get; set; }
-        
+
     }
 }

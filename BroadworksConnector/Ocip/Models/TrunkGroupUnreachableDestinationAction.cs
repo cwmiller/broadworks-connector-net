@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Trunk Group unreachable destination action.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupUnreachableDestinationAction    {
-            [XmlEnum(Name = "Forward")]
+    public enum TrunkGroupUnreachableDestinationAction
+    {
+        [XmlEnum(Name = "Forward")]
         Forward,
-            [XmlEnum(Name = "Reroute")]
+        [XmlEnum(Name = "Reroute")]
         Reroute,
-     }
+    }
 }

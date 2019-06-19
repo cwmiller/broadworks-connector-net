@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,23 +11,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a list specifing the desired login status of one or more call centers.
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// Replaced By: UserCallCenterModifyRequest17sp4
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="UserCallCenterModifyRequest17sp4"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="UserCallCenterModifyRequest17sp4"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:6887""}]")]
     public class UserCallCenterModifyAvailabilityListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6887")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -33,13 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.CallCenterAgentAvailability> _callCenterAvailability;
+
+        private List<BroadWorksConnector.Ocip.Models.CallCenterAgentAvailability> _callCenterAvailability = new List<BroadWorksConnector.Ocip.Models.CallCenterAgentAvailability>();
 
         [XmlElement(ElementName = "callCenterAvailability", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CallCenterAgentAvailability> CallCenterAvailability {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6887")]
+        public List<BroadWorksConnector.Ocip.Models.CallCenterAgentAvailability> CallCenterAvailability
+        {
             get => _callCenterAvailability;
-            set {
+            set
+            {
                 CallCenterAvailabilitySpecified = true;
                 _callCenterAvailability = value;
             }
@@ -47,6 +58,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallCenterAvailabilitySpecified { get; set; }
-        
+
     }
 }

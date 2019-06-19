@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,21 +13,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Extension", "Department", "In Trunk Group", "Email Address", "Is Active".
     /// "Is Active" is "true" or "false".
     /// "Phone Number" is presented in the E164 format.
-        /// <see cref="GroupUserCallWaitingSettingsGetListRequest"/>
-        /// </summary>
+    /// <see cref="GroupUserCallWaitingSettingsGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7487""}]")]
     public class GroupUserCallWaitingSettingsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _userCallWaitingTable;
 
         [XmlElement(ElementName = "userCallWaitingTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable UserCallWaitingTable {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7487")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable UserCallWaitingTable
+        {
             get => _userCallWaitingTable;
-            set {
+            set
+            {
                 UserCallWaitingTableSpecified = true;
                 _userCallWaitingTable = value;
             }
@@ -33,6 +38,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserCallWaitingTableSpecified { get; set; }
-        
+
     }
 }

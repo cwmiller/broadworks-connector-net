@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either SuccessResponse or ErrorResponse.
     /// The following elements are only used in XS data mode and ignored in AS data mode:
     /// privateIdentity
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1116""}]")]
     public class SystemAccessDeviceModifyUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        public string DeviceName {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1116")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceName
+        {
             get => _deviceName;
-            set {
+            set
+            {
                 DeviceNameSpecified = true;
                 _deviceName = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceNameSpecified { get; set; }
-        
+
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        public string LinePort {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1116")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string LinePort
+        {
             get => _linePort;
-            set {
+            set
+            {
                 LinePortSpecified = true;
                 _linePort = value;
             }
@@ -46,13 +58,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LinePortSpecified { get; set; }
-        
+
         private string _privateIdentity;
 
         [XmlElement(ElementName = "privateIdentity", IsNullable = false, Namespace = "")]
-        public string PrivateIdentity {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1116")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string PrivateIdentity
+        {
             get => _privateIdentity;
-            set {
+            set
+            {
                 PrivateIdentitySpecified = true;
                 _privateIdentity = value;
             }
@@ -60,13 +78,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrivateIdentitySpecified { get; set; }
-        
+
         private bool _isPrimaryLinePort;
 
         [XmlElement(ElementName = "isPrimaryLinePort", IsNullable = false, Namespace = "")]
-        public bool IsPrimaryLinePort {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1116")]
+        public bool IsPrimaryLinePort
+        {
             get => _isPrimaryLinePort;
-            set {
+            set
+            {
                 IsPrimaryLinePortSpecified = true;
                 _isPrimaryLinePort = value;
             }
@@ -74,6 +96,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsPrimaryLinePortSpecified { get; set; }
-        
+
     }
 }

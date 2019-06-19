@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Contains the music on hold source configuration.
     /// Replaced by: MusicOnHoldSourceModify21
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class MusicOnHoldSourceModify20 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:8205""}]")]
+    public class MusicOnHoldSourceModify20
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AudioFileCodec _audioFilePreferredCodec;
 
         [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AudioFileCodec AudioFilePreferredCodec {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8205")]
+        public BroadWorksConnector.Ocip.Models.AudioFileCodec AudioFilePreferredCodec
+        {
             get => _audioFilePreferredCodec;
-            set {
+            set
+            {
                 AudioFilePreferredCodecSpecified = true;
                 _audioFilePreferredCodec = value;
             }
@@ -28,13 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioFilePreferredCodecSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
 
         [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8205")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection
+        {
             get => _messageSourceSelection;
-            set {
+            set
+            {
                 MessageSourceSelectionSpecified = true;
                 _messageSourceSelection = value;
             }
@@ -42,13 +52,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MessageSourceSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify20CustomSource _customSource;
 
         [XmlElement(ElementName = "customSource", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify20CustomSource CustomSource {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8205")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify20CustomSource CustomSource
+        {
             get => _customSource;
-            set {
+            set
+            {
                 CustomSourceSpecified = true;
                 _customSource = value;
             }
@@ -56,13 +70,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CustomSourceSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify20ExternalSource _externalSource;
 
         [XmlElement(ElementName = "externalSource", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify20ExternalSource ExternalSource {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8205")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify20ExternalSource ExternalSource
+        {
             get => _externalSource;
-            set {
+            set
+            {
                 ExternalSourceSpecified = true;
                 _externalSource = value;
             }
@@ -70,6 +88,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExternalSourceSpecified { get; set; }
-        
+
     }
 }

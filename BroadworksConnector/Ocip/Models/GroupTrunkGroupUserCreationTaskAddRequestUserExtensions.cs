@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class GroupTrunkGroupUserCreationTaskAddRequestUserExtensions 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3082""}]")]
+    public class GroupTrunkGroupUserCreationTaskAddRequestUserExtensions
     {
 
-        
-        private List<string> _extension;
+        private List<string> _extension = new List<string>();
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
-        public List<string> Extension {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3082")]
+        [MinLength(2)]
+        [MaxLength(6)]
+        public List<string> Extension
+        {
             get => _extension;
-            set {
+            set
+            {
                 ExtensionSpecified = true;
                 _extension = value;
             }
@@ -27,13 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtensionSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.ExtensionRange> _extensionRange;
+
+        private List<BroadWorksConnector.Ocip.Models.ExtensionRange> _extensionRange = new List<BroadWorksConnector.Ocip.Models.ExtensionRange>();
 
         [XmlElement(ElementName = "extensionRange", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.ExtensionRange> ExtensionRange {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3082")]
+        public List<BroadWorksConnector.Ocip.Models.ExtensionRange> ExtensionRange
+        {
             get => _extensionRange;
-            set {
+            set
+            {
                 ExtensionRangeSpecified = true;
                 _extensionRange = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtensionRangeSpecified { get; set; }
-        
+
     }
 }

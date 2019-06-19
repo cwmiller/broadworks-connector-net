@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Contains a Call Center Call Disposition Code and its Level
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallDispositionCodeWithLevel 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7715""}]")]
+    public class CallDispositionCodeWithLevel
     {
 
-        
         private string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        public string Code {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7715")]
+        [MinLength(1)]
+        [MaxLength(10)]
+        public string Code
+        {
             get => _code;
-            set {
+            set
+            {
                 CodeSpecified = true;
                 _code = value;
             }
@@ -27,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CodeSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallDispositionCodeLevel _level;
 
         [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallDispositionCodeLevel Level {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7715")]
+        public BroadWorksConnector.Ocip.Models.CallDispositionCodeLevel Level
+        {
             get => _level;
-            set {
+            set
+            {
                 LevelSpecified = true;
                 _level = value;
             }
@@ -41,6 +51,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LevelSpecified { get; set; }
-        
+
     }
 }

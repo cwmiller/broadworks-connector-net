@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemDialPlanPolicyGetAccessCodeRequest
-        /// <see cref="SystemDialPlanPolicyGetAccessCodeRequest"/>
-        /// </summary>
+    /// <see cref="SystemDialPlanPolicyGetAccessCodeRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8072""}]")]
     public class SystemDialPlanPolicyGetAccessCodeResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _includeCodeForNetworkTranslationsAndRouting;
 
         [XmlElement(ElementName = "includeCodeForNetworkTranslationsAndRouting", IsNullable = false, Namespace = "")]
-        public bool IncludeCodeForNetworkTranslationsAndRouting {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8072")]
+        public bool IncludeCodeForNetworkTranslationsAndRouting
+        {
             get => _includeCodeForNetworkTranslationsAndRouting;
-            set {
+            set
+            {
                 IncludeCodeForNetworkTranslationsAndRoutingSpecified = true;
                 _includeCodeForNetworkTranslationsAndRouting = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeCodeForNetworkTranslationsAndRoutingSpecified { get; set; }
-        
+
         private bool _includeCodeForScreeningServices;
 
         [XmlElement(ElementName = "includeCodeForScreeningServices", IsNullable = false, Namespace = "")]
-        public bool IncludeCodeForScreeningServices {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8072")]
+        public bool IncludeCodeForScreeningServices
+        {
             get => _includeCodeForScreeningServices;
-            set {
+            set
+            {
                 IncludeCodeForScreeningServicesSpecified = true;
                 _includeCodeForScreeningServices = value;
             }
@@ -42,13 +50,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeCodeForScreeningServicesSpecified { get; set; }
-        
+
         private bool _enableSecondaryDialTone;
 
         [XmlElement(ElementName = "enableSecondaryDialTone", IsNullable = false, Namespace = "")]
-        public bool EnableSecondaryDialTone {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8072")]
+        public bool EnableSecondaryDialTone
+        {
             get => _enableSecondaryDialTone;
-            set {
+            set
+            {
                 EnableSecondaryDialToneSpecified = true;
                 _enableSecondaryDialTone = value;
             }
@@ -56,13 +67,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableSecondaryDialToneSpecified { get; set; }
-        
+
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        public string Description {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8072")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Description
+        {
             get => _description;
-            set {
+            set
+            {
                 DescriptionSpecified = true;
                 _description = value;
             }
@@ -70,6 +87,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DescriptionSpecified { get; set; }
-        
+
     }
 }

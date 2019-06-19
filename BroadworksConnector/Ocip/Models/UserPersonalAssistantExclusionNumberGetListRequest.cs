@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get the User Personal Assistant Exclusion Number List information.
     /// The response is either a UserPersonalAssistantExclusionNumberGetListResponse or an ErrorResponse.
-        /// <see cref="UserPersonalAssistantExclusionNumberGetListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="UserPersonalAssistantExclusionNumberGetListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:214""}]")]
     public class UserPersonalAssistantExclusionNumberGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:214")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumber> _searchCriteriaPersonalAssistantExclusionNumber;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumber> _searchCriteriaPersonalAssistantExclusionNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumber>();
 
         [XmlElement(ElementName = "searchCriteriaPersonalAssistantExclusionNumber", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumber> SearchCriteriaPersonalAssistantExclusionNumber {
+        [Optional]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:214")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumber> SearchCriteriaPersonalAssistantExclusionNumber
+        {
             get => _searchCriteriaPersonalAssistantExclusionNumber;
-            set {
+            set
+            {
                 SearchCriteriaPersonalAssistantExclusionNumberSpecified = true;
                 _searchCriteriaPersonalAssistantExclusionNumber = value;
             }
@@ -44,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaPersonalAssistantExclusionNumberSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumberDescription> _searchCriteriaPersonalAssistantExclusionNumberDescription;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumberDescription> _searchCriteriaPersonalAssistantExclusionNumberDescription = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumberDescription>();
 
         [XmlElement(ElementName = "searchCriteriaPersonalAssistantExclusionNumberDescription", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumberDescription> SearchCriteriaPersonalAssistantExclusionNumberDescription {
+        [Optional]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:214")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumberDescription> SearchCriteriaPersonalAssistantExclusionNumberDescription
+        {
             get => _searchCriteriaPersonalAssistantExclusionNumberDescription;
-            set {
+            set
+            {
                 SearchCriteriaPersonalAssistantExclusionNumberDescriptionSpecified = true;
                 _searchCriteriaPersonalAssistantExclusionNumberDescription = value;
             }
@@ -58,13 +73,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaPersonalAssistantExclusionNumberDescriptionSpecified { get; set; }
-        
+
         private int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-        public int ResponseSizeLimit {
+        [Optional]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:214")]
+        [MinInclusive(1)]
+        public int ResponseSizeLimit
+        {
             get => _responseSizeLimit;
-            set {
+            set
+            {
                 ResponseSizeLimitSpecified = true;
                 _responseSizeLimit = value;
             }
@@ -72,6 +92,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponseSizeLimitSpecified { get; set; }
-        
+
     }
 }

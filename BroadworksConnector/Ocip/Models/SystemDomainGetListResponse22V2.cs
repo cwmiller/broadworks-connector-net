@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,20 +11,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// The column headings are: "Domain Name" and "Reseller Id".
     /// The following elements are only used in AS and XS data mode and not returned in Amplify data mode:
     /// systemDefaultDomain
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8491""}]")]
     public class SystemDomainGetListResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _systemDefaultDomain;
 
         [XmlElement(ElementName = "systemDefaultDomain", IsNullable = false, Namespace = "")]
-        public string SystemDefaultDomain {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8491")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string SystemDefaultDomain
+        {
             get => _systemDefaultDomain;
-            set {
+            set
+            {
                 SystemDefaultDomainSpecified = true;
                 _systemDefaultDomain = value;
             }
@@ -30,13 +38,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SystemDefaultDomainSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _domainTable;
 
         [XmlElement(ElementName = "domainTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable DomainTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8491")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable DomainTable
+        {
             get => _domainTable;
-            set {
+            set
+            {
                 DomainTableSpecified = true;
                 _domainTable = value;
             }
@@ -44,6 +55,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DomainTableSpecified { get; set; }
-        
+
     }
 }

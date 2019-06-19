@@ -10,15 +10,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// 1) read-only access to devices, but
     /// 2) the group administrator may associate users with devices
     /// "Read-Only" indicates read-only access to devices and user-device associations
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupAdminAccessDeviceAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupAdminAccessDeviceAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Associate User With Device")]
+        [XmlEnum(Name = "Associate User With Device")]
         AssociateUserWithDevice,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-     }
+    }
 }

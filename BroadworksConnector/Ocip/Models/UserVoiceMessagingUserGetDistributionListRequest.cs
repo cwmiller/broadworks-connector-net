@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a voice mail distribution list for a users voice message.
     /// The response is either UserVoiceMessagingUserGetDistributionListResponse or ErrorResponse.
-        /// <see cref="UserVoiceMessagingUserGetDistributionListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="UserVoiceMessagingUserGetDistributionListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:1765""}]")]
     public class UserVoiceMessagingUserGetDistributionListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1765")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private int _listId;
 
         [XmlElement(ElementName = "listId", IsNullable = false, Namespace = "")]
-        public int ListId {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1765")]
+        [MinInclusive(0)]
+        [MaxInclusive(14)]
+        public int ListId
+        {
             get => _listId;
-            set {
+            set
+            {
                 ListIdSpecified = true;
                 _listId = value;
             }
@@ -44,6 +56,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ListIdSpecified { get; set; }
-        
+
     }
 }

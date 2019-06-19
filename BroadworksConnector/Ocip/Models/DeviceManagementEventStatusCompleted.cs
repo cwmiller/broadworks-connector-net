@@ -8,13 +8,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// It can be 'Canceled', meaning that it was canceled in the middle of processing.
     /// It can be 'Completed', meaning that all its related expanded events have
     /// been successfully processed.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DeviceManagementEventStatusCompleted    {
-            [XmlEnum(Name = "Canceled")]
+    public enum DeviceManagementEventStatusCompleted
+    {
+        [XmlEnum(Name = "Canceled")]
         Canceled,
-            [XmlEnum(Name = "Completed")]
+        [XmlEnum(Name = "Completed")]
         Completed,
-     }
+    }
 }

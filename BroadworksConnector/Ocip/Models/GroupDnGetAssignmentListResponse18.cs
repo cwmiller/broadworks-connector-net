@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -17,21 +19,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The "Country Code" column indicates the dialing prefix for the phone number.
     /// The "National Prefix" column indicates the digit sequence to be dialed before the telephone number.
     /// NOTE: the same phone number can show up in the list twice if the phone number is being used as the group calling line Id.
-        /// <see cref="GroupDnGetAssignmentListRequest18"/>
-        /// </summary>
+    /// <see cref="GroupDnGetAssignmentListRequest18"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4209""}]")]
     public class GroupDnGetAssignmentListResponse18 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _dnTable;
 
         [XmlElement(ElementName = "dnTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable DnTable {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4209")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable DnTable
+        {
             get => _dnTable;
-            set {
+            set
+            {
                 DnTableSpecified = true;
                 _dnTable = value;
             }
@@ -39,6 +44,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DnTableSpecified { get; set; }
-        
+
     }
 }

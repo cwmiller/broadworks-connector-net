@@ -7,15 +7,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// This data type is applicable only for an Enterprise administrator.
     /// Enterprise Administrator's policy for accessing
     /// the Number Activation information.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum EnterpriseAdminNumberActivationAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum EnterpriseAdminNumberActivationAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Read-Only")]
+        [XmlEnum(Name = "Read-Only")]
         ReadOnly,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

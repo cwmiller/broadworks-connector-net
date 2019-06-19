@@ -1,25 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class UserEnhancedCallLogsGetListResponse17sp4V2ExtendedEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32624""}]")]
+    public class UserEnhancedCallLogsGetListResponse17sp4V2ExtendedEntry
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.ExtendedMixedCallLogsEntry17sp4> _extendedCallLog;
+        private List<BroadWorksConnector.Ocip.Models.ExtendedMixedCallLogsEntry17sp4> _extendedCallLog = new List<BroadWorksConnector.Ocip.Models.ExtendedMixedCallLogsEntry17sp4>();
 
         [XmlElement(ElementName = "extendedCallLog", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.ExtendedMixedCallLogsEntry17sp4> ExtendedCallLog {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32624")]
+        public List<BroadWorksConnector.Ocip.Models.ExtendedMixedCallLogsEntry17sp4> ExtendedCallLog
+        {
             get => _extendedCallLog;
-            set {
+            set
+            {
                 ExtendedCallLogSpecified = true;
                 _extendedCallLog = value;
             }
@@ -27,6 +33,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtendedCallLogSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Delete a GETS Session Priority map.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10113""}]")]
     public class SystemGETSSessionPriorityMapDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private int _priorityLevel;
 
         [XmlElement(ElementName = "priorityLevel", IsNullable = false, Namespace = "")]
-        public int PriorityLevel {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10113")]
+        [MinInclusive(1)]
+        [MaxInclusive(5)]
+        public int PriorityLevel
+        {
             get => _priorityLevel;
-            set {
+            set
+            {
                 PriorityLevelSpecified = true;
                 _priorityLevel = value;
             }
@@ -30,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PriorityLevelSpecified { get; set; }
-        
+
     }
 }

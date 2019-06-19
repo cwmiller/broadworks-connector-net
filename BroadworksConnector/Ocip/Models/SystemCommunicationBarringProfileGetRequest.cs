@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,23 +11,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SystemCommunicationBarringProfileGetResponse
     /// or an ErrorResponse.
     /// Replaced by: SystemCommunicationBarringProfileGetRequest16
-        /// <see cref="SystemCommunicationBarringProfileGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemCommunicationBarringProfileGetRequest16"/>
-        /// </summary>
+    /// <see cref="SystemCommunicationBarringProfileGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemCommunicationBarringProfileGetRequest16"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10201""}]")]
     public class SystemCommunicationBarringProfileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10201")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -33,6 +40,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
     }
 }

@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupThirdPartyVoiceMailSupportGetRequest.
-        /// <see cref="GroupThirdPartyVoiceMailSupportGetRequest"/>
-        /// </summary>
+    /// <see cref="GroupThirdPartyVoiceMailSupportGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3c311aa5c89c0cf5b46e1cdefd5bc387:69""}]")]
     public class GroupThirdPartyVoiceMailSupportGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:69")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -28,13 +33,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private string _groupServer;
 
         [XmlElement(ElementName = "groupServer", IsNullable = false, Namespace = "")]
-        public string GroupServer {
+        [Optional]
+        [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:69")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string GroupServer
+        {
             get => _groupServer;
-            set {
+            set
+            {
                 GroupServerSpecified = true;
                 _groupServer = value;
             }
@@ -42,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupServerSpecified { get; set; }
-        
+
     }
 }

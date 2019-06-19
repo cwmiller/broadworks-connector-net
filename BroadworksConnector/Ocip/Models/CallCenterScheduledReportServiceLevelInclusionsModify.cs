@@ -1,25 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The call center enhanced reporting scheduled report modified inclusions related to the Service Level thresholds
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterScheduledReportServiceLevelInclusionsModify 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7665""}]")]
+    public class CallCenterScheduledReportServiceLevelInclusionsModify
     {
 
-        
         private bool _includeOverflowTimeTransferedInServiceLevel;
 
         [XmlElement(ElementName = "includeOverflowTimeTransferedInServiceLevel", IsNullable = false, Namespace = "")]
-        public bool IncludeOverflowTimeTransferedInServiceLevel {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7665")]
+        public bool IncludeOverflowTimeTransferedInServiceLevel
+        {
             get => _includeOverflowTimeTransferedInServiceLevel;
-            set {
+            set
+            {
                 IncludeOverflowTimeTransferedInServiceLevelSpecified = true;
                 _includeOverflowTimeTransferedInServiceLevel = value;
             }
@@ -27,13 +33,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeOverflowTimeTransferedInServiceLevelSpecified { get; set; }
-        
+
         private bool _includeOtherTransfersInServiceLevel;
 
         [XmlElement(ElementName = "includeOtherTransfersInServiceLevel", IsNullable = false, Namespace = "")]
-        public bool IncludeOtherTransfersInServiceLevel {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7665")]
+        public bool IncludeOtherTransfersInServiceLevel
+        {
             get => _includeOtherTransfersInServiceLevel;
-            set {
+            set
+            {
                 IncludeOtherTransfersInServiceLevelSpecified = true;
                 _includeOtherTransfersInServiceLevel = value;
             }
@@ -41,13 +51,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeOtherTransfersInServiceLevelSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel _abandonedCallsInServiceLevel;
 
         [XmlElement(ElementName = "abandonedCallsInServiceLevel", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel AbandonedCallsInServiceLevel {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7665")]
+        public BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel AbandonedCallsInServiceLevel
+        {
             get => _abandonedCallsInServiceLevel;
-            set {
+            set
+            {
                 AbandonedCallsInServiceLevelSpecified = true;
                 _abandonedCallsInServiceLevel = value;
             }
@@ -55,13 +69,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AbandonedCallsInServiceLevelSpecified { get; set; }
-        
+
         private int? _abandonedCallIntervalSeconds;
 
         [XmlElement(ElementName = "abandonedCallIntervalSeconds", IsNullable = true, Namespace = "")]
-        public int? AbandonedCallIntervalSeconds {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7665")]
+        [MinInclusive(1)]
+        [MaxInclusive(7200)]
+        public int? AbandonedCallIntervalSeconds
+        {
             get => _abandonedCallIntervalSeconds;
-            set {
+            set
+            {
                 AbandonedCallIntervalSecondsSpecified = true;
                 _abandonedCallIntervalSeconds = value;
             }
@@ -69,6 +89,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AbandonedCallIntervalSecondsSpecified { get; set; }
-        
+
     }
 }

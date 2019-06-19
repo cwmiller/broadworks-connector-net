@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the ServiceProviderMaliciousCallTraceGetRequest.
     /// The response contains the service provider Malicious Call Trace
     /// settings.
-        /// <see cref="ServiceProviderMaliciousCallTraceGetRequest"/>
-        /// </summary>
+    /// <see cref="ServiceProviderMaliciousCallTraceGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0da7c658f240cdc10c3f9cb328db57d8:63""}]")]
     public class ServiceProviderMaliciousCallTraceGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _useSystemPlayMCTWarningAnnouncement;
 
         [XmlElement(ElementName = "useSystemPlayMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
-        public bool UseSystemPlayMCTWarningAnnouncement {
+        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:63")]
+        public bool UseSystemPlayMCTWarningAnnouncement
+        {
             get => _useSystemPlayMCTWarningAnnouncement;
-            set {
+            set
+            {
                 UseSystemPlayMCTWarningAnnouncementSpecified = true;
                 _useSystemPlayMCTWarningAnnouncement = value;
             }
@@ -30,13 +35,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseSystemPlayMCTWarningAnnouncementSpecified { get; set; }
-        
+
         private bool _playMCTWarningAnnouncement;
 
         [XmlElement(ElementName = "playMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
-        public bool PlayMCTWarningAnnouncement {
+        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:63")]
+        public bool PlayMCTWarningAnnouncement
+        {
             get => _playMCTWarningAnnouncement;
-            set {
+            set
+            {
                 PlayMCTWarningAnnouncementSpecified = true;
                 _playMCTWarningAnnouncement = value;
             }
@@ -44,6 +52,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayMCTWarningAnnouncementSpecified { get; set; }
-        
+
     }
 }

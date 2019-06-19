@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemOutgoingCallingPlanCallTypeGetMappingListRequest. The table columns are:
     /// "Country Code", "Digit Map" and "Call Type".
-        /// <see cref="SystemOutgoingCallingPlanCallTypeGetMappingListRequest"/>
-        /// </summary>
+    /// <see cref="SystemOutgoingCallingPlanCallTypeGetMappingListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:955""}]")]
     public class SystemOutgoingCallingPlanCallTypeGetMappingListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _callTypeMapping;
 
         [XmlElement(ElementName = "callTypeMapping", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable CallTypeMapping {
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:955")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable CallTypeMapping
+        {
             get => _callTypeMapping;
-            set {
+            set
+            {
                 CallTypeMappingSpecified = true;
                 _callTypeMapping = value;
             }
@@ -29,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallTypeMappingSpecified { get; set; }
-        
+
     }
 }

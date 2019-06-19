@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Contains a list of URLs for modify.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterAnnouncementURLListModify 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:908""}]")]
+    public class CallCenterAnnouncementURLListModify
     {
 
-        
         private string _url1;
 
         [XmlElement(ElementName = "url1", IsNullable = true, Namespace = "")]
-        public string Url1 {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:908")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string Url1
+        {
             get => _url1;
-            set {
+            set
+            {
                 Url1Specified = true;
                 _url1 = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Url1Specified { get; set; }
-        
+
         private string _url2;
 
         [XmlElement(ElementName = "url2", IsNullable = true, Namespace = "")]
-        public string Url2 {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:908")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string Url2
+        {
             get => _url2;
-            set {
+            set
+            {
                 Url2Specified = true;
                 _url2 = value;
             }
@@ -41,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Url2Specified { get; set; }
-        
+
         private string _url3;
 
         [XmlElement(ElementName = "url3", IsNullable = true, Namespace = "")]
-        public string Url3 {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:908")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string Url3
+        {
             get => _url3;
-            set {
+            set
+            {
                 Url3Specified = true;
                 _url3 = value;
             }
@@ -55,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Url3Specified { get; set; }
-        
+
         private string _url4;
 
         [XmlElement(ElementName = "url4", IsNullable = true, Namespace = "")]
-        public string Url4 {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:908")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string Url4
+        {
             get => _url4;
-            set {
+            set
+            {
                 Url4Specified = true;
                 _url4 = value;
             }
@@ -69,6 +95,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool Url4Specified { get; set; }
-        
+
     }
 }

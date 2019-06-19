@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Time format for a call center enhanced reporting report.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterReportTimeFormat    {
-            [XmlEnum(Name = "AM/PM")]
+    public enum CallCenterReportTimeFormat
+    {
+        [XmlEnum(Name = "AM/PM")]
         AMPM,
-            [XmlEnum(Name = "24Hour")]
+        [XmlEnum(Name = "24Hour")]
         _24Hour,
-     }
+    }
 }

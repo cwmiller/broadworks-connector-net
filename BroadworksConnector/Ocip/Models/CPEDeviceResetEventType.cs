@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Type of reset event for a CPE device.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CPEDeviceResetEventType    {
-            [XmlEnum(Name = "Resync")]
+    public enum CPEDeviceResetEventType
+    {
+        [XmlEnum(Name = "Resync")]
         Resync,
-            [XmlEnum(Name = "Check Sync")]
+        [XmlEnum(Name = "Check Sync")]
         CheckSync,
-     }
+    }
 }

@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to ServiceProviderLanguageGetListRequest.
-        /// <see cref="ServiceProviderLanguageGetListRequest"/>
-        /// </summary>
+    /// <see cref="ServiceProviderLanguageGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4030""}]")]
     public class ServiceProviderLanguageGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _language;
+        private List<string> _language = new List<string>();
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        public List<string> Language {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4030")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public List<string> Language
+        {
             get => _language;
-            set {
+            set
+            {
                 LanguageSpecified = true;
                 _language = value;
             }
@@ -28,13 +36,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LanguageSpecified { get; set; }
-        
+
         private string _defaultLanguage;
 
         [XmlElement(ElementName = "defaultLanguage", IsNullable = false, Namespace = "")]
-        public string DefaultLanguage {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4030")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DefaultLanguage
+        {
             get => _defaultLanguage;
-            set {
+            set
+            {
                 DefaultLanguageSpecified = true;
                 _defaultLanguage = value;
             }
@@ -42,6 +56,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultLanguageSpecified { get; set; }
-        
+
     }
 }

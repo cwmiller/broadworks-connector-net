@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -13,23 +15,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// If this special logic is not needed, UserCallCenterModifyRequest19 can still be used to change
     /// the agents ACD state without checking if the agent is the last signed-in agent.
     /// The response is either a UserCallCenterAgentSignOutResponse or ErrorResponse.
-        /// <see cref="UserCallCenterModifyRequest19"/>
-        /// <see cref="UserCallCenterAgentSignOutResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="UserCallCenterModifyRequest19"/>
+    /// <see cref="UserCallCenterAgentSignOutResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6651""}]")]
     public class UserCallCenterAgentSignOutRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _agentUserId;
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
-        public string AgentUserId {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6651")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string AgentUserId
+        {
             get => _agentUserId;
-            set {
+            set
+            {
                 AgentUserIdSpecified = true;
                 _agentUserId = value;
             }
@@ -37,6 +44,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AgentUserIdSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the service provider level Advice Of Charge group settings.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a69fde15f3aa7494d83b57461a7a70bb:85""}]")]
     public class GroupAdviceOfChargeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:85")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:85")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -44,13 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private bool _useGroupLevelAoCSettings;
 
         [XmlElement(ElementName = "useGroupLevelAoCSettings", IsNullable = false, Namespace = "")]
-        public bool UseGroupLevelAoCSettings {
+        [Optional]
+        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:85")]
+        public bool UseGroupLevelAoCSettings
+        {
             get => _useGroupLevelAoCSettings;
-            set {
+            set
+            {
                 UseGroupLevelAoCSettingsSpecified = true;
                 _useGroupLevelAoCSettings = value;
             }
@@ -58,13 +74,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseGroupLevelAoCSettingsSpecified { get; set; }
-        
+
         private int _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
-        public int DelayBetweenNotificationSeconds {
+        [Optional]
+        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:85")]
+        [MinInclusive(5)]
+        [MaxInclusive(1800)]
+        public int DelayBetweenNotificationSeconds
+        {
             get => _delayBetweenNotificationSeconds;
-            set {
+            set
+            {
                 DelayBetweenNotificationSecondsSpecified = true;
                 _delayBetweenNotificationSeconds = value;
             }
@@ -72,6 +94,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DelayBetweenNotificationSecondsSpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Sequential Ring Location.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SequentialRingLocationModify 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6a83dcd7b5697b78acbf42324c2dbe67:225""}]")]
+    public class SequentialRingLocationModify
     {
 
-        
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
-        public string PhoneNumber {
+        [Optional]
+        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:225")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string PhoneNumber
+        {
             get => _phoneNumber;
-            set {
+            set
+            {
                 PhoneNumberSpecified = true;
                 _phoneNumber = value;
             }
@@ -27,13 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhoneNumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings _numberOfRings;
 
         [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings NumberOfRings {
+        [Optional]
+        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:225")]
+        public BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings NumberOfRings
+        {
             get => _numberOfRings;
-            set {
+            set
+            {
                 NumberOfRingsSpecified = true;
                 _numberOfRings = value;
             }
@@ -41,13 +53,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberOfRingsSpecified { get; set; }
-        
+
         private bool _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
-        public bool AnswerConfirmationRequired {
+        [Optional]
+        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:225")]
+        public bool AnswerConfirmationRequired
+        {
             get => _answerConfirmationRequired;
-            set {
+            set
+            {
                 AnswerConfirmationRequiredSpecified = true;
                 _answerConfirmationRequired = value;
             }
@@ -55,6 +71,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnswerConfirmationRequiredSpecified { get; set; }
-        
+
     }
 }

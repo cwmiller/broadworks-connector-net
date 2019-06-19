@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -17,21 +19,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// version, value "" is returned in Amplify data mode
     /// systemType, value "VMS" is returned in Amplify mode
     /// useGsmMwiUcs2Encoding, value "true" is returned in Amplify mode
-        /// <see cref="SystemSMPPGetRequest22"/>
-        /// </summary>
+    /// <see cref="SystemSMPPGetRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16885""}]")]
     public class SystemSMPPGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _primarySMPPServerNetAddress;
 
         [XmlElement(ElementName = "primarySMPPServerNetAddress", IsNullable = false, Namespace = "")]
-        public string PrimarySMPPServerNetAddress {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string PrimarySMPPServerNetAddress
+        {
             get => _primarySMPPServerNetAddress;
-            set {
+            set
+            {
                 PrimarySMPPServerNetAddressSpecified = true;
                 _primarySMPPServerNetAddress = value;
             }
@@ -39,13 +47,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrimarySMPPServerNetAddressSpecified { get; set; }
-        
+
         private int _primarySMPPPort;
 
         [XmlElement(ElementName = "primarySMPPPort", IsNullable = false, Namespace = "")]
-        public int PrimarySMPPPort {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        [MinInclusive(1)]
+        [MaxInclusive(65535)]
+        public int PrimarySMPPPort
+        {
             get => _primarySMPPPort;
-            set {
+            set
+            {
                 PrimarySMPPPortSpecified = true;
                 _primarySMPPPort = value;
             }
@@ -53,13 +66,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrimarySMPPPortSpecified { get; set; }
-        
+
         private string _secondarySMPPServerNetAddress;
 
         [XmlElement(ElementName = "secondarySMPPServerNetAddress", IsNullable = false, Namespace = "")]
-        public string SecondarySMPPServerNetAddress {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string SecondarySMPPServerNetAddress
+        {
             get => _secondarySMPPServerNetAddress;
-            set {
+            set
+            {
                 SecondarySMPPServerNetAddressSpecified = true;
                 _secondarySMPPServerNetAddress = value;
             }
@@ -67,13 +86,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SecondarySMPPServerNetAddressSpecified { get; set; }
-        
+
         private int _secondarySMPPPort;
 
         [XmlElement(ElementName = "secondarySMPPPort", IsNullable = false, Namespace = "")]
-        public int SecondarySMPPPort {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        [MinInclusive(1)]
+        [MaxInclusive(65535)]
+        public int SecondarySMPPPort
+        {
             get => _secondarySMPPPort;
-            set {
+            set
+            {
                 SecondarySMPPPortSpecified = true;
                 _secondarySMPPPort = value;
             }
@@ -81,13 +105,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SecondarySMPPPortSpecified { get; set; }
-        
+
         private string _systemId;
 
         [XmlElement(ElementName = "systemId", IsNullable = false, Namespace = "")]
-        public string SystemId {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        [MinLength(1)]
+        [MaxLength(16)]
+        public string SystemId
+        {
             get => _systemId;
-            set {
+            set
+            {
                 SystemIdSpecified = true;
                 _systemId = value;
             }
@@ -95,13 +125,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SystemIdSpecified { get; set; }
-        
+
         private string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        public string Password {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        [MinLength(1)]
+        [MaxLength(8)]
+        public string Password
+        {
             get => _password;
-            set {
+            set
+            {
                 PasswordSpecified = true;
                 _password = value;
             }
@@ -109,13 +145,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PasswordSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SMPPVersion _version;
 
         [XmlElement(ElementName = "version", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SMPPVersion Version {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        public BroadWorksConnector.Ocip.Models.SMPPVersion Version
+        {
             get => _version;
-            set {
+            set
+            {
                 VersionSpecified = true;
                 _version = value;
             }
@@ -123,13 +162,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VersionSpecified { get; set; }
-        
+
         private string _systemType;
 
         [XmlElement(ElementName = "systemType", IsNullable = false, Namespace = "")]
-        public string SystemType {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        [MinLength(1)]
+        [MaxLength(12)]
+        public string SystemType
+        {
             get => _systemType;
-            set {
+            set
+            {
                 SystemTypeSpecified = true;
                 _systemType = value;
             }
@@ -137,13 +182,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SystemTypeSpecified { get; set; }
-        
+
         private bool _enableMWICustomizedMessage;
 
         [XmlElement(ElementName = "enableMWICustomizedMessage", IsNullable = false, Namespace = "")]
-        public bool EnableMWICustomizedMessage {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        public bool EnableMWICustomizedMessage
+        {
             get => _enableMWICustomizedMessage;
-            set {
+            set
+            {
                 EnableMWICustomizedMessageSpecified = true;
                 _enableMWICustomizedMessage = value;
             }
@@ -151,13 +199,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableMWICustomizedMessageSpecified { get; set; }
-        
+
         private bool _supportMessagePayload;
 
         [XmlElement(ElementName = "supportMessagePayload", IsNullable = false, Namespace = "")]
-        public bool SupportMessagePayload {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        public bool SupportMessagePayload
+        {
             get => _supportMessagePayload;
-            set {
+            set
+            {
                 SupportMessagePayloadSpecified = true;
                 _supportMessagePayload = value;
             }
@@ -165,13 +216,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SupportMessagePayloadSpecified { get; set; }
-        
+
         private int _maxShortMessageLength;
 
         [XmlElement(ElementName = "maxShortMessageLength", IsNullable = false, Namespace = "")]
-        public int MaxShortMessageLength {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        [MinInclusive(1)]
+        [MaxInclusive(70)]
+        public int MaxShortMessageLength
+        {
             get => _maxShortMessageLength;
-            set {
+            set
+            {
                 MaxShortMessageLengthSpecified = true;
                 _maxShortMessageLength = value;
             }
@@ -179,13 +235,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxShortMessageLengthSpecified { get; set; }
-        
+
         private bool _useGsmMwiUcs2Encoding;
 
         [XmlElement(ElementName = "useGsmMwiUcs2Encoding", IsNullable = false, Namespace = "")]
-        public bool UseGsmMwiUcs2Encoding {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        public bool UseGsmMwiUcs2Encoding
+        {
             get => _useGsmMwiUcs2Encoding;
-            set {
+            set
+            {
                 UseGsmMwiUcs2EncodingSpecified = true;
                 _useGsmMwiUcs2Encoding = value;
             }
@@ -193,13 +252,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseGsmMwiUcs2EncodingSpecified { get; set; }
-        
+
         private bool _includeOnlyNewMessageCount;
 
         [XmlElement(ElementName = "includeOnlyNewMessageCount", IsNullable = false, Namespace = "")]
-        public bool IncludeOnlyNewMessageCount {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16885")]
+        public bool IncludeOnlyNewMessageCount
+        {
             get => _includeOnlyNewMessageCount;
-            set {
+            set
+            {
                 IncludeOnlyNewMessageCountSpecified = true;
                 _includeOnlyNewMessageCount = value;
             }
@@ -207,6 +269,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeOnlyNewMessageCountSpecified { get; set; }
-        
+
     }
 }

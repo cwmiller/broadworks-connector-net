@@ -9,29 +9,30 @@ namespace BroadWorksConnector.Ocip.Models
     /// EVRC0
     /// EVRCNW
     /// EVRCNW0
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AudioFileCodecExtended    {
-            [XmlEnum(Name = "None")]
+    public enum AudioFileCodecExtended
+    {
+        [XmlEnum(Name = "None")]
         None,
-            [XmlEnum(Name = "G711")]
+        [XmlEnum(Name = "G711")]
         G711,
-            [XmlEnum(Name = "G722")]
+        [XmlEnum(Name = "G722")]
         G722,
-            [XmlEnum(Name = "G729")]
+        [XmlEnum(Name = "G729")]
         G729,
-            [XmlEnum(Name = "G726")]
+        [XmlEnum(Name = "G726")]
         G726,
-            [XmlEnum(Name = "AMR")]
+        [XmlEnum(Name = "AMR")]
         AMR,
-            [XmlEnum(Name = "AMR-WB")]
+        [XmlEnum(Name = "AMR-WB")]
         AMRWB,
-            [XmlEnum(Name = "EVRC0")]
+        [XmlEnum(Name = "EVRC0")]
         EVRC0,
-            [XmlEnum(Name = "EVRCNW")]
+        [XmlEnum(Name = "EVRCNW")]
         EVRCNW,
-            [XmlEnum(Name = "EVRCNW0")]
+        [XmlEnum(Name = "EVRCNW0")]
         EVRCNW0,
-     }
+    }
 }

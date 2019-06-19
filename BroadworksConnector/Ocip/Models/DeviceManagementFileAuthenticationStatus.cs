@@ -9,15 +9,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Challenge" : authentication is required.
     /// "Need Digest Authntication" : client needs to use digest authentication.
     /// "Need User Password Authntication" : client needs to use user/pass authentication.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DeviceManagementFileAuthenticationStatus    {
-            [XmlEnum(Name = "Challenge")]
+    public enum DeviceManagementFileAuthenticationStatus
+    {
+        [XmlEnum(Name = "Challenge")]
         Challenge,
-            [XmlEnum(Name = "Need Digest Authentication")]
+        [XmlEnum(Name = "Need Digest Authentication")]
         NeedDigestAuthentication,
-            [XmlEnum(Name = "Need User Password Authentication")]
+        [XmlEnum(Name = "Need User Password Authentication")]
         NeedUserPasswordAuthentication,
-     }
+    }
 }

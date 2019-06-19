@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -18,22 +20,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// XS data mode:
     /// impId
     /// isAlternateImpId
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""23389100b68cef3aa07ee12ac7a2bd16:380""}]")]
     public class UserIntegratedIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:380")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -41,13 +48,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Optional]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:380")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -55,13 +66,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private string _impId;
 
         [XmlElement(ElementName = "impId", IsNullable = false, Namespace = "")]
-        public string ImpId {
+        [Optional]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:380")]
+        [MinLength(1)]
+        [MaxLength(196)]
+        public string ImpId
+        {
             get => _impId;
-            set {
+            set
+            {
                 ImpIdSpecified = true;
                 _impId = value;
             }
@@ -69,13 +86,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ImpIdSpecified { get; set; }
-        
+
         private bool _isAlternateImpId;
 
         [XmlElement(ElementName = "isAlternateImpId", IsNullable = false, Namespace = "")]
-        public bool IsAlternateImpId {
+        [Optional]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:380")]
+        public bool IsAlternateImpId
+        {
             get => _isAlternateImpId;
-            set {
+            set
+            {
                 IsAlternateImpIdSpecified = true;
                 _isAlternateImpId = value;
             }
@@ -83,6 +104,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsAlternateImpIdSpecified { get; set; }
-        
+
     }
 }

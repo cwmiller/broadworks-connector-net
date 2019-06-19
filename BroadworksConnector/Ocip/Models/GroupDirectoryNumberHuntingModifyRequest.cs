@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Replaces a list of users as agents for a directory number hunting group.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7c509136e6ce6be616e313c3b28a0449:119""}]")]
     public class GroupDirectoryNumberHuntingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"7c509136e6ce6be616e313c3b28a0449:119")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -30,13 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
 
         [XmlElement(ElementName = "agentUserIdList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList {
+        [Optional]
+        [Group(@"7c509136e6ce6be616e313c3b28a0449:119")]
+        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList
+        {
             get => _agentUserIdList;
-            set {
+            set
+            {
                 AgentUserIdListSpecified = true;
                 _agentUserIdList = value;
             }
@@ -44,13 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AgentUserIdListSpecified { get; set; }
-        
+
         private bool _useTerminateCallToAgentFirst;
 
         [XmlElement(ElementName = "useTerminateCallToAgentFirst", IsNullable = false, Namespace = "")]
-        public bool UseTerminateCallToAgentFirst {
+        [Optional]
+        [Group(@"7c509136e6ce6be616e313c3b28a0449:119")]
+        public bool UseTerminateCallToAgentFirst
+        {
             get => _useTerminateCallToAgentFirst;
-            set {
+            set
+            {
                 UseTerminateCallToAgentFirstSpecified = true;
                 _useTerminateCallToAgentFirst = value;
             }
@@ -58,13 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseTerminateCallToAgentFirstSpecified { get; set; }
-        
+
         private bool _useOriginalAgentServicesForBusyAndNoAnswerCalls;
 
         [XmlElement(ElementName = "useOriginalAgentServicesForBusyAndNoAnswerCalls", IsNullable = false, Namespace = "")]
-        public bool UseOriginalAgentServicesForBusyAndNoAnswerCalls {
+        [Optional]
+        [Group(@"7c509136e6ce6be616e313c3b28a0449:119")]
+        public bool UseOriginalAgentServicesForBusyAndNoAnswerCalls
+        {
             get => _useOriginalAgentServicesForBusyAndNoAnswerCalls;
-            set {
+            set
+            {
                 UseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified = true;
                 _useOriginalAgentServicesForBusyAndNoAnswerCalls = value;
             }
@@ -72,6 +91,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified { get; set; }
-        
+
     }
 }

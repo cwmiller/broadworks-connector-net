@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for method of how the Advice of Charge is processed by the Application Server.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AdviceOfChargeIncomingAocHandling    {
-            [XmlEnum(Name = "Ignore")]
+    public enum AdviceOfChargeIncomingAocHandling
+    {
+        [XmlEnum(Name = "Ignore")]
         Ignore,
-            [XmlEnum(Name = "Charge")]
+        [XmlEnum(Name = "Charge")]
         Charge,
-     }
+    }
 }

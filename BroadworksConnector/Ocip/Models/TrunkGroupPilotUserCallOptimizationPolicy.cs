@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Trunk Group Pilot User Call Optimization Policy
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupPilotUserCallOptimizationPolicy    {
-            [XmlEnum(Name = "Optimize For User Services")]
+    public enum TrunkGroupPilotUserCallOptimizationPolicy
+    {
+        [XmlEnum(Name = "Optimize For User Services")]
         OptimizeForUserServices,
-            [XmlEnum(Name = "Optimize For High Call Volume")]
+        [XmlEnum(Name = "Optimize For High Call Volume")]
         OptimizeForHighCallVolume,
-     }
+    }
 }

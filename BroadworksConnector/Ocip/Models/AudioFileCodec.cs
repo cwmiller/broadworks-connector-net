@@ -5,23 +5,24 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Audio file codec.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AudioFileCodec    {
-            [XmlEnum(Name = "None")]
+    public enum AudioFileCodec
+    {
+        [XmlEnum(Name = "None")]
         None,
-            [XmlEnum(Name = "G711")]
+        [XmlEnum(Name = "G711")]
         G711,
-            [XmlEnum(Name = "G722")]
+        [XmlEnum(Name = "G722")]
         G722,
-            [XmlEnum(Name = "G729")]
+        [XmlEnum(Name = "G729")]
         G729,
-            [XmlEnum(Name = "G726")]
+        [XmlEnum(Name = "G726")]
         G726,
-            [XmlEnum(Name = "AMR")]
+        [XmlEnum(Name = "AMR")]
         AMR,
-            [XmlEnum(Name = "AMR-WB")]
+        [XmlEnum(Name = "AMR-WB")]
         AMRWB,
-     }
+    }
 }

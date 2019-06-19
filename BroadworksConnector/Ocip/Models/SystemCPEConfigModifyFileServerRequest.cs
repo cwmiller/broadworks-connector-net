@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,23 +10,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Modify a device CPE config file server.
     /// The response is either SuccessResponse or ErrorResponse.
     /// Replaced By: SystemCPEConfigModifyFileServerRequest14sp6
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemCPEConfigModifyFileServerRequest14sp6"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemCPEConfigModifyFileServerRequest14sp6"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4827""}]")]
     public class SystemCPEConfigModifyFileServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        public string DeviceType {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4827")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceType
+        {
             get => _deviceType;
-            set {
+            set
+            {
                 DeviceTypeSpecified = true;
                 _deviceType = value;
             }
@@ -32,13 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceTypeSpecified { get; set; }
-        
+
         private string _ftpHostNetAddress;
 
         [XmlElement(ElementName = "ftpHostNetAddress", IsNullable = false, Namespace = "")]
-        public string FtpHostNetAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4827")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string FtpHostNetAddress
+        {
             get => _ftpHostNetAddress;
-            set {
+            set
+            {
                 FtpHostNetAddressSpecified = true;
                 _ftpHostNetAddress = value;
             }
@@ -46,13 +59,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FtpHostNetAddressSpecified { get; set; }
-        
+
         private string _ftpUserId;
 
         [XmlElement(ElementName = "ftpUserId", IsNullable = false, Namespace = "")]
-        public string FtpUserId {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4827")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string FtpUserId
+        {
             get => _ftpUserId;
-            set {
+            set
+            {
                 FtpUserIdSpecified = true;
                 _ftpUserId = value;
             }
@@ -60,13 +79,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FtpUserIdSpecified { get; set; }
-        
+
         private string _ftpUserPassword;
 
         [XmlElement(ElementName = "ftpUserPassword", IsNullable = false, Namespace = "")]
-        public string FtpUserPassword {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4827")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string FtpUserPassword
+        {
             get => _ftpUserPassword;
-            set {
+            set
+            {
                 FtpUserPasswordSpecified = true;
                 _ftpUserPassword = value;
             }
@@ -74,13 +99,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FtpUserPasswordSpecified { get; set; }
-        
+
         private string _cpeFileDirectory;
 
         [XmlElement(ElementName = "cpeFileDirectory", IsNullable = true, Namespace = "")]
-        public string CpeFileDirectory {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4827")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string CpeFileDirectory
+        {
             get => _cpeFileDirectory;
-            set {
+            set
+            {
                 CpeFileDirectorySpecified = true;
                 _cpeFileDirectory = value;
             }
@@ -88,13 +119,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CpeFileDirectorySpecified { get; set; }
-        
+
         private bool _passiveFTP;
 
         [XmlElement(ElementName = "passiveFTP", IsNullable = false, Namespace = "")]
-        public bool PassiveFTP {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4827")]
+        public bool PassiveFTP
+        {
             get => _passiveFTP;
-            set {
+            set
+            {
                 PassiveFTPSpecified = true;
                 _passiveFTP = value;
             }
@@ -102,6 +137,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PassiveFTPSpecified { get; set; }
-        
+
     }
 }

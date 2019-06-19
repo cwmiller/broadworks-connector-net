@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,23 +11,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// 
     /// Replaced by: SystemTreatmentMappingCallBlockingServiceModifyRequest22 in AS data mode
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemTreatmentMappingCallBlockingServiceModifyRequest22"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemTreatmentMappingCallBlockingServiceModifyRequest22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6707""}]")]
     public class SystemTreatmentMappingCallBlockingServiceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private BroadWorksConnector.Ocip.Models.CallBlockingService _callBlockingService;
 
         [XmlElement(ElementName = "callBlockingService", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallBlockingService CallBlockingService {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6707")]
+        public BroadWorksConnector.Ocip.Models.CallBlockingService CallBlockingService
+        {
             get => _callBlockingService;
-            set {
+            set
+            {
                 CallBlockingServiceSpecified = true;
                 _callBlockingService = value;
             }
@@ -33,13 +38,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallBlockingServiceSpecified { get; set; }
-        
+
         private string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
-        public string TreatmentId {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6707")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string TreatmentId
+        {
             get => _treatmentId;
-            set {
+            set
+            {
                 TreatmentIdSpecified = true;
                 _treatmentId = value;
             }
@@ -47,6 +58,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TreatmentIdSpecified { get; set; }
-        
+
     }
 }

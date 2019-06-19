@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Enterprise Trunk Ordering Algorithm for an Enterprise Trunk
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum EnterpriseTrunkOrderingAlgorithm    {
-            [XmlEnum(Name = "Ordered Load Balancing")]
+    public enum EnterpriseTrunkOrderingAlgorithm
+    {
+        [XmlEnum(Name = "Ordered Load Balancing")]
         OrderedLoadBalancing,
-            [XmlEnum(Name = "Overflow")]
+        [XmlEnum(Name = "Overflow")]
         Overflow,
-            [XmlEnum(Name = "Most Idle")]
+        [XmlEnum(Name = "Most Idle")]
         MostIdle,
-            [XmlEnum(Name = "Least Idle")]
+        [XmlEnum(Name = "Least Idle")]
         LeastIdle,
-     }
+    }
 }

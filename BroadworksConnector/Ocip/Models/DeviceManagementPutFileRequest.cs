@@ -1,26 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Informs BroadWorks that a file was uploaded to the repository. The response is always a SuccessResponse.
-        /// <see cref="SuccessResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:281""}]")]
     public class DeviceManagementPutFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _deviceAccessURI;
 
         [XmlElement(ElementName = "deviceAccessURI", IsNullable = false, Namespace = "")]
-        public string DeviceAccessURI {
+        [Group(@"6b27fcc79475236456fc113a42b75543:281")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string DeviceAccessURI
+        {
             get => _deviceAccessURI;
-            set {
+            set
+            {
                 DeviceAccessURISpecified = true;
                 _deviceAccessURI = value;
             }
@@ -28,13 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceAccessURISpecified { get; set; }
-        
+
         private string _ipAddress;
 
         [XmlElement(ElementName = "ipAddress", IsNullable = false, Namespace = "")]
-        public string IpAddress {
+        [Group(@"6b27fcc79475236456fc113a42b75543:281")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string IpAddress
+        {
             get => _ipAddress;
-            set {
+            set
+            {
                 IpAddressSpecified = true;
                 _ipAddress = value;
             }
@@ -42,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IpAddressSpecified { get; set; }
-        
+
     }
 }

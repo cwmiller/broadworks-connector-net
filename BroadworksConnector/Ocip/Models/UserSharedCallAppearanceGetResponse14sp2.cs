@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The endpointTable contains columns:
     /// "Device Level", "Device Name", "Device Type", "Line/Port", "SIP Contact".
     /// The "Device Level" column contains one of the AccessDeviceLevel enumerated constants.
-        /// <see cref="UserSharedCallAppearanceGetRequest14sp2"/>
-        /// </summary>
+    /// <see cref="UserSharedCallAppearanceGetRequest14sp2"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:23880""}]")]
     public class UserSharedCallAppearanceGetResponse14sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _alertAllAppearancesForClickToDialCalls;
 
         [XmlElement(ElementName = "alertAllAppearancesForClickToDialCalls", IsNullable = false, Namespace = "")]
-        public bool AlertAllAppearancesForClickToDialCalls {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23880")]
+        public bool AlertAllAppearancesForClickToDialCalls
+        {
             get => _alertAllAppearancesForClickToDialCalls;
-            set {
+            set
+            {
                 AlertAllAppearancesForClickToDialCallsSpecified = true;
                 _alertAllAppearancesForClickToDialCalls = value;
             }
@@ -31,13 +36,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlertAllAppearancesForClickToDialCallsSpecified { get; set; }
-        
+
         private int _maxAppearances;
 
         [XmlElement(ElementName = "maxAppearances", IsNullable = false, Namespace = "")]
-        public int MaxAppearances {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23880")]
+        public int MaxAppearances
+        {
             get => _maxAppearances;
-            set {
+            set
+            {
                 MaxAppearancesSpecified = true;
                 _maxAppearances = value;
             }
@@ -45,13 +53,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxAppearancesSpecified { get; set; }
-        
+
         private bool _allowSCACallRetrieve;
 
         [XmlElement(ElementName = "allowSCACallRetrieve", IsNullable = false, Namespace = "")]
-        public bool AllowSCACallRetrieve {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23880")]
+        public bool AllowSCACallRetrieve
+        {
             get => _allowSCACallRetrieve;
-            set {
+            set
+            {
                 AllowSCACallRetrieveSpecified = true;
                 _allowSCACallRetrieve = value;
             }
@@ -59,13 +70,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowSCACallRetrieveSpecified { get; set; }
-        
+
         private bool _enableMultipleCallArrangement;
 
         [XmlElement(ElementName = "enableMultipleCallArrangement", IsNullable = false, Namespace = "")]
-        public bool EnableMultipleCallArrangement {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23880")]
+        public bool EnableMultipleCallArrangement
+        {
             get => _enableMultipleCallArrangement;
-            set {
+            set
+            {
                 EnableMultipleCallArrangementSpecified = true;
                 _enableMultipleCallArrangement = value;
             }
@@ -73,13 +87,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableMultipleCallArrangementSpecified { get; set; }
-        
+
         private bool _multipleCallArrangementIsActive;
 
         [XmlElement(ElementName = "multipleCallArrangementIsActive", IsNullable = false, Namespace = "")]
-        public bool MultipleCallArrangementIsActive {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23880")]
+        public bool MultipleCallArrangementIsActive
+        {
             get => _multipleCallArrangementIsActive;
-            set {
+            set
+            {
                 MultipleCallArrangementIsActiveSpecified = true;
                 _multipleCallArrangementIsActive = value;
             }
@@ -87,13 +104,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MultipleCallArrangementIsActiveSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _endpointTable;
 
         [XmlElement(ElementName = "endpointTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable EndpointTable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23880")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable EndpointTable
+        {
             get => _endpointTable;
-            set {
+            set
+            {
                 EndpointTableSpecified = true;
                 _endpointTable = value;
             }
@@ -101,13 +121,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EndpointTableSpecified { get; set; }
-        
+
         private bool _allowBridgingBetweenLocations;
 
         [XmlElement(ElementName = "allowBridgingBetweenLocations", IsNullable = false, Namespace = "")]
-        public bool AllowBridgingBetweenLocations {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23880")]
+        public bool AllowBridgingBetweenLocations
+        {
             get => _allowBridgingBetweenLocations;
-            set {
+            set
+            {
                 AllowBridgingBetweenLocationsSpecified = true;
                 _allowBridgingBetweenLocations = value;
             }
@@ -115,13 +138,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowBridgingBetweenLocationsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
 
         [XmlElement(ElementName = "bridgeWarningTone", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23880")]
+        public BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone
+        {
             get => _bridgeWarningTone;
-            set {
+            set
+            {
                 BridgeWarningToneSpecified = true;
                 _bridgeWarningTone = value;
             }
@@ -129,6 +155,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BridgeWarningToneSpecified { get; set; }
-        
+
     }
 }

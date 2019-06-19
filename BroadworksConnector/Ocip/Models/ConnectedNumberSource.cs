@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Connected Number Type
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ConnectedNumberSource    {
-            [XmlEnum(Name = "Configurable CLID")]
+    public enum ConnectedNumberSource
+    {
+        [XmlEnum(Name = "Configurable CLID")]
         ConfigurableCLID,
-            [XmlEnum(Name = "Group")]
+        [XmlEnum(Name = "Group")]
         Group,
-            [XmlEnum(Name = "User")]
+        [XmlEnum(Name = "User")]
         User,
-            [XmlEnum(Name = "Department")]
+        [XmlEnum(Name = "Department")]
         Department,
-     }
+    }
 }

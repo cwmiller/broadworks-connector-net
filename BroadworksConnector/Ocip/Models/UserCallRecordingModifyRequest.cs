@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -21,22 +23,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// The enableVoiceMailRecording parameter is only applicable
     /// if the Voice Messaging User service is assigned to the user.
     /// This applies to both users and service instances.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:457""}]")]
     public class UserCallRecordingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -44,13 +51,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.RecordingOption20 _recordingOption;
 
         [XmlElement(ElementName = "recordingOption", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.RecordingOption20 RecordingOption {
+        [Optional]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        public BroadWorksConnector.Ocip.Models.RecordingOption20 RecordingOption
+        {
             get => _recordingOption;
-            set {
+            set
+            {
                 RecordingOptionSpecified = true;
                 _recordingOption = value;
             }
@@ -58,13 +69,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RecordingOptionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.RecordingPauseResumeNotificationType _pauseResumeNotification;
 
         [XmlElement(ElementName = "pauseResumeNotification", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.RecordingPauseResumeNotificationType PauseResumeNotification {
+        [Optional]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        public BroadWorksConnector.Ocip.Models.RecordingPauseResumeNotificationType PauseResumeNotification
+        {
             get => _pauseResumeNotification;
-            set {
+            set
+            {
                 PauseResumeNotificationSpecified = true;
                 _pauseResumeNotification = value;
             }
@@ -72,13 +87,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PauseResumeNotificationSpecified { get; set; }
-        
+
         private bool _enableCallRecordingAnnouncement;
 
         [XmlElement(ElementName = "enableCallRecordingAnnouncement", IsNullable = false, Namespace = "")]
-        public bool EnableCallRecordingAnnouncement {
+        [Optional]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        public bool EnableCallRecordingAnnouncement
+        {
             get => _enableCallRecordingAnnouncement;
-            set {
+            set
+            {
                 EnableCallRecordingAnnouncementSpecified = true;
                 _enableCallRecordingAnnouncement = value;
             }
@@ -86,13 +105,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableCallRecordingAnnouncementSpecified { get; set; }
-        
+
         private bool _enableRecordCallRepeatWarningTone;
 
         [XmlElement(ElementName = "enableRecordCallRepeatWarningTone", IsNullable = false, Namespace = "")]
-        public bool EnableRecordCallRepeatWarningTone {
+        [Optional]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        public bool EnableRecordCallRepeatWarningTone
+        {
             get => _enableRecordCallRepeatWarningTone;
-            set {
+            set
+            {
                 EnableRecordCallRepeatWarningToneSpecified = true;
                 _enableRecordCallRepeatWarningTone = value;
             }
@@ -100,13 +123,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableRecordCallRepeatWarningToneSpecified { get; set; }
-        
+
         private int _recordCallRepeatWarningToneTimerSeconds;
 
         [XmlElement(ElementName = "recordCallRepeatWarningToneTimerSeconds", IsNullable = false, Namespace = "")]
-        public int RecordCallRepeatWarningToneTimerSeconds {
+        [Optional]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        [MinInclusive(10)]
+        [MaxInclusive(1800)]
+        public int RecordCallRepeatWarningToneTimerSeconds
+        {
             get => _recordCallRepeatWarningToneTimerSeconds;
-            set {
+            set
+            {
                 RecordCallRepeatWarningToneTimerSecondsSpecified = true;
                 _recordCallRepeatWarningToneTimerSeconds = value;
             }
@@ -114,13 +143,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RecordCallRepeatWarningToneTimerSecondsSpecified { get; set; }
-        
+
         private bool _enableVoiceMailRecording;
 
         [XmlElement(ElementName = "enableVoiceMailRecording", IsNullable = false, Namespace = "")]
-        public bool EnableVoiceMailRecording {
+        [Optional]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        public bool EnableVoiceMailRecording
+        {
             get => _enableVoiceMailRecording;
-            set {
+            set
+            {
                 EnableVoiceMailRecordingSpecified = true;
                 _enableVoiceMailRecording = value;
             }
@@ -128,6 +161,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableVoiceMailRecordingSpecified { get; set; }
-        
+
     }
 }

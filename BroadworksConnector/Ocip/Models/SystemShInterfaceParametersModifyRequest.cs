@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,23 +13,29 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// 
     /// Replaced by: SystemShInterfaceParametersModifyRequest17
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemShInterfaceParametersModifyRequest17"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemShInterfaceParametersModifyRequest17"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:15976""}]")]
     public class SystemShInterfaceParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _hssRealm;
 
         [XmlElement(ElementName = "hssRealm", IsNullable = true, Namespace = "")]
-        public string HssRealm {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15976")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string HssRealm
+        {
             get => _hssRealm;
-            set {
+            set
+            {
                 HssRealmSpecified = true;
                 _hssRealm = value;
             }
@@ -35,13 +43,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HssRealmSpecified { get; set; }
-        
+
         private int _requestTimeoutSeconds;
 
         [XmlElement(ElementName = "requestTimeoutSeconds", IsNullable = false, Namespace = "")]
-        public int RequestTimeoutSeconds {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15976")]
+        [MinInclusive(1)]
+        [MaxInclusive(30)]
+        public int RequestTimeoutSeconds
+        {
             get => _requestTimeoutSeconds;
-            set {
+            set
+            {
                 RequestTimeoutSecondsSpecified = true;
                 _requestTimeoutSeconds = value;
             }
@@ -49,13 +63,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RequestTimeoutSecondsSpecified { get; set; }
-        
+
         private int _publicIdentityRefreshDelaySeconds;
 
         [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
-        public int PublicIdentityRefreshDelaySeconds {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15976")]
+        [MinInclusive(0)]
+        [MaxInclusive(30)]
+        public int PublicIdentityRefreshDelaySeconds
+        {
             get => _publicIdentityRefreshDelaySeconds;
-            set {
+            set
+            {
                 PublicIdentityRefreshDelaySecondsSpecified = true;
                 _publicIdentityRefreshDelaySeconds = value;
             }
@@ -63,6 +83,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PublicIdentityRefreshDelaySecondsSpecified { get; set; }
-        
+
     }
 }

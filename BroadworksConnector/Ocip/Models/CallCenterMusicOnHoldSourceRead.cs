@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Contains the music on hold source configuration.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterMusicOnHoldSourceRead 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43464""}]")]
+    public class CallCenterMusicOnHoldSourceRead
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AudioFileCodec _audioFilePreferredCodec;
 
         [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AudioFileCodec AudioFilePreferredCodec {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43464")]
+        public BroadWorksConnector.Ocip.Models.AudioFileCodec AudioFilePreferredCodec
+        {
             get => _audioFilePreferredCodec;
-            set {
+            set
+            {
                 AudioFilePreferredCodecSpecified = true;
                 _audioFilePreferredCodec = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioFilePreferredCodecSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _messageSourceSelection;
 
         [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection MessageSourceSelection {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43464")]
+        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection MessageSourceSelection
+        {
             get => _messageSourceSelection;
-            set {
+            set
+            {
                 MessageSourceSelectionSpecified = true;
                 _messageSourceSelection = value;
             }
@@ -41,13 +49,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MessageSourceSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CallCenterMusicOnHoldSourceReadCustomSource _customSource;
 
         [XmlElement(ElementName = "customSource", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CallCenterMusicOnHoldSourceReadCustomSource CustomSource {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43464")]
+        public BroadWorksConnector.Ocip.Models.CallCenterMusicOnHoldSourceReadCustomSource CustomSource
+        {
             get => _customSource;
-            set {
+            set
+            {
                 CustomSourceSpecified = true;
                 _customSource = value;
             }
@@ -55,6 +67,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CustomSourceSpecified { get; set; }
-        
+
     }
 }

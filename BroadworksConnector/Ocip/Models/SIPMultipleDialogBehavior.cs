@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SIPMultipleDialogBehavior    {
-            [XmlEnum(Name = "Multiple Dialogs")]
+    public enum SIPMultipleDialogBehavior
+    {
+        [XmlEnum(Name = "Multiple Dialogs")]
         MultipleDialogs,
-            [XmlEnum(Name = "Multiple Dialogs With Error Correction")]
+        [XmlEnum(Name = "Multiple Dialogs With Error Correction")]
         MultipleDialogsWithErrorCorrection,
-     }
+    }
 }

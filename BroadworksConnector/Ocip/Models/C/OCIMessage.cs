@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models.C
@@ -7,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models.C
     /// <summary>
     /// A message contains a list of requests or responses. The server processes all the requests
     /// and returns a message with a corresponding list of responses.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "C")]
-     
-    public class OCIMessage 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:28"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:29""}]}]")]
+    public class OCIMessage
     {
 
-        
         private string _sessionId;
 
         [XmlElement(ElementName = "sessionId", IsNullable = false, Namespace = "")]
-        public string SessionId {
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:29")]
+        public string SessionId
+        {
             get => _sessionId;
-            set {
+            set
+            {
                 SessionIdSpecified = true;
                 _sessionId = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models.C
 
         [XmlIgnore]
         public bool SessionIdSpecified { get; set; }
-        
+
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:29")]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -42,13 +50,16 @@ namespace BroadWorksConnector.Ocip.Models.C
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        public string PhoneNumber {
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:29")]
+        public string PhoneNumber
+        {
             get => _phoneNumber;
-            set {
+            set
+            {
                 PhoneNumberSpecified = true;
                 _phoneNumber = value;
             }
@@ -56,13 +67,16 @@ namespace BroadWorksConnector.Ocip.Models.C
 
         [XmlIgnore]
         public bool PhoneNumberSpecified { get; set; }
-        
+
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        public string LinePort {
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:29")]
+        public string LinePort
+        {
             get => _linePort;
-            set {
+            set
+            {
                 LinePortSpecified = true;
                 _linePort = value;
             }
@@ -70,13 +84,16 @@ namespace BroadWorksConnector.Ocip.Models.C
 
         [XmlIgnore]
         public bool LinePortSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.C.OCICommand> _command;
+
+        private List<BroadWorksConnector.Ocip.Models.C.OCICommand> _command = new List<BroadWorksConnector.Ocip.Models.C.OCICommand>();
 
         [XmlElement(ElementName = "command", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.C.OCICommand> Command {
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:28")]
+        public List<BroadWorksConnector.Ocip.Models.C.OCICommand> Command
+        {
             get => _command;
-            set {
+            set
+            {
                 CommandSpecified = true;
                 _command = value;
             }
@@ -84,6 +101,6 @@ namespace BroadWorksConnector.Ocip.Models.C
 
         [XmlIgnore]
         public bool CommandSpecified { get; set; }
-        
+
     }
 }

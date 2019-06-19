@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the GroupFeatureAccessCodeGetListRequest.
     /// Replaced by: GroupFeatureAccessCodeGetResponse
-        /// <see cref="GroupFeatureAccessCodeGetListRequest"/>
-        /// <see cref="GroupFeatureAccessCodeGetResponse"/>
-        /// </summary>
+    /// <see cref="GroupFeatureAccessCodeGetListRequest"/>
+    /// <see cref="GroupFeatureAccessCodeGetResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1533""}]")]
     public class GroupFeatureAccessCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeEntry> _featureAccessCode;
+        private List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeEntry> _featureAccessCode = new List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeEntry>();
 
         [XmlElement(ElementName = "featureAccessCode", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeEntry> FeatureAccessCode {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1533")]
+        public List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeEntry> FeatureAccessCode
+        {
             get => _featureAccessCode;
-            set {
+            set
+            {
                 FeatureAccessCodeSpecified = true;
                 _featureAccessCode = value;
             }
@@ -30,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FeatureAccessCodeSpecified { get; set; }
-        
+
     }
 }

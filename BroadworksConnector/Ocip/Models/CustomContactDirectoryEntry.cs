@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,20 +11,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// On-Net user's DN. For a DN the groupId is used to make it unique
     /// within an Enterprise, however the groupId is not used with Service
     /// Providers.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CustomContactDirectoryEntry 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7568"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7569"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7571""}]}]}]")]
+    public class CustomContactDirectoryEntry
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7569")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _virtualOnNetPhoneNumber;
 
         [XmlElement(ElementName = "virtualOnNetPhoneNumber", IsNullable = false, Namespace = "")]
-        public string VirtualOnNetPhoneNumber {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7571")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string VirtualOnNetPhoneNumber
+        {
             get => _virtualOnNetPhoneNumber;
-            set {
+            set
+            {
                 VirtualOnNetPhoneNumberSpecified = true;
                 _virtualOnNetPhoneNumber = value;
             }
@@ -44,13 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VirtualOnNetPhoneNumberSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7571")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -58,6 +76,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
     }
 }

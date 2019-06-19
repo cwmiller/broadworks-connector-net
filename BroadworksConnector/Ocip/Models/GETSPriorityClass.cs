@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The GETS r-value .
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GETSPriorityClass    {
-            [XmlEnum(Name = "GETS-Mandatory")]
+    public enum GETSPriorityClass
+    {
+        [XmlEnum(Name = "GETS-Mandatory")]
         GETSMandatory,
-            [XmlEnum(Name = "GETS")]
+        [XmlEnum(Name = "GETS")]
         GETS,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -15,20 +17,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// returned.
     /// If "authorizationCode" is set, all call logs matching that specific
     /// authorization code are returned.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class EnhancedCallLogsCallAuthorizationCodeFilter 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2149"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2150""}]}]")]
+    public class EnhancedCallLogsCallAuthorizationCodeFilter
     {
 
-        
         private bool _callsWithCodes;
 
         [XmlElement(ElementName = "callsWithCodes", IsNullable = false, Namespace = "")]
-        public bool CallsWithCodes {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2150")]
+        public bool CallsWithCodes
+        {
             get => _callsWithCodes;
-            set {
+            set
+            {
                 CallsWithCodesSpecified = true;
                 _callsWithCodes = value;
             }
@@ -36,13 +41,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallsWithCodesSpecified { get; set; }
-        
+
         private string _authorizationCode;
 
         [XmlElement(ElementName = "authorizationCode", IsNullable = false, Namespace = "")]
-        public string AuthorizationCode {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2150")]
+        [MinLength(2)]
+        [MaxLength(14)]
+        public string AuthorizationCode
+        {
             get => _authorizationCode;
-            set {
+            set
+            {
                 AuthorizationCodeSpecified = true;
                 _authorizationCode = value;
             }
@@ -50,6 +60,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AuthorizationCodeSpecified { get; set; }
-        
+
     }
 }

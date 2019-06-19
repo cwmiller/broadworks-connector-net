@@ -5,31 +5,32 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Outgoing Calling Plan Call Type
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum OutgoingCallingPlanCallType    {
-            [XmlEnum(Name = "Casual Calls")]
+    public enum OutgoingCallingPlanCallType
+    {
+        [XmlEnum(Name = "Casual Calls")]
         CasualCalls,
-            [XmlEnum(Name = "Chargeable Directory Assistance")]
+        [XmlEnum(Name = "Chargeable Directory Assistance")]
         ChargeableDirectoryAssistance,
-            [XmlEnum(Name = "International")]
+        [XmlEnum(Name = "International")]
         International,
-            [XmlEnum(Name = "Local")]
+        [XmlEnum(Name = "Local")]
         Local,
-            [XmlEnum(Name = "Operator Assisted")]
+        [XmlEnum(Name = "Operator Assisted")]
         OperatorAssisted,
-            [XmlEnum(Name = "Premium Services I")]
+        [XmlEnum(Name = "Premium Services I")]
         PremiumServicesI,
-            [XmlEnum(Name = "Premium Services II")]
+        [XmlEnum(Name = "Premium Services II")]
         PremiumServicesII,
-            [XmlEnum(Name = "Special Services I")]
+        [XmlEnum(Name = "Special Services I")]
         SpecialServicesI,
-            [XmlEnum(Name = "Special Services II")]
+        [XmlEnum(Name = "Special Services II")]
         SpecialServicesII,
-            [XmlEnum(Name = "Toll")]
+        [XmlEnum(Name = "Toll")]
         Toll,
-            [XmlEnum(Name = "Toll Free")]
+        [XmlEnum(Name = "Toll Free")]
         TollFree,
-     }
+    }
 }

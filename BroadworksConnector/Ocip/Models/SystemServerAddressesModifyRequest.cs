@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify Server Addresses.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14809""}]")]
     public class SystemServerAddressesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _webServerClusterPublicFQDN;
 
         [XmlElement(ElementName = "webServerClusterPublicFQDN", IsNullable = true, Namespace = "")]
-        public string WebServerClusterPublicFQDN {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14809")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string WebServerClusterPublicFQDN
+        {
             get => _webServerClusterPublicFQDN;
-            set {
+            set
+            {
                 WebServerClusterPublicFQDNSpecified = true;
                 _webServerClusterPublicFQDN = value;
             }
@@ -30,13 +38,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool WebServerClusterPublicFQDNSpecified { get; set; }
-        
+
         private string _applicationServerClusterPrimaryPublicFQDN;
 
         [XmlElement(ElementName = "applicationServerClusterPrimaryPublicFQDN", IsNullable = true, Namespace = "")]
-        public string ApplicationServerClusterPrimaryPublicFQDN {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14809")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ApplicationServerClusterPrimaryPublicFQDN
+        {
             get => _applicationServerClusterPrimaryPublicFQDN;
-            set {
+            set
+            {
                 ApplicationServerClusterPrimaryPublicFQDNSpecified = true;
                 _applicationServerClusterPrimaryPublicFQDN = value;
             }
@@ -44,13 +58,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ApplicationServerClusterPrimaryPublicFQDNSpecified { get; set; }
-        
+
         private string _applicationServerClusterSecondaryPublicFQDN;
 
         [XmlElement(ElementName = "applicationServerClusterSecondaryPublicFQDN", IsNullable = true, Namespace = "")]
-        public string ApplicationServerClusterSecondaryPublicFQDN {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14809")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ApplicationServerClusterSecondaryPublicFQDN
+        {
             get => _applicationServerClusterSecondaryPublicFQDN;
-            set {
+            set
+            {
                 ApplicationServerClusterSecondaryPublicFQDNSpecified = true;
                 _applicationServerClusterSecondaryPublicFQDN = value;
             }
@@ -58,13 +78,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ApplicationServerClusterSecondaryPublicFQDNSpecified { get; set; }
-        
+
         private string _applicationServerClusterPrimaryPrivateFQDN;
 
         [XmlElement(ElementName = "applicationServerClusterPrimaryPrivateFQDN", IsNullable = true, Namespace = "")]
-        public string ApplicationServerClusterPrimaryPrivateFQDN {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14809")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ApplicationServerClusterPrimaryPrivateFQDN
+        {
             get => _applicationServerClusterPrimaryPrivateFQDN;
-            set {
+            set
+            {
                 ApplicationServerClusterPrimaryPrivateFQDNSpecified = true;
                 _applicationServerClusterPrimaryPrivateFQDN = value;
             }
@@ -72,13 +98,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ApplicationServerClusterPrimaryPrivateFQDNSpecified { get; set; }
-        
+
         private string _applicationServerClusterSecondaryPrivateFQDN;
 
         [XmlElement(ElementName = "applicationServerClusterSecondaryPrivateFQDN", IsNullable = true, Namespace = "")]
-        public string ApplicationServerClusterSecondaryPrivateFQDN {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14809")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ApplicationServerClusterSecondaryPrivateFQDN
+        {
             get => _applicationServerClusterSecondaryPrivateFQDN;
-            set {
+            set
+            {
                 ApplicationServerClusterSecondaryPrivateFQDNSpecified = true;
                 _applicationServerClusterSecondaryPrivateFQDN = value;
             }
@@ -86,6 +118,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ApplicationServerClusterSecondaryPrivateFQDNSpecified { get; set; }
-        
+
     }
 }

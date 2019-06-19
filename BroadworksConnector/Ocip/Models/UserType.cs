@@ -5,39 +5,40 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Types of users in BroadWorks.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum UserType    {
-            [XmlEnum(Name = "Normal")]
+    public enum UserType
+    {
+        [XmlEnum(Name = "Normal")]
         Normal,
-            [XmlEnum(Name = "Auto Attendant")]
+        [XmlEnum(Name = "Auto Attendant")]
         AutoAttendant,
-            [XmlEnum(Name = "BroadWorks Anywhere")]
+        [XmlEnum(Name = "BroadWorks Anywhere")]
         BroadWorksAnywhere,
-            [XmlEnum(Name = "Call Center")]
+        [XmlEnum(Name = "Call Center")]
         CallCenter,
-            [XmlEnum(Name = "Collaborate Bridge")]
+        [XmlEnum(Name = "Collaborate Bridge")]
         CollaborateBridge,
-            [XmlEnum(Name = "Find-me/Follow-me")]
+        [XmlEnum(Name = "Find-me/Follow-me")]
         FindmeFollowme,
-            [XmlEnum(Name = "Flexible Seating Host")]
+        [XmlEnum(Name = "Flexible Seating Host")]
         FlexibleSeatingHost,
-            [XmlEnum(Name = "Group Paging")]
+        [XmlEnum(Name = "Group Paging")]
         GroupPaging,
-            [XmlEnum(Name = "Hunt Group")]
+        [XmlEnum(Name = "Hunt Group")]
         HuntGroup,
-            [XmlEnum(Name = "Instant Group Call")]
+        [XmlEnum(Name = "Instant Group Call")]
         InstantGroupCall,
-            [XmlEnum(Name = "Meet-Me Conferencing")]
+        [XmlEnum(Name = "Meet-Me Conferencing")]
         MeetMeConferencing,
-            [XmlEnum(Name = "Music On Hold")]
+        [XmlEnum(Name = "Music On Hold")]
         MusicOnHold,
-            [XmlEnum(Name = "Route Point")]
+        [XmlEnum(Name = "Route Point")]
         RoutePoint,
-            [XmlEnum(Name = "Voice Messaging")]
+        [XmlEnum(Name = "Voice Messaging")]
         VoiceMessaging,
-            [XmlEnum(Name = "VoiceXML")]
+        [XmlEnum(Name = "VoiceXML")]
         VoiceXML,
-     }
+    }
 }

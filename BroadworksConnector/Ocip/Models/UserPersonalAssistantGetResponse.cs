@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response contains the user Personal Assistant information".
     /// 
     /// Replaced by: UserPersonalAssistantGetResponse22
-        /// <see cref="UserPersonalAssistantGetRequest"/>
-        /// <see cref="UserPersonalAssistantGetResponse22"/>
-        /// </summary>
+    /// <see cref="UserPersonalAssistantGetRequest"/>
+    /// <see cref="UserPersonalAssistantGetResponse22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:7508""}]")]
     public class UserPersonalAssistantGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.PersonalAssistantPresence _presence;
 
         [XmlElement(ElementName = "presence", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.PersonalAssistantPresence Presence {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7508")]
+        public BroadWorksConnector.Ocip.Models.PersonalAssistantPresence Presence
+        {
             get => _presence;
-            set {
+            set
+            {
                 PresenceSpecified = true;
                 _presence = value;
             }
@@ -32,13 +37,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PresenceSpecified { get; set; }
-        
+
         private bool _enableTransferToAttendant;
 
         [XmlElement(ElementName = "enableTransferToAttendant", IsNullable = false, Namespace = "")]
-        public bool EnableTransferToAttendant {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7508")]
+        public bool EnableTransferToAttendant
+        {
             get => _enableTransferToAttendant;
-            set {
+            set
+            {
                 EnableTransferToAttendantSpecified = true;
                 _enableTransferToAttendant = value;
             }
@@ -46,13 +54,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableTransferToAttendantSpecified { get; set; }
-        
+
         private string _attendantNumber;
 
         [XmlElement(ElementName = "attendantNumber", IsNullable = false, Namespace = "")]
-        public string AttendantNumber {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7508")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string AttendantNumber
+        {
             get => _attendantNumber;
-            set {
+            set
+            {
                 AttendantNumberSpecified = true;
                 _attendantNumber = value;
             }
@@ -60,13 +74,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AttendantNumberSpecified { get; set; }
-        
+
         private bool _enableRingSplash;
 
         [XmlElement(ElementName = "enableRingSplash", IsNullable = false, Namespace = "")]
-        public bool EnableRingSplash {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7508")]
+        public bool EnableRingSplash
+        {
             get => _enableRingSplash;
-            set {
+            set
+            {
                 EnableRingSplashSpecified = true;
                 _enableRingSplash = value;
             }
@@ -74,13 +91,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableRingSplashSpecified { get; set; }
-        
+
         private bool _enableExpirationTime;
 
         [XmlElement(ElementName = "enableExpirationTime", IsNullable = false, Namespace = "")]
-        public bool EnableExpirationTime {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7508")]
+        public bool EnableExpirationTime
+        {
             get => _enableExpirationTime;
-            set {
+            set
+            {
                 EnableExpirationTimeSpecified = true;
                 _enableExpirationTime = value;
             }
@@ -88,13 +108,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableExpirationTimeSpecified { get; set; }
-        
+
         private string _expirationTime;
 
         [XmlElement(ElementName = "expirationTime", IsNullable = false, Namespace = "")]
-        public string ExpirationTime {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7508")]
+        public string ExpirationTime
+        {
             get => _expirationTime;
-            set {
+            set
+            {
                 ExpirationTimeSpecified = true;
                 _expirationTime = value;
             }
@@ -102,6 +126,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExpirationTimeSpecified { get; set; }
-        
+
     }
 }

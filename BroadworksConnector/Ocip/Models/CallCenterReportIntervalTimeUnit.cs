@@ -5,19 +5,20 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The call center enhanced reporting report interval time unit.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterReportIntervalTimeUnit    {
-            [XmlEnum(Name = "Hour")]
+    public enum CallCenterReportIntervalTimeUnit
+    {
+        [XmlEnum(Name = "Hour")]
         Hour,
-            [XmlEnum(Name = "Day")]
+        [XmlEnum(Name = "Day")]
         Day,
-            [XmlEnum(Name = "Week")]
+        [XmlEnum(Name = "Week")]
         Week,
-            [XmlEnum(Name = "Month")]
+        [XmlEnum(Name = "Month")]
         Month,
-            [XmlEnum(Name = "Year")]
+        [XmlEnum(Name = "Year")]
         Year,
-     }
+    }
 }

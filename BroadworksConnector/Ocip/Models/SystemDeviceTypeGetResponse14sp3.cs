@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemDeviceTypeGetRequest14sp3.
     /// Replaced By: SystemDeviceTypeGetResponse14sp6
-        /// <see cref="SystemDeviceTypeGetRequest14sp3"/>
-        /// <see cref="SystemDeviceTypeGetResponse14sp6"/>
-        /// </summary>
+    /// <see cref="SystemDeviceTypeGetRequest14sp3"/>
+    /// <see cref="SystemDeviceTypeGetResponse14sp6"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5094""}]")]
     public class SystemDeviceTypeGetResponse14sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isObsolete;
 
         [XmlElement(ElementName = "isObsolete", IsNullable = false, Namespace = "")]
-        public bool IsObsolete {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5094")]
+        public bool IsObsolete
+        {
             get => _isObsolete;
-            set {
+            set
+            {
                 IsObsoleteSpecified = true;
                 _isObsolete = value;
             }
@@ -30,13 +35,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsObsoleteSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5094")]
+        public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile
+        {
             get => _profile;
-            set {
+            set
+            {
                 ProfileSpecified = true;
                 _profile = value;
             }
@@ -44,13 +52,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProfileSpecified { get; set; }
-        
+
         private string _webBasedConfigURL;
 
         [XmlElement(ElementName = "webBasedConfigURL", IsNullable = false, Namespace = "")]
-        public string WebBasedConfigURL {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5094")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string WebBasedConfigURL
+        {
             get => _webBasedConfigURL;
-            set {
+            set
+            {
                 WebBasedConfigURLSpecified = true;
                 _webBasedConfigURL = value;
             }
@@ -58,13 +72,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool WebBasedConfigURLSpecified { get; set; }
-        
+
         private bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        public bool StaticRegistrationCapable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5094")]
+        public bool StaticRegistrationCapable
+        {
             get => _staticRegistrationCapable;
-            set {
+            set
+            {
                 StaticRegistrationCapableSpecified = true;
                 _staticRegistrationCapable = value;
             }
@@ -72,13 +89,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StaticRegistrationCapableSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CPEDeviceOptions _cpeDeviceOptions;
 
         [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CPEDeviceOptions CpeDeviceOptions {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5094")]
+        public BroadWorksConnector.Ocip.Models.CPEDeviceOptions CpeDeviceOptions
+        {
             get => _cpeDeviceOptions;
-            set {
+            set
+            {
                 CpeDeviceOptionsSpecified = true;
                 _cpeDeviceOptions = value;
             }
@@ -86,13 +107,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CpeDeviceOptionsSpecified { get; set; }
-        
-        private List<string> _protocolChoice;
+
+        private List<string> _protocolChoice = new List<string>();
 
         [XmlElement(ElementName = "protocolChoice", IsNullable = false, Namespace = "")]
-        public List<string> ProtocolChoice {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5094")]
+        [MinLength(1)]
+        [MaxLength(20)]
+        public List<string> ProtocolChoice
+        {
             get => _protocolChoice;
-            set {
+            set
+            {
                 ProtocolChoiceSpecified = true;
                 _protocolChoice = value;
             }
@@ -100,13 +126,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProtocolChoiceSpecified { get; set; }
-        
+
         private bool _isIpAddressOptional;
 
         [XmlElement(ElementName = "isIpAddressOptional", IsNullable = false, Namespace = "")]
-        public bool IsIpAddressOptional {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5094")]
+        public bool IsIpAddressOptional
+        {
             get => _isIpAddressOptional;
-            set {
+            set
+            {
                 IsIpAddressOptionalSpecified = true;
                 _isIpAddressOptional = value;
             }
@@ -114,13 +143,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsIpAddressOptionalSpecified { get; set; }
-        
+
         private bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        public bool UseDomain {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5094")]
+        public bool UseDomain
+        {
             get => _useDomain;
-            set {
+            set
+            {
                 UseDomainSpecified = true;
                 _useDomain = value;
             }
@@ -128,13 +160,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseDomainSpecified { get; set; }
-        
+
         private bool _isMobilityManagerDevice;
 
         [XmlElement(ElementName = "isMobilityManagerDevice", IsNullable = false, Namespace = "")]
-        public bool IsMobilityManagerDevice {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5094")]
+        public bool IsMobilityManagerDevice
+        {
             get => _isMobilityManagerDevice;
-            set {
+            set
+            {
                 IsMobilityManagerDeviceSpecified = true;
                 _isMobilityManagerDevice = value;
             }
@@ -142,6 +177,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsMobilityManagerDeviceSpecified { get; set; }
-        
+
     }
 }

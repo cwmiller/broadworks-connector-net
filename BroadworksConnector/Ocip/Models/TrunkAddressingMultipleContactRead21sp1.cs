@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,20 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// alternateTrunkIdentityDomain is only used in XS mode and the AS when deployed in IMS mode.
     /// The following elements are only used in AS data mode and are ignored in XS data mode:
     /// physicalLocation
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class TrunkAddressingMultipleContactRead21sp1 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4226""}]")]
+    public class TrunkAddressingMultipleContactRead21sp1
     {
 
-        
         private BroadWorksConnector.Ocip.Models.TrunkGroupDeviceMultipleContactEndpointRead _trunkGroupDeviceEndpoint;
 
         [XmlElement(ElementName = "trunkGroupDeviceEndpoint", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TrunkGroupDeviceMultipleContactEndpointRead TrunkGroupDeviceEndpoint {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4226")]
+        public BroadWorksConnector.Ocip.Models.TrunkGroupDeviceMultipleContactEndpointRead TrunkGroupDeviceEndpoint
+        {
             get => _trunkGroupDeviceEndpoint;
-            set {
+            set
+            {
                 TrunkGroupDeviceEndpointSpecified = true;
                 _trunkGroupDeviceEndpoint = value;
             }
@@ -30,13 +36,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TrunkGroupDeviceEndpointSpecified { get; set; }
-        
+
         private string _enterpriseTrunkName;
 
         [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false, Namespace = "")]
-        public string EnterpriseTrunkName {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4226")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string EnterpriseTrunkName
+        {
             get => _enterpriseTrunkName;
-            set {
+            set
+            {
                 EnterpriseTrunkNameSpecified = true;
                 _enterpriseTrunkName = value;
             }
@@ -44,13 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnterpriseTrunkNameSpecified { get; set; }
-        
+
         private string _alternateTrunkIdentity;
 
         [XmlElement(ElementName = "alternateTrunkIdentity", IsNullable = false, Namespace = "")]
-        public string AlternateTrunkIdentity {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4226")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string AlternateTrunkIdentity
+        {
             get => _alternateTrunkIdentity;
-            set {
+            set
+            {
                 AlternateTrunkIdentitySpecified = true;
                 _alternateTrunkIdentity = value;
             }
@@ -58,13 +76,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlternateTrunkIdentitySpecified { get; set; }
-        
+
         private string _alternateTrunkIdentityDomain;
 
         [XmlElement(ElementName = "alternateTrunkIdentityDomain", IsNullable = false, Namespace = "")]
-        public string AlternateTrunkIdentityDomain {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4226")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string AlternateTrunkIdentityDomain
+        {
             get => _alternateTrunkIdentityDomain;
-            set {
+            set
+            {
                 AlternateTrunkIdentityDomainSpecified = true;
                 _alternateTrunkIdentityDomain = value;
             }
@@ -72,13 +96,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlternateTrunkIdentityDomainSpecified { get; set; }
-        
+
         private string _physicalLocation;
 
         [XmlElement(ElementName = "physicalLocation", IsNullable = false, Namespace = "")]
-        public string PhysicalLocation {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4226")]
+        [MinLength(1)]
+        [MaxLength(1024)]
+        public string PhysicalLocation
+        {
             get => _physicalLocation;
-            set {
+            set
+            {
                 PhysicalLocationSpecified = true;
                 _physicalLocation = value;
             }
@@ -86,6 +116,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PhysicalLocationSpecified { get; set; }
-        
+
     }
 }

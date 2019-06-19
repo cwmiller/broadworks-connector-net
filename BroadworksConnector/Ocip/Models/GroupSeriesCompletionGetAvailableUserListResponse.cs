@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the GroupSeriesCompletionGetAvailableUserListRequest.
     /// Contains a table with column headings: "User Id", "Last Name", "First Name", "Hiragana Last Name", "Hiragana First Name",
     /// "Phone Number", "Extension", "Department", "Email Address".
-        /// <see cref="GroupSeriesCompletionGetAvailableUserListRequest"/>
-        /// </summary>
+    /// <see cref="GroupSeriesCompletionGetAvailableUserListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b974dc59b4b32d9f5952a0442ecaefa8:112""}]")]
     public class GroupSeriesCompletionGetAvailableUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable {
+        [Group(@"b974dc59b4b32d9f5952a0442ecaefa8:112")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
+        {
             get => _userTable;
-            set {
+            set
+            {
                 UserTableSpecified = true;
                 _userTable = value;
             }
@@ -30,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserTableSpecified { get; set; }
-        
+
     }
 }

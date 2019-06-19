@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,22 +11,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// Note that to provision the accessInfoPattern element, the
     /// captureAccessInfoInPaniHeader system parameter needs to be set to "true".
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7197""}]")]
     public class GroupSessionAdmissionControlGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -32,13 +39,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -46,13 +58,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -60,13 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
         private string _newName;
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
-        public string NewName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string NewName
+        {
             get => _newName;
-            set {
+            set
+            {
                 NewNameSpecified = true;
                 _newName = value;
             }
@@ -74,13 +97,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewNameSpecified { get; set; }
-        
+
         private int _maxSession;
 
         [XmlElement(ElementName = "maxSession", IsNullable = false, Namespace = "")]
-        public int MaxSession {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinInclusive(0)]
+        public int MaxSession
+        {
             get => _maxSession;
-            set {
+            set
+            {
                 MaxSessionSpecified = true;
                 _maxSession = value;
             }
@@ -88,13 +116,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxSessionSpecified { get; set; }
-        
+
         private int? _maxUserOriginatingSessions;
 
         [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = true, Namespace = "")]
-        public int? MaxUserOriginatingSessions {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinInclusive(0)]
+        public int? MaxUserOriginatingSessions
+        {
             get => _maxUserOriginatingSessions;
-            set {
+            set
+            {
                 MaxUserOriginatingSessionsSpecified = true;
                 _maxUserOriginatingSessions = value;
             }
@@ -102,13 +135,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxUserOriginatingSessionsSpecified { get; set; }
-        
+
         private int? _maxUserTerminatingSessions;
 
         [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = true, Namespace = "")]
-        public int? MaxUserTerminatingSessions {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinInclusive(0)]
+        public int? MaxUserTerminatingSessions
+        {
             get => _maxUserTerminatingSessions;
-            set {
+            set
+            {
                 MaxUserTerminatingSessionsSpecified = true;
                 _maxUserTerminatingSessions = value;
             }
@@ -116,13 +154,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxUserTerminatingSessionsSpecified { get; set; }
-        
+
         private int _reservedSession;
 
         [XmlElement(ElementName = "reservedSession", IsNullable = false, Namespace = "")]
-        public int ReservedSession {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinInclusive(0)]
+        public int ReservedSession
+        {
             get => _reservedSession;
-            set {
+            set
+            {
                 ReservedSessionSpecified = true;
                 _reservedSession = value;
             }
@@ -130,13 +173,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReservedSessionSpecified { get; set; }
-        
+
         private int? _reservedUserOriginatingSessions;
 
         [XmlElement(ElementName = "reservedUserOriginatingSessions", IsNullable = true, Namespace = "")]
-        public int? ReservedUserOriginatingSessions {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinInclusive(0)]
+        public int? ReservedUserOriginatingSessions
+        {
             get => _reservedUserOriginatingSessions;
-            set {
+            set
+            {
                 ReservedUserOriginatingSessionsSpecified = true;
                 _reservedUserOriginatingSessions = value;
             }
@@ -144,13 +192,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReservedUserOriginatingSessionsSpecified { get; set; }
-        
+
         private int? _reservedUserTerminatingSessions;
 
         [XmlElement(ElementName = "reservedUserTerminatingSessions", IsNullable = true, Namespace = "")]
-        public int? ReservedUserTerminatingSessions {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinInclusive(0)]
+        public int? ReservedUserTerminatingSessions
+        {
             get => _reservedUserTerminatingSessions;
-            set {
+            set
+            {
                 ReservedUserTerminatingSessionsSpecified = true;
                 _reservedUserTerminatingSessions = value;
             }
@@ -158,13 +211,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReservedUserTerminatingSessionsSpecified { get; set; }
-        
+
         private bool _becomeDefaultGroup;
 
         [XmlElement(ElementName = "becomeDefaultGroup", IsNullable = false, Namespace = "")]
-        public bool BecomeDefaultGroup {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        public bool BecomeDefaultGroup
+        {
             get => _becomeDefaultGroup;
-            set {
+            set
+            {
                 BecomeDefaultGroupSpecified = true;
                 _becomeDefaultGroup = value;
             }
@@ -172,13 +229,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BecomeDefaultGroupSpecified { get; set; }
-        
+
         private bool _countIntraSACGroupSessions;
 
         [XmlElement(ElementName = "countIntraSACGroupSessions", IsNullable = false, Namespace = "")]
-        public bool CountIntraSACGroupSessions {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        public bool CountIntraSACGroupSessions
+        {
             get => _countIntraSACGroupSessions;
-            set {
+            set
+            {
                 CountIntraSACGroupSessionsSpecified = true;
                 _countIntraSACGroupSessions = value;
             }
@@ -186,13 +247,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CountIntraSACGroupSessionsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementDeviceList _deviceList;
 
         [XmlElement(ElementName = "deviceList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementDeviceList DeviceList {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        public BroadWorksConnector.Ocip.Models.ReplacementDeviceList DeviceList
+        {
             get => _deviceList;
-            set {
+            set
+            {
                 DeviceListSpecified = true;
                 _deviceList = value;
             }
@@ -200,13 +265,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceListSpecified { get; set; }
-        
+
         private bool _blockEmergencyAndRepairCallsDueToSACLimits;
 
         [XmlElement(ElementName = "blockEmergencyAndRepairCallsDueToSACLimits", IsNullable = false, Namespace = "")]
-        public bool BlockEmergencyAndRepairCallsDueToSACLimits {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        public bool BlockEmergencyAndRepairCallsDueToSACLimits
+        {
             get => _blockEmergencyAndRepairCallsDueToSACLimits;
-            set {
+            set
+            {
                 BlockEmergencyAndRepairCallsDueToSACLimitsSpecified = true;
                 _blockEmergencyAndRepairCallsDueToSACLimits = value;
             }
@@ -214,13 +283,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool BlockEmergencyAndRepairCallsDueToSACLimitsSpecified { get; set; }
-        
+
         private string _mediaGroupName;
 
         [XmlElement(ElementName = "mediaGroupName", IsNullable = true, Namespace = "")]
-        public string MediaGroupName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string MediaGroupName
+        {
             get => _mediaGroupName;
-            set {
+            set
+            {
                 MediaGroupNameSpecified = true;
                 _mediaGroupName = value;
             }
@@ -228,13 +303,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MediaGroupNameSpecified { get; set; }
-        
+
         private string _accessInfoPattern;
 
         [XmlElement(ElementName = "accessInfoPattern", IsNullable = true, Namespace = "")]
-        public string AccessInfoPattern {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7197")]
+        [MinLength(1)]
+        [MaxLength(1024)]
+        public string AccessInfoPattern
+        {
             get => _accessInfoPattern;
-            set {
+            set
+            {
                 AccessInfoPatternSpecified = true;
                 _accessInfoPattern = value;
             }
@@ -242,6 +323,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessInfoPatternSpecified { get; set; }
-        
+
     }
 }

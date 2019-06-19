@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Enterprise Voice VPN Location Selection.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum EnterpriseVoiceVPNPolicySelection    {
-            [XmlEnum(Name = "Private")]
+    public enum EnterpriseVoiceVPNPolicySelection
+    {
+        [XmlEnum(Name = "Private")]
         Private,
-            [XmlEnum(Name = "Public")]
+        [XmlEnum(Name = "Public")]
         Public,
-            [XmlEnum(Name = "Route")]
+        [XmlEnum(Name = "Route")]
         Route,
-            [XmlEnum(Name = "Treatment")]
+        [XmlEnum(Name = "Treatment")]
         Treatment,
-     }
+    }
 }

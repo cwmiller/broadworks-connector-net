@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Communication Barring Originating Rule
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CommunicationBarringOriginatingRule 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1399""}]")]
+    public class CommunicationBarringOriginatingRule
     {
 
-        
         private string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
-        public string Criteria {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1399")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Criteria
+        {
             get => _criteria;
-            set {
+            set
+            {
                 CriteriaSpecified = true;
                 _criteria = value;
             }
@@ -27,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction Action {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1399")]
+        public BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction Action
+        {
             get => _action;
-            set {
+            set
+            {
                 ActionSpecified = true;
                 _action = value;
             }
@@ -41,13 +51,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActionSpecified { get; set; }
-        
+
         private string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = true, Namespace = "")]
-        public string TreatmentId {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1399")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string TreatmentId
+        {
             get => _treatmentId;
-            set {
+            set
+            {
                 TreatmentIdSpecified = true;
                 _treatmentId = value;
             }
@@ -55,13 +71,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TreatmentIdSpecified { get; set; }
-        
+
         private string _transferNumber;
 
         [XmlElement(ElementName = "transferNumber", IsNullable = true, Namespace = "")]
-        public string TransferNumber {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1399")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string TransferNumber
+        {
             get => _transferNumber;
-            set {
+            set
+            {
                 TransferNumberSpecified = true;
                 _transferNumber = value;
             }
@@ -69,13 +91,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TransferNumberSpecified { get; set; }
-        
+
         private int? _callTimeoutSeconds;
 
         [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = true, Namespace = "")]
-        public int? CallTimeoutSeconds {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1399")]
+        [MinInclusive(60)]
+        [MaxInclusive(86400)]
+        public int? CallTimeoutSeconds
+        {
             get => _callTimeoutSeconds;
-            set {
+            set
+            {
                 CallTimeoutSecondsSpecified = true;
                 _callTimeoutSeconds = value;
             }
@@ -83,6 +111,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallTimeoutSecondsSpecified { get; set; }
-        
+
     }
 }

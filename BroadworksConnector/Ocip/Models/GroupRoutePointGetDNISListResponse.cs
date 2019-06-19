@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the GroupRoutePointGetDNISListRequest.
     /// Contains a table with column headings: "Name", "Phone Number", "Extension".
-        /// <see cref="GroupRoutePointGetDNISListRequest"/>
-        /// </summary>
+    /// <see cref="GroupRoutePointGetDNISListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:524""}]")]
     public class GroupRoutePointGetDNISListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _displayDNISNumber;
 
         [XmlElement(ElementName = "displayDNISNumber", IsNullable = false, Namespace = "")]
-        public bool DisplayDNISNumber {
+        [Group(@"a27224a048c30ff69eab9209dec841cc:524")]
+        public bool DisplayDNISNumber
+        {
             get => _displayDNISNumber;
-            set {
+            set
+            {
                 DisplayDNISNumberSpecified = true;
                 _displayDNISNumber = value;
             }
@@ -29,13 +34,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DisplayDNISNumberSpecified { get; set; }
-        
+
         private bool _displayDNISName;
 
         [XmlElement(ElementName = "displayDNISName", IsNullable = false, Namespace = "")]
-        public bool DisplayDNISName {
+        [Group(@"a27224a048c30ff69eab9209dec841cc:524")]
+        public bool DisplayDNISName
+        {
             get => _displayDNISName;
-            set {
+            set
+            {
                 DisplayDNISNameSpecified = true;
                 _displayDNISName = value;
             }
@@ -43,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DisplayDNISNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _dnisTable;
 
         [XmlElement(ElementName = "dnisTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable DnisTable {
+        [Group(@"a27224a048c30ff69eab9209dec841cc:524")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable DnisTable
+        {
             get => _dnisTable;
-            set {
+            set
+            {
                 DnisTableSpecified = true;
                 _dnisTable = value;
             }
@@ -57,6 +68,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DnisTableSpecified { get; set; }
-        
+
     }
 }

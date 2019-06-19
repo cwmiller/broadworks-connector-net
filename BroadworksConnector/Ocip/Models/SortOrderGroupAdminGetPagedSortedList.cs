@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Used to sort the GroupAdminGetPagedSortedListRequest request.
-        /// <see cref="GroupAdminGetPagedSortedListRequest"/>
-        /// </summary>
+    /// <see cref="GroupAdminGetPagedSortedListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SortOrderGroupAdminGetPagedSortedList 
+
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7597""}]")]
+    public class SortOrderGroupAdminGetPagedSortedList
     {
 
-        
         private BroadWorksConnector.Ocip.Models.SortByAdminId _sortByAdminId;
 
         [XmlElement(ElementName = "sortByAdminId", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByAdminId SortByAdminId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7597")]
+        public BroadWorksConnector.Ocip.Models.SortByAdminId SortByAdminId
+        {
             get => _sortByAdminId;
-            set {
+            set
+            {
                 SortByAdminIdSpecified = true;
                 _sortByAdminId = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByAdminIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByAdminLastName _sortByAdminLastName;
 
         [XmlElement(ElementName = "sortByAdminLastName", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByAdminLastName SortByAdminLastName {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7597")]
+        public BroadWorksConnector.Ocip.Models.SortByAdminLastName SortByAdminLastName
+        {
             get => _sortByAdminLastName;
-            set {
+            set
+            {
                 SortByAdminLastNameSpecified = true;
                 _sortByAdminLastName = value;
             }
@@ -42,13 +50,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByAdminLastNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByAdminFirstName _sortByAdminFirstName;
 
         [XmlElement(ElementName = "sortByAdminFirstName", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByAdminFirstName SortByAdminFirstName {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7597")]
+        public BroadWorksConnector.Ocip.Models.SortByAdminFirstName SortByAdminFirstName
+        {
             get => _sortByAdminFirstName;
-            set {
+            set
+            {
                 SortByAdminFirstNameSpecified = true;
                 _sortByAdminFirstName = value;
             }
@@ -56,6 +67,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByAdminFirstNameSpecified { get; set; }
-        
+
     }
 }

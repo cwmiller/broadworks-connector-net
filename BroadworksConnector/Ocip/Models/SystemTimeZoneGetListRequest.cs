@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,16 +11,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either SystemTimeZoneGetListResponse or ErrorResponse.
     /// 
     /// Replaced by: SystemTimeZoneGetListRequest20 in AS data mode
-        /// <see cref="SystemTimeZoneGetListResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemTimeZoneGetListRequest20"/>
-        /// </summary>
+    /// <see cref="SystemTimeZoneGetListResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemTimeZoneGetListRequest20"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:1965""}]")]
     public class SystemTimeZoneGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
     }
 }

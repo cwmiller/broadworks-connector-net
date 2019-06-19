@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the BroadWorks Anywhere system parameters.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:247""}]")]
     public class SystemBroadWorksAnywhereModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private bool _enableTransferNotification;
 
         [XmlElement(ElementName = "enableTransferNotification", IsNullable = false, Namespace = "")]
-        public bool EnableTransferNotification {
+        [Optional]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:247")]
+        public bool EnableTransferNotification
+        {
             get => _enableTransferNotification;
-            set {
+            set
+            {
                 EnableTransferNotificationSpecified = true;
                 _enableTransferNotification = value;
             }
@@ -30,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableTransferNotificationSpecified { get; set; }
-        
+
     }
 }

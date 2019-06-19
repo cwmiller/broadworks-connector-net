@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call center overflow processing action.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterOverflowProcessingAction    {
-            [XmlEnum(Name = "Busy")]
+    public enum CallCenterOverflowProcessingAction
+    {
+        [XmlEnum(Name = "Busy")]
         Busy,
-            [XmlEnum(Name = "Transfer")]
+        [XmlEnum(Name = "Transfer")]
         Transfer,
-            [XmlEnum(Name = "Ringing")]
+        [XmlEnum(Name = "Ringing")]
         Ringing,
-     }
+    }
 }

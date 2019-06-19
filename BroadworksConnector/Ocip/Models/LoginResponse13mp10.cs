@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// LoginRequest13mp10/Response13mp10 is 2nd stage of the 2 stage OCI login process.
-        /// <see cref="LoginRequest13mp10"/>
-        /// </summary>
+    /// <see cref="LoginRequest13mp10"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3344""}]")]
     public class LoginResponse13mp10 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.LoginType _loginType;
 
         [XmlElement(ElementName = "loginType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.LoginType LoginType {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3344")]
+        public BroadWorksConnector.Ocip.Models.LoginType LoginType
+        {
             get => _loginType;
-            set {
+            set
+            {
                 LoginTypeSpecified = true;
                 _loginType = value;
             }
@@ -28,13 +33,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LoginTypeSpecified { get; set; }
-        
+
         private string _locale;
 
         [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
-        public string Locale {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3344")]
+        [MaxLength(5)]
+        public string Locale
+        {
             get => _locale;
-            set {
+            set
+            {
                 LocaleSpecified = true;
                 _locale = value;
             }
@@ -42,13 +51,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LocaleSpecified { get; set; }
-        
+
         private string _encoding;
 
         [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
-        public string Encoding {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3344")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Encoding
+        {
             get => _encoding;
-            set {
+            set
+            {
                 EncodingSpecified = true;
                 _encoding = value;
             }
@@ -56,6 +70,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EncodingSpecified { get; set; }
-        
+
     }
 }

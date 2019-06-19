@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -14,20 +16,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// Hiragana Last Name + Hiragana First Name
     /// 
     /// Note that when specific conditions are met, VON users will be included in the search results.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:2183""}]")]
     public class SearchCriteriaUserName : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        
         private BroadWorksConnector.Ocip.Models.SearchMode _mode;
 
         [XmlElement(ElementName = "mode", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SearchMode Mode {
+        [Group(@"f0ada2681ca347fa83b464734259b304:2183")]
+        public BroadWorksConnector.Ocip.Models.SearchMode Mode
+        {
             get => _mode;
-            set {
+            set
+            {
                 ModeSpecified = true;
                 _mode = value;
             }
@@ -35,13 +40,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ModeSpecified { get; set; }
-        
+
         private string _value;
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
-        public string Value {
+        [Group(@"f0ada2681ca347fa83b464734259b304:2183")]
+        [MinLength(1)]
+        [MaxLength(62)]
+        public string Value
+        {
             get => _value;
-            set {
+            set
+            {
                 ValueSpecified = true;
                 _value = value;
             }
@@ -49,13 +59,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ValueSpecified { get; set; }
-        
+
         private bool _isCaseInsensitive;
 
         [XmlElement(ElementName = "isCaseInsensitive", IsNullable = false, Namespace = "")]
-        public bool IsCaseInsensitive {
+        [Group(@"f0ada2681ca347fa83b464734259b304:2183")]
+        public bool IsCaseInsensitive
+        {
             get => _isCaseInsensitive;
-            set {
+            set
+            {
                 IsCaseInsensitiveSpecified = true;
                 _isCaseInsensitive = value;
             }
@@ -63,6 +76,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsCaseInsensitiveSpecified { get; set; }
-        
+
     }
 }

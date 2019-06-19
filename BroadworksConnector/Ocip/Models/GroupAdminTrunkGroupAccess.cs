@@ -13,17 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 1) Restricted from adding or removing trunk groups, and
     /// 2) Read-only access to trunk group resources
     /// "None" indicates no access to trunk groups in the group.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupAdminTrunkGroupAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupAdminTrunkGroupAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Full Resources")]
+        [XmlEnum(Name = "Full Resources")]
         FullResources,
-            [XmlEnum(Name = "Read-Only Resources")]
+        [XmlEnum(Name = "Read-Only Resources")]
         ReadOnlyResources,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

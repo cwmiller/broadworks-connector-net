@@ -8,17 +8,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// CI indicates that the physical location comes from the Cell Identification (CI) field (5 digits) of the P-Camel-CellDorLAI header (5 digits).
     /// LAC-CI indicates that the physical location comes from the Location Area Code + Cell Identification (LAC+CI) fields of the P CAMEL CellIDorLAI header (10 digits).
     /// PANI indicates that the physical location comes from the P Network Address Info (PANI) header.  See RFC 3455.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum PhysicalLocationIndicator    {
-            [XmlEnum(Name = "CI")]
+    public enum PhysicalLocationIndicator
+    {
+        [XmlEnum(Name = "CI")]
         CI,
-            [XmlEnum(Name = "LAC-CI")]
+        [XmlEnum(Name = "LAC-CI")]
         LACCI,
-            [XmlEnum(Name = "PANI")]
+        [XmlEnum(Name = "PANI")]
         PANI,
-            [XmlEnum(Name = "Disregard Zones")]
+        [XmlEnum(Name = "Disregard Zones")]
         DisregardZones,
-     }
+    }
 }

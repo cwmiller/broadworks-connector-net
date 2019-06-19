@@ -5,21 +5,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The call center enhanced reporting sampling period.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterReportSamplingPeriod    {
-            [XmlEnum(Name = "15 Minutes")]
+    public enum CallCenterReportSamplingPeriod
+    {
+        [XmlEnum(Name = "15 Minutes")]
         _15Minutes,
-            [XmlEnum(Name = "30 Minutes")]
+        [XmlEnum(Name = "30 Minutes")]
         _30Minutes,
-            [XmlEnum(Name = "Hourly")]
+        [XmlEnum(Name = "Hourly")]
         Hourly,
-            [XmlEnum(Name = "Daily")]
+        [XmlEnum(Name = "Daily")]
         Daily,
-            [XmlEnum(Name = "Weekly")]
+        [XmlEnum(Name = "Weekly")]
         Weekly,
-            [XmlEnum(Name = "Monthly")]
+        [XmlEnum(Name = "Monthly")]
         Monthly,
-     }
+    }
 }

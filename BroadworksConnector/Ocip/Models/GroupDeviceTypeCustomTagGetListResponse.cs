@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,21 +14,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// In XS data mode, the column headings are:
     /// "Tag Name", "Tag Value", "Actual Tag Value" if request is invoked by an admin without system privileges.
     /// "Tag Name", "Tag Value", "Is Encrypted", "Actual Tag Value" if request is invoked by an admin with system privileges.
-        /// <see cref="GroupDeviceTypeCustomTagGetListRequest"/>
-        /// </summary>
+    /// <see cref="GroupDeviceTypeCustomTagGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3447""}]")]
     public class GroupDeviceTypeCustomTagGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _groupDeviceTypeCustomTagsTable;
 
         [XmlElement(ElementName = "groupDeviceTypeCustomTagsTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable GroupDeviceTypeCustomTagsTable {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3447")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable GroupDeviceTypeCustomTagsTable
+        {
             get => _groupDeviceTypeCustomTagsTable;
-            set {
+            set
+            {
                 GroupDeviceTypeCustomTagsTableSpecified = true;
                 _groupDeviceTypeCustomTagsTable = value;
             }
@@ -34,6 +39,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupDeviceTypeCustomTagsTableSpecified { get; set; }
-        
+
     }
 }

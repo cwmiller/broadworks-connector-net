@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for the Group Night Forwarding Service Activation for a group.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupNightForwardingGroupServiceActivationMode    {
-            [XmlEnum(Name = "Auto On")]
+    public enum GroupNightForwardingGroupServiceActivationMode
+    {
+        [XmlEnum(Name = "Auto On")]
         AutoOn,
-            [XmlEnum(Name = "On")]
+        [XmlEnum(Name = "On")]
         On,
-            [XmlEnum(Name = "Off")]
+        [XmlEnum(Name = "Off")]
         Off,
-     }
+    }
 }

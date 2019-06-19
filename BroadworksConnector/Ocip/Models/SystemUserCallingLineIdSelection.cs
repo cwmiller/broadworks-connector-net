@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// System User Calling Line Id Options.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SystemUserCallingLineIdSelection    {
-            [XmlEnum(Name = "Disable All")]
+    public enum SystemUserCallingLineIdSelection
+    {
+        [XmlEnum(Name = "Disable All")]
         DisableAll,
-            [XmlEnum(Name = "Enable All")]
+        [XmlEnum(Name = "Enable All")]
         EnableAll,
-            [XmlEnum(Name = "Enable All Except Emergency")]
+        [XmlEnum(Name = "Enable All Except Emergency")]
         EnableAllExceptEmergency,
-            [XmlEnum(Name = "Enable Emergency Only")]
+        [XmlEnum(Name = "Enable Emergency Only")]
         EnableEmergencyOnly,
-     }
+    }
 }

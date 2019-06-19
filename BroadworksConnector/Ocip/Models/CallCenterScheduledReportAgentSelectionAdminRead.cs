@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,20 +11,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// This is used when an admin reads a Scheduled Report.
     /// Each agent table has the following column headings:
     /// "User Id", "Last Name", "First Name", "Hiragana Last Name" and "Hiragana First Name".
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterScheduledReportAgentSelectionAdminRead 
+
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7561"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7563""}]}]")]
+    public class CallCenterScheduledReportAgentSelectionAdminRead
     {
 
-        
         private bool _allAgent;
 
         [XmlElement(ElementName = "allAgent", IsNullable = false, Namespace = "")]
-        public bool AllAgent {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7561")]
+        public bool AllAgent
+        {
             get => _allAgent;
-            set {
+            set
+            {
                 AllAgentSpecified = true;
                 _allAgent = value;
             }
@@ -30,13 +35,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllAgentSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _currentAgentTable;
 
         [XmlElement(ElementName = "currentAgentTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable CurrentAgentTable {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7563")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable CurrentAgentTable
+        {
             get => _currentAgentTable;
-            set {
+            set
+            {
                 CurrentAgentTableSpecified = true;
                 _currentAgentTable = value;
             }
@@ -44,13 +52,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CurrentAgentTableSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _pastAgentTable;
 
         [XmlElement(ElementName = "pastAgentTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable PastAgentTable {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7563")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable PastAgentTable
+        {
             get => _pastAgentTable;
-            set {
+            set
+            {
                 PastAgentTableSpecified = true;
                 _pastAgentTable = value;
             }
@@ -58,6 +69,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PastAgentTableSpecified { get; set; }
-        
+
     }
 }

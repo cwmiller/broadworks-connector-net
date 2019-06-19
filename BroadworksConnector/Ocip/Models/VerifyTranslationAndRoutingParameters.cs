@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,20 +10,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// Verification Translation and Routing parameters
     /// for creating a Verify Translation and Routing request from
     /// parameters.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class VerifyTranslationAndRoutingParameters 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4592""}]")]
+    public class VerifyTranslationAndRoutingParameters
     {
 
-        
         private BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination _origination;
 
         [XmlElement(ElementName = "origination", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination Origination {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4592")]
+        public BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination Origination
+        {
             get => _origination;
-            set {
+            set
+            {
                 OriginationSpecified = true;
                 _origination = value;
             }
@@ -29,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool OriginationSpecified { get; set; }
-        
+
         private string _destination;
 
         [XmlElement(ElementName = "destination", IsNullable = false, Namespace = "")]
-        public string Destination {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4592")]
+        [MinLength(1)]
+        [MaxLength(500)]
+        public string Destination
+        {
             get => _destination;
-            set {
+            set
+            {
                 DestinationSpecified = true;
                 _destination = value;
             }
@@ -43,13 +53,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DestinationSpecified { get; set; }
-        
+
         private string _contact;
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-        public string Contact {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4592")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string Contact
+        {
             get => _contact;
-            set {
+            set
+            {
                 ContactSpecified = true;
                 _contact = value;
             }
@@ -57,13 +73,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ContactSpecified { get; set; }
-        
+
         private string _diversion;
 
         [XmlElement(ElementName = "diversion", IsNullable = false, Namespace = "")]
-        public string Diversion {
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4592")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string Diversion
+        {
             get => _diversion;
-            set {
+            set
+            {
                 DiversionSpecified = true;
                 _diversion = value;
             }
@@ -71,6 +93,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DiversionSpecified { get; set; }
-        
+
     }
 }

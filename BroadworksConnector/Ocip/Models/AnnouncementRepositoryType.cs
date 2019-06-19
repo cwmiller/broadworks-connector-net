@@ -6,13 +6,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// The type of Announcement, the possible values are "Group" for a group level
     /// announcement or "User" for a user level announcement.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AnnouncementRepositoryType    {
-            [XmlEnum(Name = "Group")]
+    public enum AnnouncementRepositoryType
+    {
+        [XmlEnum(Name = "Group")]
         Group,
-            [XmlEnum(Name = "User")]
+        [XmlEnum(Name = "User")]
         User,
-     }
+    }
 }

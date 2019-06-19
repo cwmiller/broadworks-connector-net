@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to ServiceProviderServicePackMigrationTaskGetRequest.
     /// The groupTable column headings are: "Migrate", "Group Id", "Group Name", "User Count".
     /// Replaced By: ServiceProviderServicePackMigrationTaskGetResponse14sp4
-        /// <see cref="ServiceProviderServicePackMigrationTaskGetRequest"/>
-        /// <see cref="ServiceProviderServicePackMigrationTaskGetResponse14sp4"/>
-        /// </summary>
+    /// <see cref="ServiceProviderServicePackMigrationTaskGetRequest"/>
+    /// <see cref="ServiceProviderServicePackMigrationTaskGetResponse14sp4"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3834""}]")]
     public class ServiceProviderServicePackMigrationTaskGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-        public string TaskName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string TaskName
+        {
             get => _taskName;
-            set {
+            set
+            {
                 TaskNameSpecified = true;
                 _taskName = value;
             }
@@ -31,13 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TaskNameSpecified { get; set; }
-        
+
         private string _startTimestamp;
 
         [XmlElement(ElementName = "startTimestamp", IsNullable = false, Namespace = "")]
-        public string StartTimestamp {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public string StartTimestamp
+        {
             get => _startTimestamp;
-            set {
+            set
+            {
                 StartTimestampSpecified = true;
                 _startTimestamp = value;
             }
@@ -45,13 +56,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StartTimestampSpecified { get; set; }
-        
+
         private int _maxDurationHours;
 
         [XmlElement(ElementName = "maxDurationHours", IsNullable = false, Namespace = "")]
-        public int MaxDurationHours {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        [MinInclusive(1)]
+        [MaxInclusive(9)]
+        public int MaxDurationHours
+        {
             get => _maxDurationHours;
-            set {
+            set
+            {
                 MaxDurationHoursSpecified = true;
                 _maxDurationHours = value;
             }
@@ -59,13 +75,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxDurationHoursSpecified { get; set; }
-        
+
         private bool _sendReportEmail;
 
         [XmlElement(ElementName = "sendReportEmail", IsNullable = false, Namespace = "")]
-        public bool SendReportEmail {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public bool SendReportEmail
+        {
             get => _sendReportEmail;
-            set {
+            set
+            {
                 SendReportEmailSpecified = true;
                 _sendReportEmail = value;
             }
@@ -73,13 +92,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SendReportEmailSpecified { get; set; }
-        
+
         private string _reportDeliveryEmailAddress;
 
         [XmlElement(ElementName = "reportDeliveryEmailAddress", IsNullable = false, Namespace = "")]
-        public string ReportDeliveryEmailAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ReportDeliveryEmailAddress
+        {
             get => _reportDeliveryEmailAddress;
-            set {
+            set
+            {
                 ReportDeliveryEmailAddressSpecified = true;
                 _reportDeliveryEmailAddress = value;
             }
@@ -87,13 +112,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportDeliveryEmailAddressSpecified { get; set; }
-        
+
         private bool _abortOnError;
 
         [XmlElement(ElementName = "abortOnError", IsNullable = false, Namespace = "")]
-        public bool AbortOnError {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public bool AbortOnError
+        {
             get => _abortOnError;
-            set {
+            set
+            {
                 AbortOnErrorSpecified = true;
                 _abortOnError = value;
             }
@@ -101,13 +129,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AbortOnErrorSpecified { get; set; }
-        
+
         private int _abortErrorThreshold;
 
         [XmlElement(ElementName = "abortErrorThreshold", IsNullable = false, Namespace = "")]
-        public int AbortErrorThreshold {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        [MinInclusive(1)]
+        public int AbortErrorThreshold
+        {
             get => _abortErrorThreshold;
-            set {
+            set
+            {
                 AbortErrorThresholdSpecified = true;
                 _abortErrorThreshold = value;
             }
@@ -115,13 +148,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AbortErrorThresholdSpecified { get; set; }
-        
+
         private bool _reportAllUsers;
 
         [XmlElement(ElementName = "reportAllUsers", IsNullable = false, Namespace = "")]
-        public bool ReportAllUsers {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public bool ReportAllUsers
+        {
             get => _reportAllUsers;
-            set {
+            set
+            {
                 ReportAllUsersSpecified = true;
                 _reportAllUsers = value;
             }
@@ -129,13 +165,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportAllUsersSpecified { get; set; }
-        
+
         private bool _automaticallyIncrementServiceQuantity;
 
         [XmlElement(ElementName = "automaticallyIncrementServiceQuantity", IsNullable = false, Namespace = "")]
-        public bool AutomaticallyIncrementServiceQuantity {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public bool AutomaticallyIncrementServiceQuantity
+        {
             get => _automaticallyIncrementServiceQuantity;
-            set {
+            set
+            {
                 AutomaticallyIncrementServiceQuantitySpecified = true;
                 _automaticallyIncrementServiceQuantity = value;
             }
@@ -143,13 +182,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AutomaticallyIncrementServiceQuantitySpecified { get; set; }
-        
+
         private int _errorCount;
 
         [XmlElement(ElementName = "errorCount", IsNullable = false, Namespace = "")]
-        public int ErrorCount {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public int ErrorCount
+        {
             get => _errorCount;
-            set {
+            set
+            {
                 ErrorCountSpecified = true;
                 _errorCount = value;
             }
@@ -157,13 +199,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ErrorCountSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskStatus _status;
 
         [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskStatus Status {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskStatus Status
+        {
             get => _status;
-            set {
+            set
+            {
                 StatusSpecified = true;
                 _status = value;
             }
@@ -171,13 +216,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool StatusSpecified { get; set; }
-        
+
         private int _groupsProcessed;
 
         [XmlElement(ElementName = "groupsProcessed", IsNullable = false, Namespace = "")]
-        public int GroupsProcessed {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public int GroupsProcessed
+        {
             get => _groupsProcessed;
-            set {
+            set
+            {
                 GroupsProcessedSpecified = true;
                 _groupsProcessed = value;
             }
@@ -185,13 +233,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupsProcessedSpecified { get; set; }
-        
+
         private int _groupsTotal;
 
         [XmlElement(ElementName = "groupsTotal", IsNullable = false, Namespace = "")]
-        public int GroupsTotal {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public int GroupsTotal
+        {
             get => _groupsTotal;
-            set {
+            set
+            {
                 GroupsTotalSpecified = true;
                 _groupsTotal = value;
             }
@@ -199,13 +250,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupsTotalSpecified { get; set; }
-        
+
         private int _usersProcessed;
 
         [XmlElement(ElementName = "usersProcessed", IsNullable = false, Namespace = "")]
-        public int UsersProcessed {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public int UsersProcessed
+        {
             get => _usersProcessed;
-            set {
+            set
+            {
                 UsersProcessedSpecified = true;
                 _usersProcessed = value;
             }
@@ -213,13 +267,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UsersProcessedSpecified { get; set; }
-        
+
         private int _usersTotal;
 
         [XmlElement(ElementName = "usersTotal", IsNullable = false, Namespace = "")]
-        public int UsersTotal {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public int UsersTotal
+        {
             get => _usersTotal;
-            set {
+            set
+            {
                 UsersTotalSpecified = true;
                 _usersTotal = value;
             }
@@ -227,13 +284,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UsersTotalSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType _userSelectionType;
 
         [XmlElement(ElementName = "userSelectionType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType UserSelectionType {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType UserSelectionType
+        {
             get => _userSelectionType;
-            set {
+            set
+            {
                 UserSelectionTypeSpecified = true;
                 _userSelectionType = value;
             }
@@ -241,13 +301,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserSelectionTypeSpecified { get; set; }
-        
+
         private string _reportFilePathName;
 
         [XmlElement(ElementName = "reportFilePathName", IsNullable = false, Namespace = "")]
-        public string ReportFilePathName {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        [MinLength(1)]
+        public string ReportFilePathName
+        {
             get => _reportFilePathName;
-            set {
+            set
+            {
                 ReportFilePathNameSpecified = true;
                 _reportFilePathName = value;
             }
@@ -255,13 +319,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReportFilePathNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _groupTable;
 
         [XmlElement(ElementName = "groupTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable GroupTable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable GroupTable
+        {
             get => _groupTable;
-            set {
+            set
+            {
                 GroupTableSpecified = true;
                 _groupTable = value;
             }
@@ -269,13 +336,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupTableSpecified { get; set; }
-        
-        private List<string> _userSelectionServicePackName;
+
+        private List<string> _userSelectionServicePackName = new List<string>();
 
         [XmlElement(ElementName = "userSelectionServicePackName", IsNullable = false, Namespace = "")]
-        public List<string> UserSelectionServicePackName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> UserSelectionServicePackName
+        {
             get => _userSelectionServicePackName;
-            set {
+            set
+            {
                 UserSelectionServicePackNameSpecified = true;
                 _userSelectionServicePackName = value;
             }
@@ -283,13 +356,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserSelectionServicePackNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.UserService> _userSelectionServiceName;
+
+        private List<BroadWorksConnector.Ocip.Models.UserService> _userSelectionServiceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
         [XmlElement(ElementName = "userSelectionServiceName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.UserService> UserSelectionServiceName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public List<BroadWorksConnector.Ocip.Models.UserService> UserSelectionServiceName
+        {
             get => _userSelectionServiceName;
-            set {
+            set
+            {
                 UserSelectionServiceNameSpecified = true;
                 _userSelectionServiceName = value;
             }
@@ -297,13 +374,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserSelectionServiceNameSpecified { get; set; }
-        
-        private List<string> _removeServicePackName;
+
+        private List<string> _removeServicePackName = new List<string>();
 
         [XmlElement(ElementName = "removeServicePackName", IsNullable = false, Namespace = "")]
-        public List<string> RemoveServicePackName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> RemoveServicePackName
+        {
             get => _removeServicePackName;
-            set {
+            set
+            {
                 RemoveServicePackNameSpecified = true;
                 _removeServicePackName = value;
             }
@@ -311,13 +394,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RemoveServicePackNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.UserService> _removeServiceName;
+
+        private List<BroadWorksConnector.Ocip.Models.UserService> _removeServiceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
         [XmlElement(ElementName = "removeServiceName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.UserService> RemoveServiceName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public List<BroadWorksConnector.Ocip.Models.UserService> RemoveServiceName
+        {
             get => _removeServiceName;
-            set {
+            set
+            {
                 RemoveServiceNameSpecified = true;
                 _removeServiceName = value;
             }
@@ -325,13 +412,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RemoveServiceNameSpecified { get; set; }
-        
-        private List<string> _assignServicePackName;
+
+        private List<string> _assignServicePackName = new List<string>();
 
         [XmlElement(ElementName = "assignServicePackName", IsNullable = false, Namespace = "")]
-        public List<string> AssignServicePackName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> AssignServicePackName
+        {
             get => _assignServicePackName;
-            set {
+            set
+            {
                 AssignServicePackNameSpecified = true;
                 _assignServicePackName = value;
             }
@@ -339,13 +432,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AssignServicePackNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.UserService> _assignServiceName;
+
+        private List<BroadWorksConnector.Ocip.Models.UserService> _assignServiceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
         [XmlElement(ElementName = "assignServiceName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.UserService> AssignServiceName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3834")]
+        public List<BroadWorksConnector.Ocip.Models.UserService> AssignServiceName
+        {
             get => _assignServiceName;
-            set {
+            set
+            {
                 AssignServiceNameSpecified = true;
                 _assignServiceName = value;
             }
@@ -353,6 +450,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AssignServiceNameSpecified { get; set; }
-        
+
     }
 }

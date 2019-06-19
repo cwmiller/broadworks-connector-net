@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Executive alerting mode.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ExecutiveAlertingMode    {
-            [XmlEnum(Name = "Simultaneous")]
+    public enum ExecutiveAlertingMode
+    {
+        [XmlEnum(Name = "Simultaneous")]
         Simultaneous,
-            [XmlEnum(Name = "Sequential")]
+        [XmlEnum(Name = "Sequential")]
         Sequential,
-     }
+    }
 }

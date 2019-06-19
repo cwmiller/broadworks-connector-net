@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,22 +13,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// URL".
     /// 
     /// Replaced by: GroupDeviceTypeFileGetListResponse21
-        /// <see cref="GroupDeviceTypeFileGetListRequest14sp8"/>
-        /// <see cref="GroupDeviceTypeFileGetListResponse21"/>
-        /// </summary>
+    /// <see cref="GroupDeviceTypeFileGetListRequest14sp8"/>
+    /// <see cref="GroupDeviceTypeFileGetListResponse21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:36746""}]")]
     public class GroupDeviceTypeFileGetListResponse14sp8 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _groupDeviceTypeFilesTable;
 
         [XmlElement(ElementName = "groupDeviceTypeFilesTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable GroupDeviceTypeFilesTable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:36746")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable GroupDeviceTypeFilesTable
+        {
             get => _groupDeviceTypeFilesTable;
-            set {
+            set
+            {
                 GroupDeviceTypeFilesTableSpecified = true;
                 _groupDeviceTypeFilesTable = value;
             }
@@ -34,6 +39,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupDeviceTypeFilesTableSpecified { get; set; }
-        
+
     }
 }

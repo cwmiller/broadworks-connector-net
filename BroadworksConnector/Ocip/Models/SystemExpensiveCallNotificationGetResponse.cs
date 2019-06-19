@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemExpensiveCallNotificationGetRequest.
-        /// <see cref="SystemExpensiveCallNotificationGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemExpensiveCallNotificationGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8782""}]")]
     public class SystemExpensiveCallNotificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _enablePostAnnouncementDelayTimer;
 
         [XmlElement(ElementName = "enablePostAnnouncementDelayTimer", IsNullable = false, Namespace = "")]
-        public bool EnablePostAnnouncementDelayTimer {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8782")]
+        public bool EnablePostAnnouncementDelayTimer
+        {
             get => _enablePostAnnouncementDelayTimer;
-            set {
+            set
+            {
                 EnablePostAnnouncementDelayTimerSpecified = true;
                 _enablePostAnnouncementDelayTimer = value;
             }
@@ -28,13 +33,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnablePostAnnouncementDelayTimerSpecified { get; set; }
-        
+
         private int _postAnnouncementDelaySeconds;
 
         [XmlElement(ElementName = "postAnnouncementDelaySeconds", IsNullable = false, Namespace = "")]
-        public int PostAnnouncementDelaySeconds {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8782")]
+        [MinInclusive(0)]
+        [MaxInclusive(20)]
+        public int PostAnnouncementDelaySeconds
+        {
             get => _postAnnouncementDelaySeconds;
-            set {
+            set
+            {
                 PostAnnouncementDelaySecondsSpecified = true;
                 _postAnnouncementDelaySeconds = value;
             }
@@ -42,6 +52,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PostAnnouncementDelaySecondsSpecified { get; set; }
-        
+
     }
 }

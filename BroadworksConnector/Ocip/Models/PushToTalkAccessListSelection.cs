@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Push to talk access list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum PushToTalkAccessListSelection    {
-            [XmlEnum(Name = "Allow Calls From Selected Users")]
+    public enum PushToTalkAccessListSelection
+    {
+        [XmlEnum(Name = "Allow Calls From Selected Users")]
         AllowCallsFromSelectedUsers,
-            [XmlEnum(Name = "Allow Calls From Everyone Except Selected Users")]
+        [XmlEnum(Name = "Allow Calls From Everyone Except Selected Users")]
         AllowCallsFromEveryoneExceptSelectedUsers,
-     }
+    }
 }

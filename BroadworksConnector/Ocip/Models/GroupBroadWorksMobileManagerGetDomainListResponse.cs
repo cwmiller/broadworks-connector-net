@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the GroupBroadWorksMobileManagerGetDomainListRequest.
     /// Contains the list of domains.
-        /// <see cref="GroupBroadWorksMobileManagerGetDomainListRequest"/>
-        /// </summary>
+    /// <see cref="GroupBroadWorksMobileManagerGetDomainListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1826""}]")]
     public class GroupBroadWorksMobileManagerGetDomainListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _domainName;
+        private List<string> _domainName = new List<string>();
 
         [XmlElement(ElementName = "domainName", IsNullable = false, Namespace = "")]
-        public List<string> DomainName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1826")]
+        [MinLength(1)]
+        [MaxLength(100)]
+        public List<string> DomainName
+        {
             get => _domainName;
-            set {
+            set
+            {
                 DomainNameSpecified = true;
                 _domainName = value;
             }
@@ -29,6 +37,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DomainNameSpecified { get; set; }
-        
+
     }
 }

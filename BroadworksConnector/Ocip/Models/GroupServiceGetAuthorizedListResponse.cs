@@ -1,26 +1,34 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupServiceGetAuthorizedListRequest.
-        /// <see cref="GroupServiceGetAuthorizedListRequest"/>
-        /// </summary>
+    /// <see cref="GroupServiceGetAuthorizedListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:6825""}]")]
     public class GroupServiceGetAuthorizedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _servicePackName;
+        private List<string> _servicePackName = new List<string>();
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        public List<string> ServicePackName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6825")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> ServicePackName
+        {
             get => _servicePackName;
-            set {
+            set
+            {
                 ServicePackNameSpecified = true;
                 _servicePackName = value;
             }
@@ -28,13 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServicePackNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.GroupService> _groupServiceName;
+
+        private List<BroadWorksConnector.Ocip.Models.GroupService> _groupServiceName = new List<BroadWorksConnector.Ocip.Models.GroupService>();
 
         [XmlElement(ElementName = "groupServiceName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.GroupService> GroupServiceName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6825")]
+        public List<BroadWorksConnector.Ocip.Models.GroupService> GroupServiceName
+        {
             get => _groupServiceName;
-            set {
+            set
+            {
                 GroupServiceNameSpecified = true;
                 _groupServiceName = value;
             }
@@ -42,13 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupServiceNameSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.UserService> _userServiceName;
+
+        private List<BroadWorksConnector.Ocip.Models.UserService> _userServiceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
         [XmlElement(ElementName = "userServiceName", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.UserService> UserServiceName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6825")]
+        public List<BroadWorksConnector.Ocip.Models.UserService> UserServiceName
+        {
             get => _userServiceName;
-            set {
+            set
+            {
                 UserServiceNameSpecified = true;
                 _userServiceName = value;
             }
@@ -56,6 +72,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserServiceNameSpecified { get; set; }
-        
+
     }
 }

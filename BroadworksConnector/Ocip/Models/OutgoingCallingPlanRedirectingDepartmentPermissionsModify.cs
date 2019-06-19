@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Outgoing Calling Plan initiating call forwards/transfer permissions for a department.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class OutgoingCallingPlanRedirectingDepartmentPermissionsModify 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:2147""}]")]
+    public class OutgoingCallingPlanRedirectingDepartmentPermissionsModify
     {
 
-        
         private BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey {
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2147")]
+        public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey
+        {
             get => _departmentKey;
-            set {
+            set
+            {
                 DepartmentKeySpecified = true;
                 _departmentKey = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentKeySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectingPermissionsModify _permissions;
 
         [XmlElement(ElementName = "permissions", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectingPermissionsModify Permissions {
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2147")]
+        public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectingPermissionsModify Permissions
+        {
             get => _permissions;
-            set {
+            set
+            {
                 PermissionsSpecified = true;
                 _permissions = value;
             }
@@ -41,6 +49,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PermissionsSpecified { get; set; }
-        
+
     }
 }

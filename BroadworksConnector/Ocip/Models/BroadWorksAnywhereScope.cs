@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Controls which users may use the BroadWorks Anywhere portal.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum BroadWorksAnywhereScope    {
-            [XmlEnum(Name = "Service Provider")]
+    public enum BroadWorksAnywhereScope
+    {
+        [XmlEnum(Name = "Service Provider")]
         ServiceProvider,
-            [XmlEnum(Name = "Group")]
+        [XmlEnum(Name = "Group")]
         Group,
-     }
+    }
 }

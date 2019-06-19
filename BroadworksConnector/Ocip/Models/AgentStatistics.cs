@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Contains Call Center Agent statistics for a given time frame.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class AgentStatistics 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7282""}]")]
+    public class AgentStatistics
     {
 
-        
         private int _numberOfCallsHandled;
 
         [XmlElement(ElementName = "numberOfCallsHandled", IsNullable = false, Namespace = "")]
-        public int NumberOfCallsHandled {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7282")]
+        public int NumberOfCallsHandled
+        {
             get => _numberOfCallsHandled;
-            set {
+            set
+            {
                 NumberOfCallsHandledSpecified = true;
                 _numberOfCallsHandled = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberOfCallsHandledSpecified { get; set; }
-        
+
         private int _numberOfCallsUnanswered;
 
         [XmlElement(ElementName = "numberOfCallsUnanswered", IsNullable = false, Namespace = "")]
-        public int NumberOfCallsUnanswered {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7282")]
+        public int NumberOfCallsUnanswered
+        {
             get => _numberOfCallsUnanswered;
-            set {
+            set
+            {
                 NumberOfCallsUnansweredSpecified = true;
                 _numberOfCallsUnanswered = value;
             }
@@ -41,13 +49,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NumberOfCallsUnansweredSpecified { get; set; }
-        
+
         private int _averageCallSeconds;
 
         [XmlElement(ElementName = "averageCallSeconds", IsNullable = false, Namespace = "")]
-        public int AverageCallSeconds {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7282")]
+        public int AverageCallSeconds
+        {
             get => _averageCallSeconds;
-            set {
+            set
+            {
                 AverageCallSecondsSpecified = true;
                 _averageCallSeconds = value;
             }
@@ -55,13 +66,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AverageCallSecondsSpecified { get; set; }
-        
+
         private int _totalTalkSeconds;
 
         [XmlElement(ElementName = "totalTalkSeconds", IsNullable = false, Namespace = "")]
-        public int TotalTalkSeconds {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7282")]
+        public int TotalTalkSeconds
+        {
             get => _totalTalkSeconds;
-            set {
+            set
+            {
                 TotalTalkSecondsSpecified = true;
                 _totalTalkSeconds = value;
             }
@@ -69,13 +83,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TotalTalkSecondsSpecified { get; set; }
-        
+
         private int _totalStaffedSeconds;
 
         [XmlElement(ElementName = "totalStaffedSeconds", IsNullable = false, Namespace = "")]
-        public int TotalStaffedSeconds {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7282")]
+        public int TotalStaffedSeconds
+        {
             get => _totalStaffedSeconds;
-            set {
+            set
+            {
                 TotalStaffedSecondsSpecified = true;
                 _totalStaffedSeconds = value;
             }
@@ -83,6 +100,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TotalStaffedSecondsSpecified { get; set; }
-        
+
     }
 }

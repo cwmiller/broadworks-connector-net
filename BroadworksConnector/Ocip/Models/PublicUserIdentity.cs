@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Public User Identity
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class PublicUserIdentity 
+
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2956""}]")]
+    public class PublicUserIdentity
     {
 
-        
         private string _sipURI;
 
         [XmlElement(ElementName = "sipURI", IsNullable = false, Namespace = "")]
-        public string SipURI {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2956")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string SipURI
+        {
             get => _sipURI;
-            set {
+            set
+            {
                 SipURISpecified = true;
                 _sipURI = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SipURISpecified { get; set; }
-        
+
         private string _telURI;
 
         [XmlElement(ElementName = "telURI", IsNullable = false, Namespace = "")]
-        public string TelURI {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2956")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string TelURI
+        {
             get => _telURI;
-            set {
+            set
+            {
                 TelURISpecified = true;
                 _telURI = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TelURISpecified { get; set; }
-        
+
     }
 }

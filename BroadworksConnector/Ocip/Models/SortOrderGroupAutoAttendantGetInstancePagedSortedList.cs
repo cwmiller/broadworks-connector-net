@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Used to sort the GroupAutoAttendantGetInstancePagedSortedListRequest request.
-        /// <see cref="GroupAutoAttendantGetInstancePagedSortedListRequest"/>
-        /// </summary>
+    /// <see cref="GroupAutoAttendantGetInstancePagedSortedListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SortOrderGroupAutoAttendantGetInstancePagedSortedList 
+
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ed0640d8ef49eb8b4eaa14d7c6f6c033:673""}]")]
+    public class SortOrderGroupAutoAttendantGetInstancePagedSortedList
     {
 
-        
         private BroadWorksConnector.Ocip.Models.SortByUserId _sortByUserId;
 
         [XmlElement(ElementName = "sortByUserId", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByUserId SortByUserId {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:673")]
+        public BroadWorksConnector.Ocip.Models.SortByUserId SortByUserId
+        {
             get => _sortByUserId;
-            set {
+            set
+            {
                 SortByUserIdSpecified = true;
                 _sortByUserId = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByUserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
 
         [XmlElement(ElementName = "sortByUserLastName", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByUserLastName SortByUserLastName {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:673")]
+        public BroadWorksConnector.Ocip.Models.SortByUserLastName SortByUserLastName
+        {
             get => _sortByUserLastName;
-            set {
+            set
+            {
                 SortByUserLastNameSpecified = true;
                 _sortByUserLastName = value;
             }
@@ -42,13 +50,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByUserLastNameSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByDn _sortByDn;
 
         [XmlElement(ElementName = "sortByDn", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByDn SortByDn {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:673")]
+        public BroadWorksConnector.Ocip.Models.SortByDn SortByDn
+        {
             get => _sortByDn;
-            set {
+            set
+            {
                 SortByDnSpecified = true;
                 _sortByDn = value;
             }
@@ -56,13 +67,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByDnSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.SortByExtension _sortByExtension;
 
         [XmlElement(ElementName = "sortByExtension", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.SortByExtension SortByExtension {
+        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:673")]
+        public BroadWorksConnector.Ocip.Models.SortByExtension SortByExtension
+        {
             get => _sortByExtension;
-            set {
+            set
+            {
                 SortByExtensionSpecified = true;
                 _sortByExtension = value;
             }
@@ -70,6 +84,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SortByExtensionSpecified { get; set; }
-        
+
     }
 }

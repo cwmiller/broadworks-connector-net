@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,21 +13,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Hiragana First Name", "Phone Number", "Extension", "Department", "Email Address",
     /// "Assistant Opt-in Status" and "Executive Allow Opt-in".
     /// The possible values for "Assistant Opt-in Status" and "Executive Allow Opt-in" columns are "true" and "false".
-        /// <see cref="UserExecutiveAssistantGetRequest"/>
-        /// </summary>
+    /// <see cref="UserExecutiveAssistantGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""edd49e38c60ed5c00d394f2a35697c84:62""}]")]
     public class UserExecutiveAssistantGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _enableDivert;
 
         [XmlElement(ElementName = "enableDivert", IsNullable = false, Namespace = "")]
-        public bool EnableDivert {
+        [Group(@"edd49e38c60ed5c00d394f2a35697c84:62")]
+        public bool EnableDivert
+        {
             get => _enableDivert;
-            set {
+            set
+            {
                 EnableDivertSpecified = true;
                 _enableDivert = value;
             }
@@ -33,13 +38,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableDivertSpecified { get; set; }
-        
+
         private string _divertToPhoneNumber;
 
         [XmlElement(ElementName = "divertToPhoneNumber", IsNullable = false, Namespace = "")]
-        public string DivertToPhoneNumber {
+        [Optional]
+        [Group(@"edd49e38c60ed5c00d394f2a35697c84:62")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string DivertToPhoneNumber
+        {
             get => _divertToPhoneNumber;
-            set {
+            set
+            {
                 DivertToPhoneNumberSpecified = true;
                 _divertToPhoneNumber = value;
             }
@@ -47,13 +58,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DivertToPhoneNumberSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _executiveTable;
 
         [XmlElement(ElementName = "executiveTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable ExecutiveTable {
+        [Group(@"edd49e38c60ed5c00d394f2a35697c84:62")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable ExecutiveTable
+        {
             get => _executiveTable;
-            set {
+            set
+            {
                 ExecutiveTableSpecified = true;
                 _executiveTable = value;
             }
@@ -61,6 +75,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExecutiveTableSpecified { get; set; }
-        
+
     }
 }

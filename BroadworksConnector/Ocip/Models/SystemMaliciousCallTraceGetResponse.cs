@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,21 +14,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The column headings are "Service Provider Id",
     /// "Group Id", "User Id", "Last Name", "First Name", "Phone Number", "Trace Type", "Status",
     /// "Hiragana Last Name" and "Hiragana First Name", "Extension", "Department", "Email Address".
-        /// <see cref="SystemMaliciousCallTraceGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemMaliciousCallTraceGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0da7c658f240cdc10c3f9cb328db57d8:119""}]")]
     public class SystemMaliciousCallTraceGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _playMCTWarningAnnouncement;
 
         [XmlElement(ElementName = "playMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
-        public bool PlayMCTWarningAnnouncement {
+        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:119")]
+        public bool PlayMCTWarningAnnouncement
+        {
             get => _playMCTWarningAnnouncement;
-            set {
+            set
+            {
                 PlayMCTWarningAnnouncementSpecified = true;
                 _playMCTWarningAnnouncement = value;
             }
@@ -34,13 +39,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayMCTWarningAnnouncementSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable {
+        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:119")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
+        {
             get => _userTable;
-            set {
+            set
+            {
                 UserTableSpecified = true;
                 _userTable = value;
             }
@@ -48,6 +56,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserTableSpecified { get; set; }
-        
+
     }
 }

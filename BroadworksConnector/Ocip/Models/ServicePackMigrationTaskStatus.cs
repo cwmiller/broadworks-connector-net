@@ -5,23 +5,24 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Possible status values of a service pack migration task.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServicePackMigrationTaskStatus    {
-            [XmlEnum(Name = "Awaiting Edits")]
+    public enum ServicePackMigrationTaskStatus
+    {
+        [XmlEnum(Name = "Awaiting Edits")]
         AwaitingEdits,
-            [XmlEnum(Name = "Pending")]
+        [XmlEnum(Name = "Pending")]
         Pending,
-            [XmlEnum(Name = "Processing")]
+        [XmlEnum(Name = "Processing")]
         Processing,
-            [XmlEnum(Name = "Terminating")]
+        [XmlEnum(Name = "Terminating")]
         Terminating,
-            [XmlEnum(Name = "Terminated")]
+        [XmlEnum(Name = "Terminated")]
         Terminated,
-            [XmlEnum(Name = "Stopped By System")]
+        [XmlEnum(Name = "Stopped By System")]
         StoppedBySystem,
-            [XmlEnum(Name = "Completed")]
+        [XmlEnum(Name = "Completed")]
         Completed,
-     }
+    }
 }

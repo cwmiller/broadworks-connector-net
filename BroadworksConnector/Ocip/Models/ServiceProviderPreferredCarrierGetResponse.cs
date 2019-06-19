@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,21 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to a ServiceProviderPreferredCarrierGetRequest.
     /// Contains the currently configured carriers for a specified country code for a service provider / enterprise.
-        /// <see cref="ServiceProviderPreferredCarrierGetRequest"/>
-        /// </summary>
+    /// <see cref="ServiceProviderPreferredCarrierGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:274""}]")]
     public class ServiceProviderPreferredCarrierGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _intraLataCarrier;
 
         [XmlElement(ElementName = "intraLataCarrier", IsNullable = false, Namespace = "")]
-        public string IntraLataCarrier {
+        [Optional]
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:274")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string IntraLataCarrier
+        {
             get => _intraLataCarrier;
-            set {
+            set
+            {
                 IntraLataCarrierSpecified = true;
                 _intraLataCarrier = value;
             }
@@ -29,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IntraLataCarrierSpecified { get; set; }
-        
+
         private string _interLataCarrier;
 
         [XmlElement(ElementName = "interLataCarrier", IsNullable = false, Namespace = "")]
-        public string InterLataCarrier {
+        [Optional]
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:274")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string InterLataCarrier
+        {
             get => _interLataCarrier;
-            set {
+            set
+            {
                 InterLataCarrierSpecified = true;
                 _interLataCarrier = value;
             }
@@ -43,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool InterLataCarrierSpecified { get; set; }
-        
+
         private string _internationalCarrier;
 
         [XmlElement(ElementName = "internationalCarrier", IsNullable = false, Namespace = "")]
-        public string InternationalCarrier {
+        [Optional]
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:274")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string InternationalCarrier
+        {
             get => _internationalCarrier;
-            set {
+            set
+            {
                 InternationalCarrierSpecified = true;
                 _internationalCarrier = value;
             }
@@ -57,6 +77,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool InternationalCarrierSpecified { get; set; }
-        
+
     }
 }

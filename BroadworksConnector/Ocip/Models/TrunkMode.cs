@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Trunk Mode Options
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkMode    {
-            [XmlEnum(Name = "Pilot")]
+    public enum TrunkMode
+    {
+        [XmlEnum(Name = "Pilot")]
         Pilot,
-            [XmlEnum(Name = "Proxy")]
+        [XmlEnum(Name = "Proxy")]
         Proxy,
-            [XmlEnum(Name = "User")]
+        [XmlEnum(Name = "User")]
         User,
-     }
+    }
 }

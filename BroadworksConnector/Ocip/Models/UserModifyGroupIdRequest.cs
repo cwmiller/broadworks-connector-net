@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Move the user from one group to another group within the same enterprise.
     /// If evaluateOnly is specified, no actual move will happen. The command only tests the move and reports the impacts or possible conditions preventing the move.
     /// The response is either UserModifyGroupIdResponse or ErrorResponse.
-        /// <see cref="UserModifyGroupIdResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="UserModifyGroupIdResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2515""}]")]
     public class UserModifyGroupIdRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        public string UserId {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2515")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string UserId
+        {
             get => _userId;
-            set {
+            set
+            {
                 UserIdSpecified = true;
                 _userId = value;
             }
@@ -31,13 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserIdSpecified { get; set; }
-        
+
         private string _newGroupId;
 
         [XmlElement(ElementName = "newGroupId", IsNullable = false, Namespace = "")]
-        public string NewGroupId {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2515")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string NewGroupId
+        {
             get => _newGroupId;
-            set {
+            set
+            {
                 NewGroupIdSpecified = true;
                 _newGroupId = value;
             }
@@ -45,13 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewGroupIdSpecified { get; set; }
-        
+
         private bool _evaluateOnly;
 
         [XmlElement(ElementName = "evaluateOnly", IsNullable = false, Namespace = "")]
-        public bool EvaluateOnly {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2515")]
+        public bool EvaluateOnly
+        {
             get => _evaluateOnly;
-            set {
+            set
+            {
                 EvaluateOnlySpecified = true;
                 _evaluateOnly = value;
             }
@@ -59,6 +75,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EvaluateOnlySpecified { get; set; }
-        
+
     }
 }

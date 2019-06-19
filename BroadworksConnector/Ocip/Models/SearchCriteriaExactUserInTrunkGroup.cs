@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Criteria for searching for user in/not in a trunk group.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1211""}]")]
     public class SearchCriteriaExactUserInTrunkGroup : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        
         private bool _userInTrunkGroup;
 
         [XmlElement(ElementName = "userInTrunkGroup", IsNullable = false, Namespace = "")]
-        public bool UserInTrunkGroup {
+        [Group(@"f0ada2681ca347fa83b464734259b304:1211")]
+        public bool UserInTrunkGroup
+        {
             get => _userInTrunkGroup;
-            set {
+            set
+            {
                 UserInTrunkGroupSpecified = true;
                 _userInTrunkGroup = value;
             }
@@ -27,6 +32,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserInTrunkGroupSpecified { get; set; }
-        
+
     }
 }

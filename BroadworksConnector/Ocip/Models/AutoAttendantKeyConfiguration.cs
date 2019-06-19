@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The configuration of a key for Auto Attendant.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class AutoAttendantKeyConfiguration 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44273""}]")]
+    public class AutoAttendantKeyConfiguration
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey _key;
 
         [XmlElement(ElementName = "key", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey Key {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44273")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey Key
+        {
             get => _key;
-            set {
+            set
+            {
                 KeySpecified = true;
                 _key = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool KeySpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationEntry _entry;
 
         [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationEntry Entry {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44273")]
+        public BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationEntry Entry
+        {
             get => _entry;
-            set {
+            set
+            {
                 EntrySpecified = true;
                 _entry = value;
             }
@@ -41,6 +49,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EntrySpecified { get; set; }
-        
+
     }
 }

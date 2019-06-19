@@ -5,29 +5,30 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Personal Assistant Presence.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum PersonalAssistantPresence    {
-            [XmlEnum(Name = "None")]
+    public enum PersonalAssistantPresence
+    {
+        [XmlEnum(Name = "None")]
         None,
-            [XmlEnum(Name = "Business Trip")]
+        [XmlEnum(Name = "Business Trip")]
         BusinessTrip,
-            [XmlEnum(Name = "Gone for the Day")]
+        [XmlEnum(Name = "Gone for the Day")]
         GonefortheDay,
-            [XmlEnum(Name = "Lunch")]
+        [XmlEnum(Name = "Lunch")]
         Lunch,
-            [XmlEnum(Name = "Meeting")]
+        [XmlEnum(Name = "Meeting")]
         Meeting,
-            [XmlEnum(Name = "Out Of Office")]
+        [XmlEnum(Name = "Out Of Office")]
         OutOfOffice,
-            [XmlEnum(Name = "Temporarily Out")]
+        [XmlEnum(Name = "Temporarily Out")]
         TemporarilyOut,
-            [XmlEnum(Name = "Training")]
+        [XmlEnum(Name = "Training")]
         Training,
-            [XmlEnum(Name = "Unavailable")]
+        [XmlEnum(Name = "Unavailable")]
         Unavailable,
-            [XmlEnum(Name = "Vacation")]
+        [XmlEnum(Name = "Vacation")]
         Vacation,
-     }
+    }
 }

@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// How the incomming caller ID should be displayed in the case of an NS screening failure
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum NsScreeningFailurePolicy    {
-            [XmlEnum(Name = "Display Received Caller ID")]
+    public enum NsScreeningFailurePolicy
+    {
+        [XmlEnum(Name = "Display Received Caller ID")]
         DisplayReceivedCallerID,
-            [XmlEnum(Name = "Restrict Number")]
+        [XmlEnum(Name = "Restrict Number")]
         RestrictNumber,
-            [XmlEnum(Name = "Restrict Name And Number")]
+        [XmlEnum(Name = "Restrict Name And Number")]
         RestrictNameAndNumber,
-     }
+    }
 }

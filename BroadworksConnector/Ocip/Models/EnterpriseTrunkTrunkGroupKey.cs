@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Identifies a trunk group within an Enterprise Trunk where the service provider id is already known.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class EnterpriseTrunkTrunkGroupKey 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1858""}]")]
+    public class EnterpriseTrunkTrunkGroupKey
     {
 
-        
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1858")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -27,13 +34,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _trunkGroupName;
 
         [XmlElement(ElementName = "trunkGroupName", IsNullable = false, Namespace = "")]
-        public string TrunkGroupName {
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1858")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string TrunkGroupName
+        {
             get => _trunkGroupName;
-            set {
+            set
+            {
                 TrunkGroupNameSpecified = true;
                 _trunkGroupName = value;
             }
@@ -41,6 +53,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TrunkGroupNameSpecified { get; set; }
-        
+
     }
 }

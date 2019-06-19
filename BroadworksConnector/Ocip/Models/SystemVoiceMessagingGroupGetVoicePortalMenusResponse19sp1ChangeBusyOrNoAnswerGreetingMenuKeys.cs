@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19sp1ChangeBusyOrNoAnswerGreetingMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32119""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19sp1ChangeBusyOrNoAnswerGreetingMenuKeys
     {
 
-        
         private string _recordNewGreeting;
 
         [XmlElement(ElementName = "recordNewGreeting", IsNullable = false, Namespace = "")]
-        public string RecordNewGreeting {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32119")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string RecordNewGreeting
+        {
             get => _recordNewGreeting;
-            set {
+            set
+            {
                 RecordNewGreetingSpecified = true;
                 _recordNewGreeting = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RecordNewGreetingSpecified { get; set; }
-        
+
         private string _listenToCurrentGreeting;
 
         [XmlElement(ElementName = "listenToCurrentGreeting", IsNullable = false, Namespace = "")]
-        public string ListenToCurrentGreeting {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32119")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ListenToCurrentGreeting
+        {
             get => _listenToCurrentGreeting;
-            set {
+            set
+            {
                 ListenToCurrentGreetingSpecified = true;
                 _listenToCurrentGreeting = value;
             }
@@ -41,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ListenToCurrentGreetingSpecified { get; set; }
-        
+
         private string _revertToSystemDefaultGreeting;
 
         [XmlElement(ElementName = "revertToSystemDefaultGreeting", IsNullable = false, Namespace = "")]
-        public string RevertToSystemDefaultGreeting {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32119")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string RevertToSystemDefaultGreeting
+        {
             get => _revertToSystemDefaultGreeting;
-            set {
+            set
+            {
                 RevertToSystemDefaultGreetingSpecified = true;
                 _revertToSystemDefaultGreeting = value;
             }
@@ -55,13 +75,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RevertToSystemDefaultGreetingSpecified { get; set; }
-        
+
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        public string ReturnToPreviousMenu {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32119")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ReturnToPreviousMenu
+        {
             get => _returnToPreviousMenu;
-            set {
+            set
+            {
                 ReturnToPreviousMenuSpecified = true;
                 _returnToPreviousMenu = value;
             }
@@ -69,13 +94,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReturnToPreviousMenuSpecified { get; set; }
-        
+
         private string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
-        public string RepeatMenu {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32119")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string RepeatMenu
+        {
             get => _repeatMenu;
-            set {
+            set
+            {
                 RepeatMenuSpecified = true;
                 _repeatMenu = value;
             }
@@ -83,6 +114,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RepeatMenuSpecified { get; set; }
-        
+
     }
 }

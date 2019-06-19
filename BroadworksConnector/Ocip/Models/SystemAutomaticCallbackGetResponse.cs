@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemAutomaticCallbackGetRequest.
     /// Replaced By: SystemAutomaticCallbackGetResponse15
-        /// <see cref="SystemAutomaticCallbackGetRequest"/>
-        /// <see cref="SystemAutomaticCallbackGetResponse15"/>
-        /// </summary>
+    /// <see cref="SystemAutomaticCallbackGetRequest"/>
+    /// <see cref="SystemAutomaticCallbackGetResponse15"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4281""}]")]
     public class SystemAutomaticCallbackGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private int _monitorMinutes;
 
         [XmlElement(ElementName = "monitorMinutes", IsNullable = false, Namespace = "")]
-        public int MonitorMinutes {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4281")]
+        [MinInclusive(5)]
+        [MaxInclusive(180)]
+        public int MonitorMinutes
+        {
             get => _monitorMinutes;
-            set {
+            set
+            {
                 MonitorMinutesSpecified = true;
                 _monitorMinutes = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MonitorMinutesSpecified { get; set; }
-        
+
         private int _waitBetweenRetryOriginatorMinutes;
 
         [XmlElement(ElementName = "waitBetweenRetryOriginatorMinutes", IsNullable = false, Namespace = "")]
-        public int WaitBetweenRetryOriginatorMinutes {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4281")]
+        [MinInclusive(1)]
+        [MaxInclusive(15)]
+        public int WaitBetweenRetryOriginatorMinutes
+        {
             get => _waitBetweenRetryOriginatorMinutes;
-            set {
+            set
+            {
                 WaitBetweenRetryOriginatorMinutesSpecified = true;
                 _waitBetweenRetryOriginatorMinutes = value;
             }
@@ -44,13 +56,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool WaitBetweenRetryOriginatorMinutesSpecified { get; set; }
-        
+
         private int _maxMonitorsPerOriginator;
 
         [XmlElement(ElementName = "maxMonitorsPerOriginator", IsNullable = false, Namespace = "")]
-        public int MaxMonitorsPerOriginator {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4281")]
+        [MinInclusive(1)]
+        [MaxInclusive(30)]
+        public int MaxMonitorsPerOriginator
+        {
             get => _maxMonitorsPerOriginator;
-            set {
+            set
+            {
                 MaxMonitorsPerOriginatorSpecified = true;
                 _maxMonitorsPerOriginator = value;
             }
@@ -58,13 +75,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxMonitorsPerOriginatorSpecified { get; set; }
-        
+
         private int _maxCallbackRings;
 
         [XmlElement(ElementName = "maxCallbackRings", IsNullable = false, Namespace = "")]
-        public int MaxCallbackRings {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4281")]
+        [MinInclusive(3)]
+        [MaxInclusive(8)]
+        public int MaxCallbackRings
+        {
             get => _maxCallbackRings;
-            set {
+            set
+            {
                 MaxCallbackRingsSpecified = true;
                 _maxCallbackRings = value;
             }
@@ -72,13 +94,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxCallbackRingsSpecified { get; set; }
-        
+
         private int _maxRetryOriginatorMinutes;
 
         [XmlElement(ElementName = "maxRetryOriginatorMinutes", IsNullable = false, Namespace = "")]
-        public int MaxRetryOriginatorMinutes {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4281")]
+        [MinInclusive(180)]
+        [MaxInclusive(360)]
+        public int MaxRetryOriginatorMinutes
+        {
             get => _maxRetryOriginatorMinutes;
-            set {
+            set
+            {
                 MaxRetryOriginatorMinutesSpecified = true;
                 _maxRetryOriginatorMinutes = value;
             }
@@ -86,6 +113,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MaxRetryOriginatorMinutesSpecified { get; set; }
-        
+
     }
 }

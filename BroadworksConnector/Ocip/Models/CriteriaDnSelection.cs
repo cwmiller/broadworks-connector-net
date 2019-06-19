@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Selection criteria for a dn.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CriteriaDnSelection    {
-            [XmlEnum(Name = "Any")]
+    public enum CriteriaDnSelection
+    {
+        [XmlEnum(Name = "Any")]
         Any,
-            [XmlEnum(Name = "Specified Only")]
+        [XmlEnum(Name = "Specified Only")]
         SpecifiedOnly,
-     }
+    }
 }

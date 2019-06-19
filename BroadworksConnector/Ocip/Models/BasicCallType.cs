@@ -5,21 +5,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The basic call type for the origination
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum BasicCallType    {
-            [XmlEnum(Name = "Group")]
+    public enum BasicCallType
+    {
+        [XmlEnum(Name = "Group")]
         Group,
-            [XmlEnum(Name = "Enterprise")]
+        [XmlEnum(Name = "Enterprise")]
         Enterprise,
-            [XmlEnum(Name = "Network")]
+        [XmlEnum(Name = "Network")]
         Network,
-            [XmlEnum(Name = "Network URL")]
+        [XmlEnum(Name = "Network URL")]
         NetworkURL,
-            [XmlEnum(Name = "Repair")]
+        [XmlEnum(Name = "Repair")]
         Repair,
-            [XmlEnum(Name = "Emergency")]
+        [XmlEnum(Name = "Emergency")]
         Emergency,
-     }
+    }
 }

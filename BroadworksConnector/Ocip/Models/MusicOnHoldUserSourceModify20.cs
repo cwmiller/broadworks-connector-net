@@ -1,25 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Contains the music on hold user source configuration.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class MusicOnHoldUserSourceModify20 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""66fe518a637c74cc4b2c97aa7f68fc49:345""}]")]
+    public class MusicOnHoldUserSourceModify20
     {
 
-        
         private BroadWorksConnector.Ocip.Models.MusicOnHoldUserMessageSelection _messageSourceSelection;
 
         [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldUserMessageSelection MessageSourceSelection {
+        [Optional]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:345")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldUserMessageSelection MessageSourceSelection
+        {
             get => _messageSourceSelection;
-            set {
+            set
+            {
                 MessageSourceSelectionSpecified = true;
                 _messageSourceSelection = value;
             }
@@ -27,13 +33,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MessageSourceSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify20CustomSource _customSource;
 
         [XmlElement(ElementName = "customSource", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify20CustomSource CustomSource {
+        [Optional]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:345")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify20CustomSource CustomSource
+        {
             get => _customSource;
-            set {
+            set
+            {
                 CustomSourceSpecified = true;
                 _customSource = value;
             }
@@ -41,6 +51,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CustomSourceSpecified { get; set; }
-        
+
     }
 }

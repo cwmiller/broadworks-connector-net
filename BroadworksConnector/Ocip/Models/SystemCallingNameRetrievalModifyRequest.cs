@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,23 +11,29 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// 
     /// Replaced by: SystemCallingNameRetrievalModifyRequest16sp1
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="SystemCallingNameRetrievalModifyRequest16sp1"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemCallingNameRetrievalModifyRequest16sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:14913""}]")]
     public class SystemCallingNameRetrievalModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private int _queryTimerMilliSeconds;
 
         [XmlElement(ElementName = "queryTimerMilliSeconds", IsNullable = false, Namespace = "")]
-        public int QueryTimerMilliSeconds {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14913")]
+        [MinInclusive(500)]
+        [MaxInclusive(5000)]
+        public int QueryTimerMilliSeconds
+        {
             get => _queryTimerMilliSeconds;
-            set {
+            set
+            {
                 QueryTimerMilliSecondsSpecified = true;
                 _queryTimerMilliSeconds = value;
             }
@@ -33,13 +41,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool QueryTimerMilliSecondsSpecified { get; set; }
-        
+
         private string _serverNetAddress;
 
         [XmlElement(ElementName = "serverNetAddress", IsNullable = true, Namespace = "")]
-        public string ServerNetAddress {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14913")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ServerNetAddress
+        {
             get => _serverNetAddress;
-            set {
+            set
+            {
                 ServerNetAddressSpecified = true;
                 _serverNetAddress = value;
             }
@@ -47,13 +61,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerNetAddressSpecified { get; set; }
-        
+
         private int? _serverPort;
 
         [XmlElement(ElementName = "serverPort", IsNullable = true, Namespace = "")]
-        public int? ServerPort {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14913")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int? ServerPort
+        {
             get => _serverPort;
-            set {
+            set
+            {
                 ServerPortSpecified = true;
                 _serverPort = value;
             }
@@ -61,13 +81,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerPortSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.TransportProtocol _serverTransportProtocol;
 
         [XmlElement(ElementName = "serverTransportProtocol", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.TransportProtocol ServerTransportProtocol {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14913")]
+        public BroadWorksConnector.Ocip.Models.TransportProtocol ServerTransportProtocol
+        {
             get => _serverTransportProtocol;
-            set {
+            set
+            {
                 ServerTransportProtocolSpecified = true;
                 _serverTransportProtocol = value;
             }
@@ -75,6 +99,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServerTransportProtocolSpecified { get; set; }
-        
+
     }
 }

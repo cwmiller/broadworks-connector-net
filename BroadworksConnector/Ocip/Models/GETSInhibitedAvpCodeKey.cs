@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The GETS inhibited Avp code entry.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class GETSInhibitedAvpCodeKey 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18534""}]")]
+    public class GETSInhibitedAvpCodeKey
     {
 
-        
         private int _avpCode;
 
         [XmlElement(ElementName = "avpCode", IsNullable = false, Namespace = "")]
-        public int AvpCode {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18534")]
+        public int AvpCode
+        {
             get => _avpCode;
-            set {
+            set
+            {
                 AvpCodeSpecified = true;
                 _avpCode = value;
             }
@@ -27,13 +32,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AvpCodeSpecified { get; set; }
-        
+
         private int _vendorId;
 
         [XmlElement(ElementName = "vendorId", IsNullable = false, Namespace = "")]
-        public int VendorId {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18534")]
+        public int VendorId
+        {
             get => _vendorId;
-            set {
+            set
+            {
                 VendorIdSpecified = true;
                 _vendorId = value;
             }
@@ -41,6 +49,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VendorIdSpecified { get; set; }
-        
+
     }
 }

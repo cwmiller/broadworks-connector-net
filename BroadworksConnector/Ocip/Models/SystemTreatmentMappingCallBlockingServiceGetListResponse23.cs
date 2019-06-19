@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table with one row per mapping.
     /// The table columns are: "Service", "Treatment Id".
     /// The Service column list the service or policy which is using corresponding treatment, and can be OCP, EOCP, ICP, ACR, SCR, SCA, AAC, Intercept, PTT, CommBarring, SAC, IncomingCommBarring, HierCommBarring, IncomHierCommBarring, BWMobilityDenyOrig, BWMobilityDenyTerm, ETRouteExhaust, CallPark, NumberPortability, ConcTerminatingAlertingPolicy, AutomaticCollectCall, ETRouteExhaustUnreachable.
-        /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListRequest23"/>
-        /// </summary>
+    /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListRequest23"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:17675""}]")]
     public class SystemTreatmentMappingCallBlockingServiceGetListResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _treatmentMappingTable;
 
         [XmlElement(ElementName = "treatmentMappingTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentMappingTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17675")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentMappingTable
+        {
             get => _treatmentMappingTable;
-            set {
+            set
+            {
                 TreatmentMappingTableSpecified = true;
                 _treatmentMappingTable = value;
             }
@@ -31,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TreatmentMappingTableSpecified { get; set; }
-        
+
     }
 }

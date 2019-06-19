@@ -5,17 +5,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// SIP URI format for Trunk Group User Creation.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupUserCreationSIPURIFormat    {
-            [XmlEnum(Name = "Extension")]
+    public enum TrunkGroupUserCreationSIPURIFormat
+    {
+        [XmlEnum(Name = "Extension")]
         Extension,
-            [XmlEnum(Name = "National DN")]
+        [XmlEnum(Name = "National DN")]
         NationalDN,
-            [XmlEnum(Name = "E164 Format No Plus")]
+        [XmlEnum(Name = "E164 Format No Plus")]
         E164FormatNoPlus,
-            [XmlEnum(Name = "E164 Format")]
+        [XmlEnum(Name = "E164 Format")]
         E164Format,
-     }
+    }
 }

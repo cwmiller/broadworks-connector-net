@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for Advice of Charge Type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AdviceOfChargeType    {
-            [XmlEnum(Name = "During Call")]
+    public enum AdviceOfChargeType
+    {
+        [XmlEnum(Name = "During Call")]
         DuringCall,
-            [XmlEnum(Name = "End Of Call")]
+        [XmlEnum(Name = "End Of Call")]
         EndOfCall,
-     }
+    }
 }

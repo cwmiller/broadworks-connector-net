@@ -1,26 +1,31 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemFileRepositoryDeviceUserGetRequest.
-        /// <see cref="SystemFileRepositoryDeviceUserGetRequest"/>
-        /// </summary>
+    /// <see cref="SystemFileRepositoryDeviceUserGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9495""}]")]
     public class SystemFileRepositoryDeviceUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _allowPut;
 
         [XmlElement(ElementName = "allowPut", IsNullable = false, Namespace = "")]
-        public bool AllowPut {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9495")]
+        public bool AllowPut
+        {
             get => _allowPut;
-            set {
+            set
+            {
                 AllowPutSpecified = true;
                 _allowPut = value;
             }
@@ -28,13 +33,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowPutSpecified { get; set; }
-        
+
         private bool _allowDelete;
 
         [XmlElement(ElementName = "allowDelete", IsNullable = false, Namespace = "")]
-        public bool AllowDelete {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9495")]
+        public bool AllowDelete
+        {
             get => _allowDelete;
-            set {
+            set
+            {
                 AllowDeleteSpecified = true;
                 _allowDelete = value;
             }
@@ -42,13 +50,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowDeleteSpecified { get; set; }
-        
+
         private bool _allowGet;
 
         [XmlElement(ElementName = "allowGet", IsNullable = false, Namespace = "")]
-        public bool AllowGet {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9495")]
+        public bool AllowGet
+        {
             get => _allowGet;
-            set {
+            set
+            {
                 AllowGetSpecified = true;
                 _allowGet = value;
             }
@@ -56,6 +67,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AllowGetSpecified { get; set; }
-        
+
     }
 }

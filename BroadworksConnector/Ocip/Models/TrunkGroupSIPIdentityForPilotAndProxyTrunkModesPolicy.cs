@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Trunk Group SIP identity for pilot and proxy trunk modes policy.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum TrunkGroupSIPIdentityForPilotAndProxyTrunkModesPolicy    {
-            [XmlEnum(Name = "Pilot User")]
+    public enum TrunkGroupSIPIdentityForPilotAndProxyTrunkModesPolicy
+    {
+        [XmlEnum(Name = "Pilot User")]
         PilotUser,
-            [XmlEnum(Name = "User")]
+        [XmlEnum(Name = "User")]
         User,
-     }
+    }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,22 +12,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Hiragana Last Name" and "Hiragana First Name".
     /// 
     /// Replaced By: SystemMaliciousCallTraceGetResponse
-        /// <see cref="SystemMaliciousCallTraceGetUserListRequest"/>
-        /// <see cref="SystemMaliciousCallTraceGetResponse"/>
-        /// </summary>
+    /// <see cref="SystemMaliciousCallTraceGetUserListRequest"/>
+    /// <see cref="SystemMaliciousCallTraceGetResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:15616""}]")]
     public class SystemMaliciousCallTraceGetUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15616")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
+        {
             get => _userTable;
-            set {
+            set
+            {
                 UserTableSpecified = true;
                 _userTable = value;
             }
@@ -33,6 +38,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserTableSpecified { get; set; }
-        
+
     }
 }

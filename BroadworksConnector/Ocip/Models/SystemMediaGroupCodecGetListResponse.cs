@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,21 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to SystemMediaGroupCodecGetListRequest.
     /// Contains a table of media assigned to the media group.
     /// The column headings are: "Codec Name", "Codec Weight".
-        /// <see cref="SystemMediaGroupCodecGetListRequest"/>
-        /// </summary>
+    /// <see cref="SystemMediaGroupCodecGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10734""}]")]
     public class SystemMediaGroupCodecGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _codecTable;
 
         [XmlElement(ElementName = "codecTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable CodecTable {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10734")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable CodecTable
+        {
             get => _codecTable;
-            set {
+            set
+            {
                 CodecTableSpecified = true;
                 _codecTable = value;
             }
@@ -30,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CodecTableSpecified { get; set; }
-        
+
     }
 }

@@ -1,25 +1,30 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Attributes of the WebDav protocol when the file repository interface is using WebDav.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class FileRepositoryProtocolWebDAV20 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18521""}]")]
+    public class FileRepositoryProtocolWebDAV20
     {
 
-        
         private bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
-        public bool Secure {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18521")]
+        public bool Secure
+        {
             get => _secure;
-            set {
+            set
+            {
                 SecureSpecified = true;
                 _secure = value;
             }
@@ -27,13 +32,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SecureSpecified { get; set; }
-        
+
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        public string NetAddress {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18521")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string NetAddress
+        {
             get => _netAddress;
-            set {
+            set
+            {
                 NetAddressSpecified = true;
                 _netAddress = value;
             }
@@ -41,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetAddressSpecified { get; set; }
-        
+
         private bool _extendedFileCaptureSupport;
 
         [XmlElement(ElementName = "extendedFileCaptureSupport", IsNullable = false, Namespace = "")]
-        public bool ExtendedFileCaptureSupport {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18521")]
+        public bool ExtendedFileCaptureSupport
+        {
             get => _extendedFileCaptureSupport;
-            set {
+            set
+            {
                 ExtendedFileCaptureSupportSpecified = true;
                 _extendedFileCaptureSupport = value;
             }
@@ -55,6 +68,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ExtendedFileCaptureSupportSpecified { get; set; }
-        
+
     }
 }

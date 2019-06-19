@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5644""}]")]
+    public class ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList
     {
 
-        
-        private List<string> _groupId;
+        private List<string> _groupId = new List<string>();
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public List<string> GroupId {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5644")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public List<string> GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -27,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
     }
 }

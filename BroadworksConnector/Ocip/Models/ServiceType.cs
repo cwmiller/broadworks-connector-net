@@ -5,37 +5,38 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for Service Type
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum ServiceType    {
-            [XmlEnum(Name = "Auto Attendant")]
+    public enum ServiceType
+    {
+        [XmlEnum(Name = "Auto Attendant")]
         AutoAttendant,
-            [XmlEnum(Name = "Auto Attendant - Standard")]
+        [XmlEnum(Name = "Auto Attendant - Standard")]
         AutoAttendantStandard,
-            [XmlEnum(Name = "BroadWorks Anywhere Portal")]
+        [XmlEnum(Name = "BroadWorks Anywhere Portal")]
         BroadWorksAnywherePortal,
-            [XmlEnum(Name = "Call Center")]
+        [XmlEnum(Name = "Call Center")]
         CallCenter,
-            [XmlEnum(Name = "Collaborate Bridge")]
+        [XmlEnum(Name = "Collaborate Bridge")]
         CollaborateBridge,
-            [XmlEnum(Name = "Find-me/Follow-me")]
+        [XmlEnum(Name = "Find-me/Follow-me")]
         FindmeFollowme,
-            [XmlEnum(Name = "Flexible Seating Host")]
+        [XmlEnum(Name = "Flexible Seating Host")]
         FlexibleSeatingHost,
-            [XmlEnum(Name = "Group Paging")]
+        [XmlEnum(Name = "Group Paging")]
         GroupPaging,
-            [XmlEnum(Name = "Hunt Group")]
+        [XmlEnum(Name = "Hunt Group")]
         HuntGroup,
-            [XmlEnum(Name = "Instant Group Call")]
+        [XmlEnum(Name = "Instant Group Call")]
         InstantGroupCall,
-            [XmlEnum(Name = "Instant Conference Bridge")]
+        [XmlEnum(Name = "Instant Conference Bridge")]
         InstantConferenceBridge,
-            [XmlEnum(Name = "Meet-Me Conference Bridge")]
+        [XmlEnum(Name = "Meet-Me Conference Bridge")]
         MeetMeConferenceBridge,
-            [XmlEnum(Name = "Route Point")]
+        [XmlEnum(Name = "Route Point")]
         RoutePoint,
-            [XmlEnum(Name = "VoiceXML")]
+        [XmlEnum(Name = "VoiceXML")]
         VoiceXML,
-     }
+    }
 }

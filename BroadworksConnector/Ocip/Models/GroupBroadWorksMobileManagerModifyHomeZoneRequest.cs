@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify an existing home zone in the BroadWorks Mobile Manager.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1956""}]")]
     public class GroupBroadWorksMobileManagerModifyHomeZoneRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1956")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1956")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -44,13 +56,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _homeZoneId;
 
         [XmlElement(ElementName = "homeZoneId", IsNullable = false, Namespace = "")]
-        public string HomeZoneId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1956")]
+        public string HomeZoneId
+        {
             get => _homeZoneId;
-            set {
+            set
+            {
                 HomeZoneIdSpecified = true;
                 _homeZoneId = value;
             }
@@ -58,13 +73,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HomeZoneIdSpecified { get; set; }
-        
+
         private string _homeZoneDomainName;
 
         [XmlElement(ElementName = "homeZoneDomainName", IsNullable = false, Namespace = "")]
-        public string HomeZoneDomainName {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1956")]
+        [MinLength(1)]
+        [MaxLength(100)]
+        public string HomeZoneDomainName
+        {
             get => _homeZoneDomainName;
-            set {
+            set
+            {
                 HomeZoneDomainNameSpecified = true;
                 _homeZoneDomainName = value;
             }
@@ -72,13 +93,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool HomeZoneDomainNameSpecified { get; set; }
-        
+
         private string _mobileCountryCode;
 
         [XmlElement(ElementName = "mobileCountryCode", IsNullable = false, Namespace = "")]
-        public string MobileCountryCode {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1956")]
+        [MinLength(1)]
+        [MaxLength(3)]
+        public string MobileCountryCode
+        {
             get => _mobileCountryCode;
-            set {
+            set
+            {
                 MobileCountryCodeSpecified = true;
                 _mobileCountryCode = value;
             }
@@ -86,13 +113,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobileCountryCodeSpecified { get; set; }
-        
+
         private string _mobileNetworkCode;
 
         [XmlElement(ElementName = "mobileNetworkCode", IsNullable = false, Namespace = "")]
-        public string MobileNetworkCode {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1956")]
+        [MinLength(1)]
+        [MaxLength(3)]
+        public string MobileNetworkCode
+        {
             get => _mobileNetworkCode;
-            set {
+            set
+            {
                 MobileNetworkCodeSpecified = true;
                 _mobileNetworkCode = value;
             }
@@ -100,13 +133,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MobileNetworkCodeSpecified { get; set; }
-        
+
         private string _locationAreaCode;
 
         [XmlElement(ElementName = "locationAreaCode", IsNullable = false, Namespace = "")]
-        public string LocationAreaCode {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1956")]
+        [MinLength(1)]
+        [MaxLength(5)]
+        public string LocationAreaCode
+        {
             get => _locationAreaCode;
-            set {
+            set
+            {
                 LocationAreaCodeSpecified = true;
                 _locationAreaCode = value;
             }
@@ -114,13 +153,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool LocationAreaCodeSpecified { get; set; }
-        
+
         private string _cellIdentity;
 
         [XmlElement(ElementName = "cellIdentity", IsNullable = false, Namespace = "")]
-        public string CellIdentity {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1956")]
+        [MinLength(1)]
+        [MaxLength(5)]
+        public string CellIdentity
+        {
             get => _cellIdentity;
-            set {
+            set
+            {
                 CellIdentitySpecified = true;
                 _cellIdentity = value;
             }
@@ -128,6 +173,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CellIdentitySpecified { get; set; }
-        
+
     }
 }

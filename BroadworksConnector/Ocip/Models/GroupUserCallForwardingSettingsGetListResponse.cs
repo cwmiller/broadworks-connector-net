@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -14,21 +16,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The "Forwarding Address" is the Call Forwarding service's forwarding address.
     /// If the service is Call Forwarding Selective, the default forwarding address is returned.
     /// "Phone Number" is presented in the E164 format.
-        /// <see cref="GroupUserCallForwardingSettingsGetListRequest"/>
-        /// </summary>
+    /// <see cref="GroupUserCallForwardingSettingsGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7372""}]")]
     public class GroupUserCallForwardingSettingsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _userCallForwardingTable;
 
         [XmlElement(ElementName = "userCallForwardingTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable UserCallForwardingTable {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7372")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable UserCallForwardingTable
+        {
             get => _userCallForwardingTable;
-            set {
+            set
+            {
                 UserCallForwardingTableSpecified = true;
                 _userCallForwardingTable = value;
             }
@@ -36,6 +41,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserCallForwardingTableSpecified { get; set; }
-        
+
     }
 }

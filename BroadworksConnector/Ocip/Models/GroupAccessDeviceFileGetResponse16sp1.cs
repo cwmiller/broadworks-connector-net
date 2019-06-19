@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to GroupAccessDeviceFileGetRequest16sp1.
     /// 
     /// Replaced by: GroupAccessDeviceFileGetResponse20
-        /// <see cref="GroupAccessDeviceFileGetRequest16sp1"/>
-        /// <see cref="GroupAccessDeviceFileGetResponse20"/>
-        /// </summary>
+    /// <see cref="GroupAccessDeviceFileGetRequest16sp1"/>
+    /// <see cref="GroupAccessDeviceFileGetResponse20"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:40913""}]")]
     public class GroupAccessDeviceFileGetResponse16sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode _fileSource;
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40913")]
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource
+        {
             get => _fileSource;
-            set {
+            set
+            {
                 FileSourceSpecified = true;
                 _fileSource = value;
             }
@@ -31,13 +36,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FileSourceSpecified { get; set; }
-        
+
         private string _configurationFileName;
 
         [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
-        public string ConfigurationFileName {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40913")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string ConfigurationFileName
+        {
             get => _configurationFileName;
-            set {
+            set
+            {
                 ConfigurationFileNameSpecified = true;
                 _configurationFileName = value;
             }
@@ -45,13 +56,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ConfigurationFileNameSpecified { get; set; }
-        
+
         private string _accessUrl;
 
         [XmlElement(ElementName = "accessUrl", IsNullable = false, Namespace = "")]
-        public string AccessUrl {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40913")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string AccessUrl
+        {
             get => _accessUrl;
-            set {
+            set
+            {
                 AccessUrlSpecified = true;
                 _accessUrl = value;
             }
@@ -59,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessUrlSpecified { get; set; }
-        
+
         private string _repositoryUrl;
 
         [XmlElement(ElementName = "repositoryUrl", IsNullable = false, Namespace = "")]
-        public string RepositoryUrl {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40913")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string RepositoryUrl
+        {
             get => _repositoryUrl;
-            set {
+            set
+            {
                 RepositoryUrlSpecified = true;
                 _repositoryUrl = value;
             }
@@ -73,13 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RepositoryUrlSpecified { get; set; }
-        
+
         private string _templateUrl;
 
         [XmlElement(ElementName = "templateUrl", IsNullable = false, Namespace = "")]
-        public string TemplateUrl {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40913")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string TemplateUrl
+        {
             get => _templateUrl;
-            set {
+            set
+            {
                 TemplateUrlSpecified = true;
                 _templateUrl = value;
             }
@@ -87,6 +115,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TemplateUrlSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request a user of a file repository in the system.
     /// The response is either a SystemFileRepositoryDeviceUserGetResponse or an ErrorResponse.
-        /// <see cref="SystemFileRepositoryDeviceUserGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SystemFileRepositoryDeviceUserGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9479""}]")]
     public class SystemFileRepositoryDeviceUserGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _fileRepositoryName;
 
         [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
-        public string FileRepositoryName {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9479")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string FileRepositoryName
+        {
             get => _fileRepositoryName;
-            set {
+            set
+            {
                 FileRepositoryNameSpecified = true;
                 _fileRepositoryName = value;
             }
@@ -30,13 +37,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FileRepositoryNameSpecified { get; set; }
-        
+
         private string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
-        public string UserName {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9479")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string UserName
+        {
             get => _userName;
-            set {
+            set
+            {
                 UserNameSpecified = true;
                 _userName = value;
             }
@@ -44,6 +56,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UserNameSpecified { get; set; }
-        
+
     }
 }

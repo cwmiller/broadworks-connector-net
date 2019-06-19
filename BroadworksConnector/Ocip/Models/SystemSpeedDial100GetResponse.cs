@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the SystemSpeedDial100GetRequest.
     /// 
     /// Replaced by: SystemSpeedDial100GetResponse17sp1
-        /// <see cref="SystemSpeedDial100GetRequest"/>
-        /// <see cref="SystemSpeedDial100GetResponse17sp1"/>
-        /// </summary>
+    /// <see cref="SystemSpeedDial100GetRequest"/>
+    /// <see cref="SystemSpeedDial100GetResponse17sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:22545""}]")]
     public class SystemSpeedDial100GetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _prefix;
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
-        public string Prefix {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22545")]
+        [MinLength(1)]
+        [MaxLength(2)]
+        public string Prefix
+        {
             get => _prefix;
-            set {
+            set
+            {
                 PrefixSpecified = true;
                 _prefix = value;
             }
@@ -31,6 +38,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PrefixSpecified { get; set; }
-        
+
     }
 }

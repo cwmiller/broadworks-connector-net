@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -10,22 +12,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// The system default tag set name is not part of this response.
     /// 
     /// Replaced by SystemDeviceManagementTagSetGetListResponse22 in AS data mode
-        /// <see cref="SystemDeviceManagementTagSetGetListRequest"/>
-        /// <see cref="SystemDeviceManagementTagSetGetListResponse22"/>
-        /// </summary>
+    /// <see cref="SystemDeviceManagementTagSetGetListRequest"/>
+    /// <see cref="SystemDeviceManagementTagSetGetListResponse22"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6203""}]")]
     public class SystemDeviceManagementTagSetGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
-        private List<string> _tagSetName;
+        private List<string> _tagSetName = new List<string>();
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        public List<string> TagSetName {
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6203")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public List<string> TagSetName
+        {
             get => _tagSetName;
-            set {
+            set
+            {
                 TagSetNameSpecified = true;
                 _tagSetName = value;
             }
@@ -33,6 +41,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TagSetNameSpecified { get; set; }
-        
+
     }
 }

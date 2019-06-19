@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a static entry in the Diameter Peer Table.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2356""}]")]
     public class SystemBwDiameterPeerAddRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
 
         [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance Instance {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2356")]
+        public BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance Instance
+        {
             get => _instance;
-            set {
+            set
+            {
                 InstanceSpecified = true;
                 _instance = value;
             }
@@ -30,13 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool InstanceSpecified { get; set; }
-        
+
         private string _identity;
 
         [XmlElement(ElementName = "identity", IsNullable = false, Namespace = "")]
-        public string Identity {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2356")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string Identity
+        {
             get => _identity;
-            set {
+            set
+            {
                 IdentitySpecified = true;
                 _identity = value;
             }
@@ -44,13 +54,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IdentitySpecified { get; set; }
-        
+
         private string _ipAddress;
 
         [XmlElement(ElementName = "ipAddress", IsNullable = false, Namespace = "")]
-        public string IpAddress {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2356")]
+        [MinLength(1)]
+        [MaxLength(39)]
+        public string IpAddress
+        {
             get => _ipAddress;
-            set {
+            set
+            {
                 IpAddressSpecified = true;
                 _ipAddress = value;
             }
@@ -58,13 +74,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IpAddressSpecified { get; set; }
-        
+
         private int _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
-        public int Port {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2356")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int Port
+        {
             get => _port;
-            set {
+            set
+            {
                 PortSpecified = true;
                 _port = value;
             }
@@ -72,13 +93,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PortSpecified { get; set; }
-        
+
         private bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
-        public bool Enabled {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2356")]
+        public bool Enabled
+        {
             get => _enabled;
-            set {
+            set
+            {
                 EnabledSpecified = true;
                 _enabled = value;
             }
@@ -86,13 +110,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnabledSpecified { get; set; }
-        
+
         private bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
-        public bool Secure {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2356")]
+        public bool Secure
+        {
             get => _secure;
-            set {
+            set
+            {
                 SecureSpecified = true;
                 _secure = value;
             }
@@ -100,6 +127,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SecureSpecified { get; set; }
-        
+
     }
 }

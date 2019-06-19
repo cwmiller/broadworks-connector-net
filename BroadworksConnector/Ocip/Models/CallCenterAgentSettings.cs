@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Specifies an agent's settings for a particular Call Center.
     /// The skillLevel only applies to Premium agents.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterAgentSettings 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:259""}]")]
+    public class CallCenterAgentSettings
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:259")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -28,13 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private bool _available;
 
         [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
-        public bool Available {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:259")]
+        public bool Available
+        {
             get => _available;
-            set {
+            set
+            {
                 AvailableSpecified = true;
                 _available = value;
             }
@@ -42,13 +53,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AvailableSpecified { get; set; }
-        
+
         private int _skillLevel;
 
         [XmlElement(ElementName = "skillLevel", IsNullable = false, Namespace = "")]
-        public int SkillLevel {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:259")]
+        [MinInclusive(1)]
+        [MaxInclusive(20)]
+        public int SkillLevel
+        {
             get => _skillLevel;
-            set {
+            set
+            {
                 SkillLevelSpecified = true;
                 _skillLevel = value;
             }
@@ -56,6 +73,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SkillLevelSpecified { get; set; }
-        
+
     }
 }

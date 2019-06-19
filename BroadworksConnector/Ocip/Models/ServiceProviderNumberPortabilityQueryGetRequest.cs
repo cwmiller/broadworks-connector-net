@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get the Service Provider Number Portability Query Digit Pattern Trigger List information.
     /// The response is either a ServiceProviderNumberPortabilityQueryGetResponse or an ErrorResponse.
-        /// <see cref="ServiceProviderNumberPortabilityQueryGetResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="ServiceProviderNumberPortabilityQueryGetResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4297""}]")]
     public class ServiceProviderNumberPortabilityQueryGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4297")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -30,13 +37,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private bool _includeDigitPatterns;
 
         [XmlElement(ElementName = "includeDigitPatterns", IsNullable = false, Namespace = "")]
-        public bool IncludeDigitPatterns {
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4297")]
+        public bool IncludeDigitPatterns
+        {
             get => _includeDigitPatterns;
-            set {
+            set
+            {
                 IncludeDigitPatternsSpecified = true;
                 _includeDigitPatterns = value;
             }
@@ -44,13 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IncludeDigitPatternsSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderNumberPortabilityQueryDigitPattern> _searchCriteriaServiceProviderNumberPortabilityQueryDigitPattern;
+
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderNumberPortabilityQueryDigitPattern> _searchCriteriaServiceProviderNumberPortabilityQueryDigitPattern = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderNumberPortabilityQueryDigitPattern>();
 
         [XmlElement(ElementName = "searchCriteriaServiceProviderNumberPortabilityQueryDigitPattern", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderNumberPortabilityQueryDigitPattern> SearchCriteriaServiceProviderNumberPortabilityQueryDigitPattern {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4297")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderNumberPortabilityQueryDigitPattern> SearchCriteriaServiceProviderNumberPortabilityQueryDigitPattern
+        {
             get => _searchCriteriaServiceProviderNumberPortabilityQueryDigitPattern;
-            set {
+            set
+            {
                 SearchCriteriaServiceProviderNumberPortabilityQueryDigitPatternSpecified = true;
                 _searchCriteriaServiceProviderNumberPortabilityQueryDigitPattern = value;
             }
@@ -58,13 +72,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SearchCriteriaServiceProviderNumberPortabilityQueryDigitPatternSpecified { get; set; }
-        
+
         private int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
-        public int ResponseSizeLimit {
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4297")]
+        [MinInclusive(1)]
+        public int ResponseSizeLimit
+        {
             get => _responseSizeLimit;
-            set {
+            set
+            {
                 ResponseSizeLimitSpecified = true;
                 _responseSizeLimit = value;
             }
@@ -72,6 +91,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResponseSizeLimitSpecified { get; set; }
-        
+
     }
 }

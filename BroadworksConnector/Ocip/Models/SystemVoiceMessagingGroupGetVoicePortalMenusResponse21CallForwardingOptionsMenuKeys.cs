@@ -1,25 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// 
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21CallForwardingOptionsMenuKeys 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:853""}]")]
+    public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21CallForwardingOptionsMenuKeys
     {
 
-        
         private string _activateCallForwarding;
 
         [XmlElement(ElementName = "activateCallForwarding", IsNullable = false, Namespace = "")]
-        public string ActivateCallForwarding {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ActivateCallForwarding
+        {
             get => _activateCallForwarding;
-            set {
+            set
+            {
                 ActivateCallForwardingSpecified = true;
                 _activateCallForwarding = value;
             }
@@ -27,13 +35,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ActivateCallForwardingSpecified { get; set; }
-        
+
         private string _deactivateCallForwarding;
 
         [XmlElement(ElementName = "deactivateCallForwarding", IsNullable = false, Namespace = "")]
-        public string DeactivateCallForwarding {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string DeactivateCallForwarding
+        {
             get => _deactivateCallForwarding;
-            set {
+            set
+            {
                 DeactivateCallForwardingSpecified = true;
                 _deactivateCallForwarding = value;
             }
@@ -41,13 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeactivateCallForwardingSpecified { get; set; }
-        
+
         private string _changeCallForwardingDestination;
 
         [XmlElement(ElementName = "changeCallForwardingDestination", IsNullable = false, Namespace = "")]
-        public string ChangeCallForwardingDestination {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ChangeCallForwardingDestination
+        {
             get => _changeCallForwardingDestination;
-            set {
+            set
+            {
                 ChangeCallForwardingDestinationSpecified = true;
                 _changeCallForwardingDestination = value;
             }
@@ -55,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ChangeCallForwardingDestinationSpecified { get; set; }
-        
+
         private string _listenToCallForwardingStatus;
 
         [XmlElement(ElementName = "listenToCallForwardingStatus", IsNullable = false, Namespace = "")]
-        public string ListenToCallForwardingStatus {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ListenToCallForwardingStatus
+        {
             get => _listenToCallForwardingStatus;
-            set {
+            set
+            {
                 ListenToCallForwardingStatusSpecified = true;
                 _listenToCallForwardingStatus = value;
             }
@@ -69,13 +95,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ListenToCallForwardingStatusSpecified { get; set; }
-        
+
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        public string ReturnToPreviousMenu {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string ReturnToPreviousMenu
+        {
             get => _returnToPreviousMenu;
-            set {
+            set
+            {
                 ReturnToPreviousMenuSpecified = true;
                 _returnToPreviousMenu = value;
             }
@@ -83,13 +114,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ReturnToPreviousMenuSpecified { get; set; }
-        
+
         private string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
-        public string RepeatMenu {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Length(1)]
+        [RegularExpression(@"[0-9]|\*|#")]
+        public string RepeatMenu
+        {
             get => _repeatMenu;
-            set {
+            set
+            {
                 RepeatMenuSpecified = true;
                 _repeatMenu = value;
             }
@@ -97,6 +134,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RepeatMenuSpecified { get; set; }
-        
+
     }
 }

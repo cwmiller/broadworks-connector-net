@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for Preferred Session Timer Refresher.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum SessionTimerRefresher    {
-            [XmlEnum(Name = "Local")]
+    public enum SessionTimerRefresher
+    {
+        [XmlEnum(Name = "Local")]
         Local,
-            [XmlEnum(Name = "Remote")]
+        [XmlEnum(Name = "Remote")]
         Remote,
-     }
+    }
 }

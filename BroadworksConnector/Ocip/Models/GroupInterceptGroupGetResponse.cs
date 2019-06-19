@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the GroupInterceptGroupGetRequest.
     /// Replaced By: GroupInterceptGroupGetResponse16
-        /// <see cref="GroupInterceptGroupGetRequest"/>
-        /// <see cref="GroupInterceptGroupGetResponse16"/>
-        /// </summary>
+    /// <see cref="GroupInterceptGroupGetRequest"/>
+    /// <see cref="GroupInterceptGroupGetResponse16"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:9096""}]")]
     public class GroupInterceptGroupGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9096")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -30,13 +35,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9096")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection
+        {
             get => _announcementSelection;
-            set {
+            set
+            {
                 AnnouncementSelectionSpecified = true;
                 _announcementSelection = value;
             }
@@ -44,13 +52,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AnnouncementSelectionSpecified { get; set; }
-        
+
         private string _audioFileDescription;
 
         [XmlElement(ElementName = "audioFileDescription", IsNullable = false, Namespace = "")]
-        public string AudioFileDescription {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9096")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string AudioFileDescription
+        {
             get => _audioFileDescription;
-            set {
+            set
+            {
                 AudioFileDescriptionSpecified = true;
                 _audioFileDescription = value;
             }
@@ -58,13 +72,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioFileDescriptionSpecified { get; set; }
-        
+
         private string _videoFileDescription;
 
         [XmlElement(ElementName = "videoFileDescription", IsNullable = false, Namespace = "")]
-        public string VideoFileDescription {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9096")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string VideoFileDescription
+        {
             get => _videoFileDescription;
-            set {
+            set
+            {
                 VideoFileDescriptionSpecified = true;
                 _videoFileDescription = value;
             }
@@ -72,13 +92,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoFileDescriptionSpecified { get; set; }
-        
+
         private bool _playNewPhoneNumber;
 
         [XmlElement(ElementName = "playNewPhoneNumber", IsNullable = false, Namespace = "")]
-        public bool PlayNewPhoneNumber {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9096")]
+        public bool PlayNewPhoneNumber
+        {
             get => _playNewPhoneNumber;
-            set {
+            set
+            {
                 PlayNewPhoneNumberSpecified = true;
                 _playNewPhoneNumber = value;
             }
@@ -86,13 +109,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayNewPhoneNumberSpecified { get; set; }
-        
+
         private string _newPhoneNumber;
 
         [XmlElement(ElementName = "newPhoneNumber", IsNullable = false, Namespace = "")]
-        public string NewPhoneNumber {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9096")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string NewPhoneNumber
+        {
             get => _newPhoneNumber;
-            set {
+            set
+            {
                 NewPhoneNumberSpecified = true;
                 _newPhoneNumber = value;
             }
@@ -100,13 +129,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NewPhoneNumberSpecified { get; set; }
-        
+
         private bool _transferOnZeroToPhoneNumber;
 
         [XmlElement(ElementName = "transferOnZeroToPhoneNumber", IsNullable = false, Namespace = "")]
-        public bool TransferOnZeroToPhoneNumber {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9096")]
+        public bool TransferOnZeroToPhoneNumber
+        {
             get => _transferOnZeroToPhoneNumber;
-            set {
+            set
+            {
                 TransferOnZeroToPhoneNumberSpecified = true;
                 _transferOnZeroToPhoneNumber = value;
             }
@@ -114,13 +146,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TransferOnZeroToPhoneNumberSpecified { get; set; }
-        
+
         private string _transferPhoneNumber;
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = false, Namespace = "")]
-        public string TransferPhoneNumber {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9096")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string TransferPhoneNumber
+        {
             get => _transferPhoneNumber;
-            set {
+            set
+            {
                 TransferPhoneNumberSpecified = true;
                 _transferPhoneNumber = value;
             }
@@ -128,6 +166,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TransferPhoneNumberSpecified { get; set; }
-        
+
     }
 }

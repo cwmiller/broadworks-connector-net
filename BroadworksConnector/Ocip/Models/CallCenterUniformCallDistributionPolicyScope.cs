@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Call Center Uniform Call Distribution Policy Scope.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterUniformCallDistributionPolicyScope    {
-            [XmlEnum(Name = "Agent")]
+    public enum CallCenterUniformCallDistributionPolicyScope
+    {
+        [XmlEnum(Name = "Agent")]
         Agent,
-            [XmlEnum(Name = "Call Center")]
+        [XmlEnum(Name = "Call Center")]
         CallCenter,
-     }
+    }
 }

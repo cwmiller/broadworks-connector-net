@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// A list of Group Trunk Krunk Group Names that replaces a previously configured list.
     /// By convention, an element of this type may be set nill to clear the list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ReplacementEnterpriseTrunkTrunkGroupList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1920""}]")]
+    public class ReplacementEnterpriseTrunkTrunkGroupList
     {
 
-        
-        private List<string> _trunkGroup;
+        private List<string> _trunkGroup = new List<string>();
 
         [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
-        public List<string> TrunkGroup {
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1920")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public List<string> TrunkGroup
+        {
             get => _trunkGroup;
-            set {
+            set
+            {
                 TrunkGroupSpecified = true;
                 _trunkGroup = value;
             }
@@ -28,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TrunkGroupSpecified { get; set; }
-        
+
     }
 }

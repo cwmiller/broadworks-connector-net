@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -21,21 +23,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// - The value of the extension for the corresponding Calls To Type, when the extension is available. i.e. Primary may have number, but no extension.
     /// - For Mobility Calls To Type, this is always blank.
     /// - When no extension is available a blank space is provided instead.
-        /// <see cref="UserCallNotifyGetRequest"/>
-        /// </summary>
+    /// <see cref="UserCallNotifyGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""26f62134ab1693f4bdddc7c70b20d2eb:257""}]")]
     public class UserCallNotifyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _callNotifyEmailAddress;
 
         [XmlElement(ElementName = "callNotifyEmailAddress", IsNullable = false, Namespace = "")]
-        public string CallNotifyEmailAddress {
+        [Optional]
+        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:257")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string CallNotifyEmailAddress
+        {
             get => _callNotifyEmailAddress;
-            set {
+            set
+            {
                 CallNotifyEmailAddressSpecified = true;
                 _callNotifyEmailAddress = value;
             }
@@ -43,13 +51,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CallNotifyEmailAddressSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
+        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:257")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
+        {
             get => _criteriaTable;
-            set {
+            set
+            {
                 CriteriaTableSpecified = true;
                 _criteriaTable = value;
             }
@@ -57,6 +68,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaTableSpecified { get; set; }
-        
+
     }
 }

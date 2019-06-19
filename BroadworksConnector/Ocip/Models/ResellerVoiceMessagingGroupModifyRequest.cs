@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the reseller level data associated with Voice Messaging.
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:354""}]")]
     public class ResellerVoiceMessagingGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        public string ResellerId {
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:354")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ResellerId
+        {
             get => _resellerId;
-            set {
+            set
+            {
                 ResellerIdSpecified = true;
                 _resellerId = value;
             }
@@ -30,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ResellerIdSpecified { get; set; }
-        
+
         private string _deliveryFromAddress;
 
         [XmlElement(ElementName = "deliveryFromAddress", IsNullable = true, Namespace = "")]
-        public string DeliveryFromAddress {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:354")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string DeliveryFromAddress
+        {
             get => _deliveryFromAddress;
-            set {
+            set
+            {
                 DeliveryFromAddressSpecified = true;
                 _deliveryFromAddress = value;
             }
@@ -44,13 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeliveryFromAddressSpecified { get; set; }
-        
+
         private string _notificationFromAddress;
 
         [XmlElement(ElementName = "notificationFromAddress", IsNullable = true, Namespace = "")]
-        public string NotificationFromAddress {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:354")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string NotificationFromAddress
+        {
             get => _notificationFromAddress;
-            set {
+            set
+            {
                 NotificationFromAddressSpecified = true;
                 _notificationFromAddress = value;
             }
@@ -58,13 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NotificationFromAddressSpecified { get; set; }
-        
+
         private string _voicePortalLockoutFromAddress;
 
         [XmlElement(ElementName = "voicePortalLockoutFromAddress", IsNullable = true, Namespace = "")]
-        public string VoicePortalLockoutFromAddress {
+        [Optional]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:354")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string VoicePortalLockoutFromAddress
+        {
             get => _voicePortalLockoutFromAddress;
-            set {
+            set
+            {
                 VoicePortalLockoutFromAddressSpecified = true;
                 _voicePortalLockoutFromAddress = value;
             }
@@ -72,6 +97,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VoicePortalLockoutFromAddressSpecified { get; set; }
-        
+
     }
 }

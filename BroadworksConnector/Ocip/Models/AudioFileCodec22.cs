@@ -11,31 +11,32 @@ namespace BroadWorksConnector.Ocip.Models
     /// EVRCNW0
     /// The following values are only used in AS data mode and will fail in XS data mode:
     /// OPUS
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum AudioFileCodec22    {
-            [XmlEnum(Name = "None")]
+    public enum AudioFileCodec22
+    {
+        [XmlEnum(Name = "None")]
         None,
-            [XmlEnum(Name = "G711")]
+        [XmlEnum(Name = "G711")]
         G711,
-            [XmlEnum(Name = "G722")]
+        [XmlEnum(Name = "G722")]
         G722,
-            [XmlEnum(Name = "G729")]
+        [XmlEnum(Name = "G729")]
         G729,
-            [XmlEnum(Name = "G726")]
+        [XmlEnum(Name = "G726")]
         G726,
-            [XmlEnum(Name = "AMR")]
+        [XmlEnum(Name = "AMR")]
         AMR,
-            [XmlEnum(Name = "AMR-WB")]
+        [XmlEnum(Name = "AMR-WB")]
         AMRWB,
-            [XmlEnum(Name = "OPUS")]
+        [XmlEnum(Name = "OPUS")]
         OPUS,
-            [XmlEnum(Name = "EVRC0")]
+        [XmlEnum(Name = "EVRC0")]
         EVRC0,
-            [XmlEnum(Name = "EVRCNW")]
+        [XmlEnum(Name = "EVRCNW")]
         EVRCNW,
-            [XmlEnum(Name = "EVRCNW0")]
+        [XmlEnum(Name = "EVRCNW0")]
         EVRCNW0,
-     }
+    }
 }

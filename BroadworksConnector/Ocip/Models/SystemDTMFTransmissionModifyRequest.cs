@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the DTMF transmission settings.
     /// The response is either SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8598""}]")]
     public class SystemDTMFTransmissionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod _transmissionMethod;
 
         [XmlElement(ElementName = "transmissionMethod", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod TransmissionMethod {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8598")]
+        public BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod TransmissionMethod
+        {
             get => _transmissionMethod;
-            set {
+            set
+            {
                 TransmissionMethodSpecified = true;
                 _transmissionMethod = value;
             }
@@ -30,13 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TransmissionMethodSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType _signalingContentType;
 
         [XmlElement(ElementName = "signalingContentType", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType SignalingContentType {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8598")]
+        public BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType SignalingContentType
+        {
             get => _signalingContentType;
-            set {
+            set
+            {
                 SignalingContentTypeSpecified = true;
                 _signalingContentType = value;
             }
@@ -44,6 +54,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SignalingContentTypeSpecified { get; set; }
-        
+
     }
 }

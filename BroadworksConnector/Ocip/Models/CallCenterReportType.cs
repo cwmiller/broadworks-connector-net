@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The call center enhanced reporting type.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum CallCenterReportType    {
-            [XmlEnum(Name = "Agent")]
+    public enum CallCenterReportType
+    {
+        [XmlEnum(Name = "Agent")]
         Agent,
-            [XmlEnum(Name = "Call Center Dnis")]
+        [XmlEnum(Name = "Call Center Dnis")]
         CallCenterDnis,
-            [XmlEnum(Name = "Call Center")]
+        [XmlEnum(Name = "Call Center")]
         CallCenter,
-     }
+    }
 }

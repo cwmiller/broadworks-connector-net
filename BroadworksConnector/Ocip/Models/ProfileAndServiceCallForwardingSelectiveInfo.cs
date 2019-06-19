@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -11,20 +13,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Is Active", "Criteria Name", "Time Schedule", "Calls From", "Forward To", "Blacklisted", "Holiday Schedule"
     /// 
     /// The "Calls From" column is a string containing call numbers
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ProfileAndServiceCallForwardingSelectiveInfo 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4110""}]")]
+    public class ProfileAndServiceCallForwardingSelectiveInfo
     {
 
-        
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        public bool IsActive {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4110")]
+        public bool IsActive
+        {
             get => _isActive;
-            set {
+            set
+            {
                 IsActiveSpecified = true;
                 _isActive = value;
             }
@@ -32,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveSpecified { get; set; }
-        
+
         private string _defaultForwardToPhoneNumber;
 
         [XmlElement(ElementName = "defaultForwardToPhoneNumber", IsNullable = false, Namespace = "")]
-        public string DefaultForwardToPhoneNumber {
+        [Optional]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4110")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string DefaultForwardToPhoneNumber
+        {
             get => _defaultForwardToPhoneNumber;
-            set {
+            set
+            {
                 DefaultForwardToPhoneNumberSpecified = true;
                 _defaultForwardToPhoneNumber = value;
             }
@@ -46,13 +57,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DefaultForwardToPhoneNumberSpecified { get; set; }
-        
+
         private bool _playRingReminder;
 
         [XmlElement(ElementName = "playRingReminder", IsNullable = false, Namespace = "")]
-        public bool PlayRingReminder {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4110")]
+        public bool PlayRingReminder
+        {
             get => _playRingReminder;
-            set {
+            set
+            {
                 PlayRingReminderSpecified = true;
                 _playRingReminder = value;
             }
@@ -60,13 +74,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PlayRingReminderSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable {
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4110")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
+        {
             get => _criteriaTable;
-            set {
+            set
+            {
                 CriteriaTableSpecified = true;
                 _criteriaTable = value;
             }
@@ -74,6 +91,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool CriteriaTableSpecified { get; set; }
-        
+
     }
 }

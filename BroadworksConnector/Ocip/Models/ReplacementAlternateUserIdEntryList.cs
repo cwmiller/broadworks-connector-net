@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// A list of alternate user ids that that replaces a previously configured list.
     /// By convention, an element of this type may be set nill to clear the list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class ReplacementAlternateUserIdEntryList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3088""}]")]
+    public class ReplacementAlternateUserIdEntryList
     {
 
-        
-        private List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry> _alternateUserId;
+        private List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry> _alternateUserId = new List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry>();
 
         [XmlElement(ElementName = "alternateUserId", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry> AlternateUserId {
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3088")]
+        public List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry> AlternateUserId
+        {
             get => _alternateUserId;
-            set {
+            set
+            {
                 AlternateUserIdSpecified = true;
                 _alternateUserId = value;
             }
@@ -28,6 +33,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AlternateUserIdSpecified { get; set; }
-        
+
     }
 }

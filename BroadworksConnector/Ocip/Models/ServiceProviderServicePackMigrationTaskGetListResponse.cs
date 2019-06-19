@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,22 +14,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// namely January 1, 1970, 00:00:00 GMT.
     /// 
     /// Replaced By : ServiceProviderServicePackMigrationTaskGetListResponse21 in AS data mode
-        /// <see cref="ServiceProviderServicePackMigrationTaskGetListRequest"/>
-        /// <see cref="ServiceProviderServicePackMigrationTaskGetListResponse21"/>
-        /// </summary>
+    /// <see cref="ServiceProviderServicePackMigrationTaskGetListRequest"/>
+    /// <see cref="ServiceProviderServicePackMigrationTaskGetListResponse21"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2855""}]")]
     public class ServiceProviderServicePackMigrationTaskGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _taskTable;
 
         [XmlElement(ElementName = "taskTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable TaskTable {
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2855")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable TaskTable
+        {
             get => _taskTable;
-            set {
+            set
+            {
                 TaskTableSpecified = true;
                 _taskTable = value;
             }
@@ -35,6 +40,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TaskTableSpecified { get; set; }
-        
+
     }
 }

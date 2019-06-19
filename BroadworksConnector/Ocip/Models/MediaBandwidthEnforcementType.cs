@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Types of bandwidth enforcement.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum MediaBandwidthEnforcementType    {
-            [XmlEnum(Name = "Allow All")]
+    public enum MediaBandwidthEnforcementType
+    {
+        [XmlEnum(Name = "Allow All")]
         AllowAll,
-            [XmlEnum(Name = "Allow Unspecified")]
+        [XmlEnum(Name = "Allow Unspecified")]
         AllowUnspecified,
-            [XmlEnum(Name = "Enforce All")]
+        [XmlEnum(Name = "Enforce All")]
         EnforceAll,
-     }
+    }
 }

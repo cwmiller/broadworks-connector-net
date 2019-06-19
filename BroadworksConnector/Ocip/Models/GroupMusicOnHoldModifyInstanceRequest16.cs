@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -8,22 +10,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// Modify data for a group or department Music On
     /// Hold Instance.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:30306""}]")]
     public class GroupMusicOnHoldModifyInstanceRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30306")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -31,13 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30306")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -45,13 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
         [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.DepartmentKey Department {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30306")]
+        public BroadWorksConnector.Ocip.Models.DepartmentKey Department
+        {
             get => _department;
-            set {
+            set
+            {
                 DepartmentSpecified = true;
                 _department = value;
             }
@@ -59,13 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DepartmentSpecified { get; set; }
-        
+
         private bool _isActiveDuringCallHold;
 
         [XmlElement(ElementName = "isActiveDuringCallHold", IsNullable = false, Namespace = "")]
-        public bool IsActiveDuringCallHold {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30306")]
+        public bool IsActiveDuringCallHold
+        {
             get => _isActiveDuringCallHold;
-            set {
+            set
+            {
                 IsActiveDuringCallHoldSpecified = true;
                 _isActiveDuringCallHold = value;
             }
@@ -73,13 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveDuringCallHoldSpecified { get; set; }
-        
+
         private bool _isActiveDuringCallPark;
 
         [XmlElement(ElementName = "isActiveDuringCallPark", IsNullable = false, Namespace = "")]
-        public bool IsActiveDuringCallPark {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30306")]
+        public bool IsActiveDuringCallPark
+        {
             get => _isActiveDuringCallPark;
-            set {
+            set
+            {
                 IsActiveDuringCallParkSpecified = true;
                 _isActiveDuringCallPark = value;
             }
@@ -87,13 +111,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveDuringCallParkSpecified { get; set; }
-        
+
         private bool _isActiveDuringBusyCampOn;
 
         [XmlElement(ElementName = "isActiveDuringBusyCampOn", IsNullable = false, Namespace = "")]
-        public bool IsActiveDuringBusyCampOn {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30306")]
+        public bool IsActiveDuringBusyCampOn
+        {
             get => _isActiveDuringBusyCampOn;
-            set {
+            set
+            {
                 IsActiveDuringBusyCampOnSpecified = true;
                 _isActiveDuringBusyCampOn = value;
             }
@@ -101,13 +129,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveDuringBusyCampOnSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify16 _source;
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify16 Source {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30306")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify16 Source
+        {
             get => _source;
-            set {
+            set
+            {
                 SourceSpecified = true;
                 _source = value;
             }
@@ -115,13 +147,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SourceSpecified { get; set; }
-        
+
         private bool _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
-        public bool UseAlternateSourceForInternalCalls {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30306")]
+        public bool UseAlternateSourceForInternalCalls
+        {
             get => _useAlternateSourceForInternalCalls;
-            set {
+            set
+            {
                 UseAlternateSourceForInternalCallsSpecified = true;
                 _useAlternateSourceForInternalCalls = value;
             }
@@ -129,13 +165,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool UseAlternateSourceForInternalCallsSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify16 _internalSource;
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify16 InternalSource {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30306")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify16 InternalSource
+        {
             get => _internalSource;
-            set {
+            set
+            {
                 InternalSourceSpecified = true;
                 _internalSource = value;
             }
@@ -143,6 +183,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool InternalSourceSpecified { get; set; }
-        
+
     }
 }

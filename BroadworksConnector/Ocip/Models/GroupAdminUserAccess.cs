@@ -16,19 +16,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// 1) the group administrator is restricted from adding or removing users, and
     /// 2) no access is granted to the user's profile.
     /// "None" indicates no access to users in the group.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupAdminUserAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupAdminUserAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Full Profile")]
+        [XmlEnum(Name = "Full Profile")]
         FullProfile,
-            [XmlEnum(Name = "Read-Only Profile")]
+        [XmlEnum(Name = "Read-Only Profile")]
         ReadOnlyProfile,
-            [XmlEnum(Name = "No Profile")]
+        [XmlEnum(Name = "No Profile")]
         NoProfile,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

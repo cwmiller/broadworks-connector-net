@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -7,22 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify a file repository.
     /// The response is either SuccessResponse or ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9386""}]")]
     public class SystemFileRepositoryDeviceModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        public string Name {
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9386")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Name
+        {
             get => _name;
-            set {
+            set
+            {
                 NameSpecified = true;
                 _name = value;
             }
@@ -30,13 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NameSpecified { get; set; }
-        
+
         private string _rootDirectory;
 
         [XmlElement(ElementName = "rootDirectory", IsNullable = true, Namespace = "")]
-        public string RootDirectory {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9386")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string RootDirectory
+        {
             get => _rootDirectory;
-            set {
+            set
+            {
                 RootDirectorySpecified = true;
                 _rootDirectory = value;
             }
@@ -44,13 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool RootDirectorySpecified { get; set; }
-        
+
         private bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
-        public bool Secure {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9386")]
+        public bool Secure
+        {
             get => _secure;
-            set {
+            set
+            {
                 SecureSpecified = true;
                 _secure = value;
             }
@@ -58,13 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SecureSpecified { get; set; }
-        
+
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        public string NetAddress {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9386")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string NetAddress
+        {
             get => _netAddress;
-            set {
+            set
+            {
                 NetAddressSpecified = true;
                 _netAddress = value;
             }
@@ -72,13 +95,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool NetAddressSpecified { get; set; }
-        
+
         private bool _ftpPassive;
 
         [XmlElement(ElementName = "ftpPassive", IsNullable = false, Namespace = "")]
-        public bool FtpPassive {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9386")]
+        public bool FtpPassive
+        {
             get => _ftpPassive;
-            set {
+            set
+            {
                 FtpPassiveSpecified = true;
                 _ftpPassive = value;
             }
@@ -86,13 +113,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FtpPassiveSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.FileRepositoryProtocol22 _protocol;
 
         [XmlElement(ElementName = "protocol", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.FileRepositoryProtocol22 Protocol {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9386")]
+        public BroadWorksConnector.Ocip.Models.FileRepositoryProtocol22 Protocol
+        {
             get => _protocol;
-            set {
+            set
+            {
                 ProtocolSpecified = true;
                 _protocol = value;
             }
@@ -100,13 +131,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ProtocolSpecified { get; set; }
-        
+
         private int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
-        public int? Port {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9386")]
+        [MinInclusive(1)]
+        [MaxInclusive(65535)]
+        public int? Port
+        {
             get => _port;
-            set {
+            set
+            {
                 PortSpecified = true;
                 _port = value;
             }
@@ -114,13 +151,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool PortSpecified { get; set; }
-        
+
         private bool _ftpRemoteVerification;
 
         [XmlElement(ElementName = "ftpRemoteVerification", IsNullable = false, Namespace = "")]
-        public bool FtpRemoteVerification {
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9386")]
+        public bool FtpRemoteVerification
+        {
             get => _ftpRemoteVerification;
-            set {
+            set
+            {
                 FtpRemoteVerificationSpecified = true;
                 _ftpRemoteVerification = value;
             }
@@ -128,6 +169,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool FtpRemoteVerificationSpecified { get; set; }
-        
+
     }
 }

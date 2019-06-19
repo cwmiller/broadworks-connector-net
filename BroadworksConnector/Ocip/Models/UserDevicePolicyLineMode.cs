@@ -5,13 +5,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Choices for the user device policy line mode.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum UserDevicePolicyLineMode    {
-            [XmlEnum(Name = "Single User Private and Shared")]
+    public enum UserDevicePolicyLineMode
+    {
+        [XmlEnum(Name = "Single User Private and Shared")]
         SingleUserPrivateandShared,
-            [XmlEnum(Name = "Multiple User Shared")]
+        [XmlEnum(Name = "Multiple User Shared")]
         MultipleUserShared,
-     }
+    }
 }

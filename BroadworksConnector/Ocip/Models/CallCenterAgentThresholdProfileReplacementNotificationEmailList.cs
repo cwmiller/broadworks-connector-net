@@ -1,25 +1,32 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// List of email addresses to which the Agent Threshold Profile email is sent. The list replaces a previously configured list.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    public class CallCenterAgentThresholdProfileReplacementNotificationEmailList 
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7311""}]")]
+    public class CallCenterAgentThresholdProfileReplacementNotificationEmailList
     {
 
-        
-        private List<string> _emailAddress;
+        private List<string> _emailAddress = new List<string>();
 
         [XmlElement(ElementName = "emailAddress", IsNullable = false, Namespace = "")]
-        public List<string> EmailAddress {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7311")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<string> EmailAddress
+        {
             get => _emailAddress;
-            set {
+            set
+            {
                 EmailAddressSpecified = true;
                 _emailAddress = value;
             }
@@ -27,6 +34,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EmailAddressSpecified { get; set; }
-        
+
     }
 }

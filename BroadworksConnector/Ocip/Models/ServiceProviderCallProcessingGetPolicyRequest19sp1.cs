@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,23 +11,28 @@ namespace BroadWorksConnector.Ocip.Models
     /// Policy. The response is either a ServiceProviderCallProcessingGetPolicyResponse19sp1 or an ErrorResponse.
     /// 
     /// Replaced by: ServiceProviderCallProcessingGetPolicyRequest21sp1
-        /// <see cref="ServiceProviderCallProcessingGetPolicyResponse19sp1"/>
-        /// <see cref="ErrorResponse"/>
-        /// <see cref="ServiceProviderCallProcessingGetPolicyRequest21sp1"/>
-        /// </summary>
+    /// <see cref="ServiceProviderCallProcessingGetPolicyResponse19sp1"/>
+    /// <see cref="ErrorResponse"/>
+    /// <see cref="ServiceProviderCallProcessingGetPolicyRequest21sp1"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:36841""}]")]
     public class ServiceProviderCallProcessingGetPolicyRequest19sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:36841")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -33,6 +40,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -13,22 +15,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// tagValueToEncrypt
     /// 
     /// The response is either a SuccessResponse or an ErrorResponse.
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3469"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3474""}]}]")]
     public class GroupDeviceTypeCustomTagModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        public string ServiceProviderId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3469")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
             get => _serviceProviderId;
-            set {
+            set
+            {
                 ServiceProviderIdSpecified = true;
                 _serviceProviderId = value;
             }
@@ -36,13 +43,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceProviderIdSpecified { get; set; }
-        
+
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        public string GroupId {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3469")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string GroupId
+        {
             get => _groupId;
-            set {
+            set
+            {
                 GroupIdSpecified = true;
                 _groupId = value;
             }
@@ -50,13 +62,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool GroupIdSpecified { get; set; }
-        
+
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        public string DeviceType {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3469")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceType
+        {
             get => _deviceType;
-            set {
+            set
+            {
                 DeviceTypeSpecified = true;
                 _deviceType = value;
             }
@@ -64,13 +81,18 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool DeviceTypeSpecified { get; set; }
-        
+
         private string _tagName;
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-        public string TagName {
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3469")]
+        [MinLength(1)]
+        [MaxLength(64)]
+        public string TagName
+        {
             get => _tagName;
-            set {
+            set
+            {
                 TagNameSpecified = true;
                 _tagName = value;
             }
@@ -78,13 +100,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TagNameSpecified { get; set; }
-        
+
         private string _tagValue;
 
         [XmlElement(ElementName = "tagValue", IsNullable = true, Namespace = "")]
-        public string TagValue {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3474")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string TagValue
+        {
             get => _tagValue;
-            set {
+            set
+            {
                 TagValueSpecified = true;
                 _tagValue = value;
             }
@@ -92,13 +120,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TagValueSpecified { get; set; }
-        
+
         private string _tagValueToEncrypt;
 
         [XmlElement(ElementName = "tagValueToEncrypt", IsNullable = true, Namespace = "")]
-        public string TagValueToEncrypt {
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3474")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string TagValueToEncrypt
+        {
             get => _tagValueToEncrypt;
-            set {
+            set
+            {
                 TagValueToEncryptSpecified = true;
                 _tagValueToEncrypt = value;
             }
@@ -106,6 +140,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool TagValueToEncryptSpecified { get; set; }
-        
+
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -12,22 +14,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following element is only used in AS data mode and ignored in XS data mode:
     /// skilledAgentUserIdList
-        /// <see cref="SuccessResponse"/>
-        /// <see cref="ErrorResponse"/>
-        /// </summary>
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:5035"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:5037""}]}]")]
     public class GroupCallCenterModifyAgentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5035")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -35,13 +42,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
 
         [XmlElement(ElementName = "agentUserIdList", IsNullable = true, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5037")]
+        public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList
+        {
             get => _agentUserIdList;
-            set {
+            set
+            {
                 AgentUserIdListSpecified = true;
                 _agentUserIdList = value;
             }
@@ -49,13 +60,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AgentUserIdListSpecified { get; set; }
-        
-        private List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents> _skilledAgentUserIdList;
+
+        private List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents> _skilledAgentUserIdList = new List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents>();
 
         [XmlElement(ElementName = "skilledAgentUserIdList", IsNullable = false, Namespace = "")]
-        public List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents> SkilledAgentUserIdList {
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5037")]
+        public List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents> SkilledAgentUserIdList
+        {
             get => _skilledAgentUserIdList;
-            set {
+            set
+            {
                 SkilledAgentUserIdListSpecified = true;
                 _skilledAgentUserIdList = value;
             }
@@ -63,6 +78,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool SkilledAgentUserIdListSpecified { get; set; }
-        
+
     }
 }

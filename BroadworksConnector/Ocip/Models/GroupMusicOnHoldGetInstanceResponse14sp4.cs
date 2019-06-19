@@ -1,26 +1,33 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the GroupMusicOnHoldGetInstanceRequest14sp4.
-        /// <see cref="GroupMusicOnHoldGetInstanceRequest14sp4"/>
-        /// </summary>
+    /// <see cref="GroupMusicOnHoldGetInstanceRequest14sp4"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1769""}]")]
     public class GroupMusicOnHoldGetInstanceResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        public string ServiceUserId {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1769")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
             get => _serviceUserId;
-            set {
+            set
+            {
                 ServiceUserIdSpecified = true;
                 _serviceUserId = value;
             }
@@ -28,13 +35,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool ServiceUserIdSpecified { get; set; }
-        
+
         private bool _isActiveDuringCallHold;
 
         [XmlElement(ElementName = "isActiveDuringCallHold", IsNullable = false, Namespace = "")]
-        public bool IsActiveDuringCallHold {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1769")]
+        public bool IsActiveDuringCallHold
+        {
             get => _isActiveDuringCallHold;
-            set {
+            set
+            {
                 IsActiveDuringCallHoldSpecified = true;
                 _isActiveDuringCallHold = value;
             }
@@ -42,13 +52,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveDuringCallHoldSpecified { get; set; }
-        
+
         private bool _isActiveDuringCallPark;
 
         [XmlElement(ElementName = "isActiveDuringCallPark", IsNullable = false, Namespace = "")]
-        public bool IsActiveDuringCallPark {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1769")]
+        public bool IsActiveDuringCallPark
+        {
             get => _isActiveDuringCallPark;
-            set {
+            set
+            {
                 IsActiveDuringCallParkSpecified = true;
                 _isActiveDuringCallPark = value;
             }
@@ -56,13 +69,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveDuringCallParkSpecified { get; set; }
-        
+
         private bool _isActiveDuringBusyCampOn;
 
         [XmlElement(ElementName = "isActiveDuringBusyCampOn", IsNullable = false, Namespace = "")]
-        public bool IsActiveDuringBusyCampOn {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1769")]
+        public bool IsActiveDuringBusyCampOn
+        {
             get => _isActiveDuringBusyCampOn;
-            set {
+            set
+            {
                 IsActiveDuringBusyCampOnSpecified = true;
                 _isActiveDuringBusyCampOn = value;
             }
@@ -70,13 +86,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool IsActiveDuringBusyCampOnSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSelection;
 
         [XmlElement(ElementName = "messageSelection", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSelection {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1769")]
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSelection
+        {
             get => _messageSelection;
-            set {
+            set
+            {
                 MessageSelectionSpecified = true;
                 _messageSelection = value;
             }
@@ -84,13 +103,17 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool MessageSelectionSpecified { get; set; }
-        
+
         private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 AccessDeviceEndpoint {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1769")]
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 AccessDeviceEndpoint
+        {
             get => _accessDeviceEndpoint;
-            set {
+            set
+            {
                 AccessDeviceEndpointSpecified = true;
                 _accessDeviceEndpoint = value;
             }
@@ -98,13 +121,16 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AccessDeviceEndpointSpecified { get; set; }
-        
+
         private bool _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
-        public bool EnableVideo {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1769")]
+        public bool EnableVideo
+        {
             get => _enableVideo;
-            set {
+            set
+            {
                 EnableVideoSpecified = true;
                 _enableVideo = value;
             }
@@ -112,13 +138,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EnableVideoSpecified { get; set; }
-        
+
         private string _audioFileDescription;
 
         [XmlElement(ElementName = "audioFileDescription", IsNullable = false, Namespace = "")]
-        public string AudioFileDescription {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1769")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string AudioFileDescription
+        {
             get => _audioFileDescription;
-            set {
+            set
+            {
                 AudioFileDescriptionSpecified = true;
                 _audioFileDescription = value;
             }
@@ -126,13 +158,19 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool AudioFileDescriptionSpecified { get; set; }
-        
+
         private string _videoFileDescription;
 
         [XmlElement(ElementName = "videoFileDescription", IsNullable = false, Namespace = "")]
-        public string VideoFileDescription {
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1769")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string VideoFileDescription
+        {
             get => _videoFileDescription;
-            set {
+            set
+            {
                 VideoFileDescriptionSpecified = true;
                 _videoFileDescription = value;
             }
@@ -140,6 +178,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VideoFileDescriptionSpecified { get; set; }
-        
+
     }
 }

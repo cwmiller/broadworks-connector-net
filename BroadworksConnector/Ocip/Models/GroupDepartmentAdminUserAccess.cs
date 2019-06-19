@@ -13,17 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 1) the department administrator is restricted from adding or removing users, and
     /// 2) no access is granted to the user's profile.
     /// "None" indicates no access to users in the department.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum GroupDepartmentAdminUserAccess    {
-            [XmlEnum(Name = "Full")]
+    public enum GroupDepartmentAdminUserAccess
+    {
+        [XmlEnum(Name = "Full")]
         Full,
-            [XmlEnum(Name = "Read-Only Profile")]
+        [XmlEnum(Name = "Read-Only Profile")]
         ReadOnlyProfile,
-            [XmlEnum(Name = "No Profile")]
+        [XmlEnum(Name = "No Profile")]
         NoProfile,
-            [XmlEnum(Name = "None")]
+        [XmlEnum(Name = "None")]
         None,
-     }
+    }
 }

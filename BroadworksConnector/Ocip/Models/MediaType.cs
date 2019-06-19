@@ -5,15 +5,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Media types.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum MediaType    {
-            [XmlEnum(Name = "Audio")]
+    public enum MediaType
+    {
+        [XmlEnum(Name = "Audio")]
         Audio,
-            [XmlEnum(Name = "Video")]
+        [XmlEnum(Name = "Video")]
         Video,
-            [XmlEnum(Name = "Image")]
+        [XmlEnum(Name = "Image")]
         Image,
-     }
+    }
 }

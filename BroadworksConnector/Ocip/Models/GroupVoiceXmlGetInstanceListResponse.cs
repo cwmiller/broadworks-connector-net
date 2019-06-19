@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -9,21 +11,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table with column headings:
     /// "Service User Id", "Name", "Phone Number", "Extension", "Department", "Is Active".
     /// The column values for "Is Active" can either be true, or false.
-        /// <see cref="GroupVoiceXmlGetInstanceListRequest"/>
-        /// </summary>
+    /// <see cref="GroupVoiceXmlGetInstanceListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0639a23b2e14be05c11ead49c23bd0bd:106""}]")]
     public class GroupVoiceXmlGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _voiceXmlTable;
 
         [XmlElement(ElementName = "voiceXmlTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable VoiceXmlTable {
+        [Group(@"0639a23b2e14be05c11ead49c23bd0bd:106")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable VoiceXmlTable
+        {
             get => _voiceXmlTable;
-            set {
+            set
+            {
                 VoiceXmlTableSpecified = true;
                 _voiceXmlTable = value;
             }
@@ -31,6 +36,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool VoiceXmlTableSpecified { get; set; }
-        
+
     }
 }

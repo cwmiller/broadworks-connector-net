@@ -5,19 +5,20 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// The action performed by a device management event.
-        /// </summary>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-    public enum DeviceManagementEventAction    {
-            [XmlEnum(Name = "Delete")]
+    public enum DeviceManagementEventAction
+    {
+        [XmlEnum(Name = "Delete")]
         Delete,
-            [XmlEnum(Name = "Download")]
+        [XmlEnum(Name = "Download")]
         Download,
-            [XmlEnum(Name = "Rebuild")]
+        [XmlEnum(Name = "Rebuild")]
         Rebuild,
-            [XmlEnum(Name = "Reset")]
+        [XmlEnum(Name = "Reset")]
         Reset,
-            [XmlEnum(Name = "Upload")]
+        [XmlEnum(Name = "Upload")]
         Upload,
-     }
+    }
 }

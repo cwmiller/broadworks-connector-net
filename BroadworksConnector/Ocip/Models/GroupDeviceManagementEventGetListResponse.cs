@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
 using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Models
@@ -40,21 +42,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Each row represents an event sorted by priority of processing. The
     /// first row in the table is an event that has an associated expanded
     /// event currently being processed or next in line to be processed.
-        /// <see cref="GroupDeviceManagementEventGetListRequest"/>
-        /// </summary>
+    /// <see cref="GroupDeviceManagementEventGetListRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41136""}]")]
     public class GroupDeviceManagementEventGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        
         private BroadWorksConnector.Ocip.Models.C.OCITable _eventTable;
 
         [XmlElement(ElementName = "eventTable", IsNullable = false, Namespace = "")]
-        public BroadWorksConnector.Ocip.Models.C.OCITable EventTable {
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41136")]
+        public BroadWorksConnector.Ocip.Models.C.OCITable EventTable
+        {
             get => _eventTable;
-            set {
+            set
+            {
                 EventTableSpecified = true;
                 _eventTable = value;
             }
@@ -62,6 +67,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         public bool EventTableSpecified { get; set; }
-        
+
     }
 }
