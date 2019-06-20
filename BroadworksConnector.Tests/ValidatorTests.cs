@@ -228,7 +228,149 @@ namespace BroadWorksConnector.Tests
                         }
                     }
             };
+        }
 
+        [Fact]
+        public void TestLengthFailure()
+        {
+            Assert.Throws<LengthException>(() =>
+            {
+                var request = new FaxMessagingMenuKeysModifyEntry()
+                {
+                    SaveFaxMessageAndSkipToNext = "11"
+                };
+
+                Validator.Validate(request);
+            });
+        }
+        
+        [Fact]
+        public void TestMinLengthFailure()
+        {
+            Assert.Throws<MinLengthException>(() =>
+            {
+                var request = new LoginRequest14sp4()
+                {
+                    UserId = ""
+                };
+
+                Validator.Validate(request);
+            });
+        }
+
+        [Fact]
+        public void TestMinLengthSuccess()
+        { 
+            var request = new LoginRequest14sp4()
+            {
+                UserId = "a"
+            };
+
+            Assert.True(Validator.Validate(request));
+        }
+
+        [Fact]
+        public void TestMaxLengthFailure()
+        {
+            Assert.Throws<MaxLengthException>(() =>
+            {
+                var request = new LoginRequest14sp4()
+                {
+                    UserId = new String('a', 162)
+                };
+
+                Validator.Validate(request);
+            });
+        }
+
+        [Fact]
+        public void TestMaxLengthSuccess()
+        {
+            var request = new LoginRequest14sp4()
+            {
+                UserId = new String('a', 161)
+            };
+
+            Assert.True(Validator.Validate(request));
+        }
+
+        [Fact]
+        public void TestPatternFailure()
+        {
+            Assert.Throws<PatternException>(() =>
+            {
+                var request = new FaxMessagingMenuKeysModifyEntry()
+                {
+                    SaveFaxMessageAndSkipToNext = "a"
+                };
+
+                Validator.Validate(request);
+            });
+        }
+
+        [Fact]
+        public void TestPatternSuccess()
+        {
+            var request = new FaxMessagingMenuKeysModifyEntry()
+            {
+                SaveFaxMessageAndSkipToNext = "#"
+            };
+
+            Assert.True(Validator.Validate(request));
+        }
+
+        [Fact]
+        public void TestMinInclusiveFailure()
+        {
+            Assert.Throws<MinInclusiveException>(() =>
+            {
+                var request = new SystemExtensionLengthModifyRequest()
+                {
+                    MinExtensionLength = 1,
+                    MaxExtensionLength = 1
+                };
+
+                Validator.Validate(request);
+            });
+        }
+
+        [Fact]
+        public void TestMinInclusiveSuccess()
+        {
+            var request = new SystemExtensionLengthModifyRequest()
+            {
+                MinExtensionLength = 3,
+                MaxExtensionLength = 3
+            };
+
+            Assert.True(Validator.Validate(request));
+        }
+
+        [Fact]
+        public void TestMaxInclusiveFailure()
+        {
+            Assert.Throws<MaxInclusiveException>(() =>
+            {
+                var request = new SystemExtensionLengthModifyRequest()
+                {
+                    MinExtensionLength = 21,
+                    MaxExtensionLength = 21
+                };
+
+                Validator.Validate(request);
+            });
+        }
+
+        [Fact]
+        public void TestMaxInclusiveSuccess()
+        {
+            var request = new SystemExtensionLengthModifyRequest()
+            {
+                MinExtensionLength = 20,
+                MaxExtensionLength = 20
+            };
+
+            Assert.True(Validator.Validate(request));
         }
     }
 }

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
+using System.Reflection;
 using System.Runtime.Serialization.Json;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 
 namespace BroadWorksConnector.Ocip.Validation
@@ -32,6 +35,32 @@ namespace BroadWorksConnector.Ocip.Validation
 
             return true;
         }
+
+        /// <summary>
+        /// Determine if the given property was manually set on an object
+        /// </summary>
+        /// <param name="propertyName"></param>
+        /// <param name="instance"></param>
+        public static bool IsPropertySpecified(PropertyInfo property, object instance)
+        {
+            // Skip properties marked as Ignored to serializer
+            if (Attribute.GetCustomAttribute(property, typeof(XmlIgnoreAttribute)) != null)
+            {
+                return false;
+            }
+
+            var type = instance.GetType();
+            var specifiedFieldName = $"{property.Name}Specified";
+            var specifiedProperty = type.GetProperty(specifiedFieldName);
+
+            if (specifiedProperty == null)
+            {
+                throw new InvalidOperationException($"{specifiedFieldName} does not exist");
+            }
+
+            return (bool)specifiedProperty.GetValue(instance);
+        }
+
 
         /// <summary>
         /// Retrieves all validation groups on an object and validates them
@@ -73,8 +102,7 @@ namespace BroadWorksConnector.Ocip.Validation
         }
 
         /// <summary>
-        /// Validate any child objects
-        /// TODO: length/range requirements on values
+        /// Validate any child objects and restrictions on primitive types
         /// </summary>
         /// <param name="instance"></param>
         private static void ValidateProperties(object instance)
@@ -82,26 +110,29 @@ namespace BroadWorksConnector.Ocip.Validation
             var type = instance.GetType();
             foreach (var prop in type.GetProperties())
             {
-                var value = prop.GetValue(instance, null);
-                var valueAsEnumerable = value as IEnumerable<object>;
-
-                if (valueAsEnumerable != null)
+                if (IsPropertySpecified(prop, instance))
                 {
-                    foreach (var element in valueAsEnumerable)
+                    var value = prop.GetValue(instance, null);
+                    var valueAsEnumerable = value as IEnumerable<object>;
+
+                    if (valueAsEnumerable != null)
                     {
-                        if (ShouldValidate(element))
+                        foreach (var element in valueAsEnumerable)
                         {
-                            Validate(element);
+                            if (IsValidatableObject(element))
+                            {
+                                Validate(element);
+                            }
                         }
                     }
-                }
-                else if (ShouldValidate(value))
-                {
-                    Validate(value);
-                }
-                else
-                {
-                    // ValidatePropertyRestrictions(prop, value);
+                    else if (IsValidatableObject(value))
+                    {
+                        Validate(value);
+                    }
+                    else
+                    {
+                        ValidatePropertyRestrictions(prop, value);
+                    }
                 }
             }
         }
@@ -111,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Validation
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        private static bool ShouldValidate(object value)
+        private static bool IsValidatableObject(object value)
         {
             if (value is object)
             {
@@ -131,8 +162,54 @@ namespace BroadWorksConnector.Ocip.Validation
         /// <summary>
         /// TODO
         /// </summary>
-        private static void ValidatePropertyRestrictions()
+        private static void ValidatePropertyRestrictions(PropertyInfo property, object value)
         {
+            // Get all attributes on property
+            var attributes = Attribute.GetCustomAttributes(property);
+
+            foreach (var attribute in attributes)
+            {
+                switch (attribute)
+                {
+                    case LengthAttribute attr:
+                        if (value.ToString().Length != attr.Length)
+                        {
+                            throw new LengthException(property.Name, value.ToString().Length, attr.Length);
+                        }
+                        break;
+                    case MinLengthAttribute attr:
+                        if (value.ToString().Length < attr.Length)
+                        {
+                            throw new MinLengthException(property.Name, value.ToString().Length, attr.Length);
+                        }
+                        break;
+                    case MaxLengthAttribute attr:
+                        if (value.ToString().Length > attr.Length)
+                        {
+                            throw new MaxLengthException(property.Name, value.ToString().Length, attr.Length);
+                        }
+                        break;
+                    case MinInclusiveAttribute attr:
+                        if ((int)value < attr.Minimum)
+                        {
+                            throw new MinInclusiveException(property.Name, (int)value, attr.Minimum);
+                        }
+                        break;
+                    case MaxInclusiveAttribute attr:
+                        if ((int)value > attr.Maximum)
+                        {
+                            throw new MaxInclusiveException(property.Name, (int)value, attr.Maximum);
+                        }
+                        break;
+                    case RegularExpressionAttribute attr:
+                        if (!Regex.IsMatch(value.ToString(), attr.Pattern))
+                        {
+                            throw new PatternException(property.Name, value.ToString(), attr.Pattern);
+                        }
+
+                        break;
+                }
+            }
 
         }
     }

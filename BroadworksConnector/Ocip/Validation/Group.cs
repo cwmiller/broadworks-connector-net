@@ -27,24 +27,5 @@ namespace BroadWorksConnector.Ocip.Validation
         {
             Children = new List<Group>();
         }
-
-        /// <summary>
-        /// Determine if the given property name was manually set
-        /// </summary>
-        /// <param name="propertyName"></param>
-        /// <param name="instance"></param>
-        protected bool IsSpecified(string propertyName, object instance)
-        {
-            var type = instance.GetType();
-            var specifiedFieldName = $"{propertyName}Specified";
-            var property = type.GetProperty(specifiedFieldName);
-
-            if (property == null)
-            {
-                throw new InvalidOperationException($"{specifiedFieldName} does not exist");
-            }
-
-            return (bool)property.GetValue(instance);
-        }
     }
 }

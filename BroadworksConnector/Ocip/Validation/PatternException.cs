@@ -3,7 +3,7 @@
     /// <summary>
     /// Thrown when a value doesn't match the required pattern of a field.
     /// </summary>
-    class PatternException : ValidationException
+    public class PatternException : ValidationException
     {
         public string PropertyName { get; private set; }
 

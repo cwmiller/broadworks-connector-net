@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Validation
         {
             var set = false;
 
-            if (IsSpecified(property.Name, instance))
+            if (Validator.IsPropertySpecified(property, instance))
             {
                 var value = property.GetValue(instance, null);
                 var valueAsEnumerable = value as IEnumerable<object>;
