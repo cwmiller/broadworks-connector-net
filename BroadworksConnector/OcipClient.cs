@@ -25,6 +25,8 @@ namespace BroadWorksConnector
 
         private readonly Serializer _serializer;
 
+        public OcipClientOptions Options { get; private set; }
+
         public UserDetails UserDetails { get; private set; }
 
         /// <summary>
@@ -33,12 +35,22 @@ namespace BroadWorksConnector
         /// <param name="url"></param>
         /// <param name="username"></param>
         /// <param name="password"></param>
-        public OcipClient(string url, string username, string password)
+        public OcipClient(string url, string username, string password) : this(url, username, password, new OcipClientOptions()) { }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="options"></param>
+        public OcipClient(string url, string username, string password, OcipClientOptions options)
         {
             _username = username;
             _password = password;
             _sessionId = GenerateSessionId();
             _serializer = new Serializer();
+            Options = options;
 
             var uri = new Uri(url);
 
@@ -134,27 +146,53 @@ namespace BroadWorksConnector
                         throw new LoginException("Only MD5 supported for signing");
                     }
 
-                    // TODO: R22 support
-                    var loginRequest = new LoginRequest14sp4
+                    if (Options.MinServerVersion == ServerVersion.R22)
                     {
-                        UserId = _username,
-                        SignedPassword = signedPassword
-                    };
+                        // Release 22 login will return reseller information if logging in as a reseller
+                        var loginRequest = new LoginRequest22V2
+                        {
+                            UserId = _username,
+                            Password = signedPassword
+                        };
 
-                    var loginResponse = (await ExecuteCommands(new List<OCICommand>() { loginRequest })).First() as LoginResponse14sp4;
+                        var loginResponse = (await ExecuteCommands(new List<OCICommand>() { loginRequest })).First() as LoginResponse22V2;
 
-                    // TODO: set R22 properties
-                    UserDetails = new UserDetails
+                        UserDetails = new UserDetails
+                        {
+                            LoginType = loginResponse.LoginType.ToString(),
+                            Locale = loginResponse.Locale,
+                            Encoding = loginResponse.Encoding,
+                            GroupId = loginResponse.GroupId,
+                            ServiceProviderId = loginResponse.ServiceProviderId,
+                            IsEnterprise = loginResponse.IsEnterprise,
+                            PasswordExpiresDays = loginResponse.PasswordExpiresDays,
+                            UserDomain = loginResponse.UserDomain,
+                            ResellerId = loginResponse.ResellerId
+                        };
+                    }
+                    else
                     {
-                        LoginType = loginResponse.LoginType,
-                        Locale = loginResponse.Locale,
-                        Encoding = loginResponse.Encoding,
-                        GroupId = loginResponse.GroupId,
-                        ServiceProviderId = loginResponse.ServiceProviderId,
-                        IsEnterprise = loginResponse.IsEnterprise,
-                        PasswordExpiresDays = loginResponse.PasswordExpiresDays,
-                        UserDomain = loginResponse.UserDomain
-                    };
+                        // Release 14sp4 if the default login method unless R22 is specified
+                        var loginRequest = new LoginRequest14sp4
+                        {
+                            UserId = _username,
+                            SignedPassword = signedPassword
+                        };
+
+                        var loginResponse = (await ExecuteCommands(new List<OCICommand>() { loginRequest })).First() as LoginResponse14sp4;
+
+                        UserDetails = new UserDetails
+                        {
+                            LoginType = loginResponse.LoginType.ToString(),
+                            Locale = loginResponse.Locale,
+                            Encoding = loginResponse.Encoding,
+                            GroupId = loginResponse.GroupId,
+                            ServiceProviderId = loginResponse.ServiceProviderId,
+                            IsEnterprise = loginResponse.IsEnterprise,
+                            PasswordExpiresDays = loginResponse.PasswordExpiresDays,
+                            UserDomain = loginResponse.UserDomain
+                        };
+                    }
                 }
                 catch (ErrorResponseException e)
                 {

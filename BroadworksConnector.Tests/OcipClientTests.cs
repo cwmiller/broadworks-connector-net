@@ -1,7 +1,5 @@
 using BroadWorksConnector.Ocip;
-using BroadWorksConnector.Ocip.Models;
 using System;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace BroadWorksConnector.Tests
@@ -11,6 +9,24 @@ namespace BroadWorksConnector.Tests
     /// </summary>
     public class OcipClientTests
     {
+        [Fact]
+        public void TestDefaultOptions()
+        {
+            var client = new OcipClient("tcp://bwas", "username", "password");
+            Assert.Equal(ServerVersion.R14sp4, client.Options.MinServerVersion);
+        }
+
+        [Fact]
+        public void TestSetOptions()
+        {
+            var client = new OcipClient("tcp://bwas", "username", "password", new OcipClientOptions()
+            {
+                MinServerVersion = ServerVersion.R22
+            });
+
+            Assert.Equal(ServerVersion.R22, client.Options.MinServerVersion);
+        }
+
         [Fact]
         public void TestHttpTransport()
         {

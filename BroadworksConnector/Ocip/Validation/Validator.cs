@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Validation
         }
 
         /// <summary>
-        /// TODO
+        /// Validates primitive type restrictions
         /// </summary>
         private static void ValidatePropertyRestrictions(PropertyInfo property, object value)
         {

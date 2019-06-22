@@ -4,7 +4,7 @@ namespace BroadWorksConnector.Ocip
 {
     public class UserDetails
     {
-        public LoginType LoginType { get; set; }
+        public string LoginType { get; set; }
 
         public string Locale { get; set; }
 
