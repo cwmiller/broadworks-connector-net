@@ -1,6 +1,7 @@
 ﻿using BroadWorksConnector.Ocip;
 using BroadWorksConnector.Ocip.Models;
 using BroadWorksConnector.Ocip.Models.C;
+using BroadWorksConnector.Ocip.Validation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,6 +80,8 @@ namespace BroadWorksConnector
         /// </summary>
         /// <param name="command"></param>
         /// <returns></returns>
+        /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
+        /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
         public async Task<OCICommand> Call(OCICommand command)
         {
             if (UserDetails == null)
@@ -96,6 +99,8 @@ namespace BroadWorksConnector
         /// </summary>
         /// <param name="commands"></param>
         /// <returns></returns>
+        /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
+        /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
         public async Task<IEnumerable<OCICommand>> CallAll(IEnumerable<OCICommand> commands)
         {
             if (UserDetails == null)
@@ -123,6 +128,7 @@ namespace BroadWorksConnector
         /// Authenticates against OCI-P using the provided username and password
         /// </summary>
         /// <returns></returns>
+        /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
         public async Task<UserDetails> Login()
         {
             if (UserDetails == null)
