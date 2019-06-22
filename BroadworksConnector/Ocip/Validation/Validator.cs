@@ -12,8 +12,7 @@ namespace BroadWorksConnector.Ocip.Validation
 {
     /// <summary>
     /// Validates request objects
-    /// Enforces sequence/choice requirements
-    /// TODO: length/range requirements
+    /// Enforces sequence/choice and length/range requirements
     /// </summary>
     public static class Validator
     {
@@ -39,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Validation
         /// <summary>
         /// Determine if the given property was manually set on an object
         /// </summary>
-        /// <param name="propertyName"></param>
+        /// <param name="property"></param>
         /// <param name="instance"></param>
         public static bool IsPropertySpecified(PropertyInfo property, object instance)
         {
@@ -160,8 +159,10 @@ namespace BroadWorksConnector.Ocip.Validation
         }
 
         /// <summary>
-        /// Validates primitive type restrictions
+        /// Validates primitive types
         /// </summary>
+        /// <param name="property"></param>
+        /// <param name="value"></param>
         private static void ValidatePropertyRestrictions(PropertyInfo property, object value)
         {
             // Get all attributes on property
