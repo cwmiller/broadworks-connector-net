@@ -7,6 +7,7 @@ using System.IO;
 using System.Text;
 using Xunit;
 using System.Linq;
+using System.Diagnostics;
 
 namespace BroadWorksConnector.Tests
 {
@@ -102,6 +103,32 @@ namespace BroadWorksConnector.Tests
             Assert.False(response.IsEnterprise);
             Assert.Equal(2147483647, response.PasswordExpiresDays);
             Assert.Equal("test.com", response.UserDomain);
+        }
+
+        [Fact]
+        public void TestNillableProperty()
+        {
+            var request = new UserModifyRequest22()
+            {
+                UserId = "test@test.com",
+                Extension = "999",
+                PhoneNumber = null
+            };
+
+            var document = new BroadsoftDocument()
+            {
+                SessionId = "636956952081463406",
+                Protocol = "OCI",
+                Command = new List<OCICommand>() { request }
+            };
+
+            var xml = _serializer.Serialize(document);
+
+            var diff =
+                DiffBuilder.Compare(Input.FromFile(@"test-data/UserModifyRequest22.xml"))
+                .WithTest(xml).Build();
+
+            Assert.False(diff.HasDifferences());
         }
     }
 }
