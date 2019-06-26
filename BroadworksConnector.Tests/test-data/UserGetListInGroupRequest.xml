@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BroadsoftDocument xmlns="C" protocol="OCI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <sessionId xmlns="">acbdf1234567890</sessionId>
+  <command xmlns="" xsi:type="UserGetListInGroupRequest">
+    <serviceProviderId>SP</serviceProviderId>
+    <GroupId>Group</GroupId>
+    <searchCriteriaUserFirstName xsi:type="SearchCriteriaUserFirstName">
+      <mode>Equal To</mode>
+      <value>John</value>
+      <isCaseInsensitive>false</isCaseInsensitive>
+    </searchCriteriaUserFirstName>
+  </command>
+</BroadsoftDocument>

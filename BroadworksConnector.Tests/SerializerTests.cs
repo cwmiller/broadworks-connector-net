@@ -4,10 +4,9 @@ using BroadWorksConnector.Ocip.Models.C;
 using Org.XmlUnit.Builder;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using Xunit;
-using System.Linq;
-using System.Diagnostics;
 
 namespace BroadWorksConnector.Tests
 {
@@ -20,7 +19,7 @@ namespace BroadWorksConnector.Tests
 
         public SerializerTests()
         {
-            _serializer = new Serializer();
+            _serializer = new Serializer("BroadWorksConnector.Ocip.Models");
         }
 
         [Fact]
@@ -78,6 +77,40 @@ namespace BroadWorksConnector.Tests
 
             var diff =
                 DiffBuilder.Compare(Input.FromFile(@"test-data/GroupOutgoingCallingPlanRedirectingModifyListRequest.xml"))
+                .WithTest(xml).Build();
+
+            Assert.False(diff.HasDifferences());
+        }
+
+        [Fact]
+        public void SerializeWithEnums()
+        {
+            var request = new UserGetListInGroupRequest()
+            {
+                ServiceProviderId = "SP",
+                GroupId = "Group",
+                SearchCriteriaUserFirstName = new List<SearchCriteriaUserFirstName>()
+                {
+                    new SearchCriteriaUserFirstName()
+                    {
+                        IsCaseInsensitive = false,
+                        Mode = SearchMode.EqualTo,
+                        Value = "John"
+                    }
+                }
+            };
+
+            var document = new BroadsoftDocument()
+            {
+                SessionId = "acbdf1234567890",
+                Protocol = "OCI",
+                Command = new List<OCICommand>() { request }
+            };
+
+            var xml = _serializer.Serialize(document);
+
+            var diff =
+                DiffBuilder.Compare(Input.FromFile(@"test-data/UserGetListInGroupRequest.xml"))
                 .WithTest(xml).Build();
 
             Assert.False(diff.HasDifferences());
