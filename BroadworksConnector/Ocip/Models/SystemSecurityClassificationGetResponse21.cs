@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MeetMeAnncThresholdSpecified { get; set; }
+        protected bool MeetMeAnncThresholdSpecified { get; set; }
 
         private bool _playTrunkUserSecurityClassificationAnnouncement;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayTrunkUserSecurityClassificationAnnouncementSpecified { get; set; }
+        protected bool PlayTrunkUserSecurityClassificationAnnouncementSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _securityClassificationTable;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecurityClassificationTableSpecified { get; set; }
+        protected bool SecurityClassificationTableSpecified { get; set; }
 
     }
 }

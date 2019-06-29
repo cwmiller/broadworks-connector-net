@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DnisKeySpecified { get; set; }
+        protected bool DnisKeySpecified { get; set; }
 
     }
 }

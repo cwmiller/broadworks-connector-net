@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList _callToNumberList;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallToNumberListSpecified { get; set; }
+        protected bool CallToNumberListSpecified { get; set; }
 
     }
 }

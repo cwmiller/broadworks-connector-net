@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RemoteFileFormatSpecified { get; set; }
+        protected bool RemoteFileFormatSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory _fileCategory;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileCategorySpecified { get; set; }
+        protected bool FileCategorySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementFileCustomization _fileCustomization;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileCustomizationSpecified { get; set; }
+        protected bool FileCustomizationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode _fileSource;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileSourceSpecified { get; set; }
+        protected bool FileSourceSpecified { get; set; }
 
         private string _configurationFileName;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfigurationFileNameSpecified { get; set; }
+        protected bool ConfigurationFileNameSpecified { get; set; }
 
         private bool _useHttpDigestAuthentication;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseHttpDigestAuthenticationSpecified { get; set; }
+        protected bool UseHttpDigestAuthenticationSpecified { get; set; }
 
         private bool _macBasedFileAuthentication;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacBasedFileAuthenticationSpecified { get; set; }
+        protected bool MacBasedFileAuthenticationSpecified { get; set; }
 
         private bool _userNamePasswordFileAuthentication;
 
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserNamePasswordFileAuthenticationSpecified { get; set; }
+        protected bool UserNamePasswordFileAuthenticationSpecified { get; set; }
 
         private bool _macInCert;
 
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacInCertSpecified { get; set; }
+        protected bool MacInCertSpecified { get; set; }
 
         private bool _macInNonRequestURI;
 
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacInNonRequestURISpecified { get; set; }
+        protected bool MacInNonRequestURISpecified { get; set; }
 
         private string _macFormatInNonRequestURI;
 
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacFormatInNonRequestURISpecified { get; set; }
+        protected bool MacFormatInNonRequestURISpecified { get; set; }
 
         private string _accessUrl;
 
@@ -237,7 +237,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessUrlSpecified { get; set; }
+        protected bool AccessUrlSpecified { get; set; }
 
         private string _repositoryUrl;
 
@@ -257,7 +257,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepositoryUrlSpecified { get; set; }
+        protected bool RepositoryUrlSpecified { get; set; }
 
         private string _templateUrl;
 
@@ -277,7 +277,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TemplateUrlSpecified { get; set; }
+        protected bool TemplateUrlSpecified { get; set; }
 
         private bool _allowHttp;
 
@@ -294,7 +294,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowHttpSpecified { get; set; }
+        protected bool AllowHttpSpecified { get; set; }
 
         private bool _allowHttps;
 
@@ -311,7 +311,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowHttpsSpecified { get; set; }
+        protected bool AllowHttpsSpecified { get; set; }
 
         private bool _allowTftp;
 
@@ -328,7 +328,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowTftpSpecified { get; set; }
+        protected bool AllowTftpSpecified { get; set; }
 
         private bool _enableCaching;
 
@@ -345,7 +345,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCachingSpecified { get; set; }
+        protected bool EnableCachingSpecified { get; set; }
 
         private bool _allowUploadFromDevice;
 
@@ -362,7 +362,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowUploadFromDeviceSpecified { get; set; }
+        protected bool AllowUploadFromDeviceSpecified { get; set; }
 
         private bool _defaultExtendedFileCaptureMode;
 
@@ -380,7 +380,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultExtendedFileCaptureModeSpecified { get; set; }
+        protected bool DefaultExtendedFileCaptureModeSpecified { get; set; }
 
     }
 }

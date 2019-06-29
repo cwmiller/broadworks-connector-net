@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _useDefaultResourcePriority;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDefaultResourcePrioritySpecified { get; set; }
+        protected bool UseDefaultResourcePrioritySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ResourcePriorityValue _userResourcePriority;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserResourcePrioritySpecified { get; set; }
+        protected bool UserResourcePrioritySpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelThresholdSecondsSpecified { get; set; }
+        protected bool ServiceLevelThresholdSecondsSpecified { get; set; }
 
     }
 }

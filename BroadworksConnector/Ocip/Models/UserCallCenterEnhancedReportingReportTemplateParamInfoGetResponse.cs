@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsRealtimeReportSpecified { get; set; }
+        protected bool IsRealtimeReportSpecified { get; set; }
 
         private bool _requireAgentParam;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequireAgentParamSpecified { get; set; }
+        protected bool RequireAgentParamSpecified { get; set; }
 
         private bool _requireCallCenterParam;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequireCallCenterParamSpecified { get; set; }
+        protected bool RequireCallCenterParamSpecified { get; set; }
 
         private bool _requireCallCenterDnisParam;
 
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequireCallCenterDnisParamSpecified { get; set; }
+        protected bool RequireCallCenterDnisParamSpecified { get; set; }
 
         private bool _requireSamplingPeriodParam;
 
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequireSamplingPeriodParamSpecified { get; set; }
+        protected bool RequireSamplingPeriodParamSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _callCompletionThresholdParam;
 
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallCompletionThresholdParamSpecified { get; set; }
+        protected bool CallCompletionThresholdParamSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _shortDurationThresholdParam;
 
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ShortDurationThresholdParamSpecified { get; set; }
+        protected bool ShortDurationThresholdParamSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelThresholdParam;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelThresholdParamSpecified { get; set; }
+        protected bool ServiceLevelThresholdParamSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelInclusionsParam;
 
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelInclusionsParamSpecified { get; set; }
+        protected bool ServiceLevelInclusionsParamSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelObjectiveThresholdParam;
 
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelObjectiveThresholdParamSpecified { get; set; }
+        protected bool ServiceLevelObjectiveThresholdParamSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _abandonedCallThresholdParam;
 
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbandonedCallThresholdParamSpecified { get; set; }
+        protected bool AbandonedCallThresholdParamSpecified { get; set; }
 
         private int _serviceLevelThresholdParamNumber;
 
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelThresholdParamNumberSpecified { get; set; }
+        protected bool ServiceLevelThresholdParamNumberSpecified { get; set; }
 
         private int _abandonedCallThresholdParamNumber;
 
@@ -248,7 +248,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbandonedCallThresholdParamNumberSpecified { get; set; }
+        protected bool AbandonedCallThresholdParamNumberSpecified { get; set; }
 
     }
 }

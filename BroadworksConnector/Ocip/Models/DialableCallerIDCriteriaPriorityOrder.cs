@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaNameSpecified { get; set; }
+        protected bool CriteriaNameSpecified { get; set; }
 
         private decimal _priority;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrioritySpecified { get; set; }
+        protected bool PrioritySpecified { get; set; }
 
     }
 }

@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportTemplateTableSpecified { get; set; }
+        protected bool ReportTemplateTableSpecified { get; set; }
 
     }
 }

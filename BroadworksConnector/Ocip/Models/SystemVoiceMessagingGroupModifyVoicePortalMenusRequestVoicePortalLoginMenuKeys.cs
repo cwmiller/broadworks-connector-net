@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessUsingOtherMailboxIdSpecified { get; set; }
+        protected bool AccessUsingOtherMailboxIdSpecified { get; set; }
 
     }
 }

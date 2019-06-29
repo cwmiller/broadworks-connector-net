@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TotalNumberOfRowsSpecified { get; set; }
+        protected bool TotalNumberOfRowsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _groupCommonPhoneListTable;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupCommonPhoneListTableSpecified { get; set; }
+        protected bool GroupCommonPhoneListTableSpecified { get; set; }
 
     }
 }

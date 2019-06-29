@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify _groupNumbers;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupNumbersSpecified { get; set; }
+        protected bool GroupNumbersSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify> _departmentNumbers = new List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify>();
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentNumbersSpecified { get; set; }
+        protected bool DepartmentNumbersSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceAccessCodeListNameSpecified { get; set; }
+        protected bool ServiceAccessCodeListNameSpecified { get; set; }
 
         private string _countryCode;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountryCodeSpecified { get; set; }
+        protected bool CountryCodeSpecified { get; set; }
 
         private string _serviceAccessCode;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceAccessCodeSpecified { get; set; }
+        protected bool ServiceAccessCodeSpecified { get; set; }
 
     }
 }

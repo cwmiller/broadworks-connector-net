@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserCallWaitingTableSpecified { get; set; }
+        protected bool UserCallWaitingTableSpecified { get; set; }
 
     }
 }

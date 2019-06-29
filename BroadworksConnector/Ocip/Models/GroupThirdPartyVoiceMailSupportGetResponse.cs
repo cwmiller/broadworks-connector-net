@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private string _groupServer;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupServerSpecified { get; set; }
+        protected bool GroupServerSpecified { get; set; }
 
     }
 }

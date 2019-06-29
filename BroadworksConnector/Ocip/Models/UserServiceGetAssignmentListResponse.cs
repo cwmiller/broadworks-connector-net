@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePacksAssignmentTableSpecified { get; set; }
+        protected bool ServicePacksAssignmentTableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _userServicesAssignmentTable;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServicesAssignmentTableSpecified { get; set; }
+        protected bool UserServicesAssignmentTableSpecified { get; set; }
 
     }
 }

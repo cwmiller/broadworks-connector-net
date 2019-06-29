@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HasDepartmentSpecified { get; set; }
+        protected bool HasDepartmentSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.DepartmentKey> _department = new List<BroadWorksConnector.Ocip.Models.DepartmentKey>();
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentSpecified { get; set; }
+        protected bool DepartmentSpecified { get; set; }
 
         private List<string> _departmentFullPath = new List<string>();
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentFullPathSpecified { get; set; }
+        protected bool DepartmentFullPathSpecified { get; set; }
 
     }
 }

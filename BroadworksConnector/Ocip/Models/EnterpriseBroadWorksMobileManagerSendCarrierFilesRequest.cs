@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _emailTo;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmailToSpecified { get; set; }
+        protected bool EmailToSpecified { get; set; }
 
     }
 }

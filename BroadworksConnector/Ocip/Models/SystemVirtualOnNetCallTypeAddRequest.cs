@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VirtualOnNetCallTypeNameSpecified { get; set; }
+        protected bool VirtualOnNetCallTypeNameSpecified { get; set; }
 
         private string _virtualOnNetCallTypeCdrValue;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VirtualOnNetCallTypeCdrValueSpecified { get; set; }
+        protected bool VirtualOnNetCallTypeCdrValueSpecified { get; set; }
 
     }
 }

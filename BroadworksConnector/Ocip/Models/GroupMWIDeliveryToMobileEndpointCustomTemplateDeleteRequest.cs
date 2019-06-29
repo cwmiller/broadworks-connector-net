@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _language;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LanguageSpecified { get; set; }
+        protected bool LanguageSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TypeSpecified { get; set; }
+        protected bool TypeSpecified { get; set; }
 
     }
 }

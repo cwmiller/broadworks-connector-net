@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupKeySpecified { get; set; }
+        protected bool TrunkGroupKeySpecified { get; set; }
 
         private string _defaultSecurityClassification;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultSecurityClassificationSpecified { get; set; }
+        protected bool DefaultSecurityClassificationSpecified { get; set; }
 
     }
 }

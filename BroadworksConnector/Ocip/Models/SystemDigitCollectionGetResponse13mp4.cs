@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessCodeSpecified { get; set; }
+        protected bool AccessCodeSpecified { get; set; }
 
         private string _publicDigitMap;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PublicDigitMapSpecified { get; set; }
+        protected bool PublicDigitMapSpecified { get; set; }
 
         private string _privateDigitMap;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrivateDigitMapSpecified { get; set; }
+        protected bool PrivateDigitMapSpecified { get; set; }
 
     }
 }

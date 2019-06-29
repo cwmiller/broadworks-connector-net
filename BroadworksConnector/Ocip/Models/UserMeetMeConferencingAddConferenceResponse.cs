@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceIdSpecified { get; set; }
+        protected bool ConferenceIdSpecified { get; set; }
 
         private string _moderatorPin;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ModeratorPinSpecified { get; set; }
+        protected bool ModeratorPinSpecified { get; set; }
 
     }
 }

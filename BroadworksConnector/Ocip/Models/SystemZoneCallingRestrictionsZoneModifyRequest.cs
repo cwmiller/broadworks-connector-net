@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ZoneNameSpecified { get; set; }
+        protected bool ZoneNameSpecified { get; set; }
 
         private string _physicalLocation;
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhysicalLocationSpecified { get; set; }
+        protected bool PhysicalLocationSpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MessageSourceSelectionSpecified { get; set; }
+        protected bool MessageSourceSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead16CustomSource _customSource;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CustomSourceSpecified { get; set; }
+        protected bool CustomSourceSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RegistrationIdSpecified { get; set; }
+        protected bool RegistrationIdSpecified { get; set; }
 
         private string _userId;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallTypeSpecified { get; set; }
+        protected bool CallTypeSpecified { get; set; }
 
         private string _networkServerCallType;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkServerCallTypeSpecified { get; set; }
+        protected bool NetworkServerCallTypeSpecified { get; set; }
 
     }
 }

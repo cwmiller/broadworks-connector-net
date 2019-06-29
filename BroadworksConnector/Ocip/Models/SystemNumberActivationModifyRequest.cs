@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseNumberActivationSpecified { get; set; }
+        protected bool UseNumberActivationSpecified { get; set; }
 
     }
 }

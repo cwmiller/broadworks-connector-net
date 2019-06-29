@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertingGroupDescriptionSpecified { get; set; }
+        protected bool AlertingGroupDescriptionSpecified { get; set; }
 
         private bool _useDiversionInhibitor;
 
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDiversionInhibitorSpecified { get; set; }
+        protected bool UseDiversionInhibitorSpecified { get; set; }
 
         private bool _answerConfirmationRequired;
 
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnswerConfirmationRequiredSpecified { get; set; }
+        protected bool AnswerConfirmationRequiredSpecified { get; set; }
 
         private int _numberOfRings;
 
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfRingsSpecified { get; set; }
+        protected bool NumberOfRingsSpecified { get; set; }
 
         private List<string> _phoneNumber = new List<string>();
 
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserTableSpecified { get; set; }
+        protected bool UserTableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaTableSpecified { get; set; }
+        protected bool CriteriaTableSpecified { get; set; }
 
     }
 }

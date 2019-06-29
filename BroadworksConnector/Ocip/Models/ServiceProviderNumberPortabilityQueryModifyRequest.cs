@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private bool _enableNumberPortabilityQueryForOutgoingCalls;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNumberPortabilityQueryForOutgoingCallsSpecified { get; set; }
+        protected bool EnableNumberPortabilityQueryForOutgoingCallsSpecified { get; set; }
 
         private bool _enableNumberPortabilityQueryForIncomingCalls;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNumberPortabilityQueryForIncomingCallsSpecified { get; set; }
+        protected bool EnableNumberPortabilityQueryForIncomingCallsSpecified { get; set; }
 
         private bool _enableNumberPortabilityQueryForNetworkCallsOnly;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNumberPortabilityQueryForNetworkCallsOnlySpecified { get; set; }
+        protected bool EnableNumberPortabilityQueryForNetworkCallsOnlySpecified { get; set; }
 
         private List<string> _deleteDigitPattern = new List<string>();
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteDigitPatternSpecified { get; set; }
+        protected bool DeleteDigitPatternSpecified { get; set; }
 
     }
 }

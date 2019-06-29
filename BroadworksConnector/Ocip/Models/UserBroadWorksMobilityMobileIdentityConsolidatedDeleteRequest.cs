@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _mobileNumber;
 
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobileNumberSpecified { get; set; }
+        protected bool MobileNumberSpecified { get; set; }
 
         private bool _deleteExistingDevices;
 
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteExistingDevicesSpecified { get; set; }
+        protected bool DeleteExistingDevicesSpecified { get; set; }
 
     }
 }

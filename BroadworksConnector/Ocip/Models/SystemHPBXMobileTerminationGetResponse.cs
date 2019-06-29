@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RoutingPrefixSpecified { get; set; }
+        protected bool RoutingPrefixSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LockoutStatusSpecified { get; set; }
+        protected bool LockoutStatusSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _profileTable;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileTableSpecified { get; set; }
+        protected bool ProfileTableSpecified { get; set; }
 
     }
 }

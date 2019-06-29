@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeSpecified { get; set; }
+        protected bool DeviceTypeSpecified { get; set; }
 
         private bool _supportsPolycomPhoneServices;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportsPolycomPhoneServicesSpecified { get; set; }
+        protected bool SupportsPolycomPhoneServicesSpecified { get; set; }
 
     }
 }

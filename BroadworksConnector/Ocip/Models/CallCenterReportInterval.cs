@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DatesSpecified { get; set; }
+        protected bool DatesSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportCurrentInterval _current;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CurrentSpecified { get; set; }
+        protected bool CurrentSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportPastInterval _past;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PastSpecified { get; set; }
+        protected bool PastSpecified { get; set; }
 
     }
 }

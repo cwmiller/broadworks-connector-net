@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PublicUserIdentitySpecified { get; set; }
+        protected bool PublicUserIdentitySpecified { get; set; }
 
     }
 }

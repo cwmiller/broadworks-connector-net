@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private int _waitPeriodSeconds;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WaitPeriodSecondsSpecified { get; set; }
+        protected bool WaitPeriodSecondsSpecified { get; set; }
 
     }
 }

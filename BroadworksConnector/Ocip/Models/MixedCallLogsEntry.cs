@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallLogTypeSpecified { get; set; }
+        protected bool CallLogTypeSpecified { get; set; }
 
         private string _countryCode;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountryCodeSpecified { get; set; }
+        protected bool CountryCodeSpecified { get; set; }
 
         private string _callLogId;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallLogIdSpecified { get; set; }
+        protected bool CallLogIdSpecified { get; set; }
 
         private string _phoneNumber;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
         private string _name;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _time;
 
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeSpecified { get; set; }
+        protected bool TimeSpecified { get; set; }
 
     }
 }

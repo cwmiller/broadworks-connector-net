@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlacedSpecified { get; set; }
+        protected bool PlacedSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.BasicCallLogsEntry> _received = new List<BroadWorksConnector.Ocip.Models.BasicCallLogsEntry>();
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReceivedSpecified { get; set; }
+        protected bool ReceivedSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.BasicCallLogsEntry> _missed = new List<BroadWorksConnector.Ocip.Models.BasicCallLogsEntry>();
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MissedSpecified { get; set; }
+        protected bool MissedSpecified { get; set; }
 
     }
 }

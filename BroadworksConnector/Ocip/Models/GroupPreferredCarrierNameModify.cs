@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseServiceProviderPreferredCarrierSpecified { get; set; }
+        protected bool UseServiceProviderPreferredCarrierSpecified { get; set; }
 
         private string _carrier;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CarrierSpecified { get; set; }
+        protected bool CarrierSpecified { get; set; }
 
     }
 }

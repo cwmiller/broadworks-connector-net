@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileType _announcementFileType;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnnouncementFileTypeSpecified { get; set; }
+        protected bool AnnouncementFileTypeSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _enableBargeInWarningTone;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableBargeInWarningToneSpecified { get; set; }
+        protected bool EnableBargeInWarningToneSpecified { get; set; }
 
         private bool _enableAutomaticTargetSelection;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAutomaticTargetSelectionSpecified { get; set; }
+        protected bool EnableAutomaticTargetSelectionSpecified { get; set; }
 
     }
 }

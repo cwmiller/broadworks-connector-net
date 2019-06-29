@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdFormatSpecified { get; set; }
+        protected bool UserIdFormatSpecified { get; set; }
 
         private string _userIdDomain;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdDomainSpecified { get; set; }
+        protected bool UserIdDomainSpecified { get; set; }
 
         private bool _populateExtension;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PopulateExtensionSpecified { get; set; }
+        protected bool PopulateExtensionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _linePortFormat;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LinePortFormatSpecified { get; set; }
+        protected bool LinePortFormatSpecified { get; set; }
 
         private string _linePortDomain;
 
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LinePortDomainSpecified { get; set; }
+        protected bool LinePortDomainSpecified { get; set; }
 
         private bool _populateContact;
 
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PopulateContactSpecified { get; set; }
+        protected bool PopulateContactSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _contactFormat;
 
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactFormatSpecified { get; set; }
+        protected bool ContactFormatSpecified { get; set; }
 
         private string _contactDomain;
 
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactDomainSpecified { get; set; }
+        protected bool ContactDomainSpecified { get; set; }
 
         private int _usersCreated;
 
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UsersCreatedSpecified { get; set; }
+        protected bool UsersCreatedSpecified { get; set; }
 
         private int _totalUsersToCreate;
 
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TotalUsersToCreateSpecified { get; set; }
+        protected bool TotalUsersToCreateSpecified { get; set; }
 
         private int _errorCount;
 
@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ErrorCountSpecified { get; set; }
+        protected bool ErrorCountSpecified { get; set; }
 
         private List<string> _servicePackName = new List<string>();
 
@@ -230,7 +230,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePackNameSpecified { get; set; }
+        protected bool ServicePackNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.UserService> _userServiceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
@@ -248,7 +248,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServiceNameSpecified { get; set; }
+        protected bool UserServiceNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationTaskStatus _status;
 
@@ -265,7 +265,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatusSpecified { get; set; }
+        protected bool StatusSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationMode _userCreationMode;
 
@@ -282,7 +282,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserCreationModeSpecified { get; set; }
+        protected bool UserCreationModeSpecified { get; set; }
 
         private string _taskSummary;
 
@@ -299,7 +299,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TaskSummarySpecified { get; set; }
+        protected bool TaskSummarySpecified { get; set; }
 
         private string _reportFileKey;
 
@@ -316,7 +316,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportFileKeySpecified { get; set; }
+        protected bool ReportFileKeySpecified { get; set; }
 
     }
 }

@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnterpriseIdSpecified { get; set; }
+        protected bool EnterpriseIdSpecified { get; set; }
 
         private bool _includeGroupDepartments;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeGroupDepartmentsSpecified { get; set; }
+        protected bool IncludeGroupDepartmentsSpecified { get; set; }
 
     }
 }

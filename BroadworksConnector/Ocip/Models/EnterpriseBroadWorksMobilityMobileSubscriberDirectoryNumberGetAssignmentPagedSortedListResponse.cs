@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobileSubscriberDirectoryNumbersAssignmentTableSpecified { get; set; }
+        protected bool MobileSubscriberDirectoryNumbersAssignmentTableSpecified { get; set; }
 
     }
 }

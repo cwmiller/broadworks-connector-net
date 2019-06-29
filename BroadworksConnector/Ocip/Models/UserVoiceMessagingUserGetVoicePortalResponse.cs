@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UsePersonalizedNameSpecified { get; set; }
+        protected bool UsePersonalizedNameSpecified { get; set; }
 
         private bool _voicePortalAutoLogin;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalAutoLoginSpecified { get; set; }
+        protected bool VoicePortalAutoLoginSpecified { get; set; }
 
         private string _personalizedNameAudioFileDescription;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalizedNameAudioFileDescriptionSpecified { get; set; }
+        protected bool PersonalizedNameAudioFileDescriptionSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _newName;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewNameSpecified { get; set; }
+        protected bool NewNameSpecified { get; set; }
 
         private string _description;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private string _timeSchedule;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeScheduleSpecified { get; set; }
+        protected bool TimeScheduleSpecified { get; set; }
 
         private string _holidaySchedule;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HolidayScheduleSpecified { get; set; }
+        protected bool HolidayScheduleSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementNumberPortabilityStatusList _matchNumberPortabilityStatus;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchNumberPortabilityStatusSpecified { get; set; }
+        protected bool MatchNumberPortabilityStatusSpecified { get; set; }
 
     }
 }

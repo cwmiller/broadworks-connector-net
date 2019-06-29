@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByUserIdSpecified { get; set; }
+        protected bool SortByUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByCallCenterName _sortByCallCenterName;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByCallCenterNameSpecified { get; set; }
+        protected bool SortByCallCenterNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByDn _sortByDn;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByDnSpecified { get; set; }
+        protected bool SortByDnSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByExtension _sortByExtension;
 
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByExtensionSpecified { get; set; }
+        protected bool SortByExtensionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByDepartmentName _sortByDepartmentName;
 
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByDepartmentNameSpecified { get; set; }
+        protected bool SortByDepartmentNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByHuntPolicy _sortByHuntPolicy;
 
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByHuntPolicySpecified { get; set; }
+        protected bool SortByHuntPolicySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByCallCenterType _sortByCallCenterType;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByCallCenterTypeSpecified { get; set; }
+        protected bool SortByCallCenterTypeSpecified { get; set; }
 
     }
 }

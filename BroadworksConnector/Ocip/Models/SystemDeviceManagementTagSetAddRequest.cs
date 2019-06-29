@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagSetNameSpecified { get; set; }
+        protected bool TagSetNameSpecified { get; set; }
 
         private string _resellerId;
 
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResellerIdSpecified { get; set; }
+        protected bool ResellerIdSpecified { get; set; }
 
     }
 }

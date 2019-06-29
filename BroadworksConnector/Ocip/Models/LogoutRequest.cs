@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LogoutRequestReason _reason;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReasonSpecified { get; set; }
+        protected bool ReasonSpecified { get; set; }
 
     }
 }

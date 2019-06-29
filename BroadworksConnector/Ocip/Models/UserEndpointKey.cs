@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _linePort;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LinePortSpecified { get; set; }
+        protected bool LinePortSpecified { get; set; }
 
     }
 }

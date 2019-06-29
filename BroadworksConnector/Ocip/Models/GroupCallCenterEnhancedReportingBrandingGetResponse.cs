@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BrandingChoiceSpecified { get; set; }
+        protected bool BrandingChoiceSpecified { get; set; }
 
         private string _brandingFileDescription;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BrandingFileDescriptionSpecified { get; set; }
+        protected bool BrandingFileDescriptionSpecified { get; set; }
 
     }
 }

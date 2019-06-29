@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MonitorMinutesSpecified { get; set; }
+        protected bool MonitorMinutesSpecified { get; set; }
 
         private int _maxMonitorsPerOriginator;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxMonitorsPerOriginatorSpecified { get; set; }
+        protected bool MaxMonitorsPerOriginatorSpecified { get; set; }
 
         private int _maxCallbackRings;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCallbackRingsSpecified { get; set; }
+        protected bool MaxCallbackRingsSpecified { get; set; }
 
         private int _maxMonitorsPerTerminator;
 
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxMonitorsPerTerminatorSpecified { get; set; }
+        protected bool MaxMonitorsPerTerminatorSpecified { get; set; }
 
         private int _terminatorIdleGuardSeconds;
 
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TerminatorIdleGuardSecondsSpecified { get; set; }
+        protected bool TerminatorIdleGuardSecondsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod _callbackMethod;
 
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallbackMethodSpecified { get; set; }
+        protected bool CallbackMethodSpecified { get; set; }
 
         private int _pollingIntervalSeconds;
 
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PollingIntervalSecondsSpecified { get; set; }
+        protected bool PollingIntervalSecondsSpecified { get; set; }
 
         private int _activationDigit;
 
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ActivationDigitSpecified { get; set; }
+        protected bool ActivationDigitSpecified { get; set; }
 
     }
 }

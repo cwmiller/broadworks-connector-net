@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponseSizeLimitSpecified { get; set; }
+        protected bool ResponseSizeLimitSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceName> _searchCriteriaDeviceName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceName>();
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaDeviceNameSpecified { get; set; }
+        protected bool SearchCriteriaDeviceNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceMACAddress> _searchCriteriaDeviceMACAddress = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceMACAddress>();
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaDeviceMACAddressSpecified { get; set; }
+        protected bool SearchCriteriaDeviceMACAddressSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceNetAddress> _searchCriteriaDeviceNetAddress = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceNetAddress>();
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaDeviceNetAddressSpecified { get; set; }
+        protected bool SearchCriteriaDeviceNetAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceType _searchCriteriaExactDeviceType;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExactDeviceTypeSpecified { get; set; }
+        protected bool SearchCriteriaExactDeviceTypeSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAccessDeviceVersion> _searchCriteriaAccessDeviceVersion = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaAccessDeviceVersion>();
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaAccessDeviceVersionSpecified { get; set; }
+        protected bool SearchCriteriaAccessDeviceVersionSpecified { get; set; }
 
     }
 }

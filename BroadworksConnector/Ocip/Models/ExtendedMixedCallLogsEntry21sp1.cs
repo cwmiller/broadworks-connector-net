@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallLogTypeSpecified { get; set; }
+        protected bool CallLogTypeSpecified { get; set; }
 
         private string _countryCode;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountryCodeSpecified { get; set; }
+        protected bool CountryCodeSpecified { get; set; }
 
         private string _callLogId;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallLogIdSpecified { get; set; }
+        protected bool CallLogIdSpecified { get; set; }
 
         private string _callId;
 
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallIdSpecified { get; set; }
+        protected bool CallIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnhancedCallLogsSubscriberType20 _subscriberType;
 
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SubscriberTypeSpecified { get; set; }
+        protected bool SubscriberTypeSpecified { get; set; }
 
         private string _dialedNumber;
 
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DialedNumberSpecified { get; set; }
+        protected bool DialedNumberSpecified { get; set; }
 
         private string _calledNumber;
 
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CalledNumberSpecified { get; set; }
+        protected bool CalledNumberSpecified { get; set; }
 
         private string _networkTranslatedAddress;
 
@@ -182,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkTranslatedAddressSpecified { get; set; }
+        protected bool NetworkTranslatedAddressSpecified { get; set; }
 
         private string _callingAssertedNumber;
 
@@ -202,7 +202,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingAssertedNumberSpecified { get; set; }
+        protected bool CallingAssertedNumberSpecified { get; set; }
 
         private string _callingPresentationNumber;
 
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingPresentationNumberSpecified { get; set; }
+        protected bool CallingPresentationNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallingPresentationNumberSource _callingPresentationNumberSource;
 
@@ -240,7 +240,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingPresentationNumberSourceSpecified { get; set; }
+        protected bool CallingPresentationNumberSourceSpecified { get; set; }
 
         private string _callingPresentationName;
 
@@ -260,7 +260,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingPresentationNameSpecified { get; set; }
+        protected bool CallingPresentationNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.PresentationIndicator _callingPresentationIndicator;
 
@@ -277,7 +277,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingPresentationIndicatorSpecified { get; set; }
+        protected bool CallingPresentationIndicatorSpecified { get; set; }
 
         private string _callingGroupId;
 
@@ -297,7 +297,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingGroupIdSpecified { get; set; }
+        protected bool CallingGroupIdSpecified { get; set; }
 
         private string _calledDirectoryName;
 
@@ -317,7 +317,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CalledDirectoryNameSpecified { get; set; }
+        protected bool CalledDirectoryNameSpecified { get; set; }
 
         private string _calledGroupId;
 
@@ -337,7 +337,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CalledGroupIdSpecified { get; set; }
+        protected bool CalledGroupIdSpecified { get; set; }
 
         private string _connectedNumber;
 
@@ -357,7 +357,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConnectedNumberSpecified { get; set; }
+        protected bool ConnectedNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ConnectedNumberSource _connectedNumberSource;
 
@@ -375,7 +375,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConnectedNumberSourceSpecified { get; set; }
+        protected bool ConnectedNumberSourceSpecified { get; set; }
 
         private string _connectedName;
 
@@ -395,7 +395,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConnectedNameSpecified { get; set; }
+        protected bool ConnectedNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.PresentationIndicator _connectedPresentationIndicator;
 
@@ -413,7 +413,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConnectedPresentationIndicatorSpecified { get; set; }
+        protected bool ConnectedPresentationIndicatorSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkType _typeOfNetwork;
 
@@ -431,7 +431,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TypeOfNetworkSpecified { get; set; }
+        protected bool TypeOfNetworkSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCategory _callCategory;
 
@@ -449,7 +449,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallCategorySpecified { get; set; }
+        protected bool CallCategorySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.BasicCallType _basicCallType;
 
@@ -466,7 +466,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BasicCallTypeSpecified { get; set; }
+        protected bool BasicCallTypeSpecified { get; set; }
 
         private string _configurableCallType;
 
@@ -486,7 +486,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfigurableCallTypeSpecified { get; set; }
+        protected bool ConfigurableCallTypeSpecified { get; set; }
 
         private string _alternateCallIndicator;
 
@@ -506,7 +506,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateCallIndicatorSpecified { get; set; }
+        protected bool AlternateCallIndicatorSpecified { get; set; }
 
         private string _virtualOnNetCallType;
 
@@ -526,7 +526,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VirtualOnNetCallTypeSpecified { get; set; }
+        protected bool VirtualOnNetCallTypeSpecified { get; set; }
 
         private string _time;
 
@@ -543,7 +543,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeSpecified { get; set; }
+        protected bool TimeSpecified { get; set; }
 
         private string _startTime;
 
@@ -560,7 +560,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartTimeSpecified { get; set; }
+        protected bool StartTimeSpecified { get; set; }
 
         private string _answerTime;
 
@@ -578,7 +578,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnswerTimeSpecified { get; set; }
+        protected bool AnswerTimeSpecified { get; set; }
 
         private string _releaseTime;
 
@@ -596,7 +596,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReleaseTimeSpecified { get; set; }
+        protected bool ReleaseTimeSpecified { get; set; }
 
         private string _detachedTime;
 
@@ -614,7 +614,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DetachedTimeSpecified { get; set; }
+        protected bool DetachedTimeSpecified { get; set; }
 
         private string _detachedAnswerTime;
 
@@ -632,7 +632,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DetachedAnswerTimeSpecified { get; set; }
+        protected bool DetachedAnswerTimeSpecified { get; set; }
 
         private string _outgoingDnis;
 
@@ -652,7 +652,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutgoingDnisSpecified { get; set; }
+        protected bool OutgoingDnisSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition21sp1 _serviceInvocationDisposition;
 
@@ -670,7 +670,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationDispositionSpecified { get; set; }
+        protected bool ServiceInvocationDispositionSpecified { get; set; }
 
         private string _serviceInvocationDialedNumber;
 
@@ -690,7 +690,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationDialedNumberSpecified { get; set; }
+        protected bool ServiceInvocationDialedNumberSpecified { get; set; }
 
         private string _serviceInvocationCalledNumber;
 
@@ -710,7 +710,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationCalledNumberSpecified { get; set; }
+        protected bool ServiceInvocationCalledNumberSpecified { get; set; }
 
         private string _serviceInvocationNetworkTranslatedAddress;
 
@@ -730,7 +730,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationNetworkTranslatedAddressSpecified { get; set; }
+        protected bool ServiceInvocationNetworkTranslatedAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkType _serviceInvocationTypeOfNetwork;
 
@@ -748,7 +748,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationTypeOfNetworkSpecified { get; set; }
+        protected bool ServiceInvocationTypeOfNetworkSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCategory _serviceInvocationCallCategory;
 
@@ -766,7 +766,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationCallCategorySpecified { get; set; }
+        protected bool ServiceInvocationCallCategorySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.BasicCallType _serviceInvocationBasicCallType;
 
@@ -784,7 +784,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationBasicCallTypeSpecified { get; set; }
+        protected bool ServiceInvocationBasicCallTypeSpecified { get; set; }
 
         private string _serviceInvocationConfigurableCallType;
 
@@ -804,7 +804,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationConfigurableCallTypeSpecified { get; set; }
+        protected bool ServiceInvocationConfigurableCallTypeSpecified { get; set; }
 
         private string _serviceInvocationAlternateCallIndicator;
 
@@ -824,7 +824,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationAlternateCallIndicatorSpecified { get; set; }
+        protected bool ServiceInvocationAlternateCallIndicatorSpecified { get; set; }
 
         private string _serviceInvocationVirtualOnNetCallType;
 
@@ -844,7 +844,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationVirtualOnNetCallTypeSpecified { get; set; }
+        protected bool ServiceInvocationVirtualOnNetCallTypeSpecified { get; set; }
 
         private string _serviceInvocationCalledDirectoryName;
 
@@ -864,7 +864,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationCalledDirectoryNameSpecified { get; set; }
+        protected bool ServiceInvocationCalledDirectoryNameSpecified { get; set; }
 
         private string _serviceInvocationCalledGroupId;
 
@@ -884,7 +884,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInvocationCalledGroupIdSpecified { get; set; }
+        protected bool ServiceInvocationCalledGroupIdSpecified { get; set; }
 
         private string _redirectingNumber;
 
@@ -904,7 +904,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectingNumberSpecified { get; set; }
+        protected bool RedirectingNumberSpecified { get; set; }
 
         private string _redirectingName;
 
@@ -924,7 +924,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectingNameSpecified { get; set; }
+        protected bool RedirectingNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RedirectingPresentationIndicator _redirectingPresentationIndicator;
 
@@ -942,7 +942,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectingPresentationIndicatorSpecified { get; set; }
+        protected bool RedirectingPresentationIndicatorSpecified { get; set; }
 
         private string _redirectingReason;
 
@@ -962,7 +962,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectingReasonSpecified { get; set; }
+        protected bool RedirectingReasonSpecified { get; set; }
 
         private string _accountAuthorizationCode;
 
@@ -982,7 +982,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccountAuthorizationCodeSpecified { get; set; }
+        protected bool AccountAuthorizationCodeSpecified { get; set; }
 
         private string _callAuthorizationCode;
 
@@ -1002,7 +1002,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallAuthorizationCodeSpecified { get; set; }
+        protected bool CallAuthorizationCodeSpecified { get; set; }
 
         private string _userGroupId;
 
@@ -1022,7 +1022,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserGroupIdSpecified { get; set; }
+        protected bool UserGroupIdSpecified { get; set; }
 
         private string _userId;
 
@@ -1042,7 +1042,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _userPrimaryDn;
 
@@ -1062,7 +1062,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserPrimaryDnSpecified { get; set; }
+        protected bool UserPrimaryDnSpecified { get; set; }
 
         private string _userPrimaryExtension;
 
@@ -1082,7 +1082,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserPrimaryExtensionSpecified { get; set; }
+        protected bool UserPrimaryExtensionSpecified { get; set; }
 
         private string _securityClassification;
 
@@ -1102,7 +1102,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecurityClassificationSpecified { get; set; }
+        protected bool SecurityClassificationSpecified { get; set; }
 
     }
 }

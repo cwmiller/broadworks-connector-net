@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfigurableCLIDNormalizationSpecified { get; set; }
+        protected bool ConfigurableCLIDNormalizationSpecified { get; set; }
 
     }
 }

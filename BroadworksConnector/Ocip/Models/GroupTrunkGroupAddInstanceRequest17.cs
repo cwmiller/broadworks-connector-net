@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _name;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupPilotUser _pilotUser;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PilotUserSpecified { get; set; }
+        protected bool PilotUserSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentSpecified { get; set; }
+        protected bool DepartmentSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessDeviceSpecified { get; set; }
+        protected bool AccessDeviceSpecified { get; set; }
 
         private int _maxActiveCalls;
 
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxActiveCallsSpecified { get; set; }
+        protected bool MaxActiveCallsSpecified { get; set; }
 
         private int _maxIncomingCalls;
 
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxIncomingCallsSpecified { get; set; }
+        protected bool MaxIncomingCallsSpecified { get; set; }
 
         private int _maxOutgoingCalls;
 
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxOutgoingCallsSpecified { get; set; }
+        protected bool MaxOutgoingCallsSpecified { get; set; }
 
         private bool _enableBursting;
 
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableBurstingSpecified { get; set; }
+        protected bool EnableBurstingSpecified { get; set; }
 
         private int _burstingMaxActiveCalls;
 
@@ -226,7 +226,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BurstingMaxActiveCallsSpecified { get; set; }
+        protected bool BurstingMaxActiveCallsSpecified { get; set; }
 
         private int _burstingMaxIncomingCalls;
 
@@ -246,7 +246,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BurstingMaxIncomingCallsSpecified { get; set; }
+        protected bool BurstingMaxIncomingCallsSpecified { get; set; }
 
         private int _burstingMaxOutgoingCalls;
 
@@ -266,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BurstingMaxOutgoingCallsSpecified { get; set; }
+        protected bool BurstingMaxOutgoingCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupCapacityExceededAction _capacityExceededAction;
 
@@ -284,7 +284,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CapacityExceededActionSpecified { get; set; }
+        protected bool CapacityExceededActionSpecified { get; set; }
 
         private string _capacityExceededForwardAddress;
 
@@ -304,7 +304,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CapacityExceededForwardAddressSpecified { get; set; }
+        protected bool CapacityExceededForwardAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupKey _capacityExceededRerouteTrunkGroupKey;
 
@@ -322,7 +322,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CapacityExceededRerouteTrunkGroupKeySpecified { get; set; }
+        protected bool CapacityExceededRerouteTrunkGroupKeySpecified { get; set; }
 
         private int _capacityExceededTrapInitialCalls;
 
@@ -340,7 +340,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CapacityExceededTrapInitialCallsSpecified { get; set; }
+        protected bool CapacityExceededTrapInitialCallsSpecified { get; set; }
 
         private int _capacityExceededTrapOffsetCalls;
 
@@ -358,7 +358,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CapacityExceededTrapOffsetCallsSpecified { get; set; }
+        protected bool CapacityExceededTrapOffsetCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupUnreachableDestinationAction _unreachableDestinationAction;
 
@@ -376,7 +376,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnreachableDestinationActionSpecified { get; set; }
+        protected bool UnreachableDestinationActionSpecified { get; set; }
 
         private string _unreachableDestinationForwardAddress;
 
@@ -396,7 +396,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnreachableDestinationForwardAddressSpecified { get; set; }
+        protected bool UnreachableDestinationForwardAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupKey _unreachableDestinationRerouteTrunkGroupKey;
 
@@ -414,7 +414,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnreachableDestinationRerouteTrunkGroupKeySpecified { get; set; }
+        protected bool UnreachableDestinationRerouteTrunkGroupKeySpecified { get; set; }
 
         private int _invitationTimeout;
 
@@ -433,7 +433,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InvitationTimeoutSpecified { get; set; }
+        protected bool InvitationTimeoutSpecified { get; set; }
 
         private bool _requireAuthentication;
 
@@ -450,7 +450,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequireAuthenticationSpecified { get; set; }
+        protected bool RequireAuthenticationSpecified { get; set; }
 
         private string _sipAuthenticationUserName;
 
@@ -470,7 +470,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipAuthenticationUserNameSpecified { get; set; }
+        protected bool SipAuthenticationUserNameSpecified { get; set; }
 
         private string _sipAuthenticationPassword;
 
@@ -490,7 +490,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipAuthenticationPasswordSpecified { get; set; }
+        protected bool SipAuthenticationPasswordSpecified { get; set; }
 
         private List<string> _hostedUserId = new List<string>();
 
@@ -510,7 +510,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HostedUserIdSpecified { get; set; }
+        protected bool HostedUserIdSpecified { get; set; }
 
         private string _trunkGroupIdentity;
 
@@ -530,7 +530,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupIdentitySpecified { get; set; }
+        protected bool TrunkGroupIdentitySpecified { get; set; }
 
         private string _otgDtgIdentity;
 
@@ -550,7 +550,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OtgDtgIdentitySpecified { get; set; }
+        protected bool OtgDtgIdentitySpecified { get; set; }
 
         private bool _includeTrunkGroupIdentity;
 
@@ -567,7 +567,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeTrunkGroupIdentitySpecified { get; set; }
+        protected bool IncludeTrunkGroupIdentitySpecified { get; set; }
 
         private bool _includeDtgIdentity;
 
@@ -584,7 +584,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeDtgIdentitySpecified { get; set; }
+        protected bool IncludeDtgIdentitySpecified { get; set; }
 
         private bool _enableNetworkAddressIdentity;
 
@@ -601,7 +601,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNetworkAddressIdentitySpecified { get; set; }
+        protected bool EnableNetworkAddressIdentitySpecified { get; set; }
 
         private bool _allowUnscreenedCalls;
 
@@ -618,7 +618,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowUnscreenedCallsSpecified { get; set; }
+        protected bool AllowUnscreenedCallsSpecified { get; set; }
 
         private bool _allowUnscreenedEmergencyCalls;
 
@@ -635,7 +635,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowUnscreenedEmergencyCallsSpecified { get; set; }
+        protected bool AllowUnscreenedEmergencyCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineIdentityUsagePolicy _pilotUserCallingLineIdentityPolicy;
 
@@ -652,7 +652,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PilotUserCallingLineIdentityPolicySpecified { get; set; }
+        protected bool PilotUserCallingLineIdentityPolicySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserChargeNumberUsagePolicy _pilotUserChargeNumberPolicy;
 
@@ -669,7 +669,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PilotUserChargeNumberPolicySpecified { get; set; }
+        protected bool PilotUserChargeNumberPolicySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupCallForwardingAlwaysAction _callForwardingAlwaysAction;
 
@@ -687,7 +687,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallForwardingAlwaysActionSpecified { get; set; }
+        protected bool CallForwardingAlwaysActionSpecified { get; set; }
 
         private string _callForwardingAlwaysForwardAddress;
 
@@ -707,7 +707,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallForwardingAlwaysForwardAddressSpecified { get; set; }
+        protected bool CallForwardingAlwaysForwardAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupKey _callForwardingAlwaysRerouteTrunkGroupKey;
 
@@ -725,7 +725,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallForwardingAlwaysRerouteTrunkGroupKeySpecified { get; set; }
+        protected bool CallForwardingAlwaysRerouteTrunkGroupKeySpecified { get; set; }
 
         private string _peeringDomain;
 
@@ -745,7 +745,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeeringDomainSpecified { get; set; }
+        protected bool PeeringDomainSpecified { get; set; }
 
         private bool _routeToPeeringDomain;
 
@@ -762,7 +762,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteToPeeringDomainSpecified { get; set; }
+        protected bool RouteToPeeringDomainSpecified { get; set; }
 
     }
 }

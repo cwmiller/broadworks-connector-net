@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemAdministratorPasswordSpecified { get; set; }
+        protected bool SystemAdministratorPasswordSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.PasswordForServiceProviderAdministrator _serviceProviderAdministratorPassword;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderAdministratorPasswordSpecified { get; set; }
+        protected bool ServiceProviderAdministratorPasswordSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.PasswordForGroupAdministrator _groupAdministratorPassword;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupAdministratorPasswordSpecified { get; set; }
+        protected bool GroupAdministratorPasswordSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.PasswordForUser _userPassword;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserPasswordSpecified { get; set; }
+        protected bool UserPasswordSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.PasswordForAccessDevice _accessDeviceAuthenticationPassword;
 
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessDeviceAuthenticationPasswordSpecified { get; set; }
+        protected bool AccessDeviceAuthenticationPasswordSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.PasswordForTrunkGroup _trunkGroupAuthenticationPassword;
 
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupAuthenticationPasswordSpecified { get; set; }
+        protected bool TrunkGroupAuthenticationPasswordSpecified { get; set; }
 
     }
 }

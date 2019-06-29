@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemVoicePortalsTableSpecified { get; set; }
+        protected bool SystemVoicePortalsTableSpecified { get; set; }
 
     }
 }

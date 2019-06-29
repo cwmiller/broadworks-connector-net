@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private string _taskName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TaskNameSpecified { get; set; }
+        protected bool TaskNameSpecified { get; set; }
 
     }
 }

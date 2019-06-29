@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReleaseCauseSpecified { get; set; }
+        protected bool ReleaseCauseSpecified { get; set; }
 
     }
 }

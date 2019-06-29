@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private bool _includeDigitPatterns;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeDigitPatternsSpecified { get; set; }
+        protected bool IncludeDigitPatternsSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderNumberPortabilityQueryDigitPattern> _searchCriteriaServiceProviderNumberPortabilityQueryDigitPattern = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderNumberPortabilityQueryDigitPattern>();
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaServiceProviderNumberPortabilityQueryDigitPatternSpecified { get; set; }
+        protected bool SearchCriteriaServiceProviderNumberPortabilityQueryDigitPatternSpecified { get; set; }
 
         private int _responseSizeLimit;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponseSizeLimitSpecified { get; set; }
+        protected bool ResponseSizeLimitSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DirectTransferScreeningSpecified { get; set; }
+        protected bool DirectTransferScreeningSpecified { get; set; }
 
         private bool _vmCallbackScreening;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VmCallbackScreeningSpecified { get; set; }
+        protected bool VmCallbackScreeningSpecified { get; set; }
 
     }
 }

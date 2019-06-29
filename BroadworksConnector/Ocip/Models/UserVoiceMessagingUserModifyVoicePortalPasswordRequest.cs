@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _oldPassword;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OldPasswordSpecified { get; set; }
+        protected bool OldPasswordSpecified { get; set; }
 
         private string _newPassword;
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewPasswordSpecified { get; set; }
+        protected bool NewPasswordSpecified { get; set; }
 
     }
 }

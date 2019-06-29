@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkRoutingServerTableSpecified { get; set; }
+        protected bool NetworkRoutingServerTableSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberSpecified { get; set; }
+        protected bool NumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GETSNumberType _type;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TypeSpecified { get; set; }
+        protected bool TypeSpecified { get; set; }
 
         private string _description;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
     }
 }

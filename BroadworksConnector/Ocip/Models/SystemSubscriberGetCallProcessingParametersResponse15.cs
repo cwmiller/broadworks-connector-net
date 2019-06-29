@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserCallingLineIdSelectionSpecified { get; set; }
+        protected bool UserCallingLineIdSelectionSpecified { get; set; }
 
         private bool _isExtendedCallingLineIdActive;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsExtendedCallingLineIdActiveSpecified { get; set; }
+        protected bool IsExtendedCallingLineIdActiveSpecified { get; set; }
 
         private bool _isRingTimeOutActive;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsRingTimeOutActiveSpecified { get; set; }
+        protected bool IsRingTimeOutActiveSpecified { get; set; }
 
         private int _ringTimeoutSeconds;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RingTimeoutSecondsSpecified { get; set; }
+        protected bool RingTimeoutSecondsSpecified { get; set; }
 
         private bool _allowEmergencyRemoteOfficeOriginations;
 
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowEmergencyRemoteOfficeOriginationsSpecified { get; set; }
+        protected bool AllowEmergencyRemoteOfficeOriginationsSpecified { get; set; }
 
         private int _maxNoAnswerNumberOfRings;
 
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxNoAnswerNumberOfRingsSpecified { get; set; }
+        protected bool MaxNoAnswerNumberOfRingsSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileDescription1Specified { get; set; }
+        protected bool FileDescription1Specified { get; set; }
 
         private string _fileDescription2;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileDescription2Specified { get; set; }
+        protected bool FileDescription2Specified { get; set; }
 
         private string _fileDescription3;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileDescription3Specified { get; set; }
+        protected bool FileDescription3Specified { get; set; }
 
         private string _fileDescription4;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileDescription4Specified { get; set; }
+        protected bool FileDescription4Specified { get; set; }
 
     }
 }

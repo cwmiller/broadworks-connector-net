@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecurityClassificationSpecified { get; set; }
+        protected bool SecurityClassificationSpecified { get; set; }
 
         private int _responseSizeLimit;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponseSizeLimitSpecified { get; set; }
+        protected bool ResponseSizeLimitSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaTrunkGroupName> _searchCriteriaTrunkGroupName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaTrunkGroupName>();
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaTrunkGroupNameSpecified { get; set; }
+        protected bool SearchCriteriaTrunkGroupNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId>();
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaGroupIdSpecified { get; set; }
+        protected bool SearchCriteriaGroupIdSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> _searchCriteriaServiceProviderId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId>();
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaServiceProviderIdSpecified { get; set; }
+        protected bool SearchCriteriaServiceProviderIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactOrganizationType _searchCriteriaExactOrganizationType;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExactOrganizationTypeSpecified { get; set; }
+        protected bool SearchCriteriaExactOrganizationTypeSpecified { get; set; }
 
     }
 }

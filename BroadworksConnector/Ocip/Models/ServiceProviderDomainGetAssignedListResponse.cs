@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderDefaultDomainSpecified { get; set; }
+        protected bool ServiceProviderDefaultDomainSpecified { get; set; }
 
         private List<string> _domain = new List<string>();
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DomainSpecified { get; set; }
+        protected bool DomainSpecified { get; set; }
 
     }
 }

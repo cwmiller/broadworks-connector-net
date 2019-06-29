@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool ErrorCodeSpecified { get; set; }
+        protected bool ErrorCodeSpecified { get; set; }
 
         private string _summary;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool SummarySpecified { get; set; }
+        protected bool SummarySpecified { get; set; }
 
         private string _summaryEnglish;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool SummaryEnglishSpecified { get; set; }
+        protected bool SummaryEnglishSpecified { get; set; }
 
         private string _detail;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool DetailSpecified { get; set; }
+        protected bool DetailSpecified { get; set; }
 
     }
 }

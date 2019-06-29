@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _newName;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewNameSpecified { get; set; }
+        protected bool NewNameSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CounterResetIntervalDaysSpecified { get; set; }
+        protected bool CounterResetIntervalDaysSpecified { get; set; }
 
         private int _counterResetHour;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CounterResetHourSpecified { get; set; }
+        protected bool CounterResetHourSpecified { get; set; }
 
         private int _counterResetMinute;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CounterResetMinuteSpecified { get; set; }
+        protected bool CounterResetMinuteSpecified { get; set; }
 
         private bool _emergencySIPBypassAllowed;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmergencySIPBypassAllowedSpecified { get; set; }
+        protected bool EmergencySIPBypassAllowedSpecified { get; set; }
 
     }
 }

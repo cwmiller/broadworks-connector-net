@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OfficeZoneNameSpecified { get; set; }
+        protected bool OfficeZoneNameSpecified { get; set; }
 
         private string _description;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private List<string> _zoneName = new List<string>();
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ZoneNameSpecified { get; set; }
+        protected bool ZoneNameSpecified { get; set; }
 
         private string _primaryZoneName;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrimaryZoneNameSpecified { get; set; }
+        protected bool PrimaryZoneNameSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepositoryUrlSpecified { get; set; }
+        protected bool RepositoryUrlSpecified { get; set; }
 
         private bool _passiveFTP;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PassiveFTPSpecified { get; set; }
+        protected bool PassiveFTPSpecified { get; set; }
 
     }
 }

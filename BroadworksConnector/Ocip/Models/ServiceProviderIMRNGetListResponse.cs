@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ImrnSpecified { get; set; }
+        protected bool ImrnSpecified { get; set; }
 
     }
 }

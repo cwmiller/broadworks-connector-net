@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaIMRNSpecified { get; set; }
+        protected bool SearchCriteriaIMRNSpecified { get; set; }
 
     }
 }

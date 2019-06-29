@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfCallsReceivedSpecified { get; set; }
+        protected bool NumberOfCallsReceivedSpecified { get; set; }
 
         private int _numberOfCallsNotAnswered;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfCallsNotAnsweredSpecified { get; set; }
+        protected bool NumberOfCallsNotAnsweredSpecified { get; set; }
 
         private int _averageTimePerCallSeconds;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AverageTimePerCallSecondsSpecified { get; set; }
+        protected bool AverageTimePerCallSecondsSpecified { get; set; }
 
         private int _timeInCallsSeconds;
 
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInCallsSecondsSpecified { get; set; }
+        protected bool TimeInCallsSecondsSpecified { get; set; }
 
         private int _timeLoggedOffSeconds;
 
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeLoggedOffSecondsSpecified { get; set; }
+        protected bool TimeLoggedOffSecondsSpecified { get; set; }
 
         private int _timeLoggedOnAndIdleSeconds;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeLoggedOnAndIdleSecondsSpecified { get; set; }
+        protected bool TimeLoggedOnAndIdleSecondsSpecified { get; set; }
 
     }
 }

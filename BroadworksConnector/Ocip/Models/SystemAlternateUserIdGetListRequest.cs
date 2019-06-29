@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponseSizeLimitSpecified { get; set; }
+        protected bool ResponseSizeLimitSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAlternateUserId> _searchCriteriaAlternateUserId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaAlternateUserId>();
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaAlternateUserIdSpecified { get; set; }
+        protected bool SearchCriteriaAlternateUserIdSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId>();
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaUserIdSpecified { get; set; }
+        protected bool SearchCriteriaUserIdSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId>();
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaGroupIdSpecified { get; set; }
+        protected bool SearchCriteriaGroupIdSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> _searchCriteriaServiceProviderId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId>();
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaServiceProviderIdSpecified { get; set; }
+        protected bool SearchCriteriaServiceProviderIdSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId>();
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaResellerIdSpecified { get; set; }
+        protected bool SearchCriteriaResellerIdSpecified { get; set; }
 
     }
 }

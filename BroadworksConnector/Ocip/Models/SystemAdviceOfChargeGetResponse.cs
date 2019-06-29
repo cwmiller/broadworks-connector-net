@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DelayBetweenNotificationSecondsSpecified { get; set; }
+        protected bool DelayBetweenNotificationSecondsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncomingAocHandlingSpecified { get; set; }
+        protected bool IncomingAocHandlingSpecified { get; set; }
 
         private string _costInformationSource;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CostInformationSourceSpecified { get; set; }
+        protected bool CostInformationSourceSpecified { get; set; }
 
     }
 }

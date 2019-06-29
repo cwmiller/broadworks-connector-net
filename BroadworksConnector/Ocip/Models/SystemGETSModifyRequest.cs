@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnabledSpecified { get; set; }
+        protected bool EnabledSpecified { get; set; }
 
         private bool _enableRequireResourcePriority;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableRequireResourcePrioritySpecified { get; set; }
+        protected bool EnableRequireResourcePrioritySpecified { get; set; }
 
         private bool _sendAccessResourcePriority;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendAccessResourcePrioritySpecified { get; set; }
+        protected bool SendAccessResourcePrioritySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode _callIdentifierMode;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallIdentifierModeSpecified { get; set; }
+        protected bool CallIdentifierModeSpecified { get; set; }
 
         private int _defaultPriorityAVP;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultPriorityAVPSpecified { get; set; }
+        protected bool DefaultPriorityAVPSpecified { get; set; }
 
         private int _signalingDSCP;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SignalingDSCPSpecified { get; set; }
+        protected bool SignalingDSCPSpecified { get; set; }
 
         private string _defaultRValue;
 
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultRValueSpecified { get; set; }
+        protected bool DefaultRValueSpecified { get; set; }
 
         private bool _bypassRoRelease;
 
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BypassRoReleaseSpecified { get; set; }
+        protected bool BypassRoReleaseSpecified { get; set; }
 
     }
 }

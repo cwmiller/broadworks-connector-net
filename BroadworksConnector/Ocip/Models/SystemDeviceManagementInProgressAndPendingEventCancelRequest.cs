@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CancelAllEventsSpecified { get; set; }
+        protected bool CancelAllEventsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents _cancelMultipleEvents;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CancelMultipleEventsSpecified { get; set; }
+        protected bool CancelMultipleEventsSpecified { get; set; }
 
         private List<int> _eventId = new List<int>();
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EventIdSpecified { get; set; }
+        protected bool EventIdSpecified { get; set; }
 
     }
 }

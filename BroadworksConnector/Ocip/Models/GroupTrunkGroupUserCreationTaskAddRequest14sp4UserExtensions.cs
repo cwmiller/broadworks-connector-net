@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtensionSpecified { get; set; }
+        protected bool ExtensionSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.ExtensionRange17> _extensionRange = new List<BroadWorksConnector.Ocip.Models.ExtensionRange17>();
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtensionRangeSpecified { get; set; }
+        protected bool ExtensionRangeSpecified { get; set; }
 
     }
 }

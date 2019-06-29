@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxLoggedCallsSpecified { get; set; }
+        protected bool MaxLoggedCallsSpecified { get; set; }
 
         private int _callExpirationDays;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallExpirationDaysSpecified { get; set; }
+        protected bool CallExpirationDaysSpecified { get; set; }
 
     }
 }

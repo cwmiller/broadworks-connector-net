@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipContactSpecified { get; set; }
+        protected bool SipContactSpecified { get; set; }
 
         private string _pathHeader;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PathHeaderSpecified { get; set; }
+        protected bool PathHeaderSpecified { get; set; }
 
     }
 }

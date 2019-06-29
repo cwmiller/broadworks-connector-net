@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemAdministratorPasswordSpecified { get; set; }
+        protected bool SystemAdministratorPasswordSpecified { get; set; }
 
         private string _serviceProviderAdministratorPassword;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderAdministratorPasswordSpecified { get; set; }
+        protected bool ServiceProviderAdministratorPasswordSpecified { get; set; }
 
         private string _groupAdministratorPassword;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupAdministratorPasswordSpecified { get; set; }
+        protected bool GroupAdministratorPasswordSpecified { get; set; }
 
         private string _userPassword;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserPasswordSpecified { get; set; }
+        protected bool UserPasswordSpecified { get; set; }
 
         private string _userPasscode;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserPasscodeSpecified { get; set; }
+        protected bool UserPasscodeSpecified { get; set; }
 
         private string _userSIPAuthenticationPassword;
 
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserSIPAuthenticationPasswordSpecified { get; set; }
+        protected bool UserSIPAuthenticationPasswordSpecified { get; set; }
 
         private string _accessDeviceAuthenticationPassword;
 
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessDeviceAuthenticationPasswordSpecified { get; set; }
+        protected bool AccessDeviceAuthenticationPasswordSpecified { get; set; }
 
         private string _trunkGroupAuthenticationPassword;
 
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupAuthenticationPasswordSpecified { get; set; }
+        protected bool TrunkGroupAuthenticationPasswordSpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessDeviceSpecified { get; set; }
+        protected bool AccessDeviceSpecified { get; set; }
 
         private bool _staticRegistrationCapable;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StaticRegistrationCapableSpecified { get; set; }
+        protected bool StaticRegistrationCapableSpecified { get; set; }
 
         private bool _useDomain;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDomainSpecified { get; set; }
+        protected bool UseDomainSpecified { get; set; }
 
         private bool _staticLineOrdering;
 
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StaticLineOrderingSpecified { get; set; }
+        protected bool StaticLineOrderingSpecified { get; set; }
 
     }
 }

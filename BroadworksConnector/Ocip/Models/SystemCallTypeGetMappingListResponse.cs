@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallTypeMappingSpecified { get; set; }
+        protected bool CallTypeMappingSpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool KeySpecified { get; set; }
+        protected bool KeySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationModifyEntry20 _entry;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntrySpecified { get; set; }
+        protected bool EntrySpecified { get; set; }
 
     }
 }

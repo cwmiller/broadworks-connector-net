@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleCombinationSpecified { get; set; }
+        protected bool ScheduleCombinationSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameDialingLastNameSpecified { get; set; }
+        protected bool NameDialingLastNameSpecified { get; set; }
 
         private string _nameDialingFirstName;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameDialingFirstNameSpecified { get; set; }
+        protected bool NameDialingFirstNameSpecified { get; set; }
 
     }
 }

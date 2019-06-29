@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableMonitoringSpecified { get; set; }
+        protected bool EnableMonitoringSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
 
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfigTypeSpecified { get; set; }
+        protected bool ConfigTypeSpecified { get; set; }
 
         private string _systemFileName;
 
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemFileNameSpecified { get; set; }
+        protected bool SystemFileNameSpecified { get; set; }
 
         private string _deviceFileFormat;
 
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceFileFormatSpecified { get; set; }
+        protected bool DeviceFileFormatSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeOptions16 _deviceManagementDeviceTypeOptions;
 
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceManagementDeviceTypeOptionsSpecified { get; set; }
+        protected bool DeviceManagementDeviceTypeOptionsSpecified { get; set; }
 
     }
 }

@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceKeySpecified { get; set; }
+        protected bool ConferenceKeySpecified { get; set; }
 
         private string _title;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TitleSpecified { get; set; }
+        protected bool TitleSpecified { get; set; }
 
         private int? _estimatedParticipants;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EstimatedParticipantsSpecified { get; set; }
+        protected bool EstimatedParticipantsSpecified { get; set; }
 
         private bool _restrictParticipants;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RestrictParticipantsSpecified { get; set; }
+        protected bool RestrictParticipantsSpecified { get; set; }
 
         private int _maxParticipants;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxParticipantsSpecified { get; set; }
+        protected bool MaxParticipantsSpecified { get; set; }
 
         private string _accountCode;
 
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccountCodeSpecified { get; set; }
+        protected bool AccountCodeSpecified { get; set; }
 
         private bool _muteAllAttendeesOnEntry;
 
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MuteAllAttendeesOnEntrySpecified { get; set; }
+        protected bool MuteAllAttendeesOnEntrySpecified { get; set; }
 
         private bool _endConferenceOnModeratorExit;
 
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndConferenceOnModeratorExitSpecified { get; set; }
+        protected bool EndConferenceOnModeratorExitSpecified { get; set; }
 
         private bool _moderatorRequired;
 
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ModeratorRequiredSpecified { get; set; }
+        protected bool ModeratorRequiredSpecified { get; set; }
 
         private bool _requireSecurityPin;
 
@@ -223,7 +223,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequireSecurityPinSpecified { get; set; }
+        protected bool RequireSecurityPinSpecified { get; set; }
 
         private bool _allowUniqueIdentifier;
 
@@ -241,7 +241,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowUniqueIdentifierSpecified { get; set; }
+        protected bool AllowUniqueIdentifierSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification _attendeeNotification;
 
@@ -259,7 +259,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AttendeeNotificationSpecified { get; set; }
+        protected bool AttendeeNotificationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceSchedule _conferenceSchedule;
 
@@ -277,7 +277,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceScheduleSpecified { get; set; }
+        protected bool ConferenceScheduleSpecified { get; set; }
 
         private bool _allowParticipantUnmuteInAutoLectureMode;
 
@@ -295,7 +295,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowParticipantUnmuteInAutoLectureModeSpecified { get; set; }
+        protected bool AllowParticipantUnmuteInAutoLectureModeSpecified { get; set; }
 
     }
 }

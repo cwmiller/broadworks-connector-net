@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private int _associationLimitHours;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AssociationLimitHoursSpecified { get; set; }
+        protected bool AssociationLimitHoursSpecified { get; set; }
 
         private string _hostUserId;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HostUserIdSpecified { get; set; }
+        protected bool HostUserIdSpecified { get; set; }
 
         private string _hostLastName;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HostLastNameSpecified { get; set; }
+        protected bool HostLastNameSpecified { get; set; }
 
         private string _hostFirstName;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HostFirstNameSpecified { get; set; }
+        protected bool HostFirstNameSpecified { get; set; }
 
         private string _hostAssociationDateTime;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HostAssociationDateTimeSpecified { get; set; }
+        protected bool HostAssociationDateTimeSpecified { get; set; }
 
         private int _hostAssociationLimitHours;
 
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HostAssociationLimitHoursSpecified { get; set; }
+        protected bool HostAssociationLimitHoursSpecified { get; set; }
 
     }
 }

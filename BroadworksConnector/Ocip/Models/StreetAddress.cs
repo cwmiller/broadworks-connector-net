@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddressLine1Specified { get; set; }
+        protected bool AddressLine1Specified { get; set; }
 
         private string _addressLine2;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddressLine2Specified { get; set; }
+        protected bool AddressLine2Specified { get; set; }
 
         private string _city;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CitySpecified { get; set; }
+        protected bool CitySpecified { get; set; }
 
         private string _stateOrProvince;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StateOrProvinceSpecified { get; set; }
+        protected bool StateOrProvinceSpecified { get; set; }
 
         private string _stateOrProvinceDisplayName;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StateOrProvinceDisplayNameSpecified { get; set; }
+        protected bool StateOrProvinceDisplayNameSpecified { get; set; }
 
         private string _zipOrPostalCode;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ZipOrPostalCodeSpecified { get; set; }
+        protected bool ZipOrPostalCodeSpecified { get; set; }
 
         private string _country;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountrySpecified { get; set; }
+        protected bool CountrySpecified { get; set; }
 
     }
 }

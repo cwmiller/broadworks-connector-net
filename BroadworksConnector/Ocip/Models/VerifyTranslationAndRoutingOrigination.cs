@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LinePortSpecified { get; set; }
+        protected bool LinePortSpecified { get; set; }
 
         private string _phone;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneSpecified { get; set; }
+        protected bool PhoneSpecified { get; set; }
 
         private string _userId;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _url;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UrlSpecified { get; set; }
+        protected bool UrlSpecified { get; set; }
 
     }
 }

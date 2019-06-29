@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllocatedPortsSpecified { get; set; }
+        protected bool AllocatedPortsSpecified { get; set; }
 
         private string _networkClassOfService;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkClassOfServiceSpecified { get; set; }
+        protected bool NetworkClassOfServiceSpecified { get; set; }
 
         private int _securityPinLength;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecurityPinLengthSpecified { get; set; }
+        protected bool SecurityPinLengthSpecified { get; set; }
 
         private bool _allowIndividualOutDial;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowIndividualOutDialSpecified { get; set; }
+        protected bool AllowIndividualOutDialSpecified { get; set; }
 
         private string _operatorNumber;
 
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OperatorNumberSpecified { get; set; }
+        protected bool OperatorNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _conferenceHostUserTable;
 
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceHostUserTableSpecified { get; set; }
+        protected bool ConferenceHostUserTableSpecified { get; set; }
 
         private bool _playWarningPrompt;
 
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayWarningPromptSpecified { get; set; }
+        protected bool PlayWarningPromptSpecified { get; set; }
 
         private int _conferenceEndWarningPromptMinutes;
 
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceEndWarningPromptMinutesSpecified { get; set; }
+        protected bool ConferenceEndWarningPromptMinutesSpecified { get; set; }
 
         private bool _enableMaxConferenceDuration;
 
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableMaxConferenceDurationSpecified { get; set; }
+        protected bool EnableMaxConferenceDurationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _maxConferenceDurationMinutes;
 
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConferenceDurationMinutesSpecified { get; set; }
+        protected bool MaxConferenceDurationMinutesSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _maxScheduledConferenceDurationMinutes;
 
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxScheduledConferenceDurationMinutesSpecified { get; set; }
+        protected bool MaxScheduledConferenceDurationMinutesSpecified { get; set; }
 
     }
 }

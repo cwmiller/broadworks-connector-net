@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaServerTableSpecified { get; set; }
+        protected bool MediaServerTableSpecified { get; set; }
 
     }
 }

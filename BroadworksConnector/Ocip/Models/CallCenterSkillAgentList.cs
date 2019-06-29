@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SkillLevelSpecified { get; set; }
+        protected bool SkillLevelSpecified { get; set; }
 
         private List<string> _agent = new List<string>();
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentSpecified { get; set; }
+        protected bool AgentSpecified { get; set; }
 
     }
 }

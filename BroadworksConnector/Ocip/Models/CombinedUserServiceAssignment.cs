@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServiceSpecified { get; set; }
+        protected bool UserServiceSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AuthorizedQuantitySpecified { get; set; }
+        protected bool AuthorizedQuantitySpecified { get; set; }
 
     }
 }

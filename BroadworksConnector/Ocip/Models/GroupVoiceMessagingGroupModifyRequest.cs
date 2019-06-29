@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingGroupMailServerChoices _useMailServerSetting;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMailServerSettingSpecified { get; set; }
+        protected bool UseMailServerSettingSpecified { get; set; }
 
         private bool _warnCallerBeforeRecordingVoiceMessage;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WarnCallerBeforeRecordingVoiceMessageSpecified { get; set; }
+        protected bool WarnCallerBeforeRecordingVoiceMessageSpecified { get; set; }
 
         private bool _allowUsersConfiguringAdvancedSettings;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowUsersConfiguringAdvancedSettingsSpecified { get; set; }
+        protected bool AllowUsersConfiguringAdvancedSettingsSpecified { get; set; }
 
         private bool _allowComposeOrForwardMessageToEntireGroup;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowComposeOrForwardMessageToEntireGroupSpecified { get; set; }
+        protected bool AllowComposeOrForwardMessageToEntireGroupSpecified { get; set; }
 
         private string _mailServerNetAddress;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MailServerNetAddressSpecified { get; set; }
+        protected bool MailServerNetAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol _mailServerProtocol;
 
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MailServerProtocolSpecified { get; set; }
+        protected bool MailServerProtocolSpecified { get; set; }
 
         private bool _realDeleteForImap;
 
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RealDeleteForImapSpecified { get; set; }
+        protected bool RealDeleteForImapSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes _maxMailboxLengthMinutes;
 
@@ -201,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxMailboxLengthMinutesSpecified { get; set; }
+        protected bool MaxMailboxLengthMinutesSpecified { get; set; }
 
         private bool _doesMessageAge;
 
@@ -219,7 +219,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DoesMessageAgeSpecified { get; set; }
+        protected bool DoesMessageAgeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays _holdPeriodDays;
 
@@ -237,7 +237,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HoldPeriodDaysSpecified { get; set; }
+        protected bool HoldPeriodDaysSpecified { get; set; }
 
     }
 }

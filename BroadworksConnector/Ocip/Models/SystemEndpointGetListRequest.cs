@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponseSizeLimitSpecified { get; set; }
+        protected bool ResponseSizeLimitSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> _searchCriteriaServiceProviderId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId>();
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaServiceProviderIdSpecified { get; set; }
+        protected bool SearchCriteriaServiceProviderIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactOrganizationType _searchCriteriaExactOrganizationType;
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExactOrganizationTypeSpecified { get; set; }
+        protected bool SearchCriteriaExactOrganizationTypeSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> _searchCriteriaGroupId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId>();
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaGroupIdSpecified { get; set; }
+        protected bool SearchCriteriaGroupIdSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaLinePortUserPart> _searchCriteriaLinePortUserPart = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaLinePortUserPart>();
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaLinePortUserPartSpecified { get; set; }
+        protected bool SearchCriteriaLinePortUserPartSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaLinePortDomain> _searchCriteriaLinePortDomain = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaLinePortDomain>();
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaLinePortDomainSpecified { get; set; }
+        protected bool SearchCriteriaLinePortDomainSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName>();
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaUserLastNameSpecified { get; set; }
+        protected bool SearchCriteriaUserLastNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> _searchCriteriaUserFirstName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName>();
 
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaUserFirstNameSpecified { get; set; }
+        protected bool SearchCriteriaUserFirstNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId>();
 
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaUserIdSpecified { get; set; }
+        protected bool SearchCriteriaUserIdSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn>();
 
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaDnSpecified { get; set; }
+        protected bool SearchCriteriaDnSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension>();
 
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExtensionSpecified { get; set; }
+        protected bool SearchCriteriaExtensionSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceType> _searchCriteriaDeviceType = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceType>();
 
@@ -240,7 +240,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaDeviceTypeSpecified { get; set; }
+        protected bool SearchCriteriaDeviceTypeSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceName> _searchCriteriaDeviceName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceName>();
 
@@ -258,7 +258,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaDeviceNameSpecified { get; set; }
+        protected bool SearchCriteriaDeviceNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceMACAddress> _searchCriteriaDeviceMACAddress = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceMACAddress>();
 
@@ -276,7 +276,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaDeviceMACAddressSpecified { get; set; }
+        protected bool SearchCriteriaDeviceMACAddressSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceNetAddress> _searchCriteriaDeviceNetAddress = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceNetAddress>();
 
@@ -294,7 +294,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaDeviceNetAddressSpecified { get; set; }
+        protected bool SearchCriteriaDeviceNetAddressSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> _searchCriteriaResellerId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId>();
 
@@ -312,7 +312,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaResellerIdSpecified { get; set; }
+        protected bool SearchCriteriaResellerIdSpecified { get; set; }
 
     }
 }

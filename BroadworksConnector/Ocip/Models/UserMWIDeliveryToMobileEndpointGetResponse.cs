@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private string _mobilePhoneNumber;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobilePhoneNumberSpecified { get; set; }
+        protected bool MobilePhoneNumberSpecified { get; set; }
 
     }
 }

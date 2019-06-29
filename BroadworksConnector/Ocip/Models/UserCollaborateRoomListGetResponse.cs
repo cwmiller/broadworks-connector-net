@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RoomInstanceTableSpecified { get; set; }
+        protected bool RoomInstanceTableSpecified { get; set; }
 
     }
 }

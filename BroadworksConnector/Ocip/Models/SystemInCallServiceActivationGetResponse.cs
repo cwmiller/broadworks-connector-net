@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultActivationDigitsSpecified { get; set; }
+        protected bool DefaultActivationDigitsSpecified { get; set; }
 
     }
 }

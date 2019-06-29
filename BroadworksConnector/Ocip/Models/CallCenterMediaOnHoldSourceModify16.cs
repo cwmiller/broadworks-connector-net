@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioMessageSourceSelectionSpecified { get; set; }
+        protected bool AudioMessageSourceSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _audioFile;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFileSpecified { get; set; }
+        protected bool AudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify _externalAudioSource;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExternalAudioSourceSpecified { get; set; }
+        protected bool ExternalAudioSourceSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection _videoMessageSourceSelection;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoMessageSourceSelectionSpecified { get; set; }
+        protected bool VideoMessageSourceSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _videoFile;
 
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoFileSpecified { get; set; }
+        protected bool VideoFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify _externalVideoSource;
 
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExternalVideoSourceSpecified { get; set; }
+        protected bool ExternalVideoSourceSpecified { get; set; }
 
     }
 }

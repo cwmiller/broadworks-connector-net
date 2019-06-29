@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllCallCenterSpecified { get; set; }
+        protected bool AllCallCenterSpecified { get; set; }
 
         private List<string> _currentUserId = new List<string>();
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CurrentUserIdSpecified { get; set; }
+        protected bool CurrentUserIdSpecified { get; set; }
 
         private List<string> _pastUserId = new List<string>();
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PastUserIdSpecified { get; set; }
+        protected bool PastUserIdSpecified { get; set; }
 
     }
 }

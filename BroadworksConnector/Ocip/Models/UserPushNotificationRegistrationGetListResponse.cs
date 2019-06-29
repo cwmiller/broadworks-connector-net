@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RegistrationsTableSpecified { get; set; }
+        protected bool RegistrationsTableSpecified { get; set; }
 
     }
 }

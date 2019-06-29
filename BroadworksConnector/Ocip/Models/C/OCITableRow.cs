@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool ColSpecified { get; set; }
+        protected bool ColSpecified { get; set; }
 
     }
 }

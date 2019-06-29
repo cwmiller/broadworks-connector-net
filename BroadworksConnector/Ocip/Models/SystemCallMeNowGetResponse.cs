@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasscodeLengthSpecified { get; set; }
+        protected bool PasscodeLengthSpecified { get; set; }
 
         private int _passcodeTimeoutSeconds;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasscodeTimeoutSecondsSpecified { get; set; }
+        protected bool PasscodeTimeoutSecondsSpecified { get; set; }
 
     }
 }

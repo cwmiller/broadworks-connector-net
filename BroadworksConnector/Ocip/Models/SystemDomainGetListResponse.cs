@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemDefaultDomainSpecified { get; set; }
+        protected bool SystemDefaultDomainSpecified { get; set; }
 
         private List<string> _domain = new List<string>();
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DomainSpecified { get; set; }
+        protected bool DomainSpecified { get; set; }
 
     }
 }

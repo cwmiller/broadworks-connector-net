@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnabledSpecified { get; set; }
+        protected bool EnabledSpecified { get; set; }
 
         private int _sampleIntervalSeconds;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SampleIntervalSecondsSpecified { get; set; }
+        protected bool SampleIntervalSecondsSpecified { get; set; }
 
         private int? _protectionRate;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtectionRateSpecified { get; set; }
+        protected bool ProtectionRateSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ProtectionAction _protectionAction;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtectionActionSpecified { get; set; }
+        protected bool ProtectionActionSpecified { get; set; }
 
     }
 }

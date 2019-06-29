@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvpCodeTableSpecified { get; set; }
+        protected bool AvpCodeTableSpecified { get; set; }
 
     }
 }

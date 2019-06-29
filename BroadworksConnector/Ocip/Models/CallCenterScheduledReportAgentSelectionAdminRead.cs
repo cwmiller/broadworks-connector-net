@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllAgentSpecified { get; set; }
+        protected bool AllAgentSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _currentAgentTable;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CurrentAgentTableSpecified { get; set; }
+        protected bool CurrentAgentTableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _pastAgentTable;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PastAgentTableSpecified { get; set; }
+        protected bool PastAgentTableSpecified { get; set; }
 
     }
 }

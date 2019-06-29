@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchDigitPatternSpecified { get; set; }
+        protected bool MatchDigitPatternSpecified { get; set; }
 
         private bool _enableWhiteList;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableWhiteListSpecified { get; set; }
+        protected bool EnableWhiteListSpecified { get; set; }
 
     }
 }

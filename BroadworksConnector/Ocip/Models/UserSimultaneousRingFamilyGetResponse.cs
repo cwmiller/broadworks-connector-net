@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SimultaneousRingSelection _incomingCalls;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncomingCallsSpecified { get; set; }
+        protected bool IncomingCallsSpecified { get; set; }
 
         private List<string> _simRingPhoneNumber = new List<string>();
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SimRingPhoneNumberSpecified { get; set; }
+        protected bool SimRingPhoneNumberSpecified { get; set; }
 
     }
 }

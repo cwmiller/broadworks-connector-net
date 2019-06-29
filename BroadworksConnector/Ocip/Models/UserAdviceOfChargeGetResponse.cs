@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AdviceOfChargeType _aocType;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AocTypeSpecified { get; set; }
+        protected bool AocTypeSpecified { get; set; }
 
     }
 }

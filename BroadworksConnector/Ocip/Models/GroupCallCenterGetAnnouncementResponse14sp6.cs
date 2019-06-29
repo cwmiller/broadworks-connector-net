@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceMessageSelectionSpecified { get; set; }
+        protected bool EntranceMessageSelectionSpecified { get; set; }
 
         private string _entranceMessageAudioFileDescription;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceMessageAudioFileDescriptionSpecified { get; set; }
+        protected bool EntranceMessageAudioFileDescriptionSpecified { get; set; }
 
         private string _entranceMessageVideoFileDescription;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceMessageVideoFileDescriptionSpecified { get; set; }
+        protected bool EntranceMessageVideoFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _periodicComfortMessageSelection;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeriodicComfortMessageSelectionSpecified { get; set; }
+        protected bool PeriodicComfortMessageSelectionSpecified { get; set; }
 
         private string _periodicComfortMessageAudioFileDescription;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeriodicComfortMessageAudioFileDescriptionSpecified { get; set; }
+        protected bool PeriodicComfortMessageAudioFileDescriptionSpecified { get; set; }
 
         private string _periodicComfortMessageVideoFileDescription;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeriodicComfortMessageVideoFileDescriptionSpecified { get; set; }
+        protected bool PeriodicComfortMessageVideoFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterMusicOnHoldSourceRead _onHoldSource;
 
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OnHoldSourceSpecified { get; set; }
+        protected bool OnHoldSourceSpecified { get; set; }
 
         private bool _onHoldUseAlternateSourceForInternalCalls;
 
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OnHoldUseAlternateSourceForInternalCallsSpecified { get; set; }
+        protected bool OnHoldUseAlternateSourceForInternalCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterMusicOnHoldSourceRead _onHoldInternalSource;
 
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OnHoldInternalSourceSpecified { get; set; }
+        protected bool OnHoldInternalSourceSpecified { get; set; }
 
     }
 }

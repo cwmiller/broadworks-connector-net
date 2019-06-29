@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountryCodeSpecified { get; set; }
+        protected bool CountryCodeSpecified { get; set; }
 
         private string _prefixDigits;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrefixDigitsSpecified { get; set; }
+        protected bool PrefixDigitsSpecified { get; set; }
 
     }
 }

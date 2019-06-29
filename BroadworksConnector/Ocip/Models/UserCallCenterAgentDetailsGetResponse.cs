@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsCallCenterBasicAssignedSpecified { get; set; }
+        protected bool IsCallCenterBasicAssignedSpecified { get; set; }
 
         private bool _isCallCenterStandardAssigned;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsCallCenterStandardAssignedSpecified { get; set; }
+        protected bool IsCallCenterStandardAssignedSpecified { get; set; }
 
         private bool _isCallCenterPremiumAssigned;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsCallCenterPremiumAssignedSpecified { get; set; }
+        protected bool IsCallCenterPremiumAssignedSpecified { get; set; }
 
     }
 }

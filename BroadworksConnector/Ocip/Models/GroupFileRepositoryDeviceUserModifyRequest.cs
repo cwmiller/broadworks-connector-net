@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _fileRepositoryName;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileRepositoryNameSpecified { get; set; }
+        protected bool FileRepositoryNameSpecified { get; set; }
 
         private string _userName;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserNameSpecified { get; set; }
+        protected bool UserNameSpecified { get; set; }
 
         private string _password;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasswordSpecified { get; set; }
+        protected bool PasswordSpecified { get; set; }
 
         private bool _allowPut;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowPutSpecified { get; set; }
+        protected bool AllowPutSpecified { get; set; }
 
         private bool _allowDelete;
 
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowDeleteSpecified { get; set; }
+        protected bool AllowDeleteSpecified { get; set; }
 
         private bool _allowGet;
 
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowGetSpecified { get; set; }
+        protected bool AllowGetSpecified { get; set; }
 
     }
 }

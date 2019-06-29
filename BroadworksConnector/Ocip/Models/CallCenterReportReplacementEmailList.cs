@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmailAddressSpecified { get; set; }
+        protected bool EmailAddressSpecified { get; set; }
 
     }
 }

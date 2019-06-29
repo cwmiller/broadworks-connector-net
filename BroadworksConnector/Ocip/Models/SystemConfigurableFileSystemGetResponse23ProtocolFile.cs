@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReplicatedSpecified { get; set; }
+        protected bool ReplicatedSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19 _reportingServer;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportingServerSpecified { get; set; }
+        protected bool ReportingServerSpecified { get; set; }
 
     }
 }

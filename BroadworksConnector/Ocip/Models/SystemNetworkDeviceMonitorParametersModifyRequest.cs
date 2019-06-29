@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PollingIntervalMinutesSpecified { get; set; }
+        protected bool PollingIntervalMinutesSpecified { get; set; }
 
         private int _failedPollingIntervalMinutes;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FailedPollingIntervalMinutesSpecified { get; set; }
+        protected bool FailedPollingIntervalMinutesSpecified { get; set; }
 
     }
 }

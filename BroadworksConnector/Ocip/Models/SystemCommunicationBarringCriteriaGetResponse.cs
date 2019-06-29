@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private List<string> _matchCallType = new List<string>();
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchCallTypeSpecified { get; set; }
+        protected bool MatchCallTypeSpecified { get; set; }
 
         private List<string> _matchAlternateCallIndicator = new List<string>();
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchAlternateCallIndicatorSpecified { get; set; }
+        protected bool MatchAlternateCallIndicatorSpecified { get; set; }
 
         private bool _matchPublicNetwork;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchPublicNetworkSpecified { get; set; }
+        protected bool MatchPublicNetworkSpecified { get; set; }
 
         private bool _matchPrivateNetwork;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchPrivateNetworkSpecified { get; set; }
+        protected bool MatchPrivateNetworkSpecified { get; set; }
 
         private bool _matchLocalCategory;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchLocalCategorySpecified { get; set; }
+        protected bool MatchLocalCategorySpecified { get; set; }
 
         private bool _matchNationalCategory;
 
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchNationalCategorySpecified { get; set; }
+        protected bool MatchNationalCategorySpecified { get; set; }
 
         private bool _matchInterlataCategory;
 
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchInterlataCategorySpecified { get; set; }
+        protected bool MatchInterlataCategorySpecified { get; set; }
 
         private bool _matchIntralataCategory;
 
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchIntralataCategorySpecified { get; set; }
+        protected bool MatchIntralataCategorySpecified { get; set; }
 
         private bool _matchInternationalCategory;
 
@@ -197,7 +197,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchInternationalCategorySpecified { get; set; }
+        protected bool MatchInternationalCategorySpecified { get; set; }
 
         private bool _matchPrivateCategory;
 
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchPrivateCategorySpecified { get; set; }
+        protected bool MatchPrivateCategorySpecified { get; set; }
 
         private bool _matchEmergencyCategory;
 
@@ -231,7 +231,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchEmergencyCategorySpecified { get; set; }
+        protected bool MatchEmergencyCategorySpecified { get; set; }
 
         private bool _matchOtherCategory;
 
@@ -248,7 +248,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchOtherCategorySpecified { get; set; }
+        protected bool MatchOtherCategorySpecified { get; set; }
 
         private bool _matchInterNetwork;
 
@@ -265,7 +265,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchInterNetworkSpecified { get; set; }
+        protected bool MatchInterNetworkSpecified { get; set; }
 
         private bool _matchInterHostingNE;
 
@@ -282,7 +282,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchInterHostingNESpecified { get; set; }
+        protected bool MatchInterHostingNESpecified { get; set; }
 
         private bool _matchInterAS;
 
@@ -299,7 +299,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchInterASSpecified { get; set; }
+        protected bool MatchInterASSpecified { get; set; }
 
         private bool _matchIntraAS;
 
@@ -316,7 +316,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchIntraASSpecified { get; set; }
+        protected bool MatchIntraASSpecified { get; set; }
 
         private bool _matchChargeCalls;
 
@@ -333,7 +333,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchChargeCallsSpecified { get; set; }
+        protected bool MatchChargeCallsSpecified { get; set; }
 
         private bool _matchNoChargeCalls;
 
@@ -350,7 +350,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchNoChargeCallsSpecified { get; set; }
+        protected bool MatchNoChargeCallsSpecified { get; set; }
 
         private bool _matchGroupCalls;
 
@@ -367,7 +367,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchGroupCallsSpecified { get; set; }
+        protected bool MatchGroupCallsSpecified { get; set; }
 
         private bool _matchEnterpriseCalls;
 
@@ -384,7 +384,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchEnterpriseCallsSpecified { get; set; }
+        protected bool MatchEnterpriseCallsSpecified { get; set; }
 
         private bool _matchNetworkCalls;
 
@@ -401,7 +401,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchNetworkCallsSpecified { get; set; }
+        protected bool MatchNetworkCallsSpecified { get; set; }
 
         private bool _matchNetworkURLCalls;
 
@@ -418,7 +418,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchNetworkURLCallsSpecified { get; set; }
+        protected bool MatchNetworkURLCallsSpecified { get; set; }
 
         private bool _matchRepairCalls;
 
@@ -435,7 +435,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchRepairCallsSpecified { get; set; }
+        protected bool MatchRepairCallsSpecified { get; set; }
 
         private bool _matchEmergencyCalls;
 
@@ -452,7 +452,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchEmergencyCallsSpecified { get; set; }
+        protected bool MatchEmergencyCallsSpecified { get; set; }
 
         private bool _matchInternalCalls;
 
@@ -469,7 +469,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchInternalCallsSpecified { get; set; }
+        protected bool MatchInternalCallsSpecified { get; set; }
 
         private string _timeSchedule;
 
@@ -489,7 +489,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeScheduleSpecified { get; set; }
+        protected bool TimeScheduleSpecified { get; set; }
 
         private string _holidaySchedule;
 
@@ -509,7 +509,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HolidayScheduleSpecified { get; set; }
+        protected bool HolidayScheduleSpecified { get; set; }
 
     }
 }

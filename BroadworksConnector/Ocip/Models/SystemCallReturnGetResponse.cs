@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TwoLevelActivationSpecified { get; set; }
+        protected bool TwoLevelActivationSpecified { get; set; }
 
         private bool _provideDate;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProvideDateSpecified { get; set; }
+        protected bool ProvideDateSpecified { get; set; }
 
         private bool _lastUnansweredCallOnly;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LastUnansweredCallOnlySpecified { get; set; }
+        protected bool LastUnansweredCallOnlySpecified { get; set; }
 
         private string _confirmationKey;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfirmationKeySpecified { get; set; }
+        protected bool ConfirmationKeySpecified { get; set; }
 
         private bool _allowRestrictedNumber;
 
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowRestrictedNumberSpecified { get; set; }
+        protected bool AllowRestrictedNumberSpecified { get; set; }
 
         private bool _deleteNumberAfterAnsweredCallReturn;
 
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteNumberAfterAnsweredCallReturnSpecified { get; set; }
+        protected bool DeleteNumberAfterAnsweredCallReturnSpecified { get; set; }
 
     }
 }

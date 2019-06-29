@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _treatOriginationsAndPBXRedirectionsAsScreened;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatOriginationsAndPBXRedirectionsAsScreenedSpecified { get; set; }
+        protected bool TreatOriginationsAndPBXRedirectionsAsScreenedSpecified { get; set; }
 
         private bool _useRouteListIdentityForNonEmergencyCalls;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseRouteListIdentityForNonEmergencyCallsSpecified { get; set; }
+        protected bool UseRouteListIdentityForNonEmergencyCallsSpecified { get; set; }
 
         private bool _useRouteListIdentityForEmergencyCalls;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
+        protected bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementDNList _assignedNumberRangeStartList;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AssignedNumberRangeStartListSpecified { get; set; }
+        protected bool AssignedNumberRangeStartListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnterpriseTrunkReplacementNumberPrefixList _assignedNumberPrefixList;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AssignedNumberPrefixListSpecified { get; set; }
+        protected bool AssignedNumberPrefixListSpecified { get; set; }
 
     }
 }

@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _deleteExistingDevices;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteExistingDevicesSpecified { get; set; }
+        protected bool DeleteExistingDevicesSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnassignPhoneNumbersSpecified { get; set; }
+        protected bool UnassignPhoneNumbersSpecified { get; set; }
 
         private bool _addPhoneNumberToGroup;
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddPhoneNumberToGroupSpecified { get; set; }
+        protected bool AddPhoneNumberToGroupSpecified { get; set; }
 
         private string _newUserId;
 
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewUserIdSpecified { get; set; }
+        protected bool NewUserIdSpecified { get; set; }
 
         private string _lastName;
 
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LastNameSpecified { get; set; }
+        protected bool LastNameSpecified { get; set; }
 
         private string _firstName;
 
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FirstNameSpecified { get; set; }
+        protected bool FirstNameSpecified { get; set; }
 
         private string _callingLineIdLastName;
 
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdLastNameSpecified { get; set; }
+        protected bool CallingLineIdLastNameSpecified { get; set; }
 
         private string _callingLineIdFirstName;
 
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdFirstNameSpecified { get; set; }
+        protected bool CallingLineIdFirstNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NameDialingName _nameDialingName;
 
@@ -250,7 +250,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameDialingNameSpecified { get; set; }
+        protected bool NameDialingNameSpecified { get; set; }
 
         private string _hiraganaLastName;
 
@@ -270,7 +270,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HiraganaLastNameSpecified { get; set; }
+        protected bool HiraganaLastNameSpecified { get; set; }
 
         private string _hiraganaFirstName;
 
@@ -290,7 +290,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HiraganaFirstNameSpecified { get; set; }
+        protected bool HiraganaFirstNameSpecified { get; set; }
 
         private string _phoneNumber;
 
@@ -310,7 +310,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList _alternateUserIdList;
 
@@ -328,7 +328,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateUserIdListSpecified { get; set; }
+        protected bool AlternateUserIdListSpecified { get; set; }
 
         private string _extension;
 
@@ -348,7 +348,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtensionSpecified { get; set; }
+        protected bool ExtensionSpecified { get; set; }
 
         private string _callingLineIdPhoneNumber;
 
@@ -368,7 +368,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdPhoneNumberSpecified { get; set; }
+        protected bool CallingLineIdPhoneNumberSpecified { get; set; }
 
         private string _oldPassword;
 
@@ -388,7 +388,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OldPasswordSpecified { get; set; }
+        protected bool OldPasswordSpecified { get; set; }
 
         private string _newPassword;
 
@@ -408,7 +408,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewPasswordSpecified { get; set; }
+        protected bool NewPasswordSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
@@ -426,7 +426,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentSpecified { get; set; }
+        protected bool DepartmentSpecified { get; set; }
 
         private string _language;
 
@@ -446,7 +446,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LanguageSpecified { get; set; }
+        protected bool LanguageSpecified { get; set; }
 
         private string _timeZone;
 
@@ -466,7 +466,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeZoneSpecified { get; set; }
+        protected bool TimeZoneSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
 
@@ -484,7 +484,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipAliasListSpecified { get; set; }
+        protected bool SipAliasListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UserConsolidatedModifyRequestEndpoint _endpoint;
 
@@ -502,7 +502,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndpointSpecified { get; set; }
+        protected bool EndpointSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementConsolidatedSharedCallAppearanceAccessDeviceMultipleIdentityEndpointList _sharedCallAppearanceAccessDeviceEndpointList;
 
@@ -520,7 +520,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SharedCallAppearanceAccessDeviceEndpointListSpecified { get; set; }
+        protected bool SharedCallAppearanceAccessDeviceEndpointListSpecified { get; set; }
 
         private string _title;
 
@@ -540,7 +540,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TitleSpecified { get; set; }
+        protected bool TitleSpecified { get; set; }
 
         private string _pagerPhoneNumber;
 
@@ -560,7 +560,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PagerPhoneNumberSpecified { get; set; }
+        protected bool PagerPhoneNumberSpecified { get; set; }
 
         private string _mobilePhoneNumber;
 
@@ -580,7 +580,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobilePhoneNumberSpecified { get; set; }
+        protected bool MobilePhoneNumberSpecified { get; set; }
 
         private string _emailAddress;
 
@@ -600,7 +600,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmailAddressSpecified { get; set; }
+        protected bool EmailAddressSpecified { get; set; }
 
         private string _yahooId;
 
@@ -620,7 +620,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool YahooIdSpecified { get; set; }
+        protected bool YahooIdSpecified { get; set; }
 
         private string _addressLocation;
 
@@ -640,7 +640,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddressLocationSpecified { get; set; }
+        protected bool AddressLocationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
@@ -658,7 +658,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddressSpecified { get; set; }
+        protected bool AddressSpecified { get; set; }
 
         private string _networkClassOfService;
 
@@ -678,7 +678,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkClassOfServiceSpecified { get; set; }
+        protected bool NetworkClassOfServiceSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementConsolidatedUserServiceAssignmentList _userServiceList;
 
@@ -696,7 +696,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServiceListSpecified { get; set; }
+        protected bool UserServiceListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementConsolidatedServicePackAssignmentList _servicePackList;
 
@@ -714,7 +714,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePackListSpecified { get; set; }
+        protected bool ServicePackListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection _thirdPartyVoiceMailServerSelection;
 
@@ -732,7 +732,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThirdPartyVoiceMailServerSelectionSpecified { get; set; }
+        protected bool ThirdPartyVoiceMailServerSelectionSpecified { get; set; }
 
         private string _thirdPartyVoiceMailServerUserServer;
 
@@ -752,7 +752,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThirdPartyVoiceMailServerUserServerSpecified { get; set; }
+        protected bool ThirdPartyVoiceMailServerUserServerSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType _thirdPartyVoiceMailServerMailboxIdType;
 
@@ -770,7 +770,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThirdPartyVoiceMailServerMailboxIdTypeSpecified { get; set; }
+        protected bool ThirdPartyVoiceMailServerMailboxIdTypeSpecified { get; set; }
 
         private string _thirdPartyVoiceMailMailboxURL;
 
@@ -790,7 +790,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThirdPartyVoiceMailMailboxURLSpecified { get; set; }
+        protected bool ThirdPartyVoiceMailMailboxURLSpecified { get; set; }
 
         private string _sipAuthenticationUserName;
 
@@ -810,7 +810,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipAuthenticationUserNameSpecified { get; set; }
+        protected bool SipAuthenticationUserNameSpecified { get; set; }
 
         private string _newSipAuthenticationPassword;
 
@@ -830,7 +830,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewSipAuthenticationPasswordSpecified { get; set; }
+        protected bool NewSipAuthenticationPasswordSpecified { get; set; }
 
         private string _oldSipAuthenticationPassword;
 
@@ -850,7 +850,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OldSipAuthenticationPasswordSpecified { get; set; }
+        protected bool OldSipAuthenticationPasswordSpecified { get; set; }
 
         private string _newPasscode;
 
@@ -870,7 +870,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewPasscodeSpecified { get; set; }
+        protected bool NewPasscodeSpecified { get; set; }
 
         private string _oldPasscode;
 
@@ -890,7 +890,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OldPasscodeSpecified { get; set; }
+        protected bool OldPasscodeSpecified { get; set; }
 
         private string _impPassword;
 
@@ -910,7 +910,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ImpPasswordSpecified { get; set; }
+        protected bool ImpPasswordSpecified { get; set; }
 
     }
 }

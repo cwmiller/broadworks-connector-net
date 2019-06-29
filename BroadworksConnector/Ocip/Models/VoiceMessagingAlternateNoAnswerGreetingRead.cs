@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _audioFile;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFileSpecified { get; set; }
+        protected bool AudioFileSpecified { get; set; }
 
         private string _videoFile;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoFileSpecified { get; set; }
+        protected bool VideoFileSpecified { get; set; }
 
     }
 }

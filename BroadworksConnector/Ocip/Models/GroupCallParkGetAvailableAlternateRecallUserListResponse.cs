@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvailableHuntGroupTableSpecified { get; set; }
+        protected bool AvailableHuntGroupTableSpecified { get; set; }
 
     }
 }

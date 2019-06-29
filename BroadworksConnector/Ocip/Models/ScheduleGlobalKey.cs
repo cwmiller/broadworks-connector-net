@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleKeySpecified { get; set; }
+        protected bool ScheduleKeySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ScheduleLevel _scheduleLevel;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleLevelSpecified { get; set; }
+        protected bool ScheduleLevelSpecified { get; set; }
 
     }
 }

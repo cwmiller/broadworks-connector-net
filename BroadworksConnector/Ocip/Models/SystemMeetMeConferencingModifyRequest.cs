@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceIdLengthSpecified { get; set; }
+        protected bool ConferenceIdLengthSpecified { get; set; }
 
         private int _moderatorPinLength;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ModeratorPinLengthSpecified { get; set; }
+        protected bool ModeratorPinLengthSpecified { get; set; }
 
         private bool _enableConferenceEndDateRestriction;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableConferenceEndDateRestrictionSpecified { get; set; }
+        protected bool EnableConferenceEndDateRestrictionSpecified { get; set; }
 
         private int _conferenceEndDateRestrictionMonths;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceEndDateRestrictionMonthsSpecified { get; set; }
+        protected bool ConferenceEndDateRestrictionMonthsSpecified { get; set; }
 
         private bool _deleteExpiredConferencesAfterHoldPeriod;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteExpiredConferencesAfterHoldPeriodSpecified { get; set; }
+        protected bool DeleteExpiredConferencesAfterHoldPeriodSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays _expiredConferenceHoldPeriodDays;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExpiredConferenceHoldPeriodDaysSpecified { get; set; }
+        protected bool ExpiredConferenceHoldPeriodDaysSpecified { get; set; }
 
         private string _recordingWebAppURL;
 
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecordingWebAppURLSpecified { get; set; }
+        protected bool RecordingWebAppURLSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat _recordingFileFormat;
 
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecordingFileFormatSpecified { get; set; }
+        protected bool RecordingFileFormatSpecified { get; set; }
 
         private bool _terminateAfterGracePeriod;
 
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TerminateAfterGracePeriodSpecified { get; set; }
+        protected bool TerminateAfterGracePeriodSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _conferenceGracePeriodMinutes;
 
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceGracePeriodMinutesSpecified { get; set; }
+        protected bool ConferenceGracePeriodMinutesSpecified { get; set; }
 
         private int _conferenceParticipantEarlyEntryMinutes;
 
@@ -225,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceParticipantEarlyEntryMinutesSpecified { get; set; }
+        protected bool ConferenceParticipantEarlyEntryMinutesSpecified { get; set; }
 
         private bool _enableConferenceExpiryNotification;
 
@@ -243,7 +243,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableConferenceExpiryNotificationSpecified { get; set; }
+        protected bool EnableConferenceExpiryNotificationSpecified { get; set; }
 
         private bool _enableActiveConferenceNotification;
 
@@ -261,7 +261,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableActiveConferenceNotificationSpecified { get; set; }
+        protected bool EnableActiveConferenceNotificationSpecified { get; set; }
 
         private string _conferenceFromAddress;
 
@@ -281,7 +281,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceFromAddressSpecified { get; set; }
+        protected bool ConferenceFromAddressSpecified { get; set; }
 
         private int _conferenceActiveTalkerRefreshIntervalSeconds;
 
@@ -301,7 +301,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceActiveTalkerRefreshIntervalSecondsSpecified { get; set; }
+        protected bool ConferenceActiveTalkerRefreshIntervalSecondsSpecified { get; set; }
 
     }
 }

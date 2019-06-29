@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FinishEnteringOrReenteringPasscodeSpecified { get; set; }
+        protected bool FinishEnteringOrReenteringPasscodeSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
     }
 }

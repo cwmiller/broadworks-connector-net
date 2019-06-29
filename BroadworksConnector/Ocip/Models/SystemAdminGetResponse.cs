@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FirstNameSpecified { get; set; }
+        protected bool FirstNameSpecified { get; set; }
 
         private string _lastName;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LastNameSpecified { get; set; }
+        protected bool LastNameSpecified { get; set; }
 
         private string _language;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LanguageSpecified { get; set; }
+        protected bool LanguageSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemAdminType _adminType;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AdminTypeSpecified { get; set; }
+        protected bool AdminTypeSpecified { get; set; }
 
         private bool _readOnly;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReadOnlySpecified { get; set; }
+        protected bool ReadOnlySpecified { get; set; }
 
     }
 }

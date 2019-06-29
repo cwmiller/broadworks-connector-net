@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ToDnCriteriaSelectionSpecified { get; set; }
+        protected bool ToDnCriteriaSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList _phoneNumberList;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberListSpecified { get; set; }
+        protected bool PhoneNumberListSpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeUnitSpecified { get; set; }
+        protected bool TimeUnitSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlacedCallLogIdSpecified { get; set; }
+        protected bool PlacedCallLogIdSpecified { get; set; }
 
         private List<string> _receivedCallLogId = new List<string>();
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReceivedCallLogIdSpecified { get; set; }
+        protected bool ReceivedCallLogIdSpecified { get; set; }
 
         private List<string> _missedCallLogId = new List<string>();
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MissedCallLogIdSpecified { get; set; }
+        protected bool MissedCallLogIdSpecified { get; set; }
 
     }
 }

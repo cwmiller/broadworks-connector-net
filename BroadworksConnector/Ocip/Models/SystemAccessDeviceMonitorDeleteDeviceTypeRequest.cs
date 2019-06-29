@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteAllDeviceTypesSpecified { get; set; }
+        protected bool DeleteAllDeviceTypesSpecified { get; set; }
 
         private string _deviceType;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeSpecified { get; set; }
+        protected bool DeviceTypeSpecified { get; set; }
 
     }
 }

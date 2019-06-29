@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RemoveHuntGroupNameFromCLIDSpecified { get; set; }
+        protected bool RemoveHuntGroupNameFromCLIDSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope _uniformCallDistributionPolicyScope;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UniformCallDistributionPolicyScopeSpecified { get; set; }
+        protected bool UniformCallDistributionPolicyScopeSpecified { get; set; }
 
         private bool _allowAgentDeviceInitiatedForward;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowAgentDeviceInitiatedForwardSpecified { get; set; }
+        protected bool AllowAgentDeviceInitiatedForwardSpecified { get; set; }
 
     }
 }

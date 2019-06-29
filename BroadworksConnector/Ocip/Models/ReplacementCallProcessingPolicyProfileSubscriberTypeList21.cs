@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SubscriberTypeSpecified { get; set; }
+        protected bool SubscriberTypeSpecified { get; set; }
 
     }
 }

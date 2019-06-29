@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _name;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _newName;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewNameSpecified { get; set; }
+        protected bool NewNameSpecified { get; set; }
 
         private int _maxSession;
 
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxSessionSpecified { get; set; }
+        protected bool MaxSessionSpecified { get; set; }
 
         private int? _maxUserOriginatingSessions;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxUserOriginatingSessionsSpecified { get; set; }
+        protected bool MaxUserOriginatingSessionsSpecified { get; set; }
 
         private int? _maxUserTerminatingSessions;
 
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxUserTerminatingSessionsSpecified { get; set; }
+        protected bool MaxUserTerminatingSessionsSpecified { get; set; }
 
         private int _reservedSession;
 
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReservedSessionSpecified { get; set; }
+        protected bool ReservedSessionSpecified { get; set; }
 
         private int? _reservedUserOriginatingSessions;
 
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReservedUserOriginatingSessionsSpecified { get; set; }
+        protected bool ReservedUserOriginatingSessionsSpecified { get; set; }
 
         private int? _reservedUserTerminatingSessions;
 
@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReservedUserTerminatingSessionsSpecified { get; set; }
+        protected bool ReservedUserTerminatingSessionsSpecified { get; set; }
 
         private bool _becomeDefaultGroup;
 
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BecomeDefaultGroupSpecified { get; set; }
+        protected bool BecomeDefaultGroupSpecified { get; set; }
 
         private bool _countIntraSACGroupSessions;
 
@@ -246,7 +246,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountIntraSACGroupSessionsSpecified { get; set; }
+        protected bool CountIntraSACGroupSessionsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementDeviceList _deviceList;
 
@@ -264,7 +264,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceListSpecified { get; set; }
+        protected bool DeviceListSpecified { get; set; }
 
         private bool _blockEmergencyAndRepairCallsDueToSACLimits;
 
@@ -282,7 +282,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BlockEmergencyAndRepairCallsDueToSACLimitsSpecified { get; set; }
+        protected bool BlockEmergencyAndRepairCallsDueToSACLimitsSpecified { get; set; }
 
         private string _mediaGroupName;
 
@@ -302,7 +302,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaGroupNameSpecified { get; set; }
+        protected bool MediaGroupNameSpecified { get; set; }
 
         private string _accessInfoPattern;
 
@@ -322,7 +322,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessInfoPatternSpecified { get; set; }
+        protected bool AccessInfoPatternSpecified { get; set; }
 
     }
 }

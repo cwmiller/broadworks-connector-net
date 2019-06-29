@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PortalTableSpecified { get; set; }
+        protected bool PortalTableSpecified { get; set; }
 
     }
 }

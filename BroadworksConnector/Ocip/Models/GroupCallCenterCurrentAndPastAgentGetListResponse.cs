@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentUserTableSpecified { get; set; }
+        protected bool AgentUserTableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _deletedAgentUserTable;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeletedAgentUserTableSpecified { get; set; }
+        protected bool DeletedAgentUserTableSpecified { get; set; }
 
     }
 }

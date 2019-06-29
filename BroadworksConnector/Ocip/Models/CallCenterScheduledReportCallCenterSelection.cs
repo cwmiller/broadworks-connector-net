@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllCallCenterSpecified { get; set; }
+        protected bool AllCallCenterSpecified { get; set; }
 
         private List<string> _serviceUserId = new List<string>();
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
     }
 }

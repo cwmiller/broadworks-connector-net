@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private bool _useMobileIdentityCallAnchoring;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMobileIdentityCallAnchoringSpecified { get; set; }
+        protected bool UseMobileIdentityCallAnchoringSpecified { get; set; }
 
         private bool _preventCallsToOwnMobiles;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PreventCallsToOwnMobilesSpecified { get; set; }
+        protected bool PreventCallsToOwnMobilesSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _profileIdentityDevicesToRing;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileIdentityDevicesToRingSpecified { get; set; }
+        protected bool ProfileIdentityDevicesToRingSpecified { get; set; }
 
         private bool _profileIdentityIncludeSharedCallAppearance;
 
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileIdentityIncludeSharedCallAppearanceSpecified { get; set; }
+        protected bool ProfileIdentityIncludeSharedCallAppearanceSpecified { get; set; }
 
         private bool _profileIdentityIncludeBroadworksAnywhere;
 
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileIdentityIncludeBroadworksAnywhereSpecified { get; set; }
+        protected bool ProfileIdentityIncludeBroadworksAnywhereSpecified { get; set; }
 
         private bool _profileIdentityIncludeExecutiveAssistant;
 
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileIdentityIncludeExecutiveAssistantSpecified { get; set; }
+        protected bool ProfileIdentityIncludeExecutiveAssistantSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _profileIdentityMobileNumberAlertedTable;
 
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileIdentityMobileNumberAlertedTableSpecified { get; set; }
+        protected bool ProfileIdentityMobileNumberAlertedTableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _mobileIdentityTable;
 
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobileIdentityTableSpecified { get; set; }
+        protected bool MobileIdentityTableSpecified { get; set; }
 
     }
 }

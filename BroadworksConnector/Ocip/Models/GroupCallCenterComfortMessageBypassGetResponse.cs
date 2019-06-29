@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private int _callWaitingAgeThresholdSeconds;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallWaitingAgeThresholdSecondsSpecified { get; set; }
+        protected bool CallWaitingAgeThresholdSecondsSpecified { get; set; }
 
         private bool _playAnnouncementAfterRinging;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayAnnouncementAfterRingingSpecified { get; set; }
+        protected bool PlayAnnouncementAfterRingingSpecified { get; set; }
 
         private int _ringTimeBeforePlayingAnnouncementSeconds;
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RingTimeBeforePlayingAnnouncementSecondsSpecified { get; set; }
+        protected bool RingTimeBeforePlayingAnnouncementSecondsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
 
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioMessageSelectionSpecified { get; set; }
+        protected bool AudioMessageSelectionSpecified { get; set; }
 
         private string _audioFileUrl;
 
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFileUrlSpecified { get; set; }
+        protected bool AudioFileUrlSpecified { get; set; }
 
         private string _audioFileDescription;
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFileDescriptionSpecified { get; set; }
+        protected bool AudioFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
 
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioMediaTypeSpecified { get; set; }
+        protected bool AudioMediaTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
 
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoMessageSelectionSpecified { get; set; }
+        protected bool VideoMessageSelectionSpecified { get; set; }
 
         private string _videoFileUrl;
 
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoFileUrlSpecified { get; set; }
+        protected bool VideoFileUrlSpecified { get; set; }
 
         private string _videoFileDescription;
 
@@ -219,7 +219,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoFileDescriptionSpecified { get; set; }
+        protected bool VideoFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
 
@@ -237,7 +237,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoMediaTypeSpecified { get; set; }
+        protected bool VideoMediaTypeSpecified { get; set; }
 
     }
 }

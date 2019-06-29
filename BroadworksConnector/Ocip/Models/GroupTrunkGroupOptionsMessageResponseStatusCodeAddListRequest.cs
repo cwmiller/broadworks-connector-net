@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupKeySpecified { get; set; }
+        protected bool TrunkGroupKeySpecified { get; set; }
 
         private List<string> _statusCode = new List<string>();
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatusCodeSpecified { get; set; }
+        protected bool StatusCodeSpecified { get; set; }
 
     }
 }

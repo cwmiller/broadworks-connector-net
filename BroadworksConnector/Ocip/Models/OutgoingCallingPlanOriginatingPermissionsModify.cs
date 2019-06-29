@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupSpecified { get; set; }
+        protected bool GroupSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _local;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LocalSpecified { get; set; }
+        protected bool LocalSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _tollFree;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TollFreeSpecified { get; set; }
+        protected bool TollFreeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _toll;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TollSpecified { get; set; }
+        protected bool TollSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _international;
 
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InternationalSpecified { get; set; }
+        protected bool InternationalSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _operatorAssisted;
 
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OperatorAssistedSpecified { get; set; }
+        protected bool OperatorAssistedSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _chargeableDirectoryAssisted;
 
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChargeableDirectoryAssistedSpecified { get; set; }
+        protected bool ChargeableDirectoryAssistedSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _specialServicesI;
 
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SpecialServicesISpecified { get; set; }
+        protected bool SpecialServicesISpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _specialServicesII;
 
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SpecialServicesIISpecified { get; set; }
+        protected bool SpecialServicesIISpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _premiumServicesI;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PremiumServicesISpecified { get; set; }
+        protected bool PremiumServicesISpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _premiumServicesII;
 
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PremiumServicesIISpecified { get; set; }
+        protected bool PremiumServicesIISpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _casual;
 
@@ -230,7 +230,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CasualSpecified { get; set; }
+        protected bool CasualSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _urlDialing;
 
@@ -248,7 +248,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UrlDialingSpecified { get; set; }
+        protected bool UrlDialingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _unknown;
 
@@ -266,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnknownSpecified { get; set; }
+        protected bool UnknownSpecified { get; set; }
 
     }
 }

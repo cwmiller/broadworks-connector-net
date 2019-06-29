@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _criteriaName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaNameSpecified { get; set; }
+        protected bool CriteriaNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeScheduleSpecified { get; set; }
+        protected bool TimeScheduleSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection _forwardToNumberSelection;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardToNumberSelectionSpecified { get; set; }
+        protected bool ForwardToNumberSelectionSpecified { get; set; }
 
         private string _forwardToPhoneNumber;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardToPhoneNumberSpecified { get; set; }
+        protected bool ForwardToPhoneNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FromDnCriteriaSpecified { get; set; }
+        protected bool FromDnCriteriaSpecified { get; set; }
 
     }
 }

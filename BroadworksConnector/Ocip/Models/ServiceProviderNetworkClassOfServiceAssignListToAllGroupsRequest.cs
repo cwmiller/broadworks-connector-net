@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private List<string> _networkClassOfService = new List<string>();
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkClassOfServiceSpecified { get; set; }
+        protected bool NetworkClassOfServiceSpecified { get; set; }
 
     }
 }

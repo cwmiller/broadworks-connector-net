@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile0;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommunicationBarringProfile0Specified { get; set; }
+        protected bool CommunicationBarringProfile0Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile1;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommunicationBarringProfile1Specified { get; set; }
+        protected bool CommunicationBarringProfile1Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile2;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommunicationBarringProfile2Specified { get; set; }
+        protected bool CommunicationBarringProfile2Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile3;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommunicationBarringProfile3Specified { get; set; }
+        protected bool CommunicationBarringProfile3Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile4;
 
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommunicationBarringProfile4Specified { get; set; }
+        protected bool CommunicationBarringProfile4Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile5;
 
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommunicationBarringProfile5Specified { get; set; }
+        protected bool CommunicationBarringProfile5Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile6;
 
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommunicationBarringProfile6Specified { get; set; }
+        protected bool CommunicationBarringProfile6Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile7;
 
@@ -182,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommunicationBarringProfile7Specified { get; set; }
+        protected bool CommunicationBarringProfile7Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile8;
 
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommunicationBarringProfile8Specified { get; set; }
+        protected bool CommunicationBarringProfile8Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile9;
 
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommunicationBarringProfile9Specified { get; set; }
+        protected bool CommunicationBarringProfile9Specified { get; set; }
 
     }
 }

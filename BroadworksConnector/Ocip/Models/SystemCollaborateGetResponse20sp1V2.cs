@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CollaborateRoomIdLengthSpecified { get; set; }
+        protected bool CollaborateRoomIdLengthSpecified { get; set; }
 
         private int _instantRoomIdleTimeoutSeconds;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InstantRoomIdleTimeoutSecondsSpecified { get; set; }
+        protected bool InstantRoomIdleTimeoutSecondsSpecified { get; set; }
 
         private int _collaborateRoomMaximumDurationMinutes;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CollaborateRoomMaximumDurationMinutesSpecified { get; set; }
+        protected bool CollaborateRoomMaximumDurationMinutesSpecified { get; set; }
 
         private bool _supportOutdial;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportOutdialSpecified { get; set; }
+        protected bool SupportOutdialSpecified { get; set; }
 
         private int _maxCollaborateRoomParticipants;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCollaborateRoomParticipantsSpecified { get; set; }
+        protected bool MaxCollaborateRoomParticipantsSpecified { get; set; }
 
         private int _collaborateActiveTalkerRefreshIntervalSeconds;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CollaborateActiveTalkerRefreshIntervalSecondsSpecified { get; set; }
+        protected bool CollaborateActiveTalkerRefreshIntervalSecondsSpecified { get; set; }
 
         private bool _terminateCollaborateAfterGracePeriod;
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TerminateCollaborateAfterGracePeriodSpecified { get; set; }
+        protected bool TerminateCollaborateAfterGracePeriodSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CollaborateGracePeriodDuration _collaborateGracePeriod;
 
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CollaborateGracePeriodSpecified { get; set; }
+        protected bool CollaborateGracePeriodSpecified { get; set; }
 
         private bool _enableActiveCollaborateNotification;
 
@@ -178,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableActiveCollaborateNotificationSpecified { get; set; }
+        protected bool EnableActiveCollaborateNotificationSpecified { get; set; }
 
         private string _collaborateFromAddress;
 
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CollaborateFromAddressSpecified { get; set; }
+        protected bool CollaborateFromAddressSpecified { get; set; }
 
     }
 }

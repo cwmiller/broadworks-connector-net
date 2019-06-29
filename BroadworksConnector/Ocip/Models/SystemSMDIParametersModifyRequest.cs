@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableSMDISpecified { get; set; }
+        protected bool EnableSMDISpecified { get; set; }
 
         private int _listeningPort;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ListeningPortSpecified { get; set; }
+        protected bool ListeningPortSpecified { get; set; }
 
         private int _maxConnections;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConnectionsSpecified { get; set; }
+        protected bool MaxConnectionsSpecified { get; set; }
 
     }
 }

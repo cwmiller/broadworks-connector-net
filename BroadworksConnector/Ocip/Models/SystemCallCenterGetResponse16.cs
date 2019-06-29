@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultFromAddressSpecified { get; set; }
+        protected bool DefaultFromAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes _statisticsSamplingPeriodMinutes;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatisticsSamplingPeriodMinutesSpecified { get; set; }
+        protected bool StatisticsSamplingPeriodMinutesSpecified { get; set; }
 
         private bool _defaultEnableGuardTimer;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultEnableGuardTimerSpecified { get; set; }
+        protected bool DefaultEnableGuardTimerSpecified { get; set; }
 
         private int _defaultGuardTimerSeconds;
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultGuardTimerSecondsSpecified { get; set; }
+        protected bool DefaultGuardTimerSecondsSpecified { get; set; }
 
         private bool _forceAgentUnavailableOnDNDActivation;
 
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceAgentUnavailableOnDNDActivationSpecified { get; set; }
+        protected bool ForceAgentUnavailableOnDNDActivationSpecified { get; set; }
 
         private bool _forceAgentUnavailableOnPersonalCalls;
 
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceAgentUnavailableOnPersonalCallsSpecified { get; set; }
+        protected bool ForceAgentUnavailableOnPersonalCallsSpecified { get; set; }
 
         private bool _forceAgentUnavailableOnBouncedCallLimit;
 
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceAgentUnavailableOnBouncedCallLimitSpecified { get; set; }
+        protected bool ForceAgentUnavailableOnBouncedCallLimitSpecified { get; set; }
 
         private int _numberConsecutiveBouncedCallsToForceAgentUnavailable;
 
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified { get; set; }
+        protected bool NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified { get; set; }
 
     }
 }

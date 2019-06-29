@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupDeviceTypeFilesTableSpecified { get; set; }
+        protected bool GroupDeviceTypeFilesTableSpecified { get; set; }
 
         private bool _groupHasCustomizableDynamicFiles;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupHasCustomizableDynamicFilesSpecified { get; set; }
+        protected bool GroupHasCustomizableDynamicFilesSpecified { get; set; }
 
     }
 }

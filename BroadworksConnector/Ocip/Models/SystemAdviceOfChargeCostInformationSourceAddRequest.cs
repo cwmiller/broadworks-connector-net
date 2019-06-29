@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeerIdentitySpecified { get; set; }
+        protected bool PeerIdentitySpecified { get; set; }
 
         private int _priority;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrioritySpecified { get; set; }
+        protected bool PrioritySpecified { get; set; }
 
     }
 }

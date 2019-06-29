@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UserService _userServiceName;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServiceNameSpecified { get; set; }
+        protected bool UserServiceNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupService _groupServiceName;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupServiceNameSpecified { get; set; }
+        protected bool GroupServiceNameSpecified { get; set; }
 
         private string _servicePackName;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePackNameSpecified { get; set; }
+        protected bool ServicePackNameSpecified { get; set; }
 
     }
 }

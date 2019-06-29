@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _isActive;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private string _impId;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ImpIdSpecified { get; set; }
+        protected bool ImpIdSpecified { get; set; }
 
         private bool _isAlternateImpId;
 
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsAlternateImpIdSpecified { get; set; }
+        protected bool IsAlternateImpIdSpecified { get; set; }
 
     }
 }

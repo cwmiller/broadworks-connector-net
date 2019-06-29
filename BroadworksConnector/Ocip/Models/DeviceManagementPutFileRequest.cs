@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceAccessURISpecified { get; set; }
+        protected bool DeviceAccessURISpecified { get; set; }
 
         private string _ipAddress;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IpAddressSpecified { get; set; }
+        protected bool IpAddressSpecified { get; set; }
 
     }
 }

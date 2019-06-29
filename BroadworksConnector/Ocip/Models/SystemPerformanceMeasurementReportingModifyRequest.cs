@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private int _reportingInterval;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportingIntervalSpecified { get; set; }
+        protected bool ReportingIntervalSpecified { get; set; }
 
         private bool _resetMeasurementsAfterEachReport;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResetMeasurementsAfterEachReportSpecified { get; set; }
+        protected bool ResetMeasurementsAfterEachReportSpecified { get; set; }
 
         private bool _reportEnterprise;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportEnterpriseSpecified { get; set; }
+        protected bool ReportEnterpriseSpecified { get; set; }
 
         private bool _reportServiceProvider;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportServiceProviderSpecified { get; set; }
+        protected bool ReportServiceProviderSpecified { get; set; }
 
         private bool _reportDevice;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportDeviceSpecified { get; set; }
+        protected bool ReportDeviceSpecified { get; set; }
 
         private bool _reportTable;
 
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportTableSpecified { get; set; }
+        protected bool ReportTableSpecified { get; set; }
 
     }
 }

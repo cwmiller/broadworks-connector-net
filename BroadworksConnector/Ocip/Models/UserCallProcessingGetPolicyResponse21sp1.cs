@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseUserCLIDSettingSpecified { get; set; }
+        protected bool UseUserCLIDSettingSpecified { get; set; }
 
         private bool _useUserMediaSetting;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseUserMediaSettingSpecified { get; set; }
+        protected bool UseUserMediaSettingSpecified { get; set; }
 
         private bool _useUserCallLimitsSetting;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseUserCallLimitsSettingSpecified { get; set; }
+        protected bool UseUserCallLimitsSettingSpecified { get; set; }
 
         private bool _useUserDCLIDSetting;
 
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseUserDCLIDSettingSpecified { get; set; }
+        protected bool UseUserDCLIDSettingSpecified { get; set; }
 
         private bool _useMaxSimultaneousCalls;
 
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxSimultaneousCallsSpecified { get; set; }
+        protected bool UseMaxSimultaneousCallsSpecified { get; set; }
 
         private int _maxSimultaneousCalls;
 
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxSimultaneousCallsSpecified { get; set; }
+        protected bool MaxSimultaneousCallsSpecified { get; set; }
 
         private bool _useMaxSimultaneousVideoCalls;
 
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxSimultaneousVideoCallsSpecified { get; set; }
+        protected bool UseMaxSimultaneousVideoCallsSpecified { get; set; }
 
         private int _maxSimultaneousVideoCalls;
 
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxSimultaneousVideoCallsSpecified { get; set; }
+        protected bool MaxSimultaneousVideoCallsSpecified { get; set; }
 
         private bool _useMaxCallTimeForAnsweredCalls;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxCallTimeForAnsweredCallsSpecified { get; set; }
+        protected bool UseMaxCallTimeForAnsweredCallsSpecified { get; set; }
 
         private int _maxCallTimeForAnsweredCallsMinutes;
 
@@ -213,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCallTimeForAnsweredCallsMinutesSpecified { get; set; }
+        protected bool MaxCallTimeForAnsweredCallsMinutesSpecified { get; set; }
 
         private bool _useMaxCallTimeForUnansweredCalls;
 
@@ -230,7 +230,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxCallTimeForUnansweredCallsSpecified { get; set; }
+        protected bool UseMaxCallTimeForUnansweredCallsSpecified { get; set; }
 
         private int _maxCallTimeForUnansweredCallsMinutes;
 
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCallTimeForUnansweredCallsMinutesSpecified { get; set; }
+        protected bool MaxCallTimeForUnansweredCallsMinutesSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaPolicySelection _mediaPolicySelection;
 
@@ -266,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaPolicySelectionSpecified { get; set; }
+        protected bool MediaPolicySelectionSpecified { get; set; }
 
         private string _supportedMediaSetName;
 
@@ -286,7 +286,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportedMediaSetNameSpecified { get; set; }
+        protected bool SupportedMediaSetNameSpecified { get; set; }
 
         private bool _useMaxConcurrentRedirectedCalls;
 
@@ -303,7 +303,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxConcurrentRedirectedCallsSpecified { get; set; }
+        protected bool UseMaxConcurrentRedirectedCallsSpecified { get; set; }
 
         private int _maxConcurrentRedirectedCalls;
 
@@ -322,7 +322,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConcurrentRedirectedCallsSpecified { get; set; }
+        protected bool MaxConcurrentRedirectedCallsSpecified { get; set; }
 
         private bool _useMaxFindMeFollowMeDepth;
 
@@ -339,7 +339,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxFindMeFollowMeDepthSpecified { get; set; }
+        protected bool UseMaxFindMeFollowMeDepthSpecified { get; set; }
 
         private int _maxFindMeFollowMeDepth;
 
@@ -358,7 +358,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxFindMeFollowMeDepthSpecified { get; set; }
+        protected bool MaxFindMeFollowMeDepthSpecified { get; set; }
 
         private int _maxRedirectionDepth;
 
@@ -377,7 +377,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxRedirectionDepthSpecified { get; set; }
+        protected bool MaxRedirectionDepthSpecified { get; set; }
 
         private bool _useMaxConcurrentFindMeFollowMeInvocations;
 
@@ -394,7 +394,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxConcurrentFindMeFollowMeInvocationsSpecified { get; set; }
+        protected bool UseMaxConcurrentFindMeFollowMeInvocationsSpecified { get; set; }
 
         private int _maxConcurrentFindMeFollowMeInvocations;
 
@@ -413,7 +413,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConcurrentFindMeFollowMeInvocationsSpecified { get; set; }
+        protected bool MaxConcurrentFindMeFollowMeInvocationsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupCLIDPolicy _clidPolicy;
 
@@ -430,7 +430,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ClidPolicySpecified { get; set; }
+        protected bool ClidPolicySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupCLIDPolicy _emergencyClidPolicy;
 
@@ -447,7 +447,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmergencyClidPolicySpecified { get; set; }
+        protected bool EmergencyClidPolicySpecified { get; set; }
 
         private bool _allowAlternateNumbersForRedirectingIdentity;
 
@@ -464,7 +464,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowAlternateNumbersForRedirectingIdentitySpecified { get; set; }
+        protected bool AllowAlternateNumbersForRedirectingIdentitySpecified { get; set; }
 
         private bool _useGroupName;
 
@@ -481,7 +481,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseGroupNameSpecified { get; set; }
+        protected bool UseGroupNameSpecified { get; set; }
 
         private bool _blockCallingNameForExternalCalls;
 
@@ -498,7 +498,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BlockCallingNameForExternalCallsSpecified { get; set; }
+        protected bool BlockCallingNameForExternalCallsSpecified { get; set; }
 
         private bool _enableDialableCallerID;
 
@@ -515,7 +515,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDialableCallerIDSpecified { get; set; }
+        protected bool EnableDialableCallerIDSpecified { get; set; }
 
         private bool _allowConfigurableCLIDForRedirectingIdentity;
 
@@ -532,7 +532,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowConfigurableCLIDForRedirectingIdentitySpecified { get; set; }
+        protected bool AllowConfigurableCLIDForRedirectingIdentitySpecified { get; set; }
 
         private bool _allowDepartmentCLIDNameOverride;
 
@@ -549,7 +549,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowDepartmentCLIDNameOverrideSpecified { get; set; }
+        protected bool AllowDepartmentCLIDNameOverrideSpecified { get; set; }
 
         private bool _useUserPhoneListLookupSetting;
 
@@ -566,7 +566,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseUserPhoneListLookupSettingSpecified { get; set; }
+        protected bool UseUserPhoneListLookupSettingSpecified { get; set; }
 
         private bool _enablePhoneListLookup;
 
@@ -583,7 +583,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnablePhoneListLookupSpecified { get; set; }
+        protected bool EnablePhoneListLookupSpecified { get; set; }
 
     }
 }

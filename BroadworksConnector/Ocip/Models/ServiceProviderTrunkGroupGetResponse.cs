@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxActiveCallsSpecified { get; set; }
+        protected bool MaxActiveCallsSpecified { get; set; }
 
     }
 }

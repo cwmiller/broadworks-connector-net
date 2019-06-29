@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecordingOptionSpecified { get; set; }
+        protected bool RecordingOptionSpecified { get; set; }
 
     }
 }

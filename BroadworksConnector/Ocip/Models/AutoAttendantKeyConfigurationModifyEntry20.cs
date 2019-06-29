@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AutoAttendantKeyAction _action;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ActionSpecified { get; set; }
+        protected bool ActionSpecified { get; set; }
 
         private string _phoneNumber;
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFileSpecified { get; set; }
+        protected bool AudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoFileSpecified { get; set; }
+        protected bool VideoFileSpecified { get; set; }
 
         private string _submenuId;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SubmenuIdSpecified { get; set; }
+        protected bool SubmenuIdSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleNameSpecified { get; set; }
+        protected bool ScheduleNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.ScheduleType> _scheduleType = new List<BroadWorksConnector.Ocip.Models.ScheduleType>();
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleTypeSpecified { get; set; }
+        protected bool ScheduleTypeSpecified { get; set; }
 
     }
 }

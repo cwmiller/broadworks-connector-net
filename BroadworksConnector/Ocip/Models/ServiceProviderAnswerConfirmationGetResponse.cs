@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnnouncementMessageSelectionSpecified { get; set; }
+        protected bool AnnouncementMessageSelectionSpecified { get; set; }
 
         private string _confirmationMessageAudioFileDescription;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfirmationMessageAudioFileDescriptionSpecified { get; set; }
+        protected bool ConfirmationMessageAudioFileDescriptionSpecified { get; set; }
 
         private int _confirmationTimoutSeconds;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfirmationTimoutSecondsSpecified { get; set; }
+        protected bool ConfirmationTimoutSecondsSpecified { get; set; }
 
     }
 }

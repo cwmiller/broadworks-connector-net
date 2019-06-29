@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipURISpecified { get; set; }
+        protected bool SipURISpecified { get; set; }
 
         private string _telURI;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TelURISpecified { get; set; }
+        protected bool TelURISpecified { get; set; }
 
     }
 }

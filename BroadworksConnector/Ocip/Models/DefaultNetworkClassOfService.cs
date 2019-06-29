@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseExistingSpecified { get; set; }
+        protected bool UseExistingSpecified { get; set; }
 
         private string _networkClassOfServiceName;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkClassOfServiceNameSpecified { get; set; }
+        protected bool NetworkClassOfServiceNameSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberSpecified { get; set; }
+        protected bool NumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportIntervalTimeUnit _timeUnit;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeUnitSpecified { get; set; }
+        protected bool TimeUnitSpecified { get; set; }
 
     }
 }

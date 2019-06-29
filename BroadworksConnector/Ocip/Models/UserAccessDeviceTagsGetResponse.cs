@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTagsTableSpecified { get; set; }
+        protected bool DeviceTagsTableSpecified { get; set; }
 
     }
 }

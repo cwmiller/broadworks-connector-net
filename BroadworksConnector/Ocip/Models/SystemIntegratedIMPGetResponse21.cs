@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceDomainSpecified { get; set; }
+        protected bool ServiceDomainSpecified { get; set; }
 
         private int _servicePort;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePortSpecified { get; set; }
+        protected bool ServicePortSpecified { get; set; }
 
         private bool _addServiceProviderInIMPUserId;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddServiceProviderInIMPUserIdSpecified { get; set; }
+        protected bool AddServiceProviderInIMPUserIdSpecified { get; set; }
 
         private string _boshURL;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BoshURLSpecified { get; set; }
+        protected bool BoshURLSpecified { get; set; }
 
         private bool _allowImpPasswordRetrieval;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowImpPasswordRetrievalSpecified { get; set; }
+        protected bool AllowImpPasswordRetrievalSpecified { get; set; }
 
     }
 }

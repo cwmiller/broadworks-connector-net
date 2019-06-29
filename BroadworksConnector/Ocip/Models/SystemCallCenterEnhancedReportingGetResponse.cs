@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ArchiveReportsSpecified { get; set; }
+        protected bool ArchiveReportsSpecified { get; set; }
 
         private string _reportApplicationURL;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportApplicationURLSpecified { get; set; }
+        protected bool ReportApplicationURLSpecified { get; set; }
 
         private string _repositoryApplicationURL;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepositoryApplicationURLSpecified { get; set; }
+        protected bool RepositoryApplicationURLSpecified { get; set; }
 
     }
 }

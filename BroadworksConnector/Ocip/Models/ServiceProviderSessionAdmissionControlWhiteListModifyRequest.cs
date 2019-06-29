@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private List<string> _addMatchDigitPattern = new List<string>();
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddMatchDigitPatternSpecified { get; set; }
+        protected bool AddMatchDigitPatternSpecified { get; set; }
 
         private List<string> _deleteMatchDigitPattern = new List<string>();
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteMatchDigitPatternSpecified { get; set; }
+        protected bool DeleteMatchDigitPatternSpecified { get; set; }
 
         private bool _enableWhiteList;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableWhiteListSpecified { get; set; }
+        protected bool EnableWhiteListSpecified { get; set; }
 
     }
 }

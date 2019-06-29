@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileSourceSpecified { get; set; }
+        protected bool FileSourceSpecified { get; set; }
 
         private string _configurationFileName;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfigurationFileNameSpecified { get; set; }
+        protected bool ConfigurationFileNameSpecified { get; set; }
 
     }
 }

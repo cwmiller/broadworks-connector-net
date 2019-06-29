@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _groupDepartmentName;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupDepartmentNameSpecified { get; set; }
+        protected bool GroupDepartmentNameSpecified { get; set; }
 
         private bool _includeEnterpriseTrunkGroups;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeEnterpriseTrunkGroupsSpecified { get; set; }
+        protected bool IncludeEnterpriseTrunkGroupsSpecified { get; set; }
 
         private bool _onlyTrunkGroupsWithDevice;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OnlyTrunkGroupsWithDeviceSpecified { get; set; }
+        protected bool OnlyTrunkGroupsWithDeviceSpecified { get; set; }
 
     }
 }

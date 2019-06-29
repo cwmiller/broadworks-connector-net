@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponseSizeLimitSpecified { get; set; }
+        protected bool ResponseSizeLimitSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> _searchCriteriaServiceCode = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode>();
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaServiceCodeSpecified { get; set; }
+        protected bool SearchCriteriaServiceCodeSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> _searchCriteriaServiceCodeDescription = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription>();
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaServiceCodeDescriptionSpecified { get; set; }
+        protected bool SearchCriteriaServiceCodeDescriptionSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify20 _mediaOnHoldSource;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaOnHoldSourceSpecified { get; set; }
+        protected bool MediaOnHoldSourceSpecified { get; set; }
 
     }
 }

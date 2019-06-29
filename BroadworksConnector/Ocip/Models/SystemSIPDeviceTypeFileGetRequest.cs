@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeSpecified { get; set; }
+        protected bool DeviceTypeSpecified { get; set; }
 
         private string _fileType;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileTypeSpecified { get; set; }
+        protected bool FileTypeSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private bool _allowEmergencyCalls;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowEmergencyCallsSpecified { get; set; }
+        protected bool AllowEmergencyCallsSpecified { get; set; }
 
         private bool _allowCallsToVoicePortal;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowCallsToVoicePortalSpecified { get; set; }
+        protected bool AllowCallsToVoicePortalSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResellerIdSpecified { get; set; }
+        protected bool ResellerIdSpecified { get; set; }
 
         private string _defaultFromAddress;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultFromAddressSpecified { get; set; }
+        protected bool DefaultFromAddressSpecified { get; set; }
 
     }
 }

@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OverrideAgentWrapUpTimeSpecified { get; set; }
+        protected bool OverrideAgentWrapUpTimeSpecified { get; set; }
 
         private int _wrapUpSeconds;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WrapUpSecondsSpecified { get; set; }
+        protected bool WrapUpSecondsSpecified { get; set; }
 
     }
 }

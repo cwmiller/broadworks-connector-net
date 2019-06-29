@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePackSpecified { get; set; }
+        protected bool ServicePackSpecified { get; set; }
 
     }
 }

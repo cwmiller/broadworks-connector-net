@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponsePagingControlSpecified { get; set; }
+        protected bool ResponsePagingControlSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByEnterpriseCommonPhoneListNumber _sortByEnterpriseCommonPhoneListNumber;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByEnterpriseCommonPhoneListNumberSpecified { get; set; }
+        protected bool SortByEnterpriseCommonPhoneListNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByEnterpriseCommonPhoneListName _sortByEnterpriseCommonPhoneListName;
 
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByEnterpriseCommonPhoneListNameSpecified { get; set; }
+        protected bool SortByEnterpriseCommonPhoneListNameSpecified { get; set; }
 
         private bool _searchCriteriaModeOr;
 
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaModeOrSpecified { get; set; }
+        protected bool SearchCriteriaModeOrSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListName> _searchCriteriaEnterpriseCommonPhoneListName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListName>();
 
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaEnterpriseCommonPhoneListNameSpecified { get; set; }
+        protected bool SearchCriteriaEnterpriseCommonPhoneListNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListNumber> _searchCriteriaEnterpriseCommonPhoneListNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonPhoneListNumber>();
 
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaEnterpriseCommonPhoneListNumberSpecified { get; set; }
+        protected bool SearchCriteriaEnterpriseCommonPhoneListNumberSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonMultiPartPhoneListName> _searchCriteriaEnterpriseCommonMultiPartPhoneListName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaEnterpriseCommonMultiPartPhoneListName>();
 
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaEnterpriseCommonMultiPartPhoneListNameSpecified { get; set; }
+        protected bool SearchCriteriaEnterpriseCommonMultiPartPhoneListNameSpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceNameSpecified { get; set; }
+        protected bool ServiceNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AuthorizedQuantitySpecified { get; set; }
+        protected bool AuthorizedQuantitySpecified { get; set; }
 
         private bool _unauthorized;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnauthorizedSpecified { get; set; }
+        protected bool UnauthorizedSpecified { get; set; }
 
     }
 }

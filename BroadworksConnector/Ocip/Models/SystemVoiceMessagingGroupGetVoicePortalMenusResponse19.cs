@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseVoicePortalCustomizationSpecified { get; set; }
+        protected bool UseVoicePortalCustomizationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19VoicePortalMainMenuKeys _voicePortalMainMenuKeys;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalMainMenuKeysSpecified { get; set; }
+        protected bool VoicePortalMainMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19GreetingsMenuKeys _greetingsMenuKeys;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GreetingsMenuKeysSpecified { get; set; }
+        protected bool GreetingsMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19ConferenceGreetingMenuKeys _conferenceGreetingMenuKeys;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceGreetingMenuKeysSpecified { get; set; }
+        protected bool ConferenceGreetingMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19VoiceMessagingMenuKeys _voiceMessagingMenuKeys;
 
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessagingMenuKeysSpecified { get; set; }
+        protected bool VoiceMessagingMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19PlayGreetingMenuKeys _playGreetingMenuKeys;
 
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayGreetingMenuKeysSpecified { get; set; }
+        protected bool PlayGreetingMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19ChangeBusyOrNoAnswerGreetingMenuKeys _changeBusyOrNoAnswerGreetingMenuKeys;
 
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChangeBusyOrNoAnswerGreetingMenuKeysSpecified { get; set; }
+        protected bool ChangeBusyOrNoAnswerGreetingMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19RecordNewGreetingOrPersonalizedNameMenuKeys _recordNewGreetingOrPersonalizedNameMenuKeys;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecordNewGreetingOrPersonalizedNameMenuKeysSpecified { get; set; }
+        protected bool RecordNewGreetingOrPersonalizedNameMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19DeleteAllMessagesMenuKeys _deleteAllMessagesMenuKeys;
 
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteAllMessagesMenuKeysSpecified { get; set; }
+        protected bool DeleteAllMessagesMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19CommPilotExpressProfileMenuKeys _commPilotExpressProfileMenuKeys;
 
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommPilotExpressProfileMenuKeysSpecified { get; set; }
+        protected bool CommPilotExpressProfileMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19PersonalizedNameMenuKeys _personalizedNameMenuKeys;
 
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalizedNameMenuKeysSpecified { get; set; }
+        protected bool PersonalizedNameMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19CallForwardingOptionsMenuKeys _callForwardingOptionsMenuKeys;
 
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallForwardingOptionsMenuKeysSpecified { get; set; }
+        protected bool CallForwardingOptionsMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19ChangeCallForwardingDestinationMenuKeys _changeCallForwardingDestinationMenuKeys;
 
@@ -239,7 +239,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChangeCallForwardingDestinationMenuKeysSpecified { get; set; }
+        protected bool ChangeCallForwardingDestinationMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19VoicePortalCallingMenuKeys _voicePortalCallingMenuKeys;
 
@@ -256,7 +256,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalCallingMenuKeysSpecified { get; set; }
+        protected bool VoicePortalCallingMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19HotelingMenuKeys _hotelingMenuKeys;
 
@@ -273,7 +273,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HotelingMenuKeysSpecified { get; set; }
+        protected bool HotelingMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19PasscodeMenuKeys _passcodeMenuKeys;
 
@@ -290,7 +290,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasscodeMenuKeysSpecified { get; set; }
+        protected bool PasscodeMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19PlayMessagesMenuKeys _playMessagesMenuKeys;
 
@@ -307,7 +307,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayMessagesMenuKeysSpecified { get; set; }
+        protected bool PlayMessagesMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19PlayMessageMenuKeys _playMessageMenuKeys;
 
@@ -324,7 +324,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayMessageMenuKeysSpecified { get; set; }
+        protected bool PlayMessageMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19AdditionalMessageOptionsMenuKeys _additionalMessageOptionsMenuKeys;
 
@@ -341,7 +341,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AdditionalMessageOptionsMenuKeysSpecified { get; set; }
+        protected bool AdditionalMessageOptionsMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19ForwardOrComposeMessageMenuKeys _forwardOrComposeMessageMenuKeys;
 
@@ -358,7 +358,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardOrComposeMessageMenuKeysSpecified { get; set; }
+        protected bool ForwardOrComposeMessageMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19ReplyMessageMenuKeys _replyMessageMenuKeys;
 
@@ -375,7 +375,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReplyMessageMenuKeysSpecified { get; set; }
+        protected bool ReplyMessageMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19SendToDistributionListMenuKeys _sendToDistributionListMenuKeys;
 
@@ -392,7 +392,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendToDistributionListMenuKeysSpecified { get; set; }
+        protected bool SendToDistributionListMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19SelectDistributionListMenuKeys _selectDistributionListMenuKeys;
 
@@ -409,7 +409,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SelectDistributionListMenuKeysSpecified { get; set; }
+        protected bool SelectDistributionListMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19ReviewSelectedDistributionListMenuKeys _reviewSelectedDistributionListMenuKeys;
 
@@ -426,7 +426,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReviewSelectedDistributionListMenuKeysSpecified { get; set; }
+        protected bool ReviewSelectedDistributionListMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19SendMessageToSelectedDistributionListMenuKeys _sendMessageToSelectedDistributionListMenuKeys;
 
@@ -443,7 +443,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendMessageToSelectedDistributionListMenuKeysSpecified { get; set; }
+        protected bool SendMessageToSelectedDistributionListMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19SendToAllGroupMembersMenuKeys _sendToAllGroupMembersMenuKeys;
 
@@ -460,7 +460,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendToAllGroupMembersMenuKeysSpecified { get; set; }
+        protected bool SendToAllGroupMembersMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19SendToPersonMenuKeys _sendToPersonMenuKeys;
 
@@ -477,7 +477,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendToPersonMenuKeysSpecified { get; set; }
+        protected bool SendToPersonMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19ChangeCurrentIntroductionOrMessageOrReplyMenuKeys _changeCurrentIntroductionOrMessageOrReplyMenuKeys;
 
@@ -494,7 +494,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChangeCurrentIntroductionOrMessageOrReplyMenuKeysSpecified { get; set; }
+        protected bool ChangeCurrentIntroductionOrMessageOrReplyMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19VoicePortalLoginMenuKeys _voicePortalLoginMenuKeys;
 
@@ -511,7 +511,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalLoginMenuKeysSpecified { get; set; }
+        protected bool VoicePortalLoginMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19FaxMessagingMenuKeys _faxMessagingMenuKeys;
 
@@ -528,7 +528,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FaxMessagingMenuKeysSpecified { get; set; }
+        protected bool FaxMessagingMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19MessageDepositMenuKeys _messageDepositMenuKeys;
 
@@ -545,7 +545,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MessageDepositMenuKeysSpecified { get; set; }
+        protected bool MessageDepositMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19DisableMessageDepositMenuKeys _disableMessageDepositMenuKeys;
 
@@ -562,7 +562,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisableMessageDepositMenuKeysSpecified { get; set; }
+        protected bool DisableMessageDepositMenuKeysSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse19GreetingOnlyForwardingDestinationMenuKeys _greetingOnlyForwardingDestinationMenuKeys;
 
@@ -579,7 +579,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GreetingOnlyForwardingDestinationMenuKeysSpecified { get; set; }
+        protected bool GreetingOnlyForwardingDestinationMenuKeysSpecified { get; set; }
 
     }
 }

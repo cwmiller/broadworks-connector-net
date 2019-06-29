@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtensionLengthSpecified { get; set; }
+        protected bool ExtensionLengthSpecified { get; set; }
 
     }
 }

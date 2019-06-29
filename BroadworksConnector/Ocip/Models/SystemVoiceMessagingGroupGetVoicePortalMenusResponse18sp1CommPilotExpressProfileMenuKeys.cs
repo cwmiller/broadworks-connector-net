@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ActivateAvailableInOfficeProfileSpecified { get; set; }
+        protected bool ActivateAvailableInOfficeProfileSpecified { get; set; }
 
         private string _activateAvailableOutOfOfficeProfile;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ActivateAvailableOutOfOfficeProfileSpecified { get; set; }
+        protected bool ActivateAvailableOutOfOfficeProfileSpecified { get; set; }
 
         private string _activateBusyProfile;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ActivateBusyProfileSpecified { get; set; }
+        protected bool ActivateBusyProfileSpecified { get; set; }
 
         private string _activateUnavailableProfile;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ActivateUnavailableProfileSpecified { get; set; }
+        protected bool ActivateUnavailableProfileSpecified { get; set; }
 
         private string _noProfile;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoProfileSpecified { get; set; }
+        protected bool NoProfileSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

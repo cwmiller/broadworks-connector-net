@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnforceUserServiceAssignmentSpecified { get; set; }
+        protected bool EnforceUserServiceAssignmentSpecified { get; set; }
 
     }
 }

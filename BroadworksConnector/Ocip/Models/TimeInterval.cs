@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartDayOfWeekSpecified { get; set; }
+        protected bool StartDayOfWeekSpecified { get; set; }
 
         private int _startHour;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartHourSpecified { get; set; }
+        protected bool StartHourSpecified { get; set; }
 
         private int _startMinute;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartMinuteSpecified { get; set; }
+        protected bool StartMinuteSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DayOfWeek _endDayOfWeek;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndDayOfWeekSpecified { get; set; }
+        protected bool EndDayOfWeekSpecified { get; set; }
 
         private int _endHour;
 
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndHourSpecified { get; set; }
+        protected bool EndHourSpecified { get; set; }
 
         private int _endMinute;
 
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndMinuteSpecified { get; set; }
+        protected bool EndMinuteSpecified { get; set; }
 
     }
 }

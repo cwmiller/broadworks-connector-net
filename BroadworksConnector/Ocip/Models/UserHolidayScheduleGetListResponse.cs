@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HolidayScheduleTableSpecified { get; set; }
+        protected bool HolidayScheduleTableSpecified { get; set; }
 
     }
 }

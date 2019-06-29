@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private string _alertingGroupName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertingGroupNameSpecified { get; set; }
+        protected bool AlertingGroupNameSpecified { get; set; }
 
         private string _criteriaName;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaNameSpecified { get; set; }
+        protected bool CriteriaNameSpecified { get; set; }
 
     }
 }

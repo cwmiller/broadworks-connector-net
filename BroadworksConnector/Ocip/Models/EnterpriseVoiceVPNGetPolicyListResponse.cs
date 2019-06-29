@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LocationListSpecified { get; set; }
+        protected bool LocationListSpecified { get; set; }
 
     }
 }

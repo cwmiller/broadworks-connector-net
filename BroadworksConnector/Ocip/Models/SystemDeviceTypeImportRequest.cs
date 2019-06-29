@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileSpecified { get; set; }
+        protected bool FileSpecified { get; set; }
 
         private string _resellerId;
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResellerIdSpecified { get; set; }
+        protected bool ResellerIdSpecified { get; set; }
 
     }
 }

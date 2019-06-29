@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _ringBaseLocationFirst;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RingBaseLocationFirstSpecified { get; set; }
+        protected bool RingBaseLocationFirstSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings _baseLocationNumberOfRings;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BaseLocationNumberOfRingsSpecified { get; set; }
+        protected bool BaseLocationNumberOfRingsSpecified { get; set; }
 
         private bool _continueIfBaseLocationIsBusy;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContinueIfBaseLocationIsBusySpecified { get; set; }
+        protected bool ContinueIfBaseLocationIsBusySpecified { get; set; }
 
         private bool _callerMayStopSearch;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallerMayStopSearchSpecified { get; set; }
+        protected bool CallerMayStopSearchSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SequentialRingLocationModify _location01;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Location01Specified { get; set; }
+        protected bool Location01Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SequentialRingLocationModify _location02;
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Location02Specified { get; set; }
+        protected bool Location02Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SequentialRingLocationModify _location03;
 
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Location03Specified { get; set; }
+        protected bool Location03Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SequentialRingLocationModify _location04;
 
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Location04Specified { get; set; }
+        protected bool Location04Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SequentialRingLocationModify _location05;
 
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Location05Specified { get; set; }
+        protected bool Location05Specified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation = new List<BroadWorksConnector.Ocip.Models.CriteriaActivation>();
 
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaActivationSpecified { get; set; }
+        protected bool CriteriaActivationSpecified { get; set; }
 
     }
 }

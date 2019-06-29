@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsObsoleteSpecified { get; set; }
+        protected bool IsObsoleteSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfPortsSpecified { get; set; }
+        protected bool NumberOfPortsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileSpecified { get; set; }
+        protected bool ProfileSpecified { get; set; }
 
         private bool _registrationCapable;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RegistrationCapableSpecified { get; set; }
+        protected bool RegistrationCapableSpecified { get; set; }
 
         private bool _isConferenceDevice;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsConferenceDeviceSpecified { get; set; }
+        protected bool IsConferenceDeviceSpecified { get; set; }
 
         private bool _isMobilityManagerDevice;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsMobilityManagerDeviceSpecified { get; set; }
+        protected bool IsMobilityManagerDeviceSpecified { get; set; }
 
         private bool _isMusicOnHoldDevice;
 
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsMusicOnHoldDeviceSpecified { get; set; }
+        protected bool IsMusicOnHoldDeviceSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HoldNormalizationMode _holdNormalization;
 
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HoldNormalizationSpecified { get; set; }
+        protected bool HoldNormalizationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HoldAnnouncementMethodMode _holdAnnouncementMethod;
 
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HoldAnnouncementMethodSpecified { get; set; }
+        protected bool HoldAnnouncementMethodSpecified { get; set; }
 
         private bool _isTrusted;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsTrustedSpecified { get; set; }
+        protected bool IsTrustedSpecified { get; set; }
 
         private bool _e164Capable;
 
@@ -211,7 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool E164CapableSpecified { get; set; }
+        protected bool E164CapableSpecified { get; set; }
 
         private bool _routeAdvance;
 
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteAdvanceSpecified { get; set; }
+        protected bool RouteAdvanceSpecified { get; set; }
 
         private bool _forwardingOverride;
 
@@ -245,7 +245,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardingOverrideSpecified { get; set; }
+        protected bool ForwardingOverrideSpecified { get; set; }
 
         private bool _wirelessIntegration;
 
@@ -262,7 +262,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WirelessIntegrationSpecified { get; set; }
+        protected bool WirelessIntegrationSpecified { get; set; }
 
         private string _webBasedConfigURL;
 
@@ -282,7 +282,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WebBasedConfigURLSpecified { get; set; }
+        protected bool WebBasedConfigURLSpecified { get; set; }
 
         private bool _isVideoCapable;
 
@@ -299,7 +299,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsVideoCapableSpecified { get; set; }
+        protected bool IsVideoCapableSpecified { get; set; }
 
         private bool _pBXIntegration;
 
@@ -316,7 +316,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PBXIntegrationSpecified { get; set; }
+        protected bool PBXIntegrationSpecified { get; set; }
 
         private bool _staticRegistrationCapable;
 
@@ -333,7 +333,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StaticRegistrationCapableSpecified { get; set; }
+        protected bool StaticRegistrationCapableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CPEDeviceOptionsRead16sp1 _cpeDeviceOptions;
 
@@ -351,7 +351,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CpeDeviceOptionsSpecified { get; set; }
+        protected bool CpeDeviceOptionsSpecified { get; set; }
 
         private List<string> _protocolChoice = new List<string>();
 
@@ -370,7 +370,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtocolChoiceSpecified { get; set; }
+        protected bool ProtocolChoiceSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EarlyMediaSupportType _earlyMediaSupport;
 
@@ -387,7 +387,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EarlyMediaSupportSpecified { get; set; }
+        protected bool EarlyMediaSupportSpecified { get; set; }
 
         private bool _authenticateRefer;
 
@@ -404,7 +404,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AuthenticateReferSpecified { get; set; }
+        protected bool AuthenticateReferSpecified { get; set; }
 
         private bool _autoConfigSoftClient;
 
@@ -421,7 +421,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AutoConfigSoftClientSpecified { get; set; }
+        protected bool AutoConfigSoftClientSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AuthenticationMode _authenticationMode;
 
@@ -438,7 +438,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AuthenticationModeSpecified { get; set; }
+        protected bool AuthenticationModeSpecified { get; set; }
 
         private bool _requiresBroadWorksDigitCollection;
 
@@ -455,7 +455,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequiresBroadWorksDigitCollectionSpecified { get; set; }
+        protected bool RequiresBroadWorksDigitCollectionSpecified { get; set; }
 
         private bool _requiresBroadWorksCallWaitingTone;
 
@@ -472,7 +472,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequiresBroadWorksCallWaitingToneSpecified { get; set; }
+        protected bool RequiresBroadWorksCallWaitingToneSpecified { get; set; }
 
         private bool _requiresMWISubscription;
 
@@ -489,7 +489,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequiresMWISubscriptionSpecified { get; set; }
+        protected bool RequiresMWISubscriptionSpecified { get; set; }
 
         private bool _useHistoryInfoHeaderOnAccessSide;
 
@@ -506,7 +506,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseHistoryInfoHeaderOnAccessSideSpecified { get; set; }
+        protected bool UseHistoryInfoHeaderOnAccessSideSpecified { get; set; }
 
         private bool _adviceOfChargeCapable;
 
@@ -523,7 +523,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AdviceOfChargeCapableSpecified { get; set; }
+        protected bool AdviceOfChargeCapableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent _resetEvent;
 
@@ -541,7 +541,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResetEventSpecified { get; set; }
+        protected bool ResetEventSpecified { get; set; }
 
         private bool _supportCallCenterMIMEType;
 
@@ -558,7 +558,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportCallCenterMIMETypeSpecified { get; set; }
+        protected bool SupportCallCenterMIMETypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkMode _trunkMode;
 
@@ -575,7 +575,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkModeSpecified { get; set; }
+        protected bool TrunkModeSpecified { get; set; }
 
         private bool _addPCalledPartyId;
 
@@ -592,7 +592,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddPCalledPartyIdSpecified { get; set; }
+        protected bool AddPCalledPartyIdSpecified { get; set; }
 
         private bool _supportIdentityInUpdateAndReInvite;
 
@@ -609,7 +609,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportIdentityInUpdateAndReInviteSpecified { get; set; }
+        protected bool SupportIdentityInUpdateAndReInviteSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnscreenedPresentationIdentityPolicy _unscreenedPresentationIdentityPolicy;
 
@@ -626,7 +626,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnscreenedPresentationIdentityPolicySpecified { get; set; }
+        protected bool UnscreenedPresentationIdentityPolicySpecified { get; set; }
 
         private bool _enable3G4GContinuity;
 
@@ -643,7 +643,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Enable3G4GContinuitySpecified { get; set; }
+        protected bool Enable3G4GContinuitySpecified { get; set; }
 
         private bool _supportEmergencyDisconnectControl;
 
@@ -660,7 +660,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportEmergencyDisconnectControlSpecified { get; set; }
+        protected bool SupportEmergencyDisconnectControlSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceTypeConfigurationOption;
 
@@ -677,7 +677,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeConfigurationOptionSpecified { get; set; }
+        protected bool DeviceTypeConfigurationOptionSpecified { get; set; }
 
         private bool _supportRFC3398;
 
@@ -694,7 +694,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportRFC3398Specified { get; set; }
+        protected bool SupportRFC3398Specified { get; set; }
 
         private bool _staticLineOrdering;
 
@@ -711,7 +711,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StaticLineOrderingSpecified { get; set; }
+        protected bool StaticLineOrderingSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsPrimarySpecified { get; set; }
+        protected bool IsPrimarySpecified { get; set; }
 
         private string _hostnameForPrimary;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HostnameForPrimarySpecified { get; set; }
+        protected bool HostnameForPrimarySpecified { get; set; }
 
         private List<string> _addressForPrimary = new List<string>();
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddressForPrimarySpecified { get; set; }
+        protected bool AddressForPrimarySpecified { get; set; }
 
         private List<string> _privateAddressForPrimary = new List<string>();
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrivateAddressForPrimarySpecified { get; set; }
+        protected bool PrivateAddressForPrimarySpecified { get; set; }
 
     }
 }

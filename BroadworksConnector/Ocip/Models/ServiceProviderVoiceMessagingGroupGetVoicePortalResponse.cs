@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalScopeSpecified { get; set; }
+        protected bool VoicePortalScopeSpecified { get; set; }
 
     }
 }

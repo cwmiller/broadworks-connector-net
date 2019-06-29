@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FromDnCriteriaSelectionSpecified { get; set; }
+        protected bool FromDnCriteriaSelectionSpecified { get; set; }
 
         private bool _includeAnonymousCallers;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeAnonymousCallersSpecified { get; set; }
+        protected bool IncludeAnonymousCallersSpecified { get; set; }
 
         private bool _includeUnavailableCallers;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeUnavailableCallersSpecified { get; set; }
+        protected bool IncludeUnavailableCallersSpecified { get; set; }
 
         private List<string> _phoneNumber = new List<string>();
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
     }
 }

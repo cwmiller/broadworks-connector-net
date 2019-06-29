@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _description;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType> _assignedSubscriberType = new List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType>();
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AssignedSubscriberTypeSpecified { get; set; }
+        protected bool AssignedSubscriberTypeSpecified { get; set; }
 
     }
 }

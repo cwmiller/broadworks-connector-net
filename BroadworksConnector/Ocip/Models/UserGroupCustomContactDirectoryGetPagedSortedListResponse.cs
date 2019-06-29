@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TotalNumberOfRowsSpecified { get; set; }
+        protected bool TotalNumberOfRowsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserTableSpecified { get; set; }
+        protected bool UserTableSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioSelectionSpecified { get; set; }
+        protected bool AudioSelectionSpecified { get; set; }
 
         private string _audioFileDescription;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFileDescriptionSpecified { get; set; }
+        protected bool AudioFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioMediaTypeSpecified { get; set; }
+        protected bool AudioMediaTypeSpecified { get; set; }
 
         private string _audioFileUrl;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFileUrlSpecified { get; set; }
+        protected bool AudioFileUrlSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoSelectionSpecified { get; set; }
+        protected bool VideoSelectionSpecified { get; set; }
 
         private string _videoFileDescription;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoFileDescriptionSpecified { get; set; }
+        protected bool VideoFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
 
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoMediaTypeSpecified { get; set; }
+        protected bool VideoMediaTypeSpecified { get; set; }
 
         private string _videoFileUrl;
 
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoFileUrlSpecified { get; set; }
+        protected bool VideoFileUrlSpecified { get; set; }
 
     }
 }

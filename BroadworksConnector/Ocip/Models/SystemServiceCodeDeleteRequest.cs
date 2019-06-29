@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceCodeSpecified { get; set; }
+        protected bool ServiceCodeSpecified { get; set; }
 
     }
 }

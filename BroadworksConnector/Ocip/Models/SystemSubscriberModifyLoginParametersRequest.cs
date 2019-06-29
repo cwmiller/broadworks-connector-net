@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxFailedLoginAttemptsSpecified { get; set; }
+        protected bool MaxFailedLoginAttemptsSpecified { get; set; }
 
         private int _minLoginIdLength;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinLoginIdLengthSpecified { get; set; }
+        protected bool MinLoginIdLengthSpecified { get; set; }
 
     }
 }

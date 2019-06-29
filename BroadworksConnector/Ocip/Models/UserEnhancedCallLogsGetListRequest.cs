@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnhancedCallLogsType _callLogType;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallLogTypeSpecified { get; set; }
+        protected bool CallLogTypeSpecified { get; set; }
 
         private int _startingOffset;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartingOffsetSpecified { get; set; }
+        protected bool StartingOffsetSpecified { get; set; }
 
         private int _numCalls;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumCallsSpecified { get; set; }
+        protected bool NumCallsSpecified { get; set; }
 
     }
 }

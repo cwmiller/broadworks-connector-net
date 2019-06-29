@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HolidayNameSpecified { get; set; }
+        protected bool HolidayNameSpecified { get; set; }
 
         private string _startDate;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartDateSpecified { get; set; }
+        protected bool StartDateSpecified { get; set; }
 
         private string _endDate;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndDateSpecified { get; set; }
+        protected bool EndDateSpecified { get; set; }
 
     }
 }

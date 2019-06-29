@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ServicePolicyProfileCategory _category;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CategorySpecified { get; set; }
+        protected bool CategorySpecified { get; set; }
 
     }
 }

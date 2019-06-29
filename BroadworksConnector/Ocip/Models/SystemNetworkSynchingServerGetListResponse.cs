@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PreferredNetworkServerNetAddressSpecified { get; set; }
+        protected bool PreferredNetworkServerNetAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _networkSynchingServerTable;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkSynchingServerTableSpecified { get; set; }
+        protected bool NetworkSynchingServerTableSpecified { get; set; }
 
     }
 }

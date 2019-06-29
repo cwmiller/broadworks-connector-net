@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TaskNameSpecified { get; set; }
+        protected bool TaskNameSpecified { get; set; }
 
         private string _startTimestamp;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartTimestampSpecified { get; set; }
+        protected bool StartTimestampSpecified { get; set; }
 
         private int _maxDurationHours;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxDurationHoursSpecified { get; set; }
+        protected bool MaxDurationHoursSpecified { get; set; }
 
         private bool _sendReportEmail;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendReportEmailSpecified { get; set; }
+        protected bool SendReportEmailSpecified { get; set; }
 
         private string _reportDeliveryEmailAddress;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportDeliveryEmailAddressSpecified { get; set; }
+        protected bool ReportDeliveryEmailAddressSpecified { get; set; }
 
         private bool _abortOnError;
 
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbortOnErrorSpecified { get; set; }
+        protected bool AbortOnErrorSpecified { get; set; }
 
         private int _abortErrorThreshold;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbortErrorThresholdSpecified { get; set; }
+        protected bool AbortErrorThresholdSpecified { get; set; }
 
         private bool _reportAllUsers;
 
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportAllUsersSpecified { get; set; }
+        protected bool ReportAllUsersSpecified { get; set; }
 
         private bool _automaticallyIncrementServiceQuantity;
 
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AutomaticallyIncrementServiceQuantitySpecified { get; set; }
+        protected bool AutomaticallyIncrementServiceQuantitySpecified { get; set; }
 
         private int _errorCount;
 
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ErrorCountSpecified { get; set; }
+        protected bool ErrorCountSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskStatus _status;
 
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatusSpecified { get; set; }
+        protected bool StatusSpecified { get; set; }
 
         private int _groupsProcessed;
 
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupsProcessedSpecified { get; set; }
+        protected bool GroupsProcessedSpecified { get; set; }
 
         private int _groupsTotal;
 
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupsTotalSpecified { get; set; }
+        protected bool GroupsTotalSpecified { get; set; }
 
         private int _usersProcessed;
 
@@ -266,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UsersProcessedSpecified { get; set; }
+        protected bool UsersProcessedSpecified { get; set; }
 
         private int _usersTotal;
 
@@ -283,7 +283,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UsersTotalSpecified { get; set; }
+        protected bool UsersTotalSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType _userSelectionType;
 
@@ -300,7 +300,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserSelectionTypeSpecified { get; set; }
+        protected bool UserSelectionTypeSpecified { get; set; }
 
         private string _reportFilePathName;
 
@@ -318,7 +318,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportFilePathNameSpecified { get; set; }
+        protected bool ReportFilePathNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _groupTable;
 
@@ -335,7 +335,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupTableSpecified { get; set; }
+        protected bool GroupTableSpecified { get; set; }
 
         private List<string> _userSelectionServicePackName = new List<string>();
 
@@ -355,7 +355,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserSelectionServicePackNameSpecified { get; set; }
+        protected bool UserSelectionServicePackNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.UserService> _userSelectionServiceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
@@ -373,7 +373,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserSelectionServiceNameSpecified { get; set; }
+        protected bool UserSelectionServiceNameSpecified { get; set; }
 
         private List<string> _removeServicePackName = new List<string>();
 
@@ -393,7 +393,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RemoveServicePackNameSpecified { get; set; }
+        protected bool RemoveServicePackNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.UserService> _removeServiceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
@@ -411,7 +411,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RemoveServiceNameSpecified { get; set; }
+        protected bool RemoveServiceNameSpecified { get; set; }
 
         private List<string> _assignServicePackName = new List<string>();
 
@@ -431,7 +431,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AssignServicePackNameSpecified { get; set; }
+        protected bool AssignServicePackNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.UserService> _assignServiceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
@@ -449,7 +449,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AssignServiceNameSpecified { get; set; }
+        protected bool AssignServiceNameSpecified { get; set; }
 
     }
 }

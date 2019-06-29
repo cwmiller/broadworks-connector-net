@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReceptionistUserIdSpecified { get; set; }
+        protected bool ReceptionistUserIdSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.ReceptionistContactUserAndNote> _receptionistUserAndNote = new List<BroadWorksConnector.Ocip.Models.ReceptionistContactUserAndNote>();
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReceptionistUserAndNoteSpecified { get; set; }
+        protected bool ReceptionistUserAndNoteSpecified { get; set; }
 
     }
 }

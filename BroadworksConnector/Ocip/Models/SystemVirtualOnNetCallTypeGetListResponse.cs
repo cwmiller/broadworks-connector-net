@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VirtualOnNetCallTypeTableSpecified { get; set; }
+        protected bool VirtualOnNetCallTypeTableSpecified { get; set; }
 
     }
 }

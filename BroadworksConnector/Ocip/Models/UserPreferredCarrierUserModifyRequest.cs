@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UserPreferredCarrierNameModify _intraLataCarrier;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IntraLataCarrierSpecified { get; set; }
+        protected bool IntraLataCarrierSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UserPreferredCarrierNameModify _interLataCarrier;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InterLataCarrierSpecified { get; set; }
+        protected bool InterLataCarrierSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UserPreferredCarrierNameModify _internationalCarrier;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InternationalCarrierSpecified { get; set; }
+        protected bool InternationalCarrierSpecified { get; set; }
 
     }
 }

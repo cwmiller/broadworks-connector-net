@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePackNameSpecified { get; set; }
+        protected bool ServicePackNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.C.OCITable> _serviceUtilizationTable = new List<BroadWorksConnector.Ocip.Models.C.OCITable>();
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUtilizationTableSpecified { get; set; }
+        protected bool ServiceUtilizationTableSpecified { get; set; }
 
     }
 }

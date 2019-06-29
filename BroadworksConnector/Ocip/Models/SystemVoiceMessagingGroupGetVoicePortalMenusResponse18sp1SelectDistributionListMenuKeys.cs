@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenuOrFinishEnteringDistributionListNumber;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuOrFinishEnteringDistributionListNumberSpecified { get; set; }
+        protected bool RepeatMenuOrFinishEnteringDistributionListNumberSpecified { get; set; }
 
     }
 }

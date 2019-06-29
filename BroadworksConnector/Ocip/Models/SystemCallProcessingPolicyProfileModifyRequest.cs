@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _newName;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewNameSpecified { get; set; }
+        protected bool NewNameSpecified { get; set; }
 
         private string _description;
 
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementCallProcessingPolicyProfileSubscriberTypeList _assignedSubscriberTypeList;
 
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AssignedSubscriberTypeListSpecified { get; set; }
+        protected bool AssignedSubscriberTypeListSpecified { get; set; }
 
     }
 }

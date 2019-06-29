@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private string _name;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _linePort;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LinePortSpecified { get; set; }
+        protected bool LinePortSpecified { get; set; }
 
         private string _contact;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactSpecified { get; set; }
+        protected bool ContactSpecified { get; set; }
 
         private bool _staticRegistrationCapable;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StaticRegistrationCapableSpecified { get; set; }
+        protected bool StaticRegistrationCapableSpecified { get; set; }
 
         private bool _useDomain;
 
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDomainSpecified { get; set; }
+        protected bool UseDomainSpecified { get; set; }
 
     }
 }

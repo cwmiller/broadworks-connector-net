@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RoutingProfileSpecified { get; set; }
+        protected bool RoutingProfileSpecified { get; set; }
 
     }
 }

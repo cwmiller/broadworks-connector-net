@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ErrorSpecified { get; set; }
+        protected bool ErrorSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.UserMoveMessage> _impact = new List<BroadWorksConnector.Ocip.Models.UserMoveMessage>();
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ImpactSpecified { get; set; }
+        protected bool ImpactSpecified { get; set; }
 
     }
 }

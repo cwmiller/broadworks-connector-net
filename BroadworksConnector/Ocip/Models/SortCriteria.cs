@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsAscendingSpecified { get; set; }
+        protected bool IsAscendingSpecified { get; set; }
 
         private bool _isCaseSensitive;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsCaseSensitiveSpecified { get; set; }
+        protected bool IsCaseSensitiveSpecified { get; set; }
 
     }
 }

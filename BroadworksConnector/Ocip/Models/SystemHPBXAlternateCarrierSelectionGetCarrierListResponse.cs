@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HPBXAlternateCarriersTableSpecified { get; set; }
+        protected bool HPBXAlternateCarriersTableSpecified { get; set; }
 
     }
 }

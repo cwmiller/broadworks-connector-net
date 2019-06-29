@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private int _numberOfRingsBeforeBouncingCall;
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfRingsBeforeBouncingCallSpecified { get; set; }
+        protected bool NumberOfRingsBeforeBouncingCallSpecified { get; set; }
 
         private bool _enableTransfer;
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableTransferSpecified { get; set; }
+        protected bool EnableTransferSpecified { get; set; }
 
         private string _transferPhoneNumber;
 
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferPhoneNumberSpecified { get; set; }
+        protected bool TransferPhoneNumberSpecified { get; set; }
 
         private bool _bounceCallWhenAgentUnavailable;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BounceCallWhenAgentUnavailableSpecified { get; set; }
+        protected bool BounceCallWhenAgentUnavailableSpecified { get; set; }
 
         private bool _alertCallCenterCallOnHold;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertCallCenterCallOnHoldSpecified { get; set; }
+        protected bool AlertCallCenterCallOnHoldSpecified { get; set; }
 
         private int _alertCallCenterCallOnHoldSeconds;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertCallCenterCallOnHoldSecondsSpecified { get; set; }
+        protected bool AlertCallCenterCallOnHoldSecondsSpecified { get; set; }
 
         private bool _bounceCallCenterCallOnHold;
 
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BounceCallCenterCallOnHoldSpecified { get; set; }
+        protected bool BounceCallCenterCallOnHoldSpecified { get; set; }
 
         private int _bounceCallCenterCallOnHoldSeconds;
 
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BounceCallCenterCallOnHoldSecondsSpecified { get; set; }
+        protected bool BounceCallCenterCallOnHoldSecondsSpecified { get; set; }
 
     }
 }

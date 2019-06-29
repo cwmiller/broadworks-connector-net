@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OrderedAddressListSpecified { get; set; }
+        protected bool OrderedAddressListSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OfficeZoneNameSpecified { get; set; }
+        protected bool OfficeZoneNameSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDivertSpecified { get; set; }
+        protected bool EnableDivertSpecified { get; set; }
 
         private string _divertToPhoneNumber;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DivertToPhoneNumberSpecified { get; set; }
+        protected bool DivertToPhoneNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _executiveTable;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExecutiveTableSpecified { get; set; }
+        protected bool ExecutiveTableSpecified { get; set; }
 
     }
 }

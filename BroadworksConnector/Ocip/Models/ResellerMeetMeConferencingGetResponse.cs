@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceFromAddressSpecified { get; set; }
+        protected bool ConferenceFromAddressSpecified { get; set; }
 
         private int _maxAllocatedPorts;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxAllocatedPortsSpecified { get; set; }
+        protected bool MaxAllocatedPortsSpecified { get; set; }
 
     }
 }

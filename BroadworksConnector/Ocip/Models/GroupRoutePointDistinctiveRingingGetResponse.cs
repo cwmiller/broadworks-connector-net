@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDistinctiveRingingSpecified { get; set; }
+        protected bool EnableDistinctiveRingingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingRingPattern;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DistinctiveRingingRingPatternSpecified { get; set; }
+        protected bool DistinctiveRingingRingPatternSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingForceDeliveryRingPattern;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DistinctiveRingingForceDeliveryRingPatternSpecified { get; set; }
+        protected bool DistinctiveRingingForceDeliveryRingPatternSpecified { get; set; }
 
     }
 }

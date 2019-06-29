@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TemplateActivationTableSpecified { get; set; }
+        protected bool TemplateActivationTableSpecified { get; set; }
 
     }
 }

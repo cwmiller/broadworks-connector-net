@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServerPortSpecified { get; set; }
+        protected bool ServerPortSpecified { get; set; }
 
         private bool _enableConnectionPing;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableConnectionPingSpecified { get; set; }
+        protected bool EnableConnectionPingSpecified { get; set; }
 
         private int _connectionPingIntervalSeconds;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConnectionPingIntervalSecondsSpecified { get; set; }
+        protected bool ConnectionPingIntervalSecondsSpecified { get; set; }
 
         private bool _alterPasswords;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlterPasswordsSpecified { get; set; }
+        protected bool AlterPasswordsSpecified { get; set; }
 
         private bool _enablePublicIdentityReporting;
 
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnablePublicIdentityReportingSpecified { get; set; }
+        protected bool EnablePublicIdentityReportingSpecified { get; set; }
 
     }
 }

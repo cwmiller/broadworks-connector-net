@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatmentIdSpecified { get; set; }
+        protected bool TreatmentIdSpecified { get; set; }
 
     }
 }

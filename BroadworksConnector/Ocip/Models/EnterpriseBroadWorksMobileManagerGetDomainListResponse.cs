@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DomainNameSpecified { get; set; }
+        protected bool DomainNameSpecified { get; set; }
 
     }
 }

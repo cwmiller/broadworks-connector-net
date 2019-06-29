@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentKeySpecified { get; set; }
+        protected bool DepartmentKeySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify _transferNumbers;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferNumbersSpecified { get; set; }
+        protected bool TransferNumbersSpecified { get; set; }
 
     }
 }

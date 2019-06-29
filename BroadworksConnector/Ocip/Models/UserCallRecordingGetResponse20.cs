@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecordingOptionSpecified { get; set; }
+        protected bool RecordingOptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RecordingPauseResumeNotificationType _pauseResumeNotification;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PauseResumeNotificationSpecified { get; set; }
+        protected bool PauseResumeNotificationSpecified { get; set; }
 
         private bool _enableCallRecordingAnnouncement;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallRecordingAnnouncementSpecified { get; set; }
+        protected bool EnableCallRecordingAnnouncementSpecified { get; set; }
 
         private bool _enableRecordCallRepeatWarningTone;
 
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableRecordCallRepeatWarningToneSpecified { get; set; }
+        protected bool EnableRecordCallRepeatWarningToneSpecified { get; set; }
 
         private int _recordCallRepeatWarningToneTimerSeconds;
 
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecordCallRepeatWarningToneTimerSecondsSpecified { get; set; }
+        protected bool RecordCallRepeatWarningToneTimerSecondsSpecified { get; set; }
 
         private bool _enableVoiceMailRecording;
 
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableVoiceMailRecordingSpecified { get; set; }
+        protected bool EnableVoiceMailRecordingSpecified { get; set; }
 
     }
 }

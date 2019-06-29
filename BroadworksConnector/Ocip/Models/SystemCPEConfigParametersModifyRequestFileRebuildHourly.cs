@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartMinuteSpecified { get; set; }
+        protected bool StartMinuteSpecified { get; set; }
 
     }
 }

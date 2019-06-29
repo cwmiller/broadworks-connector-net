@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByUserLastNameSpecified { get; set; }
+        protected bool SortByUserLastNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByUserFirstNameSpecified { get; set; }
+        protected bool SortByUserFirstNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByGroupLocationCode _sortByGroupLocationCode;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByGroupLocationCodeSpecified { get; set; }
+        protected bool SortByGroupLocationCodeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByMobilePhoneNumber _sortByMobilePhoneNumber;
 
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByMobilePhoneNumberSpecified { get; set; }
+        protected bool SortByMobilePhoneNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByEmailAddress _sortByEmailAddress;
 
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByEmailAddressSpecified { get; set; }
+        protected bool SortByEmailAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByDepartmentName _sortByDepartmentName;
 
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByDepartmentNameSpecified { get; set; }
+        protected bool SortByDepartmentNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByGroupName _sortByGroupName;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByGroupNameSpecified { get; set; }
+        protected bool SortByGroupNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByYahooId _sortByYahooId;
 
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByYahooIdSpecified { get; set; }
+        protected bool SortByYahooIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByUserId _sortByUserId;
 
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByUserIdSpecified { get; set; }
+        protected bool SortByUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByImpId _sortByImpId;
 
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByImpIdSpecified { get; set; }
+        protected bool SortByImpIdSpecified { get; set; }
 
     }
 }

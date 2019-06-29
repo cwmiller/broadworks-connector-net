@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendEmergencyCallNotificationEmailSpecified { get; set; }
+        protected bool SendEmergencyCallNotificationEmailSpecified { get; set; }
 
         private string _emergencyCallNotifyEmailAddress;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmergencyCallNotifyEmailAddressSpecified { get; set; }
+        protected bool EmergencyCallNotifyEmailAddressSpecified { get; set; }
 
     }
 }

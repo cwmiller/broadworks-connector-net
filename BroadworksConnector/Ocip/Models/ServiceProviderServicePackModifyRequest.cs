@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _servicePackName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePackNameSpecified { get; set; }
+        protected bool ServicePackNameSpecified { get; set; }
 
         private string _newServicePackName;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewServicePackNameSpecified { get; set; }
+        protected bool NewServicePackNameSpecified { get; set; }
 
         private string _servicePackDescription;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePackDescriptionSpecified { get; set; }
+        protected bool ServicePackDescriptionSpecified { get; set; }
 
         private bool _isAvailableForUse;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsAvailableForUseSpecified { get; set; }
+        protected bool IsAvailableForUseSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _servicePackQuantity;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePackQuantitySpecified { get; set; }
+        protected bool ServicePackQuantitySpecified { get; set; }
 
     }
 }

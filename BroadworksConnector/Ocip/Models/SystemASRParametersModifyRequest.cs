@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxTransmissionsSpecified { get; set; }
+        protected bool MaxTransmissionsSpecified { get; set; }
 
         private int _retransmissionDelayMilliSeconds;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RetransmissionDelayMilliSecondsSpecified { get; set; }
+        protected bool RetransmissionDelayMilliSecondsSpecified { get; set; }
 
         private int _listeningPort;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ListeningPortSpecified { get; set; }
+        protected bool ListeningPortSpecified { get; set; }
 
         private string _sourceAddress;
 
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SourceAddressSpecified { get; set; }
+        protected bool SourceAddressSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _isActive;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioSelectionSpecified { get; set; }
+        protected bool AudioSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedMediaFileLevelResource20 _audioFile;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFileSpecified { get; set; }
+        protected bool AudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoSelectionSpecified { get; set; }
+        protected bool VideoSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedMediaFileLevelResource20 _videoFile;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoFileSpecified { get; set; }
+        protected bool VideoFileSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation = new List<BroadWorksConnector.Ocip.Models.CriteriaActivation>();
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaActivationSpecified { get; set; }
+        protected bool CriteriaActivationSpecified { get; set; }
 
     }
 }

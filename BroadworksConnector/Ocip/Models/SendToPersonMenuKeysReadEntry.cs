@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfirmSendingMessageSpecified { get; set; }
+        protected bool ConfirmSendingMessageSpecified { get; set; }
 
         private string _cancelSendingMessage;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CancelSendingMessageSpecified { get; set; }
+        protected bool CancelSendingMessageSpecified { get; set; }
 
         private string _finishEnteringNumberWhereToSendMessageTo;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FinishEnteringNumberWhereToSendMessageToSpecified { get; set; }
+        protected bool FinishEnteringNumberWhereToSendMessageToSpecified { get; set; }
 
         private string _finishForwardingOrSendingMessage;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FinishForwardingOrSendingMessageSpecified { get; set; }
+        protected bool FinishForwardingOrSendingMessageSpecified { get; set; }
 
     }
 }

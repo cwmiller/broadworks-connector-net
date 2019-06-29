@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants _maximumBridgeParticipants;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumBridgeParticipantsSpecified { get; set; }
+        protected bool MaximumBridgeParticipantsSpecified { get; set; }
 
         private string _networkClassOfService;
 
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkClassOfServiceSpecified { get; set; }
+        protected bool NetworkClassOfServiceSpecified { get; set; }
 
         private bool _isDefault;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsDefaultSpecified { get; set; }
+        protected bool IsDefaultSpecified { get; set; }
 
         private int _maxCollaborateRoomParticipants;
 
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCollaborateRoomParticipantsSpecified { get; set; }
+        protected bool MaxCollaborateRoomParticipantsSpecified { get; set; }
 
         private bool _supportOutdial;
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportOutdialSpecified { get; set; }
+        protected bool SupportOutdialSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _collaborateOwnerUserTable;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CollaborateOwnerUserTableSpecified { get; set; }
+        protected bool CollaborateOwnerUserTableSpecified { get; set; }
 
     }
 }

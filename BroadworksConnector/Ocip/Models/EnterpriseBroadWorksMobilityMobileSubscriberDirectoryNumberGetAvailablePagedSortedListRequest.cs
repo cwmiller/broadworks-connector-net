@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponsePagingControlSpecified { get; set; }
+        protected bool ResponsePagingControlSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByMobileDirectoryNumber _sortByMobileDirectoryNumber;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByMobileDirectoryNumberSpecified { get; set; }
+        protected bool SortByMobileDirectoryNumberSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaMobileSubscriberDirectoryNumber> _searchCriteriaMobileSubscriberDirectoryNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaMobileSubscriberDirectoryNumber>();
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaMobileSubscriberDirectoryNumberSpecified { get; set; }
+        protected bool SearchCriteriaMobileSubscriberDirectoryNumberSpecified { get; set; }
 
         private bool _searchCriteriaModeOr;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaModeOrSpecified { get; set; }
+        protected bool SearchCriteriaModeOrSpecified { get; set; }
 
     }
 }

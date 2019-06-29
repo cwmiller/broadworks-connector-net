@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _isActive;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private bool _busyRedirectToVoiceMail;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyRedirectToVoiceMailSpecified { get; set; }
+        protected bool BusyRedirectToVoiceMailSpecified { get; set; }
 
         private bool _noAnswerRedirectToVoiceMail;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerRedirectToVoiceMailSpecified { get; set; }
+        protected bool NoAnswerRedirectToVoiceMailSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection _serverSelection;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServerSelectionSpecified { get; set; }
+        protected bool ServerSelectionSpecified { get; set; }
 
         private string _userServer;
 
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServerSpecified { get; set; }
+        protected bool UserServerSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType _mailboxIdType;
 
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MailboxIdTypeSpecified { get; set; }
+        protected bool MailboxIdTypeSpecified { get; set; }
 
         private string _mailboxURL;
 
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MailboxURLSpecified { get; set; }
+        protected bool MailboxURLSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportNumberOfRings _noAnswerNumberOfRings;
 
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerNumberOfRingsSpecified { get; set; }
+        protected bool NoAnswerNumberOfRingsSpecified { get; set; }
 
         private bool _alwaysRedirectToVoiceMail;
 
@@ -202,7 +202,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlwaysRedirectToVoiceMailSpecified { get; set; }
+        protected bool AlwaysRedirectToVoiceMailSpecified { get; set; }
 
         private bool _outOfPrimaryZoneRedirectToVoiceMail;
 
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutOfPrimaryZoneRedirectToVoiceMailSpecified { get; set; }
+        protected bool OutOfPrimaryZoneRedirectToVoiceMailSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BridgeIdSpecified { get; set; }
+        protected bool BridgeIdSpecified { get; set; }
 
         private string _conferenceId;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceIdSpecified { get; set; }
+        protected bool ConferenceIdSpecified { get; set; }
 
     }
 }

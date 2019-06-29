@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderDeviceTypeFilesTableSpecified { get; set; }
+        protected bool ServiceProviderDeviceTypeFilesTableSpecified { get; set; }
 
         private bool _serviceProviderHasCustomizableDynamicFiles;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderHasCustomizableDynamicFilesSpecified { get; set; }
+        protected bool ServiceProviderHasCustomizableDynamicFilesSpecified { get; set; }
 
     }
 }

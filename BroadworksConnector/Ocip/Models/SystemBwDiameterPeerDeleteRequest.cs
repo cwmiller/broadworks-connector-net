@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InstanceSpecified { get; set; }
+        protected bool InstanceSpecified { get; set; }
 
         private string _identity;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IdentitySpecified { get; set; }
+        protected bool IdentitySpecified { get; set; }
 
     }
 }

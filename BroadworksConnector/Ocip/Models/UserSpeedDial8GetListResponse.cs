@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SpeedDialEntrySpecified { get; set; }
+        protected bool SpeedDialEntrySpecified { get; set; }
 
     }
 }

@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TotalNumberOfRowsSpecified { get; set; }
+        protected bool TotalNumberOfRowsSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.MixedCallLogsEntry> _callLog = new List<BroadWorksConnector.Ocip.Models.MixedCallLogsEntry>();
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallLogSpecified { get; set; }
+        protected bool CallLogSpecified { get; set; }
 
     }
 }

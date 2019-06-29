@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigitsSpecified { get; set; }
+        protected bool DigitsSpecified { get; set; }
 
         private string _routeName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteNameSpecified { get; set; }
+        protected bool RouteNameSpecified { get; set; }
 
     }
 }

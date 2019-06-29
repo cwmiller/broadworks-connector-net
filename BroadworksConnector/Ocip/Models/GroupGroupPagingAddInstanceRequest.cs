@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _serviceUserId;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private int _confirmationToneTimeoutSeconds;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfirmationToneTimeoutSecondsSpecified { get; set; }
+        protected bool ConfirmationToneTimeoutSecondsSpecified { get; set; }
 
         private bool _deliverOriginatorCLIDInstead;
 
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeliverOriginatorCLIDInsteadSpecified { get; set; }
+        protected bool DeliverOriginatorCLIDInsteadSpecified { get; set; }
 
         private string _originatorCLIDPrefix;
 
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OriginatorCLIDPrefixSpecified { get; set; }
+        protected bool OriginatorCLIDPrefixSpecified { get; set; }
 
         private string _networkClassOfService;
 
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkClassOfServiceSpecified { get; set; }
+        protected bool NetworkClassOfServiceSpecified { get; set; }
 
     }
 }

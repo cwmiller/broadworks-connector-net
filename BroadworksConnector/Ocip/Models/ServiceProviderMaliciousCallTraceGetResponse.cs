@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSystemPlayMCTWarningAnnouncementSpecified { get; set; }
+        protected bool UseSystemPlayMCTWarningAnnouncementSpecified { get; set; }
 
         private bool _playMCTWarningAnnouncement;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayMCTWarningAnnouncementSpecified { get; set; }
+        protected bool PlayMCTWarningAnnouncementSpecified { get; set; }
 
     }
 }

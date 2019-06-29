@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupSpecified { get; set; }
+        protected bool TrunkGroupSpecified { get; set; }
 
         private int _priority;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrioritySpecified { get; set; }
+        protected bool PrioritySpecified { get; set; }
 
         private int _weight;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WeightSpecified { get; set; }
+        protected bool WeightSpecified { get; set; }
 
     }
 }

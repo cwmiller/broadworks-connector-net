@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeLanguagesTableSpecified { get; set; }
+        protected bool DeviceTypeLanguagesTableSpecified { get; set; }
 
     }
 }

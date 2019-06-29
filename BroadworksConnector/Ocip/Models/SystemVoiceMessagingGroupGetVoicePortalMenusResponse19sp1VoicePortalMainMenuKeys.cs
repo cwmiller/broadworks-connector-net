@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessagingSpecified { get; set; }
+        protected bool VoiceMessagingSpecified { get; set; }
 
         private string _commPilotExpressProfile;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CommPilotExpressProfileSpecified { get; set; }
+        protected bool CommPilotExpressProfileSpecified { get; set; }
 
         private string _greetings;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GreetingsSpecified { get; set; }
+        protected bool GreetingsSpecified { get; set; }
 
         private string _callForwardingOptions;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallForwardingOptionsSpecified { get; set; }
+        protected bool CallForwardingOptionsSpecified { get; set; }
 
         private string _voicePortalCalling;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalCallingSpecified { get; set; }
+        protected bool VoicePortalCallingSpecified { get; set; }
 
         private string _hoteling;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HotelingSpecified { get; set; }
+        protected bool HotelingSpecified { get; set; }
 
         private string _passcode;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasscodeSpecified { get; set; }
+        protected bool PasscodeSpecified { get; set; }
 
         private string _exitVoicePortal;
 
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExitVoicePortalSpecified { get; set; }
+        protected bool ExitVoicePortalSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
         private string _externalRouting;
 
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExternalRoutingSpecified { get; set; }
+        protected bool ExternalRoutingSpecified { get; set; }
 
     }
 }

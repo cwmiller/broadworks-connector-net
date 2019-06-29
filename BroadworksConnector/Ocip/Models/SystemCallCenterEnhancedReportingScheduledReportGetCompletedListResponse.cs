@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduledReportTableSpecified { get; set; }
+        protected bool ScheduledReportTableSpecified { get; set; }
 
     }
 }

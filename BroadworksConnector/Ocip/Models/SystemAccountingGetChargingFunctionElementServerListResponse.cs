@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChargingFunctionElementServerTableSpecified { get; set; }
+        protected bool ChargingFunctionElementServerTableSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxNonPagedResponseSizeSpecified { get; set; }
+        protected bool MaxNonPagedResponseSizeSpecified { get; set; }
 
         private string _eclQueryApplicationURL;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EclQueryApplicationURLSpecified { get; set; }
+        protected bool EclQueryApplicationURLSpecified { get; set; }
 
         private string _eclQueryDataRepositoryURL;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EclQueryDataRepositoryURLSpecified { get; set; }
+        protected bool EclQueryDataRepositoryURLSpecified { get; set; }
 
     }
 }

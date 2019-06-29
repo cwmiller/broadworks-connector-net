@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PolicySelectionSpecified { get; set; }
+        protected bool PolicySelectionSpecified { get; set; }
 
     }
 }

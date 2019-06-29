@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CodeSpecified { get; set; }
+        protected bool CodeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallDispositionCodeLevel _level;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LevelSpecified { get; set; }
+        protected bool LevelSpecified { get; set; }
 
     }
 }

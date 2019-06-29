@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByAdminIdSpecified { get; set; }
+        protected bool SortByAdminIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByAdminLastName _sortByAdminLastName;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByAdminLastNameSpecified { get; set; }
+        protected bool SortByAdminLastNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByAdminFirstName _sortByAdminFirstName;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByAdminFirstNameSpecified { get; set; }
+        protected bool SortByAdminFirstNameSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MessageNameStartsWithSpecified { get; set; }
+        protected bool MessageNameStartsWithSpecified { get; set; }
 
     }
 }

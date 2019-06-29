@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumRerouteAttemptsWithinPrioritySpecified { get; set; }
+        protected bool MaximumRerouteAttemptsWithinPrioritySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList _priorityWeightedTrunkGroupList;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PriorityWeightedTrunkGroupListSpecified { get; set; }
+        protected bool PriorityWeightedTrunkGroupListSpecified { get; set; }
 
     }
 }

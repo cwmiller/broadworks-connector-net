@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileServerTableSpecified { get; set; }
+        protected bool FileServerTableSpecified { get; set; }
 
     }
 }

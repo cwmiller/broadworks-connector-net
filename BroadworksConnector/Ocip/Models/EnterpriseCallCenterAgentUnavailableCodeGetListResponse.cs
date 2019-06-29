@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnavailableCodesTableSpecified { get; set; }
+        protected bool UnavailableCodesTableSpecified { get; set; }
 
     }
 }

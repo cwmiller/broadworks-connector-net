@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsAscendingSpecified { get; set; }
+        protected bool IsAscendingSpecified { get; set; }
 
     }
 }

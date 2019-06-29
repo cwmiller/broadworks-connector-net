@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HostUserTableSpecified { get; set; }
+        protected bool HostUserTableSpecified { get; set; }
 
     }
 }

@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallDispositionCodesSpecified { get; set; }
+        protected bool EnableCallDispositionCodesSpecified { get; set; }
 
         private bool _includeOrganizationCodes;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeOrganizationCodesSpecified { get; set; }
+        protected bool IncludeOrganizationCodesSpecified { get; set; }
 
         private bool _forceUseOfCallDispositionCodes;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceUseOfCallDispositionCodesSpecified { get; set; }
+        protected bool ForceUseOfCallDispositionCodesSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallDispositionCodeWithLevel _defaultCallDispositionCode;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultCallDispositionCodeSpecified { get; set; }
+        protected bool DefaultCallDispositionCodeSpecified { get; set; }
 
     }
 }

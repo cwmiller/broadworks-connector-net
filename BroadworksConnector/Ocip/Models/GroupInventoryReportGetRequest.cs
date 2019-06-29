@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private bool _includeUsers;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeUsersSpecified { get; set; }
+        protected bool IncludeUsersSpecified { get; set; }
 
         private bool _includeServices;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeServicesSpecified { get; set; }
+        protected bool IncludeServicesSpecified { get; set; }
 
         private bool _includeDns;
 
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeDnsSpecified { get; set; }
+        protected bool IncludeDnsSpecified { get; set; }
 
         private bool _includeAccessDevices;
 
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeAccessDevicesSpecified { get; set; }
+        protected bool IncludeAccessDevicesSpecified { get; set; }
 
         private bool _includeDepartments;
 
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeDepartmentsSpecified { get; set; }
+        protected bool IncludeDepartmentsSpecified { get; set; }
 
         private string _reportDeliveryEmailAddress;
 
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportDeliveryEmailAddressSpecified { get; set; }
+        protected bool ReportDeliveryEmailAddressSpecified { get; set; }
 
     }
 }

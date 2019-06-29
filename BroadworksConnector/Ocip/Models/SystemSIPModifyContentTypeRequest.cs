@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContentTypeSpecified { get; set; }
+        protected bool ContentTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemSIPSupportedInterface _interface;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InterfaceSpecified { get; set; }
+        protected bool InterfaceSpecified { get; set; }
 
     }
 }

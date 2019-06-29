@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private bool _staticRegistrationCapable;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StaticRegistrationCapableSpecified { get; set; }
+        protected bool StaticRegistrationCapableSpecified { get; set; }
 
         private bool _useDomain;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDomainSpecified { get; set; }
+        protected bool UseDomainSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LastNameSpecified { get; set; }
+        protected bool LastNameSpecified { get; set; }
 
         private string _firstName;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FirstNameSpecified { get; set; }
+        protected bool FirstNameSpecified { get; set; }
 
         private string _hiraganaLastName;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HiraganaLastNameSpecified { get; set; }
+        protected bool HiraganaLastNameSpecified { get; set; }
 
         private string _hiraganaFirstName;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HiraganaFirstNameSpecified { get; set; }
+        protected bool HiraganaFirstNameSpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TemplateLevelSpecified { get; set; }
+        protected bool TemplateLevelSpecified { get; set; }
 
         private string _templateName;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TemplateNameSpecified { get; set; }
+        protected bool TemplateNameSpecified { get; set; }
 
     }
 }

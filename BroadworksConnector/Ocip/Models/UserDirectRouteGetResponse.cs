@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutgoingDTGPolicySpecified { get; set; }
+        protected bool OutgoingDTGPolicySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy _outgoingTrunkIdentityPolicy;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutgoingTrunkIdentityPolicySpecified { get; set; }
+        protected bool OutgoingTrunkIdentityPolicySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DirectRouteIdentifiers _directRouteIdentityList;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DirectRouteIdentityListSpecified { get; set; }
+        protected bool DirectRouteIdentityListSpecified { get; set; }
 
     }
 }

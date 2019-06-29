@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private int _intervalSeconds;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IntervalSecondsSpecified { get; set; }
+        protected bool IntervalSecondsSpecified { get; set; }
 
         private int _timeoutPeriodSeconds;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeoutPeriodSecondsSpecified { get; set; }
+        protected bool TimeoutPeriodSecondsSpecified { get; set; }
 
     }
 }

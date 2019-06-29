@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatusSpecified { get; set; }
+        protected bool StatusSpecified { get; set; }
 
     }
 }

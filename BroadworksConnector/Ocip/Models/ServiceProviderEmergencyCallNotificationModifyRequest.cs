@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private bool _sendEmergencyCallNotificationEmail;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendEmergencyCallNotificationEmailSpecified { get; set; }
+        protected bool SendEmergencyCallNotificationEmailSpecified { get; set; }
 
         private string _emergencyCallNotifyEmailAddress;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmergencyCallNotifyEmailAddressSpecified { get; set; }
+        protected bool EmergencyCallNotifyEmailAddressSpecified { get; set; }
 
         private bool _allowGroupOverride;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowGroupOverrideSpecified { get; set; }
+        protected bool AllowGroupOverrideSpecified { get; set; }
 
     }
 }

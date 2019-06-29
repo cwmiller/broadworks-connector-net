@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool QueryTimerMilliSecondsSpecified { get; set; }
+        protected bool QueryTimerMilliSecondsSpecified { get; set; }
 
         private string _serverNetAddress;
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServerNetAddressSpecified { get; set; }
+        protected bool ServerNetAddressSpecified { get; set; }
 
         private int? _serverPort;
 
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServerPortSpecified { get; set; }
+        protected bool ServerPortSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TransportProtocol _serverTransportProtocol;
 
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServerTransportProtocolSpecified { get; set; }
+        protected bool ServerTransportProtocolSpecified { get; set; }
 
     }
 }

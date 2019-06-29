@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _targetUserIdList;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TargetUserIdListSpecified { get; set; }
+        protected bool TargetUserIdListSpecified { get; set; }
 
     }
 }

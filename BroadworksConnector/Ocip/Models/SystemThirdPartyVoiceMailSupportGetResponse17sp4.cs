@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OverrideAltCallerIdForVMRetrievalSpecified { get; set; }
+        protected bool OverrideAltCallerIdForVMRetrievalSpecified { get; set; }
 
         private bool _stripDiversionOnVMDestinationRetrieval;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StripDiversionOnVMDestinationRetrievalSpecified { get; set; }
+        protected bool StripDiversionOnVMDestinationRetrievalSpecified { get; set; }
 
     }
 }

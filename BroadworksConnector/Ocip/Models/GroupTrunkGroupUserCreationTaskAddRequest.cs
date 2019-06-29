@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private string _taskName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TaskNameSpecified { get; set; }
+        protected bool TaskNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat _userIdFormat;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdFormatSpecified { get; set; }
+        protected bool UserIdFormatSpecified { get; set; }
 
         private string _userIdDomain;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdDomainSpecified { get; set; }
+        protected bool UserIdDomainSpecified { get; set; }
 
         private bool _populateExtension;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PopulateExtensionSpecified { get; set; }
+        protected bool PopulateExtensionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _linePortFormat;
 
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LinePortFormatSpecified { get; set; }
+        protected bool LinePortFormatSpecified { get; set; }
 
         private string _linePortDomain;
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LinePortDomainSpecified { get; set; }
+        protected bool LinePortDomainSpecified { get; set; }
 
         private bool _populateContact;
 
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PopulateContactSpecified { get; set; }
+        protected bool PopulateContactSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _contactFormat;
 
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactFormatSpecified { get; set; }
+        protected bool ContactFormatSpecified { get; set; }
 
         private string _contactDomain;
 
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactDomainSpecified { get; set; }
+        protected bool ContactDomainSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserPhoneNumbers _userPhoneNumbers;
 
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserPhoneNumbersSpecified { get; set; }
+        protected bool UserPhoneNumbersSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequestUserExtensions _userExtensions;
 
@@ -233,7 +233,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserExtensionsSpecified { get; set; }
+        protected bool UserExtensionsSpecified { get; set; }
 
         private List<string> _servicePackName = new List<string>();
 
@@ -253,7 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePackNameSpecified { get; set; }
+        protected bool ServicePackNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.UserService> _userService = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
@@ -271,7 +271,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServiceSpecified { get; set; }
+        protected bool UserServiceSpecified { get; set; }
 
     }
 }

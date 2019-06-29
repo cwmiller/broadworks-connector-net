@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagSetNameSpecified { get; set; }
+        protected bool TagSetNameSpecified { get; set; }
 
         private string _newTagSetName;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewTagSetNameSpecified { get; set; }
+        protected bool NewTagSetNameSpecified { get; set; }
 
     }
 }

@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayLocalUserIdentityLastNameFirstSpecified { get; set; }
+        protected bool DisplayLocalUserIdentityLastNameFirstSpecified { get; set; }
 
         private bool _forceUseOfTCP;
 
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceUseOfTCPSpecified { get; set; }
+        protected bool ForceUseOfTCPSpecified { get; set; }
 
         private bool _enableRedundancy;
 
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableRedundancySpecified { get; set; }
+        protected bool EnableRedundancySpecified { get; set; }
 
         private int _redundancyTaskDelayMilliseconds;
 
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedundancyTaskDelayMillisecondsSpecified { get; set; }
+        protected bool RedundancyTaskDelayMillisecondsSpecified { get; set; }
 
         private int _redundancyTaskIntervalMilliseconds;
 
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedundancyTaskIntervalMillisecondsSpecified { get; set; }
+        protected bool RedundancyTaskIntervalMillisecondsSpecified { get; set; }
 
         private int _maxNumberOfSubscriptionsPerRedundancyTaskInterval;
 
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxNumberOfSubscriptionsPerRedundancyTaskIntervalSpecified { get; set; }
+        protected bool MaxNumberOfSubscriptionsPerRedundancyTaskIntervalSpecified { get; set; }
 
     }
 }

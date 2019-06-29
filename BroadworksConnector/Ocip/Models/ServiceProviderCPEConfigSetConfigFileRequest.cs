@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _deviceType;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeSpecified { get; set; }
+        protected bool DeviceTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.FileResource _configFile;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfigFileSpecified { get; set; }
+        protected bool ConfigFileSpecified { get; set; }
 
     }
 }

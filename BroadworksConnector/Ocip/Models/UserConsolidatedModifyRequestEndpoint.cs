@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessDeviceEndpointSpecified { get; set; }
+        protected bool AccessDeviceEndpointSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkAddressingMultipleContactModify _trunkAddressing;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkAddressingSpecified { get; set; }
+        protected bool TrunkAddressingSpecified { get; set; }
 
     }
 }

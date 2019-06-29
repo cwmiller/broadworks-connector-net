@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnforceCLIDServiceAssignmentForPilotUserSpecified { get; set; }
+        protected bool EnforceCLIDServiceAssignmentForPilotUserSpecified { get; set; }
 
         private bool _terminateUnreachableTriggerDetectionOnReceiptOf18x;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TerminateUnreachableTriggerDetectionOnReceiptOf18xSpecified { get; set; }
+        protected bool TerminateUnreachableTriggerDetectionOnReceiptOf18xSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy _pilotUserCallingLineAssertedIdentityPolicy;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PilotUserCallingLineAssertedIdentityPolicySpecified { get; set; }
+        protected bool PilotUserCallingLineAssertedIdentityPolicySpecified { get; set; }
 
         private bool _enforceOutOfDialogPBXRedirectionPolicies;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnforceOutOfDialogPBXRedirectionPoliciesSpecified { get; set; }
+        protected bool EnforceOutOfDialogPBXRedirectionPoliciesSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupUnscreenedRedirectionHandling _unscreenedRedirectionHandling;
 
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnscreenedRedirectionHandlingSpecified { get; set; }
+        protected bool UnscreenedRedirectionHandlingSpecified { get; set; }
 
         private bool _enableHoldoverOfHighwaterCallCounts;
 
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableHoldoverOfHighwaterCallCountsSpecified { get; set; }
+        protected bool EnableHoldoverOfHighwaterCallCountsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupHighwaterCallCountHoldoverPeriodMinutes _holdoverPeriod;
 
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HoldoverPeriodSpecified { get; set; }
+        protected bool HoldoverPeriodSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupTimeZoneOffsetMinutes _timeZoneOffsetMinutes;
 
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeZoneOffsetMinutesSpecified { get; set; }
+        protected bool TimeZoneOffsetMinutesSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupCLIDSourceForScreenedCallsPolicy _clidSourceForScreenedCallsPolicy;
 
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ClidSourceForScreenedCallsPolicySpecified { get; set; }
+        protected bool ClidSourceForScreenedCallsPolicySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserLookupPolicy _userLookupPolicy;
 
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserLookupPolicySpecified { get; set; }
+        protected bool UserLookupPolicySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupOutOfDialogPBXRedirectionCLIDMapping _outOfDialogPBXRedirectionCLIDMapping;
 
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutOfDialogPBXRedirectionCLIDMappingSpecified { get; set; }
+        protected bool OutOfDialogPBXRedirectionCLIDMappingSpecified { get; set; }
 
         private bool _enforceOutOfDialogPBXRedirectionTrunkGroupCapacity;
 
@@ -225,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnforceOutOfDialogPBXRedirectionTrunkGroupCapacitySpecified { get; set; }
+        protected bool EnforceOutOfDialogPBXRedirectionTrunkGroupCapacitySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupImplicitRegistrationSetSupportPolicy _implicitRegistrationSetSupportPolicy;
 
@@ -242,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ImplicitRegistrationSetSupportPolicySpecified { get; set; }
+        protected bool ImplicitRegistrationSetSupportPolicySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupSIPIdentityForPilotAndProxyTrunkModesPolicy _sipIdentityForPilotAndProxyTrunkModesPolicy;
 
@@ -259,7 +259,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipIdentityForPilotAndProxyTrunkModesPolicySpecified { get; set; }
+        protected bool SipIdentityForPilotAndProxyTrunkModesPolicySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupSupportConnectedIdentityPolicy _supportConnectedIdentityPolicy;
 
@@ -276,7 +276,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportConnectedIdentityPolicySpecified { get; set; }
+        protected bool SupportConnectedIdentityPolicySpecified { get; set; }
 
         private bool _useUnmappedSessionsForTrunkUsers;
 
@@ -293,7 +293,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseUnmappedSessionsForTrunkUsersSpecified { get; set; }
+        protected bool UseUnmappedSessionsForTrunkUsersSpecified { get; set; }
 
     }
 }

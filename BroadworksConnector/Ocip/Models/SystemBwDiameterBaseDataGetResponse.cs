@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool XsRealmSpecified { get; set; }
+        protected bool XsRealmSpecified { get; set; }
 
         private int _xsListeningPort;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool XsListeningPortSpecified { get; set; }
+        protected bool XsListeningPortSpecified { get; set; }
 
         private string _psRealm;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PsRealmSpecified { get; set; }
+        protected bool PsRealmSpecified { get; set; }
 
         private int _psListeningPort;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PsListeningPortSpecified { get; set; }
+        protected bool PsListeningPortSpecified { get; set; }
 
         private bool _psRelayThroughXs;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PsRelayThroughXsSpecified { get; set; }
+        protected bool PsRelayThroughXsSpecified { get; set; }
 
         private int _xsRelayListeningPort;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool XsRelayListeningPortSpecified { get; set; }
+        protected bool XsRelayListeningPortSpecified { get; set; }
 
         private int _tcTimerSeconds;
 
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TcTimerSecondsSpecified { get; set; }
+        protected bool TcTimerSecondsSpecified { get; set; }
 
         private int _twTimerSeconds;
 
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TwTimerSecondsSpecified { get; set; }
+        protected bool TwTimerSecondsSpecified { get; set; }
 
         private int _requestTimerSeconds;
 
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequestTimerSecondsSpecified { get; set; }
+        protected bool RequestTimerSecondsSpecified { get; set; }
 
         private int _busyPeerDetectionOutstandingTxnCount;
 
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPeerDetectionOutstandingTxnCountSpecified { get; set; }
+        protected bool BusyPeerDetectionOutstandingTxnCountSpecified { get; set; }
 
         private int _busyPeerRestoreOutstandingTxnCount;
 
@@ -225,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPeerRestoreOutstandingTxnCountSpecified { get; set; }
+        protected bool BusyPeerRestoreOutstandingTxnCountSpecified { get; set; }
 
         private int _dynamicEntryInactivityTimerHours;
 
@@ -244,7 +244,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DynamicEntryInactivityTimerHoursSpecified { get; set; }
+        protected bool DynamicEntryInactivityTimerHoursSpecified { get; set; }
 
     }
 }

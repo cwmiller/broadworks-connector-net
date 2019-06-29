@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThirdPartyVoiceMailSupportTableSpecified { get; set; }
+        protected bool ThirdPartyVoiceMailSupportTableSpecified { get; set; }
 
     }
 }

@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnnouncementTableSpecified { get; set; }
+        protected bool AnnouncementTableSpecified { get; set; }
 
         private int _totalFileSize;
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TotalFileSizeSpecified { get; set; }
+        protected bool TotalFileSizeSpecified { get; set; }
 
         private int _maxFileSize;
 
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxFileSizeSpecified { get; set; }
+        protected bool MaxFileSizeSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceURISpecified { get; set; }
+        protected bool ConferenceURISpecified { get; set; }
 
         private int _maxConferenceParties;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConferencePartiesSpecified { get; set; }
+        protected bool MaxConferencePartiesSpecified { get; set; }
 
     }
 }

@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TotalNumberOfRowsSpecified { get; set; }
+        protected bool TotalNumberOfRowsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse20LegacyEntry _legacyEntry;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LegacyEntrySpecified { get; set; }
+        protected bool LegacyEntrySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse20ExtendedEntry _extendedEntry;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedEntrySpecified { get; set; }
+        protected bool ExtendedEntrySpecified { get; set; }
 
     }
 }

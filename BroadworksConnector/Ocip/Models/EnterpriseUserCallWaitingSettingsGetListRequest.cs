@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponsePagingControlSpecified { get; set; }
+        protected bool ResponsePagingControlSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByUserLastNameSpecified { get; set; }
+        protected bool SortByUserLastNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByUserFirstNameSpecified { get; set; }
+        protected bool SortByUserFirstNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByUserDepartment _sortByUserDepartment;
 
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByUserDepartmentSpecified { get; set; }
+        protected bool SortByUserDepartmentSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByDn _sortByDn;
 
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByDnSpecified { get; set; }
+        protected bool SortByDnSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByExtension _sortByExtension;
 
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByExtensionSpecified { get; set; }
+        protected bool SortByExtensionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByServiceStatus _sortByServiceStatus;
 
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByServiceStatusSpecified { get; set; }
+        protected bool SortByServiceStatusSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByGroupId _sortByGroupId;
 
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByGroupIdSpecified { get; set; }
+        protected bool SortByGroupIdSpecified { get; set; }
 
         private bool _includeVirtualUsers;
 
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeVirtualUsersSpecified { get; set; }
+        protected bool IncludeVirtualUsersSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> _searchCriteriaUserLastName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName>();
 
@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaUserLastNameSpecified { get; set; }
+        protected bool SearchCriteriaUserLastNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> _searchCriteriaUserFirstName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName>();
 
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaUserFirstNameSpecified { get; set; }
+        protected bool SearchCriteriaUserFirstNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> _searchCriteriaUserId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId>();
 
@@ -246,7 +246,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaUserIdSpecified { get; set; }
+        protected bool SearchCriteriaUserIdSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> _searchCriteriaDn = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn>();
 
@@ -264,7 +264,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaDnSpecified { get; set; }
+        protected bool SearchCriteriaDnSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> _searchCriteriaExtension = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension>();
 
@@ -282,7 +282,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExtensionSpecified { get; set; }
+        protected bool SearchCriteriaExtensionSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaEmailAddress> _searchCriteriaEmailAddress = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaEmailAddress>();
 
@@ -300,7 +300,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaEmailAddressSpecified { get; set; }
+        protected bool SearchCriteriaEmailAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment _searchCriteriaExactUserDepartment;
 
@@ -318,7 +318,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExactUserDepartmentSpecified { get; set; }
+        protected bool SearchCriteriaExactUserDepartmentSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserInTrunkGroup _searchCriteriaExactUserInTrunkGroup;
 
@@ -336,7 +336,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExactUserInTrunkGroupSpecified { get; set; }
+        protected bool SearchCriteriaExactUserInTrunkGroupSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaServiceStatus _searchCriteriaServiceStatus;
 
@@ -354,7 +354,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaServiceStatusSpecified { get; set; }
+        protected bool SearchCriteriaServiceStatusSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeScheduleSpecified { get; set; }
+        protected bool TimeScheduleSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HolidayScheduleSpecified { get; set; }
+        protected bool HolidayScheduleSpecified { get; set; }
 
         private bool _blacklisted;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BlacklistedSpecified { get; set; }
+        protected bool BlacklistedSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.PriorityAlertCriteriaFromDn _fromDnCriteria;
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FromDnCriteriaSpecified { get; set; }
+        protected bool FromDnCriteriaSpecified { get; set; }
 
     }
 }

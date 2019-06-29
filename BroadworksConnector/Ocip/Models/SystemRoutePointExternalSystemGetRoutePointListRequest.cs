@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RoutePointExternalSystemSpecified { get; set; }
+        protected bool RoutePointExternalSystemSpecified { get; set; }
 
     }
 }

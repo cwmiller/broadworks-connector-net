@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ApplicationServerSetNameSpecified { get; set; }
+        protected bool ApplicationServerSetNameSpecified { get; set; }
 
     }
 }

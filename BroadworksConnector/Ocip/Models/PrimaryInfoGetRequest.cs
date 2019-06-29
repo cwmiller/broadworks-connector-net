@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsPrivateSpecified { get; set; }
+        protected bool IsPrivateSpecified { get; set; }
 
         private bool _isAddressInfoRequested;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsAddressInfoRequestedSpecified { get; set; }
+        protected bool IsAddressInfoRequestedSpecified { get; set; }
 
     }
 }

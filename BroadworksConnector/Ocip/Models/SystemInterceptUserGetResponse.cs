@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmergencyAndRepairInterceptSpecified { get; set; }
+        protected bool EmergencyAndRepairInterceptSpecified { get; set; }
 
     }
 }

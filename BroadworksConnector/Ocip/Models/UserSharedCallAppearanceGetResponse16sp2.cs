@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertAllAppearancesForClickToDialCallsSpecified { get; set; }
+        protected bool AlertAllAppearancesForClickToDialCallsSpecified { get; set; }
 
         private bool _alertAllAppearancesForGroupPagingCalls;
 
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertAllAppearancesForGroupPagingCallsSpecified { get; set; }
+        protected bool AlertAllAppearancesForGroupPagingCallsSpecified { get; set; }
 
         private int _maxAppearances;
 
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxAppearancesSpecified { get; set; }
+        protected bool MaxAppearancesSpecified { get; set; }
 
         private bool _allowSCACallRetrieve;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowSCACallRetrieveSpecified { get; set; }
+        protected bool AllowSCACallRetrieveSpecified { get; set; }
 
         private bool _enableMultipleCallArrangement;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableMultipleCallArrangementSpecified { get; set; }
+        protected bool EnableMultipleCallArrangementSpecified { get; set; }
 
         private bool _multipleCallArrangementIsActive;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MultipleCallArrangementIsActiveSpecified { get; set; }
+        protected bool MultipleCallArrangementIsActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _endpointTable;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndpointTableSpecified { get; set; }
+        protected bool EndpointTableSpecified { get; set; }
 
         private bool _allowBridgingBetweenLocations;
 
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowBridgingBetweenLocationsSpecified { get; set; }
+        protected bool AllowBridgingBetweenLocationsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
 
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BridgeWarningToneSpecified { get; set; }
+        protected bool BridgeWarningToneSpecified { get; set; }
 
         private bool _enableCallParkNotification;
 
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallParkNotificationSpecified { get; set; }
+        protected bool EnableCallParkNotificationSpecified { get; set; }
 
     }
 }

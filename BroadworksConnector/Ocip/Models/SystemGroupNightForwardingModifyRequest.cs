@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NightForwardGroupCallsWithinEnterpriseSpecified { get; set; }
+        protected bool NightForwardGroupCallsWithinEnterpriseSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LineModeSpecified { get; set; }
+        protected bool LineModeSpecified { get; set; }
 
         private bool _enableDeviceFeatureSynchronization;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDeviceFeatureSynchronizationSpecified { get; set; }
+        protected bool EnableDeviceFeatureSynchronizationSpecified { get; set; }
 
     }
 }

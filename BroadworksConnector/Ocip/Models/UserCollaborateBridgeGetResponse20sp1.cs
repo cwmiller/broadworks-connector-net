@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BridgeIdSpecified { get; set; }
+        protected bool BridgeIdSpecified { get; set; }
 
         private string _bridgeName;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BridgeNameSpecified { get; set; }
+        protected bool BridgeNameSpecified { get; set; }
 
         private string _phoneNumber;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
         private string _extension;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtensionSpecified { get; set; }
+        protected bool ExtensionSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.AlternateNumberEntry21> _alternateNumberEntry = new List<BroadWorksConnector.Ocip.Models.AlternateNumberEntry21>();
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateNumberEntrySpecified { get; set; }
+        protected bool AlternateNumberEntrySpecified { get; set; }
 
         private bool _supportOutDial;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportOutDialSpecified { get; set; }
+        protected bool SupportOutDialSpecified { get; set; }
 
         private int _maxCollaborateRoomParticipants;
 
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCollaborateRoomParticipantsSpecified { get; set; }
+        protected bool MaxCollaborateRoomParticipantsSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfCallsQueuedNowSpecified { get; set; }
+        protected bool NumberOfCallsQueuedNowSpecified { get; set; }
 
         private bool _generateDailyReport;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GenerateDailyReportSpecified { get; set; }
+        protected bool GenerateDailyReportSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CollectionPeriodMinutesSpecified { get; set; }
+        protected bool CollectionPeriodMinutesSpecified { get; set; }
 
         private string _reportingEmailAddress1;
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportingEmailAddress1Specified { get; set; }
+        protected bool ReportingEmailAddress1Specified { get; set; }
 
         private string _reportingEmailAddress2;
 
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportingEmailAddress2Specified { get; set; }
+        protected bool ReportingEmailAddress2Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics13mp8 _queueStatisticsYesterday;
 
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool QueueStatisticsYesterdaySpecified { get; set; }
+        protected bool QueueStatisticsYesterdaySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics13mp8 _queueStatisticsToday;
 
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool QueueStatisticsTodaySpecified { get; set; }
+        protected bool QueueStatisticsTodaySpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics13mp8> _agentStatistics = new List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics13mp8>();
 
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentStatisticsSpecified { get; set; }
+        protected bool AgentStatisticsSpecified { get; set; }
 
     }
 }

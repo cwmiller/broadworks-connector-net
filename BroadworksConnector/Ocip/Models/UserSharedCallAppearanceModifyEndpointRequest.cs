@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointKey _accessDeviceEndpoint;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessDeviceEndpointSpecified { get; set; }
+        protected bool AccessDeviceEndpointSpecified { get; set; }
 
         private bool _isActive;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private bool _allowOrigination;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowOriginationSpecified { get; set; }
+        protected bool AllowOriginationSpecified { get; set; }
 
         private bool _allowTermination;
 
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowTerminationSpecified { get; set; }
+        protected bool AllowTerminationSpecified { get; set; }
 
     }
 }

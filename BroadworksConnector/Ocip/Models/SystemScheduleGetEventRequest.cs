@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleKeySpecified { get; set; }
+        protected bool ScheduleKeySpecified { get; set; }
 
         private string _eventName;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EventNameSpecified { get; set; }
+        protected bool EventNameSpecified { get; set; }
 
     }
 }

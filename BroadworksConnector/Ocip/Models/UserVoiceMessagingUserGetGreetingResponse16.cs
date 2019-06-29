@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyAnnouncementSelectionSpecified { get; set; }
+        protected bool BusyAnnouncementSelectionSpecified { get; set; }
 
         private string _busyPersonalAudioFile;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPersonalAudioFileSpecified { get; set; }
+        protected bool BusyPersonalAudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _busyPersonalAudioMediaType;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPersonalAudioMediaTypeSpecified { get; set; }
+        protected bool BusyPersonalAudioMediaTypeSpecified { get; set; }
 
         private string _busyPersonalVideoFile;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPersonalVideoFileSpecified { get; set; }
+        protected bool BusyPersonalVideoFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _busyPersonalVideoMediaType;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPersonalVideoMediaTypeSpecified { get; set; }
+        protected bool BusyPersonalVideoMediaTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection _noAnswerAnnouncementSelection;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerAnnouncementSelectionSpecified { get; set; }
+        protected bool NoAnswerAnnouncementSelectionSpecified { get; set; }
 
         private string _noAnswerPersonalAudioFile;
 
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerPersonalAudioFileSpecified { get; set; }
+        protected bool NoAnswerPersonalAudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _noAnswerPersonalAudioMediaType;
 
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerPersonalAudioMediaTypeSpecified { get; set; }
+        protected bool NoAnswerPersonalAudioMediaTypeSpecified { get; set; }
 
         private string _noAnswerPersonalVideoFile;
 
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerPersonalVideoFileSpecified { get; set; }
+        protected bool NoAnswerPersonalVideoFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _noAnswerPersonalVideoMediaType;
 
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerPersonalVideoMediaTypeSpecified { get; set; }
+        protected bool NoAnswerPersonalVideoMediaTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead16 _noAnswerAlternateGreeting01;
 
@@ -223,7 +223,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerAlternateGreeting01Specified { get; set; }
+        protected bool NoAnswerAlternateGreeting01Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead16 _noAnswerAlternateGreeting02;
 
@@ -241,7 +241,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerAlternateGreeting02Specified { get; set; }
+        protected bool NoAnswerAlternateGreeting02Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingRead16 _noAnswerAlternateGreeting03;
 
@@ -259,7 +259,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerAlternateGreeting03Specified { get; set; }
+        protected bool NoAnswerAlternateGreeting03Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingNumberOfRings _noAnswerNumberOfRings;
 
@@ -276,7 +276,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerNumberOfRingsSpecified { get; set; }
+        protected bool NoAnswerNumberOfRingsSpecified { get; set; }
 
     }
 }

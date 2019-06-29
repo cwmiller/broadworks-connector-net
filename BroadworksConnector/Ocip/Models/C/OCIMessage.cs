@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool SessionIdSpecified { get; set; }
+        protected bool SessionIdSpecified { get; set; }
 
         private string _userId;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _phoneNumber;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
         private string _linePort;
 
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool LinePortSpecified { get; set; }
+        protected bool LinePortSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.C.OCICommand> _command = new List<BroadWorksConnector.Ocip.Models.C.OCICommand>();
 
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool CommandSpecified { get; set; }
+        protected bool CommandSpecified { get; set; }
 
     }
 }

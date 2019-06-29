@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSettingLevelSpecified { get; set; }
+        protected bool UseSettingLevelSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _templateActivationTable;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TemplateActivationTableSpecified { get; set; }
+        protected bool TemplateActivationTableSpecified { get; set; }
 
     }
 }

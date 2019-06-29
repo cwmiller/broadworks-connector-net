@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatmentIdSpecified { get; set; }
+        protected bool TreatmentIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ChargeIndicator _chargeIndicator;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChargeIndicatorSpecified { get; set; }
+        protected bool ChargeIndicatorSpecified { get; set; }
 
         private string _description;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private int _accessSIPStatusCode;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessSIPStatusCodeSpecified { get; set; }
+        protected bool AccessSIPStatusCodeSpecified { get; set; }
 
         private string _accessSIPStatusMessage;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessSIPStatusMessageSpecified { get; set; }
+        protected bool AccessSIPStatusMessageSpecified { get; set; }
 
         private int _networkSIPStatusCode;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkSIPStatusCodeSpecified { get; set; }
+        protected bool NetworkSIPStatusCodeSpecified { get; set; }
 
         private string _networkSIPStatusMessage;
 
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkSIPStatusMessageSpecified { get; set; }
+        protected bool NetworkSIPStatusMessageSpecified { get; set; }
 
         private int _q850CauseValue;
 
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Q850CauseValueSpecified { get; set; }
+        protected bool Q850CauseValueSpecified { get; set; }
 
         private string _q850Text;
 
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Q850TextSpecified { get; set; }
+        protected bool Q850TextSpecified { get; set; }
 
         private string _accessTreatmentAudioFile;
 
@@ -213,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessTreatmentAudioFileSpecified { get; set; }
+        protected bool AccessTreatmentAudioFileSpecified { get; set; }
 
         private string _accessTreatmentVideoFile;
 
@@ -233,7 +233,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessTreatmentVideoFileSpecified { get; set; }
+        protected bool AccessTreatmentVideoFileSpecified { get; set; }
 
         private string _networkTreatmentAudioFile;
 
@@ -253,7 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkTreatmentAudioFileSpecified { get; set; }
+        protected bool NetworkTreatmentAudioFileSpecified { get; set; }
 
         private string _networkTreatmentVideoFile;
 
@@ -273,7 +273,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkTreatmentVideoFileSpecified { get; set; }
+        protected bool NetworkTreatmentVideoFileSpecified { get; set; }
 
         private string _cdrTerminationCause;
 
@@ -293,7 +293,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CdrTerminationCauseSpecified { get; set; }
+        protected bool CdrTerminationCauseSpecified { get; set; }
 
         private bool _routeAdvance;
 
@@ -311,7 +311,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteAdvanceSpecified { get; set; }
+        protected bool RouteAdvanceSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.InternalReleaseCause16 _internalReleaseCause;
 
@@ -329,7 +329,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InternalReleaseCauseSpecified { get; set; }
+        protected bool InternalReleaseCauseSpecified { get; set; }
 
         private bool _accessSendReasonHeader;
 
@@ -347,7 +347,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessSendReasonHeaderSpecified { get; set; }
+        protected bool AccessSendReasonHeaderSpecified { get; set; }
 
         private bool _networkSendReasonHeader;
 
@@ -365,7 +365,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkSendReasonHeaderSpecified { get; set; }
+        protected bool NetworkSendReasonHeaderSpecified { get; set; }
 
     }
 }

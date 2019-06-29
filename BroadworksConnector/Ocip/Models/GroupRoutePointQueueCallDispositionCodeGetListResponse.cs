@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DispositionCodesTableSpecified { get; set; }
+        protected bool DispositionCodesTableSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ApplicationControllerSpecified { get; set; }
+        protected bool ApplicationControllerSpecified { get; set; }
 
     }
 }

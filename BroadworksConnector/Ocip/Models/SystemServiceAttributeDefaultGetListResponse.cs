@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceAttributeEntrySpecified { get; set; }
+        protected bool ServiceAttributeEntrySpecified { get; set; }
 
     }
 }

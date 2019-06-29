@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayEntranceGreetingSpecified { get; set; }
+        protected bool PlayEntranceGreetingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _entranceGreetingFile;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceGreetingFileSpecified { get; set; }
+        protected bool EntranceGreetingFileSpecified { get; set; }
 
     }
 }

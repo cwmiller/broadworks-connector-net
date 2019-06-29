@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartSpecified { get; set; }
+        protected bool StartSpecified { get; set; }
 
         private string _end;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndSpecified { get; set; }
+        protected bool EndSpecified { get; set; }
 
     }
 }

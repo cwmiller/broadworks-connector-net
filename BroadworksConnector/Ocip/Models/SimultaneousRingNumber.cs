@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
         private bool _answerConfirmationRequired;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnswerConfirmationRequiredSpecified { get; set; }
+        protected bool AnswerConfirmationRequiredSpecified { get; set; }
 
     }
 }

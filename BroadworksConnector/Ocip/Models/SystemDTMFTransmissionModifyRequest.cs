@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransmissionMethodSpecified { get; set; }
+        protected bool TransmissionMethodSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType _signalingContentType;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SignalingContentTypeSpecified { get; set; }
+        protected bool SignalingContentTypeSpecified { get; set; }
 
     }
 }

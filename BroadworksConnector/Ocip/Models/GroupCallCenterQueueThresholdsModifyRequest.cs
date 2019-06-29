@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private bool _isActive;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private int? _thresholdCurrentCallsInQueueYellow;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdCurrentCallsInQueueYellowSpecified { get; set; }
+        protected bool ThresholdCurrentCallsInQueueYellowSpecified { get; set; }
 
         private int? _thresholdCurrentCallsInQueueRed;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdCurrentCallsInQueueRedSpecified { get; set; }
+        protected bool ThresholdCurrentCallsInQueueRedSpecified { get; set; }
 
         private int? _thresholdCurrentLongestWaitingCallYellow;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdCurrentLongestWaitingCallYellowSpecified { get; set; }
+        protected bool ThresholdCurrentLongestWaitingCallYellowSpecified { get; set; }
 
         private int? _thresholdCurrentLongestWaitingCallRed;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdCurrentLongestWaitingCallRedSpecified { get; set; }
+        protected bool ThresholdCurrentLongestWaitingCallRedSpecified { get; set; }
 
         private int? _thresholdAverageEstimatedWaitTimeYellow;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageEstimatedWaitTimeYellowSpecified { get; set; }
+        protected bool ThresholdAverageEstimatedWaitTimeYellowSpecified { get; set; }
 
         private int? _thresholdAverageEstimatedWaitTimeRed;
 
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageEstimatedWaitTimeRedSpecified { get; set; }
+        protected bool ThresholdAverageEstimatedWaitTimeRedSpecified { get; set; }
 
         private int? _thresholdAverageHandlingTimeYellow;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageHandlingTimeYellowSpecified { get; set; }
+        protected bool ThresholdAverageHandlingTimeYellowSpecified { get; set; }
 
         private int? _thresholdAverageHandlingTimeRed;
 
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageHandlingTimeRedSpecified { get; set; }
+        protected bool ThresholdAverageHandlingTimeRedSpecified { get; set; }
 
         private int? _thresholdAverageSpeedOfAnswerYellow;
 
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageSpeedOfAnswerYellowSpecified { get; set; }
+        protected bool ThresholdAverageSpeedOfAnswerYellowSpecified { get; set; }
 
         private int? _thresholdAverageSpeedOfAnswerRed;
 
@@ -254,7 +254,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageSpeedOfAnswerRedSpecified { get; set; }
+        protected bool ThresholdAverageSpeedOfAnswerRedSpecified { get; set; }
 
         private bool _enableNotificationEmail;
 
@@ -272,7 +272,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNotificationEmailSpecified { get; set; }
+        protected bool EnableNotificationEmailSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterQueueThresholdReplacementNotificationEmailList _notificationEmailAddressList;
 
@@ -290,7 +290,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NotificationEmailAddressListSpecified { get; set; }
+        protected bool NotificationEmailAddressListSpecified { get; set; }
 
     }
 }

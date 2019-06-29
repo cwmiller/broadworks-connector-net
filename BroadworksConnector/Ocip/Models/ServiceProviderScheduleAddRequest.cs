@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _scheduleName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleNameSpecified { get; set; }
+        protected bool ScheduleNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ScheduleType _scheduleType;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleTypeSpecified { get; set; }
+        protected bool ScheduleTypeSpecified { get; set; }
 
     }
 }

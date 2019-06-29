@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InterruptPlaybackAndReturnToPreviousMenuSpecified { get; set; }
+        protected bool InterruptPlaybackAndReturnToPreviousMenuSpecified { get; set; }
 
     }
 }

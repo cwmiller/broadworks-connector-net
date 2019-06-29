@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InterceptUserListSpecified { get; set; }
+        protected bool InterceptUserListSpecified { get; set; }
 
     }
 }

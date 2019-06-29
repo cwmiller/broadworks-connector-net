@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceNetAddressSpecified { get; set; }
+        protected bool ServiceNetAddressSpecified { get; set; }
 
         private int? _servicePort;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePortSpecified { get; set; }
+        protected bool ServicePortSpecified { get; set; }
 
         private string _boshURL;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BoshURLSpecified { get; set; }
+        protected bool BoshURLSpecified { get; set; }
 
     }
 }

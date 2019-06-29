@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupNumbersSpecified { get; set; }
+        protected bool GroupNumbersSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbers> _departmentNumbers = new List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbers>();
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentNumbersSpecified { get; set; }
+        protected bool DepartmentNumbersSpecified { get; set; }
 
     }
 }

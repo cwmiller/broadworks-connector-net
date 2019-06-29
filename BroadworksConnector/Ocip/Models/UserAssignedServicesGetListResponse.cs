@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupServiceEntrySpecified { get; set; }
+        protected bool GroupServiceEntrySpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry> _userServiceEntry = new List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry>();
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServiceEntrySpecified { get; set; }
+        protected bool UserServiceEntrySpecified { get; set; }
 
     }
 }

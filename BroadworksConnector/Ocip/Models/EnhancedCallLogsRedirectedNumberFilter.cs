@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectedCallSpecified { get; set; }
+        protected bool RedirectedCallSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.BasicCallType> _includeServiceInvocationBasicCallType = new List<BroadWorksConnector.Ocip.Models.BasicCallType>();
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeServiceInvocationBasicCallTypeSpecified { get; set; }
+        protected bool IncludeServiceInvocationBasicCallTypeSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.CallCategory> _includeServiceInvocationCallCategory = new List<BroadWorksConnector.Ocip.Models.CallCategory>();
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeServiceInvocationCallCategorySpecified { get; set; }
+        protected bool IncludeServiceInvocationCallCategorySpecified { get; set; }
 
         private List<string> _includeServiceInvocationConfigurableCallType = new List<string>();
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeServiceInvocationConfigurableCallTypeSpecified { get; set; }
+        protected bool IncludeServiceInvocationConfigurableCallTypeSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationDialedNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
 
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaServiceInvocationDialedNumberSpecified { get; set; }
+        protected bool SearchCriteriaServiceInvocationDialedNumberSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationCalledNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
 
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaServiceInvocationCalledNumberSpecified { get; set; }
+        protected bool SearchCriteriaServiceInvocationCalledNumberSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaServiceInvocationNetworkTranslatedNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
 
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaServiceInvocationNetworkTranslatedNumberSpecified { get; set; }
+        protected bool SearchCriteriaServiceInvocationNetworkTranslatedNumberSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DataTemplateSpecified { get; set; }
+        protected bool DataTemplateSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportType _reportType;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportTypeSpecified { get; set; }
+        protected bool ReportTypeSpecified { get; set; }
 
         private bool _isRealtimeReport;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsRealtimeReportSpecified { get; set; }
+        protected bool IsRealtimeReportSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isAgentParamRequired;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsAgentParamRequiredSpecified { get; set; }
+        protected bool IsAgentParamRequiredSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isCallCenterParamRequired;
 
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsCallCenterParamRequiredSpecified { get; set; }
+        protected bool IsCallCenterParamRequiredSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isCallCenterDnisParamRequired;
 
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsCallCenterDnisParamRequiredSpecified { get; set; }
+        protected bool IsCallCenterDnisParamRequiredSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isSamplingPeriodParamRequired;
 
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsSamplingPeriodParamRequiredSpecified { get; set; }
+        protected bool IsSamplingPeriodParamRequiredSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isCallCompletionThresholdParamRequired;
 
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsCallCompletionThresholdParamRequiredSpecified { get; set; }
+        protected bool IsCallCompletionThresholdParamRequiredSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isShortDurationThresholdParamRequired;
 
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsShortDurationThresholdParamRequiredSpecified { get; set; }
+        protected bool IsShortDurationThresholdParamRequiredSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isServiceLevelThresholdParamRequired;
 
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsServiceLevelThresholdParamRequiredSpecified { get; set; }
+        protected bool IsServiceLevelThresholdParamRequiredSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isServiceLevelInclusionsParamRequired;
 
@@ -203,7 +203,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsServiceLevelInclusionsParamRequiredSpecified { get; set; }
+        protected bool IsServiceLevelInclusionsParamRequiredSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isServiceLevelObjectiveThresholdParamRequired;
 
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsServiceLevelObjectiveThresholdParamRequiredSpecified { get; set; }
+        protected bool IsServiceLevelObjectiveThresholdParamRequiredSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isAbandonedCallThresholdParamRequired;
 
@@ -237,7 +237,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsAbandonedCallThresholdParamRequiredSpecified { get; set; }
+        protected bool IsAbandonedCallThresholdParamRequiredSpecified { get; set; }
 
     }
 }

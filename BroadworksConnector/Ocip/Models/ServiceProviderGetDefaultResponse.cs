@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsEnterpriseSpecified { get; set; }
+        protected bool IsEnterpriseSpecified { get; set; }
 
         private string _defaultDomain;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultDomainSpecified { get; set; }
+        protected bool DefaultDomainSpecified { get; set; }
 
     }
 }

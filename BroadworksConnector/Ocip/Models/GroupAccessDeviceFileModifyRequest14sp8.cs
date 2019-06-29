@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _deviceName;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceNameSpecified { get; set; }
+        protected bool DeviceNameSpecified { get; set; }
 
         private string _fileFormat;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileFormatSpecified { get; set; }
+        protected bool FileFormatSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode _fileSource;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileSourceSpecified { get; set; }
+        protected bool FileSourceSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.FileResource _uploadFile;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UploadFileSpecified { get; set; }
+        protected bool UploadFileSpecified { get; set; }
 
         private bool _extendedCaptureEnabled;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedCaptureEnabledSpecified { get; set; }
+        protected bool ExtendedCaptureEnabledSpecified { get; set; }
 
     }
 }

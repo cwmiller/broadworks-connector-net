@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfileFlexibleSeatingHost _serviceInstanceProfile;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify22 _accessDeviceEndpoint;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessDeviceEndpointSpecified { get; set; }
+        protected bool AccessDeviceEndpointSpecified { get; set; }
 
         private string _networkClassOfService;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkClassOfServiceSpecified { get; set; }
+        protected bool NetworkClassOfServiceSpecified { get; set; }
 
     }
 }

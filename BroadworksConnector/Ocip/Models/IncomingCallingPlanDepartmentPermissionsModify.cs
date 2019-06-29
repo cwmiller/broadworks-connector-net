@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentKeySpecified { get; set; }
+        protected bool DepartmentKeySpecified { get; set; }
 
         private bool _allowFromWithinGroup;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowFromWithinGroupSpecified { get; set; }
+        protected bool AllowFromWithinGroupSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission _allowFromOutsideGroup;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowFromOutsideGroupSpecified { get; set; }
+        protected bool AllowFromOutsideGroupSpecified { get; set; }
 
         private bool _allowCollectCalls;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowCollectCallsSpecified { get; set; }
+        protected bool AllowCollectCallsSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> _digitPatternPermission = new List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission>();
 
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigitPatternPermissionSpecified { get; set; }
+        protected bool DigitPatternPermissionSpecified { get; set; }
 
     }
 }

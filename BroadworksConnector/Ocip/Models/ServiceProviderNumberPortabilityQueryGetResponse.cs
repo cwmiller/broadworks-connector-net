@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNumberPortabilityQueryForOutgoingCallsSpecified { get; set; }
+        protected bool EnableNumberPortabilityQueryForOutgoingCallsSpecified { get; set; }
 
         private bool _enableNumberPortabilityQueryForIncomingCalls;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNumberPortabilityQueryForIncomingCallsSpecified { get; set; }
+        protected bool EnableNumberPortabilityQueryForIncomingCallsSpecified { get; set; }
 
         private bool _enableNumberPortabilityQueryForNetworkCallsOnly;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNumberPortabilityQueryForNetworkCallsOnlySpecified { get; set; }
+        protected bool EnableNumberPortabilityQueryForNetworkCallsOnlySpecified { get; set; }
 
         private List<string> _digitPattern = new List<string>();
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigitPatternSpecified { get; set; }
+        protected bool DigitPatternSpecified { get; set; }
 
     }
 }

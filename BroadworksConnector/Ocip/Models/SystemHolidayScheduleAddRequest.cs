@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HolidayScheduleNameSpecified { get; set; }
+        protected bool HolidayScheduleNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday01;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday01Specified { get; set; }
+        protected bool Holiday01Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday02;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday02Specified { get; set; }
+        protected bool Holiday02Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday03;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday03Specified { get; set; }
+        protected bool Holiday03Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday04;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday04Specified { get; set; }
+        protected bool Holiday04Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday05;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday05Specified { get; set; }
+        protected bool Holiday05Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday06;
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday06Specified { get; set; }
+        protected bool Holiday06Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday07;
 
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday07Specified { get; set; }
+        protected bool Holiday07Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday08;
 
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday08Specified { get; set; }
+        protected bool Holiday08Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday09;
 
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday09Specified { get; set; }
+        protected bool Holiday09Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday10;
 
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday10Specified { get; set; }
+        protected bool Holiday10Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday11;
 
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday11Specified { get; set; }
+        protected bool Holiday11Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday12;
 
@@ -252,7 +252,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday12Specified { get; set; }
+        protected bool Holiday12Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday13;
 
@@ -270,7 +270,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday13Specified { get; set; }
+        protected bool Holiday13Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday14;
 
@@ -288,7 +288,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday14Specified { get; set; }
+        protected bool Holiday14Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday15;
 
@@ -306,7 +306,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday15Specified { get; set; }
+        protected bool Holiday15Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday16;
 
@@ -324,7 +324,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday16Specified { get; set; }
+        protected bool Holiday16Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday17;
 
@@ -342,7 +342,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday17Specified { get; set; }
+        protected bool Holiday17Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday18;
 
@@ -360,7 +360,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday18Specified { get; set; }
+        protected bool Holiday18Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday19;
 
@@ -378,7 +378,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday19Specified { get; set; }
+        protected bool Holiday19Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Holiday _holiday20;
 
@@ -396,7 +396,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Holiday20Specified { get; set; }
+        protected bool Holiday20Specified { get; set; }
 
     }
 }

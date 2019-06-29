@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private bool _enableExchangeIntegration;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableExchangeIntegrationSpecified { get; set; }
+        protected bool EnableExchangeIntegrationSpecified { get; set; }
 
         private string _exchangeURL;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExchangeURLSpecified { get; set; }
+        protected bool ExchangeURLSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExchangeUserNamePassword _exchangeCredentials;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExchangeCredentialsSpecified { get; set; }
+        protected bool ExchangeCredentialsSpecified { get; set; }
 
     }
 }

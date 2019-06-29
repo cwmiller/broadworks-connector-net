@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetAddressSpecified { get; set; }
+        protected bool NetAddressSpecified { get; set; }
 
         private int? _port;
 
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PortSpecified { get; set; }
+        protected bool PortSpecified { get; set; }
 
         private string _description;
 
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private bool _becomePreferred;
 
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BecomePreferredSpecified { get; set; }
+        protected bool BecomePreferredSpecified { get; set; }
 
         private int _order;
 
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OrderSpecified { get; set; }
+        protected bool OrderSpecified { get; set; }
 
     }
 }

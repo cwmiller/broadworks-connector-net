@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatOriginationsAndPBXRedirectionsAsScreenedSpecified { get; set; }
+        protected bool TreatOriginationsAndPBXRedirectionsAsScreenedSpecified { get; set; }
 
         private bool _useRouteListIdentityForNonEmergencyCalls;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseRouteListIdentityForNonEmergencyCallsSpecified { get; set; }
+        protected bool UseRouteListIdentityForNonEmergencyCallsSpecified { get; set; }
 
         private bool _useRouteListIdentityForEmergencyCalls;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
+        protected bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _assignedNumberRangeTable;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AssignedNumberRangeTableSpecified { get; set; }
+        protected bool AssignedNumberRangeTableSpecified { get; set; }
 
     }
 }

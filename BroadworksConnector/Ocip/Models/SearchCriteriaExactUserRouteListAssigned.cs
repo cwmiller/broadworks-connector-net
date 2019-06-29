@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteListAssignedSpecified { get; set; }
+        protected bool RouteListAssignedSpecified { get; set; }
 
     }
 }

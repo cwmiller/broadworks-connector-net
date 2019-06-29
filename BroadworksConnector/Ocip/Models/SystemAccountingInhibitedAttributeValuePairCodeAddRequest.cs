@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AttributeValuePairCodeSpecified { get; set; }
+        protected bool AttributeValuePairCodeSpecified { get; set; }
 
         private int _vendorId;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VendorIdSpecified { get; set; }
+        protected bool VendorIdSpecified { get; set; }
 
     }
 }

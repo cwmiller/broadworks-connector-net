@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _locationDialingCode;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LocationDialingCodeSpecified { get; set; }
+        protected bool LocationDialingCodeSpecified { get; set; }
 
         private int _minExtensionLength;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinExtensionLengthSpecified { get; set; }
+        protected bool MinExtensionLengthSpecified { get; set; }
 
         private int _maxExtensionLength;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxExtensionLengthSpecified { get; set; }
+        protected bool MaxExtensionLengthSpecified { get; set; }
 
         private string _description;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private string _routeGroupId;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteGroupIdSpecified { get; set; }
+        protected bool RouteGroupIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection _policySelection;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PolicySelectionSpecified { get; set; }
+        protected bool PolicySelectionSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation> _digitManipulation = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation>();
 
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigitManipulationSpecified { get; set; }
+        protected bool DigitManipulationSpecified { get; set; }
 
         private string _treatmentId;
 
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatmentIdSpecified { get; set; }
+        protected bool TreatmentIdSpecified { get; set; }
 
     }
 }

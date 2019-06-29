@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultSecurityClassificationSpecified { get; set; }
+        protected bool DefaultSecurityClassificationSpecified { get; set; }
 
     }
 }

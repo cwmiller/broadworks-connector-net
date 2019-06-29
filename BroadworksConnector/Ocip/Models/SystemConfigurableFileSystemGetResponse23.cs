@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaDirectorySpecified { get; set; }
+        protected bool MediaDirectorySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponse23ProtocolFile _protocolFile;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtocolFileSpecified { get; set; }
+        protected bool ProtocolFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponse23ProtocolWebDAV _protocolWebDAV;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtocolWebDAVSpecified { get; set; }
+        protected bool ProtocolWebDAVSpecified { get; set; }
 
     }
 }

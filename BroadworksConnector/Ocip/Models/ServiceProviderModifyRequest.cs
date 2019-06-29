@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _defaultDomain;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultDomainSpecified { get; set; }
+        protected bool DefaultDomainSpecified { get; set; }
 
         private string _serviceProviderName;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderNameSpecified { get; set; }
+        protected bool ServiceProviderNameSpecified { get; set; }
 
         private string _supportEmail;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportEmailSpecified { get; set; }
+        protected bool SupportEmailSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Contact _contact;
 
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactSpecified { get; set; }
+        protected bool ContactSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddressSpecified { get; set; }
+        protected bool AddressSpecified { get; set; }
 
         private bool _useServiceProviderLanguages;
 
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseServiceProviderLanguagesSpecified { get; set; }
+        protected bool UseServiceProviderLanguagesSpecified { get; set; }
 
         private string _servicePolicy;
 
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePolicySpecified { get; set; }
+        protected bool ServicePolicySpecified { get; set; }
 
         private string _callProcessingSliceId;
 
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallProcessingSliceIdSpecified { get; set; }
+        protected bool CallProcessingSliceIdSpecified { get; set; }
 
         private string _provisioningSliceId;
 
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProvisioningSliceIdSpecified { get; set; }
+        protected bool ProvisioningSliceIdSpecified { get; set; }
 
         private string _subscriberPartition;
 
@@ -244,7 +244,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SubscriberPartitionSpecified { get; set; }
+        protected bool SubscriberPartitionSpecified { get; set; }
 
         private string _preferredDataCenter;
 
@@ -264,7 +264,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PreferredDataCenterSpecified { get; set; }
+        protected bool PreferredDataCenterSpecified { get; set; }
 
     }
 }

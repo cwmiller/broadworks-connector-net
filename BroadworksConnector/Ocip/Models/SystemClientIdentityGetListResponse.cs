@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ClientIdentityTableSpecified { get; set; }
+        protected bool ClientIdentityTableSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _enableDirectoryPrivacy;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDirectoryPrivacySpecified { get; set; }
+        protected bool EnableDirectoryPrivacySpecified { get; set; }
 
         private bool _enableAutoAttendantExtensionDialingPrivacy;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAutoAttendantExtensionDialingPrivacySpecified { get; set; }
+        protected bool EnableAutoAttendantExtensionDialingPrivacySpecified { get; set; }
 
         private bool _enableAutoAttendantNameDialingPrivacy;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAutoAttendantNameDialingPrivacySpecified { get; set; }
+        protected bool EnableAutoAttendantNameDialingPrivacySpecified { get; set; }
 
         private bool _enablePhoneStatusPrivacy;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnablePhoneStatusPrivacySpecified { get; set; }
+        protected bool EnablePhoneStatusPrivacySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _permittedMonitorUserIdList;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PermittedMonitorUserIdListSpecified { get; set; }
+        protected bool PermittedMonitorUserIdListSpecified { get; set; }
 
     }
 }

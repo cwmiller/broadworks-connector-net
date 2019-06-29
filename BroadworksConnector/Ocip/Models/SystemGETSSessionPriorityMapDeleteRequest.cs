@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PriorityLevelSpecified { get; set; }
+        protected bool PriorityLevelSpecified { get; set; }
 
     }
 }

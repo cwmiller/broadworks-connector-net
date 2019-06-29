@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FeatureAccessCodeNameSpecified { get; set; }
+        protected bool FeatureAccessCodeNameSpecified { get; set; }
 
         private bool _enableFAC;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableFACSpecified { get; set; }
+        protected bool EnableFACSpecified { get; set; }
 
     }
 }

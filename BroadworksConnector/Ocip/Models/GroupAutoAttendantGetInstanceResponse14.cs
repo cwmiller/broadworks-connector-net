@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private bool _enableVideo;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableVideoSpecified { get; set; }
+        protected bool EnableVideoSpecified { get; set; }
 
         private string _businessHours;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusinessHoursSpecified { get; set; }
+        protected bool BusinessHoursSpecified { get; set; }
 
         private string _holidayScheduleName;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HolidayScheduleNameSpecified { get; set; }
+        protected bool HolidayScheduleNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope _extensionDialingScope;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtensionDialingScopeSpecified { get; set; }
+        protected bool ExtensionDialingScopeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope _nameDialingScope;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameDialingScopeSpecified { get; set; }
+        protected bool NameDialingScopeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AutoAttendantNameDialingEntry _nameDialingEntries;
 
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameDialingEntriesSpecified { get; set; }
+        protected bool NameDialingEntriesSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AutoAttendantReadMenu _businessHoursMenu;
 
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusinessHoursMenuSpecified { get; set; }
+        protected bool BusinessHoursMenuSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AutoAttendantReadMenu _afterHoursMenu;
 
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AfterHoursMenuSpecified { get; set; }
+        protected bool AfterHoursMenuSpecified { get; set; }
 
     }
 }

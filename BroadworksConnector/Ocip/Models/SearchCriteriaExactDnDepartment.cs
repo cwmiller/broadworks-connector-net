@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentKeySpecified { get; set; }
+        protected bool DepartmentKeySpecified { get; set; }
 
     }
 }

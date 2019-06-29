@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private int _filesize;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FilesizeSpecified { get; set; }
+        protected bool FilesizeSpecified { get; set; }
 
         private string _lastUploaded;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LastUploadedSpecified { get; set; }
+        protected bool LastUploadedSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _usageTable;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UsageTableSpecified { get; set; }
+        protected bool UsageTableSpecified { get; set; }
 
     }
 }

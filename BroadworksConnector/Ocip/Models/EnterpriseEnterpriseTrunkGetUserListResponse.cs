@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnterpriseTrunkUserTableSpecified { get; set; }
+        protected bool EnterpriseTrunkUserTableSpecified { get; set; }
 
     }
 }

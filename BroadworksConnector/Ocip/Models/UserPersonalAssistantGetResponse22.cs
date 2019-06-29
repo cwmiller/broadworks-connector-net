@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PresenceSpecified { get; set; }
+        protected bool PresenceSpecified { get; set; }
 
         private bool _enableTransferToAttendant;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableTransferToAttendantSpecified { get; set; }
+        protected bool EnableTransferToAttendantSpecified { get; set; }
 
         private string _attendantNumber;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AttendantNumberSpecified { get; set; }
+        protected bool AttendantNumberSpecified { get; set; }
 
         private bool _enableRingSplash;
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableRingSplashSpecified { get; set; }
+        protected bool EnableRingSplashSpecified { get; set; }
 
         private bool _enableExpirationTime;
 
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableExpirationTimeSpecified { get; set; }
+        protected bool EnableExpirationTimeSpecified { get; set; }
 
         private string _expirationTime;
 
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExpirationTimeSpecified { get; set; }
+        protected bool ExpirationTimeSpecified { get; set; }
 
         private bool _alertMeFirst;
 
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertMeFirstSpecified { get; set; }
+        protected bool AlertMeFirstSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings _alertMeFirstNumberOfRings;
 
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertMeFirstNumberOfRingsSpecified { get; set; }
+        protected bool AlertMeFirstNumberOfRingsSpecified { get; set; }
 
     }
 }

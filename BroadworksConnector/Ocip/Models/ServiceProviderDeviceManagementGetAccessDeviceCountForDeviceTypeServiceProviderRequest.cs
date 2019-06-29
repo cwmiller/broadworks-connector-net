@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _deviceType;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeSpecified { get; set; }
+        protected bool DeviceTypeSpecified { get; set; }
 
         private bool _countOnlyResetSupportedDevice;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountOnlyResetSupportedDeviceSpecified { get; set; }
+        protected bool CountOnlyResetSupportedDeviceSpecified { get; set; }
 
         private bool _allowUnmanagedDeviceType;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowUnmanagedDeviceTypeSpecified { get; set; }
+        protected bool AllowUnmanagedDeviceTypeSpecified { get; set; }
 
     }
 }

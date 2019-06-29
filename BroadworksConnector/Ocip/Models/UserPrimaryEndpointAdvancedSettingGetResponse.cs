@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowOriginationSpecified { get; set; }
+        protected bool AllowOriginationSpecified { get; set; }
 
         private bool _allowTermination;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowTerminationSpecified { get; set; }
+        protected bool AllowTerminationSpecified { get; set; }
 
     }
 }

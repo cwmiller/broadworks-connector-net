@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingPartyCategoryTableSpecified { get; set; }
+        protected bool CallingPartyCategoryTableSpecified { get; set; }
 
     }
 }

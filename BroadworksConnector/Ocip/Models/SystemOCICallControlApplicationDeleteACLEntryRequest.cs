@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ApplicationIdSpecified { get; set; }
+        protected bool ApplicationIdSpecified { get; set; }
 
         private string _netAddress;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetAddressSpecified { get; set; }
+        protected bool NetAddressSpecified { get; set; }
 
     }
 }

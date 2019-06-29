@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingUserMailServerSelection _mailServerSelection;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MailServerSelectionSpecified { get; set; }
+        protected bool MailServerSelectionSpecified { get; set; }
 
         private string _groupMailServerEmailAddress;
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupMailServerEmailAddressSpecified { get; set; }
+        protected bool GroupMailServerEmailAddressSpecified { get; set; }
 
         private string _groupMailServerUserId;
 
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupMailServerUserIdSpecified { get; set; }
+        protected bool GroupMailServerUserIdSpecified { get; set; }
 
         private string _groupMailServerPassword;
 
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupMailServerPasswordSpecified { get; set; }
+        protected bool GroupMailServerPasswordSpecified { get; set; }
 
         private bool _useGroupDefaultMailServerFullMailboxLimit;
 
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseGroupDefaultMailServerFullMailboxLimitSpecified { get; set; }
+        protected bool UseGroupDefaultMailServerFullMailboxLimitSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes _groupMailServerFullMailboxLimit;
 
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupMailServerFullMailboxLimitSpecified { get; set; }
+        protected bool GroupMailServerFullMailboxLimitSpecified { get; set; }
 
         private string _personalMailServerNetAddress;
 
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalMailServerNetAddressSpecified { get; set; }
+        protected bool PersonalMailServerNetAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol _personalMailServerProtocol;
 
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalMailServerProtocolSpecified { get; set; }
+        protected bool PersonalMailServerProtocolSpecified { get; set; }
 
         private bool _personalMailServerRealDeleteForImap;
 
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalMailServerRealDeleteForImapSpecified { get; set; }
+        protected bool PersonalMailServerRealDeleteForImapSpecified { get; set; }
 
         private string _personalMailServerEmailAddress;
 
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalMailServerEmailAddressSpecified { get; set; }
+        protected bool PersonalMailServerEmailAddressSpecified { get; set; }
 
         private string _personalMailServerUserId;
 
@@ -248,7 +248,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalMailServerUserIdSpecified { get; set; }
+        protected bool PersonalMailServerUserIdSpecified { get; set; }
 
         private string _personalMailServerPassword;
 
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalMailServerPasswordSpecified { get; set; }
+        protected bool PersonalMailServerPasswordSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.VoiceMessagingDistributionListModify> _voiceMessagingDistributionList = new List<BroadWorksConnector.Ocip.Models.VoiceMessagingDistributionListModify>();
 
@@ -286,7 +286,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessagingDistributionListSpecified { get; set; }
+        protected bool VoiceMessagingDistributionListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementSelection _busyAnnouncementSelection;
 
@@ -304,7 +304,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyAnnouncementSelectionSpecified { get; set; }
+        protected bool BusyAnnouncementSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _busyPersonalAudioFile;
 
@@ -322,7 +322,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPersonalAudioFileSpecified { get; set; }
+        protected bool BusyPersonalAudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _busyPersonalVideoFile;
 
@@ -340,7 +340,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPersonalVideoFileSpecified { get; set; }
+        protected bool BusyPersonalVideoFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection _noAnswerAnnouncementSelection;
 
@@ -358,7 +358,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerAnnouncementSelectionSpecified { get; set; }
+        protected bool NoAnswerAnnouncementSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _noAnswerPersonalAudioFile;
 
@@ -376,7 +376,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerPersonalAudioFileSpecified { get; set; }
+        protected bool NoAnswerPersonalAudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _noAnswerPersonalVideoFile;
 
@@ -394,7 +394,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerPersonalVideoFileSpecified { get; set; }
+        protected bool NoAnswerPersonalVideoFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify20 _noAnswerAlternateGreeting01;
 
@@ -412,7 +412,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerAlternateGreeting01Specified { get; set; }
+        protected bool NoAnswerAlternateGreeting01Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify20 _noAnswerAlternateGreeting02;
 
@@ -430,7 +430,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerAlternateGreeting02Specified { get; set; }
+        protected bool NoAnswerAlternateGreeting02Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify20 _noAnswerAlternateGreeting03;
 
@@ -448,7 +448,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerAlternateGreeting03Specified { get; set; }
+        protected bool NoAnswerAlternateGreeting03Specified { get; set; }
 
         private bool _extendedAwayEnabled;
 
@@ -466,7 +466,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedAwayEnabledSpecified { get; set; }
+        protected bool ExtendedAwayEnabledSpecified { get; set; }
 
         private bool _extendedAwayDisableMessageDeposit;
 
@@ -484,7 +484,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedAwayDisableMessageDepositSpecified { get; set; }
+        protected bool ExtendedAwayDisableMessageDepositSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _extendedAwayAudioFile;
 
@@ -502,7 +502,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedAwayAudioFileSpecified { get; set; }
+        protected bool ExtendedAwayAudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _extendedAwayVideoFile;
 
@@ -520,7 +520,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedAwayVideoFileSpecified { get; set; }
+        protected bool ExtendedAwayVideoFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingNumberOfRings _noAnswerNumberOfRings;
 
@@ -538,7 +538,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerNumberOfRingsSpecified { get; set; }
+        protected bool NoAnswerNumberOfRingsSpecified { get; set; }
 
         private bool _disableMessageDeposit;
 
@@ -556,7 +556,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisableMessageDepositSpecified { get; set; }
+        protected bool DisableMessageDepositSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingDisableMessageDepositSelection _disableMessageDepositAction;
 
@@ -574,7 +574,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisableMessageDepositActionSpecified { get; set; }
+        protected bool DisableMessageDepositActionSpecified { get; set; }
 
         private string _greetingOnlyForwardDestination;
 
@@ -594,7 +594,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GreetingOnlyForwardDestinationSpecified { get; set; }
+        protected bool GreetingOnlyForwardDestinationSpecified { get; set; }
 
         private bool _outgoingSMDIMWIisActive;
 
@@ -612,7 +612,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutgoingSMDIMWIisActiveSpecified { get; set; }
+        protected bool OutgoingSMDIMWIisActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNList _outgoingSMDIMWIPhoneNumberList;
 
@@ -630,7 +630,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutgoingSMDIMWIPhoneNumberListSpecified { get; set; }
+        protected bool OutgoingSMDIMWIPhoneNumberListSpecified { get; set; }
 
         private bool _voiceManagementisActive;
 
@@ -648,7 +648,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceManagementisActiveSpecified { get; set; }
+        protected bool VoiceManagementisActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingMessageProcessing _processing;
 
@@ -666,7 +666,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProcessingSpecified { get; set; }
+        protected bool ProcessingSpecified { get; set; }
 
         private string _voiceMessageDeliveryEmailAddress;
 
@@ -686,7 +686,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessageDeliveryEmailAddressSpecified { get; set; }
+        protected bool VoiceMessageDeliveryEmailAddressSpecified { get; set; }
 
         private bool _usePhoneMessageWaitingIndicator;
 
@@ -704,7 +704,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UsePhoneMessageWaitingIndicatorSpecified { get; set; }
+        protected bool UsePhoneMessageWaitingIndicatorSpecified { get; set; }
 
         private bool _sendVoiceMessageNotifyEmail;
 
@@ -722,7 +722,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendVoiceMessageNotifyEmailSpecified { get; set; }
+        protected bool SendVoiceMessageNotifyEmailSpecified { get; set; }
 
         private string _voiceMessageNotifyEmailAddress;
 
@@ -742,7 +742,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessageNotifyEmailAddressSpecified { get; set; }
+        protected bool VoiceMessageNotifyEmailAddressSpecified { get; set; }
 
         private bool _sendCarbonCopyVoiceMessage;
 
@@ -760,7 +760,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendCarbonCopyVoiceMessageSpecified { get; set; }
+        protected bool SendCarbonCopyVoiceMessageSpecified { get; set; }
 
         private string _voiceMessageCarbonCopyEmailAddress;
 
@@ -780,7 +780,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessageCarbonCopyEmailAddressSpecified { get; set; }
+        protected bool VoiceMessageCarbonCopyEmailAddressSpecified { get; set; }
 
         private bool _transferOnZeroToPhoneNumber;
 
@@ -798,7 +798,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferOnZeroToPhoneNumberSpecified { get; set; }
+        protected bool TransferOnZeroToPhoneNumberSpecified { get; set; }
 
         private string _transferPhoneNumber;
 
@@ -818,7 +818,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferPhoneNumberSpecified { get; set; }
+        protected bool TransferPhoneNumberSpecified { get; set; }
 
         private bool _alwaysRedirectToVoiceMail;
 
@@ -836,7 +836,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlwaysRedirectToVoiceMailSpecified { get; set; }
+        protected bool AlwaysRedirectToVoiceMailSpecified { get; set; }
 
         private bool _busyRedirectToVoiceMail;
 
@@ -854,7 +854,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyRedirectToVoiceMailSpecified { get; set; }
+        protected bool BusyRedirectToVoiceMailSpecified { get; set; }
 
         private bool _noAnswerRedirectToVoiceMail;
 
@@ -872,7 +872,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerRedirectToVoiceMailSpecified { get; set; }
+        protected bool NoAnswerRedirectToVoiceMailSpecified { get; set; }
 
         private bool _outOfPrimaryZoneRedirectToVoiceMail;
 
@@ -890,7 +890,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutOfPrimaryZoneRedirectToVoiceMailSpecified { get; set; }
+        protected bool OutOfPrimaryZoneRedirectToVoiceMailSpecified { get; set; }
 
         private bool _usePersonalizedName;
 
@@ -908,7 +908,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UsePersonalizedNameSpecified { get; set; }
+        protected bool UsePersonalizedNameSpecified { get; set; }
 
         private bool _voicePortalAutoLogin;
 
@@ -926,7 +926,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalAutoLoginSpecified { get; set; }
+        protected bool VoicePortalAutoLoginSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _personalizedNameAudioFile;
 
@@ -944,7 +944,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalizedNameAudioFileSpecified { get; set; }
+        protected bool PersonalizedNameAudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingAliasListModify _userMessagingAliasList;
 
@@ -962,7 +962,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserMessagingAliasListSpecified { get; set; }
+        protected bool UserMessagingAliasListSpecified { get; set; }
 
     }
 }

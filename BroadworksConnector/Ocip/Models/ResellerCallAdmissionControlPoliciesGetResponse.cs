@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallAdmissionControlSpecified { get; set; }
+        protected bool EnableCallAdmissionControlSpecified { get; set; }
 
         private int _maxConcurrentNetworkSessions;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConcurrentNetworkSessionsSpecified { get; set; }
+        protected bool MaxConcurrentNetworkSessionsSpecified { get; set; }
 
         private int _maxConcurrentNetworkSessionsThreshold;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConcurrentNetworkSessionsThresholdSpecified { get; set; }
+        protected bool MaxConcurrentNetworkSessionsThresholdSpecified { get; set; }
 
         private int _maxNetworkCallsPerSecond;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxNetworkCallsPerSecondSpecified { get; set; }
+        protected bool MaxNetworkCallsPerSecondSpecified { get; set; }
 
         private int _maxNetworkCallsPerSecondThreshold;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxNetworkCallsPerSecondThresholdSpecified { get; set; }
+        protected bool MaxNetworkCallsPerSecondThresholdSpecified { get; set; }
 
         private int _maxConcurrentExternalSIPRECSessions;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConcurrentExternalSIPRECSessionsSpecified { get; set; }
+        protected bool MaxConcurrentExternalSIPRECSessionsSpecified { get; set; }
 
         private int _maxConcurrentExternalSIPRECSessionsThreshold;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConcurrentExternalSIPRECSessionsThresholdSpecified { get; set; }
+        protected bool MaxConcurrentExternalSIPRECSessionsThresholdSpecified { get; set; }
 
     }
 }

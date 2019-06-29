@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope _broadWorksAnywhereScope;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BroadWorksAnywhereScopeSpecified { get; set; }
+        protected bool BroadWorksAnywhereScopeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt _promptForCLID;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PromptForCLIDSpecified { get; set; }
+        protected bool PromptForCLIDSpecified { get; set; }
 
         private bool _silentPromptMode;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SilentPromptModeSpecified { get; set; }
+        protected bool SilentPromptModeSpecified { get; set; }
 
         private bool _promptForPasscode;
 
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PromptForPasscodeSpecified { get; set; }
+        protected bool PromptForPasscodeSpecified { get; set; }
 
     }
 }

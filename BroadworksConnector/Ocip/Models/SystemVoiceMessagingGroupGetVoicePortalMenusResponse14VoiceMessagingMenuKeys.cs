@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayMessagesSpecified { get; set; }
+        protected bool PlayMessagesSpecified { get; set; }
 
         private string _changeBusyGreeting;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChangeBusyGreetingSpecified { get; set; }
+        protected bool ChangeBusyGreetingSpecified { get; set; }
 
         private string _changeNoAnswerGreeting;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChangeNoAnswerGreetingSpecified { get; set; }
+        protected bool ChangeNoAnswerGreetingSpecified { get; set; }
 
         private string _composeMessage;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ComposeMessageSpecified { get; set; }
+        protected bool ComposeMessageSpecified { get; set; }
 
         private string _deleteAllMessages;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteAllMessagesSpecified { get; set; }
+        protected bool DeleteAllMessagesSpecified { get; set; }
 
         private string _passcode;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasscodeSpecified { get; set; }
+        protected bool PasscodeSpecified { get; set; }
 
         private string _personalizedName;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalizedNameSpecified { get; set; }
+        protected bool PersonalizedNameSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

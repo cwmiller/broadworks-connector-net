@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxSimultaneousMigrationTasksSpecified { get; set; }
+        protected bool MaxSimultaneousMigrationTasksSpecified { get; set; }
 
     }
 }

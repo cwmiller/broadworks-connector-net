@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SimultaneousRingNumberSpecified { get; set; }
+        protected bool SimultaneousRingNumberSpecified { get; set; }
 
     }
 }

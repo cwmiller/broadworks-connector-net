@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentSpecified { get; set; }
+        protected bool DepartmentSpecified { get; set; }
 
         private bool _isActiveDuringCallHold;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveDuringCallHoldSpecified { get; set; }
+        protected bool IsActiveDuringCallHoldSpecified { get; set; }
 
         private bool _isActiveDuringCallPark;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveDuringCallParkSpecified { get; set; }
+        protected bool IsActiveDuringCallParkSpecified { get; set; }
 
         private bool _isActiveDuringBusyCampOn;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveDuringBusyCampOnSpecified { get; set; }
+        protected bool IsActiveDuringBusyCampOnSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify _source;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SourceSpecified { get; set; }
+        protected bool SourceSpecified { get; set; }
 
         private bool _useAlternateSourceForInternalCalls;
 
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseAlternateSourceForInternalCallsSpecified { get; set; }
+        protected bool UseAlternateSourceForInternalCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify _internalSource;
 
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InternalSourceSpecified { get; set; }
+        protected bool InternalSourceSpecified { get; set; }
 
     }
 }

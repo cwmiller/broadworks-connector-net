@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool XsRealmSpecified { get; set; }
+        protected bool XsRealmSpecified { get; set; }
 
         private int _xsListeningPort;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool XsListeningPortSpecified { get; set; }
+        protected bool XsListeningPortSpecified { get; set; }
 
         private bool _xsListeningPortEnabled;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool XsListeningPortEnabledSpecified { get; set; }
+        protected bool XsListeningPortEnabledSpecified { get; set; }
 
         private int _xsListeningSecurePort;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool XsListeningSecurePortSpecified { get; set; }
+        protected bool XsListeningSecurePortSpecified { get; set; }
 
         private bool _xsListeningSecurePortEnabled;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool XsListeningSecurePortEnabledSpecified { get; set; }
+        protected bool XsListeningSecurePortEnabledSpecified { get; set; }
 
         private string _psRealm;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PsRealmSpecified { get; set; }
+        protected bool PsRealmSpecified { get; set; }
 
         private int _psListeningPort;
 
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PsListeningPortSpecified { get; set; }
+        protected bool PsListeningPortSpecified { get; set; }
 
         private bool _psListeningPortEnabled;
 
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PsListeningPortEnabledSpecified { get; set; }
+        protected bool PsListeningPortEnabledSpecified { get; set; }
 
         private int _psListeningSecurePort;
 
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PsListeningSecurePortSpecified { get; set; }
+        protected bool PsListeningSecurePortSpecified { get; set; }
 
         private bool _psListeningSecurePortEnabled;
 
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PsListeningSecurePortEnabledSpecified { get; set; }
+        protected bool PsListeningSecurePortEnabledSpecified { get; set; }
 
         private bool _psRelayThroughXs;
 
@@ -227,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PsRelayThroughXsSpecified { get; set; }
+        protected bool PsRelayThroughXsSpecified { get; set; }
 
         private int _xsRelayListeningPort;
 
@@ -247,7 +247,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool XsRelayListeningPortSpecified { get; set; }
+        protected bool XsRelayListeningPortSpecified { get; set; }
 
         private int _tcTimerSeconds;
 
@@ -267,7 +267,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TcTimerSecondsSpecified { get; set; }
+        protected bool TcTimerSecondsSpecified { get; set; }
 
         private int _twTimerSeconds;
 
@@ -287,7 +287,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TwTimerSecondsSpecified { get; set; }
+        protected bool TwTimerSecondsSpecified { get; set; }
 
         private int _requestTimerSeconds;
 
@@ -307,7 +307,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequestTimerSecondsSpecified { get; set; }
+        protected bool RequestTimerSecondsSpecified { get; set; }
 
         private int _busyPeerDetectionOutstandingTxnCount;
 
@@ -327,7 +327,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPeerDetectionOutstandingTxnCountSpecified { get; set; }
+        protected bool BusyPeerDetectionOutstandingTxnCountSpecified { get; set; }
 
         private int _busyPeerRestoreOutstandingTxnCount;
 
@@ -347,7 +347,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPeerRestoreOutstandingTxnCountSpecified { get; set; }
+        protected bool BusyPeerRestoreOutstandingTxnCountSpecified { get; set; }
 
         private int _dynamicEntryInactivityTimerHours;
 
@@ -367,7 +367,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DynamicEntryInactivityTimerHoursSpecified { get; set; }
+        protected bool DynamicEntryInactivityTimerHoursSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOfflineBillingApplication;
 
@@ -385,7 +385,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AdvertisedOfflineBillingApplicationSpecified { get; set; }
+        protected bool AdvertisedOfflineBillingApplicationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOnlineBillingApplication;
 
@@ -403,7 +403,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AdvertisedOnlineBillingApplicationSpecified { get; set; }
+        protected bool AdvertisedOnlineBillingApplicationSpecified { get; set; }
 
         private int _defaultPort;
 
@@ -423,7 +423,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultPortSpecified { get; set; }
+        protected bool DefaultPortSpecified { get; set; }
 
         private int _defaultSecurePort;
 
@@ -443,7 +443,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultSecurePortSpecified { get; set; }
+        protected bool DefaultSecurePortSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DiameterPeerDiscoveryMode _peerDiscoveryMode;
 
@@ -461,7 +461,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeerDiscoveryModeSpecified { get; set; }
+        protected bool PeerDiscoveryModeSpecified { get; set; }
 
     }
 }

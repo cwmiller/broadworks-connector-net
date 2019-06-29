@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip
             }
 
             // Element contents is an object contianing all attributes and elements under this element
-            return new XElement(ns + elementName, 
+            return new XElement(ns + elementName,
                 new XAttribute(XNamespace.Xmlns + "xsi", "http://www.w3.org/2001/XMLSchema-instance"),
                 new XAttribute(XNamespace.Xmlns + "xsd", "http://www.w3.org/2001/XMLSchema"),
                 GetElementContentsForInstance(objType, obj));
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip
             var isNillable = elementAttr.IsNullable == true;
 
             // Namespace defaults to blank unless it's specified in the attribute
-            XNamespace ns = elementAttr.Namespace != null 
+            XNamespace ns = elementAttr.Namespace != null
                 ? elementAttr.Namespace
                 : "";
 
@@ -231,7 +231,7 @@ namespace BroadWorksConnector.Ocip
                 : property.Name;
 
             // namespace defaults to blank unless it's specified in the attribute
-            XNamespace ns = attributeAttr.Namespace != null 
+            XNamespace ns = attributeAttr.Namespace != null
                 ? attributeAttr.Namespace
                 : "";
 
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip
         private bool IsPropertySpecified(PropertyInfo property, Type objectType, object instance)
         {
             // Instance will include a sibling property named PropertyNameSpecified that is set to true if the property was set.
-            var specifiedProperty = objectType.GetProperty($"{property.Name}Specified");
+            var specifiedProperty = objectType.GetProperty($"{property.Name}Specified", BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
 
             if (specifiedProperty == null)
             {
@@ -344,7 +344,7 @@ namespace BroadWorksConnector.Ocip
                         var childElement = element.Element(elementAttr.ElementName);
                         if (childElement != null)
                         {
-                           property.SetValue(obj, DeserializeElement(childElement, property.PropertyType));
+                            property.SetValue(obj, DeserializeElement(childElement, property.PropertyType));
                         }
                     }
                 }

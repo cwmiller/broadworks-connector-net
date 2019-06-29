@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponseSizeLimitSpecified { get; set; }
+        protected bool ResponseSizeLimitSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaRoamingMscAddress> _searchCriteriaRoamingMscAddress = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaRoamingMscAddress>();
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaRoamingMscAddressSpecified { get; set; }
+        protected bool SearchCriteriaRoamingMscAddressSpecified { get; set; }
 
     }
 }

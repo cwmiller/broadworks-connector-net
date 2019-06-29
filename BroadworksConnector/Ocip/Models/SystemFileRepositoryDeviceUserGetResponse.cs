@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowPutSpecified { get; set; }
+        protected bool AllowPutSpecified { get; set; }
 
         private bool _allowDelete;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowDeleteSpecified { get; set; }
+        protected bool AllowDeleteSpecified { get; set; }
 
         private bool _allowGet;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowGetSpecified { get; set; }
+        protected bool AllowGetSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MonitoredUserTableSpecified { get; set; }
+        protected bool MonitoredUserTableSpecified { get; set; }
 
     }
 }

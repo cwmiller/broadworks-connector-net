@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SaveFaxMessageAndSkipToNextSpecified { get; set; }
+        protected bool SaveFaxMessageAndSkipToNextSpecified { get; set; }
 
         private string _previousFaxMessage;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PreviousFaxMessageSpecified { get; set; }
+        protected bool PreviousFaxMessageSpecified { get; set; }
 
         private string _playEnvelope;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayEnvelopeSpecified { get; set; }
+        protected bool PlayEnvelopeSpecified { get; set; }
 
         private string _nextFaxMessage;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NextFaxMessageSpecified { get; set; }
+        protected bool NextFaxMessageSpecified { get; set; }
 
         private string _deleteFaxMessage;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteFaxMessageSpecified { get; set; }
+        protected bool DeleteFaxMessageSpecified { get; set; }
 
         private string _printFaxMessage;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrintFaxMessageSpecified { get; set; }
+        protected bool PrintFaxMessageSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
     }
 }

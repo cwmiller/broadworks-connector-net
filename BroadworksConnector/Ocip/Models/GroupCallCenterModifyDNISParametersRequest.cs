@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private bool _displayDNISNumber;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayDNISNumberSpecified { get; set; }
+        protected bool DisplayDNISNumberSpecified { get; set; }
 
         private bool _displayDNISName;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayDNISNameSpecified { get; set; }
+        protected bool DisplayDNISNameSpecified { get; set; }
 
         private bool _promoteCallsFromPriority1to0;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PromoteCallsFromPriority1to0Specified { get; set; }
+        protected bool PromoteCallsFromPriority1to0Specified { get; set; }
 
         private bool _promoteCallsFromPriority2to1;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PromoteCallsFromPriority2to1Specified { get; set; }
+        protected bool PromoteCallsFromPriority2to1Specified { get; set; }
 
         private bool _promoteCallsFromPriority3to2;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PromoteCallsFromPriority3to2Specified { get; set; }
+        protected bool PromoteCallsFromPriority3to2Specified { get; set; }
 
         private int _promoteCallsFromPriority1to0Seconds;
 
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PromoteCallsFromPriority1to0SecondsSpecified { get; set; }
+        protected bool PromoteCallsFromPriority1to0SecondsSpecified { get; set; }
 
         private int _promoteCallsFromPriority2to1Seconds;
 
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PromoteCallsFromPriority2to1SecondsSpecified { get; set; }
+        protected bool PromoteCallsFromPriority2to1SecondsSpecified { get; set; }
 
         private int _promoteCallsFromPriority3to2Seconds;
 
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PromoteCallsFromPriority3to2SecondsSpecified { get; set; }
+        protected bool PromoteCallsFromPriority3to2SecondsSpecified { get; set; }
 
     }
 }

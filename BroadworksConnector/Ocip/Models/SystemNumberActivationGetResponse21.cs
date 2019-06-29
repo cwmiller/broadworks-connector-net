@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberActivationModeSpecified { get; set; }
+        protected bool NumberActivationModeSpecified { get; set; }
 
         private bool _enableEnterpriseTrunkNumberRangeActivation;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableEnterpriseTrunkNumberRangeActivationSpecified { get; set; }
+        protected bool EnableEnterpriseTrunkNumberRangeActivationSpecified { get; set; }
 
     }
 }

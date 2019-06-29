@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAutomaticCollectCallSpecified { get; set; }
+        protected bool EnableAutomaticCollectCallSpecified { get; set; }
 
     }
 }

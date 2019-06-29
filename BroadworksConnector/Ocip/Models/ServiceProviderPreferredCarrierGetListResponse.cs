@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderCarrierTableSpecified { get; set; }
+        protected bool ServiceProviderCarrierTableSpecified { get; set; }
 
     }
 }

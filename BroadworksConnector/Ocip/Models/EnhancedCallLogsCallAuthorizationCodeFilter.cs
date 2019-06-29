@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallsWithCodesSpecified { get; set; }
+        protected bool CallsWithCodesSpecified { get; set; }
 
         private string _authorizationCode;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AuthorizationCodeSpecified { get; set; }
+        protected bool AuthorizationCodeSpecified { get; set; }
 
     }
 }

@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobileSubscriberDirectoryNumberTableSpecified { get; set; }
+        protected bool MobileSubscriberDirectoryNumberTableSpecified { get; set; }
 
     }
 }

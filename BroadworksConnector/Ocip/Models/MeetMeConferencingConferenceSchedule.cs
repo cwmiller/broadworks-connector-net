@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleReservationlessSpecified { get; set; }
+        protected bool ScheduleReservationlessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleOneTime _scheduleOneTime;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleOneTimeSpecified { get; set; }
+        protected bool ScheduleOneTimeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceScheduleScheduleRecurring _scheduleRecurring;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleRecurringSpecified { get; set; }
+        protected bool ScheduleRecurringSpecified { get; set; }
 
     }
 }

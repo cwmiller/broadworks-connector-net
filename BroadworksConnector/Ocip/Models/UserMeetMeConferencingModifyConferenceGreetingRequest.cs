@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceKeySpecified { get; set; }
+        protected bool ConferenceKeySpecified { get; set; }
 
         private bool _playEntranceGreeting;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayEntranceGreetingSpecified { get; set; }
+        protected bool PlayEntranceGreetingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _entranceGreetingFile;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceGreetingFileSpecified { get; set; }
+        protected bool EntranceGreetingFileSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobileNumberSpecified { get; set; }
+        protected bool MobileNumberSpecified { get; set; }
 
         private string _description;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private bool _isPrimary;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsPrimarySpecified { get; set; }
+        protected bool IsPrimarySpecified { get; set; }
 
         private bool _enableAlerting;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAlertingSpecified { get; set; }
+        protected bool EnableAlertingSpecified { get; set; }
 
     }
 }

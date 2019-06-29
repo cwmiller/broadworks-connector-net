@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CarrierSpecified { get; set; }
+        protected bool CarrierSpecified { get; set; }
 
         private string _cic;
 
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CicSpecified { get; set; }
+        protected bool CicSpecified { get; set; }
 
         private string _countryCode;
 
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountryCodeSpecified { get; set; }
+        protected bool CountryCodeSpecified { get; set; }
 
         private bool _isIntraLata;
 
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsIntraLataSpecified { get; set; }
+        protected bool IsIntraLataSpecified { get; set; }
 
         private bool _isInterLata;
 
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsInterLataSpecified { get; set; }
+        protected bool IsInterLataSpecified { get; set; }
 
         private bool _isInternational;
 
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsInternationalSpecified { get; set; }
+        protected bool IsInternationalSpecified { get; set; }
 
     }
 }

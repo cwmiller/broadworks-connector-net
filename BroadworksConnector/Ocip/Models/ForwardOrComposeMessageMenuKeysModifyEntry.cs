@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendToPersonSpecified { get; set; }
+        protected bool SendToPersonSpecified { get; set; }
 
         private string _sendToAllGroupMembers;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendToAllGroupMembersSpecified { get; set; }
+        protected bool SendToAllGroupMembersSpecified { get; set; }
 
         private string _sendToDistributionList;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendToDistributionListSpecified { get; set; }
+        protected bool SendToDistributionListSpecified { get; set; }
 
         private string _changeCurrentIntroductionOrMessage;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChangeCurrentIntroductionOrMessageSpecified { get; set; }
+        protected bool ChangeCurrentIntroductionOrMessageSpecified { get; set; }
 
         private string _listenToCurrentIntroductionOrMessage;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ListenToCurrentIntroductionOrMessageSpecified { get; set; }
+        protected bool ListenToCurrentIntroductionOrMessageSpecified { get; set; }
 
         private string _setOrClearUrgentIndicator;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetOrClearUrgentIndicatorSpecified { get; set; }
+        protected bool SetOrClearUrgentIndicatorSpecified { get; set; }
 
         private string _setOrClearConfidentialIndicator;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetOrClearConfidentialIndicatorSpecified { get; set; }
+        protected bool SetOrClearConfidentialIndicatorSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

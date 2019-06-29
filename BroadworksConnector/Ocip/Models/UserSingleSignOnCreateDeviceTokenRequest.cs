@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceLevelSpecified { get; set; }
+        protected bool DeviceLevelSpecified { get; set; }
 
         private string _deviceName;
 
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceNameSpecified { get; set; }
+        protected bool DeviceNameSpecified { get; set; }
 
     }
 }

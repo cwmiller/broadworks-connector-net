@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecallTimerSecondsSpecified { get; set; }
+        protected bool RecallTimerSecondsSpecified { get; set; }
 
         private int _displayTimerSeconds;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayTimerSecondsSpecified { get; set; }
+        protected bool DisplayTimerSecondsSpecified { get; set; }
 
         private bool _enableDestinationAnnouncement;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDestinationAnnouncementSpecified { get; set; }
+        protected bool EnableDestinationAnnouncementSpecified { get; set; }
 
     }
 }

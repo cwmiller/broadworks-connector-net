@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeSpecified { get; set; }
+        protected bool DeviceTypeSpecified { get; set; }
 
         private string _ftpHostNetAddress;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpHostNetAddressSpecified { get; set; }
+        protected bool FtpHostNetAddressSpecified { get; set; }
 
         private string _ftpUserId;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpUserIdSpecified { get; set; }
+        protected bool FtpUserIdSpecified { get; set; }
 
         private string _ftpUserPassword;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpUserPasswordSpecified { get; set; }
+        protected bool FtpUserPasswordSpecified { get; set; }
 
         private string _cpeFileDirectory;
 
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CpeFileDirectorySpecified { get; set; }
+        protected bool CpeFileDirectorySpecified { get; set; }
 
         private bool _passiveFTP;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PassiveFTPSpecified { get; set; }
+        protected bool PassiveFTPSpecified { get; set; }
 
     }
 }

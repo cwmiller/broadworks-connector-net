@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private bool _deleted;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeletedSpecified { get; set; }
+        protected bool DeletedSpecified { get; set; }
 
         private bool _allDNIS;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllDNISSpecified { get; set; }
+        protected bool AllDNISSpecified { get; set; }
 
         private List<string> _currentName = new List<string>();
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CurrentNameSpecified { get; set; }
+        protected bool CurrentNameSpecified { get; set; }
 
         private List<string> _pastName = new List<string>();
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PastNameSpecified { get; set; }
+        protected bool PastNameSpecified { get; set; }
 
     }
 }

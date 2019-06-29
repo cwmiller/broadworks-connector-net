@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigitPatternCriteriaSpecified { get; set; }
+        protected bool DigitPatternCriteriaSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction _action;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ActionSpecified { get; set; }
+        protected bool ActionSpecified { get; set; }
 
         private int _callTimeoutSeconds;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallTimeoutSecondsSpecified { get; set; }
+        protected bool CallTimeoutSecondsSpecified { get; set; }
 
         private string _timeSchedule;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeScheduleSpecified { get; set; }
+        protected bool TimeScheduleSpecified { get; set; }
 
         private string _holidaySchedule;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HolidayScheduleSpecified { get; set; }
+        protected bool HolidayScheduleSpecified { get; set; }
 
         private decimal _priority;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrioritySpecified { get; set; }
+        protected bool PrioritySpecified { get; set; }
 
     }
 }

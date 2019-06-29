@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScreenMaliciousCallersSpecified { get; set; }
+        protected bool ScreenMaliciousCallersSpecified { get; set; }
 
     }
 }

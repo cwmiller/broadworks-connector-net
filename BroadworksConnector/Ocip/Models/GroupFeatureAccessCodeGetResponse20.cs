@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseFeatureAccessCodeLevelSpecified { get; set; }
+        protected bool UseFeatureAccessCodeLevelSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeEntry> _featureAccessCode = new List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeEntry>();
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FeatureAccessCodeSpecified { get; set; }
+        protected bool FeatureAccessCodeSpecified { get; set; }
 
     }
 }

@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private string _outboundAlternateNumber;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutboundAlternateNumberSpecified { get; set; }
+        protected bool OutboundAlternateNumberSpecified { get; set; }
 
         private bool _isActive;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private bool _broadworksCallControl;
 
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BroadworksCallControlSpecified { get; set; }
+        protected bool BroadworksCallControlSpecified { get; set; }
 
         private bool _useDiversionInhibitor;
 
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDiversionInhibitorSpecified { get; set; }
+        protected bool UseDiversionInhibitorSpecified { get; set; }
 
         private bool _answerConfirmationRequired;
 
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnswerConfirmationRequiredSpecified { get; set; }
+        protected bool AnswerConfirmationRequiredSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaTableSpecified { get; set; }
+        protected bool CriteriaTableSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateCallIndicatorSpecified { get; set; }
+        protected bool AlternateCallIndicatorSpecified { get; set; }
 
         private string _treatmentAudioFile;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatmentAudioFileSpecified { get; set; }
+        protected bool TreatmentAudioFileSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxActiveCallsSpecified { get; set; }
+        protected bool MaxActiveCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _maxAvailableActiveCalls;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxAvailableActiveCallsSpecified { get; set; }
+        protected bool MaxAvailableActiveCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _burstingMaxActiveCalls;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BurstingMaxActiveCallsSpecified { get; set; }
+        protected bool BurstingMaxActiveCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _burstingMaxAvailableActiveCalls;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BurstingMaxAvailableActiveCallsSpecified { get; set; }
+        protected bool BurstingMaxAvailableActiveCallsSpecified { get; set; }
 
     }
 }

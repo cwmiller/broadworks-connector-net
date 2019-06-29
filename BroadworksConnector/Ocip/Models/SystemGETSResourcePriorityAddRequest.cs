@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PriorityValueSpecified { get; set; }
+        protected bool PriorityValueSpecified { get; set; }
 
         private int _priorityLevel;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PriorityLevelSpecified { get; set; }
+        protected bool PriorityLevelSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GETSPriorityClass _priorityClass;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PriorityClassSpecified { get; set; }
+        protected bool PriorityClassSpecified { get; set; }
 
     }
 }

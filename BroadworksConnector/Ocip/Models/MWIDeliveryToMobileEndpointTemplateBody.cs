@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LineSpecified { get; set; }
+        protected bool LineSpecified { get; set; }
 
     }
 }

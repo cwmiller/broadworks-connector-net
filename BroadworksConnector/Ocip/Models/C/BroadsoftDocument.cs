@@ -9,6 +9,6 @@ namespace BroadWorksConnector.Ocip.Models.C
         public string Protocol { get; set; }
 
         [XmlIgnore]
-        public bool ProtocolSpecified { get => true; }
+        protected bool ProtocolSpecified { get => true; }
     }
 }

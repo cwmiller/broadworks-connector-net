@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OriginationSpecified { get; set; }
+        protected bool OriginationSpecified { get; set; }
 
         private string _destination;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DestinationSpecified { get; set; }
+        protected bool DestinationSpecified { get; set; }
 
         private string _contact;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactSpecified { get; set; }
+        protected bool ContactSpecified { get; set; }
 
         private string _diversion;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DiversionSpecified { get; set; }
+        protected bool DiversionSpecified { get; set; }
 
     }
 }

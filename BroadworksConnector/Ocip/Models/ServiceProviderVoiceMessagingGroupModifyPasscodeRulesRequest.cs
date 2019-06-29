@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private bool _disallowRepeatedDigits;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisallowRepeatedDigitsSpecified { get; set; }
+        protected bool DisallowRepeatedDigitsSpecified { get; set; }
 
         private bool _disallowUserNumber;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisallowUserNumberSpecified { get; set; }
+        protected bool DisallowUserNumberSpecified { get; set; }
 
         private bool _disallowReversedUserNumber;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisallowReversedUserNumberSpecified { get; set; }
+        protected bool DisallowReversedUserNumberSpecified { get; set; }
 
         private bool _disallowOldPasscode;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisallowOldPasscodeSpecified { get; set; }
+        protected bool DisallowOldPasscodeSpecified { get; set; }
 
         private bool _disallowReversedOldPasscode;
 
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisallowReversedOldPasscodeSpecified { get; set; }
+        protected bool DisallowReversedOldPasscodeSpecified { get; set; }
 
         private int _minCodeLength;
 
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinCodeLengthSpecified { get; set; }
+        protected bool MinCodeLengthSpecified { get; set; }
 
         private int _maxCodeLength;
 
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCodeLengthSpecified { get; set; }
+        protected bool MaxCodeLengthSpecified { get; set; }
 
         private bool _disableLoginAfterMaxFailedLoginAttempts;
 
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisableLoginAfterMaxFailedLoginAttemptsSpecified { get; set; }
+        protected bool DisableLoginAfterMaxFailedLoginAttemptsSpecified { get; set; }
 
         private int _maxFailedLoginAttempts;
 
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxFailedLoginAttemptsSpecified { get; set; }
+        protected bool MaxFailedLoginAttemptsSpecified { get; set; }
 
         private bool _expirePassword;
 
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExpirePasswordSpecified { get; set; }
+        protected bool ExpirePasswordSpecified { get; set; }
 
         private int _passcodeExpiresDays;
 
@@ -244,7 +244,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasscodeExpiresDaysSpecified { get; set; }
+        protected bool PasscodeExpiresDaysSpecified { get; set; }
 
         private bool _sendLoginDisabledNotifyEmail;
 
@@ -262,7 +262,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendLoginDisabledNotifyEmailSpecified { get; set; }
+        protected bool SendLoginDisabledNotifyEmailSpecified { get; set; }
 
         private string _loginDisabledNotifyEmailAddress;
 
@@ -282,7 +282,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LoginDisabledNotifyEmailAddressSpecified { get; set; }
+        protected bool LoginDisabledNotifyEmailAddressSpecified { get; set; }
 
     }
 }

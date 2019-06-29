@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UserType _userType;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserTypeSpecified { get; set; }
+        protected bool UserTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EndpointType21sp1 _endpointType;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndpointTypeSpecified { get; set; }
+        protected bool EndpointTypeSpecified { get; set; }
 
         private string _sCSCFName;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SCSCFNameSpecified { get; set; }
+        protected bool SCSCFNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.IMSUserState _iMSUserState;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IMSUserStateSpecified { get; set; }
+        protected bool IMSUserStateSpecified { get; set; }
 
     }
 }

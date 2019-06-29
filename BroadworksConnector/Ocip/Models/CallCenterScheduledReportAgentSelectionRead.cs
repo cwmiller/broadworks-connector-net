@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllAgentSpecified { get; set; }
+        protected bool AllAgentSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _agentTable;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentTableSpecified { get; set; }
+        protected bool AgentTableSpecified { get; set; }
 
     }
 }

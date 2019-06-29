@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GetDefaultMenuKeysSpecified { get; set; }
+        protected bool GetDefaultMenuKeysSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceXmlTableSpecified { get; set; }
+        protected bool VoiceXmlTableSpecified { get; set; }
 
     }
 }

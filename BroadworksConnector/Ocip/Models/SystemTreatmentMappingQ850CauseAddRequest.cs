@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Q850CauseValueSpecified { get; set; }
+        protected bool Q850CauseValueSpecified { get; set; }
 
         private string _treatmentId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatmentIdSpecified { get; set; }
+        protected bool TreatmentIdSpecified { get; set; }
 
     }
 }

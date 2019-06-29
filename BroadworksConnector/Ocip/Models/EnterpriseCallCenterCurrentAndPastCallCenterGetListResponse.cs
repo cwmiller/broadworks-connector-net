@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private List<string> _deletedServiceUserId = new List<string>();
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeletedServiceUserIdSpecified { get; set; }
+        protected bool DeletedServiceUserIdSpecified { get; set; }
 
     }
 }

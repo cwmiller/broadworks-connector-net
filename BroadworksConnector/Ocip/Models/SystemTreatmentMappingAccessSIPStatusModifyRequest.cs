@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipStatusCodeSpecified { get; set; }
+        protected bool SipStatusCodeSpecified { get; set; }
 
         private string _treatmentId;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatmentIdSpecified { get; set; }
+        protected bool TreatmentIdSpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartDateSpecified { get; set; }
+        protected bool StartDateSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HourMinute _startTime;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartTimeSpecified { get; set; }
+        protected bool StartTimeSpecified { get; set; }
 
         private string _endDate;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndDateSpecified { get; set; }
+        protected bool EndDateSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HourMinute _endTime;
 
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndTimeSpecified { get; set; }
+        protected bool EndTimeSpecified { get; set; }
 
     }
 }

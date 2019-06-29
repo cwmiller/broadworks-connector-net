@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RandomSpecified { get; set; }
+        protected bool RandomSpecified { get; set; }
 
         private int _port;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PortSpecified { get; set; }
+        protected bool PortSpecified { get; set; }
 
     }
 }

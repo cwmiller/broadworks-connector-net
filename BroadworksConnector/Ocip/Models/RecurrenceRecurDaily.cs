@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurIntervalSpecified { get; set; }
+        protected bool RecurIntervalSpecified { get; set; }
 
     }
 }

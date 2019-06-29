@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeGroupCommonPhoneListInDirectorySpecified { get; set; }
+        protected bool IncludeGroupCommonPhoneListInDirectorySpecified { get; set; }
 
         private bool _includeGroupCustomContactDirectoryInDirectory;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeGroupCustomContactDirectoryInDirectorySpecified { get; set; }
+        protected bool IncludeGroupCustomContactDirectoryInDirectorySpecified { get; set; }
 
         private string _groupCustomContactDirectory;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupCustomContactDirectorySpecified { get; set; }
+        protected bool GroupCustomContactDirectorySpecified { get; set; }
 
     }
 }

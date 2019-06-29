@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSettingLevelSpecified { get; set; }
+        protected bool UseSettingLevelSpecified { get; set; }
 
         private bool _enableLocationServices;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableLocationServicesSpecified { get; set; }
+        protected bool EnableLocationServicesSpecified { get; set; }
 
         private bool _enableMSRNLookup;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableMSRNLookupSpecified { get; set; }
+        protected bool EnableMSRNLookupSpecified { get; set; }
 
         private bool _enableMobileStateChecking;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableMobileStateCheckingSpecified { get; set; }
+        protected bool EnableMobileStateCheckingSpecified { get; set; }
 
         private bool _denyCallOriginations;
 
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DenyCallOriginationsSpecified { get; set; }
+        protected bool DenyCallOriginationsSpecified { get; set; }
 
         private bool _denyCallTerminations;
 
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DenyCallTerminationsSpecified { get; set; }
+        protected bool DenyCallTerminationsSpecified { get; set; }
 
         private bool _enableAnnouncementSuppression;
 
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAnnouncementSuppressionSpecified { get; set; }
+        protected bool EnableAnnouncementSuppressionSpecified { get; set; }
 
         private bool _enableInternalCLIDDeliveryAccessLocations;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableInternalCLIDDeliveryAccessLocationsSpecified { get; set; }
+        protected bool EnableInternalCLIDDeliveryAccessLocationsSpecified { get; set; }
 
         private bool _enableEnhancedUnreachableStateChecking;
 
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableEnhancedUnreachableStateCheckingSpecified { get; set; }
+        protected bool EnableEnhancedUnreachableStateCheckingSpecified { get; set; }
 
         private bool _enableNetworkCallBarringStatusCheck;
 
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNetworkCallBarringStatusCheckSpecified { get; set; }
+        protected bool EnableNetworkCallBarringStatusCheckSpecified { get; set; }
 
     }
 }

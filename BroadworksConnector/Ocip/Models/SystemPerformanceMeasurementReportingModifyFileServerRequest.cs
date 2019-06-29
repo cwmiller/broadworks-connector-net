@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpHostNetAddressSpecified { get; set; }
+        protected bool FtpHostNetAddressSpecified { get; set; }
 
         private bool _passiveFTP;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PassiveFTPSpecified { get; set; }
+        protected bool PassiveFTPSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DiversionReasonTableSpecified { get; set; }
+        protected bool DiversionReasonTableSpecified { get; set; }
 
     }
 }

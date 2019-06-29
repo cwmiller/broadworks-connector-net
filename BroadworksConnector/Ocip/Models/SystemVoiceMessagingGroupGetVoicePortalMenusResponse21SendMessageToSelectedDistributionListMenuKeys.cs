@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfirmSendingToDistributionListSpecified { get; set; }
+        protected bool ConfirmSendingToDistributionListSpecified { get; set; }
 
         private string _cancelSendingToDistributionList;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CancelSendingToDistributionListSpecified { get; set; }
+        protected bool CancelSendingToDistributionListSpecified { get; set; }
 
     }
 }

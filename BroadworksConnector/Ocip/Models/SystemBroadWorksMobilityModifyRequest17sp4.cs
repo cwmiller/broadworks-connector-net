@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableLocationServicesSpecified { get; set; }
+        protected bool EnableLocationServicesSpecified { get; set; }
 
         private bool _enableMSRNLookup;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableMSRNLookupSpecified { get; set; }
+        protected bool EnableMSRNLookupSpecified { get; set; }
 
         private bool _enableMobileStateChecking;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableMobileStateCheckingSpecified { get; set; }
+        protected bool EnableMobileStateCheckingSpecified { get; set; }
 
         private bool _denyCallOriginations;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DenyCallOriginationsSpecified { get; set; }
+        protected bool DenyCallOriginationsSpecified { get; set; }
 
         private bool _denyCallTerminations;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DenyCallTerminationsSpecified { get; set; }
+        protected bool DenyCallTerminationsSpecified { get; set; }
 
         private int _imrnTimeoutMilliseconds;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ImrnTimeoutMillisecondsSpecified { get; set; }
+        protected bool ImrnTimeoutMillisecondsSpecified { get; set; }
 
         private string _scfSignalingNetAddress;
 
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScfSignalingNetAddressSpecified { get; set; }
+        protected bool ScfSignalingNetAddressSpecified { get; set; }
 
         private int? _scfSignalingPort;
 
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScfSignalingPortSpecified { get; set; }
+        protected bool ScfSignalingPortSpecified { get; set; }
 
         private int _refreshPeriodSeconds;
 
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RefreshPeriodSecondsSpecified { get; set; }
+        protected bool RefreshPeriodSecondsSpecified { get; set; }
 
         private int _maxConsecutiveFailures;
 
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConsecutiveFailuresSpecified { get; set; }
+        protected bool MaxConsecutiveFailuresSpecified { get; set; }
 
         private int _maxResponseWaitTimeMilliseconds;
 
@@ -229,7 +229,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
+        protected bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
 
         private bool _enableAnnouncementSuppression;
 
@@ -247,7 +247,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAnnouncementSuppressionSpecified { get; set; }
+        protected bool EnableAnnouncementSuppressionSpecified { get; set; }
 
     }
 }

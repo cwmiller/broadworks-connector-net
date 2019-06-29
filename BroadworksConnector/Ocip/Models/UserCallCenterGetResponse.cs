@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentACDStateSpecified { get; set; }
+        protected bool AgentACDStateSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserTableSpecified { get; set; }
+        protected bool UserTableSpecified { get; set; }
 
     }
 }

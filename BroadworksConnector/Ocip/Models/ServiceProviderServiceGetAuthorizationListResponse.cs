@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupServicesAuthorizationTableSpecified { get; set; }
+        protected bool GroupServicesAuthorizationTableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _userServicesAuthorizationTable;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServicesAuthorizationTableSpecified { get; set; }
+        protected bool UserServicesAuthorizationTableSpecified { get; set; }
 
     }
 }

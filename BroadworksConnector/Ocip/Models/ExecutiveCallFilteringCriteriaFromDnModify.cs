@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FromDnCriteriaSelectionSpecified { get; set; }
+        protected bool FromDnCriteriaSelectionSpecified { get; set; }
 
         private bool _includeAnonymousCallers;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeAnonymousCallersSpecified { get; set; }
+        protected bool IncludeAnonymousCallersSpecified { get; set; }
 
         private bool _includeUnavailableCallers;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeUnavailableCallersSpecified { get; set; }
+        protected bool IncludeUnavailableCallersSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList _phoneNumberList;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberListSpecified { get; set; }
+        protected bool PhoneNumberListSpecified { get; set; }
 
     }
 }

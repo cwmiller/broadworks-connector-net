@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnabledSpecified { get; set; }
+        protected bool EnabledSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EstimatedWaitMessageOperatingMode _operatingMode;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OperatingModeSpecified { get; set; }
+        protected bool OperatingModeSpecified { get; set; }
 
         private bool _playPositionHighVolume;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayPositionHighVolumeSpecified { get; set; }
+        protected bool PlayPositionHighVolumeSpecified { get; set; }
 
         private bool _playTimeHighVolume;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayTimeHighVolumeSpecified { get; set; }
+        protected bool PlayTimeHighVolumeSpecified { get; set; }
 
         private int _maximumPositions;
 
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumPositionsSpecified { get; set; }
+        protected bool MaximumPositionsSpecified { get; set; }
 
         private int _maximumWaitingMinutes;
 
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumWaitingMinutesSpecified { get; set; }
+        protected bool MaximumWaitingMinutesSpecified { get; set; }
 
         private int _defaultCallHandlingMinutes;
 
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultCallHandlingMinutesSpecified { get; set; }
+        protected bool DefaultCallHandlingMinutesSpecified { get; set; }
 
     }
 }

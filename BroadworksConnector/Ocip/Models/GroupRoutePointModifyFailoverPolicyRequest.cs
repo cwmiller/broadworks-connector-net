@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private bool _enableFailoverSupport;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableFailoverSupportSpecified { get; set; }
+        protected bool EnableFailoverSupportSpecified { get; set; }
 
         private string _externalSystem;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExternalSystemSpecified { get; set; }
+        protected bool ExternalSystemSpecified { get; set; }
 
         private string _failoverPhoneNumber;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FailoverPhoneNumberSpecified { get; set; }
+        protected bool FailoverPhoneNumberSpecified { get; set; }
 
         private bool _perCallEnableFailoverSupport;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PerCallEnableFailoverSupportSpecified { get; set; }
+        protected bool PerCallEnableFailoverSupportSpecified { get; set; }
 
         private int _perCallCallFailureTimeoutSeconds;
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PerCallCallFailureTimeoutSecondsSpecified { get; set; }
+        protected bool PerCallCallFailureTimeoutSecondsSpecified { get; set; }
 
         private int _perCallOutboundCallFailureTimeoutSeconds;
 
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PerCallOutboundCallFailureTimeoutSecondsSpecified { get; set; }
+        protected bool PerCallOutboundCallFailureTimeoutSecondsSpecified { get; set; }
 
         private string _perCallFailoverPhoneNumber;
 
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PerCallFailoverPhoneNumberSpecified { get; set; }
+        protected bool PerCallFailoverPhoneNumberSpecified { get; set; }
 
     }
 }

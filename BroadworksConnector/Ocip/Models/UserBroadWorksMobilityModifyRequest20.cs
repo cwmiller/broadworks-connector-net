@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _isActive;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _phonesToRing;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhonesToRingSpecified { get; set; }
+        protected bool PhonesToRingSpecified { get; set; }
 
         private string _mobilePhoneNumber;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobilePhoneNumberSpecified { get; set; }
+        protected bool MobilePhoneNumberSpecified { get; set; }
 
         private bool _alertClickToDialCalls;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertClickToDialCallsSpecified { get; set; }
+        protected bool AlertClickToDialCallsSpecified { get; set; }
 
         private bool _alertGroupPagingCalls;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertGroupPagingCallsSpecified { get; set; }
+        protected bool AlertGroupPagingCallsSpecified { get; set; }
 
         private bool _enableDiversionInhibitor;
 
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDiversionInhibitorSpecified { get; set; }
+        protected bool EnableDiversionInhibitorSpecified { get; set; }
 
         private bool _requireAnswerConfirmation;
 
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequireAnswerConfirmationSpecified { get; set; }
+        protected bool RequireAnswerConfirmationSpecified { get; set; }
 
         private bool _broadworksCallControl;
 
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BroadworksCallControlSpecified { get; set; }
+        protected bool BroadworksCallControlSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel _useSettingLevel;
 
@@ -202,7 +202,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSettingLevelSpecified { get; set; }
+        protected bool UseSettingLevelSpecified { get; set; }
 
         private bool _denyCallOriginations;
 
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DenyCallOriginationsSpecified { get; set; }
+        protected bool DenyCallOriginationsSpecified { get; set; }
 
         private bool _denyCallTerminations;
 
@@ -238,7 +238,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DenyCallTerminationsSpecified { get; set; }
+        protected bool DenyCallTerminationsSpecified { get; set; }
 
     }
 }

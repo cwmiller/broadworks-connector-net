@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DelayMillisecondsSpecified { get; set; }
+        protected bool DelayMillisecondsSpecified { get; set; }
 
     }
 }

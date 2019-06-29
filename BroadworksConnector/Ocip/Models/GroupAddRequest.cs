@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _defaultDomain;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultDomainSpecified { get; set; }
+        protected bool DefaultDomainSpecified { get; set; }
 
         private int _userLimit;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserLimitSpecified { get; set; }
+        protected bool UserLimitSpecified { get; set; }
 
         private string _groupName;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupNameSpecified { get; set; }
+        protected bool GroupNameSpecified { get; set; }
 
         private string _callingLineIdName;
 
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdNameSpecified { get; set; }
+        protected bool CallingLineIdNameSpecified { get; set; }
 
         private string _timeZone;
 
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeZoneSpecified { get; set; }
+        protected bool TimeZoneSpecified { get; set; }
 
         private string _locationDialingCode;
 
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LocationDialingCodeSpecified { get; set; }
+        protected bool LocationDialingCodeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Contact _contact;
 
@@ -207,7 +207,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactSpecified { get; set; }
+        protected bool ContactSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
@@ -225,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddressSpecified { get; set; }
+        protected bool AddressSpecified { get; set; }
 
         private string _servicePolicy;
 
@@ -245,7 +245,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePolicySpecified { get; set; }
+        protected bool ServicePolicySpecified { get; set; }
 
         private string _callProcessingSliceId;
 
@@ -265,7 +265,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallProcessingSliceIdSpecified { get; set; }
+        protected bool CallProcessingSliceIdSpecified { get; set; }
 
         private string _provisioningSliceId;
 
@@ -285,7 +285,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProvisioningSliceIdSpecified { get; set; }
+        protected bool ProvisioningSliceIdSpecified { get; set; }
 
         private string _subscriberPartition;
 
@@ -305,7 +305,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SubscriberPartitionSpecified { get; set; }
+        protected bool SubscriberPartitionSpecified { get; set; }
 
         private string _preferredDataCenter;
 
@@ -325,7 +325,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PreferredDataCenterSpecified { get; set; }
+        protected bool PreferredDataCenterSpecified { get; set; }
 
         private string _defaultUserCallingLineIdPhoneNumber;
 
@@ -345,7 +345,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultUserCallingLineIdPhoneNumberSpecified { get; set; }
+        protected bool DefaultUserCallingLineIdPhoneNumberSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpHostNetAddressSpecified { get; set; }
+        protected bool FtpHostNetAddressSpecified { get; set; }
 
     }
 }

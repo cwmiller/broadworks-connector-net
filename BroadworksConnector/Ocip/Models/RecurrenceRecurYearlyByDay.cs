@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurIntervalSpecified { get; set; }
+        protected bool RecurIntervalSpecified { get; set; }
 
         private int _dayOfMonth;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DayOfMonthSpecified { get; set; }
+        protected bool DayOfMonthSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Month _month;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MonthSpecified { get; set; }
+        protected bool MonthSpecified { get; set; }
 
     }
 }

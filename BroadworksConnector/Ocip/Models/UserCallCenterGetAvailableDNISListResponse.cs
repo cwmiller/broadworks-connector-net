@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvailableDNISSpecified { get; set; }
+        protected bool AvailableDNISSpecified { get; set; }
 
     }
 }

@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResellerIdSpecified { get; set; }
+        protected bool ResellerIdSpecified { get; set; }
 
     }
 }

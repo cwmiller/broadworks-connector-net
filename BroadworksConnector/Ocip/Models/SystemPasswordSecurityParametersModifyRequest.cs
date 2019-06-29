@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseExistingHashingSpecified { get; set; }
+        protected bool UseExistingHashingSpecified { get; set; }
 
         private bool _enforcePasswordChangeOnExpiry;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnforcePasswordChangeOnExpirySpecified { get; set; }
+        protected bool EnforcePasswordChangeOnExpirySpecified { get; set; }
 
     }
 }

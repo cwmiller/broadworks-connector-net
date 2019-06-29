@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private bool _restrictAggregateSessions;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RestrictAggregateSessionsSpecified { get; set; }
+        protected bool RestrictAggregateSessionsSpecified { get; set; }
 
         private int? _maxSessions;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxSessionsSpecified { get; set; }
+        protected bool MaxSessionsSpecified { get; set; }
 
         private int? _maxUserOriginatingSessions;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxUserOriginatingSessionsSpecified { get; set; }
+        protected bool MaxUserOriginatingSessionsSpecified { get; set; }
 
         private int? _maxUserTerminatingSessions;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxUserTerminatingSessionsSpecified { get; set; }
+        protected bool MaxUserTerminatingSessionsSpecified { get; set; }
 
         private bool _countIntraServiceProviderSessions;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountIntraServiceProviderSessionsSpecified { get; set; }
+        protected bool CountIntraServiceProviderSessionsSpecified { get; set; }
 
     }
 }

@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsObsoleteSpecified { get; set; }
+        protected bool IsObsoleteSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileSpecified { get; set; }
+        protected bool ProfileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfPortsSpecified { get; set; }
+        protected bool NumberOfPortsSpecified { get; set; }
 
         private List<string> _protocolChoice = new List<string>();
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtocolChoiceSpecified { get; set; }
+        protected bool ProtocolChoiceSpecified { get; set; }
 
     }
 }

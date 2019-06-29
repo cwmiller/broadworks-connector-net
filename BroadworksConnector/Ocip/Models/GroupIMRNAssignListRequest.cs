@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private List<string> _imrn = new List<string>();
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ImrnSpecified { get; set; }
+        protected bool ImrnSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.DNRange> _imrnRange = new List<BroadWorksConnector.Ocip.Models.DNRange>();
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ImrnRangeSpecified { get; set; }
+        protected bool ImrnRangeSpecified { get; set; }
 
     }
 }

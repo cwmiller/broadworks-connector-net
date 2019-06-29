@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VersionSpecified { get; set; }
+        protected bool VersionSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TemplateUrlSpecified { get; set; }
+        protected bool TemplateUrlSpecified { get; set; }
 
     }
 }

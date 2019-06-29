@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendCallsToVoiceMailExceptExcludedNumbersSpecified { get; set; }
+        protected bool SendCallsToVoiceMailExceptExcludedNumbersSpecified { get; set; }
 
         private string _excludedPhoneNumber01;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExcludedPhoneNumber01Specified { get; set; }
+        protected bool ExcludedPhoneNumber01Specified { get; set; }
 
         private string _excludedPhoneNumber02;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExcludedPhoneNumber02Specified { get; set; }
+        protected bool ExcludedPhoneNumber02Specified { get; set; }
 
         private string _excludedPhoneNumber03;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExcludedPhoneNumber03Specified { get; set; }
+        protected bool ExcludedPhoneNumber03Specified { get; set; }
 
         private string _forwardExcludedNumbersTo;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardExcludedNumbersToSpecified { get; set; }
+        protected bool ForwardExcludedNumbersToSpecified { get; set; }
 
     }
 }

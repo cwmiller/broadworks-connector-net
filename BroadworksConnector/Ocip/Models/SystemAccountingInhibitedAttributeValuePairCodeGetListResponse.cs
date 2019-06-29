@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InhibitedAttributeValuePairCodeTableSpecified { get; set; }
+        protected bool InhibitedAttributeValuePairCodeTableSpecified { get; set; }
 
     }
 }

@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseGroupSettingSpecified { get; set; }
+        protected bool UseGroupSettingSpecified { get; set; }
 
         private bool _useMaxSimultaneousCalls;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxSimultaneousCallsSpecified { get; set; }
+        protected bool UseMaxSimultaneousCallsSpecified { get; set; }
 
         private int _maxSimultaneousCalls;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxSimultaneousCallsSpecified { get; set; }
+        protected bool MaxSimultaneousCallsSpecified { get; set; }
 
         private bool _useMaxSimultaneousVideoCalls;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxSimultaneousVideoCallsSpecified { get; set; }
+        protected bool UseMaxSimultaneousVideoCallsSpecified { get; set; }
 
         private int _maxSimultaneousVideoCalls;
 
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxSimultaneousVideoCallsSpecified { get; set; }
+        protected bool MaxSimultaneousVideoCallsSpecified { get; set; }
 
         private bool _useMaxCallTimeForAnsweredCalls;
 
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxCallTimeForAnsweredCallsSpecified { get; set; }
+        protected bool UseMaxCallTimeForAnsweredCallsSpecified { get; set; }
 
         private int _maxCallTimeForAnsweredCallsMinutes;
 
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCallTimeForAnsweredCallsMinutesSpecified { get; set; }
+        protected bool MaxCallTimeForAnsweredCallsMinutesSpecified { get; set; }
 
         private bool _useMaxCallTimeForUnansweredCalls;
 
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxCallTimeForUnansweredCallsSpecified { get; set; }
+        protected bool UseMaxCallTimeForUnansweredCallsSpecified { get; set; }
 
         private int _maxCallTimeForUnansweredCallsMinutes;
 
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCallTimeForUnansweredCallsMinutesSpecified { get; set; }
+        protected bool MaxCallTimeForUnansweredCallsMinutesSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaPolicySelection _mediaPolicySelection;
 
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaPolicySelectionSpecified { get; set; }
+        protected bool MediaPolicySelectionSpecified { get; set; }
 
         private string _supportedMediaSetName;
 
@@ -213,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportedMediaSetNameSpecified { get; set; }
+        protected bool SupportedMediaSetNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.NetworkUsageSelection _networkUsageSelection;
 
@@ -230,7 +230,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkUsageSelectionSpecified { get; set; }
+        protected bool NetworkUsageSelectionSpecified { get; set; }
 
         private bool _enforceGroupCallingLineIdentityRestriction;
 
@@ -247,7 +247,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnforceGroupCallingLineIdentityRestrictionSpecified { get; set; }
+        protected bool EnforceGroupCallingLineIdentityRestrictionSpecified { get; set; }
 
     }
 }

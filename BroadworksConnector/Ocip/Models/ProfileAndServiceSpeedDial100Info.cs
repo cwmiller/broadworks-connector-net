@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrefixSpecified { get; set; }
+        protected bool PrefixSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SpeedDial100Entry> _speedDialEntry = new List<BroadWorksConnector.Ocip.Models.SpeedDial100Entry>();
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SpeedDialEntrySpecified { get; set; }
+        protected bool SpeedDialEntrySpecified { get; set; }
 
     }
 }

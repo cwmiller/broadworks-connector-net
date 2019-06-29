@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendSavedAndUrgentMWIOnNotificationSpecified { get; set; }
+        protected bool SendSavedAndUrgentMWIOnNotificationSpecified { get; set; }
 
         private bool _sendMessageSummaryUpdateOnRegister;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendMessageSummaryUpdateOnRegisterSpecified { get; set; }
+        protected bool SendMessageSummaryUpdateOnRegisterSpecified { get; set; }
 
         private int _minTimeBetweenMWIOnRegister;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinTimeBetweenMWIOnRegisterSpecified { get; set; }
+        protected bool MinTimeBetweenMWIOnRegisterSpecified { get; set; }
 
     }
 }

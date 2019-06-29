@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumber01Specified { get; set; }
+        protected bool PhoneNumber01Specified { get; set; }
 
         private string _phoneNumber02;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumber02Specified { get; set; }
+        protected bool PhoneNumber02Specified { get; set; }
 
         private string _phoneNumber03;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumber03Specified { get; set; }
+        protected bool PhoneNumber03Specified { get; set; }
 
     }
 }

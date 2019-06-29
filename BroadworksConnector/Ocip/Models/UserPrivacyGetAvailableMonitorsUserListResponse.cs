@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvailableMonitorsTableSpecified { get; set; }
+        protected bool AvailableMonitorsTableSpecified { get; set; }
 
     }
 }

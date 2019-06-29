@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify _source;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SourceSpecified { get; set; }
+        protected bool SourceSpecified { get; set; }
 
         private bool _useAlternateSourceForInternalCalls;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseAlternateSourceForInternalCallsSpecified { get; set; }
+        protected bool UseAlternateSourceForInternalCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify _internalSource;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InternalSourceSpecified { get; set; }
+        protected bool InternalSourceSpecified { get; set; }
 
     }
 }

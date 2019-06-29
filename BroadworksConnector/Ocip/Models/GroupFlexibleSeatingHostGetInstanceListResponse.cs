@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FlexibleSeatingHostTableSpecified { get; set; }
+        protected bool FlexibleSeatingHostTableSpecified { get; set; }
 
     }
 }

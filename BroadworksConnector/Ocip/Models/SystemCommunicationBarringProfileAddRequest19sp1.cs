@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _description;
 
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction _originatingDefaultAction;
 
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OriginatingDefaultActionSpecified { get; set; }
+        protected bool OriginatingDefaultActionSpecified { get; set; }
 
         private string _originatingDefaultTreatmentId;
 
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OriginatingDefaultTreatmentIdSpecified { get; set; }
+        protected bool OriginatingDefaultTreatmentIdSpecified { get; set; }
 
         private string _originatingDefaultTransferNumber;
 
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OriginatingDefaultTransferNumberSpecified { get; set; }
+        protected bool OriginatingDefaultTransferNumberSpecified { get; set; }
 
         private int _originatingDefaultCallTimeout;
 
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OriginatingDefaultCallTimeoutSpecified { get; set; }
+        protected bool OriginatingDefaultCallTimeoutSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingRule> _originatingRule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingRule>();
 
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OriginatingRuleSpecified { get; set; }
+        protected bool OriginatingRuleSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction _redirectingDefaultAction;
 
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectingDefaultActionSpecified { get; set; }
+        protected bool RedirectingDefaultActionSpecified { get; set; }
 
         private int _redirectingDefaultCallTimeout;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectingDefaultCallTimeoutSpecified { get; set; }
+        protected bool RedirectingDefaultCallTimeoutSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingRule> _redirectingRule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingRule>();
 
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectingRuleSpecified { get; set; }
+        protected bool RedirectingRuleSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction _incomingDefaultAction;
 
@@ -229,7 +229,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncomingDefaultActionSpecified { get; set; }
+        protected bool IncomingDefaultActionSpecified { get; set; }
 
         private int _incomingDefaultCallTimeout;
 
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncomingDefaultCallTimeoutSpecified { get; set; }
+        protected bool IncomingDefaultCallTimeoutSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule19sp1> _incomingRule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule19sp1>();
 
@@ -267,7 +267,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncomingRuleSpecified { get; set; }
+        protected bool IncomingRuleSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _callMeNowDefaultAction;
 
@@ -284,7 +284,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallMeNowDefaultActionSpecified { get; set; }
+        protected bool CallMeNowDefaultActionSpecified { get; set; }
 
         private int _callMeNowDefaultCallTimeout;
 
@@ -304,7 +304,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallMeNowDefaultCallTimeoutSpecified { get; set; }
+        protected bool CallMeNowDefaultCallTimeoutSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowRule> _callMeNowRule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowRule>();
 
@@ -322,7 +322,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallMeNowRuleSpecified { get; set; }
+        protected bool CallMeNowRuleSpecified { get; set; }
 
         private bool _applyToAttendedCallTransfers;
 
@@ -339,7 +339,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ApplyToAttendedCallTransfersSpecified { get; set; }
+        protected bool ApplyToAttendedCallTransfersSpecified { get; set; }
 
     }
 }

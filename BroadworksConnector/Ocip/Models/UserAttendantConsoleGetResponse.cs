@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LaunchOnLoginSpecified { get; set; }
+        protected bool LaunchOnLoginSpecified { get; set; }
 
         private bool _allowUserConfigCallDetails;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowUserConfigCallDetailsSpecified { get; set; }
+        protected bool AllowUserConfigCallDetailsSpecified { get; set; }
 
         private bool _allowUserViewCallDetails;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowUserViewCallDetailsSpecified { get; set; }
+        protected bool AllowUserViewCallDetailsSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.AttendantConsoleDisplayColumn> _displayColumn = new List<BroadWorksConnector.Ocip.Models.AttendantConsoleDisplayColumn>();
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayColumnSpecified { get; set; }
+        protected bool DisplayColumnSpecified { get; set; }
 
     }
 }

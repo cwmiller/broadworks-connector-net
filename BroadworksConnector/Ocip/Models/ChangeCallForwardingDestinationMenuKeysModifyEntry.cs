@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FinishEnteringNewDestinationNumberSpecified { get; set; }
+        protected bool FinishEnteringNewDestinationNumberSpecified { get; set; }
 
     }
 }

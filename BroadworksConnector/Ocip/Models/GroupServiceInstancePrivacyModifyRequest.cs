@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private bool _enableDirectoryPrivacy;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDirectoryPrivacySpecified { get; set; }
+        protected bool EnableDirectoryPrivacySpecified { get; set; }
 
         private bool _enableAutoAttendantExtensionDialingPrivacy;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAutoAttendantExtensionDialingPrivacySpecified { get; set; }
+        protected bool EnableAutoAttendantExtensionDialingPrivacySpecified { get; set; }
 
         private bool _enableAutoAttendantNameDialingPrivacy;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAutoAttendantNameDialingPrivacySpecified { get; set; }
+        protected bool EnableAutoAttendantNameDialingPrivacySpecified { get; set; }
 
     }
 }

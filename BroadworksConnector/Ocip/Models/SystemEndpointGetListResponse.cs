@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndpointTableSpecified { get; set; }
+        protected bool EndpointTableSpecified { get; set; }
 
     }
 }

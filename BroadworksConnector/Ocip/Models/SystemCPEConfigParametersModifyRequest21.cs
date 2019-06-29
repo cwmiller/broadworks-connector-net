@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableIPDeviceManagementSpecified { get; set; }
+        protected bool EnableIPDeviceManagementSpecified { get; set; }
 
         private int _ftpConnectTimeoutSeconds;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpConnectTimeoutSecondsSpecified { get; set; }
+        protected bool FtpConnectTimeoutSecondsSpecified { get; set; }
 
         private int _ftpFileTransferTimeoutSeconds;
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
+        protected bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
 
         private int _pauseBetweenFileRebuildMilliseconds;
 
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PauseBetweenFileRebuildMillisecondsSpecified { get; set; }
+        protected bool PauseBetweenFileRebuildMillisecondsSpecified { get; set; }
 
         private string _deviceAccessAppServerClusterName;
 
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceAccessAppServerClusterNameSpecified { get; set; }
+        protected bool DeviceAccessAppServerClusterNameSpecified { get; set; }
 
         private int _minTimeBetweenResetMilliseconds;
 
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinTimeBetweenResetMillisecondsSpecified { get; set; }
+        protected bool MinTimeBetweenResetMillisecondsSpecified { get; set; }
 
         private bool _alwaysPushFilesOnRebuild;
 
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlwaysPushFilesOnRebuildSpecified { get; set; }
+        protected bool AlwaysPushFilesOnRebuildSpecified { get; set; }
 
         private int _maxFileOperationRetryAttempts;
 
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxFileOperationRetryAttemptsSpecified { get; set; }
+        protected bool MaxFileOperationRetryAttemptsSpecified { get; set; }
 
         private bool _enableAutoRebuildConfig;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAutoRebuildConfigSpecified { get; set; }
+        protected bool EnableAutoRebuildConfigSpecified { get; set; }
 
         private int _eventQueueSize;
 
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EventQueueSizeSpecified { get; set; }
+        protected bool EventQueueSizeSpecified { get; set; }
 
         private bool _allowDeviceCredentialsRetrieval;
 
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowDeviceCredentialsRetrievalSpecified { get; set; }
+        protected bool AllowDeviceCredentialsRetrievalSpecified { get; set; }
 
     }
 }

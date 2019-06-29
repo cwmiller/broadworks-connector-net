@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllAgentSpecified { get; set; }
+        protected bool AllAgentSpecified { get; set; }
 
         private List<string> _agentUserId = new List<string>();
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentUserIdSpecified { get; set; }
+        protected bool AgentUserIdSpecified { get; set; }
 
     }
 }

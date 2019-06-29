@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePackNameSpecified { get; set; }
+        protected bool ServicePackNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.GroupService> _groupServiceName = new List<BroadWorksConnector.Ocip.Models.GroupService>();
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupServiceNameSpecified { get; set; }
+        protected bool GroupServiceNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.UserService> _userServiceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServiceNameSpecified { get; set; }
+        protected bool UserServiceNameSpecified { get; set; }
 
     }
 }

@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultCountryCodeSpecified { get; set; }
+        protected bool DefaultCountryCodeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _countryCodeTable;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountryCodeTableSpecified { get; set; }
+        protected bool CountryCodeTableSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentUserIdSpecified { get; set; }
+        protected bool AgentUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UserDisplayNames _agentDisplayNames;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentDisplayNamesSpecified { get; set; }
+        protected bool AgentDisplayNamesSpecified { get; set; }
 
         private bool _available;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvailableSpecified { get; set; }
+        protected bool AvailableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AgentStatistics _statistics;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatisticsSpecified { get; set; }
+        protected bool StatisticsSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisallowAuthenticationNameSpecified { get; set; }
+        protected bool DisallowAuthenticationNameSpecified { get; set; }
 
         private bool _disallowOldPassword;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisallowOldPasswordSpecified { get; set; }
+        protected bool DisallowOldPasswordSpecified { get; set; }
 
         private bool _disallowReversedOldPassword;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisallowReversedOldPasswordSpecified { get; set; }
+        protected bool DisallowReversedOldPasswordSpecified { get; set; }
 
         private bool _restrictMinDigits;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RestrictMinDigitsSpecified { get; set; }
+        protected bool RestrictMinDigitsSpecified { get; set; }
 
         private int _minDigits;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinDigitsSpecified { get; set; }
+        protected bool MinDigitsSpecified { get; set; }
 
         private bool _restrictMinUpperCaseLetters;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RestrictMinUpperCaseLettersSpecified { get; set; }
+        protected bool RestrictMinUpperCaseLettersSpecified { get; set; }
 
         private int _minUpperCaseLetters;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinUpperCaseLettersSpecified { get; set; }
+        protected bool MinUpperCaseLettersSpecified { get; set; }
 
         private bool _restrictMinLowerCaseLetters;
 
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RestrictMinLowerCaseLettersSpecified { get; set; }
+        protected bool RestrictMinLowerCaseLettersSpecified { get; set; }
 
         private int _minLowerCaseLetters;
 
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinLowerCaseLettersSpecified { get; set; }
+        protected bool MinLowerCaseLettersSpecified { get; set; }
 
         private bool _restrictMinNonAlphanumericCharacters;
 
@@ -203,7 +203,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RestrictMinNonAlphanumericCharactersSpecified { get; set; }
+        protected bool RestrictMinNonAlphanumericCharactersSpecified { get; set; }
 
         private int _minNonAlphanumericCharacters;
 
@@ -223,7 +223,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinNonAlphanumericCharactersSpecified { get; set; }
+        protected bool MinNonAlphanumericCharactersSpecified { get; set; }
 
         private int _minLength;
 
@@ -243,7 +243,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinLengthSpecified { get; set; }
+        protected bool MinLengthSpecified { get; set; }
 
         private bool _sendPermanentLockoutNotification;
 
@@ -261,7 +261,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendPermanentLockoutNotificationSpecified { get; set; }
+        protected bool SendPermanentLockoutNotificationSpecified { get; set; }
 
         private string _permanentLockoutNotifyEmailAddress;
 
@@ -281,7 +281,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PermanentLockoutNotifyEmailAddressSpecified { get; set; }
+        protected bool PermanentLockoutNotifyEmailAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AuthenticationLockoutType _deviceProfileAuthenticationLockoutType;
 
@@ -299,7 +299,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceProfileAuthenticationLockoutTypeSpecified { get; set; }
+        protected bool DeviceProfileAuthenticationLockoutTypeSpecified { get; set; }
 
         private int _deviceProfileTemporaryLockoutThreshold;
 
@@ -319,7 +319,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceProfileTemporaryLockoutThresholdSpecified { get; set; }
+        protected bool DeviceProfileTemporaryLockoutThresholdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _deviceProfileWaitAlgorithm;
 
@@ -337,7 +337,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceProfileWaitAlgorithmSpecified { get; set; }
+        protected bool DeviceProfileWaitAlgorithmSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _deviceProfileLockoutFixedMinutes;
 
@@ -355,7 +355,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceProfileLockoutFixedMinutesSpecified { get; set; }
+        protected bool DeviceProfileLockoutFixedMinutesSpecified { get; set; }
 
         private int _deviceProfilePermanentLockoutThreshold;
 
@@ -375,7 +375,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceProfilePermanentLockoutThresholdSpecified { get; set; }
+        protected bool DeviceProfilePermanentLockoutThresholdSpecified { get; set; }
 
     }
 }

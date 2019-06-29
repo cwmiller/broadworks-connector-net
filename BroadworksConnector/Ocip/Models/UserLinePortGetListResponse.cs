@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LinePortTableSpecified { get; set; }
+        protected bool LinePortTableSpecified { get; set; }
 
     }
 }

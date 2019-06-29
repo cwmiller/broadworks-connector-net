@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddressSpecified { get; set; }
+        protected bool AddressSpecified { get; set; }
 
         private bool _isNetAddressExtended;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsNetAddressExtendedSpecified { get; set; }
+        protected bool IsNetAddressExtendedSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType _type;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TypeSpecified { get; set; }
+        protected bool TypeSpecified { get; set; }
 
         private string _description;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CostInformationSourceTableSpecified { get; set; }
+        protected bool CostInformationSourceTableSpecified { get; set; }
 
     }
 }

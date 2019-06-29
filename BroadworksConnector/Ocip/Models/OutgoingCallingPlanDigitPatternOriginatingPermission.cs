@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigitPatternNameSpecified { get; set; }
+        protected bool DigitPatternNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _permission;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PermissionSpecified { get; set; }
+        protected bool PermissionSpecified { get; set; }
 
     }
 }

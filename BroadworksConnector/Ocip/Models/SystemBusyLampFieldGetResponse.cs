@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayLocalUserIdentityLastNameFirstSpecified { get; set; }
+        protected bool DisplayLocalUserIdentityLastNameFirstSpecified { get; set; }
 
     }
 }

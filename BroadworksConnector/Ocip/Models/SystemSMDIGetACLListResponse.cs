@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AclTableSpecified { get; set; }
+        protected bool AclTableSpecified { get; set; }
 
     }
 }

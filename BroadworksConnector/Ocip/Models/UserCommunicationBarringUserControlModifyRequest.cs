@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private int? _enableProfile;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableProfileSpecified { get; set; }
+        protected bool EnableProfileSpecified { get; set; }
 
         private string _oldPasscode;
 
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OldPasscodeSpecified { get; set; }
+        protected bool OldPasscodeSpecified { get; set; }
 
         private string _newPasscode;
 
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewPasscodeSpecified { get; set; }
+        protected bool NewPasscodeSpecified { get; set; }
 
         private bool _resetLockout;
 
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResetLockoutSpecified { get; set; }
+        protected bool ResetLockoutSpecified { get; set; }
 
     }
 }

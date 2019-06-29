@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CollaborateFromAddressSpecified { get; set; }
+        protected bool CollaborateFromAddressSpecified { get; set; }
 
     }
 }

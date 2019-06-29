@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatusCountTableSpecified { get; set; }
+        protected bool StatusCountTableSpecified { get; set; }
 
     }
 }

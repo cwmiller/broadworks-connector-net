@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartTimeSpecified { get; set; }
+        protected bool StartTimeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleDuration _duration;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DurationSpecified { get; set; }
+        protected bool DurationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Recurrence _recurrence;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurrenceSpecified { get; set; }
+        protected bool RecurrenceSpecified { get; set; }
 
     }
 }

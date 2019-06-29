@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _playToneToAgentForSilentMonitoring;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayToneToAgentForSilentMonitoringSpecified { get; set; }
+        protected bool PlayToneToAgentForSilentMonitoringSpecified { get; set; }
 
     }
 }

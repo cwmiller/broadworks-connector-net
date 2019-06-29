@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetAddressSpecified { get; set; }
+        protected bool NetAddressSpecified { get; set; }
 
         private bool _deleteAllMessageNames;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteAllMessageNamesSpecified { get; set; }
+        protected bool DeleteAllMessageNamesSpecified { get; set; }
 
         private List<string> _messageNameStartsWith = new List<string>();
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MessageNameStartsWithSpecified { get; set; }
+        protected bool MessageNameStartsWithSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TypeSpecified { get; set; }
+        protected bool TypeSpecified { get; set; }
 
         private int _numberOfDigits;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfDigitsSpecified { get; set; }
+        protected bool NumberOfDigitsSpecified { get; set; }
 
         private bool _allowLocalAndTollFreeCalls;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowLocalAndTollFreeCallsSpecified { get; set; }
+        protected bool AllowLocalAndTollFreeCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _mandatoryUsageUserTable;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MandatoryUsageUserTableSpecified { get; set; }
+        protected bool MandatoryUsageUserTableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _optionalUsageUserTable;
 
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OptionalUsageUserTableSpecified { get; set; }
+        protected bool OptionalUsageUserTableSpecified { get; set; }
 
     }
 }

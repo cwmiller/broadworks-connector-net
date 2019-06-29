@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementEventQueueType _eventQueueType;
 
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EventQueueTypeSpecified { get; set; }
+        protected bool EventQueueTypeSpecified { get; set; }
 
         private int _responseSizeLimit;
 
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponseSizeLimitSpecified { get; set; }
+        protected bool ResponseSizeLimitSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventStatusInProgressOrPending _searchCriteriaExactDeviceManagementEventStatusInProgressOrPending;
 
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExactDeviceManagementEventStatusInProgressOrPendingSpecified { get; set; }
+        protected bool SearchCriteriaExactDeviceManagementEventStatusInProgressOrPendingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventStatusCompleted _searchCriteriaExactDeviceManagementEventStatusCompleted;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExactDeviceManagementEventStatusCompletedSpecified { get; set; }
+        protected bool SearchCriteriaExactDeviceManagementEventStatusCompletedSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventAction _searchCriteriaExactDeviceManagementEventAction;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExactDeviceManagementEventActionSpecified { get; set; }
+        protected bool SearchCriteriaExactDeviceManagementEventActionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventLevel _searchCriteriaExactDeviceManagementEventLevel;
 
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExactDeviceManagementEventLevelSpecified { get; set; }
+        protected bool SearchCriteriaExactDeviceManagementEventLevelSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceManagementEventType _searchCriteriaExactDeviceManagementEventType;
 
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExactDeviceManagementEventTypeSpecified { get; set; }
+        protected bool SearchCriteriaExactDeviceManagementEventTypeSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventAdditionalInfo> _searchCriteriaDeviceManagementEventAdditionalInfo = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventAdditionalInfo>();
 
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaDeviceManagementEventAdditionalInfoSpecified { get; set; }
+        protected bool SearchCriteriaDeviceManagementEventAdditionalInfoSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventLoginId> _searchCriteriaDeviceManagementEventLoginId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventLoginId>();
 
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaDeviceManagementEventLoginIdSpecified { get; set; }
+        protected bool SearchCriteriaDeviceManagementEventLoginIdSpecified { get; set; }
 
     }
 }

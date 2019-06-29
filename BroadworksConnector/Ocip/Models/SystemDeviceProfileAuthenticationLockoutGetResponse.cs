@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LockoutTableSpecified { get; set; }
+        protected bool LockoutTableSpecified { get; set; }
 
     }
 }

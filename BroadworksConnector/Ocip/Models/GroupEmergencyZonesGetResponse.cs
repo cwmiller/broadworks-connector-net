@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition _emergencyZonesProhibition;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmergencyZonesProhibitionSpecified { get; set; }
+        protected bool EmergencyZonesProhibitionSpecified { get; set; }
 
         private bool _sendEmergencyCallNotifyEmail;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendEmergencyCallNotifyEmailSpecified { get; set; }
+        protected bool SendEmergencyCallNotifyEmailSpecified { get; set; }
 
         private string _emergencyCallNotifyEmailAddress;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmergencyCallNotifyEmailAddressSpecified { get; set; }
+        protected bool EmergencyCallNotifyEmailAddressSpecified { get; set; }
 
     }
 }

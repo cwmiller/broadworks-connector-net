@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServerTimeZoneSpecified { get; set; }
+        protected bool ServerTimeZoneSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _timeZoneTable;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeZoneTableSpecified { get; set; }
+        protected bool TimeZoneTableSpecified { get; set; }
 
     }
 }

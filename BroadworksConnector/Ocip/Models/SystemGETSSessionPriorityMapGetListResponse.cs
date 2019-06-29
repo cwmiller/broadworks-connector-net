@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SessionPriorityTableSpecified { get; set; }
+        protected bool SessionPriorityTableSpecified { get; set; }
 
     }
 }

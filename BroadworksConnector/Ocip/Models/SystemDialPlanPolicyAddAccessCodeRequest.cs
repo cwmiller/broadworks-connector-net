@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessCodeSpecified { get; set; }
+        protected bool AccessCodeSpecified { get; set; }
 
         private bool _includeCodeForNetworkTranslationsAndRouting;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeCodeForNetworkTranslationsAndRoutingSpecified { get; set; }
+        protected bool IncludeCodeForNetworkTranslationsAndRoutingSpecified { get; set; }
 
         private bool _includeCodeForScreeningServices;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeCodeForScreeningServicesSpecified { get; set; }
+        protected bool IncludeCodeForScreeningServicesSpecified { get; set; }
 
         private bool _enableSecondaryDialTone;
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableSecondaryDialToneSpecified { get; set; }
+        protected bool EnableSecondaryDialToneSpecified { get; set; }
 
         private string _description;
 
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
     }
 }

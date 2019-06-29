@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileSourceSpecified { get; set; }
+        protected bool FileSourceSpecified { get; set; }
 
         private string _configurationFileName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfigurationFileNameSpecified { get; set; }
+        protected bool ConfigurationFileNameSpecified { get; set; }
 
         private string _accessUrl;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessUrlSpecified { get; set; }
+        protected bool AccessUrlSpecified { get; set; }
 
         private string _repositoryUrl;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepositoryUrlSpecified { get; set; }
+        protected bool RepositoryUrlSpecified { get; set; }
 
         private string _templateUrl;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TemplateUrlSpecified { get; set; }
+        protected bool TemplateUrlSpecified { get; set; }
 
     }
 }

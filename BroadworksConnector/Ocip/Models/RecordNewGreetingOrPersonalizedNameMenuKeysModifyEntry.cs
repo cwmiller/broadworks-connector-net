@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndRecordingSpecified { get; set; }
+        protected bool EndRecordingSpecified { get; set; }
 
     }
 }

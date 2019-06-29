@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResellerIdSpecified { get; set; }
+        protected bool ResellerIdSpecified { get; set; }
 
         private string _serviceProviderId;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _svcProviderId;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SvcProviderIdSpecified { get; set; }
+        protected bool SvcProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _userId;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _linePort;
 
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LinePortSpecified { get; set; }
+        protected bool LinePortSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
 
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceLevelSpecified { get; set; }
+        protected bool DeviceLevelSpecified { get; set; }
 
         private string _deviceName;
 
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceNameSpecified { get; set; }
+        protected bool DeviceNameSpecified { get; set; }
 
         private string _deviceType;
 
@@ -207,7 +207,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeSpecified { get; set; }
+        protected bool DeviceTypeSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaRegistrationURI> _searchCriteriaRegistrationURI = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaRegistrationURI>();
 
@@ -225,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaRegistrationURISpecified { get; set; }
+        protected bool SearchCriteriaRegistrationURISpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaSIPContact> _searchCriteriaSIPContact = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaSIPContact>();
 
@@ -243,7 +243,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaSIPContactSpecified { get; set; }
+        protected bool SearchCriteriaSIPContactSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RegistrationEndpointType _endpointType;
 
@@ -261,7 +261,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndpointTypeSpecified { get; set; }
+        protected bool EndpointTypeSpecified { get; set; }
 
         private bool _expired;
 
@@ -279,7 +279,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExpiredSpecified { get; set; }
+        protected bool ExpiredSpecified { get; set; }
 
     }
 }

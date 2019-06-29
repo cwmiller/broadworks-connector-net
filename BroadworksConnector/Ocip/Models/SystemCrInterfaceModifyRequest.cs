@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CrAuditEnabledSpecified { get; set; }
+        protected bool CrAuditEnabledSpecified { get; set; }
 
         private int _crAuditIntervalMilliseconds;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CrAuditIntervalMillisecondsSpecified { get; set; }
+        protected bool CrAuditIntervalMillisecondsSpecified { get; set; }
 
         private int _crAuditTimeoutMilliseconds;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CrAuditTimeoutMillisecondsSpecified { get; set; }
+        protected bool CrAuditTimeoutMillisecondsSpecified { get; set; }
 
         private bool _crConnectionEnabled;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CrConnectionEnabledSpecified { get; set; }
+        protected bool CrConnectionEnabledSpecified { get; set; }
 
         private int _crConnectionTimeoutMilliseconds;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CrConnectionTimeoutMillisecondsSpecified { get; set; }
+        protected bool CrConnectionTimeoutMillisecondsSpecified { get; set; }
 
         private int _crTcpConnectionTimeoutSeconds;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CrTcpConnectionTimeoutSecondsSpecified { get; set; }
+        protected bool CrTcpConnectionTimeoutSecondsSpecified { get; set; }
 
         private int _crNumberOfReconnectionAttempts;
 
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CrNumberOfReconnectionAttemptsSpecified { get; set; }
+        protected bool CrNumberOfReconnectionAttemptsSpecified { get; set; }
 
     }
 }

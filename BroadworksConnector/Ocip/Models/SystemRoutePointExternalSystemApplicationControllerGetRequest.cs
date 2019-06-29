@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExternalSystemSpecified { get; set; }
+        protected bool ExternalSystemSpecified { get; set; }
 
     }
 }

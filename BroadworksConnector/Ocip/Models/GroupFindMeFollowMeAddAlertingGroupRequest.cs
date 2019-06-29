@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private string _alertingGroupName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertingGroupNameSpecified { get; set; }
+        protected bool AlertingGroupNameSpecified { get; set; }
 
         private string _alertingGroupDescription;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertingGroupDescriptionSpecified { get; set; }
+        protected bool AlertingGroupDescriptionSpecified { get; set; }
 
         private bool _useDiversionInhibitor;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDiversionInhibitorSpecified { get; set; }
+        protected bool UseDiversionInhibitorSpecified { get; set; }
 
         private bool _answerConfirmationRequired;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnswerConfirmationRequiredSpecified { get; set; }
+        protected bool AnswerConfirmationRequiredSpecified { get; set; }
 
         private int _numberOfRings;
 
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfRingsSpecified { get; set; }
+        protected bool NumberOfRingsSpecified { get; set; }
 
         private string _phoneNumber;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
         private string _userId;
 
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteDestinationSpecified { get; set; }
+        protected bool RouteDestinationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemSMDIMessageDeskModifyServerRouteRequestDeviceNameList _deviceNameList;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceNameListSpecified { get; set; }
+        protected bool DeviceNameListSpecified { get; set; }
 
     }
 }

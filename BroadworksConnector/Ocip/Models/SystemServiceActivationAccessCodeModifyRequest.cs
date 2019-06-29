@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private string _terminatingAccessCode;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TerminatingAccessCodeSpecified { get; set; }
+        protected bool TerminatingAccessCodeSpecified { get; set; }
 
         private string _redirectingAccessCode;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectingAccessCodeSpecified { get; set; }
+        protected bool RedirectingAccessCodeSpecified { get; set; }
 
         private string _clickToDialAccessCode;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ClickToDialAccessCodeSpecified { get; set; }
+        protected bool ClickToDialAccessCodeSpecified { get; set; }
 
     }
 }

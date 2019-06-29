@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResellerIdSpecified { get; set; }
+        protected bool ResellerIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.FileResource _serviceOffering;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceOfferingSpecified { get; set; }
+        protected bool ServiceOfferingSpecified { get; set; }
 
     }
 }

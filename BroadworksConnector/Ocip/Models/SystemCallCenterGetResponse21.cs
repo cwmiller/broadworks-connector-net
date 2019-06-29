@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultFromAddressSpecified { get; set; }
+        protected bool DefaultFromAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes _statisticsSamplingPeriodMinutes;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatisticsSamplingPeriodMinutesSpecified { get; set; }
+        protected bool StatisticsSamplingPeriodMinutesSpecified { get; set; }
 
         private bool _defaultEnableGuardTimer;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultEnableGuardTimerSpecified { get; set; }
+        protected bool DefaultEnableGuardTimerSpecified { get; set; }
 
         private int _defaultGuardTimerSeconds;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultGuardTimerSecondsSpecified { get; set; }
+        protected bool DefaultGuardTimerSecondsSpecified { get; set; }
 
         private bool _forceAgentUnavailableOnDNDActivation;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceAgentUnavailableOnDNDActivationSpecified { get; set; }
+        protected bool ForceAgentUnavailableOnDNDActivationSpecified { get; set; }
 
         private bool _forceAgentUnavailableOnPersonalCalls;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceAgentUnavailableOnPersonalCallsSpecified { get; set; }
+        protected bool ForceAgentUnavailableOnPersonalCallsSpecified { get; set; }
 
         private bool _forceAgentUnavailableOnBouncedCallLimit;
 
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceAgentUnavailableOnBouncedCallLimitSpecified { get; set; }
+        protected bool ForceAgentUnavailableOnBouncedCallLimitSpecified { get; set; }
 
         private int _numberConsecutiveBouncedCallsToForceAgentUnavailable;
 
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified { get; set; }
+        protected bool NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified { get; set; }
 
         private bool _forceAgentUnavailableOnNotReachable;
 
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceAgentUnavailableOnNotReachableSpecified { get; set; }
+        protected bool ForceAgentUnavailableOnNotReachableSpecified { get; set; }
 
         private bool _defaultPlayRingWhenOfferCall;
 
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultPlayRingWhenOfferCallSpecified { get; set; }
+        protected bool DefaultPlayRingWhenOfferCallSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterUniformCallDistributionPolicyScope _uniformCallDistributionPolicyScope;
 
@@ -213,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UniformCallDistributionPolicyScopeSpecified { get; set; }
+        protected bool UniformCallDistributionPolicyScopeSpecified { get; set; }
 
         private int _callHandlingSamplingPeriodMinutes;
 
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallHandlingSamplingPeriodMinutesSpecified { get; set; }
+        protected bool CallHandlingSamplingPeriodMinutesSpecified { get; set; }
 
         private int _callHandlingMinimumSamplingSize;
 
@@ -251,7 +251,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallHandlingMinimumSamplingSizeSpecified { get; set; }
+        protected bool CallHandlingMinimumSamplingSizeSpecified { get; set; }
 
         private bool _playToneToAgentForEmergencyCall;
 
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayToneToAgentForEmergencyCallSpecified { get; set; }
+        protected bool PlayToneToAgentForEmergencyCallSpecified { get; set; }
 
         private string _emergencyCallCLIDPrefix;
 
@@ -287,7 +287,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmergencyCallCLIDPrefixSpecified { get; set; }
+        protected bool EmergencyCallCLIDPrefixSpecified { get; set; }
 
         private int _thresholdCrossingNotificationEmailGuardTimerSeconds;
 
@@ -306,7 +306,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdCrossingNotificationEmailGuardTimerSecondsSpecified { get; set; }
+        protected bool ThresholdCrossingNotificationEmailGuardTimerSecondsSpecified { get; set; }
 
         private bool _allowAgentDeviceInitiatedForward;
 
@@ -323,7 +323,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowAgentDeviceInitiatedForwardSpecified { get; set; }
+        protected bool AllowAgentDeviceInitiatedForwardSpecified { get; set; }
 
     }
 }

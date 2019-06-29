@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportsEnhancedConfigurationSpecified { get; set; }
+        protected bool SupportsEnhancedConfigurationSpecified { get; set; }
 
         private bool _supportsReset;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportsResetSpecified { get; set; }
+        protected bool SupportsResetSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configurationType;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfigurationTypeSpecified { get; set; }
+        protected bool ConfigurationTypeSpecified { get; set; }
 
         private string _configurationFileName;
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfigurationFileNameSpecified { get; set; }
+        protected bool ConfigurationFileNameSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private List<string> _destinationPhoneNumber = new List<string>();
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DestinationPhoneNumberSpecified { get; set; }
+        protected bool DestinationPhoneNumberSpecified { get; set; }
 
         private bool _isAnswerTimeoutEnabled;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsAnswerTimeoutEnabledSpecified { get; set; }
+        protected bool IsAnswerTimeoutEnabledSpecified { get; set; }
 
         private int _answerTimeoutMinutes;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnswerTimeoutMinutesSpecified { get; set; }
+        protected bool AnswerTimeoutMinutesSpecified { get; set; }
 
     }
 }

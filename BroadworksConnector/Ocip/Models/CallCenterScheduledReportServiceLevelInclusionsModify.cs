@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeOverflowTimeTransferedInServiceLevelSpecified { get; set; }
+        protected bool IncludeOverflowTimeTransferedInServiceLevelSpecified { get; set; }
 
         private bool _includeOtherTransfersInServiceLevel;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeOtherTransfersInServiceLevelSpecified { get; set; }
+        protected bool IncludeOtherTransfersInServiceLevelSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel _abandonedCallsInServiceLevel;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbandonedCallsInServiceLevelSpecified { get; set; }
+        protected bool AbandonedCallsInServiceLevelSpecified { get; set; }
 
         private int? _abandonedCallIntervalSeconds;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbandonedCallIntervalSecondsSpecified { get; set; }
+        protected bool AbandonedCallIntervalSecondsSpecified { get; set; }
 
     }
 }

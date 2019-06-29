@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayEntranceMessageSpecified { get; set; }
+        protected bool PlayEntranceMessageSpecified { get; set; }
 
         private bool _mandatoryEntranceMessage;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MandatoryEntranceMessageSpecified { get; set; }
+        protected bool MandatoryEntranceMessageSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _entranceAudioMessageSelection;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceAudioMessageSelectionSpecified { get; set; }
+        protected bool EntranceAudioMessageSelectionSpecified { get; set; }
 
         private string _entranceAudioFileUrl;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceAudioFileUrlSpecified { get; set; }
+        protected bool EntranceAudioFileUrlSpecified { get; set; }
 
         private string _entranceMessageAudioFileDescription;
 
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceMessageAudioFileDescriptionSpecified { get; set; }
+        protected bool EntranceMessageAudioFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _entranceAudioFileMediaType;
 
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceAudioFileMediaTypeSpecified { get; set; }
+        protected bool EntranceAudioFileMediaTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _entranceVideoMessageSelection;
 
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceVideoMessageSelectionSpecified { get; set; }
+        protected bool EntranceVideoMessageSelectionSpecified { get; set; }
 
         private string _entranceVideoFileUrl;
 
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceVideoFileUrlSpecified { get; set; }
+        protected bool EntranceVideoFileUrlSpecified { get; set; }
 
         private string _entranceMessageVideoFileDescription;
 
@@ -182,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceMessageVideoFileDescriptionSpecified { get; set; }
+        protected bool EntranceMessageVideoFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _entranceVideoFileMediaType;
 
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceVideoFileMediaTypeSpecified { get; set; }
+        protected bool EntranceVideoFileMediaTypeSpecified { get; set; }
 
         private bool _playPeriodicComfortMessage;
 
@@ -217,7 +217,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayPeriodicComfortMessageSpecified { get; set; }
+        protected bool PlayPeriodicComfortMessageSpecified { get; set; }
 
         private int _timeBetweenComfortMessagesSeconds;
 
@@ -236,7 +236,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeBetweenComfortMessagesSecondsSpecified { get; set; }
+        protected bool TimeBetweenComfortMessagesSecondsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _periodicComfortAudioMessageSelection;
 
@@ -253,7 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeriodicComfortAudioMessageSelectionSpecified { get; set; }
+        protected bool PeriodicComfortAudioMessageSelectionSpecified { get; set; }
 
         private string _periodicComfortAudioFileUrl;
 
@@ -273,7 +273,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeriodicComfortAudioFileUrlSpecified { get; set; }
+        protected bool PeriodicComfortAudioFileUrlSpecified { get; set; }
 
         private string _periodicComfortMessageAudioFileDescription;
 
@@ -293,7 +293,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeriodicComfortMessageAudioFileDescriptionSpecified { get; set; }
+        protected bool PeriodicComfortMessageAudioFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _periodicComfortAudioFileMediaType;
 
@@ -311,7 +311,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeriodicComfortAudioFileMediaTypeSpecified { get; set; }
+        protected bool PeriodicComfortAudioFileMediaTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _periodicComfortVideoMessageSelection;
 
@@ -329,7 +329,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeriodicComfortVideoMessageSelectionSpecified { get; set; }
+        protected bool PeriodicComfortVideoMessageSelectionSpecified { get; set; }
 
         private string _periodicComfortVideoFileUrl;
 
@@ -349,7 +349,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeriodicComfortVideoFileUrlSpecified { get; set; }
+        protected bool PeriodicComfortVideoFileUrlSpecified { get; set; }
 
         private string _periodicComfortMessageVideoFileDescription;
 
@@ -369,7 +369,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeriodicComfortMessageVideoFileDescriptionSpecified { get; set; }
+        protected bool PeriodicComfortMessageVideoFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _periodicComfortVideoFileMediaType;
 
@@ -387,7 +387,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeriodicComfortVideoFileMediaTypeSpecified { get; set; }
+        protected bool PeriodicComfortVideoFileMediaTypeSpecified { get; set; }
 
         private bool _enableMediaOnHoldForQueuedCalls;
 
@@ -404,7 +404,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableMediaOnHoldForQueuedCallsSpecified { get; set; }
+        protected bool EnableMediaOnHoldForQueuedCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceRead16 _mediaOnHoldSource;
 
@@ -421,7 +421,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaOnHoldSourceSpecified { get; set; }
+        protected bool MediaOnHoldSourceSpecified { get; set; }
 
         private bool _mediaOnHoldUseAlternateSourceForInternalCalls;
 
@@ -439,7 +439,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaOnHoldUseAlternateSourceForInternalCallsSpecified { get; set; }
+        protected bool MediaOnHoldUseAlternateSourceForInternalCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceRead16 _mediaOnHoldInternalSource;
 
@@ -457,7 +457,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaOnHoldInternalSourceSpecified { get; set; }
+        protected bool MediaOnHoldInternalSourceSpecified { get; set; }
 
     }
 }

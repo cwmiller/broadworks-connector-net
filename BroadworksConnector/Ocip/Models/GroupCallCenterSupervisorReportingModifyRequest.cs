@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private string _reportingServerName;
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportingServerNameSpecified { get; set; }
+        protected bool ReportingServerNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _supervisorUserIdList;
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupervisorUserIdListSpecified { get; set; }
+        protected bool SupervisorUserIdListSpecified { get; set; }
 
     }
 }

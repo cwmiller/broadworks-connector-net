@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ModeSpecified { get; set; }
+        protected bool ModeSpecified { get; set; }
 
         private string _value;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ValueSpecified { get; set; }
+        protected bool ValueSpecified { get; set; }
 
         private bool _isCaseInsensitive;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsCaseInsensitiveSpecified { get; set; }
+        protected bool IsCaseInsensitiveSpecified { get; set; }
 
     }
 }

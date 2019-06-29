@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecurityClassificationSpecified { get; set; }
+        protected bool SecurityClassificationSpecified { get; set; }
 
         private string _customizedSecurityClassification;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CustomizedSecurityClassificationSpecified { get; set; }
+        protected bool CustomizedSecurityClassificationSpecified { get; set; }
 
     }
 }

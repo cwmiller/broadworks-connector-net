@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ClassmarkTableSpecified { get; set; }
+        protected bool ClassmarkTableSpecified { get; set; }
 
     }
 }

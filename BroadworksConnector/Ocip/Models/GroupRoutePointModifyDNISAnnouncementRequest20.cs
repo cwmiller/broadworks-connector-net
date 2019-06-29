@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DnisKeySpecified { get; set; }
+        protected bool DnisKeySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify20 _mediaOnHoldSource;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaOnHoldSourceSpecified { get; set; }
+        protected bool MediaOnHoldSourceSpecified { get; set; }
 
     }
 }

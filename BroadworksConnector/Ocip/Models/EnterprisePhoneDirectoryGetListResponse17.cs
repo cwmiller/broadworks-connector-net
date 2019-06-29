@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DirectoryTableSpecified { get; set; }
+        protected bool DirectoryTableSpecified { get; set; }
 
     }
 }

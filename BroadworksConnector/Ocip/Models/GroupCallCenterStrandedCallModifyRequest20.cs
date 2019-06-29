@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterStrandedCallProcessingAction _action;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ActionSpecified { get; set; }
+        protected bool ActionSpecified { get; set; }
 
         private string _transferPhoneNumber;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferPhoneNumberSpecified { get; set; }
+        protected bool TransferPhoneNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioMessageSelectionSpecified { get; set; }
+        protected bool AudioMessageSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify _audioUrlList;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioUrlListSpecified { get; set; }
+        protected bool AudioUrlListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify20 _audioFileList;
 
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFileListSpecified { get; set; }
+        protected bool AudioFileListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
 
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoMessageSelectionSpecified { get; set; }
+        protected bool VideoMessageSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify _videoUrlList;
 
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoUrlListSpecified { get; set; }
+        protected bool VideoUrlListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify20 _videoFileList;
 
@@ -182,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoFileListSpecified { get; set; }
+        protected bool VideoFileListSpecified { get; set; }
 
     }
 }

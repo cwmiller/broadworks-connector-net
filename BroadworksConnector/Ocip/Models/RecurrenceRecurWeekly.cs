@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurIntervalSpecified { get; set; }
+        protected bool RecurIntervalSpecified { get; set; }
 
         private bool _sunday;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SundaySpecified { get; set; }
+        protected bool SundaySpecified { get; set; }
 
         private bool _monday;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MondaySpecified { get; set; }
+        protected bool MondaySpecified { get; set; }
 
         private bool _tuesday;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TuesdaySpecified { get; set; }
+        protected bool TuesdaySpecified { get; set; }
 
         private bool _wednesday;
 
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WednesdaySpecified { get; set; }
+        protected bool WednesdaySpecified { get; set; }
 
         private bool _thursday;
 
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThursdaySpecified { get; set; }
+        protected bool ThursdaySpecified { get; set; }
 
         private bool _friday;
 
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FridaySpecified { get; set; }
+        protected bool FridaySpecified { get; set; }
 
         private bool _saturday;
 
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SaturdaySpecified { get; set; }
+        protected bool SaturdaySpecified { get; set; }
 
     }
 }

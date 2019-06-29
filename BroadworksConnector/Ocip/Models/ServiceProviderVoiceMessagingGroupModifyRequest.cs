@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _deliveryFromAddress;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeliveryFromAddressSpecified { get; set; }
+        protected bool DeliveryFromAddressSpecified { get; set; }
 
         private string _notificationFromAddress;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NotificationFromAddressSpecified { get; set; }
+        protected bool NotificationFromAddressSpecified { get; set; }
 
         private string _voicePortalLockoutFromAddress;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalLockoutFromAddressSpecified { get; set; }
+        protected bool VoicePortalLockoutFromAddressSpecified { get; set; }
 
         private bool _useSystemDefaultDeliveryFromAddress;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSystemDefaultDeliveryFromAddressSpecified { get; set; }
+        protected bool UseSystemDefaultDeliveryFromAddressSpecified { get; set; }
 
         private bool _useSystemDefaultNotificationFromAddress;
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSystemDefaultNotificationFromAddressSpecified { get; set; }
+        protected bool UseSystemDefaultNotificationFromAddressSpecified { get; set; }
 
         private bool _useSystemDefaultVoicePortalLockoutFromAddress;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSystemDefaultVoicePortalLockoutFromAddressSpecified { get; set; }
+        protected bool UseSystemDefaultVoicePortalLockoutFromAddressSpecified { get; set; }
 
     }
 }

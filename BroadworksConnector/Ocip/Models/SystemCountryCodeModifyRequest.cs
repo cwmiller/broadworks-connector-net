@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountryCodeSpecified { get; set; }
+        protected bool CountryCodeSpecified { get; set; }
 
         private int _ringPeriodMilliseconds;
 
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RingPeriodMillisecondsSpecified { get; set; }
+        protected bool RingPeriodMillisecondsSpecified { get; set; }
 
         private int _offHookWarningTimerSeconds;
 
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OffHookWarningTimerSecondsSpecified { get; set; }
+        protected bool OffHookWarningTimerSecondsSpecified { get; set; }
 
         private bool _enableNationalPrefix;
 
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNationalPrefixSpecified { get; set; }
+        protected bool EnableNationalPrefixSpecified { get; set; }
 
         private string _nationalPrefix;
 
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NationalPrefixSpecified { get; set; }
+        protected bool NationalPrefixSpecified { get; set; }
 
         private bool _becomeDefaultCountryCode;
 
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BecomeDefaultCountryCodeSpecified { get; set; }
+        protected bool BecomeDefaultCountryCodeSpecified { get; set; }
 
         private int _maxCallWaitingTones;
 
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCallWaitingTonesSpecified { get; set; }
+        protected bool MaxCallWaitingTonesSpecified { get; set; }
 
         private int _timeBetweenCallWaitingTonesMilliseconds;
 
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeBetweenCallWaitingTonesMillisecondsSpecified { get; set; }
+        protected bool TimeBetweenCallWaitingTonesMillisecondsSpecified { get; set; }
 
         private bool _disableNationalPrefixForOffNetCalls;
 
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisableNationalPrefixForOffNetCallsSpecified { get; set; }
+        protected bool DisableNationalPrefixForOffNetCallsSpecified { get; set; }
 
     }
 }

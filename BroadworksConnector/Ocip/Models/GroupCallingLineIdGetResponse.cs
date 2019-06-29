@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseGroupNumberSpecified { get; set; }
+        protected bool UseGroupNumberSpecified { get; set; }
 
         private bool _useGroupName;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseGroupNameSpecified { get; set; }
+        protected bool UseGroupNameSpecified { get; set; }
 
         private string _callingLineIdPhoneNumber;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdPhoneNumberSpecified { get; set; }
+        protected bool CallingLineIdPhoneNumberSpecified { get; set; }
 
         private string _callingLineIdName;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdNameSpecified { get; set; }
+        protected bool CallingLineIdNameSpecified { get; set; }
 
     }
 }

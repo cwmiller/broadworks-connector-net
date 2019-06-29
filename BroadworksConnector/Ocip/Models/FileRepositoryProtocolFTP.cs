@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpPassiveSpecified { get; set; }
+        protected bool FtpPassiveSpecified { get; set; }
 
         private string _netAddress;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetAddressSpecified { get; set; }
+        protected bool NetAddressSpecified { get; set; }
 
     }
 }

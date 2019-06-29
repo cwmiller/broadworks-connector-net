@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingMessageProcessing _processing;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProcessingSpecified { get; set; }
+        protected bool ProcessingSpecified { get; set; }
 
         private string _voiceMessageDeliveryEmailAddress;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessageDeliveryEmailAddressSpecified { get; set; }
+        protected bool VoiceMessageDeliveryEmailAddressSpecified { get; set; }
 
         private bool _usePhoneMessageWaitingIndicator;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UsePhoneMessageWaitingIndicatorSpecified { get; set; }
+        protected bool UsePhoneMessageWaitingIndicatorSpecified { get; set; }
 
         private bool _sendVoiceMessageNotifyEmail;
 
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendVoiceMessageNotifyEmailSpecified { get; set; }
+        protected bool SendVoiceMessageNotifyEmailSpecified { get; set; }
 
         private string _voiceMessageNotifyEmailAddress;
 
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessageNotifyEmailAddressSpecified { get; set; }
+        protected bool VoiceMessageNotifyEmailAddressSpecified { get; set; }
 
         private bool _sendCarbonCopyVoiceMessage;
 
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendCarbonCopyVoiceMessageSpecified { get; set; }
+        protected bool SendCarbonCopyVoiceMessageSpecified { get; set; }
 
         private string _voiceMessageCarbonCopyEmailAddress;
 
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessageCarbonCopyEmailAddressSpecified { get; set; }
+        protected bool VoiceMessageCarbonCopyEmailAddressSpecified { get; set; }
 
         private bool _transferOnZeroToPhoneNumber;
 
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferOnZeroToPhoneNumberSpecified { get; set; }
+        protected bool TransferOnZeroToPhoneNumberSpecified { get; set; }
 
         private string _transferPhoneNumber;
 
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferPhoneNumberSpecified { get; set; }
+        protected bool TransferPhoneNumberSpecified { get; set; }
 
         private bool _alwaysRedirectToVoiceMail;
 
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlwaysRedirectToVoiceMailSpecified { get; set; }
+        protected bool AlwaysRedirectToVoiceMailSpecified { get; set; }
 
         private bool _busyRedirectToVoiceMail;
 
@@ -233,7 +233,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyRedirectToVoiceMailSpecified { get; set; }
+        protected bool BusyRedirectToVoiceMailSpecified { get; set; }
 
         private bool _noAnswerRedirectToVoiceMail;
 
@@ -250,7 +250,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerRedirectToVoiceMailSpecified { get; set; }
+        protected bool NoAnswerRedirectToVoiceMailSpecified { get; set; }
 
     }
 }

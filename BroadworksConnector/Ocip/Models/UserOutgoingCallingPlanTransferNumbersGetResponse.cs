@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseCustomSettingsSpecified { get; set; }
+        protected bool UseCustomSettingsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers _userNumbers;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserNumbersSpecified { get; set; }
+        protected bool UserNumbersSpecified { get; set; }
 
     }
 }

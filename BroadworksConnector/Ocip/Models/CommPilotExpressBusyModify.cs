@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncomingCallsSpecified { get; set; }
+        protected bool IncomingCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotifyModify _voiceMailNotify;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMailNotifySpecified { get; set; }
+        protected bool VoiceMailNotifySpecified { get; set; }
 
     }
 }

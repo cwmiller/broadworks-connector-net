@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinExtensionSpecified { get; set; }
+        protected bool MinExtensionSpecified { get; set; }
 
         private string _maxExtension;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxExtensionSpecified { get; set; }
+        protected bool MaxExtensionSpecified { get; set; }
 
     }
 }

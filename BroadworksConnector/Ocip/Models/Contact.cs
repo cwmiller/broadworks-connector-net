@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactNameSpecified { get; set; }
+        protected bool ContactNameSpecified { get; set; }
 
         private string _contactNumber;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactNumberSpecified { get; set; }
+        protected bool ContactNumberSpecified { get; set; }
 
         private string _contactEmail;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactEmailSpecified { get; set; }
+        protected bool ContactEmailSpecified { get; set; }
 
     }
 }

@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SubmenuTableSpecified { get; set; }
+        protected bool SubmenuTableSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetPresenceToNoneSpecified { get; set; }
+        protected bool SetPresenceToNoneSpecified { get; set; }
 
         private string _setPresenceToBusinessTrip;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetPresenceToBusinessTripSpecified { get; set; }
+        protected bool SetPresenceToBusinessTripSpecified { get; set; }
 
         private string _setPresenceToGoneForTheDay;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetPresenceToGoneForTheDaySpecified { get; set; }
+        protected bool SetPresenceToGoneForTheDaySpecified { get; set; }
 
         private string _setPresenceToLunch;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetPresenceToLunchSpecified { get; set; }
+        protected bool SetPresenceToLunchSpecified { get; set; }
 
         private string _setPresenceToMeeting;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetPresenceToMeetingSpecified { get; set; }
+        protected bool SetPresenceToMeetingSpecified { get; set; }
 
         private string _setPresenceToOutOfOffice;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetPresenceToOutOfOfficeSpecified { get; set; }
+        protected bool SetPresenceToOutOfOfficeSpecified { get; set; }
 
         private string _setPresenceToTemporarilyOut;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetPresenceToTemporarilyOutSpecified { get; set; }
+        protected bool SetPresenceToTemporarilyOutSpecified { get; set; }
 
         private string _setPresenceToTraining;
 
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetPresenceToTrainingSpecified { get; set; }
+        protected bool SetPresenceToTrainingSpecified { get; set; }
 
         private string _setPresenceToUnavailable;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetPresenceToUnavailableSpecified { get; set; }
+        protected bool SetPresenceToUnavailableSpecified { get; set; }
 
         private string _setPresenceToVacation;
 
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetPresenceToVacationSpecified { get; set; }
+        protected bool SetPresenceToVacationSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -233,7 +233,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -253,7 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

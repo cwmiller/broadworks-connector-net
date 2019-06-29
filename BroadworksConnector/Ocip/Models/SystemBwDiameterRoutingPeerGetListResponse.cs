@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RoutingPeerTableSpecified { get; set; }
+        protected bool RoutingPeerTableSpecified { get; set; }
 
     }
 }

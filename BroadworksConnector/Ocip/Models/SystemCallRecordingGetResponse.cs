@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContinueCallAfterRecordingFailureSpecified { get; set; }
+        protected bool ContinueCallAfterRecordingFailureSpecified { get; set; }
 
         private int _refreshPeriodSeconds;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RefreshPeriodSecondsSpecified { get; set; }
+        protected bool RefreshPeriodSecondsSpecified { get; set; }
 
         private int _maxConsecutiveFailures;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConsecutiveFailuresSpecified { get; set; }
+        protected bool MaxConsecutiveFailuresSpecified { get; set; }
 
         private int _maxResponseWaitTimeMilliseconds;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
+        protected bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
 
         private bool _continueCallAfterVideoRecordingFailure;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContinueCallAfterVideoRecordingFailureSpecified { get; set; }
+        protected bool ContinueCallAfterVideoRecordingFailureSpecified { get; set; }
 
     }
 }

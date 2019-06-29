@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DirectTransferScreeningSpecified { get; set; }
+        protected bool DirectTransferScreeningSpecified { get; set; }
 
         private bool _enableEnhancedTollCallTyping;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableEnhancedTollCallTypingSpecified { get; set; }
+        protected bool EnableEnhancedTollCallTypingSpecified { get; set; }
 
     }
 }

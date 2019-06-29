@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SmdiServerTableSpecified { get; set; }
+        protected bool SmdiServerTableSpecified { get; set; }
 
     }
 }

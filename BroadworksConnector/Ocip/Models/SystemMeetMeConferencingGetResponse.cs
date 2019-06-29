@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceIdLengthSpecified { get; set; }
+        protected bool ConferenceIdLengthSpecified { get; set; }
 
         private int _moderatorPinLength;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ModeratorPinLengthSpecified { get; set; }
+        protected bool ModeratorPinLengthSpecified { get; set; }
 
         private bool _enableConferenceEndDateRestriction;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableConferenceEndDateRestrictionSpecified { get; set; }
+        protected bool EnableConferenceEndDateRestrictionSpecified { get; set; }
 
         private int _conferenceEndDateRestrictionMonths;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceEndDateRestrictionMonthsSpecified { get; set; }
+        protected bool ConferenceEndDateRestrictionMonthsSpecified { get; set; }
 
         private bool _deleteExpiredConferencesAfterHoldPeriod;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteExpiredConferencesAfterHoldPeriodSpecified { get; set; }
+        protected bool DeleteExpiredConferencesAfterHoldPeriodSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays _expiredConferenceHoldPeriodDays;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExpiredConferenceHoldPeriodDaysSpecified { get; set; }
+        protected bool ExpiredConferenceHoldPeriodDaysSpecified { get; set; }
 
         private string _recordingWebAppURL;
 
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecordingWebAppURLSpecified { get; set; }
+        protected bool RecordingWebAppURLSpecified { get; set; }
 
     }
 }

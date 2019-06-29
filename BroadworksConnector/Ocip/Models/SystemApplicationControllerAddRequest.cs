@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _subscriberId;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SubscriberIdSpecified { get; set; }
+        protected bool SubscriberIdSpecified { get; set; }
 
         private string _channelSetId;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChannelSetIdSpecified { get; set; }
+        protected bool ChannelSetIdSpecified { get; set; }
 
     }
 }

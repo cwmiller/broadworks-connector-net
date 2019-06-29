@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileRepositoryUserTableSpecified { get; set; }
+        protected bool FileRepositoryUserTableSpecified { get; set; }
 
     }
 }

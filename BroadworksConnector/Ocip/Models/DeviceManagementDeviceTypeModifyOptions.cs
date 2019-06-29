@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceAccessProtocolSpecified { get; set; }
+        protected bool DeviceAccessProtocolSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementTagMode _tagMode;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagModeSpecified { get; set; }
+        protected bool TagModeSpecified { get; set; }
 
         private string _tagSet;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagSetSpecified { get; set; }
+        protected bool TagSetSpecified { get; set; }
 
         private bool _allowDeviceProfileCustomTagSet;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowDeviceProfileCustomTagSetSpecified { get; set; }
+        protected bool AllowDeviceProfileCustomTagSetSpecified { get; set; }
 
         private bool _allowGroupCustomTagSet;
 
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowGroupCustomTagSetSpecified { get; set; }
+        protected bool AllowGroupCustomTagSetSpecified { get; set; }
 
         private bool _sendEmailUponResetFailure;
 
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendEmailUponResetFailureSpecified { get; set; }
+        protected bool SendEmailUponResetFailureSpecified { get; set; }
 
         private string _deviceAccessNetAddress;
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceAccessNetAddressSpecified { get; set; }
+        protected bool DeviceAccessNetAddressSpecified { get; set; }
 
         private int? _deviceAccessPort;
 
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceAccessPortSpecified { get; set; }
+        protected bool DeviceAccessPortSpecified { get; set; }
 
         private string _deviceAccessContext;
 
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceAccessContextSpecified { get; set; }
+        protected bool DeviceAccessContextSpecified { get; set; }
 
         private string _defaultDeviceLanguage;
 
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultDeviceLanguageSpecified { get; set; }
+        protected bool DefaultDeviceLanguageSpecified { get; set; }
 
         private string _defaultDeviceEncoding;
 
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultDeviceEncodingSpecified { get; set; }
+        protected bool DefaultDeviceEncodingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementUserNamePassword _accessDeviceCredentials;
 
@@ -242,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessDeviceCredentialsSpecified { get; set; }
+        protected bool AccessDeviceCredentialsSpecified { get; set; }
 
         private bool _useHttpDigestAuthentication;
 
@@ -260,7 +260,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseHttpDigestAuthenticationSpecified { get; set; }
+        protected bool UseHttpDigestAuthenticationSpecified { get; set; }
 
         private bool _macBasedFileAuthentication;
 
@@ -278,7 +278,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacBasedFileAuthenticationSpecified { get; set; }
+        protected bool MacBasedFileAuthenticationSpecified { get; set; }
 
         private bool _userNamePasswordFileAuthentication;
 
@@ -296,7 +296,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserNamePasswordFileAuthenticationSpecified { get; set; }
+        protected bool UserNamePasswordFileAuthenticationSpecified { get; set; }
 
         private bool _macInNonRequestURI;
 
@@ -314,7 +314,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacInNonRequestURISpecified { get; set; }
+        protected bool MacInNonRequestURISpecified { get; set; }
 
         private string _macFormatInNonRequestURI;
 
@@ -334,7 +334,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacFormatInNonRequestURISpecified { get; set; }
+        protected bool MacFormatInNonRequestURISpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResellerTableSpecified { get; set; }
+        protected bool ResellerTableSpecified { get; set; }
 
     }
 }

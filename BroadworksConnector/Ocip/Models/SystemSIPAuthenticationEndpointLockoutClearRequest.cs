@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserEndpointKeySpecified { get; set; }
+        protected bool UserEndpointKeySpecified { get; set; }
 
     }
 }

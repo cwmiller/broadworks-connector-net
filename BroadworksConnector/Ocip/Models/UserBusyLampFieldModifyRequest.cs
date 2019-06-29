@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _listURI;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ListURISpecified { get; set; }
+        protected bool ListURISpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _monitoredUserIdList;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MonitoredUserIdListSpecified { get; set; }
+        protected bool MonitoredUserIdListSpecified { get; set; }
 
         private bool _enableCallParkNotification;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallParkNotificationSpecified { get; set; }
+        protected bool EnableCallParkNotificationSpecified { get; set; }
 
     }
 }

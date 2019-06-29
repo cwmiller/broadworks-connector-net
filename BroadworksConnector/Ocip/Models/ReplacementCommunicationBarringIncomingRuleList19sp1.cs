@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RuleSpecified { get; set; }
+        protected bool RuleSpecified { get; set; }
 
     }
 }

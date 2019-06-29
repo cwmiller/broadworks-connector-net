@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LoginTokenSpecified { get; set; }
+        protected bool LoginTokenSpecified { get; set; }
 
     }
 }

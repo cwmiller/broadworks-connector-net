@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatusSpecified { get; set; }
+        protected bool StatusSpecified { get; set; }
 
         private string _treatmentFileName;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatmentFileNameSpecified { get; set; }
+        protected bool TreatmentFileNameSpecified { get; set; }
 
     }
 }

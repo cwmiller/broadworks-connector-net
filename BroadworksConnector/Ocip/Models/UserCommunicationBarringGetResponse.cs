@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseGroupSettingSpecified { get; set; }
+        protected bool UseGroupSettingSpecified { get; set; }
 
         private string _profileName;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileNameSpecified { get; set; }
+        protected bool ProfileNameSpecified { get; set; }
 
     }
 }

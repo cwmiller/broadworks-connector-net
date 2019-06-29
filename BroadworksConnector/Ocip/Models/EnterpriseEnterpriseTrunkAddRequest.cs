@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _enterpriseTrunkName;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnterpriseTrunkNameSpecified { get; set; }
+        protected bool EnterpriseTrunkNameSpecified { get; set; }
 
         private int _maximumRerouteAttempts;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumRerouteAttemptsSpecified { get; set; }
+        protected bool MaximumRerouteAttemptsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction _routeExhaustionAction;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteExhaustionActionSpecified { get; set; }
+        protected bool RouteExhaustionActionSpecified { get; set; }
 
         private string _routeExhaustionForwardAddress;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteExhaustionForwardAddressSpecified { get; set; }
+        protected bool RouteExhaustionForwardAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkAddRequestOrderedRouting _orderedRouting;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OrderedRoutingSpecified { get; set; }
+        protected bool OrderedRoutingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkAddRequestPriorityWeightedRouting _priorityWeightedRouting;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PriorityWeightedRoutingSpecified { get; set; }
+        protected bool PriorityWeightedRoutingSpecified { get; set; }
 
     }
 }

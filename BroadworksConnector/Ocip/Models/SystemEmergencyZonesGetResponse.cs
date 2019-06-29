@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultFromAddressSpecified { get; set; }
+        protected bool DefaultFromAddressSpecified { get; set; }
 
     }
 }

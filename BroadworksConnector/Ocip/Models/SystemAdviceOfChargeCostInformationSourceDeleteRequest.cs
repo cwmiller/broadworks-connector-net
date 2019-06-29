@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeerIdentitySpecified { get; set; }
+        protected bool PeerIdentitySpecified { get; set; }
 
     }
 }

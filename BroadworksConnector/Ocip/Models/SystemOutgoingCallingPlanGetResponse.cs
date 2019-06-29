@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DirectTransferScreeningSpecified { get; set; }
+        protected bool DirectTransferScreeningSpecified { get; set; }
 
     }
 }

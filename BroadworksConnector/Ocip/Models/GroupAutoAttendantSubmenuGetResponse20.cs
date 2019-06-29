@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnnouncementSelectionSpecified { get; set; }
+        protected bool AnnouncementSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFileSpecified { get; set; }
+        protected bool AudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoFileSpecified { get; set; }
+        protected bool VideoFileSpecified { get; set; }
 
         private bool _enableLevelExtensionDialing;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableLevelExtensionDialingSpecified { get; set; }
+        protected bool EnableLevelExtensionDialingSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyReadConfiguration20> _keyConfiguration = new List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyReadConfiguration20>();
 
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool KeyConfigurationSpecified { get; set; }
+        protected bool KeyConfigurationSpecified { get; set; }
 
     }
 }

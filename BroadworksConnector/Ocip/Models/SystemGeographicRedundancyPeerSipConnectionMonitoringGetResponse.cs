@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnabledSpecified { get; set; }
+        protected bool EnabledSpecified { get; set; }
 
         private int _heartbeatInterval;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HeartbeatIntervalSpecified { get; set; }
+        protected bool HeartbeatIntervalSpecified { get; set; }
 
         private int _heartbeatTimeout;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HeartbeatTimeoutSpecified { get; set; }
+        protected bool HeartbeatTimeoutSpecified { get; set; }
 
     }
 }

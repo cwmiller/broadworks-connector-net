@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallCapacityGroupTableSpecified { get; set; }
+        protected bool CallCapacityGroupTableSpecified { get; set; }
 
     }
 }

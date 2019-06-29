@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatusDurationHoursSpecified { get; set; }
+        protected bool StatusDurationHoursSpecified { get; set; }
 
         private int _statusAuditIntervalHours;
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatusAuditIntervalHoursSpecified { get; set; }
+        protected bool StatusAuditIntervalHoursSpecified { get; set; }
 
         private int _maximumConcurrentFaxesPerUser;
 
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumConcurrentFaxesPerUserSpecified { get; set; }
+        protected bool MaximumConcurrentFaxesPerUserSpecified { get; set; }
 
     }
 }

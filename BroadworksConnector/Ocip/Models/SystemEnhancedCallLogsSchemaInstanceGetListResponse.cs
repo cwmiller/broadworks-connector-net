@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SchemaInstanceUsageTableSpecified { get; set; }
+        protected bool SchemaInstanceUsageTableSpecified { get; set; }
 
     }
 }

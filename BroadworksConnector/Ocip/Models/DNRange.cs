@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinPhoneNumberSpecified { get; set; }
+        protected bool MinPhoneNumberSpecified { get; set; }
 
         private string _maxPhoneNumber;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxPhoneNumberSpecified { get; set; }
+        protected bool MaxPhoneNumberSpecified { get; set; }
 
     }
 }

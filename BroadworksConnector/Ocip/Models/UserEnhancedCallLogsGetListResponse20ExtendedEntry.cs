@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedCallLogSpecified { get; set; }
+        protected bool ExtendedCallLogSpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OperationSpecified { get; set; }
+        protected bool OperationSpecified { get; set; }
 
         private string _value;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ValueSpecified { get; set; }
+        protected bool ValueSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ListURISpecified { get; set; }
+        protected bool ListURISpecified { get; set; }
 
         private bool _enableCallParkNotification;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallParkNotificationSpecified { get; set; }
+        protected bool EnableCallParkNotificationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _monitoredUserTable;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MonitoredUserTableSpecified { get; set; }
+        protected bool MonitoredUserTableSpecified { get; set; }
 
     }
 }

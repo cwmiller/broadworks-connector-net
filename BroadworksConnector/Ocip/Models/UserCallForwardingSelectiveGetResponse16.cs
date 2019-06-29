@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private string _defaultForwardToPhoneNumber;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultForwardToPhoneNumberSpecified { get; set; }
+        protected bool DefaultForwardToPhoneNumberSpecified { get; set; }
 
         private bool _playRingReminder;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayRingReminderSpecified { get; set; }
+        protected bool PlayRingReminderSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaTableSpecified { get; set; }
+        protected bool CriteriaTableSpecified { get; set; }
 
     }
 }

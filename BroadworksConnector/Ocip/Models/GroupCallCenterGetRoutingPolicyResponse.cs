@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RoutingPolicySpecified { get; set; }
+        protected bool RoutingPolicySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _callCenterTable;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallCenterTableSpecified { get; set; }
+        protected bool CallCenterTableSpecified { get; set; }
 
     }
 }

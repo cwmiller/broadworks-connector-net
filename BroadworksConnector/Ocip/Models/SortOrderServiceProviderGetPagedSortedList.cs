@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByServiceProviderIdSpecified { get; set; }
+        protected bool SortByServiceProviderIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByServiceProviderName _sortByServiceProviderName;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByServiceProviderNameSpecified { get; set; }
+        protected bool SortByServiceProviderNameSpecified { get; set; }
 
     }
 }

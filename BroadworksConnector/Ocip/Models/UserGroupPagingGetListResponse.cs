@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PagingGroupTableSpecified { get; set; }
+        protected bool PagingGroupTableSpecified { get; set; }
 
     }
 }

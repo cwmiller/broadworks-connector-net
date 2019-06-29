@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseAliasForDomainSpecified { get; set; }
+        protected bool UseAliasForDomainSpecified { get; set; }
 
         private string _defaultDomain;
 
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultDomainSpecified { get; set; }
+        protected bool DefaultDomainSpecified { get; set; }
 
     }
 }

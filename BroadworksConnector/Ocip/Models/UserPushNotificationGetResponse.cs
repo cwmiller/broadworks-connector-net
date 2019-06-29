@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendPushNotificationForClickToDialSpecified { get; set; }
+        protected bool SendPushNotificationForClickToDialSpecified { get; set; }
 
     }
 }

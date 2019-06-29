@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProvisioningUrlSpecified { get; set; }
+        protected bool ProvisioningUrlSpecified { get; set; }
 
         private string _provisioningUserId;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProvisioningUserIdSpecified { get; set; }
+        protected bool ProvisioningUserIdSpecified { get; set; }
 
         private bool _enableSynchronization;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableSynchronizationSpecified { get; set; }
+        protected bool EnableSynchronizationSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScfApiNetAddress1Specified { get; set; }
+        protected bool ScfApiNetAddress1Specified { get; set; }
 
         private string _scfApiNetAddress2;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScfApiNetAddress2Specified { get; set; }
+        protected bool ScfApiNetAddress2Specified { get; set; }
 
         private string _userName;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserNameSpecified { get; set; }
+        protected bool UserNameSpecified { get; set; }
 
         private string _emailFromAddress;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmailFromAddressSpecified { get; set; }
+        protected bool EmailFromAddressSpecified { get; set; }
 
         private bool _scfIMSOnly;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScfIMSOnlySpecified { get; set; }
+        protected bool ScfIMSOnlySpecified { get; set; }
 
         private string _signalingIPAddress;
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SignalingIPAddressSpecified { get; set; }
+        protected bool SignalingIPAddressSpecified { get; set; }
 
         private int _signalingPort;
 
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SignalingPortSpecified { get; set; }
+        protected bool SignalingPortSpecified { get; set; }
 
     }
 }

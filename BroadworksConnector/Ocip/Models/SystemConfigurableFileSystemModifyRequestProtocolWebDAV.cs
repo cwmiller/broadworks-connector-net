@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecureSpecified { get; set; }
+        protected bool SecureSpecified { get; set; }
 
         private string _userName;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserNameSpecified { get; set; }
+        protected bool UserNameSpecified { get; set; }
 
         private string _password;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasswordSpecified { get; set; }
+        protected bool PasswordSpecified { get; set; }
 
         private string _fileServerFQDN;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileServerFQDNSpecified { get; set; }
+        protected bool FileServerFQDNSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecordNewGreetingSpecified { get; set; }
+        protected bool RecordNewGreetingSpecified { get; set; }
 
         private string _listenToCurrentGreeting;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ListenToCurrentGreetingSpecified { get; set; }
+        protected bool ListenToCurrentGreetingSpecified { get; set; }
 
         private string _revertToSystemDefaultGreeting;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RevertToSystemDefaultGreetingSpecified { get; set; }
+        protected bool RevertToSystemDefaultGreetingSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

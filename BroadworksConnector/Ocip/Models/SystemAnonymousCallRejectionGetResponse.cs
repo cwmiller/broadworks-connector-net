@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PaiRequiredSpecified { get; set; }
+        protected bool PaiRequiredSpecified { get; set; }
 
         private bool _screenOnlyLocalCalls;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScreenOnlyLocalCallsSpecified { get; set; }
+        protected bool ScreenOnlyLocalCallsSpecified { get; set; }
 
     }
 }

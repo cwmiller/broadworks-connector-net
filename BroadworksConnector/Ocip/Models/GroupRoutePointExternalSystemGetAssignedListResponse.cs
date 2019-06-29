@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExternalSystemTableSpecified { get; set; }
+        protected bool ExternalSystemTableSpecified { get; set; }
 
     }
 }

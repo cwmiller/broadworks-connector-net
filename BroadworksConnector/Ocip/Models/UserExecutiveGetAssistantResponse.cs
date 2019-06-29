@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowOptInOutSpecified { get; set; }
+        protected bool AllowOptInOutSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _assistantUserTable;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AssistantUserTableSpecified { get; set; }
+        protected bool AssistantUserTableSpecified { get; set; }
 
     }
 }

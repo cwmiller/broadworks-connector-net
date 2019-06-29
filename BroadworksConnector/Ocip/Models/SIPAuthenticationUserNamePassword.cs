@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipAuthenticationUserNameSpecified { get; set; }
+        protected bool SipAuthenticationUserNameSpecified { get; set; }
 
         private string _sipAuthenticationPassword;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipAuthenticationPasswordSpecified { get; set; }
+        protected bool SipAuthenticationPasswordSpecified { get; set; }
 
     }
 }

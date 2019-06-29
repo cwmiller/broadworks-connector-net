@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CustomContactDirectoryNameSpecified { get; set; }
+        protected bool CustomContactDirectoryNameSpecified { get; set; }
 
     }
 }

@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDirectoryPrivacySpecified { get; set; }
+        protected bool EnableDirectoryPrivacySpecified { get; set; }
 
     }
 }

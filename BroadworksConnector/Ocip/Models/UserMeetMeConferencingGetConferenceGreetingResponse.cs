@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayEntranceGreetingSpecified { get; set; }
+        protected bool PlayEntranceGreetingSpecified { get; set; }
 
         private string _entranceGreetingAudioFile;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceGreetingAudioFileSpecified { get; set; }
+        protected bool EntranceGreetingAudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _entranceGreetingMediaType;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EntranceGreetingMediaTypeSpecified { get; set; }
+        protected bool EntranceGreetingMediaTypeSpecified { get; set; }
 
     }
 }

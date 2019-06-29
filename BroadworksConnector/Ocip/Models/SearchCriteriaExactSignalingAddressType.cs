@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileSpecified { get; set; }
+        protected bool ProfileSpecified { get; set; }
 
     }
 }

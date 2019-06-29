@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _newName;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewNameSpecified { get; set; }
+        protected bool NewNameSpecified { get; set; }
 
         private string _scfSignalingNetAddress;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScfSignalingNetAddressSpecified { get; set; }
+        protected bool ScfSignalingNetAddressSpecified { get; set; }
 
         private int? _scfSignalingPort;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScfSignalingPortSpecified { get; set; }
+        protected bool ScfSignalingPortSpecified { get; set; }
 
         private int _refreshPeriodSeconds;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RefreshPeriodSecondsSpecified { get; set; }
+        protected bool RefreshPeriodSecondsSpecified { get; set; }
 
         private int _maxConsecutiveFailures;
 
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConsecutiveFailuresSpecified { get; set; }
+        protected bool MaxConsecutiveFailuresSpecified { get; set; }
 
         private int _maxResponseWaitTimeMilliseconds;
 
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
+        protected bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
 
         private bool _enableAnnouncementSuppression;
 
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAnnouncementSuppressionSpecified { get; set; }
+        protected bool EnableAnnouncementSuppressionSpecified { get; set; }
 
         private string _serviceAccessCodeListName;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceAccessCodeListNameSpecified { get; set; }
+        protected bool ServiceAccessCodeListNameSpecified { get; set; }
 
     }
 }

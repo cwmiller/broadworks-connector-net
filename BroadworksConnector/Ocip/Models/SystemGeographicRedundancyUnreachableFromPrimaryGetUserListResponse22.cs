@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnreachableFromPrimaryUserTableSpecified { get; set; }
+        protected bool UnreachableFromPrimaryUserTableSpecified { get; set; }
 
         private int _totalNumberOfUnreachableFromPrimaryUsers;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TotalNumberOfUnreachableFromPrimaryUsersSpecified { get; set; }
+        protected bool TotalNumberOfUnreachableFromPrimaryUsersSpecified { get; set; }
 
     }
 }

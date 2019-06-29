@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PortNumberSpecified { get; set; }
+        protected bool PortNumberSpecified { get; set; }
 
     }
 }

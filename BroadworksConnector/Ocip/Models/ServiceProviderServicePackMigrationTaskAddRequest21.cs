@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _taskName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TaskNameSpecified { get; set; }
+        protected bool TaskNameSpecified { get; set; }
 
         private string _startTimestamp;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartTimestampSpecified { get; set; }
+        protected bool StartTimestampSpecified { get; set; }
 
         private int _expireAfterNumHours;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExpireAfterNumHoursSpecified { get; set; }
+        protected bool ExpireAfterNumHoursSpecified { get; set; }
 
         private int _maxDurationHours;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxDurationHoursSpecified { get; set; }
+        protected bool MaxDurationHoursSpecified { get; set; }
 
         private bool _sendReportEmail;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendReportEmailSpecified { get; set; }
+        protected bool SendReportEmailSpecified { get; set; }
 
         private string _reportDeliveryEmailAddress;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportDeliveryEmailAddressSpecified { get; set; }
+        protected bool ReportDeliveryEmailAddressSpecified { get; set; }
 
         private bool _abortOnError;
 
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbortOnErrorSpecified { get; set; }
+        protected bool AbortOnErrorSpecified { get; set; }
 
         private int _abortErrorThreshold;
 
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbortErrorThresholdSpecified { get; set; }
+        protected bool AbortErrorThresholdSpecified { get; set; }
 
         private bool _reportAllUsers;
 
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportAllUsersSpecified { get; set; }
+        protected bool ReportAllUsersSpecified { get; set; }
 
         private bool _automaticallyIncrementServiceQuantity;
 
@@ -217,7 +217,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AutomaticallyIncrementServiceQuantitySpecified { get; set; }
+        protected bool AutomaticallyIncrementServiceQuantitySpecified { get; set; }
 
     }
 }

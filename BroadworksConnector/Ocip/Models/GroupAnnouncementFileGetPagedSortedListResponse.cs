@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnnouncementTableSpecified { get; set; }
+        protected bool AnnouncementTableSpecified { get; set; }
 
     }
 }

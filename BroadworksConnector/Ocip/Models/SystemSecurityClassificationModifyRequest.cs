@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MeetMeAnncThresholdSpecified { get; set; }
+        protected bool MeetMeAnncThresholdSpecified { get; set; }
 
         private bool _playTrunkUserSecurityClassificationAnnouncement;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayTrunkUserSecurityClassificationAnnouncementSpecified { get; set; }
+        protected bool PlayTrunkUserSecurityClassificationAnnouncementSpecified { get; set; }
 
         private List<string> _securityClassificationName = new List<string>();
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecurityClassificationNameSpecified { get; set; }
+        protected bool SecurityClassificationNameSpecified { get; set; }
 
     }
 }

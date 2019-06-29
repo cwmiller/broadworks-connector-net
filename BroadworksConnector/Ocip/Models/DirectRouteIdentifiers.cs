@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DtgIdentitySpecified { get; set; }
+        protected bool DtgIdentitySpecified { get; set; }
 
         private string _trunkIdentity;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkIdentitySpecified { get; set; }
+        protected bool TrunkIdentitySpecified { get; set; }
 
     }
 }

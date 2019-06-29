@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _enterpriseTrunkName;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnterpriseTrunkNameSpecified { get; set; }
+        protected bool EnterpriseTrunkNameSpecified { get; set; }
 
         private int _maximumRerouteAttempts;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumRerouteAttemptsSpecified { get; set; }
+        protected bool MaximumRerouteAttemptsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction _routeExhaustionAction;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteExhaustionActionSpecified { get; set; }
+        protected bool RouteExhaustionActionSpecified { get; set; }
 
         private string _routeExhaustionForwardAddress;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteExhaustionForwardAddressSpecified { get; set; }
+        protected bool RouteExhaustionForwardAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkAddRequest21OrderedRouting _orderedRouting;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OrderedRoutingSpecified { get; set; }
+        protected bool OrderedRoutingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkAddRequest21PriorityWeightedRouting _priorityWeightedRouting;
 
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PriorityWeightedRoutingSpecified { get; set; }
+        protected bool PriorityWeightedRoutingSpecified { get; set; }
 
         private bool _enableCapacityManagement;
 
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCapacityManagementSpecified { get; set; }
+        protected bool EnableCapacityManagementSpecified { get; set; }
 
         private int _maxActiveCalls;
 
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxActiveCallsSpecified { get; set; }
+        protected bool MaxActiveCallsSpecified { get; set; }
 
         private int _capacityExceededTrapInitialCalls;
 
@@ -219,7 +219,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CapacityExceededTrapInitialCallsSpecified { get; set; }
+        protected bool CapacityExceededTrapInitialCallsSpecified { get; set; }
 
         private int _capacityExceededTrapOffsetCalls;
 
@@ -238,7 +238,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CapacityExceededTrapOffsetCallsSpecified { get; set; }
+        protected bool CapacityExceededTrapOffsetCallsSpecified { get; set; }
 
     }
 }

@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterType _type;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TypeSpecified { get; set; }
+        protected bool TypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PolicySpecified { get; set; }
+        protected bool PolicySpecified { get; set; }
 
         private bool _enableVideo;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableVideoSpecified { get; set; }
+        protected bool EnableVideoSpecified { get; set; }
 
         private int _queueLength;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool QueueLengthSpecified { get; set; }
+        protected bool QueueLengthSpecified { get; set; }
 
         private bool _enableReporting;
 
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableReportingSpecified { get; set; }
+        protected bool EnableReportingSpecified { get; set; }
 
         private string _reportingServerName;
 
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportingServerNameSpecified { get; set; }
+        protected bool ReportingServerNameSpecified { get; set; }
 
         private bool _allowCallerToDialEscapeDigit;
 
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowCallerToDialEscapeDigitSpecified { get; set; }
+        protected bool AllowCallerToDialEscapeDigitSpecified { get; set; }
 
         private string _escapeDigit;
 
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EscapeDigitSpecified { get; set; }
+        protected bool EscapeDigitSpecified { get; set; }
 
         private bool _resetCallStatisticsUponEntryInQueue;
 
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResetCallStatisticsUponEntryInQueueSpecified { get; set; }
+        protected bool ResetCallStatisticsUponEntryInQueueSpecified { get; set; }
 
         private bool _allowAgentLogoff;
 
@@ -242,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowAgentLogoffSpecified { get; set; }
+        protected bool AllowAgentLogoffSpecified { get; set; }
 
         private bool _allowCallWaitingForAgents;
 
@@ -260,7 +260,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowCallWaitingForAgentsSpecified { get; set; }
+        protected bool AllowCallWaitingForAgentsSpecified { get; set; }
 
         private bool _allowCallsToAgentsInWrapUp;
 
@@ -278,7 +278,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowCallsToAgentsInWrapUpSpecified { get; set; }
+        protected bool AllowCallsToAgentsInWrapUpSpecified { get; set; }
 
         private bool _overrideAgentWrapUpTime;
 
@@ -296,7 +296,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OverrideAgentWrapUpTimeSpecified { get; set; }
+        protected bool OverrideAgentWrapUpTimeSpecified { get; set; }
 
         private int? _wrapUpSeconds;
 
@@ -316,7 +316,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WrapUpSecondsSpecified { get; set; }
+        protected bool WrapUpSecondsSpecified { get; set; }
 
         private bool _forceDeliveryOfCalls;
 
@@ -334,7 +334,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceDeliveryOfCallsSpecified { get; set; }
+        protected bool ForceDeliveryOfCallsSpecified { get; set; }
 
         private int? _forceDeliveryWaitTimeSeconds;
 
@@ -354,7 +354,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceDeliveryWaitTimeSecondsSpecified { get; set; }
+        protected bool ForceDeliveryWaitTimeSecondsSpecified { get; set; }
 
         private bool _enableAutomaticStateChangeForAgents;
 
@@ -372,7 +372,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAutomaticStateChangeForAgentsSpecified { get; set; }
+        protected bool EnableAutomaticStateChangeForAgentsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AgentACDAutomaticState _agentStateAfterCall;
 
@@ -390,7 +390,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentStateAfterCallSpecified { get; set; }
+        protected bool AgentStateAfterCallSpecified { get; set; }
 
         private string _agentUnavailableCode;
 
@@ -410,7 +410,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentUnavailableCodeSpecified { get; set; }
+        protected bool AgentUnavailableCodeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AudioFileCodec _externalPreferredAudioCodec;
 
@@ -428,7 +428,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExternalPreferredAudioCodecSpecified { get; set; }
+        protected bool ExternalPreferredAudioCodecSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AudioFileCodec _internalPreferredAudioCodec;
 
@@ -446,7 +446,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InternalPreferredAudioCodecSpecified { get; set; }
+        protected bool InternalPreferredAudioCodecSpecified { get; set; }
 
         private bool _playRingingWhenOfferingCall;
 
@@ -464,7 +464,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayRingingWhenOfferingCallSpecified { get; set; }
+        protected bool PlayRingingWhenOfferingCallSpecified { get; set; }
 
     }
 }

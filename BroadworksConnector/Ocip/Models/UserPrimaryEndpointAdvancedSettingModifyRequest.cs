@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _allowOrigination;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowOriginationSpecified { get; set; }
+        protected bool AllowOriginationSpecified { get; set; }
 
         private bool _allowTermination;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowTerminationSpecified { get; set; }
+        protected bool AllowTerminationSpecified { get; set; }
 
         private bool _allowVideo;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowVideoSpecified { get; set; }
+        protected bool AllowVideoSpecified { get; set; }
 
     }
 }

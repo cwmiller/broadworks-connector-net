@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhysicalLocationIndicatorSpecified { get; set; }
+        protected bool PhysicalLocationIndicatorSpecified { get; set; }
 
         private bool _enforceMscValidation;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnforceMscValidationSpecified { get; set; }
+        protected bool EnforceMscValidationSpecified { get; set; }
 
         private bool _enableOfficeZoneAnnouncement;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableOfficeZoneAnnouncementSpecified { get; set; }
+        protected bool EnableOfficeZoneAnnouncementSpecified { get; set; }
 
         private bool _enhanceOfficeZone;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnhanceOfficeZoneSpecified { get; set; }
+        protected bool EnhanceOfficeZoneSpecified { get; set; }
 
     }
 }

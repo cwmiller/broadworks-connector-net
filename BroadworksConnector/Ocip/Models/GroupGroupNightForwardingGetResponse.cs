@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NightForwardingSpecified { get; set; }
+        protected bool NightForwardingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeSchedule _businessHours;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusinessHoursSpecified { get; set; }
+        protected bool BusinessHoursSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HolidayScheduleSpecified { get; set; }
+        protected bool HolidayScheduleSpecified { get; set; }
 
         private string _forwardToPhoneNumber;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardToPhoneNumberSpecified { get; set; }
+        protected bool ForwardToPhoneNumberSpecified { get; set; }
 
     }
 }

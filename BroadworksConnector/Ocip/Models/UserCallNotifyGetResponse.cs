@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallNotifyEmailAddressSpecified { get; set; }
+        protected bool CallNotifyEmailAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaTableSpecified { get; set; }
+        protected bool CriteriaTableSpecified { get; set; }
 
     }
 }

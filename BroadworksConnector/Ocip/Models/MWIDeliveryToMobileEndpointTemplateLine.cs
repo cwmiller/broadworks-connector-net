@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrefixSpecified { get; set; }
+        protected bool PrefixSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag _tag;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagSpecified { get; set; }
+        protected bool TagSpecified { get; set; }
 
         private string _postfix;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PostfixSpecified { get; set; }
+        protected bool PostfixSpecified { get; set; }
 
     }
 }

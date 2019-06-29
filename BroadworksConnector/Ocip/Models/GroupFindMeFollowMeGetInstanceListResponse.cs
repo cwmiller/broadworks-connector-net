@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FindMeFollowMeTableSpecified { get; set; }
+        protected bool FindMeFollowMeTableSpecified { get; set; }
 
     }
 }

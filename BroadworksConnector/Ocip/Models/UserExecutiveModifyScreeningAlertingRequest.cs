@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _enableScreening;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableScreeningSpecified { get; set; }
+        protected bool EnableScreeningSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExecutiveScreeningAlertType _screeningAlertType;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScreeningAlertTypeSpecified { get; set; }
+        protected bool ScreeningAlertTypeSpecified { get; set; }
 
         private bool _alertBroadWorksMobilityLocation;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertBroadWorksMobilityLocationSpecified { get; set; }
+        protected bool AlertBroadWorksMobilityLocationSpecified { get; set; }
 
         private bool _alertBroadWorksAnywhereLocations;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertBroadWorksAnywhereLocationsSpecified { get; set; }
+        protected bool AlertBroadWorksAnywhereLocationsSpecified { get; set; }
 
         private bool _alertSharedCallAppearanceLocations;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertSharedCallAppearanceLocationsSpecified { get; set; }
+        protected bool AlertSharedCallAppearanceLocationsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExecutiveAlertingMode _alertingMode;
 
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertingModeSpecified { get; set; }
+        protected bool AlertingModeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode _alertingCallingLineIdNameMode;
 
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertingCallingLineIdNameModeSpecified { get; set; }
+        protected bool AlertingCallingLineIdNameModeSpecified { get; set; }
 
         private string _alertingCustomCallingLineIdName;
 
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertingCustomCallingLineIdNameSpecified { get; set; }
+        protected bool AlertingCustomCallingLineIdNameSpecified { get; set; }
 
         private string _unicodeAlertingCustomCallingLineIdName;
 
@@ -203,7 +203,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnicodeAlertingCustomCallingLineIdNameSpecified { get; set; }
+        protected bool UnicodeAlertingCustomCallingLineIdNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode _alertingCallingLineIdPhoneNumberMode;
 
@@ -221,7 +221,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertingCallingLineIdPhoneNumberModeSpecified { get; set; }
+        protected bool AlertingCallingLineIdPhoneNumberModeSpecified { get; set; }
 
         private string _alertingCustomCallingLineIdPhoneNumber;
 
@@ -241,7 +241,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertingCustomCallingLineIdPhoneNumberSpecified { get; set; }
+        protected bool AlertingCustomCallingLineIdPhoneNumberSpecified { get; set; }
 
         private int _callPushRecallNumberOfRings;
 
@@ -261,7 +261,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallPushRecallNumberOfRingsSpecified { get; set; }
+        protected bool CallPushRecallNumberOfRingsSpecified { get; set; }
 
         private int _nextAssistantNumberOfRings;
 
@@ -281,7 +281,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NextAssistantNumberOfRingsSpecified { get; set; }
+        protected bool NextAssistantNumberOfRingsSpecified { get; set; }
 
         private bool _enableRollover;
 
@@ -299,7 +299,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableRolloverSpecified { get; set; }
+        protected bool EnableRolloverSpecified { get; set; }
 
         private int? _rolloverWaitTimeSeconds;
 
@@ -319,7 +319,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RolloverWaitTimeSecondsSpecified { get; set; }
+        protected bool RolloverWaitTimeSecondsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExecutiveRolloverActionType _rolloverAction;
 
@@ -337,7 +337,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RolloverActionSpecified { get; set; }
+        protected bool RolloverActionSpecified { get; set; }
 
         private string _rolloverForwardToPhoneNumber;
 
@@ -357,7 +357,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RolloverForwardToPhoneNumberSpecified { get; set; }
+        protected bool RolloverForwardToPhoneNumberSpecified { get; set; }
 
     }
 }

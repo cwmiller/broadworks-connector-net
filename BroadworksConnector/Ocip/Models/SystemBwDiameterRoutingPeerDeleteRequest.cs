@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InstanceSpecified { get; set; }
+        protected bool InstanceSpecified { get; set; }
 
         private string _realm;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RealmSpecified { get; set; }
+        protected bool RealmSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.BwDiameterApplicationId _applicationId;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ApplicationIdSpecified { get; set; }
+        protected bool ApplicationIdSpecified { get; set; }
 
         private string _identity;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IdentitySpecified { get; set; }
+        protected bool IdentitySpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceNameSpecified { get; set; }
+        protected bool ServiceNameSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntry> _serviceAttributeEntry = new List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntry>();
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceAttributeEntrySpecified { get; set; }
+        protected bool ServiceAttributeEntrySpecified { get; set; }
 
     }
 }

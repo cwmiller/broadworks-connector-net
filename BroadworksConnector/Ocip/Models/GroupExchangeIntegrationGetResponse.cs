@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableExchangeIntegrationSpecified { get; set; }
+        protected bool EnableExchangeIntegrationSpecified { get; set; }
 
         private string _exchangeURL;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExchangeURLSpecified { get; set; }
+        protected bool ExchangeURLSpecified { get; set; }
 
         private string _exchangeUserName;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExchangeUserNameSpecified { get; set; }
+        protected bool ExchangeUserNameSpecified { get; set; }
 
     }
 }

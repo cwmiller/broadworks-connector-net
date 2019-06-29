@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GreetingOnlyForwardingDestinationSpecified { get; set; }
+        protected bool GreetingOnlyForwardingDestinationSpecified { get; set; }
 
     }
 }

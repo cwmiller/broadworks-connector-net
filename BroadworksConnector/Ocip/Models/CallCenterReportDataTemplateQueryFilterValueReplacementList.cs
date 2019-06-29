@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FilterValueSpecified { get; set; }
+        protected bool FilterValueSpecified { get; set; }
 
     }
 }

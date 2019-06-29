@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OldSpecified { get; set; }
+        protected bool OldSpecified { get; set; }
 
         private string _new;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewSpecified { get; set; }
+        protected bool NewSpecified { get; set; }
 
     }
 }

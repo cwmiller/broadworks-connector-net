@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountLongConnectionsToMediaServerSpecified { get; set; }
+        protected bool CountLongConnectionsToMediaServerSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType _sacHandlingForMoH;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SacHandlingForMoHSpecified { get; set; }
+        protected bool SacHandlingForMoHSpecified { get; set; }
 
         private bool _blockVMDepositDueToSACLimits;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BlockVMDepositDueToSACLimitsSpecified { get; set; }
+        protected bool BlockVMDepositDueToSACLimitsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType _sacCodecSelectionPolicy;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SacCodecSelectionPolicySpecified { get; set; }
+        protected bool SacCodecSelectionPolicySpecified { get; set; }
 
         private bool _countCallToMobileNumberForSACSubscriber;
 
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountCallToMobileNumberForSACSubscriberSpecified { get; set; }
+        protected bool CountCallToMobileNumberForSACSubscriberSpecified { get; set; }
 
         private bool _countBWAnywhereForSACSubscriber;
 
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountBWAnywhereForSACSubscriberSpecified { get; set; }
+        protected bool CountBWAnywhereForSACSubscriberSpecified { get; set; }
 
         private bool _countROForSACSubscriber;
 
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountROForSACSubscriberSpecified { get; set; }
+        protected bool CountROForSACSubscriberSpecified { get; set; }
 
         private bool _excludeBWMobilityForSACSubscriber;
 
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExcludeBWMobilityForSACSubscriberSpecified { get; set; }
+        protected bool ExcludeBWMobilityForSACSubscriberSpecified { get; set; }
 
     }
 }

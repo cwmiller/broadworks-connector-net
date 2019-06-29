@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _allowOptInOut;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowOptInOutSpecified { get; set; }
+        protected bool AllowOptInOutSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _assistantUserIdList;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AssistantUserIdListSpecified { get; set; }
+        protected bool AssistantUserIdListSpecified { get; set; }
 
     }
 }

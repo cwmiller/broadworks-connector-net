@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentACDStateSpecified { get; set; }
+        protected bool AgentACDStateSpecified { get; set; }
 
         private string _agentUnavailableCode;
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentUnavailableCodeSpecified { get; set; }
+        protected bool AgentUnavailableCodeSpecified { get; set; }
 
         private bool _useDefaultGuardTimer;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDefaultGuardTimerSpecified { get; set; }
+        protected bool UseDefaultGuardTimerSpecified { get; set; }
 
         private bool _enableGuardTimer;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableGuardTimerSpecified { get; set; }
+        protected bool EnableGuardTimerSpecified { get; set; }
 
         private int _guardTimerSeconds;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GuardTimerSecondsSpecified { get; set; }
+        protected bool GuardTimerSecondsSpecified { get; set; }
 
         private bool _useSystemDefaultUnavailableSettings;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSystemDefaultUnavailableSettingsSpecified { get; set; }
+        protected bool UseSystemDefaultUnavailableSettingsSpecified { get; set; }
 
         private bool _forceAgentUnavailableOnDNDActivation;
 
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceAgentUnavailableOnDNDActivationSpecified { get; set; }
+        protected bool ForceAgentUnavailableOnDNDActivationSpecified { get; set; }
 
         private bool _forceUnavailableOnPersonalCalls;
 
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceUnavailableOnPersonalCallsSpecified { get; set; }
+        protected bool ForceUnavailableOnPersonalCallsSpecified { get; set; }
 
         private bool _forceAgentUnavailableOnBouncedCallLimit;
 
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceAgentUnavailableOnBouncedCallLimitSpecified { get; set; }
+        protected bool ForceAgentUnavailableOnBouncedCallLimitSpecified { get; set; }
 
         private int _numberConsecutiveBouncedCallsToForceAgentUnavailable;
 
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified { get; set; }
+        protected bool NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified { get; set; }
 
         private bool _makeOutgoingCallsAsCallCenter;
 
@@ -223,7 +223,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MakeOutgoingCallsAsCallCenterSpecified { get; set; }
+        protected bool MakeOutgoingCallsAsCallCenterSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DNISKey _outgoingCallDNIS;
 
@@ -241,7 +241,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutgoingCallDNISSpecified { get; set; }
+        protected bool OutgoingCallDNISSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _callCenterTable;
 
@@ -258,7 +258,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallCenterTableSpecified { get; set; }
+        protected bool CallCenterTableSpecified { get; set; }
 
     }
 }

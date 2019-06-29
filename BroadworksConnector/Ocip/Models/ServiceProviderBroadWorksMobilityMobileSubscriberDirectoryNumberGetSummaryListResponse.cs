@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobileSubscriberDirectoryNumbersSummaryTableSpecified { get; set; }
+        protected bool MobileSubscriberDirectoryNumbersSummaryTableSpecified { get; set; }
 
     }
 }

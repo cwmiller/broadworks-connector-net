@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private int _maxActiveCallsAllowed;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxActiveCallsAllowedSpecified { get; set; }
+        protected bool MaxActiveCallsAllowedSpecified { get; set; }
 
         private int _maxIncomingActiveCallsAllowed;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxIncomingActiveCallsAllowedSpecified { get; set; }
+        protected bool MaxIncomingActiveCallsAllowedSpecified { get; set; }
 
         private int _maxOutgoingActiveCallsAllowed;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxOutgoingActiveCallsAllowedSpecified { get; set; }
+        protected bool MaxOutgoingActiveCallsAllowedSpecified { get; set; }
 
         private bool _defaultGroupForNewUsers;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultGroupForNewUsersSpecified { get; set; }
+        protected bool DefaultGroupForNewUsersSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserTableSpecified { get; set; }
+        protected bool UserTableSpecified { get; set; }
 
     }
 }

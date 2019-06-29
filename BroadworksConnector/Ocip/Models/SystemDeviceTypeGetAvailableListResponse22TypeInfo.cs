@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileSpecified { get; set; }
+        protected bool ProfileSpecified { get; set; }
 
         private bool _staticRegistrationCapable;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StaticRegistrationCapableSpecified { get; set; }
+        protected bool StaticRegistrationCapableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfigTypeSpecified { get; set; }
+        protected bool ConfigTypeSpecified { get; set; }
 
         private List<string> _protocolChoice = new List<string>();
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtocolChoiceSpecified { get; set; }
+        protected bool ProtocolChoiceSpecified { get; set; }
 
         private bool _isIpAddressOptional;
 
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsIpAddressOptionalSpecified { get; set; }
+        protected bool IsIpAddressOptionalSpecified { get; set; }
 
         private bool _useDomain;
 
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDomainSpecified { get; set; }
+        protected bool UseDomainSpecified { get; set; }
 
         private bool _isMobilityManagerDevice;
 
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsMobilityManagerDeviceSpecified { get; set; }
+        protected bool IsMobilityManagerDeviceSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceConfigurationOption;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceConfigurationOptionSpecified { get; set; }
+        protected bool DeviceConfigurationOptionSpecified { get; set; }
 
         private bool _staticLineOrdering;
 
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StaticLineOrderingSpecified { get; set; }
+        protected bool StaticLineOrderingSpecified { get; set; }
 
         private int _numberOfPorts;
 
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfPortsSpecified { get; set; }
+        protected bool NumberOfPortsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceTypeLevel _deviceTypeLevel;
 
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeLevelSpecified { get; set; }
+        protected bool DeviceTypeLevelSpecified { get; set; }
 
     }
 }

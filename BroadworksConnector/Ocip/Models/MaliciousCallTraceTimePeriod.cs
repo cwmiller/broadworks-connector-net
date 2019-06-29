@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartDateTimeSpecified { get; set; }
+        protected bool StartDateTimeSpecified { get; set; }
 
         private string _stopDateTime;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StopDateTimeSpecified { get; set; }
+        protected bool StopDateTimeSpecified { get; set; }
 
     }
 }

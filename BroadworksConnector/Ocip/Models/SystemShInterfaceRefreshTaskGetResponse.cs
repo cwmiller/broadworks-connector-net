@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsRunningSpecified { get; set; }
+        protected bool IsRunningSpecified { get; set; }
 
         private int _numberPublicIdentityRefreshesStarted;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberPublicIdentityRefreshesStartedSpecified { get; set; }
+        protected bool NumberPublicIdentityRefreshesStartedSpecified { get; set; }
 
         private int _numberPublicIdentities;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberPublicIdentitiesSpecified { get; set; }
+        protected bool NumberPublicIdentitiesSpecified { get; set; }
 
     }
 }

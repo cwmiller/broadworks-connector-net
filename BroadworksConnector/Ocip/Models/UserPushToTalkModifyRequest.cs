@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _allowAutoAnswer;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowAutoAnswerSpecified { get; set; }
+        protected bool AllowAutoAnswerSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection _outgoingConnectionSelection;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutgoingConnectionSelectionSpecified { get; set; }
+        protected bool OutgoingConnectionSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection _accessListSelection;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessListSelectionSpecified { get; set; }
+        protected bool AccessListSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _selectedUserIdList;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SelectedUserIdListSpecified { get; set; }
+        protected bool SelectedUserIdListSpecified { get; set; }
 
     }
 }

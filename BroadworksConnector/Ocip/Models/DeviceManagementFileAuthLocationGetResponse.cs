@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileRepositoryUserNameSpecified { get; set; }
+        protected bool FileRepositoryUserNameSpecified { get; set; }
 
         private string _fileRepositoryPassword;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileRepositoryPasswordSpecified { get; set; }
+        protected bool FileRepositoryPasswordSpecified { get; set; }
 
         private string _netAddress;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetAddressSpecified { get; set; }
+        protected bool NetAddressSpecified { get; set; }
 
         private string _remoteFileFormat;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RemoteFileFormatSpecified { get; set; }
+        protected bool RemoteFileFormatSpecified { get; set; }
 
         private int _portNumber;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PortNumberSpecified { get; set; }
+        protected bool PortNumberSpecified { get; set; }
 
         private string _rootDirectory;
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RootDirectorySpecified { get; set; }
+        protected bool RootDirectorySpecified { get; set; }
 
         private string _cpeFileDirectory;
 
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CpeFileDirectorySpecified { get; set; }
+        protected bool CpeFileDirectorySpecified { get; set; }
 
         private bool _secure;
 
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecureSpecified { get; set; }
+        protected bool SecureSpecified { get; set; }
 
         private bool _macInNonRequestURI;
 
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacInNonRequestURISpecified { get; set; }
+        protected bool MacInNonRequestURISpecified { get; set; }
 
         private string _macFormatInNonRequestURI;
 
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacFormatInNonRequestURISpecified { get; set; }
+        protected bool MacFormatInNonRequestURISpecified { get; set; }
 
         private bool _useHttpDigestAuthentication;
 
@@ -226,7 +226,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseHttpDigestAuthenticationSpecified { get; set; }
+        protected bool UseHttpDigestAuthenticationSpecified { get; set; }
 
         private bool _macBasedFileAuthentication;
 
@@ -244,7 +244,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacBasedFileAuthenticationSpecified { get; set; }
+        protected bool MacBasedFileAuthenticationSpecified { get; set; }
 
         private bool _userNamePasswordFileAuthentication;
 
@@ -262,7 +262,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserNamePasswordFileAuthenticationSpecified { get; set; }
+        protected bool UserNamePasswordFileAuthenticationSpecified { get; set; }
 
         private bool _completionNotification;
 
@@ -280,7 +280,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CompletionNotificationSpecified { get; set; }
+        protected bool CompletionNotificationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory _fileCategory;
 
@@ -298,7 +298,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileCategorySpecified { get; set; }
+        protected bool FileCategorySpecified { get; set; }
 
     }
 }

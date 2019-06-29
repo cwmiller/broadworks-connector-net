@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BroadWorksLanguageSpecified { get; set; }
+        protected bool BroadWorksLanguageSpecified { get; set; }
 
         private string _deviceLanguage;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceLanguageSpecified { get; set; }
+        protected bool DeviceLanguageSpecified { get; set; }
 
     }
 }

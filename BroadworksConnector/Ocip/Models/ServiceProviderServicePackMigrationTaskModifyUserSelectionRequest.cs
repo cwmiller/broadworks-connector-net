@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _taskName;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TaskNameSpecified { get; set; }
+        protected bool TaskNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType _userSelectionType;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserSelectionTypeSpecified { get; set; }
+        protected bool UserSelectionTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserServiceList _userServiceNameList;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServiceNameListSpecified { get; set; }
+        protected bool UserServiceNameListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementServicePackNameList _servicePackNameList;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePackNameListSpecified { get; set; }
+        protected bool ServicePackNameListSpecified { get; set; }
 
     }
 }

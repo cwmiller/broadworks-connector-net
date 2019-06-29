@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentWeightSpecified { get; set; }
+        protected bool AgentWeightSpecified { get; set; }
 
     }
 }

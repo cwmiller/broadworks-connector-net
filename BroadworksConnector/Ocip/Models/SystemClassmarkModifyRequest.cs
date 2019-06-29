@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ClassmarkSpecified { get; set; }
+        protected bool ClassmarkSpecified { get; set; }
 
         private string _value;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ValueSpecified { get; set; }
+        protected bool ValueSpecified { get; set; }
 
         private string _webDisplayKey;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WebDisplayKeySpecified { get; set; }
+        protected bool WebDisplayKeySpecified { get; set; }
 
     }
 }

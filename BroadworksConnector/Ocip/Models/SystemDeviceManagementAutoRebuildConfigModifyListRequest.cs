@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AutoRebuildConfigEntrySpecified { get; set; }
+        protected bool AutoRebuildConfigEntrySpecified { get; set; }
 
     }
 }

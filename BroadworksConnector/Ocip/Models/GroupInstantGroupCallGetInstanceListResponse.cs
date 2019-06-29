@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InstantGroupCallTableSpecified { get; set; }
+        protected bool InstantGroupCallTableSpecified { get; set; }
 
     }
 }

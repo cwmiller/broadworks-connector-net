@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CarrierSpecified { get; set; }
+        protected bool CarrierSpecified { get; set; }
 
     }
 }

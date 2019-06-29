@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _alertAllAppearancesForClickToDialCalls;
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertAllAppearancesForClickToDialCallsSpecified { get; set; }
+        protected bool AlertAllAppearancesForClickToDialCallsSpecified { get; set; }
 
         private bool _alertAllAppearancesForGroupPagingCalls;
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertAllAppearancesForGroupPagingCallsSpecified { get; set; }
+        protected bool AlertAllAppearancesForGroupPagingCallsSpecified { get; set; }
 
         private bool _allowSCACallRetrieve;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowSCACallRetrieveSpecified { get; set; }
+        protected bool AllowSCACallRetrieveSpecified { get; set; }
 
         private bool _multipleCallArrangementIsActive;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MultipleCallArrangementIsActiveSpecified { get; set; }
+        protected bool MultipleCallArrangementIsActiveSpecified { get; set; }
 
         private bool _allowBridgingBetweenLocations;
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowBridgingBetweenLocationsSpecified { get; set; }
+        protected bool AllowBridgingBetweenLocationsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BridgeWarningToneSpecified { get; set; }
+        protected bool BridgeWarningToneSpecified { get; set; }
 
         private bool _enableCallParkNotification;
 
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallParkNotificationSpecified { get; set; }
+        protected bool EnableCallParkNotificationSpecified { get; set; }
 
         private bool _useUserPrimaryWithAlternateCallsSetting;
 
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseUserPrimaryWithAlternateCallsSettingSpecified { get; set; }
+        protected bool UseUserPrimaryWithAlternateCallsSettingSpecified { get; set; }
 
         private bool _allowSimultaneousPrimaryAndAlternateCalls;
 
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowSimultaneousPrimaryAndAlternateCallsSpecified { get; set; }
+        protected bool AllowSimultaneousPrimaryAndAlternateCallsSpecified { get; set; }
 
         private bool _restrictCallRetrieveOfPrimaryCall;
 
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RestrictCallRetrieveOfPrimaryCallSpecified { get; set; }
+        protected bool RestrictCallRetrieveOfPrimaryCallSpecified { get; set; }
 
         private bool _restrictCallBridgingOfPrimaryCall;
 
@@ -240,7 +240,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RestrictCallBridgingOfPrimaryCallSpecified { get; set; }
+        protected bool RestrictCallBridgingOfPrimaryCallSpecified { get; set; }
 
     }
 }

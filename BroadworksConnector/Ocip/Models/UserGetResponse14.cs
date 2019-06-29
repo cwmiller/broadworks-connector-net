@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _lastName;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LastNameSpecified { get; set; }
+        protected bool LastNameSpecified { get; set; }
 
         private string _firstName;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FirstNameSpecified { get; set; }
+        protected bool FirstNameSpecified { get; set; }
 
         private string _callingLineIdLastName;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdLastNameSpecified { get; set; }
+        protected bool CallingLineIdLastNameSpecified { get; set; }
 
         private string _callingLineIdFirstName;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdFirstNameSpecified { get; set; }
+        protected bool CallingLineIdFirstNameSpecified { get; set; }
 
         private string _hiraganaLastName;
 
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HiraganaLastNameSpecified { get; set; }
+        protected bool HiraganaLastNameSpecified { get; set; }
 
         private string _hiraganaFirstName;
 
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HiraganaFirstNameSpecified { get; set; }
+        protected bool HiraganaFirstNameSpecified { get; set; }
 
         private string _phoneNumber;
 
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
         private string _extension;
 
@@ -211,7 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtensionSpecified { get; set; }
+        protected bool ExtensionSpecified { get; set; }
 
         private string _callingLineIdPhoneNumber;
 
@@ -231,7 +231,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdPhoneNumberSpecified { get; set; }
+        protected bool CallingLineIdPhoneNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentSpecified { get; set; }
+        protected bool DepartmentSpecified { get; set; }
 
         private string _departmentFullPath;
 
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentFullPathSpecified { get; set; }
+        protected bool DepartmentFullPathSpecified { get; set; }
 
         private string _language;
 
@@ -287,7 +287,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LanguageSpecified { get; set; }
+        protected bool LanguageSpecified { get; set; }
 
         private string _timeZone;
 
@@ -306,7 +306,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeZoneSpecified { get; set; }
+        protected bool TimeZoneSpecified { get; set; }
 
         private string _timeZoneDisplayName;
 
@@ -325,7 +325,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeZoneDisplayNameSpecified { get; set; }
+        protected bool TimeZoneDisplayNameSpecified { get; set; }
 
         private string _defaultAlias;
 
@@ -344,7 +344,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultAliasSpecified { get; set; }
+        protected bool DefaultAliasSpecified { get; set; }
 
         private List<string> _alias = new List<string>();
 
@@ -364,7 +364,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AliasSpecified { get; set; }
+        protected bool AliasSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 _accessDeviceEndpoint;
 
@@ -382,7 +382,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessDeviceEndpointSpecified { get; set; }
+        protected bool AccessDeviceEndpointSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupDeviceEndpointRead _trunkGroupDeviceEndpoint;
 
@@ -400,7 +400,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupDeviceEndpointSpecified { get; set; }
+        protected bool TrunkGroupDeviceEndpointSpecified { get; set; }
 
         private string _title;
 
@@ -420,7 +420,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TitleSpecified { get; set; }
+        protected bool TitleSpecified { get; set; }
 
         private string _pagerPhoneNumber;
 
@@ -440,7 +440,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PagerPhoneNumberSpecified { get; set; }
+        protected bool PagerPhoneNumberSpecified { get; set; }
 
         private string _mobilePhoneNumber;
 
@@ -460,7 +460,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobilePhoneNumberSpecified { get; set; }
+        protected bool MobilePhoneNumberSpecified { get; set; }
 
         private string _emailAddress;
 
@@ -480,7 +480,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmailAddressSpecified { get; set; }
+        protected bool EmailAddressSpecified { get; set; }
 
         private string _yahooId;
 
@@ -500,7 +500,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool YahooIdSpecified { get; set; }
+        protected bool YahooIdSpecified { get; set; }
 
         private string _addressLocation;
 
@@ -520,7 +520,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddressLocationSpecified { get; set; }
+        protected bool AddressLocationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
@@ -538,7 +538,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddressSpecified { get; set; }
+        protected bool AddressSpecified { get; set; }
 
     }
 }

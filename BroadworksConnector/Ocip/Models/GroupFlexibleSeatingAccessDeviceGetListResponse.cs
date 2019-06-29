@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvailableAccessDeviceSpecified { get; set; }
+        protected bool AvailableAccessDeviceSpecified { get; set; }
 
     }
 }

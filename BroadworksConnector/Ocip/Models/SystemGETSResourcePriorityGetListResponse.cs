@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResourcePriorityTableSpecified { get; set; }
+        protected bool ResourcePriorityTableSpecified { get; set; }
 
     }
 }

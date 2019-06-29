@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagSetNameSpecified { get; set; }
+        protected bool TagSetNameSpecified { get; set; }
 
     }
 }

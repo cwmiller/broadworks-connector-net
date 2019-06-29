@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CpcValueSpecified { get; set; }
+        protected bool CpcValueSpecified { get; set; }
 
         private int _isupOliValue;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsupOliValueSpecified { get; set; }
+        protected bool IsupOliValueSpecified { get; set; }
 
         private string _gtdOliValue;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GtdOliValueSpecified { get; set; }
+        protected bool GtdOliValueSpecified { get; set; }
 
         private bool _userCategory;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserCategorySpecified { get; set; }
+        protected bool UserCategorySpecified { get; set; }
 
         private bool _payPhone;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PayPhoneSpecified { get; set; }
+        protected bool PayPhoneSpecified { get; set; }
 
         private bool _operator;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OperatorSpecified { get; set; }
+        protected bool OperatorSpecified { get; set; }
 
         private bool _default;
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultSpecified { get; set; }
+        protected bool DefaultSpecified { get; set; }
 
         private bool _collectCall;
 
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CollectCallSpecified { get; set; }
+        protected bool CollectCallSpecified { get; set; }
 
         private string _webDisplayKey;
 
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WebDisplayKeySpecified { get; set; }
+        protected bool WebDisplayKeySpecified { get; set; }
 
     }
 }

@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StateOrProvinceTableSpecified { get; set; }
+        protected bool StateOrProvinceTableSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AliasNetAddressSpecified { get; set; }
+        protected bool AliasNetAddressSpecified { get; set; }
 
     }
 }

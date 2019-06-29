@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayToneToAgentForSilentMonitoringSpecified { get; set; }
+        protected bool PlayToneToAgentForSilentMonitoringSpecified { get; set; }
 
     }
 }

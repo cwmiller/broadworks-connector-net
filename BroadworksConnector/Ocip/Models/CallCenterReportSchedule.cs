@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleTimeSpecified { get; set; }
+        protected bool ScheduleTimeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportScheduleRecurrence _recurrence;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurrenceSpecified { get; set; }
+        protected bool RecurrenceSpecified { get; set; }
 
     }
 }

@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EventTableSpecified { get; set; }
+        protected bool EventTableSpecified { get; set; }
 
     }
 }

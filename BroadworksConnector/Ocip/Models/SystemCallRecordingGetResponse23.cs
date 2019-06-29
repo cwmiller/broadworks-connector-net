@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContinueCallAfterRecordingFailureSpecified { get; set; }
+        protected bool ContinueCallAfterRecordingFailureSpecified { get; set; }
 
         private int _maxResponseWaitTimeMilliseconds;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
+        protected bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
 
         private bool _continueCallAfterVideoRecordingFailure;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContinueCallAfterVideoRecordingFailureSpecified { get; set; }
+        protected bool ContinueCallAfterVideoRecordingFailureSpecified { get; set; }
 
         private bool _useContinueCallAfterRecordingFailureForOnDemandMode;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseContinueCallAfterRecordingFailureForOnDemandModeSpecified { get; set; }
+        protected bool UseContinueCallAfterRecordingFailureForOnDemandModeSpecified { get; set; }
 
         private bool _useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode;
 
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartModeSpecified { get; set; }
+        protected bool UseContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartModeSpecified { get; set; }
 
         private bool _restrictCallRecordingProvisioningAccess;
 
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RestrictCallRecordingProvisioningAccessSpecified { get; set; }
+        protected bool RestrictCallRecordingProvisioningAccessSpecified { get; set; }
 
     }
 }

@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PolicySelectionSpecified { get; set; }
+        protected bool PolicySelectionSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperation> _digitManipulationOperation = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperation>();
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigitManipulationOperationSpecified { get; set; }
+        protected bool DigitManipulationOperationSpecified { get; set; }
 
         private List<string> _routeGroupId = new List<string>();
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteGroupIdSpecified { get; set; }
+        protected bool RouteGroupIdSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNTreatmentEntry> _treatment = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNTreatmentEntry>();
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatmentSpecified { get; set; }
+        protected bool TreatmentSpecified { get; set; }
 
     }
 }

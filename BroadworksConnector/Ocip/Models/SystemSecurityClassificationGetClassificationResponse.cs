@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioAnnouncementFileDescriptionSpecified { get; set; }
+        protected bool AudioAnnouncementFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _audioAnnouncementFileType;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioAnnouncementFileTypeSpecified { get; set; }
+        protected bool AudioAnnouncementFileTypeSpecified { get; set; }
 
     }
 }

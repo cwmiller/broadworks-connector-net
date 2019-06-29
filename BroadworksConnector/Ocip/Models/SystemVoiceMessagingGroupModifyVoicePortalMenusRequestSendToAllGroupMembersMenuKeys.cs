@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfirmSendingToEntireGroupSpecified { get; set; }
+        protected bool ConfirmSendingToEntireGroupSpecified { get; set; }
 
         private string _cancelSendingToEntireGroup;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CancelSendingToEntireGroupSpecified { get; set; }
+        protected bool CancelSendingToEntireGroupSpecified { get; set; }
 
     }
 }

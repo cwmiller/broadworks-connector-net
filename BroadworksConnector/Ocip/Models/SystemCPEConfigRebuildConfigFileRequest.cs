@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeSpecified { get; set; }
+        protected bool DeviceTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CPEDeviceConfigRebuildType _rebuildType;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RebuildTypeSpecified { get; set; }
+        protected bool RebuildTypeSpecified { get; set; }
 
         private bool _force;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceSpecified { get; set; }
+        protected bool ForceSpecified { get; set; }
 
     }
 }

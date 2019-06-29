@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _name;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _description;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private string _dataTemplate;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DataTemplateSpecified { get; set; }
+        protected bool DataTemplateSpecified { get; set; }
 
         private int _filterNumber;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FilterNumberSpecified { get; set; }
+        protected bool FilterNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledFileResource _xsltTemplate;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool XsltTemplateSpecified { get; set; }
+        protected bool XsltTemplateSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption _scope;
 
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScopeSpecified { get; set; }
+        protected bool ScopeSpecified { get; set; }
 
         private bool _isEnabled;
 
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsEnabledSpecified { get; set; }
+        protected bool IsEnabledSpecified { get; set; }
 
         private bool _isRealtimeReport;
 
@@ -202,7 +202,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsRealtimeReportSpecified { get; set; }
+        protected bool IsRealtimeReportSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _callCompletionThresholdParam;
 
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallCompletionThresholdParamSpecified { get; set; }
+        protected bool CallCompletionThresholdParamSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _shortDurationThresholdParam;
 
@@ -238,7 +238,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ShortDurationThresholdParamSpecified { get; set; }
+        protected bool ShortDurationThresholdParamSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelThresholdParam;
 
@@ -256,7 +256,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelThresholdParamSpecified { get; set; }
+        protected bool ServiceLevelThresholdParamSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelInclusionsParam;
 
@@ -274,7 +274,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelInclusionsParamSpecified { get; set; }
+        protected bool ServiceLevelInclusionsParamSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelObjectiveThresholdParam;
 
@@ -292,7 +292,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelObjectiveThresholdParamSpecified { get; set; }
+        protected bool ServiceLevelObjectiveThresholdParamSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _abandonedCallThresholdParam;
 
@@ -310,7 +310,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbandonedCallThresholdParamSpecified { get; set; }
+        protected bool AbandonedCallThresholdParamSpecified { get; set; }
 
         private int _serviceLevelThresholdParamNumber;
 
@@ -330,7 +330,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelThresholdParamNumberSpecified { get; set; }
+        protected bool ServiceLevelThresholdParamNumberSpecified { get; set; }
 
         private int _abandonedCallThresholdParamNumber;
 
@@ -350,7 +350,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbandonedCallThresholdParamNumberSpecified { get; set; }
+        protected bool AbandonedCallThresholdParamNumberSpecified { get; set; }
 
         private List<string> _filterValue = new List<string>();
 
@@ -370,7 +370,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FilterValueSpecified { get; set; }
+        protected bool FilterValueSpecified { get; set; }
 
     }
 }

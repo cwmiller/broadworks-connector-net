@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableBargeInWarningToneSpecified { get; set; }
+        protected bool EnableBargeInWarningToneSpecified { get; set; }
 
     }
 }

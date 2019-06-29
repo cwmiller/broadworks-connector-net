@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _profileName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileNameSpecified { get; set; }
+        protected bool ProfileNameSpecified { get; set; }
 
         private string _newProfileName;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewProfileNameSpecified { get; set; }
+        protected bool NewProfileNameSpecified { get; set; }
 
         private string _profileDescription;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileDescriptionSpecified { get; set; }
+        protected bool ProfileDescriptionSpecified { get; set; }
 
         private int? _thresholdCurrentCallStateIdleTimeYellow;
 
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdCurrentCallStateIdleTimeYellowSpecified { get; set; }
+        protected bool ThresholdCurrentCallStateIdleTimeYellowSpecified { get; set; }
 
         private int? _thresholdCurrentCallStateIdleTimeRed;
 
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdCurrentCallStateIdleTimeRedSpecified { get; set; }
+        protected bool ThresholdCurrentCallStateIdleTimeRedSpecified { get; set; }
 
         private int? _thresholdCurrentCallStateOnCallTimeYellow;
 
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdCurrentCallStateOnCallTimeYellowSpecified { get; set; }
+        protected bool ThresholdCurrentCallStateOnCallTimeYellowSpecified { get; set; }
 
         private int? _thresholdCurrentCallStateOnCallTimeRed;
 
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdCurrentCallStateOnCallTimeRedSpecified { get; set; }
+        protected bool ThresholdCurrentCallStateOnCallTimeRedSpecified { get; set; }
 
         private int? _thresholdCurrentAgentStateUnavailableTimeYellow;
 
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdCurrentAgentStateUnavailableTimeYellowSpecified { get; set; }
+        protected bool ThresholdCurrentAgentStateUnavailableTimeYellowSpecified { get; set; }
 
         private int? _thresholdCurrentAgentStateUnavailableTimeRed;
 
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdCurrentAgentStateUnavailableTimeRedSpecified { get; set; }
+        protected bool ThresholdCurrentAgentStateUnavailableTimeRedSpecified { get; set; }
 
         private int? _thresholdAverageBusyInTimeYellow;
 
@@ -235,7 +235,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageBusyInTimeYellowSpecified { get; set; }
+        protected bool ThresholdAverageBusyInTimeYellowSpecified { get; set; }
 
         private int? _thresholdAverageBusyInTimeRed;
 
@@ -255,7 +255,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageBusyInTimeRedSpecified { get; set; }
+        protected bool ThresholdAverageBusyInTimeRedSpecified { get; set; }
 
         private int? _thresholdAverageBusyOutTimeYellow;
 
@@ -275,7 +275,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageBusyOutTimeYellowSpecified { get; set; }
+        protected bool ThresholdAverageBusyOutTimeYellowSpecified { get; set; }
 
         private int? _thresholdAverageBusyOutTimeRed;
 
@@ -295,7 +295,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageBusyOutTimeRedSpecified { get; set; }
+        protected bool ThresholdAverageBusyOutTimeRedSpecified { get; set; }
 
         private int? _thresholdAverageWrapUpTimeYellow;
 
@@ -315,7 +315,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageWrapUpTimeYellowSpecified { get; set; }
+        protected bool ThresholdAverageWrapUpTimeYellowSpecified { get; set; }
 
         private int? _thresholdAverageWrapUpTimeRed;
 
@@ -335,7 +335,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ThresholdAverageWrapUpTimeRedSpecified { get; set; }
+        protected bool ThresholdAverageWrapUpTimeRedSpecified { get; set; }
 
         private bool _enableNotificationEmail;
 
@@ -353,7 +353,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNotificationEmailSpecified { get; set; }
+        protected bool EnableNotificationEmailSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterAgentThresholdProfileReplacementNotificationEmailList _notificationEmailAddressList;
 
@@ -371,7 +371,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NotificationEmailAddressListSpecified { get; set; }
+        protected bool NotificationEmailAddressListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
 
@@ -389,7 +389,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentUserIdListSpecified { get; set; }
+        protected bool AgentUserIdListSpecified { get; set; }
 
     }
 }

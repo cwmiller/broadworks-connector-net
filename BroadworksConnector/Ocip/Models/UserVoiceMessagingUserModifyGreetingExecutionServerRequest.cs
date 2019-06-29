@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementSelection _busyAnnouncementSelection;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyAnnouncementSelectionSpecified { get; set; }
+        protected bool BusyAnnouncementSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _busyPersonalAudioFile;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPersonalAudioFileSpecified { get; set; }
+        protected bool BusyPersonalAudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _busyPersonalVideoFile;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusyPersonalVideoFileSpecified { get; set; }
+        protected bool BusyPersonalVideoFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection _noAnswerAnnouncementSelection;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerAnnouncementSelectionSpecified { get; set; }
+        protected bool NoAnswerAnnouncementSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _noAnswerPersonalAudioFile;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerPersonalAudioFileSpecified { get; set; }
+        protected bool NoAnswerPersonalAudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _noAnswerPersonalVideoFile;
 
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerPersonalVideoFileSpecified { get; set; }
+        protected bool NoAnswerPersonalVideoFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingNumberOfRings _noAnswerNumberOfRings;
 
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerNumberOfRingsSpecified { get; set; }
+        protected bool NoAnswerNumberOfRingsSpecified { get; set; }
 
         private bool _extendedAwayEnabled;
 
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedAwayEnabledSpecified { get; set; }
+        protected bool ExtendedAwayEnabledSpecified { get; set; }
 
         private bool _extendedAwayDisableMessageDeposit;
 
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedAwayDisableMessageDepositSpecified { get; set; }
+        protected bool ExtendedAwayDisableMessageDepositSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _extendedAwayAudioFile;
 
@@ -217,7 +217,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedAwayAudioFileSpecified { get; set; }
+        protected bool ExtendedAwayAudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledFileNameResource _extendedAwayVideoFile;
 
@@ -235,7 +235,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedAwayVideoFileSpecified { get; set; }
+        protected bool ExtendedAwayVideoFileSpecified { get; set; }
 
         private bool _disableMessageDeposit;
 
@@ -253,7 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisableMessageDepositSpecified { get; set; }
+        protected bool DisableMessageDepositSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingDisableMessageDepositSelection _disableMessageDepositAction;
 
@@ -271,7 +271,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisableMessageDepositActionSpecified { get; set; }
+        protected bool DisableMessageDepositActionSpecified { get; set; }
 
         private string _greetingOnlyForwardDestination;
 
@@ -291,7 +291,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GreetingOnlyForwardDestinationSpecified { get; set; }
+        protected bool GreetingOnlyForwardDestinationSpecified { get; set; }
 
     }
 }

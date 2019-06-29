@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportsPolycomPhoneServicesSpecified { get; set; }
+        protected bool SupportsPolycomPhoneServicesSpecified { get; set; }
 
     }
 }

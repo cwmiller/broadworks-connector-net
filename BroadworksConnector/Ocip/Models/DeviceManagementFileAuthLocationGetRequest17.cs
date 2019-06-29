@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceAccessProtocolSpecified { get; set; }
+        protected bool DeviceAccessProtocolSpecified { get; set; }
 
         private string _deviceAccessMethod;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceAccessMethodSpecified { get; set; }
+        protected bool DeviceAccessMethodSpecified { get; set; }
 
         private string _deviceAccessURI;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceAccessURISpecified { get; set; }
+        protected bool DeviceAccessURISpecified { get; set; }
 
         private string _accessDeviceUserName;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessDeviceUserNameSpecified { get; set; }
+        protected bool AccessDeviceUserNameSpecified { get; set; }
 
         private string _accessDeviceUserPassword;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessDeviceUserPasswordSpecified { get; set; }
+        protected bool AccessDeviceUserPasswordSpecified { get; set; }
 
         private string _signedPassword;
 
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SignedPasswordSpecified { get; set; }
+        protected bool SignedPasswordSpecified { get; set; }
 
         private string _macAddress;
 
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacAddressSpecified { get; set; }
+        protected bool MacAddressSpecified { get; set; }
 
         private string _realmName;
 
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RealmNameSpecified { get; set; }
+        protected bool RealmNameSpecified { get; set; }
 
         private string _digestHa1Complement;
 
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigestHa1ComplementSpecified { get; set; }
+        protected bool DigestHa1ComplementSpecified { get; set; }
 
         private string _digestResponse;
 
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigestResponseSpecified { get; set; }
+        protected bool DigestResponseSpecified { get; set; }
 
     }
 }

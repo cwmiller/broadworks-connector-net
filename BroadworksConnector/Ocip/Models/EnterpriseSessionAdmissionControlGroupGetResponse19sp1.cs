@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxSessionSpecified { get; set; }
+        protected bool MaxSessionSpecified { get; set; }
 
         private int _maxUserOriginatingSessions;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxUserOriginatingSessionsSpecified { get; set; }
+        protected bool MaxUserOriginatingSessionsSpecified { get; set; }
 
         private int _maxUserTerminatingSessions;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxUserTerminatingSessionsSpecified { get; set; }
+        protected bool MaxUserTerminatingSessionsSpecified { get; set; }
 
         private int _reservedSession;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReservedSessionSpecified { get; set; }
+        protected bool ReservedSessionSpecified { get; set; }
 
         private int _reservedUserOriginatingSessions;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReservedUserOriginatingSessionsSpecified { get; set; }
+        protected bool ReservedUserOriginatingSessionsSpecified { get; set; }
 
         private int _reservedUserTerminatingSessions;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReservedUserTerminatingSessionsSpecified { get; set; }
+        protected bool ReservedUserTerminatingSessionsSpecified { get; set; }
 
         private bool _defaultGroup;
 
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultGroupSpecified { get; set; }
+        protected bool DefaultGroupSpecified { get; set; }
 
         private bool _countIntraSACGroupSessions;
 
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountIntraSACGroupSessionsSpecified { get; set; }
+        protected bool CountIntraSACGroupSessionsSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> _devices = new List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice>();
 
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DevicesSpecified { get; set; }
+        protected bool DevicesSpecified { get; set; }
 
         private bool _blockEmergencyAndRepairCallsDueToSACLimits;
 
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BlockEmergencyAndRepairCallsDueToSACLimitsSpecified { get; set; }
+        protected bool BlockEmergencyAndRepairCallsDueToSACLimitsSpecified { get; set; }
 
     }
 }

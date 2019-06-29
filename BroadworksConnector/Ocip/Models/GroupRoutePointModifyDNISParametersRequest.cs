@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private bool _displayDNISNumber;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayDNISNumberSpecified { get; set; }
+        protected bool DisplayDNISNumberSpecified { get; set; }
 
         private bool _displayDNISName;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayDNISNameSpecified { get; set; }
+        protected bool DisplayDNISNameSpecified { get; set; }
 
     }
 }

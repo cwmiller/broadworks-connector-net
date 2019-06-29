@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LicenseStrictnessSpecified { get; set; }
+        protected bool LicenseStrictnessSpecified { get; set; }
 
         private int _groupUserlimit;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupUserlimitSpecified { get; set; }
+        protected bool GroupUserlimitSpecified { get; set; }
 
         private string _expirationDate;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExpirationDateSpecified { get; set; }
+        protected bool ExpirationDateSpecified { get; set; }
 
         private List<string> _hostId = new List<string>();
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HostIdSpecified { get; set; }
+        protected bool HostIdSpecified { get; set; }
 
         private List<string> _licenseName = new List<string>();
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LicenseNameSpecified { get; set; }
+        protected bool LicenseNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _licenseTable;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LicenseTableSpecified { get; set; }
+        protected bool LicenseTableSpecified { get; set; }
 
     }
 }

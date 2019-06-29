@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnswerConfirmationRequiredSpecified { get; set; }
+        protected bool AnswerConfirmationRequiredSpecified { get; set; }
 
     }
 }

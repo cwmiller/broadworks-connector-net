@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RestrictNonAudioVideoMediaTypesSpecified { get; set; }
+        protected bool RestrictNonAudioVideoMediaTypesSpecified { get; set; }
 
     }
 }

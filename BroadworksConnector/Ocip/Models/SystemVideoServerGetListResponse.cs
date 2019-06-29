@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoServerTableSpecified { get; set; }
+        protected bool VideoServerTableSpecified { get; set; }
 
     }
 }

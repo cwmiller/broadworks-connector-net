@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExecutiveUserIdSpecified { get; set; }
+        protected bool ExecutiveUserIdSpecified { get; set; }
 
         private bool _optIn;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OptInSpecified { get; set; }
+        protected bool OptInSpecified { get; set; }
 
     }
 }

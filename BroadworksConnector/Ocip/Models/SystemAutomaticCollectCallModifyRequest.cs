@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAutomaticCollectCallSpecified { get; set; }
+        protected bool EnableAutomaticCollectCallSpecified { get; set; }
 
         private bool _enableConnectTone;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableConnectToneSpecified { get; set; }
+        protected bool EnableConnectToneSpecified { get; set; }
 
     }
 }

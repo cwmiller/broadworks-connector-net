@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableIPDeviceManagementSpecified { get; set; }
+        protected bool EnableIPDeviceManagementSpecified { get; set; }
 
         private int _ftpConnectTimeoutSeconds;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpConnectTimeoutSecondsSpecified { get; set; }
+        protected bool FtpConnectTimeoutSecondsSpecified { get; set; }
 
         private int _ftpFileTransferTimeoutSeconds;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
+        protected bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
 
     }
 }

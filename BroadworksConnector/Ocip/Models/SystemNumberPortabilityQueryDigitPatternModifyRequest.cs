@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigitPatternSpecified { get; set; }
+        protected bool DigitPatternSpecified { get; set; }
 
         private string _newDigitPattern;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewDigitPatternSpecified { get; set; }
+        protected bool NewDigitPatternSpecified { get; set; }
 
         private string _status;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatusSpecified { get; set; }
+        protected bool StatusSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrimaryServerNetAddressSpecified { get; set; }
+        protected bool PrimaryServerNetAddressSpecified { get; set; }
 
         private string _secondaryServerNetAddress;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecondaryServerNetAddressSpecified { get; set; }
+        protected bool SecondaryServerNetAddressSpecified { get; set; }
 
         private string _defaultFromAddress;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultFromAddressSpecified { get; set; }
+        protected bool DefaultFromAddressSpecified { get; set; }
 
         private string _defaultSubject;
 
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultSubjectSpecified { get; set; }
+        protected bool DefaultSubjectSpecified { get; set; }
 
         private bool _supportDNSSRVForMailServerAccess;
 
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportDNSSRVForMailServerAccessSpecified { get; set; }
+        protected bool SupportDNSSRVForMailServerAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SMTPSecureMode _secureMode;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecureModeSpecified { get; set; }
+        protected bool SecureModeSpecified { get; set; }
 
         private int? _port;
 
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PortSpecified { get; set; }
+        protected bool PortSpecified { get; set; }
 
     }
 }

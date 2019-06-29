@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaNumberPortabilityQueryDigitPatternSpecified { get; set; }
+        protected bool SearchCriteriaNumberPortabilityQueryDigitPatternSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityStatus> _searchCriteriaNumberPortabilityStatus = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityStatus>();
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaNumberPortabilityStatusSpecified { get; set; }
+        protected bool SearchCriteriaNumberPortabilityStatusSpecified { get; set; }
 
         private int _responseSizeLimit;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponseSizeLimitSpecified { get; set; }
+        protected bool ResponseSizeLimitSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RoomNameSpecified { get; set; }
+        protected bool RoomNameSpecified { get; set; }
 
         private string _instantRoomStartTime;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InstantRoomStartTimeSpecified { get; set; }
+        protected bool InstantRoomStartTimeSpecified { get; set; }
 
         private string _instantRoomEndTime;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InstantRoomEndTimeSpecified { get; set; }
+        protected bool InstantRoomEndTimeSpecified { get; set; }
 
     }
 }

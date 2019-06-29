@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleKeySpecified { get; set; }
+        protected bool ScheduleKeySpecified { get; set; }
 
         private string _eventName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EventNameSpecified { get; set; }
+        protected bool EventNameSpecified { get; set; }
 
         private string _startDate;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartDateSpecified { get; set; }
+        protected bool StartDateSpecified { get; set; }
 
         private bool _allDayEvent;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllDayEventSpecified { get; set; }
+        protected bool AllDayEventSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HourMinute _startTime;
 
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartTimeSpecified { get; set; }
+        protected bool StartTimeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HourMinute _endTime;
 
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndTimeSpecified { get; set; }
+        protected bool EndTimeSpecified { get; set; }
 
         private string _endDate;
 
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndDateSpecified { get; set; }
+        protected bool EndDateSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.Recurrence _recurrence;
 
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurrenceSpecified { get; set; }
+        protected bool RecurrenceSpecified { get; set; }
 
     }
 }

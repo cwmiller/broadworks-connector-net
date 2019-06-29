@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayDistinctiveRingbackSpecified { get; set; }
+        protected bool PlayDistinctiveRingbackSpecified { get; set; }
 
     }
 }

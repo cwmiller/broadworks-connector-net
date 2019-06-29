@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PolicySpecified { get; set; }
+        protected bool PolicySpecified { get; set; }
 
         private bool _huntAfterNoAnswer;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HuntAfterNoAnswerSpecified { get; set; }
+        protected bool HuntAfterNoAnswerSpecified { get; set; }
 
         private int _noAnswerNumberOfRings;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerNumberOfRingsSpecified { get; set; }
+        protected bool NoAnswerNumberOfRingsSpecified { get; set; }
 
         private bool _forwardAfterTimeout;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardAfterTimeoutSpecified { get; set; }
+        protected bool ForwardAfterTimeoutSpecified { get; set; }
 
         private int _forwardTimeoutSeconds;
 
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardTimeoutSecondsSpecified { get; set; }
+        protected bool ForwardTimeoutSecondsSpecified { get; set; }
 
         private string _forwardToPhoneNumber;
 
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardToPhoneNumberSpecified { get; set; }
+        protected bool ForwardToPhoneNumberSpecified { get; set; }
 
         private bool _enableVideo;
 
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableVideoSpecified { get; set; }
+        protected bool EnableVideoSpecified { get; set; }
 
         private int _queueLength;
 
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool QueueLengthSpecified { get; set; }
+        protected bool QueueLengthSpecified { get; set; }
 
         private bool _allowAgentLogoff;
 
@@ -227,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowAgentLogoffSpecified { get; set; }
+        protected bool AllowAgentLogoffSpecified { get; set; }
 
         private bool _playMusicOnHold;
 
@@ -245,7 +245,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayMusicOnHoldSpecified { get; set; }
+        protected bool PlayMusicOnHoldSpecified { get; set; }
 
         private bool _playComfortMessage;
 
@@ -263,7 +263,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayComfortMessageSpecified { get; set; }
+        protected bool PlayComfortMessageSpecified { get; set; }
 
         private int _timeBetweenComfortMessagesSeconds;
 
@@ -283,7 +283,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeBetweenComfortMessagesSecondsSpecified { get; set; }
+        protected bool TimeBetweenComfortMessagesSecondsSpecified { get; set; }
 
         private bool _enableGuardTimer;
 
@@ -301,7 +301,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableGuardTimerSpecified { get; set; }
+        protected bool EnableGuardTimerSpecified { get; set; }
 
         private int _guardTimerSeconds;
 
@@ -321,7 +321,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GuardTimerSecondsSpecified { get; set; }
+        protected bool GuardTimerSecondsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
 
@@ -339,7 +339,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentUserIdListSpecified { get; set; }
+        protected bool AgentUserIdListSpecified { get; set; }
 
         private bool _allowCallWaitingForAgents;
 
@@ -357,7 +357,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowCallWaitingForAgentsSpecified { get; set; }
+        protected bool AllowCallWaitingForAgentsSpecified { get; set; }
 
         private bool _allowCallsToAgentsInWrapUp;
 
@@ -375,7 +375,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowCallsToAgentsInWrapUpSpecified { get; set; }
+        protected bool AllowCallsToAgentsInWrapUpSpecified { get; set; }
 
         private bool _enableCallQueueWhenNoAgentsAvailable;
 
@@ -393,7 +393,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallQueueWhenNoAgentsAvailableSpecified { get; set; }
+        protected bool EnableCallQueueWhenNoAgentsAvailableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterStatisticsSource _statisticsSource;
 
@@ -411,7 +411,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatisticsSourceSpecified { get; set; }
+        protected bool StatisticsSourceSpecified { get; set; }
 
     }
 }

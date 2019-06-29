@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SkillLevelSpecified { get; set; }
+        protected bool SkillLevelSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agents;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentsSpecified { get; set; }
+        protected bool AgentsSpecified { get; set; }
 
     }
 }

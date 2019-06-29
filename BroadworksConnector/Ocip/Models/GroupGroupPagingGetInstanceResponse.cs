@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private int _confirmationToneTimeoutSeconds;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfirmationToneTimeoutSecondsSpecified { get; set; }
+        protected bool ConfirmationToneTimeoutSecondsSpecified { get; set; }
 
         private bool _deliverOriginatorCLIDInstead;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeliverOriginatorCLIDInsteadSpecified { get; set; }
+        protected bool DeliverOriginatorCLIDInsteadSpecified { get; set; }
 
         private string _originatorCLIDPrefix;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OriginatorCLIDPrefixSpecified { get; set; }
+        protected bool OriginatorCLIDPrefixSpecified { get; set; }
 
     }
 }

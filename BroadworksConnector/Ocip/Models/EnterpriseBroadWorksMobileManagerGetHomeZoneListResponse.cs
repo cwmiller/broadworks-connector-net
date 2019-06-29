@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HomeZonesTableSpecified { get; set; }
+        protected bool HomeZonesTableSpecified { get; set; }
 
     }
 }

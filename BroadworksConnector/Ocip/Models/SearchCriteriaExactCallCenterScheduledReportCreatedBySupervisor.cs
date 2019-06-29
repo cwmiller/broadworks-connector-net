@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CreatedBySupervisorSpecified { get; set; }
+        protected bool CreatedBySupervisorSpecified { get; set; }
 
     }
 }

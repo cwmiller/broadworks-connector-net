@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatmentMappingTableSpecified { get; set; }
+        protected bool TreatmentMappingTableSpecified { get; set; }
 
     }
 }

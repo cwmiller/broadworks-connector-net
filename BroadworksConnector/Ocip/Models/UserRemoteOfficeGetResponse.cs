@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private string _remoteOfficePhoneNumber;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RemoteOfficePhoneNumberSpecified { get; set; }
+        protected bool RemoteOfficePhoneNumberSpecified { get; set; }
 
     }
 }

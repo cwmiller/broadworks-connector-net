@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnassignPhoneNumbersSpecified { get; set; }
+        protected bool UnassignPhoneNumbersSpecified { get; set; }
 
         private bool _addPhoneNumberToGroup;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddPhoneNumberToGroupSpecified { get; set; }
+        protected bool AddPhoneNumberToGroupSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
 
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
 
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PolicySpecified { get; set; }
+        protected bool PolicySpecified { get; set; }
 
         private bool _huntAfterNoAnswer;
 
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HuntAfterNoAnswerSpecified { get; set; }
+        protected bool HuntAfterNoAnswerSpecified { get; set; }
 
         private int _noAnswerNumberOfRings;
 
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerNumberOfRingsSpecified { get; set; }
+        protected bool NoAnswerNumberOfRingsSpecified { get; set; }
 
         private bool _forwardAfterTimeout;
 
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardAfterTimeoutSpecified { get; set; }
+        protected bool ForwardAfterTimeoutSpecified { get; set; }
 
         private int _forwardTimeoutSeconds;
 
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardTimeoutSecondsSpecified { get; set; }
+        protected bool ForwardTimeoutSecondsSpecified { get; set; }
 
         private string _forwardToPhoneNumber;
 
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardToPhoneNumberSpecified { get; set; }
+        protected bool ForwardToPhoneNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
 
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentUserIdListSpecified { get; set; }
+        protected bool AgentUserIdListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementAgentWeightList _agentWeightList;
 
@@ -252,7 +252,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentWeightListSpecified { get; set; }
+        protected bool AgentWeightListSpecified { get; set; }
 
         private bool _allowCallWaitingForAgents;
 
@@ -270,7 +270,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowCallWaitingForAgentsSpecified { get; set; }
+        protected bool AllowCallWaitingForAgentsSpecified { get; set; }
 
         private bool _useSystemHuntGroupCLIDSetting;
 
@@ -288,7 +288,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSystemHuntGroupCLIDSettingSpecified { get; set; }
+        protected bool UseSystemHuntGroupCLIDSettingSpecified { get; set; }
 
         private bool _includeHuntGroupNameInCLID;
 
@@ -306,7 +306,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncludeHuntGroupNameInCLIDSpecified { get; set; }
+        protected bool IncludeHuntGroupNameInCLIDSpecified { get; set; }
 
         private bool _enableNotReachableForwarding;
 
@@ -324,7 +324,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableNotReachableForwardingSpecified { get; set; }
+        protected bool EnableNotReachableForwardingSpecified { get; set; }
 
         private string _notReachableForwardToPhoneNumber;
 
@@ -344,7 +344,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NotReachableForwardToPhoneNumberSpecified { get; set; }
+        protected bool NotReachableForwardToPhoneNumberSpecified { get; set; }
 
         private bool _makeBusyWhenNotReachable;
 
@@ -362,7 +362,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MakeBusyWhenNotReachableSpecified { get; set; }
+        protected bool MakeBusyWhenNotReachableSpecified { get; set; }
 
         private bool _allowMembersToControlGroupBusy;
 
@@ -380,7 +380,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowMembersToControlGroupBusySpecified { get; set; }
+        protected bool AllowMembersToControlGroupBusySpecified { get; set; }
 
         private bool _enableGroupBusy;
 
@@ -398,7 +398,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableGroupBusySpecified { get; set; }
+        protected bool EnableGroupBusySpecified { get; set; }
 
         private bool _applyGroupBusyWhenTerminatingToAgent;
 
@@ -416,7 +416,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ApplyGroupBusyWhenTerminatingToAgentSpecified { get; set; }
+        protected bool ApplyGroupBusyWhenTerminatingToAgentSpecified { get; set; }
 
         private string _networkClassOfService;
 
@@ -436,7 +436,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkClassOfServiceSpecified { get; set; }
+        protected bool NetworkClassOfServiceSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementConsolidatedUserServiceAssignmentList _serviceList;
 
@@ -454,7 +454,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceListSpecified { get; set; }
+        protected bool ServiceListSpecified { get; set; }
 
         private bool _isActive;
 
@@ -472,7 +472,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _directoryNumberHuntingAgentUserIdList;
 
@@ -490,7 +490,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DirectoryNumberHuntingAgentUserIdListSpecified { get; set; }
+        protected bool DirectoryNumberHuntingAgentUserIdListSpecified { get; set; }
 
         private bool _directoryNumberHuntingUseTerminateCallToAgentFirst;
 
@@ -508,7 +508,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DirectoryNumberHuntingUseTerminateCallToAgentFirstSpecified { get; set; }
+        protected bool DirectoryNumberHuntingUseTerminateCallToAgentFirstSpecified { get; set; }
 
         private bool _directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls;
 
@@ -526,7 +526,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DirectoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified { get; set; }
+        protected bool DirectoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified { get; set; }
 
     }
 }

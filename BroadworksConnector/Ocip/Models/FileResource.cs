@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SourceFileNameSpecified { get; set; }
+        protected bool SourceFileNameSpecified { get; set; }
 
         private string _fileContent;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileContentSpecified { get; set; }
+        protected bool FileContentSpecified { get; set; }
 
     }
 }

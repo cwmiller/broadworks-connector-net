@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeFilesTableSpecified { get; set; }
+        protected bool DeviceTypeFilesTableSpecified { get; set; }
 
     }
 }

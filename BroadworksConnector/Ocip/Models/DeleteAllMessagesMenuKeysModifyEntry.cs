@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfirmDeletionSpecified { get; set; }
+        protected bool ConfirmDeletionSpecified { get; set; }
 
         private string _cancelDeletion;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CancelDeletionSpecified { get; set; }
+        protected bool CancelDeletionSpecified { get; set; }
 
     }
 }

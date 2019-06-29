@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ParentDepartmentKeySpecified { get; set; }
+        protected bool ParentDepartmentKeySpecified { get; set; }
 
         private string _callingLineIdName;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdNameSpecified { get; set; }
+        protected bool CallingLineIdNameSpecified { get; set; }
 
         private string _callingLineIdPhoneNumber;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdPhoneNumberSpecified { get; set; }
+        protected bool CallingLineIdPhoneNumberSpecified { get; set; }
 
     }
 }

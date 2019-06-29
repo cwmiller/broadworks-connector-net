@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GenerateDailyReportSpecified { get; set; }
+        protected bool GenerateDailyReportSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CollectionPeriodMinutesSpecified { get; set; }
+        protected bool CollectionPeriodMinutesSpecified { get; set; }
 
         private string _reportingEmailAddress1;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportingEmailAddress1Specified { get; set; }
+        protected bool ReportingEmailAddress1Specified { get; set; }
 
         private string _reportingEmailAddress2;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportingEmailAddress2Specified { get; set; }
+        protected bool ReportingEmailAddress2Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterStatisticsSource _statisticsSource;
 
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatisticsSourceSpecified { get; set; }
+        protected bool StatisticsSourceSpecified { get; set; }
 
     }
 }

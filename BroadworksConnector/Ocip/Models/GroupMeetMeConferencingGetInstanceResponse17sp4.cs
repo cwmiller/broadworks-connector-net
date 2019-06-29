@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceInstanceProfileSpecified { get; set; }
+        protected bool ServiceInstanceProfileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllocatedPortsSpecified { get; set; }
+        protected bool AllocatedPortsSpecified { get; set; }
 
         private string _networkClassOfService;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkClassOfServiceSpecified { get; set; }
+        protected bool NetworkClassOfServiceSpecified { get; set; }
 
         private bool _allowIndividualOutDial;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowIndividualOutDialSpecified { get; set; }
+        protected bool AllowIndividualOutDialSpecified { get; set; }
 
         private string _operatorNumber;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OperatorNumberSpecified { get; set; }
+        protected bool OperatorNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _conferenceHostUserTable;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConferenceHostUserTableSpecified { get; set; }
+        protected bool ConferenceHostUserTableSpecified { get; set; }
 
     }
 }

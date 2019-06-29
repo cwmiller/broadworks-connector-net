@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileSpecified { get; set; }
+        protected bool FileSpecified { get; set; }
 
         private string _url;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UrlSpecified { get; set; }
+        protected bool UrlSpecified { get; set; }
 
     }
 }

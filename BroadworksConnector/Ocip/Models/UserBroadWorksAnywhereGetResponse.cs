@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertAllLocationsForClickToDialCallsSpecified { get; set; }
+        protected bool AlertAllLocationsForClickToDialCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberTableSpecified { get; set; }
+        protected bool PhoneNumberTableSpecified { get; set; }
 
     }
 }

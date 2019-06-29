@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReservedCodeTableSpecified { get; set; }
+        protected bool ReservedCodeTableSpecified { get; set; }
 
     }
 }

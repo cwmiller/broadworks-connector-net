@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private bool _isActive;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private int _numberOfRingsBeforeBouncingCall;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfRingsBeforeBouncingCallSpecified { get; set; }
+        protected bool NumberOfRingsBeforeBouncingCallSpecified { get; set; }
 
         private bool _enableTransfer;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableTransferSpecified { get; set; }
+        protected bool EnableTransferSpecified { get; set; }
 
         private string _transferPhoneNumber;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferPhoneNumberSpecified { get; set; }
+        protected bool TransferPhoneNumberSpecified { get; set; }
 
         private bool _bounceCallWhenAgentUnavailable;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BounceCallWhenAgentUnavailableSpecified { get; set; }
+        protected bool BounceCallWhenAgentUnavailableSpecified { get; set; }
 
     }
 }

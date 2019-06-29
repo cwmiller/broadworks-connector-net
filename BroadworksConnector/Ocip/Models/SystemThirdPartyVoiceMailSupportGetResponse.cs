@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OverrideAltCallerIdForVMRetrievalSpecified { get; set; }
+        protected bool OverrideAltCallerIdForVMRetrievalSpecified { get; set; }
 
     }
 }

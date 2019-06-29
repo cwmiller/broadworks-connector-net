@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleCombinationSpecified { get; set; }
+        protected bool ScheduleCombinationSpecified { get; set; }
 
         private bool _screenPrivateNumber;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScreenPrivateNumberSpecified { get; set; }
+        protected bool ScreenPrivateNumberSpecified { get; set; }
 
     }
 }

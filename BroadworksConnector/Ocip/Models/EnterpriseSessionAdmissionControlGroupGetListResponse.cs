@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SessionAdmissionControlGroupTableSpecified { get; set; }
+        protected bool SessionAdmissionControlGroupTableSpecified { get; set; }
 
     }
 }

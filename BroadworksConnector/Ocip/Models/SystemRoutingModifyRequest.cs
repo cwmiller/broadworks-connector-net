@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsRouteRoundRobinSpecified { get; set; }
+        protected bool IsRouteRoundRobinSpecified { get; set; }
 
         private int _routeTimerSeconds;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteTimerSecondsSpecified { get; set; }
+        protected bool RouteTimerSecondsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy _dnsResolvedAddressSelectionPolicy;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DnsResolvedAddressSelectionPolicySpecified { get; set; }
+        protected bool DnsResolvedAddressSelectionPolicySpecified { get; set; }
 
         private int _statefulExpirationMinutes;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatefulExpirationMinutesSpecified { get; set; }
+        protected bool StatefulExpirationMinutesSpecified { get; set; }
 
         private int _maxAddressesPerHostname;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxAddressesPerHostnameSpecified { get; set; }
+        protected bool MaxAddressesPerHostnameSpecified { get; set; }
 
         private int _maxAddressesDuringSetup;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxAddressesDuringSetupSpecified { get; set; }
+        protected bool MaxAddressesDuringSetupSpecified { get; set; }
 
     }
 }

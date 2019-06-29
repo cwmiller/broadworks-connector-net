@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServiceAuthorizationSpecified { get; set; }
+        protected bool UserServiceAuthorizationSpecified { get; set; }
 
     }
 }

@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupDeviceEndpointSpecified { get; set; }
+        protected bool TrunkGroupDeviceEndpointSpecified { get; set; }
 
         private string _enterpriseTrunkName;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnterpriseTrunkNameSpecified { get; set; }
+        protected bool EnterpriseTrunkNameSpecified { get; set; }
 
         private string _alternateTrunkIdentity;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateTrunkIdentitySpecified { get; set; }
+        protected bool AlternateTrunkIdentitySpecified { get; set; }
 
     }
 }

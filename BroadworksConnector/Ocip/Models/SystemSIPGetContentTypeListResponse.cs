@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContentTypeTableSpecified { get; set; }
+        protected bool ContentTypeTableSpecified { get; set; }
 
     }
 }

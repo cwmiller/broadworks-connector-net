@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LineModeSpecified { get; set; }
+        protected bool LineModeSpecified { get; set; }
 
         private bool _enableDeviceFeatureSynchronization;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDeviceFeatureSynchronizationSpecified { get; set; }
+        protected bool EnableDeviceFeatureSynchronizationSpecified { get; set; }
 
         private bool _enableDnd;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDndSpecified { get; set; }
+        protected bool EnableDndSpecified { get; set; }
 
         private bool _enableCallForwardingAlways;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallForwardingAlwaysSpecified { get; set; }
+        protected bool EnableCallForwardingAlwaysSpecified { get; set; }
 
         private bool _enableCallForwardingBusy;
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallForwardingBusySpecified { get; set; }
+        protected bool EnableCallForwardingBusySpecified { get; set; }
 
         private bool _enableCallForwardingNoAnswer;
 
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallForwardingNoAnswerSpecified { get; set; }
+        protected bool EnableCallForwardingNoAnswerSpecified { get; set; }
 
         private bool _enableAcd;
 
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAcdSpecified { get; set; }
+        protected bool EnableAcdSpecified { get; set; }
 
         private bool _enableExecutive;
 
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableExecutiveSpecified { get; set; }
+        protected bool EnableExecutiveSpecified { get; set; }
 
         private bool _enableExecutiveAssistant;
 
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableExecutiveAssistantSpecified { get; set; }
+        protected bool EnableExecutiveAssistantSpecified { get; set; }
 
         private bool _enableSecurityClassification;
 
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableSecurityClassificationSpecified { get; set; }
+        protected bool EnableSecurityClassificationSpecified { get; set; }
 
         private bool _enableCallRecording;
 
@@ -252,7 +252,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallRecordingSpecified { get; set; }
+        protected bool EnableCallRecordingSpecified { get; set; }
 
         private bool _enableCallDecline;
 
@@ -270,7 +270,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCallDeclineSpecified { get; set; }
+        protected bool EnableCallDeclineSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserCallingPlanTableSpecified { get; set; }
+        protected bool UserCallingPlanTableSpecified { get; set; }
 
     }
 }

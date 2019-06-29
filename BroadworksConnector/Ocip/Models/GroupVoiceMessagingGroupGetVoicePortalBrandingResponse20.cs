@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalGreetingSelectionSpecified { get; set; }
+        protected bool VoicePortalGreetingSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _voicePortalGreetingFile;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalGreetingFileSpecified { get; set; }
+        protected bool VoicePortalGreetingFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voiceMessagingGreetingSelection;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessagingGreetingSelectionSpecified { get; set; }
+        protected bool VoiceMessagingGreetingSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _voiceMessagingGreetingFile;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessagingGreetingFileSpecified { get; set; }
+        protected bool VoiceMessagingGreetingFileSpecified { get; set; }
 
     }
 }

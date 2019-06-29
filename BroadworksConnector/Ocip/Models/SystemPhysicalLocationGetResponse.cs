@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlwaysAllowEmergencyCallsSpecified { get; set; }
+        protected bool AlwaysAllowEmergencyCallsSpecified { get; set; }
 
     }
 }

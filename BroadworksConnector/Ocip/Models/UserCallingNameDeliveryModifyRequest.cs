@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _isActiveForExternalCalls;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveForExternalCallsSpecified { get; set; }
+        protected bool IsActiveForExternalCallsSpecified { get; set; }
 
         private bool _isActiveForInternalCalls;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveForInternalCallsSpecified { get; set; }
+        protected bool IsActiveForInternalCallsSpecified { get; set; }
 
     }
 }

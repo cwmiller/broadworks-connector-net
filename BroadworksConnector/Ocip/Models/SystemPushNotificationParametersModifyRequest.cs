@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnforceAllowedApplicationListSpecified { get; set; }
+        protected bool EnforceAllowedApplicationListSpecified { get; set; }
 
         private int _maximumRegistrationsPerUser;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumRegistrationsPerUserSpecified { get; set; }
+        protected bool MaximumRegistrationsPerUserSpecified { get; set; }
 
         private int _maximumRegistrationAgeDays;
 
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumRegistrationAgeDaysSpecified { get; set; }
+        protected bool MaximumRegistrationAgeDaysSpecified { get; set; }
 
         private int _newCallTimeout;
 
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewCallTimeoutSpecified { get; set; }
+        protected bool NewCallTimeoutSpecified { get; set; }
 
         private int _subscriptionEventsPerSecond;
 
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SubscriptionEventsPerSecondSpecified { get; set; }
+        protected bool SubscriptionEventsPerSecondSpecified { get; set; }
 
     }
 }

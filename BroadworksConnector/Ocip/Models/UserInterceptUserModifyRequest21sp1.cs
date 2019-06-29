@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _isActive;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnnouncementSelectionSpecified { get; set; }
+        protected bool AnnouncementSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _audioFile;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFileSpecified { get; set; }
+        protected bool AudioFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _videoFile;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoFileSpecified { get; set; }
+        protected bool VideoFileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.InterceptInboundCall _inboundCallMode;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InboundCallModeSpecified { get; set; }
+        protected bool InboundCallModeSpecified { get; set; }
 
         private bool _alternateBlockingAnnouncement;
 
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateBlockingAnnouncementSpecified { get; set; }
+        protected bool AlternateBlockingAnnouncementSpecified { get; set; }
 
         private bool _exemptInboundMobilityCalls;
 
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExemptInboundMobilityCallsSpecified { get; set; }
+        protected bool ExemptInboundMobilityCallsSpecified { get; set; }
 
         private bool _disableParallelRingingToNetworkLocations;
 
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisableParallelRingingToNetworkLocationsSpecified { get; set; }
+        protected bool DisableParallelRingingToNetworkLocationsSpecified { get; set; }
 
         private bool _routeToVoiceMail;
 
@@ -203,7 +203,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteToVoiceMailSpecified { get; set; }
+        protected bool RouteToVoiceMailSpecified { get; set; }
 
         private bool _playNewPhoneNumber;
 
@@ -221,7 +221,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayNewPhoneNumberSpecified { get; set; }
+        protected bool PlayNewPhoneNumberSpecified { get; set; }
 
         private string _newPhoneNumber;
 
@@ -241,7 +241,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewPhoneNumberSpecified { get; set; }
+        protected bool NewPhoneNumberSpecified { get; set; }
 
         private bool _transferOnZeroToPhoneNumber;
 
@@ -259,7 +259,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferOnZeroToPhoneNumberSpecified { get; set; }
+        protected bool TransferOnZeroToPhoneNumberSpecified { get; set; }
 
         private string _transferPhoneNumber;
 
@@ -279,7 +279,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferPhoneNumberSpecified { get; set; }
+        protected bool TransferPhoneNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.InterceptOutboundCall _outboundCallMode;
 
@@ -297,7 +297,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutboundCallModeSpecified { get; set; }
+        protected bool OutboundCallModeSpecified { get; set; }
 
         private bool _exemptOutboundMobilityCalls;
 
@@ -315,7 +315,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExemptOutboundMobilityCallsSpecified { get; set; }
+        protected bool ExemptOutboundMobilityCallsSpecified { get; set; }
 
         private bool _rerouteOutboundCalls;
 
@@ -333,7 +333,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RerouteOutboundCallsSpecified { get; set; }
+        protected bool RerouteOutboundCallsSpecified { get; set; }
 
         private string _outboundReroutePhoneNumber;
 
@@ -353,7 +353,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutboundReroutePhoneNumberSpecified { get; set; }
+        protected bool OutboundReroutePhoneNumberSpecified { get; set; }
 
     }
 }

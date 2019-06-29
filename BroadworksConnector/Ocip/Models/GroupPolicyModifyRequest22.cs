@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupCallingPlanAccess _callingPlanAccess;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingPlanAccessSpecified { get; set; }
+        protected bool CallingPlanAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupExtensionAccess _extensionAccess;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtensionAccessSpecified { get; set; }
+        protected bool ExtensionAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupVoiceMessagingAccess _voiceMessagingAccess;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessagingAccessSpecified { get; set; }
+        protected bool VoiceMessagingAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupDepartmentAdminUserAccess _departmentAdminUserAccess;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentAdminUserAccessSpecified { get; set; }
+        protected bool DepartmentAdminUserAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupDepartmentAdminTrunkGroupAccess _departmentAdminTrunkGroupAccess;
 
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentAdminTrunkGroupAccessSpecified { get; set; }
+        protected bool DepartmentAdminTrunkGroupAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupDepartmentAdminPhoneNumberExtensionAccess _departmentAdminPhoneNumberExtensionAccess;
 
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentAdminPhoneNumberExtensionAccessSpecified { get; set; }
+        protected bool DepartmentAdminPhoneNumberExtensionAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupDepartmentAdminCallingLineIdNumberAccess _departmentAdminCallingLineIdNumberAccess;
 
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentAdminCallingLineIdNumberAccessSpecified { get; set; }
+        protected bool DepartmentAdminCallingLineIdNumberAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupUserAuthenticationAccess _userAuthenticationAccess;
 
@@ -202,7 +202,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserAuthenticationAccessSpecified { get; set; }
+        protected bool UserAuthenticationAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupUserGroupDirectoryAccess _userGroupDirectoryAccess;
 
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserGroupDirectoryAccessSpecified { get; set; }
+        protected bool UserGroupDirectoryAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupUserProfileAccess _userProfileAccess;
 
@@ -238,7 +238,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserProfileAccessSpecified { get; set; }
+        protected bool UserProfileAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupUserCallLogAccess _userEnhancedCallLogAccess;
 
@@ -256,7 +256,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserEnhancedCallLogAccessSpecified { get; set; }
+        protected bool UserEnhancedCallLogAccessSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.GroupUserAutoAttendantNameDialingAccess _userAutoAttendantNameDialingAccess;
 
@@ -274,7 +274,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserAutoAttendantNameDialingAccessSpecified { get; set; }
+        protected bool UserAutoAttendantNameDialingAccessSpecified { get; set; }
 
     }
 }

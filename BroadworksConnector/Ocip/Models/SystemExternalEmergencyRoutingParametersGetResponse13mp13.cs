@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceURISpecified { get; set; }
+        protected bool ServiceURISpecified { get; set; }
 
         private string _defaultEmergencyNumber;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultEmergencyNumberSpecified { get; set; }
+        protected bool DefaultEmergencyNumberSpecified { get; set; }
 
         private bool _isActive;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private bool _supportsDNSSRV;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportsDNSSRVSpecified { get; set; }
+        protected bool SupportsDNSSRVSpecified { get; set; }
 
         private int _connectionTimeoutSeconds;
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConnectionTimeoutSecondsSpecified { get; set; }
+        protected bool ConnectionTimeoutSecondsSpecified { get; set; }
 
     }
 }

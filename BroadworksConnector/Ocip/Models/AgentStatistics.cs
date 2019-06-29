@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfCallsHandledSpecified { get; set; }
+        protected bool NumberOfCallsHandledSpecified { get; set; }
 
         private int _numberOfCallsUnanswered;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfCallsUnansweredSpecified { get; set; }
+        protected bool NumberOfCallsUnansweredSpecified { get; set; }
 
         private int _averageCallSeconds;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AverageCallSecondsSpecified { get; set; }
+        protected bool AverageCallSecondsSpecified { get; set; }
 
         private int _totalTalkSeconds;
 
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TotalTalkSecondsSpecified { get; set; }
+        protected bool TotalTalkSecondsSpecified { get; set; }
 
         private int _totalStaffedSeconds;
 
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TotalStaffedSecondsSpecified { get; set; }
+        protected bool TotalStaffedSecondsSpecified { get; set; }
 
     }
 }

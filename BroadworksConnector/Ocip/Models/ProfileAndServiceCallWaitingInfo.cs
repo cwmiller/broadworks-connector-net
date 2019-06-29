@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private bool _disableCallingLineIdDelivery;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisableCallingLineIdDeliverySpecified { get; set; }
+        protected bool DisableCallingLineIdDeliverySpecified { get; set; }
 
     }
 }

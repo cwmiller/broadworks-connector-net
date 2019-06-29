@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LicenseStrictnessSpecified { get; set; }
+        protected bool LicenseStrictnessSpecified { get; set; }
 
         private int _groupUserlimit;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupUserlimitSpecified { get; set; }
+        protected bool GroupUserlimitSpecified { get; set; }
 
         private string _expirationDate;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExpirationDateSpecified { get; set; }
+        protected bool ExpirationDateSpecified { get; set; }
 
         private List<string> _hostId = new List<string>();
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HostIdSpecified { get; set; }
+        protected bool HostIdSpecified { get; set; }
 
         private List<string> _licenseName = new List<string>();
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LicenseNameSpecified { get; set; }
+        protected bool LicenseNameSpecified { get; set; }
 
         private int _numberOfTrunkUsers;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfTrunkUsersSpecified { get; set; }
+        protected bool NumberOfTrunkUsersSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _subscriberLicenseTable;
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SubscriberLicenseTableSpecified { get; set; }
+        protected bool SubscriberLicenseTableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _groupServiceLicenseTable;
 
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupServiceLicenseTableSpecified { get; set; }
+        protected bool GroupServiceLicenseTableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _virtualServiceLicenseTable;
 
@@ -178,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VirtualServiceLicenseTableSpecified { get; set; }
+        protected bool VirtualServiceLicenseTableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _userServiceLicenseTable;
 
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserServiceLicenseTableSpecified { get; set; }
+        protected bool UserServiceLicenseTableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _systemParamLicenseTable;
 
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemParamLicenseTableSpecified { get; set; }
+        protected bool SystemParamLicenseTableSpecified { get; set; }
 
     }
 }

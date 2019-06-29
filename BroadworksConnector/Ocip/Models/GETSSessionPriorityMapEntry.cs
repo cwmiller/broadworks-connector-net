@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PriorityLevelSpecified { get; set; }
+        protected bool PriorityLevelSpecified { get; set; }
 
         private int _sessionPriority;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SessionPrioritySpecified { get; set; }
+        protected bool SessionPrioritySpecified { get; set; }
 
     }
 }

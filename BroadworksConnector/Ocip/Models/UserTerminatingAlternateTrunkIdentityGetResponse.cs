@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TerminatingTrunkIdentitySpecified { get; set; }
+        protected bool TerminatingTrunkIdentitySpecified { get; set; }
 
     }
 }

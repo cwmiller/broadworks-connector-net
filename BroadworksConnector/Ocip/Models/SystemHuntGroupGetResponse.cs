@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AnonymousInsteadOfPrivateCLIDSpecified { get; set; }
+        protected bool AnonymousInsteadOfPrivateCLIDSpecified { get; set; }
 
         private bool _removeHuntGroupNameFromCLID;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RemoveHuntGroupNameFromCLIDSpecified { get; set; }
+        protected bool RemoveHuntGroupNameFromCLIDSpecified { get; set; }
 
     }
 }

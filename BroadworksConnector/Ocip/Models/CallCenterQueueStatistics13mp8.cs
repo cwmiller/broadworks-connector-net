@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfIncomingCallsSpecified { get; set; }
+        protected bool NumberOfIncomingCallsSpecified { get; set; }
 
         private int _numberOfCallsQueued;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfCallsQueuedSpecified { get; set; }
+        protected bool NumberOfCallsQueuedSpecified { get; set; }
 
         private int _numberOfBusyOverflows;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfBusyOverflowsSpecified { get; set; }
+        protected bool NumberOfBusyOverflowsSpecified { get; set; }
 
         private int _numberOfCallsAnswered;
 
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfCallsAnsweredSpecified { get; set; }
+        protected bool NumberOfCallsAnsweredSpecified { get; set; }
 
         private int _averageTimeWithAgentSeconds;
 
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AverageTimeWithAgentSecondsSpecified { get; set; }
+        protected bool AverageTimeWithAgentSecondsSpecified { get; set; }
 
         private int _averageTimeInQueueSeconds;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AverageTimeInQueueSecondsSpecified { get; set; }
+        protected bool AverageTimeInQueueSecondsSpecified { get; set; }
 
         private string _averageNumberOfAgentsBusy;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AverageNumberOfAgentsBusySpecified { get; set; }
+        protected bool AverageNumberOfAgentsBusySpecified { get; set; }
 
         private string _averageNumberOfAgentsLoggedOff;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AverageNumberOfAgentsLoggedOffSpecified { get; set; }
+        protected bool AverageNumberOfAgentsLoggedOffSpecified { get; set; }
 
         private int _averageHoldTimeBeforeCallLossSeconds;
 
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AverageHoldTimeBeforeCallLossSecondsSpecified { get; set; }
+        protected bool AverageHoldTimeBeforeCallLossSecondsSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableMessageDepositSpecified { get; set; }
+        protected bool EnableMessageDepositSpecified { get; set; }
 
         private string _disableMessageDeposit;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisableMessageDepositSpecified { get; set; }
+        protected bool DisableMessageDepositSpecified { get; set; }
 
         private string _listenToMessageDepositStatus;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ListenToMessageDepositStatusSpecified { get; set; }
+        protected bool ListenToMessageDepositStatusSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

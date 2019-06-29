@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatusDigitPatternTableSpecified { get; set; }
+        protected bool StatusDigitPatternTableSpecified { get; set; }
 
     }
 }

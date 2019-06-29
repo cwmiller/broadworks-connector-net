@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaOnHoldSourceSpecified { get; set; }
+        protected bool MediaOnHoldSourceSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private bool _isActiveDuringCallHold;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveDuringCallHoldSpecified { get; set; }
+        protected bool IsActiveDuringCallHoldSpecified { get; set; }
 
         private bool _isActiveDuringCallPark;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveDuringCallParkSpecified { get; set; }
+        protected bool IsActiveDuringCallParkSpecified { get; set; }
 
         private bool _isActiveDuringBusyCampOn;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveDuringBusyCampOnSpecified { get; set; }
+        protected bool IsActiveDuringBusyCampOnSpecified { get; set; }
 
         private bool _enableVideo;
 
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableVideoSpecified { get; set; }
+        protected bool EnableVideoSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead16 _source;
 
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SourceSpecified { get; set; }
+        protected bool SourceSpecified { get; set; }
 
         private bool _useAlternateSourceForInternalCalls;
 
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseAlternateSourceForInternalCallsSpecified { get; set; }
+        protected bool UseAlternateSourceForInternalCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead16 _internalSource;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InternalSourceSpecified { get; set; }
+        protected bool InternalSourceSpecified { get; set; }
 
     }
 }

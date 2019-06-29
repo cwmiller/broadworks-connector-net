@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumTargetUsersFromServiceProviderSpecified { get; set; }
+        protected bool MaximumTargetUsersFromServiceProviderSpecified { get; set; }
 
         private int _maximumTargetUsers;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumTargetUsersSpecified { get; set; }
+        protected bool MaximumTargetUsersSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HssRealmSpecified { get; set; }
+        protected bool HssRealmSpecified { get; set; }
 
         private int _publicIdentityRefreshDelaySeconds;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PublicIdentityRefreshDelaySecondsSpecified { get; set; }
+        protected bool PublicIdentityRefreshDelaySecondsSpecified { get; set; }
 
     }
 }

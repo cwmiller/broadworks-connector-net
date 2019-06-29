@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResellerAdminTableSpecified { get; set; }
+        protected bool ResellerAdminTableSpecified { get; set; }
 
     }
 }

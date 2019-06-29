@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _rootDirectory;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RootDirectorySpecified { get; set; }
+        protected bool RootDirectorySpecified { get; set; }
 
         private int _port;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PortSpecified { get; set; }
+        protected bool PortSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.FileRepositoryProtocolWebDAV20 _protocolWebDAV;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtocolWebDAVSpecified { get; set; }
+        protected bool ProtocolWebDAVSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.FileRepositoryProtocolFTP16 _protocolFTP;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtocolFTPSpecified { get; set; }
+        protected bool ProtocolFTPSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.FileRepositoryProtocolFTP16 _protocolSFTP;
 
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtocolSFTPSpecified { get; set; }
+        protected bool ProtocolSFTPSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.FileRepositoryProtocolFTP16 _protocolFTPS;
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtocolFTPSSpecified { get; set; }
+        protected bool ProtocolFTPSSpecified { get; set; }
 
     }
 }

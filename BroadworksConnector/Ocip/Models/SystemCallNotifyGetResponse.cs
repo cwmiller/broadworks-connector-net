@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultFromAddressSpecified { get; set; }
+        protected bool DefaultFromAddressSpecified { get; set; }
 
         private bool _useShortSubjectLine;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseShortSubjectLineSpecified { get; set; }
+        protected bool UseShortSubjectLineSpecified { get; set; }
 
         private bool _useDnInMailBody;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDnInMailBodySpecified { get; set; }
+        protected bool UseDnInMailBodySpecified { get; set; }
 
     }
 }

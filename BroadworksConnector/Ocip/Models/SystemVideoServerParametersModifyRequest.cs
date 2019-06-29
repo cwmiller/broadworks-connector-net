@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoServerResponseTimerMillisecondsSpecified { get; set; }
+        protected bool VideoServerResponseTimerMillisecondsSpecified { get; set; }
 
         private int _videoServerSelectionRouteTimerMilliseconds;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VideoServerSelectionRouteTimerMillisecondsSpecified { get; set; }
+        protected bool VideoServerSelectionRouteTimerMillisecondsSpecified { get; set; }
 
         private bool _useStaticVideoServerDevice;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseStaticVideoServerDeviceSpecified { get; set; }
+        protected bool UseStaticVideoServerDeviceSpecified { get; set; }
 
     }
 }

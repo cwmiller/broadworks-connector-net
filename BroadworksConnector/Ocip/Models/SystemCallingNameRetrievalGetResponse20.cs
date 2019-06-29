@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TriggerCNAMQueriesForAllNetworkCallsSpecified { get; set; }
+        protected bool TriggerCNAMQueriesForAllNetworkCallsSpecified { get; set; }
 
         private bool _triggerCNAMQueriesForGroupAndEnterpriseCalls;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TriggerCNAMQueriesForGroupAndEnterpriseCallsSpecified { get; set; }
+        protected bool TriggerCNAMQueriesForGroupAndEnterpriseCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol _queryProtocol;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool QueryProtocolSpecified { get; set; }
+        protected bool QueryProtocolSpecified { get; set; }
 
         private int _queryTimeoutMilliseconds;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool QueryTimeoutMillisecondsSpecified { get; set; }
+        protected bool QueryTimeoutMillisecondsSpecified { get; set; }
 
         private string _sipExternalDatabaseNetAddress;
 
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipExternalDatabaseNetAddressSpecified { get; set; }
+        protected bool SipExternalDatabaseNetAddressSpecified { get; set; }
 
         private int _sipExternalDatabasePort;
 
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipExternalDatabasePortSpecified { get; set; }
+        protected bool SipExternalDatabasePortSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TransportProtocol _sipExternalDatabaseTransport;
 
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipExternalDatabaseTransportSpecified { get; set; }
+        protected bool SipExternalDatabaseTransportSpecified { get; set; }
 
         private string _soapExternalDatabaseNetAddress;
 
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SoapExternalDatabaseNetAddressSpecified { get; set; }
+        protected bool SoapExternalDatabaseNetAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity _callingNameSource;
 
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingNameSourceSpecified { get; set; }
+        protected bool CallingNameSourceSpecified { get; set; }
 
         private int _routeAdvanceTimer;
 
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteAdvanceTimerSpecified { get; set; }
+        protected bool RouteAdvanceTimerSpecified { get; set; }
 
         private int _retryFailedCNAMServerInterval;
 
@@ -217,7 +217,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RetryFailedCNAMServerIntervalSpecified { get; set; }
+        protected bool RetryFailedCNAMServerIntervalSpecified { get; set; }
 
         private bool _ignoreRestrictedPresentationIndicator;
 
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IgnoreRestrictedPresentationIndicatorSpecified { get; set; }
+        protected bool IgnoreRestrictedPresentationIndicatorSpecified { get; set; }
 
         private bool _supportsDNSSRV;
 
@@ -251,7 +251,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportsDNSSRVSpecified { get; set; }
+        protected bool SupportsDNSSRVSpecified { get; set; }
 
     }
 }

@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateUserIdSpecified { get; set; }
+        protected bool AlternateUserIdSpecified { get; set; }
 
     }
 }

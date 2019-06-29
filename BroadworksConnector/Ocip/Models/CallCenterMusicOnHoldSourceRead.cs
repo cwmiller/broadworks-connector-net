@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFilePreferredCodecSpecified { get; set; }
+        protected bool AudioFilePreferredCodecSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _messageSourceSelection;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MessageSourceSelectionSpecified { get; set; }
+        protected bool MessageSourceSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterMusicOnHoldSourceReadCustomSource _customSource;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CustomSourceSpecified { get; set; }
+        protected bool CustomSourceSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MonitorMinutesSpecified { get; set; }
+        protected bool MonitorMinutesSpecified { get; set; }
 
         private int _waitBetweenRetryOriginatorMinutes;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WaitBetweenRetryOriginatorMinutesSpecified { get; set; }
+        protected bool WaitBetweenRetryOriginatorMinutesSpecified { get; set; }
 
         private int _maxMonitorsPerOriginator;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxMonitorsPerOriginatorSpecified { get; set; }
+        protected bool MaxMonitorsPerOriginatorSpecified { get; set; }
 
         private int _maxCallbackRings;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCallbackRingsSpecified { get; set; }
+        protected bool MaxCallbackRingsSpecified { get; set; }
 
         private int _maxRetryOriginatorMinutes;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxRetryOriginatorMinutesSpecified { get; set; }
+        protected bool MaxRetryOriginatorMinutesSpecified { get; set; }
 
     }
 }

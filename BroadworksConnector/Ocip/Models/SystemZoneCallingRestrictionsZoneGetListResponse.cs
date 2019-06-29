@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ZoneTableSpecified { get; set; }
+        protected bool ZoneTableSpecified { get; set; }
 
     }
 }

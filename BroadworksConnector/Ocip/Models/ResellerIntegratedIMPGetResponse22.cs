@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSystemServiceDomainSpecified { get; set; }
+        protected bool UseSystemServiceDomainSpecified { get; set; }
 
         private string _serviceDomain;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceDomainSpecified { get; set; }
+        protected bool ServiceDomainSpecified { get; set; }
 
         private int _servicePort;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServicePortSpecified { get; set; }
+        protected bool ServicePortSpecified { get; set; }
 
         private bool _useSystemMessagingServer;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSystemMessagingServerSpecified { get; set; }
+        protected bool UseSystemMessagingServerSpecified { get; set; }
 
         private string _provisioningUrl;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProvisioningUrlSpecified { get; set; }
+        protected bool ProvisioningUrlSpecified { get; set; }
 
         private string _provisioningUserId;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProvisioningUserIdSpecified { get; set; }
+        protected bool ProvisioningUserIdSpecified { get; set; }
 
         private string _boshURL;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BoshURLSpecified { get; set; }
+        protected bool BoshURLSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
 
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultImpIdTypeSpecified { get; set; }
+        protected bool DefaultImpIdTypeSpecified { get; set; }
 
     }
 }

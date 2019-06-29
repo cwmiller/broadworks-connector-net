@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _prefixDigits;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrefixDigitsSpecified { get; set; }
+        protected bool PrefixDigitsSpecified { get; set; }
 
         private string _serverNetAddress;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServerNetAddressSpecified { get; set; }
+        protected bool ServerNetAddressSpecified { get; set; }
 
         private int? _serverPort;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServerPortSpecified { get; set; }
+        protected bool ServerPortSpecified { get; set; }
 
         private int _timeoutSeconds;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeoutSecondsSpecified { get; set; }
+        protected bool TimeoutSecondsSpecified { get; set; }
 
     }
 }

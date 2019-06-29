@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponsePagingControlSpecified { get; set; }
+        protected bool ResponsePagingControlSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByLocation _sortByLocation;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByLocationSpecified { get; set; }
+        protected bool SortByLocationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByEnabled _sortByEnabled;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByEnabledSpecified { get; set; }
+        protected bool SortByEnabledSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation> _searchCriteriaLocation = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation>();
 
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaLocationSpecified { get; set; }
+        protected bool SearchCriteriaLocationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SearchCriteriaExactLocationEnabled _searchCriteriaExactLocationEnabled;
 
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaExactLocationEnabledSpecified { get; set; }
+        protected bool SearchCriteriaExactLocationEnabledSpecified { get; set; }
 
     }
 }

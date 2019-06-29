@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReceptionistNoteSpecified { get; set; }
+        protected bool ReceptionistNoteSpecified { get; set; }
 
     }
 }

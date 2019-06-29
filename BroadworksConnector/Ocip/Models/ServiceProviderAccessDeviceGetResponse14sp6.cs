@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeSpecified { get; set; }
+        protected bool DeviceTypeSpecified { get; set; }
 
         private string _protocol;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtocolSpecified { get; set; }
+        protected bool ProtocolSpecified { get; set; }
 
         private string _netAddress;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetAddressSpecified { get; set; }
+        protected bool NetAddressSpecified { get; set; }
 
         private int _port;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PortSpecified { get; set; }
+        protected bool PortSpecified { get; set; }
 
         private string _outboundProxyServerNetAddress;
 
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutboundProxyServerNetAddressSpecified { get; set; }
+        protected bool OutboundProxyServerNetAddressSpecified { get; set; }
 
         private string _stunServerNetAddress;
 
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StunServerNetAddressSpecified { get; set; }
+        protected bool StunServerNetAddressSpecified { get; set; }
 
         private string _macAddress;
 
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MacAddressSpecified { get; set; }
+        protected bool MacAddressSpecified { get; set; }
 
         private string _serialNumber;
 
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SerialNumberSpecified { get; set; }
+        protected bool SerialNumberSpecified { get; set; }
 
         private string _description;
 
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
 
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfPortsSpecified { get; set; }
+        protected bool NumberOfPortsSpecified { get; set; }
 
         private int _numberOfAssignedPorts;
 
@@ -229,7 +229,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfAssignedPortsSpecified { get; set; }
+        protected bool NumberOfAssignedPortsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceStatus _status;
 
@@ -246,7 +246,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatusSpecified { get; set; }
+        protected bool StatusSpecified { get; set; }
 
         private string _physicalLocation;
 
@@ -266,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhysicalLocationSpecified { get; set; }
+        protected bool PhysicalLocationSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TransportProtocol _transportProtocol;
 
@@ -284,7 +284,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransportProtocolSpecified { get; set; }
+        protected bool TransportProtocolSpecified { get; set; }
 
         private string _mobilityManagerProvisioningURL;
 
@@ -304,7 +304,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobilityManagerProvisioningURLSpecified { get; set; }
+        protected bool MobilityManagerProvisioningURLSpecified { get; set; }
 
         private string _mobilityManagerProvisioningUserName;
 
@@ -324,7 +324,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobilityManagerProvisioningUserNameSpecified { get; set; }
+        protected bool MobilityManagerProvisioningUserNameSpecified { get; set; }
 
         private int _mobilityManagerDefaultOriginatingServiceKey;
 
@@ -344,7 +344,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobilityManagerDefaultOriginatingServiceKeySpecified { get; set; }
+        protected bool MobilityManagerDefaultOriginatingServiceKeySpecified { get; set; }
 
         private int _mobilityManagerDefaultTerminatingServiceKey;
 
@@ -364,7 +364,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobilityManagerDefaultTerminatingServiceKeySpecified { get; set; }
+        protected bool MobilityManagerDefaultTerminatingServiceKeySpecified { get; set; }
 
         private bool _useCustomUserNamePassword;
 
@@ -382,7 +382,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseCustomUserNamePasswordSpecified { get; set; }
+        protected bool UseCustomUserNamePasswordSpecified { get; set; }
 
         private string _userName;
 
@@ -402,7 +402,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserNameSpecified { get; set; }
+        protected bool UserNameSpecified { get; set; }
 
     }
 }

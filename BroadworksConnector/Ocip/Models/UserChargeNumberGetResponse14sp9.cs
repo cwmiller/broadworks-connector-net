@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
         private bool _useChargeNumberForEnhancedTranslations;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseChargeNumberForEnhancedTranslationsSpecified { get; set; }
+        protected bool UseChargeNumberForEnhancedTranslationsSpecified { get; set; }
 
         private bool _sendChargeNumberToNetwork;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendChargeNumberToNetworkSpecified { get; set; }
+        protected bool SendChargeNumberToNetworkSpecified { get; set; }
 
     }
 }

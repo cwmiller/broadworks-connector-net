@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowEmergencyCallsSpecified { get; set; }
+        protected bool AllowEmergencyCallsSpecified { get; set; }
 
         private bool _allowCallsToVoicePortal;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowCallsToVoicePortalSpecified { get; set; }
+        protected bool AllowCallsToVoicePortalSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResellerIdSpecified { get; set; }
+        protected bool ResellerIdSpecified { get; set; }
 
         private bool _useSystemSettings;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSystemSettingsSpecified { get; set; }
+        protected bool UseSystemSettingsSpecified { get; set; }
 
         private bool _sendResourcePriorityToNetwork;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendResourcePriorityToNetworkSpecified { get; set; }
+        protected bool SendResourcePriorityToNetworkSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ResourcePriorityValue _resourcePriority;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResourcePrioritySpecified { get; set; }
+        protected bool ResourcePrioritySpecified { get; set; }
 
     }
 }

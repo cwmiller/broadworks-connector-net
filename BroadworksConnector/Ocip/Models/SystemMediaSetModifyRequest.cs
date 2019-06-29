@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetNameSpecified { get; set; }
+        protected bool SetNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementMediaNameList _mediaNameList;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaNameListSpecified { get; set; }
+        protected bool MediaNameListSpecified { get; set; }
 
     }
 }

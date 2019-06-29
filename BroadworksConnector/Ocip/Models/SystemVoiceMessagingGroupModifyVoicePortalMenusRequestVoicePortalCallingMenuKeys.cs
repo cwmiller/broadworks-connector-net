@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndCurrentCallAndGoBackToPreviousMenuSpecified { get; set; }
+        protected bool EndCurrentCallAndGoBackToPreviousMenuSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
     }
 }

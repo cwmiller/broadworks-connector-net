@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferToAttendantKeySpecified { get; set; }
+        protected bool TransferToAttendantKeySpecified { get; set; }
 
         private string _transferToVoiceMessagingKey;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransferToVoiceMessagingKeySpecified { get; set; }
+        protected bool TransferToVoiceMessagingKeySpecified { get; set; }
 
     }
 }

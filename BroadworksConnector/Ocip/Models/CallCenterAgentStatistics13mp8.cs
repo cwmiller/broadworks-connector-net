@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentUserIdSpecified { get; set; }
+        protected bool AgentUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.UserDisplayNames _agentDisplayNames;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentDisplayNamesSpecified { get; set; }
+        protected bool AgentDisplayNamesSpecified { get; set; }
 
         private bool _available;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvailableSpecified { get; set; }
+        protected bool AvailableSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 _statisticsYesterday;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatisticsYesterdaySpecified { get; set; }
+        protected bool StatisticsYesterdaySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 _statisticsToday;
 
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatisticsTodaySpecified { get; set; }
+        protected bool StatisticsTodaySpecified { get; set; }
 
     }
 }

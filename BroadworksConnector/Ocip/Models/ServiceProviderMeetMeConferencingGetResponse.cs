@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllocatedPortsSpecified { get; set; }
+        protected bool AllocatedPortsSpecified { get; set; }
 
     }
 }

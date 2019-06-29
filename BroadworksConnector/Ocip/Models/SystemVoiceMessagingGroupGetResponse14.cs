@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RealDeleteForImapSpecified { get; set; }
+        protected bool RealDeleteForImapSpecified { get; set; }
 
         private bool _useDnInMailBody;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDnInMailBodySpecified { get; set; }
+        protected bool UseDnInMailBodySpecified { get; set; }
 
         private bool _useShortSubjectLine;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseShortSubjectLineSpecified { get; set; }
+        protected bool UseShortSubjectLineSpecified { get; set; }
 
         private int _maxGreetingLengthMinutes;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxGreetingLengthMinutesSpecified { get; set; }
+        protected bool MaxGreetingLengthMinutesSpecified { get; set; }
 
         private int _maxMessageLengthMinutes;
 
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxMessageLengthMinutesSpecified { get; set; }
+        protected bool MaxMessageLengthMinutesSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes _maxMailboxLengthMinutes;
 
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxMailboxLengthMinutesSpecified { get; set; }
+        protected bool MaxMailboxLengthMinutesSpecified { get; set; }
 
         private bool _doesMessageAge;
 
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DoesMessageAgeSpecified { get; set; }
+        protected bool DoesMessageAgeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays _holdPeriodDays;
 
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HoldPeriodDaysSpecified { get; set; }
+        protected bool HoldPeriodDaysSpecified { get; set; }
 
         private string _mailServerNetAddress;
 
@@ -178,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MailServerNetAddressSpecified { get; set; }
+        protected bool MailServerNetAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol _mailServerProtocol;
 
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MailServerProtocolSpecified { get; set; }
+        protected bool MailServerProtocolSpecified { get; set; }
 
         private string _defaultDeliveryFromAddress;
 
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultDeliveryFromAddressSpecified { get; set; }
+        protected bool DefaultDeliveryFromAddressSpecified { get; set; }
 
         private string _defaultNotificationFromAddress;
 
@@ -233,7 +233,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultNotificationFromAddressSpecified { get; set; }
+        protected bool DefaultNotificationFromAddressSpecified { get; set; }
 
         private string _defaultVoicePortalLockoutFromAddress;
 
@@ -252,7 +252,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultVoicePortalLockoutFromAddressSpecified { get; set; }
+        protected bool DefaultVoicePortalLockoutFromAddressSpecified { get; set; }
 
         private bool _useOutgoingMWIOnSMDI;
 
@@ -269,7 +269,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseOutgoingMWIOnSMDISpecified { get; set; }
+        protected bool UseOutgoingMWIOnSMDISpecified { get; set; }
 
         private int _mwiDelayInSeconds;
 
@@ -288,7 +288,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MwiDelayInSecondsSpecified { get; set; }
+        protected bool MwiDelayInSecondsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemVoicePortalScope _voicePortalScope;
 
@@ -305,7 +305,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalScopeSpecified { get; set; }
+        protected bool VoicePortalScopeSpecified { get; set; }
 
         private bool _enterpriseVoicePortalLicensed;
 
@@ -322,7 +322,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnterpriseVoicePortalLicensedSpecified { get; set; }
+        protected bool EnterpriseVoicePortalLicensedSpecified { get; set; }
 
         private bool _networkWideMessaging;
 
@@ -339,7 +339,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkWideMessagingSpecified { get; set; }
+        protected bool NetworkWideMessagingSpecified { get; set; }
 
         private bool _useExternalRouting;
 
@@ -356,7 +356,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseExternalRoutingSpecified { get; set; }
+        protected bool UseExternalRoutingSpecified { get; set; }
 
         private string _defaultExternalRoutingAddress;
 
@@ -376,7 +376,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultExternalRoutingAddressSpecified { get; set; }
+        protected bool DefaultExternalRoutingAddressSpecified { get; set; }
 
     }
 }

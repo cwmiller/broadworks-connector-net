@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserListSizeLimitSpecified { get; set; }
+        protected bool UserListSizeLimitSpecified { get; set; }
 
     }
 }

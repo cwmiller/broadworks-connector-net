@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseServiceProviderSettingSpecified { get; set; }
+        protected bool UseServiceProviderSettingSpecified { get; set; }
 
         private string _serviceDomain;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceDomainSpecified { get; set; }
+        protected bool ServiceDomainSpecified { get; set; }
 
     }
 }

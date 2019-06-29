@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OriginatingServiceKeySpecified { get; set; }
+        protected bool OriginatingServiceKeySpecified { get; set; }
 
         private int _terminatingServiceKey;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TerminatingServiceKeySpecified { get; set; }
+        protected bool TerminatingServiceKeySpecified { get; set; }
 
     }
 }

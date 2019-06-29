@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobileManagerIdSpecified { get; set; }
+        protected bool MobileManagerIdSpecified { get; set; }
 
         private string _name;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private bool _isActive;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private bool _localToCarrier;
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LocalToCarrierSpecified { get; set; }
+        protected bool LocalToCarrierSpecified { get; set; }
 
         private string _deactivationReason;
 
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeactivationReasonSpecified { get; set; }
+        protected bool DeactivationReasonSpecified { get; set; }
 
         private bool _maxTxPerSecondEnabled;
 
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxTxPerSecondEnabledSpecified { get; set; }
+        protected bool MaxTxPerSecondEnabledSpecified { get; set; }
 
         private int _maxTxPerSecond;
 
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxTxPerSecondSpecified { get; set; }
+        protected bool MaxTxPerSecondSpecified { get; set; }
 
         private bool _tldnEnabled;
 
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TldnEnabledSpecified { get; set; }
+        protected bool TldnEnabledSpecified { get; set; }
 
         private bool _genericNumberEnabled;
 
@@ -178,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GenericNumberEnabledSpecified { get; set; }
+        protected bool GenericNumberEnabledSpecified { get; set; }
 
         private bool _mobileStateCheckEnabled;
 
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobileStateCheckEnabledSpecified { get; set; }
+        protected bool MobileStateCheckEnabledSpecified { get; set; }
 
         private bool _locationBasedServicesEnabled;
 
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LocationBasedServicesEnabledSpecified { get; set; }
+        protected bool LocationBasedServicesEnabledSpecified { get; set; }
 
     }
 }

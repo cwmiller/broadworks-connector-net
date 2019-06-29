@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupervisorUserIdSpecified { get; set; }
+        protected bool SupervisorUserIdSpecified { get; set; }
 
     }
 }

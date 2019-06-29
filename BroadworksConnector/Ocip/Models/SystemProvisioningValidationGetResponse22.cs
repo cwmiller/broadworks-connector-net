@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private bool _isNetworkServerQueryActive;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsNetworkServerQueryActiveSpecified { get; set; }
+        protected bool IsNetworkServerQueryActiveSpecified { get; set; }
 
         private int _timeoutSeconds;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeoutSecondsSpecified { get; set; }
+        protected bool TimeoutSecondsSpecified { get; set; }
 
         private bool _denyMobilityNumberAsRedirectionDestination;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DenyMobilityNumberAsRedirectionDestinationSpecified { get; set; }
+        protected bool DenyMobilityNumberAsRedirectionDestinationSpecified { get; set; }
 
         private bool _denyEnterpriseNumberAsNetworkLocationDestination;
 
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DenyEnterpriseNumberAsNetworkLocationDestinationSpecified { get; set; }
+        protected bool DenyEnterpriseNumberAsNetworkLocationDestinationSpecified { get; set; }
 
     }
 }

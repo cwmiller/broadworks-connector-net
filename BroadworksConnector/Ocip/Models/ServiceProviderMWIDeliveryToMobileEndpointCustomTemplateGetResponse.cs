@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsEnabledSpecified { get; set; }
+        protected bool IsEnabledSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody _templateBody;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TemplateBodySpecified { get; set; }
+        protected bool TemplateBodySpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StatisticsRangeSpecified { get; set; }
+        protected bool StatisticsRangeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics14sp9 _queueStatistics;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool QueueStatisticsSpecified { get; set; }
+        protected bool QueueStatisticsSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics14sp9> _agentStatistics = new List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics14sp9>();
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentStatisticsSpecified { get; set; }
+        protected bool AgentStatisticsSpecified { get; set; }
 
     }
 }

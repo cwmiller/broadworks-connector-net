@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentKeySpecified { get; set; }
+        protected bool DepartmentKeySpecified { get; set; }
 
         private string _departmentName;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentNameSpecified { get; set; }
+        protected bool DepartmentNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissions _permissions;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PermissionsSpecified { get; set; }
+        protected bool PermissionsSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbandonedCallThresholdSecondsSpecified { get; set; }
+        protected bool AbandonedCallThresholdSecondsSpecified { get; set; }
 
     }
 }

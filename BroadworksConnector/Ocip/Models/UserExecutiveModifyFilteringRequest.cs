@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _enableFiltering;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableFilteringSpecified { get; set; }
+        protected bool EnableFilteringSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode _filteringMode;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FilteringModeSpecified { get; set; }
+        protected bool FilteringModeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType _simpleFilterType;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SimpleFilterTypeSpecified { get; set; }
+        protected bool SimpleFilterTypeSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.CriteriaActivation> _criteriaActivation = new List<BroadWorksConnector.Ocip.Models.CriteriaActivation>();
 
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaActivationSpecified { get; set; }
+        protected bool CriteriaActivationSpecified { get; set; }
 
     }
 }

@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableIPDeviceManagementSpecified { get; set; }
+        protected bool EnableIPDeviceManagementSpecified { get; set; }
 
         private int _ftpConnectTimeoutSeconds;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpConnectTimeoutSecondsSpecified { get; set; }
+        protected bool FtpConnectTimeoutSecondsSpecified { get; set; }
 
         private int _ftpFileTransferTimeoutSeconds;
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
+        protected bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
 
         private int _pauseBetweenFileRebuildMilliseconds;
 
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PauseBetweenFileRebuildMillisecondsSpecified { get; set; }
+        protected bool PauseBetweenFileRebuildMillisecondsSpecified { get; set; }
 
         private int _maxBusyTimeMinutes;
 
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxBusyTimeMinutesSpecified { get; set; }
+        protected bool MaxBusyTimeMinutesSpecified { get; set; }
 
         private string _deviceAccessAppServerClusterName;
 
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceAccessAppServerClusterNameSpecified { get; set; }
+        protected bool DeviceAccessAppServerClusterNameSpecified { get; set; }
 
     }
 }

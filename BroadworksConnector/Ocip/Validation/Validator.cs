@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Validation
 
             var type = instance.GetType();
             var specifiedFieldName = $"{property.Name}Specified";
-            var specifiedProperty = type.GetProperty(specifiedFieldName);
+            var specifiedProperty = type.GetProperty(specifiedFieldName, BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
 
             if (specifiedProperty == null)
             {

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupDeviceEndpointSpecified { get; set; }
+        protected bool TrunkGroupDeviceEndpointSpecified { get; set; }
 
         private string _enterpriseTrunkName;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnterpriseTrunkNameSpecified { get; set; }
+        protected bool EnterpriseTrunkNameSpecified { get; set; }
 
         private string _alternateTrunkIdentity;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateTrunkIdentitySpecified { get; set; }
+        protected bool AlternateTrunkIdentitySpecified { get; set; }
 
         private string _alternateTrunkIdentityDomain;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateTrunkIdentityDomainSpecified { get; set; }
+        protected bool AlternateTrunkIdentityDomainSpecified { get; set; }
 
         private string _physicalLocation;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhysicalLocationSpecified { get; set; }
+        protected bool PhysicalLocationSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LineTypeSpecified { get; set; }
+        protected bool LineTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction _matchAction;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchActionSpecified { get; set; }
+        protected bool MatchActionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction _noMatchAction;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoMatchActionSpecified { get; set; }
+        protected bool NoMatchActionSpecified { get; set; }
 
     }
 }

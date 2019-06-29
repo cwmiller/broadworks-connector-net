@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupListSpecified { get; set; }
+        protected bool TrunkGroupListSpecified { get; set; }
 
     }
 }

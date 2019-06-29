@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TotalFileSizeSpecified { get; set; }
+        protected bool TotalFileSizeSpecified { get; set; }
 
         private int _maxAudioFileSize;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxAudioFileSizeSpecified { get; set; }
+        protected bool MaxAudioFileSizeSpecified { get; set; }
 
         private int _maxVideoFileSize;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxVideoFileSizeSpecified { get; set; }
+        protected bool MaxVideoFileSizeSpecified { get; set; }
 
         private int _maxFileSize;
 
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxFileSizeSpecified { get; set; }
+        protected bool MaxFileSizeSpecified { get; set; }
 
     }
 }

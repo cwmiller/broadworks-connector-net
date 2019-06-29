@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContinueCallAsDialedOnTimeoutOrErrorSpecified { get; set; }
+        protected bool ContinueCallAsDialedOnTimeoutOrErrorSpecified { get; set; }
 
         private int _numberPortabilityNameLookupTimeoutMilliseconds;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberPortabilityNameLookupTimeoutMillisecondsSpecified { get; set; }
+        protected bool NumberPortabilityNameLookupTimeoutMillisecondsSpecified { get; set; }
 
     }
 }

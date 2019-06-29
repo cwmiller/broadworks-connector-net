@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WebServerClusterPublicFQDNSpecified { get; set; }
+        protected bool WebServerClusterPublicFQDNSpecified { get; set; }
 
         private string _applicationServerClusterPrimaryPublicFQDN;
 
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ApplicationServerClusterPrimaryPublicFQDNSpecified { get; set; }
+        protected bool ApplicationServerClusterPrimaryPublicFQDNSpecified { get; set; }
 
         private string _applicationServerClusterSecondaryPublicFQDN;
 
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ApplicationServerClusterSecondaryPublicFQDNSpecified { get; set; }
+        protected bool ApplicationServerClusterSecondaryPublicFQDNSpecified { get; set; }
 
         private string _applicationServerClusterPrimaryPrivateFQDN;
 
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ApplicationServerClusterPrimaryPrivateFQDNSpecified { get; set; }
+        protected bool ApplicationServerClusterPrimaryPrivateFQDNSpecified { get; set; }
 
         private string _applicationServerClusterSecondaryPrivateFQDN;
 
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ApplicationServerClusterSecondaryPrivateFQDNSpecified { get; set; }
+        protected bool ApplicationServerClusterSecondaryPrivateFQDNSpecified { get; set; }
 
     }
 }

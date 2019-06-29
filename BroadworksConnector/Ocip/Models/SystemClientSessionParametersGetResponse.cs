@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableInactivityTimeoutSpecified { get; set; }
+        protected bool EnableInactivityTimeoutSpecified { get; set; }
 
         private int _inactivityTimeoutMinutes;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InactivityTimeoutMinutesSpecified { get; set; }
+        protected bool InactivityTimeoutMinutesSpecified { get; set; }
 
     }
 }

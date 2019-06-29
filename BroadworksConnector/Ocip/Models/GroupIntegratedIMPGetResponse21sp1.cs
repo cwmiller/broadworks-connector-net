@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseServiceProviderSettingSpecified { get; set; }
+        protected bool UseServiceProviderSettingSpecified { get; set; }
 
         private string _serviceDomain;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceDomainSpecified { get; set; }
+        protected bool ServiceDomainSpecified { get; set; }
 
         private string _effectiveServiceDomain;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EffectiveServiceDomainSpecified { get; set; }
+        protected bool EffectiveServiceDomainSpecified { get; set; }
 
         private bool _addServiceProviderInIMPUserId;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AddServiceProviderInIMPUserIdSpecified { get; set; }
+        protected bool AddServiceProviderInIMPUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
 
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultImpIdTypeSpecified { get; set; }
+        protected bool DefaultImpIdTypeSpecified { get; set; }
 
     }
 }

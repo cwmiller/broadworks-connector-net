@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AudioFilePreferredCodecSpecified { get; set; }
+        protected bool AudioFilePreferredCodecSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MessageSourceSelectionSpecified { get; set; }
+        protected bool MessageSourceSelectionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd20CustomSource _customSource;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CustomSourceSpecified { get; set; }
+        protected bool CustomSourceSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd20ExternalSource _externalSource;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExternalSourceSpecified { get; set; }
+        protected bool ExternalSourceSpecified { get; set; }
 
     }
 }

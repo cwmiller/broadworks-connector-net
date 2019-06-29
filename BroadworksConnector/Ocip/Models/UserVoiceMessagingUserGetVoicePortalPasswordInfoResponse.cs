@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsLoginDisabledSpecified { get; set; }
+        protected bool IsLoginDisabledSpecified { get; set; }
 
         private int _expirationDays;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExpirationDaysSpecified { get; set; }
+        protected bool ExpirationDaysSpecified { get; set; }
 
         private bool _doesNotExpire;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DoesNotExpireSpecified { get; set; }
+        protected bool DoesNotExpireSpecified { get; set; }
 
         private string _password;
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasswordSpecified { get; set; }
+        protected bool PasswordSpecified { get; set; }
 
     }
 }

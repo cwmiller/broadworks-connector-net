@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _newGroupId;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewGroupIdSpecified { get; set; }
+        protected bool NewGroupIdSpecified { get; set; }
 
         private bool _evaluateOnly;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EvaluateOnlySpecified { get; set; }
+        protected bool EvaluateOnlySpecified { get; set; }
 
     }
 }

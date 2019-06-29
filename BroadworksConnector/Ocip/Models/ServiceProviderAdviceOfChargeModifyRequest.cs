@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private bool _useSPLevelAoCSettings;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseSPLevelAoCSettingsSpecified { get; set; }
+        protected bool UseSPLevelAoCSettingsSpecified { get; set; }
 
         private int _delayBetweenNotificationSeconds;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DelayBetweenNotificationSecondsSpecified { get; set; }
+        protected bool DelayBetweenNotificationSecondsSpecified { get; set; }
 
     }
 }

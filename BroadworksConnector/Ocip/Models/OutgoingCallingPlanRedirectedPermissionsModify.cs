@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OutsideGroupSpecified { get; set; }
+        protected bool OutsideGroupSpecified { get; set; }
 
     }
 }

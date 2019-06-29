@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DmEventLevelSpecified { get; set; }
+        protected bool DmEventLevelSpecified { get; set; }
 
     }
 }

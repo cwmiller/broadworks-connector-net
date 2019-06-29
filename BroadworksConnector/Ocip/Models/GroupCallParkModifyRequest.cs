@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private int _recallTimerSeconds;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecallTimerSecondsSpecified { get; set; }
+        protected bool RecallTimerSecondsSpecified { get; set; }
 
         private int _displayTimerSeconds;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayTimerSecondsSpecified { get; set; }
+        protected bool DisplayTimerSecondsSpecified { get; set; }
 
         private bool _enableDestinationAnnouncement;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDestinationAnnouncementSpecified { get; set; }
+        protected bool EnableDestinationAnnouncementSpecified { get; set; }
 
         private string _recallAlternateUserId;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecallAlternateUserIdSpecified { get; set; }
+        protected bool RecallAlternateUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RingPattern _recallRingPattern;
 
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecallRingPatternSpecified { get; set; }
+        protected bool RecallRingPatternSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
 
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecallToSpecified { get; set; }
+        protected bool RecallToSpecified { get; set; }
 
         private int _alternateUserRecallTimerSeconds;
 
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateUserRecallTimerSecondsSpecified { get; set; }
+        protected bool AlternateUserRecallTimerSecondsSpecified { get; set; }
 
     }
 }

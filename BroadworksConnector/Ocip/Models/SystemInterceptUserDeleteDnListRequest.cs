@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumbersSpecified { get; set; }
+        protected bool PhoneNumbersSpecified { get; set; }
 
     }
 }

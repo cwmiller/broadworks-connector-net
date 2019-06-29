@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CodecTableSpecified { get; set; }
+        protected bool CodecTableSpecified { get; set; }
 
     }
 }

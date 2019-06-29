@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvailableNumberPrefixTableSpecified { get; set; }
+        protected bool AvailableNumberPrefixTableSpecified { get; set; }
 
     }
 }

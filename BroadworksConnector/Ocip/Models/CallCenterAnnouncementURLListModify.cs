@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Url1Specified { get; set; }
+        protected bool Url1Specified { get; set; }
 
         private string _url2;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Url2Specified { get; set; }
+        protected bool Url2Specified { get; set; }
 
         private string _url3;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Url3Specified { get; set; }
+        protected bool Url3Specified { get; set; }
 
         private string _url4;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Url4Specified { get; set; }
+        protected bool Url4Specified { get; set; }
 
     }
 }

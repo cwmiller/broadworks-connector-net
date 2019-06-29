@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipAliasSpecified { get; set; }
+        protected bool SipAliasSpecified { get; set; }
 
     }
 }

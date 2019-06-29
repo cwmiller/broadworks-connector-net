@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportingServerTableSpecified { get; set; }
+        protected bool ReportingServerTableSpecified { get; set; }
 
     }
 }

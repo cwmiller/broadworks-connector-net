@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowConferenceSpecified { get; set; }
+        protected bool AllowConferenceSpecified { get; set; }
 
         private bool _allowMusicOnHold;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowMusicOnHoldSpecified { get; set; }
+        protected bool AllowMusicOnHoldSpecified { get; set; }
 
         private bool _onlyConference;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OnlyConferenceSpecified { get; set; }
+        protected bool OnlyConferenceSpecified { get; set; }
 
         private bool _onlyVideoCapable;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OnlyVideoCapableSpecified { get; set; }
+        protected bool OnlyVideoCapableSpecified { get; set; }
 
         private bool _onlyOptionalIpAddress;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OnlyOptionalIpAddressSpecified { get; set; }
+        protected bool OnlyOptionalIpAddressSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _homeZoneDomainName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HomeZoneDomainNameSpecified { get; set; }
+        protected bool HomeZoneDomainNameSpecified { get; set; }
 
         private string _mobileCountryCode;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobileCountryCodeSpecified { get; set; }
+        protected bool MobileCountryCodeSpecified { get; set; }
 
         private string _mobileNetworkCode;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobileNetworkCodeSpecified { get; set; }
+        protected bool MobileNetworkCodeSpecified { get; set; }
 
         private string _locationAreaCode;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LocationAreaCodeSpecified { get; set; }
+        protected bool LocationAreaCodeSpecified { get; set; }
 
         private string _cellIdentity;
 
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CellIdentitySpecified { get; set; }
+        protected bool CellIdentitySpecified { get; set; }
 
     }
 }

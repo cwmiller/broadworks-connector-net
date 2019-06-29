@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduledReportSearchIntervalMinutesSpecified { get; set; }
+        protected bool ScheduledReportSearchIntervalMinutesSpecified { get; set; }
 
         private int _maximumScheduledReportsPerInterval;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumScheduledReportsPerIntervalSpecified { get; set; }
+        protected bool MaximumScheduledReportsPerIntervalSpecified { get; set; }
 
         private int _deleteScheduledReportDaysAfterCompletion;
 
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteScheduledReportDaysAfterCompletionSpecified { get; set; }
+        protected bool DeleteScheduledReportDaysAfterCompletionSpecified { get; set; }
 
     }
 }

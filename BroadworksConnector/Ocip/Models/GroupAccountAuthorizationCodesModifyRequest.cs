@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType _codeType;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CodeTypeSpecified { get; set; }
+        protected bool CodeTypeSpecified { get; set; }
 
         private int _numberOfDigits;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfDigitsSpecified { get; set; }
+        protected bool NumberOfDigitsSpecified { get; set; }
 
         private bool _allowLocalAndTollFreeCalls;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowLocalAndTollFreeCallsSpecified { get; set; }
+        protected bool AllowLocalAndTollFreeCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _mandatoryUsageUserIdList;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MandatoryUsageUserIdListSpecified { get; set; }
+        protected bool MandatoryUsageUserIdListSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _optionalUsageUserIdList;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OptionalUsageUserIdListSpecified { get; set; }
+        protected bool OptionalUsageUserIdListSpecified { get; set; }
 
     }
 }

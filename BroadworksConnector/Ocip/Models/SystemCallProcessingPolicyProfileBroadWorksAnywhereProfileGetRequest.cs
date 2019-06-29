@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallProcessingPolicyProfileNameSpecified { get; set; }
+        protected bool CallProcessingPolicyProfileNameSpecified { get; set; }
 
     }
 }

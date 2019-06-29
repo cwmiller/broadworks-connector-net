@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CodeEntrySpecified { get; set; }
+        protected bool CodeEntrySpecified { get; set; }
 
     }
 }

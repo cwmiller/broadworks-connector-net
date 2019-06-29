@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MscAddressSpecified { get; set; }
+        protected bool MscAddressSpecified { get; set; }
 
     }
 }

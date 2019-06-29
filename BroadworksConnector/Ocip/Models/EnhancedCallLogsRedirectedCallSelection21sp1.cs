@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectedCallSpecified { get; set; }
+        protected bool RedirectedCallSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition21sp1> _redirectType = new List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition21sp1>();
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectTypeSpecified { get; set; }
+        protected bool RedirectTypeSpecified { get; set; }
 
     }
 }

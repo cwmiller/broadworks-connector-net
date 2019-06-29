@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _mediaFileType;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaFileTypeSpecified { get; set; }
+        protected bool MediaFileTypeSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvailableDnSpecified { get; set; }
+        protected bool AvailableDnSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableAgentUnavailableCodesSpecified { get; set; }
+        protected bool EnableAgentUnavailableCodesSpecified { get; set; }
 
         private string _defaultAgentUnavailableCodeOnDND;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultAgentUnavailableCodeOnDNDSpecified { get; set; }
+        protected bool DefaultAgentUnavailableCodeOnDNDSpecified { get; set; }
 
         private string _defaultAgentUnavailableCodeOnPersonalCalls;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultAgentUnavailableCodeOnPersonalCallsSpecified { get; set; }
+        protected bool DefaultAgentUnavailableCodeOnPersonalCallsSpecified { get; set; }
 
         private string _defaultAgentUnavailableCodeOnConsecutiveBounces;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultAgentUnavailableCodeOnConsecutiveBouncesSpecified { get; set; }
+        protected bool DefaultAgentUnavailableCodeOnConsecutiveBouncesSpecified { get; set; }
 
         private bool _forceUseOfAgentUnavailableCodes;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceUseOfAgentUnavailableCodesSpecified { get; set; }
+        protected bool ForceUseOfAgentUnavailableCodesSpecified { get; set; }
 
         private string _defaultAgentUnavailableCode;
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultAgentUnavailableCodeSpecified { get; set; }
+        protected bool DefaultAgentUnavailableCodeSpecified { get; set; }
 
     }
 }

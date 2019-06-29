@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendMessageToSelectedDistributionListSpecified { get; set; }
+        protected bool SendMessageToSelectedDistributionListSpecified { get; set; }
 
         private string _selectDistributionList;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SelectDistributionListSpecified { get; set; }
+        protected bool SelectDistributionListSpecified { get; set; }
 
         private string _reviewSelectedDistributionList;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReviewSelectedDistributionListSpecified { get; set; }
+        protected bool ReviewSelectedDistributionListSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

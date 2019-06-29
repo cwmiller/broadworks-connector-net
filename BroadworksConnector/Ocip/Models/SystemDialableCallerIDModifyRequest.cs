@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaPriorityOrderSpecified { get; set; }
+        protected bool CriteriaPriorityOrderSpecified { get; set; }
 
     }
 }

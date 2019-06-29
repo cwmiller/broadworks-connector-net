@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private bool _allowActivationWithUserAddresses;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowActivationWithUserAddressesSpecified { get; set; }
+        protected bool AllowActivationWithUserAddressesSpecified { get; set; }
 
     }
 }

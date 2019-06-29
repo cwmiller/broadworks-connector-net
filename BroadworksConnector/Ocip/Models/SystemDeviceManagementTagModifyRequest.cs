@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemDefaultTagSetSpecified { get; set; }
+        protected bool SystemDefaultTagSetSpecified { get; set; }
 
         private string _tagSetName;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagSetNameSpecified { get; set; }
+        protected bool TagSetNameSpecified { get; set; }
 
         private string _tagName;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagNameSpecified { get; set; }
+        protected bool TagNameSpecified { get; set; }
 
         private string _tagValue;
 
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagValueSpecified { get; set; }
+        protected bool TagValueSpecified { get; set; }
 
         private string _tagValueToEncrypt;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagValueToEncryptSpecified { get; set; }
+        protected bool TagValueToEncryptSpecified { get; set; }
 
         private bool _isTagValueOverridable;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsTagValueOverridableSpecified { get; set; }
+        protected bool IsTagValueOverridableSpecified { get; set; }
 
     }
 }

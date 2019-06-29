@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProfileSpecified { get; set; }
+        protected bool ProfileSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommPilotExpressAvailableInOffice _availableInOffice;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvailableInOfficeSpecified { get; set; }
+        protected bool AvailableInOfficeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommPilotExpressAvailableOutOfOffice _availableOutOfOffice;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvailableOutOfOfficeSpecified { get; set; }
+        protected bool AvailableOutOfOfficeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommPilotExpressBusy _busy;
 
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusySpecified { get; set; }
+        protected bool BusySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommPilotExpressUnavailable _unavailable;
 
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnavailableSpecified { get; set; }
+        protected bool UnavailableSpecified { get; set; }
 
     }
 }

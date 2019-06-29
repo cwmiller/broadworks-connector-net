@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TreatVirtualOnNetCallsAsInternalSpecified { get; set; }
+        protected bool TreatVirtualOnNetCallsAsInternalSpecified { get; set; }
 
     }
 }

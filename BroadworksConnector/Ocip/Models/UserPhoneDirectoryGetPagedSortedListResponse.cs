@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TotalNumberOfRowsSpecified { get; set; }
+        protected bool TotalNumberOfRowsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _directoryTable;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DirectoryTableSpecified { get; set; }
+        protected bool DirectoryTableSpecified { get; set; }
 
     }
 }

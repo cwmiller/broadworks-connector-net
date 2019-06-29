@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultLanguageSpecified { get; set; }
+        protected bool DefaultLanguageSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _languageTable;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LanguageTableSpecified { get; set; }
+        protected bool LanguageTableSpecified { get; set; }
 
     }
 }

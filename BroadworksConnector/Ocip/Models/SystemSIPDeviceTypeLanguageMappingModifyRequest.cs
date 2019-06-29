@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeSpecified { get; set; }
+        protected bool DeviceTypeSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.DeviceManagementLanguageMapping> _languageMapping = new List<BroadWorksConnector.Ocip.Models.DeviceManagementLanguageMapping>();
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LanguageMappingSpecified { get; set; }
+        protected bool LanguageMappingSpecified { get; set; }
 
     }
 }

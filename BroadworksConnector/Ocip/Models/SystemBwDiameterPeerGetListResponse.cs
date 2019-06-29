@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PeerTableSpecified { get; set; }
+        protected bool PeerTableSpecified { get; set; }
 
     }
 }

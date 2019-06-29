@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableTutorialSpecified { get; set; }
+        protected bool EnableTutorialSpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DmEventStatusCompletedSpecified { get; set; }
+        protected bool DmEventStatusCompletedSpecified { get; set; }
 
     }
 }

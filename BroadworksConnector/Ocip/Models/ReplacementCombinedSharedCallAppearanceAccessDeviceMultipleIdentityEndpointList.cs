@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SharedCallAppearanceAccessDeviceEndpointSpecified { get; set; }
+        protected bool SharedCallAppearanceAccessDeviceEndpointSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _name;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _newName;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewNameSpecified { get; set; }
+        protected bool NewNameSpecified { get; set; }
 
         private string _description;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private string _prefixDigits;
 
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrefixDigitsSpecified { get; set; }
+        protected bool PrefixDigitsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringCallTypeList _matchCallType;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchCallTypeSpecified { get; set; }
+        protected bool MatchCallTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringAlternateCallIndicatorList _matchAlternateCallIndicator;
 
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchAlternateCallIndicatorSpecified { get; set; }
+        protected bool MatchAlternateCallIndicatorSpecified { get; set; }
 
         private bool _matchLocalCategory;
 
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchLocalCategorySpecified { get; set; }
+        protected bool MatchLocalCategorySpecified { get; set; }
 
         private bool _matchNationalCategory;
 
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchNationalCategorySpecified { get; set; }
+        protected bool MatchNationalCategorySpecified { get; set; }
 
         private bool _matchInterlataCategory;
 
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchInterlataCategorySpecified { get; set; }
+        protected bool MatchInterlataCategorySpecified { get; set; }
 
         private bool _matchIntralataCategory;
 
@@ -223,7 +223,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchIntralataCategorySpecified { get; set; }
+        protected bool MatchIntralataCategorySpecified { get; set; }
 
         private bool _matchInternationalCategory;
 
@@ -241,7 +241,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchInternationalCategorySpecified { get; set; }
+        protected bool MatchInternationalCategorySpecified { get; set; }
 
         private bool _matchPrivateCategory;
 
@@ -259,7 +259,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchPrivateCategorySpecified { get; set; }
+        protected bool MatchPrivateCategorySpecified { get; set; }
 
         private bool _matchEmergencyCategory;
 
@@ -277,7 +277,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchEmergencyCategorySpecified { get; set; }
+        protected bool MatchEmergencyCategorySpecified { get; set; }
 
         private bool _matchOtherCategory;
 
@@ -295,7 +295,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MatchOtherCategorySpecified { get; set; }
+        protected bool MatchOtherCategorySpecified { get; set; }
 
     }
 }

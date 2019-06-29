@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableMonitoringSpecified { get; set; }
+        protected bool EnableMonitoringSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType? _resetEvent;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResetEventSpecified { get; set; }
+        protected bool ResetEventSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeModifyOptions _deviceManagementDeviceTypeOptions;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceManagementDeviceTypeOptionsSpecified { get; set; }
+        protected bool DeviceManagementDeviceTypeOptionsSpecified { get; set; }
 
     }
 }

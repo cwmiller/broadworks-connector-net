@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartHourSpecified { get; set; }
+        protected bool StartHourSpecified { get; set; }
 
         private int _startMinute;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartMinuteSpecified { get; set; }
+        protected bool StartMinuteSpecified { get; set; }
 
     }
 }

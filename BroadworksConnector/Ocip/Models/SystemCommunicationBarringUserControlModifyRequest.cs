@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableLockoutSpecified { get; set; }
+        protected bool EnableLockoutSpecified { get; set; }
 
         private int _maxNumberOfFailedAttempts;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxNumberOfFailedAttemptsSpecified { get; set; }
+        protected bool MaxNumberOfFailedAttemptsSpecified { get; set; }
 
         private int _lockoutMinutes;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LockoutMinutesSpecified { get; set; }
+        protected bool LockoutMinutesSpecified { get; set; }
 
     }
 }

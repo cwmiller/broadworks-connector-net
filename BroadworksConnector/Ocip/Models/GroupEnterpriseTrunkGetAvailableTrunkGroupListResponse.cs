@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupNameSpecified { get; set; }
+        protected bool TrunkGroupNameSpecified { get; set; }
 
     }
 }

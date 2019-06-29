@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AdditionalPhoneNumberToRingSpecified { get; set; }
+        protected bool AdditionalPhoneNumberToRingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirection _busySetting;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusySettingSpecified { get; set; }
+        protected bool BusySettingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirection _noAnswerSetting;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoAnswerSettingSpecified { get; set; }
+        protected bool NoAnswerSettingSpecified { get; set; }
 
     }
 }

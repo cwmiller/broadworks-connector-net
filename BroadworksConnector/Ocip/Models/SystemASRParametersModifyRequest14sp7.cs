@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxTransmissionsSpecified { get; set; }
+        protected bool MaxTransmissionsSpecified { get; set; }
 
         private int _retransmissionDelayMilliSeconds;
 
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RetransmissionDelayMilliSecondsSpecified { get; set; }
+        protected bool RetransmissionDelayMilliSecondsSpecified { get; set; }
 
         private int _listeningPort;
 
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ListeningPortSpecified { get; set; }
+        protected bool ListeningPortSpecified { get; set; }
 
         private bool _enableCustomMessageControl;
 
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableCustomMessageControlSpecified { get; set; }
+        protected bool EnableCustomMessageControlSpecified { get; set; }
 
         private int _customNumberOfUsersPerMessage;
 
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CustomNumberOfUsersPerMessageSpecified { get; set; }
+        protected bool CustomNumberOfUsersPerMessageSpecified { get; set; }
 
         private int _customMessageIntervalMilliseconds;
 
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CustomMessageIntervalMillisecondsSpecified { get; set; }
+        protected bool CustomMessageIntervalMillisecondsSpecified { get; set; }
 
     }
 }

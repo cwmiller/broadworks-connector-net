@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeZoneSpecified { get; set; }
+        protected bool TimeZoneSpecified { get; set; }
 
         private string _scheduleDate;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleDateSpecified { get; set; }
+        protected bool ScheduleDateSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HourMinute _scheduleTime;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleTimeSpecified { get; set; }
+        protected bool ScheduleTimeSpecified { get; set; }
 
     }
 }

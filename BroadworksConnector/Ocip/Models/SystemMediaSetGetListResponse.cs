@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaSetNameSpecified { get; set; }
+        protected bool MediaSetNameSpecified { get; set; }
 
     }
 }

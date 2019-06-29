@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectedCallsCOLPPrivacySpecified { get; set; }
+        protected bool RedirectedCallsCOLPPrivacySpecified { get; set; }
 
     }
 }

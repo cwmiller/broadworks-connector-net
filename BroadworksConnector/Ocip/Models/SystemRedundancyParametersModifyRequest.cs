@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RollBackTimerMinutesSpecified { get; set; }
+        protected bool RollBackTimerMinutesSpecified { get; set; }
 
         private bool _sendSipOptionMessageUponMigration;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendSipOptionMessageUponMigrationSpecified { get; set; }
+        protected bool SendSipOptionMessageUponMigrationSpecified { get; set; }
 
     }
 }

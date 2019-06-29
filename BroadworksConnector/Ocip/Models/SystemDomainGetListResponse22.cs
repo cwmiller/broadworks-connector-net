@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemDefaultDomainSpecified { get; set; }
+        protected bool SystemDefaultDomainSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _domainTable;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DomainTableSpecified { get; set; }
+        protected bool DomainTableSpecified { get; set; }
 
     }
 }

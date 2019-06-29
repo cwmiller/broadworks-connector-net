@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RoamingNetworkTableSpecified { get; set; }
+        protected bool RoamingNetworkTableSpecified { get; set; }
 
     }
 }

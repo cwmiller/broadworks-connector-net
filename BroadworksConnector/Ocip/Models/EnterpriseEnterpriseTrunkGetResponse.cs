@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaximumRerouteAttemptsSpecified { get; set; }
+        protected bool MaximumRerouteAttemptsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction _routeExhaustionAction;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteExhaustionActionSpecified { get; set; }
+        protected bool RouteExhaustionActionSpecified { get; set; }
 
         private string _routeExhaustionForwardAddress;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteExhaustionForwardAddressSpecified { get; set; }
+        protected bool RouteExhaustionForwardAddressSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkGetResponseOrderedRouting _orderedRouting;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OrderedRoutingSpecified { get; set; }
+        protected bool OrderedRoutingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkGetResponsePriorityWeightedRouting _priorityWeightedRouting;
 
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PriorityWeightedRoutingSpecified { get; set; }
+        protected bool PriorityWeightedRoutingSpecified { get; set; }
 
     }
 }

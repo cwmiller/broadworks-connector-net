@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private bool _enableZoneCallingRestrictions;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableZoneCallingRestrictionsSpecified { get; set; }
+        protected bool EnableZoneCallingRestrictionsSpecified { get; set; }
 
         private bool _enableOriginationRoamingRestrictions;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableOriginationRoamingRestrictionsSpecified { get; set; }
+        protected bool EnableOriginationRoamingRestrictionsSpecified { get; set; }
 
         private bool _enableEmergencyOriginationRoamingRestrictions;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableEmergencyOriginationRoamingRestrictionsSpecified { get; set; }
+        protected bool EnableEmergencyOriginationRoamingRestrictionsSpecified { get; set; }
 
         private bool _enableTerminationRoamingRestrictions;
 
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableTerminationRoamingRestrictionsSpecified { get; set; }
+        protected bool EnableTerminationRoamingRestrictionsSpecified { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrimarySMPPServerNetAddressSpecified { get; set; }
+        protected bool PrimarySMPPServerNetAddressSpecified { get; set; }
 
         private int _primarySMPPPort;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrimarySMPPPortSpecified { get; set; }
+        protected bool PrimarySMPPPortSpecified { get; set; }
 
         private string _secondarySMPPServerNetAddress;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecondarySMPPServerNetAddressSpecified { get; set; }
+        protected bool SecondarySMPPServerNetAddressSpecified { get; set; }
 
         private int _secondarySMPPPort;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecondarySMPPPortSpecified { get; set; }
+        protected bool SecondarySMPPPortSpecified { get; set; }
 
         private string _systemId;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemIdSpecified { get; set; }
+        protected bool SystemIdSpecified { get; set; }
 
         private string _password;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasswordSpecified { get; set; }
+        protected bool PasswordSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SMPPVersion _version;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VersionSpecified { get; set; }
+        protected bool VersionSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MobileNetworkNameSpecified { get; set; }
+        protected bool MobileNetworkNameSpecified { get; set; }
 
         private List<string> _imrnNumber = new List<string>();
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ImrnNumberSpecified { get; set; }
+        protected bool ImrnNumberSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.DNRange> _numberRange = new List<BroadWorksConnector.Ocip.Models.DNRange>();
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberRangeSpecified { get; set; }
+        protected bool NumberRangeSpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UnlimitedSpecified { get; set; }
+        protected bool UnlimitedSpecified { get; set; }
 
         private int _quantity;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool QuantitySpecified { get; set; }
+        protected bool QuantitySpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxMonitorsPerOriginatorSpecified { get; set; }
+        protected bool MaxMonitorsPerOriginatorSpecified { get; set; }
 
         private int _maxMonitorsPerTerminator;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxMonitorsPerTerminatorSpecified { get; set; }
+        protected bool MaxMonitorsPerTerminatorSpecified { get; set; }
 
         private int _t2Minutes;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool T2MinutesSpecified { get; set; }
+        protected bool T2MinutesSpecified { get; set; }
 
         private int _t4Seconds;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool T4SecondsSpecified { get; set; }
+        protected bool T4SecondsSpecified { get; set; }
 
         private int _t5Seconds;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool T5SecondsSpecified { get; set; }
+        protected bool T5SecondsSpecified { get; set; }
 
         private int _t6Minutes;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool T6MinutesSpecified { get; set; }
+        protected bool T6MinutesSpecified { get; set; }
 
         private int _t7Minutes;
 
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool T7MinutesSpecified { get; set; }
+        protected bool T7MinutesSpecified { get; set; }
 
         private int _t8Seconds;
 
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool T8SecondsSpecified { get; set; }
+        protected bool T8SecondsSpecified { get; set; }
 
         private int _tRingSeconds;
 
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TRingSecondsSpecified { get; set; }
+        protected bool TRingSecondsSpecified { get; set; }
 
         private int _t10OMinutes;
 
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool T10OMinutesSpecified { get; set; }
+        protected bool T10OMinutesSpecified { get; set; }
 
         private int _t10TMinutes;
 
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool T10TMinutesSpecified { get; set; }
+        protected bool T10TMinutesSpecified { get; set; }
 
     }
 }

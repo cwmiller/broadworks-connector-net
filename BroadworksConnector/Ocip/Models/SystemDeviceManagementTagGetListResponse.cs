@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagsTableSpecified { get; set; }
+        protected bool TagsTableSpecified { get; set; }
 
     }
 }

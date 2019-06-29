@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ZoneNameSpecified { get; set; }
+        protected bool ZoneNameSpecified { get; set; }
 
         private int _responseSizeLimit;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponseSizeLimitSpecified { get; set; }
+        protected bool ResponseSizeLimitSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaPhysicalLocation> _searchCriteriaPhysicalLocation = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaPhysicalLocation>();
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SearchCriteriaPhysicalLocationSpecified { get; set; }
+        protected bool SearchCriteriaPhysicalLocationSpecified { get; set; }
 
     }
 }

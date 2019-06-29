@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceNameSpecified { get; set; }
+        protected bool DeviceNameSpecified { get; set; }
 
         private string _tagName;
 
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagNameSpecified { get; set; }
+        protected bool TagNameSpecified { get; set; }
 
         private string _tagValue;
 
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagValueSpecified { get; set; }
+        protected bool TagValueSpecified { get; set; }
 
         private string _tagValueToEncrypt;
 
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TagValueToEncryptSpecified { get; set; }
+        protected bool TagValueToEncryptSpecified { get; set; }
 
     }
 }

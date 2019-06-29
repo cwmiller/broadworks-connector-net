@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CriteriaSpecified { get; set; }
+        protected bool CriteriaSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction _action;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ActionSpecified { get; set; }
+        protected bool ActionSpecified { get; set; }
 
         private int? _callTimeoutSeconds;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallTimeoutSecondsSpecified { get; set; }
+        protected bool CallTimeoutSecondsSpecified { get; set; }
 
     }
 }

@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnhancedCallLogsCallLogsRequestType _callLogType;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallLogTypeSpecified { get; set; }
+        protected bool CallLogTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnhancedCallLogsTimeRange _dateTimeRange;
 
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DateTimeRangeSpecified { get; set; }
+        protected bool DateTimeRangeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnhancedCallLogsNumberFilter _numberFilter;
 
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberFilterSpecified { get; set; }
+        protected bool NumberFilterSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnhancedCallLogsRedirectedNumberFilter21sp1 _redirectedNumberFilter;
 
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RedirectedNumberFilterSpecified { get; set; }
+        protected bool RedirectedNumberFilterSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnhancedCallLogsAccountAuthorizationCodeFilter _accountAuthorizationCodeFilter;
 
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccountAuthorizationCodeFilterSpecified { get; set; }
+        protected bool AccountAuthorizationCodeFilterSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnhancedCallLogsCallAuthorizationCodeFilter _callAuthorizationCodeFilter;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallAuthorizationCodeFilterSpecified { get; set; }
+        protected bool CallAuthorizationCodeFilterSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnhancedCallLogsSubscriberType20 _subscriberType;
 
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SubscriberTypeSpecified { get; set; }
+        protected bool SubscriberTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponsePagingControlSpecified { get; set; }
+        protected bool ResponsePagingControlSpecified { get; set; }
 
     }
 }

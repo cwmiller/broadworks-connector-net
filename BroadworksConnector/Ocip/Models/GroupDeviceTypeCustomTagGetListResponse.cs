@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupDeviceTypeCustomTagsTableSpecified { get; set; }
+        protected bool GroupDeviceTypeCustomTagsTableSpecified { get; set; }
 
     }
 }

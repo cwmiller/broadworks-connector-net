@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentUserTableSpecified { get; set; }
+        protected bool AgentUserTableSpecified { get; set; }
 
         private bool _useTerminateCallToAgentFirst;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseTerminateCallToAgentFirstSpecified { get; set; }
+        protected bool UseTerminateCallToAgentFirstSpecified { get; set; }
 
         private bool _useOriginalAgentServicesForBusyAndNoAnswerCalls;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified { get; set; }
+        protected bool UseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified { get; set; }
 
     }
 }

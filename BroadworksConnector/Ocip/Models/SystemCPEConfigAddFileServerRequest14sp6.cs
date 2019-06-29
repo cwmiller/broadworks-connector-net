@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceTypeSpecified { get; set; }
+        protected bool DeviceTypeSpecified { get; set; }
 
         private string _fileRepositoryName;
 
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FileRepositoryNameSpecified { get; set; }
+        protected bool FileRepositoryNameSpecified { get; set; }
 
         private string _cpeFileDirectory;
 
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CpeFileDirectorySpecified { get; set; }
+        protected bool CpeFileDirectorySpecified { get; set; }
 
         private string _extendedCaptureFileRepositoryName;
 
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedCaptureFileRepositoryNameSpecified { get; set; }
+        protected bool ExtendedCaptureFileRepositoryNameSpecified { get; set; }
 
     }
 }

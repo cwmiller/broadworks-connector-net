@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InterceptDNListSpecified { get; set; }
+        protected bool InterceptDNListSpecified { get; set; }
 
     }
 }

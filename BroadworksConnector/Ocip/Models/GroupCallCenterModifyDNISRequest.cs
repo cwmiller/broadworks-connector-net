@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DnisKeySpecified { get; set; }
+        protected bool DnisKeySpecified { get; set; }
 
         private string _newDNISName;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewDNISNameSpecified { get; set; }
+        protected bool NewDNISNameSpecified { get; set; }
 
         private string _dnisPhoneNumber;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DnisPhoneNumberSpecified { get; set; }
+        protected bool DnisPhoneNumberSpecified { get; set; }
 
         private string _extension;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtensionSpecified { get; set; }
+        protected bool ExtensionSpecified { get; set; }
 
         private bool _useCustomCLIDSettings;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseCustomCLIDSettingsSpecified { get; set; }
+        protected bool UseCustomCLIDSettingsSpecified { get; set; }
 
         private string _callingLineIdPhoneNumber;
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdPhoneNumberSpecified { get; set; }
+        protected bool CallingLineIdPhoneNumberSpecified { get; set; }
 
         private string _callingLineIdLastName;
 
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdLastNameSpecified { get; set; }
+        protected bool CallingLineIdLastNameSpecified { get; set; }
 
         private string _callingLineIdFirstName;
 
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdFirstNameSpecified { get; set; }
+        protected bool CallingLineIdFirstNameSpecified { get; set; }
 
         private bool _useCustomDnisAnnouncementSettings;
 
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseCustomDnisAnnouncementSettingsSpecified { get; set; }
+        protected bool UseCustomDnisAnnouncementSettingsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DNISPriority _priority;
 
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrioritySpecified { get; set; }
+        protected bool PrioritySpecified { get; set; }
 
         private bool _allowOutgoingACDCall;
 
@@ -226,7 +226,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowOutgoingACDCallSpecified { get; set; }
+        protected bool AllowOutgoingACDCallSpecified { get; set; }
 
     }
 }

@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemVoicePortalIdSpecified { get; set; }
+        protected bool SystemVoicePortalIdSpecified { get; set; }
 
         private string _name;
 
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _callingLineIdName;
 
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallingLineIdNameSpecified { get; set; }
+        protected bool CallingLineIdNameSpecified { get; set; }
 
         private string _language;
 
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool LanguageSpecified { get; set; }
+        protected bool LanguageSpecified { get; set; }
 
         private string _timeZone;
 
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeZoneSpecified { get; set; }
+        protected bool TimeZoneSpecified { get; set; }
 
         private string _phoneNumber;
 
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhoneNumberSpecified { get; set; }
+        protected bool PhoneNumberSpecified { get; set; }
 
         private string _publicUserIdentity;
 
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PublicUserIdentitySpecified { get; set; }
+        protected bool PublicUserIdentitySpecified { get; set; }
 
         private string _networkVoicePortalNumber;
 
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkVoicePortalNumberSpecified { get; set; }
+        protected bool NetworkVoicePortalNumberSpecified { get; set; }
 
         private bool _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLoginSpecified { get; set; }
+        protected bool AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLoginSpecified { get; set; }
 
         private bool _useVoicePortalWizard;
 
@@ -211,7 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseVoicePortalWizardSpecified { get; set; }
+        protected bool UseVoicePortalWizardSpecified { get; set; }
 
         private bool _useVoicePortalDefaultGreeting;
 
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseVoicePortalDefaultGreetingSpecified { get; set; }
+        protected bool UseVoicePortalDefaultGreetingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _voicePortalGreetingFile;
 
@@ -246,7 +246,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalGreetingFileSpecified { get; set; }
+        protected bool VoicePortalGreetingFileSpecified { get; set; }
 
         private bool _useVoiceMessagingDefaultGreeting;
 
@@ -263,7 +263,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseVoiceMessagingDefaultGreetingSpecified { get; set; }
+        protected bool UseVoiceMessagingDefaultGreetingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _voiceMessagingGreetingFile;
 
@@ -281,7 +281,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessagingGreetingFileSpecified { get; set; }
+        protected bool VoiceMessagingGreetingFileSpecified { get; set; }
 
     }
 }

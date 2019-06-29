@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableSyncSpecified { get; set; }
+        protected bool EnableSyncSpecified { get; set; }
 
         private bool _syncLinePorts;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SyncLinePortsSpecified { get; set; }
+        protected bool SyncLinePortsSpecified { get; set; }
 
         private bool _syncDeviceManagementInfo;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SyncDeviceManagementInfoSpecified { get; set; }
+        protected bool SyncDeviceManagementInfoSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertingGroupTableSpecified { get; set; }
+        protected bool AlertingGroupTableSpecified { get; set; }
 
     }
 }

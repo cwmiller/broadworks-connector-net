@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PublicClusterFQDNSpecified { get; set; }
+        protected bool PublicClusterFQDNSpecified { get; set; }
 
     }
 }

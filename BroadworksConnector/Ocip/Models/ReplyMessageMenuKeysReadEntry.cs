@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendReplyToCallerSpecified { get; set; }
+        protected bool SendReplyToCallerSpecified { get; set; }
 
         private string _changeCurrentReply;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChangeCurrentReplySpecified { get; set; }
+        protected bool ChangeCurrentReplySpecified { get; set; }
 
         private string _listenToCurrentReply;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ListenToCurrentReplySpecified { get; set; }
+        protected bool ListenToCurrentReplySpecified { get; set; }
 
         private string _setOrClearUrgentIndicator;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetOrClearUrgentIndicatorSpecified { get; set; }
+        protected bool SetOrClearUrgentIndicatorSpecified { get; set; }
 
         private string _setOrClearConfidentialIndicator;
 
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SetOrClearConfidentialIndicatorSpecified { get; set; }
+        protected bool SetOrClearConfidentialIndicatorSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

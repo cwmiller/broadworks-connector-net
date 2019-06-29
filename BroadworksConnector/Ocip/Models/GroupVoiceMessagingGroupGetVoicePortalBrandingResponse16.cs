@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalGreetingSelectionSpecified { get; set; }
+        protected bool VoicePortalGreetingSelectionSpecified { get; set; }
 
         private string _voicePortalGreetingFileDescription;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalGreetingFileDescriptionSpecified { get; set; }
+        protected bool VoicePortalGreetingFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _voicePortalGreetingMediaType;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalGreetingMediaTypeSpecified { get; set; }
+        protected bool VoicePortalGreetingMediaTypeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voiceMessagingGreetingSelection;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessagingGreetingSelectionSpecified { get; set; }
+        protected bool VoiceMessagingGreetingSelectionSpecified { get; set; }
 
         private string _voiceMessagingGreetingFileDescription;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessagingGreetingFileDescriptionSpecified { get; set; }
+        protected bool VoiceMessagingGreetingFileDescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaFileType _voiceMessagingGreetingMediaType;
 
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoiceMessagingGreetingMediaTypeSpecified { get; set; }
+        protected bool VoiceMessagingGreetingMediaTypeSpecified { get; set; }
 
     }
 }

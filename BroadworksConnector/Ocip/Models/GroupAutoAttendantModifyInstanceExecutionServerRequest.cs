@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer _businessHoursMenu;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BusinessHoursMenuSpecified { get; set; }
+        protected bool BusinessHoursMenuSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer _afterHoursMenu;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AfterHoursMenuSpecified { get; set; }
+        protected bool AfterHoursMenuSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer _holidayMenu;
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HolidayMenuSpecified { get; set; }
+        protected bool HolidayMenuSpecified { get; set; }
 
     }
 }

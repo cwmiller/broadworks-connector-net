@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ActivateConfGreetingSpecified { get; set; }
+        protected bool ActivateConfGreetingSpecified { get; set; }
 
         private string _deactivateConfGreeting;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeactivateConfGreetingSpecified { get; set; }
+        protected bool DeactivateConfGreetingSpecified { get; set; }
 
         private string _recordNewConfGreeting;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecordNewConfGreetingSpecified { get; set; }
+        protected bool RecordNewConfGreetingSpecified { get; set; }
 
         private string _listenToCurrentConfGreeting;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ListenToCurrentConfGreetingSpecified { get; set; }
+        protected bool ListenToCurrentConfGreetingSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

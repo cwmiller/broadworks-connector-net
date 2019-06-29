@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsAuditActiveSpecified { get; set; }
+        protected bool IsAuditActiveSpecified { get; set; }
 
         private int _auditIntervalSeconds;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AuditIntervalSecondsSpecified { get; set; }
+        protected bool AuditIntervalSecondsSpecified { get; set; }
 
         private int _auditTimeoutSeconds;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AuditTimeoutSecondsSpecified { get; set; }
+        protected bool AuditTimeoutSecondsSpecified { get; set; }
 
         private bool _releaseCallOnAuditFailure;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReleaseCallOnAuditFailureSpecified { get; set; }
+        protected bool ReleaseCallOnAuditFailureSpecified { get; set; }
 
         private bool _isSIPRefreshAllowedOnAudit;
 
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsSIPRefreshAllowedOnAuditSpecified { get; set; }
+        protected bool IsSIPRefreshAllowedOnAuditSpecified { get; set; }
 
         private bool _allowUpdateForSIPRefresh;
 
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowUpdateForSIPRefreshSpecified { get; set; }
+        protected bool AllowUpdateForSIPRefreshSpecified { get; set; }
 
         private bool _isSIPSessionTimerActive;
 
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsSIPSessionTimerActiveSpecified { get; set; }
+        protected bool IsSIPSessionTimerActiveSpecified { get; set; }
 
         private int _sipSessionExpiresMinimumSeconds;
 
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipSessionExpiresMinimumSecondsSpecified { get; set; }
+        protected bool SipSessionExpiresMinimumSecondsSpecified { get; set; }
 
         private bool _enforceSIPSessionExpiresMaximum;
 
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnforceSIPSessionExpiresMaximumSpecified { get; set; }
+        protected bool EnforceSIPSessionExpiresMaximumSpecified { get; set; }
 
         private int _sipSessionExpiresMaximumSeconds;
 
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipSessionExpiresMaximumSecondsSpecified { get; set; }
+        protected bool SipSessionExpiresMaximumSecondsSpecified { get; set; }
 
         private int _sipSessionExpiresTimerSeconds;
 
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipSessionExpiresTimerSecondsSpecified { get; set; }
+        protected bool SipSessionExpiresTimerSecondsSpecified { get; set; }
 
         private bool _alwaysUseSessionTimerWhenSupported;
 
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlwaysUseSessionTimerWhenSupportedSpecified { get; set; }
+        protected bool AlwaysUseSessionTimerWhenSupportedSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SessionTimerRefresher _preferredSessionTimerRefresher;
 
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PreferredSessionTimerRefresherSpecified { get; set; }
+        protected bool PreferredSessionTimerRefresherSpecified { get; set; }
 
         private bool _enableEmergencyCallAlarmTimer;
 
@@ -266,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableEmergencyCallAlarmTimerSpecified { get; set; }
+        protected bool EnableEmergencyCallAlarmTimerSpecified { get; set; }
 
         private int _emergencyCallAlarmMinutes;
 
@@ -285,7 +285,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmergencyCallAlarmMinutesSpecified { get; set; }
+        protected bool EmergencyCallAlarmMinutesSpecified { get; set; }
 
         private bool _enableEmergencyCallCleanupTimer;
 
@@ -302,7 +302,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableEmergencyCallCleanupTimerSpecified { get; set; }
+        protected bool EnableEmergencyCallCleanupTimerSpecified { get; set; }
 
         private int _emergencyCallCleanupMinutes;
 
@@ -321,7 +321,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmergencyCallCleanupMinutesSpecified { get; set; }
+        protected bool EmergencyCallCleanupMinutesSpecified { get; set; }
 
     }
 }

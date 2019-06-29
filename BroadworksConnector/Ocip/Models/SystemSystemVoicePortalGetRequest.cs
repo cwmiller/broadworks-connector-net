@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemVoicePortalIdSpecified { get; set; }
+        protected bool SystemVoicePortalIdSpecified { get; set; }
 
     }
 }

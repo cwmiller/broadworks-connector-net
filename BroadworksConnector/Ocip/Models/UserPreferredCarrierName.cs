@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseGroupPreferredCarrierSpecified { get; set; }
+        protected bool UseGroupPreferredCarrierSpecified { get; set; }
 
         private string _carrier;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CarrierSpecified { get; set; }
+        protected bool CarrierSpecified { get; set; }
 
     }
 }

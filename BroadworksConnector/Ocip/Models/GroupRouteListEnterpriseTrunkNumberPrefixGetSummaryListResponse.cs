@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberPrefixSummaryTableSpecified { get; set; }
+        protected bool NumberPrefixSummaryTableSpecified { get; set; }
 
     }
 }

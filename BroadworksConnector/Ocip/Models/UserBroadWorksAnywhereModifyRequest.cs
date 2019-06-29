@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _alertAllLocationsForClickToDialCalls;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertAllLocationsForClickToDialCallsSpecified { get; set; }
+        protected bool AlertAllLocationsForClickToDialCallsSpecified { get; set; }
 
         private bool _alertAllLocationsForGroupPagingCalls;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlertAllLocationsForGroupPagingCallsSpecified { get; set; }
+        protected bool AlertAllLocationsForGroupPagingCallsSpecified { get; set; }
 
     }
 }

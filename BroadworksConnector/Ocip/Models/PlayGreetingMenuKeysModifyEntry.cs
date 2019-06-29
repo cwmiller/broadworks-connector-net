@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SkipBackwardSpecified { get; set; }
+        protected bool SkipBackwardSpecified { get; set; }
 
         private string _pauseOrResume;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PauseOrResumeSpecified { get; set; }
+        protected bool PauseOrResumeSpecified { get; set; }
 
         private string _skipForward;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SkipForwardSpecified { get; set; }
+        protected bool SkipForwardSpecified { get; set; }
 
         private string _jumpToBegin;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool JumpToBeginSpecified { get; set; }
+        protected bool JumpToBeginSpecified { get; set; }
 
         private string _jumpToEnd;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool JumpToEndSpecified { get; set; }
+        protected bool JumpToEndSpecified { get; set; }
 
     }
 }

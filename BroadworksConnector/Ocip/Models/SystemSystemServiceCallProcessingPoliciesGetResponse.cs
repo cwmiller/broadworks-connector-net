@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxSimultaneousCallsSpecified { get; set; }
+        protected bool UseMaxSimultaneousCallsSpecified { get; set; }
 
         private int _maxSimultaneousCalls;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxSimultaneousCallsSpecified { get; set; }
+        protected bool MaxSimultaneousCallsSpecified { get; set; }
 
         private bool _useMaxSimultaneousVideoCalls;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxSimultaneousVideoCallsSpecified { get; set; }
+        protected bool UseMaxSimultaneousVideoCallsSpecified { get; set; }
 
         private int _maxSimultaneousVideoCalls;
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxSimultaneousVideoCallsSpecified { get; set; }
+        protected bool MaxSimultaneousVideoCallsSpecified { get; set; }
 
         private bool _useMaxConcurrentRedirectedCalls;
 
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxConcurrentRedirectedCallsSpecified { get; set; }
+        protected bool UseMaxConcurrentRedirectedCallsSpecified { get; set; }
 
         private int _maxConcurrentRedirectedCalls;
 
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxConcurrentRedirectedCallsSpecified { get; set; }
+        protected bool MaxConcurrentRedirectedCallsSpecified { get; set; }
 
         private bool _useMaxCallTimeForAnsweredCalls;
 
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseMaxCallTimeForAnsweredCallsSpecified { get; set; }
+        protected bool UseMaxCallTimeForAnsweredCallsSpecified { get; set; }
 
         private int _maxCallTimeForAnsweredCallsMinutes;
 
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxCallTimeForAnsweredCallsMinutesSpecified { get; set; }
+        protected bool MaxCallTimeForAnsweredCallsMinutesSpecified { get; set; }
 
     }
 }

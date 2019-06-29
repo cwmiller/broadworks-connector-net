@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _name;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _newName;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewNameSpecified { get; set; }
+        protected bool NewNameSpecified { get; set; }
 
         private int _maxActiveCallsAllowed;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxActiveCallsAllowedSpecified { get; set; }
+        protected bool MaxActiveCallsAllowedSpecified { get; set; }
 
         private int? _maxIncomingActiveCallsAllowed;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxIncomingActiveCallsAllowedSpecified { get; set; }
+        protected bool MaxIncomingActiveCallsAllowedSpecified { get; set; }
 
         private int? _maxOutgoingActiveCallsAllowed;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxOutgoingActiveCallsAllowedSpecified { get; set; }
+        protected bool MaxOutgoingActiveCallsAllowedSpecified { get; set; }
 
         private bool _becomeDefaultGroupForNewUsers;
 
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BecomeDefaultGroupForNewUsersSpecified { get; set; }
+        protected bool BecomeDefaultGroupForNewUsersSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _userIdList;
 
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdListSpecified { get; set; }
+        protected bool UserIdListSpecified { get; set; }
 
     }
 }

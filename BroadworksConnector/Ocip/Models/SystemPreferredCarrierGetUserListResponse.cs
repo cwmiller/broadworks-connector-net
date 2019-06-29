@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UsersUsingCarrierTableSpecified { get; set; }
+        protected bool UsersUsingCarrierTableSpecified { get; set; }
 
     }
 }

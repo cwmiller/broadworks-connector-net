@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnterpriseIdSpecified { get; set; }
+        protected bool EnterpriseIdSpecified { get; set; }
 
         private string _departmentName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentNameSpecified { get; set; }
+        protected bool DepartmentNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey _parentDepartmentKey;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ParentDepartmentKeySpecified { get; set; }
+        protected bool ParentDepartmentKeySpecified { get; set; }
 
     }
 }

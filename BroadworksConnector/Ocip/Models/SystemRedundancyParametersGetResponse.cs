@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RollBackTimerMinutesSpecified { get; set; }
+        protected bool RollBackTimerMinutesSpecified { get; set; }
 
     }
 }

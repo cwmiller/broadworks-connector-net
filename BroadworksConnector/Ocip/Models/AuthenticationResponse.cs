@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _nonce;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NonceSpecified { get; set; }
+        protected bool NonceSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DigitalSignatureAlgorithm _passwordAlgorithm;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasswordAlgorithmSpecified { get; set; }
+        protected bool PasswordAlgorithmSpecified { get; set; }
 
     }
 }

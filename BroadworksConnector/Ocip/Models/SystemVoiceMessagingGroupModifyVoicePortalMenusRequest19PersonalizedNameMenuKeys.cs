@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecordNewPersonalizedNameSpecified { get; set; }
+        protected bool RecordNewPersonalizedNameSpecified { get; set; }
 
         private string _listenToCurrentPersonalizedName;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ListenToCurrentPersonalizedNameSpecified { get; set; }
+        protected bool ListenToCurrentPersonalizedNameSpecified { get; set; }
 
         private string _deletePersonalizedName;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeletePersonalizedNameSpecified { get; set; }
+        protected bool DeletePersonalizedNameSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

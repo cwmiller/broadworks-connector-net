@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableTransferNotificationSpecified { get; set; }
+        protected bool EnableTransferNotificationSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateCallIndicatorTableSpecified { get; set; }
+        protected bool AlternateCallIndicatorTableSpecified { get; set; }
 
     }
 }

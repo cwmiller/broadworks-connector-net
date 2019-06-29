@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableVideoSpecified { get; set; }
+        protected bool EnableVideoSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead _source;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SourceSpecified { get; set; }
+        protected bool SourceSpecified { get; set; }
 
         private bool _useAlternateSourceForInternalCalls;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseAlternateSourceForInternalCallsSpecified { get; set; }
+        protected bool UseAlternateSourceForInternalCallsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead _internalSource;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InternalSourceSpecified { get; set; }
+        protected bool InternalSourceSpecified { get; set; }
 
     }
 }

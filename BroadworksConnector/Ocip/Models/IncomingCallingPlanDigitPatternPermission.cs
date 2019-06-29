@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigitPatternNameSpecified { get; set; }
+        protected bool DigitPatternNameSpecified { get; set; }
 
         private bool _allow;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowSpecified { get; set; }
+        protected bool AllowSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FeatureAccessCodeNameSpecified { get; set; }
+        protected bool FeatureAccessCodeNameSpecified { get; set; }
 
         private string _mainCode;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MainCodeSpecified { get; set; }
+        protected bool MainCodeSpecified { get; set; }
 
         private string _alternateCode;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateCodeSpecified { get; set; }
+        protected bool AlternateCodeSpecified { get; set; }
 
         private bool _enableFAC;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableFACSpecified { get; set; }
+        protected bool EnableFACSpecified { get; set; }
 
     }
 }

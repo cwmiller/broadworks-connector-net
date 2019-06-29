@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OciReportingACLTableSpecified { get; set; }
+        protected bool OciReportingACLTableSpecified { get; set; }
 
     }
 }

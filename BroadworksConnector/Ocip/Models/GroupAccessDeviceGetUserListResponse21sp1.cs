@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceUserTableSpecified { get; set; }
+        protected bool DeviceUserTableSpecified { get; set; }
 
     }
 }

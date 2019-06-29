@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _rootDirectory;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RootDirectorySpecified { get; set; }
+        protected bool RootDirectorySpecified { get; set; }
 
         private bool _secure;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecureSpecified { get; set; }
+        protected bool SecureSpecified { get; set; }
 
         private string _netAddress;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetAddressSpecified { get; set; }
+        protected bool NetAddressSpecified { get; set; }
 
         private bool _ftpPassive;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpPassiveSpecified { get; set; }
+        protected bool FtpPassiveSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.FileRepositoryProtocol _protocol;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProtocolSpecified { get; set; }
+        protected bool ProtocolSpecified { get; set; }
 
         private int? _port;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PortSpecified { get; set; }
+        protected bool PortSpecified { get; set; }
 
         private bool _ftpRemoteVerification;
 
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool FtpRemoteVerificationSpecified { get; set; }
+        protected bool FtpRemoteVerificationSpecified { get; set; }
 
     }
 }

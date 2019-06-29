@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsActiveSpecified { get; set; }
+        protected bool IsActiveSpecified { get; set; }
 
         private int _associationLimitHours;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AssociationLimitHoursSpecified { get; set; }
+        protected bool AssociationLimitHoursSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.HotelingHostAccessLevel _accessLevel;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AccessLevelSpecified { get; set; }
+        protected bool AccessLevelSpecified { get; set; }
 
         private string _guestLastName;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GuestLastNameSpecified { get; set; }
+        protected bool GuestLastNameSpecified { get; set; }
 
         private string _guestFirstName;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GuestFirstNameSpecified { get; set; }
+        protected bool GuestFirstNameSpecified { get; set; }
 
         private string _guestPhoneNumber;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GuestPhoneNumberSpecified { get; set; }
+        protected bool GuestPhoneNumberSpecified { get; set; }
 
         private string _guestExtension;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GuestExtensionSpecified { get; set; }
+        protected bool GuestExtensionSpecified { get; set; }
 
         private string _guestLocationDialingCode;
 
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GuestLocationDialingCodeSpecified { get; set; }
+        protected bool GuestLocationDialingCodeSpecified { get; set; }
 
         private string _guestAssociationDateTime;
 
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GuestAssociationDateTimeSpecified { get; set; }
+        protected bool GuestAssociationDateTimeSpecified { get; set; }
 
     }
 }

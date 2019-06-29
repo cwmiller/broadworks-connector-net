@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PhysicalLocationSpecified { get; set; }
+        protected bool PhysicalLocationSpecified { get; set; }
 
     }
 }

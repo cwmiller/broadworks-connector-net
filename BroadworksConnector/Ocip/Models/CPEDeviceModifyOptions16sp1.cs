@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableMonitoringSpecified { get; set; }
+        protected bool EnableMonitoringSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeModifyOptions16 _deviceManagementDeviceTypeOptions;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeviceManagementDeviceTypeOptionsSpecified { get; set; }
+        protected bool DeviceManagementDeviceTypeOptionsSpecified { get; set; }
 
     }
 }

@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseCustomSettingsSpecified { get; set; }
+        protected bool UseCustomSettingsSpecified { get; set; }
 
     }
 }

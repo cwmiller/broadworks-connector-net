@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateCallIndicatorSpecified { get; set; }
+        protected bool AlternateCallIndicatorSpecified { get; set; }
 
         private string _networkServerAlternateCallIndicator;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkServerAlternateCallIndicatorSpecified { get; set; }
+        protected bool NetworkServerAlternateCallIndicatorSpecified { get; set; }
 
     }
 }

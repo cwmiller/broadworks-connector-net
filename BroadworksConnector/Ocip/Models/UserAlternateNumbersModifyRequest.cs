@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _distinctiveRing;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DistinctiveRingSpecified { get; set; }
+        protected bool DistinctiveRingSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AlternateNumberEntry21 _alternateEntry01;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateEntry01Specified { get; set; }
+        protected bool AlternateEntry01Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AlternateNumberEntry21 _alternateEntry02;
 
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateEntry02Specified { get; set; }
+        protected bool AlternateEntry02Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AlternateNumberEntry21 _alternateEntry03;
 
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateEntry03Specified { get; set; }
+        protected bool AlternateEntry03Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AlternateNumberEntry21 _alternateEntry04;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateEntry04Specified { get; set; }
+        protected bool AlternateEntry04Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AlternateNumberEntry21 _alternateEntry05;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateEntry05Specified { get; set; }
+        protected bool AlternateEntry05Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AlternateNumberEntry21 _alternateEntry06;
 
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateEntry06Specified { get; set; }
+        protected bool AlternateEntry06Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AlternateNumberEntry21 _alternateEntry07;
 
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateEntry07Specified { get; set; }
+        protected bool AlternateEntry07Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AlternateNumberEntry21 _alternateEntry08;
 
@@ -201,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateEntry08Specified { get; set; }
+        protected bool AlternateEntry08Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AlternateNumberEntry21 _alternateEntry09;
 
@@ -219,7 +219,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateEntry09Specified { get; set; }
+        protected bool AlternateEntry09Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AlternateNumberEntry21 _alternateEntry10;
 
@@ -237,7 +237,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AlternateEntry10Specified { get; set; }
+        protected bool AlternateEntry10Specified { get; set; }
 
     }
 }

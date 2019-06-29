@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DiversionReasonSpecified { get; set; }
+        protected bool DiversionReasonSpecified { get; set; }
 
         private string _causeValue;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CauseValueSpecified { get; set; }
+        protected bool CauseValueSpecified { get; set; }
 
     }
 }

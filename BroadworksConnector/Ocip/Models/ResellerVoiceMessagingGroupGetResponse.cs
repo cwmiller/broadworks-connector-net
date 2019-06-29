@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeliveryFromAddressSpecified { get; set; }
+        protected bool DeliveryFromAddressSpecified { get; set; }
 
         private string _notificationFromAddress;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NotificationFromAddressSpecified { get; set; }
+        protected bool NotificationFromAddressSpecified { get; set; }
 
         private string _voicePortalLockoutFromAddress;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalLockoutFromAddressSpecified { get; set; }
+        protected bool VoicePortalLockoutFromAddressSpecified { get; set; }
 
     }
 }

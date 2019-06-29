@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _usePersonalizedName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UsePersonalizedNameSpecified { get; set; }
+        protected bool UsePersonalizedNameSpecified { get; set; }
 
         private bool _voicePortalAutoLogin;
 
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VoicePortalAutoLoginSpecified { get; set; }
+        protected bool VoicePortalAutoLoginSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _personalizedNameAudioFile;
 
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalizedNameAudioFileSpecified { get; set; }
+        protected bool PersonalizedNameAudioFileSpecified { get; set; }
 
     }
 }

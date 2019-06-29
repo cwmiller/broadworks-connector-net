@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ApplicationIdSpecified { get; set; }
+        protected bool ApplicationIdSpecified { get; set; }
 
         private bool _enableSystemWide;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableSystemWideSpecified { get; set; }
+        protected bool EnableSystemWideSpecified { get; set; }
 
         private int _notificationTimeoutSeconds;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NotificationTimeoutSecondsSpecified { get; set; }
+        protected bool NotificationTimeoutSecondsSpecified { get; set; }
 
         private string _description;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
     }
 }

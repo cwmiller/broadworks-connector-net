@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsSendEnabledSpecified { get; set; }
+        protected bool IsSendEnabledSpecified { get; set; }
 
         private string _server1NetAddress;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Server1NetAddressSpecified { get; set; }
+        protected bool Server1NetAddressSpecified { get; set; }
 
         private int _server1SendPort;
 
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Server1SendPortSpecified { get; set; }
+        protected bool Server1SendPortSpecified { get; set; }
 
         private int _server1RetrievePort;
 
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Server1RetrievePortSpecified { get; set; }
+        protected bool Server1RetrievePortSpecified { get; set; }
 
         private string _server2NetAddress;
 
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Server2NetAddressSpecified { get; set; }
+        protected bool Server2NetAddressSpecified { get; set; }
 
         private int _server2SendPort;
 
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Server2SendPortSpecified { get; set; }
+        protected bool Server2SendPortSpecified { get; set; }
 
         private int _server2RetrievePort;
 
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool Server2RetrievePortSpecified { get; set; }
+        protected bool Server2RetrievePortSpecified { get; set; }
 
         private string _sharedSecret;
 
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SharedSecretSpecified { get; set; }
+        protected bool SharedSecretSpecified { get; set; }
 
         private int _retransmissionDelayMilliSeconds;
 
@@ -203,7 +203,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RetransmissionDelayMilliSecondsSpecified { get; set; }
+        protected bool RetransmissionDelayMilliSecondsSpecified { get; set; }
 
         private int _maxTransmissions;
 
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxTransmissionsSpecified { get; set; }
+        protected bool MaxTransmissionsSpecified { get; set; }
 
         private int _soapTimeoutSeconds;
 
@@ -241,7 +241,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SoapTimeoutSecondsSpecified { get; set; }
+        protected bool SoapTimeoutSecondsSpecified { get; set; }
 
         private bool _useDBS;
 
@@ -258,7 +258,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDBSSpecified { get; set; }
+        protected bool UseDBSSpecified { get; set; }
 
         private int _maxNonPagedResponseSize;
 
@@ -277,7 +277,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxNonPagedResponseSizeSpecified { get; set; }
+        protected bool MaxNonPagedResponseSizeSpecified { get; set; }
 
     }
 }

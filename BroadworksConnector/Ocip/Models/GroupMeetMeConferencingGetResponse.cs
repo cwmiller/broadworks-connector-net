@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AvailablePortsSpecified { get; set; }
+        protected bool AvailablePortsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllocatedPortsSpecified { get; set; }
+        protected bool AllocatedPortsSpecified { get; set; }
 
     }
 }

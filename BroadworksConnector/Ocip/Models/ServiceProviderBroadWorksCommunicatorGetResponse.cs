@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ConfigurationServerURLSpecified { get; set; }
+        protected bool ConfigurationServerURLSpecified { get; set; }
 
     }
 }

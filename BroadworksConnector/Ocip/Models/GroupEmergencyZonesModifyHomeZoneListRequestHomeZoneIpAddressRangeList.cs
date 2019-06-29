@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HomeZoneIpAddressRangeSpecified { get; set; }
+        protected bool HomeZoneIpAddressRangeSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.IPAddressRange _newHomeZoneIpAddressRange;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewHomeZoneIpAddressRangeSpecified { get; set; }
+        protected bool NewHomeZoneIpAddressRangeSpecified { get; set; }
 
     }
 }

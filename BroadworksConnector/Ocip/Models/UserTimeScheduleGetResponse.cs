@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeScheduleNameSpecified { get; set; }
+        protected bool TimeScheduleNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval01;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval01Specified { get; set; }
+        protected bool TimeInterval01Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval02;
 
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval02Specified { get; set; }
+        protected bool TimeInterval02Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval03;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval03Specified { get; set; }
+        protected bool TimeInterval03Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval04;
 
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval04Specified { get; set; }
+        protected bool TimeInterval04Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval05;
 
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval05Specified { get; set; }
+        protected bool TimeInterval05Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval06;
 
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval06Specified { get; set; }
+        protected bool TimeInterval06Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval07;
 
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval07Specified { get; set; }
+        protected bool TimeInterval07Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval08;
 
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval08Specified { get; set; }
+        protected bool TimeInterval08Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval09;
 
@@ -197,7 +197,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval09Specified { get; set; }
+        protected bool TimeInterval09Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval10;
 
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval10Specified { get; set; }
+        protected bool TimeInterval10Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval11;
 
@@ -233,7 +233,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval11Specified { get; set; }
+        protected bool TimeInterval11Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval12;
 
@@ -251,7 +251,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval12Specified { get; set; }
+        protected bool TimeInterval12Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval13;
 
@@ -269,7 +269,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval13Specified { get; set; }
+        protected bool TimeInterval13Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval14;
 
@@ -287,7 +287,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval14Specified { get; set; }
+        protected bool TimeInterval14Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval15;
 
@@ -305,7 +305,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval15Specified { get; set; }
+        protected bool TimeInterval15Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval16;
 
@@ -323,7 +323,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval16Specified { get; set; }
+        protected bool TimeInterval16Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval17;
 
@@ -341,7 +341,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval17Specified { get; set; }
+        protected bool TimeInterval17Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval18;
 
@@ -359,7 +359,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval18Specified { get; set; }
+        protected bool TimeInterval18Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval19;
 
@@ -377,7 +377,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval19Specified { get; set; }
+        protected bool TimeInterval19Specified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.TimeInterval _timeInterval20;
 
@@ -395,7 +395,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeInterval20Specified { get; set; }
+        protected bool TimeInterval20Specified { get; set; }
 
     }
 }

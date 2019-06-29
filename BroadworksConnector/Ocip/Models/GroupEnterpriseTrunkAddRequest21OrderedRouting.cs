@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TrunkGroupSpecified { get; set; }
+        protected bool TrunkGroupSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm _orderingAlgorithm;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OrderingAlgorithmSpecified { get; set; }
+        protected bool OrderingAlgorithmSpecified { get; set; }
 
     }
 }

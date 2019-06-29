@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CollaborateBridgeTableSpecified { get; set; }
+        protected bool CollaborateBridgeTableSpecified { get; set; }
 
     }
 }

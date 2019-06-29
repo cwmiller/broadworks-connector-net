@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultFlashActivationDigitsSpecified { get; set; }
+        protected bool DefaultFlashActivationDigitsSpecified { get; set; }
 
         private string _defaultCallTransferActivationDigits;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DefaultCallTransferActivationDigitsSpecified { get; set; }
+        protected bool DefaultCallTransferActivationDigitsSpecified { get; set; }
 
     }
 }

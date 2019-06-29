@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserCallForwardingTableSpecified { get; set; }
+        protected bool UserCallForwardingTableSpecified { get; set; }
 
     }
 }

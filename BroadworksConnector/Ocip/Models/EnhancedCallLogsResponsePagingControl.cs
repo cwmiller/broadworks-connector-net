@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponseStartIndexSpecified { get; set; }
+        protected bool ResponseStartIndexSpecified { get; set; }
 
         private int _responsePageSize;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResponsePageSizeSpecified { get; set; }
+        protected bool ResponsePageSizeSpecified { get; set; }
 
     }
 }

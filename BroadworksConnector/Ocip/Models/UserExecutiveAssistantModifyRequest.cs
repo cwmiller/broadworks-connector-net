@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private bool _enableDivert;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableDivertSpecified { get; set; }
+        protected bool EnableDivertSpecified { get; set; }
 
         private string _divertToPhoneNumber;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DivertToPhoneNumberSpecified { get; set; }
+        protected bool DivertToPhoneNumberSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.ExecutiveAssistantOptInStatus> _optInStatus = new List<BroadWorksConnector.Ocip.Models.ExecutiveAssistantOptInStatus>();
 
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OptInStatusSpecified { get; set; }
+        protected bool OptInStatusSpecified { get; set; }
 
     }
 }

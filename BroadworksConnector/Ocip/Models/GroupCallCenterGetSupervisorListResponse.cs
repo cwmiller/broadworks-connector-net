@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportingServerURLSpecified { get; set; }
+        protected bool ReportingServerURLSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _supervisorTable;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupervisorTableSpecified { get; set; }
+        protected bool SupervisorTableSpecified { get; set; }
 
     }
 }

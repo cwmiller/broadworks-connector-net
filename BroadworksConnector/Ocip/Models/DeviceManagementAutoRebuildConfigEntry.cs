@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OciRequestPrefixSpecified { get; set; }
+        protected bool OciRequestPrefixSpecified { get; set; }
 
         private bool _autoRebuildEnabled;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AutoRebuildEnabledSpecified { get; set; }
+        protected bool AutoRebuildEnabledSpecified { get; set; }
 
     }
 }

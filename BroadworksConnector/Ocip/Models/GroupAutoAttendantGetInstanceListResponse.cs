@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AutoAttendantTableSpecified { get; set; }
+        protected bool AutoAttendantTableSpecified { get; set; }
 
     }
 }

@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisconnectAfterGreetingSpecified { get; set; }
+        protected bool DisconnectAfterGreetingSpecified { get; set; }
 
         private string _forwardAfterGreeting;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardAfterGreetingSpecified { get; set; }
+        protected bool ForwardAfterGreetingSpecified { get; set; }
 
         private string _changeForwardingDestination;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ChangeForwardingDestinationSpecified { get; set; }
+        protected bool ChangeForwardingDestinationSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool HomeZoneIpAddressSpecified { get; set; }
+        protected bool HomeZoneIpAddressSpecified { get; set; }
 
         private string _newHomeZoneIpAddress;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NewHomeZoneIpAddressSpecified { get; set; }
+        protected bool NewHomeZoneIpAddressSpecified { get; set; }
 
     }
 }

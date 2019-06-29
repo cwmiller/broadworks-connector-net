@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountryCodeSpecified { get; set; }
+        protected bool CountryCodeSpecified { get; set; }
 
         private string _digitMap;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigitMapSpecified { get; set; }
+        protected bool DigitMapSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SystemCallType _callType;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallTypeSpecified { get; set; }
+        protected bool CallTypeSpecified { get; set; }
 
     }
 }

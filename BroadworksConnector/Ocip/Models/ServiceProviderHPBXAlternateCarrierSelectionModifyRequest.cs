@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private bool _processCbcCarrierSelection;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ProcessCbcCarrierSelectionSpecified { get; set; }
+        protected bool ProcessCbcCarrierSelectionSpecified { get; set; }
 
         private string _preselectedLocalCarrier;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PreselectedLocalCarrierSpecified { get; set; }
+        protected bool PreselectedLocalCarrierSpecified { get; set; }
 
         private string _preselectedDistantCarrier;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PreselectedDistantCarrierSpecified { get; set; }
+        protected bool PreselectedDistantCarrierSpecified { get; set; }
 
     }
 }

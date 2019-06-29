@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ContactUserIdSpecified { get; set; }
+        protected bool ContactUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey _vonUser;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool VonUserSpecified { get; set; }
+        protected bool VonUserSpecified { get; set; }
 
         private string _note;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NoteSpecified { get; set; }
+        protected bool NoteSpecified { get; set; }
 
     }
 }

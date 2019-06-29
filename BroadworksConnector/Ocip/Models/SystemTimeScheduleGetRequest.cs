@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TimeScheduleNameSpecified { get; set; }
+        protected bool TimeScheduleNameSpecified { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurDailySpecified { get; set; }
+        protected bool RecurDailySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RecurrenceRecurWeekly _recurWeekly;
 
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurWeeklySpecified { get; set; }
+        protected bool RecurWeeklySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByDay _recurMonthlyByDay;
 
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurMonthlyByDaySpecified { get; set; }
+        protected bool RecurMonthlyByDaySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByWeek _recurMonthlyByWeek;
 
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurMonthlyByWeekSpecified { get; set; }
+        protected bool RecurMonthlyByWeekSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByDay _recurYearlyByDay;
 
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurYearlyByDaySpecified { get; set; }
+        protected bool RecurYearlyByDaySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByWeek _recurYearlyByWeek;
 
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurYearlyByWeekSpecified { get; set; }
+        protected bool RecurYearlyByWeekSpecified { get; set; }
 
         private bool _recurForEver;
 
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurForEverSpecified { get; set; }
+        protected bool RecurForEverSpecified { get; set; }
 
         private string _recurEndDate;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurEndDateSpecified { get; set; }
+        protected bool RecurEndDateSpecified { get; set; }
 
         private int _recurEndOccurrence;
 
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecurEndOccurrenceSpecified { get; set; }
+        protected bool RecurEndOccurrenceSpecified { get; set; }
 
     }
 }

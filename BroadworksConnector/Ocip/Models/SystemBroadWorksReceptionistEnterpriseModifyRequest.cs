@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxMonitoredUsersSpecified { get; set; }
+        protected bool MaxMonitoredUsersSpecified { get; set; }
 
     }
 }

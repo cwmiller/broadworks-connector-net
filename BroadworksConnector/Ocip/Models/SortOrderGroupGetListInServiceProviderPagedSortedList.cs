@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByGroupIdSpecified { get; set; }
+        protected bool SortByGroupIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByGroupName _sortByGroupName;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByGroupNameSpecified { get; set; }
+        protected bool SortByGroupNameSpecified { get; set; }
 
     }
 }

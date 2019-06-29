@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SystemDefaultSpecified { get; set; }
+        protected bool SystemDefaultSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _callRecordingPlatformTable;
 
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallRecordingPlatformTableSpecified { get; set; }
+        protected bool CallRecordingPlatformTableSpecified { get; set; }
 
     }
 }

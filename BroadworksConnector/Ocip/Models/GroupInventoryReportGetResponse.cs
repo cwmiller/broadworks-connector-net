@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool InventoryReportTableSpecified { get; set; }
+        protected bool InventoryReportTableSpecified { get; set; }
 
     }
 }

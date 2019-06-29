@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableRuntimeDataSyncSpecified { get; set; }
+        protected bool EnableRuntimeDataSyncSpecified { get; set; }
 
         private int _runtimeDataSyncIntervalInMilliSeconds;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RuntimeDataSyncIntervalInMilliSecondsSpecified { get; set; }
+        protected bool RuntimeDataSyncIntervalInMilliSecondsSpecified { get; set; }
 
     }
 }

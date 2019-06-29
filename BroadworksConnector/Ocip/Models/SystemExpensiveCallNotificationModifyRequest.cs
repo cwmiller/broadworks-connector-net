@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnablePostAnnouncementDelayTimerSpecified { get; set; }
+        protected bool EnablePostAnnouncementDelayTimerSpecified { get; set; }
 
         private int _postAnnouncementDelaySeconds;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PostAnnouncementDelaySecondsSpecified { get; set; }
+        protected bool PostAnnouncementDelaySecondsSpecified { get; set; }
 
     }
 }

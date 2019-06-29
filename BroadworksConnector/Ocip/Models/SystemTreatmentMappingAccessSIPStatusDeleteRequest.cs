@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipStatusCodeSpecified { get; set; }
+        protected bool SipStatusCodeSpecified { get; set; }
 
     }
 }

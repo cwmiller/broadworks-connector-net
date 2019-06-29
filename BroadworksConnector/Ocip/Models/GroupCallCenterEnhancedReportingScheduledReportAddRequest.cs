@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private string _groupId;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GroupIdSpecified { get; set; }
+        protected bool GroupIdSpecified { get; set; }
 
         private string _name;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _description;
 
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateKey _reportTemplate;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportTemplateSpecified { get; set; }
+        protected bool ReportTemplateSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportSchedule _schedule;
 
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleSpecified { get; set; }
+        protected bool ScheduleSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportSamplingPeriod _samplingPeriod;
 
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SamplingPeriodSpecified { get; set; }
+        protected bool SamplingPeriodSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DayOfWeek _startDayOfWeek;
 
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool StartDayOfWeekSpecified { get; set; }
+        protected bool StartDayOfWeekSpecified { get; set; }
 
         private string _reportTimeZone;
 
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportTimeZoneSpecified { get; set; }
+        protected bool ReportTimeZoneSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportDateFormat _reportDateFormat;
 
@@ -201,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportDateFormatSpecified { get; set; }
+        protected bool ReportDateFormatSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportTimeFormat _reportTimeFormat;
 
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportTimeFormatSpecified { get; set; }
+        protected bool ReportTimeFormatSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportInterval _reportInterval;
 
@@ -235,7 +235,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportIntervalSpecified { get; set; }
+        protected bool ReportIntervalSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportFileFormat _reportFormat;
 
@@ -252,7 +252,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReportFormatSpecified { get; set; }
+        protected bool ReportFormatSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterScheduledReportAgentSelection _agent;
 
@@ -270,7 +270,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentSpecified { get; set; }
+        protected bool AgentSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterScheduledReportCallCenterSelection _callCenter;
 
@@ -287,7 +287,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallCenterSpecified { get; set; }
+        protected bool CallCenterSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterScheduledReportDNISSelection _dnis;
 
@@ -304,7 +304,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DnisSpecified { get; set; }
+        protected bool DnisSpecified { get; set; }
 
         private int _callCompletionThresholdSeconds;
 
@@ -324,7 +324,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallCompletionThresholdSecondsSpecified { get; set; }
+        protected bool CallCompletionThresholdSecondsSpecified { get; set; }
 
         private int _shortDurationThresholdSeconds;
 
@@ -344,7 +344,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ShortDurationThresholdSecondsSpecified { get; set; }
+        protected bool ShortDurationThresholdSecondsSpecified { get; set; }
 
         private List<int> _serviceLevelThresholdSeconds = new List<int>();
 
@@ -364,7 +364,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelThresholdSecondsSpecified { get; set; }
+        protected bool ServiceLevelThresholdSecondsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallCenterScheduledReportServiceLevelInclusions _serviceLevelInclusions;
 
@@ -382,7 +382,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelInclusionsSpecified { get; set; }
+        protected bool ServiceLevelInclusionsSpecified { get; set; }
 
         private int _serviceLevelObjectivePercentage;
 
@@ -402,7 +402,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceLevelObjectivePercentageSpecified { get; set; }
+        protected bool ServiceLevelObjectivePercentageSpecified { get; set; }
 
         private List<int> _abandonedCallThresholdSeconds = new List<int>();
 
@@ -422,7 +422,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AbandonedCallThresholdSecondsSpecified { get; set; }
+        protected bool AbandonedCallThresholdSecondsSpecified { get; set; }
 
         private List<string> _emailAddress = new List<string>();
 
@@ -441,7 +441,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EmailAddressSpecified { get; set; }
+        protected bool EmailAddressSpecified { get; set; }
 
     }
 }

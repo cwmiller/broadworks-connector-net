@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfCallsQueuedNowSpecified { get; set; }
+        protected bool NumberOfCallsQueuedNowSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _agentsCurrentlyStaffed;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AgentsCurrentlyStaffedSpecified { get; set; }
+        protected bool AgentsCurrentlyStaffedSpecified { get; set; }
 
     }
 }

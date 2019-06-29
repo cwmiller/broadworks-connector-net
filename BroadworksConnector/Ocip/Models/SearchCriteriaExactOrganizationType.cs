@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OrganizationTypeSpecified { get; set; }
+        protected bool OrganizationTypeSpecified { get; set; }
 
     }
 }

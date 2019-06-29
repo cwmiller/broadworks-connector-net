@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IsRecallActiveSpecified { get; set; }
+        protected bool IsRecallActiveSpecified { get; set; }
 
         private int _recallNumberOfRings;
 
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RecallNumberOfRingsSpecified { get; set; }
+        protected bool RecallNumberOfRingsSpecified { get; set; }
 
         private bool _useDiversionInhibitorForBlindTransfer;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDiversionInhibitorForBlindTransferSpecified { get; set; }
+        protected bool UseDiversionInhibitorForBlindTransferSpecified { get; set; }
 
         private bool _useDiversionInhibitorForConsultativeCalls;
 
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseDiversionInhibitorForConsultativeCallsSpecified { get; set; }
+        protected bool UseDiversionInhibitorForConsultativeCallsSpecified { get; set; }
 
     }
 }

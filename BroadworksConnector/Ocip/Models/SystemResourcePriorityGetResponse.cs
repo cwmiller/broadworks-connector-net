@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SendResourcePriorityToNetworkSpecified { get; set; }
+        protected bool SendResourcePriorityToNetworkSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ResourcePriorityValue _resourcePriority;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ResourcePrioritySpecified { get; set; }
+        protected bool ResourcePrioritySpecified { get; set; }
 
     }
 }

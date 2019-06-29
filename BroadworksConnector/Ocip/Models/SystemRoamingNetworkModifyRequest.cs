@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MscAddressSpecified { get; set; }
+        protected bool MscAddressSpecified { get; set; }
 
         private string _networkTranslationIndex;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetworkTranslationIndexSpecified { get; set; }
+        protected bool NetworkTranslationIndexSpecified { get; set; }
 
     }
 }

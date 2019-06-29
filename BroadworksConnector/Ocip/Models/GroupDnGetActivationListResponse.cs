@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DnTableSpecified { get; set; }
+        protected bool DnTableSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceProviderIdSpecified { get; set; }
+        protected bool ServiceProviderIdSpecified { get; set; }
 
         private bool _requiresAccessCodeForPublicCalls;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RequiresAccessCodeForPublicCallsSpecified { get; set; }
+        protected bool RequiresAccessCodeForPublicCallsSpecified { get; set; }
 
         private bool _allowE164PublicCalls;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AllowE164PublicCallsSpecified { get; set; }
+        protected bool AllowE164PublicCallsSpecified { get; set; }
 
         private bool _preferE164NumberFormatForCallbackServices;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PreferE164NumberFormatForCallbackServicesSpecified { get; set; }
+        protected bool PreferE164NumberFormatForCallbackServicesSpecified { get; set; }
 
         private string _publicDigitMap;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PublicDigitMapSpecified { get; set; }
+        protected bool PublicDigitMapSpecified { get; set; }
 
         private string _privateDigitMap;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PrivateDigitMapSpecified { get; set; }
+        protected bool PrivateDigitMapSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AdministratorIdSpecified { get; set; }
+        protected bool AdministratorIdSpecified { get; set; }
 
         private bool _generatePassword;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool GeneratePasswordSpecified { get; set; }
+        protected bool GeneratePasswordSpecified { get; set; }
 
     }
 }

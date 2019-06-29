@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SecureSpecified { get; set; }
+        protected bool SecureSpecified { get; set; }
 
         private string _netAddress;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetAddressSpecified { get; set; }
+        protected bool NetAddressSpecified { get; set; }
 
         private bool _extendedFileCaptureSupport;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ExtendedFileCaptureSupportSpecified { get; set; }
+        protected bool ExtendedFileCaptureSupportSpecified { get; set; }
 
     }
 }

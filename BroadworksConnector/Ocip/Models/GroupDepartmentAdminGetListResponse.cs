@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DepartmentAdminTableSpecified { get; set; }
+        protected bool DepartmentAdminTableSpecified { get; set; }
 
     }
 }

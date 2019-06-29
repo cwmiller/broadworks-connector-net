@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayLocalUserIdentityLastNameFirstSpecified { get; set; }
+        protected bool DisplayLocalUserIdentityLastNameFirstSpecified { get; set; }
 
         private bool _forceUseOfTCP;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForceUseOfTCPSpecified { get; set; }
+        protected bool ForceUseOfTCPSpecified { get; set; }
 
     }
 }

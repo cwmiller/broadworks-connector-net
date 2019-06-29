@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseGroupLevelAoCSettingsSpecified { get; set; }
+        protected bool UseGroupLevelAoCSettingsSpecified { get; set; }
 
         private int _delayBetweenNotificationSeconds;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DelayBetweenNotificationSecondsSpecified { get; set; }
+        protected bool DelayBetweenNotificationSecondsSpecified { get; set; }
 
     }
 }

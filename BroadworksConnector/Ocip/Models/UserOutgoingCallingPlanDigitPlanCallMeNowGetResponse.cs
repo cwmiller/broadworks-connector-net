@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseCustomSettingsSpecified { get; set; }
+        protected bool UseCustomSettingsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions _userPermissions;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserPermissionsSpecified { get; set; }
+        protected bool UserPermissionsSpecified { get; set; }
 
     }
 }

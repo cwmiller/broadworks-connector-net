@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayDNISNumberSpecified { get; set; }
+        protected bool DisplayDNISNumberSpecified { get; set; }
 
         private bool _displayDNISName;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DisplayDNISNameSpecified { get; set; }
+        protected bool DisplayDNISNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _dnisTable;
 
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DnisTableSpecified { get; set; }
+        protected bool DnisTableSpecified { get; set; }
 
     }
 }

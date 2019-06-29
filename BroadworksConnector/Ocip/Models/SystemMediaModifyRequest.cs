@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaNameSpecified { get; set; }
+        protected bool MediaNameSpecified { get; set; }
 
         private string _codecName;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CodecNameSpecified { get; set; }
+        protected bool CodecNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType _bandwidthEnforcementType;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BandwidthEnforcementTypeSpecified { get; set; }
+        protected bool BandwidthEnforcementTypeSpecified { get; set; }
 
         private int? _mediaBandwidth;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaBandwidthSpecified { get; set; }
+        protected bool MediaBandwidthSpecified { get; set; }
 
     }
 }

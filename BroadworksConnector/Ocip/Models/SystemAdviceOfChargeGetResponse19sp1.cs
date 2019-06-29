@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DelayBetweenNotificationSecondsSpecified { get; set; }
+        protected bool DelayBetweenNotificationSecondsSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool IncomingAocHandlingSpecified { get; set; }
+        protected bool IncomingAocHandlingSpecified { get; set; }
 
         private bool _useOCSEnquiry;
 
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseOCSEnquirySpecified { get; set; }
+        protected bool UseOCSEnquirySpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType _oCSEnquiryType;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OCSEnquiryTypeSpecified { get; set; }
+        protected bool OCSEnquiryTypeSpecified { get; set; }
 
     }
 }

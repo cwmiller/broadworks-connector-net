@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TaskTableSpecified { get; set; }
+        protected bool TaskTableSpecified { get; set; }
 
     }
 }

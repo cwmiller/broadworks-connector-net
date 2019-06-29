@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByMobileDirectoryNumberSpecified { get; set; }
+        protected bool SortByMobileDirectoryNumberSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByDn _sortByDn;
 
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByDnSpecified { get; set; }
+        protected bool SortByDnSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByDepartmentName _sortByDepartmentName;
 
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByDepartmentNameSpecified { get; set; }
+        protected bool SortByDepartmentNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByUserId _sortByUserId;
 
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByUserIdSpecified { get; set; }
+        protected bool SortByUserIdSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
 
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByUserFirstNameSpecified { get; set; }
+        protected bool SortByUserFirstNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
 
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByUserLastNameSpecified { get; set; }
+        protected bool SortByUserLastNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByExtension _sortByExtension;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByExtensionSpecified { get; set; }
+        protected bool SortByExtensionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SortByDnAvailable _sortByDnAvailable;
 
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SortByDnAvailableSpecified { get; set; }
+        protected bool SortByDnAvailableSpecified { get; set; }
 
     }
 }

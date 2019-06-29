@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ServiceUserIdSpecified { get; set; }
+        protected bool ServiceUserIdSpecified { get; set; }
 
         private bool _enableQueueStatusNotification;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableQueueStatusNotificationSpecified { get; set; }
+        protected bool EnableQueueStatusNotificationSpecified { get; set; }
 
         private bool _enableQueueDepthThreshold;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableQueueDepthThresholdSpecified { get; set; }
+        protected bool EnableQueueDepthThresholdSpecified { get; set; }
 
         private bool _enableWaitingTimeThreshold;
 
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EnableWaitingTimeThresholdSpecified { get; set; }
+        protected bool EnableWaitingTimeThresholdSpecified { get; set; }
 
         private int _numberOfCallsThreshold;
 
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NumberOfCallsThresholdSpecified { get; set; }
+        protected bool NumberOfCallsThresholdSpecified { get; set; }
 
         private int _waitingTimeOfCallsThreshold;
 
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool WaitingTimeOfCallsThresholdSpecified { get; set; }
+        protected bool WaitingTimeOfCallsThresholdSpecified { get; set; }
 
     }
 }

@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CountLongConnectionsToMediaServerSpecified { get; set; }
+        protected bool CountLongConnectionsToMediaServerSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType _sacHandlingForMoH;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SacHandlingForMoHSpecified { get; set; }
+        protected bool SacHandlingForMoHSpecified { get; set; }
 
         private bool _blockVMDepositDueToSACLimits;
 
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BlockVMDepositDueToSACLimitsSpecified { get; set; }
+        protected bool BlockVMDepositDueToSACLimitsSpecified { get; set; }
 
     }
 }

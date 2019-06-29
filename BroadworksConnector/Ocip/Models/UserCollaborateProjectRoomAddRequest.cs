@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UserIdSpecified { get; set; }
+        protected bool UserIdSpecified { get; set; }
 
         private string _roomName;
 
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RoomNameSpecified { get; set; }
+        protected bool RoomNameSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification _attendeeNotification;
 
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool AttendeeNotificationSpecified { get; set; }
+        protected bool AttendeeNotificationSpecified { get; set; }
 
         private bool _endCollaborateRoomSessionOnOwnerExit;
 
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool EndCollaborateRoomSessionOnOwnerExitSpecified { get; set; }
+        protected bool EndCollaborateRoomSessionOnOwnerExitSpecified { get; set; }
 
         private bool _ownerRequired;
 
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OwnerRequiredSpecified { get; set; }
+        protected bool OwnerRequiredSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CollaborateRoomSchedule _roomSchedule;
 
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RoomScheduleSpecified { get; set; }
+        protected bool RoomScheduleSpecified { get; set; }
 
     }
 }

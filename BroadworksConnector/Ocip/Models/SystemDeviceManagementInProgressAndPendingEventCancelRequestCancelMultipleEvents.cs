@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DmEventStatusForCancelSpecified { get; set; }
+        protected bool DmEventStatusForCancelSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementEventAction _dmEventAction;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DmEventActionSpecified { get; set; }
+        protected bool DmEventActionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel _dmEventLevel;
 
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DmEventLevelSpecified { get; set; }
+        protected bool DmEventLevelSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementEventType _dmEventType;
 
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DmEventTypeSpecified { get; set; }
+        protected bool DmEventTypeSpecified { get; set; }
 
     }
 }

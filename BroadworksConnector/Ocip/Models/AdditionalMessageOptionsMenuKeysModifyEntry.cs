@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SaveMessageSpecified { get; set; }
+        protected bool SaveMessageSpecified { get; set; }
 
         private string _deleteMessage;
 
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DeleteMessageSpecified { get; set; }
+        protected bool DeleteMessageSpecified { get; set; }
 
         private string _playEnvelope;
 
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PlayEnvelopeSpecified { get; set; }
+        protected bool PlayEnvelopeSpecified { get; set; }
 
         private string _callbackCaller;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool CallbackCallerSpecified { get; set; }
+        protected bool CallbackCallerSpecified { get; set; }
 
         private string _composeMessage;
 
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ComposeMessageSpecified { get; set; }
+        protected bool ComposeMessageSpecified { get; set; }
 
         private string _replyMessage;
 
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReplyMessageSpecified { get; set; }
+        protected bool ReplyMessageSpecified { get; set; }
 
         private string _forwardMessage;
 
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ForwardMessageSpecified { get; set; }
+        protected bool ForwardMessageSpecified { get; set; }
 
         private string _personalizedName;
 
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PersonalizedNameSpecified { get; set; }
+        protected bool PersonalizedNameSpecified { get; set; }
 
         private string _passcode;
 
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PasscodeSpecified { get; set; }
+        protected bool PasscodeSpecified { get; set; }
 
         private string _returnToPreviousMenu;
 
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ReturnToPreviousMenuSpecified { get; set; }
+        protected bool ReturnToPreviousMenuSpecified { get; set; }
 
         private string _repeatMenu;
 
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RepeatMenuSpecified { get; set; }
+        protected bool RepeatMenuSpecified { get; set; }
 
     }
 }

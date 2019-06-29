@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DigitPatternTableSpecified { get; set; }
+        protected bool DigitPatternTableSpecified { get; set; }
 
     }
 }

@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaServerResponseTimerMillisecondsSpecified { get; set; }
+        protected bool MediaServerResponseTimerMillisecondsSpecified { get; set; }
 
         private int _mediaServerSelectionRouteTimerMilliseconds;
 
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaServerSelectionRouteTimerMillisecondsSpecified { get; set; }
+        protected bool MediaServerSelectionRouteTimerMillisecondsSpecified { get; set; }
 
         private bool _useStaticMediaServerDevice;
 
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool UseStaticMediaServerDeviceSpecified { get; set; }
+        protected bool UseStaticMediaServerDeviceSpecified { get; set; }
 
     }
 }

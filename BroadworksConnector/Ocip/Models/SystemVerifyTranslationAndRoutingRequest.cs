@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ParametersSpecified { get; set; }
+        protected bool ParametersSpecified { get; set; }
 
         private string _sipMessage;
 
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SipMessageSpecified { get; set; }
+        protected bool SipMessageSpecified { get; set; }
 
     }
 }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteDeviceTableSpecified { get; set; }
+        protected bool RouteDeviceTableSpecified { get; set; }
 
     }
 }

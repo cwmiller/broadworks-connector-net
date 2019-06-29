@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinExtensionLengthSpecified { get; set; }
+        protected bool MinExtensionLengthSpecified { get; set; }
 
         private int _maxExtensionLength;
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxExtensionLengthSpecified { get; set; }
+        protected bool MaxExtensionLengthSpecified { get; set; }
 
     }
 }

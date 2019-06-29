@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool ScheduleGlobalKeySpecified { get; set; }
+        protected bool ScheduleGlobalKeySpecified { get; set; }
 
     }
 }

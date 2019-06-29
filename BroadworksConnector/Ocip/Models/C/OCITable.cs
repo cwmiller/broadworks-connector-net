@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool ColHeadingSpecified { get; set; }
+        protected bool ColHeadingSpecified { get; set; }
 
         private List<BroadWorksConnector.Ocip.Models.C.OCITableRow> _row = new List<BroadWorksConnector.Ocip.Models.C.OCITableRow>();
 
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         }
 
         [XmlIgnore]
-        public bool RowSpecified { get; set; }
+        protected bool RowSpecified { get; set; }
 
     }
 }

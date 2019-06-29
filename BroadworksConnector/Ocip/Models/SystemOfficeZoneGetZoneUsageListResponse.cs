@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool OfficeZoneTableSpecified { get; set; }
+        protected bool OfficeZoneTableSpecified { get; set; }
 
     }
 }

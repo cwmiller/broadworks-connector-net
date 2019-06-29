@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NameSpecified { get; set; }
+        protected bool NameSpecified { get; set; }
 
         private string _netAddress;
 
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool NetAddressSpecified { get; set; }
+        protected bool NetAddressSpecified { get; set; }
 
         private int? _port;
 
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool PortSpecified { get; set; }
+        protected bool PortSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.MediaStream _mediaStream;
 
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MediaStreamSpecified { get; set; }
+        protected bool MediaStreamSpecified { get; set; }
 
         private bool _becomeSystemDefault;
 
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BecomeSystemDefaultSpecified { get; set; }
+        protected bool BecomeSystemDefaultSpecified { get; set; }
 
         private string _becomeResellerDefault;
 
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool BecomeResellerDefaultSpecified { get; set; }
+        protected bool BecomeResellerDefaultSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol _transportType;
 
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool TransportTypeSpecified { get; set; }
+        protected bool TransportTypeSpecified { get; set; }
 
         private string _description;
 
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool DescriptionSpecified { get; set; }
+        protected bool DescriptionSpecified { get; set; }
 
         private BroadWorksConnector.Ocip.Models.CallRecordingPlatformSchemaVersion _schemaVersion;
 
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SchemaVersionSpecified { get; set; }
+        protected bool SchemaVersionSpecified { get; set; }
 
         private bool _supportVideoRecording;
 
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool SupportVideoRecordingSpecified { get; set; }
+        protected bool SupportVideoRecordingSpecified { get; set; }
 
         private string _route;
 
@@ -226,7 +226,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool RouteSpecified { get; set; }
+        protected bool RouteSpecified { get; set; }
 
     }
 }

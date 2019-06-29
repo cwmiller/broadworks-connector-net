@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MinIpAddressSpecified { get; set; }
+        protected bool MinIpAddressSpecified { get; set; }
 
         private string _maxIpAddress;
 
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         }
 
         [XmlIgnore]
-        public bool MaxIpAddressSpecified { get; set; }
+        protected bool MaxIpAddressSpecified { get; set; }
 
     }
 }
