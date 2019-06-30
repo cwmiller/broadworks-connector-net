@@ -4,6 +4,18 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <Version>0.4.0-alpha</Version>
+
+    <Authors>Chase Miller</Authors>
+
+    <Company />
+
+    <Product />
+
+    <Copyright>2019</Copyright>
+
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>

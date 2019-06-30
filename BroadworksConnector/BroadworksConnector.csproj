@@ -8,9 +8,9 @@
     <Copyright>2019</Copyright>
     <RepositoryUrl></RepositoryUrl>
     <PackageProjectUrl>https://github.com/cwmiller/broadworks-connector-net</PackageProjectUrl>
-    <Version>0.3.0-alpha</Version>
+    <Version>0.4.0-alpha</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageTags>broadworks ocip</PackageTags>
+    <PackageTags>broadworks ocip broadsoft</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
