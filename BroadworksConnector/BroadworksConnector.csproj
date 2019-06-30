@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -8,7 +8,7 @@
     <Copyright>2019</Copyright>
     <RepositoryUrl></RepositoryUrl>
     <PackageProjectUrl>https://github.com/cwmiller/broadworks-connector-net</PackageProjectUrl>
-    <Version>0.4.0-alpha</Version>
+    <Version>0.4.1-alpha</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageTags>broadworks ocip broadsoft</PackageTags>
   </PropertyGroup>
