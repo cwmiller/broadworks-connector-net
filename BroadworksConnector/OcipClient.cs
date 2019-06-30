@@ -236,7 +236,10 @@ namespace BroadWorksConnector
         /// <returns></returns>
         private async Task<IEnumerable<OCICommand>> ExecuteCommands(IEnumerable<OCICommand> commands)
         {
-            Validator.Validate(commands);
+            foreach (var command in commands)
+            {
+                Validator.Validate(command);
+            }
 
             var xml = SerializeCommands(commands);
             BroadsoftDocument response = null;
