@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip
         {
             var doc = XDocument.Parse(xml);
 
-            var obj = DeserializeElement(doc.Root) as BroadsoftDocument;
+            var obj = DeserializeElement(doc.Root, typeof(BroadsoftDocument)) as BroadsoftDocument;
 
             return obj;
         }
@@ -285,7 +285,7 @@ namespace BroadWorksConnector.Ocip
         /// <param name="element"></param>
         /// <param name="targetType"></param>
         /// <returns></returns>
-        private object DeserializeElement(XElement element, Type targetType = null)
+        private object DeserializeElement(XElement element, Type targetType)
         {
             // If the element contains no elements, serialize its value
             if (!element.HasElements)
@@ -293,47 +293,52 @@ namespace BroadWorksConnector.Ocip
                 return DeserializeValue(element.Value, targetType);
             }
 
-            var typeName = !string.IsNullOrEmpty(element.Name.Namespace.NamespaceName)
-                ? $"{ModelNamespace}.{element.Name.Namespace}.{element.Name.LocalName}"
-                : $"{ModelNamespace}.{element.Name.LocalName}";
-
-            // Check if element has an attribute that specifies what the type is
-            var typeAttribute = element.Attribute(xsiNamespace + "type");
-
-            if (typeAttribute != null)
+            // If the target type is abstract, then there should be an attribute on the XML element
+            // telling us the concrete type
+            if (targetType.IsAbstract)
             {
-                typeName = $"{ModelNamespace}.{typeAttribute.Value}";
+                var typeAttribute = element.Attribute(xsiNamespace + "type");
+
+                if (typeAttribute != null)
+                {
+                    var typeName = $"{ModelNamespace}.{typeAttribute.Value}";
+
+                    targetType = Type.GetType(typeName);
+                }
             }
 
-            var objType = Type.GetType(typeName);
-
-            if (objType == null)
+            if (targetType == null)
             {
-                throw new ArgumentException("No type could be found for element", nameof(element));
+                throw new ArgumentException("targetType cannot be null", nameof(targetType));
             }
 
-            var obj = Activator.CreateInstance(objType);
+            var obj = Activator.CreateInstance(targetType);
 
             // Iterate through properties in the object and set it
-            var properties = objType.GetProperties();
+            var properties = targetType.GetProperties();
 
             foreach (var property in properties)
             {
-                var propertyIsList = property.PropertyType.GetTypeInfo().IsGenericType && property.PropertyType.GetGenericTypeDefinition() == typeof(List<>);
+                var propertyType = property.PropertyType;
+                var propertyIsList = propertyType.GetTypeInfo().IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(List<>);
 
                 XmlElementAttribute elementAttr = Attribute.GetCustomAttribute(property, typeof(XmlElementAttribute)) as XmlElementAttribute;
                 if (elementAttr != null)
                 {
                     if (propertyIsList)
                     {
+                        // Since the destination is a list, we need to get the type the list is composed of so we can construct them.
+                        var individualType = propertyType.GetTypeInfo().GenericTypeArguments[0];
+
                         var childElements = element.Elements(elementAttr.ElementName);
+
                         if (childElements.Count() > 0)
                         {
-                            var list = Activator.CreateInstance(property.PropertyType) as IList;
+                            var list = Activator.CreateInstance(propertyType) as IList;
 
                             foreach (var childElement in childElements)
                             {
-                                list.Add(DeserializeElement(childElement, property.PropertyType));
+                                list.Add(DeserializeElement(childElement, individualType));
                             }
 
                             property.SetValue(obj, list);
@@ -344,7 +349,7 @@ namespace BroadWorksConnector.Ocip
                         var childElement = element.Element(elementAttr.ElementName);
                         if (childElement != null)
                         {
-                            property.SetValue(obj, DeserializeElement(childElement, property.PropertyType));
+                            property.SetValue(obj, DeserializeElement(childElement, propertyType));
                         }
                     }
                 }

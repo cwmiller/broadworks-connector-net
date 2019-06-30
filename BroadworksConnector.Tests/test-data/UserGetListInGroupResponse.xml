@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<BroadsoftDocument protocol="OCI" xmlns="C" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <sessionId xmlns="">acbdf1234567890</sessionId>
+  <command echo="" xsi:type="UserGetListInGroupResponse" xmlns="">
+    <userTable>
+      <colHeading>User Id</colHeading>
+      <colHeading>Last Name</colHeading>
+      <colHeading>First Name</colHeading>
+      <colHeading>Department</colHeading>
+      <colHeading>Phone Number</colHeading>
+      <colHeading>Phone Number Activated</colHeading>
+      <colHeading>Email Address</colHeading>
+      <colHeading>Hiragana Last Name</colHeading>
+      <colHeading>Hiragana First Name</colHeading>
+      <colHeading>In Trunk Group</colHeading>
+      <colHeading>Extension</colHeading>
+      <colHeading>Country Code</colHeading>
+      <colHeading>National Prefix</colHeading>
+      <row>
+        <col>john.doe@test.com</col>
+        <col>Doe</col>
+        <col>John</col>
+        <col/>
+        <col/>
+        <col/>
+        <col/>
+        <col>Doe</col>
+        <col>John</col>
+        <col>false</col>
+        <col>100</col>
+        <col/>
+        <col/>
+      </row>
+      <row>
+        <col>jane.doe@test.com</col>
+        <col>Doe</col>
+        <col>Jane</col>
+        <col/>
+        <col/>
+        <col/>
+        <col/>
+        <col>Doe</col>
+        <col>Jane</col>
+        <col>false</col>
+        <col>101</col>
+        <col/>
+        <col/>
+      </row>
+    </userTable>
+  </command>
+</BroadsoftDocument>

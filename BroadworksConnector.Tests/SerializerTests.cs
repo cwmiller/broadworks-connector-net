@@ -117,6 +117,50 @@ namespace BroadWorksConnector.Tests
         }
 
         [Fact]
+        public void DeserializeUserGetListInGroupRequest()
+        {
+            var xmlData = File.ReadAllBytes(@"test-data/UserGetListInGroupResponse.xml");
+            var xml = Encoding.UTF8.GetString(xmlData);
+
+            var document = _serializer.Deserialize(xml);
+
+            Assert.IsType<UserGetListInGroupResponse>(document.Command.First());
+
+            var response = document.Command.First() as UserGetListInGroupResponse;
+
+            Assert.IsType<OCITable>(response.UserTable);
+
+            Assert.Equal(2, response.UserTable.Row.Count);
+            Assert.Equal("john.doe@test.com", response.UserTable.Row[0].Col[0]);
+            Assert.Equal("Doe", response.UserTable.Row[0].Col[1]);
+            Assert.Equal("John", response.UserTable.Row[0].Col[2]);
+            Assert.Equal("", response.UserTable.Row[0].Col[3]);
+            Assert.Equal("", response.UserTable.Row[0].Col[4]);
+            Assert.Equal("", response.UserTable.Row[0].Col[5]);
+            Assert.Equal("", response.UserTable.Row[0].Col[6]);
+            Assert.Equal("Doe", response.UserTable.Row[0].Col[7]);
+            Assert.Equal("John", response.UserTable.Row[0].Col[8]);
+            Assert.Equal("false", response.UserTable.Row[0].Col[9]);
+            Assert.Equal("100", response.UserTable.Row[0].Col[10]);
+            Assert.Equal("", response.UserTable.Row[0].Col[11]);
+            Assert.Equal("", response.UserTable.Row[0].Col[12]);
+
+            Assert.Equal("jane.doe@test.com", response.UserTable.Row[1].Col[0]);
+            Assert.Equal("Doe", response.UserTable.Row[1].Col[1]);
+            Assert.Equal("Jane", response.UserTable.Row[1].Col[2]);
+            Assert.Equal("", response.UserTable.Row[1].Col[3]);
+            Assert.Equal("", response.UserTable.Row[1].Col[4]);
+            Assert.Equal("", response.UserTable.Row[1].Col[5]);
+            Assert.Equal("", response.UserTable.Row[1].Col[6]);
+            Assert.Equal("Doe", response.UserTable.Row[1].Col[7]);
+            Assert.Equal("Jane", response.UserTable.Row[1].Col[8]);
+            Assert.Equal("false", response.UserTable.Row[1].Col[9]);
+            Assert.Equal("101", response.UserTable.Row[1].Col[10]);
+            Assert.Equal("", response.UserTable.Row[1].Col[11]);
+            Assert.Equal("", response.UserTable.Row[1].Col[12]);
+        }
+
+        [Fact]
         public void DeserializeLoginResponse14sp4()
         {
             var xmlData = File.ReadAllBytes(@"test-data/LoginResponse14sp4.xml");
