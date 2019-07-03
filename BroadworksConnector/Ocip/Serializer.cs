@@ -301,7 +301,7 @@ namespace BroadWorksConnector.Ocip
 
                 if (typeAttribute != null)
                 {
-                    var typeName = $"{ModelNamespace}.{typeAttribute.Value}";
+                    var typeName = $"{ModelNamespace}.{typeAttribute.Value.Replace("c:", "C.")}";
 
                     targetType = Type.GetType(typeName);
                 }

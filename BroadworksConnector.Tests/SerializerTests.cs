@@ -207,5 +207,16 @@ namespace BroadWorksConnector.Tests
 
             Assert.False(diff.HasDifferences());
         }
+
+        [Fact]
+        public void TestErrorResponse()
+        {
+            var xmlData = File.ReadAllBytes(@"test-data/ErrorResponse.xml");
+            var xml = Encoding.UTF8.GetString(xmlData);
+
+            var document = _serializer.Deserialize(xml);
+
+            Assert.IsType<ErrorResponse>(document.Command.First());
+        }
     }
 }
