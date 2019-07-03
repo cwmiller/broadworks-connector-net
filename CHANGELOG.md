@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.4.2-alpha] - 2019-07-01
+### Fixed
+- Fixed issue where an ErrorResponse from the server would trigger a BadResponseException instead of an ErrorResponseException.
+
 ## [0.4.1-alpha] - 2019-06-30
 ### Fixed
 - Fixed issue with all calls failing due to calling `Validator.Validate` on an list.
@@ -14,5 +18,6 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
-[0.4.1-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.4.0-alpha...0.4.1-alpha
+[0.4.2-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.4.1-alpha...0.4.2-alpha
+[0.4.0-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.3.0-alpha...0.4.0-alpha
 [0.4.0-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.3.0-alpha...0.4.0-alpha
