@@ -60,12 +60,12 @@ namespace BroadWorksConnector.Ocip.Validation
 
             if ((setMembers.Count() == 0) && (nonOptionalMembers.Count() != 0) && !Optional)
             {
-                throw new ChoiceNotSetException(instance);
+                throw new ChoiceNotSetException(instance, OptionNames(options, type));
             }
 
             if (setMembers.Count() > 1)
             {
-                throw new InvalidChoiceException(instance);
+                throw new InvalidChoiceException(instance, OptionNames(options, type));
             }
         }
 
@@ -128,6 +128,40 @@ namespace BroadWorksConnector.Ocip.Validation
             }
 
             return set;
+        }
+
+        /// <summary>
+        /// Retrieves all the properties/groups that are part of the group
+        /// </summary>
+        /// <param name="options"></param>
+        /// <param name="instanceType"></param>
+        /// <returns></returns>
+        private IEnumerable<string> OptionNames(IEnumerable<ChoiceOption> options, Type instanceType)
+        {
+            return options.Select(opt =>
+            {
+                if (opt is ChoiceFieldOption fieldOpt)
+                {
+                    return fieldOpt.Name;
+                } else if (opt is ChoiceSequenceOption sequenceOpt)
+                {
+                    var seqProperties =
+                        instanceType.GetProperties()
+                        .Where(prop => Attribute.GetCustomAttribute(prop, typeof(XmlIgnoreAttribute)) == null)
+                        .Where(prop =>
+                        {
+                            var groupAttribute = Attribute.GetCustomAttribute(prop, typeof(GroupAttribute)) as GroupAttribute;
+                            return groupAttribute != null && groupAttribute.Id == sequenceOpt.Sequence.Id;
+                        })
+                        .Select(prop => prop.Name);
+
+                    return $"[{string.Join(", ", seqProperties)}]";
+                }
+                else
+                {
+                    throw new InvalidOperationException("Unknown choice option");
+                }
+            });
         }
     }
 }

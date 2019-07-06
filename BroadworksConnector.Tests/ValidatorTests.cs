@@ -2,7 +2,6 @@
 using BroadWorksConnector.Ocip.Validation;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace BroadWorksConnector.Tests
