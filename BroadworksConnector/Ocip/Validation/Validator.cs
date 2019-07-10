@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Validation
         public static bool IsPropertySpecified(PropertyInfo property, object instance)
         {
             // Skip properties marked as Ignored to serializer
-            if (Attribute.GetCustomAttribute(property, typeof(XmlIgnoreAttribute)) != null)
+            if (AttributeUtil.Get<XmlIgnoreAttribute>(property) != null)
             {
                 return false;
             }
@@ -68,6 +68,7 @@ namespace BroadWorksConnector.Ocip.Validation
         private static void ValidateGroups(object instance)
         {
             var groups = GetGroups(instance);
+
             foreach (var group in groups)
             {
                 group.Validate(instance);
@@ -82,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Validation
         private static IEnumerable<Group> GetGroups(object instance)
         {
             // Object should have a Groups attribute containing the group details as JSON
-            var groupsAttr = (GroupsAttribute)Attribute.GetCustomAttribute(instance.GetType(), typeof(GroupsAttribute));
+            var groupsAttr = AttributeUtil.Get<GroupsAttribute>(instance.GetType());
 
             if (groupsAttr == null)
             {
@@ -107,6 +108,7 @@ namespace BroadWorksConnector.Ocip.Validation
         private static void ValidateProperties(object instance)
         {
             var type = instance.GetType();
+
             foreach (var prop in type.GetProperties())
             {
                 if (IsPropertySpecified(prop, instance))
@@ -147,10 +149,10 @@ namespace BroadWorksConnector.Ocip.Validation
             {
                 var type = value.GetType();
 
-                return !type.IsPrimitive
-                    && !type.Equals(typeof(string))
-                    && !type.IsEnum
-                    && Attribute.GetCustomAttribute(type, typeof(XmlIgnoreAttribute)) == null;
+                return !type.IsPrimitive                                    // Ignore primitives
+                    && !type.Equals(typeof(string))                         // Ignore strings
+                    && !type.IsEnum                                         // Ignore enums
+                    && AttributeUtil.Get<XmlIgnoreAttribute>(type) == null; // Ignore anything explicitly marked as ignore
             }
             else
             {
@@ -166,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Validation
         private static void ValidatePropertyRestrictions(PropertyInfo property, object value)
         {
             // Get all attributes on property
-            var attributes = Attribute.GetCustomAttributes(property);
+            var attributes = AttributeUtil.GetAll(property);
 
             foreach (var attribute in attributes)
             {

@@ -10,7 +10,7 @@ namespace BroadWorksConnector.Ocip
     /// <summary>
     /// TCP transport
     /// </summary>
-    public class TcpTransport : ITransport
+    internal class TcpTransport : ITransport
     {
         private string _host;
 

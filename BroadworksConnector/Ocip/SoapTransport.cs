@@ -7,7 +7,7 @@ namespace BroadWorksConnector.Ocip
     /// <summary>
     /// Transport for handling OCIP calls over SOAP
     /// </summary>
-    public class SoapTransport : ITransport
+    internal class SoapTransport : ITransport
     {
         private Uri _uri;
 

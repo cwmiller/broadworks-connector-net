@@ -36,13 +36,16 @@ namespace BroadWorksConnector.Ocip
             return rootElement.Declaration + Environment.NewLine + rootElement.ToString();
         }
 
+        /// <summary>
+        /// Deserialize a response to a BroadsoftDocument object
+        /// </summary>
+        /// <param name="xml"></param>
+        /// <returns></returns>
         public BroadsoftDocument Deserialize(string xml)
         {
-            var doc = XDocument.Parse(xml);
+            var document = XDocument.Parse(xml);
 
-            var obj = DeserializeElement(doc.Root, typeof(BroadsoftDocument)) as BroadsoftDocument;
-
-            return obj;
+            return DeserializeElement(document.Root, typeof(BroadsoftDocument)) as BroadsoftDocument;
         }
 
         /// <summary>
@@ -55,10 +58,12 @@ namespace BroadWorksConnector.Ocip
         {
             var objType = obj.GetType();
             XNamespace ns = "";
+
+            // By default, element name will by the class name
             var elementName = objType.Name;
 
             // XmlRoot attribute will contain useful information such as namespace
-            XmlRootAttribute xmlRootAttr = Attribute.GetCustomAttribute(objType, typeof(XmlRootAttribute)) as XmlRootAttribute;
+            var xmlRootAttr = AttributeUtil.Get<XmlRootAttribute>(objType);
 
             if (xmlRootAttr != null)
             {
@@ -92,17 +97,16 @@ namespace BroadWorksConnector.Ocip
             var contents = new List<object>();
 
             // Get all properties that are marked with XmlElementAttribute or XmlAttributeAttribute
-            var properties = (from prop in type.GetProperties()
-                              where Attribute.GetCustomAttribute(prop, typeof(XmlElementAttribute)) != null
-                              || Attribute.GetCustomAttribute(prop, typeof(XmlAttributeAttribute)) != null
-                              select prop);
+            var properties = type.GetProperties()
+                .Where(prop => AttributeUtil.Get<XmlElementAttribute>(prop) != null || AttributeUtil.Get<XmlAttributeAttribute>(prop) != null);
 
             foreach (var property in properties)
             {
                 if (IsPropertySpecified(property, type, instance))
                 {
                     // Handle property if it's an XML Element
-                    XmlElementAttribute elementAttr = Attribute.GetCustomAttribute(property, typeof(XmlElementAttribute)) as XmlElementAttribute;
+                    var elementAttr = AttributeUtil.Get<XmlElementAttribute>(property);
+
                     if (elementAttr != null)
                     {
                         var propertyValue = property.GetValue(instance);
@@ -112,10 +116,7 @@ namespace BroadWorksConnector.Ocip
 
                         if (asEnumerable != null)
                         {
-                            foreach (var entry in asEnumerable)
-                            {
-                                contents.Add(SerializeElement(property, entry, elementAttr));
-                            }
+                            contents.AddRange(asEnumerable.Select(entry => SerializeElement(property, entry, elementAttr)));
                         }
                         else
                         {
@@ -124,7 +125,8 @@ namespace BroadWorksConnector.Ocip
                     }
 
                     // Handle property if it's an XML Attribute
-                    XmlAttributeAttribute attributeAttr = Attribute.GetCustomAttribute(property, typeof(XmlAttributeAttribute)) as XmlAttributeAttribute;
+                    var attributeAttr = AttributeUtil.Get<XmlAttributeAttribute>(property);
+
                     if (attributeAttr != null)
                     {
                         contents.Add(SerializeAttribute(property, property.GetValue(instance), attributeAttr));
@@ -205,7 +207,7 @@ namespace BroadWorksConnector.Ocip
         /// <returns></returns>
         private string EnumForValue(Type enumType, string value)
         {
-            var xmlEnumAttr = enumType.GetField(value).GetCustomAttribute(typeof(XmlEnumAttribute)) as XmlEnumAttribute;
+            var xmlEnumAttr = AttributeUtil.Get<XmlEnumAttribute>(enumType.GetField(value));
 
             if (xmlEnumAttr == null)
             {
@@ -249,6 +251,7 @@ namespace BroadWorksConnector.Ocip
         private bool IsPropertySpecified(PropertyInfo property, Type objectType, object instance)
         {
             // Instance will include a sibling property named PropertyNameSpecified that is set to true if the property was set.
+            // var specifiedProperty = objectType.GetProperty($"{property.Name}Specified", BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
             var specifiedProperty = objectType.GetProperty($"{property.Name}Specified", BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
 
             if (specifiedProperty == null)
@@ -301,9 +304,7 @@ namespace BroadWorksConnector.Ocip
 
                 if (typeAttribute != null)
                 {
-                    var typeName = $"{ModelNamespace}.{typeAttribute.Value.Replace("c:", "C.")}";
-
-                    targetType = Type.GetType(typeName);
+                    targetType = Type.GetType($"{ModelNamespace}.{typeAttribute.Value.Replace("c:", "C.")}");
                 }
             }
 
@@ -322,7 +323,8 @@ namespace BroadWorksConnector.Ocip
                 var propertyType = property.PropertyType;
                 var propertyIsList = propertyType.GetTypeInfo().IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(List<>);
 
-                XmlElementAttribute elementAttr = Attribute.GetCustomAttribute(property, typeof(XmlElementAttribute)) as XmlElementAttribute;
+                var elementAttr = AttributeUtil.Get<XmlElementAttribute>(property);
+
                 if (elementAttr != null)
                 {
                     if (propertyIsList)
@@ -330,6 +332,7 @@ namespace BroadWorksConnector.Ocip
                         // Since the destination is a list, we need to get the type the list is composed of so we can construct them.
                         var individualType = propertyType.GetTypeInfo().GenericTypeArguments[0];
 
+                        // Get elements from the XML for the property
                         var childElements = element.Elements(elementAttr.ElementName);
 
                         if (childElements.Count() > 0)
@@ -347,6 +350,7 @@ namespace BroadWorksConnector.Ocip
                     else
                     {
                         var childElement = element.Element(elementAttr.ElementName);
+
                         if (childElement != null)
                         {
                             property.SetValue(obj, DeserializeElement(childElement, propertyType));
@@ -354,10 +358,12 @@ namespace BroadWorksConnector.Ocip
                     }
                 }
 
-                XmlAttributeAttribute attributeAttr = Attribute.GetCustomAttribute(property, typeof(XmlAttributeAttribute)) as XmlAttributeAttribute;
+                var attributeAttr = AttributeUtil.Get<XmlAttributeAttribute>(property);
+
                 if (attributeAttr != null)
                 {
                     var attribute = element.Attribute(attributeAttr.AttributeName);
+
                     if (attribute != null)
                     {
                         property.SetValue(obj, attribute.Value);
@@ -414,9 +420,9 @@ namespace BroadWorksConnector.Ocip
 
             var enumValue = targetType.GetFields().Where(field =>
             {
-                var enumAttr = Attribute.GetCustomAttribute(field, typeof(XmlEnumAttribute)) as XmlEnumAttribute;
+                var enumAttr = AttributeUtil.Get<XmlEnumAttribute>(field);
 
-                return (enumAttr?.Name == value);
+                return enumAttr?.Name == value;
             }).FirstOrDefault();
 
             if (enumValue == null)

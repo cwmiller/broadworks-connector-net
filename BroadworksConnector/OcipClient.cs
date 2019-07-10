@@ -5,9 +5,12 @@ using BroadWorksConnector.Ocip.Validation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+
+[assembly: InternalsVisibleToAttribute("BroadWorksConnector.Tests")]
 
 namespace BroadWorksConnector
 {
@@ -22,7 +25,7 @@ namespace BroadWorksConnector
 
         private readonly string _sessionId;
 
-        public ITransport Transport { get; private set; }
+        internal ITransport Transport { get; private set; }
 
         private readonly Serializer _serializer;
 
