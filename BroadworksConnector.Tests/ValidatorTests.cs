@@ -2,6 +2,7 @@
 using BroadWorksConnector.Ocip.Validation;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace BroadWorksConnector.Tests
@@ -11,11 +12,11 @@ namespace BroadWorksConnector.Tests
         [Fact]
         public void TestRequirementMissing()
         {
-            Assert.Throws<FieldNotSetException>(() =>
-            {
-                var request = new LoginRequest14sp4();
-                Validator.Validate(request);
-            });
+            var request = new LoginRequest14sp4();
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<FieldNotSetError>(results.Errors.Single());
         }
 
         [Fact]
@@ -26,21 +27,24 @@ namespace BroadWorksConnector.Tests
                 UserId = "test"
             };
 
-            Assert.True(Validator.Validate(request));
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
         }
 
         [Fact]
         public void TestRequirementWithArrayNotMet()
         {
-            Assert.Throws<FieldNotSetException>(() =>
+            var request = new GroupCommunicationBarringAuthorizationCodeAddListRequest()
             {
-                var request = new GroupCommunicationBarringAuthorizationCodeAddListRequest()
-                {
-                    ServiceProviderId = "SID",
-                    GroupId = "GID"
-                };
-                Validator.Validate(request);
-            });
+                ServiceProviderId = "SID",
+                GroupId = "GID"
+            };
+
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<FieldNotSetError>(results.Errors.Single());
         }
 
         [Fact]
@@ -58,31 +62,35 @@ namespace BroadWorksConnector.Tests
                     }
                 }
             };
+
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
         }
 
         [Fact]
         public void TestChoiceNotMet()
         {
-            Assert.Throws<ChoiceNotSetException>(() =>
-            {
-                var request = new UserModifyRequest16Endpoint();
-                Validator.Validate(request);
-            });
+            var request = new UserModifyRequest16Endpoint();
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<ChoiceNotSetError>(results.Errors.Single());
         }
 
         [Fact]
         public void TestMultipleChoiceSelections()
         {
-            Assert.Throws<InvalidChoiceException>(() =>
+            var request = new SystemGetRegistrationContactListRequest()
             {
-                var request = new SystemGetRegistrationContactListRequest()
-                {
-                    ResellerId = "reseller",
-                    ServiceProviderId = "serviceProvider"
-                };
+                ResellerId = "reseller",
+                ServiceProviderId = "serviceProvider"
+            };
 
-                Validator.Validate(request);
-            });
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<InvalidChoiceError>(results.Errors.Single());
         }
 
         [Fact]
@@ -93,22 +101,24 @@ namespace BroadWorksConnector.Tests
                 GroupId = "group"
             };
 
-            Assert.True(Validator.Validate(request));
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
         }
 
         [Fact]
         public void TestMultipleChoiceWithSequenceSequence()
         {
-            Assert.Throws<InvalidChoiceException>(() =>
+            var request = new SystemGetRegistrationContactListRequest()
             {
-                var request = new SystemGetRegistrationContactListRequest()
-                {
-                    GroupId = "group",
-                    ResellerId = "reseller"
-                };
+                GroupId = "group",
+                ResellerId = "reseller"
+            };
 
-                Validator.Validate(request);
-            });
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<InvalidChoiceError>(results.Errors.Single());
         }
 
         [Fact]
@@ -125,21 +135,23 @@ namespace BroadWorksConnector.Tests
                 CallingLineIdLastName = "Doe"
             };
 
-            Assert.True(Validator.Validate(request));
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
         }
 
         [Fact]
         public void TestChoiceWithUnsetArrays()
         {
-            Assert.Throws<ChoiceNotSetException>(() =>
+            var request = new GroupCallCenterAddAgentListRequest()
             {
-                var request = new GroupCallCenterAddAgentListRequest()
-                {
-                    ServiceUserId = "test@test.com"
-                };
+                ServiceUserId = "test@test.com"
+            };
 
-                Validator.Validate(request);
-            });
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<ChoiceNotSetError>(results.Errors.Single());
         }
 
         [Fact]
@@ -151,58 +163,63 @@ namespace BroadWorksConnector.Tests
                 AgentUserId = new List<string>() { "user@test.com" }
             };
 
-            Assert.True(Validator.Validate(request));
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
         }
 
         [Fact]
         public void TestChoiceWithSetArrays()
         {
-            Assert.Throws<InvalidChoiceException>(() =>
+            var request = new GroupCallCenterAddAgentListRequest()
             {
-                var request = new GroupCallCenterAddAgentListRequest()
+                ServiceUserId = "test@test.com",
+                AgentUserId = new List<string>() { "user@test.com" },
+                AgentSkillList = new List<CallCenterSkillAgentList>()
                 {
-                    ServiceUserId = "test@test.com",
-                    AgentUserId = new List<string>() { "user@test.com" },
-                    AgentSkillList = new List<CallCenterSkillAgentList>()
+                    new CallCenterSkillAgentList()
                     {
-                        new CallCenterSkillAgentList()
-                        {
-                            Agent = new List<string>() { "test" },
-                            SkillLevel = 1
-                        }
+                        Agent = new List<string>() { "test" },
+                        SkillLevel = 1
                     }
-                };
+                }
+            };
 
-                Validator.Validate(request);
-            });
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<InvalidChoiceError>(results.Errors.Single());
         }
 
         [Fact]
         public void TestOptionalGroup()
         {
             var request = new SystemGetRegistrationContactListRequest();
-            Assert.True(Validator.Validate(request));
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
         }
 
         [Fact]
         public void TestIncompleteObjectInArray()
         {
-            Assert.Throws<FieldNotSetException>(() =>
+            var request = new GroupAccessDeviceGetListRequest()
             {
-                var request = new GroupAccessDeviceGetListRequest()
-                {
-                    ServiceProviderId = "SP",
-                    GroupId = "G",
-                    SearchCriteriaDeviceMACAddress = new List<SearchCriteriaDeviceMACAddress>() {
-                        new SearchCriteriaDeviceMACAddress()
-                        {
-                            Value = "000000000000"
-                        }
+                ServiceProviderId = "SP",
+                GroupId = "G",
+                SearchCriteriaDeviceMACAddress = new List<SearchCriteriaDeviceMACAddress>() {
+                    new SearchCriteriaDeviceMACAddress()
+                    {
+                        Value = "000000000000",
+                        Mode = SearchMode.EqualTo
                     }
-                };
+                }
+            };
 
-                Validator.Validate(request);
-            });
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<FieldNotSetError>(results.Errors.Single());
         }
 
         [Fact]
@@ -227,34 +244,38 @@ namespace BroadWorksConnector.Tests
                         }
                     }
             };
+
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
         }
 
         [Fact]
         public void TestLengthFailure()
         {
-            Assert.Throws<LengthException>(() =>
+            var request = new FaxMessagingMenuKeysModifyEntry()
             {
-                var request = new FaxMessagingMenuKeysModifyEntry()
-                {
-                    SaveFaxMessageAndSkipToNext = "11"
-                };
+                SaveFaxMessageAndSkipToNext = "11"
+            };
 
-                Validator.Validate(request);
-            });
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<LengthError>(results.Errors.Single());
         }
         
         [Fact]
         public void TestMinLengthFailure()
         {
-            Assert.Throws<MinLengthException>(() =>
+            var request = new LoginRequest14sp4()
             {
-                var request = new LoginRequest14sp4()
-                {
-                    UserId = ""
-                };
+                UserId = ""
+            };
 
-                Validator.Validate(request);
-            });
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<MinLengthError>(results.Errors.Single());
         }
 
         [Fact]
@@ -265,21 +286,23 @@ namespace BroadWorksConnector.Tests
                 UserId = "a"
             };
 
-            Assert.True(Validator.Validate(request));
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
         }
 
         [Fact]
         public void TestMaxLengthFailure()
         {
-            Assert.Throws<MaxLengthException>(() =>
+            var request = new LoginRequest14sp4()
             {
-                var request = new LoginRequest14sp4()
-                {
-                    UserId = new String('a', 162)
-                };
+                UserId = new String('a', 162)
+            };
 
-                Validator.Validate(request);
-            });
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<MaxLengthError>(results.Errors.Single());
         }
 
         [Fact]
@@ -290,21 +313,23 @@ namespace BroadWorksConnector.Tests
                 UserId = new String('a', 161)
             };
 
-            Assert.True(Validator.Validate(request));
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
         }
 
         [Fact]
         public void TestPatternFailure()
         {
-            Assert.Throws<PatternException>(() =>
+            var request = new FaxMessagingMenuKeysModifyEntry()
             {
-                var request = new FaxMessagingMenuKeysModifyEntry()
-                {
-                    SaveFaxMessageAndSkipToNext = "a"
-                };
+                SaveFaxMessageAndSkipToNext = "a"
+            };
 
-                Validator.Validate(request);
-            });
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<PatternError>(results.Errors.Single());
         }
 
         [Fact]
@@ -315,22 +340,23 @@ namespace BroadWorksConnector.Tests
                 SaveFaxMessageAndSkipToNext = "#"
             };
 
-            Assert.True(Validator.Validate(request));
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
         }
 
         [Fact]
         public void TestMinInclusiveFailure()
         {
-            Assert.Throws<MinInclusiveException>(() =>
+            var request = new SystemExtensionLengthModifyRequest()
             {
-                var request = new SystemExtensionLengthModifyRequest()
-                {
-                    MinExtensionLength = 1,
-                    MaxExtensionLength = 1
-                };
+                MinExtensionLength = 1
+            };
 
-                Validator.Validate(request);
-            });
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<MinInclusiveError>(results.Errors.Single());
         }
 
         [Fact]
@@ -338,26 +364,26 @@ namespace BroadWorksConnector.Tests
         {
             var request = new SystemExtensionLengthModifyRequest()
             {
-                MinExtensionLength = 3,
-                MaxExtensionLength = 3
+                MinExtensionLength = 3
             };
 
-            Assert.True(Validator.Validate(request));
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
         }
 
         [Fact]
         public void TestMaxInclusiveFailure()
         {
-            Assert.Throws<MaxInclusiveException>(() =>
+            var request = new SystemExtensionLengthModifyRequest()
             {
-                var request = new SystemExtensionLengthModifyRequest()
-                {
-                    MinExtensionLength = 21,
-                    MaxExtensionLength = 21
-                };
+                MinExtensionLength = 21
+            };
 
-                Validator.Validate(request);
-            });
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<MaxInclusiveError>(results.Errors.Single());
         }
 
         [Fact]
@@ -365,11 +391,27 @@ namespace BroadWorksConnector.Tests
         {
             var request = new SystemExtensionLengthModifyRequest()
             {
-                MinExtensionLength = 20,
-                MaxExtensionLength = 20
+                MinExtensionLength = 20
             };
 
-            Assert.True(Validator.Validate(request));
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
+        }
+
+        [Fact]
+        public void TestMultipleValidationFailures()
+        {
+            var request = new SystemExtensionLengthModifyRequest()
+            {
+                MinExtensionLength = 21,
+                MaxExtensionLength = 1
+            };
+
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.Equal(2, results.Errors.Count());
         }
     }
 }

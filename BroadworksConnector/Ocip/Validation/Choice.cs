@@ -20,8 +20,10 @@ namespace BroadWorksConnector.Ocip.Validation
         /// Validate choice group
         /// </summary>
         /// <param name="instance"></param>
-        public override void Validate(object instance)
+        /// <returns>A list of all errors encountered.</returns>
+        public override IEnumerable<ValidationError> Validate(object instance)
         {
+            var errors = new List<ValidationError>();
             var type = instance.GetType();
 
             // Get all properties on object that are part of this group
@@ -60,13 +62,13 @@ namespace BroadWorksConnector.Ocip.Validation
 
             if ((setMembers.Count() == 0) && (nonOptionalMembers.Count() != 0) && !Optional)
             {
-                throw new ChoiceNotSetException(instance, OptionNames(options, type));
+                errors.Add(new ChoiceNotSetError(instance, OptionNames(options, type)));
+            } else if (setMembers.Count() > 1)
+            {
+                errors.Add(new InvalidChoiceError(instance, OptionNames(options, type)));
             }
 
-            if (setMembers.Count() > 1)
-            {
-                throw new InvalidChoiceException(instance, OptionNames(options, type));
-            }
+            return errors;
         }
 
         /// <summary>

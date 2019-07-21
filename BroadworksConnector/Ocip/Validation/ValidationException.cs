@@ -1,18 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BroadWorksConnector.Ocip.Validation
 {
     /// <summary>
-    /// Base exception for all validation exceptions
+    /// Exception that gets thrown when a request object fails validation 
     /// </summary>
     public class ValidationException : Exception
     {
+        public IEnumerable<ValidationError> Errors { get; set; }
+
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="message"></param>
-        public ValidationException(string message) : base(message)
+        /// <param name="errors"></param>
+        public ValidationException(string message, IEnumerable<ValidationError> errors) : base(message)
         {
+            Errors = errors;
         }
     }
 }

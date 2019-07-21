@@ -16,8 +16,10 @@ namespace BroadWorksConnector.Ocip.Validation
         /// Validate sequence group
         /// </summary>
         /// <param name="instance"></param>
-        public override void Validate(object instance)
+        /// <returns>A list of all errors encountered.</returns>
+        public override IEnumerable<ValidationError> Validate(object instance)
         {
+            var errors = new List<ValidationError>();
             var type = instance.GetType();
 
             // Get all properties on object that are part of this group and required
@@ -55,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Validation
 
                 if (!set)
                 {
-                    throw new FieldNotSetException(instance, prop.Name);
+                    errors.Add(new FieldNotSetError(instance, prop.Name));
                 }
             }
 
@@ -64,9 +66,11 @@ namespace BroadWorksConnector.Ocip.Validation
             {
                 foreach (var child in Children)
                 {
-                    child.Validate(instance);
+                    errors.AddRange(child.Validate(instance));
                 }
             }
+
+            return errors;
         }
     }
 }

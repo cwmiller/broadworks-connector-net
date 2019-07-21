@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace BroadWorksConnector.Ocip.Validation
@@ -18,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Validation
         [DataMember(Name = "children")]
         public IEnumerable<Group> Children { get; set; }
 
-        public abstract void Validate(object instance);
+        public abstract IEnumerable<ValidationError> Validate(object instance);
 
         /// <summary>
         /// Constructor

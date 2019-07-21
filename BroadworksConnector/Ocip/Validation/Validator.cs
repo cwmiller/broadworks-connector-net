@@ -26,13 +26,25 @@ namespace BroadWorksConnector.Ocip.Validation
         /// Validate an object
         /// </summary>
         /// <param name="instance"></param>
-        /// <returns></returns>
-        public static bool Validate(object instance)
+        /// <returns>A ValidationResult indicating if the object is valid or what the errors are.</returns>
+        public static ValidationResult Validate(object instance)
         {
-            ValidateGroups(instance);
-            ValidateProperties(instance);
+            return new ValidationResult(ValidateObject(instance));
+        }
 
-            return true;
+        /// <summary>
+        /// Validate an object
+        /// </summary>
+        /// <param name="instance"></param>
+        /// <returns>A list of all errors encountered.</returns>
+        private static IEnumerable<ValidationError> ValidateObject(object instance)
+        {
+            var errors = new List<ValidationError>();
+
+            errors.AddRange(ValidateGroups(instance));
+            errors.AddRange(ValidateProperties(instance));
+
+            return errors;
         }
 
         /// <summary>
@@ -65,14 +77,18 @@ namespace BroadWorksConnector.Ocip.Validation
         /// Retrieves all validation groups on an object and validates them
         /// </summary>
         /// <param name="instance"></param>
-        private static void ValidateGroups(object instance)
+        /// <returns>A list of all errors encountered.</returns>
+        private static IEnumerable<ValidationError> ValidateGroups(object instance)
         {
+            var errors = new List<ValidationError>();
             var groups = GetGroups(instance);
 
             foreach (var group in groups)
             {
-                group.Validate(instance);
+                errors.AddRange(group.Validate(instance));
             }
+
+            return errors;
         }
 
         /// <summary>
@@ -105,8 +121,10 @@ namespace BroadWorksConnector.Ocip.Validation
         /// Validate any child objects and restrictions on primitive types
         /// </summary>
         /// <param name="instance"></param>
-        private static void ValidateProperties(object instance)
+        /// <returns>A list of all errors encountered.</returns>
+        private static IEnumerable<ValidationError> ValidateProperties(object instance)
         {
+            var errors = new List<ValidationError>();
             var type = instance.GetType();
 
             foreach (var prop in type.GetProperties())
@@ -122,27 +140,29 @@ namespace BroadWorksConnector.Ocip.Validation
                         {
                             if (IsValidatableObject(element))
                             {
-                                Validate(element);
+                                errors.AddRange(ValidateObject(element));
                             }
                         }
                     }
                     else if (IsValidatableObject(value))
                     {
-                        Validate(value);
+                        errors.AddRange(ValidateObject(value));
                     }
                     else
                     {
-                        ValidatePropertyRestrictions(prop, value);
+                        errors.AddRange(ValidatePropertyRestrictions(instance, prop, value));
                     }
                 }
             }
+
+            return errors;
         }
 
         /// <summary>
         /// Determines if a value is an object that should be ran through the validator
         /// </summary>
         /// <param name="value"></param>
-        /// <returns></returns>
+        /// <returns>If an object should be ran through the Validate method.</returns>
         private static bool IsValidatableObject(object value)
         {
             if (value is object)
@@ -165,8 +185,11 @@ namespace BroadWorksConnector.Ocip.Validation
         /// </summary>
         /// <param name="property"></param>
         /// <param name="value"></param>
-        private static void ValidatePropertyRestrictions(PropertyInfo property, object value)
+        /// <returns>A list of all errors encountered.</returns>
+        private static IEnumerable<ValidationError> ValidatePropertyRestrictions(object instance, PropertyInfo property, object value)
         {
+            var errors = new List<ValidationError>();
+
             // Get all attributes on property
             var attributes = AttributeUtil.GetAll(property);
 
@@ -177,43 +200,44 @@ namespace BroadWorksConnector.Ocip.Validation
                     case LengthAttribute attr:
                         if (value.ToString().Length != attr.Length)
                         {
-                            throw new LengthException(property.Name, value.ToString().Length, attr.Length);
+                            errors.Add(new LengthError(instance, property.Name, value.ToString().Length, attr.Length));
                         }
                         break;
                     case MinLengthAttribute attr:
                         if (value.ToString().Length < attr.Length)
                         {
-                            throw new MinLengthException(property.Name, value.ToString().Length, attr.Length);
+                            errors.Add(new MinLengthError(instance, property.Name, value.ToString().Length, attr.Length));
                         }
                         break;
                     case MaxLengthAttribute attr:
                         if (value.ToString().Length > attr.Length)
                         {
-                            throw new MaxLengthException(property.Name, value.ToString().Length, attr.Length);
+                            errors.Add(new MaxLengthError(instance, property.Name, value.ToString().Length, attr.Length));
                         }
                         break;
                     case MinInclusiveAttribute attr:
                         if ((int)value < attr.Minimum)
                         {
-                            throw new MinInclusiveException(property.Name, (int)value, attr.Minimum);
+                            errors.Add(new MinInclusiveError(instance, property.Name, (int)value, attr.Minimum));
                         }
                         break;
                     case MaxInclusiveAttribute attr:
                         if ((int)value > attr.Maximum)
                         {
-                            throw new MaxInclusiveException(property.Name, (int)value, attr.Maximum);
+                            errors.Add(new MaxInclusiveError(instance, property.Name, (int)value, attr.Maximum));
                         }
                         break;
                     case RegularExpressionAttribute attr:
                         if (!Regex.IsMatch(value.ToString(), attr.Pattern))
                         {
-                            throw new PatternException(property.Name, value.ToString(), attr.Pattern);
+                            errors.Add(new PatternError(instance, property.Name, value.ToString(), attr.Pattern));
                         }
 
                         break;
                 }
             }
 
+            return errors;
         }
     }
 }

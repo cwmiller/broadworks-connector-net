@@ -239,10 +239,7 @@ namespace BroadWorksConnector
         /// <returns></returns>
         private async Task<IEnumerable<OCICommand>> ExecuteCommands(IEnumerable<OCICommand> commands)
         {
-            foreach (var command in commands)
-            {
-                Validator.Validate(command);
-            }
+            ValidateCommands(commands);
 
             var xml = SerializeCommands(commands);
             BroadsoftDocument response = null;
@@ -277,6 +274,27 @@ namespace BroadWorksConnector
             }
 
             return response.Command;
+        }
+
+        /// <summary>
+        /// Validates a list of commands
+        /// </summary>
+        /// <param name="commands"></param>
+        private void ValidateCommands(IEnumerable<OCICommand> commands)
+        {
+            foreach (var command in commands)
+            {
+                var validationResult = Validator.Validate(command);
+
+                if (!validationResult.Success)
+                {
+                    var message = validationResult.Errors.Count() == 1
+                        ? validationResult.Errors.Single().Message
+                        : "Multiple validation errors found";
+
+                    throw new ValidationException(message, validationResult.Errors);
+                }
+            }
         }
 
 
