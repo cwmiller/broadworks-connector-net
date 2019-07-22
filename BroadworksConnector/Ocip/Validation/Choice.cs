@@ -29,10 +29,11 @@ namespace BroadWorksConnector.Ocip.Validation
             // Get all properties on object that are part of this group
             var requiredProperties =
                 type.GetProperties()
-                .Where(prop => Attribute.GetCustomAttribute(prop, typeof(XmlIgnoreAttribute)) == null)
+                .Where(prop => AttributeUtil.Get<XmlIgnoreAttribute>(prop) == null)
                 .Where(prop =>
                 {
-                    var groupAttribute = Attribute.GetCustomAttribute(prop, typeof(GroupAttribute)) as GroupAttribute;
+                    var groupAttribute = AttributeUtil.Get<GroupAttribute>(prop);
+
                     return groupAttribute != null && groupAttribute.Id == Id;
                 });
 
@@ -41,20 +42,34 @@ namespace BroadWorksConnector.Ocip.Validation
             options.AddRange(requiredProperties.Select(prop => new ChoiceFieldOption()
             {
                 Name = prop.Name,
-                Optional = Attribute.GetCustomAttribute(prop, typeof(OptionalAttribute)) != null,
+                Optional = AttributeUtil.Get<OptionalAttribute>(prop) != null,
                 Set = IsFieldSet(prop, instance)
             }));
 
             if (Children != null)
             {
-                options.AddRange(Children
-                    .Where(child => child is Sequence)
-                    .Select(child => new ChoiceSequenceOption()
+                // Find any Sequences that are children
+                foreach (var child in Children)
+                {
+                    if (child is Sequence sequence)
                     {
-                        Sequence = child as Sequence,
-                        Optional = false,
-                        Set = IsSequenceSet(child as Sequence, instance)
-                    }));
+                        var isSet = IsSequenceSet(sequence, instance);
+
+                        // If any of the sequences have set fields, validate the Sequence to 
+                        // enforce all required fields
+                        if (isSet)
+                        {
+                            errors.AddRange(sequence.Validate(instance));
+                        }
+
+                        options.Add(new ChoiceSequenceOption()
+                        {
+                            Sequence = sequence,
+                            Optional = false,
+                            Set = isSet
+                        });
+                    }
+                }
             }
 
             var setMembers = options.Where(opt => opt.Set);
@@ -114,11 +129,12 @@ namespace BroadWorksConnector.Ocip.Validation
             // Get properties that are part of sequence
             var requiredProperties =
                instance.GetType().GetProperties()
-               .Where(prop => Attribute.GetCustomAttribute(prop, typeof(XmlIgnoreAttribute)) == null)
+               .Where(prop => AttributeUtil.Get<XmlIgnoreAttribute>(prop) == null)
                .Where(prop =>
                {
-                   var groupAttribute = Attribute.GetCustomAttribute(prop, typeof(GroupAttribute)) as GroupAttribute;
-                   return groupAttribute != null && groupAttribute.Id == Id;
+                   var groupAttribute = AttributeUtil.Get<GroupAttribute>(prop);
+
+                   return groupAttribute != null && groupAttribute.Id == sequence.Id;
                });
 
             foreach (var property in requiredProperties)
@@ -149,10 +165,11 @@ namespace BroadWorksConnector.Ocip.Validation
                 {
                     var seqProperties =
                         instanceType.GetProperties()
-                        .Where(prop => Attribute.GetCustomAttribute(prop, typeof(XmlIgnoreAttribute)) == null)
+                        .Where(prop => AttributeUtil.Get<XmlIgnoreAttribute>(prop) == null)
                         .Where(prop =>
                         {
-                            var groupAttribute = Attribute.GetCustomAttribute(prop, typeof(GroupAttribute)) as GroupAttribute;
+                            var groupAttribute = AttributeUtil.Get<GroupAttribute>(prop);
+
                             return groupAttribute != null && groupAttribute.Id == sequenceOpt.Sequence.Id;
                         })
                         .Select(prop => prop.Name);

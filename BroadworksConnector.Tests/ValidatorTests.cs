@@ -48,6 +48,22 @@ namespace BroadWorksConnector.Tests
         }
 
         [Fact]
+        public void TestRequirementArrayEmpty()
+        {
+            var request = new GroupCommunicationBarringAuthorizationCodeAddListRequest()
+            {
+                ServiceProviderId = "SID",
+                GroupId = "GID",
+                Code = new List<CommunicationBarringAuthorizationCodeEntry>()
+            };
+
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<FieldNotSetError>(results.Errors.Single());
+        }
+   
+        [Fact]
         public void TestRequirementWithArrayMet()
         {
             var request = new GroupCommunicationBarringAuthorizationCodeAddListRequest()
@@ -83,8 +99,8 @@ namespace BroadWorksConnector.Tests
         {
             var request = new SystemGetRegistrationContactListRequest()
             {
-                ResellerId = "reseller",
-                ServiceProviderId = "serviceProvider"
+                UserId = "userId",
+                LinePort = "linePort"
             };
 
             var results = Validator.Validate(request);
@@ -98,6 +114,7 @@ namespace BroadWorksConnector.Tests
         {
             var request = new SystemGetRegistrationContactListRequest()
             {
+                SvcProviderId = "svc",
                 GroupId = "group"
             };
 
@@ -107,11 +124,12 @@ namespace BroadWorksConnector.Tests
         }
 
         [Fact]
-        public void TestMultipleChoiceWithSequenceSequence()
+        public void TestMultipleChoiceWithSequence()
         {
             var request = new SystemGetRegistrationContactListRequest()
             {
                 GroupId = "group",
+                SvcProviderId = "svc",
                 ResellerId = "reseller"
             };
 
@@ -189,6 +207,21 @@ namespace BroadWorksConnector.Tests
 
             Assert.False(results.Success);
             Assert.IsType<InvalidChoiceError>(results.Errors.Single());
+        }
+
+        [Fact]
+        public void TestMultipleChoiceAndIncompleteSequence()
+        {
+            var request = new SystemGetRegistrationContactListRequest()
+            {
+                SvcProviderId = "123",
+                UserId = "userId"
+            };
+
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.Equal(2, results.Errors.Count());
         }
 
         [Fact]

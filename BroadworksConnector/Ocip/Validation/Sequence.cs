@@ -25,11 +25,12 @@ namespace BroadWorksConnector.Ocip.Validation
             // Get all properties on object that are part of this group and required
             var requiredProperties =
                 type.GetProperties()
-                .Where(prop => Attribute.GetCustomAttribute(prop, typeof(OptionalAttribute)) == null)
-                .Where(prop => Attribute.GetCustomAttribute(prop, typeof(XmlIgnoreAttribute)) == null)
+                .Where(prop => AttributeUtil.Get<OptionalAttribute>(prop) == null)
+                .Where(prop => AttributeUtil.Get<XmlIgnoreAttribute>(prop) == null)
                 .Where(prop =>
                 {
-                    var groupAttribute = Attribute.GetCustomAttribute(prop, typeof(GroupAttribute)) as GroupAttribute;
+                    var groupAttribute = AttributeUtil.Get<GroupAttribute>(prop);
+
                     return groupAttribute != null && groupAttribute.Id == Id;
                 });
 
