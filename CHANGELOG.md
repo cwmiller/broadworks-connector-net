@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.5.0-alpha] - 2019-07-23
+### Changed
+- `Validator.Validate` now returns a `ValidationResult` object instead of throwing a child of `ValidationException`. The `Success` property is true if the object passed all validation checks. If not successful, the `Errors` property contains a list of all errors.
+- `ValidationException` is no longer abstract and is what is thrown by `OcipClient` when validation fails.
+- Sequences that are part of choices are now validated if at least one property is set on the sequence.
+- Choice error messages now include the list of properties that make up the choice.
+
+### Fixed
+- Choice groups were not properly determining when a sequence property was set.
+
 ## [0.4.2-alpha] - 2019-07-01
 ### Fixed
 - Fixed issue where an ErrorResponse from the server would trigger a BadResponseException instead of an ErrorResponseException.
@@ -18,6 +28,7 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[0.5.0-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.4.2-alpha...0.5.0-alpha
 [0.4.2-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.4.1-alpha...0.4.2-alpha
 [0.4.0-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.3.0-alpha...0.4.0-alpha
 [0.4.0-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.3.0-alpha...0.4.0-alpha
