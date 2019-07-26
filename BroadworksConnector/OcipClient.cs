@@ -136,32 +136,15 @@ namespace BroadWorksConnector
         {
             if (UserDetails == null)
             {
-                var authRequest = new AuthenticationRequest
-                {
-                    UserId = _username
-                };
-
                 try
                 {
-                    var authResponse = (await ExecuteCommands(new List<OCICommand>() { authRequest })).First() as AuthenticationResponse;
-                    string signedPassword = null;
-
-                    if (authResponse.PasswordAlgorithm == DigitalSignatureAlgorithm.MD5)
-                    {
-                        signedPassword = Md5($"{authResponse.Nonce}:{Sha1(_password)}");
-                    }
-                    else
-                    {
-                        throw new LoginException("Only MD5 supported for signing");
-                    }
-
                     if (Options.MinServerVersion == ServerVersion.R22)
                     {
                         // Release 22 login will return reseller information if logging in as a reseller
                         var loginRequest = new LoginRequest22V2
                         {
                             UserId = _username,
-                            Password = signedPassword
+                            Password = _password
                         };
 
                         var loginResponse = (await ExecuteCommands(new List<OCICommand>() { loginRequest })).First() as LoginResponse22V2;
@@ -181,6 +164,23 @@ namespace BroadWorksConnector
                     }
                     else
                     {
+                        var authRequest = new AuthenticationRequest
+                        {
+                            UserId = _username
+                        };
+
+                        var authResponse = (await ExecuteCommands(new List<OCICommand>() { authRequest })).First() as AuthenticationResponse;
+                        string signedPassword = null;
+
+                        if (authResponse.PasswordAlgorithm == DigitalSignatureAlgorithm.MD5)
+                        {
+                            signedPassword = Md5($"{authResponse.Nonce}:{Sha1(_password)}");
+                        }
+                        else
+                        {
+                            throw new LoginException("Only MD5 supported for signing");
+                        }
+
                         // Release 14sp4 if the default login method unless R22 is specified
                         var loginRequest = new LoginRequest14sp4
                         {
