@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.5.1-alpha] - 2019-07-26
+### Fixed
+- Fixed R22 login
+
 ## [0.5.0-alpha] - 2019-07-23
 ### Changed
 - `Validator.Validate` now returns a `ValidationResult` object instead of throwing a child of `ValidationException`. The `Success` property is true if the object passed all validation checks. If not successful, the `Errors` property contains a list of all errors.
@@ -28,6 +32,7 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[0.5.1-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.0-alpha...0.5.1-alpha
 [0.5.0-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.4.2-alpha...0.5.0-alpha
 [0.4.2-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.4.1-alpha...0.4.2-alpha
 [0.4.0-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.3.0-alpha...0.4.0-alpha
