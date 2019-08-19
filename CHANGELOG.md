@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.5.2-alpha] - 2019-08-19
+### Fixed
+- SuccessResponse responses were causing an exception
+
 ## [0.5.1-alpha] - 2019-07-26
 ### Fixed
 - Fixed R22 login
@@ -32,6 +36,7 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[0.5.2-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.1-alpha...0.5.2-alpha
 [0.5.1-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.0-alpha...0.5.1-alpha
 [0.5.0-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.4.2-alpha...0.5.0-alpha
 [0.4.2-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.4.1-alpha...0.4.2-alpha
