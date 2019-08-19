@@ -290,8 +290,8 @@ namespace BroadWorksConnector.Ocip
         /// <returns></returns>
         private object DeserializeElement(XElement element, Type targetType)
         {
-            // If the element contains no elements, serialize its value
-            if (!element.HasElements)
+            // Serialize to primitive value if primitive or enum
+            if (IsValueType(targetType))
             {
                 return DeserializeValue(element.Value, targetType);
             }
@@ -403,6 +403,21 @@ namespace BroadWorksConnector.Ocip
             }
 
             return value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="targetType"></param>
+        /// <returns></returns>
+        private bool IsValueType(Type targetType)
+        {
+            return targetType.Equals(typeof(bool))
+                || targetType.Equals(typeof(int))
+                || targetType.Equals(typeof(decimal))
+                || targetType.Equals(typeof(float))
+                || targetType.Equals(typeof(string))
+                || targetType.IsEnum;
         }
 
         /// <summary>

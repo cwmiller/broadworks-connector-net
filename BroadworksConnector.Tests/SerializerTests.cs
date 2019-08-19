@@ -218,5 +218,16 @@ namespace BroadWorksConnector.Tests
 
             Assert.IsType<ErrorResponse>(document.Command.First());
         }
+
+        [Fact]
+        public void TestSuccessResponse()
+        {
+            var xmlData = File.ReadAllBytes(@"test-data/SuccessResponse.xml");
+            var xml = Encoding.UTF8.GetString(xmlData);
+
+            var document = _serializer.Deserialize(xml);
+
+            Assert.IsType<SuccessResponse>(document.Command.First());
+        }
     }
 }

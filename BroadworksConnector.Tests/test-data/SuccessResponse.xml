@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<BroadsoftDocument protocol="OCI" xmlns="C" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <sessionId xmlns="">75849054236735</sessionId>
+  <command echo="" xsi:type="c:SuccessResponse" xmlns:c="C" xmlns=""/>
+</BroadsoftDocument>
