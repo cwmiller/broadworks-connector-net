@@ -1,8 +1,12 @@
 # Changelog
 
+## [0.5.3-alpha] - 2019-09-02
+### Fixed
+- Fixed SOAP transport always treating the connection as HTTPS even when an HTTP URL is given to it.
+
 ## [0.5.2-alpha] - 2019-08-19
 ### Fixed
-- SuccessResponse responses were causing an exception
+- `SuccessResponse` responses were causing an exception
 
 ## [0.5.1-alpha] - 2019-07-26
 ### Fixed
@@ -36,6 +40,7 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[0.5.3-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.2-alpha...0.5.3-alpha
 [0.5.2-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.1-alpha...0.5.2-alpha
 [0.5.1-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.0-alpha...0.5.1-alpha
 [0.5.0-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.4.2-alpha...0.5.0-alpha
