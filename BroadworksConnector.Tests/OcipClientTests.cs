@@ -30,14 +30,14 @@ namespace BroadWorksConnector.Tests
         [Fact]
         public void TestHttpTransport()
         {
-            var client = new OcipClient("http://bwas/webservice/services/ProvisioningService?wsdl", "username", "password");
+            var client = new OcipClient("http://bwas/webservice/services/ProvisioningService", "username", "password");
             Assert.IsType<SoapTransport>(client.Transport);
         }
 
         [Fact]
         public void TestHttpsTransport()
         {
-            var client = new OcipClient("https://bwas/webservice/services/ProvisioningService?wsdl", "username", "password");
+            var client = new OcipClient("https://bwas/webservice/services/ProvisioningService", "username", "password");
             Assert.IsType<SoapTransport>(client.Transport);
         }
 
