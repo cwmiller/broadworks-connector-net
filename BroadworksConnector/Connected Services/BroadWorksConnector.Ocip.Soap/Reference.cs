@@ -282,8 +282,7 @@ namespace BroadWorksConnector.Ocip.Soap
                 result.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
                 result.MaxReceivedMessageSize = int.MaxValue;
                 result.AllowCookies = true;
-                result.Security.Mode = System.ServiceModel.BasicHttpSecurityMode.Transport;
-
+                
                 if (endpointUri?.Scheme == "https")
                 {
                     result.Security.Mode = System.ServiceModel.BasicHttpSecurityMode.Transport;
