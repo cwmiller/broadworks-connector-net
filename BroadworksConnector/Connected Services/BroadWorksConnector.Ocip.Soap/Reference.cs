@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+
 namespace BroadWorksConnector.Ocip.Soap
 {
     
@@ -215,14 +217,14 @@ namespace BroadWorksConnector.Ocip.Soap
         }
         
         public BWProvisioningServiceClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
-                base(BWProvisioningServiceClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
+                base(BWProvisioningServiceClient.GetBindingForEndpoint(endpointConfiguration, new Uri(remoteAddress)), new System.ServiceModel.EndpointAddress(remoteAddress))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
         
         public BWProvisioningServiceClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(BWProvisioningServiceClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
+                base(BWProvisioningServiceClient.GetBindingForEndpoint(endpointConfiguration, remoteAddress.Uri), remoteAddress)
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
@@ -271,7 +273,7 @@ namespace BroadWorksConnector.Ocip.Soap
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
         }
         
-        private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
+        private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration, Uri endpointUri = null)
         {
             if ((endpointConfiguration == EndpointConfiguration.ProvisioningService))
             {
@@ -281,6 +283,12 @@ namespace BroadWorksConnector.Ocip.Soap
                 result.MaxReceivedMessageSize = int.MaxValue;
                 result.AllowCookies = true;
                 result.Security.Mode = System.ServiceModel.BasicHttpSecurityMode.Transport;
+
+                if (endpointUri?.Scheme == "https")
+                {
+                    result.Security.Mode = System.ServiceModel.BasicHttpSecurityMode.Transport;
+                }
+
                 return result;
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
