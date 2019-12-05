@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Security;
 using System.Net.Sockets;
 using System.Text;
@@ -60,7 +62,9 @@ namespace BroadWorksConnector.Ocip
 
             var response = "";
             var requestData = Encoding.UTF8.GetBytes(request);
-            var responseData = new byte[1024];
+
+            var responseData = new List<byte>();
+            var responseBuffer = new byte[1024];
 
             await _stream.WriteAsync(requestData, 0, requestData.Length);
 
@@ -71,12 +75,15 @@ namespace BroadWorksConnector.Ocip
                 do
                 {
                     // Clear out response buffer for each read so there's no hanging data from the previous read
-                    Array.Clear(responseData, 0, responseData.Length);
-                    bytesRead = await _stream.ReadAsync(responseData, 0, responseData.Length);
+                    bytesRead = await _stream.ReadAsync(responseBuffer, 0, responseBuffer.Length);
 
-                    response += Encoding.UTF8.GetString(responseData);
+                    // Append buffer contents to full response
+                    responseData.AddRange(responseBuffer.Take(bytesRead));
 
-                    // Reading stops once we receive a closing BroadsoftDocument tag
+                    // Read the full response as a UTF8 string
+                    response = Encoding.UTF8.GetString(responseData.ToArray());
+                    
+                    // Once the response contains the ending tag, return it
                     if (response.Contains("</BroadsoftDocument>\n"))
                     {
                         break;
@@ -88,8 +95,7 @@ namespace BroadWorksConnector.Ocip
                 throw new BadResponseException("Unable to parse response", e);
             }
 
-            // Remove any NULL characters that might have slipped in.
-            return response.Replace("\0", "");
+            return response;
         }
 
         public void Dispose()
