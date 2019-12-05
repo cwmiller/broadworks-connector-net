@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.5.5-alpha] - 2019-12-05
+### Fixed
+- Fixed issue with `TcpTransport` that could cause a timeout when reading from server.
+
 ## [0.5.4-alpha] - 2019-09-02
 ### Fixed
 - HTTP now actually fixed
@@ -44,6 +48,7 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[0.5.5-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.4-alpha...0.5.5-alpha
 [0.5.4-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.3-alpha...0.5.4-alpha
 [0.5.3-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.2-alpha...0.5.3-alpha
 [0.5.2-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.1-alpha...0.5.2-alpha
