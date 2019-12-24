@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BroadsoftDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" protocol="OCI" xmlns="C">
+  <sessionId xmlns="">acbdf1234567890</sessionId>
+  <command xsi:type="UserServiceAssignListRequest" xmlns="">
+    <userId>john.doe@test.com</userId>
+    <serviceName>Advice Of Charge</serviceName>
+    <serviceName>Alternate Numbers</serviceName>
+    <serviceName>Anonymous Call Rejection</serviceName>
+    <serviceName>Attendant Console</serviceName>
+  </command>
+</BroadsoftDocument>

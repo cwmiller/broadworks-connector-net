@@ -117,6 +117,37 @@ namespace BroadWorksConnector.Tests
         }
 
         [Fact]
+        public void SerializeWithListOfEnums()
+        {
+            var request = new UserServiceAssignListRequest()
+            {
+                UserId = "john.doe@test.com",
+                ServiceName = new List<UserService>()
+                {
+                    UserService.AdviceOfCharge,
+                    UserService.AlternateNumbers,
+                    UserService.AnonymousCallRejection,
+                    UserService.AttendantConsole
+                }
+            };
+
+            var document = new BroadsoftDocument()
+            {
+                SessionId = "acbdf1234567890",
+                Protocol = "OCI",
+                Command = new List<OCICommand>() { request }
+            };
+
+            var xml = _serializer.Serialize(document);
+
+            var diff =
+                DiffBuilder.Compare(Input.FromFile(@"test-data/UserServiceAssignListRequest.xml"))
+                .WithTest(xml).Build();
+
+            Assert.False(diff.HasDifferences());
+        }
+
+        [Fact]
         public void DeserializeUserGetListInGroupRequest()
         {
             var xmlData = File.ReadAllBytes(@"test-data/UserGetListInGroupResponse.xml");

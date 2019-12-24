@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization.Json;
 using System.Text;
@@ -132,11 +134,13 @@ namespace BroadWorksConnector.Ocip.Validation
                 if (IsPropertySpecified(prop, instance))
                 {
                     var value = prop.GetValue(instance, null);
-                    var valueAsEnumerable = value as IEnumerable<object>;
 
-                    if (valueAsEnumerable != null)
+                    var isList = prop.PropertyType.GetInterfaces()
+                            .Any(t => t.IsGenericType && t.GetGenericTypeDefinition() == typeof(IList<>));
+
+                    if (isList)
                     {
-                        foreach (var element in valueAsEnumerable)
+                        foreach (var element in (IEnumerable)value)
                         {
                             if (IsValidatableObject(element))
                             {

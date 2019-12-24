@@ -111,12 +111,16 @@ namespace BroadWorksConnector.Ocip
                     {
                         var propertyValue = property.GetValue(instance);
 
-                        // If property value is enumerable, create an element for each one. Else just create an element for the value.
-                        var asEnumerable = propertyValue as IEnumerable<object>;
+                        // If property value is a list, create an element for each entry. Else just create an element for the value.
+                        var isList = property.PropertyType.GetInterfaces()
+                            .Any(t => t.IsGenericType && t.GetGenericTypeDefinition() == typeof(IList<>));
 
-                        if (asEnumerable != null)
+                        if (isList)
                         {
-                            contents.AddRange(asEnumerable.Select(entry => SerializeElement(property, entry, elementAttr)));
+                            foreach (var entry in (IEnumerable)propertyValue)
+                            {
+                                contents.Add(SerializeElement(property, entry, elementAttr));
+                            }
                         }
                         else
                         {
