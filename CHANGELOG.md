@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.2] - 2020-04-11
+### Fixed
+- Fixed issue with serialized XML not including the xsi:type attribute for abstract properties when they have been set to NULL.
+
 ## [1.0.1] - 2019-12-24
 ### Fixed
 - Fixed issue with enum lists not being recognized as a list by the `Serializer` or `Validator`.
@@ -54,6 +58,7 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[1.0.2]: https://github.com/cwmiller/broadworks-connector-net/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/cwmiller/broadworks-connector-net/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.5-alpha...1.0.0
 [0.5.5-alpha]: https://github.com/cwmiller/broadworks-connector-net/compare/0.5.4-alpha...0.5.5-alpha
