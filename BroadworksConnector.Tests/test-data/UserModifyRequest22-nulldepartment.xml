@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BroadsoftDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" protocol="OCI" xmlns="C">
+  <sessionId xmlns="">636956952081463406</sessionId>
+  <command xsi:type="UserModifyRequest22" xmlns="">
+    <userId>test@test.com</userId>
+    <phoneNumber xsi:nil="true" />
+    <extension>999</extension>
+    <department xsi:type="EnterpriseDepartmentKey" xsi:nil="true" />
+  </command>
+</BroadsoftDocument>

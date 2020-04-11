@@ -240,6 +240,33 @@ namespace BroadWorksConnector.Tests
         }
 
         [Fact]
+        public void TestNillableAbstractProperty()
+        {
+            var request = new UserModifyRequest22()
+            {
+                UserId = "test@test.com",
+                Extension = "999",
+                PhoneNumber = null,
+                Department = null
+            };
+
+            var document = new BroadsoftDocument()
+            {
+                SessionId = "636956952081463406",
+                Protocol = "OCI",
+                Command = new List<OCICommand>() { request }
+            };
+
+            var xml = _serializer.Serialize(document);
+
+            var diff =
+                DiffBuilder.Compare(Input.FromFile(@"test-data/UserModifyRequest22-nulldepartment.xml"))
+                .WithTest(xml).Build();
+
+            Assert.False(diff.HasDifferences());
+        }
+
+        [Fact]
         public void TestErrorResponse()
         {
             var xmlData = File.ReadAllBytes(@"test-data/ErrorResponse.xml");

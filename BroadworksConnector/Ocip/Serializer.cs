@@ -176,30 +176,38 @@ namespace BroadWorksConnector.Ocip
 
             var elementAttributes = new List<object>();
 
-
             if (isEnum)
             {
                 return new XElement(ns + elementName, elementAttributes, EnumForValue(valueType, value.ToString()));
             }
-            else if (isPrimitive)
-            {
-                // Null values where the element is marked as Nillable gets an xsi:nil attribute included
-                if (isNillable && value == null)
-                {
-                    elementAttributes.Add(new XAttribute(xsiNamespace + "nil", true));
-                }
-
-                return new XElement(ns + elementName, elementAttributes, value);
-            }
             else
             {
                 // If element extends an abstract class, include an xsi:type attribute
-                if (ExtendsAbstract(valueType))
+                if (!valueType.IsPrimitive && ExtendsAbstract(valueType))
                 {
-                    elementAttributes.Add(new XAttribute(xsiNamespace + "type", valueType.Name));
+                    // If the field was set to NULL, use any type that inherits the abstract class
+                    // Else use the type of the value
+                    var xsiTypeToUse = (value == null)
+                        ? valueType.Assembly.GetTypes().Where(type => type.IsSubclassOf(valueType)).OrderBy(t => t.Name).FirstOrDefault().Name
+                        : valueType.Name;
+
+                    elementAttributes.Add(new XAttribute(xsiNamespace + "type", xsiTypeToUse));
                 }
 
-                return new XElement(ns + elementName, elementAttributes, GetElementContentsForInstance(valueType, value));
+                if (isPrimitive)
+                {
+                    // Null values where the element is marked as Nillable gets an xsi:nil attribute included
+                    if (isNillable && value == null)
+                    {
+                        elementAttributes.Add(new XAttribute(xsiNamespace + "nil", true));
+                    }
+
+                    return new XElement(ns + elementName, elementAttributes, value);
+                }
+                else
+                {
+                    return new XElement(ns + elementName, elementAttributes, GetElementContentsForInstance(valueType, value));
+                }
             }
         }
 
