@@ -13,6 +13,8 @@ namespace BroadWorksConnector
     {
         private static Dictionary<string, List<Attribute>> _cache = new Dictionary<string, List<Attribute>>();
 
+        private static object _cacheLock = new object();
+
         /// <summary>
         /// Retrieve attribute
         /// </summary>
@@ -34,23 +36,26 @@ namespace BroadWorksConnector
         /// <returns></returns>
         public static IEnumerable<Attribute> GetAll(MemberInfo member)
         {
-            // Cache key is in format ObjectFullName or ObjectFullName#Property
-            var memberCacheKey = (member is TypeInfo memberInfo)
-                ? memberInfo.FullName
-                : $"{member.DeclaringType?.FullName}#{member.Name}"; 
-
-            if (_cache.ContainsKey(memberCacheKey))
+            lock (_cacheLock)
             {
-                return _cache[memberCacheKey];
-            }
-            else
-            {
-                // Retrieves all attributes on the member and store them in a list
-                var allAtrributes = Attribute.GetCustomAttributes(member).ToList();
+                // Cache key is in format ObjectFullName or ObjectFullName#Property
+                var memberCacheKey = (member is TypeInfo memberInfo)
+                    ? memberInfo.FullName
+                    : $"{member.DeclaringType?.FullName}#{member.Name}";
 
-                _cache.Add(memberCacheKey, allAtrributes);
+                if (_cache.ContainsKey(memberCacheKey))
+                {
+                    return _cache[memberCacheKey];
+                }
+                else
+                {
+                    // Retrieves all attributes on the member and store them in a list
+                    var allAtrributes = Attribute.GetCustomAttributes(member).ToList();
 
-                return allAtrributes;
+                    _cache.Add(memberCacheKey, allAtrributes);
+
+                    return allAtrributes;
+                }
             }
         }
     }
