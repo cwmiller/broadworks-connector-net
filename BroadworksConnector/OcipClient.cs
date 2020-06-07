@@ -54,7 +54,7 @@ namespace BroadWorksConnector
             _username = username;
             _password = password;
             _sessionId = GenerateSessionId();
-            _serializer = new Serializer("BroadWorksConnector.Ocip.Models");
+            _serializer = new Serializer(typeof(AccessDevice).Namespace);
             Options = options;
 
             var uri = new Uri(url);
