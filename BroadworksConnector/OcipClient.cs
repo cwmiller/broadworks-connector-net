@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 [assembly: InternalsVisibleToAttribute("BroadWorksConnector.Tests")]
@@ -85,14 +86,25 @@ namespace BroadWorksConnector
         /// <returns></returns>
         /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
         /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
-        public async Task<OCICommand> Call(OCICommand command)
+        [Obsolete("Deprecated method. Use CallAsync instead.")]
+        public Task<OCICommand> Call(OCICommand command) => CallAsync(command);
+
+        /// <summary>
+        /// Executes a single Request
+        /// </summary>
+        /// <param name="command"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
+        /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
+        public async Task<OCICommand> CallAsync(OCICommand command, CancellationToken cancellationToken = default)
         {
             if (UserDetails == null)
             {
-                await Login();
+                await LoginAsync(cancellationToken);
             }
 
-            var responses = await ExecuteCommands(new List<OCICommand> { command });
+            var responses = await ExecuteCommandsAsync(new List<OCICommand> { command }, cancellationToken);
 
             return responses.First();
         }
@@ -104,14 +116,25 @@ namespace BroadWorksConnector
         /// <returns></returns>
         /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
         /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
-        public async Task<IEnumerable<OCICommand>> CallAll(IEnumerable<OCICommand> commands)
+        [Obsolete("Deprecated method. Use CallAllAsync instead.")]
+        public Task<IEnumerable<OCICommand>> CallAll(IEnumerable<OCICommand> commands) => CallAllAsync(commands);
+
+        /// <summary>
+        /// Executes multiple commands in a single request
+        /// </summary>
+        /// <param name="commands"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
+        /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
+        public async Task<IEnumerable<OCICommand>> CallAllAsync(IEnumerable<OCICommand> commands, CancellationToken cancellationToken = default)
         {
             if (UserDetails == null)
             {
-                await Login();
+                await LoginAsync(cancellationToken);
             }
 
-            return await ExecuteCommands(commands);
+            return await ExecuteCommandsAsync(commands, cancellationToken);
         }
 
         /// <summary>
@@ -132,7 +155,15 @@ namespace BroadWorksConnector
         /// </summary>
         /// <returns></returns>
         /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
-        public async Task<UserDetails> Login()
+        [Obsolete("Deprecated method. Use LoginAsync instead.")]
+        public Task<UserDetails> Login() => LoginAsync();
+
+        /// <summary>
+        /// Authenticates against OCI-P using the provided username and password
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
+        public async Task<UserDetails> LoginAsync(CancellationToken cancellationToken = default)
         {
             if (UserDetails == null)
             {
@@ -147,7 +178,7 @@ namespace BroadWorksConnector
                             Password = _password
                         };
 
-                        var loginResponse = (await ExecuteCommands(new List<OCICommand>() { loginRequest })).First() as LoginResponse22V2;
+                        var loginResponse = (await ExecuteCommandsAsync(new List<OCICommand> { loginRequest }, cancellationToken)).First() as LoginResponse22V2;
 
                         UserDetails = new UserDetails
                         {
@@ -169,7 +200,7 @@ namespace BroadWorksConnector
                             UserId = _username
                         };
 
-                        var authResponse = (await ExecuteCommands(new List<OCICommand>() { authRequest })).First() as AuthenticationResponse;
+                        var authResponse = (await ExecuteCommandsAsync(new List<OCICommand> { authRequest }, cancellationToken)).First() as AuthenticationResponse;
                         string signedPassword = null;
 
                         if (authResponse.PasswordAlgorithm == DigitalSignatureAlgorithm.MD5)
@@ -188,7 +219,7 @@ namespace BroadWorksConnector
                             SignedPassword = signedPassword
                         };
 
-                        var loginResponse = (await ExecuteCommands(new List<OCICommand>() { loginRequest })).First() as LoginResponse14sp4;
+                        var loginResponse = (await ExecuteCommandsAsync(new List<OCICommand> { loginRequest }, cancellationToken)).First() as LoginResponse14sp4;
 
                         UserDetails = new UserDetails
                         {
@@ -237,14 +268,14 @@ namespace BroadWorksConnector
         /// <exception cref="BadResponseException">Thrown when server returns something that isn't expected.</exception>
         /// <exception cref="ErrorResponseException">Thrown when server returns an ErrorResponse object.</exception>
         /// <returns></returns>
-        private async Task<IEnumerable<OCICommand>> ExecuteCommands(IEnumerable<OCICommand> commands)
+        private async Task<IEnumerable<OCICommand>> ExecuteCommandsAsync(IEnumerable<OCICommand> commands, CancellationToken cancellationToken = default)
         {
             ValidateCommands(commands);
 
             var xml = SerializeCommands(commands);
             BroadsoftDocument response = null;
 
-            var responseXml = await Transport.Send(xml);
+            var responseXml = await Transport.SendAsync(xml, cancellationToken);
 
             try
             {

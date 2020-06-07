@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Security;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BroadWorksConnector.Ocip
@@ -42,7 +43,16 @@ namespace BroadWorksConnector.Ocip
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public async Task<string> Send(string request)
+        [Obsolete("Method deprecated. Use SendAsync instead.")]
+        public Task<string> Send(string request) => SendAsync(request);
+
+        /// <summary>
+        /// Send request to host and return results
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public async Task<string> SendAsync(string request, CancellationToken cancellationToken = default)
         {
             // Connect to host
             if (_tcpClient == null)
@@ -66,7 +76,7 @@ namespace BroadWorksConnector.Ocip
             var responseData = new List<byte>();
             var responseBuffer = new byte[1024];
 
-            await _stream.WriteAsync(requestData, 0, requestData.Length);
+            await _stream.WriteAsync(requestData, 0, requestData.Length, cancellationToken);
 
             try
             {
@@ -75,14 +85,15 @@ namespace BroadWorksConnector.Ocip
                 do
                 {
                     // Clear out response buffer for each read so there's no hanging data from the previous read
-                    bytesRead = await _stream.ReadAsync(responseBuffer, 0, responseBuffer.Length);
+                    bytesRead = await _stream.ReadAsync(responseBuffer, 0, responseBuffer.Length, cancellationToken);
 
                     // Append buffer contents to full response
                     responseData.AddRange(responseBuffer.Take(bytesRead));
 
                     // Read the full response as a UTF8 string
-                    response = Encoding.UTF8.GetString(responseData.ToArray());
                     
+                    response = Encoding.UTF8.GetString(responseData.ToArray());
+
                     // Once the response contains the ending tag, return it
                     if (response.Contains("</BroadsoftDocument>\n"))
                     {
@@ -90,7 +101,7 @@ namespace BroadWorksConnector.Ocip
                     }
                 } while (bytesRead != 0);
             }
-            catch (Exception e)
+            catch (Exception e) when (!(e is OperationCanceledException))   // Allow exceptions caused by cancellationToken to fall through 
             {
                 throw new BadResponseException("Unable to parse response", e);
             }

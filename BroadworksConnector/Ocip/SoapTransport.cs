@@ -1,5 +1,7 @@
 ﻿using BroadWorksConnector.Ocip.Soap;
 using System;
+using System.ServiceModel;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BroadWorksConnector.Ocip
@@ -33,16 +35,37 @@ namespace BroadWorksConnector.Ocip
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public async Task<string> Send(string request)
-        {
-            var response = await _client.processOCIMessageAsync(request);
+        [Obsolete("This method is deprecated. Use SendAsync instead.")]
+        public Task<string> Send(string request) => SendAsync(request);
 
-            if (response.Body?.processOCIMessageReturn == null)
+        public async Task<string> SendAsync(string request, CancellationToken cancellationToken = default)
+        {
+            processOCIMessageResponse response = null;
+
+            if (!cancellationToken.IsCancellationRequested)
             {
-                throw new BadResponseException("No processOCIMessageReturn in response");
+                using (var ctr = cancellationToken.Register(() =>
+                {
+                    _client.Abort();
+
+                    cancellationToken.ThrowIfCancellationRequested();
+                }))
+                {
+                    response = await _client.processOCIMessageAsync(request);
+
+                    if (response.Body?.processOCIMessageReturn == null)
+                    {
+                        throw new BadResponseException("No processOCIMessageReturn in response");
+                    }
+
+                }
+            }
+            else
+            {
+                cancellationToken.ThrowIfCancellationRequested();
             }
 
-            return response.Body.processOCIMessageReturn;
+            return response?.Body?.processOCIMessageReturn;
         }
     }
 }
