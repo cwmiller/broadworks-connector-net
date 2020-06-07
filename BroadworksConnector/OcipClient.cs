@@ -101,10 +101,10 @@ namespace BroadWorksConnector
         {
             if (UserDetails == null)
             {
-                await LoginAsync(cancellationToken);
+                await LoginAsync(cancellationToken).ConfigureAwait(false);
             }
 
-            var responses = await ExecuteCommandsAsync(new List<OCICommand> { command }, cancellationToken);
+            var responses = await ExecuteCommandsAsync(new List<OCICommand> { command }, cancellationToken).ConfigureAwait(false);
 
             return responses.First();
         }
@@ -131,10 +131,10 @@ namespace BroadWorksConnector
         {
             if (UserDetails == null)
             {
-                await LoginAsync(cancellationToken);
+                await LoginAsync(cancellationToken).ConfigureAwait(false);
             }
 
-            return await ExecuteCommandsAsync(commands, cancellationToken);
+            return await ExecuteCommandsAsync(commands, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace BroadWorksConnector
                             Password = _password
                         };
 
-                        var loginResponse = (await ExecuteCommandsAsync(new List<OCICommand> { loginRequest }, cancellationToken)).First() as LoginResponse22V2;
+                        var loginResponse = (await ExecuteCommandsAsync(new List<OCICommand> { loginRequest }, cancellationToken).ConfigureAwait(false)).First() as LoginResponse22V2;
 
                         UserDetails = new UserDetails
                         {
@@ -200,7 +200,7 @@ namespace BroadWorksConnector
                             UserId = _username
                         };
 
-                        var authResponse = (await ExecuteCommandsAsync(new List<OCICommand> { authRequest }, cancellationToken)).First() as AuthenticationResponse;
+                        var authResponse = (await ExecuteCommandsAsync(new List<OCICommand> { authRequest }, cancellationToken).ConfigureAwait(false)).First() as AuthenticationResponse;
                         string signedPassword = null;
 
                         if (authResponse.PasswordAlgorithm == DigitalSignatureAlgorithm.MD5)
@@ -219,7 +219,7 @@ namespace BroadWorksConnector
                             SignedPassword = signedPassword
                         };
 
-                        var loginResponse = (await ExecuteCommandsAsync(new List<OCICommand> { loginRequest }, cancellationToken)).First() as LoginResponse14sp4;
+                        var loginResponse = (await ExecuteCommandsAsync(new List<OCICommand> { loginRequest }, cancellationToken).ConfigureAwait(false)).First() as LoginResponse14sp4;
 
                         UserDetails = new UserDetails
                         {
@@ -275,7 +275,7 @@ namespace BroadWorksConnector
             var xml = SerializeCommands(commands);
             BroadsoftDocument response = null;
 
-            var responseXml = await Transport.SendAsync(xml, cancellationToken);
+            var responseXml = await Transport.SendAsync(xml, cancellationToken).ConfigureAwait(false);
 
             try
             {

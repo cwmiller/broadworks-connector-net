@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip
                 if (_useSsl)
                 {
                     _stream = new SslStream(_tcpClient.GetStream());
-                    await (_stream as SslStream).AuthenticateAsClientAsync(_host);
+                    await (_stream as SslStream).AuthenticateAsClientAsync(_host).ConfigureAwait(false);
                 }
                 else
                 {
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip
             var responseData = new List<byte>();
             var responseBuffer = new byte[1024];
 
-            await _stream.WriteAsync(requestData, 0, requestData.Length, cancellationToken);
+            await _stream.WriteAsync(requestData, 0, requestData.Length, cancellationToken).ConfigureAwait(false);
 
             try
             {
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip
                 do
                 {
                     // Clear out response buffer for each read so there's no hanging data from the previous read
-                    bytesRead = await _stream.ReadAsync(responseBuffer, 0, responseBuffer.Length, cancellationToken);
+                    bytesRead = await _stream.ReadAsync(responseBuffer, 0, responseBuffer.Length, cancellationToken).ConfigureAwait(false);
 
                     // Append buffer contents to full response
                     responseData.AddRange(responseBuffer.Take(bytesRead));

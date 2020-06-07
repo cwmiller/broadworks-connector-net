@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip
                     cancellationToken.ThrowIfCancellationRequested();
                 }))
                 {
-                    response = await _client.processOCIMessageAsync(request);
+                    response = await _client.processOCIMessageAsync(request).ConfigureAwait(false);
 
                     if (response.Body?.processOCIMessageReturn == null)
                     {
