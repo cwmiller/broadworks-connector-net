@@ -143,11 +143,17 @@ namespace BroadWorksConnector
         /// <returns></returns>
         private string GenerateSessionId()
         {
+            // Session ID will be a SHA2 hash using a GUID and the hashcode for this instance
             var sha256 = new SHA256Managed();
-            var ticks = DateTime.Now.Ticks.ToString();
-            var bytes = Encoding.ASCII.GetBytes(ticks);
+            var guid = Guid.NewGuid().ToString();
+            var hashCode = GetHashCode();
 
-            return ticks.ToString();
+            var input = $"{guid}:{hashCode}";
+            var inputBytes = Encoding.ASCII.GetBytes(input);
+
+            var computedHash = sha256.ComputeHash(inputBytes);
+
+            return string.Concat(computedHash.Select(b => b.ToString("x2")));
         }
 
         /// <summary>
