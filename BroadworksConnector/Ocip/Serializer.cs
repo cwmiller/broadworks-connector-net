@@ -52,18 +52,20 @@ namespace BroadWorksConnector.Ocip
         /// Serialize the root object for a request.
         /// This should always be BroadsoftDocument
         /// </summary>
-        /// <param name="obj"></param>
+        /// <param name="document"></param>
         /// <returns></returns>
-        private XElement SerializeRoot(object obj)
+        private XElement SerializeRoot(BroadsoftDocument document)
         {
-            var objType = obj.GetType();
-            XNamespace ns = "";
+            //var objType = document.GetType();
+            var documentType = typeof(BroadsoftDocument);
+
+            var ns = XNamespace.None;
 
             // By default, element name will by the class name
-            var elementName = objType.Name;
+            var elementName = documentType.Name;
 
             // XmlRoot attribute will contain useful information such as namespace
-            var xmlRootAttr = AttributeUtil.Get<XmlRootAttribute>(objType);
+            var xmlRootAttr = AttributeUtil.Get<XmlRootAttribute>(documentType);
 
             if (xmlRootAttr != null)
             {
@@ -83,30 +85,31 @@ namespace BroadWorksConnector.Ocip
             return new XElement(ns + elementName,
                 new XAttribute(XNamespace.Xmlns + "xsi", "http://www.w3.org/2001/XMLSchema-instance"),
                 new XAttribute(XNamespace.Xmlns + "xsd", "http://www.w3.org/2001/XMLSchema"),
-                GetElementContentsForInstance(objType, obj));
+                GetElementContentsForInstance(documentType, document));
         }
 
         /// <summary>
-        /// Returns all the child attributes and elements for a serialized object
+        /// Returns all the child attributes and elements in serialized form for an object
         /// </summary>
         /// <param name="type"></param>
         /// <param name="instance"></param>
         /// <returns></returns>
-        private List<object> GetElementContentsForInstance(Type type, object instance)
+        private List<XObject> GetElementContentsForInstance(Type type, object instance)
         {
-            var contents = new List<object>();
+            var contents = new List<XObject>();
 
             // Get all properties that are marked with XmlElementAttribute or XmlAttributeAttribute
             var properties = type.GetProperties()
-                .Where(prop => AttributeUtil.Get<XmlElementAttribute>(prop) != null || AttributeUtil.Get<XmlAttributeAttribute>(prop) != null);
+                .Where(prop => AttributeUtil.GetAll(prop).Any(attr => attr is XmlElementAttribute || attr is XmlAttributeAttribute));
 
             foreach (var property in properties)
             {
                 if (IsPropertySpecified(property, type, instance))
                 {
-                    // Handle property if it's an XML Element
                     var elementAttr = AttributeUtil.Get<XmlElementAttribute>(property);
+                    var attributeAttr = AttributeUtil.Get<XmlAttributeAttribute>(property);
 
+                    // Handle property if it's an XML Element
                     if (elementAttr != null)
                     {
                         var propertyValue = property.GetValue(instance);
@@ -127,11 +130,8 @@ namespace BroadWorksConnector.Ocip
                             contents.Add(SerializeElement(property, propertyValue, elementAttr));
                         }
                     }
-
                     // Handle property if it's an XML Attribute
-                    var attributeAttr = AttributeUtil.Get<XmlAttributeAttribute>(property);
-
-                    if (attributeAttr != null)
+                    else if (attributeAttr != null)
                     {
                         contents.Add(SerializeAttribute(property, property.GetValue(instance), attributeAttr));
                     }
@@ -163,9 +163,7 @@ namespace BroadWorksConnector.Ocip
             var isNillable = elementAttr.IsNullable == true;
 
             // Namespace defaults to blank unless it's specified in the attribute
-            XNamespace ns = elementAttr.Namespace != null
-                ? elementAttr.Namespace
-                : "";
+            var ns = elementAttr.Namespace ?? XNamespace.None;
 
             // Primitive types, nulls, and strings should create an element with the value as a child.
             var isPrimitive = valueType.IsPrimitive
@@ -174,7 +172,7 @@ namespace BroadWorksConnector.Ocip
 
             var isEnum = valueType.IsEnum;
 
-            var elementAttributes = new List<object>();
+            var elementAttributes = new List<XAttribute>();
 
             if (isEnum)
             {
@@ -245,9 +243,7 @@ namespace BroadWorksConnector.Ocip
                 : property.Name;
 
             // namespace defaults to blank unless it's specified in the attribute
-            XNamespace ns = attributeAttr.Namespace != null
-                ? attributeAttr.Namespace
-                : "";
+            var ns = attributeAttr.Namespace ?? XNamespace.None;
 
             return new XAttribute(ns + attributeName, value);
         }
@@ -263,7 +259,6 @@ namespace BroadWorksConnector.Ocip
         private bool IsPropertySpecified(PropertyInfo property, Type objectType, object instance)
         {
             // Instance will include a sibling property named PropertyNameSpecified that is set to true if the property was set.
-            // var specifiedProperty = objectType.GetProperty($"{property.Name}Specified", BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
             var specifiedProperty = objectType.GetProperty($"{property.Name}Specified", BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
 
             if (specifiedProperty == null)
@@ -305,7 +300,7 @@ namespace BroadWorksConnector.Ocip
             // Serialize to primitive value if primitive or enum
             if (IsValueType(targetType))
             {
-                return DeserializeValue(element.Value, targetType);
+                return DeserializeValueType(element.Value, targetType);
             }
 
             // If the target type is abstract, then there should be an attribute on the XML element
@@ -336,7 +331,9 @@ namespace BroadWorksConnector.Ocip
                 var propertyIsList = propertyType.GetTypeInfo().IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(List<>);
 
                 var elementAttr = AttributeUtil.Get<XmlElementAttribute>(property);
+                var attributeAttr = AttributeUtil.Get<XmlAttributeAttribute>(property);
 
+                // Handle when property is for an XML element
                 if (elementAttr != null)
                 {
                     if (propertyIsList)
@@ -369,10 +366,8 @@ namespace BroadWorksConnector.Ocip
                         }
                     }
                 }
-
-                var attributeAttr = AttributeUtil.Get<XmlAttributeAttribute>(property);
-
-                if (attributeAttr != null)
+                // Handle when property is for an XML attribute
+                else if (attributeAttr != null)
                 {
                     var attribute = element.Attribute(attributeAttr.AttributeName);
 
@@ -387,13 +382,18 @@ namespace BroadWorksConnector.Ocip
         }
 
         /// <summary>
-        /// Deserialize a primitive value
+        /// Deserialize a string for a value type
         /// </summary>
         /// <param name="value"></param>
         /// <param name="targetType"></param>
         /// <returns></returns>
-        private object DeserializeValue(string value, Type targetType)
+        private object DeserializeValueType(string value, Type targetType)
         {
+            if (!IsValueType(targetType))
+            {
+                throw new ArgumentException($"Type {targetType.Name} is not a value type", nameof(targetType));
+            }
+
             if (targetType.Equals(typeof(bool)))
             {
                 return value == "true";
@@ -418,7 +418,7 @@ namespace BroadWorksConnector.Ocip
         }
 
         /// <summary>
-        /// 
+        /// Returns if an object type is a value type, which includes the primitive types and enums
         /// </summary>
         /// <param name="targetType"></param>
         /// <returns></returns>
