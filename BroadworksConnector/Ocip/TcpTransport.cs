@@ -21,6 +21,8 @@ namespace BroadWorksConnector.Ocip
 
         private bool _useSsl;
 
+        private OcipClientOptions _options;
+
         private TcpClient _tcpClient;
 
         private Stream _stream;
@@ -31,11 +33,13 @@ namespace BroadWorksConnector.Ocip
         /// <param name="host"></param>
         /// <param name="port"></param>
         /// <param name="useSsl"></param>
-        public TcpTransport(string host, int port, bool useSsl = false)
+        /// <param name="options"></param>
+        public TcpTransport(string host, int port, bool useSsl, OcipClientOptions options)
         {
             _host = host;
             _port = port;
             _useSsl = useSsl;
+            _options = options;
         }
 
         /// <summary>
@@ -58,6 +62,8 @@ namespace BroadWorksConnector.Ocip
             if (_tcpClient == null)
             {
                 _tcpClient = new TcpClient(_host, _port);
+                _tcpClient.SendTimeout = _options.TcpSendTimeout;
+                _tcpClient.ReceiveTimeout = _options.TcpReceiveTimeout;
 
                 if (_useSsl)
                 {

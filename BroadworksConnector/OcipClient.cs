@@ -63,16 +63,16 @@ namespace BroadWorksConnector
             {
                 case "http":
                 case "https":
-                    Transport = new SoapTransport(uri);
+                    Transport = new SoapTransport(uri, options);
                     break;
                 case "tcp":
-                    Transport = new TcpTransport(uri.Host, uri.Port > -1 ? uri.Port : 2208);
+                    Transport = new TcpTransport(uri.Host, uri.Port > -1 ? uri.Port : 2208, false, options);
                     break;
                 case "ssl":
                 case "sslv2":
                 case "sslv3":
                 case "tls":
-                    Transport = new TcpTransport(uri.Host, uri.Port > -1 ? uri.Port : 2209, true);
+                    Transport = new TcpTransport(uri.Host, uri.Port > -1 ? uri.Port : 2209, true, options);
                     break;
                 default:
                     throw new ArgumentException("Unsupported protocol", nameof(url));

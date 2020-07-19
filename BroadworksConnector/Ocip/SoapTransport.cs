@@ -1,6 +1,5 @@
 ﻿using BroadWorksConnector.Ocip.Soap;
 using System;
-using System.ServiceModel;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -11,18 +10,16 @@ namespace BroadWorksConnector.Ocip
     /// </summary>
     internal class SoapTransport : ITransport
     {
-        private Uri _uri;
-
         private BWProvisioningServiceClient _client;
 
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="uri"></param>
-        public SoapTransport(Uri uri)
+        /// <param name="ocipOptions"></param>
+        public SoapTransport(Uri uri, OcipClientOptions ocipOptions)
         {
-            _uri = uri;
-            _client = new BWProvisioningServiceClient(BWProvisioningServiceClient.EndpointConfiguration.ProvisioningService, uri.ToString());
+            _client = new BWProvisioningServiceClient(BWProvisioningServiceClient.EndpointConfiguration.ProvisioningService, uri.ToString(), ocipOptions);
         }
 
         public void Dispose()

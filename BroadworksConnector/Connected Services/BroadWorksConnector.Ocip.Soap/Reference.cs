@@ -11,8 +11,6 @@ using System;
 
 namespace BroadWorksConnector.Ocip.Soap
 {
-    
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="urn:com:broadsoft:webservice", ConfigurationName="BroadWorksConnector.Ocip.Soap.BWProvisioningService")]
     public interface BWProvisioningService
@@ -194,45 +192,18 @@ namespace BroadWorksConnector.Ocip.Soap
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     public partial class BWProvisioningServiceClient : System.ServiceModel.ClientBase<BroadWorksConnector.Ocip.Soap.BWProvisioningService>, BroadWorksConnector.Ocip.Soap.BWProvisioningService
     {
+        /// <summary>
+        /// Implement this partial method to configure the service endpoint.
+        /// </summary>
+        /// <param name="serviceEndpoint">The endpoint to configure</param>
+        /// <param name="clientCredentials">The client credentials</param>
+        static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
         
-    /// <summary>
-    /// Implement this partial method to configure the service endpoint.
-    /// </summary>
-    /// <param name="serviceEndpoint">The endpoint to configure</param>
-    /// <param name="clientCredentials">The client credentials</param>
-    static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
-        
-        public BWProvisioningServiceClient() : 
-                base(BWProvisioningServiceClient.GetDefaultBinding(), BWProvisioningServiceClient.GetDefaultEndpointAddress())
-        {
-            this.Endpoint.Name = EndpointConfiguration.ProvisioningService.ToString();
-            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
-        }
-        
-        public BWProvisioningServiceClient(EndpointConfiguration endpointConfiguration) : 
-                base(BWProvisioningServiceClient.GetBindingForEndpoint(endpointConfiguration), BWProvisioningServiceClient.GetEndpointAddress(endpointConfiguration))
+        public BWProvisioningServiceClient(EndpointConfiguration endpointConfiguration, string remoteAddress, OcipClientOptions ocipOptions) : 
+                base(BWProvisioningServiceClient.GetBindingForEndpoint(endpointConfiguration, new Uri(remoteAddress), ocipOptions), new System.ServiceModel.EndpointAddress(remoteAddress))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
-        }
-        
-        public BWProvisioningServiceClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
-                base(BWProvisioningServiceClient.GetBindingForEndpoint(endpointConfiguration, new Uri(remoteAddress)), new System.ServiceModel.EndpointAddress(remoteAddress))
-        {
-            this.Endpoint.Name = endpointConfiguration.ToString();
-            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
-        }
-        
-        public BWProvisioningServiceClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(BWProvisioningServiceClient.GetBindingForEndpoint(endpointConfiguration, remoteAddress.Uri), remoteAddress)
-        {
-            this.Endpoint.Name = endpointConfiguration.ToString();
-            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
-        }
-        
-        public BWProvisioningServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress)
-        {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -273,7 +244,7 @@ namespace BroadWorksConnector.Ocip.Soap
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
         }
         
-        private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration, Uri endpointUri = null)
+        private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration, Uri endpointUri = null, OcipClientOptions ocipOptions = null)
         {
             if ((endpointConfiguration == EndpointConfiguration.ProvisioningService))
             {
@@ -282,10 +253,17 @@ namespace BroadWorksConnector.Ocip.Soap
                 result.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
                 result.MaxReceivedMessageSize = int.MaxValue;
                 result.AllowCookies = true;
-                
+
                 if (endpointUri?.Scheme == "https")
                 {
                     result.Security.Mode = System.ServiceModel.BasicHttpSecurityMode.Transport;
+                }
+
+                if (ocipOptions != null)
+                {
+                    result.OpenTimeout = TimeSpan.FromMilliseconds(ocipOptions.SoapOpenTimeout);
+                    result.CloseTimeout = TimeSpan.FromMilliseconds(ocipOptions.SoapCloseTimeout);
+                    result.SendTimeout = TimeSpan.FromMilliseconds(ocipOptions.SoapSendTimeout);
                 }
 
                 return result;

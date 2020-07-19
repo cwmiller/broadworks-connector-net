@@ -6,11 +6,31 @@
         /// Minimum supported BroadWorks version.
         /// Defaults to R14sp4, set to R22 if running R22 or greater to set ResellerId in UserDetails 
         /// </summary>
-        public ServerVersion MinServerVersion { get; set; }
+        public ServerVersion MinServerVersion { get; set; } = ServerVersion.R14sp4;
 
-        public OcipClientOptions()
-        {
-            MinServerVersion = ServerVersion.R14sp4;
-        }
+        /// <summary>
+        /// Timeout setting for opening new connections with SOAP transport. Value is in milliseconds. Defaults to 60 seconds.
+        /// </summary>
+        public int SoapOpenTimeout { get; set; } = 60000;
+
+        /// <summary>
+        /// Timeout setting for closing connections with SOAP transport. Value is in milliseconds. Defaults to 60 seconds.
+        /// </summary>
+        public int SoapCloseTimeout { get; set; } = 60000;
+
+        /// <summary>
+        /// Timeout setting for sending and receiving data with SOAP transport. Value is in milliseconds. Defaults to 60 seconds.
+        /// </summary>
+        public int SoapSendTimeout { get; set; } = 60000;
+
+        /// <summary>
+        /// Timeout setting for sending data with TCP transport. Value is in milliseconds. Defaults to 0.
+        /// </summary>
+        public int TcpSendTimeout { get; set; } = 0;
+
+        /// <summary>
+        /// Timeout setting for receiving data with TCP transport. Value is in milliseconds. Defaults to 0.
+        /// </summary>
+        public int TcpReceiveTimeout { get; set; } = 0;
     }
 }
