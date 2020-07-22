@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.0] - 2020-07-22
+### Added
+- Added properties to `OcipClientOptions` to control timeouts for both SOAP and TCP transports.
+
 ## [1.1.0] - 2020-06-28
 ### Changed
 - All async methods have been renamed to include an "Async" suffix. The previous names are still usable, but are marked as deprecated and will be removed in the next major release.
@@ -70,6 +74,7 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[1.2.0]: https://github.com/cwmiller/broadworks-connector-net/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/cwmiller/broadworks-connector-net/compare/1.0.3...1.1.0
 [1.0.3]: https://github.com/cwmiller/broadworks-connector-net/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/cwmiller/broadworks-connector-net/compare/1.0.1...1.0.2
