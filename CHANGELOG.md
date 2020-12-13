@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.1] - 2020-12-13
+### Fixed
+- Fixed response type for GroupCallCenterStrandedCallUnavailableGetRequest20
+
 ## [1.2.0] - 2020-07-22
 ### Added
 - Added properties to `OcipClientOptions` to control timeouts for both SOAP and TCP transports.
