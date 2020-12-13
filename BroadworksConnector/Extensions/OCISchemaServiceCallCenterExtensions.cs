@@ -3413,21 +3413,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get a call center's stranded calls - unavailable settings.
-        /// The response is either a GroupCallCenterStrandedCallUnavailableGetResponse or an ErrorResponse.
+        /// The response is either a GroupCallCenterStrandedCallUnavailableGetResponse20 or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupCallCenterStrandedCallUnavailableGetRequest20Async instead.")]
-        public static async Task<GroupCallCenterStrandedCallUnavailableGetResponse> GroupCallCenterStrandedCallUnavailableGetRequest20(this OcipClient client, GroupCallCenterStrandedCallUnavailableGetRequest20 request)
+        public static async Task<GroupCallCenterStrandedCallUnavailableGetResponse20> GroupCallCenterStrandedCallUnavailableGetRequest20(this OcipClient client, GroupCallCenterStrandedCallUnavailableGetRequest20 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupCallCenterStrandedCallUnavailableGetResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupCallCenterStrandedCallUnavailableGetResponse20;
         }
 
         /// <summary>
         /// Get a call center's stranded calls - unavailable settings.
-        /// The response is either a GroupCallCenterStrandedCallUnavailableGetResponse or an ErrorResponse.
+        /// The response is either a GroupCallCenterStrandedCallUnavailableGetResponse20 or an ErrorResponse.
         /// </summary>
-        public static async Task<GroupCallCenterStrandedCallUnavailableGetResponse> GroupCallCenterStrandedCallUnavailableGetRequest20Async(this OcipClient client, GroupCallCenterStrandedCallUnavailableGetRequest20 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupCallCenterStrandedCallUnavailableGetResponse20> GroupCallCenterStrandedCallUnavailableGetRequest20Async(this OcipClient client, GroupCallCenterStrandedCallUnavailableGetRequest20 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupCallCenterStrandedCallUnavailableGetResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupCallCenterStrandedCallUnavailableGetResponse20;
         }
         /// <summary>
         /// Modify a call center's stranded calls - unavailable settings.
