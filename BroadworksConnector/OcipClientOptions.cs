@@ -1,4 +1,6 @@
-﻿namespace BroadWorksConnector
+﻿using System.Text;
+
+namespace BroadWorksConnector
 {
     public class OcipClientOptions
     {
@@ -32,5 +34,15 @@
         /// Timeout setting for receiving data with TCP transport. Value is in milliseconds. Defaults to 0.
         /// </summary>
         public int TcpReceiveTimeout { get; set; } = 0;
+
+        /// <summary>
+        /// Encoding setting for encoding the request data with TCP transport. Defaults to UTF8.
+        /// </summary>
+        public Encoding TcpRequestEncoding { get; set; } = Encoding.UTF8;
+
+        /// <summary>
+        /// Encoding setting for decoding the request data with TCP transport. Defaults to UTF8.
+        /// </summary>
+        public Encoding TcpResponseEncoding { get; set; } = Encoding.UTF8;
     }
 }

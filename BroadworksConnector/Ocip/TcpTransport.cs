@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip
             }
 
             var response = "";
-            var requestData = Encoding.UTF8.GetBytes(request);
+            var requestData = _options.TcpRequestEncoding.GetBytes(request);
 
             var responseData = new List<byte>();
             var responseBuffer = new byte[1024];
@@ -96,9 +96,9 @@ namespace BroadWorksConnector.Ocip
                     // Append buffer contents to full response
                     responseData.AddRange(responseBuffer.Take(bytesRead));
 
-                    // Read the full response as a UTF8 string
+                    // Read the full response as a string using the encoding provided in the client options
                     
-                    response = Encoding.UTF8.GetString(responseData.ToArray());
+                    response = _options.TcpResponseEncoding.GetString(responseData.ToArray());
 
                     // Once the response contains the ending tag, return it
                     if (response.Contains("</BroadsoftDocument>\n"))
