@@ -34,6 +34,8 @@ namespace BroadWorksConnector
 
         public UserDetails UserDetails { get; private set; }
 
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -171,6 +173,8 @@ namespace BroadWorksConnector
         /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
         public async Task<UserDetails> LoginAsync(CancellationToken cancellationToken = default)
         {
+            await _semaphore.WaitAsync();
+
             if (UserDetails == null)
             {
                 try
@@ -243,6 +247,10 @@ namespace BroadWorksConnector
                 catch (ErrorResponseException e)
                 {
                     throw new LoginException(e.Message, e);
+                }
+                finally
+                {
+                    _semaphore.Release();
                 }
             }
 

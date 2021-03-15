@@ -27,6 +27,8 @@ namespace BroadWorksConnector.Ocip
 
         private Stream _stream;
 
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -58,58 +60,70 @@ namespace BroadWorksConnector.Ocip
         /// <returns></returns>
         public async Task<string> SendAsync(string request, CancellationToken cancellationToken = default)
         {
-            // Connect to host
-            if (_tcpClient == null)
-            {
-                _tcpClient = new TcpClient(_host, _port);
-                _tcpClient.SendTimeout = _options.TcpSendTimeout;
-                _tcpClient.ReceiveTimeout = _options.TcpReceiveTimeout;
-
-                if (_useSsl)
-                {
-                    _stream = new SslStream(_tcpClient.GetStream());
-                    await (_stream as SslStream).AuthenticateAsClientAsync(_host).ConfigureAwait(false);
-                }
-                else
-                {
-                    _stream = _tcpClient.GetStream();
-                }
-            }
+            // Use a semaphore to prevent concurrency issues since this transport only maintains a single TCP connection.
+            await _semaphore.WaitAsync();
 
             var response = "";
-            var requestData = _options.TcpRequestEncoding.GetBytes(request);
-
-            var responseData = new List<byte>();
-            var responseBuffer = new byte[1024];
-
-            await _stream.WriteAsync(requestData, 0, requestData.Length, cancellationToken).ConfigureAwait(false);
 
             try
             {
-                int bytesRead = -1;
-
-                do
+                // Connect to host
+                if (_tcpClient == null)
                 {
-                    // Clear out response buffer for each read so there's no hanging data from the previous read
-                    bytesRead = await _stream.ReadAsync(responseBuffer, 0, responseBuffer.Length, cancellationToken).ConfigureAwait(false);
 
-                    // Append buffer contents to full response
-                    responseData.AddRange(responseBuffer.Take(bytesRead));
+                    _tcpClient = new TcpClient(_host, _port);
+                    _tcpClient.SendTimeout = _options.TcpSendTimeout;
+                    _tcpClient.ReceiveTimeout = _options.TcpReceiveTimeout;
 
-                    // Read the full response as a string using the encoding provided in the client options
-                    
-                    response = _options.TcpResponseEncoding.GetString(responseData.ToArray());
-
-                    // Once the response contains the ending tag, return it
-                    if (response.Contains("</BroadsoftDocument>\n"))
+                    if (_useSsl)
                     {
-                        break;
+                        _stream = new SslStream(_tcpClient.GetStream());
+                        await (_stream as SslStream).AuthenticateAsClientAsync(_host).ConfigureAwait(false);
                     }
-                } while (bytesRead != 0);
-            }
-            catch (Exception e) when (!(e is OperationCanceledException))   // Allow exceptions caused by cancellationToken to fall through 
+                    else
+                    {
+                        _stream = _tcpClient.GetStream();
+                    }
+                }
+                
+                var requestData = _options.TcpRequestEncoding.GetBytes(request);
+
+                var responseData = new List<byte>();
+                var responseBuffer = new byte[1024];
+
+                await _stream.WriteAsync(requestData, 0, requestData.Length, cancellationToken).ConfigureAwait(false);
+
+                try
+                {
+                    int bytesRead = -1;
+
+                    do
+                    {
+                        // Clear out response buffer for each read so there's no hanging data from the previous read
+                        bytesRead = await _stream.ReadAsync(responseBuffer, 0, responseBuffer.Length, cancellationToken).ConfigureAwait(false);
+
+                        // Append buffer contents to full response
+                        responseData.AddRange(responseBuffer.Take(bytesRead));
+
+                        // Read the full response as a string using the encoding provided in the client options
+
+                        response = _options.TcpResponseEncoding.GetString(responseData.ToArray());
+
+                        // Once the response contains the ending tag, return it
+                        if (response.Contains("</BroadsoftDocument>\n"))
+                        {
+                            break;
+                        }
+                    } while (bytesRead != 0);
+                }
+                catch (Exception e) when (!(e is OperationCanceledException))   // Allow exceptions caused by cancellationToken to fall through 
+                {
+                    throw new BadResponseException("Unable to parse response", e);
+                }
+            } 
+            finally
             {
-                throw new BadResponseException("Unable to parse response", e);
+                _semaphore.Release();
             }
 
             return response;
