@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.3.0] - 2021-03-27
+### Added
+- Added options to `OcipClientOptions` to adjust the request and response text encoding used by the TCP transport. [@Rogn](https://github.com/Rogn)
+- Added locks to prevent concurrency issues.
+
 ## [1.2.1] - 2020-12-13
 ### Fixed
 - Fixed response type for GroupCallCenterStrandedCallUnavailableGetRequest20
