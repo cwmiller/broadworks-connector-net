@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8647""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9676""}]")]
     public class SystemEmergencyCallDDoSProtectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8647")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9676")]
         public bool Enabled
         {
             get => _enabled;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sampleIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8647")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9676")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int SampleIntervalSeconds
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "protectionRate", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8647")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9676")]
         [MinInclusive(1)]
         [MaxInclusive(10000)]
         public int? ProtectionRate
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "protectionAction", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8647")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9676")]
         public BroadWorksConnector.Ocip.Models.ProtectionAction ProtectionAction
         {
             get => _protectionAction;

@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b87b6355d5858fdbeb8c1eb05dc1651a:144""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b87b6355d5858fdbeb8c1eb05dc1651a:146""}]")]
     public class UserPrivacyGetRequest13mp17 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:144")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:146")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

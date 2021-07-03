@@ -13,21 +13,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The lineport may be any lineport associated with a user.
     /// 
     /// The response is a UserGetLoginInfoResponse22V2 or an ErrorResponse
+    /// 
+    /// Replaced by UserGetLoginInfoRequest22V3.
     /// <see cref="UserGetLoginInfoRequest22V2"/>
     /// <see cref="UserGetLoginInfoResponse22V2"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="UserGetLoginInfoRequest22V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:652"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:653""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43146"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43147""}]}]")]
     public class UserGetLoginInfoRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:653")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43147")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -46,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:653")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43147")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -65,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:653")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43147")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort

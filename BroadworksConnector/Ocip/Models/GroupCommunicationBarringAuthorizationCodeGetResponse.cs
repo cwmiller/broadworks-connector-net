@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:2441""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:2981""}]")]
     public class GroupCommunicationBarringAuthorizationCodeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2441")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2981")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2441")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2981")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

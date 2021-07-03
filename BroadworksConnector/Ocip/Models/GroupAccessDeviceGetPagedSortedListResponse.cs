@@ -9,20 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to GroupAccessDeviceGetPagedSortedListRequest.
     /// Contains a table of devices configured in the group.
-    /// The column headings are: "Device Name", "Device Type", "Available Ports", "Net Address", "MAC Address", "Status" and "Version".
+    /// The column headings are: "Device Name", "Device Type", "Available Ports", "Net Address", "MAC Address", "Status", "Version", and "Support Visual Device Management API".
+    /// When CloudPBX is not licensed, the column "Support Visual Device Management API" values are not returned.
+    /// 
+    /// Replaced by GroupAccessDeviceGetPagedSortedListResponse22.
     /// <see cref="GroupAccessDeviceGetPagedSortedListRequest"/>
+    /// <see cref="GroupAccessDeviceGetPagedSortedListResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:750""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3090""}]")]
     public class GroupAccessDeviceGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _accessDeviceTable;
 
         [XmlElement(ElementName = "accessDeviceTable", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:750")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3090")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AccessDeviceTable
         {
             get => _accessDeviceTable;

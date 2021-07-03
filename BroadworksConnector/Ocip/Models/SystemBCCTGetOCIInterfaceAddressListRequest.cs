@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Get the OCI entries from the Broadworks Common Communication Transport (BCCT) protocol to interface
-    /// mapping list.
+    /// Get the OCI entries from the Broadworks Common Communication Transport (BCCT) protocol to interface mapping list.
     /// The response is SystemBCCTGetOCIInterfaceAddressListResponse or ErrorResponse.
     /// <see cref="SystemBCCTGetOCIInterfaceAddressListResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -16,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4361""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:20068""}]")]
     public class SystemBCCTGetOCIInterfaceAddressListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 

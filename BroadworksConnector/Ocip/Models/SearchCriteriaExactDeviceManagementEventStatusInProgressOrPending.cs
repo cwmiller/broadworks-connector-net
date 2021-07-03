@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:820""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:879""}]")]
     public class SearchCriteriaExactDeviceManagementEventStatusInProgressOrPending : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusInProgressOrPending _dmEventStatusInProgressOrPending;
 
         [XmlElement(ElementName = "dmEventStatusInProgressOrPending", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:820")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:879")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusInProgressOrPending DmEventStatusInProgressOrPending
         {
             get => _dmEventStatusInProgressOrPending;

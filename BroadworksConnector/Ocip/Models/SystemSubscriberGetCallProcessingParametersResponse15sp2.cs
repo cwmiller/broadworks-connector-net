@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16413""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35171""}]")]
     public class SystemSubscriberGetCallProcessingParametersResponse15sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isExtendedCallingLineIdActive;
 
         [XmlElement(ElementName = "isExtendedCallingLineIdActive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16413")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35171")]
         public bool IsExtendedCallingLineIdActive
         {
             get => _isExtendedCallingLineIdActive;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isRingTimeOutActive;
 
         [XmlElement(ElementName = "isRingTimeOutActive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16413")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35171")]
         public bool IsRingTimeOutActive
         {
             get => _isRingTimeOutActive;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _ringTimeoutSeconds;
 
         [XmlElement(ElementName = "ringTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16413")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35171")]
         [MinInclusive(1)]
         [MaxInclusive(180)]
         public int RingTimeoutSeconds
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowEmergencyRemoteOfficeOriginations;
 
         [XmlElement(ElementName = "allowEmergencyRemoteOfficeOriginations", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16413")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35171")]
         public bool AllowEmergencyRemoteOfficeOriginations
         {
             get => _allowEmergencyRemoteOfficeOriginations;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxNoAnswerNumberOfRings;
 
         [XmlElement(ElementName = "maxNoAnswerNumberOfRings", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16413")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35171")]
         [MinInclusive(6)]
         [MaxInclusive(20)]
         public int MaxNoAnswerNumberOfRings

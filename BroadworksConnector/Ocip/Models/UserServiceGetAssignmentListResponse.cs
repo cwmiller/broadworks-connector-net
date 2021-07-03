@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3798""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3884""}]")]
     public class UserServiceGetAssignmentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _servicePacksAssignmentTable;
 
         [XmlElement(ElementName = "servicePacksAssignmentTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3798")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3884")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ServicePacksAssignmentTable
         {
             get => _servicePacksAssignmentTable;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _userServicesAssignmentTable;
 
         [XmlElement(ElementName = "userServicesAssignmentTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3798")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3884")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserServicesAssignmentTable
         {
             get => _userServicesAssignmentTable;

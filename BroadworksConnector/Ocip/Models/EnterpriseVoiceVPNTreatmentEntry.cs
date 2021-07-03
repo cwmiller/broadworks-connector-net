@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1653""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1654""}]")]
     public class EnterpriseVoiceVPNTreatmentEntry
     {
 
         private string _id;
 
         [XmlElement(ElementName = "id", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1653")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1654")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Id
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1653")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1654")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Description

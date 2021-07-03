@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7268""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:8284""}]")]
     public class GroupShInterfaceGetUserListResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7268")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8284")]
         public List<BroadWorksConnector.Ocip.Models.ShInterfaceUserListEntry21sp1> Entry
         {
             get => _entry;

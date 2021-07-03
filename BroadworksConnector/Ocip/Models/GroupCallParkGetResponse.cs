@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19123""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:7456""}]")]
     public class GroupCallParkGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _recallTimerSeconds;
 
         [XmlElement(ElementName = "recallTimerSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19123")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7456")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
         public int RecallTimerSeconds
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _displayTimerSeconds;
 
         [XmlElement(ElementName = "displayTimerSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19123")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7456")]
         [MinInclusive(2)]
         [MaxInclusive(15)]
         public int DisplayTimerSeconds
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableDestinationAnnouncement;
 
         [XmlElement(ElementName = "enableDestinationAnnouncement", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19123")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7456")]
         public bool EnableDestinationAnnouncement
         {
             get => _enableDestinationAnnouncement;

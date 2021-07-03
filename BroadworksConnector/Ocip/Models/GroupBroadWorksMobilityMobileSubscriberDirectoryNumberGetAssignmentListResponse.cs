@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:378""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:399""}]")]
     public class GroupBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _mobileSubscriberDirectoryNumberTable;
 
         [XmlElement(ElementName = "mobileSubscriberDirectoryNumberTable", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:378")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:399")]
         public BroadWorksConnector.Ocip.Models.C.OCITable MobileSubscriberDirectoryNumberTable
         {
             get => _mobileSubscriberDirectoryNumberTable;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:510""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:511""}]")]
     public class EnterpriseCommunicationBarringAuthorizationCodeAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:510")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:511")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeConfiguration> _code = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeConfiguration>();
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:510")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:511")]
         public List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeConfiguration> Code
         {
             get => _code;

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""43afb2158d313a1d1a148124d7caba1e:275""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""43afb2158d313a1d1a148124d7caba1e:219""}]")]
     public class GroupFlexibleSeatingHostGuestAssociationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:275")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:219")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

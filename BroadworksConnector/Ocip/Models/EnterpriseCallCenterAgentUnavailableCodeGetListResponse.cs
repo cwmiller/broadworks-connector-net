@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:786""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:797""}]")]
     public class EnterpriseCallCenterAgentUnavailableCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _unavailableCodesTable;
 
         [XmlElement(ElementName = "unavailableCodesTable", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:786")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:797")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UnavailableCodesTable
         {
             get => _unavailableCodesTable;

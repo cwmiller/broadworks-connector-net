@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8176""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9245""}]")]
     public class SystemDigitCollectionGetResponse13mp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8176")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9245")]
         [MinLength(1)]
         [MaxLength(1)]
         public string AccessCode
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _publicDigitMap;
 
         [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8176")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9245")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PublicDigitMap
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8176")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9245")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PrivateDigitMap

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2885""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2921""}]")]
     public class UserPersonalPhoneListModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2885")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2921")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _entryName;
 
         [XmlElement(ElementName = "entryName", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2885")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2921")]
         [MinLength(1)]
         [MaxLength(50)]
         public string EntryName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newEntryName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2885")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2921")]
         [MinLength(1)]
         [MaxLength(50)]
         public string NewEntryName
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2885")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2921")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PhoneNumber

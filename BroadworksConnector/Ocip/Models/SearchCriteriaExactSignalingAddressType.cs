@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1150""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1239""}]")]
     public class SearchCriteriaExactSignalingAddressType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1150")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:1239")]
         public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile
         {
             get => _profile;

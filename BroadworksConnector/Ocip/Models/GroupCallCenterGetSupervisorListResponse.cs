@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1060""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:6264""}]")]
     public class GroupCallCenterGetSupervisorListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingServerURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1060")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6264")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ReportingServerURL
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _supervisorTable;
 
         [XmlElement(ElementName = "supervisorTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1060")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6264")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SupervisorTable
         {
             get => _supervisorTable;

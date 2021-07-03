@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4818"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4823"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4825""}]}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5646"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5651"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5653""}]}]}]")]
     public class ServiceProviderScheduleAddEventRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4818")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5646")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
 
         [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4818")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5646")]
         public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey
         {
             get => _scheduleKey;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _eventName;
 
         [XmlElement(ElementName = "eventName", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4818")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5646")]
         [MinLength(1)]
         [MaxLength(40)]
         public string EventName
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _startDate;
 
         [XmlElement(ElementName = "startDate", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4818")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5646")]
         public string StartDate
         {
             get => _startDate;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allDayEvent;
 
         [XmlElement(ElementName = "allDayEvent", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4823")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5651")]
         public bool AllDayEvent
         {
             get => _allDayEvent;
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.HourMinute _startTime;
 
         [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4825")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5653")]
         public BroadWorksConnector.Ocip.Models.HourMinute StartTime
         {
             get => _startTime;
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.HourMinute _endTime;
 
         [XmlElement(ElementName = "endTime", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4825")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5653")]
         public BroadWorksConnector.Ocip.Models.HourMinute EndTime
         {
             get => _endTime;
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _endDate;
 
         [XmlElement(ElementName = "endDate", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4818")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5646")]
         public string EndDate
         {
             get => _endDate;
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4818")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5646")]
         public BroadWorksConnector.Ocip.Models.Recurrence Recurrence
         {
             get => _recurrence;

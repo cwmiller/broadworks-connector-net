@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1226""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1315""}]")]
     public class SearchCriteriaExactUserNetworkClassOfService : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1226")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:1315")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

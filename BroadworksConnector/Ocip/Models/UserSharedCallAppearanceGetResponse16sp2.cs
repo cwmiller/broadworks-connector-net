@@ -26,14 +26,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7729""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:14366""}]")]
     public class UserSharedCallAppearanceGetResponse16sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _alertAllAppearancesForClickToDialCalls;
 
         [XmlElement(ElementName = "alertAllAppearancesForClickToDialCalls", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7729")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14366")]
         public bool AlertAllAppearancesForClickToDialCalls
         {
             get => _alertAllAppearancesForClickToDialCalls;
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _alertAllAppearancesForGroupPagingCalls;
 
         [XmlElement(ElementName = "alertAllAppearancesForGroupPagingCalls", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7729")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14366")]
         public bool AlertAllAppearancesForGroupPagingCalls
         {
             get => _alertAllAppearancesForGroupPagingCalls;
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxAppearances;
 
         [XmlElement(ElementName = "maxAppearances", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7729")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14366")]
         public int MaxAppearances
         {
             get => _maxAppearances;
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowSCACallRetrieve;
 
         [XmlElement(ElementName = "allowSCACallRetrieve", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7729")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14366")]
         public bool AllowSCACallRetrieve
         {
             get => _allowSCACallRetrieve;
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableMultipleCallArrangement;
 
         [XmlElement(ElementName = "enableMultipleCallArrangement", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7729")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14366")]
         public bool EnableMultipleCallArrangement
         {
             get => _enableMultipleCallArrangement;
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _multipleCallArrangementIsActive;
 
         [XmlElement(ElementName = "multipleCallArrangementIsActive", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7729")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14366")]
         public bool MultipleCallArrangementIsActive
         {
             get => _multipleCallArrangementIsActive;
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _endpointTable;
 
         [XmlElement(ElementName = "endpointTable", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7729")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14366")]
         public BroadWorksConnector.Ocip.Models.C.OCITable EndpointTable
         {
             get => _endpointTable;
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowBridgingBetweenLocations;
 
         [XmlElement(ElementName = "allowBridgingBetweenLocations", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7729")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14366")]
         public bool AllowBridgingBetweenLocations
         {
             get => _allowBridgingBetweenLocations;
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
 
         [XmlElement(ElementName = "bridgeWarningTone", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7729")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14366")]
         public BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone
         {
             get => _bridgeWarningTone;
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableCallParkNotification;
 
         [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7729")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14366")]
         public bool EnableCallParkNotification
         {
             get => _enableCallParkNotification;

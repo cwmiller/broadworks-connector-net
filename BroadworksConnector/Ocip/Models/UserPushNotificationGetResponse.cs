@@ -8,19 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to UserPushNotificationGetRequest.
+    /// 
+    /// Replaced by: UserPushNotificationResponse24
     /// <see cref="UserPushNotificationGetRequest"/>
+    /// <see cref="UserPushNotificationResponse24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3391""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:45736""}]")]
     public class UserPushNotificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _sendPushNotificationForClickToDial;
 
         [XmlElement(ElementName = "sendPushNotificationForClickToDial", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3391")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45736")]
         public bool SendPushNotificationForClickToDial
         {
             get => _sendPushNotificationForClickToDial;

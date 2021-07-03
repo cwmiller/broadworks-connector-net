@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:302""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:303""}]")]
     public class GroupFindMeFollowMeGetAlertingGroupSelectiveCriteriaRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:302")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:303")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _alertingGroupName;
 
         [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:302")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:303")]
         [MinLength(1)]
         [MaxLength(40)]
         public string AlertingGroupName
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:302")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:303")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName

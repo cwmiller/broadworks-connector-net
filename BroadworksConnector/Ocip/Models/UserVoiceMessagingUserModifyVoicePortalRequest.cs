@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11964""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47325""}]")]
     public class UserVoiceMessagingUserModifyVoicePortalRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11964")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47325")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "usePersonalizedName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11964")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47325")]
         public bool UsePersonalizedName
         {
             get => _usePersonalizedName;
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voicePortalAutoLogin", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11964")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47325")]
         public bool VoicePortalAutoLogin
         {
             get => _voicePortalAutoLogin;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalizedNameAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11964")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47325")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource PersonalizedNameAudioFile
         {
             get => _personalizedNameAudioFile;

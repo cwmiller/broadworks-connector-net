@@ -11,6 +11,10 @@ namespace BroadWorksConnector.Ocip.Models
     /// an existing announcement in the user repository.
     /// When modifying the file type the command will fail if the media type of the new file changes
     /// the announcement from audio to video (or vice versa).
+    /// 
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// announcementFileExternalId
+    /// 
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -18,14 +22,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:706""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:767"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:768"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:769""}]}]}]")]
     public class UserAnnouncementFileModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:706")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:769")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _announcementFileKey;
 
         [XmlElement(ElementName = "announcementFileKey", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:706")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:769")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileKey AnnouncementFileKey
         {
             get => _announcementFileKey;
@@ -58,11 +62,29 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AnnouncementFileKeySpecified { get; set; }
 
+        private string _announcementFileExternalId;
+
+        [XmlElement(ElementName = "announcementFileExternalId", IsNullable = false, Namespace = "")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:768")]
+        [MaxLength(36)]
+        public string AnnouncementFileExternalId
+        {
+            get => _announcementFileExternalId;
+            set
+            {
+                AnnouncementFileExternalIdSpecified = true;
+                _announcementFileExternalId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AnnouncementFileExternalIdSpecified { get; set; }
+
         private string _newAnnouncementFileName;
 
         [XmlElement(ElementName = "newAnnouncementFileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:706")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:767")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NewAnnouncementFileName
@@ -82,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:706")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:767")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AnnouncementFile
         {
             get => _announcementFile;

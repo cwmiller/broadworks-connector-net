@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:544""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:545""}]")]
     public class GroupOutgoingCallingPlanPinholeDigitPatternModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:544")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:545")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:544")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:545")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:544")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:545")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Name
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:544")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:545")]
         [MinLength(1)]
         [MaxLength(160)]
         public string DigitPattern

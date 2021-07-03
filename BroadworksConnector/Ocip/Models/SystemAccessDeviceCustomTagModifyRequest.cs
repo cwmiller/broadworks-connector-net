@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:749"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:752""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:844"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:847""}]}]")]
     public class SystemAccessDeviceCustomTagModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:749")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:844")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _tagName;
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:749")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:844")]
         [MinLength(1)]
         [MaxLength(64)]
         public string TagName
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagValue", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:752")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:847")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TagValue
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagValueToEncrypt", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:752")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:847")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TagValueToEncrypt

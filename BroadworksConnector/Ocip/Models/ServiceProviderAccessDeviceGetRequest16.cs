@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25746""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16807""}]")]
     public class ServiceProviderAccessDeviceGetRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25746")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16807")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25746")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16807")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName

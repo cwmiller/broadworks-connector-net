@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:652""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:711""}]")]
     public class SearchCriteriaExactAutoAttendantType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private BroadWorksConnector.Ocip.Models.AutoAttendantType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:652")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:711")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantType Type
         {
             get => _type;

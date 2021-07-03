@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:45378""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47610""}]")]
     public class BroadWorksMobilityUserMobileIdentityEntry
     {
 
         private string _mobileNumber;
 
         [XmlElement(ElementName = "mobileNumber", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45378")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47610")]
         [MinLength(1)]
         [MaxLength(23)]
         public string MobileNumber
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45378")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47610")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Description
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isPrimary;
 
         [XmlElement(ElementName = "isPrimary", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45378")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47610")]
         public bool IsPrimary
         {
             get => _isPrimary;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableAlerting;
 
         [XmlElement(ElementName = "enableAlerting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45378")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47610")]
         public bool EnableAlerting
         {
             get => _enableAlerting;

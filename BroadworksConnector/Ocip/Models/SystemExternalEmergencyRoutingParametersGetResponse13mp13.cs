@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9093""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10122""}]")]
     public class SystemExternalEmergencyRoutingParametersGetResponse13mp13 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceURI", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9093")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10122")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceURI
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultEmergencyNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9093")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10122")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DefaultEmergencyNumber
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9093")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10122")]
         public bool IsActive
         {
             get => _isActive;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _supportsDNSSRV;
 
         [XmlElement(ElementName = "supportsDNSSRV", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9093")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10122")]
         public bool SupportsDNSSRV
         {
             get => _supportsDNSSRV;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _connectionTimeoutSeconds;
 
         [XmlElement(ElementName = "connectionTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9093")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10122")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int ConnectionTimeoutSeconds

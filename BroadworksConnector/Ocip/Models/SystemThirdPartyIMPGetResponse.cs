@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27017""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35504""}]")]
     public class SystemThirdPartyIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27017")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35504")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceNetAddress
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27017")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35504")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int ServicePort

@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:33051"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:33057""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2238"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2244""}]}]")]
     public class EnterpriseEnterpriseTrunkAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33051")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2238")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _enterpriseTrunkName;
 
         [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33051")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2238")]
         [MinLength(1)]
         [MaxLength(30)]
         public string EnterpriseTrunkName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maximumRerouteAttempts;
 
         [XmlElement(ElementName = "maximumRerouteAttempts", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33051")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2238")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaximumRerouteAttempts
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction _routeExhaustionAction;
 
         [XmlElement(ElementName = "routeExhaustionAction", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33051")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2238")]
         public BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction RouteExhaustionAction
         {
             get => _routeExhaustionAction;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "routeExhaustionForwardAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33051")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2238")]
         [MinLength(1)]
         [MaxLength(161)]
         public string RouteExhaustionForwardAddress
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkAddRequestOrderedRouting _orderedRouting;
 
         [XmlElement(ElementName = "orderedRouting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33057")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2244")]
         public BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkAddRequestOrderedRouting OrderedRouting
         {
             get => _orderedRouting;
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkAddRequestPriorityWeightedRouting _priorityWeightedRouting;
 
         [XmlElement(ElementName = "priorityWeightedRouting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33057")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2244")]
         public BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkAddRequestPriorityWeightedRouting PriorityWeightedRouting
         {
             get => _priorityWeightedRouting;

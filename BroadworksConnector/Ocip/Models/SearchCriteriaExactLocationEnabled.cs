@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:970""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1059""}]")]
     public class SearchCriteriaExactLocationEnabled : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:970")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:1059")]
         public bool Enabled
         {
             get => _enabled;

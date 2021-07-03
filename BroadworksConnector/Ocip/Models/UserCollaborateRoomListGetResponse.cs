@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:1013""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:1010""}]")]
     public class UserCollaborateRoomListGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _roomInstanceTable;
 
         [XmlElement(ElementName = "roomInstanceTable", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:1013")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:1010")]
         public BroadWorksConnector.Ocip.Models.C.OCITable RoomInstanceTable
         {
             get => _roomInstanceTable;

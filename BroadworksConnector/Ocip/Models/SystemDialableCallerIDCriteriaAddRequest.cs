@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7828""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8875""}]")]
     public class SystemDialableCallerIDCriteriaAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "prefixDigits", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         [MinLength(1)]
         [MaxLength(10)]
         public string PrefixDigits
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "matchCallType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> MatchCallType
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "matchAlternateCallIndicator", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> MatchAlternateCallIndicator
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _matchLocalCategory;
 
         [XmlElement(ElementName = "matchLocalCategory", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         public bool MatchLocalCategory
         {
             get => _matchLocalCategory;
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _matchNationalCategory;
 
         [XmlElement(ElementName = "matchNationalCategory", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         public bool MatchNationalCategory
         {
             get => _matchNationalCategory;
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _matchInterlataCategory;
 
         [XmlElement(ElementName = "matchInterlataCategory", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         public bool MatchInterlataCategory
         {
             get => _matchInterlataCategory;
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _matchIntralataCategory;
 
         [XmlElement(ElementName = "matchIntralataCategory", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         public bool MatchIntralataCategory
         {
             get => _matchIntralataCategory;
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _matchInternationalCategory;
 
         [XmlElement(ElementName = "matchInternationalCategory", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         public bool MatchInternationalCategory
         {
             get => _matchInternationalCategory;
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _matchPrivateCategory;
 
         [XmlElement(ElementName = "matchPrivateCategory", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         public bool MatchPrivateCategory
         {
             get => _matchPrivateCategory;
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _matchEmergencyCategory;
 
         [XmlElement(ElementName = "matchEmergencyCategory", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         public bool MatchEmergencyCategory
         {
             get => _matchEmergencyCategory;
@@ -239,7 +239,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _matchOtherCategory;
 
         [XmlElement(ElementName = "matchOtherCategory", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7828")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8875")]
         public bool MatchOtherCategory
         {
             get => _matchOtherCategory;

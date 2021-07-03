@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4264""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4279""}]")]
     public class GroupCallCenterGetDistinctiveRingingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4264")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4279")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

@@ -9,8 +9,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Replaced by: UserGetRequest17sp4
     /// 
-    /// Request to get the user information.
-    /// The response is either UserGetResponse17 or ErrorResponse.
+    /// Request to get the user information.  The response is either UserGetResponse17 or ErrorResponse.
     /// <see cref="UserGetRequest17sp4"/>
     /// <see cref="UserGetResponse17"/>
     /// <see cref="ErrorResponse"/>
@@ -18,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:23543""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43422""}]")]
     public class UserGetRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23543")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43422")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

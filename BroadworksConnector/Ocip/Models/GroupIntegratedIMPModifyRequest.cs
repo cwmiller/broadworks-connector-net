@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""23389100b68cef3aa07ee12ac7a2bd16:87""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""23389100b68cef3aa07ee12ac7a2bd16:88""}]")]
     public class GroupIntegratedIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:87")]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:88")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:87")]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:88")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useServiceProviderSetting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:87")]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:88")]
         public bool UseServiceProviderSetting
         {
             get => _useServiceProviderSetting;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:87")]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:88")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceDomain

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18704""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:20091""}]")]
     public class ServicePolicyAttributeModifyEntry
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18704")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20091")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _value;
 
         [XmlElement(ElementName = "value", IsNullable = true, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18704")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20091")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string Value

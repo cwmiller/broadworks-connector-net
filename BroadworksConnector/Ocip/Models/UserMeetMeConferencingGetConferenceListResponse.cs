@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:806""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:770""}]")]
     public class UserMeetMeConferencingGetConferenceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _conferenceTable;
 
         [XmlElement(ElementName = "conferenceTable", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:806")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:770")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ConferenceTable
         {
             get => _conferenceTable;

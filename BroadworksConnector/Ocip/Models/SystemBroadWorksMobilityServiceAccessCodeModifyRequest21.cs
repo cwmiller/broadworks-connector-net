@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:1214""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:1459""}]")]
     public class SystemBroadWorksMobilityServiceAccessCodeModifyRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceAccessCodeListName;
 
         [XmlElement(ElementName = "serviceAccessCodeListName", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1214")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1459")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceAccessCodeListName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1214")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1459")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _serviceAccessCode;
 
         [XmlElement(ElementName = "serviceAccessCode", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1214")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1459")]
         [MinLength(1)]
         [MaxLength(10)]
         public string ServiceAccessCode
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1214")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1459")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

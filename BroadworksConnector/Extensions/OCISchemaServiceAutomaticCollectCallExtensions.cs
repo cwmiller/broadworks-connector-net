@@ -11,21 +11,21 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Get system Automatic Collect Call service settings.
-        /// The response is either SystemAutomaticCollectCallGetResponse or ErrorResponse.
+        /// The response is either SystemAutomaticCollectCallGetResponse22 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemAutomaticCollectCallGetRequestAsync instead.")]
-        public static async Task<SystemAutomaticCollectCallGetResponse> SystemAutomaticCollectCallGetRequest(this OcipClient client, SystemAutomaticCollectCallGetRequest request)
+        [Obsolete("This method is deprecated. Use SystemAutomaticCollectCallGetRequest22Async instead.")]
+        public static async Task<SystemAutomaticCollectCallGetResponse22> SystemAutomaticCollectCallGetRequest22(this OcipClient client, SystemAutomaticCollectCallGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemAutomaticCollectCallGetResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemAutomaticCollectCallGetResponse22;
         }
 
         /// <summary>
         /// Get system Automatic Collect Call service settings.
-        /// The response is either SystemAutomaticCollectCallGetResponse or ErrorResponse.
+        /// The response is either SystemAutomaticCollectCallGetResponse22 or ErrorResponse.
         /// </summary>
-        public static async Task<SystemAutomaticCollectCallGetResponse> SystemAutomaticCollectCallGetRequestAsync(this OcipClient client, SystemAutomaticCollectCallGetRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SystemAutomaticCollectCallGetResponse22> SystemAutomaticCollectCallGetRequest22Async(this OcipClient client, SystemAutomaticCollectCallGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAutomaticCollectCallGetResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAutomaticCollectCallGetResponse22;
         }
         /// <summary>
         /// Modify system Automatic Collect Call service settings.

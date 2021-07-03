@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11177""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12218""}]")]
     public class SystemMGCPDeviceTypeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isObsolete;
 
         [XmlElement(ElementName = "isObsolete", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11177")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12218")]
         public bool IsObsolete
         {
             get => _isObsolete;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11177")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12218")]
         public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile
         {
             get => _profile;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
 
         [XmlElement(ElementName = "numberOfPorts", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11177")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12218")]
         public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts
         {
             get => _numberOfPorts;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _protocolChoice = new List<string>();
 
         [XmlElement(ElementName = "protocolChoice", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11177")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12218")]
         [MinLength(1)]
         [MaxLength(20)]
         public List<string> ProtocolChoice

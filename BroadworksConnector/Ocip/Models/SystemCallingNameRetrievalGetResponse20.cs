@@ -8,19 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemCallingNameRetrievalGetRequest20.
+    /// 
+    /// Replaced by: SystemCallingNameRetrievalGetResponse24
     /// <see cref="SystemCallingNameRetrievalGetRequest20"/>
+    /// <see cref="SystemCallingNameRetrievalGetResponse24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7abfb1e02a3465af832e0a8a8adfc741:58""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:21135""}]")]
     public class SystemCallingNameRetrievalGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _triggerCNAMQueriesForAllNetworkCalls;
 
         [XmlElement(ElementName = "triggerCNAMQueriesForAllNetworkCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         public bool TriggerCNAMQueriesForAllNetworkCalls
         {
             get => _triggerCNAMQueriesForAllNetworkCalls;
@@ -37,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _triggerCNAMQueriesForGroupAndEnterpriseCalls;
 
         [XmlElement(ElementName = "triggerCNAMQueriesForGroupAndEnterpriseCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         public bool TriggerCNAMQueriesForGroupAndEnterpriseCalls
         {
             get => _triggerCNAMQueriesForGroupAndEnterpriseCalls;
@@ -54,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol _queryProtocol;
 
         [XmlElement(ElementName = "queryProtocol", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         public BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol QueryProtocol
         {
             get => _queryProtocol;
@@ -71,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _queryTimeoutMilliseconds;
 
         [XmlElement(ElementName = "queryTimeoutMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         [MinInclusive(100)]
         [MaxInclusive(10000)]
         public int QueryTimeoutMilliseconds
@@ -91,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sipExternalDatabaseNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SipExternalDatabaseNetAddress
@@ -111,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sipExternalDatabasePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int SipExternalDatabasePort
@@ -130,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.TransportProtocol _sipExternalDatabaseTransport;
 
         [XmlElement(ElementName = "sipExternalDatabaseTransport", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         public BroadWorksConnector.Ocip.Models.TransportProtocol SipExternalDatabaseTransport
         {
             get => _sipExternalDatabaseTransport;
@@ -148,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "soapExternalDatabaseNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SoapExternalDatabaseNetAddress
@@ -167,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity _callingNameSource;
 
         [XmlElement(ElementName = "callingNameSource", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         public BroadWorksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity CallingNameSource
         {
             get => _callingNameSource;
@@ -184,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _routeAdvanceTimer;
 
         [XmlElement(ElementName = "routeAdvanceTimer", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         [MinInclusive(100)]
         [MaxInclusive(2000)]
         public int RouteAdvanceTimer
@@ -203,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _retryFailedCNAMServerInterval;
 
         [XmlElement(ElementName = "retryFailedCNAMServerInterval", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         [MinInclusive(0)]
         [MaxInclusive(604800)]
         public int RetryFailedCNAMServerInterval
@@ -222,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _ignoreRestrictedPresentationIndicator;
 
         [XmlElement(ElementName = "ignoreRestrictedPresentationIndicator", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         public bool IgnoreRestrictedPresentationIndicator
         {
             get => _ignoreRestrictedPresentationIndicator;
@@ -239,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _supportsDNSSRV;
 
         [XmlElement(ElementName = "supportsDNSSRV", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:58")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21135")]
         public bool SupportsDNSSRV
         {
             get => _supportsDNSSRV;

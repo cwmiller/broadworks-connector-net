@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:400""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:415""}]")]
     public class ServiceProviderMeetMeConferencingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
         [XmlElement(ElementName = "allocatedPorts", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:400")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:415")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts
         {
             get => _allocatedPorts;

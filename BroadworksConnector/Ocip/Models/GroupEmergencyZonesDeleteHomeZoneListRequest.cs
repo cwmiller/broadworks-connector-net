@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e71c2205fb31894f87810b330a85ede2:68""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e71c2205fb31894f87810b330a85ede2:69""}]")]
     public class GroupEmergencyZonesDeleteHomeZoneListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:68")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:69")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:68")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:69")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "homeZoneIpAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:68")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:69")]
         [MinLength(1)]
         [MaxLength(39)]
         public List<string> HomeZoneIpAddress
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "homeZoneIpAddressRange", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:68")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:69")]
         public List<BroadWorksConnector.Ocip.Models.IPAddressRange> HomeZoneIpAddressRange
         {
             get => _homeZoneIpAddressRange;

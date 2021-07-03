@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5676""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:29281""}]")]
     public class SystemSessionAuditGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5676")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29281")]
         public bool IsActive
         {
             get => _isActive;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _intervalSeconds;
 
         [XmlElement(ElementName = "intervalSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5676")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29281")]
         [MinInclusive(60)]
         [MaxInclusive(7200)]
         public int IntervalSeconds
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _timeoutPeriodSeconds;
 
         [XmlElement(ElementName = "timeoutPeriodSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5676")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29281")]
         [MinInclusive(60)]
         [MaxInclusive(600)]
         public int TimeoutPeriodSeconds

@@ -15,9 +15,12 @@ namespace BroadWorksConnector.Ocip.Models
     /// If resellerId is specified, all the system level available device types and the device types in the given reseller are returned.
     /// If reseller administrator sends the request, resellerId is not specified, the administrator's resellerId is used.
     /// If neither excludeReseller nor resellerId is specified, all the system level and reseller level available device types are returned.
+    /// If excludeLeafDeviceTypes is specified, leaf device types are excluded in the response returned.  Leaf
+    /// device types are device types that have the option supportLinks set to "Support Link to Device".
     /// 
     /// The following elements are only used in AS data mode and ignored in the XS data mode:
     /// resellerId
+    /// excludeLeafDeviceTypes
     /// 
     /// The response is either SystemDeviceTypeGetAvailableListResponse22 or ErrorResponse.
     /// <see cref="SystemSIPDeviceTypeGetListRequest"/>
@@ -28,14 +31,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7655"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7661""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8699"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8705""}]}]")]
     public class SystemDeviceTypeGetAvailableListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private bool _allowConference;
 
         [XmlElement(ElementName = "allowConference", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7655")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8699")]
         public bool AllowConference
         {
             get => _allowConference;
@@ -52,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowMusicOnHold;
 
         [XmlElement(ElementName = "allowMusicOnHold", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7655")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8699")]
         public bool AllowMusicOnHold
         {
             get => _allowMusicOnHold;
@@ -69,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _onlyConference;
 
         [XmlElement(ElementName = "onlyConference", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7655")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8699")]
         public bool OnlyConference
         {
             get => _onlyConference;
@@ -86,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _onlyVideoCapable;
 
         [XmlElement(ElementName = "onlyVideoCapable", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7655")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8699")]
         public bool OnlyVideoCapable
         {
             get => _onlyVideoCapable;
@@ -103,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _onlyOptionalIpAddress;
 
         [XmlElement(ElementName = "onlyOptionalIpAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7655")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8699")]
         public bool OnlyOptionalIpAddress
         {
             get => _onlyOptionalIpAddress;
@@ -121,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "excludeReseller", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7661")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8705")]
         public bool ExcludeReseller
         {
             get => _excludeReseller;
@@ -139,9 +142,9 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7661")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8705")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string ResellerId
         {
             get => _resellerId;
@@ -154,6 +157,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
+
+        private bool _excludeLeafDeviceTypes;
+
+        [XmlElement(ElementName = "excludeLeafDeviceTypes", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8699")]
+        public bool ExcludeLeafDeviceTypes
+        {
+            get => _excludeLeafDeviceTypes;
+            set
+            {
+                ExcludeLeafDeviceTypesSpecified = true;
+                _excludeLeafDeviceTypes = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ExcludeLeafDeviceTypesSpecified { get; set; }
 
     }
 }

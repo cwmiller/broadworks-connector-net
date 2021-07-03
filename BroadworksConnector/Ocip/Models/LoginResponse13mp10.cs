@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3344""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16438""}]")]
     public class LoginResponse13mp10 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.LoginType _loginType;
 
         [XmlElement(ElementName = "loginType", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3344")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16438")]
         public BroadWorksConnector.Ocip.Models.LoginType LoginType
         {
             get => _loginType;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _locale;
 
         [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3344")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16438")]
         [MaxLength(5)]
         public string Locale
         {
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _encoding;
 
         [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3344")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16438")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Encoding

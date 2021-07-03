@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc829065f9d696d3ca7084121d57f8c0:612""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc829065f9d696d3ca7084121d57f8c0:616""}]")]
     public class SystemHuntGroupModifyRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "removeHuntGroupNameFromCLID", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc829065f9d696d3ca7084121d57f8c0:612")]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:616")]
         public bool RemoveHuntGroupNameFromCLID
         {
             get => _removeHuntGroupNameFromCLID;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "uniformCallDistributionPolicyScope", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc829065f9d696d3ca7084121d57f8c0:612")]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:616")]
         public BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope UniformCallDistributionPolicyScope
         {
             get => _uniformCallDistributionPolicyScope;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowAgentDeviceInitiatedForward", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc829065f9d696d3ca7084121d57f8c0:612")]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:616")]
         public bool AllowAgentDeviceInitiatedForward
         {
             get => _allowAgentDeviceInitiatedForward;

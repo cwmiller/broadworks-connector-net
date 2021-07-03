@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:861""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:862""}]")]
     public class EnterpriseSecurityClassificationCustomizationGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _securityClassificationNameTable;
 
         [XmlElement(ElementName = "securityClassificationNameTable", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:861")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:862")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SecurityClassificationNameTable
         {
             get => _securityClassificationNameTable;

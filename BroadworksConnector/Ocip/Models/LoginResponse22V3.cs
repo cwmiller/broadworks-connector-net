@@ -16,18 +16,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// The parameter tokenRevocationTime is represented in the number of milliseconds
     /// since January 1, 1970, 00:00:00 GMT, and it is set to the more current time between
     /// the system level token revocation time and user level token revocation time.
+    /// 
+    /// Replaced by LoginRequest22V4 in AS data mode.
+    /// <see cref="LoginRequest22V4"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:377""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4401""}]")]
     public class LoginResponse22V3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.LoginType22 _loginType;
 
         [XmlElement(ElementName = "loginType", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:377")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4401")]
         public BroadWorksConnector.Ocip.Models.LoginType22 LoginType
         {
             get => _loginType;
@@ -44,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _locale;
 
         [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:377")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4401")]
         [MaxLength(5)]
         public string Locale
         {
@@ -62,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _encoding;
 
         [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:377")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4401")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Encoding
@@ -82,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:377")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4401")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -102,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:377")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4401")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -121,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isEnterprise;
 
         [XmlElement(ElementName = "isEnterprise", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:377")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4401")]
         public bool IsEnterprise
         {
             get => _isEnterprise;
@@ -139,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "passwordExpiresDays", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:377")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4401")]
         public int PasswordExpiresDays
         {
             get => _passwordExpiresDays;
@@ -156,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _userDomain;
 
         [XmlElement(ElementName = "userDomain", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:377")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4401")]
         [MinLength(1)]
         [MaxLength(80)]
         public string UserDomain
@@ -176,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:377")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4401")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ResellerId
@@ -196,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tokenRevocationTime", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:377")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4401")]
         public string TokenRevocationTime
         {
             get => _tokenRevocationTime;

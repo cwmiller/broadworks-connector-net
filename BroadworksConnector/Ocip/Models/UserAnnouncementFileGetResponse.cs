@@ -16,19 +16,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// For Call Center and Route Point users the "Instance Name" column contains the instance id and
     /// when the announcement is being used by a DNIS, "Intance Name" column contans the instance id and the DNIS id.
     /// For Auto Attendants with submenus and the announcement is used by a submenu the "Instance Name" column will contain the submenu name
+    /// 
+    /// Replaced by: UserAnnouncementFileGetResponse22.
     /// <see cref="UserAnnouncementFileGetRequest"/>
+    /// <see cref="UserAnnouncementFileGetResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:684""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:39505""}]")]
     public class UserAnnouncementFileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:684")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39505")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Description
@@ -47,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _filesize;
 
         [XmlElement(ElementName = "filesize", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:684")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39505")]
         public int Filesize
         {
             get => _filesize;
@@ -64,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _lastUploaded;
 
         [XmlElement(ElementName = "lastUploaded", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:684")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39505")]
         public string LastUploaded
         {
             get => _lastUploaded;
@@ -81,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _usageTable;
 
         [XmlElement(ElementName = "usageTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:684")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39505")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UsageTable
         {
             get => _usageTable;

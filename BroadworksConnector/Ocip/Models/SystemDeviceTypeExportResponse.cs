@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7628""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8669""}]")]
     public class SystemDeviceTypeExportResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _file;
 
         [XmlElement(ElementName = "file", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7628")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8669")]
         [MinLength(1)]
         [MaxLength(256)]
         public string File

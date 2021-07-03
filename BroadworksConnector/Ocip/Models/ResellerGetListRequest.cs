@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:334""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:550""}]")]
     public class ResellerGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:334")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:550")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaResellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:334")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:550")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId
         {
             get => _searchCriteriaResellerId;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaResellerName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:334")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:550")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerName> SearchCriteriaResellerName
         {
             get => _searchCriteriaResellerName;

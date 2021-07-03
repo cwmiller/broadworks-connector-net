@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3f28429898a57a7f7846d3877b22df9f:707""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3f28429898a57a7f7846d3877b22df9f:750""}]")]
     public class SystemRouteListEnterpriseTrunkNumberPrefixGetSummaryListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -27,9 +27,9 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:707")]
+        [Group(@"3f28429898a57a7f7846d3877b22df9f:750")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string ResellerId
         {
             get => _resellerId;

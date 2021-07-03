@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:580""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:525""}]")]
     public class GroupRoutePointGetFailoverPolicyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:580")]
+        [Group(@"a27224a048c30ff69eab9209dec841cc:525")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

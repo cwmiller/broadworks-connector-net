@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:932""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:1177""}]")]
     public class SystemBroadWorksMobilityMobileNetworkModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:932")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1177")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:932")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1177")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NewName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scfSignalingNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:932")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1177")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ScfSignalingNetAddress
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scfSignalingPort", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:932")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1177")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? ScfSignalingPort
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "refreshPeriodSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:932")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1177")]
         [MinInclusive(10)]
         [MaxInclusive(1800)]
         public int RefreshPeriodSeconds
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxConsecutiveFailures", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:932")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1177")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaxConsecutiveFailures
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:932")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1177")]
         [MinInclusive(100)]
         [MaxInclusive(10000)]
         public int MaxResponseWaitTimeMilliseconds
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAnnouncementSuppression", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:932")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1177")]
         public bool EnableAnnouncementSuppression
         {
             get => _enableAnnouncementSuppression;
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceAccessCodeListName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:932")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1177")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceAccessCodeListName

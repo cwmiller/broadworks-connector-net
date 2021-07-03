@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1214""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1225""}]")]
     public class EnterpriseCallCenterEnhancedReportingBrandingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingBrandingChoice _brandingChoice;
 
         [XmlElement(ElementName = "brandingChoice", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1214")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1225")]
         public BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingBrandingChoice BrandingChoice
         {
             get => _brandingChoice;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "brandingFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1214")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1225")]
         [MinLength(1)]
         [MaxLength(256)]
         public string BrandingFileDescription

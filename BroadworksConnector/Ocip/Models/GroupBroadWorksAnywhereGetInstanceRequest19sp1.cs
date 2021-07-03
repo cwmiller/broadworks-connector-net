@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:141""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:142""}]")]
     public class GroupBroadWorksAnywhereGetInstanceRequest19sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:141")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:142")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

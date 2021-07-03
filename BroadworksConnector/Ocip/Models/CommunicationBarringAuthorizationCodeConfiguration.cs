@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1326""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1414""}]")]
     public class CommunicationBarringAuthorizationCodeConfiguration
     {
 
         private string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1326")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1414")]
         [MinLength(2)]
         [MaxLength(14)]
         public string Code
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1326")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1414")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1326")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1414")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

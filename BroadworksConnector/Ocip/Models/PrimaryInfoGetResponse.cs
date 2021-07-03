@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:535""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:473""}]")]
     public class PrimaryInfoGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isPrimary;
 
         [XmlElement(ElementName = "isPrimary", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:535")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:473")]
         public bool IsPrimary
         {
             get => _isPrimary;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostnameForPrimary", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:535")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:473")]
         [MinLength(1)]
         [MaxLength(80)]
         public string HostnameForPrimary
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "addressForPrimary", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:535")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:473")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> AddressForPrimary
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateAddressForPrimary", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:535")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:473")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> PrivateAddressForPrimary

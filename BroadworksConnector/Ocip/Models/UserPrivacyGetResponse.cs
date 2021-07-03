@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:7545""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:45701""}]")]
     public class UserPrivacyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _enableDirectoryPrivacy;
 
         [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7545")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45701")]
         public bool EnableDirectoryPrivacy
         {
             get => _enableDirectoryPrivacy;

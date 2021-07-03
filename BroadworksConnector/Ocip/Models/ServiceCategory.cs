@@ -6,7 +6,9 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// List of supported Service Categories that have configurable default attributes entries.
     /// The following elements are ignored in AS data mode:
+    /// Basic Call Logs
     /// OMA Presence
+    /// Push to Talk
     /// The following elements are ignored in XS data mode:
     /// ChargeNumber
     /// Integrated IMP
@@ -16,6 +18,8 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
     public enum ServiceCategory
     {
+        [XmlEnum(Name = "Basic Call Logs")]
+        BasicCallLogs,
         [XmlEnum(Name = "Call Transfer")]
         CallTransfer,
         [XmlEnum(Name = "Call Waiting")]
@@ -40,6 +44,8 @@ namespace BroadWorksConnector.Ocip.Models
         OMAPresence,
         [XmlEnum(Name = "Prepaid")]
         Prepaid,
+        [XmlEnum(Name = "Push to Talk")]
+        PushtoTalk,
         [XmlEnum(Name = "Shared Call Appearance")]
         SharedCallAppearance,
         [XmlEnum(Name = "Third-Party Voice Mail Support")]

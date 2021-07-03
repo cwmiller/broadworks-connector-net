@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14897""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16039""}]")]
     public class SystemServiceAttributeDefaultGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntryRead> _serviceAttributeEntry = new List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntryRead>();
 
         [XmlElement(ElementName = "serviceAttributeEntry", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14897")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16039")]
         public List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntryRead> ServiceAttributeEntry
         {
             get => _serviceAttributeEntry;

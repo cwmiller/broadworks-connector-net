@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:973""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1340""}]")]
     public class GroupAccessDeviceTagSetGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:973")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1340")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSetName

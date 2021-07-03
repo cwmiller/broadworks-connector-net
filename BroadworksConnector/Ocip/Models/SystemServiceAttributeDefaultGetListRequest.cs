@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14881""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16023""}]")]
     public class SystemServiceAttributeDefaultGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.ServiceCategory _serviceName;
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14881")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16023")]
         public BroadWorksConnector.Ocip.Models.ServiceCategory ServiceName
         {
             get => _serviceName;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:85""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:90""}]")]
     public class GroupGroupPagingAddOriginatorListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:85")]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:90")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _originatorUserId = new List<string>();
 
         [XmlElement(ElementName = "originatorUserId", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:85")]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:90")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> OriginatorUserId

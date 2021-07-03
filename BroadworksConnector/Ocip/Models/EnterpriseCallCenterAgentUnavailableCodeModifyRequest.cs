@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:835""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:846""}]")]
     public class EnterpriseCallCenterAgentUnavailableCodeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:835")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:846")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:835")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:846")]
         [MinLength(1)]
         [MaxLength(10)]
         public string Code
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:835")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:846")]
         public bool IsActive
         {
             get => _isActive;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:835")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:846")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Description

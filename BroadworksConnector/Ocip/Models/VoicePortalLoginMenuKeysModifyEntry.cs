@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3356""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3274""}]")]
     public class VoicePortalLoginMenuKeysModifyEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessUsingOtherMailboxId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3356")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3274")]
         [MinLength(1)]
         [MaxLength(3)]
         [RegularExpression(@"([0-9]|\*|#){0,3}")]

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:857""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1017""}]")]
     public class SystemAccessDeviceFileModifyRequest14sp8 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:857")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1017")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _fileFormat;
 
         [XmlElement(ElementName = "fileFormat", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:857")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1017")]
         [MinLength(1)]
         [MaxLength(128)]
         public string FileFormat
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:857")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1017")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource
         {
             get => _fileSource;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "uploadFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:857")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1017")]
         public BroadWorksConnector.Ocip.Models.FileResource UploadFile
         {
             get => _uploadFile;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extendedCaptureEnabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:857")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1017")]
         public bool ExtendedCaptureEnabled
         {
             get => _extendedCaptureEnabled;

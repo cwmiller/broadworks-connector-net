@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13963""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15059""}]")]
     public class SystemRoutePointExternalSystemApplicationControllerDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13963")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15059")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "applicationController", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13963")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15059")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> ApplicationController

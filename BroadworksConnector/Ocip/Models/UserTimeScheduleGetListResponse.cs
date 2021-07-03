@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:17861""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:46770""}]")]
     public class UserTimeScheduleGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _timeScheduleTable;
 
         [XmlElement(ElementName = "timeScheduleTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17861")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46770")]
         public BroadWorksConnector.Ocip.Models.C.OCITable TimeScheduleTable
         {
             get => _timeScheduleTable;

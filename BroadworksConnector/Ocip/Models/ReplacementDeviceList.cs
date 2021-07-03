@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3305""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3931""}]")]
     public class ReplacementDeviceList
     {
 
         private List<BroadWorksConnector.Ocip.Models.AccessDevice> _device = new List<BroadWorksConnector.Ocip.Models.AccessDevice>();
 
         [XmlElement(ElementName = "device", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3305")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3931")]
         public List<BroadWorksConnector.Ocip.Models.AccessDevice> Device
         {
             get => _device;

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a7ae3767516578250f020b627d8fe972:56""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:46929""}]")]
     public class UserVideoAddOnGetResponse19 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"a7ae3767516578250f020b627d8fe972:56")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46929")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.VideoAddOnMaxOriginatingCallDelaySeconds _maxOriginatingCallDelaySeconds;
 
         [XmlElement(ElementName = "maxOriginatingCallDelaySeconds", IsNullable = false, Namespace = "")]
-        [Group(@"a7ae3767516578250f020b627d8fe972:56")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46929")]
         public BroadWorksConnector.Ocip.Models.VideoAddOnMaxOriginatingCallDelaySeconds MaxOriginatingCallDelaySeconds
         {
             get => _maxOriginatingCallDelaySeconds;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a7ae3767516578250f020b627d8fe972:56")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46929")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;

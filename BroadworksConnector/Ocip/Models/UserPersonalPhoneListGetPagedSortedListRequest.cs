@@ -29,14 +29,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2842"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2845""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2878"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2881""}]}]")]
     public class UserPersonalPhoneListGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2842")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2878")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2842")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2878")]
         public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
         {
             get => _responsePagingControl;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SortByUserPersonalPhoneListNumber _sortByUserPersonalPhoneListNumber;
 
         [XmlElement(ElementName = "sortByUserPersonalPhoneListNumber", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2845")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2881")]
         public BroadWorksConnector.Ocip.Models.SortByUserPersonalPhoneListNumber SortByUserPersonalPhoneListNumber
         {
             get => _sortByUserPersonalPhoneListNumber;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SortByUserPersonalPhoneListName _sortByUserPersonalPhoneListName;
 
         [XmlElement(ElementName = "sortByUserPersonalPhoneListName", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2845")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2881")]
         public BroadWorksConnector.Ocip.Models.SortByUserPersonalPhoneListName SortByUserPersonalPhoneListName
         {
             get => _sortByUserPersonalPhoneListName;
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2842")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2878")]
         public bool SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserPersonalPhoneListName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2842")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2878")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserPersonalPhoneListName> SearchCriteriaUserPersonalPhoneListName
         {
             get => _searchCriteriaUserPersonalPhoneListName;
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserPersonalPhoneListNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2842")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2878")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserPersonalPhoneListNumber> SearchCriteriaUserPersonalPhoneListNumber
         {
             get => _searchCriteriaUserPersonalPhoneListNumber;
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserPersonalMultiPartPhoneListName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2842")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2878")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserPersonalMultiPartPhoneListName> SearchCriteriaUserPersonalMultiPartPhoneListName
         {
             get => _searchCriteriaUserPersonalMultiPartPhoneListName;

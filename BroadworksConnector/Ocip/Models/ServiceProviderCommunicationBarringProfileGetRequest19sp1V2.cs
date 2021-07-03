@@ -8,22 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get an existing Communication Barring Profile.
-    /// The response is either a ServiceProviderCommunicationBarringProfileGetResponse19sp1V2
-    /// or an ErrorResponse.
+    /// The response is either a ServiceProviderCommunicationBarringProfileGetResponse19sp1V2 or an ErrorResponse.
     /// <see cref="ServiceProviderCommunicationBarringProfileGetResponse19sp1V2"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:1997""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:2496""}]")]
     public class ServiceProviderCommunicationBarringProfileGetRequest19sp1V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:1997")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2496")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:1997")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2496")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name

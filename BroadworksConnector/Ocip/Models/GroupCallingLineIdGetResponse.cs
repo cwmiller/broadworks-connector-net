@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1164""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:7346""}]")]
     public class GroupCallingLineIdGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _useGroupNumber;
 
         [XmlElement(ElementName = "useGroupNumber", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1164")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7346")]
         public bool UseGroupNumber
         {
             get => _useGroupNumber;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useGroupName;
 
         [XmlElement(ElementName = "useGroupName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1164")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7346")]
         public bool UseGroupName
         {
             get => _useGroupName;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1164")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7346")]
         [MinLength(1)]
         [MaxLength(23)]
         public string CallingLineIdPhoneNumber
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callingLineIdName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1164")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7346")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CallingLineIdName

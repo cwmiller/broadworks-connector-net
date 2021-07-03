@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14091""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15187""}]")]
     public class SystemRoutePointExternalSystemModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14091")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15187")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14091")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15187")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14091")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15187")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

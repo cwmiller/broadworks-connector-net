@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// AuthenticationVerifyRequest is used to authenticate a user using the user Id and password.
-    /// The response is a AuthenticationVerifyResponse or an ErrorResponse
+    /// AuthenticationVerifyRequest is used to authenticate a user using the user Id and password. The response is a AuthenticationVerifyResponse or an ErrorResponse
     /// Replaced By: AuthenticationVerifyRequest14sp8
     /// <see cref="AuthenticationVerifyRequest"/>
     /// <see cref="AuthenticationVerifyResponse"/>
@@ -18,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:358""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1009""}]")]
     public class AuthenticationVerifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:358")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1009")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:358")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1009")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password

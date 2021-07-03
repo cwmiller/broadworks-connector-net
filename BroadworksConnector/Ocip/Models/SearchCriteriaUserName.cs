@@ -13,21 +13,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// First Name + ' ' + Last Name
     /// Last Name + ' ' + First Name
     /// Last Name + ', ' + First Name
-    /// Hiragana Last Name + Hiragana First Name
+    /// Hiragana Last Name + ' ' + Hiragana First Name
     /// 
     /// Note that when specific conditions are met, VON users will be included in the search results.
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:2183""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:2321""}]")]
     public class SearchCriteriaUserName : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private BroadWorksConnector.Ocip.Models.SearchMode _mode;
 
         [XmlElement(ElementName = "mode", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:2183")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:2321")]
         public BroadWorksConnector.Ocip.Models.SearchMode Mode
         {
             get => _mode;
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _value;
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:2183")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:2321")]
         [MinLength(1)]
         [MaxLength(62)]
         public string Value
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isCaseInsensitive;
 
         [XmlElement(ElementName = "isCaseInsensitive", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:2183")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:2321")]
         public bool IsCaseInsensitive
         {
             get => _isCaseInsensitive;

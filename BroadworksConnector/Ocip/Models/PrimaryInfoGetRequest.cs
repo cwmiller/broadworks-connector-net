@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Requests information about the primary server for high-availability support.
-    /// The response is either PrimaryInfoGetResponse or ErrorResponse
+    /// The response is either a PrimaryInfoGetResponse or an ErrorResponse.
     /// <see cref="PrimaryInfoGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:502""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:440""}]")]
     public class PrimaryInfoGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private bool _isPrivate;
 
         [XmlElement(ElementName = "isPrivate", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:502")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:440")]
         public bool IsPrivate
         {
             get => _isPrivate;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isAddressInfoRequested;
 
         [XmlElement(ElementName = "isAddressInfoRequested", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:502")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:440")]
         public bool IsAddressInfoRequested
         {
             get => _isAddressInfoRequested;

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7c509136e6ce6be616e313c3b28a0449:64""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7c509136e6ce6be616e313c3b28a0449:65""}]")]
     public class GroupDirectoryNumberHuntingGetAvailableUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"7c509136e6ce6be616e313c3b28a0449:64")]
+        [Group(@"7c509136e6ce6be616e313c3b28a0449:65")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;

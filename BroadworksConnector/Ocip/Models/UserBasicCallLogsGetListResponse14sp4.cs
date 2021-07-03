@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f8236d2e87356bf980f5d808d1d0ceb3:57""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f8236d2e87356bf980f5d808d1d0ceb3:59""}]")]
     public class UserBasicCallLogsGetListResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "placed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f8236d2e87356bf980f5d808d1d0ceb3:57")]
+        [Group(@"f8236d2e87356bf980f5d808d1d0ceb3:59")]
         public List<BroadWorksConnector.Ocip.Models.CallLogsEntry> Placed
         {
             get => _placed;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "received", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f8236d2e87356bf980f5d808d1d0ceb3:57")]
+        [Group(@"f8236d2e87356bf980f5d808d1d0ceb3:59")]
         public List<BroadWorksConnector.Ocip.Models.CallLogsEntry> Received
         {
             get => _received;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "missed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f8236d2e87356bf980f5d808d1d0ceb3:57")]
+        [Group(@"f8236d2e87356bf980f5d808d1d0ceb3:59")]
         public List<BroadWorksConnector.Ocip.Models.CallLogsEntry> Missed
         {
             get => _missed;

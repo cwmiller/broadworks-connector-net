@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3546""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4401""}]")]
     public class GroupDeviceTypeFileGetResponse16sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3546")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4401")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource
         {
             get => _fileSource;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3546")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4401")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ConfigurationFileName
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _accessUrl;
 
         [XmlElement(ElementName = "accessUrl", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3546")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4401")]
         [MinLength(1)]
         [MaxLength(256)]
         public string AccessUrl
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repositoryUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3546")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4401")]
         [MinLength(1)]
         [MaxLength(256)]
         public string RepositoryUrl
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "templateUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3546")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4401")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TemplateUrl

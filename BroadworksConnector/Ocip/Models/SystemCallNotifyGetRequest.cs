@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""26f62134ab1693f4bdddc7c70b20d2eb:99""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""26f62134ab1693f4bdddc7c70b20d2eb:100""}]")]
     public class SystemCallNotifyGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 

@@ -8,6 +8,10 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Delete one or more announcements from the user announcement repository
+    /// 
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// announcementFileExternalId
+    /// 
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -15,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:495""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:526"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:528""}]}]")]
     public class UserAnnouncementFileDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:495")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:526")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<BroadWorksConnector.Ocip.Models.AnnouncementFileKey> _announcementFileKey = new List<BroadWorksConnector.Ocip.Models.AnnouncementFileKey>();
 
         [XmlElement(ElementName = "announcementFileKey", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:495")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:528")]
         public List<BroadWorksConnector.Ocip.Models.AnnouncementFileKey> AnnouncementFileKey
         {
             get => _announcementFileKey;
@@ -54,6 +58,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool AnnouncementFileKeySpecified { get; set; }
+
+        private List<string> _announcementFileExternalId = new List<string>();
+
+        [XmlElement(ElementName = "announcementFileExternalId", IsNullable = false, Namespace = "")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:528")]
+        [MaxLength(36)]
+        public List<string> AnnouncementFileExternalId
+        {
+            get => _announcementFileExternalId;
+            set
+            {
+                AnnouncementFileExternalIdSpecified = true;
+                _announcementFileExternalId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AnnouncementFileExternalIdSpecified { get; set; }
 
     }
 }

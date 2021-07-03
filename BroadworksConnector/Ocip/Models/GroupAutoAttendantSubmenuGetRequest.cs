@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:440""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:1377""}]")]
     public class GroupAutoAttendantSubmenuGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:440")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:1377")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _submenuId;
 
         [XmlElement(ElementName = "submenuId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:440")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:1377")]
         [MinLength(1)]
         [MaxLength(40)]
         public string SubmenuId

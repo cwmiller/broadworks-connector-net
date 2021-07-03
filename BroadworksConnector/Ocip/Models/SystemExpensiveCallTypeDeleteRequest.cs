@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8833""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9862""}]")]
     public class SystemExpensiveCallTypeDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _alternateCallIndicator;
 
         [XmlElement(ElementName = "alternateCallIndicator", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8833")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9862")]
         [MinLength(1)]
         [MaxLength(64)]
         public string AlternateCallIndicator

@@ -8,19 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the SystemSubscriberGetProvisioningParametersRequest.
+    /// 
+    /// Replaced by: SystemSubscriberGetProvisioningParametersResponse24
     /// <see cref="SystemSubscriberGetProvisioningParametersRequest"/>
+    /// <see cref="SystemSubscriberGetProvisioningParametersResponse24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:17082""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35272""}]")]
     public class SystemSubscriberGetProvisioningParametersResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _configurableCLIDNormalization;
 
         [XmlElement(ElementName = "configurableCLIDNormalization", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17082")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35272")]
         public bool ConfigurableCLIDNormalization
         {
             get => _configurableCLIDNormalization;

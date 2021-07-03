@@ -51,6 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByServiceProviderId))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByServiceProviderName))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByServiceStatus))]
+    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByTrunkGroupName))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByUserDepartment))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByUserFirstName))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByUserId))]
@@ -59,14 +60,14 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByUserPersonalPhoneListNumber))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByYahooId))]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""58293b6da8bb02a6430b3eb1beb91194:723""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""58293b6da8bb02a6430b3eb1beb91194:737""}]")]
     public abstract class SortCriteria
     {
 
         private bool _isAscending;
 
         [XmlElement(ElementName = "isAscending", IsNullable = false, Namespace = "")]
-        [Group(@"58293b6da8bb02a6430b3eb1beb91194:723")]
+        [Group(@"58293b6da8bb02a6430b3eb1beb91194:737")]
         public bool IsAscending
         {
             get => _isAscending;
@@ -83,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isCaseSensitive;
 
         [XmlElement(ElementName = "isCaseSensitive", IsNullable = false, Namespace = "")]
-        [Group(@"58293b6da8bb02a6430b3eb1beb91194:723")]
+        [Group(@"58293b6da8bb02a6430b3eb1beb91194:737")]
         public bool IsCaseSensitive
         {
             get => _isCaseSensitive;

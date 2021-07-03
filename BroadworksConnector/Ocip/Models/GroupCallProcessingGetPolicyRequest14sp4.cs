@@ -8,8 +8,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request the group level data associated with Call Processing Policy.
-    /// The response is either a GroupCallProcessingGetPolicyResponse14sp4 or an
-    /// ErrorResponse.
+    /// The response is either a GroupCallProcessingGetPolicyResponse14sp4 or an ErrorResponse.
     /// Replaced By : GroupCallProcessingGetPolicyRequest15
     /// <see cref="GroupCallProcessingGetPolicyResponse14sp4"/>
     /// <see cref="ErrorResponse"/>
@@ -18,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1241""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:7509""}]")]
     public class GroupCallProcessingGetPolicyRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1241")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7509")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1241")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7509")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

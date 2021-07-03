@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:2703""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3499""}]")]
     public class GroupCustomContactDirectoryAddRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2703")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3499")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2703")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3499")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2703")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3499")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2703")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3499")]
         public List<BroadWorksConnector.Ocip.Models.CustomContactDirectoryEntry> Entry
         {
             get => _entry;

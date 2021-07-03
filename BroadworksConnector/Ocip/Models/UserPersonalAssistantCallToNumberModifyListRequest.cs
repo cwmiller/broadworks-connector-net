@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:162""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:163""}]")]
     public class UserPersonalAssistantCallToNumberModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:162")]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:163")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callToNumberList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:162")]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:163")]
         public BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList CallToNumberList
         {
             get => _callToNumberList;

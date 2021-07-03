@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1232""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1662""}]")]
     public class SystemAccessDeviceMonitorParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pollingIntervalMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1232")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1662")]
         [MinInclusive(0)]
         [MaxInclusive(1440)]
         public int PollingIntervalMinutes

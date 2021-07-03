@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6297""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:8247""}]")]
     public class SystemDomainGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "systemDefaultDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6297")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8247")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SystemDefaultDomain
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6297")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8247")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> Domain

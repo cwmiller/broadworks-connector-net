@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:23387""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:42401""}]")]
     public class UserEnhancedCallLogsGetListRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23387")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42401")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23387")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42401")]
         public BroadWorksConnector.Ocip.Models.CallLogsType CallLogType
         {
             get => _callLogType;
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23387")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42401")]
         public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
         {
             get => _responsePagingControl;

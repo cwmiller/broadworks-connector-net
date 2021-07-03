@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8222""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9291""}]")]
     public class SystemDnGetSummaryListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -33,9 +33,9 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8222")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9291")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string ResellerId
         {
             get => _resellerId;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8222")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9291")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn
         {
             get => _searchCriteriaDn;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaServiceProviderId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8222")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9291")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId
         {
             get => _searchCriteriaServiceProviderId;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactOrganizationType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8222")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9291")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaExactOrganizationType SearchCriteriaExactOrganizationType
         {
             get => _searchCriteriaExactOrganizationType;

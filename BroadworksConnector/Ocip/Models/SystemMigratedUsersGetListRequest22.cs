@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11214""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12255""}]")]
     public class SystemMigratedUsersGetListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userListSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11214")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12255")]
         [MinInclusive(1)]
         [MaxInclusive(10000)]
         public int UserListSizeLimit

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7310""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:42833""}]")]
     public class UserEnhancedCallLogsGetListResponse21ExtendedEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extendedCallLog", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7310")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42833")]
         public List<BroadWorksConnector.Ocip.Models.ExtendedMixedCallLogsEntry21> ExtendedCallLog
         {
             get => _extendedCallLog;

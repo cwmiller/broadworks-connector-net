@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Tests
             Assert.False(results.Success);
             Assert.IsType<FieldNotSetError>(results.Errors.Single());
         }
-   
+
         [Fact]
         public void TestRequirementWithArrayMet()
         {
@@ -296,7 +296,7 @@ namespace BroadWorksConnector.Tests
             Assert.False(results.Success);
             Assert.IsType<LengthError>(results.Errors.Single());
         }
-        
+
         [Fact]
         public void TestMinLengthFailure()
         {
@@ -313,7 +313,7 @@ namespace BroadWorksConnector.Tests
 
         [Fact]
         public void TestMinLengthSuccess()
-        { 
+        {
             var request = new LoginRequest14sp4()
             {
                 UserId = "a"

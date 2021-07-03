@@ -5,6 +5,9 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Network Transport Protocol.
+    /// 
+    /// The following values are only used in AS data mode and will fail in XS data mode:
+    /// TLS
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]

@@ -7,21 +7,21 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Response to SystemCallCenterReportingServerGetListRequest. The table columns are:
+    /// Response to SystemCallCenterReportingServerGetListRequest.  The table columns are:
     /// "Name", "URL", "Net Address", and "Description".
     /// <see cref="SystemCallCenterReportingServerGetListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26014""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:20989""}]")]
     public class SystemCallCenterReportingServerGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _reportingServerTable;
 
         [XmlElement(ElementName = "reportingServerTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26014")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20989")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ReportingServerTable
         {
             get => _reportingServerTable;

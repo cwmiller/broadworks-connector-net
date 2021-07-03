@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1653""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1761""}]")]
     public class UserEnterpriseCommonPhoneListGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1653")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1761")]
         public int TotalNumberOfRows
         {
             get => _totalNumberOfRows;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _enterpriseCommonPhoneListTable;
 
         [XmlElement(ElementName = "enterpriseCommonPhoneListTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1653")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1761")]
         public BroadWorksConnector.Ocip.Models.C.OCITable EnterpriseCommonPhoneListTable
         {
             get => _enterpriseCommonPhoneListTable;

@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:484""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:422""}]")]
     public class PasswordModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:484")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:422")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "oldPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:484")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:422")]
         [MinLength(1)]
         [MaxLength(60)]
         public string OldPassword
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _newPassword;
 
         [XmlElement(ElementName = "newPassword", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:484")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:422")]
         [MinLength(1)]
         [MaxLength(60)]
         public string NewPassword

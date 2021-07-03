@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:667""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:726""}]")]
     public class SearchCriteriaExactCallCenterReportTemplateKey : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateKey _reportTemplate;
 
         [XmlElement(ElementName = "reportTemplate", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:667")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:726")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateKey ReportTemplate
         {
             get => _reportTemplate;

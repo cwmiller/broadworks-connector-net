@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11018""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12059""}]")]
     public class SystemMediaSetAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _setName;
 
         [XmlElement(ElementName = "setName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11018")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12059")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SetName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _mediaName = new List<string>();
 
         [XmlElement(ElementName = "mediaName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11018")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12059")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> MediaName

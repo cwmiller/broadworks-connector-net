@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4131""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4948""}]")]
     public class ServiceProviderNetworkClassOfServiceAssignListToAllGroupsRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4131")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4948")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _networkClassOfService = new List<string>();
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4131")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4948")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> NetworkClassOfService

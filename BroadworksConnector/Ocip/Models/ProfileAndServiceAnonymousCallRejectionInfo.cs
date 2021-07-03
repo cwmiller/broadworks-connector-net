@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4029""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4213""}]")]
     public class ProfileAndServiceAnonymousCallRejectionInfo
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4029")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4213")]
         public bool IsActive
         {
             get => _isActive;

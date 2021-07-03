@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3696""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3735""}]")]
     public class UserScheduleGetListResponse17sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scheduleGlobalKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3696")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3735")]
         public List<BroadWorksConnector.Ocip.Models.ScheduleGlobalKey> ScheduleGlobalKey
         {
             get => _scheduleGlobalKey;

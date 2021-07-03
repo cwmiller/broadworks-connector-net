@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12942""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14029""}]")]
     public class SystemOfficeZoneModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _officeZoneName;
 
         [XmlElement(ElementName = "officeZoneName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12942")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14029")]
         [MinLength(1)]
         [MaxLength(40)]
         public string OfficeZoneName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newOfficeZoneName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12942")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14029")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewOfficeZoneName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12942")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14029")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "replacementZoneList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12942")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14029")]
         public BroadWorksConnector.Ocip.Models.ReplacementZoneList ReplacementZoneList
         {
             get => _replacementZoneList;
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "primaryZoneName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12942")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14029")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PrimaryZoneName

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:6467""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:34855""}]")]
     public class SystemSMDIAddACLEntryRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6467")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34855")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6467")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34855")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

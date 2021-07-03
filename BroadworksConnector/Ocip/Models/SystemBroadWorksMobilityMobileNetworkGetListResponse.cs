@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:879""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:1124""}]")]
     public class SystemBroadWorksMobilityMobileNetworkGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _mobileNetworkTable;
 
         [XmlElement(ElementName = "mobileNetworkTable", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:879")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1124")]
         public BroadWorksConnector.Ocip.Models.C.OCITable MobileNetworkTable
         {
             get => _mobileNetworkTable;

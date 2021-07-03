@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2423""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2776""}]")]
     public class SystemBwDiameterPeerModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
 
         [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2423")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2776")]
         public BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance Instance
         {
             get => _instance;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _identity;
 
         [XmlElement(ElementName = "identity", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2423")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2776")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Identity
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ipAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2423")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2776")]
         [MinLength(1)]
         [MaxLength(39)]
         public string IpAddress
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2423")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2776")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int Port
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2423")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2776")]
         public bool Enabled
         {
             get => _enabled;
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2423")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2776")]
         public bool Secure
         {
             get => _secure;

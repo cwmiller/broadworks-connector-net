@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1296""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1726""}]")]
     public class SystemAccessDeviceTagSetModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1296")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1726")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagSetName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1296")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1726")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSetName

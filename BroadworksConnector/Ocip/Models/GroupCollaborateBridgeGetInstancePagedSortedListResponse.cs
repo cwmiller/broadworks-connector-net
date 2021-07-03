@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:377""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:378""}]")]
     public class GroupCollaborateBridgeGetInstancePagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _collaborateBridgeTable;
 
         [XmlElement(ElementName = "collaborateBridgeTable", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:377")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:378")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CollaborateBridgeTable
         {
             get => _collaborateBridgeTable;

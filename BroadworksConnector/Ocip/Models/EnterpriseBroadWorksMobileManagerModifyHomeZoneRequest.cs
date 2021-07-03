@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:350""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:351""}]")]
     public class EnterpriseBroadWorksMobileManagerModifyHomeZoneRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:350")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:351")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _homeZoneId;
 
         [XmlElement(ElementName = "homeZoneId", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:350")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:351")]
         public string HomeZoneId
         {
             get => _homeZoneId;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "homeZoneDomainName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:350")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:351")]
         [MinLength(1)]
         [MaxLength(100)]
         public string HomeZoneDomainName
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobileCountryCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:350")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:351")]
         [MinLength(1)]
         [MaxLength(3)]
         public string MobileCountryCode
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobileNetworkCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:350")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:351")]
         [MinLength(1)]
         [MaxLength(3)]
         public string MobileNetworkCode
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "locationAreaCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:350")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:351")]
         [MinLength(1)]
         [MaxLength(5)]
         public string LocationAreaCode
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "cellIdentity", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:350")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:351")]
         [MinLength(1)]
         [MaxLength(5)]
         public string CellIdentity

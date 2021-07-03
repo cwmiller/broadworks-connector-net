@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12750""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13841""}]")]
     public class SystemOCIReportingParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverPort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12750")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13841")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int ServerPort
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableConnectionPing", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12750")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13841")]
         public bool EnableConnectionPing
         {
             get => _enableConnectionPing;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "connectionPingIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12750")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13841")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ConnectionPingIntervalSeconds
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alterPasswords", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12750")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13841")]
         public bool AlterPasswords
         {
             get => _alterPasswords;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enablePublicIdentityReporting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12750")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13841")]
         public bool EnablePublicIdentityReporting
         {
             get => _enablePublicIdentityReporting;
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12750")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13841")]
         public bool Secure
         {
             get => _secure;

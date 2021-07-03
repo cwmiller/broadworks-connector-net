@@ -4,8 +4,7 @@ using System.Xml.Serialization;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Different type of user and virtual subscriber which could have a set of call processing policy profile
-    /// defined in BroadWorks.
+    /// Different type of user and virtual subscriber which could have a set of call processing policy profile defined in BroadWorks.
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]

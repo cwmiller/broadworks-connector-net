@@ -8,8 +8,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get the list of users that are unreachable from the primary application server.
-    /// The response is a SystemGeographicRedundancyUnreachableFromPrimaryGetUserListResponse or an
-    /// ErrorResponse.
+    /// The response is a SystemGeographicRedundancyUnreachableFromPrimaryGetUserListResponse or an ErrorResponse.
     /// 
     /// Replaced by: SystemGeographicRedundancyUnreachableFromPrimaryGetUserListRequest22 in AS data mode
     /// <see cref="SystemGeographicRedundancyUnreachableFromPrimaryGetUserListResponse"/>
@@ -19,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38732""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26999""}]")]
     public class SystemGeographicRedundancyUnreachableFromPrimaryGetUserListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 

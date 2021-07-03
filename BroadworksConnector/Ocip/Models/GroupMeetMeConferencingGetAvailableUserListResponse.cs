@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:142""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:143""}]")]
     public class GroupMeetMeConferencingGetAvailableUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:142")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:143")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;

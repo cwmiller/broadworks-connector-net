@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4555""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2142""}]")]
     public class GroupCommunicationBarringAuthorizationCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4555")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2142")]
         public List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> Code
         {
             get => _code;

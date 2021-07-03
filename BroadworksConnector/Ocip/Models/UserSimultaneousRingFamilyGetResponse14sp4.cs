@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:17556""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:46354""}]")]
     public class UserSimultaneousRingFamilyGetResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17556")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46354")]
         public bool IsActive
         {
             get => _isActive;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SimultaneousRingSelection _incomingCalls;
 
         [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17556")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46354")]
         public BroadWorksConnector.Ocip.Models.SimultaneousRingSelection IncomingCalls
         {
             get => _incomingCalls;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
 
         [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17556")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46354")]
         public BroadWorksConnector.Ocip.Models.C.OCITable PhoneNumberTable
         {
             get => _phoneNumberTable;

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38709""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25632""}]")]
     public class SystemCrInterfaceGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _crAuditEnabled;
 
         [XmlElement(ElementName = "crAuditEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38709")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25632")]
         public bool CrAuditEnabled
         {
             get => _crAuditEnabled;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _crAuditIntervalMilliseconds;
 
         [XmlElement(ElementName = "crAuditIntervalMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38709")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25632")]
         [MinInclusive(500)]
         [MaxInclusive(60000)]
         public int CrAuditIntervalMilliseconds
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _crAuditTimeoutMilliseconds;
 
         [XmlElement(ElementName = "crAuditTimeoutMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38709")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25632")]
         [MinInclusive(500)]
         [MaxInclusive(10000)]
         public int CrAuditTimeoutMilliseconds
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _crConnectionEnabled;
 
         [XmlElement(ElementName = "crConnectionEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38709")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25632")]
         public bool CrConnectionEnabled
         {
             get => _crConnectionEnabled;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _crConnectionTimeoutMilliseconds;
 
         [XmlElement(ElementName = "crConnectionTimeoutMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38709")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25632")]
         [MinInclusive(1000)]
         [MaxInclusive(32000)]
         public int CrConnectionTimeoutMilliseconds

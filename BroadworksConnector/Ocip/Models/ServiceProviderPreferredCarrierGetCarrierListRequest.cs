@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:190""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:191""}]")]
     public class ServiceProviderPreferredCarrierGetCarrierListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:190")]
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:191")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:190")]
+        [Group(@"74a46a9bfccb54713c1d19735843f1df:191")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode

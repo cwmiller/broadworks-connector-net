@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4335""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5153""}]")]
     public class ServiceProviderNumberPortabilityQueryModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4335")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5153")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForOutgoingCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4335")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5153")]
         public bool EnableNumberPortabilityQueryForOutgoingCalls
         {
             get => _enableNumberPortabilityQueryForOutgoingCalls;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForIncomingCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4335")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5153")]
         public bool EnableNumberPortabilityQueryForIncomingCalls
         {
             get => _enableNumberPortabilityQueryForIncomingCalls;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForNetworkCallsOnly", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4335")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5153")]
         public bool EnableNumberPortabilityQueryForNetworkCallsOnly
         {
             get => _enableNumberPortabilityQueryForNetworkCallsOnly;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deleteDigitPattern", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4335")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5153")]
         [MinLength(1)]
         [MaxLength(160)]
         public List<string> DeleteDigitPattern

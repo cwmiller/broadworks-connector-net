@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1371""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1798""}]")]
     public class GroupAdminModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1371")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1798")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1371")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1798")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1371")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1798")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1371")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1798")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1371")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1798")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language

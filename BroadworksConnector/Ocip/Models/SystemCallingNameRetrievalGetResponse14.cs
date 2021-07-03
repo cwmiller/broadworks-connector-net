@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:14892""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:21066""}]")]
     public class SystemCallingNameRetrievalGetResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _queryTimerMilliSeconds;
 
         [XmlElement(ElementName = "queryTimerMilliSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14892")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
         [MinInclusive(500)]
         [MaxInclusive(5000)]
         public int QueryTimerMilliSeconds
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14892")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServerNetAddress
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverPort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14892")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int ServerPort
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.TransportProtocol _serverTransportProtocol;
 
         [XmlElement(ElementName = "serverTransportProtocol", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14892")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
         public BroadWorksConnector.Ocip.Models.TransportProtocol ServerTransportProtocol
         {
             get => _serverTransportProtocol;

@@ -14,19 +14,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// The "Mobile Network" column contains the Mobile Network the number belongs to.
     /// The "Mobile Country Code" column indicates the dialing prefix for the mobile number.
     /// The "Mobile National Prefix" column indicates the digit sequence to be dialed before the mobile number.
+    /// Replaced by: EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse22
     /// <see cref="EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListRequest"/>
+    /// <see cref="EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:268""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2049""}]")]
     public class EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _availableMobileSubscriberDirectoryNumberTable;
 
         [XmlElement(ElementName = "availableMobileSubscriberDirectoryNumberTable", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:268")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2049")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AvailableMobileSubscriberDirectoryNumberTable
         {
             get => _availableMobileSubscriberDirectoryNumberTable;

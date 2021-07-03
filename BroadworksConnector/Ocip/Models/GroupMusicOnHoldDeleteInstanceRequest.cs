@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""66fe518a637c74cc4b2c97aa7f68fc49:74""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""66fe518a637c74cc4b2c97aa7f68fc49:78""}]")]
     public class GroupMusicOnHoldDeleteInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:74")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:78")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:74")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:78")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
         [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:74")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:78")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey Department
         {
             get => _department;

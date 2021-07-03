@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1120""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1209""}]")]
     public class SearchCriteriaExactServiceProviderAdminType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private BroadWorksConnector.Ocip.Models.ServiceProviderAdminType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1120")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:1209")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminType Type
         {
             get => _type;

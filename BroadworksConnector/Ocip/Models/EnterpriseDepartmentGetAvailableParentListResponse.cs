@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:686""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:687""}]")]
     public class EnterpriseDepartmentGetAvailableParentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:686")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:687")]
         public List<BroadWorksConnector.Ocip.Models.DepartmentKey> DepartmentKey
         {
             get => _departmentKey;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fullPathName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:686")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:687")]
         [MinLength(1)]
         public List<string> FullPathName
         {

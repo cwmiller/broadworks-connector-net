@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38328""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:23862""}]")]
     public class SystemCallProcessingPolicyProfileUserProfileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38328")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23862")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

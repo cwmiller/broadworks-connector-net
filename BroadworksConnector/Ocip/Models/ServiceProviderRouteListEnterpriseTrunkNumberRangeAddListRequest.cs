@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3f28429898a57a7f7846d3877b22df9f:586""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6185""}]")]
     public class ServiceProviderRouteListEnterpriseTrunkNumberRangeAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:586")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6185")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberRange", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:586")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6185")]
         public List<BroadWorksConnector.Ocip.Models.DNRange> NumberRange
         {
             get => _numberRange;

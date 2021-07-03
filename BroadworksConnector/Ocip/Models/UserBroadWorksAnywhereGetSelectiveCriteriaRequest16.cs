@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3381""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:12538""}]")]
     public class UserBroadWorksAnywhereGetSelectiveCriteriaRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3381")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:12538")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3381")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:12538")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3381")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:12538")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName

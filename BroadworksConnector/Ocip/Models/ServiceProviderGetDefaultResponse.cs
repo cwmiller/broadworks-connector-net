@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3653""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4431""}]")]
     public class ServiceProviderGetDefaultResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isEnterprise;
 
         [XmlElement(ElementName = "isEnterprise", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3653")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4431")]
         public bool IsEnterprise
         {
             get => _isEnterprise;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3653")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4431")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultDomain

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:743""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:809""}]")]
     public class UserAnnouncementRepositoryGetSettingsResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _totalFileSize;
 
         [XmlElement(ElementName = "totalFileSize", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:743")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:809")]
         public int TotalFileSize
         {
             get => _totalFileSize;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxAudioFileSize;
 
         [XmlElement(ElementName = "maxAudioFileSize", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:743")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:809")]
         public int MaxAudioFileSize
         {
             get => _maxAudioFileSize;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxVideoFileSize;
 
         [XmlElement(ElementName = "maxVideoFileSize", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:743")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:809")]
         public int MaxVideoFileSize
         {
             get => _maxVideoFileSize;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxFileSize;
 
         [XmlElement(ElementName = "maxFileSize", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:743")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:809")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int MaxFileSize

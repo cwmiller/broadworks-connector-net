@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1015""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1104""}]")]
     public class SearchCriteriaExactMobileNetwork : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private string _mobileNetworkName;
 
         [XmlElement(ElementName = "mobileNetworkName", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1015")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:1104")]
         [MinLength(1)]
         [MaxLength(80)]
         public string MobileNetworkName

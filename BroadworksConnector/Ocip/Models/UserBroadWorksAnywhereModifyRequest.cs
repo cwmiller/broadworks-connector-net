@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:570""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:571""}]")]
     public class UserBroadWorksAnywhereModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:570")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:571")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertAllLocationsForClickToDialCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:570")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:571")]
         public bool AlertAllLocationsForClickToDialCalls
         {
             get => _alertAllLocationsForClickToDialCalls;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertAllLocationsForGroupPagingCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:570")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:571")]
         public bool AlertAllLocationsForGroupPagingCalls
         {
             get => _alertAllLocationsForGroupPagingCalls;

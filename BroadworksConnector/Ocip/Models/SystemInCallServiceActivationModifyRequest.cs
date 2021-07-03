@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Modifies the system's DTMF based in-call service activation trigger attributes.
-    /// The response is either a SuccessResponse or an ErrorResponse.
+    /// Modifies the system's DTMF based in-call service activation trigger  attributes.The response is either a SuccessResponse or an ErrorResponse.
     /// Replaced by: SystemInCallServiceActivationModifyRequest17
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -17,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:15581""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27330""}]")]
     public class SystemInCallServiceActivationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -25,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultActivationDigits", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15581")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27330")]
         [MinLength(1)]
         [MaxLength(8)]
         public string DefaultActivationDigits

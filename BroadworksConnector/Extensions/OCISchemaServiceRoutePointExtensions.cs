@@ -34,9 +34,12 @@ namespace BroadWorksConnector
         /// those decisions itself.
         /// The domain is required in the serviceUserId.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// The Following elements are only used in AS data mode and ignored in XS data mode:
+        /// - sendCallAdmissionNotification, use value ‘false’ in XS data mode.
+        /// - callAdmissionTimerSeconds, use value ‘3’ in XS data mode.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupRoutePointAddInstanceRequest22Async instead.")]
-        public static async Task<SuccessResponse> GroupRoutePointAddInstanceRequest22(this OcipClient client, GroupRoutePointAddInstanceRequest22 request)
+        [Obsolete("This method is deprecated. Use GroupRoutePointAddInstanceRequest23Async instead.")]
+        public static async Task<SuccessResponse> GroupRoutePointAddInstanceRequest23(this OcipClient client, GroupRoutePointAddInstanceRequest23 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -48,8 +51,11 @@ namespace BroadWorksConnector
         /// those decisions itself.
         /// The domain is required in the serviceUserId.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// The Following elements are only used in AS data mode and ignored in XS data mode:
+        /// - sendCallAdmissionNotification, use value ‘false’ in XS data mode.
+        /// - callAdmissionTimerSeconds, use value ‘3’ in XS data mode.
         /// </summary>
-        public static async Task<SuccessResponse> GroupRoutePointAddInstanceRequest22Async(this OcipClient client, GroupRoutePointAddInstanceRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> GroupRoutePointAddInstanceRequest23Async(this OcipClient client, GroupRoutePointAddInstanceRequest23 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -203,24 +209,6 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get a route point's announcement settings.
-        /// The response is either a GroupRoutePointGetAnnouncementResponse20 or an ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use GroupRoutePointGetAnnouncementRequest20Async instead.")]
-        public static async Task<GroupRoutePointGetAnnouncementResponse20> GroupRoutePointGetAnnouncementRequest20(this OcipClient client, GroupRoutePointGetAnnouncementRequest20 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupRoutePointGetAnnouncementResponse20;
-        }
-
-        /// <summary>
-        /// Get a route point's announcement settings.
-        /// The response is either a GroupRoutePointGetAnnouncementResponse20 or an ErrorResponse.
-        /// </summary>
-        public static async Task<GroupRoutePointGetAnnouncementResponse20> GroupRoutePointGetAnnouncementRequest20Async(this OcipClient client, GroupRoutePointGetAnnouncementRequest20 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupRoutePointGetAnnouncementResponse20;
-        }
-        /// <summary>
-        /// Get a route point's announcement settings.
         /// The response is either a GroupRoutePointGetAnnouncementResponse22 or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupRoutePointGetAnnouncementRequest22Async instead.")]
@@ -254,24 +242,6 @@ namespace BroadWorksConnector
         public static async Task<GroupRoutePointGetDNISAgentListResponse> GroupRoutePointGetDNISAgentListRequestAsync(this OcipClient client, GroupRoutePointGetDNISAgentListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupRoutePointGetDNISAgentListResponse;
-        }
-        /// <summary>
-        /// Get a route point's DNIS Announcements
-        /// The response is either a GroupRoutePointGetDNISAnnouncementResponse20 or an ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use GroupRoutePointGetDNISAnnouncementRequest20Async instead.")]
-        public static async Task<GroupRoutePointGetDNISAnnouncementResponse20> GroupRoutePointGetDNISAnnouncementRequest20(this OcipClient client, GroupRoutePointGetDNISAnnouncementRequest20 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupRoutePointGetDNISAnnouncementResponse20;
-        }
-
-        /// <summary>
-        /// Get a route point's DNIS Announcements
-        /// The response is either a GroupRoutePointGetDNISAnnouncementResponse20 or an ErrorResponse.
-        /// </summary>
-        public static async Task<GroupRoutePointGetDNISAnnouncementResponse20> GroupRoutePointGetDNISAnnouncementRequest20Async(this OcipClient client, GroupRoutePointGetDNISAnnouncementRequest20 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupRoutePointGetDNISAnnouncementResponse20;
         }
         /// <summary>
         /// Get a route point's DNIS Announcements
@@ -370,9 +340,12 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to get all the information of a Route Point instance.
         /// The response is either GroupRoutePointGetInstanceResponse19sp1 or ErrorResponse.
+        /// The Following elements are only used in AS data mode and ignored in XS data mode:
+        /// - sendCallAdmissionNotification, use value ‘false’ in XS data mode.
+        /// - callAdmissionTimerSeconds, use value ‘3’ in XS data mode.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupRoutePointGetInstanceRequest22Async instead.")]
-        public static async Task<GroupRoutePointGetInstanceResponse19sp1> GroupRoutePointGetInstanceRequest22(this OcipClient client, GroupRoutePointGetInstanceRequest22 request)
+        [Obsolete("This method is deprecated. Use GroupRoutePointGetInstanceRequest23Async instead.")]
+        public static async Task<GroupRoutePointGetInstanceResponse19sp1> GroupRoutePointGetInstanceRequest23(this OcipClient client, GroupRoutePointGetInstanceRequest23 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as GroupRoutePointGetInstanceResponse19sp1;
         }
@@ -380,8 +353,11 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to get all the information of a Route Point instance.
         /// The response is either GroupRoutePointGetInstanceResponse19sp1 or ErrorResponse.
+        /// The Following elements are only used in AS data mode and ignored in XS data mode:
+        /// - sendCallAdmissionNotification, use value ‘false’ in XS data mode.
+        /// - callAdmissionTimerSeconds, use value ‘3’ in XS data mode.
         /// </summary>
-        public static async Task<GroupRoutePointGetInstanceResponse19sp1> GroupRoutePointGetInstanceRequest22Async(this OcipClient client, GroupRoutePointGetInstanceRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupRoutePointGetInstanceResponse19sp1> GroupRoutePointGetInstanceRequest23Async(this OcipClient client, GroupRoutePointGetInstanceRequest23 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupRoutePointGetInstanceResponse19sp1;
         }
@@ -552,6 +528,9 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to modify a Route Point instance.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// The Following elements are only used in AS data mode and ignored in XS data mode:
+        /// - sendCallAdmissionNotification, use value ‘false’ in XS data mode.
+        /// - callAdmissionTimerSeconds, use value ‘3’ in XS data mode.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupRoutePointModifyInstanceRequest22Async instead.")]
         public static async Task<SuccessResponse> GroupRoutePointModifyInstanceRequest22(this OcipClient client, GroupRoutePointModifyInstanceRequest22 request)
@@ -562,6 +541,9 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to modify a Route Point instance.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// The Following elements are only used in AS data mode and ignored in XS data mode:
+        /// - sendCallAdmissionNotification, use value ‘false’ in XS data mode.
+        /// - callAdmissionTimerSeconds, use value ‘3’ in XS data mode.
         /// </summary>
         public static async Task<SuccessResponse> GroupRoutePointModifyInstanceRequest22Async(this OcipClient client, GroupRoutePointModifyInstanceRequest22 request, CancellationToken cancellationToken = default)
         {

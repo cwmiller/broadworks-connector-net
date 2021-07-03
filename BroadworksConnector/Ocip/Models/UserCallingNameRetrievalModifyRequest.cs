@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7abfb1e02a3465af832e0a8a8adfc741:146""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7abfb1e02a3465af832e0a8a8adfc741:147""}]")]
     public class UserCallingNameRetrievalModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:146")]
+        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:147")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:146")]
+        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:147")]
         public bool IsActive
         {
             get => _isActive;

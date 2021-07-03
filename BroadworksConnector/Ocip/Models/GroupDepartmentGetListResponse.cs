@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19441""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:9061""}]")]
     public class GroupDepartmentGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19441")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9061")]
         public List<BroadWorksConnector.Ocip.Models.DepartmentKey> DepartmentKey
         {
             get => _departmentKey;
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fullPathName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19441")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9061")]
         [MinLength(1)]
         public List<string> FullPathName
         {

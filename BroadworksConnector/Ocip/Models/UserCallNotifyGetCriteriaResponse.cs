@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11076""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:40860""}]")]
     public class UserCallNotifyGetCriteriaResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11076")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40860")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11076")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40860")]
         public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria
         {
             get => _fromDnCriteria;

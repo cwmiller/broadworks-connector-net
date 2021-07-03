@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Request the system's DTMF based in-call service activation trigger attributes.
-    /// The response is either a SystemInCallServiceActivationGetResponse or an ErrorResponse.
+    /// Request the system's DTMF based in-call service activation trigger attributes. The response is either a SystemInCallServiceActivationGetResponse or an ErrorResponse.
     /// 
     /// Replaced by: SystemInCallServiceActivationGetRequest17
     /// <see cref="SystemInCallServiceActivationGetResponse"/>
@@ -18,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:15550""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27300""}]")]
     public class SystemInCallServiceActivationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 

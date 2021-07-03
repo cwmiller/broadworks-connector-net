@@ -11,8 +11,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request the system level data associated with the COLP service.
-        /// The response is either a SystemConnectedLineIdentificationPresentationGetResponse or an
-        /// ErrorResponse.
+        /// The response is either a SystemConnectedLineIdentificationPresentationGetResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemConnectedLineIdentificationPresentationGetRequestAsync instead.")]
         public static async Task<SystemConnectedLineIdentificationPresentationGetResponse> SystemConnectedLineIdentificationPresentationGetRequest(this OcipClient client, SystemConnectedLineIdentificationPresentationGetRequest request)
@@ -22,8 +21,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request the system level data associated with the COLP service.
-        /// The response is either a SystemConnectedLineIdentificationPresentationGetResponse or an
-        /// ErrorResponse.
+        /// The response is either a SystemConnectedLineIdentificationPresentationGetResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemConnectedLineIdentificationPresentationGetResponse> SystemConnectedLineIdentificationPresentationGetRequestAsync(this OcipClient client, SystemConnectedLineIdentificationPresentationGetRequest request, CancellationToken cancellationToken = default)
         {

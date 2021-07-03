@@ -24,14 +24,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:1464""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:1669""}]")]
     public class UserBroadWorksMobilityMobileIdentityConsolidatedDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1464")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1669")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _mobileNumber;
 
         [XmlElement(ElementName = "mobileNumber", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1464")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1669")]
         [MinLength(1)]
         [MaxLength(23)]
         public string MobileNumber
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deleteExistingDevices", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1464")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1669")]
         public bool DeleteExistingDevices
         {
             get => _deleteExistingDevices;

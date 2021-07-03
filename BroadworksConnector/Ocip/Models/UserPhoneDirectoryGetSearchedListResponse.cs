@@ -28,14 +28,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3198""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3234""}]")]
     public class UserPhoneDirectoryGetSearchedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _directoryTable;
 
         [XmlElement(ElementName = "directoryTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3198")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3234")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DirectoryTable
         {
             get => _directoryTable;

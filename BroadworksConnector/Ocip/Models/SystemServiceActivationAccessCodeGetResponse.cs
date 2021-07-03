@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14843""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15985""}]")]
     public class SystemServiceActivationAccessCodeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14843")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15985")]
         public bool IsActive
         {
             get => _isActive;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "terminatingAccessCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14843")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15985")]
         [MinLength(1)]
         [MaxLength(80)]
         public string TerminatingAccessCode
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "redirectingAccessCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14843")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15985")]
         [MinLength(1)]
         [MaxLength(80)]
         public string RedirectingAccessCode
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "clickToDialAccessCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14843")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15985")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ClickToDialAccessCode

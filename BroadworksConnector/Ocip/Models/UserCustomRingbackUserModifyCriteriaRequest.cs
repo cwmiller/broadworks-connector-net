@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11275""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:42177""}]")]
     public class UserCustomRingbackUserModifyCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newCriteriaName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         [MinLength(1)]
         [MaxLength(50)]
         public string NewCriteriaName
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         public BroadWorksConnector.Ocip.Models.CriteriaFromDnModify FromDnCriteria
         {
             get => _fromDnCriteria;
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection
         {
             get => _audioSelection;
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResource AudioFile
         {
             get => _audioFile;
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection
         {
             get => _videoSelection;
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResource VideoFile
         {
             get => _videoFile;
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callWaitingAudioSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingAudioSelection
         {
             get => _callWaitingAudioSelection;
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callWaitingAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResource CallWaitingAudioFile
         {
             get => _callWaitingAudioFile;
@@ -227,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callWaitingVideoSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingVideoSelection
         {
             get => _callWaitingVideoSelection;
@@ -245,7 +245,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callWaitingVideoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11275")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42177")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResource CallWaitingVideoFile
         {
             get => _callWaitingVideoFile;

@@ -14,22 +14,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The password used for the lineport is the user's password associated with userId.
     /// 
     /// The response is a AuthenticationVerifyResponse22V2 or an ErrorResponse
+    /// Replaced by AuthenticationVerifyRequest22V3
     /// <see cref="AuthenticationVerifyRequest22V2"/>
     /// <see cref="ExternalAuthenticationAuthorizeTokenRequest"/>
     /// <see cref="AuthenticationVerifyResponse22V2"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="AuthenticationVerifyRequest22V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:60"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:61""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:65""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:69""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:73""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:76""}]}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1150"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1151""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1155""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1159""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1163""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1166""}]}]")]
     public class AuthenticationVerifyRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:76")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1166")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -48,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:69")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1159")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password
@@ -67,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:65")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1155")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -86,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _passcode;
 
         [XmlElement(ElementName = "passcode", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:65")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1155")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Passcode
@@ -105,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:69")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1159")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -124,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _loginToken;
 
         [XmlElement(ElementName = "loginToken", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:73")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1163")]
         [MinLength(1)]
         public string LoginToken
         {
@@ -142,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _sipAuthenticationUserName;
 
         [XmlElement(ElementName = "sipAuthenticationUserName", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:76")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1166")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SipAuthenticationUserName
@@ -161,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _sipAuthenticationPassword;
 
         [XmlElement(ElementName = "sipAuthenticationPassword", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:76")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1166")]
         [MinLength(1)]
         [MaxLength(60)]
         public string SipAuthenticationPassword

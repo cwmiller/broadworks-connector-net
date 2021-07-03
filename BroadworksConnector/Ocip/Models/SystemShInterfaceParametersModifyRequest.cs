@@ -7,9 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Modifies the Sh Interface system parameters. This request must be submitted on both nodes in the
-    /// redundant Application Server cluster in order for the changes to take effect on each node without
-    /// requiring a restart.
+    /// Modifies the Sh Interface system parameters.  This request must be submitted on both nodes in the redundant Application Server cluster in order for the changes to take effect on each node without requiring a restart.
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// 
     /// Replaced by: SystemShInterfaceParametersModifyRequest17
@@ -20,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:15976""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:29382""}]")]
     public class SystemShInterfaceParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -28,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hssRealm", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15976")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29382")]
         [MinLength(1)]
         [MaxLength(80)]
         public string HssRealm
@@ -48,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "requestTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15976")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29382")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int RequestTimeoutSeconds
@@ -68,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15976")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29382")]
         [MinInclusive(0)]
         [MaxInclusive(30)]
         public int PublicIdentityRefreshDelaySeconds

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10865""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11906""}]")]
     public class SystemMediaModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _mediaName;
 
         [XmlElement(ElementName = "mediaName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10865")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11906")]
         [MinLength(1)]
         [MaxLength(80)]
         public string MediaName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "codecName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10865")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11906")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CodecName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bandwidthEnforcementType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10865")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11906")]
         public BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType BandwidthEnforcementType
         {
             get => _bandwidthEnforcementType;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mediaBandwidth", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10865")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11906")]
         [MinInclusive(1)]
         [MaxInclusive(100000000)]
         public int? MediaBandwidth

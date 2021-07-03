@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3511""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4366""}]")]
     public class GroupDeviceTypeFileGetListResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _groupDeviceTypeFilesTable;
 
         [XmlElement(ElementName = "groupDeviceTypeFilesTable", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3511")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4366")]
         public BroadWorksConnector.Ocip.Models.C.OCITable GroupDeviceTypeFilesTable
         {
             get => _groupDeviceTypeFilesTable;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _groupHasCustomizableDynamicFiles;
 
         [XmlElement(ElementName = "groupHasCustomizableDynamicFiles", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3511")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4366")]
         public bool GroupHasCustomizableDynamicFiles
         {
             get => _groupHasCustomizableDynamicFiles;

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6892""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6917""}]")]
     public class UserCallCenterGetAgentSupervisorListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _agentUserId;
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6892")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6917")]
         [MinLength(1)]
         [MaxLength(161)]
         public string AgentUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6892")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6917")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

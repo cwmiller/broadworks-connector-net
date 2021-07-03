@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:67""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:125""}]")]
     public class GroupCallRecordingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:67")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:125")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name

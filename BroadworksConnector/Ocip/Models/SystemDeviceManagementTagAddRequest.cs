@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4884"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4885""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25734"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25735""}]}]")]
     public class SystemDeviceManagementTagAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private bool _systemDefaultTagSet;
 
         [XmlElement(ElementName = "systemDefaultTagSet", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4885")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25735")]
         public bool SystemDefaultTagSet
         {
             get => _systemDefaultTagSet;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4885")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25735")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSetName
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _tagName;
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4884")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25734")]
         [MinLength(1)]
         [MaxLength(64)]
         public string TagName
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4884")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25734")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TagValue

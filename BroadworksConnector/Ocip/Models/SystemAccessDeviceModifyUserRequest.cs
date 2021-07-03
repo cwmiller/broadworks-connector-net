@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1116""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1546""}]")]
     public class SystemAccessDeviceModifyUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1116")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1546")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1116")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1546")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateIdentity", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1116")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1546")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PrivateIdentity
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isPrimaryLinePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1116")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1546")]
         public bool IsPrimaryLinePort
         {
             get => _isPrimaryLinePort;

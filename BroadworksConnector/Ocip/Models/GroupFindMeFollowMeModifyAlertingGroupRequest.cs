@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:444""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:445""}]")]
     public class GroupFindMeFollowMeModifyAlertingGroupRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:444")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:445")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _alertingGroupName;
 
         [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:444")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:445")]
         [MinLength(1)]
         [MaxLength(40)]
         public string AlertingGroupName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newAlertingGroupName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:444")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:445")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewAlertingGroupName
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertingGroupDescription", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:444")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:445")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AlertingGroupDescription
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useDiversionInhibitor", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:444")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:445")]
         public bool UseDiversionInhibitor
         {
             get => _useDiversionInhibitor;
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:444")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:445")]
         public bool AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:444")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:445")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int NumberOfRings
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumberOrUserList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:444")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:445")]
         public BroadWorksConnector.Ocip.Models.FindMeFollowMeAlertingGroupReplacementOutgoingDNSIPURIorUserIdList PhoneNumberOrUserList
         {
             get => _phoneNumberOrUserList;
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:444")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:445")]
         public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation
         {
             get => _criteriaActivation;

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:2258""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:2259""}]")]
     public class OutgoingPinholeDigitPlanDigitPatternCallMeNowPermission
     {
 
         private string _digitPatternName;
 
         [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2258")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2259")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DigitPatternName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanCallMeNowPermission _permission;
 
         [XmlElement(ElementName = "permission", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2258")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2259")]
         public BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanCallMeNowPermission Permission
         {
             get => _permission;

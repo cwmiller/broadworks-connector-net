@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11495""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12571""}]")]
     public class SystemNetworkClassOfServiceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewName
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "communicationBarringProfile0", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile0
         {
             get => _communicationBarringProfile0;
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "communicationBarringProfile1", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile1
         {
             get => _communicationBarringProfile1;
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "communicationBarringProfile2", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile2
         {
             get => _communicationBarringProfile2;
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "communicationBarringProfile3", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile3
         {
             get => _communicationBarringProfile3;
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "communicationBarringProfile4", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile4
         {
             get => _communicationBarringProfile4;
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "communicationBarringProfile5", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile5
         {
             get => _communicationBarringProfile5;
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "communicationBarringProfile6", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile6
         {
             get => _communicationBarringProfile6;
@@ -211,7 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "communicationBarringProfile7", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile7
         {
             get => _communicationBarringProfile7;
@@ -229,7 +229,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "communicationBarringProfile8", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile8
         {
             get => _communicationBarringProfile8;
@@ -247,7 +247,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "communicationBarringProfile9", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         public BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile CommunicationBarringProfile9
         {
             get => _communicationBarringProfile9;
@@ -265,7 +265,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkTranslationIndex", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         [MinLength(1)]
         [MaxLength(128)]
         public string NetworkTranslationIndex
@@ -285,7 +285,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11495")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12571")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

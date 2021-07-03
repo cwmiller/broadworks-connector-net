@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:17051""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18022""}]")]
     public class SystemSubscriberGetLoginParametersResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _maxFailedLoginAttempts;
 
         [XmlElement(ElementName = "maxFailedLoginAttempts", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17051")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18022")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
         public int MaxFailedLoginAttempts
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _minLoginIdLength;
 
         [XmlElement(ElementName = "minLoginIdLength", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17051")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18022")]
         [MinInclusive(2)]
         [MaxInclusive(80)]
         public int MinLoginIdLength

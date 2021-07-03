@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4316""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5134""}]")]
     public class ServiceProviderNumberPortabilityQueryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _enableNumberPortabilityQueryForOutgoingCalls;
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForOutgoingCalls", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4316")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5134")]
         public bool EnableNumberPortabilityQueryForOutgoingCalls
         {
             get => _enableNumberPortabilityQueryForOutgoingCalls;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableNumberPortabilityQueryForIncomingCalls;
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForIncomingCalls", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4316")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5134")]
         public bool EnableNumberPortabilityQueryForIncomingCalls
         {
             get => _enableNumberPortabilityQueryForIncomingCalls;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableNumberPortabilityQueryForNetworkCallsOnly;
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForNetworkCallsOnly", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4316")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5134")]
         public bool EnableNumberPortabilityQueryForNetworkCallsOnly
         {
             get => _enableNumberPortabilityQueryForNetworkCallsOnly;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4316")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5134")]
         [MinLength(1)]
         [MaxLength(160)]
         public List<string> DigitPattern

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:30281""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11234""}]")]
     public class GroupMusicOnHoldAddInstanceRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30281")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11234")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30281")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11234")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
         [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30281")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11234")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey Department
         {
             get => _department;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isActiveDuringCallHold;
 
         [XmlElement(ElementName = "isActiveDuringCallHold", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30281")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11234")]
         public bool IsActiveDuringCallHold
         {
             get => _isActiveDuringCallHold;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isActiveDuringCallPark;
 
         [XmlElement(ElementName = "isActiveDuringCallPark", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30281")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11234")]
         public bool IsActiveDuringCallPark
         {
             get => _isActiveDuringCallPark;
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isActiveDuringBusyCampOn;
 
         [XmlElement(ElementName = "isActiveDuringBusyCampOn", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30281")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11234")]
         public bool IsActiveDuringBusyCampOn
         {
             get => _isActiveDuringBusyCampOn;
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd16 _source;
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30281")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11234")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd16 Source
         {
             get => _source;
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30281")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11234")]
         public bool UseAlternateSourceForInternalCalls
         {
             get => _useAlternateSourceForInternalCalls;
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30281")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11234")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd16 InternalSource
         {
             get => _internalSource;

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3167""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3096""}]")]
     public class SendToDistributionListMenuKeysModifyEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendMessageToSelectedDistributionList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3167")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3096")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SendMessageToSelectedDistributionList
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "selectDistributionList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3167")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3096")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SelectDistributionList
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reviewSelectedDistributionList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3167")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3096")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReviewSelectedDistributionList
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3167")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3096")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3167")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3096")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

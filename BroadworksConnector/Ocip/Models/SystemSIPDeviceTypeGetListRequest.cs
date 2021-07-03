@@ -14,6 +14,9 @@ namespace BroadWorksConnector.Ocip.Models
     /// types and the device types in the administrator's reseller meeting the search criteria are returned.
     /// See Also: SystemDeviceTypeGetAvailableListRequest22 in AS data mode, SystemDeviceTypeGetAvailableListRequest19 in XS data mode.
     /// The response is either SystemSIPDeviceTypeGetListResponse or ErrorResponse.
+    /// 
+    /// The following data elements are only used in AS data mode and ignored in XS data mode:
+    /// searchCriteriaExactDeviceTypeConfigurationOptionType
     /// <see cref="SystemDeviceTypeGetAvailableListRequest22"/>
     /// <see cref="SystemDeviceTypeGetAvailableListRequest19"/>
     /// <see cref="SystemSIPDeviceTypeGetListResponse"/>
@@ -22,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16058""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:17121""}]")]
     public class SystemSIPDeviceTypeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -30,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16058")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17121")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -49,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDeviceType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16058")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17121")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceType> SearchCriteriaDeviceType
         {
             get => _searchCriteriaDeviceType;
@@ -67,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactSignalingAddressType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16058")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17121")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaExactSignalingAddressType SearchCriteriaExactSignalingAddressType
         {
             get => _searchCriteriaExactSignalingAddressType;
@@ -85,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaResellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16058")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17121")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId
         {
             get => _searchCriteriaResellerId;
@@ -99,11 +102,29 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaResellerIdSpecified { get; set; }
 
+        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceTypeConfigurationOptionType> _searchCriteriaDeviceConfigurationOptions = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceTypeConfigurationOptionType>();
+
+        [XmlElement(ElementName = "searchCriteriaDeviceConfigurationOptions", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17121")]
+        public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceTypeConfigurationOptionType> SearchCriteriaDeviceConfigurationOptions
+        {
+            get => _searchCriteriaDeviceConfigurationOptions;
+            set
+            {
+                SearchCriteriaDeviceConfigurationOptionsSpecified = true;
+                _searchCriteriaDeviceConfigurationOptions = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool SearchCriteriaDeviceConfigurationOptionsSpecified { get; set; }
+
         private bool _includeSystemLevel;
 
         [XmlElement(ElementName = "includeSystemLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16058")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17121")]
         public bool IncludeSystemLevel
         {
             get => _includeSystemLevel;

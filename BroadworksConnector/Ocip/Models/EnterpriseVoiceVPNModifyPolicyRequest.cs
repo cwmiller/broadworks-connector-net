@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1534"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1542""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1535"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1543""}]}]")]
     public class EnterpriseVoiceVPNModifyPolicyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1534")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1535")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _locationDialingCode;
 
         [XmlElement(ElementName = "locationDialingCode", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1534")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1535")]
         [MinLength(1)]
         [MaxLength(22)]
         public string LocationDialingCode
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1534")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1535")]
         [MinInclusive(0)]
         [MaxInclusive(100)]
         public int MinExtensionLength
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1534")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1535")]
         [MinInclusive(0)]
         [MaxInclusive(100)]
         public int MaxExtensionLength
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1534")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1535")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Description
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "routeGroupId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1534")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1535")]
         [MinLength(1)]
         [MaxLength(30)]
         public string RouteGroupId
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "policySelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1534")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1535")]
         public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection PolicySelection
         {
             get => _policySelection;
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "digitManipulation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1542")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1543")]
         public List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation> DigitManipulation
         {
             get => _digitManipulation;
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1542")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1543")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TreatmentId

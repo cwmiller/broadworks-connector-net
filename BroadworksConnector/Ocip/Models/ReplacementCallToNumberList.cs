@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3112""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3727""}]")]
     public class ReplacementCallToNumberList
     {
 
         private List<BroadWorksConnector.Ocip.Models.CallToNumber> _callToNumber = new List<BroadWorksConnector.Ocip.Models.CallToNumber>();
 
         [XmlElement(ElementName = "callToNumber", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3112")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3727")]
         public List<BroadWorksConnector.Ocip.Models.CallToNumber> CallToNumber
         {
             get => _callToNumber;

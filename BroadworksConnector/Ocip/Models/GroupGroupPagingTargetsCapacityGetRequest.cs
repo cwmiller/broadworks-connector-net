@@ -10,20 +10,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request the maximum number of target users per paging group configured for a group.
     /// The response is either a GroupGroupPagingTargetsCapacityGetResponse
     /// or an ErrorResponse.
+    /// 
+    /// Replaced by: GroupGroupPagingTargetsCapacityGetRequest22 in AS data mode.
     /// <see cref="GroupGroupPagingTargetsCapacityGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupGroupPagingTargetsCapacityGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:467""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2640""}]")]
     public class GroupGroupPagingTargetsCapacityGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:467")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2640")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:467")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2640")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

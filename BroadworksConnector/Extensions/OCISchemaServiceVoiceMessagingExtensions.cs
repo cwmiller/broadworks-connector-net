@@ -713,32 +713,6 @@ namespace BroadWorksConnector
         /// Modify the user's voice messaging voice portal settings.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserVoiceMessagingUserModifyRequestAsync instead.")]
-        public static async Task<SuccessResponse> UserVoiceMessagingUserModifyRequest(this OcipClient client, UserVoiceMessagingUserModifyRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Modify the user's voice messaging advanced voice management service setting.
-        /// Modify a voice mail distribution list for a users voice message.
-        /// Modify the user's voice messaging greeting.
-        /// Modify the user's voice messaging outgoing message waiting indicator service setting.
-        /// Modify the user's voice messaging voice portal settings.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// </summary>
-        public static async Task<SuccessResponse> UserVoiceMessagingUserModifyRequestAsync(this OcipClient client, UserVoiceMessagingUserModifyRequest request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
-        }
-        /// <summary>
-        /// Modify the user's voice messaging advanced voice management service setting.
-        /// Modify a voice mail distribution list for a users voice message.
-        /// Modify the user's voice messaging greeting.
-        /// Modify the user's voice messaging outgoing message waiting indicator service setting.
-        /// Modify the user's voice messaging voice portal settings.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// </summary>
         [Obsolete("This method is deprecated. Use UserVoiceMessagingUserModifyRequest23Async instead.")]
         public static async Task<SuccessResponse> UserVoiceMessagingUserModifyRequest23(this OcipClient client, UserVoiceMessagingUserModifyRequest23 request)
         {

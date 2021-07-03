@@ -22,14 +22,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6518""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6859""}]")]
     public class SystemCountryCodeAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6518")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6859")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _countryName;
 
         [XmlElement(ElementName = "countryName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6518")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6859")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CountryName
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ringPeriodMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6518")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6859")]
         [MinInclusive(1)]
         [MaxInclusive(12000)]
         public int RingPeriodMilliseconds
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "offHookWarningTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6518")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6859")]
         [MinInclusive(1)]
         [MaxInclusive(360)]
         public int OffHookWarningTimerSeconds
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableNationalPrefix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6518")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6859")]
         public bool EnableNationalPrefix
         {
             get => _enableNationalPrefix;
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "nationalPrefix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6518")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6859")]
         [MinLength(1)]
         [MaxLength(2)]
         public string NationalPrefix
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxCallWaitingTones", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6518")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6859")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int MaxCallWaitingTones
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeBetweenCallWaitingTonesMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6518")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6859")]
         [MinInclusive(0)]
         [MaxInclusive(120000)]
         public int TimeBetweenCallWaitingTonesMilliseconds
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disableNationalPrefixForOffNetCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6518")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6859")]
         public bool DisableNationalPrefixForOffNetCalls
         {
             get => _disableNationalPrefixForOffNetCalls;

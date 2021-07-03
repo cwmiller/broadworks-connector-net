@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get the profile for a reseller.
     /// The response is either ResellerGetResponse or ErrorResponse.
+    /// 
+    /// Replaced by: ResellerGetRequest22
     /// <see cref="ResellerGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="ResellerGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:368""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16512""}]")]
     public class ResellerGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:368")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16512")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ResellerId

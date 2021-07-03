@@ -8,19 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemCallRecordingGetRequest22.
+    /// 
+    /// Replaced by: SystemCallRecordingGetResponse23
     /// <see cref="SystemCallRecordingGetRequest22"/>
+    /// <see cref="SystemCallRecordingGetResponse23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:259""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24732""}]")]
     public class SystemCallRecordingGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _continueCallAfterRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterRecordingFailure", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:259")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24732")]
         public bool ContinueCallAfterRecordingFailure
         {
             get => _continueCallAfterRecordingFailure;
@@ -37,8 +40,8 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxResponseWaitTimeMilliseconds;
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:259")]
-        [MinInclusive(1000)]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24732")]
+        [MinInclusive(50)]
         [MaxInclusive(10000)]
         public int MaxResponseWaitTimeMilliseconds
         {
@@ -56,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _continueCallAfterVideoRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterVideoRecordingFailure", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:259")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24732")]
         public bool ContinueCallAfterVideoRecordingFailure
         {
             get => _continueCallAfterVideoRecordingFailure;

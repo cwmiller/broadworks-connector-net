@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""43afb2158d313a1d1a148124d7caba1e:335""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""43afb2158d313a1d1a148124d7caba1e:279""}]")]
     public class GroupFlexibleSeatingHostModifyActiveInstanceListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:335")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:279")]
         public List<BroadWorksConnector.Ocip.Models.ServiceActivation> ServiceActivation
         {
             get => _serviceActivation;

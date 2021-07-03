@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:5749""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6087""}]")]
     public class SystemCommunicationBarringGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _directTransferScreening;
 
         [XmlElement(ElementName = "directTransferScreening", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5749")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6087")]
         public bool DirectTransferScreening
         {
             get => _directTransferScreening;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _vmCallbackScreening;
 
         [XmlElement(ElementName = "vmCallbackScreening", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5749")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6087")]
         public bool VmCallbackScreening
         {
             get => _vmCallbackScreening;

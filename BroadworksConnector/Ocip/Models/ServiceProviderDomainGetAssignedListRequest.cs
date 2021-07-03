@@ -7,22 +7,25 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Requests the list of all domains assigned to a service provider.
+    /// Requests the list of all matching domains assigned to a service provider .
     /// The response is either ServiceProviderDomainGetAssignedListResponse or ErrorResponse.
+    /// 
+    /// Replaced by ServiceProviderDomainGetAssignedListRequest22.
     /// <see cref="ServiceProviderDomainGetAssignedListResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="ServiceProviderDomainGetAssignedListRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3294""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:5673""}]")]
     public class ServiceProviderDomainGetAssignedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3294")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:5673")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

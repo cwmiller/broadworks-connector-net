@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11539""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12615""}]")]
     public class SystemNetworkDeviceMonitorParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _pollingIntervalMinutes;
 
         [XmlElement(ElementName = "pollingIntervalMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11539")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12615")]
         [MinInclusive(0)]
         [MaxInclusive(1440)]
         public int PollingIntervalMinutes
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _failedPollingIntervalMinutes;
 
         [XmlElement(ElementName = "failedPollingIntervalMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11539")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12615")]
         [MinInclusive(1)]
         [MaxInclusive(720)]
         public int FailedPollingIntervalMinutes

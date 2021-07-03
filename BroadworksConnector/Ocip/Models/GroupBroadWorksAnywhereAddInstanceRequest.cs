@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:64""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:65""}]")]
     public class GroupBroadWorksAnywhereAddInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:64")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:65")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:64")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:65")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:64")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:65")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:64")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:65")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope _broadWorksAnywhereScope;
 
         [XmlElement(ElementName = "broadWorksAnywhereScope", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:64")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:65")]
         public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope BroadWorksAnywhereScope
         {
             get => _broadWorksAnywhereScope;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt _promptForCLID;
 
         [XmlElement(ElementName = "promptForCLID", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:64")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:65")]
         public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt PromptForCLID
         {
             get => _promptForCLID;
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _silentPromptMode;
 
         [XmlElement(ElementName = "silentPromptMode", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:64")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:65")]
         public bool SilentPromptMode
         {
             get => _silentPromptMode;
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _promptForPasscode;
 
         [XmlElement(ElementName = "promptForPasscode", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:64")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:65")]
         public bool PromptForPasscode
         {
             get => _promptForPasscode;
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:64")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:65")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

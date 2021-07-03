@@ -15,16 +15,16 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:448""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:668"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:669""}]}]")]
     public class ResellerModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:448")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:669")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string ResellerId
         {
             get => _resellerId;
@@ -38,13 +38,31 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
+        private string _resellerExternalId;
+
+        [XmlElement(ElementName = "resellerExternalId", IsNullable = false, Namespace = "")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:669")]
+        [MaxLength(36)]
+        public string ResellerExternalId
+        {
+            get => _resellerExternalId;
+            set
+            {
+                ResellerExternalIdSpecified = true;
+                _resellerExternalId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ResellerExternalIdSpecified { get; set; }
+
         private string _resellerName;
 
         [XmlElement(ElementName = "resellerName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:448")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:668")]
         [MinLength(1)]
-        [MaxLength(80)]
+        [MaxLength(320)]
         public string ResellerName
         {
             get => _resellerName;

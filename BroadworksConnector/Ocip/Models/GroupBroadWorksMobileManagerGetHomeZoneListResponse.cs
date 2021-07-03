@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1861""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:2366""}]")]
     public class GroupBroadWorksMobileManagerGetHomeZoneListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _homeZonesTable;
 
         [XmlElement(ElementName = "homeZonesTable", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1861")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2366")]
         public BroadWorksConnector.Ocip.Models.C.OCITable HomeZonesTable
         {
             get => _homeZonesTable;

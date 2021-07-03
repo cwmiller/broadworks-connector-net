@@ -9,24 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a list of service provider/enterprises within a reseller that have a given
     /// Network Class of Service assigned.
-    /// The response is either a ResellerNetworkClassOfServiceGetAssignedServiceProviderListResponse
-    /// or an ErrorResponse.
+    /// The response is either a ResellerNetworkClassOfServiceGetAssignedServiceProviderListResponse or an ErrorResponse.
     /// <see cref="ResellerNetworkClassOfServiceGetAssignedServiceProviderListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:520""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:741""}]")]
     public class ResellerNetworkClassOfServiceGetAssignedServiceProviderListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:520")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:741")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string ResellerId
         {
             get => _resellerId;
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:520")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:741")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -63,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:520")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:741")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -82,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaServiceProviderId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:520")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:741")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId
         {
             get => _searchCriteriaServiceProviderId;
@@ -100,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaServiceProviderName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:520")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:741")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderName> SearchCriteriaServiceProviderName
         {
             get => _searchCriteriaServiceProviderName;

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2339""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2268""}]")]
     public class AnnouncementRecordingMenuKeysModifyEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "acceptRecording", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2339")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2268")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string AcceptRecording
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "rejectRerecord", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2339")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2268")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RejectRerecord
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2339")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2268")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2339")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2268")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "end", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2339")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2268")]
         [MinLength(1)]
         [MaxLength(3)]
         [RegularExpression(@"([0-9]|\*|#){0,3}")]

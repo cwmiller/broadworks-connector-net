@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1130""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1141""}]")]
     public class EnterpriseCallCenterCurrentAndPastCallCenterGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1130")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1141")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isPremiumOnly", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1130")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1141")]
         public bool IsPremiumOnly
         {
             get => _isPremiumOnly;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1130")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1141")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactUserGroup", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1130")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1141")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserGroup SearchCriteriaExactUserGroup
         {
             get => _searchCriteriaExactUserGroup;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaCallCenterName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1130")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1141")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaCallCenterName SearchCriteriaCallCenterName
         {
             get => _searchCriteriaCallCenterName;

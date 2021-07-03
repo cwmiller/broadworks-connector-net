@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10619""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11660""}]")]
     public class SystemMediaDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _mediaName;
 
         [XmlElement(ElementName = "mediaName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10619")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11660")]
         [MinLength(1)]
         [MaxLength(80)]
         public string MediaName

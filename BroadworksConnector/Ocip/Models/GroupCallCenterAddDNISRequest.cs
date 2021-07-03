@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1959""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1974""}]")]
     public class GroupCallCenterAddDNISRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.DNISKey _dnisKey;
 
         [XmlElement(ElementName = "dnisKey", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1959")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1974")]
         public BroadWorksConnector.Ocip.Models.DNISKey DnisKey
         {
             get => _dnisKey;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "dnisPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1959")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1974")]
         [MinLength(1)]
         [MaxLength(23)]
         public string DnisPhoneNumber
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1959")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1974")]
         [MinLength(2)]
         [MaxLength(20)]
         public string Extension
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useCustomCLIDSettings;
 
         [XmlElement(ElementName = "useCustomCLIDSettings", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1959")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1974")]
         public bool UseCustomCLIDSettings
         {
             get => _useCustomCLIDSettings;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1959")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1974")]
         [MinLength(1)]
         [MaxLength(23)]
         public string CallingLineIdPhoneNumber
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1959")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1974")]
         [MinLength(1)]
         [MaxLength(30)]
         public string CallingLineIdLastName
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1959")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1974")]
         [MinLength(1)]
         [MaxLength(30)]
         public string CallingLineIdFirstName
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useCustomDnisAnnouncementSettings;
 
         [XmlElement(ElementName = "useCustomDnisAnnouncementSettings", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1959")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1974")]
         public bool UseCustomDnisAnnouncementSettings
         {
             get => _useCustomDnisAnnouncementSettings;
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.DNISPriority _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1959")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1974")]
         public BroadWorksConnector.Ocip.Models.DNISPriority Priority
         {
             get => _priority;
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowOutgoingACDCall;
 
         [XmlElement(ElementName = "allowOutgoingACDCall", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1959")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1974")]
         public bool AllowOutgoingACDCall
         {
             get => _allowOutgoingACDCall;

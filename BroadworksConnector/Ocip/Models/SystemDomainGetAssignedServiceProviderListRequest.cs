@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8379""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9448""}]")]
     public class SystemDomainGetAssignedServiceProviderListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _domain;
 
         [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8379")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9448")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Domain
@@ -48,9 +48,9 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8379")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9448")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string ResellerId
         {
             get => _resellerId;

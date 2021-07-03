@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2444""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2797""}]")]
     public class SystemBwDiameterRoutingPeerAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
 
         [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2797")]
         public BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance Instance
         {
             get => _instance;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _realm;
 
         [XmlElement(ElementName = "realm", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2797")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Realm
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.BwDiameterApplicationId _applicationId;
 
         [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2797")]
         public BroadWorksConnector.Ocip.Models.BwDiameterApplicationId ApplicationId
         {
             get => _applicationId;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _identity;
 
         [XmlElement(ElementName = "identity", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2797")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Identity
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2797")]
         [MinInclusive(0)]
         [MaxInclusive(65535)]
         public int Priority
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _weight;
 
         [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2444")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2797")]
         [MinInclusive(0)]
         [MaxInclusive(65535)]
         public int Weight

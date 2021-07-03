@@ -303,8 +303,7 @@ namespace BroadWorksConnector
         /// Requests a list of users using the specified carrier.  It is possible to restrict the
         /// number of rows returned by specifying various search criteria. Multiple search criteria
         /// are logically ANDed together.
-        /// The response is either a SystemPreferredCarrierGetUserListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemPreferredCarrierGetUserListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemPreferredCarrierGetUserListRequestAsync instead.")]
         public static async Task<SystemPreferredCarrierGetUserListResponse> SystemPreferredCarrierGetUserListRequest(this OcipClient client, SystemPreferredCarrierGetUserListRequest request)
@@ -316,8 +315,7 @@ namespace BroadWorksConnector
         /// Requests a list of users using the specified carrier.  It is possible to restrict the
         /// number of rows returned by specifying various search criteria. Multiple search criteria
         /// are logically ANDed together.
-        /// The response is either a SystemPreferredCarrierGetUserListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemPreferredCarrierGetUserListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemPreferredCarrierGetUserListResponse> SystemPreferredCarrierGetUserListRequestAsync(this OcipClient client, SystemPreferredCarrierGetUserListRequest request, CancellationToken cancellationToken = default)
         {

@@ -11,21 +11,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// When " redirectedCall " is set to true, all call logs with redirected call are returned. When it
     /// set to false, all call logs without redirected call are returned.
     /// The redirected call can be defined by including a subset of Service Invocation Disposition here.
-    /// If none included, any call has a ServiceInvocationDisposition value defined in
-    /// ServiceInvocationDisposition
+    /// If none included, any call has a ServiceInvocationDisposition  value defined in ServiceInvocationDisposition
     /// is considered as a redirected call.
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44857""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:48425""}]")]
     public class EnhancedCallLogsRedirectedCallSelection
     {
 
         private bool _redirectedCall;
 
         [XmlElement(ElementName = "redirectedCall", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44857")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48425")]
         public bool RedirectedCall
         {
             get => _redirectedCall;
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "redirectType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44857")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48425")]
         public List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition> RedirectType
         {
             get => _redirectType;

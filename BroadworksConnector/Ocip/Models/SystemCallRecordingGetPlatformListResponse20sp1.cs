@@ -8,8 +8,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemCallRecordingGetPlatformListRequest20sp1.
-    /// Contains the default system Call Recording platform and a table with columns headings "Name", "Net
-    /// Address", "Port",
+    /// Contains the default system Call Recording platform and a table with columns headings "Name", "Net Address", "Port",
     /// "Transport Type", "Media Stream", "Description", "Schema Version", "Support Video Rec".
     /// The system default recording platform also appears in the table with the other platforms.
     /// 
@@ -24,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41701""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24597""}]")]
     public class SystemCallRecordingGetPlatformListResponse20sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -32,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "systemDefault", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41701")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24597")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SystemDefault
@@ -51,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _callRecordingPlatformTable;
 
         [XmlElement(ElementName = "callRecordingPlatformTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41701")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24597")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CallRecordingPlatformTable
         {
             get => _callRecordingPlatformTable;

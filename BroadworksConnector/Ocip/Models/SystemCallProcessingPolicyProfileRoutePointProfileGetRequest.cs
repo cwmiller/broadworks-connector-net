@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Request to get the configuration for a call processing policy profile Route Point subscriber type
-    /// profile.
+    /// Request to get the configuration for a call processing policy profile Route Point subscriber type profile.
     /// The response is either a SystemCallProcessingPolicyProfileRoutePointProfileGetResponse or an
     /// ErrorResponse.
     /// 
@@ -20,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38174""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:23482""}]")]
     public class SystemCallProcessingPolicyProfileRoutePointProfileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38174")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23482")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

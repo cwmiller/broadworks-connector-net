@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:880""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:954""}]")]
     public class SearchCriteriaExactDnActivation : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private bool _activated;
 
         [XmlElement(ElementName = "activated", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:880")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:954")]
         public bool Activated
         {
             get => _activated;

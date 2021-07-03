@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:29831""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:6729""}]")]
     public class GroupCallCenterModifyInstanceRequest19 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public BroadWorksConnector.Ocip.Models.CallCenterType Type
         {
             get => _type;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "routingType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public BroadWorksConnector.Ocip.Models.CallCenterRoutingType RoutingType
         {
             get => _routingType;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "policy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public BroadWorksConnector.Ocip.Models.HuntPolicy Policy
         {
             get => _policy;
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public bool EnableVideo
         {
             get => _enableVideo;
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "queueLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         [MinInclusive(0)]
         [MaxInclusive(525)]
         public int QueueLength
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableReporting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public bool EnableReporting
         {
             get => _enableReporting;
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowCallerToDialEscapeDigit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public bool AllowCallerToDialEscapeDigit
         {
             get => _allowCallerToDialEscapeDigit;
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "escapeDigit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         [Length(1)]
         public string EscapeDigit
         {
@@ -207,7 +207,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resetCallStatisticsUponEntryInQueue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public bool ResetCallStatisticsUponEntryInQueue
         {
             get => _resetCallStatisticsUponEntryInQueue;
@@ -225,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowAgentLogoff", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public bool AllowAgentLogoff
         {
             get => _allowAgentLogoff;
@@ -243,7 +243,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowCallWaitingForAgents", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public bool AllowCallWaitingForAgents
         {
             get => _allowCallWaitingForAgents;
@@ -261,7 +261,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowCallsToAgentsInWrapUp", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public bool AllowCallsToAgentsInWrapUp
         {
             get => _allowCallsToAgentsInWrapUp;
@@ -279,7 +279,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "overrideAgentWrapUpTime", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public bool OverrideAgentWrapUpTime
         {
             get => _overrideAgentWrapUpTime;
@@ -297,7 +297,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "wrapUpSeconds", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         [MinInclusive(1)]
         [MaxInclusive(3600)]
         public int? WrapUpSeconds
@@ -317,7 +317,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceDeliveryOfCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public bool ForceDeliveryOfCalls
         {
             get => _forceDeliveryOfCalls;
@@ -335,7 +335,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceDeliveryWaitTimeSeconds", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int? ForceDeliveryWaitTimeSeconds
@@ -355,7 +355,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAutomaticStateChangeForAgents", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public bool EnableAutomaticStateChangeForAgents
         {
             get => _enableAutomaticStateChangeForAgents;
@@ -373,7 +373,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentStateAfterCall", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public BroadWorksConnector.Ocip.Models.AgentACDAutomaticState AgentStateAfterCall
         {
             get => _agentStateAfterCall;
@@ -391,7 +391,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentUnavailableCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         [MinLength(1)]
         [MaxLength(10)]
         public string AgentUnavailableCode
@@ -411,7 +411,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "externalPreferredAudioCodec", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public BroadWorksConnector.Ocip.Models.AudioFileCodec ExternalPreferredAudioCodec
         {
             get => _externalPreferredAudioCodec;
@@ -429,7 +429,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "internalPreferredAudioCodec", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public BroadWorksConnector.Ocip.Models.AudioFileCodec InternalPreferredAudioCodec
         {
             get => _internalPreferredAudioCodec;
@@ -447,7 +447,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playRingingWhenOfferingCall", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         public bool PlayRingingWhenOfferingCall
         {
             get => _playRingingWhenOfferingCall;
@@ -465,7 +465,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29831")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6729")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

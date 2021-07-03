@@ -9,13 +9,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the system settings for the call center enhanced reporting scheduling tasks.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// The following elements are only used in AS data mode:
+    /// callCenterEventMode, value “Legacy ECCR" is returned in Amplify data mode
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6486""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6455""}]")]
     public class SystemCallCenterEnhancedReportingScheduledTaskParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scheduledReportSearchIntervalMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6486")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6455")]
         [MinInclusive(1)]
         [MaxInclusive(1440)]
         public int ScheduledReportSearchIntervalMinutes
@@ -43,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maximumScheduledReportsPerInterval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6486")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6455")]
         [MinInclusive(1)]
         [MaxInclusive(100000)]
         public int MaximumScheduledReportsPerInterval
@@ -63,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deleteScheduledReportDaysAfterCompletion", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6486")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6455")]
         [MinInclusive(1)]
         [MaxInclusive(366)]
         public int DeleteScheduledReportDaysAfterCompletion
@@ -78,6 +81,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool DeleteScheduledReportDaysAfterCompletionSpecified { get; set; }
+
+        private BroadWorksConnector.Ocip.Models.CallCenterEventRecordingCallCenterEventMode _callCenterEventMode;
+
+        [XmlElement(ElementName = "callCenterEventMode", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6455")]
+        public BroadWorksConnector.Ocip.Models.CallCenterEventRecordingCallCenterEventMode CallCenterEventMode
+        {
+            get => _callCenterEventMode;
+            set
+            {
+                CallCenterEventModeSpecified = true;
+                _callCenterEventMode = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool CallCenterEventModeSpecified { get; set; }
 
     }
 }

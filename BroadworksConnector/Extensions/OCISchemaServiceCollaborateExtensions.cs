@@ -436,8 +436,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request the collaborate room settings for an instant room.
         /// The request fails when requesting collaborate room settings for My Room or project rooms.
-        /// The response is either UserCollaborateInstantRoomGetResponse or
-        /// ErrorResponse.
+        /// The response is either UserCollaborateInstantRoomGetResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserCollaborateInstantRoomGetRequestAsync instead.")]
         public static async Task<UserCollaborateInstantRoomGetResponse> UserCollaborateInstantRoomGetRequest(this OcipClient client, UserCollaborateInstantRoomGetRequest request)
@@ -448,8 +447,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request the collaborate room settings for an instant room.
         /// The request fails when requesting collaborate room settings for My Room or project rooms.
-        /// The response is either UserCollaborateInstantRoomGetResponse or
-        /// ErrorResponse.
+        /// The response is either UserCollaborateInstantRoomGetResponse or ErrorResponse.
         /// </summary>
         public static async Task<UserCollaborateInstantRoomGetResponse> UserCollaborateInstantRoomGetRequestAsync(this OcipClient client, UserCollaborateInstantRoomGetRequest request, CancellationToken cancellationToken = default)
         {
@@ -495,8 +493,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request collaborate room settings for MyRoom.
-        /// The response is either UserCollaborateMyRoomGetResponse or
-        /// ErrorResponse.
+        /// The response is either UserCollaborateMyRoomGetResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserCollaborateMyRoomGetRequestAsync instead.")]
         public static async Task<UserCollaborateMyRoomGetResponse> UserCollaborateMyRoomGetRequest(this OcipClient client, UserCollaborateMyRoomGetRequest request)
@@ -506,8 +503,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request collaborate room settings for MyRoom.
-        /// The response is either UserCollaborateMyRoomGetResponse or
-        /// ErrorResponse.
+        /// The response is either UserCollaborateMyRoomGetResponse or ErrorResponse.
         /// </summary>
         public static async Task<UserCollaborateMyRoomGetResponse> UserCollaborateMyRoomGetRequestAsync(this OcipClient client, UserCollaborateMyRoomGetRequest request, CancellationToken cancellationToken = default)
         {
@@ -552,8 +548,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request collaborate room settings for a project room.
         /// The request fails when requesting collaborate room settings for instant rooms or My Room.
-        /// The response is either UserCollaborateProjectRoomGetResponse or
-        /// ErrorResponse.
+        /// The response is either UserCollaborateProjectRoomGetResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserCollaborateProjectRoomGetRequestAsync instead.")]
         public static async Task<UserCollaborateProjectRoomGetResponse> UserCollaborateProjectRoomGetRequest(this OcipClient client, UserCollaborateProjectRoomGetRequest request)
@@ -564,8 +559,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request collaborate room settings for a project room.
         /// The request fails when requesting collaborate room settings for instant rooms or My Room.
-        /// The response is either UserCollaborateProjectRoomGetResponse or
-        /// ErrorResponse.
+        /// The response is either UserCollaborateProjectRoomGetResponse or ErrorResponse.
         /// </summary>
         public static async Task<UserCollaborateProjectRoomGetResponse> UserCollaborateProjectRoomGetRequestAsync(this OcipClient client, UserCollaborateProjectRoomGetRequest request, CancellationToken cancellationToken = default)
         {
@@ -598,8 +592,7 @@ namespace BroadWorksConnector
         /// attendeeNotification, endRoomSessionOnOwnerExit and ownerRequired.
         /// In addition, the roomSchedule is returned for Project Room and
         /// the roomStartTime and roomEndTime are returned for Instant Room.
-        /// The response is either UserCollaborateRoomGetResponse or
-        /// ErrorResponse.
+        /// The response is either UserCollaborateRoomGetResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserCollaborateRoomGetRequestAsync instead.")]
         public static async Task<UserCollaborateRoomGetResponse> UserCollaborateRoomGetRequest(this OcipClient client, UserCollaborateRoomGetRequest request)
@@ -614,8 +607,7 @@ namespace BroadWorksConnector
         /// attendeeNotification, endRoomSessionOnOwnerExit and ownerRequired.
         /// In addition, the roomSchedule is returned for Project Room and
         /// the roomStartTime and roomEndTime are returned for Instant Room.
-        /// The response is either UserCollaborateRoomGetResponse or
-        /// ErrorResponse.
+        /// The response is either UserCollaborateRoomGetResponse or ErrorResponse.
         /// </summary>
         public static async Task<UserCollaborateRoomGetResponse> UserCollaborateRoomGetRequestAsync(this OcipClient client, UserCollaborateRoomGetRequest request, CancellationToken cancellationToken = default)
         {

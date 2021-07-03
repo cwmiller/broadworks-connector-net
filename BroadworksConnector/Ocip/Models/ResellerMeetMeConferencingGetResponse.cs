@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:350""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4557""}]")]
     public class ResellerMeetMeConferencingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "conferenceFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:350")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4557")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ConferenceFromAddress
@@ -40,7 +40,8 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxAllocatedPorts;
 
         [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:350")]
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4557")]
         [MinInclusive(0)]
         [MaxInclusive(999999)]
         public int MaxAllocatedPorts

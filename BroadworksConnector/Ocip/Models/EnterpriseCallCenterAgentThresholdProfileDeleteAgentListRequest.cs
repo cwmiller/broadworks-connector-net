@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:391""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:402""}]")]
     public class EnterpriseCallCenterAgentThresholdProfileDeleteAgentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:391")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:402")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _profileName;
 
         [XmlElement(ElementName = "profileName", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:391")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:402")]
         [MinLength(1)]
         [MaxLength(40)]
         public string ProfileName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _agentUserId = new List<string>();
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:391")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:402")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> AgentUserId

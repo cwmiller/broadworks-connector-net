@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4963""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:5872""}]")]
     public class GroupFileRepositoryDeviceUserAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4963")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5872")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4963")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5872")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _fileRepositoryName;
 
         [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4963")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5872")]
         [MinLength(1)]
         [MaxLength(40)]
         public string FileRepositoryName
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4963")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5872")]
         [MinLength(1)]
         [MaxLength(30)]
         public string UserName
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4963")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5872")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Password
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowPut;
 
         [XmlElement(ElementName = "allowPut", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4963")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5872")]
         public bool AllowPut
         {
             get => _allowPut;
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowDelete;
 
         [XmlElement(ElementName = "allowDelete", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4963")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5872")]
         public bool AllowDelete
         {
             get => _allowDelete;
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowGet;
 
         [XmlElement(ElementName = "allowGet", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4963")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5872")]
         public bool AllowGet
         {
             get => _allowGet;

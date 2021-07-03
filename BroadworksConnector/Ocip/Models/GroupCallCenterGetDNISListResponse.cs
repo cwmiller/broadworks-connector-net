@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4459""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4417""}]")]
     public class GroupCallCenterGetDNISListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _displayDNISNumber;
 
         [XmlElement(ElementName = "displayDNISNumber", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4459")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
         public bool DisplayDNISNumber
         {
             get => _displayDNISNumber;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _displayDNISName;
 
         [XmlElement(ElementName = "displayDNISName", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4459")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
         public bool DisplayDNISName
         {
             get => _displayDNISName;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _promoteCallsFromPriority1to0;
 
         [XmlElement(ElementName = "promoteCallsFromPriority1to0", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4459")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
         public bool PromoteCallsFromPriority1to0
         {
             get => _promoteCallsFromPriority1to0;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _promoteCallsFromPriority2to1;
 
         [XmlElement(ElementName = "promoteCallsFromPriority2to1", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4459")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
         public bool PromoteCallsFromPriority2to1
         {
             get => _promoteCallsFromPriority2to1;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _promoteCallsFromPriority3to2;
 
         [XmlElement(ElementName = "promoteCallsFromPriority3to2", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4459")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
         public bool PromoteCallsFromPriority3to2
         {
             get => _promoteCallsFromPriority3to2;
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _promoteCallsFromPriority1to0Seconds;
 
         [XmlElement(ElementName = "promoteCallsFromPriority1to0Seconds", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4459")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
         [MinInclusive(1)]
         [MaxInclusive(1800)]
         public int PromoteCallsFromPriority1to0Seconds
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _promoteCallsFromPriority2to1Seconds;
 
         [XmlElement(ElementName = "promoteCallsFromPriority2to1Seconds", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4459")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
         [MinInclusive(1)]
         [MaxInclusive(1800)]
         public int PromoteCallsFromPriority2to1Seconds
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _promoteCallsFromPriority3to2Seconds;
 
         [XmlElement(ElementName = "promoteCallsFromPriority3to2Seconds", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4459")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
         [MinInclusive(1)]
         [MaxInclusive(1800)]
         public int PromoteCallsFromPriority3to2Seconds
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _dnisTable;
 
         [XmlElement(ElementName = "dnisTable", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4459")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DnisTable
         {
             get => _dnisTable;

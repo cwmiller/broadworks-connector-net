@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6620""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:11787""}]")]
     public class SystemTreatmentMappingCallBlockingServiceDeleteRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.CallBlockingService22V2 _callBlockingService;
 
         [XmlElement(ElementName = "callBlockingService", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6620")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:11787")]
         public BroadWorksConnector.Ocip.Models.CallBlockingService22V2 CallBlockingService
         {
             get => _callBlockingService;

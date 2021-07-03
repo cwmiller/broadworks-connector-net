@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3385""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4240""}]")]
     public class GroupDeviceTypeCustomTagAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3385")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4240")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3385")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4240")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3385")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4240")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _tagName;
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3385")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4240")]
         [MinLength(1)]
         [MaxLength(64)]
         public string TagName
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3385")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4240")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TagValue

@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14809""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15951""}]")]
     public class SystemServerAddressesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "webServerClusterPublicFQDN", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14809")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15951")]
         [MinLength(1)]
         [MaxLength(80)]
         public string WebServerClusterPublicFQDN
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "applicationServerClusterPrimaryPublicFQDN", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14809")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15951")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ApplicationServerClusterPrimaryPublicFQDN
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "applicationServerClusterSecondaryPublicFQDN", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14809")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15951")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ApplicationServerClusterSecondaryPublicFQDN
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "applicationServerClusterPrimaryPrivateFQDN", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14809")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15951")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ApplicationServerClusterPrimaryPrivateFQDN
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "applicationServerClusterSecondaryPrivateFQDN", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14809")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15951")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ApplicationServerClusterSecondaryPrivateFQDN

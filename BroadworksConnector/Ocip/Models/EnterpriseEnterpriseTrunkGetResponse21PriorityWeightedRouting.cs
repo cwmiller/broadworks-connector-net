@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:346""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2367""}]")]
     public class EnterpriseEnterpriseTrunkGetResponse21PriorityWeightedRouting
     {
 
         private int _maximumRerouteAttemptsWithinPriority;
 
         [XmlElement(ElementName = "maximumRerouteAttemptsWithinPriority", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:346")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2367")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaximumRerouteAttemptsWithinPriority
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "priorityWeightedTrunkGroup", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:346")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2367")]
         public List<BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkPriorityWeightedTrunkGroup> PriorityWeightedTrunkGroup
         {
             get => _priorityWeightedTrunkGroup;

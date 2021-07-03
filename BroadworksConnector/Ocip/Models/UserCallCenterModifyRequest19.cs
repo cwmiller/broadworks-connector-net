@@ -25,20 +25,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// forceAgentUnavailableOnNotReachable
     /// makeOutgoingCallsAsCallCenter
     /// outgoingCallDNIS
+    /// useSystemDefaultWrapUpDestination
+    /// wrapUpDestination
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7228""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7259""}]")]
     public class UserCallCenterModifyRequest19 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -58,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentACDState", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         public BroadWorksConnector.Ocip.Models.AgentACDState AgentACDState
         {
             get => _agentACDState;
@@ -76,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentThresholdProfileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         [MinLength(1)]
         [MaxLength(40)]
         public string AgentThresholdProfileName
@@ -96,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentUnavailableCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         [MinLength(1)]
         [MaxLength(10)]
         public string AgentUnavailableCode
@@ -116,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useDefaultGuardTimer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         public bool UseDefaultGuardTimer
         {
             get => _useDefaultGuardTimer;
@@ -134,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableGuardTimer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         public bool EnableGuardTimer
         {
             get => _enableGuardTimer;
@@ -152,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "guardTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         [MinInclusive(1)]
         [MaxInclusive(25)]
         public int GuardTimerSeconds
@@ -172,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useSystemDefaultUnavailableSettings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         public bool UseSystemDefaultUnavailableSettings
         {
             get => _useSystemDefaultUnavailableSettings;
@@ -190,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceAgentUnavailableOnDNDActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         public bool ForceAgentUnavailableOnDNDActivation
         {
             get => _forceAgentUnavailableOnDNDActivation;
@@ -208,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceAgentUnavailableOnPersonalCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         public bool ForceAgentUnavailableOnPersonalCalls
         {
             get => _forceAgentUnavailableOnPersonalCalls;
@@ -226,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceAgentUnavailableOnBouncedCallLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         public bool ForceAgentUnavailableOnBouncedCallLimit
         {
             get => _forceAgentUnavailableOnBouncedCallLimit;
@@ -244,7 +246,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberConsecutiveBouncedCallsToForceAgentUnavailable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
         public int NumberConsecutiveBouncedCallsToForceAgentUnavailable
@@ -264,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceAgentUnavailableOnNotReachable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         public bool ForceAgentUnavailableOnNotReachable
         {
             get => _forceAgentUnavailableOnNotReachable;
@@ -282,7 +284,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "makeOutgoingCallsAsCallCenter", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         public bool MakeOutgoingCallsAsCallCenter
         {
             get => _makeOutgoingCallsAsCallCenter;
@@ -300,7 +302,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "outgoingCallDNIS", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         public BroadWorksConnector.Ocip.Models.DNISKey OutgoingCallDNIS
         {
             get => _outgoingCallDNIS;
@@ -318,7 +320,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callCenterAgentSettings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7228")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
         public List<BroadWorksConnector.Ocip.Models.CallCenterAgentSettings> CallCenterAgentSettings
         {
             get => _callCenterAgentSettings;
@@ -331,6 +333,44 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool CallCenterAgentSettingsSpecified { get; set; }
+
+        private bool _useSystemDefaultWrapUpDestination;
+
+        [XmlElement(ElementName = "useSystemDefaultWrapUpDestination", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
+        public bool UseSystemDefaultWrapUpDestination
+        {
+            get => _useSystemDefaultWrapUpDestination;
+            set
+            {
+                UseSystemDefaultWrapUpDestinationSpecified = true;
+                _useSystemDefaultWrapUpDestination = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool UseSystemDefaultWrapUpDestinationSpecified { get; set; }
+
+        private string _wrapUpDestination;
+
+        [XmlElement(ElementName = "wrapUpDestination", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7259")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string WrapUpDestination
+        {
+            get => _wrapUpDestination;
+            set
+            {
+                WrapUpDestinationSpecified = true;
+                _wrapUpDestination = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool WrapUpDestinationSpecified { get; set; }
 
     }
 }

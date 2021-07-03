@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1981""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2397""}]")]
     public class SystemASRParametersGetResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _maxTransmissions;
 
         [XmlElement(ElementName = "maxTransmissions", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1981")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaxTransmissions
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _retransmissionDelayMilliSeconds;
 
         [XmlElement(ElementName = "retransmissionDelayMilliSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1981")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]
         [MinInclusive(100)]
         [MaxInclusive(2000)]
         public int RetransmissionDelayMilliSeconds
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _listeningPort;
 
         [XmlElement(ElementName = "listeningPort", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1981")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int ListeningPort
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableCustomMessageControl;
 
         [XmlElement(ElementName = "enableCustomMessageControl", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1981")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]
         public bool EnableCustomMessageControl
         {
             get => _enableCustomMessageControl;
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _customNumberOfUsersPerMessage;
 
         [XmlElement(ElementName = "customNumberOfUsersPerMessage", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1981")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int CustomNumberOfUsersPerMessage
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _customMessageIntervalMilliseconds;
 
         [XmlElement(ElementName = "customMessageIntervalMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1981")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]
         [MinInclusive(50)]
         [MaxInclusive(1000)]
         public int CustomMessageIntervalMilliseconds

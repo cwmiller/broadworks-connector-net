@@ -10,8 +10,7 @@ namespace BroadWorksConnector
     {
 
         /// <summary>
-        /// Request to get the user level IN Integration service attributes
-        /// The response is either UserINIntegrationGetResponse or ErrorResponse
+        /// Request to get the user level IN Integration service attributes The response is either UserINIntegrationGetResponse or ErrorResponse
         /// </summary>
         [Obsolete("This method is deprecated. Use UserINIntegrationGetRequestAsync instead.")]
         public static async Task<UserINIntegrationGetResponse> UserINIntegrationGetRequest(this OcipClient client, UserINIntegrationGetRequest request)
@@ -20,8 +19,7 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// Request to get the user level IN Integration service attributes
-        /// The response is either UserINIntegrationGetResponse or ErrorResponse
+        /// Request to get the user level IN Integration service attributes The response is either UserINIntegrationGetResponse or ErrorResponse
         /// </summary>
         public static async Task<UserINIntegrationGetResponse> UserINIntegrationGetRequestAsync(this OcipClient client, UserINIntegrationGetRequest request, CancellationToken cancellationToken = default)
         {

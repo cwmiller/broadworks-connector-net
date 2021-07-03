@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2386""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2812""}]")]
     public class FileRepositoryProtocolWebDAV
     {
 
         private bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2386")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2812")]
         public bool Secure
         {
             get => _secure;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2386")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2812")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress

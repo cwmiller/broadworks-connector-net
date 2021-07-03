@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4353""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:5049""}]")]
     public class TrunkGroupDeviceMultipleContactEndpointModify22
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4353")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5049")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Name
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4353")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5049")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4353")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5049")]
         public BroadWorksConnector.Ocip.Models.ReplacementContactList22 ContactList
         {
             get => _contactList;

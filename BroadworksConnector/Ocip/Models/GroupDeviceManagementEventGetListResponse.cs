@@ -35,11 +35,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// were pushed, not pushed because of same hash, and not pushed when
     /// processing the event.
     /// "LoginId" is the user or admin id who triggered the event.
-    /// "Start Time" is the date when the event was started. The display
+    /// "Start Time" is the date when the event was started.  The display
     /// shows the month, days, hours, and minutes (MM-dd hh:mm).
     /// "Process Time" is the time taken to process the event in hours,
     /// minutes, seconds, and milliseconds (hhhh:mm:ss.SSS).
-    /// Each row represents an event sorted by priority of processing. The
+    /// Each row represents an event sorted by priority of processing.  The
     /// first row in the table is an event that has an associated expanded
     /// event currently being processed or next in line to be processed.
     /// <see cref="GroupDeviceManagementEventGetListRequest"/>
@@ -47,14 +47,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41136""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:9141""}]")]
     public class GroupDeviceManagementEventGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _eventTable;
 
         [XmlElement(ElementName = "eventTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41136")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9141")]
         public BroadWorksConnector.Ocip.Models.C.OCITable EventTable
         {
             get => _eventTable;

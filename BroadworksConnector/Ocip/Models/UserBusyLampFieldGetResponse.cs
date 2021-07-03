@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:23100""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:40308""}]")]
     public class UserBusyLampFieldGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "listURI", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23100")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40308")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ListURI
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _monitoredUserTable;
 
         [XmlElement(ElementName = "monitoredUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23100")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40308")]
         public BroadWorksConnector.Ocip.Models.C.OCITable MonitoredUserTable
         {
             get => _monitoredUserTable;

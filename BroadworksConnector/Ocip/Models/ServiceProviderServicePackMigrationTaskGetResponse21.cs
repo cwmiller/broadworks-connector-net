@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5571"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5591""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6401"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6421""}]}]")]
     public class ServiceProviderServicePackMigrationTaskGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         [MinLength(1)]
         [MaxLength(80)]
         public string TaskName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "startTimestamp", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public string StartTimestamp
         {
             get => _startTimestamp;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "actualStartTimestamp", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public string ActualStartTimestamp
         {
             get => _actualStartTimestamp;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _expireAfterNumHours;
 
         [XmlElement(ElementName = "expireAfterNumHours", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         [MinInclusive(1)]
         [MaxInclusive(168)]
         public int ExpireAfterNumHours
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxDurationHours;
 
         [XmlElement(ElementName = "maxDurationHours", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         [MinInclusive(1)]
         [MaxInclusive(9)]
         public int MaxDurationHours
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _sendReportEmail;
 
         [XmlElement(ElementName = "sendReportEmail", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public bool SendReportEmail
         {
             get => _sendReportEmail;
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportDeliveryEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ReportDeliveryEmailAddress
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _abortOnError;
 
         [XmlElement(ElementName = "abortOnError", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public bool AbortOnError
         {
             get => _abortOnError;
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "abortErrorThreshold", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         [MinInclusive(1)]
         public int AbortErrorThreshold
         {
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _reportAllUsers;
 
         [XmlElement(ElementName = "reportAllUsers", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public bool ReportAllUsers
         {
             get => _reportAllUsers;
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _automaticallyIncrementServiceQuantity;
 
         [XmlElement(ElementName = "automaticallyIncrementServiceQuantity", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public bool AutomaticallyIncrementServiceQuantity
         {
             get => _automaticallyIncrementServiceQuantity;
@@ -221,7 +221,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _errorCount;
 
         [XmlElement(ElementName = "errorCount", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public int ErrorCount
         {
             get => _errorCount;
@@ -238,7 +238,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskStatus21 _status;
 
         [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskStatus21 Status
         {
             get => _status;
@@ -255,7 +255,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _groupsProcessed;
 
         [XmlElement(ElementName = "groupsProcessed", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public int GroupsProcessed
         {
             get => _groupsProcessed;
@@ -272,7 +272,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _groupsTotal;
 
         [XmlElement(ElementName = "groupsTotal", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public int GroupsTotal
         {
             get => _groupsTotal;
@@ -289,7 +289,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _usersProcessed;
 
         [XmlElement(ElementName = "usersProcessed", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public int UsersProcessed
         {
             get => _usersProcessed;
@@ -306,7 +306,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _usersTotal;
 
         [XmlElement(ElementName = "usersTotal", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public int UsersTotal
         {
             get => _usersTotal;
@@ -323,7 +323,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType _userSelectionType;
 
         [XmlElement(ElementName = "userSelectionType", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType UserSelectionType
         {
             get => _userSelectionType;
@@ -340,7 +340,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _reportFilePathName;
 
         [XmlElement(ElementName = "reportFilePathName", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         [MinLength(1)]
         public string ReportFilePathName
         {
@@ -358,7 +358,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _migrateAllGroups;
 
         [XmlElement(ElementName = "migrateAllGroups", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5591")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6421")]
         public bool MigrateAllGroups
         {
             get => _migrateAllGroups;
@@ -375,7 +375,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _groupTable;
 
         [XmlElement(ElementName = "groupTable", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5591")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6421")]
         public BroadWorksConnector.Ocip.Models.C.OCITable GroupTable
         {
             get => _groupTable;
@@ -393,7 +393,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userSelectionServicePackName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> UserSelectionServicePackName
@@ -413,7 +413,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userSelectionServiceName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public List<BroadWorksConnector.Ocip.Models.UserService> UserSelectionServiceName
         {
             get => _userSelectionServiceName;
@@ -431,7 +431,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "removeServicePackName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> RemoveServicePackName
@@ -451,7 +451,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "removeServiceName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public List<BroadWorksConnector.Ocip.Models.UserService> RemoveServiceName
         {
             get => _removeServiceName;
@@ -469,7 +469,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "assignServicePackName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> AssignServicePackName
@@ -489,7 +489,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "assignServiceName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5571")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6401")]
         public List<BroadWorksConnector.Ocip.Models.UserService> AssignServiceName
         {
             get => _assignServiceName;

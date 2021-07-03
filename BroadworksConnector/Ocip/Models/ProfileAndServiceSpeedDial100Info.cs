@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4373""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4557""}]")]
     public class ProfileAndServiceSpeedDial100Info
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4373")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4557")]
         [MinLength(1)]
         [MaxLength(2)]
         public string Prefix
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "speedDialEntry", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4373")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4557")]
         public List<BroadWorksConnector.Ocip.Models.SpeedDial100Entry> SpeedDialEntry
         {
             get => _speedDialEntry;

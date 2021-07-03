@@ -12,21 +12,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// ErrorResponse.
     /// 
     /// The useGroupCLIDSetting attribute controls the CLID settings
-    /// (clidPolicy, emergencyClidPolicy, allowAlternateNumbersForRedirectingIdentity, useGroupName,
-    /// allowDepartmentCLIDNameOverride)
+    /// (clidPolicy, emergencyClidPolicy, allowAlternateNumbersForRedirectingIdentity, useGroupName, allowDepartmentCLIDNameOverride)
     /// 
     /// The useGroupMediaSetting attribute controls the Media settings
     /// (medisPolicySelection, supportedMediaSetName)
     /// The useGroupCallLimitsSetting attribute controls the Call Limits settings
     /// (useMaxSimultaneousCalls, maxSimultaneousCalls,
-    /// useMaxSimultaneousVideoCalls, maxSimultaneousVideoCalls, useMaxCallTimeForAnsweredCalls,
-    /// maxCallTimeForAnsweredCallsMinutes, useMaxCallTimeForUnansweredCalls,
-    /// maxCallTimeForUnansweredCallsMinutes, useMaxConcurrentRedirectedCalls, useMaxFindMeFollowMeDepth,
-    /// maxRedirectionDepth, useMaxConcurrentFindMeFollowMeInvocations, maxConcurrentFindMeFollowMeInvocations)
+    /// useMaxSimultaneousVideoCalls, maxSimultaneousVideoCalls, useMaxCallTimeForAnsweredCalls, maxCallTimeForAnsweredCallsMinutes, useMaxCallTimeForUnansweredCalls, maxCallTimeForUnansweredCallsMinutes, useMaxConcurrentRedirectedCalls, useMaxFindMeFollowMeDepth, maxRedirectionDepth, useMaxConcurrentFindMeFollowMeInvocations, maxConcurrentFindMeFollowMeInvocations)
     /// The useGroupTranslationRoutingSetting attribute controls the routing and translation settings
     /// (networkUsageSelection, enforceGroupCallingLineIdentityRestriction,
-    /// allowEnterpriseGroupCallTypingForPrivateDialingPlan, allowEnterpriseGroupCallTypingForPublicDialingPlan,
-    /// overrideCLIDRestrictionForExternalCallsViaPrivateDialingPlan, enableEnterpriseExtensionDialing)
+    /// allowEnterpriseGroupCallTypingForPrivateDialingPlan, allowEnterpriseGroupCallTypingForPublicDialingPlan, overrideCLIDRestrictionForExternalCallsViaPrivateDialingPlan, enableEnterpriseExtensionDialing)
     /// The following elements are only used in AS data mode:
     /// useGroupDCLIDSetting
     /// enableDialableCallerID
@@ -40,14 +35,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:36232""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:7777""}]")]
     public class GroupCallProcessingGetPolicyRequest18 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:36232")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7777")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -66,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:36232")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7777")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

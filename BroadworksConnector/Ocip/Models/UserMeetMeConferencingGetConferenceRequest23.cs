@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:904""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:819""}]")]
     public class UserMeetMeConferencingGetConferenceRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:904")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:819")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
 
         [XmlElement(ElementName = "conferenceKey", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:904")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:819")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey
         {
             get => _conferenceKey;

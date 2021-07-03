@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:1281""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:1238""}]")]
     public class UserRoutePointCallDispositionCodeGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _dispositionCodesTable;
 
         [XmlElement(ElementName = "dispositionCodesTable", IsNullable = false, Namespace = "")]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:1281")]
+        [Group(@"a27224a048c30ff69eab9209dec841cc:1238")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DispositionCodesTable
         {
             get => _dispositionCodesTable;

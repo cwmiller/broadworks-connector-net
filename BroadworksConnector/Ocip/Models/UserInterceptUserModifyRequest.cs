@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11490""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44994""}]")]
     public class UserInterceptUserModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11490")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44994")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11490")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44994")]
         public bool IsActive
         {
             get => _isActive;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11490")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44994")]
         public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection
         {
             get => _announcementSelection;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11490")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44994")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource AudioFile
         {
             get => _audioFile;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11490")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44994")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource VideoFile
         {
             get => _videoFile;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playNewPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11490")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44994")]
         public bool PlayNewPhoneNumber
         {
             get => _playNewPhoneNumber;
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11490")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44994")]
         [MinLength(1)]
         [MaxLength(23)]
         public string NewPhoneNumber
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transferOnZeroToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11490")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44994")]
         public bool TransferOnZeroToPhoneNumber
         {
             get => _transferOnZeroToPhoneNumber;
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11490")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44994")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TransferPhoneNumber

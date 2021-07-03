@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2796"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2799"",""optional"":true}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3297"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3300"",""optional"":true}]}]")]
     public class MusicOnHoldSourceRead22
     {
 
         private BroadWorksConnector.Ocip.Models.AudioFileCodec22 _audioFilePreferredCodec;
 
         [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2796")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3297")]
         public BroadWorksConnector.Ocip.Models.AudioFileCodec22 AudioFilePreferredCodec
         {
             get => _audioFilePreferredCodec;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
 
         [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2796")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3297")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection
         {
             get => _messageSourceSelection;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead22LabeledCustomSourceMediaFiles _labeledCustomSourceMediaFiles;
 
         [XmlElement(ElementName = "labeledCustomSourceMediaFiles", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2799")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3300")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead22LabeledCustomSourceMediaFiles LabeledCustomSourceMediaFiles
         {
             get => _labeledCustomSourceMediaFiles;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead22AnnouncementCustomSourceMediaFiles _announcementCustomSourceMediaFiles;
 
         [XmlElement(ElementName = "announcementCustomSourceMediaFiles", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2799")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3300")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead22AnnouncementCustomSourceMediaFiles AnnouncementCustomSourceMediaFiles
         {
             get => _announcementCustomSourceMediaFiles;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "externalSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2796")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3297")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead22ExternalSource ExternalSource
         {
             get => _externalSource;

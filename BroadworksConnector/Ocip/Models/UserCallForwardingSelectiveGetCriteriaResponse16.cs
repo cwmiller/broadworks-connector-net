@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3436""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:12663""}]")]
     public class UserCallForwardingSelectiveGetCriteriaResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3436")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:12663")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3436")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:12663")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16 _forwardToNumberSelection;
 
         [XmlElement(ElementName = "forwardToNumberSelection", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3436")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:12663")]
         public BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16 ForwardToNumberSelection
         {
             get => _forwardToNumberSelection;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3436")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:12663")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ForwardToPhoneNumber
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3436")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:12663")]
         public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria
         {
             get => _fromDnCriteria;

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3f28429898a57a7f7846d3877b22df9f:840""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3f28429898a57a7f7846d3877b22df9f:885""}]")]
     public class EnterpriseTrunkReplacementNumberPrefixList
     {
 
         private List<string> _numberPrefix = new List<string>();
 
         [XmlElement(ElementName = "numberPrefix", IsNullable = false, Namespace = "")]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:840")]
+        [Group(@"3f28429898a57a7f7846d3877b22df9f:885")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> NumberPrefix

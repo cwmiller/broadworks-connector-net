@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:493""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:494""}]")]
     public class GroupFindMeFollowMeModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:493")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:494")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:493")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:494")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:493")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:494")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

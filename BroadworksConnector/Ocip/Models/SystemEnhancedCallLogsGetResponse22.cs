@@ -7,20 +7,22 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
+    /// Replaced by: SystemEnhancedCallLogsGetResponse24.
     /// Response to SystemEnhancedCallLogsGetRequest22.
+    /// <see cref="SystemEnhancedCallLogsGetResponse24"/>
     /// <see cref="SystemEnhancedCallLogsGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f6b3702edb5f67fa12c2c426d98657db:210""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26614""}]")]
     public class SystemEnhancedCallLogsGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _maxNonPagedResponseSize;
 
         [XmlElement(ElementName = "maxNonPagedResponseSize", IsNullable = false, Namespace = "")]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:210")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26614")]
         [MinInclusive(100)]
         [MaxInclusive(1000)]
         public int MaxNonPagedResponseSize
@@ -40,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "eclQueryApplicationURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:210")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26614")]
         [MinLength(1)]
         [MaxLength(256)]
         public string EclQueryApplicationURL
@@ -60,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "eclQueryDataRepositoryURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:210")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26614")]
         [MinLength(1)]
         [MaxLength(256)]
         public string EclQueryDataRepositoryURL

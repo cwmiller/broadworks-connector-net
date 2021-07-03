@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4209""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19820""}]")]
     public class SystemASRParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _maxTransmissions;
 
         [XmlElement(ElementName = "maxTransmissions", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4209")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19820")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaxTransmissions
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _retransmissionDelayMilliSeconds;
 
         [XmlElement(ElementName = "retransmissionDelayMilliSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4209")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19820")]
         [MinInclusive(100)]
         [MaxInclusive(2000)]
         public int RetransmissionDelayMilliSeconds
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _listeningPort;
 
         [XmlElement(ElementName = "listeningPort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4209")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19820")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int ListeningPort

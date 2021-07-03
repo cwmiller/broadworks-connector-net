@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12173""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13300""}]")]
     public class SystemNumberPortabilityQueryStatusModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _statusName;
 
         [XmlElement(ElementName = "statusName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12173")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13300")]
         [MinLength(1)]
         [MaxLength(40)]
         public string StatusName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newStatusName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12173")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13300")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewStatusName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treatmentFileName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12173")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13300")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TreatmentFileName

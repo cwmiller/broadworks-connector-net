@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:212""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:215""}]")]
     public class AutomaticCollectCallPrefixDigitsEntry
     {
 
         private string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:212")]
+        [Group(@"af1b47d7cab3335a81456e64e42371b0:215")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _prefixDigits;
 
         [XmlElement(ElementName = "prefixDigits", IsNullable = false, Namespace = "")]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:212")]
+        [Group(@"af1b47d7cab3335a81456e64e42371b0:215")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PrefixDigits

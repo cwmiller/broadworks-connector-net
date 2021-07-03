@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18169""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19241""}]")]
     public class SystemVideoServerParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _videoServerResponseTimerMilliseconds;
 
         [XmlElement(ElementName = "videoServerResponseTimerMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18169")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19241")]
         [MinInclusive(600)]
         [MaxInclusive(120000)]
         public int VideoServerResponseTimerMilliseconds
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _videoServerSelectionRouteTimerMilliseconds;
 
         [XmlElement(ElementName = "videoServerSelectionRouteTimerMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18169")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19241")]
         [MinInclusive(500)]
         [MaxInclusive(120000)]
         public int VideoServerSelectionRouteTimerMilliseconds
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useStaticVideoServerDevice;
 
         [XmlElement(ElementName = "useStaticVideoServerDevice", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18169")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19241")]
         public bool UseStaticVideoServerDevice
         {
             get => _useStaticVideoServerDevice;

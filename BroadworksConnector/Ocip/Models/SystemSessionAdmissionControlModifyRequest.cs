@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15134""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16279""}]")]
     public class SystemSessionAdmissionControlModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "countLongConnectionsToMediaServer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15134")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16279")]
         public bool CountLongConnectionsToMediaServer
         {
             get => _countLongConnectionsToMediaServer;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sacHandlingForMoH", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15134")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16279")]
         public BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType SacHandlingForMoH
         {
             get => _sacHandlingForMoH;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "blockVMDepositDueToSACLimits", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15134")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16279")]
         public bool BlockVMDepositDueToSACLimits
         {
             get => _blockVMDepositDueToSACLimits;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sacCodecSelectionPolicy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15134")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16279")]
         public BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType SacCodecSelectionPolicy
         {
             get => _sacCodecSelectionPolicy;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "countCallToMobileNumberForSACSubscriber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15134")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16279")]
         public bool CountCallToMobileNumberForSACSubscriber
         {
             get => _countCallToMobileNumberForSACSubscriber;
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "countBWAnywhereForSACSubscriber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15134")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16279")]
         public bool CountBWAnywhereForSACSubscriber
         {
             get => _countBWAnywhereForSACSubscriber;
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "countROForSACSubscriber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15134")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16279")]
         public bool CountROForSACSubscriber
         {
             get => _countROForSACSubscriber;
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "excludeBWMobilityForSACSubscriber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15134")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16279")]
         public bool ExcludeBWMobilityForSACSubscriber
         {
             get => _excludeBWMobilityForSACSubscriber;
@@ -162,6 +162,60 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool ExcludeBWMobilityForSACSubscriberSpecified { get; set; }
+
+        private bool _enableHoldoverOfHighwaterSessionCounts;
+
+        [XmlElement(ElementName = "enableHoldoverOfHighwaterSessionCounts", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16279")]
+        public bool EnableHoldoverOfHighwaterSessionCounts
+        {
+            get => _enableHoldoverOfHighwaterSessionCounts;
+            set
+            {
+                EnableHoldoverOfHighwaterSessionCountsSpecified = true;
+                _enableHoldoverOfHighwaterSessionCounts = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool EnableHoldoverOfHighwaterSessionCountsSpecified { get; set; }
+
+        private BroadWorksConnector.Ocip.Models.SessionAdmissionControlHighwaterSessionCountHoldoverPeriodMinutes _holdoverPeriodMinutes;
+
+        [XmlElement(ElementName = "holdoverPeriodMinutes", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16279")]
+        public BroadWorksConnector.Ocip.Models.SessionAdmissionControlHighwaterSessionCountHoldoverPeriodMinutes HoldoverPeriodMinutes
+        {
+            get => _holdoverPeriodMinutes;
+            set
+            {
+                HoldoverPeriodMinutesSpecified = true;
+                _holdoverPeriodMinutes = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool HoldoverPeriodMinutesSpecified { get; set; }
+
+        private BroadWorksConnector.Ocip.Models.SessionAdmissionControlTimeZoneOffsetMinutes _timeZoneOffsetMinutes;
+
+        [XmlElement(ElementName = "timeZoneOffsetMinutes", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16279")]
+        public BroadWorksConnector.Ocip.Models.SessionAdmissionControlTimeZoneOffsetMinutes TimeZoneOffsetMinutes
+        {
+            get => _timeZoneOffsetMinutes;
+            set
+            {
+                TimeZoneOffsetMinutesSpecified = true;
+                _timeZoneOffsetMinutes = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool TimeZoneOffsetMinutesSpecified { get; set; }
 
     }
 }

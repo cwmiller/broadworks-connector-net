@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26390""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:29107""}]")]
     public class SystemSelectiveServicesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.ScheduleCombinationType _scheduleCombination;
 
         [XmlElement(ElementName = "scheduleCombination", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26390")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29107")]
         public BroadWorksConnector.Ocip.Models.ScheduleCombinationType ScheduleCombination
         {
             get => _scheduleCombination;

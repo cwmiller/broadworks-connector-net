@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3dd296d55b56269ae23d86a934b8b35c:78""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3dd296d55b56269ae23d86a934b8b35c:79""}]")]
     public class GroupIncomingCallingPlanModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"3dd296d55b56269ae23d86a934b8b35c:78")]
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:79")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"3dd296d55b56269ae23d86a934b8b35c:78")]
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:79")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3dd296d55b56269ae23d86a934b8b35c:78")]
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:79")]
         public BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissionsModify GroupPermissions
         {
             get => _groupPermissions;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3dd296d55b56269ae23d86a934b8b35c:78")]
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:79")]
         public List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissionsModify> DepartmentPermissions
         {
             get => _departmentPermissions;

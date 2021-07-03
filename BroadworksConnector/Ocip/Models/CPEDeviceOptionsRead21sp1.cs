@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:45144""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:48035""}]")]
     public class CPEDeviceOptionsRead21sp1
     {
 
         private bool _enableMonitoring;
 
         [XmlElement(ElementName = "enableMonitoring", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45144")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48035")]
         public bool EnableMonitoring
         {
             get => _enableMonitoring;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45144")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48035")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigType
         {
             get => _configType;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "systemFileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45144")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48035")]
         [MinLength(1)]
         [MaxLength(265)]
         public string SystemFileName
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceFileFormat", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45144")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48035")]
         [MinLength(1)]
         [MaxLength(265)]
         public string DeviceFileFormat
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceManagementDeviceTypeOptions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45144")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48035")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeOptionsRead21sp1 DeviceManagementDeviceTypeOptions
         {
             get => _deviceManagementDeviceTypeOptions;

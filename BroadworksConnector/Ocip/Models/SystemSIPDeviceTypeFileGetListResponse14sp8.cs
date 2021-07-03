@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15936""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16996""}]")]
     public class SystemSIPDeviceTypeFileGetListResponse14sp8 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _deviceTypeFilesTable;
 
         [XmlElement(ElementName = "deviceTypeFilesTable", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15936")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16996")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DeviceTypeFilesTable
         {
             get => _deviceTypeFilesTable;

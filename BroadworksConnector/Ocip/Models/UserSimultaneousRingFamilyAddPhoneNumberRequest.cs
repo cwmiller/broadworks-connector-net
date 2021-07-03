@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:17473""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:46236""}]")]
     public class UserSimultaneousRingFamilyAddPhoneNumberRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17473")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46236")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17473")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46236")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PhoneNumber
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17473")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46236")]
         public bool AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;

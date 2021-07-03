@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:1042""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3023""}]")]
     public class MeetMeConferencingConferencePorts
     {
 
         private bool _unlimited;
 
         [XmlElement(ElementName = "unlimited", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:1042")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3023")]
         public bool Unlimited
         {
             get => _unlimited;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _quantity;
 
         [XmlElement(ElementName = "quantity", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:1042")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3023")]
         [MinInclusive(0)]
         [MaxInclusive(999999)]
         public int Quantity

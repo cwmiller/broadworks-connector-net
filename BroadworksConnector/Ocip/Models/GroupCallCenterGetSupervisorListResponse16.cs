@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4896""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4856""}]")]
     public class GroupCallCenterGetSupervisorListResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _supervisorTable;
 
         [XmlElement(ElementName = "supervisorTable", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4896")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4856")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SupervisorTable
         {
             get => _supervisorTable;

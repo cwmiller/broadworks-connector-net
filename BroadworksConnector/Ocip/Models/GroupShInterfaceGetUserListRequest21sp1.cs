@@ -7,22 +7,21 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Returns a list of all Public User Identities and associated data in a group.
-    /// The response is either a GroupShInterfaceGetUserListResponse21sp1 or an ErrorResponse.
+    /// Returns a list of all Public User Identities and associated data in a group. The response is either a GroupShInterfaceGetUserListResponse21sp1 or an ErrorResponse.
     /// <see cref="GroupShInterfaceGetUserListResponse21sp1"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7250""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:8266""}]")]
     public class GroupShInterfaceGetUserListRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7250")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8266")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7250")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8266")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

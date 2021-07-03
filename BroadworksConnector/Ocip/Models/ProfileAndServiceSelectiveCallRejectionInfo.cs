@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4315""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4499""}]")]
     public class ProfileAndServiceSelectiveCallRejectionInfo
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4315")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4499")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
         {
             get => _criteriaTable;

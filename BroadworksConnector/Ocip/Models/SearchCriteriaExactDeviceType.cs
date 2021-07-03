@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:865""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:924""}]")]
     public class SearchCriteriaExactDeviceType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:865")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:924")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType

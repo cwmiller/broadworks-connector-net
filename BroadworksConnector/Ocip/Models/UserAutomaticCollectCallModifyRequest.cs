@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:190""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:193""}]")]
     public class UserAutomaticCollectCallModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:190")]
+        [Group(@"af1b47d7cab3335a81456e64e42371b0:193")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAutomaticCollectCall", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:190")]
+        [Group(@"af1b47d7cab3335a81456e64e42371b0:193")]
         public bool EnableAutomaticCollectCall
         {
             get => _enableAutomaticCollectCall;

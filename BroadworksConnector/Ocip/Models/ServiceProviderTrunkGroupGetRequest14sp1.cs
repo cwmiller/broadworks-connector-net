@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get the maximum and bursting maximum permissible active Trunk Group calls for the service provider.
     /// The response is either a ServiceProviderTrunkGroupGetResponse14sp1 or an ErrorResponse.
+    /// 
+    /// Deprecated by ServiceProviderTrunkGroupGetRequest23
     /// <see cref="ServiceProviderTrunkGroupGetResponse14sp1"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="ServiceProviderTrunkGroupGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1592""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19187""}]")]
     public class ServiceProviderTrunkGroupGetRequest14sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1592")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19187")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

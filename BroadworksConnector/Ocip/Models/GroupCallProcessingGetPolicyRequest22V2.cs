@@ -8,15 +8,11 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request the group level data associated with Call Processing Policy.
-    /// The response is either a GroupCallProcessingGetPolicyResponse22V2 or an
-    /// ErrorResponse.
-    /// 
+    /// The response is either a GroupCallProcessingGetPolicyResponse22V2 or an ErrorResponse.
     /// The useGroupCLIDSetting attribute controls the CLID settings
     /// (clidPolicy,enterpriseCallsCLIDPolicy, groupCallsCLIDPolicy, emergencyClidPolicy, allowAlternateNumbersForRedirectingIdentity, useGroupName, allowDepartmentCLIDNameOverride)
-    /// 
     /// The useGroupMediaSetting attribute controls the Media settings
     /// (medisPolicySelection, supportedMediaSetName)
-    /// 
     /// The useGroupCallLimitsSetting attribute controls the Call Limits settings
     /// (useMaxSimultaneousCalls, maxSimultaneousCalls,
     /// useMaxSimultaneousVideoCalls, maxSimultaneousVideoCalls, useMaxCallTimeForAnsweredCalls,
@@ -24,26 +20,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// useMaxConcurrentRedirectedCalls, useMaxFindMeFollowMeDepth, maxRedirectionDepth,
     /// useMaxConcurrentFindMeFollowMeInvocations, maxConcurrentFindMeFollowMeInvocations,
     /// useMaxConcurrentTerminatingAlertingRequests, maxConcurrentTerminatingAlertingRequests)
-    /// 
     /// The useGroupTranslationRoutingSetting attribute controls the routing and translation settings
     /// (networkUsageSelection, enforceGroupCallingLineIdentityRestriction,
     /// allowEnterpriseGroupCallTypingForPrivateDialingPlan, allowEnterpriseGroupCallTypingForPublicDialingPlan, overrideCLIDRestrictionForExternalCallsViaPrivateDialingPlan, enableEnterpriseExtensionDialing)
+    /// Replaced by: GroupCallProcessingGetPolicyRequest22V3 in AS data mode.
     /// <see cref="GroupCallProcessingGetPolicyResponse22V2"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="useMaxConcurrentTerminatingAlertingRequests"/>
     /// <see cref="maxConcurrentTerminatingAlertingRequests"/>
+    /// <see cref="GroupCallProcessingGetPolicyRequest22V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:2043""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:1848""}]")]
     public class GroupCallProcessingGetPolicyRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2043")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:1848")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -62,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2043")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:1848")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

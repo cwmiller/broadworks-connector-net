@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.GroupDepartmentKey))]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1833""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2050""}]")]
     public abstract class DepartmentKey
     {
 

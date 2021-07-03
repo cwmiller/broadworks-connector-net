@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2611""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3390""}]")]
     public class GroupNetworkClassOfServiceGetAssignedUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:2611")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:3390")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;

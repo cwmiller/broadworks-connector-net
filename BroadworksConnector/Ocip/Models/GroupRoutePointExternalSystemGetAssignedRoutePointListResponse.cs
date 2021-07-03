@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:6217""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7235""}]")]
     public class GroupRoutePointExternalSystemGetAssignedRoutePointListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _routePointTable;
 
         [XmlElement(ElementName = "routePointTable", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6217")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7235")]
         public BroadWorksConnector.Ocip.Models.C.OCITable RoutePointTable
         {
             get => _routePointTable;

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2496""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2965""}]")]
     public class LabeledFileNameResource
     {
 
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2496")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2965")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Description
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MediaFileType _mediaType;
 
         [XmlElement(ElementName = "mediaType", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2496")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2965")]
         public BroadWorksConnector.Ocip.Models.MediaFileType MediaType
         {
             get => _mediaType;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _sourceFileName;
 
         [XmlElement(ElementName = "sourceFileName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2496")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2965")]
         [MinLength(1)]
         public string SourceFileName
         {

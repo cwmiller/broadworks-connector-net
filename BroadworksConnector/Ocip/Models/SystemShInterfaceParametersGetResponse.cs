@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Response to SystemShInterfaceParametersGetRequest. Contains the Sh Interface system parameters.
+    /// Response to SystemShInterfaceParametersGetRequest.  Contains the Sh Interface system parameters.
     /// 
     /// Replaced by: SystemShInterfaceParametersGetResponse17
     /// <see cref="SystemShInterfaceParametersGetRequest"/>
@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:15953""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:29362""}]")]
     public class SystemShInterfaceParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hssRealm", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15953")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29362")]
         [MinLength(1)]
         [MaxLength(80)]
         public string HssRealm
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _requestTimeoutSeconds;
 
         [XmlElement(ElementName = "requestTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15953")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29362")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int RequestTimeoutSeconds
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _publicIdentityRefreshDelaySeconds;
 
         [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15953")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29362")]
         [MinInclusive(0)]
         [MaxInclusive(30)]
         public int PublicIdentityRefreshDelaySeconds

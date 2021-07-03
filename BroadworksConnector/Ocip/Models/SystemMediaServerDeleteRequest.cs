@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10903""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11944""}]")]
     public class SystemMediaServerDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10903")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11944")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress

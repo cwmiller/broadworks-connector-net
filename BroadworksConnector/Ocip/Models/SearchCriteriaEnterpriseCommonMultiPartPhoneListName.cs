@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:570""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:629""}]")]
     public class SearchCriteriaEnterpriseCommonMultiPartPhoneListName : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private List<string> _value = new List<string>();
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:570")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:629")]
         [MinLength(1)]
         [MaxLength(50)]
         public List<string> Value
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isCaseInsensitive;
 
         [XmlElement(ElementName = "isCaseInsensitive", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:570")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:629")]
         public bool IsCaseInsensitive
         {
             get => _isCaseInsensitive;

@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:6146""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:31878""}]")]
     public class SystemSIPDeviceTypeGetRequest14sp3 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6146")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31878")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType

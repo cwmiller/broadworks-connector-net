@@ -338,6 +338,8 @@ namespace BroadWorksConnector.Ocip.Models
         OutlookIntegration,
         [XmlEnum(Name = "Office Communicator Tab")]
         OfficeCommunicatorTab,
+        [XmlEnum(Name = "PBX Integration")]
+        PBXIntegration,
         [XmlEnum(Name = "Personal Assistant")]
         PersonalAssistant,
         [XmlEnum(Name = "Physical Location")]
@@ -404,6 +406,8 @@ namespace BroadWorksConnector.Ocip.Models
         SpeedDial8,
         [XmlEnum(Name = "Terminating Alternate Trunk Identity")]
         TerminatingAlternateTrunkIdentity,
+        [XmlEnum(Name = "Terminating Closed User Group")]
+        TerminatingClosedUserGroup,
         [XmlEnum(Name = "Third-Party IMP")]
         ThirdPartyIMP,
         [XmlEnum(Name = "Third-Party MWI Control")]

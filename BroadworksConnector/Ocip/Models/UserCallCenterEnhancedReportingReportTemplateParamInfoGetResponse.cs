@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6753""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6778""}]")]
     public class UserCallCenterEnhancedReportingReportTemplateParamInfoGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isRealtimeReport;
 
         [XmlElement(ElementName = "isRealtimeReport", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         public bool IsRealtimeReport
         {
             get => _isRealtimeReport;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _requireAgentParam;
 
         [XmlElement(ElementName = "requireAgentParam", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         public bool RequireAgentParam
         {
             get => _requireAgentParam;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _requireCallCenterParam;
 
         [XmlElement(ElementName = "requireCallCenterParam", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         public bool RequireCallCenterParam
         {
             get => _requireCallCenterParam;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _requireCallCenterDnisParam;
 
         [XmlElement(ElementName = "requireCallCenterDnisParam", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         public bool RequireCallCenterDnisParam
         {
             get => _requireCallCenterDnisParam;
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _requireSamplingPeriodParam;
 
         [XmlElement(ElementName = "requireSamplingPeriodParam", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         public bool RequireSamplingPeriodParam
         {
             get => _requireSamplingPeriodParam;
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callCompletionThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption CallCompletionThresholdParam
         {
             get => _callCompletionThresholdParam;
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "shortDurationThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ShortDurationThresholdParam
         {
             get => _shortDurationThresholdParam;
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceLevelThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelThresholdParam
         {
             get => _serviceLevelThresholdParam;
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceLevelInclusionsParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelInclusionsParam
         {
             get => _serviceLevelInclusionsParam;
@@ -178,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceLevelObjectiveThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelObjectiveThresholdParam
         {
             get => _serviceLevelObjectiveThresholdParam;
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "abandonedCallThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption AbandonedCallThresholdParam
         {
             get => _abandonedCallThresholdParam;
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceLevelThresholdParamNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
         public int ServiceLevelThresholdParamNumber
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "abandonedCallThresholdParamNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6753")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6778")]
         [MinInclusive(1)]
         [MaxInclusive(4)]
         public int AbandonedCallThresholdParamNumber

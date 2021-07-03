@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3204""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3894""}]")]
     public class ServiceProviderDnGetSummaryListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3204")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3894")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3204")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3894")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId
         {
             get => _searchCriteriaGroupId;
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3204")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3894")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn
         {
             get => _searchCriteriaDn;

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44718""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:49118""}]")]
     public class MusicOnHoldSourceModify16ExternalSource
     {
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44718")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49118")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;

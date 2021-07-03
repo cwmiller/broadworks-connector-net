@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1447"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1458""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1470"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1481""}]}]")]
     public class GroupTrunkGroupUserCreationTaskAddRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey
         {
             get => _trunkGroupKey;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         [MinLength(1)]
         [MaxLength(80)]
         public string TaskName
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat _userIdFormat;
 
         [XmlElement(ElementName = "userIdFormat", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat UserIdFormat
         {
             get => _userIdFormat;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _userIdDomain;
 
         [XmlElement(ElementName = "userIdDomain", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         [MinLength(1)]
         [MaxLength(80)]
         public string UserIdDomain
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _populateExtension;
 
         [XmlElement(ElementName = "populateExtension", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         public bool PopulateExtension
         {
             get => _populateExtension;
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _linePortFormat;
 
         [XmlElement(ElementName = "linePortFormat", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat LinePortFormat
         {
             get => _linePortFormat;
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _linePortDomain;
 
         [XmlElement(ElementName = "linePortDomain", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         [MinLength(1)]
         [MaxLength(80)]
         public string LinePortDomain
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _populateContact;
 
         [XmlElement(ElementName = "populateContact", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         public bool PopulateContact
         {
             get => _populateContact;
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contactFormat", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat ContactFormat
         {
             get => _contactFormat;
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contactDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ContactDomain
@@ -202,7 +202,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequest14sp4UserPhoneNumbers _userPhoneNumbers;
 
         [XmlElement(ElementName = "userPhoneNumbers", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1458")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1481")]
         public BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequest14sp4UserPhoneNumbers UserPhoneNumbers
         {
             get => _userPhoneNumbers;
@@ -219,7 +219,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequest14sp4UserExtensions _userExtensions;
 
         [XmlElement(ElementName = "userExtensions", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1458")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1481")]
         public BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequest14sp4UserExtensions UserExtensions
         {
             get => _userExtensions;
@@ -237,7 +237,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> ServicePackName
@@ -257,7 +257,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1447")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
         public List<BroadWorksConnector.Ocip.Models.UserService> UserService
         {
             get => _userService;

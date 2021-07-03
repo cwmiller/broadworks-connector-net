@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2166""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2544""}]")]
     public class EnhancedCallLogsResponsePagingControl
     {
 
         private int _responseStartIndex;
 
         [XmlElement(ElementName = "responseStartIndex", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2166")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2544")]
         [MinInclusive(1)]
         public int ResponseStartIndex
         {
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _responsePageSize;
 
         [XmlElement(ElementName = "responsePageSize", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2166")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2544")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
         public int ResponsePageSize

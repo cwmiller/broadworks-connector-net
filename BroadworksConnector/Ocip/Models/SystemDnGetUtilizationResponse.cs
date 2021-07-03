@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5135""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26378""}]")]
     public class SystemDnGetUtilizationResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5135")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26378")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5135")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26378")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5135")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26378")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5135")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26378")]
         public BroadWorksConnector.Ocip.Models.UserType UserType
         {
             get => _userType;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isGroupCallingLineId;
 
         [XmlElement(ElementName = "isGroupCallingLineId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5135")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26378")]
         public bool IsGroupCallingLineId
         {
             get => _isGroupCallingLineId;

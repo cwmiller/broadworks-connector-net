@@ -592,7 +592,7 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
-        /// Request to get the list of call types of outgoing calling plan
+        /// Request to get the list of call types of outgoing calling plan.
         /// The response is SystemOutgoingCallingPlanCallTypeGetListResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemOutgoingCallingPlanCallTypeGetListRequestAsync instead.")]
@@ -602,7 +602,7 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// Request to get the list of call types of outgoing calling plan
+        /// Request to get the list of call types of outgoing calling plan.
         /// The response is SystemOutgoingCallingPlanCallTypeGetListResponse or ErrorResponse.
         /// </summary>
         public static async Task<SystemOutgoingCallingPlanCallTypeGetListResponse> SystemOutgoingCallingPlanCallTypeGetListRequestAsync(this OcipClient client, SystemOutgoingCallingPlanCallTypeGetListRequest request, CancellationToken cancellationToken = default)

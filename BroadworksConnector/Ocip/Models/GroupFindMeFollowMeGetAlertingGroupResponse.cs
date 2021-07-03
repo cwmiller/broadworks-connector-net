@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:280""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:281""}]")]
     public class GroupFindMeFollowMeGetAlertingGroupResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertingGroupDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:281")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AlertingGroupDescription
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useDiversionInhibitor;
 
         [XmlElement(ElementName = "useDiversionInhibitor", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:281")]
         public bool UseDiversionInhibitor
         {
             get => _useDiversionInhibitor;
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:281")]
         public bool AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _numberOfRings;
 
         [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:281")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int NumberOfRings
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:281")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> PhoneNumber
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:281")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:280")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:281")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
         {
             get => _criteriaTable;

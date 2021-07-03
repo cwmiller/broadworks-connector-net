@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:8504""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:6119""}]")]
     public class GroupCallCenterGetInstanceStatisticsReportingResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _generateDailyReport;
 
         [XmlElement(ElementName = "generateDailyReport", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8504")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6119")]
         public bool GenerateDailyReport
         {
             get => _generateDailyReport;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
 
         [XmlElement(ElementName = "collectionPeriodMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8504")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6119")]
         public BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes CollectionPeriodMinutes
         {
             get => _collectionPeriodMinutes;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingEmailAddress1", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8504")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6119")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ReportingEmailAddress1
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingEmailAddress2", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8504")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6119")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ReportingEmailAddress2

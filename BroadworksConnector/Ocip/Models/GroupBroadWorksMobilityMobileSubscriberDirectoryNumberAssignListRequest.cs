@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:329""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:350""}]")]
     public class GroupBroadWorksMobilityMobileSubscriberDirectoryNumberAssignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:329")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:350")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:329")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:350")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobileSubscriberDirectoryNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:329")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:350")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> MobileSubscriberDirectoryNumber

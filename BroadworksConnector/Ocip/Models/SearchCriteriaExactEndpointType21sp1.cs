@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:925""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1014""}]")]
     public class SearchCriteriaExactEndpointType21sp1 : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private BroadWorksConnector.Ocip.Models.EndpointType21sp1 _endpointType;
 
         [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:925")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:1014")]
         public BroadWorksConnector.Ocip.Models.EndpointType21sp1 EndpointType
         {
             get => _endpointType;

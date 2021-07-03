@@ -9,20 +9,27 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify a specified system access device.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// useHotline
+    /// hotlineContact
+    /// isWebexTeamsDevice
+    /// defaultPathHeader
+    /// deviceExternalId
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1081""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6860"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6861""}]}]")]
     public class SystemAccessDeviceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6861")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -38,11 +45,29 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceNameSpecified { get; set; }
 
+        private string _deviceExternalId;
+
+        [XmlElement(ElementName = "deviceExternalId", IsNullable = false, Namespace = "")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6861")]
+        [MaxLength(36)]
+        public string DeviceExternalId
+        {
+            get => _deviceExternalId;
+            set
+            {
+                DeviceExternalIdSpecified = true;
+                _deviceExternalId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool DeviceExternalIdSpecified { get; set; }
+
         private string _protocol;
 
         [XmlElement(ElementName = "protocol", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinLength(1)]
         [MaxLength(20)]
         public string Protocol
@@ -62,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "netAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -82,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int? Port
@@ -102,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "outboundProxyServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinLength(1)]
         [MaxLength(80)]
         public string OutboundProxyServerNetAddress
@@ -122,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "stunServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinLength(1)]
         [MaxLength(80)]
         public string StunServerNetAddress
@@ -142,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "macAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinLength(1)]
         [MaxLength(12)]
         public string MacAddress
@@ -162,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serialNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SerialNumber
@@ -182,7 +207,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -202,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "physicalLocation", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinLength(1)]
         [MaxLength(1024)]
         public string PhysicalLocation
@@ -218,12 +243,12 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhysicalLocationSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.TransportProtocol _transportProtocol;
+        private BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
-        public BroadWorksConnector.Ocip.Models.TransportProtocol TransportProtocol
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
+        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol TransportProtocol
         {
             get => _transportProtocol;
             set
@@ -240,7 +265,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobilityManagerProvisioningURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinLength(1)]
         [MaxLength(256)]
         public string MobilityManagerProvisioningURL
@@ -260,7 +285,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobilityManagerProvisioningUserName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinLength(1)]
         [MaxLength(15)]
         public string MobilityManagerProvisioningUserName
@@ -280,7 +305,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobilityManagerProvisioningPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinLength(1)]
         [MaxLength(15)]
         public string MobilityManagerProvisioningPassword
@@ -300,7 +325,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobilityManagerDefaultOriginatingServiceKey", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinInclusive(0)]
         [MaxInclusive(999)]
         public int? MobilityManagerDefaultOriginatingServiceKey
@@ -320,7 +345,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobilityManagerDefaultTerminatingServiceKey", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         [MinInclusive(0)]
         [MaxInclusive(999)]
         public int? MobilityManagerDefaultTerminatingServiceKey
@@ -340,7 +365,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useCustomUserNamePassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         public bool UseCustomUserNamePassword
         {
             get => _useCustomUserNamePassword;
@@ -358,7 +383,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceCredentials", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1081")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementUserNamePassword16 AccessDeviceCredentials
         {
             get => _accessDeviceCredentials;
@@ -371,6 +396,82 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool AccessDeviceCredentialsSpecified { get; set; }
+
+        private bool _useHotline;
+
+        [XmlElement(ElementName = "useHotline", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
+        public bool UseHotline
+        {
+            get => _useHotline;
+            set
+            {
+                UseHotlineSpecified = true;
+                _useHotline = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool UseHotlineSpecified { get; set; }
+
+        private string _hotlineContact;
+
+        [XmlElement(ElementName = "hotlineContact", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string HotlineContact
+        {
+            get => _hotlineContact;
+            set
+            {
+                HotlineContactSpecified = true;
+                _hotlineContact = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool HotlineContactSpecified { get; set; }
+
+        private bool _isWebexTeamsDevice;
+
+        [XmlElement(ElementName = "isWebexTeamsDevice", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
+        public bool IsWebexTeamsDevice
+        {
+            get => _isWebexTeamsDevice;
+            set
+            {
+                IsWebexTeamsDeviceSpecified = true;
+                _isWebexTeamsDevice = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IsWebexTeamsDeviceSpecified { get; set; }
+
+        private string _defaultPathHeader;
+
+        [XmlElement(ElementName = "defaultPathHeader", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6860")]
+        [MinLength(1)]
+        [MaxLength(1024)]
+        public string DefaultPathHeader
+        {
+            get => _defaultPathHeader;
+            set
+            {
+                DefaultPathHeaderSpecified = true;
+                _defaultPathHeader = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool DefaultPathHeaderSpecified { get; set; }
 
     }
 }

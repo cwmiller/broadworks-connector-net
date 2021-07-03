@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2739e54a6c7a2ab6abe092f89482573e:58""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2739e54a6c7a2ab6abe092f89482573e:59""}]")]
     public class UserCallingNumberDeliveryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isActiveForExternalCalls;
 
         [XmlElement(ElementName = "isActiveForExternalCalls", IsNullable = false, Namespace = "")]
-        [Group(@"2739e54a6c7a2ab6abe092f89482573e:58")]
+        [Group(@"2739e54a6c7a2ab6abe092f89482573e:59")]
         public bool IsActiveForExternalCalls
         {
             get => _isActiveForExternalCalls;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isActiveForInternalCalls;
 
         [XmlElement(ElementName = "isActiveForInternalCalls", IsNullable = false, Namespace = "")]
-        [Group(@"2739e54a6c7a2ab6abe092f89482573e:58")]
+        [Group(@"2739e54a6c7a2ab6abe092f89482573e:59")]
         public bool IsActiveForInternalCalls
         {
             get => _isActiveForInternalCalls;

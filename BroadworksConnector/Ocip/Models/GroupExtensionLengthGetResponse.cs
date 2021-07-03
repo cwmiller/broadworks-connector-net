@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:13615""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:9631""}]")]
     public class GroupExtensionLengthGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _extensionLength;
 
         [XmlElement(ElementName = "extensionLength", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13615")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9631")]
         [MinInclusive(2)]
         [MaxInclusive(6)]
         public int ExtensionLength

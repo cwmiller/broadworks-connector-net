@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:17338""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18311""}]")]
     public class SystemSystemServiceDnGetUsageListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _dnUtilizationTable;
 
         [XmlElement(ElementName = "dnUtilizationTable", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17338")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18311")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DnUtilizationTable
         {
             get => _dnUtilizationTable;

@@ -9,13 +9,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request the system level data associated with the Trunk Group service.
     /// The response is either SystemTrunkGroupGetResponse23 or ErrorResponse.
+    /// 
+    /// Replaced by: SystemTrunkGroupGetRequest24
     /// <see cref="SystemTrunkGroupGetResponse23"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemTrunkGroupGetRequest24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1643""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35828""}]")]
     public class SystemTrunkGroupGetRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 

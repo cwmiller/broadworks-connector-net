@@ -24,14 +24,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2793""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2829""}]")]
     public class UserPersonalPhoneListGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2793")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2829")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2793")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2829")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2793")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2829")]
         public bool SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserPersonalPhoneListName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2793")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2829")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserPersonalPhoneListName> SearchCriteriaUserPersonalPhoneListName
         {
             get => _searchCriteriaUserPersonalPhoneListName;
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserPersonalPhoneListNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2793")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2829")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserPersonalPhoneListNumber> SearchCriteriaUserPersonalPhoneListNumber
         {
             get => _searchCriteriaUserPersonalPhoneListNumber;

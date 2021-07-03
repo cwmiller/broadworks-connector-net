@@ -8,20 +8,16 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get the list of registration contacts.
-    /// This request handles all levels of administration privileges. The content of the response will only
-    /// contain
-    /// items within the scope of the requester's login id. At the system level any of the choice parameters may
-    /// be
-    /// specified to filter the registrations listed. At the reseller level, the resellerId must be specified.
+    /// This request handles all levels of administration privileges.  The content of the response will only contain
+    /// items within the scope of the requester's login id.  At the system level any of the choice parameters may be
+    /// specified to filter the registrations listed.  At the reseller level, the resellerId must be specified.
     /// ResellerId is not valid at service provider, group or user level. At the service provider level the
-    /// serviceProviderId must be specified for the service provider and group options. When using the userId or
-    /// linePort options the specified value must be valid for that service provider login. At the group level
-    /// the servicProviderId and the groupId must be specified for the group option. When using the userId or
-    /// linePort
+    /// serviceProviderId must be specified for the service provider and group options.  When using the userId or
+    /// linePort options the specified value must be valid for that service provider login.  At the group level
+    /// the servicProviderId and the groupId must be specified for the group option. When using the userId or linePort
     /// options the specified value must be valid for that group login.
-    /// The serviceProviderId option is not valid at the group level. At the user level when using the userId or
-    /// linePort options the specified value must be valid for that user login. The serviceProviderId and
-    /// groupId
+    /// The serviceProviderId option is not valid at the group level.  At the user level when using the userId or
+    /// linePort options the specified value must be valid for that user login.  The serviceProviderId and groupId
     /// options are not valid at the user level.
     /// The response is either SystemGetRegistrationContactListResponse or ErrorResponse.
     /// 
@@ -33,14 +29,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38783"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38784"",""optional"":true,""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38787""}]}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27045"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27046"",""optional"":true,""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27049""}]}]}]")]
     public class SystemGetRegistrationContactListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38784")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27046")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ResellerId
@@ -59,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38784")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27046")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -78,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _svcProviderId;
 
         [XmlElement(ElementName = "svcProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38787")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27049")]
         [MinLength(1)]
         [MaxLength(30)]
         public string SvcProviderId
@@ -97,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38787")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27049")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -116,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38784")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27046")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -135,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38784")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27046")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -155,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27045")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceLevel DeviceLevel
         {
             get => _deviceLevel;
@@ -173,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27045")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -193,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27045")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -213,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaRegistrationURI", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27045")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaRegistrationURI> SearchCriteriaRegistrationURI
         {
             get => _searchCriteriaRegistrationURI;
@@ -231,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaSIPContact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27045")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaSIPContact> SearchCriteriaSIPContact
         {
             get => _searchCriteriaSIPContact;
@@ -249,7 +245,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27045")]
         public BroadWorksConnector.Ocip.Models.RegistrationEndpointType EndpointType
         {
             get => _endpointType;
@@ -267,7 +263,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "expired", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27045")]
         public bool Expired
         {
             get => _expired;

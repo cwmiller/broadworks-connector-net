@@ -8,21 +8,27 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Add a Call Recording platform.
+    /// The first system level call recording platform added is made the system default
+    /// call recording platform.  The first reseller level call recording platform added
+    /// for a reseller is made the reseller default call recording platform.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// Replaced by: SystemCallRecordingAddPlatformRequest22
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemCallRecordingAddPlatformRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:101""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24485""}]")]
     public class SystemCallRecordingAddPlatformRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:101")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24485")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -41,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:101")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24485")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -61,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:101")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24485")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int Port
@@ -80,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MediaStream _mediaStream;
 
         [XmlElement(ElementName = "mediaStream", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:101")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24485")]
         public BroadWorksConnector.Ocip.Models.MediaStream MediaStream
         {
             get => _mediaStream;
@@ -97,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.TransportProtocol _transportType;
 
         [XmlElement(ElementName = "transportType", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:101")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24485")]
         public BroadWorksConnector.Ocip.Models.TransportProtocol TransportType
         {
             get => _transportType;
@@ -115,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:101")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24485")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -134,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallRecordingPlatformSchemaVersion _schemaVersion;
 
         [XmlElement(ElementName = "schemaVersion", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:101")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24485")]
         public BroadWorksConnector.Ocip.Models.CallRecordingPlatformSchemaVersion SchemaVersion
         {
             get => _schemaVersion;
@@ -151,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _supportVideoRecording;
 
         [XmlElement(ElementName = "supportVideoRecording", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:101")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24485")]
         public bool SupportVideoRecording
         {
             get => _supportVideoRecording;
@@ -164,6 +170,26 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool SupportVideoRecordingSpecified { get; set; }
+
+        private string _resellerId;
+
+        [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24485")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ResellerId
+        {
+            get => _resellerId;
+            set
+            {
+                ResellerIdSpecified = true;
+                _resellerId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ResellerIdSpecified { get; set; }
 
     }
 }

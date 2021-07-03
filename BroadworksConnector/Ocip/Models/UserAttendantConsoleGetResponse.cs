@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16821""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:39558""}]")]
     public class UserAttendantConsoleGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _launchOnLogin;
 
         [XmlElement(ElementName = "launchOnLogin", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16821")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39558")]
         public bool LaunchOnLogin
         {
             get => _launchOnLogin;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowUserConfigCallDetails;
 
         [XmlElement(ElementName = "allowUserConfigCallDetails", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16821")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39558")]
         public bool AllowUserConfigCallDetails
         {
             get => _allowUserConfigCallDetails;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowUserViewCallDetails;
 
         [XmlElement(ElementName = "allowUserViewCallDetails", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16821")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39558")]
         public bool AllowUserViewCallDetails
         {
             get => _allowUserViewCallDetails;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "displayColumn", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16821")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39558")]
         public List<BroadWorksConnector.Ocip.Models.AttendantConsoleDisplayColumn> DisplayColumn
         {
             get => _displayColumn;

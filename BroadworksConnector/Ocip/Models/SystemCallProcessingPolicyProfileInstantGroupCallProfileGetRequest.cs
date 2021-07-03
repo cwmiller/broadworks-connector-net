@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Request to get the configuration for a call processing policy profile Instant Group Call subscriber type
-    /// profile.
+    /// Request to get the configuration for a call processing policy profile Instant Group Call subscriber type profile.
     /// The response is either a SystemCallProcessingPolicyProfileInstantGroupCallProfileGetResponse22 or an
     /// ErrorResponse.
     /// 
@@ -20,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38032""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:23238""}]")]
     public class SystemCallProcessingPolicyProfileInstantGroupCallProfileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38032")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23238")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:5160""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:5120""}]")]
     public class GroupCallCenterModifyDNISParametersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5160")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5120")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "displayDNISNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5160")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5120")]
         public bool DisplayDNISNumber
         {
             get => _displayDNISNumber;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "displayDNISName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5160")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5120")]
         public bool DisplayDNISName
         {
             get => _displayDNISName;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "promoteCallsFromPriority1to0", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5160")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5120")]
         public bool PromoteCallsFromPriority1to0
         {
             get => _promoteCallsFromPriority1to0;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "promoteCallsFromPriority2to1", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5160")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5120")]
         public bool PromoteCallsFromPriority2to1
         {
             get => _promoteCallsFromPriority2to1;
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "promoteCallsFromPriority3to2", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5160")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5120")]
         public bool PromoteCallsFromPriority3to2
         {
             get => _promoteCallsFromPriority3to2;
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "promoteCallsFromPriority1to0Seconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5160")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5120")]
         [MinInclusive(1)]
         [MaxInclusive(1800)]
         public int PromoteCallsFromPriority1to0Seconds
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "promoteCallsFromPriority2to1Seconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5160")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5120")]
         [MinInclusive(1)]
         [MaxInclusive(1800)]
         public int PromoteCallsFromPriority2to1Seconds
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "promoteCallsFromPriority3to2Seconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5160")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5120")]
         [MinInclusive(1)]
         [MaxInclusive(1800)]
         public int PromoteCallsFromPriority3to2Seconds

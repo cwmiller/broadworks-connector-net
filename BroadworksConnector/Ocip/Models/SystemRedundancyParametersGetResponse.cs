@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:22167""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:29032""}]")]
     public class SystemRedundancyParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _rollBackTimerMinutes;
 
         [XmlElement(ElementName = "rollBackTimerMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22167")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29032")]
         [MinInclusive(0)]
         [MaxInclusive(3600)]
         public int RollBackTimerMinutes

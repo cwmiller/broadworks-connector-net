@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3167""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3203""}]")]
     public class UserPhoneDirectoryGetSearchedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3167")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3203")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "nameSearchString", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3167")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3203")]
         [MinLength(1)]
         public string NameSearchString
         {

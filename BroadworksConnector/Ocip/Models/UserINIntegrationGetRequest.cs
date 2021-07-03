@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Request to get the user level IN Integration service attributes
-    /// The response is either UserINIntegrationGetResponse or ErrorResponse
+    /// Request to get the user level IN Integration service attributes The response is either UserINIntegrationGetResponse or ErrorResponse
     /// <see cref="UserINIntegrationGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>

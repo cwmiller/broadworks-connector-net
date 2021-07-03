@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4061""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19515""}]")]
     public class SystemAccessDeviceFileModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4061")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19515")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _fileType;
 
         [XmlElement(ElementName = "fileType", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4061")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19515")]
         [MinLength(1)]
         [MaxLength(40)]
         public string FileType
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4061")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19515")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource
         {
             get => _fileSource;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "uploadFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4061")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19515")]
         public BroadWorksConnector.Ocip.Models.FileResource UploadFile
         {
             get => _uploadFile;

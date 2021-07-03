@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43411""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47546""}]")]
     public class AutoAttendantModifyMenu
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43411")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47546")]
         public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection
         {
             get => _announcementSelection;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43411")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47546")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource AudioFile
         {
             get => _audioFile;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43411")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47546")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource VideoFile
         {
             get => _videoFile;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableFirstMenuLevelExtensionDialing", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43411")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47546")]
         public bool EnableFirstMenuLevelExtensionDialing
         {
             get => _enableFirstMenuLevelExtensionDialing;
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "keyConfiguration", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43411")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47546")]
         public List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyModifyConfiguration> KeyConfiguration
         {
             get => _keyConfiguration;

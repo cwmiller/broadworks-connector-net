@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2471""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2400""}]")]
     public class ChangeExtendedAwayGreetingMenuKeysModifyEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "activateExtendedAwayGreeting", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2471")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2400")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ActivateExtendedAwayGreeting
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deactivateExtendedAwayGreeting", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2471")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2400")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string DeactivateExtendedAwayGreeting
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recordNewGreeting", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2471")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2400")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RecordNewGreeting
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "listenToCurrentGreeting", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2471")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2400")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ListenToCurrentGreeting
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableMessageDeposit", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2471")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2400")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string EnableMessageDeposit
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disableMessageDeposit", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2471")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2400")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string DisableMessageDeposit
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2471")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2400")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2471")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2400")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:193""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:194""}]")]
     public class GroupOutgoingCallingPlanDepartmentAuthorizationCodeAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:193")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:194")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:193")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:194")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:193")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:194")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey
         {
             get => _departmentKey;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> _codeEntry = new List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry>();
 
         [XmlElement(ElementName = "codeEntry", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:193")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:194")]
         public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanAuthorizationCodeEntry> CodeEntry
         {
             get => _codeEntry;

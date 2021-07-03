@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8b2edcd7d6936a8b76653949ae59623:534""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8b2edcd7d6936a8b76653949ae59623:561""}]")]
     public class UserVoiceMessagingUserModifyVoicePortalRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"a8b2edcd7d6936a8b76653949ae59623:534")]
+        [Group(@"a8b2edcd7d6936a8b76653949ae59623:561")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "usePersonalizedName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8b2edcd7d6936a8b76653949ae59623:534")]
+        [Group(@"a8b2edcd7d6936a8b76653949ae59623:561")]
         public bool UsePersonalizedName
         {
             get => _usePersonalizedName;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voicePortalAutoLogin", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8b2edcd7d6936a8b76653949ae59623:534")]
+        [Group(@"a8b2edcd7d6936a8b76653949ae59623:561")]
         public bool VoicePortalAutoLogin
         {
             get => _voicePortalAutoLogin;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalizedNameAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8b2edcd7d6936a8b76653949ae59623:534")]
+        [Group(@"a8b2edcd7d6936a8b76653949ae59623:561")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource PersonalizedNameAudioFile
         {
             get => _personalizedNameAudioFile;

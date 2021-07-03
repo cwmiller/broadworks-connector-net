@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2258""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2303""}]")]
     public class UserGetServiceInstanceListInSystemResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _serviceInstanceTable;
 
         [XmlElement(ElementName = "serviceInstanceTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2258")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2303")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ServiceInstanceTable
         {
             get => _serviceInstanceTable;

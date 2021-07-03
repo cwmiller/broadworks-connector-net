@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1346""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1347""}]")]
     public class UserOutgoingCallingPlanOriginatingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _useCustomSettings;
 
         [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1346")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1347")]
         public bool UseCustomSettings
         {
             get => _useCustomSettings;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermissions _userPermissions;
 
         [XmlElement(ElementName = "userPermissions", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1346")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1347")]
         public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermissions UserPermissions
         {
             get => _userPermissions;

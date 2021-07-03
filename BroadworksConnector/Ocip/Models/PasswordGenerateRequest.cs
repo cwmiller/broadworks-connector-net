@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:438""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:376""}]")]
     public class PasswordGenerateRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "systemAdministratorPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:438")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:376")]
         public BroadWorksConnector.Ocip.Models.PasswordForSystemAdministrator SystemAdministratorPassword
         {
             get => _systemAdministratorPassword;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceProviderAdministratorPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:438")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:376")]
         public BroadWorksConnector.Ocip.Models.PasswordForServiceProviderAdministrator ServiceProviderAdministratorPassword
         {
             get => _serviceProviderAdministratorPassword;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupAdministratorPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:438")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:376")]
         public BroadWorksConnector.Ocip.Models.PasswordForGroupAdministrator GroupAdministratorPassword
         {
             get => _groupAdministratorPassword;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:438")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:376")]
         public BroadWorksConnector.Ocip.Models.PasswordForUser UserPassword
         {
             get => _userPassword;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceAuthenticationPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:438")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:376")]
         public BroadWorksConnector.Ocip.Models.PasswordForAccessDevice AccessDeviceAuthenticationPassword
         {
             get => _accessDeviceAuthenticationPassword;
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "trunkGroupAuthenticationPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:438")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:376")]
         public BroadWorksConnector.Ocip.Models.PasswordForTrunkGroup TrunkGroupAuthenticationPassword
         {
             get => _trunkGroupAuthenticationPassword;

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12579"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12581""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13706"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13708""}]}]")]
     public class SystemOCIReportingDeleteMessageNameListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12579")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13706")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _deleteAllMessageNames;
 
         [XmlElement(ElementName = "deleteAllMessageNames", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12581")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13708")]
         public bool DeleteAllMessageNames
         {
             get => _deleteAllMessageNames;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _messageNameStartsWith = new List<string>();
 
         [XmlElement(ElementName = "messageNameStartsWith", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12581")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13708")]
         [MinLength(1)]
         [MaxLength(256)]
         public List<string> MessageNameStartsWith

@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11307""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:42378""}]")]
     public class UserEnhancedCallLogsGetListRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11307")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42378")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11307")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42378")]
         public BroadWorksConnector.Ocip.Models.CallLogsType CallLogType
         {
             get => _callLogType;
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _startingOffset;
 
         [XmlElement(ElementName = "startingOffset", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11307")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42378")]
         [MinInclusive(0)]
         [MaxInclusive(9999)]
         public int StartingOffset
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _numCalls;
 
         [XmlElement(ElementName = "numCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11307")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42378")]
         [MinInclusive(1)]
         [MaxInclusive(10000)]
         public int NumCalls

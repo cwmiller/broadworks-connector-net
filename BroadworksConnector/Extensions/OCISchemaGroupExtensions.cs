@@ -12,9 +12,13 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to add a group access device.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// deviceExternalId
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupAccessDeviceAddRequest14Async instead.")]
-        public static async Task<SuccessResponse> GroupAccessDeviceAddRequest14(this OcipClient client, GroupAccessDeviceAddRequest14 request)
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceAddRequest22V2Async instead.")]
+        public static async Task<SuccessResponse> GroupAccessDeviceAddRequest22V2(this OcipClient client, GroupAccessDeviceAddRequest22V2 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -22,8 +26,12 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to add a group access device.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// deviceExternalId
         /// </summary>
-        public static async Task<SuccessResponse> GroupAccessDeviceAddRequest14Async(this OcipClient client, GroupAccessDeviceAddRequest14 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> GroupAccessDeviceAddRequest22V2Async(this OcipClient client, GroupAccessDeviceAddRequest22V2 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -44,6 +52,30 @@ namespace BroadWorksConnector
         public static async Task<GroupAccessDeviceAvailablePortGetListResponse> GroupAccessDeviceAvailablePortGetListRequestAsync(this OcipClient client, GroupAccessDeviceAvailablePortGetListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceAvailablePortGetListResponse;
+        }
+        /// <summary>
+        /// Request to add or modify a list of static configuration tag for a group access
+        /// device.  If the tag does not exist, it is added.  If the tag exists, its
+        /// value is updated.
+        /// 
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceCustomTagAddOrModifyListRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupAccessDeviceCustomTagAddOrModifyListRequest(this OcipClient client, GroupAccessDeviceCustomTagAddOrModifyListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to add or modify a list of static configuration tag for a group access
+        /// device.  If the tag does not exist, it is added.  If the tag exists, its
+        /// value is updated.
+        /// 
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupAccessDeviceCustomTagAddOrModifyListRequestAsync(this OcipClient client, GroupAccessDeviceCustomTagAddOrModifyListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Request to add a static configuration tag for a group access device.
@@ -131,6 +163,10 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to delete a specified group access device.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceExternalId
+        /// 
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupAccessDeviceDeleteRequestAsync instead.")]
@@ -141,9 +177,55 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request to delete a specified group access device.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceExternalId
+        /// 
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> GroupAccessDeviceDeleteRequestAsync(this OcipClient client, GroupAccessDeviceDeleteRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Requests the activation information for a device configured at the Group level.
+        /// The response is either GroupAccessDeviceDeviceActivationGetResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceDeviceActivationGetRequestAsync instead.")]
+        public static async Task<GroupAccessDeviceDeviceActivationGetResponse> GroupAccessDeviceDeviceActivationGetRequest(this OcipClient client, GroupAccessDeviceDeviceActivationGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupAccessDeviceDeviceActivationGetResponse;
+        }
+
+        /// <summary>
+        /// Requests the activation information for a device configured at the Group level.
+        /// The response is either GroupAccessDeviceDeviceActivationGetResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<GroupAccessDeviceDeviceActivationGetResponse> GroupAccessDeviceDeviceActivationGetRequestAsync(this OcipClient client, GroupAccessDeviceDeviceActivationGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceDeviceActivationGetResponse;
+        }
+        /// <summary>
+        /// Activates or deactivates a device configured at the Group level. It is only possible
+        /// for this request to activate a device which is deactivated. Trying to activate a
+        /// device in the activating state will result in an error response since only the DAS is
+        /// allowed to execute this operation.
+        /// Returns a SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceDeviceActivationModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupAccessDeviceDeviceActivationModifyRequest(this OcipClient client, GroupAccessDeviceDeviceActivationModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Activates or deactivates a device configured at the Group level. It is only possible
+        /// for this request to activate a device which is deactivated. Trying to activate a
+        /// device in the activating state will result in an error response since only the DAS is
+        /// allowed to execute this operation.
+        /// Returns a SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupAccessDeviceDeviceActivationModifyRequestAsync(this OcipClient client, GroupAccessDeviceDeviceActivationModifyRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -200,6 +282,46 @@ namespace BroadWorksConnector
         public static async Task<SuccessResponse> GroupAccessDeviceFileModifyRequest14sp8Async(this OcipClient client, GroupAccessDeviceFileModifyRequest14sp8 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Requests a new activation code for a device configured at the Group level.
+        /// Returns a SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceGenerateActivationCodeRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupAccessDeviceGenerateActivationCodeRequest(this OcipClient client, GroupAccessDeviceGenerateActivationCodeRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Requests a new activation code for a device configured at the Group level.
+        /// Returns a SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupAccessDeviceGenerateActivationCodeRequestAsync(this OcipClient client, GroupAccessDeviceGenerateActivationCodeRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Get the list of all available custom tags managed by the Device Management System, on a per-device profile basis.
+        /// The response is either GroupAccessDeviceGetAvailableCustomTagListResponse or ErrorResponse.
+        /// The following elements are used in AS mode and ignored in XS data mode:
+        /// tagSetName
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceGetAvailableCustomTagListRequestAsync instead.")]
+        public static async Task<GroupAccessDeviceGetAvailableCustomTagListResponse> GroupAccessDeviceGetAvailableCustomTagListRequest(this OcipClient client, GroupAccessDeviceGetAvailableCustomTagListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupAccessDeviceGetAvailableCustomTagListResponse;
+        }
+
+        /// <summary>
+        /// Get the list of all available custom tags managed by the Device Management System, on a per-device profile basis.
+        /// The response is either GroupAccessDeviceGetAvailableCustomTagListResponse or ErrorResponse.
+        /// The following elements are used in AS mode and ignored in XS data mode:
+        /// tagSetName
+        /// </summary>
+        public static async Task<GroupAccessDeviceGetAvailableCustomTagListResponse> GroupAccessDeviceGetAvailableCustomTagListRequestAsync(this OcipClient client, GroupAccessDeviceGetAvailableCustomTagListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceGetAvailableCustomTagListResponse;
         }
         /// <summary>
         /// Requests the list of available access devices for assignment to a user
@@ -266,7 +388,73 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceGetEnhancedConfigurationTypeResponse14;
         }
         /// <summary>
+        /// Requests the list of linked leaf devices for the group level tree device passed in the request.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The list includes devices created at the system, service provider, and group levels.
+        /// 
+        /// The response is either GroupAccessDeviceGetLinkedLeafDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceGetLinkedLeafDeviceListRequestAsync instead.")]
+        public static async Task<GroupAccessDeviceGetLinkedLeafDeviceListResponse> GroupAccessDeviceGetLinkedLeafDeviceListRequest(this OcipClient client, GroupAccessDeviceGetLinkedLeafDeviceListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupAccessDeviceGetLinkedLeafDeviceListResponse;
+        }
+
+        /// <summary>
+        /// Requests the list of linked leaf devices for the group level tree device passed in the request.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The list includes devices created at the system, service provider, and group levels.
+        /// 
+        /// The response is either GroupAccessDeviceGetLinkedLeafDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        public static async Task<GroupAccessDeviceGetLinkedLeafDeviceListResponse> GroupAccessDeviceGetLinkedLeafDeviceListRequestAsync(this OcipClient client, GroupAccessDeviceGetLinkedLeafDeviceListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceGetLinkedLeafDeviceListResponse;
+        }
+        /// <summary>
+        /// Requests the tree device linked with the group level leaf device passed in the request.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// 
+        /// The response is either GroupAccessDeviceGetLinkedTreeDeviceResponse or
+        /// ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceGetLinkedTreeDeviceRequestAsync instead.")]
+        public static async Task<GroupAccessDeviceGetLinkedTreeDeviceResponse> GroupAccessDeviceGetLinkedTreeDeviceRequest(this OcipClient client, GroupAccessDeviceGetLinkedTreeDeviceRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupAccessDeviceGetLinkedTreeDeviceResponse;
+        }
+
+        /// <summary>
+        /// Requests the tree device linked with the group level leaf device passed in the request.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// 
+        /// The response is either GroupAccessDeviceGetLinkedTreeDeviceResponse or
+        /// ErrorResponse.
+        /// </summary>
+        public static async Task<GroupAccessDeviceGetLinkedTreeDeviceResponse> GroupAccessDeviceGetLinkedTreeDeviceRequestAsync(this OcipClient client, GroupAccessDeviceGetLinkedTreeDeviceRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceGetLinkedTreeDeviceResponse;
+        }
+        /// <summary>
         /// Requests the list of access devices in a group.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// 
         /// The response is either GroupAccessDeviceGetListResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupAccessDeviceGetListRequestAsync instead.")]
@@ -277,11 +465,33 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Requests the list of access devices in a group.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// 
         /// The response is either GroupAccessDeviceGetListResponse or ErrorResponse.
         /// </summary>
         public static async Task<GroupAccessDeviceGetListResponse> GroupAccessDeviceGetListRequestAsync(this OcipClient client, GroupAccessDeviceGetListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceGetListResponse;
+        }
+        /// <summary>
+        /// Get the list of all native tags with logic managed by the Device Management System, on a per-device profile basis.
+        /// The response is either GroupAccessDeviceGetAvailableCustomTagListResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceGetNativeTagsWithLogicListRequestAsync instead.")]
+        public static async Task<GroupAccessDeviceGetAvailableCustomTagListResponse> GroupAccessDeviceGetNativeTagsWithLogicListRequest(this OcipClient client, GroupAccessDeviceGetNativeTagsWithLogicListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupAccessDeviceGetAvailableCustomTagListResponse;
+        }
+
+        /// <summary>
+        /// Get the list of all native tags with logic managed by the Device Management System, on a per-device profile basis.
+        /// The response is either GroupAccessDeviceGetAvailableCustomTagListResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<GroupAccessDeviceGetAvailableCustomTagListResponse> GroupAccessDeviceGetNativeTagsWithLogicListRequestAsync(this OcipClient client, GroupAccessDeviceGetNativeTagsWithLogicListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceGetAvailableCustomTagListResponse;
         }
         /// <summary>
         /// Requests the list of access devices in a group.
@@ -293,9 +503,13 @@ namespace BroadWorksConnector
         /// Multiple search criteria are logically ANDed together unless the
         /// searchCriteriaModeOr option is included. Then the search criteria are logically
         /// ORed together.
+        /// The getVisualDeviceManagementAPIDevicesOnly element can only be set when CloudPBX is licenced.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is not set, all devices are returned with Visual Device Management API flag set to empty.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is set to true, only SIP devices supporting Visual Device Management API are returned.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is set to false, all SIP devices are returned with their current Visual Device Management API flag value.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupAccessDeviceGetPagedSortedListRequestAsync instead.")]
-        public static async Task<GroupAccessDeviceGetPagedSortedListResponse> GroupAccessDeviceGetPagedSortedListRequest(this OcipClient client, GroupAccessDeviceGetPagedSortedListRequest request)
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceGetPagedSortedListRequest22Async instead.")]
+        public static async Task<GroupAccessDeviceGetPagedSortedListResponse> GroupAccessDeviceGetPagedSortedListRequest22(this OcipClient client, GroupAccessDeviceGetPagedSortedListRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as GroupAccessDeviceGetPagedSortedListResponse;
         }
@@ -310,28 +524,32 @@ namespace BroadWorksConnector
         /// Multiple search criteria are logically ANDed together unless the
         /// searchCriteriaModeOr option is included. Then the search criteria are logically
         /// ORed together.
+        /// The getVisualDeviceManagementAPIDevicesOnly element can only be set when CloudPBX is licenced.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is not set, all devices are returned with Visual Device Management API flag set to empty.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is set to true, only SIP devices supporting Visual Device Management API are returned.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is set to false, all SIP devices are returned with their current Visual Device Management API flag value.
         /// </summary>
-        public static async Task<GroupAccessDeviceGetPagedSortedListResponse> GroupAccessDeviceGetPagedSortedListRequestAsync(this OcipClient client, GroupAccessDeviceGetPagedSortedListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<GroupAccessDeviceGetPagedSortedListResponse> GroupAccessDeviceGetPagedSortedListRequest22Async(this OcipClient client, GroupAccessDeviceGetPagedSortedListRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceGetPagedSortedListResponse;
         }
         /// <summary>
         /// Requests the configuration of a specified group access device.
-        /// The response is either GroupAccessDeviceGetResponse18sp1 or ErrorResponse.
+        /// The response is either GroupAccessDeviceGetResponse24 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupAccessDeviceGetRequest18sp1Async instead.")]
-        public static async Task<GroupAccessDeviceGetResponse18sp1> GroupAccessDeviceGetRequest18sp1(this OcipClient client, GroupAccessDeviceGetRequest18sp1 request)
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceGetRequest24Async instead.")]
+        public static async Task<GroupAccessDeviceGetResponse24> GroupAccessDeviceGetRequest24(this OcipClient client, GroupAccessDeviceGetRequest24 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupAccessDeviceGetResponse18sp1;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupAccessDeviceGetResponse24;
         }
 
         /// <summary>
         /// Requests the configuration of a specified group access device.
-        /// The response is either GroupAccessDeviceGetResponse18sp1 or ErrorResponse.
+        /// The response is either GroupAccessDeviceGetResponse24 or ErrorResponse.
         /// </summary>
-        public static async Task<GroupAccessDeviceGetResponse18sp1> GroupAccessDeviceGetRequest18sp1Async(this OcipClient client, GroupAccessDeviceGetRequest18sp1 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupAccessDeviceGetResponse24> GroupAccessDeviceGetRequest24Async(this OcipClient client, GroupAccessDeviceGetRequest24 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceGetResponse18sp1;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceGetResponse24;
         }
         /// <summary>
         /// Requests the configuration of a specified group access device.
@@ -356,11 +574,40 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAccessDeviceGetUserListResponse21sp1;
         }
         /// <summary>
+        /// Request to link one or more leaf devices to a group level tree device.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceLinkDeviceListRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupAccessDeviceLinkDeviceListRequest(this OcipClient client, GroupAccessDeviceLinkDeviceListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to link one or more leaf devices to a group level tree device.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupAccessDeviceLinkDeviceListRequestAsync(this OcipClient client, GroupAccessDeviceLinkDeviceListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
         /// Request to modify a specified group access device.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceExternalId
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupAccessDeviceModifyRequest14Async instead.")]
-        public static async Task<SuccessResponse> GroupAccessDeviceModifyRequest14(this OcipClient client, GroupAccessDeviceModifyRequest14 request)
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceModifyRequest22Async instead.")]
+        public static async Task<SuccessResponse> GroupAccessDeviceModifyRequest22(this OcipClient client, GroupAccessDeviceModifyRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -368,8 +615,11 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to modify a specified group access device.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceExternalId
         /// </summary>
-        public static async Task<SuccessResponse> GroupAccessDeviceModifyRequest14Async(this OcipClient client, GroupAccessDeviceModifyRequest14 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> GroupAccessDeviceModifyRequest22Async(this OcipClient client, GroupAccessDeviceModifyRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -450,52 +700,24 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
-        /// Add a group.
+        /// Request to unlink one or more leaf access devices from a tree device.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
         /// The response is either a SuccessResponse or an ErrorResponse.
-        /// The following elements are only used in Amplify data mode and ignored in AS and XS data mode:
-        /// servicePolicy,
-        /// callProcessingSliceId,
-        /// provisioningSliceId,
-        /// subscriberPartition.
-        /// When the callProcessingSliceId or provisioningSliceId is not specified in the AmplifyDataMode,
-        /// the default slice Id is assigned to the Group.
-        /// Only Provisioning admin and above can change the callProcessingSliceId,
-        /// provisioningSliceId, and subscriberPartition.
-        /// 
-        /// The following elements are only used in Amplify and XS data mode and ignored in AS mode:
-        /// preferredDataCenter.
-        /// Only Provisioning admin and above can change the preferredDataCenter.
-        /// 
-        /// The following elements are only used in XS data mode and ignored in Amplify and AS data mode:
-        /// defaultUserCallingLineIdPhoneNumber.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupAddRequestAsync instead.")]
-        public static async Task<SuccessResponse> GroupAddRequest(this OcipClient client, GroupAddRequest request)
+        [Obsolete("This method is deprecated. Use GroupAccessDeviceUnlinkDeviceListRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupAccessDeviceUnlinkDeviceListRequest(this OcipClient client, GroupAccessDeviceUnlinkDeviceListRequest request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
 
         /// <summary>
-        /// Add a group.
+        /// Request to unlink one or more leaf access devices from a tree device.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
         /// The response is either a SuccessResponse or an ErrorResponse.
-        /// The following elements are only used in Amplify data mode and ignored in AS and XS data mode:
-        /// servicePolicy,
-        /// callProcessingSliceId,
-        /// provisioningSliceId,
-        /// subscriberPartition.
-        /// When the callProcessingSliceId or provisioningSliceId is not specified in the AmplifyDataMode,
-        /// the default slice Id is assigned to the Group.
-        /// Only Provisioning admin and above can change the callProcessingSliceId,
-        /// provisioningSliceId, and subscriberPartition.
-        /// 
-        /// The following elements are only used in Amplify and XS data mode and ignored in AS mode:
-        /// preferredDataCenter.
-        /// Only Provisioning admin and above can change the preferredDataCenter.
-        /// 
-        /// The following elements are only used in XS data mode and ignored in Amplify and AS data mode:
-        /// defaultUserCallingLineIdPhoneNumber.
         /// </summary>
-        public static async Task<SuccessResponse> GroupAddRequestAsync(this OcipClient client, GroupAddRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> GroupAccessDeviceUnlinkDeviceListRequestAsync(this OcipClient client, GroupAccessDeviceUnlinkDeviceListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -514,6 +736,80 @@ namespace BroadWorksConnector
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> GroupAdminAddRequestAsync(this OcipClient client, GroupAdminAddRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to add an alternate admin Id to a group administrator.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAdminAlternateIdAddRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupAdminAlternateIdAddRequest(this OcipClient client, GroupAdminAlternateIdAddRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to add an alternate admin Id to a group administrator.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupAdminAlternateIdAddRequestAsync(this OcipClient client, GroupAdminAlternateIdAddRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to delete an alternate admin user id of a group administrator.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAdminAlternateIdDeleteRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupAdminAlternateIdDeleteRequest(this OcipClient client, GroupAdminAlternateIdDeleteRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to delete an alternate admin user id of a group administrator.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupAdminAlternateIdDeleteRequestAsync(this OcipClient client, GroupAdminAlternateIdDeleteRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to get the admin id and the list of alternate admin ids of an admin.
+        /// The response is either GroupAdminAlternateIdGetListResponse or ErrorResponse.
+        /// The "userId" can be either the admin user Id or an alternate admin user Id.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAdminAlternateIdGetListRequestAsync instead.")]
+        public static async Task<GroupAdminAlternateIdGetListResponse> GroupAdminAlternateIdGetListRequest(this OcipClient client, GroupAdminAlternateIdGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupAdminAlternateIdGetListResponse;
+        }
+
+        /// <summary>
+        /// Request to get the admin id and the list of alternate admin ids of an admin.
+        /// The response is either GroupAdminAlternateIdGetListResponse or ErrorResponse.
+        /// The "userId" can be either the admin user Id or an alternate admin user Id.
+        /// </summary>
+        public static async Task<GroupAdminAlternateIdGetListResponse> GroupAdminAlternateIdGetListRequestAsync(this OcipClient client, GroupAdminAlternateIdGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAdminAlternateIdGetListResponse;
+        }
+        /// <summary>
+        /// Request to modify an alternate id of a group admin.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupAdminAlternateIdModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupAdminAlternateIdModifyRequest(this OcipClient client, GroupAdminAlternateIdModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to modify an alternate id of a group admin.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupAdminAlternateIdModifyRequestAsync(this OcipClient client, GroupAdminAlternateIdModifyRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -603,21 +899,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get a group administrators profile.
-        /// The response is either a GroupAdminGetResponse21sp1 or an ErrorResponse.
+        /// The response is either a GroupAdminGetResponse22 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupAdminGetRequest21sp1Async instead.")]
-        public static async Task<GroupAdminGetResponse21sp1> GroupAdminGetRequest21sp1(this OcipClient client, GroupAdminGetRequest21sp1 request)
+        [Obsolete("This method is deprecated. Use GroupAdminGetRequest22Async instead.")]
+        public static async Task<GroupAdminGetResponse22> GroupAdminGetRequest22(this OcipClient client, GroupAdminGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupAdminGetResponse21sp1;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupAdminGetResponse22;
         }
 
         /// <summary>
         /// Get a group administrators profile.
-        /// The response is either a GroupAdminGetResponse21sp1 or an ErrorResponse.
+        /// The response is either a GroupAdminGetResponse22 or an ErrorResponse.
         /// </summary>
-        public static async Task<GroupAdminGetResponse21sp1> GroupAdminGetRequest21sp1Async(this OcipClient client, GroupAdminGetRequest21sp1 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupAdminGetResponse22> GroupAdminGetRequest22Async(this OcipClient client, GroupAdminGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAdminGetResponse21sp1;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAdminGetResponse22;
         }
         /// <summary>
         /// Requests the effective password rules setting for a group administrator.
@@ -689,6 +985,11 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Add an announcement to the group announcement repository
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupAnnouncementFileAddRequestAsync instead.")]
@@ -699,6 +1000,11 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Add an announcement to the group announcement repository
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> GroupAnnouncementFileAddRequestAsync(this OcipClient client, GroupAnnouncementFileAddRequest request, CancellationToken cancellationToken = default)
@@ -707,6 +1013,11 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Delete one or more announcements from the group announcement repository
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupAnnouncementFileDeleteListRequestAsync instead.")]
@@ -717,6 +1028,11 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Delete one or more announcements from the group announcement repository
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> GroupAnnouncementFileDeleteListRequestAsync(this OcipClient client, GroupAnnouncementFileDeleteListRequest request, CancellationToken cancellationToken = default)
@@ -725,6 +1041,10 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the list of available announcement files for a Group.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// 
         /// The response is either a GroupAnnouncementFileGetListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupAnnouncementFileGetListRequestAsync instead.")]
@@ -735,6 +1055,10 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Get the list of available announcement files for a Group.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// 
         /// The response is either a GroupAnnouncementFileGetListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<GroupAnnouncementFileGetListResponse> GroupAnnouncementFileGetListRequestAsync(this OcipClient client, GroupAnnouncementFileGetListRequest request, CancellationToken cancellationToken = default)
@@ -751,8 +1075,11 @@ namespace BroadWorksConnector
         /// If no sortOrder is included, the response is sorted by Name ascending by default.
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
-        /// The response is either a GroupAnnouncementFileGetPagedSortedListResponse or an
-        /// ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// 
+        /// The response is either a GroupAnnouncementFileGetPagedSortedListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupAnnouncementFileGetPagedSortedListRequestAsync instead.")]
         public static async Task<GroupAnnouncementFileGetPagedSortedListResponse> GroupAnnouncementFileGetPagedSortedListRequest(this OcipClient client, GroupAnnouncementFileGetPagedSortedListRequest request)
@@ -770,8 +1097,11 @@ namespace BroadWorksConnector
         /// If no sortOrder is included, the response is sorted by Name ascending by default.
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
-        /// The response is either a GroupAnnouncementFileGetPagedSortedListResponse or an
-        /// ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
+        /// 
+        /// The response is either a GroupAnnouncementFileGetPagedSortedListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<GroupAnnouncementFileGetPagedSortedListResponse> GroupAnnouncementFileGetPagedSortedListRequestAsync(this OcipClient client, GroupAnnouncementFileGetPagedSortedListRequest request, CancellationToken cancellationToken = default)
         {
@@ -779,24 +1109,36 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the announcement repository file information.
-        /// The response is either GroupAnnouncementFileGetResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
+        /// The response is either GroupAnnouncementFileGetResponse22 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupAnnouncementFileGetRequestAsync instead.")]
-        public static async Task<GroupAnnouncementFileGetResponse> GroupAnnouncementFileGetRequest(this OcipClient client, GroupAnnouncementFileGetRequest request)
+        [Obsolete("This method is deprecated. Use GroupAnnouncementFileGetRequest22Async instead.")]
+        public static async Task<GroupAnnouncementFileGetResponse22> GroupAnnouncementFileGetRequest22(this OcipClient client, GroupAnnouncementFileGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupAnnouncementFileGetResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupAnnouncementFileGetResponse22;
         }
 
         /// <summary>
         /// Request to get the announcement repository file information.
-        /// The response is either GroupAnnouncementFileGetResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
+        /// The response is either GroupAnnouncementFileGetResponse22 or ErrorResponse.
         /// </summary>
-        public static async Task<GroupAnnouncementFileGetResponse> GroupAnnouncementFileGetRequestAsync(this OcipClient client, GroupAnnouncementFileGetRequest request, CancellationToken cancellationToken = default)
+        public static async Task<GroupAnnouncementFileGetResponse22> GroupAnnouncementFileGetRequest22Async(this OcipClient client, GroupAnnouncementFileGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAnnouncementFileGetResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupAnnouncementFileGetResponse22;
         }
         /// <summary>
         /// Modify an existing announcement in the group repository
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupAnnouncementFileModifyRequestAsync instead.")]
@@ -807,6 +1149,10 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Modify an existing announcement in the group repository
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> GroupAnnouncementFileModifyRequestAsync(this OcipClient client, GroupAnnouncementFileModifyRequest request, CancellationToken cancellationToken = default)
@@ -815,6 +1161,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Return the disk space being used.
+        /// 
         /// The response is either a GroupAnnouncementRepositoryGetSettingsResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupAnnouncementRepositoryGetSettingsRequestAsync instead.")]
@@ -825,6 +1172,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Return the disk space being used.
+        /// 
         /// The response is either a GroupAnnouncementRepositoryGetSettingsResponse or an ErrorResponse.
         /// </summary>
         public static async Task<GroupAnnouncementRepositoryGetSettingsResponse> GroupAnnouncementRepositoryGetSettingsRequestAsync(this OcipClient client, GroupAnnouncementRepositoryGetSettingsRequest request, CancellationToken cancellationToken = default)
@@ -1107,7 +1455,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request the group level data associated with Call Processing Policy.
-        /// The response is either a GroupCallProcessingGetPolicyResponse22V2 or an
+        /// The response is either a GroupCallProcessingGetPolicyResponse22V3 or an
         /// ErrorResponse.
         /// 
         /// The useGroupCLIDSetting attribute controls the CLID settings
@@ -1128,15 +1476,15 @@ namespace BroadWorksConnector
         /// (networkUsageSelection, enforceGroupCallingLineIdentityRestriction,
         /// allowEnterpriseGroupCallTypingForPrivateDialingPlan, allowEnterpriseGroupCallTypingForPublicDialingPlan, overrideCLIDRestrictionForExternalCallsViaPrivateDialingPlan, enableEnterpriseExtensionDialing)
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupCallProcessingGetPolicyRequest22V2Async instead.")]
-        public static async Task<GroupCallProcessingGetPolicyResponse22V2> GroupCallProcessingGetPolicyRequest22V2(this OcipClient client, GroupCallProcessingGetPolicyRequest22V2 request)
+        [Obsolete("This method is deprecated. Use GroupCallProcessingGetPolicyRequest22V3Async instead.")]
+        public static async Task<GroupCallProcessingGetPolicyResponse22V3> GroupCallProcessingGetPolicyRequest22V3(this OcipClient client, GroupCallProcessingGetPolicyRequest22V3 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupCallProcessingGetPolicyResponse22V2;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupCallProcessingGetPolicyResponse22V3;
         }
 
         /// <summary>
         /// Request the group level data associated with Call Processing Policy.
-        /// The response is either a GroupCallProcessingGetPolicyResponse22V2 or an
+        /// The response is either a GroupCallProcessingGetPolicyResponse22V3 or an
         /// ErrorResponse.
         /// 
         /// The useGroupCLIDSetting attribute controls the CLID settings
@@ -1157,9 +1505,9 @@ namespace BroadWorksConnector
         /// (networkUsageSelection, enforceGroupCallingLineIdentityRestriction,
         /// allowEnterpriseGroupCallTypingForPrivateDialingPlan, allowEnterpriseGroupCallTypingForPublicDialingPlan, overrideCLIDRestrictionForExternalCallsViaPrivateDialingPlan, enableEnterpriseExtensionDialing)
         /// </summary>
-        public static async Task<GroupCallProcessingGetPolicyResponse22V2> GroupCallProcessingGetPolicyRequest22V2Async(this OcipClient client, GroupCallProcessingGetPolicyRequest22V2 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupCallProcessingGetPolicyResponse22V3> GroupCallProcessingGetPolicyRequest22V3Async(this OcipClient client, GroupCallProcessingGetPolicyRequest22V3 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupCallProcessingGetPolicyResponse22V2;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupCallProcessingGetPolicyResponse22V3;
         }
         /// <summary>
         /// Modify the group level data associated with Call Processing Policy.
@@ -1204,6 +1552,12 @@ namespace BroadWorksConnector
         /// useUserPhoneNumberForGroupCallsWhenInternalCLIDUnavailable
         /// useUserPhoneNumberForEnterpriseCallsWhenInternalCLIDUnavailable
         /// allowMobileDNForRedirectingIdentity
+        /// enableGatewayRoutePolicy
+        /// networkCallsGatewayRouteIdentity
+        /// networkURLCallsGatewayRouteIdentity
+        /// emergencyCallsGatewayRouteIdentity
+        /// repairCallsGatewayRouteIdentity
+        /// callTypingErrorsGatewayRouteIdentity
         /// 
         /// The following elements are only used in XS data mode and ignored in AS data mode:
         /// routeOverrideDomain
@@ -1258,6 +1612,12 @@ namespace BroadWorksConnector
         /// useUserPhoneNumberForGroupCallsWhenInternalCLIDUnavailable
         /// useUserPhoneNumberForEnterpriseCallsWhenInternalCLIDUnavailable
         /// allowMobileDNForRedirectingIdentity
+        /// enableGatewayRoutePolicy
+        /// networkCallsGatewayRouteIdentity
+        /// networkURLCallsGatewayRouteIdentity
+        /// emergencyCallsGatewayRouteIdentity
+        /// repairCallsGatewayRouteIdentity
+        /// callTypingErrorsGatewayRouteIdentity
         /// 
         /// The following elements are only used in XS data mode and ignored in AS data mode:
         /// routeOverrideDomain
@@ -1518,6 +1878,276 @@ namespace BroadWorksConnector
         public static async Task<SuccessResponse> GroupCommunicationBarringProfileModifyListRequestAsync(this OcipClient client, GroupCommunicationBarringProfileModifyListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Add a group.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// serviceProviderExternalId
+        /// groupExternalId
+        /// 
+        /// The following elements are only used in Amplify data mode and ignored in AS and XS data mode:
+        /// servicePolicy,
+        /// callProcessingSliceId,
+        /// provisioningSliceId,
+        /// subscriberPartition.
+        /// When the callProcessingSliceId or provisioningSliceId is not specified in the AmplifyDataMode,
+        /// the default slice Id is assigned to the Group.
+        /// Only Provisioning admin and above can change the callProcessingSliceId,
+        /// provisioningSliceId, and subscriberPartition.
+        /// 
+        /// The following elements are only used in Amplify and XS data mode and ignored in AS mode:
+        /// preferredDataCenter.
+        /// Only Provisioning admin and above can change the preferredDataCenter.
+        /// 
+        /// The following elements are only used in XS data mode and ignored in Amplify and AS data mode:
+        /// defaultUserCallingLineIdPhoneNumber.
+        /// 
+        /// The following elements are optional for the group. If the elements are included,
+        /// they will be either added, authorized, or modified on the group. Should any of the
+        /// following elements be rejected to due existing system or service provider settings,
+        /// the group will not be added and the response will be an ErrorResponse:
+        /// domain
+        /// admin
+        /// minExtensionLength
+        /// maxExtensionLength
+        /// defaultExtensionLength
+        /// servicePackAuthorization
+        /// groupServiceAuthorizationAndAssignment
+        /// userServiceAuthorization
+        /// servicePack
+        /// activatablePhoneNumber
+        /// activatableDNRange
+        /// routingProfile
+        /// trunkGroupMaxActiveCalls
+        /// trunkGroupBurstingMaxActiveCalls
+        /// meetMeConferencingAllocatedPorts
+        /// 
+        /// 
+        /// When a group or user service is included that is not activated, is not licensed,
+        /// or not authorized to the service provider, the response will be an ErrorResponse.
+        /// 
+        /// If the group service authorized quantity is not included it will default to Unlimited.
+        /// 
+        /// If activatablePhoneNumber and activatableDNRange elements are included, when
+        /// activate element is present, this value overrides the system group default
+        /// activatable settings.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupConsolidatedAddRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupConsolidatedAddRequest(this OcipClient client, GroupConsolidatedAddRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Add a group.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// serviceProviderExternalId
+        /// groupExternalId
+        /// 
+        /// The following elements are only used in Amplify data mode and ignored in AS and XS data mode:
+        /// servicePolicy,
+        /// callProcessingSliceId,
+        /// provisioningSliceId,
+        /// subscriberPartition.
+        /// When the callProcessingSliceId or provisioningSliceId is not specified in the AmplifyDataMode,
+        /// the default slice Id is assigned to the Group.
+        /// Only Provisioning admin and above can change the callProcessingSliceId,
+        /// provisioningSliceId, and subscriberPartition.
+        /// 
+        /// The following elements are only used in Amplify and XS data mode and ignored in AS mode:
+        /// preferredDataCenter.
+        /// Only Provisioning admin and above can change the preferredDataCenter.
+        /// 
+        /// The following elements are only used in XS data mode and ignored in Amplify and AS data mode:
+        /// defaultUserCallingLineIdPhoneNumber.
+        /// 
+        /// The following elements are optional for the group. If the elements are included,
+        /// they will be either added, authorized, or modified on the group. Should any of the
+        /// following elements be rejected to due existing system or service provider settings,
+        /// the group will not be added and the response will be an ErrorResponse:
+        /// domain
+        /// admin
+        /// minExtensionLength
+        /// maxExtensionLength
+        /// defaultExtensionLength
+        /// servicePackAuthorization
+        /// groupServiceAuthorizationAndAssignment
+        /// userServiceAuthorization
+        /// servicePack
+        /// activatablePhoneNumber
+        /// activatableDNRange
+        /// routingProfile
+        /// trunkGroupMaxActiveCalls
+        /// trunkGroupBurstingMaxActiveCalls
+        /// meetMeConferencingAllocatedPorts
+        /// 
+        /// 
+        /// When a group or user service is included that is not activated, is not licensed,
+        /// or not authorized to the service provider, the response will be an ErrorResponse.
+        /// 
+        /// If the group service authorized quantity is not included it will default to Unlimited.
+        /// 
+        /// If activatablePhoneNumber and activatableDNRange elements are included, when
+        /// activate element is present, this value overrides the system group default
+        /// activatable settings.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupConsolidatedAddRequestAsync(this OcipClient client, GroupConsolidatedAddRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Add a group.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// serviceProviderExternalId
+        /// groupExternalId
+        /// 
+        /// The following elements are only used in Amplify data mode and ignored in AS and XS data mode:
+        /// servicePolicy,
+        /// callProcessingSliceId,
+        /// provisioningSliceId,
+        /// subscriberPartition.
+        /// When the callProcessingSliceId or provisioningSliceId is not specified in the AmplifyDataMode,
+        /// the default slice Id is assigned to the Group.
+        /// Only Provisioning admin and above can change the callProcessingSliceId,
+        /// provisioningSliceId, and subscriberPartition.
+        /// 
+        /// The following elements are only used in Amplify and XS data mode and ignored in AS mode:
+        /// preferredDataCenter.
+        /// Only Provisioning admin and above can change the preferredDataCenter.
+        /// 
+        /// The following elements are only used in XS data mode and ignored in Amplify and AS data mode:
+        /// defaultUserCallingLineIdPhoneNumber.
+        /// 
+        /// The following elements are optional for the group. If the elements are included,
+        /// they will be either added, authorized, or modified on the group. Should any of the
+        /// following elements be rejected to due existing system or service provider settings,
+        /// the group will not be added and the response will be an ErrorResponse:
+        /// domain
+        /// admin
+        /// minExtensionLength
+        /// maxExtensionLength
+        /// defaultExtensionLength
+        /// servicePackAuthorization
+        /// groupServiceAuthorizationAndAssignment
+        /// userServiceAuthorization
+        /// servicePack
+        /// activatablePhoneNumber
+        /// activatableDNRange
+        /// routingProfile
+        /// trunkGroupMaxActiveCalls
+        /// trunkGroupBurstingMaxActiveCalls
+        /// meetMeConferencingAllocatedPorts
+        /// When a group or user service is included that is not activated, is not licensed,
+        /// or not authorized to the service provider, the response will be an ErrorResponse.
+        /// 
+        /// If the group service authorized quantity is not included it will default to Unlimited.
+        /// 
+        /// If activatablePhoneNumber and activatableDNRange elements are included, when
+        /// activate element is present, this value overrides the system group default
+        /// activatable settings.
+        /// If the activatablePhoneNumber and activatableDNRange element are included, the phone numbers are added to the service provider if they are available to be assigned to the group and not currently added to the service provider.
+        /// The response is either a SuccessResponse or an ErrorResponse or an GroupConsolidatedAddResponse22
+        /// 
+        /// The response returned is a
+        /// -	SuccessResponse if all the data is successfully added.
+        /// -	ErrorResponse if any data other than the DN validation/assignment fails.
+        /// -	GroupConsolidatedAddResponse22 if any of the activatablePhoneNumber or activatableDNRange fails validation.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupConsolidatedAddRequest22Async instead.")]
+        public static async Task<OCIResponse> GroupConsolidatedAddRequest22(this OcipClient client, GroupConsolidatedAddRequest22 request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as OCIResponse;
+        }
+
+        /// <summary>
+        /// Add a group.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// serviceProviderExternalId
+        /// groupExternalId
+        /// 
+        /// The following elements are only used in Amplify data mode and ignored in AS and XS data mode:
+        /// servicePolicy,
+        /// callProcessingSliceId,
+        /// provisioningSliceId,
+        /// subscriberPartition.
+        /// When the callProcessingSliceId or provisioningSliceId is not specified in the AmplifyDataMode,
+        /// the default slice Id is assigned to the Group.
+        /// Only Provisioning admin and above can change the callProcessingSliceId,
+        /// provisioningSliceId, and subscriberPartition.
+        /// 
+        /// The following elements are only used in Amplify and XS data mode and ignored in AS mode:
+        /// preferredDataCenter.
+        /// Only Provisioning admin and above can change the preferredDataCenter.
+        /// 
+        /// The following elements are only used in XS data mode and ignored in Amplify and AS data mode:
+        /// defaultUserCallingLineIdPhoneNumber.
+        /// 
+        /// The following elements are optional for the group. If the elements are included,
+        /// they will be either added, authorized, or modified on the group. Should any of the
+        /// following elements be rejected to due existing system or service provider settings,
+        /// the group will not be added and the response will be an ErrorResponse:
+        /// domain
+        /// admin
+        /// minExtensionLength
+        /// maxExtensionLength
+        /// defaultExtensionLength
+        /// servicePackAuthorization
+        /// groupServiceAuthorizationAndAssignment
+        /// userServiceAuthorization
+        /// servicePack
+        /// activatablePhoneNumber
+        /// activatableDNRange
+        /// routingProfile
+        /// trunkGroupMaxActiveCalls
+        /// trunkGroupBurstingMaxActiveCalls
+        /// meetMeConferencingAllocatedPorts
+        /// When a group or user service is included that is not activated, is not licensed,
+        /// or not authorized to the service provider, the response will be an ErrorResponse.
+        /// 
+        /// If the group service authorized quantity is not included it will default to Unlimited.
+        /// 
+        /// If activatablePhoneNumber and activatableDNRange elements are included, when
+        /// activate element is present, this value overrides the system group default
+        /// activatable settings.
+        /// If the activatablePhoneNumber and activatableDNRange element are included, the phone numbers are added to the service provider if they are available to be assigned to the group and not currently added to the service provider.
+        /// The response is either a SuccessResponse or an ErrorResponse or an GroupConsolidatedAddResponse22
+        /// 
+        /// The response returned is a
+        /// -	SuccessResponse if all the data is successfully added.
+        /// -	ErrorResponse if any data other than the DN validation/assignment fails.
+        /// -	GroupConsolidatedAddResponse22 if any of the activatablePhoneNumber or activatableDNRange fails validation.
+        /// </summary>
+        public static async Task<OCIResponse> GroupConsolidatedAddRequest22Async(this OcipClient client, GroupConsolidatedAddRequest22 request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as OCIResponse;
+        }
+        /// <summary>
+        /// Adds DNs to enterprise and group and activates the DNs on assignment.
+        /// It is possible to add either: a single DN,
+        /// or a list of DNs, or a range of DNs, or any combination thereof.
+        /// The response is either SuccessResponse or GroupConsolidatedDnAssignListResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupConsolidatedDnAssignListRequestAsync instead.")]
+        public static async Task<OCIResponse> GroupConsolidatedDnAssignListRequest(this OcipClient client, GroupConsolidatedDnAssignListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as OCIResponse;
+        }
+
+        /// <summary>
+        /// Adds DNs to enterprise and group and activates the DNs on assignment.
+        /// It is possible to add either: a single DN,
+        /// or a list of DNs, or a range of DNs, or any combination thereof.
+        /// The response is either SuccessResponse or GroupConsolidatedDnAssignListResponse.
+        /// </summary>
+        public static async Task<OCIResponse> GroupConsolidatedDnAssignListRequestAsync(this OcipClient client, GroupConsolidatedDnAssignListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as OCIResponse;
         }
         /// <summary>
         /// Rebuild the group default config file for the specified device type.
@@ -2018,6 +2648,42 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
+        /// Request the Device Activation policy of a group.
+        /// The response is either a GroupDeviceActivationPolicyGetResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupDeviceActivationPolicyGetRequestAsync instead.")]
+        public static async Task<GroupDeviceActivationPolicyGetResponse> GroupDeviceActivationPolicyGetRequest(this OcipClient client, GroupDeviceActivationPolicyGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupDeviceActivationPolicyGetResponse;
+        }
+
+        /// <summary>
+        /// Request the Device Activation policy of a group.
+        /// The response is either a GroupDeviceActivationPolicyGetResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<GroupDeviceActivationPolicyGetResponse> GroupDeviceActivationPolicyGetRequestAsync(this OcipClient client, GroupDeviceActivationPolicyGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupDeviceActivationPolicyGetResponse;
+        }
+        /// <summary>
+        /// Modify the Device Activation policy of a group.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupDeviceActivationPolicyModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupDeviceActivationPolicyModifyRequest(this OcipClient client, GroupDeviceActivationPolicyModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify the Device Activation policy of a group.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupDeviceActivationPolicyModifyRequestAsync(this OcipClient client, GroupDeviceActivationPolicyModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
         /// Request device management's events for a specific queue.
         /// It is possible to restrict the number of rows returned using
         /// responseSizeLimit.
@@ -2445,21 +3111,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request the Group level data associated with Dial Plan Policy.
-        /// The response is either a GroupDialPlanPolicyGetResponse17 or an ErrorResponse.
+        /// The response is either a GroupDialPlanPolicyGetResponse22 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupDialPlanPolicyGetRequest17Async instead.")]
-        public static async Task<GroupDialPlanPolicyGetResponse17> GroupDialPlanPolicyGetRequest17(this OcipClient client, GroupDialPlanPolicyGetRequest17 request)
+        [Obsolete("This method is deprecated. Use GroupDialPlanPolicyGetRequest22Async instead.")]
+        public static async Task<GroupDialPlanPolicyGetResponse22> GroupDialPlanPolicyGetRequest22(this OcipClient client, GroupDialPlanPolicyGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupDialPlanPolicyGetResponse17;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupDialPlanPolicyGetResponse22;
         }
 
         /// <summary>
         /// Request the Group level data associated with Dial Plan Policy.
-        /// The response is either a GroupDialPlanPolicyGetResponse17 or an ErrorResponse.
+        /// The response is either a GroupDialPlanPolicyGetResponse22 or an ErrorResponse.
         /// </summary>
-        public static async Task<GroupDialPlanPolicyGetResponse17> GroupDialPlanPolicyGetRequest17Async(this OcipClient client, GroupDialPlanPolicyGetRequest17 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupDialPlanPolicyGetResponse22> GroupDialPlanPolicyGetRequest22Async(this OcipClient client, GroupDialPlanPolicyGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupDialPlanPolicyGetResponse17;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupDialPlanPolicyGetResponse22;
         }
         /// <summary>
         /// Request to modify a Group level Dial Plan Access Code and its attribues.
@@ -2482,6 +3148,9 @@ namespace BroadWorksConnector
         /// <summary>
         /// Modify the Group level data associated with Dial Plan Policy.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// overrideResolvedDeviceDigitMap
+        /// deviceDigitMap
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupDialPlanPolicyModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> GroupDialPlanPolicyModifyRequest(this OcipClient client, GroupDialPlanPolicyModifyRequest request)
@@ -2492,6 +3161,9 @@ namespace BroadWorksConnector
         /// <summary>
         /// Modify the Group level data associated with Dial Plan Policy.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// overrideResolvedDeviceDigitMap
+        /// deviceDigitMap
         /// </summary>
         public static async Task<SuccessResponse> GroupDialPlanPolicyModifyRequestAsync(this OcipClient client, GroupDialPlanPolicyModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -2792,6 +3464,24 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupDnGetListResponse;
         }
         /// <summary>
+        /// Validates DNs given in the request
+        /// The response is GroupDnGetStatusListResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupDnGetStatusListRequestAsync instead.")]
+        public static async Task<GroupDnGetStatusListResponse> GroupDnGetStatusListRequest(this OcipClient client, GroupDnGetStatusListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupDnGetStatusListResponse;
+        }
+
+        /// <summary>
+        /// Validates DNs given in the request
+        /// The response is GroupDnGetStatusListResponse.
+        /// </summary>
+        public static async Task<GroupDnGetStatusListResponse> GroupDnGetStatusListRequestAsync(this OcipClient client, GroupDnGetStatusListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupDnGetStatusListResponse;
+        }
+        /// <summary>
         /// Get the list of assigned and unassigned DN ranges in a group.
         /// Dns assigned to the IMRN pool are not listed in the response.
         /// The response is either a GroupDnGetSummaryListResponse or an ErrorResponse.
@@ -3067,25 +3757,28 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request the group's extension length.
-        /// The response is either a GroupExtensionLengthGetResponse17 or an ErrorResponse.
+        /// The response is either a GroupExtensionLengthGetResponse22 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupExtensionLengthGetRequest17Async instead.")]
-        public static async Task<GroupExtensionLengthGetResponse17> GroupExtensionLengthGetRequest17(this OcipClient client, GroupExtensionLengthGetRequest17 request)
+        [Obsolete("This method is deprecated. Use GroupExtensionLengthGetRequest22Async instead.")]
+        public static async Task<GroupExtensionLengthGetResponse22> GroupExtensionLengthGetRequest22(this OcipClient client, GroupExtensionLengthGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupExtensionLengthGetResponse17;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupExtensionLengthGetResponse22;
         }
 
         /// <summary>
         /// Request the group's extension length.
-        /// The response is either a GroupExtensionLengthGetResponse17 or an ErrorResponse.
+        /// The response is either a GroupExtensionLengthGetResponse22 or an ErrorResponse.
         /// </summary>
-        public static async Task<GroupExtensionLengthGetResponse17> GroupExtensionLengthGetRequest17Async(this OcipClient client, GroupExtensionLengthGetRequest17 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupExtensionLengthGetResponse22> GroupExtensionLengthGetRequest22Async(this OcipClient client, GroupExtensionLengthGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupExtensionLengthGetResponse17;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupExtensionLengthGetResponse22;
         }
         /// <summary>
         /// Modify the group's extension length range.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useExterpriseExtensionLengthSetting
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupExtensionLengthModifyRequest17Async instead.")]
         public static async Task<SuccessResponse> GroupExtensionLengthModifyRequest17(this OcipClient client, GroupExtensionLengthModifyRequest17 request)
@@ -3096,6 +3789,9 @@ namespace BroadWorksConnector
         /// <summary>
         /// Modify the group's extension length range.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useExterpriseExtensionLengthSetting
         /// </summary>
         public static async Task<SuccessResponse> GroupExtensionLengthModifyRequest17Async(this OcipClient client, GroupExtensionLengthModifyRequest17 request, CancellationToken cancellationToken = default)
         {
@@ -3234,6 +3930,58 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
+        /// Requests the list of available leaf devices that can be linked to a tree device within a specific group.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The list returned includes devices created at the system, service provider, and group levels.
+        /// The response is either GroupGetAvailableLeafDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupGetAvailableLeafDeviceListRequestAsync instead.")]
+        public static async Task<GroupGetAvailableLeafDeviceListResponse> GroupGetAvailableLeafDeviceListRequest(this OcipClient client, GroupGetAvailableLeafDeviceListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupGetAvailableLeafDeviceListResponse;
+        }
+
+        /// <summary>
+        /// Requests the list of available leaf devices that can be linked to a tree device within a specific group.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The list returned includes devices created at the system, service provider, and group levels.
+        /// The response is either GroupGetAvailableLeafDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        public static async Task<GroupGetAvailableLeafDeviceListResponse> GroupGetAvailableLeafDeviceListRequestAsync(this OcipClient client, GroupGetAvailableLeafDeviceListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupGetAvailableLeafDeviceListResponse;
+        }
+        /// <summary>
+        /// Requests the list of available tree devices to which leaf devices can be linked to within a specific group.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// The list returned includes devices created at the system, service provider, and group levels.
+        /// The response is either GroupGetAvailableTreeDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupGetAvailableTreeDeviceListRequestAsync instead.")]
+        public static async Task<GroupGetAvailableTreeDeviceListResponse> GroupGetAvailableTreeDeviceListRequest(this OcipClient client, GroupGetAvailableTreeDeviceListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupGetAvailableTreeDeviceListResponse;
+        }
+
+        /// <summary>
+        /// Requests the list of available tree devices to which leaf devices can be linked to within a specific group.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// The list returned includes devices created at the system, service provider, and group levels.
+        /// The response is either GroupGetAvailableTreeDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        public static async Task<GroupGetAvailableTreeDeviceListResponse> GroupGetAvailableTreeDeviceListRequestAsync(this OcipClient client, GroupGetAvailableTreeDeviceListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupGetAvailableTreeDeviceListResponse;
+        }
+        /// <summary>
         /// Request the default profile for a group.
         /// The response is either a GroupGetDefaultResponse or an ErrorResponse.
         /// </summary>
@@ -3337,21 +4085,27 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the profile for a group.
-        /// The response is either a GroupGetResponse22V2 or an ErrorResponse.
+        /// The response is either a GroupGetResponse22V5 or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupGetRequest22V2Async instead.")]
-        public static async Task<GroupGetResponse22V2> GroupGetRequest22V2(this OcipClient client, GroupGetRequest22V2 request)
+        [Obsolete("This method is deprecated. Use GroupGetRequest22V5Async instead.")]
+        public static async Task<GroupGetResponse22V5> GroupGetRequest22V5(this OcipClient client, GroupGetRequest22V5 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupGetResponse22V2;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupGetResponse22V5;
         }
 
         /// <summary>
         /// Get the profile for a group.
-        /// The response is either a GroupGetResponse22V2 or an ErrorResponse.
+        /// The response is either a GroupGetResponse22V5 or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
         /// </summary>
-        public static async Task<GroupGetResponse22V2> GroupGetRequest22V2Async(this OcipClient client, GroupGetRequest22V2 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupGetResponse22V5> GroupGetRequest22V5Async(this OcipClient client, GroupGetRequest22V5 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupGetResponse22V2;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupGetResponse22V5;
         }
         /// <summary>
         /// Get the list of users assigned the user service or service pack.
@@ -3450,6 +4204,11 @@ namespace BroadWorksConnector
         /// 
         /// The following elements are only used in XS data mode and ignored in Amplify and AS data mode:
         /// defaultUserCallingLineIdPhoneNumber.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in the XS data mode:
+        /// extensionLengthSettings
+        /// dialPlanAccessCode
+        /// dialPlanPolicy
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> GroupModifyRequest(this OcipClient client, GroupModifyRequest request)
@@ -3476,6 +4235,11 @@ namespace BroadWorksConnector
         /// 
         /// The following elements are only used in XS data mode and ignored in Amplify and AS data mode:
         /// defaultUserCallingLineIdPhoneNumber.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in the XS data mode:
+        /// extensionLengthSettings
+        /// dialPlanAccessCode
+        /// dialPlanPolicy
         /// </summary>
         public static async Task<SuccessResponse> GroupModifyRequestAsync(this OcipClient client, GroupModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -3526,7 +4290,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get a list of Network Classes of Service assigned to a group.
         /// The response is either a GroupNetworkClassOfServiceGetAssignedListResponse
-        /// or an ErrorResponse.
+        /// or an ErorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupNetworkClassOfServiceGetAssignedListRequestAsync instead.")]
         public static async Task<GroupNetworkClassOfServiceGetAssignedListResponse> GroupNetworkClassOfServiceGetAssignedListRequest(this OcipClient client, GroupNetworkClassOfServiceGetAssignedListRequest request)
@@ -3537,7 +4301,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get a list of Network Classes of Service assigned to a group.
         /// The response is either a GroupNetworkClassOfServiceGetAssignedListResponse
-        /// or an ErrorResponse.
+        /// or an ErorResponse.
         /// </summary>
         public static async Task<GroupNetworkClassOfServiceGetAssignedListResponse> GroupNetworkClassOfServiceGetAssignedListRequestAsync(this OcipClient client, GroupNetworkClassOfServiceGetAssignedListRequest request, CancellationToken cancellationToken = default)
         {
@@ -3547,7 +4311,7 @@ namespace BroadWorksConnector
         /// Get a list of users within a group that have a given Network Class
         /// of Service assigned.
         /// The response is either a GroupNetworkClassOfServiceGetAssignedUserListResponse21
-        /// or an ErrorResponse.
+        /// or an ErorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupNetworkClassOfServiceGetAssignedUserListRequest21Async instead.")]
         public static async Task<GroupNetworkClassOfServiceGetAssignedUserListResponse21> GroupNetworkClassOfServiceGetAssignedUserListRequest21(this OcipClient client, GroupNetworkClassOfServiceGetAssignedUserListRequest21 request)
@@ -3559,7 +4323,7 @@ namespace BroadWorksConnector
         /// Get a list of users within a group that have a given Network Class
         /// of Service assigned.
         /// The response is either a GroupNetworkClassOfServiceGetAssignedUserListResponse21
-        /// or an ErrorResponse.
+        /// or an ErorResponse.
         /// </summary>
         public static async Task<GroupNetworkClassOfServiceGetAssignedUserListResponse21> GroupNetworkClassOfServiceGetAssignedUserListRequest21Async(this OcipClient client, GroupNetworkClassOfServiceGetAssignedUserListRequest21 request, CancellationToken cancellationToken = default)
         {
@@ -4634,8 +5398,7 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
-        /// Returns a list of all Public User Identities and associated data in a group.
-        /// The response is either a GroupShInterfaceGetUserListResponse21sp1 or an ErrorResponse.
+        /// Returns a list of all Public User Identities and associated data in a group. The response is either a GroupShInterfaceGetUserListResponse21sp1 or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupShInterfaceGetUserListRequest21sp1Async instead.")]
         public static async Task<GroupShInterfaceGetUserListResponse21sp1> GroupShInterfaceGetUserListRequest21sp1(this OcipClient client, GroupShInterfaceGetUserListRequest21sp1 request)
@@ -4644,12 +5407,97 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// Returns a list of all Public User Identities and associated data in a group.
-        /// The response is either a GroupShInterfaceGetUserListResponse21sp1 or an ErrorResponse.
+        /// Returns a list of all Public User Identities and associated data in a group. The response is either a GroupShInterfaceGetUserListResponse21sp1 or an ErrorResponse.
         /// </summary>
         public static async Task<GroupShInterfaceGetUserListResponse21sp1> GroupShInterfaceGetUserListRequest21sp1Async(this OcipClient client, GroupShInterfaceGetUserListRequest21sp1 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupShInterfaceGetUserListResponse21sp1;
+        }
+        /// <summary>
+        /// Get Group Stir Shaken service settings. The response is either GroupStirShakenGetResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupStirShakenGetRequestAsync instead.")]
+        public static async Task<GroupStirShakenGetResponse> GroupStirShakenGetRequest(this OcipClient client, GroupStirShakenGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupStirShakenGetResponse;
+        }
+
+        /// <summary>
+        /// Get Group Stir Shaken service settings. The response is either GroupStirShakenGetResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<GroupStirShakenGetResponse> GroupStirShakenGetRequestAsync(this OcipClient client, GroupStirShakenGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupStirShakenGetResponse;
+        }
+        /// <summary>
+        /// Modify Group Stir Shaken service settings. The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupStirShakenModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupStirShakenModifyRequest(this OcipClient client, GroupStirShakenModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify Group Stir Shaken service settings. The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupStirShakenModifyRequestAsync(this OcipClient client, GroupStirShakenModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to get the list of template files used to support a VDM device defined at group level.
+        /// The response is either GroupTemplateOnlyDeviceFileGetListResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupTemplateOnlyDeviceFileGetListRequestAsync instead.")]
+        public static async Task<GroupTemplateOnlyDeviceFileGetListResponse> GroupTemplateOnlyDeviceFileGetListRequest(this OcipClient client, GroupTemplateOnlyDeviceFileGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupTemplateOnlyDeviceFileGetListResponse;
+        }
+
+        /// <summary>
+        /// Request to get the list of template files used to support a VDM device defined at group level.
+        /// The response is either GroupTemplateOnlyDeviceFileGetListResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<GroupTemplateOnlyDeviceFileGetListResponse> GroupTemplateOnlyDeviceFileGetListRequestAsync(this OcipClient client, GroupTemplateOnlyDeviceFileGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupTemplateOnlyDeviceFileGetListResponse;
+        }
+        /// <summary>
+        /// Get the third-party emergency call service settings for the Group.
+        /// The response is either a GroupThirdPartyEmergencyCallingGetResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupThirdPartyEmergencyCallingGetRequestAsync instead.")]
+        public static async Task<GroupThirdPartyEmergencyCallingGetResponse> GroupThirdPartyEmergencyCallingGetRequest(this OcipClient client, GroupThirdPartyEmergencyCallingGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupThirdPartyEmergencyCallingGetResponse;
+        }
+
+        /// <summary>
+        /// Get the third-party emergency call service settings for the Group.
+        /// The response is either a GroupThirdPartyEmergencyCallingGetResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<GroupThirdPartyEmergencyCallingGetResponse> GroupThirdPartyEmergencyCallingGetRequestAsync(this OcipClient client, GroupThirdPartyEmergencyCallingGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupThirdPartyEmergencyCallingGetResponse;
+        }
+        /// <summary>
+        /// Modify the third-party emergency call service settings for the Group.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupThirdPartyEmergencyCallingModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupThirdPartyEmergencyCallingModifyRequest(this OcipClient client, GroupThirdPartyEmergencyCallingModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify the third-party emergency call service settings for the Group.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupThirdPartyEmergencyCallingModifyRequestAsync(this OcipClient client, GroupThirdPartyEmergencyCallingModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Requests the list of available trunk groups within a group.
@@ -4670,6 +5518,40 @@ namespace BroadWorksConnector
         public static async Task<GroupTrunkGroupGetAvailableDetailListResponse> GroupTrunkGroupGetAvailableDetailListRequestAsync(this OcipClient client, GroupTrunkGroupGetAvailableDetailListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupTrunkGroupGetAvailableDetailListResponse;
+        }
+        /// <summary>
+        /// Get Group Trunk Group Stir Shaken service settings.
+        /// The response is either GroupTrunkGroupStirShakenGetResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupTrunkGroupStirShakenGetRequestAsync instead.")]
+        public static async Task<GroupTrunkGroupStirShakenGetResponse> GroupTrunkGroupStirShakenGetRequest(this OcipClient client, GroupTrunkGroupStirShakenGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupTrunkGroupStirShakenGetResponse;
+        }
+
+        /// <summary>
+        /// Get Group Trunk Group Stir Shaken service settings.
+        /// The response is either GroupTrunkGroupStirShakenGetResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<GroupTrunkGroupStirShakenGetResponse> GroupTrunkGroupStirShakenGetRequestAsync(this OcipClient client, GroupTrunkGroupStirShakenGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupTrunkGroupStirShakenGetResponse;
+        }
+        /// <summary>
+        /// Modify group trunk group Stir Shaken service settings. The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupTrunkGroupStirShakenModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupTrunkGroupStirShakenModifyRequest(this OcipClient client, GroupTrunkGroupStirShakenModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify group trunk group Stir Shaken service settings. The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupTrunkGroupStirShakenModifyRequestAsync(this OcipClient client, GroupTrunkGroupStirShakenModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Get a list of users and the service settings for a Call Forwarding service.
@@ -4758,6 +5640,152 @@ namespace BroadWorksConnector
         public static async Task<GroupUserHotelingGuestSettingsGetListResponse> GroupUserHotelingGuestSettingsGetListRequestAsync(this OcipClient client, GroupUserHotelingGuestSettingsGetListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupUserHotelingGuestSettingsGetListResponse;
+        }
+        /// <summary>
+        /// Request to modify language of the users within a group.
+        /// If neither applyToUsers nor applyToServiceInstances is specified in the request, language is not changed for any user in the group.
+        /// If applyToUsers is specified, regular users within the group have the language modified.
+        /// If applyToServiceInstances is specified, the service instance users within the group have the language modified.
+        /// 
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupUserLanguageModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupUserLanguageModifyRequest(this OcipClient client, GroupUserLanguageModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to modify language of the users within a group.
+        /// If neither applyToUsers nor applyToServiceInstances is specified in the request, language is not changed for any user in the group.
+        /// If applyToUsers is specified, regular users within the group have the language modified.
+        /// If applyToServiceInstances is specified, the service instance users within the group have the language modified.
+        /// 
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupUserLanguageModifyRequestAsync(this OcipClient client, GroupUserLanguageModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Get the information for a specified device supporting visual device management.
+        /// The response is either a GroupVisualDeviceManagementGetDeviceInfoResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupVisualDeviceManagementGetDeviceInfoRequestAsync instead.")]
+        public static async Task<GroupVisualDeviceManagementGetDeviceInfoResponse> GroupVisualDeviceManagementGetDeviceInfoRequest(this OcipClient client, GroupVisualDeviceManagementGetDeviceInfoRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupVisualDeviceManagementGetDeviceInfoResponse;
+        }
+
+        /// <summary>
+        /// Get the information for a specified device supporting visual device management.
+        /// The response is either a GroupVisualDeviceManagementGetDeviceInfoResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<GroupVisualDeviceManagementGetDeviceInfoResponse> GroupVisualDeviceManagementGetDeviceInfoRequestAsync(this OcipClient client, GroupVisualDeviceManagementGetDeviceInfoRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupVisualDeviceManagementGetDeviceInfoResponse;
+        }
+        /// <summary>
+        /// Assign a group level Xsi policy profile and a list of user Xsi policy profiles
+        /// to a group.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupXsiPolicyProfileAssignListRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupXsiPolicyProfileAssignListRequest(this OcipClient client, GroupXsiPolicyProfileAssignListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Assign a group level Xsi policy profile and a list of user Xsi policy profiles
+        /// to a group.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupXsiPolicyProfileAssignListRequestAsync(this OcipClient client, GroupXsiPolicyProfileAssignListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Get a list of Xsi policy profile assigned.
+        /// The response is either a GroupXsiPolicyProfileGetAssignedListResponse
+        /// or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupXsiPolicyProfileGetAssignedListRequestAsync instead.")]
+        public static async Task<GroupXsiPolicyProfileGetAssignedListResponse> GroupXsiPolicyProfileGetAssignedListRequest(this OcipClient client, GroupXsiPolicyProfileGetAssignedListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupXsiPolicyProfileGetAssignedListResponse;
+        }
+
+        /// <summary>
+        /// Get a list of Xsi policy profile assigned.
+        /// The response is either a GroupXsiPolicyProfileGetAssignedListResponse
+        /// or an ErrorResponse.
+        /// </summary>
+        public static async Task<GroupXsiPolicyProfileGetAssignedListResponse> GroupXsiPolicyProfileGetAssignedListRequestAsync(this OcipClient client, GroupXsiPolicyProfileGetAssignedListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupXsiPolicyProfileGetAssignedListResponse;
+        }
+        /// <summary>
+        /// Get a list of user within a group that have a given
+        /// user Xsi policy profile assigned.
+        /// The response is either a GroupXsiPolicyProfileGetAssignedUserListResponse
+        /// or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupXsiPolicyProfileGetAssignedUserListRequestAsync instead.")]
+        public static async Task<GroupXsiPolicyProfileGetAssignedUserListResponse> GroupXsiPolicyProfileGetAssignedUserListRequest(this OcipClient client, GroupXsiPolicyProfileGetAssignedUserListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupXsiPolicyProfileGetAssignedUserListResponse;
+        }
+
+        /// <summary>
+        /// Get a list of user within a group that have a given
+        /// user Xsi policy profile assigned.
+        /// The response is either a GroupXsiPolicyProfileGetAssignedUserListResponse
+        /// or an ErrorResponse.
+        /// </summary>
+        public static async Task<GroupXsiPolicyProfileGetAssignedUserListResponse> GroupXsiPolicyProfileGetAssignedUserListRequestAsync(this OcipClient client, GroupXsiPolicyProfileGetAssignedUserListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupXsiPolicyProfileGetAssignedUserListResponse;
+        }
+        /// <summary>
+        /// Modifies the default Xsi policy profile for a group.
+        /// It can only modify the user level default Xsi policy profile.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupXsiPolicyProfileModifyDefaultRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupXsiPolicyProfileModifyDefaultRequest(this OcipClient client, GroupXsiPolicyProfileModifyDefaultRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modifies the default Xsi policy profile for a group.
+        /// It can only modify the user level default Xsi policy profile.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupXsiPolicyProfileModifyDefaultRequestAsync(this OcipClient client, GroupXsiPolicyProfileModifyDefaultRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Unassign a list of Xsi policy profile.
+        /// Only user level Xsi policy profile can be unassigned.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use GroupXsiPolicyProfileUnassignListRequestAsync instead.")]
+        public static async Task<SuccessResponse> GroupXsiPolicyProfileUnassignListRequest(this OcipClient client, GroupXsiPolicyProfileUnassignListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Unassign a list of Xsi policy profile.
+        /// Only user level Xsi policy profile can be unassigned.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> GroupXsiPolicyProfileUnassignListRequestAsync(this OcipClient client, GroupXsiPolicyProfileUnassignListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
 
     }

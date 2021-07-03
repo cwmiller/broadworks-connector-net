@@ -8,19 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the UserSharedCallAppearanceGetEndpointRequest.
+    /// Replaced by: UserSharedCallAppearanceGetEndpointResponse21 in XS data mode
     /// <see cref="UserSharedCallAppearanceGetEndpointRequest"/>
+    /// <see cref="UserSharedCallAppearanceGetEndpointResponse21"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""524e0d071a229a44af2f953d6b50db35:100""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:46135""}]")]
     public class UserSharedCallAppearanceGetEndpointResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:100")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46135")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowOrigination;
 
         [XmlElement(ElementName = "allowOrigination", IsNullable = false, Namespace = "")]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:100")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46135")]
         public bool AllowOrigination
         {
             get => _allowOrigination;
@@ -54,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowTermination;
 
         [XmlElement(ElementName = "allowTermination", IsNullable = false, Namespace = "")]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:100")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46135")]
         public bool AllowTermination
         {
             get => _allowTermination;

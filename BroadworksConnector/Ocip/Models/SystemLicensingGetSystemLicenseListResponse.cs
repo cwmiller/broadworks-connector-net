@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3197""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:8486""}]")]
     public class SystemLicensingGetSystemLicenseListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "license", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3197")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8486")]
         public List<BroadWorksConnector.Ocip.Models.SystemLicenseType> License
         {
             get => _license;

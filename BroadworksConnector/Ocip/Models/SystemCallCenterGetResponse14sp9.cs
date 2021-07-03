@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:9997""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:20844""}]")]
     public class SystemCallCenterGetResponse14sp9 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _defaultFromAddress;
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9997")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20844")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultFromAddress
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes _statisticsSamplingPeriodMinutes;
 
         [XmlElement(ElementName = "statisticsSamplingPeriodMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9997")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20844")]
         public BroadWorksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes StatisticsSamplingPeriodMinutes
         {
             get => _statisticsSamplingPeriodMinutes;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:403""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:492""}]")]
     public class AccessDeviceMultipleIdentityEndpointKey
     {
 
         private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:403")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:492")]
         public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
         {
             get => _accessDevice;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:403")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:492")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateIdentity", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:403")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:492")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PrivateIdentity

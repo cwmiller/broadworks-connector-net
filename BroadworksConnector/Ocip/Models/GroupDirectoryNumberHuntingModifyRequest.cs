@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7c509136e6ce6be616e313c3b28a0449:119""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7c509136e6ce6be616e313c3b28a0449:120""}]")]
     public class GroupDirectoryNumberHuntingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"7c509136e6ce6be616e313c3b28a0449:119")]
+        [Group(@"7c509136e6ce6be616e313c3b28a0449:120")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7c509136e6ce6be616e313c3b28a0449:119")]
+        [Group(@"7c509136e6ce6be616e313c3b28a0449:120")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList
         {
             get => _agentUserIdList;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useTerminateCallToAgentFirst", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7c509136e6ce6be616e313c3b28a0449:119")]
+        [Group(@"7c509136e6ce6be616e313c3b28a0449:120")]
         public bool UseTerminateCallToAgentFirst
         {
             get => _useTerminateCallToAgentFirst;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useOriginalAgentServicesForBusyAndNoAnswerCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7c509136e6ce6be616e313c3b28a0449:119")]
+        [Group(@"7c509136e6ce6be616e313c3b28a0449:120")]
         public bool UseOriginalAgentServicesForBusyAndNoAnswerCalls
         {
             get => _useOriginalAgentServicesForBusyAndNoAnswerCalls;

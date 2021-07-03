@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14732""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15874""}]")]
     public class SystemSelectiveServicesGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.ScheduleCombinationType _scheduleCombination;
 
         [XmlElement(ElementName = "scheduleCombination", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14732")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15874")]
         public BroadWorksConnector.Ocip.Models.ScheduleCombinationType ScheduleCombination
         {
             get => _scheduleCombination;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _screenPrivateNumber;
 
         [XmlElement(ElementName = "screenPrivateNumber", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14732")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15874")]
         public bool ScreenPrivateNumber
         {
             get => _screenPrivateNumber;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _emptyHolidayScheduleIsOutOfSchedule;
 
         [XmlElement(ElementName = "emptyHolidayScheduleIsOutOfSchedule", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14732")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15874")]
         public bool EmptyHolidayScheduleIsOutOfSchedule
         {
             get => _emptyHolidayScheduleIsOutOfSchedule;

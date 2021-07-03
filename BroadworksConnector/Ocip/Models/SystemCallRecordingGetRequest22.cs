@@ -10,13 +10,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request the system level data associated with Call Recording.
     /// The response is either a SystemCallRecordingGetResponse22 or an
     /// ErrorResponse.
+    /// 
+    /// Replaced by: SystemCallRecordingGetRequest23
     /// <see cref="SystemCallRecordingGetResponse22"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemCallRecordingGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:246""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24696""}]")]
     public class SystemCallRecordingGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 

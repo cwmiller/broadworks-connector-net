@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4864""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5692""}]")]
     public class ServiceProviderScheduleDeleteEventListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4864")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5692")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
 
         [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4864")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5692")]
         public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey
         {
             get => _scheduleKey;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _eventName = new List<string>();
 
         [XmlElement(ElementName = "eventName", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4864")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5692")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> EventName

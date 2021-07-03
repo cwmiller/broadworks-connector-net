@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7369""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8071""}]")]
     public class SystemDeviceManagementTagSetAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7369")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8071")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSetName
@@ -47,9 +47,9 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7369")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8071")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string ResellerId
         {
             get => _resellerId;

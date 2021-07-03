@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3534""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:14025""}]")]
     public class UserPreAlertingAnnouncementGetCriteriaResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3534")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14025")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3534")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14025")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _blacklisted;
 
         [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3534")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14025")]
         public bool Blacklisted
         {
             get => _blacklisted;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3534")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14025")]
         public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria
         {
             get => _fromDnCriteria;

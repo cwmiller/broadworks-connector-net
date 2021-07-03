@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7252"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7253""},{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7259""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7954"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7955""},{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7961""}]}]")]
     public class SystemDeviceManagementTagAddRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private bool _systemDefaultTagSet;
 
         [XmlElement(ElementName = "systemDefaultTagSet", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7253")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7955")]
         public bool SystemDefaultTagSet
         {
             get => _systemDefaultTagSet;
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7253")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7955")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSetName
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _tagName;
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7252")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7954")]
         [MinLength(1)]
         [MaxLength(64)]
         public string TagName
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isTagValueEncrypted;
 
         [XmlElement(ElementName = "isTagValueEncrypted", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7252")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7954")]
         public bool IsTagValueEncrypted
         {
             get => _isTagValueEncrypted;
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7259")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7961")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TagValue
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagValueToEncrypt", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7259")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7961")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TagValueToEncrypt
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isTagValueOverridable;
 
         [XmlElement(ElementName = "isTagValueOverridable", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7252")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7954")]
         public bool IsTagValueOverridable
         {
             get => _isTagValueOverridable;

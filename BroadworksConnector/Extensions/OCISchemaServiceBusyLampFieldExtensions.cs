@@ -11,39 +11,21 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request the system level data associated with the Busy Lamp
-        /// Field service. The response is either a SystemBusyLampFieldGetResponse18 or an ErrorResponse.
+        /// Field service. The response is either a SystemBusyLampFieldGetResponse23V2 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemBusyLampFieldGetRequest18Async instead.")]
-        public static async Task<SystemBusyLampFieldGetResponse18> SystemBusyLampFieldGetRequest18(this OcipClient client, SystemBusyLampFieldGetRequest18 request)
+        [Obsolete("This method is deprecated. Use SystemBusyLampFieldGetRequest23V2Async instead.")]
+        public static async Task<SystemBusyLampFieldGetResponse23V2> SystemBusyLampFieldGetRequest23V2(this OcipClient client, SystemBusyLampFieldGetRequest23V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemBusyLampFieldGetResponse18;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemBusyLampFieldGetResponse23V2;
         }
 
         /// <summary>
         /// Request the system level data associated with the Busy Lamp
-        /// Field service. The response is either a SystemBusyLampFieldGetResponse18 or an ErrorResponse.
+        /// Field service. The response is either a SystemBusyLampFieldGetResponse23V2 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemBusyLampFieldGetResponse18> SystemBusyLampFieldGetRequest18Async(this OcipClient client, SystemBusyLampFieldGetRequest18 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemBusyLampFieldGetResponse23V2> SystemBusyLampFieldGetRequest23V2Async(this OcipClient client, SystemBusyLampFieldGetRequest23V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemBusyLampFieldGetResponse18;
-        }
-        /// <summary>
-        /// Request the system level data associated with the Busy Lamp
-        /// Field service. The response is either a SystemBusyLampFieldGetResponse23 or an ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemBusyLampFieldGetRequest23Async instead.")]
-        public static async Task<SystemBusyLampFieldGetResponse23> SystemBusyLampFieldGetRequest23(this OcipClient client, SystemBusyLampFieldGetRequest23 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemBusyLampFieldGetResponse23;
-        }
-
-        /// <summary>
-        /// Request the system level data associated with the Busy Lamp
-        /// Field service. The response is either a SystemBusyLampFieldGetResponse23 or an ErrorResponse.
-        /// </summary>
-        public static async Task<SystemBusyLampFieldGetResponse23> SystemBusyLampFieldGetRequest23Async(this OcipClient client, SystemBusyLampFieldGetRequest23 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemBusyLampFieldGetResponse23;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemBusyLampFieldGetResponse23V2;
         }
         /// <summary>
         /// Modify the system level data associated with the Busy Lamp Field
@@ -58,6 +40,9 @@ namespace BroadWorksConnector
         /// redundancyTaskDelayMilliseconds
         /// redundancyTaskIntervalMilliseconds
         /// maxNumberOfSubscriptionsPerRedundancyTaskInterval
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// ignoreUnansweredTerminatingCalls
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemBusyLampFieldModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemBusyLampFieldModifyRequest(this OcipClient client, SystemBusyLampFieldModifyRequest request)
@@ -78,6 +63,9 @@ namespace BroadWorksConnector
         /// redundancyTaskDelayMilliseconds
         /// redundancyTaskIntervalMilliseconds
         /// maxNumberOfSubscriptionsPerRedundancyTaskInterval
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// ignoreUnansweredTerminatingCalls
         /// </summary>
         public static async Task<SuccessResponse> SystemBusyLampFieldModifyRequestAsync(this OcipClient client, SystemBusyLampFieldModifyRequest request, CancellationToken cancellationToken = default)
         {

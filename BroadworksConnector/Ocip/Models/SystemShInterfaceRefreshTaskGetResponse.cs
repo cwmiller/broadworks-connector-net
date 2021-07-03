@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15304""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16452""}]")]
     public class SystemShInterfaceRefreshTaskGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isRunning;
 
         [XmlElement(ElementName = "isRunning", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15304")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16452")]
         public bool IsRunning
         {
             get => _isRunning;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberPublicIdentityRefreshesStarted", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15304")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16452")]
         public int NumberPublicIdentityRefreshesStarted
         {
             get => _numberPublicIdentityRefreshesStarted;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberPublicIdentities", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15304")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16452")]
         public int NumberPublicIdentities
         {
             get => _numberPublicIdentities;

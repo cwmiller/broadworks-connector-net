@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5967""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:31415""}]")]
     public class SystemSIPDeviceTypeFileDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5967")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31415")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _fileType;
 
         [XmlElement(ElementName = "fileType", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5967")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31415")]
         [MinLength(1)]
         [MaxLength(40)]
         public string FileType

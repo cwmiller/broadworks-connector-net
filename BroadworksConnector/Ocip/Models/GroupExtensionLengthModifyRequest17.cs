@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the group's extension length range.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// useExterpriseExtensionLengthSetting
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4873""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:5781""}]")]
     public class GroupExtensionLengthModifyRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4873")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5781")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4873")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5781")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4873")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5781")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int MinExtensionLength
@@ -81,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4873")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5781")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int MaxExtensionLength
@@ -101,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4873")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5781")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int DefaultExtensionLength
@@ -116,6 +119,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool DefaultExtensionLengthSpecified { get; set; }
+
+        private bool _useEnterpriseExtensionLengthSetting;
+
+        [XmlElement(ElementName = "useEnterpriseExtensionLengthSetting", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5781")]
+        public bool UseEnterpriseExtensionLengthSetting
+        {
+            get => _useEnterpriseExtensionLengthSetting;
+            set
+            {
+                UseEnterpriseExtensionLengthSettingSpecified = true;
+                _useEnterpriseExtensionLengthSetting = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool UseEnterpriseExtensionLengthSettingSpecified { get; set; }
 
     }
 }

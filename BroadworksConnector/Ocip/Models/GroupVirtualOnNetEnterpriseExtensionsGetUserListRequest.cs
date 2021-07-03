@@ -11,8 +11,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// It is possible to search by various criteria to restrict the number
     /// of rows returned.
     /// Multiple search criteria are logically ANDed together.
-    /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserListResponse or an
-    /// ErrorResponse.
+    /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserListResponse or an ErrorResponse.
     /// <see cref="GroupVirtualOnNetEnterpriseExtensionsGetUserListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>

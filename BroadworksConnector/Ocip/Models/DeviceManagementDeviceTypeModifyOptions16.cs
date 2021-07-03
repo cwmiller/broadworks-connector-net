@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1842""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:48092""}]")]
     public class DeviceManagementDeviceTypeModifyOptions16
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceAccessProtocol", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public BroadWorksConnector.Ocip.Models.DeviceAccessProtocol16 DeviceAccessProtocol
         {
             get => _deviceAccessProtocol;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementTagMode TagMode
         {
             get => _tagMode;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagSet", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSet
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowDeviceProfileCustomTagSet", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public bool AllowDeviceProfileCustomTagSet
         {
             get => _allowDeviceProfileCustomTagSet;
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowGroupCustomTagSet", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public bool AllowGroupCustomTagSet
         {
             get => _allowGroupCustomTagSet;
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowSpCustomTagSet", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public bool AllowSpCustomTagSet
         {
             get => _allowSpCustomTagSet;
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendEmailUponResetFailure", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public bool SendEmailUponResetFailure
         {
             get => _sendEmailUponResetFailure;
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceAccessNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DeviceAccessNetAddress
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceAccessPort", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? DeviceAccessPort
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceAccessContext", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DeviceAccessContext
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultDeviceLanguage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DefaultDeviceLanguage
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultDeviceEncoding", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DefaultDeviceEncoding
@@ -248,7 +248,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceCredentials", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementUserNamePassword16 AccessDeviceCredentials
         {
             get => _accessDeviceCredentials;
@@ -266,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useHttpDigestAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public bool UseHttpDigestAuthentication
         {
             get => _useHttpDigestAuthentication;
@@ -284,7 +284,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "macBasedFileAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public bool MacBasedFileAuthentication
         {
             get => _macBasedFileAuthentication;
@@ -302,7 +302,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userNamePasswordFileAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public bool UserNamePasswordFileAuthentication
         {
             get => _userNamePasswordFileAuthentication;
@@ -320,7 +320,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "macInNonRequestURI", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public bool MacInNonRequestURI
         {
             get => _macInNonRequestURI;
@@ -338,7 +338,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "macInCert", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         public bool MacInCert
         {
             get => _macInCert;
@@ -356,7 +356,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "macFormatInNonRequestURI", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1842")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48092")]
         [MinLength(1)]
         [MaxLength(256)]
         public string MacFormatInNonRequestURI

@@ -9,8 +9,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to UserEnhancedCallLogsGetListRequest17sp4V2.
     /// Total numbers of rows is:
-    /// - the total number of retrievable logs of the call log type that was specified in the
-    /// UserEnhancedCallLogsGetListRequest17sp4V2,
+    /// - the total number of retrievable logs of the call log type that was specified in the UserEnhancedCallLogsGetListRequest17sp4V2,
     /// if a call log type was specified in the request.
     /// - the total number of retrievable logs, if no call log type was specified in the request.
     /// A list of MixedCallLogsEntry will be returned if the call logs are stored on CDS
@@ -22,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32609"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32611""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:42697"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:42699""}]}]")]
     public class UserEnhancedCallLogsGetListResponse17sp4V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32609")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42697")]
         public int TotalNumberOfRows
         {
             get => _totalNumberOfRows;
@@ -46,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse17sp4V2LegacyEntry _legacyEntry;
 
         [XmlElement(ElementName = "legacyEntry", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32611")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42699")]
         public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse17sp4V2LegacyEntry LegacyEntry
         {
             get => _legacyEntry;
@@ -63,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse17sp4V2ExtendedEntry _extendedEntry;
 
         [XmlElement(ElementName = "extendedEntry", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32611")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42699")]
         public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse17sp4V2ExtendedEntry ExtendedEntry
         {
             get => _extendedEntry;

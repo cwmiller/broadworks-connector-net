@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32742""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:45135""}]")]
     public class UserMeetMeConferencingGetConferenceGreetingResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _playEntranceGreeting;
 
         [XmlElement(ElementName = "playEntranceGreeting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32742")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45135")]
         public bool PlayEntranceGreeting
         {
             get => _playEntranceGreeting;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "entranceGreetingAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32742")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45135")]
         [MinLength(1)]
         [MaxLength(256)]
         public string EntranceGreetingAudioFile
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "entranceGreetingMediaType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32742")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45135")]
         public BroadWorksConnector.Ocip.Models.MediaFileType EntranceGreetingMediaType
         {
             get => _entranceGreetingMediaType;

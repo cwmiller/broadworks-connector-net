@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2526"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2529""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2995"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2998""}]}]")]
     public class LabeledMediaFileResource
     {
 
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2526")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2995")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Description
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MediaFileType _mediaType;
 
         [XmlElement(ElementName = "mediaType", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2526")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2995")]
         public BroadWorksConnector.Ocip.Models.MediaFileType MediaType
         {
             get => _mediaType;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _sourceFileName;
 
         [XmlElement(ElementName = "sourceFileName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2529")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2998")]
         [MinLength(1)]
         public string SourceFileName
         {
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _content;
 
         [XmlElement(ElementName = "content", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2529")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2998")]
         public string Content
         {
             get => _content;

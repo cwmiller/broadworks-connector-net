@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get the user's Video Add-On service setting.
     /// The response is either a UserVideoAddOnGetResponse19 or an ErrorResponse.
+    /// 
+    /// Replaced by: UserVideoAddOnGetRequest22.
     /// <see cref="UserVideoAddOnGetResponse19"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="UserVideoAddOnGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a7ae3767516578250f020b627d8fe972:41""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:46897""}]")]
     public class UserVideoAddOnGetRequest19 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"a7ae3767516578250f020b627d8fe972:41")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46897")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

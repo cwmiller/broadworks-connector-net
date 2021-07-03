@@ -8,19 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemPerformanceMeasurementReportingGetRequest22.
+    /// 
+    /// Replaced by: SystemPerformanceMeasurementReportingGetResponse24
     /// <see cref="SystemPerformanceMeasurementReportingGetRequest22"/>
+    /// <see cref="SystemPerformanceMeasurementReportingGetResponse24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13263""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:28379""}]")]
     public class SystemPerformanceMeasurementReportingGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28379")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _reportingInterval;
 
         [XmlElement(ElementName = "reportingInterval", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28379")]
         [MinInclusive(5)]
         [MaxInclusive(45000)]
         public int ReportingInterval
@@ -56,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _resetMeasurementsAfterEachReport;
 
         [XmlElement(ElementName = "resetMeasurementsAfterEachReport", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28379")]
         public bool ResetMeasurementsAfterEachReport
         {
             get => _resetMeasurementsAfterEachReport;
@@ -73,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _reportEnterprise;
 
         [XmlElement(ElementName = "reportEnterprise", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28379")]
         public bool ReportEnterprise
         {
             get => _reportEnterprise;
@@ -90,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _reportServiceProvider;
 
         [XmlElement(ElementName = "reportServiceProvider", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28379")]
         public bool ReportServiceProvider
         {
             get => _reportServiceProvider;
@@ -107,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _reportDevice;
 
         [XmlElement(ElementName = "reportDevice", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28379")]
         public bool ReportDevice
         {
             get => _reportDevice;
@@ -124,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _reportTable;
 
         [XmlElement(ElementName = "reportTable", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13263")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28379")]
         public bool ReportTable
         {
             get => _reportTable;

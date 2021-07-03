@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""26f62134ab1693f4bdddc7c70b20d2eb:257""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""26f62134ab1693f4bdddc7c70b20d2eb:258""}]")]
     public class UserCallNotifyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callNotifyEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:257")]
+        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:258")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CallNotifyEmailAddress
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:257")]
+        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:258")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
         {
             get => _criteriaTable;

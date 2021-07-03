@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4110""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4294""}]")]
     public class ProfileAndServiceCallForwardingSelectiveInfo
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4110")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4294")]
         public bool IsActive
         {
             get => _isActive;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultForwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4110")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4294")]
         [MinLength(1)]
         [MaxLength(161)]
         public string DefaultForwardToPhoneNumber
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _playRingReminder;
 
         [XmlElement(ElementName = "playRingReminder", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4110")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4294")]
         public bool PlayRingReminder
         {
             get => _playRingReminder;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4110")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4294")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
         {
             get => _criteriaTable;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16469""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35591""}]")]
     public class SystemTimeScheduleDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _timeScheduleName;
 
         [XmlElement(ElementName = "timeScheduleName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16469")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35591")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TimeScheduleName

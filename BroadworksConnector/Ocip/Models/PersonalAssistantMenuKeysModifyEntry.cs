@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2833""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2762""}]")]
     public class PersonalAssistantMenuKeysModifyEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setPresenceToNone", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetPresenceToNone
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setPresenceToBusinessTrip", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetPresenceToBusinessTrip
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setPresenceToGoneForTheDay", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetPresenceToGoneForTheDay
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setPresenceToLunch", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetPresenceToLunch
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setPresenceToMeeting", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetPresenceToMeeting
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setPresenceToOutOfOffice", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetPresenceToOutOfOffice
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setPresenceToTemporarilyOut", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetPresenceToTemporarilyOut
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setPresenceToTraining", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetPresenceToTraining
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setPresenceToUnavailable", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetPresenceToUnavailable
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setPresenceToVacation", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetPresenceToVacation
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -240,7 +240,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2833")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2762")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

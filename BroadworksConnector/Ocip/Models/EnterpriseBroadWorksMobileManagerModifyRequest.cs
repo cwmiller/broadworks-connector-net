@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:372""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:373""}]")]
     public class EnterpriseBroadWorksMobileManagerModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:372")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:373")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "informationFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:372")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:373")]
         [MinLength(1)]
         public string InformationFile
         {
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "certificateFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:372")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:373")]
         [MinLength(1)]
         public string CertificateFile
         {
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "localToCarrier", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:372")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:373")]
         public bool LocalToCarrier
         {
             get => _localToCarrier;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxTxPerSecondEnabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:372")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:373")]
         public bool MaxTxPerSecondEnabled
         {
             get => _maxTxPerSecondEnabled;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxTxPerSecond", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:372")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:373")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
         public int MaxTxPerSecond
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tldnEnabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:372")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:373")]
         public bool TldnEnabled
         {
             get => _tldnEnabled;
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "genericNumberEnabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:372")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:373")]
         public bool GenericNumberEnabled
         {
             get => _genericNumberEnabled;
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobileStateCheckEnabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:372")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:373")]
         public bool MobileStateCheckEnabled
         {
             get => _mobileStateCheckEnabled;
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "locationBasedServicesEnabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:372")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:373")]
         public bool LocationBasedServicesEnabled
         {
             get => _locationBasedServicesEnabled;

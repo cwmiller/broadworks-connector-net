@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3dd296d55b56269ae23d86a934b8b35c:184""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3dd296d55b56269ae23d86a934b8b35c:185""}]")]
     public class IncomingCallingPlanDigitPatternPermission
     {
 
         private string _digitPatternName;
 
         [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
-        [Group(@"3dd296d55b56269ae23d86a934b8b35c:184")]
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:185")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DigitPatternName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allow;
 
         [XmlElement(ElementName = "allow", IsNullable = false, Namespace = "")]
-        [Group(@"3dd296d55b56269ae23d86a934b8b35c:184")]
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:185")]
         public bool Allow
         {
             get => _allow;

@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:459""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:397""}]")]
     public class PasswordGenerateResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "systemAdministratorPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:397")]
         [MinLength(1)]
         [MaxLength(60)]
         public string SystemAdministratorPassword
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceProviderAdministratorPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:397")]
         [MinLength(1)]
         [MaxLength(60)]
         public string ServiceProviderAdministratorPassword
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupAdministratorPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:397")]
         [MinLength(1)]
         [MaxLength(60)]
         public string GroupAdministratorPassword
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:397")]
         [MinLength(1)]
         [MaxLength(60)]
         public string UserPassword
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userPasscode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:397")]
         [MinLength(1)]
         [MaxLength(30)]
         public string UserPasscode
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userSIPAuthenticationPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:397")]
         [MinLength(1)]
         [MaxLength(60)]
         public string UserSIPAuthenticationPassword
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceAuthenticationPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:397")]
         [MinLength(1)]
         [MaxLength(60)]
         public string AccessDeviceAuthenticationPassword
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "trunkGroupAuthenticationPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:459")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:397")]
         [MinLength(1)]
         [MaxLength(60)]
         public string TrunkGroupAuthenticationPassword

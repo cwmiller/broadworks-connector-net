@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request the group's extension length.
     /// The response is either a GroupExtensionLengthGetResponse17 or an ErrorResponse.
+    /// 
+    /// Replaced by: GroupExtensionLengthGetRequest22 in AS data mode
     /// <see cref="GroupExtensionLengthGetResponse17"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupExtensionLengthGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4839""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2267""}]")]
     public class GroupExtensionLengthGetRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4839")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2267")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4839")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2267")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

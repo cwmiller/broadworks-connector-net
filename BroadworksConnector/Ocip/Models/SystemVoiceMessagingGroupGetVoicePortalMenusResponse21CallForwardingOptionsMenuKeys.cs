@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:853""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:854""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21CallForwardingOptionsMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "activateCallForwarding", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:854")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ActivateCallForwarding
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deactivateCallForwarding", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:854")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string DeactivateCallForwarding
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "changeCallForwardingDestination", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:854")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ChangeCallForwardingDestination
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "listenToCallForwardingStatus", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:854")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ListenToCallForwardingStatus
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:854")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:853")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:854")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

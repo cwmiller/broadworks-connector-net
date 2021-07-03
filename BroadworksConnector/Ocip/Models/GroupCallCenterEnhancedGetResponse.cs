@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:8306""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4836""}]")]
     public class GroupCallCenterEnhancedGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _overrideAgentWrapUpTime;
 
         [XmlElement(ElementName = "overrideAgentWrapUpTime", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8306")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4836")]
         public bool OverrideAgentWrapUpTime
         {
             get => _overrideAgentWrapUpTime;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "wrapUpSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8306")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4836")]
         [MinInclusive(1)]
         [MaxInclusive(3600)]
         public int WrapUpSeconds

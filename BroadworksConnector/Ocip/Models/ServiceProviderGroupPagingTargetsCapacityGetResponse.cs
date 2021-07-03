@@ -8,21 +8,24 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to ServiceProviderGroupPagingTargetsCapacityGetRequest.
+    /// 
+    /// Replaced by: ServiceProviderGroupPagingTargetsCapacityGetResponse22 in AS data mode.
     /// <see cref="ServiceProviderGroupPagingTargetsCapacityGetRequest"/>
+    /// <see cref="ServiceProviderGroupPagingTargetsCapacityGetResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:534""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:5910""}]")]
     public class ServiceProviderGroupPagingTargetsCapacityGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _maximumTargetUsers;
 
         [XmlElement(ElementName = "maximumTargetUsers", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:534")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:5910")]
         [MinInclusive(1)]
-        [MaxInclusive(294)]
+        [MaxInclusive(149)]
         public int MaximumTargetUsers
         {
             get => _maximumTargetUsers;

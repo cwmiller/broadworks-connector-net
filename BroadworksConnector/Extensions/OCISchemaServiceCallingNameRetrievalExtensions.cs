@@ -11,21 +11,21 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request the system's calling name retrieval attributes.
-        /// The response is either a SystemCallingNameRetrievalGetResponse20 or an ErrorResponse.
+        /// The response is either a SystemCallingNameRetrievalGetResponse24 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallingNameRetrievalGetRequest20Async instead.")]
-        public static async Task<SystemCallingNameRetrievalGetResponse20> SystemCallingNameRetrievalGetRequest20(this OcipClient client, SystemCallingNameRetrievalGetRequest20 request)
+        [Obsolete("This method is deprecated. Use SystemCallingNameRetrievalGetRequest24Async instead.")]
+        public static async Task<SystemCallingNameRetrievalGetResponse24> SystemCallingNameRetrievalGetRequest24(this OcipClient client, SystemCallingNameRetrievalGetRequest24 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallingNameRetrievalGetResponse20;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallingNameRetrievalGetResponse24;
         }
 
         /// <summary>
         /// Request the system's calling name retrieval attributes.
-        /// The response is either a SystemCallingNameRetrievalGetResponse20 or an ErrorResponse.
+        /// The response is either a SystemCallingNameRetrievalGetResponse24 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallingNameRetrievalGetResponse20> SystemCallingNameRetrievalGetRequest20Async(this OcipClient client, SystemCallingNameRetrievalGetRequest20 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallingNameRetrievalGetResponse24> SystemCallingNameRetrievalGetRequest24Async(this OcipClient client, SystemCallingNameRetrievalGetRequest24 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallingNameRetrievalGetResponse20;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallingNameRetrievalGetResponse24;
         }
         /// <summary>
         /// Modifies the system's calling name retrieval attributes.

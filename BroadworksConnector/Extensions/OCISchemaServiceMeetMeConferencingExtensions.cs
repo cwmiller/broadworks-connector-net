@@ -179,27 +179,42 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request the reseller level data associated with Meet-Me Conferencing functions.
-        /// The response is either a ResellerMeetMeConferencingGetResponse or an
+        /// The response is either a ResellerMeetMeConferencingGetResponse22 or an
         /// ErrorResponse.
+        /// The following data elements are only returned for System and Provisioning Administrators:
+        /// maxAllocatedPorts.
+        /// The following data elements are only returned for System and Provisioning Administrators and AS Mode Only:
+        /// disableUnlimitedMeetMePorts,
+        /// enableMaxAllocatedPorts.
         /// </summary>
-        [Obsolete("This method is deprecated. Use ResellerMeetMeConferencingGetRequestAsync instead.")]
-        public static async Task<ResellerMeetMeConferencingGetResponse> ResellerMeetMeConferencingGetRequest(this OcipClient client, ResellerMeetMeConferencingGetRequest request)
+        [Obsolete("This method is deprecated. Use ResellerMeetMeConferencingGetRequest22Async instead.")]
+        public static async Task<ResellerMeetMeConferencingGetResponse22> ResellerMeetMeConferencingGetRequest22(this OcipClient client, ResellerMeetMeConferencingGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as ResellerMeetMeConferencingGetResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as ResellerMeetMeConferencingGetResponse22;
         }
 
         /// <summary>
         /// Request the reseller level data associated with Meet-Me Conferencing functions.
-        /// The response is either a ResellerMeetMeConferencingGetResponse or an
+        /// The response is either a ResellerMeetMeConferencingGetResponse22 or an
         /// ErrorResponse.
+        /// The following data elements are only returned for System and Provisioning Administrators:
+        /// maxAllocatedPorts.
+        /// The following data elements are only returned for System and Provisioning Administrators and AS Mode Only:
+        /// disableUnlimitedMeetMePorts,
+        /// enableMaxAllocatedPorts.
         /// </summary>
-        public static async Task<ResellerMeetMeConferencingGetResponse> ResellerMeetMeConferencingGetRequestAsync(this OcipClient client, ResellerMeetMeConferencingGetRequest request, CancellationToken cancellationToken = default)
+        public static async Task<ResellerMeetMeConferencingGetResponse22> ResellerMeetMeConferencingGetRequest22Async(this OcipClient client, ResellerMeetMeConferencingGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as ResellerMeetMeConferencingGetResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as ResellerMeetMeConferencingGetResponse22;
         }
         /// <summary>
         /// Modify the reseller level data associated with Meet-Me Conferencing functions.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following data elements are only modified for System and Provisioning Administrators:
+        /// maxAllocatedPorts.
+        /// The following data elements are only modified for System and Provisioning Administrators and AS Mode only:
+        /// disableUnlimitedMeetMePorts,
+        /// enableMaxAllocatedPorts.
         /// </summary>
         [Obsolete("This method is deprecated. Use ResellerMeetMeConferencingModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> ResellerMeetMeConferencingModifyRequest(this OcipClient client, ResellerMeetMeConferencingModifyRequest request)
@@ -210,6 +225,11 @@ namespace BroadWorksConnector
         /// <summary>
         /// Modify the reseller level data associated with Meet-Me Conferencing functions.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following data elements are only modified for System and Provisioning Administrators:
+        /// maxAllocatedPorts.
+        /// The following data elements are only modified for System and Provisioning Administrators and AS Mode only:
+        /// disableUnlimitedMeetMePorts,
+        /// enableMaxAllocatedPorts.
         /// </summary>
         public static async Task<SuccessResponse> ResellerMeetMeConferencingModifyRequestAsync(this OcipClient client, ResellerMeetMeConferencingModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -286,28 +306,6 @@ namespace BroadWorksConnector
         public static async Task<SuccessResponse> SystemMeetMeConferencingModifyRequestAsync(this OcipClient client, SystemMeetMeConferencingModifyRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
-        }
-        /// <summary>
-        /// Add a Meet-Me conference.
-        /// The response is either UserMeetMeConferencingAddConferenceResponse19 or ErrorResponse.
-        /// The startTime element is adjusted to the first occurrence of the recurrent schedule that comes at or after the startTime.
-        /// The startTime, endTime and recurrence information for a conferenceSchedule element will be adjusted to the user Host time zone.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use UserMeetMeConferencingAddConferenceRequest19Async instead.")]
-        public static async Task<UserMeetMeConferencingAddConferenceResponse19> UserMeetMeConferencingAddConferenceRequest19(this OcipClient client, UserMeetMeConferencingAddConferenceRequest19 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserMeetMeConferencingAddConferenceResponse19;
-        }
-
-        /// <summary>
-        /// Add a Meet-Me conference.
-        /// The response is either UserMeetMeConferencingAddConferenceResponse19 or ErrorResponse.
-        /// The startTime element is adjusted to the first occurrence of the recurrent schedule that comes at or after the startTime.
-        /// The startTime, endTime and recurrence information for a conferenceSchedule element will be adjusted to the user Host time zone.
-        /// </summary>
-        public static async Task<UserMeetMeConferencingAddConferenceResponse19> UserMeetMeConferencingAddConferenceRequest19Async(this OcipClient client, UserMeetMeConferencingAddConferenceRequest19 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserMeetMeConferencingAddConferenceResponse19;
         }
         /// <summary>
         /// Add a Meet-Me conference.
@@ -476,24 +474,6 @@ namespace BroadWorksConnector
         public static async Task<UserMeetMeConferencingGetConferenceRecordingListResponse> UserMeetMeConferencingGetConferenceRecordingListRequestAsync(this OcipClient client, UserMeetMeConferencingGetConferenceRecordingListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserMeetMeConferencingGetConferenceRecordingListResponse;
-        }
-        /// <summary>
-        /// Get the information of a conference owned by the user.
-        /// The response is either UserMeetMeConferencingGetConferenceResponse20 or ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use UserMeetMeConferencingGetConferenceRequest20Async instead.")]
-        public static async Task<UserMeetMeConferencingGetConferenceResponse20> UserMeetMeConferencingGetConferenceRequest20(this OcipClient client, UserMeetMeConferencingGetConferenceRequest20 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserMeetMeConferencingGetConferenceResponse20;
-        }
-
-        /// <summary>
-        /// Get the information of a conference owned by the user.
-        /// The response is either UserMeetMeConferencingGetConferenceResponse20 or ErrorResponse.
-        /// </summary>
-        public static async Task<UserMeetMeConferencingGetConferenceResponse20> UserMeetMeConferencingGetConferenceRequest20Async(this OcipClient client, UserMeetMeConferencingGetConferenceRequest20 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserMeetMeConferencingGetConferenceResponse20;
         }
         /// <summary>
         /// Get the information of a conference owned by the user.

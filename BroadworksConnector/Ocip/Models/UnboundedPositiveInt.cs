@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4502""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:5198""}]")]
     public class UnboundedPositiveInt
     {
 
         private bool _unlimited;
 
         [XmlElement(ElementName = "unlimited", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4502")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5198")]
         public bool Unlimited
         {
             get => _unlimited;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _quantity;
 
         [XmlElement(ElementName = "quantity", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4502")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5198")]
         [MinInclusive(1)]
         public int Quantity
         {

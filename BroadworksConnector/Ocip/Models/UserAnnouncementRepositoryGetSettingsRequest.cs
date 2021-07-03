@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Return the disk space being used.
-    /// The response is either UserAnnouncementRepositoryGetSettingsResponse or ErrorResponse
+    /// The response is either a UserAnnouncementRepositoryGetSettingsResponse or an ErrorResponse.
     /// <see cref="UserAnnouncementRepositoryGetSettingsResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:725""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:791""}]")]
     public class UserAnnouncementRepositoryGetSettingsRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:725")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:791")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

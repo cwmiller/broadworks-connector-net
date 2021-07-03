@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2956""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3526""}]")]
     public class PublicUserIdentity
     {
 
         private string _sipURI;
 
         [XmlElement(ElementName = "sipURI", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2956")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3526")]
         [MinLength(1)]
         [MaxLength(161)]
         public string SipURI
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _telURI;
 
         [XmlElement(ElementName = "telURI", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2956")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3526")]
         [MinLength(1)]
         [MaxLength(23)]
         public string TelURI

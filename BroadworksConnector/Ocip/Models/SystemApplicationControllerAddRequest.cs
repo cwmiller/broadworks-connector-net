@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1865""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2313""}]")]
     public class SystemApplicationControllerAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1865")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2313")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _subscriberId;
 
         [XmlElement(ElementName = "subscriberId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1865")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2313")]
         [MinLength(1)]
         [MaxLength(161)]
         public string SubscriberId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _channelSetId;
 
         [XmlElement(ElementName = "channelSetId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1865")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2313")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ChannelSetId

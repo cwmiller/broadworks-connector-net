@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43089""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47596""}]")]
     public class BasicCallLogsEntry
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43089")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47596")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43089")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47596")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PhoneNumber
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43089")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47596")]
         [MinLength(1)]
         [MaxLength(62)]
         public string Name
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _time;
 
         [XmlElement(ElementName = "time", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43089")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47596")]
         public string Time
         {
             get => _time;

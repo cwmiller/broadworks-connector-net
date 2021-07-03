@@ -9,7 +9,8 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// LoginRequest13mp10 is 2nd stage of the 2 stage OCI login process.
     /// The signedPassword is not required for external authentication login from a trusted host (ACL).
-    /// The response is either LoginResponse13mp10 or ErrorResponse
+    /// 
+    /// The response is either a LoginResponse13mp10 or an ErrorResponse.
     /// <see cref="LoginRequest13mp10"/>
     /// <see cref="LoginResponse13mp10"/>
     /// <see cref="ErrorResponse"/>
@@ -17,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3328""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16377""}]")]
     public class LoginRequest13mp10 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3328")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16377")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "signedPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3328")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16377")]
         [MinLength(1)]
         public string SignedPassword
         {

@@ -48,44 +48,6 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
-        /// Get the enhanced call log database schema instance associated with this
-        /// service provider.
-        /// The response is either a ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse or an ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use ServiceProviderEnhancedCallLogsSchemaInstanceGetRequestAsync instead.")]
-        public static async Task<ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse> ServiceProviderEnhancedCallLogsSchemaInstanceGetRequest(this OcipClient client, ServiceProviderEnhancedCallLogsSchemaInstanceGetRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse;
-        }
-
-        /// <summary>
-        /// Get the enhanced call log database schema instance associated with this
-        /// service provider.
-        /// The response is either a ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse or an ErrorResponse.
-        /// </summary>
-        public static async Task<ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse> ServiceProviderEnhancedCallLogsSchemaInstanceGetRequestAsync(this OcipClient client, ServiceProviderEnhancedCallLogsSchemaInstanceGetRequest request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse;
-        }
-        /// <summary>
-        /// Modify the Enhanced Call Logs schema instance associated with this Service Provider.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use ServiceProviderEnhancedCallLogsSchemaInstanceModifyRequestAsync instead.")]
-        public static async Task<SuccessResponse> ServiceProviderEnhancedCallLogsSchemaInstanceModifyRequest(this OcipClient client, ServiceProviderEnhancedCallLogsSchemaInstanceModifyRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Modify the Enhanced Call Logs schema instance associated with this Service Provider.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// </summary>
-        public static async Task<SuccessResponse> ServiceProviderEnhancedCallLogsSchemaInstanceModifyRequestAsync(this OcipClient client, ServiceProviderEnhancedCallLogsSchemaInstanceModifyRequest request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
-        }
-        /// <summary>
         /// Get the service provider's enhanced call log settings.
         /// The response is either a ServiceProviderEnhancedCallLogsGetResponse17sp4 or an ErrorResponse.
         /// This command will return an ErrorResponse if DBS is used as the call log server.
@@ -128,20 +90,80 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
-        /// Request the system level data associated with Enhanced Call Logs. The response is either a SystemEnhancedCallLogsGetResponse22 or an ErrorResponse.
+        /// Get the enhanced call log database schema instance associated with this
+        /// service provider.
+        /// The response is either a ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemEnhancedCallLogsGetRequest22Async instead.")]
-        public static async Task<SystemEnhancedCallLogsGetResponse22> SystemEnhancedCallLogsGetRequest22(this OcipClient client, SystemEnhancedCallLogsGetRequest22 request)
+        [Obsolete("This method is deprecated. Use ServiceProviderEnhancedCallLogsSchemaInstanceGetRequestAsync instead.")]
+        public static async Task<ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse> ServiceProviderEnhancedCallLogsSchemaInstanceGetRequest(this OcipClient client, ServiceProviderEnhancedCallLogsSchemaInstanceGetRequest request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemEnhancedCallLogsGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse;
         }
 
         /// <summary>
-        /// Request the system level data associated with Enhanced Call Logs. The response is either a SystemEnhancedCallLogsGetResponse22 or an ErrorResponse.
+        /// Get the enhanced call log database schema instance associated with this
+        /// service provider.
+        /// The response is either a ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemEnhancedCallLogsGetResponse22> SystemEnhancedCallLogsGetRequest22Async(this OcipClient client, SystemEnhancedCallLogsGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse> ServiceProviderEnhancedCallLogsSchemaInstanceGetRequestAsync(this OcipClient client, ServiceProviderEnhancedCallLogsSchemaInstanceGetRequest request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemEnhancedCallLogsGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as ServiceProviderEnhancedCallLogsSchemaInstanceGetResponse;
+        }
+        /// <summary>
+        /// Modify the Enhanced Call Logs schema instance associated with this Service Provider.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use ServiceProviderEnhancedCallLogsSchemaInstanceModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> ServiceProviderEnhancedCallLogsSchemaInstanceModifyRequest(this OcipClient client, ServiceProviderEnhancedCallLogsSchemaInstanceModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify the Enhanced Call Logs schema instance associated with this Service Provider.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> ServiceProviderEnhancedCallLogsSchemaInstanceModifyRequestAsync(this OcipClient client, ServiceProviderEnhancedCallLogsSchemaInstanceModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request the system level database schema instances defined for Enhanced Call Logs.
+        /// For each instance, the number of actual users (users that have the Enhanced Call Logs service,
+        /// are assigned to that schema instance and have recorded call logs on the NDS) are given.
+        /// The response is either a SystemEnhancedCallLogsActiveSchemaInstanceGetListResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemEnhancedCallLogsActiveSchemaInstanceGetListRequestAsync instead.")]
+        public static async Task<SystemEnhancedCallLogsActiveSchemaInstanceGetListResponse> SystemEnhancedCallLogsActiveSchemaInstanceGetListRequest(this OcipClient client, SystemEnhancedCallLogsActiveSchemaInstanceGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemEnhancedCallLogsActiveSchemaInstanceGetListResponse;
+        }
+
+        /// <summary>
+        /// Request the system level database schema instances defined for Enhanced Call Logs.
+        /// For each instance, the number of actual users (users that have the Enhanced Call Logs service,
+        /// are assigned to that schema instance and have recorded call logs on the NDS) are given.
+        /// The response is either a SystemEnhancedCallLogsActiveSchemaInstanceGetListResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SystemEnhancedCallLogsActiveSchemaInstanceGetListResponse> SystemEnhancedCallLogsActiveSchemaInstanceGetListRequestAsync(this OcipClient client, SystemEnhancedCallLogsActiveSchemaInstanceGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemEnhancedCallLogsActiveSchemaInstanceGetListResponse;
+        }
+        /// <summary>
+        /// Request the system level data associated with Enhanced Call Logs. The response is either a SystemEnhancedCallLogsGetResponse22V2 or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemEnhancedCallLogsGetRequest22V2Async instead.")]
+        public static async Task<SystemEnhancedCallLogsGetResponse22V2> SystemEnhancedCallLogsGetRequest22V2(this OcipClient client, SystemEnhancedCallLogsGetRequest22V2 request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemEnhancedCallLogsGetResponse22V2;
+        }
+
+        /// <summary>
+        /// Request the system level data associated with Enhanced Call Logs. The response is either a SystemEnhancedCallLogsGetResponse22V2 or an ErrorResponse.
+        /// </summary>
+        public static async Task<SystemEnhancedCallLogsGetResponse22V2> SystemEnhancedCallLogsGetRequest22V2Async(this OcipClient client, SystemEnhancedCallLogsGetRequest22V2 request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemEnhancedCallLogsGetResponse22V2;
         }
         /// <summary>
         /// Modify the system level data associated with Enhanced Call Logs.
@@ -195,14 +217,14 @@ namespace BroadWorksConnector
         /// It is possible to restrict the number of rows returned using responsePagingControl. If responsePagingControl
         /// is not specified, the value of Enhanced Call Logs system parameter maxNonPagedResponseSize will control
         /// the maximum number of call logs can be returned.
-        /// The response is either a UserEnhancedCallLogsGetListResponse22 or an ErrorResponse.
+        /// The response is either a UserEnhancedCallLogsGetListResponse23 or an ErrorResponse.
         /// The following elements are only used in AS data mode and ignored in XS data mode:
         /// callAuthorizationCodeFilter
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserEnhancedCallLogsGetListRequest22Async instead.")]
-        public static async Task<UserEnhancedCallLogsGetListResponse22> UserEnhancedCallLogsGetListRequest22(this OcipClient client, UserEnhancedCallLogsGetListRequest22 request)
+        [Obsolete("This method is deprecated. Use UserEnhancedCallLogsGetListRequest23Async instead.")]
+        public static async Task<UserEnhancedCallLogsGetListResponse23> UserEnhancedCallLogsGetListRequest23(this OcipClient client, UserEnhancedCallLogsGetListRequest23 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserEnhancedCallLogsGetListResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as UserEnhancedCallLogsGetListResponse23;
         }
 
         /// <summary>
@@ -215,13 +237,13 @@ namespace BroadWorksConnector
         /// It is possible to restrict the number of rows returned using responsePagingControl. If responsePagingControl
         /// is not specified, the value of Enhanced Call Logs system parameter maxNonPagedResponseSize will control
         /// the maximum number of call logs can be returned.
-        /// The response is either a UserEnhancedCallLogsGetListResponse22 or an ErrorResponse.
+        /// The response is either a UserEnhancedCallLogsGetListResponse23 or an ErrorResponse.
         /// The following elements are only used in AS data mode and ignored in XS data mode:
         /// callAuthorizationCodeFilter
         /// </summary>
-        public static async Task<UserEnhancedCallLogsGetListResponse22> UserEnhancedCallLogsGetListRequest22Async(this OcipClient client, UserEnhancedCallLogsGetListRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<UserEnhancedCallLogsGetListResponse23> UserEnhancedCallLogsGetListRequest23Async(this OcipClient client, UserEnhancedCallLogsGetListRequest23 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserEnhancedCallLogsGetListResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserEnhancedCallLogsGetListResponse23;
         }
 
     }

@@ -8,7 +8,8 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Modify data for Music On Hold User.
-    /// The response is either a SuccessResponse or an ErrorResponse.
+    /// The response is either a SuccessResponse or an
+    /// ErrorResponse.
     /// Replaced By: UserMusicOnHoldUserModifyRequest16
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -17,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11600""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:45573""}]")]
     public class UserMusicOnHoldUserModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11600")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45573")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11600")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45573")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify Source
         {
             get => _source;
@@ -62,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11600")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45573")]
         public bool UseAlternateSourceForInternalCalls
         {
             get => _useAlternateSourceForInternalCalls;
@@ -80,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11600")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45573")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify InternalSource
         {
             get => _internalSource;

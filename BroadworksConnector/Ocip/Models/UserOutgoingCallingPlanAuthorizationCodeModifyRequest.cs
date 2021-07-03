@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1114""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1115""}]")]
     public class UserOutgoingCallingPlanAuthorizationCodeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1114")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1115")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1114")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1115")]
         public bool UseCustomSettings
         {
             get => _useCustomSettings;

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:185""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:291""}]")]
     public class ResellerAdminModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:185")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:291")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:185")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:291")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:185")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:291")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:185")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:291")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:185")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:291")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language

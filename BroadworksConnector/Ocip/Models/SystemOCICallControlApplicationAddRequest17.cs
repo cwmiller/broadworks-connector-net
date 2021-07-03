@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6316""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:8769""}]")]
     public class SystemOCICallControlApplicationAddRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _applicationId;
 
         [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6316")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8769")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ApplicationId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableSystemWide;
 
         [XmlElement(ElementName = "enableSystemWide", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6316")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8769")]
         public bool EnableSystemWide
         {
             get => _enableSystemWide;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _notificationTimeoutSeconds;
 
         [XmlElement(ElementName = "notificationTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6316")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8769")]
         [MinInclusive(2)]
         [MaxInclusive(30)]
         public int NotificationTimeoutSeconds
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6316")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8769")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxEventChannelsPerSet;
 
         [XmlElement(ElementName = "maxEventChannelsPerSet", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6316")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8769")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
         public int MaxEventChannelsPerSet

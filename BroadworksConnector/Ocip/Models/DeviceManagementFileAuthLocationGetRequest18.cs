@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32925""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1465""}]")]
     public class DeviceManagementFileAuthLocationGetRequest18 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.DeviceAccessProtocol16 _deviceAccessProtocol;
 
         [XmlElement(ElementName = "deviceAccessProtocol", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32925")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1465")]
         public BroadWorksConnector.Ocip.Models.DeviceAccessProtocol16 DeviceAccessProtocol
         {
             get => _deviceAccessProtocol;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _deviceAccessMethod;
 
         [XmlElement(ElementName = "deviceAccessMethod", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32925")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1465")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceAccessMethod
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _deviceAccessURI;
 
         [XmlElement(ElementName = "deviceAccessURI", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32925")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1465")]
         [MinLength(1)]
         [MaxLength(256)]
         public string DeviceAccessURI
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceUserName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32925")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1465")]
         [MinLength(1)]
         [MaxLength(161)]
         public string AccessDeviceUserName
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceUserPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32925")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1465")]
         [MinLength(1)]
         [MaxLength(60)]
         public string AccessDeviceUserPassword
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "signedPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32925")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1465")]
         [MinLength(1)]
         public string SignedPassword
         {
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "macAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32925")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1465")]
         [MinLength(1)]
         [MaxLength(12)]
         public string MacAddress
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "realmName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32925")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1465")]
         [MinLength(1)]
         [MaxLength(265)]
         public string RealmName
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "digestHa1Complement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32925")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1465")]
         [MinLength(32)]
         [MaxLength(256)]
         public string DigestHa1Complement
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "digestResponse", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32925")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1465")]
         [MinLength(32)]
         [MaxLength(32)]
         public string DigestResponse

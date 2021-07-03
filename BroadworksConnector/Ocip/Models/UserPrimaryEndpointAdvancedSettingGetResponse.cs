@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3338""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3376""}]")]
     public class UserPrimaryEndpointAdvancedSettingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _allowOrigination;
 
         [XmlElement(ElementName = "allowOrigination", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3338")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3376")]
         public bool AllowOrigination
         {
             get => _allowOrigination;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowTermination;
 
         [XmlElement(ElementName = "allowTermination", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3338")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3376")]
         public bool AllowTermination
         {
             get => _allowTermination;

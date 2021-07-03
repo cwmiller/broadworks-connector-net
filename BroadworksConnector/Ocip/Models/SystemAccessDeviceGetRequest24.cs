@@ -1,0 +1,64 @@
+using System;
+using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
+using System.Collections.Generic;
+
+namespace BroadWorksConnector.Ocip.Models
+{
+    /// <summary>
+    /// Requests the configuration of a specified system access device.
+    /// 
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// deviceExternalId
+    /// 
+    /// The response is either SystemAccessDeviceGetResponse24 or ErrorResponse.
+    /// <see cref="SystemAccessDeviceGetResponse24"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1364"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1365""}]}]")]
+    public class SystemAccessDeviceGetRequest24 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    {
+
+        private string _deviceName;
+
+        [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1365")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string DeviceName
+        {
+            get => _deviceName;
+            set
+            {
+                DeviceNameSpecified = true;
+                _deviceName = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool DeviceNameSpecified { get; set; }
+
+        private string _deviceExternalId;
+
+        [XmlElement(ElementName = "deviceExternalId", IsNullable = false, Namespace = "")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1365")]
+        [MaxLength(36)]
+        public string DeviceExternalId
+        {
+            get => _deviceExternalId;
+            set
+            {
+                DeviceExternalIdSpecified = true;
+                _deviceExternalId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool DeviceExternalIdSpecified { get; set; }
+
+    }
+}

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2245""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2174""}]")]
     public class UserVoiceMessagingUserModifyVoicePortalRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2245")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2174")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "usePersonalizedName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2245")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2174")]
         public bool UsePersonalizedName
         {
             get => _usePersonalizedName;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voicePortalAutoLogin", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2245")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2174")]
         public bool VoicePortalAutoLogin
         {
             get => _voicePortalAutoLogin;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalizedNameAudioFile", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2245")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2174")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey PersonalizedNameAudioFile
         {
             get => _personalizedNameAudioFile;

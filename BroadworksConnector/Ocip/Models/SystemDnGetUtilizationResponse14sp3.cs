@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8319""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9388""}]")]
     public class SystemDnGetUtilizationResponse14sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8319")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9388")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8319")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9388")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8319")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9388")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8319")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9388")]
         public BroadWorksConnector.Ocip.Models.UserType UserType
         {
             get => _userType;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isGroupCallingLineId;
 
         [XmlElement(ElementName = "isGroupCallingLineId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8319")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9388")]
         public bool IsGroupCallingLineId
         {
             get => _isGroupCallingLineId;
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActivated", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8319")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9388")]
         public bool IsActivated
         {
             get => _isActivated;

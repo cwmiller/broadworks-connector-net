@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:42300""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35351""}]")]
     public class SystemSystemVoicePortalGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _systemVoicePortalId;
 
         [XmlElement(ElementName = "systemVoicePortalId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42300")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35351")]
         [MinLength(1)]
         [MaxLength(161)]
         public string SystemVoicePortalId

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1211""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1300""}]")]
     public class SearchCriteriaExactUserInTrunkGroup : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private bool _userInTrunkGroup;
 
         [XmlElement(ElementName = "userInTrunkGroup", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1211")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:1300")]
         public bool UserInTrunkGroup
         {
             get => _userInTrunkGroup;

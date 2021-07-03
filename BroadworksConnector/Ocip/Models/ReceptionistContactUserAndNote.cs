@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2980"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2981""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3595"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3596""}]}]")]
     public class ReceptionistContactUserAndNote
     {
 
         private string _contactUserId;
 
         [XmlElement(ElementName = "contactUserId", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2981")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3596")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ContactUserId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey _vonUser;
 
         [XmlElement(ElementName = "vonUser", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2981")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3596")]
         public BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey VonUser
         {
             get => _vonUser;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _note;
 
         [XmlElement(ElementName = "note", IsNullable = true, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2980")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3595")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Note

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:477""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:422""}]")]
     public class GroupRoutePointGetDNISAnnouncementRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.DNISKey _dnisKey;
 
         [XmlElement(ElementName = "dnisKey", IsNullable = false, Namespace = "")]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:477")]
+        [Group(@"a27224a048c30ff69eab9209dec841cc:422")]
         public BroadWorksConnector.Ocip.Models.DNISKey DnisKey
         {
             get => _dnisKey;

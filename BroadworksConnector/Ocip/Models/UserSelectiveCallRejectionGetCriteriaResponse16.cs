@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:17454""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:45942""}]")]
     public class UserSelectiveCallRejectionGetCriteriaResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17454")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45942")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallType _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17454")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45942")]
         public BroadWorksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallType FromDnCriteria
         {
             get => _fromDnCriteria;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _blacklisted;
 
         [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17454")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45942")]
         public bool Blacklisted
         {
             get => _blacklisted;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17454")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45942")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;

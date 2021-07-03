@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1494""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1517""}]")]
     public class GroupTrunkGroupUserCreationTaskDeleteRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1494")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1517")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey
         {
             get => _trunkGroupKey;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1494")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1517")]
         [MinLength(1)]
         [MaxLength(80)]
         public string TaskName

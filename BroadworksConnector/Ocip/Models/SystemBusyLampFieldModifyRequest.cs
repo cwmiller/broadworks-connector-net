@@ -19,13 +19,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// redundancyTaskDelayMilliseconds
     /// redundancyTaskIntervalMilliseconds
     /// maxNumberOfSubscriptionsPerRedundancyTaskInterval
+    /// 
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// ignoreUnansweredTerminatingCalls
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4faeca417998d23ce2ff6b0b43212aa6:129""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4faeca417998d23ce2ff6b0b43212aa6:102""}]")]
     public class SystemBusyLampFieldModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -33,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "displayLocalUserIdentityLastNameFirst", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:129")]
+        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
         public bool DisplayLocalUserIdentityLastNameFirst
         {
             get => _displayLocalUserIdentityLastNameFirst;
@@ -51,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceUseOfTCP", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:129")]
+        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
         public bool ForceUseOfTCP
         {
             get => _forceUseOfTCP;
@@ -69,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableRedundancy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:129")]
+        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
         public bool EnableRedundancy
         {
             get => _enableRedundancy;
@@ -87,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "redundancyTaskDelayMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:129")]
+        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
         [MinInclusive(10000)]
         [MaxInclusive(180000)]
         public int RedundancyTaskDelayMilliseconds
@@ -107,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "redundancyTaskIntervalMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:129")]
+        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
         [MinInclusive(50)]
         [MaxInclusive(20000)]
         public int RedundancyTaskIntervalMilliseconds
@@ -127,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxNumberOfSubscriptionsPerRedundancyTaskInterval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:129")]
+        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
         [MinInclusive(1)]
         [MaxInclusive(50000)]
         public int MaxNumberOfSubscriptionsPerRedundancyTaskInterval
@@ -142,6 +145,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool MaxNumberOfSubscriptionsPerRedundancyTaskIntervalSpecified { get; set; }
+
+        private bool _ignoreUnansweredTerminatingCalls;
+
+        [XmlElement(ElementName = "ignoreUnansweredTerminatingCalls", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
+        public bool IgnoreUnansweredTerminatingCalls
+        {
+            get => _ignoreUnansweredTerminatingCalls;
+            set
+            {
+                IgnoreUnansweredTerminatingCallsSpecified = true;
+                _ignoreUnansweredTerminatingCalls = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IgnoreUnansweredTerminatingCallsSpecified { get; set; }
 
     }
 }

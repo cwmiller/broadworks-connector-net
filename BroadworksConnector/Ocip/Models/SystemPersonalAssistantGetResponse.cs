@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:64""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:65""}]")]
     public class SystemPersonalAssistantGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _transferToAttendantKey;
 
         [XmlElement(ElementName = "transferToAttendantKey", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:64")]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:65")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string TransferToAttendantKey
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _transferToVoiceMessagingKey;
 
         [XmlElement(ElementName = "transferToVoiceMessagingKey", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:64")]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:65")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string TransferToVoiceMessagingKey

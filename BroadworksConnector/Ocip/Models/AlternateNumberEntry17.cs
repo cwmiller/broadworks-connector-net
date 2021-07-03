@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7838""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:14532""}]")]
     public class AlternateNumberEntry17
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7838")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14532")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extension", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7838")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14532")]
         [MinLength(2)]
         [MaxLength(20)]
         public string Extension
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ringPattern", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7838")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14532")]
         public BroadWorksConnector.Ocip.Models.RingPattern? RingPattern
         {
             get => _ringPattern;

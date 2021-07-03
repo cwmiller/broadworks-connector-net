@@ -8,8 +8,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get the service provider's voice portal branding settings.
-    /// The response is either a ServiceProviderVoiceMessagingGroupGetVoicePortalBrandingResponse or an
-    /// ErrorResponse.
+    /// The response is either a ServiceProviderVoiceMessagingGroupGetVoicePortalBrandingResponse or an ErrorResponse.
     /// Replaced By: ServiceProviderVoiceMessagingGroupGetVoicePortalBrandingRequest16
     /// <see cref="ServiceProviderVoiceMessagingGroupGetVoicePortalBrandingResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -18,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:9833""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19283""}]")]
     public class ServiceProviderVoiceMessagingGroupGetVoicePortalBrandingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9833")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19283")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

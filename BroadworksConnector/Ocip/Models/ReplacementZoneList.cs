@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18657""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:20044""}]")]
     public class ReplacementZoneList
     {
 
         private List<string> _zoneName = new List<string>();
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18657")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20044")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> ZoneName

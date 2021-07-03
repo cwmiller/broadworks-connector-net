@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1528""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1551""}]")]
     public class GroupTrunkGroupUserCreationTaskGetListResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _taskTable;
 
         [XmlElement(ElementName = "taskTable", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1528")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1551")]
         public BroadWorksConnector.Ocip.Models.C.OCITable TaskTable
         {
             get => _taskTable;

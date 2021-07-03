@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b87b6355d5858fdbeb8c1eb05dc1651a:79""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b87b6355d5858fdbeb8c1eb05dc1651a:80""}]")]
     public class GroupServiceInstancePrivacyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:79")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:80")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:79")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:80")]
         public bool EnableDirectoryPrivacy
         {
             get => _enableDirectoryPrivacy;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:79")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:80")]
         public bool EnableAutoAttendantExtensionDialingPrivacy
         {
             get => _enableAutoAttendantExtensionDialingPrivacy;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAutoAttendantNameDialingPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:79")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:80")]
         public bool EnableAutoAttendantNameDialingPrivacy
         {
             get => _enableAutoAttendantNameDialingPrivacy;

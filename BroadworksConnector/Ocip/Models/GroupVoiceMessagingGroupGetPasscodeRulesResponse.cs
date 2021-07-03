@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3222""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16134""}]")]
     public class GroupVoiceMessagingGroupGetPasscodeRulesResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.GroupPasscodeRulesLevel _useRuleLevel;
 
         [XmlElement(ElementName = "useRuleLevel", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         public BroadWorksConnector.Ocip.Models.GroupPasscodeRulesLevel UseRuleLevel
         {
             get => _useRuleLevel;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _disallowRepeatedDigits;
 
         [XmlElement(ElementName = "disallowRepeatedDigits", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         public bool DisallowRepeatedDigits
         {
             get => _disallowRepeatedDigits;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _disallowUserNumber;
 
         [XmlElement(ElementName = "disallowUserNumber", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         public bool DisallowUserNumber
         {
             get => _disallowUserNumber;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _disallowReversedUserNumber;
 
         [XmlElement(ElementName = "disallowReversedUserNumber", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         public bool DisallowReversedUserNumber
         {
             get => _disallowReversedUserNumber;
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _disallowOldPasscode;
 
         [XmlElement(ElementName = "disallowOldPasscode", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         public bool DisallowOldPasscode
         {
             get => _disallowOldPasscode;
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _disallowReversedOldPasscode;
 
         [XmlElement(ElementName = "disallowReversedOldPasscode", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         public bool DisallowReversedOldPasscode
         {
             get => _disallowReversedOldPasscode;
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _minCodeLength;
 
         [XmlElement(ElementName = "minCodeLength", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         [MinInclusive(2)]
         [MaxInclusive(15)]
         public int MinCodeLength
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxCodeLength;
 
         [XmlElement(ElementName = "maxCodeLength", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         [MinInclusive(3)]
         [MaxInclusive(30)]
         public int MaxCodeLength
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _disableLoginAfterMaxFailedLoginAttempts;
 
         [XmlElement(ElementName = "disableLoginAfterMaxFailedLoginAttempts", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         public bool DisableLoginAfterMaxFailedLoginAttempts
         {
             get => _disableLoginAfterMaxFailedLoginAttempts;
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxFailedLoginAttempts", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         [MinInclusive(2)]
         [MaxInclusive(10)]
         public int MaxFailedLoginAttempts
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _expirePassword;
 
         [XmlElement(ElementName = "expirePassword", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         public bool ExpirePassword
         {
             get => _expirePassword;
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "passcodeExpiresDays", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         [MinInclusive(15)]
         [MaxInclusive(180)]
         public int PasscodeExpiresDays
@@ -237,7 +237,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _sendLoginDisabledNotifyEmail;
 
         [XmlElement(ElementName = "sendLoginDisabledNotifyEmail", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         public bool SendLoginDisabledNotifyEmail
         {
             get => _sendLoginDisabledNotifyEmail;
@@ -255,7 +255,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "loginDisabledNotifyEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3222")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16134")]
         [MinLength(1)]
         [MaxLength(80)]
         public string LoginDisabledNotifyEmailAddress

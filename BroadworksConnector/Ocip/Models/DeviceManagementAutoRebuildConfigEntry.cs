@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18509""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19896""}]")]
     public class DeviceManagementAutoRebuildConfigEntry
     {
 
         private string _ociRequestPrefix;
 
         [XmlElement(ElementName = "ociRequestPrefix", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18509")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19896")]
         [MinLength(1)]
         [MaxLength(256)]
         public string OciRequestPrefix
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "autoRebuildEnabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18509")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19896")]
         public bool AutoRebuildEnabled
         {
             get => _autoRebuildEnabled;

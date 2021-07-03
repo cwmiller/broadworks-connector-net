@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f46f967f937c7dc89ddb3db423383aa4:133""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f46f967f937c7dc89ddb3db423383aa4:134""}]")]
     public class UserFaxMessagingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f46f967f937c7dc89ddb3db423383aa4:133")]
+        [Group(@"f46f967f937c7dc89ddb3db423383aa4:134")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f46f967f937c7dc89ddb3db423383aa4:133")]
+        [Group(@"f46f967f937c7dc89ddb3db423383aa4:134")]
         public bool IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f46f967f937c7dc89ddb3db423383aa4:133")]
+        [Group(@"f46f967f937c7dc89ddb3db423383aa4:134")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extension", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f46f967f937c7dc89ddb3db423383aa4:133")]
+        [Group(@"f46f967f937c7dc89ddb3db423383aa4:134")]
         [MinLength(2)]
         [MaxLength(20)]
         public string Extension
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sipAliasList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f46f967f937c7dc89ddb3db423383aa4:133")]
+        [Group(@"f46f967f937c7dc89ddb3db423383aa4:134")]
         public BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList
         {
             get => _sipAliasList;

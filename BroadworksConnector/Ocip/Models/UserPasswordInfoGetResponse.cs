@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2732"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2734""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2719"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2721""}]}]")]
     public class UserPasswordInfoGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isLoginDisabled;
 
         [XmlElement(ElementName = "isLoginDisabled", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2732")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2719")]
         public bool IsLoginDisabled
         {
             get => _isLoginDisabled;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _expirationDays;
 
         [XmlElement(ElementName = "expirationDays", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2734")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2721")]
         public int ExpirationDays
         {
             get => _expirationDays;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _doesNotExpire;
 
         [XmlElement(ElementName = "doesNotExpire", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2734")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2721")]
         public bool DoesNotExpire
         {
             get => _doesNotExpire;

@@ -17,19 +17,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table with a row for each registration and token with column headings :
     /// "User Id",  "Registration Id",  "Application Id",  "Application Version",  "Device Os Type",
     /// "Device Os Version",  "Registration Date",  "Token",  "Events"
+    /// 
+    /// Replaced by: UserPushNotificationRegistrationGetListResponse21sp1
     /// <see cref="UserPushNotificationRegistrationGetListRequest"/>
+    /// <see cref="UserPushNotificationRegistrationGetListResponse21sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3468""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:14183""}]")]
     public class UserPushNotificationRegistrationGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _registrationsTable;
 
         [XmlElement(ElementName = "registrationsTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3468")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14183")]
         public BroadWorksConnector.Ocip.Models.C.OCITable RegistrationsTable
         {
             get => _registrationsTable;

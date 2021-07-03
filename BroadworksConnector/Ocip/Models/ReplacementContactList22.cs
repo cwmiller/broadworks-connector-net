@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3293""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3919""}]")]
     public class ReplacementContactList22
     {
 
         private List<BroadWorksConnector.Ocip.Models.SIPContactInfo> _contact = new List<BroadWorksConnector.Ocip.Models.SIPContactInfo>();
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3293")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3919")]
         public List<BroadWorksConnector.Ocip.Models.SIPContactInfo> Contact
         {
             get => _contact;

@@ -8,7 +8,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupAnnouncementFileGetPagedSortedListRequest.
-    /// The response contains a table with columns: "Name", "Media Type" and "File Size".
+    /// The response contains a table with columns: "Name", "Media Type", "File Size", and "Announcement File External Id".
     /// The "Name" column contains the name of the announcement file.
     /// The "Media Type" column contains the media type of the announcement
     /// File with the possible values:
@@ -17,12 +17,15 @@ namespace BroadWorksConnector.Ocip.Models
     /// 3GP - A 3GP file
     /// MOV - A MOV file using a H.263 or H.264 codec.
     /// The "File Size" column contains the file size (KB) of the announcement file.
+    /// 
+    /// The following columns are populated in AS data mode only:
+    /// "Announcement File External Id"
     /// <see cref="GroupAnnouncementFileGetPagedSortedListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1520""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1999""}]")]
     public class GroupAnnouncementFileGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -30,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementTable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1520")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1999")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AnnouncementTable
         {
             get => _announcementTable;

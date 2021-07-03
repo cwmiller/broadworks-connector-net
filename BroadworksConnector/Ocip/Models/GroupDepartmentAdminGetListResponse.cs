@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3014""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3810""}]")]
     public class GroupDepartmentAdminGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _departmentAdminTable;
 
         [XmlElement(ElementName = "departmentAdminTable", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3014")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3810")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DepartmentAdminTable
         {
             get => _departmentAdminTable;

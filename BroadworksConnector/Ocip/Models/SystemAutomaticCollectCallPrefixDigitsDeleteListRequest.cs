@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:110""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:113""}]")]
     public class SystemAutomaticCollectCallPrefixDigitsDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private List<BroadWorksConnector.Ocip.Models.AutomaticCollectCallPrefixDigitsEntry> _prefixDigitsEntry = new List<BroadWorksConnector.Ocip.Models.AutomaticCollectCallPrefixDigitsEntry>();
 
         [XmlElement(ElementName = "prefixDigitsEntry", IsNullable = false, Namespace = "")]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:110")]
+        [Group(@"af1b47d7cab3335a81456e64e42371b0:113")]
         public List<BroadWorksConnector.Ocip.Models.AutomaticCollectCallPrefixDigitsEntry> PrefixDigitsEntry
         {
             get => _prefixDigitsEntry;

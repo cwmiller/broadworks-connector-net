@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:955""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1044""}]")]
     public class SearchCriteriaExactHuntPolicy : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private BroadWorksConnector.Ocip.Models.HuntPolicy _huntPolicy;
 
         [XmlElement(ElementName = "huntPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:955")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:1044")]
         public BroadWorksConnector.Ocip.Models.HuntPolicy HuntPolicy
         {
             get => _huntPolicy;

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32352""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38143""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19sp1SendMessageToSelectedDistributionListMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "confirmSendingToDistributionList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32352")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38143")]
         [Length(1)]
         [RegularExpression(@"\*|#")]
         public string ConfirmSendingToDistributionList
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _cancelSendingToDistributionList;
 
         [XmlElement(ElementName = "cancelSendingToDistributionList", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:32352")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38143")]
         [Length(1)]
         [RegularExpression(@"\*|#")]
         public string CancelSendingToDistributionList

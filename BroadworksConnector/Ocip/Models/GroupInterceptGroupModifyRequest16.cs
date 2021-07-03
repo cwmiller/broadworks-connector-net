@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4722""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2888""}]")]
     public class GroupInterceptGroupModifyRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         public bool IsActive
         {
             get => _isActive;
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection
         {
             get => _announcementSelection;
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AudioFile
         {
             get => _audioFile;
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VideoFile
         {
             get => _videoFile;
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playNewPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         public bool PlayNewPhoneNumber
         {
             get => _playNewPhoneNumber;
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         [MinLength(1)]
         [MaxLength(23)]
         public string NewPhoneNumber
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transferOnZeroToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         public bool TransferOnZeroToPhoneNumber
         {
             get => _transferOnZeroToPhoneNumber;
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TransferPhoneNumber
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "rerouteOutboundCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         public bool RerouteOutboundCalls
         {
             get => _rerouteOutboundCalls;
@@ -230,7 +230,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "outboundReroutePhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         [MinLength(1)]
         [MaxLength(161)]
         public string OutboundReroutePhoneNumber
@@ -250,7 +250,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowOutboundLocalCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         public bool AllowOutboundLocalCalls
         {
             get => _allowOutboundLocalCalls;
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "inboundCallMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         public BroadWorksConnector.Ocip.Models.InterceptInboundCall InboundCallMode
         {
             get => _inboundCallMode;
@@ -286,7 +286,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateBlockingAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         public bool AlternateBlockingAnnouncement
         {
             get => _alternateBlockingAnnouncement;
@@ -304,7 +304,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "routeToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4722")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2888")]
         public bool RouteToVoiceMail
         {
             get => _routeToVoiceMail;

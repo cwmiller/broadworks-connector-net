@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9a6dbade05624033cf7fe782b7c9a9a7:66""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9a6dbade05624033cf7fe782b7c9a9a7:67""}]")]
     public class SystemExecutiveGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _treatVirtualOnNetCallsAsInternal;
 
         [XmlElement(ElementName = "treatVirtualOnNetCallsAsInternal", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:66")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:67")]
         public bool TreatVirtualOnNetCallsAsInternal
         {
             get => _treatVirtualOnNetCallsAsInternal;

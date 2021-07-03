@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:3538""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:3960""}]")]
     public class SystemCallProcessingPolicyProfileGetAssignedNCOSListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _networkClassOfServiceTable;
 
         [XmlElement(ElementName = "networkClassOfServiceTable", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:3538")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:3960")]
         public BroadWorksConnector.Ocip.Models.C.OCITable NetworkClassOfServiceTable
         {
             get => _networkClassOfServiceTable;

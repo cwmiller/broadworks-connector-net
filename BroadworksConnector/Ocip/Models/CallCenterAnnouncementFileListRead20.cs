@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:866""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:972""}]")]
     public class CallCenterAnnouncementFileListRead20
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "file1", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:866")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:972")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File1
         {
             get => _file1;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "file2", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:866")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:972")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File2
         {
             get => _file2;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "file3", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:866")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:972")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File3
         {
             get => _file3;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "file4", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:866")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:972")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File4
         {
             get => _file4;

@@ -10,20 +10,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request to get the configuration for a call processing policy profile Flexible Seating Host subscriber type profile.
     /// The response is either a SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse or an
     /// ErrorResponse.
+    /// 
+    /// Replaced by: SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22V2
     /// <see cref="SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:3411""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:22859""}]")]
     public class SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:3411")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22859")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26218""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27362""}]")]
     public class SystemIntegratedIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26218")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27362")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceDomain
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26218")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27362")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int ServicePort
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _addServiceProviderInIMPUserId;
 
         [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26218")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27362")]
         public bool AddServiceProviderInIMPUserId
         {
             get => _addServiceProviderInIMPUserId;

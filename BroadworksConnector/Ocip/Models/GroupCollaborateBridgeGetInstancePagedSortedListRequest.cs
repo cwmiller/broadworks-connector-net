@@ -25,14 +25,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:347""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:348""}]")]
     public class GroupCollaborateBridgeGetInstancePagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:347")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:348")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:347")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:348")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:347")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:348")]
         public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
         {
             get => _responsePagingControl;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sortOrder", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:347")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:348")]
         public List<BroadWorksConnector.Ocip.Models.SortOrderGroupCollaborateBridgeGetInstancePagedSortedList> SortOrder
         {
             get => _sortOrder;
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserLastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:347")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:348")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName
         {
             get => _searchCriteriaUserLastName;
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDepartmentName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:347")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:348")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDepartmentName> SearchCriteriaDepartmentName
         {
             get => _searchCriteriaDepartmentName;
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:347")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:348")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId
         {
             get => _searchCriteriaUserId;
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:347")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:348")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn
         {
             get => _searchCriteriaDn;
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExtension", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:347")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:348")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension
         {
             get => _searchCriteriaExtension;
@@ -197,7 +197,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactDnActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:347")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:348")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaExactDnActivation SearchCriteriaExactDnActivation
         {
             get => _searchCriteriaExactDnActivation;
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:347")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:348")]
         public bool SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;

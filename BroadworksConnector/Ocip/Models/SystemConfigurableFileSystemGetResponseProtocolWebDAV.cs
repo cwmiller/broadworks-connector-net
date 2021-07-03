@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:1563""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7813""}]")]
     public class SystemConfigurableFileSystemGetResponseProtocolWebDAV
     {
 
         private bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:1563")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:7813")]
         public bool Secure
         {
             get => _secure;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:1563")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:7813")]
         [MinLength(1)]
         [MaxLength(40)]
         public string UserName
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:1563")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:7813")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Password
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _fileServerFQDN;
 
         [XmlElement(ElementName = "fileServerFQDN", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:1563")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:7813")]
         [MinLength(1)]
         [MaxLength(80)]
         public string FileServerFQDN

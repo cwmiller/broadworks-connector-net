@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3039""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2968""}]")]
     public class ReplyMessageMenuKeysModifyEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendReplyToCaller", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3039")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2968")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SendReplyToCaller
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "changeCurrentReply", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3039")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2968")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ChangeCurrentReply
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "listenToCurrentReply", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3039")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2968")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ListenToCurrentReply
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setOrClearUrgentIndicator", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3039")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2968")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetOrClearUrgentIndicator
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setOrClearConfidentialIndicator", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3039")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2968")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetOrClearConfidentialIndicator
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3039")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2968")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3039")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2968")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:28458""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38893""}]")]
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestHotelingMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "checkHostStatus", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28458")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38893")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string CheckHostStatus
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "associateWithHost", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28458")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38893")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string AssociateWithHost
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disassociateFromHost", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28458")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38893")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string DisassociateFromHost
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28458")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38893")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28458")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38893")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

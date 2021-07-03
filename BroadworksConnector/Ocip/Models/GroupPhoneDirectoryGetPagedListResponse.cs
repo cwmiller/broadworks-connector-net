@@ -17,16 +17,12 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Location", "Address Line 1", "Address Line 2", "City", "State", "Zip", "Country".
     /// 
     /// Finally "Service Name".
-    /// The Service Name represents the localized service name for service instances. The localized values are
-    /// taken from the BroadworksLabel.properties file.
-    ///         Service Name is currently supporting:
-    ///         AutoAttendant, AutoAttendantStandard, AutoAttendantVideo, CallCenter, CallCenterStandard,
-    /// CallCenterPremium
-    ///         HuntGroup, InstantGroupCall, VoiceMessagingGroup, MusicOnHold, MusicOnHoldVideo, RoutePoint,
-    /// BroadWorksAnywhere
-    ///         GroupPaging, FindmeFollowme, VoiceXML, FlexibleSeatingGuest, CollaborateSharing,
-    /// MeetMeConferencing.
-    ///         For a Regular User or a Virtual On Network Enterprise Extensions, the Service Name is empty.
+    /// The Service Name represents the localized service name for service instances. The localized values are taken from the BroadworksLabel.properties file.
+    /// Service Name is currently supporting:
+    /// AutoAttendant, AutoAttendantStandard, AutoAttendantVideo, CallCenter, CallCenterStandard, CallCenterPremium
+    /// HuntGroup, InstantGroupCall, VoiceMessagingGroup, MusicOnHold, MusicOnHoldVideo, RoutePoint, BroadWorksAnywhere
+    /// GroupPaging, FindmeFollowme, VoiceXML, FlexibleSeatingGuest, CollaborateSharing, MeetMeConferencing.
+    /// For a Regular User or a Virtual On Network Enterprise Extensions, the Service Name is empty.
     /// 
     /// Replaced By: GroupPhoneDirectoryGetPagedSortedListResponse
     /// <see cref="GroupPhoneDirectoryGetPagedListRequest"/>
@@ -35,14 +31,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1895""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11805""}]")]
     public class GroupPhoneDirectoryGetPagedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1895")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11805")]
         public int TotalNumberOfRows
         {
             get => _totalNumberOfRows;
@@ -59,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _directoryTable;
 
         [XmlElement(ElementName = "directoryTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1895")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11805")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DirectoryTable
         {
             get => _directoryTable;

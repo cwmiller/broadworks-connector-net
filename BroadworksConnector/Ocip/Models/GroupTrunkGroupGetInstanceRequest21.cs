@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:33600""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:14386""}]")]
     public class GroupTrunkGroupGetInstanceRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33600")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14386")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey
         {
             get => _trunkGroupKey;

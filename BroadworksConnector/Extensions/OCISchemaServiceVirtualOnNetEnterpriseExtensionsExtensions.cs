@@ -78,8 +78,7 @@ namespace BroadWorksConnector
         /// It is possible to search by various criteria to restrict the number
         /// of rows returned.
         /// Multiple search criteria are logically ANDed together.
-        /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserListResponse or an
-        /// ErrorResponse.
+        /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupVirtualOnNetEnterpriseExtensionsGetUserListRequestAsync instead.")]
         public static async Task<GroupVirtualOnNetEnterpriseExtensionsGetUserListResponse> GroupVirtualOnNetEnterpriseExtensionsGetUserListRequest(this OcipClient client, GroupVirtualOnNetEnterpriseExtensionsGetUserListRequest request)
@@ -92,8 +91,7 @@ namespace BroadWorksConnector
         /// It is possible to search by various criteria to restrict the number
         /// of rows returned.
         /// Multiple search criteria are logically ANDed together.
-        /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserListResponse or an
-        /// ErrorResponse.
+        /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<GroupVirtualOnNetEnterpriseExtensionsGetUserListResponse> GroupVirtualOnNetEnterpriseExtensionsGetUserListRequestAsync(this OcipClient client, GroupVirtualOnNetEnterpriseExtensionsGetUserListRequest request, CancellationToken cancellationToken = default)
         {
@@ -101,8 +99,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get an existing Virtual On-Net user from a Group.
-        /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserResponse
-        /// or an ErrorResponse.
+        /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupVirtualOnNetEnterpriseExtensionsGetUserRequestAsync instead.")]
         public static async Task<GroupVirtualOnNetEnterpriseExtensionsGetUserResponse> GroupVirtualOnNetEnterpriseExtensionsGetUserRequest(this OcipClient client, GroupVirtualOnNetEnterpriseExtensionsGetUserRequest request)
@@ -112,8 +109,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Get an existing Virtual On-Net user from a Group.
-        /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserResponse
-        /// or an ErrorResponse.
+        /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserResponse or an ErrorResponse.
         /// </summary>
         public static async Task<GroupVirtualOnNetEnterpriseExtensionsGetUserResponse> GroupVirtualOnNetEnterpriseExtensionsGetUserRequestAsync(this OcipClient client, GroupVirtualOnNetEnterpriseExtensionsGetUserRequest request, CancellationToken cancellationToken = default)
         {
@@ -179,8 +175,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the list Virtual On-Net Call Types in the system.
-        /// The response is either a SystemVirtualOnNetCallTypeGetListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemVirtualOnNetCallTypeGetListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemVirtualOnNetCallTypeGetListRequestAsync instead.")]
         public static async Task<SystemVirtualOnNetCallTypeGetListResponse> SystemVirtualOnNetCallTypeGetListRequest(this OcipClient client, SystemVirtualOnNetCallTypeGetListRequest request)
@@ -190,8 +185,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Get the list Virtual On-Net Call Types in the system.
-        /// The response is either a SystemVirtualOnNetCallTypeGetListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemVirtualOnNetCallTypeGetListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemVirtualOnNetCallTypeGetListResponse> SystemVirtualOnNetCallTypeGetListRequestAsync(this OcipClient client, SystemVirtualOnNetCallTypeGetListRequest request, CancellationToken cancellationToken = default)
         {

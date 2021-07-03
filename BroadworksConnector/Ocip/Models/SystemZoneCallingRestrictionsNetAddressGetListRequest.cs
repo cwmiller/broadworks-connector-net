@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16642""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:39166""}]")]
     public class SystemZoneCallingRestrictionsNetAddressGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16642")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39166")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ZoneName
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16642")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39166")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaZoneIPAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16642")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39166")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaZoneIPAddress> SearchCriteriaZoneIPAddress
         {
             get => _searchCriteriaZoneIPAddress;

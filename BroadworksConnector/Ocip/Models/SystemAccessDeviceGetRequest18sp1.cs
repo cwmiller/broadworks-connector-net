@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Requests the configuration of a specified system access device.
     /// The response is either SystemAccessDeviceGetResponse18sp1 or ErrorResponse.
+    /// 
+    /// Replaced by: SystemAccessDeviceGetRequest22
     /// <see cref="SystemAccessDeviceGetResponse18sp1"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemAccessDeviceGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:970""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6462""}]")]
     public class SystemAccessDeviceGetRequest18sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:970")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:6462")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName

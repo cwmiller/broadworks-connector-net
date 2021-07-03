@@ -10,6 +10,42 @@ namespace BroadWorksConnector
     {
 
         /// <summary>
+        /// Get the Call Recording attributes for a enterprise.
+        /// The response is either a EnterpriseCallRecordingGetResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use EnterpriseCallRecordingGetRequestAsync instead.")]
+        public static async Task<EnterpriseCallRecordingGetResponse> EnterpriseCallRecordingGetRequest(this OcipClient client, EnterpriseCallRecordingGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as EnterpriseCallRecordingGetResponse;
+        }
+
+        /// <summary>
+        /// Get the Call Recording attributes for a enterprise.
+        /// The response is either a EnterpriseCallRecordingGetResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<EnterpriseCallRecordingGetResponse> EnterpriseCallRecordingGetRequestAsync(this OcipClient client, EnterpriseCallRecordingGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as EnterpriseCallRecordingGetResponse;
+        }
+        /// <summary>
+        /// Modify the Call Recording attributes for a enterprise.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use EnterpriseCallRecordingModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> EnterpriseCallRecordingModifyRequest(this OcipClient client, EnterpriseCallRecordingModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify the Call Recording attributes for a enterprise.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> EnterpriseCallRecordingModifyRequestAsync(this OcipClient client, EnterpriseCallRecordingModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
         /// Get the Call Recording platform for a group.
         /// The response is either a GroupCallRecordingGetResponse or an ErrorResponse.
         /// </summary>
@@ -46,20 +82,38 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
-        /// Add a Call Recording platform.
+        /// Get the Call Recording attribute for a reseller.
+        /// The response is either a ResellerCallRecordingGetResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use ResellerCallRecordingGetRequestAsync instead.")]
+        public static async Task<ResellerCallRecordingGetResponse> ResellerCallRecordingGetRequest(this OcipClient client, ResellerCallRecordingGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as ResellerCallRecordingGetResponse;
+        }
+
+        /// <summary>
+        /// Get the Call Recording attribute for a reseller.
+        /// The response is either a ResellerCallRecordingGetResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<ResellerCallRecordingGetResponse> ResellerCallRecordingGetRequestAsync(this OcipClient client, ResellerCallRecordingGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as ResellerCallRecordingGetResponse;
+        }
+        /// <summary>
+        /// Modify the Call Recording attribute for a reseller.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallRecordingAddPlatformRequest20Async instead.")]
-        public static async Task<SuccessResponse> SystemCallRecordingAddPlatformRequest20(this OcipClient client, SystemCallRecordingAddPlatformRequest20 request)
+        [Obsolete("This method is deprecated. Use ResellerCallRecordingModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> ResellerCallRecordingModifyRequest(this OcipClient client, ResellerCallRecordingModifyRequest request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
 
         /// <summary>
-        /// Add a Call Recording platform.
+        /// Modify the Call Recording attribute for a reseller.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> SystemCallRecordingAddPlatformRequest20Async(this OcipClient client, SystemCallRecordingAddPlatformRequest20 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> ResellerCallRecordingModifyRequestAsync(this OcipClient client, ResellerCallRecordingModifyRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -149,26 +203,6 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request the system level data associated with Call Recording.
-        /// The response is either a SystemCallRecordingGetResponse22 or an
-        /// ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallRecordingGetRequest22Async instead.")]
-        public static async Task<SystemCallRecordingGetResponse22> SystemCallRecordingGetRequest22(this OcipClient client, SystemCallRecordingGetRequest22 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallRecordingGetResponse22;
-        }
-
-        /// <summary>
-        /// Request the system level data associated with Call Recording.
-        /// The response is either a SystemCallRecordingGetResponse22 or an
-        /// ErrorResponse.
-        /// </summary>
-        public static async Task<SystemCallRecordingGetResponse22> SystemCallRecordingGetRequest22Async(this OcipClient client, SystemCallRecordingGetRequest22 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallRecordingGetResponse22;
-        }
-        /// <summary>
-        /// Request the system level data associated with Call Recording.
         /// The response is either a SystemCallRecordingGetResponse23 or an
         /// ErrorResponse.
         /// </summary>
@@ -186,24 +220,6 @@ namespace BroadWorksConnector
         public static async Task<SystemCallRecordingGetResponse23> SystemCallRecordingGetRequest23Async(this OcipClient client, SystemCallRecordingGetRequest23 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallRecordingGetResponse23;
-        }
-        /// <summary>
-        /// Modify the specified Call Recording platform.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallRecordingModifyPlatformRequestAsync instead.")]
-        public static async Task<SuccessResponse> SystemCallRecordingModifyPlatformRequest(this OcipClient client, SystemCallRecordingModifyPlatformRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Modify the specified Call Recording platform.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// </summary>
-        public static async Task<SuccessResponse> SystemCallRecordingModifyPlatformRequestAsync(this OcipClient client, SystemCallRecordingModifyPlatformRequest request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Modify the specified Call Recording platform.
@@ -243,7 +259,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the Call Recording attributes for a user.
-        /// The response is either a UserCallRecordingGetResponse20 or an ErrorResponse.
+        /// The response is either a UserCallRecordingGetResponse23 or an ErrorResponse.
         /// 
         /// The following parameters are not returned for service instance:
         /// - pauseResumeNotification
@@ -251,15 +267,15 @@ namespace BroadWorksConnector
         /// - enableRecordCallRepeatWarningTone
         /// - recordCallRepeatWarningToneTimerSeconds
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserCallRecordingGetRequest20Async instead.")]
-        public static async Task<UserCallRecordingGetResponse20> UserCallRecordingGetRequest20(this OcipClient client, UserCallRecordingGetRequest20 request)
+        [Obsolete("This method is deprecated. Use UserCallRecordingGetRequest23Async instead.")]
+        public static async Task<UserCallRecordingGetResponse23> UserCallRecordingGetRequest23(this OcipClient client, UserCallRecordingGetRequest23 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserCallRecordingGetResponse20;
+            return await client.CallAsync(request).ConfigureAwait(false) as UserCallRecordingGetResponse23;
         }
 
         /// <summary>
         /// Get the Call Recording attributes for a user.
-        /// The response is either a UserCallRecordingGetResponse20 or an ErrorResponse.
+        /// The response is either a UserCallRecordingGetResponse23 or an ErrorResponse.
         /// 
         /// The following parameters are not returned for service instance:
         /// - pauseResumeNotification
@@ -267,9 +283,9 @@ namespace BroadWorksConnector
         /// - enableRecordCallRepeatWarningTone
         /// - recordCallRepeatWarningToneTimerSeconds
         /// </summary>
-        public static async Task<UserCallRecordingGetResponse20> UserCallRecordingGetRequest20Async(this OcipClient client, UserCallRecordingGetRequest20 request, CancellationToken cancellationToken = default)
+        public static async Task<UserCallRecordingGetResponse23> UserCallRecordingGetRequest23Async(this OcipClient client, UserCallRecordingGetRequest23 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserCallRecordingGetResponse20;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserCallRecordingGetResponse23;
         }
         /// <summary>
         /// Modify the Call Recording attributes for a user. The recording options
@@ -288,6 +304,8 @@ namespace BroadWorksConnector
         /// The enableVoiceMailRecording parameter is only applicable
         /// if the Voice Messaging User service is assigned to the user.
         /// This applies to both users and service instances.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// mediaStream
         /// </summary>
         [Obsolete("This method is deprecated. Use UserCallRecordingModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> UserCallRecordingModifyRequest(this OcipClient client, UserCallRecordingModifyRequest request)
@@ -312,6 +330,8 @@ namespace BroadWorksConnector
         /// The enableVoiceMailRecording parameter is only applicable
         /// if the Voice Messaging User service is assigned to the user.
         /// This applies to both users and service instances.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// mediaStream
         /// </summary>
         public static async Task<SuccessResponse> UserCallRecordingModifyRequestAsync(this OcipClient client, UserCallRecordingModifyRequest request, CancellationToken cancellationToken = default)
         {

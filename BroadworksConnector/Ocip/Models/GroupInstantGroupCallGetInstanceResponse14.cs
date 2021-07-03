@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:13889""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10748""}]")]
     public class GroupInstantGroupCallGetInstanceResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13889")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10748")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "destinationPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13889")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10748")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> DestinationPhoneNumber
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isAnswerTimeoutEnabled;
 
         [XmlElement(ElementName = "isAnswerTimeoutEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13889")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10748")]
         public bool IsAnswerTimeoutEnabled
         {
             get => _isAnswerTimeoutEnabled;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "answerTimeoutMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13889")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10748")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
         public int AnswerTimeoutMinutes

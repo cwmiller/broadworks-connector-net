@@ -15,16 +15,16 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:494""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:495""}]")]
     public class ResellerCollaborateModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:494")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:495")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string ResellerId
         {
             get => _resellerId;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "collaborateFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:494")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:495")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CollaborateFromAddress

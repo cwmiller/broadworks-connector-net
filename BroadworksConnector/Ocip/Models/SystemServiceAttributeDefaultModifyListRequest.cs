@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14913""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16055""}]")]
     public class SystemServiceAttributeDefaultModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.ServiceCategory _serviceName;
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14913")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16055")]
         public BroadWorksConnector.Ocip.Models.ServiceCategory ServiceName
         {
             get => _serviceName;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntry> _serviceAttributeEntry = new List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntry>();
 
         [XmlElement(ElementName = "serviceAttributeEntry", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14913")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16055")]
         public List<BroadWorksConnector.Ocip.Models.ServiceAttributeEntry> ServiceAttributeEntry
         {
             get => _serviceAttributeEntry;

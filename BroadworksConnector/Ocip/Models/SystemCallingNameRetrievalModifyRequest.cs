@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:14913""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:21165""}]")]
     public class SystemCallingNameRetrievalModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "queryTimerMilliSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14913")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21165")]
         [MinInclusive(500)]
         [MaxInclusive(5000)]
         public int QueryTimerMilliSeconds
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14913")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21165")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServerNetAddress
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverPort", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14913")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21165")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int? ServerPort
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverTransportProtocol", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14913")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21165")]
         public BroadWorksConnector.Ocip.Models.TransportProtocol ServerTransportProtocol
         {
             get => _serverTransportProtocol;

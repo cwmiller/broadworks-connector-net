@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14531""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15673""}]")]
     public class SystemScheduleDeleteEventListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
 
         [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14531")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15673")]
         public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey
         {
             get => _scheduleKey;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _eventName = new List<string>();
 
         [XmlElement(ElementName = "eventName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14531")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15673")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> EventName

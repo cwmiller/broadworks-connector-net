@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10190""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11228""}]")]
     public class SystemHomeNetworkDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _mscAddress;
 
         [XmlElement(ElementName = "mscAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10190")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11228")]
         [MinLength(1)]
         [MaxLength(23)]
         public string MscAddress

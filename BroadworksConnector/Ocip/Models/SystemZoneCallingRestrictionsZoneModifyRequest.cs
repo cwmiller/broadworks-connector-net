@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16748""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:39270""}]")]
     public class SystemZoneCallingRestrictionsZoneModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16748")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39270")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ZoneName
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "physicalLocation", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16748")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39270")]
         [MinLength(1)]
         [MaxLength(1024)]
         public string PhysicalLocation

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5636"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5639""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6466"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6469""}]}]")]
     public class ServiceProviderServicePackMigrationTaskModifyGroupListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5636")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6466")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5636")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6466")]
         [MinLength(1)]
         [MaxLength(80)]
         public string TaskName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _migrateAllGroups;
 
         [XmlElement(ElementName = "migrateAllGroups", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5639")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6469")]
         public bool MigrateAllGroups
         {
             get => _migrateAllGroups;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5639")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6469")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList GroupIdList
         {
             get => _groupIdList;

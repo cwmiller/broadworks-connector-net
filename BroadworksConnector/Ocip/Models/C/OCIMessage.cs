@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models.C
     [Serializable]
     [XmlRoot(Namespace = "C")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:28"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:29""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:37"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:38""}]}]")]
     public class OCIMessage
     {
 
         private string _sessionId;
 
         [XmlElement(ElementName = "sessionId", IsNullable = false, Namespace = "")]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:29")]
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:38")]
         public string SessionId
         {
             get => _sessionId;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:29")]
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:38")]
         public string UserId
         {
             get => _userId;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:29")]
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:38")]
         public string PhoneNumber
         {
             get => _phoneNumber;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:29")]
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:38")]
         public string LinePort
         {
             get => _linePort;
@@ -85,10 +85,46 @@ namespace BroadWorksConnector.Ocip.Models.C
         [XmlIgnore]
         protected bool LinePortSpecified { get; set; }
 
+        private BroadWorksConnector.Ocip.Models.C.ExternalUserIdentity _externalUserIdentity;
+
+        [XmlElement(ElementName = "externalUserIdentity", IsNullable = false, Namespace = "")]
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:38")]
+        public BroadWorksConnector.Ocip.Models.C.ExternalUserIdentity ExternalUserIdentity
+        {
+            get => _externalUserIdentity;
+            set
+            {
+                ExternalUserIdentitySpecified = true;
+                _externalUserIdentity = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ExternalUserIdentitySpecified { get; set; }
+
+        private string _trackingId;
+
+        [XmlElement(ElementName = "trackingId", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:37")]
+        [MinLength(1)]
+        public string TrackingId
+        {
+            get => _trackingId;
+            set
+            {
+                TrackingIdSpecified = true;
+                _trackingId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool TrackingIdSpecified { get; set; }
+
         private List<BroadWorksConnector.Ocip.Models.C.OCICommand> _command = new List<BroadWorksConnector.Ocip.Models.C.OCICommand>();
 
         [XmlElement(ElementName = "command", IsNullable = false, Namespace = "")]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:28")]
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:37")]
         public List<BroadWorksConnector.Ocip.Models.C.OCICommand> Command
         {
             get => _command;

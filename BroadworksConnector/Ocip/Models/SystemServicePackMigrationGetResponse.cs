@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15031""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16173""}]")]
     public class SystemServicePackMigrationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _maxSimultaneousMigrationTasks;
 
         [XmlElement(ElementName = "maxSimultaneousMigrationTasks", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15031")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16173")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaxSimultaneousMigrationTasks

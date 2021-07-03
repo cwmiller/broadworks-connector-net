@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:791""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:790""}]")]
     public class UserCollaborateMyRoomModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:791")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:790")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "roomName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:791")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:790")]
         [MinLength(1)]
         [MaxLength(40)]
         public string RoomName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "attendeeNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:791")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:790")]
         public BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification AttendeeNotification
         {
             get => _attendeeNotification;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "endCollaborateRoomSessionOnOwnerExit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:791")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:790")]
         public bool EndCollaborateRoomSessionOnOwnerExit
         {
             get => _endCollaborateRoomSessionOnOwnerExit;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ownerRequired", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:791")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:790")]
         public bool OwnerRequired
         {
             get => _ownerRequired;

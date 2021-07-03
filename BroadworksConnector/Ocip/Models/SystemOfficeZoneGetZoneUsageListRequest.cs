@@ -9,22 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get the list of Office Zones that contain a specific
     /// Zone.
-    /// The response is either a SystemOfficeZoneGetZoneUsageListResponse
-    /// or an ErrorResponse.
+    /// The response is either a SystemOfficeZoneGetZoneUsageListResponse or an ErrorResponse.
     /// <see cref="SystemOfficeZoneGetZoneUsageListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12908""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13995""}]")]
     public class SystemOfficeZoneGetZoneUsageListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12908")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13995")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ZoneName

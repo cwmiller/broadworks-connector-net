@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1747""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1826""}]")]
     public class SystemTrunkGroupOptionsMessageResponseStatusCodeDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private List<string> _statusCode = new List<string>();
 
         [XmlElement(ElementName = "statusCode", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1747")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1826")]
         [MinLength(3)]
         [MaxLength(40)]
         public List<string> StatusCode

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""41b968f87257b8dd553215179161ccb4:74""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""41b968f87257b8dd553215179161ccb4:182""}]")]
     public class UserCallCenterMonitoringModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"41b968f87257b8dd553215179161ccb4:74")]
+        [Group(@"41b968f87257b8dd553215179161ccb4:182")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playToneToAgentForSilentMonitoring", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"41b968f87257b8dd553215179161ccb4:74")]
+        [Group(@"41b968f87257b8dd553215179161ccb4:182")]
         public bool PlayToneToAgentForSilentMonitoring
         {
             get => _playToneToAgentForSilentMonitoring;
@@ -55,6 +55,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool PlayToneToAgentForSilentMonitoringSpecified { get; set; }
+
+        private bool _playToneToAgentForSupervisorCoaching;
+
+        [XmlElement(ElementName = "playToneToAgentForSupervisorCoaching", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"41b968f87257b8dd553215179161ccb4:182")]
+        public bool PlayToneToAgentForSupervisorCoaching
+        {
+            get => _playToneToAgentForSupervisorCoaching;
+            set
+            {
+                PlayToneToAgentForSupervisorCoachingSpecified = true;
+                _playToneToAgentForSupervisorCoaching = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool PlayToneToAgentForSupervisorCoachingSpecified { get; set; }
 
     }
 }

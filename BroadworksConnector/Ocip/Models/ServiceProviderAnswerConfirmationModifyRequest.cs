@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:9569""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:17273""}]")]
     public class ServiceProviderAnswerConfirmationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9569")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17273")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9569")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17273")]
         public BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection AnnouncementMessageSelection
         {
             get => _announcementMessageSelection;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "confirmationMessageAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9569")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17273")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource ConfirmationMessageAudioFile
         {
             get => _confirmationMessageAudioFile;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "confirmationTimoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9569")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17273")]
         [MinInclusive(2)]
         [MaxInclusive(30)]
         public int ConfirmationTimoutSeconds

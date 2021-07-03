@@ -10,36 +10,36 @@ namespace BroadWorksConnector
     {
 
         /// <summary>
-        /// AuthenticationVerifyRequest22V2 is used to authenticate a user either by userId/password, userId/sip username/sip password,
+        /// AuthenticationVerifyRequest22V4 is used to authenticate a user either by userId/password, userId/sip username/sip password,
         /// dn/passcode, lineport/password or a token previously authorized with the ExternalAuthenticationAuthorizeTokenRequest.
         /// The phone number may be any DN associated with a user.
         /// The lineport may be any lineport associated with a user.
         /// The password used for the lineport is the user's password associated with userId.
         /// 
-        /// The response is a AuthenticationVerifyResponse22V2 or an ErrorResponse
+        /// The response is a AuthenticationVerifyResponse22V4 or an ErrorResponse
         /// </summary>
-        [Obsolete("This method is deprecated. Use AuthenticationVerifyRequest22V2Async instead.")]
-        public static async Task<AuthenticationVerifyResponse22V2> AuthenticationVerifyRequest22V2(this OcipClient client, AuthenticationVerifyRequest22V2 request)
+        [Obsolete("This method is deprecated. Use AuthenticationVerifyRequest22V4Async instead.")]
+        public static async Task<AuthenticationVerifyResponse22V4> AuthenticationVerifyRequest22V4(this OcipClient client, AuthenticationVerifyRequest22V4 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as AuthenticationVerifyResponse22V2;
+            return await client.CallAsync(request).ConfigureAwait(false) as AuthenticationVerifyResponse22V4;
         }
 
         /// <summary>
-        /// AuthenticationVerifyRequest22V2 is used to authenticate a user either by userId/password, userId/sip username/sip password,
+        /// AuthenticationVerifyRequest22V4 is used to authenticate a user either by userId/password, userId/sip username/sip password,
         /// dn/passcode, lineport/password or a token previously authorized with the ExternalAuthenticationAuthorizeTokenRequest.
         /// The phone number may be any DN associated with a user.
         /// The lineport may be any lineport associated with a user.
         /// The password used for the lineport is the user's password associated with userId.
         /// 
-        /// The response is a AuthenticationVerifyResponse22V2 or an ErrorResponse
+        /// The response is a AuthenticationVerifyResponse22V4 or an ErrorResponse
         /// </summary>
-        public static async Task<AuthenticationVerifyResponse22V2> AuthenticationVerifyRequest22V2Async(this OcipClient client, AuthenticationVerifyRequest22V2 request, CancellationToken cancellationToken = default)
+        public static async Task<AuthenticationVerifyResponse22V4> AuthenticationVerifyRequest22V4Async(this OcipClient client, AuthenticationVerifyRequest22V4 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as AuthenticationVerifyResponse22V2;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as AuthenticationVerifyResponse22V4;
         }
         /// <summary>
-        /// AvailabilityTestRequest is for high-availability support. The response is either SuccessResponse
-        /// or ErrorResponse.
+        /// AvailabilityTestRequest is for high-availability support.
+        /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use AvailabilityTestRequestAsync instead.")]
         public static async Task<SuccessResponse> AvailabilityTestRequest(this OcipClient client, AvailabilityTestRequest request)
@@ -48,8 +48,8 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// AvailabilityTestRequest is for high-availability support. The response is either SuccessResponse
-        /// or ErrorResponse.
+        /// AvailabilityTestRequest is for high-availability support.
+        /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> AvailabilityTestRequestAsync(this OcipClient client, AvailabilityTestRequest request, CancellationToken cancellationToken = default)
         {
@@ -58,56 +58,32 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the address and credentials of the File Repository hosting the requested access device file.
         /// Also get the file name and path on the File Repository.
-        /// The response is either DeviceManagementFileAuthLocationGetResponse21sp1 or ErrorResponse.
-        /// The following elements are only used in AS data mode and will fail in XS data mode:
-        /// deviceToken
-        /// </summary>
-        [Obsolete("This method is deprecated. Use DeviceManagementFileAuthLocationGetRequest21sp1Async instead.")]
-        public static async Task<DeviceManagementFileAuthLocationGetResponse21sp1> DeviceManagementFileAuthLocationGetRequest21sp1(this OcipClient client, DeviceManagementFileAuthLocationGetRequest21sp1 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as DeviceManagementFileAuthLocationGetResponse21sp1;
-        }
-
-        /// <summary>
-        /// Get the address and credentials of the File Repository hosting the requested access device file.
-        /// Also get the file name and path on the File Repository.
-        /// The response is either DeviceManagementFileAuthLocationGetResponse21sp1 or ErrorResponse.
-        /// The following elements are only used in AS data mode and will fail in XS data mode:
-        /// deviceToken
-        /// </summary>
-        public static async Task<DeviceManagementFileAuthLocationGetResponse21sp1> DeviceManagementFileAuthLocationGetRequest21sp1Async(this OcipClient client, DeviceManagementFileAuthLocationGetRequest21sp1 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as DeviceManagementFileAuthLocationGetResponse21sp1;
-        }
-        /// <summary>
-        /// Get the address and credentials of the File Repository hosting the requested access device file.
-        /// Also get the file name and path on the File Repository.
-        /// The response is either DeviceManagementFileAuthLocationGetResponse22V2 or ErrorResponse.
+        /// The response is either DeviceManagementFileAuthLocationGetResponse22V3 or ErrorResponse.
         /// The following elements are only used in AS data mode and will fail in XS data mode:
         /// deviceToken
         /// The following elements are only used in XS data mode and will be ignored in AS data mode:
         /// fileNameLookup
         /// fileNameOnDisk
         /// </summary>
-        [Obsolete("This method is deprecated. Use DeviceManagementFileAuthLocationGetRequest22V2Async instead.")]
-        public static async Task<DeviceManagementFileAuthLocationGetResponse22V2> DeviceManagementFileAuthLocationGetRequest22V2(this OcipClient client, DeviceManagementFileAuthLocationGetRequest22V2 request)
+        [Obsolete("This method is deprecated. Use DeviceManagementFileAuthLocationGetRequest22V3Async instead.")]
+        public static async Task<DeviceManagementFileAuthLocationGetResponse22V3> DeviceManagementFileAuthLocationGetRequest22V3(this OcipClient client, DeviceManagementFileAuthLocationGetRequest22V3 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as DeviceManagementFileAuthLocationGetResponse22V2;
+            return await client.CallAsync(request).ConfigureAwait(false) as DeviceManagementFileAuthLocationGetResponse22V3;
         }
 
         /// <summary>
         /// Get the address and credentials of the File Repository hosting the requested access device file.
         /// Also get the file name and path on the File Repository.
-        /// The response is either DeviceManagementFileAuthLocationGetResponse22V2 or ErrorResponse.
+        /// The response is either DeviceManagementFileAuthLocationGetResponse22V3 or ErrorResponse.
         /// The following elements are only used in AS data mode and will fail in XS data mode:
         /// deviceToken
         /// The following elements are only used in XS data mode and will be ignored in AS data mode:
         /// fileNameLookup
         /// fileNameOnDisk
         /// </summary>
-        public static async Task<DeviceManagementFileAuthLocationGetResponse22V2> DeviceManagementFileAuthLocationGetRequest22V2Async(this OcipClient client, DeviceManagementFileAuthLocationGetRequest22V2 request, CancellationToken cancellationToken = default)
+        public static async Task<DeviceManagementFileAuthLocationGetResponse22V3> DeviceManagementFileAuthLocationGetRequest22V3Async(this OcipClient client, DeviceManagementFileAuthLocationGetRequest22V3 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as DeviceManagementFileAuthLocationGetResponse22V2;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as DeviceManagementFileAuthLocationGetResponse22V3;
         }
         /// <summary>
         /// Informs BroadWorks that a file was uploaded to the repository. The response is always a SuccessResponse.
@@ -150,8 +126,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// This command allows a BroadWorks or Third-Party Client Application to
         /// create a Single Sign-On token for a user.
-        /// The response is either ExternalAuthenticationCreateLoginTokenResponse
-        /// or ErrorResponse.
+        /// The response is either ExternalAuthenticationCreateLoginTokenResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use ExternalAuthenticationCreateLoginTokenRequestAsync instead.")]
         public static async Task<ExternalAuthenticationCreateLoginTokenResponse> ExternalAuthenticationCreateLoginTokenRequest(this OcipClient client, ExternalAuthenticationCreateLoginTokenRequest request)
@@ -162,8 +137,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// This command allows a BroadWorks or Third-Party Client Application to
         /// create a Single Sign-On token for a user.
-        /// The response is either ExternalAuthenticationCreateLoginTokenResponse
-        /// or ErrorResponse.
+        /// The response is either ExternalAuthenticationCreateLoginTokenResponse or ErrorResponse.
         /// </summary>
         public static async Task<ExternalAuthenticationCreateLoginTokenResponse> ExternalAuthenticationCreateLoginTokenRequestAsync(this OcipClient client, ExternalAuthenticationCreateLoginTokenRequest request, CancellationToken cancellationToken = default)
         {
@@ -172,22 +146,30 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to login to OCI.
         /// password is not required for external authentication login from a trusted host (ACL).
-        /// The response is LoginResponse22V3 or ErrorResponse
+        /// 
+        /// The following data element is only used in XS data mode and will be ignored in AS data mode:
+        /// signedPassword
+        /// 
+        /// The response is either LoginResponse22V5 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use LoginRequest22V3Async instead.")]
-        public static async Task<LoginResponse22V3> LoginRequest22V3(this OcipClient client, LoginRequest22V3 request)
+        [Obsolete("This method is deprecated. Use LoginRequest22V5Async instead.")]
+        public static async Task<LoginResponse22V5> LoginRequest22V5(this OcipClient client, LoginRequest22V5 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as LoginResponse22V3;
+            return await client.CallAsync(request).ConfigureAwait(false) as LoginResponse22V5;
         }
 
         /// <summary>
         /// Request to login to OCI.
         /// password is not required for external authentication login from a trusted host (ACL).
-        /// The response is LoginResponse22V3 or ErrorResponse
+        /// 
+        /// The following data element is only used in XS data mode and will be ignored in AS data mode:
+        /// signedPassword
+        /// 
+        /// The response is either LoginResponse22V5 or ErrorResponse.
         /// </summary>
-        public static async Task<LoginResponse22V3> LoginRequest22V3Async(this OcipClient client, LoginRequest22V3 request, CancellationToken cancellationToken = default)
+        public static async Task<LoginResponse22V5> LoginRequest22V5Async(this OcipClient client, LoginRequest22V5 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as LoginResponse22V3;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as LoginResponse22V5;
         }
         /// <summary>
         /// LogoutRequest is sent when an OCI user logs out or when connection is lost.
@@ -273,7 +255,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Requests information about the primary server for high-availability support.
-        /// The response is either PrimaryInfoGetResponse or ErrorResponse
+        /// The response is either a PrimaryInfoGetResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use PrimaryInfoGetRequestAsync instead.")]
         public static async Task<PrimaryInfoGetResponse> PrimaryInfoGetRequest(this OcipClient client, PrimaryInfoGetRequest request)
@@ -283,7 +265,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Requests information about the primary server for high-availability support.
-        /// The response is either PrimaryInfoGetResponse or ErrorResponse
+        /// The response is either a PrimaryInfoGetResponse or an ErrorResponse.
         /// </summary>
         public static async Task<PrimaryInfoGetResponse> PrimaryInfoGetRequestAsync(this OcipClient client, PrimaryInfoGetRequest request, CancellationToken cancellationToken = default)
         {
@@ -291,8 +273,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the public cluster fully qualified domain name (FQDN).
-        /// The response is either a PublicClusterGetFullyQualifiedDomainNameResponse
-        /// or an ErrorResponse.
+        /// The response is either a PublicClusterGetFullyQualifiedDomainNameResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use PublicClusterGetFullyQualifiedDomainNameRequestAsync instead.")]
         public static async Task<PublicClusterGetFullyQualifiedDomainNameResponse> PublicClusterGetFullyQualifiedDomainNameRequest(this OcipClient client, PublicClusterGetFullyQualifiedDomainNameRequest request)
@@ -302,8 +283,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Get the public cluster fully qualified domain name (FQDN).
-        /// The response is either a PublicClusterGetFullyQualifiedDomainNameResponse
-        /// or an ErrorResponse.
+        /// The response is either a PublicClusterGetFullyQualifiedDomainNameResponse or an ErrorResponse.
         /// </summary>
         public static async Task<PublicClusterGetFullyQualifiedDomainNameResponse> PublicClusterGetFullyQualifiedDomainNameRequestAsync(this OcipClient client, PublicClusterGetFullyQualifiedDomainNameRequest request, CancellationToken cancellationToken = default)
         {
@@ -346,30 +326,36 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
-        /// UserGetLoginInfoRequest22V2 is used to access login information for a user
+        /// UserGetLoginInfoRequest22V4 is used to access login information for a user
         /// either by a userId, dn or lineport.
         /// The phone number may be any DN associated with a user.
         /// The lineport may be any lineport associated with a user.
         /// 
-        /// The response is a UserGetLoginInfoResponse22V2 or an ErrorResponse
+        /// The response is a UserGetLoginInfoResponse22V4 or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS and Amplify data mode.
+        /// loginRole
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserGetLoginInfoRequest22V2Async instead.")]
-        public static async Task<UserGetLoginInfoResponse22V2> UserGetLoginInfoRequest22V2(this OcipClient client, UserGetLoginInfoRequest22V2 request)
+        [Obsolete("This method is deprecated. Use UserGetLoginInfoRequest22V4Async instead.")]
+        public static async Task<UserGetLoginInfoResponse22V4> UserGetLoginInfoRequest22V4(this OcipClient client, UserGetLoginInfoRequest22V4 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserGetLoginInfoResponse22V2;
+            return await client.CallAsync(request).ConfigureAwait(false) as UserGetLoginInfoResponse22V4;
         }
 
         /// <summary>
-        /// UserGetLoginInfoRequest22V2 is used to access login information for a user
+        /// UserGetLoginInfoRequest22V4 is used to access login information for a user
         /// either by a userId, dn or lineport.
         /// The phone number may be any DN associated with a user.
         /// The lineport may be any lineport associated with a user.
         /// 
-        /// The response is a UserGetLoginInfoResponse22V2 or an ErrorResponse
+        /// The response is a UserGetLoginInfoResponse22V4 or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS and Amplify data mode.
+        /// loginRole
         /// </summary>
-        public static async Task<UserGetLoginInfoResponse22V2> UserGetLoginInfoRequest22V2Async(this OcipClient client, UserGetLoginInfoRequest22V2 request, CancellationToken cancellationToken = default)
+        public static async Task<UserGetLoginInfoResponse22V4> UserGetLoginInfoRequest22V4Async(this OcipClient client, UserGetLoginInfoRequest22V4 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserGetLoginInfoResponse22V2;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserGetLoginInfoResponse22V4;
         }
         /// <summary>
         /// This command allows a BroadWorks or Third-Party Client Application to
@@ -379,8 +365,7 @@ namespace BroadWorksConnector
         /// (including a trunk user on a trunk device).
         /// 2. and, the specified device is not in locked state.
         /// 3. and, the device type of the device does support Device Management.
-        /// The response is either UserSingleSignOnCreateDeviceTokenResponse
-        /// or ErrorResponse.
+        /// The response is either UserSingleSignOnCreateDeviceTokenResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserSingleSignOnCreateDeviceTokenRequestAsync instead.")]
         public static async Task<UserSingleSignOnCreateDeviceTokenResponse> UserSingleSignOnCreateDeviceTokenRequest(this OcipClient client, UserSingleSignOnCreateDeviceTokenRequest request)
@@ -396,8 +381,7 @@ namespace BroadWorksConnector
         /// (including a trunk user on a trunk device).
         /// 2. and, the specified device is not in locked state.
         /// 3. and, the device type of the device does support Device Management.
-        /// The response is either UserSingleSignOnCreateDeviceTokenResponse
-        /// or ErrorResponse.
+        /// The response is either UserSingleSignOnCreateDeviceTokenResponse or ErrorResponse.
         /// </summary>
         public static async Task<UserSingleSignOnCreateDeviceTokenResponse> UserSingleSignOnCreateDeviceTokenRequestAsync(this OcipClient client, UserSingleSignOnCreateDeviceTokenRequest request, CancellationToken cancellationToken = default)
         {

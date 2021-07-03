@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6406""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:9246""}]")]
     public class SystemProvisioningValidationGetResponse14sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6406")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:9246")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isNetworkServerQueryActive;
 
         [XmlElement(ElementName = "isNetworkServerQueryActive", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6406")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:9246")]
         public bool IsNetworkServerQueryActive
         {
             get => _isNetworkServerQueryActive;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _timeoutSeconds;
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6406")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:9246")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int TimeoutSeconds

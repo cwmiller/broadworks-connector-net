@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get the information of a conference owned by the user.
     /// The response is either UserMeetMeConferencingGetConferenceResponse20 or ErrorResponse.
+    /// 
+    /// Replaced by: UserMeetMeConferencingGetConferenceRequest23
     /// <see cref="UserMeetMeConferencingGetConferenceResponse20"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="UserMeetMeConferencingGetConferenceRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:855""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:45189""}]")]
     public class UserMeetMeConferencingGetConferenceRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:855")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45189")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
 
         [XmlElement(ElementName = "conferenceKey", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:855")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45189")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey
         {
             get => _conferenceKey;

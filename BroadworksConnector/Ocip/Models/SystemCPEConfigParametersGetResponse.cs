@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4864""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25470""}]")]
     public class SystemCPEConfigParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _enableIPDeviceManagement;
 
         [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4864")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25470")]
         public bool EnableIPDeviceManagement
         {
             get => _enableIPDeviceManagement;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _ftpConnectTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4864")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25470")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
         public int FtpConnectTimeoutSeconds
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _ftpFileTransferTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4864")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25470")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
         public int FtpFileTransferTimeoutSeconds

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:489""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:615""}]")]
     public class AnnouncementFileLevelKey
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:489")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:615")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MediaFileType _mediaFileType;
 
         [XmlElement(ElementName = "mediaFileType", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:489")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:615")]
         public BroadWorksConnector.Ocip.Models.MediaFileType MediaFileType
         {
             get => _mediaFileType;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AnnouncementRepositoryType _level;
 
         [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:489")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:615")]
         public BroadWorksConnector.Ocip.Models.AnnouncementRepositoryType Level
         {
             get => _level;

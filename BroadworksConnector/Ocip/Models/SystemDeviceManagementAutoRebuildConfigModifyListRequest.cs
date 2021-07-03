@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6992""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7689""}]")]
     public class SystemDeviceManagementAutoRebuildConfigModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private List<BroadWorksConnector.Ocip.Models.DeviceManagementAutoRebuildConfigEntry> _autoRebuildConfigEntry = new List<BroadWorksConnector.Ocip.Models.DeviceManagementAutoRebuildConfigEntry>();
 
         [XmlElement(ElementName = "autoRebuildConfigEntry", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6992")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7689")]
         public List<BroadWorksConnector.Ocip.Models.DeviceManagementAutoRebuildConfigEntry> AutoRebuildConfigEntry
         {
             get => _autoRebuildConfigEntry;

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18692""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:20079""}]")]
     public class ServiceCodeEntry
     {
 
         private string _serviceCode;
 
         [XmlElement(ElementName = "serviceCode", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18692")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20079")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceCode
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18692")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20079")]
         [MinLength(1)]
         [MaxLength(200)]
         public string Description

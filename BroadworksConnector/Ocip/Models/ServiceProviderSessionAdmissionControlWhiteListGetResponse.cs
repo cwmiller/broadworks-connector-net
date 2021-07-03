@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5880""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6710""}]")]
     public class ServiceProviderSessionAdmissionControlWhiteListGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "matchDigitPattern", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5880")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6710")]
         [MinLength(1)]
         [MaxLength(160)]
         public List<string> MatchDigitPattern
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableWhiteList;
 
         [XmlElement(ElementName = "enableWhiteList", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5880")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6710")]
         public bool EnableWhiteList
         {
             get => _enableWhiteList;

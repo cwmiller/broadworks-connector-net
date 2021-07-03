@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3225""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:49468""}]")]
     public class VoiceMessagingAliasListModify
     {
 
         private List<string> _phoneNumber = new List<string>();
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3225")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49468")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> PhoneNumber

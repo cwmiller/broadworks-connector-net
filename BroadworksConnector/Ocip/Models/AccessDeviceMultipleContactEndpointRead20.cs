@@ -9,18 +9,19 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Access device end point that can have multiple contacts.
     /// Port numbers are only used by devices with static line ordering.
+    /// Replaced by AccessDeviceMultipleContactEndpointRead22.
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:218""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47418""}]")]
     public class AccessDeviceMultipleContactEndpointRead20
     {
 
         private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:218")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47418")]
         public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
         {
             get => _accessDevice;
@@ -37,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:218")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47418")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -57,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:218")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47418")]
         [MinLength(1)]
         [MaxLength(1020)]
         public List<string> Contact
@@ -76,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:218")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47418")]
         public bool StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -93,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:218")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47418")]
         public bool UseDomain
         {
             get => _useDomain;
@@ -111,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:218")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47418")]
         [MinInclusive(1)]
         [MaxInclusive(1024)]
         public int PortNumber
@@ -130,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _supportVisualDeviceManagement;
 
         [XmlElement(ElementName = "supportVisualDeviceManagement", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:218")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47418")]
         public bool SupportVisualDeviceManagement
         {
             get => _supportVisualDeviceManagement;

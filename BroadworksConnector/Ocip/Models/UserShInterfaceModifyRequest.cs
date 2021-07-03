@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3941""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4027""}]")]
     public class UserShInterfaceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
 
         [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3941")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4027")]
         public BroadWorksConnector.Ocip.Models.PublicUserIdentity PublicUserIdentity
         {
             get => _publicUserIdentity;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "SCSCFName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3941")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4027")]
         [MinLength(1)]
         [MaxLength(161)]
         public string SCSCFName
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "IMSUserState", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3941")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4027")]
         public BroadWorksConnector.Ocip.Models.IMSUserState IMSUserState
         {
             get => _iMSUserState;

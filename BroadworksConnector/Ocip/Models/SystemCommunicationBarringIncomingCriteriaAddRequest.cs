@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a new Communication Barring Incoming Criteria.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// Replaced by: SystemCommunicationBarringIncomingCriteriaAddRequest22
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemCommunicationBarringIncomingCriteriaAddRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:5766""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7541""}]")]
     public class SystemCommunicationBarringIncomingCriteriaAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5766")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:7541")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -42,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5766")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:7541")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -62,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5766")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:7541")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TimeSchedule
@@ -82,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5766")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:7541")]
         [MinLength(1)]
         [MaxLength(40)]
         public string HolidaySchedule
@@ -102,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "matchNumberPortabilityStatus", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5766")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:7541")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> MatchNumberPortabilityStatus

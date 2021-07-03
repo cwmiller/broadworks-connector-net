@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1135"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1136""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1565"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1566""}]}]")]
     public class SystemAccessDeviceMonitorAddDeviceTypeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private bool _addAllDeviceTypes;
 
         [XmlElement(ElementName = "addAllDeviceTypes", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1136")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1566")]
         public bool AddAllDeviceTypes
         {
             get => _addAllDeviceTypes;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1136")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1566")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType

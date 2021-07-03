@@ -22,14 +22,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:135""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:136""}]")]
     public class GroupCollaborateBridgeConsolidatedDeleteInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:135")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:136")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:135")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:136")]
         public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers
         {
             get => _unassignPhoneNumbers;

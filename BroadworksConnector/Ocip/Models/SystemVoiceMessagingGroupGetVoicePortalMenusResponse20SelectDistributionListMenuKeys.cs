@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35524""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38558""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse20SelectDistributionListMenuKeys
     {
 
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35524")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38558")]
         [Length(1)]
         [RegularExpression(@"\*|#")]
         public string ReturnToPreviousMenu
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenuOrFinishEnteringDistributionListNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35524")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38558")]
         [Length(1)]
         [RegularExpression(@"\*|#")]
         public string RepeatMenuOrFinishEnteringDistributionListNumber

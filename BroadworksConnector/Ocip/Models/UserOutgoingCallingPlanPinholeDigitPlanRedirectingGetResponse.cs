@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1496""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1497""}]")]
     public class UserOutgoingCallingPlanPinholeDigitPlanRedirectingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _useCustomSettings;
 
         [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1496")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1497")]
         public bool UseCustomSettings
         {
             get => _useCustomSettings;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userPermissions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1496")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1497")]
         public BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanDigitPatternRedirectingPermissions UserPermissions
         {
             get => _userPermissions;

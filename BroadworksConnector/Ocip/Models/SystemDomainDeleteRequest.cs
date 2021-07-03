@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8357""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9426""}]")]
     public class SystemDomainDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _domain;
 
         [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8357")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9426")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Domain

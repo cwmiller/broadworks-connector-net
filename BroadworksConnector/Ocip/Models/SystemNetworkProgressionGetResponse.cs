@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11587""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12663""}]")]
     public class SystemNetworkProgressionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11587")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12663")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _waitPeriodSeconds;
 
         [XmlElement(ElementName = "waitPeriodSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11587")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12663")]
         [MinInclusive(1)]
         [MaxInclusive(15)]
         public int WaitPeriodSeconds

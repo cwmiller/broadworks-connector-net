@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2968""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3583""}]")]
     public class RandomPort
     {
 
         private string _random;
 
         [XmlElement(ElementName = "random", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2968")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3583")]
         public string Random
         {
             get => _random;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2968")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3583")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int Port

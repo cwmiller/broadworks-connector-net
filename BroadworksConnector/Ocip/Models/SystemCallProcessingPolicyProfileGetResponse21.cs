@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:3601""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:4022""}]")]
     public class SystemCallProcessingPolicyProfileGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:3601")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:4022")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "assignedSubscriberType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:3601")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:4022")]
         public List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType21> AssignedSubscriberType
         {
             get => _assignedSubscriberType;

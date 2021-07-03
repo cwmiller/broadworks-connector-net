@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3270""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16252""}]")]
     public class GroupVoiceMessagingGroupGetVoicePortalResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3270")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16252")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3270")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16252")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3270")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16252")]
         public bool IsActive
         {
             get => _isActive;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
 
         [XmlElement(ElementName = "allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3270")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16252")]
         public bool AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin
         {
             get => _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useVoicePortalWizard;
 
         [XmlElement(ElementName = "useVoicePortalWizard", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3270")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16252")]
         public bool UseVoicePortalWizard
         {
             get => _useVoicePortalWizard;
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope _voicePortalExternalRoutingScope;
 
         [XmlElement(ElementName = "voicePortalExternalRoutingScope", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3270")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16252")]
         public BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope VoicePortalExternalRoutingScope
         {
             get => _voicePortalExternalRoutingScope;
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useExternalRouting;
 
         [XmlElement(ElementName = "useExternalRouting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3270")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16252")]
         public bool UseExternalRouting
         {
             get => _useExternalRouting;
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "externalRoutingAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3270")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16252")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ExternalRoutingAddress

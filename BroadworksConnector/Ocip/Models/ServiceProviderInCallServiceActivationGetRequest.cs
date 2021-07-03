@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Request the service provider's DTMF based in-call service activation trigger attributes.
-    /// The response is either a ServiceProviderInCallServiceActivationGetResponse or an ErrorResponse.
+    /// Request the service provider's DTMF based in-call service activation trigger attributes.The response is either a ServiceProviderInCallServiceActivationGetResponse or an ErrorResponse.
     /// Replaced by: ServiceProviderInCallServiceActivationGetRequest17
     /// <see cref="ServiceProviderInCallServiceActivationGetResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -17,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:14715""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:18924""}]")]
     public class ServiceProviderInCallServiceActivationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14715")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18924")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

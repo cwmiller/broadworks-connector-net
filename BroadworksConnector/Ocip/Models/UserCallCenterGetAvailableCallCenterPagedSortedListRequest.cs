@@ -25,14 +25,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6972""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6997""}]")]
     public class UserCallCenterGetAvailableCallCenterPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6972")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6997")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6972")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6997")]
         public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
         {
             get => _responsePagingControl;
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sortByUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6972")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6997")]
         public BroadWorksConnector.Ocip.Models.SortByUserId SortByUserId
         {
             get => _sortByUserId;
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6972")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6997")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId
         {
             get => _searchCriteriaUserId;
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6972")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6997")]
         public bool SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;

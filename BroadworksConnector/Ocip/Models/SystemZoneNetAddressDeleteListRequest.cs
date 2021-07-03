@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18403""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19790""}]")]
     public class SystemZoneNetAddressDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18403")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19790")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ZoneName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18403")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19790")]
         [MinLength(1)]
         [MaxLength(39)]
         public List<string> NetAddress
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "netAddressRange", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18403")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19790")]
         public List<BroadWorksConnector.Ocip.Models.IPAddressRange> NetAddressRange
         {
             get => _netAddressRange;

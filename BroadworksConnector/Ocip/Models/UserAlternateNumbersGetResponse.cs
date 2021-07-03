@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16780""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:39451""}]")]
     public class UserAlternateNumbersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _distinctiveRing;
 
         [XmlElement(ElementName = "distinctiveRing", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16780")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39451")]
         public bool DistinctiveRing
         {
             get => _distinctiveRing;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateEntry01", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16780")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39451")]
         public BroadWorksConnector.Ocip.Models.AlternateNumberEntry AlternateEntry01
         {
             get => _alternateEntry01;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateEntry02", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16780")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39451")]
         public BroadWorksConnector.Ocip.Models.AlternateNumberEntry AlternateEntry02
         {
             get => _alternateEntry02;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateEntry03", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16780")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39451")]
         public BroadWorksConnector.Ocip.Models.AlternateNumberEntry AlternateEntry03
         {
             get => _alternateEntry03;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateEntry04", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16780")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39451")]
         public BroadWorksConnector.Ocip.Models.AlternateNumberEntry AlternateEntry04
         {
             get => _alternateEntry04;
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateEntry05", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16780")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39451")]
         public BroadWorksConnector.Ocip.Models.AlternateNumberEntry AlternateEntry05
         {
             get => _alternateEntry05;
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateEntry06", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16780")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39451")]
         public BroadWorksConnector.Ocip.Models.AlternateNumberEntry AlternateEntry06
         {
             get => _alternateEntry06;
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateEntry07", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16780")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39451")]
         public BroadWorksConnector.Ocip.Models.AlternateNumberEntry AlternateEntry07
         {
             get => _alternateEntry07;
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateEntry08", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16780")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39451")]
         public BroadWorksConnector.Ocip.Models.AlternateNumberEntry AlternateEntry08
         {
             get => _alternateEntry08;
@@ -182,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateEntry09", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16780")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39451")]
         public BroadWorksConnector.Ocip.Models.AlternateNumberEntry AlternateEntry09
         {
             get => _alternateEntry09;
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateEntry10", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16780")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39451")]
         public BroadWorksConnector.Ocip.Models.AlternateNumberEntry AlternateEntry10
         {
             get => _alternateEntry10;

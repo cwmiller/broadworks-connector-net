@@ -78,7 +78,8 @@ namespace BroadWorksConnector.Ocip.Validation
             if ((setMembers.Count() == 0) && (nonOptionalMembers.Count() != 0) && !Optional)
             {
                 errors.Add(new ChoiceNotSetError(instance, OptionNames(options, type)));
-            } else if (setMembers.Count() > 1)
+            }
+            else if (setMembers.Count() > 1)
             {
                 errors.Add(new InvalidChoiceError(instance, OptionNames(options, type)));
             }
@@ -161,7 +162,8 @@ namespace BroadWorksConnector.Ocip.Validation
                 if (opt is ChoiceFieldOption fieldOpt)
                 {
                     return fieldOpt.Name;
-                } else if (opt is ChoiceSequenceOption sequenceOpt)
+                }
+                else if (opt is ChoiceSequenceOption sequenceOpt)
                 {
                     var seqProperties =
                         instanceType.GetProperties()

@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e71c2205fb31894f87810b330a85ede2:103""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e71c2205fb31894f87810b330a85ede2:104""}]")]
     public class GroupEmergencyZonesGetHomeZoneListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "homeZoneIpAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:103")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:104")]
         [MinLength(1)]
         [MaxLength(39)]
         public List<string> HomeZoneIpAddress
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "homeZoneIpAddressRange", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:103")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:104")]
         public List<BroadWorksConnector.Ocip.Models.IPAddressRange> HomeZoneIpAddressRange
         {
             get => _homeZoneIpAddressRange;

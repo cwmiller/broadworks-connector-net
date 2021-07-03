@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1415""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1503""}]")]
     public class CommunicationBarringProfileReplacementList
     {
 
         private List<string> _profileName = new List<string>();
 
         [XmlElement(ElementName = "profileName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1415")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1503")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> ProfileName

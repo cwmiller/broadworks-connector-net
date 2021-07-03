@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:5665""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6495""}]")]
     public class ServiceProviderServicePackMigrationTaskModifyRemovalListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5665")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6495")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5665")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6495")]
         [MinLength(1)]
         [MaxLength(80)]
         public string TaskName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userServiceNameList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5665")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6495")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserServiceList UserServiceNameList
         {
             get => _userServiceNameList;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePackNameList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5665")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6495")]
         public BroadWorksConnector.Ocip.Models.ReplacementServicePackNameList ServicePackNameList
         {
             get => _servicePackNameList;

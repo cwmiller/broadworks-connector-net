@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10310""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26151""}]")]
     public class SystemDeviceTypeGetResponse14sp6 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isObsolete;
 
         [XmlElement(ElementName = "isObsolete", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10310")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26151")]
         public bool IsObsolete
         {
             get => _isObsolete;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10310")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26151")]
         public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile
         {
             get => _profile;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "webBasedConfigURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10310")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26151")]
         [MinLength(1)]
         [MaxLength(80)]
         public string WebBasedConfigURL
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10310")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26151")]
         public bool StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10310")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26151")]
         public BroadWorksConnector.Ocip.Models.CPEDeviceOptionsRead CpeDeviceOptions
         {
             get => _cpeDeviceOptions;
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _protocolChoice = new List<string>();
 
         [XmlElement(ElementName = "protocolChoice", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10310")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26151")]
         [MinLength(1)]
         [MaxLength(20)]
         public List<string> ProtocolChoice
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isIpAddressOptional;
 
         [XmlElement(ElementName = "isIpAddressOptional", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10310")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26151")]
         public bool IsIpAddressOptional
         {
             get => _isIpAddressOptional;
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10310")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26151")]
         public bool UseDomain
         {
             get => _useDomain;
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isMobilityManagerDevice;
 
         [XmlElement(ElementName = "isMobilityManagerDevice", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10310")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26151")]
         public bool IsMobilityManagerDevice
         {
             get => _isMobilityManagerDevice;

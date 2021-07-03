@@ -10,20 +10,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// Add a Group Paging instance to a group.
     /// The domain is required in the serviceUserId.
     /// The response is either SuccessResponse or ErrorResponse.
+    /// 
+    /// The following element is only used in AS data mode and ignored in XS data mode:
+    /// networkClassOfService
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:62""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:67""}]")]
     public class GroupGroupPagingAddInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:62")]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:67")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:62")]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:67")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:62")]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:67")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -80,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:62")]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:67")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -97,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _confirmationToneTimeoutSeconds;
 
         [XmlElement(ElementName = "confirmationToneTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:62")]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:67")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int ConfirmationToneTimeoutSeconds
@@ -116,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _deliverOriginatorCLIDInstead;
 
         [XmlElement(ElementName = "deliverOriginatorCLIDInstead", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:62")]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:67")]
         public bool DeliverOriginatorCLIDInstead
         {
             get => _deliverOriginatorCLIDInstead;
@@ -134,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "originatorCLIDPrefix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:62")]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:67")]
         [MinLength(1)]
         [MaxLength(30)]
         public string OriginatorCLIDPrefix
@@ -154,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:62")]
+        [Group(@"0d36df8c109e3ea7324f79031368c661:67")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

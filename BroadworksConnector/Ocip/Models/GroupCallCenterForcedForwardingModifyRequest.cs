@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:12783""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5016""}]")]
     public class GroupCallCenterForcedForwardingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5016")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5016")]
         public bool IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5016")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ForwardToPhoneNumber
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowEnableViaFAC", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5016")]
         public bool AllowEnableViaFAC
         {
             get => _allowEnableViaFAC;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playAnnouncementBeforeForwarding", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5016")]
         public bool PlayAnnouncementBeforeForwarding
         {
             get => _playAnnouncementBeforeForwarding;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5016")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection
         {
             get => _audioMessageSelection;
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5016")]
         public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource AudioFile
         {
             get => _audioFile;
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5016")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection
         {
             get => _videoMessageSelection;
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12783")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5016")]
         public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource VideoFile
         {
             get => _videoFile;

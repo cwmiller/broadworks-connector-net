@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44987""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:49439""}]")]
     public class TrunkAddressingMultipleContactRead
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "trunkGroupDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44987")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49439")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupDeviceMultipleContactEndpointRead TrunkGroupDeviceEndpoint
         {
             get => _trunkGroupDeviceEndpoint;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44987")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49439")]
         [MinLength(1)]
         [MaxLength(30)]
         public string EnterpriseTrunkName
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateTrunkIdentity", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44987")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49439")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AlternateTrunkIdentity

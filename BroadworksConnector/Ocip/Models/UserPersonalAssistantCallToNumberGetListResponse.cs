@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:144""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:145""}]")]
     public class UserPersonalAssistantCallToNumberGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callToNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:144")]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:145")]
         public List<BroadWorksConnector.Ocip.Models.CallToNumber> CallToNumber
         {
             get => _callToNumber;

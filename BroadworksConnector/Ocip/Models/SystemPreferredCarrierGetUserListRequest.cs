@@ -10,8 +10,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// Requests a list of users using the specified carrier.  It is possible to restrict the
     /// number of rows returned by specifying various search criteria. Multiple search criteria
     /// are logically ANDed together.
-    /// The response is either a SystemPreferredCarrierGetUserListResponse
-    /// or an ErrorResponse.
+    /// The response is either a SystemPreferredCarrierGetUserListResponse or an ErrorResponse.
     /// <see cref="SystemPreferredCarrierGetUserListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>

@@ -12,9 +12,11 @@ namespace BroadWorksConnector
         /// <summary>
         /// Add a Music on Hold Instance to a department.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// - useDynamicMOHDuringCallHold
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupMusicOnHoldAddInstanceRequest22Async instead.")]
-        public static async Task<SuccessResponse> GroupMusicOnHoldAddInstanceRequest22(this OcipClient client, GroupMusicOnHoldAddInstanceRequest22 request)
+        [Obsolete("This method is deprecated. Use GroupMusicOnHoldAddInstanceRequest23Async instead.")]
+        public static async Task<SuccessResponse> GroupMusicOnHoldAddInstanceRequest23(this OcipClient client, GroupMusicOnHoldAddInstanceRequest23 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -22,8 +24,10 @@ namespace BroadWorksConnector
         /// <summary>
         /// Add a Music on Hold Instance to a department.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// - useDynamicMOHDuringCallHold
         /// </summary>
-        public static async Task<SuccessResponse> GroupMusicOnHoldAddInstanceRequest22Async(this OcipClient client, GroupMusicOnHoldAddInstanceRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> GroupMusicOnHoldAddInstanceRequest23Async(this OcipClient client, GroupMusicOnHoldAddInstanceRequest23 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -46,8 +50,7 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
-        /// Returns a list of all departments that have a Music On Hold instance.
-        /// The response is either GroupMusicOnHoldGetDepartmentListResponse or ErrorResponse.
+        /// Returns a list of all departments that have a Music On Hold instance. The response is either GroupMusicOnHoldGetDepartmentListResponse or ErrorResponse.
         /// It is possible to get the instances within a specified department.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupMusicOnHoldGetDepartmentListRequestAsync instead.")]
@@ -57,8 +60,7 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// Returns a list of all departments that have a Music On Hold instance.
-        /// The response is either GroupMusicOnHoldGetDepartmentListResponse or ErrorResponse.
+        /// Returns a list of all departments that have a Music On Hold instance. The response is either GroupMusicOnHoldGetDepartmentListResponse or ErrorResponse.
         /// It is possible to get the instances within a specified department.
         /// </summary>
         public static async Task<GroupMusicOnHoldGetDepartmentListResponse> GroupMusicOnHoldGetDepartmentListRequestAsync(this OcipClient client, GroupMusicOnHoldGetDepartmentListRequest request, CancellationToken cancellationToken = default)
@@ -67,21 +69,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get a Music On Hold data for a group or department instance.
-        /// The response is either GroupMusicOnHoldGetInstanceResponse22V2 or ErrorResponse.
+        /// The response is either GroupMusicOnHoldGetInstanceResponse23V2 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupMusicOnHoldGetInstanceRequest22V2Async instead.")]
-        public static async Task<GroupMusicOnHoldGetInstanceResponse22V2> GroupMusicOnHoldGetInstanceRequest22V2(this OcipClient client, GroupMusicOnHoldGetInstanceRequest22V2 request)
+        [Obsolete("This method is deprecated. Use GroupMusicOnHoldGetInstanceRequest23V2Async instead.")]
+        public static async Task<GroupMusicOnHoldGetInstanceResponse23V2> GroupMusicOnHoldGetInstanceRequest23V2(this OcipClient client, GroupMusicOnHoldGetInstanceRequest23V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupMusicOnHoldGetInstanceResponse22V2;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupMusicOnHoldGetInstanceResponse23V2;
         }
 
         /// <summary>
         /// Get a Music On Hold data for a group or department instance.
-        /// The response is either GroupMusicOnHoldGetInstanceResponse22V2 or ErrorResponse.
+        /// The response is either GroupMusicOnHoldGetInstanceResponse23V2 or ErrorResponse.
         /// </summary>
-        public static async Task<GroupMusicOnHoldGetInstanceResponse22V2> GroupMusicOnHoldGetInstanceRequest22V2Async(this OcipClient client, GroupMusicOnHoldGetInstanceRequest22V2 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupMusicOnHoldGetInstanceResponse23V2> GroupMusicOnHoldGetInstanceRequest23V2Async(this OcipClient client, GroupMusicOnHoldGetInstanceRequest23V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupMusicOnHoldGetInstanceResponse22V2;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupMusicOnHoldGetInstanceResponse23V2;
         }
         /// <summary>
         /// Modify data for a group or department Music On Hold Instance.

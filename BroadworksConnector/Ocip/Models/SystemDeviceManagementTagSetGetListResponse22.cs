@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7431""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8234""}]")]
     public class SystemDeviceManagementTagSetGetListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _tagSetTable;
 
         [XmlElement(ElementName = "tagSetTable", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7431")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8234")]
         public BroadWorksConnector.Ocip.Models.C.OCITable TagSetTable
         {
             get => _tagSetTable;

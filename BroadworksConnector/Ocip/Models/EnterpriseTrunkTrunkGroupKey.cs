@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1858""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1937""}]")]
     public class EnterpriseTrunkTrunkGroupKey
     {
 
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1858")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1937")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _trunkGroupName;
 
         [XmlElement(ElementName = "trunkGroupName", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1858")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1937")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TrunkGroupName

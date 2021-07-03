@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:760""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:819""}]")]
     public class SearchCriteriaExactDeviceLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
 
         [XmlElement(ElementName = "deviceLevel", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:760")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:819")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceLevel DeviceLevel
         {
             get => _deviceLevel;

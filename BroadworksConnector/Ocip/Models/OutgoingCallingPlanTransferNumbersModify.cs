@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:2220""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:2221""}]")]
     public class OutgoingCallingPlanTransferNumbersModify
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber01", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2220")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2221")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PhoneNumber01
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber02", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2220")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2221")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PhoneNumber02
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber03", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2220")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2221")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PhoneNumber03

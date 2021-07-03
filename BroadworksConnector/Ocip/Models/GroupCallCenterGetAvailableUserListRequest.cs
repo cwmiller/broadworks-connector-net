@@ -11,8 +11,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// Searching for users by group only makes sense when the call center is part of an Enterprise.
     /// The response is either GroupCallCenterGetAvailableUserListResponse or ErrorResponse.
     /// 
-    /// Replaced By: GroupCallCenterGetAvailableAgentListRequest and
-    /// GroupCallCenterGetAvailableSupervisorListRequest
+    /// Replaced By: GroupCallCenterGetAvailableAgentListRequest and GroupCallCenterGetAvailableSupervisorListRequest
     /// <see cref="GroupCallCenterGetAvailableUserListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="GroupCallCenterGetAvailableAgentListRequest"/>
@@ -21,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:8389""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5311""}]")]
     public class GroupCallCenterGetAvailableUserListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8389")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5311")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -47,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8389")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5311")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -67,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8389")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5311")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -86,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserLastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8389")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5311")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName
         {
             get => _searchCriteriaUserLastName;
@@ -104,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserFirstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8389")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5311")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName
         {
             get => _searchCriteriaUserFirstName;
@@ -122,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactUserDepartment", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8389")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5311")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment SearchCriteriaExactUserDepartment
         {
             get => _searchCriteriaExactUserDepartment;
@@ -140,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactUserGroup", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8389")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5311")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserGroup SearchCriteriaExactUserGroup
         {
             get => _searchCriteriaExactUserGroup;

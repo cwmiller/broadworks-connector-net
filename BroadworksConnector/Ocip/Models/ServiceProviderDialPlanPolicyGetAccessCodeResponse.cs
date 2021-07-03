@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:2979""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3627""}]")]
     public class ServiceProviderDialPlanPolicyGetAccessCodeResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _includeCodeForNetworkTranslationsAndRouting;
 
         [XmlElement(ElementName = "includeCodeForNetworkTranslationsAndRouting", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2979")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3627")]
         public bool IncludeCodeForNetworkTranslationsAndRouting
         {
             get => _includeCodeForNetworkTranslationsAndRouting;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _includeCodeForScreeningServices;
 
         [XmlElement(ElementName = "includeCodeForScreeningServices", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2979")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3627")]
         public bool IncludeCodeForScreeningServices
         {
             get => _includeCodeForScreeningServices;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableSecondaryDialTone;
 
         [XmlElement(ElementName = "enableSecondaryDialTone", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2979")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3627")]
         public bool EnableSecondaryDialTone
         {
             get => _enableSecondaryDialTone;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2979")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3627")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

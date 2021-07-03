@@ -12,9 +12,14 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to add a system-level access device.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// isWebexTeamsDevice
+        /// defaultPathHeader
+        /// deviceExternalId
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemAccessDeviceAddRequestAsync instead.")]
-        public static async Task<SuccessResponse> SystemAccessDeviceAddRequest(this OcipClient client, SystemAccessDeviceAddRequest request)
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceAddRequest22V3Async instead.")]
+        public static async Task<SuccessResponse> SystemAccessDeviceAddRequest22V3(this OcipClient client, SystemAccessDeviceAddRequest22V3 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -22,8 +27,37 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to add a system-level access device.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// isWebexTeamsDevice
+        /// defaultPathHeader
+        /// deviceExternalId
         /// </summary>
-        public static async Task<SuccessResponse> SystemAccessDeviceAddRequestAsync(this OcipClient client, SystemAccessDeviceAddRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> SystemAccessDeviceAddRequest22V3Async(this OcipClient client, SystemAccessDeviceAddRequest22V3 request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to add or modify a list of static configuration tag for a system access
+        /// device.  If the tag does not exist, it is added.  If the tag exists, its
+        /// value is updated.
+        /// 
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceCustomTagAddOrModifyListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemAccessDeviceCustomTagAddOrModifyListRequest(this OcipClient client, SystemAccessDeviceCustomTagAddOrModifyListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to add or modify a list of static configuration tag for a system access
+        /// device.  If the tag does not exist, it is added.  If the tag exists, its
+        /// value is updated.
+        /// 
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemAccessDeviceCustomTagAddOrModifyListRequestAsync(this OcipClient client, SystemAccessDeviceCustomTagAddOrModifyListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -109,6 +143,10 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to delete a specified system access device.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceExternalId
+        /// 
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemAccessDeviceDeleteRequestAsync instead.")]
@@ -119,9 +157,53 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request to delete a specified system access device.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceExternalId
+        /// 
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> SystemAccessDeviceDeleteRequestAsync(this OcipClient client, SystemAccessDeviceDeleteRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Requests the activation information for a device configured at System level.
+        /// Returns a SystemAccessDeviceDeviceActivationGetResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceDeviceActivationGetRequestAsync instead.")]
+        public static async Task<SystemAccessDeviceDeviceActivationGetResponse> SystemAccessDeviceDeviceActivationGetRequest(this OcipClient client, SystemAccessDeviceDeviceActivationGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemAccessDeviceDeviceActivationGetResponse;
+        }
+
+        /// <summary>
+        /// Requests the activation information for a device configured at System level.
+        /// Returns a SystemAccessDeviceDeviceActivationGetResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemAccessDeviceDeviceActivationGetResponse> SystemAccessDeviceDeviceActivationGetRequestAsync(this OcipClient client, SystemAccessDeviceDeviceActivationGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceDeviceActivationGetResponse;
+        }
+        /// <summary>
+        /// Activates or deactivates a device configured at the System level. It is only possible for this request to
+        /// activate a device which is deactivated. Trying to activate a device in the activating state will result in an error response
+        /// since only the DAS is allowed to execute this operation.
+        /// Returns a SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceDeviceActivationModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemAccessDeviceDeviceActivationModifyRequest(this OcipClient client, SystemAccessDeviceDeviceActivationModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Activates or deactivates a device configured at the System level. It is only possible for this request to
+        /// activate a device which is deactivated. Trying to activate a device in the activating state will result in an error response
+        /// since only the DAS is allowed to execute this operation.
+        /// Returns a SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemAccessDeviceDeviceActivationModifyRequestAsync(this OcipClient client, SystemAccessDeviceDeviceActivationModifyRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -180,6 +262,24 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
+        /// Requests a new activation code for a device configured at the System level.
+        /// Returns a SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceGenerateActivationCodeRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemAccessDeviceGenerateActivationCodeRequest(this OcipClient client, SystemAccessDeviceGenerateActivationCodeRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Requests a new activation code for a device configured at the System level.
+        /// Returns a SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemAccessDeviceGenerateActivationCodeRequestAsync(this OcipClient client, SystemAccessDeviceGenerateActivationCodeRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
         /// Requests the list of all access devices in the entire system.
         /// Prior to release 14, this functionality was provided with the SystemAccessDeviceGetListRequest14.
         /// If reseller administrator sends the request, searchCriteriaResellerId is ignored. All the device
@@ -212,6 +312,90 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceGetAllResponse;
         }
         /// <summary>
+        /// Get the list of all available custom tags managed by the Device Management System, on a per-device profile basis.
+        /// The response is either SystemAccessDeviceGetAvailableCustomTagListResponse or ErrorResponse.
+        /// The following elements are used in AS mode and ignored in XS data mode:
+        /// tagSetName
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceGetAvailableCustomTagListRequestAsync instead.")]
+        public static async Task<SystemAccessDeviceGetAvailableCustomTagListResponse> SystemAccessDeviceGetAvailableCustomTagListRequest(this OcipClient client, SystemAccessDeviceGetAvailableCustomTagListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemAccessDeviceGetAvailableCustomTagListResponse;
+        }
+
+        /// <summary>
+        /// Get the list of all available custom tags managed by the Device Management System, on a per-device profile basis.
+        /// The response is either SystemAccessDeviceGetAvailableCustomTagListResponse or ErrorResponse.
+        /// The following elements are used in AS mode and ignored in XS data mode:
+        /// tagSetName
+        /// </summary>
+        public static async Task<SystemAccessDeviceGetAvailableCustomTagListResponse> SystemAccessDeviceGetAvailableCustomTagListRequestAsync(this OcipClient client, SystemAccessDeviceGetAvailableCustomTagListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceGetAvailableCustomTagListResponse;
+        }
+        /// <summary>
+        /// Requests the list of linked leaf devices for the system level tree device passed in the request.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The list includes devices created at the system, service provider, and group levels.
+        /// 
+        /// The response is either SystemAccessDeviceGetLinkedLeafDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceGetLinkedLeafDeviceListRequestAsync instead.")]
+        public static async Task<SystemAccessDeviceGetLinkedLeafDeviceListResponse> SystemAccessDeviceGetLinkedLeafDeviceListRequest(this OcipClient client, SystemAccessDeviceGetLinkedLeafDeviceListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemAccessDeviceGetLinkedLeafDeviceListResponse;
+        }
+
+        /// <summary>
+        /// Requests the list of linked leaf devices for the system level tree device passed in the request.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The list includes devices created at the system, service provider, and group levels.
+        /// 
+        /// The response is either SystemAccessDeviceGetLinkedLeafDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        public static async Task<SystemAccessDeviceGetLinkedLeafDeviceListResponse> SystemAccessDeviceGetLinkedLeafDeviceListRequestAsync(this OcipClient client, SystemAccessDeviceGetLinkedLeafDeviceListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceGetLinkedLeafDeviceListResponse;
+        }
+        /// <summary>
+        /// Requests the tree device linked with the system level leaf device passed in the request.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// 
+        /// The response is either SystemAccessDeviceGetLinkedTreeDeviceResponse or
+        /// ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceGetLinkedTreeDeviceRequestAsync instead.")]
+        public static async Task<SystemAccessDeviceGetLinkedTreeDeviceResponse> SystemAccessDeviceGetLinkedTreeDeviceRequest(this OcipClient client, SystemAccessDeviceGetLinkedTreeDeviceRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemAccessDeviceGetLinkedTreeDeviceResponse;
+        }
+
+        /// <summary>
+        /// Requests the tree device linked with the system level leaf device passed in the request.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// 
+        /// The response is either SystemAccessDeviceGetLinkedTreeDeviceResponse or
+        /// ErrorResponse.
+        /// </summary>
+        public static async Task<SystemAccessDeviceGetLinkedTreeDeviceResponse> SystemAccessDeviceGetLinkedTreeDeviceRequestAsync(this OcipClient client, SystemAccessDeviceGetLinkedTreeDeviceRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceGetLinkedTreeDeviceResponse;
+        }
+        /// <summary>
         /// Requests the list of access devices defined at the System-level.
         /// Prior to release 14, this command requested a list of all devices in the entire system. That
         /// functionality is now moved to the SystemAccessDeviceGetAllRequest.
@@ -234,22 +418,88 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceGetListResponse14;
         }
         /// <summary>
-        /// Requests the configuration of a specified system access device.
-        /// The response is either SystemAccessDeviceGetResponse18sp1 or ErrorResponse.
+        /// Get the list of all native tags with logic managed by the Device Management System, on a per-device profile basis.
+        /// The response is either SystemAccessDeviceGetNativeTagsWithLogicListResponse or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemAccessDeviceGetRequest18sp1Async instead.")]
-        public static async Task<SystemAccessDeviceGetResponse18sp1> SystemAccessDeviceGetRequest18sp1(this OcipClient client, SystemAccessDeviceGetRequest18sp1 request)
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceGetNativeTagsWithLogicListRequestAsync instead.")]
+        public static async Task<SystemAccessDeviceGetNativeTagsWithLogicListResponse> SystemAccessDeviceGetNativeTagsWithLogicListRequest(this OcipClient client, SystemAccessDeviceGetNativeTagsWithLogicListRequest request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemAccessDeviceGetResponse18sp1;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemAccessDeviceGetNativeTagsWithLogicListResponse;
+        }
+
+        /// <summary>
+        /// Get the list of all native tags with logic managed by the Device Management System, on a per-device profile basis.
+        /// The response is either SystemAccessDeviceGetNativeTagsWithLogicListResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemAccessDeviceGetNativeTagsWithLogicListResponse> SystemAccessDeviceGetNativeTagsWithLogicListRequestAsync(this OcipClient client, SystemAccessDeviceGetNativeTagsWithLogicListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceGetNativeTagsWithLogicListResponse;
+        }
+        /// <summary>
+        /// Requests the list of system-level access devices.
+        /// The response is either SystemAccessDeviceGetPagedSortedListResponse or ErrorResponse.
+        /// If no sortOrder is included, the response is sorted by Device Name ascending
+        /// by default.  If the responsePagingControl element is not provided, the paging startIndex
+        /// will be set to 1 by default, and the responsePageSize will be set to the maximum
+        /// responsePageSize by default.
+        /// Multiple search criteria are logically ANDed together unless the
+        /// searchCriteriaModeOr option is included. Then the search criteria are logically
+        /// ORed together.
+        /// The getVisualDeviceManagementAPIDevicesOnly element can only be set when CloudPBX is licenced.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is not set, all devices are returned with Visual Device Management API flag set to empty.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is set to true, only SIP devices supporting Visual Device Management API are returned.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is set to false, all SIP devices are returned with their current Visual Device Management API flag value.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceGetPagedSortedListRequestAsync instead.")]
+        public static async Task<SystemAccessDeviceGetPagedSortedListResponse> SystemAccessDeviceGetPagedSortedListRequest(this OcipClient client, SystemAccessDeviceGetPagedSortedListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemAccessDeviceGetPagedSortedListResponse;
+        }
+
+        /// <summary>
+        /// Requests the list of system-level access devices.
+        /// The response is either SystemAccessDeviceGetPagedSortedListResponse or ErrorResponse.
+        /// If no sortOrder is included, the response is sorted by Device Name ascending
+        /// by default.  If the responsePagingControl element is not provided, the paging startIndex
+        /// will be set to 1 by default, and the responsePageSize will be set to the maximum
+        /// responsePageSize by default.
+        /// Multiple search criteria are logically ANDed together unless the
+        /// searchCriteriaModeOr option is included. Then the search criteria are logically
+        /// ORed together.
+        /// The getVisualDeviceManagementAPIDevicesOnly element can only be set when CloudPBX is licenced.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is not set, all devices are returned with Visual Device Management API flag set to empty.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is set to true, only SIP devices supporting Visual Device Management API are returned.
+        /// If the getVisualDeviceManagementAPIDevicesOnly element is set to false, all SIP devices are returned with their current Visual Device Management API flag value.
+        /// </summary>
+        public static async Task<SystemAccessDeviceGetPagedSortedListResponse> SystemAccessDeviceGetPagedSortedListRequestAsync(this OcipClient client, SystemAccessDeviceGetPagedSortedListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceGetPagedSortedListResponse;
+        }
+        /// <summary>
+        /// Requests the configuration of a specified system access device.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceExternalId
+        /// 
+        /// The response is either SystemAccessDeviceGetResponse24 or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceGetRequest24Async instead.")]
+        public static async Task<SystemAccessDeviceGetResponse24> SystemAccessDeviceGetRequest24(this OcipClient client, SystemAccessDeviceGetRequest24 request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemAccessDeviceGetResponse24;
         }
 
         /// <summary>
         /// Requests the configuration of a specified system access device.
-        /// The response is either SystemAccessDeviceGetResponse18sp1 or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceExternalId
+        /// 
+        /// The response is either SystemAccessDeviceGetResponse24 or ErrorResponse.
         /// </summary>
-        public static async Task<SystemAccessDeviceGetResponse18sp1> SystemAccessDeviceGetRequest18sp1Async(this OcipClient client, SystemAccessDeviceGetRequest18sp1 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemAccessDeviceGetResponse24> SystemAccessDeviceGetRequest24Async(this OcipClient client, SystemAccessDeviceGetRequest24 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceGetResponse18sp1;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceGetResponse24;
         }
         /// <summary>
         /// Requests the users associated with a specified system access device.
@@ -274,11 +524,42 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceGetUserListResponse21sp1;
         }
         /// <summary>
-        /// Request to modify a specified system access device.
+        /// Request to link one or more leaf devices to a system level tree device.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemAccessDeviceModifyRequestAsync instead.")]
-        public static async Task<SuccessResponse> SystemAccessDeviceModifyRequest(this OcipClient client, SystemAccessDeviceModifyRequest request)
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceLinkDeviceListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemAccessDeviceLinkDeviceListRequest(this OcipClient client, SystemAccessDeviceLinkDeviceListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to link one or more leaf devices to a system level tree device.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemAccessDeviceLinkDeviceListRequestAsync(this OcipClient client, SystemAccessDeviceLinkDeviceListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to modify a specified system access device.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// isWebexTeamsDevice
+        /// defaultPathHeader
+        /// deviceExternalId
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceModifyRequest22Async instead.")]
+        public static async Task<SuccessResponse> SystemAccessDeviceModifyRequest22(this OcipClient client, SystemAccessDeviceModifyRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -286,8 +567,13 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to modify a specified system access device.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// isWebexTeamsDevice
+        /// defaultPathHeader
+        /// deviceExternalId
         /// </summary>
-        public static async Task<SuccessResponse> SystemAccessDeviceModifyRequestAsync(this OcipClient client, SystemAccessDeviceModifyRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> SystemAccessDeviceModifyRequest22Async(this OcipClient client, SystemAccessDeviceModifyRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -494,6 +780,28 @@ namespace BroadWorksConnector
         public static async Task<SystemAccessDeviceTypeGetListResponse> SystemAccessDeviceTypeGetListRequestAsync(this OcipClient client, SystemAccessDeviceTypeGetListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemAccessDeviceTypeGetListResponse;
+        }
+        /// <summary>
+        /// Request to unlink one or more leaf access devices from a tree device.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemAccessDeviceUnlinkDeviceListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemAccessDeviceUnlinkDeviceListRequest(this OcipClient client, SystemAccessDeviceUnlinkDeviceListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to unlink one or more leaf access devices from a tree device.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemAccessDeviceUnlinkDeviceListRequestAsync(this OcipClient client, SystemAccessDeviceUnlinkDeviceListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Request to add a ChargingFunctionElement Server to the system.
@@ -955,24 +1263,6 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the list of Application Server Registration system parameters.
-        /// The response is either SystemASRParametersGetResponse14sp7 or ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemASRParametersGetRequest14sp7Async instead.")]
-        public static async Task<SystemASRParametersGetResponse14sp7> SystemASRParametersGetRequest14sp7(this OcipClient client, SystemASRParametersGetRequest14sp7 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemASRParametersGetResponse14sp7;
-        }
-
-        /// <summary>
-        /// Request to get the list of Application Server Registration system parameters.
-        /// The response is either SystemASRParametersGetResponse14sp7 or ErrorResponse.
-        /// </summary>
-        public static async Task<SystemASRParametersGetResponse14sp7> SystemASRParametersGetRequest14sp7Async(this OcipClient client, SystemASRParametersGetRequest14sp7 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemASRParametersGetResponse14sp7;
-        }
-        /// <summary>
-        /// Request to get the list of Application Server Registration system parameters.
         /// The response is either SystemASRParametersGetResponse23 or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemASRParametersGetRequest23Async instead.")]
@@ -1145,24 +1435,6 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Requests the list of System Diameter base parameters.
-        /// The response is either SystemBwDiameterBaseDataGetResponse17sp3 or ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemBwDiameterBaseDataGetRequest17sp3Async instead.")]
-        public static async Task<SystemBwDiameterBaseDataGetResponse17sp3> SystemBwDiameterBaseDataGetRequest17sp3(this OcipClient client, SystemBwDiameterBaseDataGetRequest17sp3 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemBwDiameterBaseDataGetResponse17sp3;
-        }
-
-        /// <summary>
-        /// Requests the list of System Diameter base parameters.
-        /// The response is either SystemBwDiameterBaseDataGetResponse17sp3 or ErrorResponse.
-        /// </summary>
-        public static async Task<SystemBwDiameterBaseDataGetResponse17sp3> SystemBwDiameterBaseDataGetRequest17sp3Async(this OcipClient client, SystemBwDiameterBaseDataGetRequest17sp3 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemBwDiameterBaseDataGetResponse17sp3;
-        }
-        /// <summary>
-        /// Requests the list of System Diameter base parameters.
         /// The response is either SystemBwDiameterBaseDataGetResponse22 or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemBwDiameterBaseDataGetRequest22Async instead.")]
@@ -1194,24 +1466,6 @@ namespace BroadWorksConnector
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> SystemBwDiameterBaseDataModifyRequestAsync(this OcipClient client, SystemBwDiameterBaseDataModifyRequest request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
-        }
-        /// <summary>
-        /// Add a static entry in the Diameter Peer Table.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemBwDiameterPeerAddRequestAsync instead.")]
-        public static async Task<SuccessResponse> SystemBwDiameterPeerAddRequest(this OcipClient client, SystemBwDiameterPeerAddRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Add a static entry in the Diameter Peer Table.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// </summary>
-        public static async Task<SuccessResponse> SystemBwDiameterPeerAddRequestAsync(this OcipClient client, SystemBwDiameterPeerAddRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -1430,22 +1684,22 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
-        /// The response is either a SystemCallProcessingGetPolicyResponse23 or an
+        /// The response is either a SystemCallProcessingGetPolicyResponse22V3 or an
         /// ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingGetPolicyRequest23Async instead.")]
-        public static async Task<SystemCallProcessingGetPolicyResponse23> SystemCallProcessingGetPolicyRequest23(this OcipClient client, SystemCallProcessingGetPolicyRequest23 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingGetPolicyRequest23V2Async instead.")]
+        public static async Task<SystemCallProcessingGetPolicyResponse22V3> SystemCallProcessingGetPolicyRequest23V2(this OcipClient client, SystemCallProcessingGetPolicyRequest23V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingGetPolicyResponse23;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingGetPolicyResponse22V3;
         }
 
         /// <summary>
-        /// The response is either a SystemCallProcessingGetPolicyResponse23 or an
+        /// The response is either a SystemCallProcessingGetPolicyResponse22V3 or an
         /// ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingGetPolicyResponse23> SystemCallProcessingGetPolicyRequest23Async(this OcipClient client, SystemCallProcessingGetPolicyRequest23 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingGetPolicyResponse22V3> SystemCallProcessingGetPolicyRequest23V2Async(this OcipClient client, SystemCallProcessingGetPolicyRequest23V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingGetPolicyResponse23;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingGetPolicyResponse22V3;
         }
         /// <summary>
         /// Modify the system level data associated with Call Processing Policy.
@@ -1467,6 +1721,8 @@ namespace BroadWorksConnector
         /// useUserPhoneNumberForEnterpriseCallsWhenInternalCLIDUnavailable
         /// allowMobileDNForRedirectingIdentity
         /// conferenceDisableClampTones
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// The following elements are only used in XS data mode and ignored in AS data mode:
         /// routeOverrideDomain
         /// routeOverridePrefix
@@ -1497,6 +1753,8 @@ namespace BroadWorksConnector
         /// useUserPhoneNumberForEnterpriseCallsWhenInternalCLIDUnavailable
         /// allowMobileDNForRedirectingIdentity
         /// conferenceDisableClampTones
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// The following elements are only used in XS data mode and ignored in AS data mode:
         /// routeOverrideDomain
         /// routeOverridePrefix
@@ -1525,28 +1783,30 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Auto Attendant subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22V2 or an ErrorResponse.
         /// The response contains the call processing policy profile setting for Auto Attendant.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22> SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22V2Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22V2> SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22V2;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Auto Attendant subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22V2 or an ErrorResponse.
         /// The response contains the call processing policy profile setting for Auto Attendant.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22> SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22V2> SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22V2;
         }
         /// <summary>
-        /// The response is either SuccessResponse and ErrorResponse
+        /// Modify a call processing policy profile auto attendant subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileAutoAttendantProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileAutoAttendantProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileAutoAttendantProfileModifyRequest request)
@@ -1555,7 +1815,11 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either SuccessResponse and ErrorResponse
+        /// Modify a call processing policy profile auto attendant subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileAutoAttendantProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileAutoAttendantProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -1563,26 +1827,28 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile BroadWorks Anywhere subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22V2 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22> SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22V2Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22V2> SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22V2;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile BroadWorks Anywhere subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22V2 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22> SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22V2> SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse22V2;
         }
         /// <summary>
-        /// The response is either a SuccessResponse or an ErrorResponse
+        /// Modify a call processing policy profile broadworks anywhare subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileModifyRequest request)
@@ -1591,7 +1857,11 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either a SuccessResponse or an ErrorResponse
+        /// Modify a call processing policy profile broadworks anywhare subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -1599,26 +1869,28 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Call Center subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22V2 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileCallCenterProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22> SystemCallProcessingPolicyProfileCallCenterProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileCallCenterProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileCallCenterProfileGetRequest22V2Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22V2> SystemCallProcessingPolicyProfileCallCenterProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileCallCenterProfileGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22V2;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Call Center subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22V2 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22> SystemCallProcessingPolicyProfileCallCenterProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileCallCenterProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22V2> SystemCallProcessingPolicyProfileCallCenterProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileCallCenterProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22V2;
         }
         /// <summary>
-        /// The response is either a SuccessResponse or an ErrorResponse
+        /// Modify a call processing policy profile call center subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileCallCenterProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileCallCenterProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileCallCenterProfileModifyRequest request)
@@ -1627,7 +1899,11 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either a SuccessResponse or an ErrorResponse
+        /// Modify a call processing policy profile call center subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileCallCenterProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileCallCenterProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -1635,27 +1911,30 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Collaborate subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22> SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22V2Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22V2> SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22V2;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Collaborate subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22> SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22V2> SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22V2;
         }
         /// <summary>
         /// Request to get to modify the call processing policy profile collaborate subscriber type profile.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileCollaborateProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileCollaborateProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileCollaborateProfileModifyRequest request)
@@ -1666,6 +1945,9 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to get to modify the call processing policy profile collaborate subscriber type profile.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileCollaborateProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileCollaborateProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -1691,26 +1973,30 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Find-me/Follow-me subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22> SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetRequest22V2Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22V2> SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22V2;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Find-me/Follow-me subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22> SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22V2> SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileFindMeFollowMeProfileGetResponse22V2;
         }
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile find-me/follow-me subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileFindMeFollowMeProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileFindMeFollowMeProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileFindMeFollowMeProfileModifyRequest request)
@@ -1719,7 +2005,11 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile find-me/follow-me subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileFindMeFollowMeProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileFindMeFollowMeProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -1727,26 +2017,30 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Flexible Seating Host subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse or an
+        /// The response is either a SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse> SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22V2Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse22V2> SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse22V2;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Flexible Seating Host subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse or an
+        /// The response is either a SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse> SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse22V2> SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileGetResponse22V2;
         }
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile flexible seating host subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileModifyRequest request)
@@ -1755,7 +2049,11 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile flexible seating host subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileFlexibleSeatingHostProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -1763,8 +2061,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request a list of NCOSs that have a given CallP Policy Profile assigned.
-        /// The response is either a SystemCallProcessingPolicyProfileGetAssignedNCOSListResponse or
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileGetAssignedNCOSListResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileGetAssignedNCOSListRequestAsync instead.")]
         public static async Task<SystemCallProcessingPolicyProfileGetAssignedNCOSListResponse> SystemCallProcessingPolicyProfileGetAssignedNCOSListRequest(this OcipClient client, SystemCallProcessingPolicyProfileGetAssignedNCOSListRequest request)
@@ -1774,8 +2071,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request a list of NCOSs that have a given CallP Policy Profile assigned.
-        /// The response is either a SystemCallProcessingPolicyProfileGetAssignedNCOSListResponse or
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileGetAssignedNCOSListResponse or ErrorResponse.
         /// </summary>
         public static async Task<SystemCallProcessingPolicyProfileGetAssignedNCOSListResponse> SystemCallProcessingPolicyProfileGetAssignedNCOSListRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileGetAssignedNCOSListRequest request, CancellationToken cancellationToken = default)
         {
@@ -1783,8 +2079,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the list of all Call Processing Policy Profiles.
-        /// The response is either a SystemCallProcessingPolicyProfileGetListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileGetListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileGetListRequestAsync instead.")]
         public static async Task<SystemCallProcessingPolicyProfileGetListResponse> SystemCallProcessingPolicyProfileGetListRequest(this OcipClient client, SystemCallProcessingPolicyProfileGetListRequest request)
@@ -1794,8 +2089,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Get the list of all Call Processing Policy Profiles.
-        /// The response is either a SystemCallProcessingPolicyProfileGetListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileGetListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemCallProcessingPolicyProfileGetListResponse> SystemCallProcessingPolicyProfileGetListRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileGetListRequest request, CancellationToken cancellationToken = default)
         {
@@ -1821,8 +2115,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Group Paging subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileGroupPagingProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileGroupPagingProfileGetResponse22 or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileGroupPagingProfileGetRequest22Async instead.")]
         public static async Task<SystemCallProcessingPolicyProfileGroupPagingProfileGetResponse22> SystemCallProcessingPolicyProfileGroupPagingProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileGroupPagingProfileGetRequest22 request)
@@ -1832,15 +2125,14 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Group Paging subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileGroupPagingProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileGroupPagingProfileGetResponse22 or an ErrorResponse.
         /// </summary>
         public static async Task<SystemCallProcessingPolicyProfileGroupPagingProfileGetResponse22> SystemCallProcessingPolicyProfileGroupPagingProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileGroupPagingProfileGetRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileGroupPagingProfileGetResponse22;
         }
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileGroupPagingProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileGroupPagingProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileGroupPagingProfileModifyRequest request)
@@ -1849,7 +2141,7 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileGroupPagingProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileGroupPagingProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -1857,26 +2149,28 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Hunt Group subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22V2 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22> SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22V2Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22V2> SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22V2;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Hunt Group subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22V2 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22> SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22V2> SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse22V2;
         }
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile hunt group subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileHuntGroupProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileHuntGroupProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileHuntGroupProfileModifyRequest request)
@@ -1885,7 +2179,11 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile hunt group subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileHuntGroupProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileHuntGroupProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -1893,8 +2191,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Instant Group Call subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileInstantGroupCallProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileInstantGroupCallProfileGetResponse22 or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileInstantGroupCallProfileGetRequest22Async instead.")]
         public static async Task<SystemCallProcessingPolicyProfileInstantGroupCallProfileGetResponse22> SystemCallProcessingPolicyProfileInstantGroupCallProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileInstantGroupCallProfileGetRequest22 request)
@@ -1904,15 +2201,14 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Instant Group Call subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileInstantGroupCallProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileInstantGroupCallProfileGetResponse22 or an ErrorResponse.
         /// </summary>
         public static async Task<SystemCallProcessingPolicyProfileInstantGroupCallProfileGetResponse22> SystemCallProcessingPolicyProfileInstantGroupCallProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileInstantGroupCallProfileGetRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileInstantGroupCallProfileGetResponse22;
         }
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileInstantGroupCallProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileInstantGroupCallProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileInstantGroupCallProfileModifyRequest request)
@@ -1921,7 +2217,7 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileInstantGroupCallProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileInstantGroupCallProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -1929,26 +2225,28 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Meet-Me Conferencing subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22V2 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22> SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest22V2Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22V2> SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22V2;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Meet-Me Conferencing subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22 or an
-        /// ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22V2 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22> SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22V2> SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22V2;
         }
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile meet-me conferencing subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileMeetMeConferencingProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileMeetMeConferencingProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileMeetMeConferencingProfileModifyRequest request)
@@ -1957,7 +2255,11 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile meet-me conferencing subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileMeetMeConferencingProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileMeetMeConferencingProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -1983,26 +2285,30 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Route Point subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22> SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22V2Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22V2> SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22V2;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Route Point subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22> SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22V2> SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileRoutePointProfileGetResponse22V2;
         }
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile route point subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileRoutePointProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileRoutePointProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileRoutePointProfileModifyRequest request)
@@ -2011,7 +2317,11 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile route point subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileRoutePointProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileRoutePointProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -2019,46 +2329,30 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Trunk Group Pilot user subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V3 or an
         /// ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22> SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22V3Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V3> SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22V3(this OcipClient client, SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22V3 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V3;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Trunk Group Pilot user subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V3 or an
         /// ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22> SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V3> SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22V3Async(this OcipClient client, SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22V3 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V3;
         }
         /// <summary>
-        /// Request to get the configuration for a call processing policy profile Trunk Group Pilot user subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V2 or an
-        /// ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22V2Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V2> SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22V2 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V2;
-        }
-
-        /// <summary>
-        /// Request to get the configuration for a call processing policy profile Trunk Group Pilot user subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V2 or an
-        /// ErrorResponse.
-        /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V2> SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileTrunkGroupPilotProfileGetResponse22V2;
-        }
-        /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile trunk group pilot subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileTrunkGroupPilotProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileTrunkGroupPilotProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileTrunkGroupPilotProfileModifyRequest request)
@@ -2067,7 +2361,11 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile trunk group pilot subscriber type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileTrunkGroupPilotProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileTrunkGroupPilotProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -2075,43 +2373,28 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile user subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileUserProfileGetResponse22 or an ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileUserProfileGetResponse22V3 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileUserProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileUserProfileGetResponse22> SystemCallProcessingPolicyProfileUserProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileUserProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileUserProfileGetRequest22V3Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileUserProfileGetResponse22V3> SystemCallProcessingPolicyProfileUserProfileGetRequest22V3(this OcipClient client, SystemCallProcessingPolicyProfileUserProfileGetRequest22V3 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileUserProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileUserProfileGetResponse22V3;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile user subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileUserProfileGetResponse22 or an ErrorResponse.
+        /// The response is either a SystemCallProcessingPolicyProfileUserProfileGetResponse22V3 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileUserProfileGetResponse22> SystemCallProcessingPolicyProfileUserProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileUserProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileUserProfileGetResponse22V3> SystemCallProcessingPolicyProfileUserProfileGetRequest22V3Async(this OcipClient client, SystemCallProcessingPolicyProfileUserProfileGetRequest22V3 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileUserProfileGetResponse22;
-        }
-        /// <summary>
-        /// Request to get the configuration for a call processing policy profile user subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileUserProfileGetResponse22V2 or an ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileUserProfileGetRequest22V2Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileUserProfileGetResponse22V2> SystemCallProcessingPolicyProfileUserProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileUserProfileGetRequest22V2 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileUserProfileGetResponse22V2;
-        }
-
-        /// <summary>
-        /// Request to get the configuration for a call processing policy profile user subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileUserProfileGetResponse22V2 or an ErrorResponse.
-        /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileUserProfileGetResponse22V2> SystemCallProcessingPolicyProfileUserProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileUserProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileUserProfileGetResponse22V2;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileUserProfileGetResponse22V3;
         }
         /// <summary>
         /// Modify a call processing policy profile user subscriber type profile in system.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileUserProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileUserProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileUserProfileModifyRequest request)
@@ -2122,6 +2405,9 @@ namespace BroadWorksConnector
         /// <summary>
         /// Modify a call processing policy profile user subscriber type profile in system.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileUserProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileUserProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -2129,26 +2415,30 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Voice Portal subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileVoicePortalProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22> SystemCallProcessingPolicyProfileVoicePortalProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileVoicePortalProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileVoicePortalProfileGetRequest22V2Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22V2> SystemCallProcessingPolicyProfileVoicePortalProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileVoicePortalProfileGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22V2;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile Voice Portal subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22> SystemCallProcessingPolicyProfileVoicePortalProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileVoicePortalProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22V2> SystemCallProcessingPolicyProfileVoicePortalProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileVoicePortalProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileVoicePortalProfileGetResponse22V2;
         }
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile voice portal type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileVoicePortalProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileVoicePortalProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileVoicePortalProfileModifyRequest request)
@@ -2157,7 +2447,11 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile voice portal type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileVoicePortalProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileVoicePortalProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -2165,26 +2459,30 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the configuration for a call processing policy profile VoiceXML subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest22Async instead.")]
-        public static async Task<SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22> SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest22(this OcipClient client, SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest22V2Async instead.")]
+        public static async Task<SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22V2> SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest22V2(this OcipClient client, SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22V2;
         }
 
         /// <summary>
         /// Request to get the configuration for a call processing policy profile VoiceXML subscriber type profile.
-        /// The response is either a SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22 or an
+        /// The response is either a SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22> SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest22Async(this OcipClient client, SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22V2> SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest22V2Async(this OcipClient client, SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse22V2;
         }
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile voice XML type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallProcessingPolicyProfileVoiceXMLProfileModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileVoiceXMLProfileModifyRequest(this OcipClient client, SystemCallProcessingPolicyProfileVoiceXMLProfileModifyRequest request)
@@ -2193,7 +2491,11 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// The response is either SuccessResponse or ErrorResponse
+        /// Modify a call processing policy profile voice XML type profile in system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useMaxCallsPerSecond
+        /// maxCallsPerSecond
         /// </summary>
         public static async Task<SuccessResponse> SystemCallProcessingPolicyProfileVoiceXMLProfileModifyRequestAsync(this OcipClient client, SystemCallProcessingPolicyProfileVoiceXMLProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -2875,8 +3177,8 @@ namespace BroadWorksConnector
         /// Add a new Communication Barring Incoming Criteria.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCommunicationBarringIncomingCriteriaAddRequestAsync instead.")]
-        public static async Task<SuccessResponse> SystemCommunicationBarringIncomingCriteriaAddRequest(this OcipClient client, SystemCommunicationBarringIncomingCriteriaAddRequest request)
+        [Obsolete("This method is deprecated. Use SystemCommunicationBarringIncomingCriteriaAddRequest22Async instead.")]
+        public static async Task<SuccessResponse> SystemCommunicationBarringIncomingCriteriaAddRequest22(this OcipClient client, SystemCommunicationBarringIncomingCriteriaAddRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -2885,7 +3187,7 @@ namespace BroadWorksConnector
         /// Add a new Communication Barring Incoming Criteria.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> SystemCommunicationBarringIncomingCriteriaAddRequestAsync(this OcipClient client, SystemCommunicationBarringIncomingCriteriaAddRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> SystemCommunicationBarringIncomingCriteriaAddRequest22Async(this OcipClient client, SystemCommunicationBarringIncomingCriteriaAddRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -2927,21 +3229,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get an existing Communication Barring Incoming Criteria.
-        /// The response is either a SystemCommunicationBarringIncomingCriteriaGetResponse or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringIncomingCriteriaGetResponse22 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCommunicationBarringIncomingCriteriaGetRequestAsync instead.")]
-        public static async Task<SystemCommunicationBarringIncomingCriteriaGetResponse> SystemCommunicationBarringIncomingCriteriaGetRequest(this OcipClient client, SystemCommunicationBarringIncomingCriteriaGetRequest request)
+        [Obsolete("This method is deprecated. Use SystemCommunicationBarringIncomingCriteriaGetRequest22Async instead.")]
+        public static async Task<SystemCommunicationBarringIncomingCriteriaGetResponse22> SystemCommunicationBarringIncomingCriteriaGetRequest22(this OcipClient client, SystemCommunicationBarringIncomingCriteriaGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCommunicationBarringIncomingCriteriaGetResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCommunicationBarringIncomingCriteriaGetResponse22;
         }
 
         /// <summary>
         /// Get an existing Communication Barring Incoming Criteria.
-        /// The response is either a SystemCommunicationBarringIncomingCriteriaGetResponse or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringIncomingCriteriaGetResponse22 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemCommunicationBarringIncomingCriteriaGetResponse> SystemCommunicationBarringIncomingCriteriaGetRequestAsync(this OcipClient client, SystemCommunicationBarringIncomingCriteriaGetRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCommunicationBarringIncomingCriteriaGetResponse22> SystemCommunicationBarringIncomingCriteriaGetRequest22Async(this OcipClient client, SystemCommunicationBarringIncomingCriteriaGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCommunicationBarringIncomingCriteriaGetResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCommunicationBarringIncomingCriteriaGetResponse22;
         }
         /// <summary>
         /// Modify an existing Communication Barring Incoming Criteria.
@@ -3036,8 +3338,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of Communication Barring Proifles that uses a specific
         /// Communication Barring criteria.
-        /// The response is either a SystemCommunicationBarringProfileGetCriteriaUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringProfileGetCriteriaUsageListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCommunicationBarringProfileGetCriteriaUsageListRequestAsync instead.")]
         public static async Task<SystemCommunicationBarringProfileGetCriteriaUsageListResponse> SystemCommunicationBarringProfileGetCriteriaUsageListRequest(this OcipClient client, SystemCommunicationBarringProfileGetCriteriaUsageListRequest request)
@@ -3048,8 +3349,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of Communication Barring Proifles that uses a specific
         /// Communication Barring criteria.
-        /// The response is either a SystemCommunicationBarringProfileGetCriteriaUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringProfileGetCriteriaUsageListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemCommunicationBarringProfileGetCriteriaUsageListResponse> SystemCommunicationBarringProfileGetCriteriaUsageListRequestAsync(this OcipClient client, SystemCommunicationBarringProfileGetCriteriaUsageListRequest request, CancellationToken cancellationToken = default)
         {
@@ -3057,8 +3357,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the list of Profiles that use a specific Digit Pattern Criteria.
-        /// The response is either a SystemCommunicationBarringProfileGetDigitPatternCriteriaUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringProfileGetDigitPatternCriteriaUsageListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCommunicationBarringProfileGetDigitPatternCriteriaUsageListRequestAsync instead.")]
         public static async Task<SystemCommunicationBarringProfileGetDigitPatternCriteriaUsageListResponse> SystemCommunicationBarringProfileGetDigitPatternCriteriaUsageListRequest(this OcipClient client, SystemCommunicationBarringProfileGetDigitPatternCriteriaUsageListRequest request)
@@ -3068,8 +3367,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Get the list of Profiles that use a specific Digit Pattern Criteria.
-        /// The response is either a SystemCommunicationBarringProfileGetDigitPatternCriteriaUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringProfileGetDigitPatternCriteriaUsageListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemCommunicationBarringProfileGetDigitPatternCriteriaUsageListResponse> SystemCommunicationBarringProfileGetDigitPatternCriteriaUsageListRequestAsync(this OcipClient client, SystemCommunicationBarringProfileGetDigitPatternCriteriaUsageListRequest request, CancellationToken cancellationToken = default)
         {
@@ -3078,8 +3376,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of Communication Barring Proifles that uses a specific
         /// Communication Barring Incoming criteria.
-        /// The response is either a SystemCommunicationBarringProfileGetIncomingCriteriaUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringProfileGetIncomingCriteriaUsageListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCommunicationBarringProfileGetIncomingCriteriaUsageListRequestAsync instead.")]
         public static async Task<SystemCommunicationBarringProfileGetIncomingCriteriaUsageListResponse> SystemCommunicationBarringProfileGetIncomingCriteriaUsageListRequest(this OcipClient client, SystemCommunicationBarringProfileGetIncomingCriteriaUsageListRequest request)
@@ -3090,8 +3387,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of Communication Barring Proifles that uses a specific
         /// Communication Barring Incoming criteria.
-        /// The response is either a SystemCommunicationBarringProfileGetIncomingCriteriaUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringProfileGetIncomingCriteriaUsageListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemCommunicationBarringProfileGetIncomingCriteriaUsageListResponse> SystemCommunicationBarringProfileGetIncomingCriteriaUsageListRequestAsync(this OcipClient client, SystemCommunicationBarringProfileGetIncomingCriteriaUsageListRequest request, CancellationToken cancellationToken = default)
         {
@@ -3117,8 +3413,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get an existing Communication Barring Profile.
-        /// The response is either a SystemCommunicationBarringProfileGetResponse19sp1V2
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringProfileGetResponse19sp1V2 or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCommunicationBarringProfileGetRequest19sp1V2Async instead.")]
         public static async Task<SystemCommunicationBarringProfileGetResponse19sp1V2> SystemCommunicationBarringProfileGetRequest19sp1V2(this OcipClient client, SystemCommunicationBarringProfileGetRequest19sp1V2 request)
@@ -3128,8 +3423,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Get an existing Communication Barring Profile.
-        /// The response is either a SystemCommunicationBarringProfileGetResponse19sp1V2
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringProfileGetResponse19sp1V2 or an ErrorResponse.
         /// </summary>
         public static async Task<SystemCommunicationBarringProfileGetResponse19sp1V2> SystemCommunicationBarringProfileGetRequest19sp1V2Async(this OcipClient client, SystemCommunicationBarringProfileGetRequest19sp1V2 request, CancellationToken cancellationToken = default)
         {
@@ -3174,8 +3468,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of Service Providers that use a specific
         /// Communication Barring Criteria.
-        /// The response is either a SystemCommunicationBarringServiceProviderGetCriteriaUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringServiceProviderGetCriteriaUsageListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCommunicationBarringServiceProviderGetCriteriaUsageListRequestAsync instead.")]
         public static async Task<SystemCommunicationBarringServiceProviderGetCriteriaUsageListResponse> SystemCommunicationBarringServiceProviderGetCriteriaUsageListRequest(this OcipClient client, SystemCommunicationBarringServiceProviderGetCriteriaUsageListRequest request)
@@ -3186,8 +3479,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of Service Providers that use a specific
         /// Communication Barring Criteria.
-        /// The response is either a SystemCommunicationBarringServiceProviderGetCriteriaUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringServiceProviderGetCriteriaUsageListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemCommunicationBarringServiceProviderGetCriteriaUsageListResponse> SystemCommunicationBarringServiceProviderGetCriteriaUsageListRequestAsync(this OcipClient client, SystemCommunicationBarringServiceProviderGetCriteriaUsageListRequest request, CancellationToken cancellationToken = default)
         {
@@ -3196,8 +3488,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of Service Providers that use a specific
         /// Communication Barring Incoming Criteria.
-        /// The response is either a SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListRequestAsync instead.")]
         public static async Task<SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListResponse> SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListRequest(this OcipClient client, SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListRequest request)
@@ -3208,8 +3499,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of Service Providers that use a specific
         /// Communication Barring Incoming Criteria.
-        /// The response is either a SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListResponse> SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListRequestAsync(this OcipClient client, SystemCommunicationBarringServiceProviderGetIncomingCriteriaUsageListRequest request, CancellationToken cancellationToken = default)
         {
@@ -3217,27 +3507,27 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the File System parameters.
-        /// change of behavior is that CLI System/MediaFileSystem/get will no longer show the password
-        /// The response is either SystemConfigurableFileSystemGetResponse23 or ErrorResponse.
+        /// The response is either SystemConfigurableFileSystemGetResponse23V2 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemConfigurableFileSystemGetRequest23Async instead.")]
-        public static async Task<SystemConfigurableFileSystemGetResponse23> SystemConfigurableFileSystemGetRequest23(this OcipClient client, SystemConfigurableFileSystemGetRequest23 request)
+        [Obsolete("This method is deprecated. Use SystemConfigurableFileSystemGetRequest23V2Async instead.")]
+        public static async Task<SystemConfigurableFileSystemGetResponse23V2> SystemConfigurableFileSystemGetRequest23V2(this OcipClient client, SystemConfigurableFileSystemGetRequest23V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemConfigurableFileSystemGetResponse23;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemConfigurableFileSystemGetResponse23V2;
         }
 
         /// <summary>
         /// Request to get the File System parameters.
-        /// change of behavior is that CLI System/MediaFileSystem/get will no longer show the password
-        /// The response is either SystemConfigurableFileSystemGetResponse23 or ErrorResponse.
+        /// The response is either SystemConfigurableFileSystemGetResponse23V2 or ErrorResponse.
         /// </summary>
-        public static async Task<SystemConfigurableFileSystemGetResponse23> SystemConfigurableFileSystemGetRequest23Async(this OcipClient client, SystemConfigurableFileSystemGetRequest23 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemConfigurableFileSystemGetResponse23V2> SystemConfigurableFileSystemGetRequest23V2Async(this OcipClient client, SystemConfigurableFileSystemGetRequest23V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemConfigurableFileSystemGetResponse23;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemConfigurableFileSystemGetResponse23V2;
         }
         /// <summary>
         /// Request to modify File System parameters.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// protocolFile-secure
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemConfigurableFileSystemModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemConfigurableFileSystemModifyRequest(this OcipClient client, SystemConfigurableFileSystemModifyRequest request)
@@ -3248,6 +3538,8 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to modify File System parameters.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// protocolFile-secure
         /// </summary>
         public static async Task<SuccessResponse> SystemConfigurableFileSystemModifyRequestAsync(this OcipClient client, SystemConfigurableFileSystemModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -3399,8 +3691,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request data for all country codes.
-        /// The response is either a SystemCountryCodeGetListResponse or an
-        /// ErrorResponse.
+        /// The response is either a SystemCountryCodeGetListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCountryCodeGetListRequestAsync instead.")]
         public static async Task<SystemCountryCodeGetListResponse> SystemCountryCodeGetListRequest(this OcipClient client, SystemCountryCodeGetListRequest request)
@@ -3410,8 +3701,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request data for all country codes.
-        /// The response is either a SystemCountryCodeGetListResponse or an
-        /// ErrorResponse.
+        /// The response is either a SystemCountryCodeGetListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemCountryCodeGetListResponse> SystemCountryCodeGetListRequestAsync(this OcipClient client, SystemCountryCodeGetListRequest request, CancellationToken cancellationToken = default)
         {
@@ -3722,6 +4012,320 @@ namespace BroadWorksConnector
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> SystemCrInterfaceModifyRequestAsync(this OcipClient client, SystemCrInterfaceModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request the Device Activation policy of the system.
+        /// The response is either a SystemDeviceActivationPolicyGetResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceActivationPolicyGetRequestAsync instead.")]
+        public static async Task<SystemDeviceActivationPolicyGetResponse> SystemDeviceActivationPolicyGetRequest(this OcipClient client, SystemDeviceActivationPolicyGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceActivationPolicyGetResponse;
+        }
+
+        /// <summary>
+        /// Request the Device Activation policy of the system.
+        /// The response is either a SystemDeviceActivationPolicyGetResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SystemDeviceActivationPolicyGetResponse> SystemDeviceActivationPolicyGetRequestAsync(this OcipClient client, SystemDeviceActivationPolicyGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceActivationPolicyGetResponse;
+        }
+        /// <summary>
+        /// Modify the Device Activation policy of the system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceActivationPolicyModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceActivationPolicyModifyRequest(this OcipClient client, SystemDeviceActivationPolicyModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify the Device Activation policy of the system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceActivationPolicyModifyRequestAsync(this OcipClient client, SystemDeviceActivationPolicyModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to add a device family.
+        /// When the optional element resellerId is specified, the device family created is at reseller level. Device family name
+        /// should be unique throughout the system including all the reseller level device families.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in the XS data mode:
+        /// resellerId
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyAddRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceFamilyAddRequest(this OcipClient client, SystemDeviceFamilyAddRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to add a device family.
+        /// When the optional element resellerId is specified, the device family created is at reseller level. Device family name
+        /// should be unique throughout the system including all the reseller level device families.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in the XS data mode:
+        /// resellerId
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceFamilyAddRequestAsync(this OcipClient client, SystemDeviceFamilyAddRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to assign a list of Device Types to a device family.
+        /// 
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyAssignDeviceTypeListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceFamilyAssignDeviceTypeListRequest(this OcipClient client, SystemDeviceFamilyAssignDeviceTypeListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to assign a list of Device Types to a device family.
+        /// 
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceFamilyAssignDeviceTypeListRequestAsync(this OcipClient client, SystemDeviceFamilyAssignDeviceTypeListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to assign a list of Tag Sets to a device family.
+        /// 
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyAssignTagSetListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceFamilyAssignTagSetListRequest(this OcipClient client, SystemDeviceFamilyAssignTagSetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to assign a list of Tag Sets to a device family.
+        /// 
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceFamilyAssignTagSetListRequestAsync(this OcipClient client, SystemDeviceFamilyAssignTagSetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to delete a device family.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyDeleteListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceFamilyDeleteListRequest(this OcipClient client, SystemDeviceFamilyDeleteListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to delete a device family.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceFamilyDeleteListRequestAsync(this OcipClient client, SystemDeviceFamilyDeleteListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to export a device family.
+        /// 
+        /// The response is either a SystemDeviceFamilyExportResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyExportRequestAsync instead.")]
+        public static async Task<SystemDeviceFamilyExportResponse> SystemDeviceFamilyExportRequest(this OcipClient client, SystemDeviceFamilyExportRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceFamilyExportResponse;
+        }
+
+        /// <summary>
+        /// Request to export a device family.
+        /// 
+        /// The response is either a SystemDeviceFamilyExportResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SystemDeviceFamilyExportResponse> SystemDeviceFamilyExportRequestAsync(this OcipClient client, SystemDeviceFamilyExportRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceFamilyExportResponse;
+        }
+        /// <summary>
+        /// Request to get the list of device family managed by the Device Management System.
+        /// If includeSystemLevel is specified, all system level device families and the reseller device families matching search criteria
+        /// are returned even when searchCriteriaResellerId is specified.
+        /// If reseller administrator sends the request, searchCriteriaResellerId is ignored and automatically set to the administrator's reseller.
+        /// 
+        /// The response is either SystemDeviceFamilyGetListResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyGetListRequestAsync instead.")]
+        public static async Task<SystemDeviceFamilyGetListResponse> SystemDeviceFamilyGetListRequest(this OcipClient client, SystemDeviceFamilyGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceFamilyGetListResponse;
+        }
+
+        /// <summary>
+        /// Request to get the list of device family managed by the Device Management System.
+        /// If includeSystemLevel is specified, all system level device families and the reseller device families matching search criteria
+        /// are returned even when searchCriteriaResellerId is specified.
+        /// If reseller administrator sends the request, searchCriteriaResellerId is ignored and automatically set to the administrator's reseller.
+        /// 
+        /// The response is either SystemDeviceFamilyGetListResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemDeviceFamilyGetListResponse> SystemDeviceFamilyGetListRequestAsync(this OcipClient client, SystemDeviceFamilyGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceFamilyGetListResponse;
+        }
+        /// <summary>
+        /// Request to get the associated device types and tagsets for a given device family.
+        /// 
+        /// The response is either SystemDeviceFamilyGetResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyGetRequestAsync instead.")]
+        public static async Task<SystemDeviceFamilyGetResponse> SystemDeviceFamilyGetRequest(this OcipClient client, SystemDeviceFamilyGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceFamilyGetResponse;
+        }
+
+        /// <summary>
+        /// Request to get the associated device types and tagsets for a given device family.
+        /// 
+        /// The response is either SystemDeviceFamilyGetResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemDeviceFamilyGetResponse> SystemDeviceFamilyGetRequestAsync(this OcipClient client, SystemDeviceFamilyGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceFamilyGetResponse;
+        }
+        /// <summary>
+        /// Request to perform a dry run import of a Device Family Set Archive File (DFAF) as a new Device Family.  The URL supports the HTTP and the FILE protocols.
+        /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element deviceFamilyOverride is set to true, an existing device family with the same name on the destination system will be overridden.
+        /// When the optional element tagSetOverride is set to true, any existing tag set on the destination system will be overridden.
+        /// When the optional element deviceTypeFileUpdate is set, on import, for any existing device type associated with the device family, the files that are matched based on the file format are updated with the ones from the DTAF. The file format and the file category are the only attributes that can't be updated.
+        /// The response is either a SystemDeviceFamilyImportDryRunResponse or an ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// resellerId
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyImportDryRunRequestAsync instead.")]
+        public static async Task<SystemDeviceFamilyImportDryRunResponse> SystemDeviceFamilyImportDryRunRequest(this OcipClient client, SystemDeviceFamilyImportDryRunRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceFamilyImportDryRunResponse;
+        }
+
+        /// <summary>
+        /// Request to perform a dry run import of a Device Family Set Archive File (DFAF) as a new Device Family.  The URL supports the HTTP and the FILE protocols.
+        /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element deviceFamilyOverride is set to true, an existing device family with the same name on the destination system will be overridden.
+        /// When the optional element tagSetOverride is set to true, any existing tag set on the destination system will be overridden.
+        /// When the optional element deviceTypeFileUpdate is set, on import, for any existing device type associated with the device family, the files that are matched based on the file format are updated with the ones from the DTAF. The file format and the file category are the only attributes that can't be updated.
+        /// The response is either a SystemDeviceFamilyImportDryRunResponse or an ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// resellerId
+        /// </summary>
+        public static async Task<SystemDeviceFamilyImportDryRunResponse> SystemDeviceFamilyImportDryRunRequestAsync(this OcipClient client, SystemDeviceFamilyImportDryRunRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceFamilyImportDryRunResponse;
+        }
+        /// <summary>
+        /// Request to import a Device Family Set Archive File (DFAF) as a new Device Family.  The URL supports the HTTP and the FILE protocols.
+        /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element deviceFamilyOverride is set to true, an existing device family with the same name on the destination system will be overridden.
+        /// When the optional element tagSetOverride is set to true, any existing tag set on the destination system will be overridden.
+        /// When the optional element deviceTypeFileUpdate is set, on import, for any existing device type associated with the device family, the files that are matched based on the file format are updated with the ones from the DTAF. The file format and the file category are the only attributes that can't be updated.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// resellerId
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyImportRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceFamilyImportRequest(this OcipClient client, SystemDeviceFamilyImportRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to import a Device Family Set Archive File (DFAF) as a new Device Family.  The URL supports the HTTP and the FILE protocols.
+        /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element deviceFamilyOverride is set to true, an existing device family with the same name on the destination system will be overridden.
+        /// When the optional element tagSetOverride is set to true, any existing tag set on the destination system will be overridden.
+        /// When the optional element deviceTypeFileUpdate is set, on import, for any existing device type associated with the device family, the files that are matched based on the file format are updated with the ones from the DTAF. The file format and the file category are the only attributes that can't be updated.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// resellerId
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceFamilyImportRequestAsync(this OcipClient client, SystemDeviceFamilyImportRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to modify a device family.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceFamilyModifyRequest(this OcipClient client, SystemDeviceFamilyModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to modify a device family.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceFamilyModifyRequestAsync(this OcipClient client, SystemDeviceFamilyModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to unassign a list of Device Types to a device family. Device family name
+        /// should be unique through out the system including all the reseller level device families.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in the XS data mode:
+        /// resellerId
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyUnassignDeviceTypeListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceFamilyUnassignDeviceTypeListRequest(this OcipClient client, SystemDeviceFamilyUnassignDeviceTypeListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to unassign a list of Device Types to a device family. Device family name
+        /// should be unique through out the system including all the reseller level device families.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in the XS data mode:
+        /// resellerId
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceFamilyUnassignDeviceTypeListRequestAsync(this OcipClient client, SystemDeviceFamilyUnassignDeviceTypeListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to unassign a list of Tag Sets to a device family.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceFamilyUnassignTagSetListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceFamilyUnassignTagSetListRequest(this OcipClient client, SystemDeviceFamilyUnassignTagSetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to unassign a list of Tag Sets to a device family.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceFamilyUnassignTagSetListRequestAsync(this OcipClient client, SystemDeviceFamilyUnassignTagSetListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -4040,6 +4644,60 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
+        /// Request to add a country to a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetCountryAddRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetCountryAddRequest(this OcipClient client, SystemDeviceManagementTagSetCountryAddRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to add a country to a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetCountryAddRequestAsync(this OcipClient client, SystemDeviceManagementTagSetCountryAddRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to delete a list of countries from a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetCountryDeleteListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetCountryDeleteListRequest(this OcipClient client, SystemDeviceManagementTagSetCountryDeleteListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to delete a list of countries from a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetCountryDeleteListRequestAsync(this OcipClient client, SystemDeviceManagementTagSetCountryDeleteListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to get the list of countries within the region of a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetCountryGetListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetCountryGetListRequest(this OcipClient client, SystemDeviceManagementTagSetCountryGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to get the list of countries within the region of a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetCountryGetListRequestAsync(this OcipClient client, SystemDeviceManagementTagSetCountryGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
         /// Request to delete a static configuration tag set.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
@@ -4056,6 +4714,26 @@ namespace BroadWorksConnector
         public static async Task<SuccessResponse> SystemDeviceManagementTagSetDeleteRequestAsync(this OcipClient client, SystemDeviceManagementTagSetDeleteRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to export a custom tag set.
+        /// Tag set name should be unique through out the system including all the reseller level tag sets.
+        /// The response is either a SystemDeviceManagementTagSetExportResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetExportRequestAsync instead.")]
+        public static async Task<SystemDeviceManagementTagSetExportResponse> SystemDeviceManagementTagSetExportRequest(this OcipClient client, SystemDeviceManagementTagSetExportRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceManagementTagSetExportResponse;
+        }
+
+        /// <summary>
+        /// Request to export a custom tag set.
+        /// Tag set name should be unique through out the system including all the reseller level tag sets.
+        /// The response is either a SystemDeviceManagementTagSetExportResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SystemDeviceManagementTagSetExportResponse> SystemDeviceManagementTagSetExportRequestAsync(this OcipClient client, SystemDeviceManagementTagSetExportRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceManagementTagSetExportResponse;
         }
         /// <summary>
         /// Request to get the list of custom configuration tag sets managed by the Device Management System.
@@ -4086,6 +4764,66 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceManagementTagSetGetListResponse22;
         }
         /// <summary>
+        /// Request to perform a dry run for the import of a Tag Set Archive File (TSAF) as a new Tag Set.  The URL supports the HTTP and the FILE protocols.
+        /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element tagSetOverride is set to true, an existing tag set on the destination system will be overridden.
+        /// When the optional element tagSetRename is set, on import the tag set name part of the TSAF will be changed to the desired name on the destination system.
+        /// The response is either a SystemDeviceManagementTagSetImportDryRunResponse or an ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// resellerId
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetImportDryRunRequestAsync instead.")]
+        public static async Task<SystemDeviceManagementTagSetImportDryRunResponse> SystemDeviceManagementTagSetImportDryRunRequest(this OcipClient client, SystemDeviceManagementTagSetImportDryRunRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceManagementTagSetImportDryRunResponse;
+        }
+
+        /// <summary>
+        /// Request to perform a dry run for the import of a Tag Set Archive File (TSAF) as a new Tag Set.  The URL supports the HTTP and the FILE protocols.
+        /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element tagSetOverride is set to true, an existing tag set on the destination system will be overridden.
+        /// When the optional element tagSetRename is set, on import the tag set name part of the TSAF will be changed to the desired name on the destination system.
+        /// The response is either a SystemDeviceManagementTagSetImportDryRunResponse or an ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// resellerId
+        /// </summary>
+        public static async Task<SystemDeviceManagementTagSetImportDryRunResponse> SystemDeviceManagementTagSetImportDryRunRequestAsync(this OcipClient client, SystemDeviceManagementTagSetImportDryRunRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceManagementTagSetImportDryRunResponse;
+        }
+        /// <summary>
+        /// Request to import a Tag Set Archive File (TSAF) as a new Tag Set.  The URL supports the HTTP and the FILE protocols.
+        /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element tagSetOverride is set to true, an existing tag set on the destination system will be overridden.
+        /// When the optional element tagSetRename is set, on import the tag set name part of the TSAF will be changed to the desired name on the destination system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// resellerId
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetImportRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetImportRequest(this OcipClient client, SystemDeviceManagementTagSetImportRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to import a Tag Set Archive File (TSAF) as a new Tag Set.  The URL supports the HTTP and the FILE protocols.
+        /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element tagSetOverride is set to true, an existing tag set on the destination system will be overridden.
+        /// When the optional element tagSetRename is set, on import the tag set name part of the TSAF will be changed to the desired name on the destination system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// resellerId
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetImportRequestAsync(this OcipClient client, SystemDeviceManagementTagSetImportRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
         /// Request to modify a static configuration tag set.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
@@ -4100,6 +4838,150 @@ namespace BroadWorksConnector
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> SystemDeviceManagementTagSetModifyRequestAsync(this OcipClient client, SystemDeviceManagementTagSetModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to add a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetRegionAddRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionAddRequest(this OcipClient client, SystemDeviceManagementTagSetRegionAddRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to add a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionAddRequestAsync(this OcipClient client, SystemDeviceManagementTagSetRegionAddRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to delete a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetRegionDeleteListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionDeleteListRequest(this OcipClient client, SystemDeviceManagementTagSetRegionDeleteListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to delete a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionDeleteListRequestAsync(this OcipClient client, SystemDeviceManagementTagSetRegionDeleteListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to get the list of regions within a static configuration tag set for per-region tags override.
+        /// The response is either a SystemDeviceManagementTagSetRegionGetListResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetRegionGetListRequestAsync instead.")]
+        public static async Task<SystemDeviceManagementTagSetRegionGetListResponse> SystemDeviceManagementTagSetRegionGetListRequest(this OcipClient client, SystemDeviceManagementTagSetRegionGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceManagementTagSetRegionGetListResponse;
+        }
+
+        /// <summary>
+        /// Request to get the list of regions within a static configuration tag set for per-region tags override.
+        /// The response is either a SystemDeviceManagementTagSetRegionGetListResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SystemDeviceManagementTagSetRegionGetListResponse> SystemDeviceManagementTagSetRegionGetListRequestAsync(this OcipClient client, SystemDeviceManagementTagSetRegionGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceManagementTagSetRegionGetListResponse;
+        }
+        /// <summary>
+        /// Request to modify the name of a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetRegionModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionModifyRequest(this OcipClient client, SystemDeviceManagementTagSetRegionModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to modify the name of a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionModifyRequestAsync(this OcipClient client, SystemDeviceManagementTagSetRegionModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to add a tag override to a region of a static configuration tag set.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetRegionTagAddListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionTagAddListRequest(this OcipClient client, SystemDeviceManagementTagSetRegionTagAddListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to add a tag override to a region of a static configuration tag set.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionTagAddListRequestAsync(this OcipClient client, SystemDeviceManagementTagSetRegionTagAddListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to delete a tag override to a region of a static configuration tag set.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetRegionTagDeleteListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionTagDeleteListRequest(this OcipClient client, SystemDeviceManagementTagSetRegionTagDeleteListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to delete a tag override to a region of a static configuration tag set.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionTagDeleteListRequestAsync(this OcipClient client, SystemDeviceManagementTagSetRegionTagDeleteListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to get the list of tag overrides for a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SystemDeviceManagementTagSetRegionTagGetListResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetRegionTagGetListRequestAsync instead.")]
+        public static async Task<SystemDeviceManagementTagSetRegionTagGetListResponse> SystemDeviceManagementTagSetRegionTagGetListRequest(this OcipClient client, SystemDeviceManagementTagSetRegionTagGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceManagementTagSetRegionTagGetListResponse;
+        }
+
+        /// <summary>
+        /// Request to get the list of tag overrides for a region within a static configuration tag set for per-region tags override.
+        /// The response is either a SystemDeviceManagementTagSetRegionTagGetListResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SystemDeviceManagementTagSetRegionTagGetListResponse> SystemDeviceManagementTagSetRegionTagGetListRequestAsync(this OcipClient client, SystemDeviceManagementTagSetRegionTagGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceManagementTagSetRegionTagGetListResponse;
+        }
+        /// <summary>
+        /// Request to modify the value of a tag override within a region of a static configuration tag set.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemDeviceManagementTagSetRegionTagModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionTagModifyRequest(this OcipClient client, SystemDeviceManagementTagSetRegionTagModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to modify the value of a tag override within a region of a static configuration tag set.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemDeviceManagementTagSetRegionTagModifyRequestAsync(this OcipClient client, SystemDeviceManagementTagSetRegionTagModifyRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -4220,9 +5102,12 @@ namespace BroadWorksConnector
         /// If resellerId is specified, all the system level available device types and the device types in the given reseller are returned.
         /// If reseller administrator sends the request, resellerId is not specified, the administrator's resellerId is used.
         /// If neither excludeReseller nor resellerId is specified, all the system level and reseller level available device types are returned.
+        /// If excludeLeafDeviceTypes is specified, leaf device types are excluded in the response returned.  Leaf
+        /// device types are device types that have the option supportLinks set to "Support Link to Device".
         /// 
         /// The following elements are only used in AS data mode and ignored in the XS data mode:
         /// resellerId
+        /// excludeLeafDeviceTypes
         /// 
         /// The response is either SystemDeviceTypeGetAvailableListResponse22 or ErrorResponse.
         /// </summary>
@@ -4241,9 +5126,12 @@ namespace BroadWorksConnector
         /// If resellerId is specified, all the system level available device types and the device types in the given reseller are returned.
         /// If reseller administrator sends the request, resellerId is not specified, the administrator's resellerId is used.
         /// If neither excludeReseller nor resellerId is specified, all the system level and reseller level available device types are returned.
+        /// If excludeLeafDeviceTypes is specified, leaf device types are excluded in the response returned.  Leaf
+        /// device types are device types that have the option supportLinks set to "Support Link to Device".
         /// 
         /// The following elements are only used in AS data mode and ignored in the XS data mode:
         /// resellerId
+        /// excludeLeafDeviceTypes
         /// 
         /// The response is either SystemDeviceTypeGetAvailableListResponse22 or ErrorResponse.
         /// </summary>
@@ -4254,53 +5142,69 @@ namespace BroadWorksConnector
         /// <summary>
         /// Requests the information about the specified device type without regard to whether the
         /// type is SIP or MGCP.
-        /// The response is either SystemDeviceTypeGetResponse22 or ErrorResponse.
+        /// The response is either SystemDeviceTypeGetResponse22V5 or ErrorResponse.
         /// Note: The elements deviceTypeConfigurationOption and staticLineOrdering apply to SIP device types only. Therefore, only present in the response when the device type is SIP.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemDeviceTypeGetRequest22Async instead.")]
-        public static async Task<SystemDeviceTypeGetResponse22> SystemDeviceTypeGetRequest22(this OcipClient client, SystemDeviceTypeGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemDeviceTypeGetRequest22V5Async instead.")]
+        public static async Task<SystemDeviceTypeGetResponse22V5> SystemDeviceTypeGetRequest22V5(this OcipClient client, SystemDeviceTypeGetRequest22V5 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceTypeGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceTypeGetResponse22V5;
         }
 
         /// <summary>
         /// Requests the information about the specified device type without regard to whether the
         /// type is SIP or MGCP.
-        /// The response is either SystemDeviceTypeGetResponse22 or ErrorResponse.
+        /// The response is either SystemDeviceTypeGetResponse22V5 or ErrorResponse.
         /// Note: The elements deviceTypeConfigurationOption and staticLineOrdering apply to SIP device types only. Therefore, only present in the response when the device type is SIP.
         /// </summary>
-        public static async Task<SystemDeviceTypeGetResponse22> SystemDeviceTypeGetRequest22Async(this OcipClient client, SystemDeviceTypeGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemDeviceTypeGetResponse22V5> SystemDeviceTypeGetRequest22V5Async(this OcipClient client, SystemDeviceTypeGetRequest22V5 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceTypeGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceTypeGetResponse22V5;
         }
         /// <summary>
-        /// Requests the information about the specified device type without regard to whether the
-        /// type is SIP or MGCP.
-        /// The response is either SystemDeviceTypeGetResponse22V2 or ErrorResponse.
-        /// Note: The elements deviceTypeConfigurationOption and staticLineOrdering apply to SIP device types only. Therefore, only present in the response when the device type is SIP.
+        /// Request to perform a dry run for the import of a Device Type Archive File (DTAF) as a new Device Type.  The URL supports the HTTP and the FILE protocols.
+        /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element deviceTypeRename is set, on import, the device type name part of the DTAF will be changed to the desired name on the destination system.
+        /// When the optional element deviceTypeFileUpdate is set, on import, the files that are matched based on the file format are updated with the ones from the DTAF. The file format and the file category are the only attributes that can't be updated.
+        /// The response is either a SystemDeviceTypeImportDryRunResponse or an ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceTypeFileUpdate
+        /// deviceTypeRename
+        /// resellerId
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemDeviceTypeGetRequest22V2Async instead.")]
-        public static async Task<SystemDeviceTypeGetResponse22V2> SystemDeviceTypeGetRequest22V2(this OcipClient client, SystemDeviceTypeGetRequest22V2 request)
+        [Obsolete("This method is deprecated. Use SystemDeviceTypeImportDryRunRequestAsync instead.")]
+        public static async Task<SystemDeviceTypeImportDryRunResponse> SystemDeviceTypeImportDryRunRequest(this OcipClient client, SystemDeviceTypeImportDryRunRequest request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceTypeGetResponse22V2;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDeviceTypeImportDryRunResponse;
         }
 
         /// <summary>
-        /// Requests the information about the specified device type without regard to whether the
-        /// type is SIP or MGCP.
-        /// The response is either SystemDeviceTypeGetResponse22V2 or ErrorResponse.
-        /// Note: The elements deviceTypeConfigurationOption and staticLineOrdering apply to SIP device types only. Therefore, only present in the response when the device type is SIP.
+        /// Request to perform a dry run for the import of a Device Type Archive File (DTAF) as a new Device Type.  The URL supports the HTTP and the FILE protocols.
+        /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element deviceTypeRename is set, on import, the device type name part of the DTAF will be changed to the desired name on the destination system.
+        /// When the optional element deviceTypeFileUpdate is set, on import, the files that are matched based on the file format are updated with the ones from the DTAF. The file format and the file category are the only attributes that can't be updated.
+        /// The response is either a SystemDeviceTypeImportDryRunResponse or an ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceTypeFileUpdate
+        /// deviceTypeRename
+        /// resellerId
         /// </summary>
-        public static async Task<SystemDeviceTypeGetResponse22V2> SystemDeviceTypeGetRequest22V2Async(this OcipClient client, SystemDeviceTypeGetRequest22V2 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemDeviceTypeImportDryRunResponse> SystemDeviceTypeImportDryRunRequestAsync(this OcipClient client, SystemDeviceTypeImportDryRunRequest request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceTypeGetResponse22V2;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDeviceTypeImportDryRunResponse;
         }
         /// <summary>
         /// Request to import a Device Type Archive File (DTAF) as a new Device Type.  The URL supports the HTTP and the FILE protocols.
         /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element deviceTypeRename is set, on import, the device type name part of the DTAF will be changed to the desired name on the destination system.
+        /// When the optional element deviceTypeFileUpdate is set, on import, the files that are matched based on the file format are updated with the ones from the DTAF. The file format and the file category are the only attributes that can't be updated.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// 
         /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceTypeFileUpdate
+        /// deviceTypeRename
         /// resellerId
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemDeviceTypeImportRequestAsync instead.")]
@@ -4312,9 +5216,13 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to import a Device Type Archive File (DTAF) as a new Device Type.  The URL supports the HTTP and the FILE protocols.
         /// When the optional element resellerId is specified, the device type created is at reseller level.
+        /// When the optional element deviceTypeRename is set, on import, the device type name part of the DTAF will be changed to the desired name on the destination system.
+        /// When the optional element deviceTypeFileUpdate is set, on import, the files that are matched based on the file format are updated with the ones from the DTAF. The file format and the file category are the only attributes that can't be updated.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// 
         /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// deviceTypeFileUpdate
+        /// deviceTypeRename
         /// resellerId
         /// </summary>
         public static async Task<SuccessResponse> SystemDeviceTypeImportRequestAsync(this OcipClient client, SystemDeviceTypeImportRequest request, CancellationToken cancellationToken = default)
@@ -4503,23 +5411,23 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request the system level data associated with Dial Plan Policy.
-        /// The response is either a SystemDialPlanPolicyGetResponse17 or an
+        /// The response is either a SystemDialPlanPolicyGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemDialPlanPolicyGetRequest17Async instead.")]
-        public static async Task<SystemDialPlanPolicyGetResponse17> SystemDialPlanPolicyGetRequest17(this OcipClient client, SystemDialPlanPolicyGetRequest17 request)
+        [Obsolete("This method is deprecated. Use SystemDialPlanPolicyGetRequest22V2Async instead.")]
+        public static async Task<SystemDialPlanPolicyGetResponse22V2> SystemDialPlanPolicyGetRequest22V2(this OcipClient client, SystemDialPlanPolicyGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemDialPlanPolicyGetResponse17;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemDialPlanPolicyGetResponse22V2;
         }
 
         /// <summary>
         /// Request the system level data associated with Dial Plan Policy.
-        /// The response is either a SystemDialPlanPolicyGetResponse17 or an
+        /// The response is either a SystemDialPlanPolicyGetResponse22V2 or an
         /// ErrorResponse.
         /// </summary>
-        public static async Task<SystemDialPlanPolicyGetResponse17> SystemDialPlanPolicyGetRequest17Async(this OcipClient client, SystemDialPlanPolicyGetRequest17 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemDialPlanPolicyGetResponse22V2> SystemDialPlanPolicyGetRequest22V2Async(this OcipClient client, SystemDialPlanPolicyGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDialPlanPolicyGetResponse17;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDialPlanPolicyGetResponse22V2;
         }
         /// <summary>
         /// Request to modify a system-level Dial Plan Access Code and its attribues.
@@ -4542,6 +5450,12 @@ namespace BroadWorksConnector
         /// <summary>
         /// Modify the system level data associated with Dial Plan Policy.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// overrideResolvedDeviceDigitMap
+        /// deviceDigitMap
+        /// permissiveOACDialing
+        /// performInternalTranslationsWithOAC
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemDialPlanPolicyModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemDialPlanPolicyModifyRequest(this OcipClient client, SystemDialPlanPolicyModifyRequest request)
@@ -4552,6 +5466,12 @@ namespace BroadWorksConnector
         /// <summary>
         /// Modify the system level data associated with Dial Plan Policy.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// overrideResolvedDeviceDigitMap
+        /// deviceDigitMap
+        /// permissiveOACDialing
+        /// performInternalTranslationsWithOAC
         /// </summary>
         public static async Task<SuccessResponse> SystemDialPlanPolicyModifyRequestAsync(this OcipClient client, SystemDialPlanPolicyModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -4746,40 +5666,6 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDomainGetAssignedServiceProviderListResponse;
         }
         /// <summary>
-        /// Requests the list of all system-level domains and all reseller level domains.
-        /// If excludeReseller is specified, returns all the system-level domain names only.
-        /// If resellerId is specified, returns all the system-level domain names and the given reseller's domains.
-        /// If reseller administrator sends the request and resellerId is not specified, the administrator's resellerId is used.
-        /// 
-        /// The response is either SystemDomainGetListResponse22 or ErrorResponse.
-        /// 
-        /// The following elements are only used in AS data mode:
-        /// includeReseller
-        /// resellerId
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemDomainGetListRequest22Async instead.")]
-        public static async Task<SystemDomainGetListResponse22> SystemDomainGetListRequest22(this OcipClient client, SystemDomainGetListRequest22 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemDomainGetListResponse22;
-        }
-
-        /// <summary>
-        /// Requests the list of all system-level domains and all reseller level domains.
-        /// If excludeReseller is specified, returns all the system-level domain names only.
-        /// If resellerId is specified, returns all the system-level domain names and the given reseller's domains.
-        /// If reseller administrator sends the request and resellerId is not specified, the administrator's resellerId is used.
-        /// 
-        /// The response is either SystemDomainGetListResponse22 or ErrorResponse.
-        /// 
-        /// The following elements are only used in AS data mode:
-        /// includeReseller
-        /// resellerId
-        /// </summary>
-        public static async Task<SystemDomainGetListResponse22> SystemDomainGetListRequest22Async(this OcipClient client, SystemDomainGetListRequest22 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemDomainGetListResponse22;
-        }
-        /// <summary>
         /// Requests the list of all matching system-level domains and all matching reseller level domains.
         /// If excludeReseller is specified, returns all matching system-level domain names only.
         /// If resellerId is specified, returns all matching system-level domain names and the given reseller's domains.
@@ -4787,11 +5673,13 @@ namespace BroadWorksConnector
         /// 
         /// The response is either SystemDomainGetListResponse22V2 or ErrorResponse.
         /// 
-        /// The following elements are only used in AS data mode and will be ignored in XS data mode:
+        /// The following elements are only used in AS data mode and will be ingored in XS data mode:
         /// includeReseller
         /// resellerId
         /// responseSizeLimit
         /// searchCriteriaDomainName
+        /// searchCriteriaResellerId
+        /// searchCriteriaExactDomainLevel
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemDomainGetListRequest22V2Async instead.")]
         public static async Task<SystemDomainGetListResponse22V2> SystemDomainGetListRequest22V2(this OcipClient client, SystemDomainGetListRequest22V2 request)
@@ -4807,11 +5695,13 @@ namespace BroadWorksConnector
         /// 
         /// The response is either SystemDomainGetListResponse22V2 or ErrorResponse.
         /// 
-        /// The following elements are only used in AS data mode and will be ignored in XS data mode:
+        /// The following elements are only used in AS data mode and will be ingored in XS data mode:
         /// includeReseller
         /// resellerId
         /// responseSizeLimit
         /// searchCriteriaDomainName
+        /// searchCriteriaResellerId
+        /// searchCriteriaExactDomainLevel
         /// </summary>
         public static async Task<SystemDomainGetListResponse22V2> SystemDomainGetListRequest22V2Async(this OcipClient client, SystemDomainGetListRequest22V2 request, CancellationToken cancellationToken = default)
         {
@@ -5460,40 +6350,6 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemFileRepositoryDeviceGetListResponse;
         }
         /// <summary>
-        /// Request to get the file repository information.  The response is either SystemFileRepositoryDeviceGetResponse20 or ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemFileRepositoryDeviceGetRequest20Async instead.")]
-        public static async Task<SystemFileRepositoryDeviceGetResponse20> SystemFileRepositoryDeviceGetRequest20(this OcipClient client, SystemFileRepositoryDeviceGetRequest20 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemFileRepositoryDeviceGetResponse20;
-        }
-
-        /// <summary>
-        /// Request to get the file repository information.  The response is either SystemFileRepositoryDeviceGetResponse20 or ErrorResponse.
-        /// </summary>
-        public static async Task<SystemFileRepositoryDeviceGetResponse20> SystemFileRepositoryDeviceGetRequest20Async(this OcipClient client, SystemFileRepositoryDeviceGetRequest20 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemFileRepositoryDeviceGetResponse20;
-        }
-        /// <summary>
-        /// Modify a file repository.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemFileRepositoryDeviceModifyRequestAsync instead.")]
-        public static async Task<SuccessResponse> SystemFileRepositoryDeviceModifyRequest(this OcipClient client, SystemFileRepositoryDeviceModifyRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Modify a file repository.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// </summary>
-        public static async Task<SuccessResponse> SystemFileRepositoryDeviceModifyRequestAsync(this OcipClient client, SystemFileRepositoryDeviceModifyRequest request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
-        }
-        /// <summary>
         /// Request to get the file repository information.  The response is either SystemFileRepositoryDeviceGetResponse22 or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemFileRepositoryDeviceGetRequest22Async instead.")]
@@ -5706,6 +6562,60 @@ namespace BroadWorksConnector
         public static async Task<SystemGeographicRedundancyUnreachableFromPrimaryGetUserListResponse22> SystemGeographicRedundancyUnreachableFromPrimaryGetUserListRequest22Async(this OcipClient client, SystemGeographicRedundancyUnreachableFromPrimaryGetUserListRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemGeographicRedundancyUnreachableFromPrimaryGetUserListResponse22;
+        }
+        /// <summary>
+        /// Requests the list of available leaf devices that can be linked to a tree device for the entire system.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The list returned includes devices created at the system, service provider, and group levels.
+        /// The response is either SystemGetAvailableLeafDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemGetAvailableLeafDeviceListRequestAsync instead.")]
+        public static async Task<SystemGetAvailableLeafDeviceListResponse> SystemGetAvailableLeafDeviceListRequest(this OcipClient client, SystemGetAvailableLeafDeviceListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemGetAvailableLeafDeviceListResponse;
+        }
+
+        /// <summary>
+        /// Requests the list of available leaf devices that can be linked to a tree device for the entire system.
+        /// A leaf device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
+        /// The list returned includes devices created at the system, service provider, and group levels.
+        /// The response is either SystemGetAvailableLeafDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        public static async Task<SystemGetAvailableLeafDeviceListResponse> SystemGetAvailableLeafDeviceListRequestAsync(this OcipClient client, SystemGetAvailableLeafDeviceListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemGetAvailableLeafDeviceListResponse;
+        }
+        /// <summary>
+        /// Requests the list of available tree devices to link to for the entire system.
+        /// Requests the list of available tree devices to which a leaf device can be linked for the entire system.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// The list returned includes devices created at the system, service provider, and group levels.
+        /// The response is either SystemGetAvailableTreeDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemGetAvailableTreeDeviceListRequestAsync instead.")]
+        public static async Task<SystemGetAvailableTreeDeviceListResponse> SystemGetAvailableTreeDeviceListRequest(this OcipClient client, SystemGetAvailableTreeDeviceListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemGetAvailableTreeDeviceListResponse;
+        }
+
+        /// <summary>
+        /// Requests the list of available tree devices to link to for the entire system.
+        /// Requests the list of available tree devices to which a leaf device can be linked for the entire system.
+        /// A tree device is a device associated with a device type that has the option
+        /// supportLinks set to "Support Links from Devices". Many leaf devices can be linked to it.
+        /// The list returned includes devices created at the system, service provider, and group levels.
+        /// The response is either SystemGetAvailableTreeDeviceListResponse or
+        /// ErrorResponse.
+        /// </summary>
+        public static async Task<SystemGetAvailableTreeDeviceListResponse> SystemGetAvailableTreeDeviceListRequestAsync(this OcipClient client, SystemGetAvailableTreeDeviceListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemGetAvailableTreeDeviceListResponse;
         }
         /// <summary>
         /// Get the list of registration contacts.
@@ -6303,19 +7213,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to add a language to the system.
+        /// The command will fail in Amplify data mode if the locale element is greater than 5 characters in length.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemLanguageAddRequestAsync instead.")]
-        public static async Task<SuccessResponse> SystemLanguageAddRequest(this OcipClient client, SystemLanguageAddRequest request)
+        [Obsolete("This method is deprecated. Use SystemLanguageAddRequest22Async instead.")]
+        public static async Task<SuccessResponse> SystemLanguageAddRequest22(this OcipClient client, SystemLanguageAddRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
 
         /// <summary>
         /// Request to add a language to the system.
+        /// The command will fail in Amplify data mode if the locale element is greater than 5 characters in length.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> SystemLanguageAddRequestAsync(this OcipClient client, SystemLanguageAddRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> SystemLanguageAddRequest22Async(this OcipClient client, SystemLanguageAddRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -6359,10 +7271,11 @@ namespace BroadWorksConnector
         /// Request to modify a language properties in the system.
         /// If the becomeDefaultLanguage element is present, the language in this request becomes
         /// the default language for the system.
+        /// The command will fail in Amplify data mode if the locale element is greater than 5 characters in length.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemLanguageModifyRequestAsync instead.")]
-        public static async Task<SuccessResponse> SystemLanguageModifyRequest(this OcipClient client, SystemLanguageModifyRequest request)
+        [Obsolete("This method is deprecated. Use SystemLanguageModifyRequest22Async instead.")]
+        public static async Task<SuccessResponse> SystemLanguageModifyRequest22(this OcipClient client, SystemLanguageModifyRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -6371,47 +7284,48 @@ namespace BroadWorksConnector
         /// Request to modify a language properties in the system.
         /// If the becomeDefaultLanguage element is present, the language in this request becomes
         /// the default language for the system.
+        /// The command will fail in Amplify data mode if the locale element is greater than 5 characters in length.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> SystemLanguageModifyRequestAsync(this OcipClient client, SystemLanguageModifyRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> SystemLanguageModifyRequest22Async(this OcipClient client, SystemLanguageModifyRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Get all the licensing information.
-        /// The response is either SystemLicensingGetResponse14sp3 or ErrorResponse.
+        /// The response is either SystemLicensingGetResponse21sp1 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemLicensingGetRequest14sp3Async instead.")]
-        public static async Task<SystemLicensingGetResponse14sp3> SystemLicensingGetRequest14sp3(this OcipClient client, SystemLicensingGetRequest14sp3 request)
+        [Obsolete("This method is deprecated. Use SystemLicensingGetRequest21sp1Async instead.")]
+        public static async Task<SystemLicensingGetResponse21sp1> SystemLicensingGetRequest21sp1(this OcipClient client, SystemLicensingGetRequest21sp1 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemLicensingGetResponse14sp3;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemLicensingGetResponse21sp1;
         }
 
         /// <summary>
         /// Get all the licensing information.
-        /// The response is either SystemLicensingGetResponse14sp3 or ErrorResponse.
+        /// The response is either SystemLicensingGetResponse21sp1 or ErrorResponse.
         /// </summary>
-        public static async Task<SystemLicensingGetResponse14sp3> SystemLicensingGetRequest14sp3Async(this OcipClient client, SystemLicensingGetRequest14sp3 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemLicensingGetResponse21sp1> SystemLicensingGetRequest21sp1Async(this OcipClient client, SystemLicensingGetRequest21sp1 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemLicensingGetResponse14sp3;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemLicensingGetResponse21sp1;
         }
         /// <summary>
         /// Request to get the list of system licenses in the system.
-        /// The response is either a SystemLicensingGetSystemLicenseListResponse22 or an ErrorResponse.
+        /// The response is either a SystemLicensingGetSystemLicenseListResponse22V2 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemLicensingGetSystemLicenseListRequest22Async instead.")]
-        public static async Task<SystemLicensingGetSystemLicenseListResponse22> SystemLicensingGetSystemLicenseListRequest22(this OcipClient client, SystemLicensingGetSystemLicenseListRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemLicensingGetSystemLicenseListRequest22V2Async instead.")]
+        public static async Task<SystemLicensingGetSystemLicenseListResponse22V2> SystemLicensingGetSystemLicenseListRequest22V2(this OcipClient client, SystemLicensingGetSystemLicenseListRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemLicensingGetSystemLicenseListResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemLicensingGetSystemLicenseListResponse22V2;
         }
 
         /// <summary>
         /// Request to get the list of system licenses in the system.
-        /// The response is either a SystemLicensingGetSystemLicenseListResponse22 or an ErrorResponse.
+        /// The response is either a SystemLicensingGetSystemLicenseListResponse22V2 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemLicensingGetSystemLicenseListResponse22> SystemLicensingGetSystemLicenseListRequest22Async(this OcipClient client, SystemLicensingGetSystemLicenseListRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemLicensingGetSystemLicenseListResponse22V2> SystemLicensingGetSystemLicenseListRequest22V2Async(this OcipClient client, SystemLicensingGetSystemLicenseListRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemLicensingGetSystemLicenseListResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemLicensingGetSystemLicenseListResponse22V2;
         }
         /// <summary>
         /// Load a new license file.
@@ -7062,8 +7976,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request a list of service providers that have a given Network Class
         /// of Service assigned.
-        /// The response is either a SystemNetworkClassOfServiceGetAssignedServiceProviderListResponse or
-        /// ErrorResponse.
+        /// The response is either a SystemNetworkClassOfServiceGetAssignedServiceProviderListResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemNetworkClassOfServiceGetAssignedServiceProviderListRequestAsync instead.")]
         public static async Task<SystemNetworkClassOfServiceGetAssignedServiceProviderListResponse> SystemNetworkClassOfServiceGetAssignedServiceProviderListRequest(this OcipClient client, SystemNetworkClassOfServiceGetAssignedServiceProviderListRequest request)
@@ -7074,12 +7987,31 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request a list of service providers that have a given Network Class
         /// of Service assigned.
-        /// The response is either a SystemNetworkClassOfServiceGetAssignedServiceProviderListResponse or
-        /// ErrorResponse.
+        /// The response is either a SystemNetworkClassOfServiceGetAssignedServiceProviderListResponse or ErrorResponse.
         /// </summary>
         public static async Task<SystemNetworkClassOfServiceGetAssignedServiceProviderListResponse> SystemNetworkClassOfServiceGetAssignedServiceProviderListRequestAsync(this OcipClient client, SystemNetworkClassOfServiceGetAssignedServiceProviderListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemNetworkClassOfServiceGetAssignedServiceProviderListResponse;
+        }
+        /// <summary>
+        /// Request a list of system voice portals that have a given Network Class
+        /// of Service assigned.
+        /// The response is either a SystemNetworkClassOfServiceGetAssignedSystemVoicePortalListResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemNetworkClassOfServiceGetAssignedSystemVoicePortalListRequestAsync instead.")]
+        public static async Task<SystemNetworkClassOfServiceGetAssignedSystemVoicePortalListResponse> SystemNetworkClassOfServiceGetAssignedSystemVoicePortalListRequest(this OcipClient client, SystemNetworkClassOfServiceGetAssignedSystemVoicePortalListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemNetworkClassOfServiceGetAssignedSystemVoicePortalListResponse;
+        }
+
+        /// <summary>
+        /// Request a list of system voice portals that have a given Network Class
+        /// of Service assigned.
+        /// The response is either a SystemNetworkClassOfServiceGetAssignedSystemVoicePortalListResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemNetworkClassOfServiceGetAssignedSystemVoicePortalListResponse> SystemNetworkClassOfServiceGetAssignedSystemVoicePortalListRequestAsync(this OcipClient client, SystemNetworkClassOfServiceGetAssignedSystemVoicePortalListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemNetworkClassOfServiceGetAssignedSystemVoicePortalListResponse;
         }
         /// <summary>
         /// Get the list of Network Classes of Service that contain a specific
@@ -7315,27 +8247,28 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the list of Network Server Sync system parameters.
-        /// The response is either SystemNetworkServerSyncParametersGetResponse17sp4 or ErrorResponse.
+        /// The response is either SystemNetworkServerSyncParametersGetResponse24V2 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemNetworkServerSyncParametersGetRequest17sp4Async instead.")]
-        public static async Task<SystemNetworkServerSyncParametersGetResponse17sp4> SystemNetworkServerSyncParametersGetRequest17sp4(this OcipClient client, SystemNetworkServerSyncParametersGetRequest17sp4 request)
+        [Obsolete("This method is deprecated. Use SystemNetworkServerSyncParametersGetRequest24V2Async instead.")]
+        public static async Task<SystemNetworkServerSyncParametersGetResponse24V2> SystemNetworkServerSyncParametersGetRequest24V2(this OcipClient client, SystemNetworkServerSyncParametersGetRequest24V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemNetworkServerSyncParametersGetResponse17sp4;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemNetworkServerSyncParametersGetResponse24V2;
         }
 
         /// <summary>
         /// Request to get the list of Network Server Sync system parameters.
-        /// The response is either SystemNetworkServerSyncParametersGetResponse17sp4 or ErrorResponse.
+        /// The response is either SystemNetworkServerSyncParametersGetResponse24V2 or ErrorResponse.
         /// </summary>
-        public static async Task<SystemNetworkServerSyncParametersGetResponse17sp4> SystemNetworkServerSyncParametersGetRequest17sp4Async(this OcipClient client, SystemNetworkServerSyncParametersGetRequest17sp4 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemNetworkServerSyncParametersGetResponse24V2> SystemNetworkServerSyncParametersGetRequest24V2Async(this OcipClient client, SystemNetworkServerSyncParametersGetRequest24V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemNetworkServerSyncParametersGetResponse17sp4;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemNetworkServerSyncParametersGetResponse24V2;
         }
         /// <summary>
         /// Request to modify Network Server Sync system parameters.
         /// The response is either SuccessResponse or ErrorResponse.
         /// The following elements are only used in AS data mode:
         /// syncTrunkGroups
+        /// syncConnectionTimeoutSeconds
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemNetworkServerSyncParametersModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemNetworkServerSyncParametersModifyRequest(this OcipClient client, SystemNetworkServerSyncParametersModifyRequest request)
@@ -7348,6 +8281,7 @@ namespace BroadWorksConnector
         /// The response is either SuccessResponse or ErrorResponse.
         /// The following elements are only used in AS data mode:
         /// syncTrunkGroups
+        /// syncConnectionTimeoutSeconds
         /// </summary>
         public static async Task<SuccessResponse> SystemNetworkServerSyncParametersModifyRequestAsync(this OcipClient client, SystemNetworkServerSyncParametersModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -7480,6 +8414,42 @@ namespace BroadWorksConnector
         /// numberActivationMode = Group And User Activation Enabled will raise an error in XS data mode.
         /// </summary>
         public static async Task<SuccessResponse> SystemNumberActivationModifyRequest18sp1Async(this OcipClient client, SystemNumberActivationModifyRequest18sp1 request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to get the system number formatting parameters.
+        /// The response is either SystemNumberFormattingParametersGetResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemNumberFormattingParametersGetRequestAsync instead.")]
+        public static async Task<SystemNumberFormattingParametersGetResponse> SystemNumberFormattingParametersGetRequest(this OcipClient client, SystemNumberFormattingParametersGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemNumberFormattingParametersGetResponse;
+        }
+
+        /// <summary>
+        /// Request to get the system number formatting parameters.
+        /// The response is either SystemNumberFormattingParametersGetResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemNumberFormattingParametersGetResponse> SystemNumberFormattingParametersGetRequestAsync(this OcipClient client, SystemNumberFormattingParametersGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemNumberFormattingParametersGetResponse;
+        }
+        /// <summary>
+        /// Request to modify the system number formatting parameters.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemNumberFormattingParametersModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemNumberFormattingParametersModifyRequest(this OcipClient client, SystemNumberFormattingParametersModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to modify the system number formatting parameters.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemNumberFormattingParametersModifyRequestAsync(this OcipClient client, SystemNumberFormattingParametersModifyRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -8121,28 +9091,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the list of OCIReporting system parameters.
-        /// The response is either SystemOCIReportingParametersGetResponse14sp1 or
-        /// ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemOCIReportingParametersGetRequest14sp1Async instead.")]
-        public static async Task<SystemOCIReportingParametersGetResponse14sp1> SystemOCIReportingParametersGetRequest14sp1(this OcipClient client, SystemOCIReportingParametersGetRequest14sp1 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemOCIReportingParametersGetResponse14sp1;
-        }
-
-        /// <summary>
-        /// Request to get the list of OCIReporting system parameters.
-        /// The response is either SystemOCIReportingParametersGetResponse14sp1 or
-        /// ErrorResponse.
-        /// </summary>
-        public static async Task<SystemOCIReportingParametersGetResponse14sp1> SystemOCIReportingParametersGetRequest14sp1Async(this OcipClient client, SystemOCIReportingParametersGetRequest14sp1 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemOCIReportingParametersGetResponse14sp1;
-        }
-        /// <summary>
-        /// Request to get the list of OCIReporting system parameters.
-        /// The response is either SystemOCIReportingParametersGetResponse22 or
-        /// ErrorResponse.
+        /// The response is either SystemOCIReportingParametersGetResponse22 or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemOCIReportingParametersGetRequest22Async instead.")]
         public static async Task<SystemOCIReportingParametersGetResponse22> SystemOCIReportingParametersGetRequest22(this OcipClient client, SystemOCIReportingParametersGetRequest22 request)
@@ -8152,8 +9101,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request to get the list of OCIReporting system parameters.
-        /// The response is either SystemOCIReportingParametersGetResponse22 or
-        /// ErrorResponse.
+        /// The response is either SystemOCIReportingParametersGetResponse22 or ErrorResponse.
         /// </summary>
         public static async Task<SystemOCIReportingParametersGetResponse22> SystemOCIReportingParametersGetRequest22Async(this OcipClient client, SystemOCIReportingParametersGetRequest22 request, CancellationToken cancellationToken = default)
         {
@@ -8231,8 +9179,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the list of all Office Zones.
-        /// The response is either a SystemOfficeZoneGetListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemOfficeZoneGetListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemOfficeZoneGetListRequestAsync instead.")]
         public static async Task<SystemOfficeZoneGetListResponse> SystemOfficeZoneGetListRequest(this OcipClient client, SystemOfficeZoneGetListRequest request)
@@ -8242,8 +9189,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Get the list of all Office Zones.
-        /// The response is either a SystemOfficeZoneGetListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemOfficeZoneGetListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemOfficeZoneGetListResponse> SystemOfficeZoneGetListRequestAsync(this OcipClient client, SystemOfficeZoneGetListRequest request, CancellationToken cancellationToken = default)
         {
@@ -8251,8 +9197,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get an existing Office Zone.
-        /// The response is either a SystemOfficeZoneGetResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemOfficeZoneGetResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemOfficeZoneGetRequestAsync instead.")]
         public static async Task<SystemOfficeZoneGetResponse> SystemOfficeZoneGetRequest(this OcipClient client, SystemOfficeZoneGetRequest request)
@@ -8262,8 +9207,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Get an existing Office Zone.
-        /// The response is either a SystemOfficeZoneGetResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemOfficeZoneGetResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemOfficeZoneGetResponse> SystemOfficeZoneGetRequestAsync(this OcipClient client, SystemOfficeZoneGetRequest request, CancellationToken cancellationToken = default)
         {
@@ -8272,8 +9216,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of Office Zones that contain a specific
         /// Zone.
-        /// The response is either a SystemOfficeZoneGetZoneUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemOfficeZoneGetZoneUsageListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemOfficeZoneGetZoneUsageListRequestAsync instead.")]
         public static async Task<SystemOfficeZoneGetZoneUsageListResponse> SystemOfficeZoneGetZoneUsageListRequest(this OcipClient client, SystemOfficeZoneGetZoneUsageListRequest request)
@@ -8284,8 +9227,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of Office Zones that contain a specific
         /// Zone.
-        /// The response is either a SystemOfficeZoneGetZoneUsageListResponse
-        /// or an ErrorResponse.
+        /// The response is either a SystemOfficeZoneGetZoneUsageListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemOfficeZoneGetZoneUsageListResponse> SystemOfficeZoneGetZoneUsageListRequestAsync(this OcipClient client, SystemOfficeZoneGetZoneUsageListRequest request, CancellationToken cancellationToken = default)
         {
@@ -8310,26 +9252,92 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
+        /// Request to get the list of Outbound Proxy Cache system parameters.
+        /// The response is either SystemOutboundProxyCacheParametersGetResponse or ErrorResponse.
+        /// 
+        /// Note that an error is returned if CloudPBX is not licensed.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemOutboundProxyCacheParametersGetRequestAsync instead.")]
+        public static async Task<SystemOutboundProxyCacheParametersGetResponse> SystemOutboundProxyCacheParametersGetRequest(this OcipClient client, SystemOutboundProxyCacheParametersGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemOutboundProxyCacheParametersGetResponse;
+        }
+
+        /// <summary>
+        /// Request to get the list of Outbound Proxy Cache system parameters.
+        /// The response is either SystemOutboundProxyCacheParametersGetResponse or ErrorResponse.
+        /// 
+        /// Note that an error is returned if CloudPBX is not licensed.
+        /// </summary>
+        public static async Task<SystemOutboundProxyCacheParametersGetResponse> SystemOutboundProxyCacheParametersGetRequestAsync(this OcipClient client, SystemOutboundProxyCacheParametersGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemOutboundProxyCacheParametersGetResponse;
+        }
+        /// <summary>
+        /// Request to modify Outbound Proxy Cache system parameters.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// Note that an error is returned if CloudPBX is not licensed.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemOutboundProxyCacheParametersModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemOutboundProxyCacheParametersModifyRequest(this OcipClient client, SystemOutboundProxyCacheParametersModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to modify Outbound Proxy Cache system parameters.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// Note that an error is returned if CloudPBX is not licensed.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemOutboundProxyCacheParametersModifyRequestAsync(this OcipClient client, SystemOutboundProxyCacheParametersModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to stale the Outbound Proxy Cache.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// Note that an error is returned if CloudPBX is not licensed.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemOutboundProxyCacheStaleRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemOutboundProxyCacheStaleRequest(this OcipClient client, SystemOutboundProxyCacheStaleRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to stale the Outbound Proxy Cache.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// Note that an error is returned if CloudPBX is not licensed.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemOutboundProxyCacheStaleRequestAsync(this OcipClient client, SystemOutboundProxyCacheStaleRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
         /// Requests the system's password rules setting applicable to
         /// System administrator, Provisioning Administrator,
         /// and/or Service Provider Administrator, Group Administrator, Department Administrator, user.
-        /// The response is either SystemPasswordRulesGetResponse22 or ErrorResponse.
+        /// The response is either SystemPasswordRulesGetResponse23 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemPasswordRulesGetRequest22Async instead.")]
-        public static async Task<SystemPasswordRulesGetResponse22> SystemPasswordRulesGetRequest22(this OcipClient client, SystemPasswordRulesGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemPasswordRulesGetRequest23Async instead.")]
+        public static async Task<SystemPasswordRulesGetResponse23> SystemPasswordRulesGetRequest23(this OcipClient client, SystemPasswordRulesGetRequest23 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemPasswordRulesGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemPasswordRulesGetResponse23;
         }
 
         /// <summary>
         /// Requests the system's password rules setting applicable to
         /// System administrator, Provisioning Administrator,
         /// and/or Service Provider Administrator, Group Administrator, Department Administrator, user.
-        /// The response is either SystemPasswordRulesGetResponse22 or ErrorResponse.
+        /// The response is either SystemPasswordRulesGetResponse23 or ErrorResponse.
         /// </summary>
-        public static async Task<SystemPasswordRulesGetResponse22> SystemPasswordRulesGetRequest22Async(this OcipClient client, SystemPasswordRulesGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemPasswordRulesGetResponse23> SystemPasswordRulesGetRequest23Async(this OcipClient client, SystemPasswordRulesGetRequest23 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemPasswordRulesGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemPasswordRulesGetResponse23;
         }
         /// <summary>
         /// Request to modify the system providers password rule
@@ -8419,60 +9427,6 @@ namespace BroadWorksConnector
         /// Add a performance measurements reporting ftp server.
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemPerformanceMeasurementReportingAddFileServerRequestAsync instead.")]
-        public static async Task<SuccessResponse> SystemPerformanceMeasurementReportingAddFileServerRequest(this OcipClient client, SystemPerformanceMeasurementReportingAddFileServerRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Add a performance measurements reporting ftp server.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// </summary>
-        public static async Task<SuccessResponse> SystemPerformanceMeasurementReportingAddFileServerRequestAsync(this OcipClient client, SystemPerformanceMeasurementReportingAddFileServerRequest request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
-        }
-        /// <summary>
-        /// Delete a performance measurements reporting ftp server.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemPerformanceMeasurementReportingDeleteFileServerRequestAsync instead.")]
-        public static async Task<SuccessResponse> SystemPerformanceMeasurementReportingDeleteFileServerRequest(this OcipClient client, SystemPerformanceMeasurementReportingDeleteFileServerRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Delete a performance measurements reporting ftp server.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// </summary>
-        public static async Task<SuccessResponse> SystemPerformanceMeasurementReportingDeleteFileServerRequestAsync(this OcipClient client, SystemPerformanceMeasurementReportingDeleteFileServerRequest request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
-        }
-        /// <summary>
-        /// Requests the list performance measurements reporting ftp servers.
-        /// The response is either SystemPerformanceMeasurementReportingGetFileServerListResponse or ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemPerformanceMeasurementReportingGetFileServerListRequestAsync instead.")]
-        public static async Task<SystemPerformanceMeasurementReportingGetFileServerListResponse> SystemPerformanceMeasurementReportingGetFileServerListRequest(this OcipClient client, SystemPerformanceMeasurementReportingGetFileServerListRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemPerformanceMeasurementReportingGetFileServerListResponse;
-        }
-
-        /// <summary>
-        /// Requests the list performance measurements reporting ftp servers.
-        /// The response is either SystemPerformanceMeasurementReportingGetFileServerListResponse or ErrorResponse.
-        /// </summary>
-        public static async Task<SystemPerformanceMeasurementReportingGetFileServerListResponse> SystemPerformanceMeasurementReportingGetFileServerListRequestAsync(this OcipClient client, SystemPerformanceMeasurementReportingGetFileServerListRequest request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemPerformanceMeasurementReportingGetFileServerListResponse;
-        }
-        /// <summary>
-        /// Add a performance measurements reporting ftp server.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// </summary>
         [Obsolete("This method is deprecated. Use SystemPerformanceMeasurementReportingAddFileServerRequest22Async instead.")]
         public static async Task<SuccessResponse> SystemPerformanceMeasurementReportingAddFileServerRequest22(this OcipClient client, SystemPerformanceMeasurementReportingAddFileServerRequest22 request)
         {
@@ -8525,39 +9479,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Requests the performance measurements reporting settings.
-        /// The response is either SystemPerformanceMeasurementReportingGetResponse22 or ErrorResponse.
+        /// The response is either SystemPerformanceMeasurementReportingGetResponse24 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemPerformanceMeasurementReportingGetRequest22Async instead.")]
-        public static async Task<SystemPerformanceMeasurementReportingGetResponse22> SystemPerformanceMeasurementReportingGetRequest22(this OcipClient client, SystemPerformanceMeasurementReportingGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemPerformanceMeasurementReportingGetRequest24Async instead.")]
+        public static async Task<SystemPerformanceMeasurementReportingGetResponse24> SystemPerformanceMeasurementReportingGetRequest24(this OcipClient client, SystemPerformanceMeasurementReportingGetRequest24 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemPerformanceMeasurementReportingGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemPerformanceMeasurementReportingGetResponse24;
         }
 
         /// <summary>
         /// Requests the performance measurements reporting settings.
-        /// The response is either SystemPerformanceMeasurementReportingGetResponse22 or ErrorResponse.
+        /// The response is either SystemPerformanceMeasurementReportingGetResponse24 or ErrorResponse.
         /// </summary>
-        public static async Task<SystemPerformanceMeasurementReportingGetResponse22> SystemPerformanceMeasurementReportingGetRequest22Async(this OcipClient client, SystemPerformanceMeasurementReportingGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemPerformanceMeasurementReportingGetResponse24> SystemPerformanceMeasurementReportingGetRequest24Async(this OcipClient client, SystemPerformanceMeasurementReportingGetRequest24 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemPerformanceMeasurementReportingGetResponse22;
-        }
-        /// <summary>
-        /// Modify a performance measurements reporting ftp server.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemPerformanceMeasurementReportingModifyFileServerRequestAsync instead.")]
-        public static async Task<SuccessResponse> SystemPerformanceMeasurementReportingModifyFileServerRequest(this OcipClient client, SystemPerformanceMeasurementReportingModifyFileServerRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Modify a performance measurements reporting ftp server.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// </summary>
-        public static async Task<SuccessResponse> SystemPerformanceMeasurementReportingModifyFileServerRequestAsync(this OcipClient client, SystemPerformanceMeasurementReportingModifyFileServerRequest request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemPerformanceMeasurementReportingGetResponse24;
         }
         /// <summary>
         /// Modify a performance measurements reporting ftp server.
@@ -9380,6 +10316,42 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemRoutingProfileGetListResponse;
         }
         /// <summary>
+        /// Request to get the list of Routing Profile related system parameters.
+        /// The response is either SystemRoutingProfileParametersGetResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemRoutingProfileParametersGetRequestAsync instead.")]
+        public static async Task<SystemRoutingProfileParametersGetResponse> SystemRoutingProfileParametersGetRequest(this OcipClient client, SystemRoutingProfileParametersGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemRoutingProfileParametersGetResponse;
+        }
+
+        /// <summary>
+        /// Request to get the list of Routing Profile related system parameters.
+        /// The response is either SystemRoutingProfileParametersGetResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemRoutingProfileParametersGetResponse> SystemRoutingProfileParametersGetRequestAsync(this OcipClient client, SystemRoutingProfileParametersGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemRoutingProfileParametersGetResponse;
+        }
+        /// <summary>
+        /// Request to modify Routing Profile system parameters.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemRoutingProfileParametersModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemRoutingProfileParametersModifyRequest(this OcipClient client, SystemRoutingProfileParametersModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to modify Routing Profile system parameters.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemRoutingProfileParametersModifyRequestAsync(this OcipClient client, SystemRoutingProfileParametersModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
         /// Get the system call admission control parameters.
         /// The response is either a SystemRuntimeDataPublicationGetResponse or an ErrorResponse.
         /// </summary>
@@ -9875,21 +10847,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the session admission control settings for the system.
-        /// The response is either a SystemSessionAdmissionControlGetResponse22 or an ErrorResponse.
+        /// The response is either a SystemSessionAdmissionControlGetResponse22V2 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemSessionAdmissionControlGetRequest22Async instead.")]
-        public static async Task<SystemSessionAdmissionControlGetResponse22> SystemSessionAdmissionControlGetRequest22(this OcipClient client, SystemSessionAdmissionControlGetRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemSessionAdmissionControlGetRequest22V2Async instead.")]
+        public static async Task<SystemSessionAdmissionControlGetResponse22V2> SystemSessionAdmissionControlGetRequest22V2(this OcipClient client, SystemSessionAdmissionControlGetRequest22V2 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemSessionAdmissionControlGetResponse22;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemSessionAdmissionControlGetResponse22V2;
         }
 
         /// <summary>
         /// Get the session admission control settings for the system.
-        /// The response is either a SystemSessionAdmissionControlGetResponse22 or an ErrorResponse.
+        /// The response is either a SystemSessionAdmissionControlGetResponse22V2 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemSessionAdmissionControlGetResponse22> SystemSessionAdmissionControlGetRequest22Async(this OcipClient client, SystemSessionAdmissionControlGetRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemSessionAdmissionControlGetResponse22V2> SystemSessionAdmissionControlGetRequest22V2Async(this OcipClient client, SystemSessionAdmissionControlGetRequest22V2 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemSessionAdmissionControlGetResponse22;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemSessionAdmissionControlGetResponse22V2;
         }
         /// <summary>
         /// Modify the session admission control settings for the system.
@@ -10277,10 +11249,14 @@ namespace BroadWorksConnector
         /// supportClientSessionInfo, use value "false" in XS data mode
         /// supportCallInfoConferenceSubscriptionURI, use value "false" in XS data mode
         /// supportRemotePartyInfo, use value "false" in XS data mode
-        /// supportVisualDeviceManagement, use value "false" in XS data mode
+        /// supportVisualDeviceManagementRedirectLink, use value "false" in XS data mode
         /// bypassMediaTreatment, use value "false" in XS data mode
         /// supportCauseParameter, use value "false" in XS data mode
         /// resellerId
+        /// supportVisualDeviceManagementAPI, use value "false" in XS data mode
+        /// deviceCategory
+        /// verstatInPAIHeader, use value "false" in XS data mode
+        /// verstatInFromHeader, use value "false" in XS data mode
         /// 
         /// The following values for element profile are only used in AS data mode and an error is returned in the XS data mode:
         /// SignalingAddressType=Non-intelligent Device Addressing
@@ -10292,8 +11268,8 @@ namespace BroadWorksConnector
         /// The two elements are mutually exclusive.
         /// When both are set to true, the command fails.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeAddRequest22V3Async instead.")]
-        public static async Task<SuccessResponse> SystemSIPDeviceTypeAddRequest22V3(this OcipClient client, SystemSIPDeviceTypeAddRequest22V3 request)
+        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeAddRequest23V7Async instead.")]
+        public static async Task<SuccessResponse> SystemSIPDeviceTypeAddRequest23V7(this OcipClient client, SystemSIPDeviceTypeAddRequest23V7 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -10316,10 +11292,14 @@ namespace BroadWorksConnector
         /// supportClientSessionInfo, use value "false" in XS data mode
         /// supportCallInfoConferenceSubscriptionURI, use value "false" in XS data mode
         /// supportRemotePartyInfo, use value "false" in XS data mode
-        /// supportVisualDeviceManagement, use value "false" in XS data mode
+        /// supportVisualDeviceManagementRedirectLink, use value "false" in XS data mode
         /// bypassMediaTreatment, use value "false" in XS data mode
         /// supportCauseParameter, use value "false" in XS data mode
         /// resellerId
+        /// supportVisualDeviceManagementAPI, use value "false" in XS data mode
+        /// deviceCategory
+        /// verstatInPAIHeader, use value "false" in XS data mode
+        /// verstatInFromHeader, use value "false" in XS data mode
         /// 
         /// The following values for element profile are only used in AS data mode and an error is returned in the XS data mode:
         /// SignalingAddressType=Non-intelligent Device Addressing
@@ -10331,85 +11311,7 @@ namespace BroadWorksConnector
         /// The two elements are mutually exclusive.
         /// When both are set to true, the command fails.
         /// </summary>
-        public static async Task<SuccessResponse> SystemSIPDeviceTypeAddRequest22V3Async(this OcipClient client, SystemSIPDeviceTypeAddRequest22V3 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
-        }
-        /// <summary>
-        /// Request to add a sip device type.
-        /// The response is either SuccessResponse or ErrorResponse. When the optional element resellerId is specified,
-        /// the device type created is at reseller level. Device type name should be unique through out the system
-        /// including all the reseller level device types.
-        /// 
-        /// The following elements are only used in the XS data mode and ignored in the AS data mode:
-        /// enhancedForICS, use value "false" in AS data mode
-        /// supports3G4GContinuity, use value "false" in AS data mode
-        /// publishesOwnPresence, use value "false" in AS data mode
-        /// locationNetwork, use value "Fixed" in AS data mode
-        /// allowTerminationBasedOnICSI, use value "false" in AS data mode
-        /// roamingMode, use value "None" in AS data mode
-        /// 
-        /// The following elements are only used in AS data mode and ignored in the XS data mode:
-        /// supportClientSessionInfo, use value "false" in XS data mode
-        /// supportCallInfoConferenceSubscriptionURI, use value "false" in XS data mode
-        /// supportRemotePartyInfo, use value "false" in XS data mode
-        /// supportVisualDeviceManagement, use value "false" in XS data mode
-        /// bypassMediaTreatment, use value "false" in XS data mode
-        /// supportCauseParameter, use value "false" in XS data mode
-        /// supportCallingPartyCategoryInOutboundFromHeader, use value "true" in XS data mode
-        /// resellerId
-        /// 
-        /// The following values for element profile are only used in AS data mode and an error is returned in the XS data mode:
-        /// SignalingAddressType=Non-intelligent Device Addressing
-        /// SignalingAddressType=Intelligent Device Addressing
-        /// 
-        /// The following logic applies to these elements:
-        /// macInCert
-        /// macInNonRequestURI
-        /// The two elements are mutually exclusive.
-        /// When both are set to true, the command fails.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeAddRequest23Async instead.")]
-        public static async Task<SuccessResponse> SystemSIPDeviceTypeAddRequest23(this OcipClient client, SystemSIPDeviceTypeAddRequest23 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Request to add a sip device type.
-        /// The response is either SuccessResponse or ErrorResponse. When the optional element resellerId is specified,
-        /// the device type created is at reseller level. Device type name should be unique through out the system
-        /// including all the reseller level device types.
-        /// 
-        /// The following elements are only used in the XS data mode and ignored in the AS data mode:
-        /// enhancedForICS, use value "false" in AS data mode
-        /// supports3G4GContinuity, use value "false" in AS data mode
-        /// publishesOwnPresence, use value "false" in AS data mode
-        /// locationNetwork, use value "Fixed" in AS data mode
-        /// allowTerminationBasedOnICSI, use value "false" in AS data mode
-        /// roamingMode, use value "None" in AS data mode
-        /// 
-        /// The following elements are only used in AS data mode and ignored in the XS data mode:
-        /// supportClientSessionInfo, use value "false" in XS data mode
-        /// supportCallInfoConferenceSubscriptionURI, use value "false" in XS data mode
-        /// supportRemotePartyInfo, use value "false" in XS data mode
-        /// supportVisualDeviceManagement, use value "false" in XS data mode
-        /// bypassMediaTreatment, use value "false" in XS data mode
-        /// supportCauseParameter, use value "false" in XS data mode
-        /// supportCallingPartyCategoryInOutboundFromHeader, use value "true" in XS data mode
-        /// resellerId
-        /// 
-        /// The following values for element profile are only used in AS data mode and an error is returned in the XS data mode:
-        /// SignalingAddressType=Non-intelligent Device Addressing
-        /// SignalingAddressType=Intelligent Device Addressing
-        /// 
-        /// The following logic applies to these elements:
-        /// macInCert
-        /// macInNonRequestURI
-        /// The two elements are mutually exclusive.
-        /// When both are set to true, the command fails.
-        /// </summary>
-        public static async Task<SuccessResponse> SystemSIPDeviceTypeAddRequest23Async(this OcipClient client, SystemSIPDeviceTypeAddRequest23 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> SystemSIPDeviceTypeAddRequest23V7Async(this OcipClient client, SystemSIPDeviceTypeAddRequest23V7 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -10441,8 +11343,8 @@ namespace BroadWorksConnector
         /// The two elements are mutually exclusive.
         /// When both are set to true, the command fails.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeFileAddRequest21sp1Async instead.")]
-        public static async Task<SuccessResponse> SystemSIPDeviceTypeFileAddRequest21sp1(this OcipClient client, SystemSIPDeviceTypeFileAddRequest21sp1 request)
+        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeFileAddRequest22Async instead.")]
+        public static async Task<SuccessResponse> SystemSIPDeviceTypeFileAddRequest22(this OcipClient client, SystemSIPDeviceTypeFileAddRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -10457,7 +11359,7 @@ namespace BroadWorksConnector
         /// The two elements are mutually exclusive.
         /// When both are set to true, the command fails.
         /// </summary>
-        public static async Task<SuccessResponse> SystemSIPDeviceTypeFileAddRequest21sp1Async(this OcipClient client, SystemSIPDeviceTypeFileAddRequest21sp1 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> SystemSIPDeviceTypeFileAddRequest22Async(this OcipClient client, SystemSIPDeviceTypeFileAddRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -10499,21 +11401,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get a sip device type file.
-        /// The response is either SystemSIPDeviceTypeFileGetResponse21sp1 or ErrorResponse.
+        /// The response is either SystemSIPDeviceTypeFileGetResponse22 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeFileGetRequest21sp1Async instead.")]
-        public static async Task<SystemSIPDeviceTypeFileGetResponse21sp1> SystemSIPDeviceTypeFileGetRequest21sp1(this OcipClient client, SystemSIPDeviceTypeFileGetRequest21sp1 request)
+        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeFileGetRequest22Async instead.")]
+        public static async Task<SystemSIPDeviceTypeFileGetResponse22> SystemSIPDeviceTypeFileGetRequest22(this OcipClient client, SystemSIPDeviceTypeFileGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemSIPDeviceTypeFileGetResponse21sp1;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemSIPDeviceTypeFileGetResponse22;
         }
 
         /// <summary>
         /// Request to get a sip device type file.
-        /// The response is either SystemSIPDeviceTypeFileGetResponse21sp1 or ErrorResponse.
+        /// The response is either SystemSIPDeviceTypeFileGetResponse22 or ErrorResponse.
         /// </summary>
-        public static async Task<SystemSIPDeviceTypeFileGetResponse21sp1> SystemSIPDeviceTypeFileGetRequest21sp1Async(this OcipClient client, SystemSIPDeviceTypeFileGetRequest21sp1 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemSIPDeviceTypeFileGetResponse22> SystemSIPDeviceTypeFileGetRequest22Async(this OcipClient client, SystemSIPDeviceTypeFileGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemSIPDeviceTypeFileGetResponse21sp1;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemSIPDeviceTypeFileGetResponse22;
         }
         /// <summary>
         /// Request to modify a sip device type file.
@@ -10557,6 +11459,9 @@ namespace BroadWorksConnector
         /// types and the device types in the administrator's reseller meeting the search criteria are returned.
         /// See Also: SystemDeviceTypeGetAvailableListRequest22 in AS data mode, SystemDeviceTypeGetAvailableListRequest19 in XS data mode.
         /// The response is either SystemSIPDeviceTypeGetListResponse or ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// searchCriteriaExactDeviceTypeConfigurationOptionType
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeGetListRequestAsync instead.")]
         public static async Task<SystemSIPDeviceTypeGetListResponse> SystemSIPDeviceTypeGetListRequest(this OcipClient client, SystemSIPDeviceTypeGetListRequest request)
@@ -10572,6 +11477,9 @@ namespace BroadWorksConnector
         /// types and the device types in the administrator's reseller meeting the search criteria are returned.
         /// See Also: SystemDeviceTypeGetAvailableListRequest22 in AS data mode, SystemDeviceTypeGetAvailableListRequest19 in XS data mode.
         /// The response is either SystemSIPDeviceTypeGetListResponse or ErrorResponse.
+        /// 
+        /// The following data elements are only used in AS data mode and ignored in XS data mode:
+        /// searchCriteriaExactDeviceTypeConfigurationOptionType
         /// </summary>
         public static async Task<SystemSIPDeviceTypeGetListResponse> SystemSIPDeviceTypeGetListRequestAsync(this OcipClient client, SystemSIPDeviceTypeGetListRequest request, CancellationToken cancellationToken = default)
         {
@@ -10580,42 +11488,22 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to get a sip device type.
         /// See Also: SystemDeviceTypeGetRequest
-        /// The response is either SystemSIPDeviceTypeGetResponse22V4 or ErrorResponse.
+        /// The response is either SystemSIPDeviceTypeGetResponse23V9 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeGetRequest22V4Async instead.")]
-        public static async Task<SystemSIPDeviceTypeGetResponse22V4> SystemSIPDeviceTypeGetRequest22V4(this OcipClient client, SystemSIPDeviceTypeGetRequest22V4 request)
+        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeGetRequest23V9Async instead.")]
+        public static async Task<SystemSIPDeviceTypeGetResponse23V9> SystemSIPDeviceTypeGetRequest23V9(this OcipClient client, SystemSIPDeviceTypeGetRequest23V9 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemSIPDeviceTypeGetResponse22V4;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemSIPDeviceTypeGetResponse23V9;
         }
 
         /// <summary>
         /// Request to get a sip device type.
         /// See Also: SystemDeviceTypeGetRequest
-        /// The response is either SystemSIPDeviceTypeGetResponse22V4 or ErrorResponse.
+        /// The response is either SystemSIPDeviceTypeGetResponse23V9 or ErrorResponse.
         /// </summary>
-        public static async Task<SystemSIPDeviceTypeGetResponse22V4> SystemSIPDeviceTypeGetRequest22V4Async(this OcipClient client, SystemSIPDeviceTypeGetRequest22V4 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemSIPDeviceTypeGetResponse23V9> SystemSIPDeviceTypeGetRequest23V9Async(this OcipClient client, SystemSIPDeviceTypeGetRequest23V9 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemSIPDeviceTypeGetResponse22V4;
-        }
-        /// <summary>
-        /// Request to get a sip device type.
-        /// See Also: SystemDeviceTypeGetRequest
-        /// The response is either SystemSIPDeviceTypeGetResponse23 or ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeGetRequest23Async instead.")]
-        public static async Task<SystemSIPDeviceTypeGetResponse23> SystemSIPDeviceTypeGetRequest23(this OcipClient client, SystemSIPDeviceTypeGetRequest23 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemSIPDeviceTypeGetResponse23;
-        }
-
-        /// <summary>
-        /// Request to get a sip device type.
-        /// See Also: SystemDeviceTypeGetRequest
-        /// The response is either SystemSIPDeviceTypeGetResponse23 or ErrorResponse.
-        /// </summary>
-        public static async Task<SystemSIPDeviceTypeGetResponse23> SystemSIPDeviceTypeGetRequest23Async(this OcipClient client, SystemSIPDeviceTypeGetRequest23 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemSIPDeviceTypeGetResponse23;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemSIPDeviceTypeGetResponse23V9;
         }
         /// <summary>
         /// Request to get the list of device language names mapped to BroadWorks language names, per-device type.
@@ -10670,9 +11558,14 @@ namespace BroadWorksConnector
         /// supportClientSessionInfo
         /// supportCallInfoConferenceSubscriptionURI
         /// supportRemotePartyInfo
-        /// supportVisualDeviceManagement
+        /// supportVisualDeviceManagementRedirectLink
         /// bypassMediaTreatment
         /// supportCauseParameter
+        /// supportCallingPartyCategoryInOutboundFromHeader
+        /// supportVisualDeviceManagementAPI
+        /// deviceCategory
+        /// verstatInPAIHeader
+        /// verstatInFromHeader
         /// 
         /// The following elements are only used in XS data mode and ignored in AS mode:
         /// enhancedForICS
@@ -10690,8 +11583,8 @@ namespace BroadWorksConnector
         /// When macInCert is set to true, macInNonRequestURI will be reset to false.
         /// When macInNonRequestURI is set to true, macInCert will be reset to false.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeModifyRequest22Async instead.")]
-        public static async Task<SuccessResponse> SystemSIPDeviceTypeModifyRequest22(this OcipClient client, SystemSIPDeviceTypeModifyRequest22 request)
+        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeModifyRequest22V5Async instead.")]
+        public static async Task<SuccessResponse> SystemSIPDeviceTypeModifyRequest22V5(this OcipClient client, SystemSIPDeviceTypeModifyRequest22V5 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -10713,51 +11606,14 @@ namespace BroadWorksConnector
         /// supportClientSessionInfo
         /// supportCallInfoConferenceSubscriptionURI
         /// supportRemotePartyInfo
-        /// supportVisualDeviceManagement
-        /// bypassMediaTreatment
-        /// supportCauseParameter
-        /// 
-        /// The following elements are only used in XS data mode and ignored in AS mode:
-        /// enhancedForICS
-        /// supports3G4GContinuity
-        /// publishesOwnPresence
-        /// locationNetwork
-        /// allowTerminationBasedOnICSI
-        /// roamingMode
-        /// 
-        /// The following logic applies to these elements:
-        /// macInCert
-        /// macInNonRequestURI
-        /// The two elements are mutually exclusive.
-        /// When both are set to true, the command fails.
-        /// When macInCert is set to true, macInNonRequestURI will be reset to false.
-        /// When macInNonRequestURI is set to true, macInCert will be reset to false.
-        /// </summary>
-        public static async Task<SuccessResponse> SystemSIPDeviceTypeModifyRequest22Async(this OcipClient client, SystemSIPDeviceTypeModifyRequest22 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
-        }
-        /// <summary>
-        /// Request to modify a sip device type.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// 
-        /// The following elements are not changeable:
-        /// numberOfPorts
-        /// SignalingAddressType
-        /// isConferenceDevice
-        /// isMusicOnHoldDevice
-        /// isMobilityManagerDevice
-        /// deviceTypeConfigurationOption
-        /// staticLineOrdering
-        /// 
-        /// The following elements are only used in AS data mode and ignored in XS data mode:
-        /// supportClientSessionInfo
-        /// supportCallInfoConferenceSubscriptionURI
-        /// supportRemotePartyInfo
-        /// supportVisualDeviceManagement
+        /// supportVisualDeviceManagementRedirectLink
         /// bypassMediaTreatment
         /// supportCauseParameter
         /// supportCallingPartyCategoryInOutboundFromHeader
+        /// supportVisualDeviceManagementAPI
+        /// deviceCategory
+        /// verstatInPAIHeader
+        /// verstatInFromHeader
         /// 
         /// The following elements are only used in XS data mode and ignored in AS mode:
         /// enhancedForICS
@@ -10775,51 +11631,7 @@ namespace BroadWorksConnector
         /// When macInCert is set to true, macInNonRequestURI will be reset to false.
         /// When macInNonRequestURI is set to true, macInCert will be reset to false.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemSIPDeviceTypeModifyRequest22V2Async instead.")]
-        public static async Task<SuccessResponse> SystemSIPDeviceTypeModifyRequest22V2(this OcipClient client, SystemSIPDeviceTypeModifyRequest22V2 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Request to modify a sip device type.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// 
-        /// The following elements are not changeable:
-        /// numberOfPorts
-        /// SignalingAddressType
-        /// isConferenceDevice
-        /// isMusicOnHoldDevice
-        /// isMobilityManagerDevice
-        /// deviceTypeConfigurationOption
-        /// staticLineOrdering
-        /// 
-        /// The following elements are only used in AS data mode and ignored in XS data mode:
-        /// supportClientSessionInfo
-        /// supportCallInfoConferenceSubscriptionURI
-        /// supportRemotePartyInfo
-        /// supportVisualDeviceManagement
-        /// bypassMediaTreatment
-        /// supportCauseParameter
-        /// supportCallingPartyCategoryInOutboundFromHeader
-        /// 
-        /// The following elements are only used in XS data mode and ignored in AS mode:
-        /// enhancedForICS
-        /// supports3G4GContinuity
-        /// publishesOwnPresence
-        /// locationNetwork
-        /// allowTerminationBasedOnICSI
-        /// roamingMode
-        /// 
-        /// The following logic applies to these elements:
-        /// macInCert
-        /// macInNonRequestURI
-        /// The two elements are mutually exclusive.
-        /// When both are set to true, the command fails.
-        /// When macInCert is set to true, macInNonRequestURI will be reset to false.
-        /// When macInNonRequestURI is set to true, macInCert will be reset to false.
-        /// </summary>
-        public static async Task<SuccessResponse> SystemSIPDeviceTypeModifyRequest22V2Async(this OcipClient client, SystemSIPDeviceTypeModifyRequest22V2 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> SystemSIPDeviceTypeModifyRequest22V5Async(this OcipClient client, SystemSIPDeviceTypeModifyRequest22V5 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -11148,9 +11960,44 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemStateOrProvinceGetListResponse;
         }
         /// <summary>
+        /// Get system Stir Shaken service settings.
+        /// The response is either SystemStirShakenGetResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemStirShakenGetRequestAsync instead.")]
+        public static async Task<SystemStirShakenGetResponse> SystemStirShakenGetRequest(this OcipClient client, SystemStirShakenGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemStirShakenGetResponse;
+        }
+
+        /// <summary>
+        /// Get system Stir Shaken service settings.
+        /// The response is either SystemStirShakenGetResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemStirShakenGetResponse> SystemStirShakenGetRequestAsync(this OcipClient client, SystemStirShakenGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemStirShakenGetResponse;
+        }
+        /// <summary>
+        /// Modify system Stir Shaken service settings.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemStirShakenModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemStirShakenModifyRequest(this OcipClient client, SystemStirShakenModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify system Stir Shaken service settings.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemStirShakenModifyRequestAsync(this OcipClient client, SystemStirShakenModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
         /// Get the system call processing configuration for all subscribers
-        /// The response is either a SystemSubscriberGetCallProcessingParametersResponse18sp1
-        /// or an ErrorResponse.
+        /// The response is either a SystemSubscriberGetCallProcessingParametersResponse18sp1 or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemSubscriberGetCallProcessingParametersRequest18sp1Async instead.")]
         public static async Task<SystemSubscriberGetCallProcessingParametersResponse18sp1> SystemSubscriberGetCallProcessingParametersRequest18sp1(this OcipClient client, SystemSubscriberGetCallProcessingParametersRequest18sp1 request)
@@ -11160,8 +12007,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Get the system call processing configuration for all subscribers
-        /// The response is either a SystemSubscriberGetCallProcessingParametersResponse18sp1
-        /// or an ErrorResponse.
+        /// The response is either a SystemSubscriberGetCallProcessingParametersResponse18sp1 or an ErrorResponse.
         /// </summary>
         public static async Task<SystemSubscriberGetCallProcessingParametersResponse18sp1> SystemSubscriberGetCallProcessingParametersRequest18sp1Async(this OcipClient client, SystemSubscriberGetCallProcessingParametersRequest18sp1 request, CancellationToken cancellationToken = default)
         {
@@ -11187,23 +12033,23 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the system provisioning configuration for all subscribers
-        /// The response is either a SystemSubscriberGetProvisioningParametersResponse
+        /// The response is either a SystemSubscriberGetProvisioningParametersResponse24
         /// or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemSubscriberGetProvisioningParametersRequestAsync instead.")]
-        public static async Task<SystemSubscriberGetProvisioningParametersResponse> SystemSubscriberGetProvisioningParametersRequest(this OcipClient client, SystemSubscriberGetProvisioningParametersRequest request)
+        [Obsolete("This method is deprecated. Use SystemSubscriberGetProvisioningParametersRequest24Async instead.")]
+        public static async Task<SystemSubscriberGetProvisioningParametersResponse24> SystemSubscriberGetProvisioningParametersRequest24(this OcipClient client, SystemSubscriberGetProvisioningParametersRequest24 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemSubscriberGetProvisioningParametersResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemSubscriberGetProvisioningParametersResponse24;
         }
 
         /// <summary>
         /// Get the system provisioning configuration for all subscribers
-        /// The response is either a SystemSubscriberGetProvisioningParametersResponse
+        /// The response is either a SystemSubscriberGetProvisioningParametersResponse24
         /// or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemSubscriberGetProvisioningParametersResponse> SystemSubscriberGetProvisioningParametersRequestAsync(this OcipClient client, SystemSubscriberGetProvisioningParametersRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SystemSubscriberGetProvisioningParametersResponse24> SystemSubscriberGetProvisioningParametersRequest24Async(this OcipClient client, SystemSubscriberGetProvisioningParametersRequest24 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemSubscriberGetProvisioningParametersResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemSubscriberGetProvisioningParametersResponse24;
         }
         /// <summary>
         /// Modify the system call processing configuration for all subscribers.
@@ -11423,6 +12269,9 @@ namespace BroadWorksConnector
         /// 
         /// The following elements are only used in IMS mode:
         /// publicUserIdentity, ignored in standalone mode if provided.
+        /// 
+        /// The following elements are only used in AS mode and ignored in XS data mode:
+        /// networkClassOfService
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemSystemVoicePortalAddRequest21sp1Async instead.")]
         public static async Task<SuccessResponse> SystemSystemVoicePortalAddRequest21sp1(this OcipClient client, SystemSystemVoicePortalAddRequest21sp1 request)
@@ -11436,6 +12285,9 @@ namespace BroadWorksConnector
         /// 
         /// The following elements are only used in IMS mode:
         /// publicUserIdentity, ignored in standalone mode if provided.
+        /// 
+        /// The following elements are only used in AS mode and ignored in XS data mode:
+        /// networkClassOfService
         /// </summary>
         public static async Task<SuccessResponse> SystemSystemVoicePortalAddRequest21sp1Async(this OcipClient client, SystemSystemVoicePortalAddRequest21sp1 request, CancellationToken cancellationToken = default)
         {
@@ -11479,25 +12331,28 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get a system voice portal instance.
-        /// The response is either SystemSystemVoicePortalGetResponse21sp1 or ErrorResponse.
+        /// The response is either SystemSystemVoicePortalGetResponse23 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemSystemVoicePortalGetRequest21sp1Async instead.")]
-        public static async Task<SystemSystemVoicePortalGetResponse21sp1> SystemSystemVoicePortalGetRequest21sp1(this OcipClient client, SystemSystemVoicePortalGetRequest21sp1 request)
+        [Obsolete("This method is deprecated. Use SystemSystemVoicePortalGetRequest23Async instead.")]
+        public static async Task<SystemSystemVoicePortalGetResponse23> SystemSystemVoicePortalGetRequest23(this OcipClient client, SystemSystemVoicePortalGetRequest23 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemSystemVoicePortalGetResponse21sp1;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemSystemVoicePortalGetResponse23;
         }
 
         /// <summary>
         /// Request to get a system voice portal instance.
-        /// The response is either SystemSystemVoicePortalGetResponse21sp1 or ErrorResponse.
+        /// The response is either SystemSystemVoicePortalGetResponse23 or ErrorResponse.
         /// </summary>
-        public static async Task<SystemSystemVoicePortalGetResponse21sp1> SystemSystemVoicePortalGetRequest21sp1Async(this OcipClient client, SystemSystemVoicePortalGetRequest21sp1 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemSystemVoicePortalGetResponse23> SystemSystemVoicePortalGetRequest23Async(this OcipClient client, SystemSystemVoicePortalGetRequest23 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemSystemVoicePortalGetResponse21sp1;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemSystemVoicePortalGetResponse23;
         }
         /// <summary>
         /// Request to update a System  Voice portal instance.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// networkClassOfService
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemSystemVoicePortalModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemSystemVoicePortalModifyRequest(this OcipClient client, SystemSystemVoicePortalModifyRequest request)
@@ -11508,8 +12363,65 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to update a System  Voice portal instance.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// networkClassOfService
         /// </summary>
         public static async Task<SuccessResponse> SystemSystemVoicePortalModifyRequestAsync(this OcipClient client, SystemSystemVoicePortalModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to get the list of template files used to support a VDM device defined at system level.
+        /// The response is either SystemTemplateOnlyDeviceFileGetListResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemTemplateOnlyDeviceFileGetListRequestAsync instead.")]
+        public static async Task<SystemTemplateOnlyDeviceFileGetListResponse> SystemTemplateOnlyDeviceFileGetListRequest(this OcipClient client, SystemTemplateOnlyDeviceFileGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemTemplateOnlyDeviceFileGetListResponse;
+        }
+
+        /// <summary>
+        /// Request to get the list of template files used to support a VDM device defined at system level.
+        /// The response is either SystemTemplateOnlyDeviceFileGetListResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemTemplateOnlyDeviceFileGetListResponse> SystemTemplateOnlyDeviceFileGetListRequestAsync(this OcipClient client, SystemTemplateOnlyDeviceFileGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemTemplateOnlyDeviceFileGetListResponse;
+        }
+        /// <summary>
+        /// Get the third-party emergency call service settings for the system.
+        /// The response is either a SystemThirdPartyEmergencyCallingGetResponse24 or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemThirdPartyEmergencyCallingGetRequest24Async instead.")]
+        public static async Task<SystemThirdPartyEmergencyCallingGetResponse24> SystemThirdPartyEmergencyCallingGetRequest24(this OcipClient client, SystemThirdPartyEmergencyCallingGetRequest24 request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemThirdPartyEmergencyCallingGetResponse24;
+        }
+
+        /// <summary>
+        /// Get the third-party emergency call service settings for the system.
+        /// The response is either a SystemThirdPartyEmergencyCallingGetResponse24 or an ErrorResponse.
+        /// </summary>
+        public static async Task<SystemThirdPartyEmergencyCallingGetResponse24> SystemThirdPartyEmergencyCallingGetRequest24Async(this OcipClient client, SystemThirdPartyEmergencyCallingGetRequest24 request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemThirdPartyEmergencyCallingGetResponse24;
+        }
+        /// <summary>
+        /// Modify the third-party emergency call service settings for the system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemThirdPartyEmergencyCallingModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemThirdPartyEmergencyCallingModifyRequest(this OcipClient client, SystemThirdPartyEmergencyCallingModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify the third-party emergency call service settings for the system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemThirdPartyEmergencyCallingModifyRequestAsync(this OcipClient client, SystemThirdPartyEmergencyCallingModifyRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -11609,8 +12521,8 @@ namespace BroadWorksConnector
         /// Add a Call Blocking Service mapping.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemTreatmentMappingCallBlockingServiceAddRequest23Async instead.")]
-        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceAddRequest23(this OcipClient client, SystemTreatmentMappingCallBlockingServiceAddRequest23 request)
+        [Obsolete("This method is deprecated. Use SystemTreatmentMappingCallBlockingServiceAddRequest23V3Async instead.")]
+        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceAddRequest23V3(this OcipClient client, SystemTreatmentMappingCallBlockingServiceAddRequest23V3 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -11619,7 +12531,7 @@ namespace BroadWorksConnector
         /// Add a Call Blocking Service mapping.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceAddRequest23Async(this OcipClient client, SystemTreatmentMappingCallBlockingServiceAddRequest23 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceAddRequest23V3Async(this OcipClient client, SystemTreatmentMappingCallBlockingServiceAddRequest23V3 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -11627,8 +12539,8 @@ namespace BroadWorksConnector
         /// Delete a Call Blocking Service mapping.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemTreatmentMappingCallBlockingServiceDeleteRequest23Async instead.")]
-        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceDeleteRequest23(this OcipClient client, SystemTreatmentMappingCallBlockingServiceDeleteRequest23 request)
+        [Obsolete("This method is deprecated. Use SystemTreatmentMappingCallBlockingServiceDeleteRequest23V3Async instead.")]
+        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceDeleteRequest23V3(this OcipClient client, SystemTreatmentMappingCallBlockingServiceDeleteRequest23V3 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -11637,36 +12549,36 @@ namespace BroadWorksConnector
         /// Delete a Call Blocking Service mapping.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceDeleteRequest23Async(this OcipClient client, SystemTreatmentMappingCallBlockingServiceDeleteRequest23 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceDeleteRequest23V3Async(this OcipClient client, SystemTreatmentMappingCallBlockingServiceDeleteRequest23V3 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Requests a table of all the existing Call Blocking Service Mappings in the system.
-        /// The response is either a SystemTreatmentMappingCallBlockingServiceGetListResponse23
-        /// or an ErrorResponse.
+        /// 
+        /// The response is either a SystemTreatmentMappingCallBlockingServiceGetListResponse23V3 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemTreatmentMappingCallBlockingServiceGetListRequest23Async instead.")]
-        public static async Task<SystemTreatmentMappingCallBlockingServiceGetListResponse23> SystemTreatmentMappingCallBlockingServiceGetListRequest23(this OcipClient client, SystemTreatmentMappingCallBlockingServiceGetListRequest23 request)
+        [Obsolete("This method is deprecated. Use SystemTreatmentMappingCallBlockingServiceGetListRequest23V3Async instead.")]
+        public static async Task<SystemTreatmentMappingCallBlockingServiceGetListResponse23V3> SystemTreatmentMappingCallBlockingServiceGetListRequest23V3(this OcipClient client, SystemTreatmentMappingCallBlockingServiceGetListRequest23V3 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemTreatmentMappingCallBlockingServiceGetListResponse23;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemTreatmentMappingCallBlockingServiceGetListResponse23V3;
         }
 
         /// <summary>
         /// Requests a table of all the existing Call Blocking Service Mappings in the system.
-        /// The response is either a SystemTreatmentMappingCallBlockingServiceGetListResponse23
-        /// or an ErrorResponse.
+        /// 
+        /// The response is either a SystemTreatmentMappingCallBlockingServiceGetListResponse23V3 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemTreatmentMappingCallBlockingServiceGetListResponse23> SystemTreatmentMappingCallBlockingServiceGetListRequest23Async(this OcipClient client, SystemTreatmentMappingCallBlockingServiceGetListRequest23 request, CancellationToken cancellationToken = default)
+        public static async Task<SystemTreatmentMappingCallBlockingServiceGetListResponse23V3> SystemTreatmentMappingCallBlockingServiceGetListRequest23V3Async(this OcipClient client, SystemTreatmentMappingCallBlockingServiceGetListRequest23V3 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemTreatmentMappingCallBlockingServiceGetListResponse23;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemTreatmentMappingCallBlockingServiceGetListResponse23V3;
         }
         /// <summary>
         /// Modify the fields for a Call Blocking Service mapping.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemTreatmentMappingCallBlockingServiceModifyRequest23Async instead.")]
-        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceModifyRequest23(this OcipClient client, SystemTreatmentMappingCallBlockingServiceModifyRequest23 request)
+        [Obsolete("This method is deprecated. Use SystemTreatmentMappingCallBlockingServiceModifyRequest23V3Async instead.")]
+        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceModifyRequest23V3(this OcipClient client, SystemTreatmentMappingCallBlockingServiceModifyRequest23V3 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -11675,7 +12587,7 @@ namespace BroadWorksConnector
         /// Modify the fields for a Call Blocking Service mapping.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceModifyRequest23Async(this OcipClient client, SystemTreatmentMappingCallBlockingServiceModifyRequest23 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> SystemTreatmentMappingCallBlockingServiceModifyRequest23V3Async(this OcipClient client, SystemTreatmentMappingCallBlockingServiceModifyRequest23V3 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -11865,8 +12777,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Requests a table of all the existing Network SIP Status Code Mappings in the system.
-        /// The response is either an SystemTreatmentMappingNetworkSIPStatusGetListResponse
-        /// or an ErrorResponse.
+        /// The response is either an SystemTreatmentMappingNetworkSIPStatusGetListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemTreatmentMappingNetworkSIPStatusGetListRequestAsync instead.")]
         public static async Task<SystemTreatmentMappingNetworkSIPStatusGetListResponse> SystemTreatmentMappingNetworkSIPStatusGetListRequest(this OcipClient client, SystemTreatmentMappingNetworkSIPStatusGetListRequest request)
@@ -11876,8 +12787,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Requests a table of all the existing Network SIP Status Code Mappings in the system.
-        /// The response is either an SystemTreatmentMappingNetworkSIPStatusGetListResponse
-        /// or an ErrorResponse.
+        /// The response is either an SystemTreatmentMappingNetworkSIPStatusGetListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemTreatmentMappingNetworkSIPStatusGetListResponse> SystemTreatmentMappingNetworkSIPStatusGetListRequestAsync(this OcipClient client, SystemTreatmentMappingNetworkSIPStatusGetListRequest request, CancellationToken cancellationToken = default)
         {
@@ -11977,7 +12887,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Represents a Verify Translation and Routing request which can be either a request containing
-        /// parameters or a request containing a SIP message. The response is a SystemVerifyTranslationAndRoutingResponse.
+        /// parameters or a request containing a SIP message. Returns a SystemVerifyTranslationAndRoutingResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemVerifyTranslationAndRoutingRequestAsync instead.")]
         public static async Task<SystemVerifyTranslationAndRoutingResponse> SystemVerifyTranslationAndRoutingRequest(this OcipClient client, SystemVerifyTranslationAndRoutingRequest request)
@@ -11987,7 +12897,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Represents a Verify Translation and Routing request which can be either a request containing
-        /// parameters or a request containing a SIP message. The response is a SystemVerifyTranslationAndRoutingResponse.
+        /// parameters or a request containing a SIP message. Returns a SystemVerifyTranslationAndRoutingResponse.
         /// </summary>
         public static async Task<SystemVerifyTranslationAndRoutingResponse> SystemVerifyTranslationAndRoutingRequestAsync(this OcipClient client, SystemVerifyTranslationAndRoutingRequest request, CancellationToken cancellationToken = default)
         {
@@ -12102,6 +13012,242 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
+        /// Get the information for a specified device supporting visual device management.
+        /// The response is either a SystemVisualDeviceManagementGetDeviceInfoResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemVisualDeviceManagementGetDeviceInfoRequestAsync instead.")]
+        public static async Task<SystemVisualDeviceManagementGetDeviceInfoResponse> SystemVisualDeviceManagementGetDeviceInfoRequest(this OcipClient client, SystemVisualDeviceManagementGetDeviceInfoRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemVisualDeviceManagementGetDeviceInfoResponse;
+        }
+
+        /// <summary>
+        /// Get the information for a specified device supporting visual device management.
+        /// The response is either a SystemVisualDeviceManagementGetDeviceInfoResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemVisualDeviceManagementGetDeviceInfoResponse> SystemVisualDeviceManagementGetDeviceInfoRequestAsync(this OcipClient client, SystemVisualDeviceManagementGetDeviceInfoRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemVisualDeviceManagementGetDeviceInfoResponse;
+        }
+        /// <summary>
+        /// Add the system Xsi application Id entries.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiApplicationIdAddListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemXsiApplicationIdAddListRequest(this OcipClient client, SystemXsiApplicationIdAddListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Add the system Xsi application Id entries.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemXsiApplicationIdAddListRequestAsync(this OcipClient client, SystemXsiApplicationIdAddListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Delete the entries from system Xsi application Id list.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiApplicationIdDeleteListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemXsiApplicationIdDeleteListRequest(this OcipClient client, SystemXsiApplicationIdDeleteListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Delete the entries from system Xsi application Id list.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemXsiApplicationIdDeleteListRequestAsync(this OcipClient client, SystemXsiApplicationIdDeleteListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Get the system Xsi application Id white lists.
+        /// The response is either SystemXsiApplicationIdGetListResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiApplicationIdGetListRequestAsync instead.")]
+        public static async Task<SystemXsiApplicationIdGetListResponse> SystemXsiApplicationIdGetListRequest(this OcipClient client, SystemXsiApplicationIdGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemXsiApplicationIdGetListResponse;
+        }
+
+        /// <summary>
+        /// Get the system Xsi application Id white lists.
+        /// The response is either SystemXsiApplicationIdGetListResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemXsiApplicationIdGetListResponse> SystemXsiApplicationIdGetListRequestAsync(this OcipClient client, SystemXsiApplicationIdGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemXsiApplicationIdGetListResponse;
+        }
+        /// <summary>
+        /// Modify the system Xsi applicaiton Id description.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiApplicationIdModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemXsiApplicationIdModifyRequest(this OcipClient client, SystemXsiApplicationIdModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify the system Xsi applicaiton Id description.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemXsiApplicationIdModifyRequestAsync(this OcipClient client, SystemXsiApplicationIdModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to get the Xsi application Id system parameters.
+        /// The response is either SystemXsiApplicationIdParameterGetResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiApplicationIdParameterGetRequestAsync instead.")]
+        public static async Task<SystemXsiApplicationIdParameterGetResponse> SystemXsiApplicationIdParameterGetRequest(this OcipClient client, SystemXsiApplicationIdParameterGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemXsiApplicationIdParameterGetResponse;
+        }
+
+        /// <summary>
+        /// Request to get the Xsi application Id system parameters.
+        /// The response is either SystemXsiApplicationIdParameterGetResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemXsiApplicationIdParameterGetResponse> SystemXsiApplicationIdParameterGetRequestAsync(this OcipClient client, SystemXsiApplicationIdParameterGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemXsiApplicationIdParameterGetResponse;
+        }
+        /// <summary>
+        /// Request to modify Xsi application system parameter.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiApplicationIdParameterModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemXsiApplicationIdParameterModifyRequest(this OcipClient client, SystemXsiApplicationIdParameterModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to modify Xsi application system parameter.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemXsiApplicationIdParameterModifyRequestAsync(this OcipClient client, SystemXsiApplicationIdParameterModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Add the system Xsi policy profile entry.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiPolicyProfileAddRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemXsiPolicyProfileAddRequest(this OcipClient client, SystemXsiPolicyProfileAddRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Add the system Xsi policy profile entry.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemXsiPolicyProfileAddRequestAsync(this OcipClient client, SystemXsiPolicyProfileAddRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Delete an entry from system Xsi application Id list.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiPolicyProfileDeleteRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemXsiPolicyProfileDeleteRequest(this OcipClient client, SystemXsiPolicyProfileDeleteRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Delete an entry from system Xsi application Id list.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemXsiPolicyProfileDeleteRequestAsync(this OcipClient client, SystemXsiPolicyProfileDeleteRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Get usage of specific policy profile.
+        /// The response is either a SystemXsiPolicyProfileGetAssignedServiceProviderListResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiPolicyProfileGetAssignedServiceProviderListRequestAsync instead.")]
+        public static async Task<SystemXsiPolicyProfileGetAssignedServiceProviderListResponse> SystemXsiPolicyProfileGetAssignedServiceProviderListRequest(this OcipClient client, SystemXsiPolicyProfileGetAssignedServiceProviderListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemXsiPolicyProfileGetAssignedServiceProviderListResponse;
+        }
+
+        /// <summary>
+        /// Get usage of specific policy profile.
+        /// The response is either a SystemXsiPolicyProfileGetAssignedServiceProviderListResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SystemXsiPolicyProfileGetAssignedServiceProviderListResponse> SystemXsiPolicyProfileGetAssignedServiceProviderListRequestAsync(this OcipClient client, SystemXsiPolicyProfileGetAssignedServiceProviderListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemXsiPolicyProfileGetAssignedServiceProviderListResponse;
+        }
+        /// <summary>
+        /// Get the system Xsi policy profile list.
+        /// The response is either SystemXsiPolicyProfileGetListResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiPolicyProfileGetListRequestAsync instead.")]
+        public static async Task<SystemXsiPolicyProfileGetListResponse> SystemXsiPolicyProfileGetListRequest(this OcipClient client, SystemXsiPolicyProfileGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemXsiPolicyProfileGetListResponse;
+        }
+
+        /// <summary>
+        /// Get the system Xsi policy profile list.
+        /// The response is either SystemXsiPolicyProfileGetListResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemXsiPolicyProfileGetListResponse> SystemXsiPolicyProfileGetListRequestAsync(this OcipClient client, SystemXsiPolicyProfileGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemXsiPolicyProfileGetListResponse;
+        }
+        /// <summary>
+        /// Get an existing Xsi policy profile.
+        /// The response is either a SystemXsiPolicyProfileGetResponse
+        /// or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiPolicyProfileGetRequestAsync instead.")]
+        public static async Task<SystemXsiPolicyProfileGetResponse> SystemXsiPolicyProfileGetRequest(this OcipClient client, SystemXsiPolicyProfileGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemXsiPolicyProfileGetResponse;
+        }
+
+        /// <summary>
+        /// Get an existing Xsi policy profile.
+        /// The response is either a SystemXsiPolicyProfileGetResponse
+        /// or an ErrorResponse.
+        /// </summary>
+        public static async Task<SystemXsiPolicyProfileGetResponse> SystemXsiPolicyProfileGetRequestAsync(this OcipClient client, SystemXsiPolicyProfileGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemXsiPolicyProfileGetResponse;
+        }
+        /// <summary>
+        /// Modify the system Xsi policy profile entry.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemXsiPolicyProfileModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemXsiPolicyProfileModifyRequest(this OcipClient client, SystemXsiPolicyProfileModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify the system Xsi policy profile entry.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemXsiPolicyProfileModifyRequestAsync(this OcipClient client, SystemXsiPolicyProfileModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
         /// Add a Zone and optional Net Addresses and Physical Locations.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
@@ -12120,8 +13266,7 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
-        /// Returns a zone calling physical location for a given zone.
-        /// The response is SystemZoneCallingZonePhysicalLocationGetResponse or an ErrorResponse.
+        /// Returns a zone calling physical location for a given zone. The response is either a SystemZoneCallingZonePhysicalLocationGetResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemZoneCallingZonePhysicalLocationGetRequestAsync instead.")]
         public static async Task<SystemZoneCallingZonePhysicalLocationGetResponse> SystemZoneCallingZonePhysicalLocationGetRequest(this OcipClient client, SystemZoneCallingZonePhysicalLocationGetRequest request)
@@ -12130,16 +13275,14 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// Returns a zone calling physical location for a given zone.
-        /// The response is SystemZoneCallingZonePhysicalLocationGetResponse or an ErrorResponse.
+        /// Returns a zone calling physical location for a given zone. The response is either a SystemZoneCallingZonePhysicalLocationGetResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemZoneCallingZonePhysicalLocationGetResponse> SystemZoneCallingZonePhysicalLocationGetRequestAsync(this OcipClient client, SystemZoneCallingZonePhysicalLocationGetRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemZoneCallingZonePhysicalLocationGetResponse;
         }
         /// <summary>
-        /// Modifies a zone calling physical location for a given zone.
-        /// The response is a SuccessResponse or an ErrorResponse.
+        /// Modifies a zone calling physical location for a given zone. The response is a SuccessResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemZoneCallingZonePhysicalLocationModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemZoneCallingZonePhysicalLocationModifyRequest(this OcipClient client, SystemZoneCallingZonePhysicalLocationModifyRequest request)
@@ -12148,8 +13291,7 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// Modifies a zone calling physical location for a given zone.
-        /// The response is a SuccessResponse or an ErrorResponse.
+        /// Modifies a zone calling physical location for a given zone. The response is a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> SystemZoneCallingZonePhysicalLocationModifyRequestAsync(this OcipClient client, SystemZoneCallingZonePhysicalLocationModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -12283,7 +13425,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Gets a list of IP Addresses and/or Ranges assigned to a zone.
-        /// The response is SystemZoneNetAddressGetListResponse or an ErrorResponse.
+        /// The response is an SystemZoneNetAddressGetListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemZoneNetAddressGetListRequestAsync instead.")]
         public static async Task<SystemZoneNetAddressGetListResponse> SystemZoneNetAddressGetListRequest(this OcipClient client, SystemZoneNetAddressGetListRequest request)
@@ -12293,7 +13435,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Gets a list of IP Addresses and/or Ranges assigned to a zone.
-        /// The response is SystemZoneNetAddressGetListResponse or an ErrorResponse.
+        /// The response is an SystemZoneNetAddressGetListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemZoneNetAddressGetListResponse> SystemZoneNetAddressGetListRequestAsync(this OcipClient client, SystemZoneNetAddressGetListRequest request, CancellationToken cancellationToken = default)
         {

@@ -13,20 +13,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// The request fails when enableAssociationLimit, associationLimitHours, unlockPhonePINCode are changed when the guest is associated to a host.
     /// The request fails when accessDeviceEndpoint is set in the request when the guest is associated to a host.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// Replaced by: UserFlexibleSeatingGuestModifyRequest22.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="UserFlexibleSeatingGuestModifyRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""43afb2158d313a1d1a148124d7caba1e:525""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43043""}]")]
     public class UserFlexibleSeatingGuestModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:525")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -46,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:525")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
         public bool IsActive
         {
             get => _isActive;
@@ -64,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:525")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
         public bool EnableAssociationLimit
         {
             get => _enableAssociationLimit;
@@ -82,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:525")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int AssociationLimitHours
@@ -102,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unlockPhonePINCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:525")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
         [MinLength(4)]
         [MaxLength(10)]
         public string UnlockPhonePINCode
@@ -122,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:525")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -140,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostUserId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:525")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
         [MinLength(1)]
         [MaxLength(161)]
         public string HostUserId

@@ -39,14 +39,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3144""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3180""}]")]
     public class UserPhoneDirectoryGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3144")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3180")]
         public int TotalNumberOfRows
         {
             get => _totalNumberOfRows;
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _directoryTable;
 
         [XmlElement(ElementName = "directoryTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3144")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3180")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DirectoryTable
         {
             get => _directoryTable;

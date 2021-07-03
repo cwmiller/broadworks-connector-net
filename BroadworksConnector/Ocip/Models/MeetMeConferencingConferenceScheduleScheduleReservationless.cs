@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:1080""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:975""}]")]
     public class MeetMeConferencingConferenceScheduleScheduleReservationless
     {
 
         private string _startTime;
 
         [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:1080")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:975")]
         public string StartTime
         {
             get => _startTime;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _endTime;
 
         [XmlElement(ElementName = "endTime", IsNullable = true, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:1080")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:975")]
         public string EndTime
         {
             get => _endTime;

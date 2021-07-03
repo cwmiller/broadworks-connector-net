@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b87b6355d5858fdbeb8c1eb05dc1651a:188""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b87b6355d5858fdbeb8c1eb05dc1651a:190""}]")]
     public class UserPrivacyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:188")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:190")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:188")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:190")]
         public bool EnableDirectoryPrivacy
         {
             get => _enableDirectoryPrivacy;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:188")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:190")]
         public bool EnableAutoAttendantExtensionDialingPrivacy
         {
             get => _enableAutoAttendantExtensionDialingPrivacy;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAutoAttendantNameDialingPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:188")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:190")]
         public bool EnableAutoAttendantNameDialingPrivacy
         {
             get => _enableAutoAttendantNameDialingPrivacy;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enablePhoneStatusPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:188")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:190")]
         public bool EnablePhoneStatusPrivacy
         {
             get => _enablePhoneStatusPrivacy;
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "permittedMonitorUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:188")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:190")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList PermittedMonitorUserIdList
         {
             get => _permittedMonitorUserIdList;

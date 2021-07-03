@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3834""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3920""}]")]
     public class UserServiceIsAssignedResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isAssigned;
 
         [XmlElement(ElementName = "isAssigned", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3834")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3920")]
         public bool IsAssigned
         {
             get => _isAssigned;

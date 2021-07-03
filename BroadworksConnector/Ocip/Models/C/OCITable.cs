@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models.C
     [Serializable]
     [XmlRoot(Namespace = "C")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:214""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:237""}]")]
     public class OCITable
     {
 
         private List<string> _colHeading = new List<string>();
 
         [XmlElement(ElementName = "colHeading", IsNullable = false, Namespace = "")]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:214")]
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:237")]
         public List<string> ColHeading
         {
             get => _colHeading;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models.C
 
         [XmlElement(ElementName = "row", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:214")]
+        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:237")]
         public List<BroadWorksConnector.Ocip.Models.C.OCITableRow> Row
         {
             get => _row;

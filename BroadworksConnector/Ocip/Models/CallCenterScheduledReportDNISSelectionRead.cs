@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7632"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7635"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7637""}]}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7665"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7668"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7670""}]}]}]")]
     public class CallCenterScheduledReportDNISSelectionRead
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7632")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7665")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deleted", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7632")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7665")]
         public bool Deleted
         {
             get => _deleted;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allDNIS;
 
         [XmlElement(ElementName = "allDNIS", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7635")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7668")]
         public bool AllDNIS
         {
             get => _allDNIS;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "currentName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7637")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7670")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> CurrentName
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7637")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7670")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> PastName

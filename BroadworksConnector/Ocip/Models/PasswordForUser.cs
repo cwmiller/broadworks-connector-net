@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:853""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:795""}]")]
     public class PasswordForUser
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:795")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:795")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:795")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "generatePassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:795")]
         public bool GeneratePassword
         {
             get => _generatePassword;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "generatePasscode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:795")]
         public bool GeneratePasscode
         {
             get => _generatePasscode;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "generateSipPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:853")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:795")]
         public bool GenerateSipPassword
         {
             get => _generateSipPassword;

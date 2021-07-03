@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4271""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4455""}]")]
     public class ProfileAndServiceMusicOnHoldInfo
     {
 
         private bool _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4271")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4455")]
         public bool EnableVideo
         {
             get => _enableVideo;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 _source;
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4271")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4455")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 Source
         {
             get => _source;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4271")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4455")]
         public bool UseAlternateSourceForInternalCalls
         {
             get => _useAlternateSourceForInternalCalls;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4271")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4455")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 InternalSource
         {
             get => _internalSource;

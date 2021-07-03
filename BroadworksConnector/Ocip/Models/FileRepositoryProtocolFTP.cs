@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44006""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:48960""}]")]
     public class FileRepositoryProtocolFTP
     {
 
         private bool _ftpPassive;
 
         [XmlElement(ElementName = "ftpPassive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44006")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48960")]
         public bool FtpPassive
         {
             get => _ftpPassive;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44006")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48960")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress

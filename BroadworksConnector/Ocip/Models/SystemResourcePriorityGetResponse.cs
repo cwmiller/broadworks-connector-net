@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0c61aa8506194ca714d0fe1c4a0b57ff:112""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0c61aa8506194ca714d0fe1c4a0b57ff:113""}]")]
     public class SystemResourcePriorityGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _sendResourcePriorityToNetwork;
 
         [XmlElement(ElementName = "sendResourcePriorityToNetwork", IsNullable = false, Namespace = "")]
-        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:112")]
+        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:113")]
         public bool SendResourcePriorityToNetwork
         {
             get => _sendResourcePriorityToNetwork;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ResourcePriorityValue _resourcePriority;
 
         [XmlElement(ElementName = "resourcePriority", IsNullable = false, Namespace = "")]
-        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:112")]
+        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:113")]
         public BroadWorksConnector.Ocip.Models.ResourcePriorityValue ResourcePriority
         {
             get => _resourcePriority;

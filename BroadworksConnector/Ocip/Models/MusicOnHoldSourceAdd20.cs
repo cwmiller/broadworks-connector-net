@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:8175""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:14873""}]")]
     public class MusicOnHoldSourceAdd20
     {
 
         private BroadWorksConnector.Ocip.Models.AudioFileCodec _audioFilePreferredCodec;
 
         [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8175")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14873")]
         public BroadWorksConnector.Ocip.Models.AudioFileCodec AudioFilePreferredCodec
         {
             get => _audioFilePreferredCodec;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
 
         [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8175")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14873")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection
         {
             get => _messageSourceSelection;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "customSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8175")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14873")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd20CustomSource CustomSource
         {
             get => _customSource;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "externalSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8175")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14873")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceAdd20ExternalSource ExternalSource
         {
             get => _externalSource;

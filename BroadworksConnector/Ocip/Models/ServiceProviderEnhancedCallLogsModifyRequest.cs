@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f6b3702edb5f67fa12c2c426d98657db:180""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f6b3702edb5f67fa12c2c426d98657db:138""}]")]
     public class ServiceProviderEnhancedCallLogsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:180")]
+        [Group(@"f6b3702edb5f67fa12c2c426d98657db:138")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxLoggedCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:180")]
+        [Group(@"f6b3702edb5f67fa12c2c426d98657db:138")]
         [MinInclusive(1)]
         [MaxInclusive(99000)]
         public int MaxLoggedCalls
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callExpirationDays", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:180")]
+        [Group(@"f6b3702edb5f67fa12c2c426d98657db:138")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
         public int CallExpirationDays

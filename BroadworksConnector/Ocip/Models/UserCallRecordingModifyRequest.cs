@@ -23,20 +23,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// The enableVoiceMailRecording parameter is only applicable
     /// if the Voice Messaging User service is assigned to the user.
     /// This applies to both users and service instances.
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// mediaStream
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:457""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:490""}]")]
     public class UserCallRecordingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -56,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recordingOption", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
         public BroadWorksConnector.Ocip.Models.RecordingOption20 RecordingOption
         {
             get => _recordingOption;
@@ -74,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pauseResumeNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
         public BroadWorksConnector.Ocip.Models.RecordingPauseResumeNotificationType PauseResumeNotification
         {
             get => _pauseResumeNotification;
@@ -92,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableCallRecordingAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
         public bool EnableCallRecordingAnnouncement
         {
             get => _enableCallRecordingAnnouncement;
@@ -110,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableRecordCallRepeatWarningTone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
         public bool EnableRecordCallRepeatWarningTone
         {
             get => _enableRecordCallRepeatWarningTone;
@@ -128,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recordCallRepeatWarningToneTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
         [MinInclusive(10)]
         [MaxInclusive(1800)]
         public int RecordCallRepeatWarningToneTimerSeconds
@@ -148,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableVoiceMailRecording", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:457")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
         public bool EnableVoiceMailRecording
         {
             get => _enableVoiceMailRecording;
@@ -161,6 +163,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool EnableVoiceMailRecordingSpecified { get; set; }
+
+        private BroadWorksConnector.Ocip.Models.MediaStream _mediaStream;
+
+        [XmlElement(ElementName = "mediaStream", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
+        public BroadWorksConnector.Ocip.Models.MediaStream MediaStream
+        {
+            get => _mediaStream;
+            set
+            {
+                MediaStreamSpecified = true;
+                _mediaStream = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool MediaStreamSpecified { get; set; }
 
     }
 }

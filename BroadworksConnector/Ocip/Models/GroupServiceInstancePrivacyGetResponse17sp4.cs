@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b87b6355d5858fdbeb8c1eb05dc1651a:61""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b87b6355d5858fdbeb8c1eb05dc1651a:62""}]")]
     public class GroupServiceInstancePrivacyGetResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _enableDirectoryPrivacy;
 
         [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:61")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:62")]
         public bool EnableDirectoryPrivacy
         {
             get => _enableDirectoryPrivacy;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableAutoAttendantExtensionDialingPrivacy;
 
         [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false, Namespace = "")]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:61")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:62")]
         public bool EnableAutoAttendantExtensionDialingPrivacy
         {
             get => _enableAutoAttendantExtensionDialingPrivacy;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableAutoAttendantNameDialingPrivacy;
 
         [XmlElement(ElementName = "enableAutoAttendantNameDialingPrivacy", IsNullable = false, Namespace = "")]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:61")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:62")]
         public bool EnableAutoAttendantNameDialingPrivacy
         {
             get => _enableAutoAttendantNameDialingPrivacy;

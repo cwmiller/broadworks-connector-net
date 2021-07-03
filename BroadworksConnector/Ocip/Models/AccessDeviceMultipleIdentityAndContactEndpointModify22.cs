@@ -13,11 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// Port numbers are only used by devices with static line ordering.
     /// The following elements are only used in XS data mode and ignored in AS data mode:
     /// privateIdentity
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// useHotline
+    /// hotlineContact
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:318""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:376""}]")]
     public class AccessDeviceMultipleIdentityAndContactEndpointModify22
     {
 
@@ -25,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:318")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
         public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
         {
             get => _accessDevice;
@@ -43,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:318")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -63,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateIdentity", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:318")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PrivateIdentity
@@ -83,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:318")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
         public BroadWorksConnector.Ocip.Models.ReplacementContactList22 ContactList
         {
             get => _contactList;
@@ -101,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:318")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
         [MinInclusive(1)]
         [MaxInclusive(1024)]
         public int PortNumber
@@ -116,6 +119,44 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool PortNumberSpecified { get; set; }
+
+        private bool _useHotline;
+
+        [XmlElement(ElementName = "useHotline", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
+        public bool UseHotline
+        {
+            get => _useHotline;
+            set
+            {
+                UseHotlineSpecified = true;
+                _useHotline = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool UseHotlineSpecified { get; set; }
+
+        private string _hotlineContact;
+
+        [XmlElement(ElementName = "hotlineContact", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string HotlineContact
+        {
+            get => _hotlineContact;
+            set
+            {
+                HotlineContactSpecified = true;
+                _hotlineContact = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool HotlineContactSpecified { get; set; }
 
     }
 }

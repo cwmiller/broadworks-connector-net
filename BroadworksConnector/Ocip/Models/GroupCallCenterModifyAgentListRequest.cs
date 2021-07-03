@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:5035"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:5037""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4995"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4997""}]}]")]
     public class GroupCallCenterModifyAgentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5035")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4995")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5037")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4997")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList
         {
             get => _agentUserIdList;
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "skilledAgentUserIdList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5037")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4997")]
         public List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents> SkilledAgentUserIdList
         {
             get => _skilledAgentUserIdList;

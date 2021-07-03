@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5010""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25885""}]")]
     public class SystemDeviceTypeGetAvailableListResponse14sp1TypeInfo
     {
 
         private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5010")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25885")]
         public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile
         {
             get => _profile;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5010")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25885")]
         public bool StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5010")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25885")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigType
         {
             get => _configType;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _protocolChoice = new List<string>();
 
         [XmlElement(ElementName = "protocolChoice", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5010")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25885")]
         [MinLength(1)]
         [MaxLength(20)]
         public List<string> ProtocolChoice
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isIpAddressOptional;
 
         [XmlElement(ElementName = "isIpAddressOptional", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5010")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25885")]
         public bool IsIpAddressOptional
         {
             get => _isIpAddressOptional;
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5010")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25885")]
         public bool UseDomain
         {
             get => _useDomain;

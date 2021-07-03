@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:6898""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7915""}]")]
     public class GroupServicePhoneNumberLookupRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6898")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7915")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6898")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7915")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.NumberLookupServiceType _serviceType;
 
         [XmlElement(ElementName = "serviceType", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6898")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7915")]
         public BroadWorksConnector.Ocip.Models.NumberLookupServiceType ServiceType
         {
             get => _serviceType;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6898")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7915")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber

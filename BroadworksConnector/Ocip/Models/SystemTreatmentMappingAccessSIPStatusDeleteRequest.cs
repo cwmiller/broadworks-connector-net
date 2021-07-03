@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:17561""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18632""}]")]
     public class SystemTreatmentMappingAccessSIPStatusDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private int _sipStatusCode;
 
         [XmlElement(ElementName = "sipStatusCode", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17561")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18632")]
         [MinInclusive(400)]
         [MaxInclusive(699)]
         public int SipStatusCode

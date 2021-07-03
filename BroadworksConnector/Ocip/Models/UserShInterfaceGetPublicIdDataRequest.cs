@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7757""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:14394""}]")]
     public class UserShInterfaceGetPublicIdDataRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
 
         [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7757")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:14394")]
         public BroadWorksConnector.Ocip.Models.PublicUserIdentity PublicUserIdentity
         {
             get => _publicUserIdentity;

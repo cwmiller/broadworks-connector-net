@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7545""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8586""}]")]
     public class SystemDeviceProfileAuthenticationPasswordRulesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _disallowAuthenticationName;
 
         [XmlElement(ElementName = "disallowAuthenticationName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         public bool DisallowAuthenticationName
         {
             get => _disallowAuthenticationName;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _disallowOldPassword;
 
         [XmlElement(ElementName = "disallowOldPassword", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         public bool DisallowOldPassword
         {
             get => _disallowOldPassword;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _disallowReversedOldPassword;
 
         [XmlElement(ElementName = "disallowReversedOldPassword", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         public bool DisallowReversedOldPassword
         {
             get => _disallowReversedOldPassword;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _restrictMinDigits;
 
         [XmlElement(ElementName = "restrictMinDigits", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         public bool RestrictMinDigits
         {
             get => _restrictMinDigits;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _minDigits;
 
         [XmlElement(ElementName = "minDigits", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MinDigits
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _restrictMinUpperCaseLetters;
 
         [XmlElement(ElementName = "restrictMinUpperCaseLetters", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         public bool RestrictMinUpperCaseLetters
         {
             get => _restrictMinUpperCaseLetters;
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _minUpperCaseLetters;
 
         [XmlElement(ElementName = "minUpperCaseLetters", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MinUpperCaseLetters
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _restrictMinLowerCaseLetters;
 
         [XmlElement(ElementName = "restrictMinLowerCaseLetters", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         public bool RestrictMinLowerCaseLetters
         {
             get => _restrictMinLowerCaseLetters;
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _minLowerCaseLetters;
 
         [XmlElement(ElementName = "minLowerCaseLetters", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MinLowerCaseLetters
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _restrictMinNonAlphanumericCharacters;
 
         [XmlElement(ElementName = "restrictMinNonAlphanumericCharacters", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         public bool RestrictMinNonAlphanumericCharacters
         {
             get => _restrictMinNonAlphanumericCharacters;
@@ -197,7 +197,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _minNonAlphanumericCharacters;
 
         [XmlElement(ElementName = "minNonAlphanumericCharacters", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MinNonAlphanumericCharacters
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _minLength;
 
         [XmlElement(ElementName = "minLength", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         [MinInclusive(3)]
         [MaxInclusive(40)]
         public int MinLength
@@ -235,7 +235,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _sendPermanentLockoutNotification;
 
         [XmlElement(ElementName = "sendPermanentLockoutNotification", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         public bool SendPermanentLockoutNotification
         {
             get => _sendPermanentLockoutNotification;
@@ -253,7 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "permanentLockoutNotifyEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PermanentLockoutNotifyEmailAddress
@@ -272,7 +272,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AuthenticationLockoutType _deviceProfileAuthenticationLockoutType;
 
         [XmlElement(ElementName = "deviceProfileAuthenticationLockoutType", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         public BroadWorksConnector.Ocip.Models.AuthenticationLockoutType DeviceProfileAuthenticationLockoutType
         {
             get => _deviceProfileAuthenticationLockoutType;
@@ -289,7 +289,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _deviceProfileTemporaryLockoutThreshold;
 
         [XmlElement(ElementName = "deviceProfileTemporaryLockoutThreshold", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int DeviceProfileTemporaryLockoutThreshold
@@ -308,7 +308,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _deviceProfileWaitAlgorithm;
 
         [XmlElement(ElementName = "deviceProfileWaitAlgorithm", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         public BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType DeviceProfileWaitAlgorithm
         {
             get => _deviceProfileWaitAlgorithm;
@@ -325,7 +325,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _deviceProfileLockoutFixedMinutes;
 
         [XmlElement(ElementName = "deviceProfileLockoutFixedMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         public BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes DeviceProfileLockoutFixedMinutes
         {
             get => _deviceProfileLockoutFixedMinutes;
@@ -342,7 +342,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _deviceProfilePermanentLockoutThreshold;
 
         [XmlElement(ElementName = "deviceProfilePermanentLockoutThreshold", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8586")]
         [MinInclusive(2)]
         [MaxInclusive(10)]
         public int DeviceProfilePermanentLockoutThreshold

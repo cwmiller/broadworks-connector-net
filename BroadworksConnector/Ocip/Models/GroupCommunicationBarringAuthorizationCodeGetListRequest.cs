@@ -8,8 +8,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get a list of Communication Barring Authorization Codes for a group.
-    /// The response is either a GroupCommunicationBarringAuthorizationCodeGetListResponse
-    /// or an ErrorResponse.
+    /// The response is either a GroupCommunicationBarringAuthorizationCodeGetListResponse or an ErrorResponse.
     /// 
     /// Replaced by: GroupCommunicationBarringAuthorizationCodeGetListRequest21sp1 in AS data mode
     /// <see cref="GroupCommunicationBarringAuthorizationCodeGetListResponse"/>
@@ -19,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4535""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2122""}]")]
     public class GroupCommunicationBarringAuthorizationCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4535")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2122")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -45,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4535")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2122")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3263""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3181""}]")]
     public class VoiceMessagingAlternateNoAnswerGreetingRead20
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3263")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3181")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3263")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3181")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile
         {
             get => _audioFile;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3263")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3181")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile
         {
             get => _videoFile;

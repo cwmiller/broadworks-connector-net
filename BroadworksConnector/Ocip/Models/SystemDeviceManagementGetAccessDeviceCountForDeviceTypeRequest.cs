@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7092""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7794""}]")]
     public class SystemDeviceManagementGetAccessDeviceCountForDeviceTypeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7092")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7794")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "countOnlyResetSupportedDevice", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7092")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7794")]
         public bool CountOnlyResetSupportedDevice
         {
             get => _countOnlyResetSupportedDevice;
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowUnmanagedDeviceType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7092")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7794")]
         public bool AllowUnmanagedDeviceType
         {
             get => _allowUnmanagedDeviceType;

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2058""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2474""}]")]
     public class SystemAuthenticationLockoutSettingsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _counterResetIntervalDays;
 
         [XmlElement(ElementName = "counterResetIntervalDays", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2058")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2474")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int CounterResetIntervalDays
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _counterResetHour;
 
         [XmlElement(ElementName = "counterResetHour", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2058")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2474")]
         [MinInclusive(0)]
         [MaxInclusive(23)]
         public int CounterResetHour
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _counterResetMinute;
 
         [XmlElement(ElementName = "counterResetMinute", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2058")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2474")]
         [MinInclusive(0)]
         [MaxInclusive(59)]
         public int CounterResetMinute
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _emergencySIPBypassAllowed;
 
         [XmlElement(ElementName = "emergencySIPBypassAllowed", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2058")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2474")]
         public bool EmergencySIPBypassAllowed
         {
             get => _emergencySIPBypassAllowed;

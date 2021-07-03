@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1085""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1151""}]")]
     public class UserCommunicationBarringAuthorizationCodeAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1085")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1151")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> _code = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry>();
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1085")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1151")]
         public List<BroadWorksConnector.Ocip.Models.CommunicationBarringAuthorizationCodeEntry> Code
         {
             get => _code;

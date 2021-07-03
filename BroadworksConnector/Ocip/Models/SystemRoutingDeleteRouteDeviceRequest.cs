@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14162""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15258""}]")]
     public class SystemRoutingDeleteRouteDeviceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _routeName;
 
         [XmlElement(ElementName = "routeName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14162")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15258")]
         [MinLength(1)]
         [MaxLength(32)]
         public string RouteName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14162")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15258")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14162")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15258")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int Port

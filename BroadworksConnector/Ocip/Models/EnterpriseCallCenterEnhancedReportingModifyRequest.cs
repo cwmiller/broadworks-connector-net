@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24209""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2144""}]")]
     public class EnterpriseCallCenterEnhancedReportingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24209")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2144")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingServer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24209")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2144")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice ReportingServer
         {
             get => _reportingServer;
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "webStatisticSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24209")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2144")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource WebStatisticSource
         {
             get => _webStatisticSource;

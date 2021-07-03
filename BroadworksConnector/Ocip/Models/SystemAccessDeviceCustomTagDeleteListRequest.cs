@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:693""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:788""}]")]
     public class SystemAccessDeviceCustomTagDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:693")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:788")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _tagName = new List<string>();
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:693")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:788")]
         [MinLength(1)]
         [MaxLength(64)]
         public List<string> TagName

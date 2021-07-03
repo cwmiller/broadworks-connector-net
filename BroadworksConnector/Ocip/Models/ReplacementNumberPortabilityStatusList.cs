@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3318""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3956""}]")]
     public class ReplacementNumberPortabilityStatusList
     {
 
         private List<string> _status = new List<string>();
 
         [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3318")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3956")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> Status

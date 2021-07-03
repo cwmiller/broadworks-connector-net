@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1062""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1150""}]")]
     public class CollaborateRoomScheduleScheduleOneTime
     {
 
         private string _startTime;
 
         [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1062")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1150")]
         public string StartTime
         {
             get => _startTime;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleDuration _duration;
 
         [XmlElement(ElementName = "duration", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1062")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1150")]
         public BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleDuration Duration
         {
             get => _duration;

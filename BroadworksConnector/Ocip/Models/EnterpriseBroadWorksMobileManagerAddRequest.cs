@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:130""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:131""}]")]
     public class EnterpriseBroadWorksMobileManagerAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:130")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:131")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _informationFile;
 
         [XmlElement(ElementName = "informationFile", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:130")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:131")]
         [MinLength(1)]
         public string InformationFile
         {
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _certificateFile;
 
         [XmlElement(ElementName = "certificateFile", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:130")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:131")]
         [MinLength(1)]
         public string CertificateFile
         {
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:130")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:131")]
         public bool IsActive
         {
             get => _isActive;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _localToCarrier;
 
         [XmlElement(ElementName = "localToCarrier", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:130")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:131")]
         public bool LocalToCarrier
         {
             get => _localToCarrier;
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _maxTxPerSecondEnabled;
 
         [XmlElement(ElementName = "maxTxPerSecondEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:130")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:131")]
         public bool MaxTxPerSecondEnabled
         {
             get => _maxTxPerSecondEnabled;
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxTxPerSecond", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:130")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:131")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
         public int MaxTxPerSecond
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _tldnEnabled;
 
         [XmlElement(ElementName = "tldnEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:130")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:131")]
         public bool TldnEnabled
         {
             get => _tldnEnabled;
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _genericNumberEnabled;
 
         [XmlElement(ElementName = "genericNumberEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:130")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:131")]
         public bool GenericNumberEnabled
         {
             get => _genericNumberEnabled;
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _mobileStateCheckEnabled;
 
         [XmlElement(ElementName = "mobileStateCheckEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:130")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:131")]
         public bool MobileStateCheckEnabled
         {
             get => _mobileStateCheckEnabled;
@@ -201,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _locationBasedServicesEnabled;
 
         [XmlElement(ElementName = "locationBasedServicesEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:130")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:131")]
         public bool LocationBasedServicesEnabled
         {
             get => _locationBasedServicesEnabled;

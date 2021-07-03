@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get the announcement repository file information.
     /// The response is either UserAnnouncementFileGetResponse or ErrorResponse.
+    /// 
+    /// Replaced by: UserAnnouncementFileGetRequest22.
     /// <see cref="UserAnnouncementFileGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="UserAnnouncementFileGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:660""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:39479""}]")]
     public class UserAnnouncementFileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:660")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39479")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _announcementFileKey;
 
         [XmlElement(ElementName = "announcementFileKey", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:660")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39479")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileKey AnnouncementFileKey
         {
             get => _announcementFileKey;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11966""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13093""}]")]
     public class SystemNumberPortabilityQueryDigitPatternGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _statusDigitPatternTable;
 
         [XmlElement(ElementName = "statusDigitPatternTable", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11966")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13093")]
         public BroadWorksConnector.Ocip.Models.C.OCITable StatusDigitPatternTable
         {
             get => _statusDigitPatternTable;

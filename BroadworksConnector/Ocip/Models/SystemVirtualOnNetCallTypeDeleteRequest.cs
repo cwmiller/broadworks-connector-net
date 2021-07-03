@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:262""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:261""}]")]
     public class SystemVirtualOnNetCallTypeDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _virtualOnNetCallTypeName;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:262")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:261")]
         [MinLength(1)]
         [MaxLength(40)]
         public string VirtualOnNetCallTypeName

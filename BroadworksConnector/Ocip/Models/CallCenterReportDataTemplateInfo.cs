@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7398""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7431""}]")]
     public class CallCenterReportDataTemplateInfo
     {
 
         private string _dataTemplate;
 
         [XmlElement(ElementName = "dataTemplate", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DataTemplate
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportType _reportType;
 
         [XmlElement(ElementName = "reportType", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportType ReportType
         {
             get => _reportType;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isRealtimeReport;
 
         [XmlElement(ElementName = "isRealtimeReport", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public bool IsRealtimeReport
         {
             get => _isRealtimeReport;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isAgentParamRequired;
 
         [XmlElement(ElementName = "isAgentParamRequired", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption IsAgentParamRequired
         {
             get => _isAgentParamRequired;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isCallCenterParamRequired;
 
         [XmlElement(ElementName = "isCallCenterParamRequired", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption IsCallCenterParamRequired
         {
             get => _isCallCenterParamRequired;
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isCallCenterDnisParamRequired;
 
         [XmlElement(ElementName = "isCallCenterDnisParamRequired", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption IsCallCenterDnisParamRequired
         {
             get => _isCallCenterDnisParamRequired;
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isSamplingPeriodParamRequired;
 
         [XmlElement(ElementName = "isSamplingPeriodParamRequired", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption IsSamplingPeriodParamRequired
         {
             get => _isSamplingPeriodParamRequired;
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isCallCompletionThresholdParamRequired;
 
         [XmlElement(ElementName = "isCallCompletionThresholdParamRequired", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption IsCallCompletionThresholdParamRequired
         {
             get => _isCallCompletionThresholdParamRequired;
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isShortDurationThresholdParamRequired;
 
         [XmlElement(ElementName = "isShortDurationThresholdParamRequired", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption IsShortDurationThresholdParamRequired
         {
             get => _isShortDurationThresholdParamRequired;
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isServiceLevelThresholdParamRequired;
 
         [XmlElement(ElementName = "isServiceLevelThresholdParamRequired", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption IsServiceLevelThresholdParamRequired
         {
             get => _isServiceLevelThresholdParamRequired;
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isServiceLevelInclusionsParamRequired;
 
         [XmlElement(ElementName = "isServiceLevelInclusionsParamRequired", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption IsServiceLevelInclusionsParamRequired
         {
             get => _isServiceLevelInclusionsParamRequired;
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isServiceLevelObjectiveThresholdParamRequired;
 
         [XmlElement(ElementName = "isServiceLevelObjectiveThresholdParamRequired", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption IsServiceLevelObjectiveThresholdParamRequired
         {
             get => _isServiceLevelObjectiveThresholdParamRequired;
@@ -225,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption _isAbandonedCallThresholdParamRequired;
 
         [XmlElement(ElementName = "isAbandonedCallThresholdParamRequired", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7398")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7431")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInputParameterOption IsAbandonedCallThresholdParamRequired
         {
             get => _isAbandonedCallThresholdParamRequired;

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc829065f9d696d3ca7084121d57f8c0:345""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc829065f9d696d3ca7084121d57f8c0:349""}]")]
     public class GroupHuntGroupGetInstanceListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"bc829065f9d696d3ca7084121d57f8c0:345")]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:349")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"bc829065f9d696d3ca7084121d57f8c0:345")]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:349")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupDepartmentName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc829065f9d696d3ca7084121d57f8c0:345")]
+        [Group(@"bc829065f9d696d3ca7084121d57f8c0:349")]
         [MinLength(1)]
         [MaxLength(50)]
         public string GroupDepartmentName

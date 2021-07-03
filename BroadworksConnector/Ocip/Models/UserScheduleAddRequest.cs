@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3514""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3553""}]")]
     public class UserScheduleAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3514")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3553")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _scheduleName;
 
         [XmlElement(ElementName = "scheduleName", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3514")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3553")]
         [MinLength(1)]
         [MaxLength(40)]
         public string ScheduleName
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ScheduleType _scheduleType;
 
         [XmlElement(ElementName = "scheduleType", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3514")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3553")]
         public BroadWorksConnector.Ocip.Models.ScheduleType ScheduleType
         {
             get => _scheduleType;

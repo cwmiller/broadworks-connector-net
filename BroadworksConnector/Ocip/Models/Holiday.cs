@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43872""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:48972""}]")]
     public class Holiday
     {
 
         private string _holidayName;
 
         [XmlElement(ElementName = "holidayName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43872")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48972")]
         [MinLength(1)]
         [MaxLength(40)]
         public string HolidayName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _startDate;
 
         [XmlElement(ElementName = "startDate", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43872")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48972")]
         public string StartDate
         {
             get => _startDate;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "endDate", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43872")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48972")]
         public string EndDate
         {
             get => _endDate;

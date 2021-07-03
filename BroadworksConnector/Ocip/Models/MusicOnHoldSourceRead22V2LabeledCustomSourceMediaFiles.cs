@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2849""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3350""}]")]
     public class MusicOnHoldSourceRead22V2LabeledCustomSourceMediaFiles
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2849")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3350")]
         [MinLength(1)]
         [MaxLength(256)]
         public string AudioFileDescription
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2849")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3350")]
         public BroadWorksConnector.Ocip.Models.MediaFileType AudioMediaType
         {
             get => _audioMediaType;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2849")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3350")]
         [MinLength(1)]
         [MaxLength(256)]
         public string VideoFileDescription
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2849")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3350")]
         public BroadWorksConnector.Ocip.Models.MediaFileType VideoMediaType
         {
             get => _videoMediaType;

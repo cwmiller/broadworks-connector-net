@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11096""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12137""}]")]
     public class SystemMediaSetGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private List<string> _mediaName = new List<string>();
 
         [XmlElement(ElementName = "mediaName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11096")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12137")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> MediaName

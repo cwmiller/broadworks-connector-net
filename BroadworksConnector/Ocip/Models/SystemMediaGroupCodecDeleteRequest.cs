@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10700""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11741""}]")]
     public class SystemMediaGroupCodecDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10700")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11741")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _codecName;
 
         [XmlElement(ElementName = "codecName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10700")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11741")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CodecName

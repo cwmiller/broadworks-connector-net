@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:17789""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18862""}]")]
     public class SystemTreatmentMappingNetworkServerTreatmentAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _nsTreatment;
 
         [XmlElement(ElementName = "nsTreatment", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17789")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18862")]
         [MinLength(1)]
         [MaxLength(8)]
         public string NsTreatment
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17789")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18862")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TreatmentId

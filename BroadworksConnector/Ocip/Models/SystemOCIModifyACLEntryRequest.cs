@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12509""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13636""}]")]
     public class SystemOCIModifyACLEntryRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12509")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13636")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12509")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13636")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

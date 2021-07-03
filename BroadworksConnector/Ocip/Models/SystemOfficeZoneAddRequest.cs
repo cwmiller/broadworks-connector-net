@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12771""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13862""}]")]
     public class SystemOfficeZoneAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _officeZoneName;
 
         [XmlElement(ElementName = "officeZoneName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12771")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13862")]
         [MinLength(1)]
         [MaxLength(40)]
         public string OfficeZoneName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12771")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13862")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _zoneName = new List<string>();
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12771")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13862")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> ZoneName
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _primaryZoneName;
 
         [XmlElement(ElementName = "primaryZoneName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12771")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13862")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PrimaryZoneName

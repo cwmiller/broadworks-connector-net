@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Request to get the list of call types of outgoing calling plan
+    /// Request to get the list of call types of outgoing calling plan.
     /// The response is SystemOutgoingCallingPlanCallTypeGetListResponse or ErrorResponse.
     /// <see cref="SystemOutgoingCallingPlanCallTypeGetListResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:910""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:911""}]")]
     public class SystemOutgoingCallingPlanCallTypeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 

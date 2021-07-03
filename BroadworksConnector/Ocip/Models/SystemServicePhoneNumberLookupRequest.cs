@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15063""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16205""}]")]
     public class SystemServicePhoneNumberLookupRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.NumberLookupServiceType _serviceType;
 
         [XmlElement(ElementName = "serviceType", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15063")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16205")]
         public BroadWorksConnector.Ocip.Models.NumberLookupServiceType ServiceType
         {
             get => _serviceType;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15063")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16205")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber

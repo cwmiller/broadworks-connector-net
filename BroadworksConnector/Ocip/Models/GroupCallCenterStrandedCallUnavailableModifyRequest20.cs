@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:5935""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:5897""}]")]
     public class GroupCallCenterStrandedCallUnavailableModifyRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "conditionPolicyOnNumberOfAgentsWithSpecifiedUnavailableCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         public bool ConditionPolicyOnNumberOfAgentsWithSpecifiedUnavailableCode
         {
             get => _conditionPolicyOnNumberOfAgentsWithSpecifiedUnavailableCode;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberOfAgentsWithSpecifiedUnavailableCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
         public int? NumberOfAgentsWithSpecifiedUnavailableCode
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentsUnavailableCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         [MinLength(1)]
         [MaxLength(10)]
         public string AgentsUnavailableCode
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         public BroadWorksConnector.Ocip.Models.CallCenterStrandedCallUnavailableProcessingAction Action
         {
             get => _action;
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         [MinLength(1)]
         [MaxLength(161)]
         public string TransferPhoneNumber
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection
         {
             get => _audioMessageSelection;
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioUrlList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify AudioUrlList
         {
             get => _audioUrlList;
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFileList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify20 AudioFileList
         {
             get => _audioFileList;
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection
         {
             get => _videoMessageSelection;
@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoUrlList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify VideoUrlList
         {
             get => _videoUrlList;
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFileList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:5935")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:5897")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify20 VideoFileList
         {
             get => _videoFileList;

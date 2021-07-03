@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2678""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3173""}]")]
     public class MusicOnHoldSourceModify21AnnouncementCustomSourceMediaFiles
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2678")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3173")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileKey AudioFile
         {
             get => _audioFile;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2678")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3173")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileKey VideoFile
         {
             get => _videoFile;

@@ -255,8 +255,8 @@ namespace BroadWorksConnector
         /// Add number prefixes to a service provider.
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use ServiceProviderRouteListEnterpriseTrunkNumberPrefixAddListRequestAsync instead.")]
-        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberPrefixAddListRequest(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberPrefixAddListRequest request)
+        [Obsolete("This method is deprecated. Use ServiceProviderRouteListEnterpriseTrunkNumberPrefixAddListRequest22Async instead.")]
+        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberPrefixAddListRequest22(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberPrefixAddListRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -265,7 +265,7 @@ namespace BroadWorksConnector
         /// Add number prefixes to a service provider.
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberPrefixAddListRequestAsync(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberPrefixAddListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberPrefixAddListRequest22Async(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberPrefixAddListRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -346,6 +346,24 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as ServiceProviderRouteListEnterpriseTrunkNumberPrefixGetSummaryListResponse;
         }
         /// <summary>
+        /// Modify a list of number prefixes in a service provider.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use ServiceProviderRouteListEnterpriseTrunkNumberPrefixModifyListRequestAsync instead.")]
+        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberPrefixModifyListRequest(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberPrefixModifyListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify a list of number prefixes in a service provider.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberPrefixModifyListRequestAsync(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberPrefixModifyListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
         /// Activate number ranges in a service provider.
         /// It is not an error to activate an already activated number range.
         /// The command fails if executed when system level enterprise trunk number range activation is disabled.
@@ -371,8 +389,8 @@ namespace BroadWorksConnector
         /// Add number ranges to a service provider.
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use ServiceProviderRouteListEnterpriseTrunkNumberRangeAddListRequestAsync instead.")]
-        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberRangeAddListRequest(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberRangeAddListRequest request)
+        [Obsolete("This method is deprecated. Use ServiceProviderRouteListEnterpriseTrunkNumberRangeAddListRequest22Async instead.")]
+        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberRangeAddListRequest22(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberRangeAddListRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -381,7 +399,7 @@ namespace BroadWorksConnector
         /// Add number ranges to a service provider.
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberRangeAddListRequestAsync(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberRangeAddListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberRangeAddListRequest22Async(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberRangeAddListRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -460,6 +478,24 @@ namespace BroadWorksConnector
         public static async Task<ServiceProviderRouteListEnterpriseTrunkNumberRangeGetSummaryListResponse> ServiceProviderRouteListEnterpriseTrunkNumberRangeGetSummaryListRequestAsync(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberRangeGetSummaryListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as ServiceProviderRouteListEnterpriseTrunkNumberRangeGetSummaryListResponse;
+        }
+        /// <summary>
+        /// Modify a list of number ranges in a service provider
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use ServiceProviderRouteListEnterpriseTrunkNumberRangeModifyListRequestAsync instead.")]
+        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberRangeModifyListRequest(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberRangeModifyListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify a list of number ranges in a service provider
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> ServiceProviderRouteListEnterpriseTrunkNumberRangeModifyListRequestAsync(this OcipClient client, ServiceProviderRouteListEnterpriseTrunkNumberRangeModifyListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Request a summary table of all enterprise trunk prefixes in the system.

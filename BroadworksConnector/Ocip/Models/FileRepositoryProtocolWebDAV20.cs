@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18521""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19908""}]")]
     public class FileRepositoryProtocolWebDAV20
     {
 
         private bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18521")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19908")]
         public bool Secure
         {
             get => _secure;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18521")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19908")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _extendedFileCaptureSupport;
 
         [XmlElement(ElementName = "extendedFileCaptureSupport", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18521")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19908")]
         public bool ExtendedFileCaptureSupport
         {
             get => _extendedFileCaptureSupport;

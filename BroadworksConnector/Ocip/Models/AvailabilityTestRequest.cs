@@ -7,8 +7,8 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// AvailabilityTestRequest is for high-availability support. The response is either SuccessResponse
-    /// or ErrorResponse.
+    /// AvailabilityTestRequest is for high-availability support.
+    /// The response is either SuccessResponse or ErrorResponse.
     /// <see cref="AvailabilityTestRequest"/>
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10682""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11723""}]")]
     public class SystemMediaGroupCodecAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10682")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11723")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _codecName;
 
         [XmlElement(ElementName = "codecName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10682")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11723")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CodecName
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _codecWeight;
 
         [XmlElement(ElementName = "codecWeight", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10682")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11723")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
         public int CodecWeight

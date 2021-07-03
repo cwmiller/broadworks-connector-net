@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9430""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10401""}]")]
     public class SystemFileRepositoryDeviceUserDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _fileRepositoryName;
 
         [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9430")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10401")]
         [MinLength(1)]
         [MaxLength(40)]
         public string FileRepositoryName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9430")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10401")]
         [MinLength(1)]
         [MaxLength(30)]
         public string UserName

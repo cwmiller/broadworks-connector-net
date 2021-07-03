@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:213""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:214""}]")]
     public class GroupOutgoingCallingPlanDepartmentAuthorizationCodeDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:213")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:214")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:213")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:214")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:213")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:214")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey
         {
             get => _departmentKey;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _code = new List<string>();
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:213")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:214")]
         [MinLength(2)]
         [MaxLength(14)]
         public List<string> Code

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11876""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12957""}]")]
     public class SystemNumberActivationGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.NumberActivationMode _numberActivationMode;
 
         [XmlElement(ElementName = "numberActivationMode", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11876")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12957")]
         public BroadWorksConnector.Ocip.Models.NumberActivationMode NumberActivationMode
         {
             get => _numberActivationMode;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableEnterpriseTrunkNumberRangeActivation;
 
         [XmlElement(ElementName = "enableEnterpriseTrunkNumberRangeActivation", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11876")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12957")]
         public bool EnableEnterpriseTrunkNumberRangeActivation
         {
             get => _enableEnterpriseTrunkNumberRangeActivation;

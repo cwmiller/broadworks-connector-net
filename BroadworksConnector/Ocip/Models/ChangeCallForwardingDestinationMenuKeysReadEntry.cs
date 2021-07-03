@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2438""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2367""}]")]
     public class ChangeCallForwardingDestinationMenuKeysReadEntry
     {
 
         private string _finishEnteringNewDestinationNumber;
 
         [XmlElement(ElementName = "finishEnteringNewDestinationNumber", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2438")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2367")]
         [Length(1)]
         [RegularExpression(@"\*|#")]
         public string FinishEnteringNewDestinationNumber

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1165""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1254""}]")]
     public class SearchCriteriaExactSkillLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private int _skillLevel;
 
         [XmlElement(ElementName = "skillLevel", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1165")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:1254")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int SkillLevel

@@ -10,13 +10,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// Get the system provisioning configuration for all subscribers
     /// The response is either a SystemSubscriberGetProvisioningParametersResponse
     /// or an ErrorResponse.
+    /// 
+    /// Replaced by: SystemSubscriberGetProvisioningParametersRequest24
     /// <see cref="SystemSubscriberGetProvisioningParametersResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemSubscriberGetProvisioningParametersRequest24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:17069""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35257""}]")]
     public class SystemSubscriberGetProvisioningParametersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 

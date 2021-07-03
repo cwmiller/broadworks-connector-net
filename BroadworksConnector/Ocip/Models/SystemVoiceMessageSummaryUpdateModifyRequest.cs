@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:567""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:568""}]")]
     public class SystemVoiceMessageSummaryUpdateModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendSavedAndUrgentMWIOnNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:567")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:568")]
         public bool SendSavedAndUrgentMWIOnNotification
         {
             get => _sendSavedAndUrgentMWIOnNotification;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendMessageSummaryUpdateOnRegister", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:567")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:568")]
         public bool SendMessageSummaryUpdateOnRegister
         {
             get => _sendMessageSummaryUpdateOnRegister;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minTimeBetweenMWIOnRegister", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:567")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:568")]
         [MinInclusive(0)]
         [MaxInclusive(86400)]
         public int MinTimeBetweenMWIOnRegister

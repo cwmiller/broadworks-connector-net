@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e8517420bc6d5462dc1b2d9f82295894:153""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e8517420bc6d5462dc1b2d9f82295894:154""}]")]
     public class UserSelectiveCallAcceptanceGetCriteriaResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e8517420bc6d5462dc1b2d9f82295894:153")]
+        [Group(@"e8517420bc6d5462dc1b2d9f82295894:154")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e8517420bc6d5462dc1b2d9f82295894:153")]
+        [Group(@"e8517420bc6d5462dc1b2d9f82295894:154")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _blacklisted;
 
         [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
-        [Group(@"e8517420bc6d5462dc1b2d9f82295894:153")]
+        [Group(@"e8517420bc6d5462dc1b2d9f82295894:154")]
         public bool Blacklisted
         {
             get => _blacklisted;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"e8517420bc6d5462dc1b2d9f82295894:153")]
+        [Group(@"e8517420bc6d5462dc1b2d9f82295894:154")]
         public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria
         {
             get => _fromDnCriteria;
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callToNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e8517420bc6d5462dc1b2d9f82295894:153")]
+        [Group(@"e8517420bc6d5462dc1b2d9f82295894:154")]
         public List<BroadWorksConnector.Ocip.Models.CallToNumber> CallToNumber
         {
             get => _callToNumber;

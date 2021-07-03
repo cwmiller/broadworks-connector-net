@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e71c2205fb31894f87810b330a85ede2:155""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e71c2205fb31894f87810b330a85ede2:156""}]")]
     public class GroupEmergencyZonesModifyHomeZoneListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:155")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:156")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:155")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:156")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "homeZoneIpAddressList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:155")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:156")]
         public List<BroadWorksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressList> HomeZoneIpAddressList
         {
             get => _homeZoneIpAddressList;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "homeZoneIpAddressRangeList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:155")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:156")]
         public List<BroadWorksConnector.Ocip.Models.GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressRangeList> HomeZoneIpAddressRangeList
         {
             get => _homeZoneIpAddressRangeList;

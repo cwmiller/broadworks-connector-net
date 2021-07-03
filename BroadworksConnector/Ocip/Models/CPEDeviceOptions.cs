@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43154""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47869""}]")]
     public class CPEDeviceOptions
     {
 
         private bool _enableMonitoring;
 
         [XmlElement(ElementName = "enableMonitoring", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43154")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47869")]
         public bool EnableMonitoring
         {
             get => _enableMonitoring;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resetEvent", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43154")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47869")]
         public BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType ResetEvent
         {
             get => _resetEvent;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
 
         [XmlElement(ElementName = "configType", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43154")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47869")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigType
         {
             get => _configType;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _systemFileName;
 
         [XmlElement(ElementName = "systemFileName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43154")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47869")]
         [MinLength(1)]
         [MaxLength(265)]
         public string SystemFileName
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _deviceFileFormat;
 
         [XmlElement(ElementName = "deviceFileFormat", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43154")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47869")]
         [MinLength(1)]
         [MaxLength(265)]
         public string DeviceFileFormat

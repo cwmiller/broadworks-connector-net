@@ -8,22 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get an existing Virtual On-Net user from a Group.
-    /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserResponse
-    /// or an ErrorResponse.
+    /// The response is either a GroupVirtualOnNetEnterpriseExtensionsGetUserResponse or an ErrorResponse.
     /// <see cref="GroupVirtualOnNetEnterpriseExtensionsGetUserResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:181""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:180""}]")]
     public class GroupVirtualOnNetEnterpriseExtensionsGetUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:181")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:180")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:181")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:180")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:181")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:180")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber

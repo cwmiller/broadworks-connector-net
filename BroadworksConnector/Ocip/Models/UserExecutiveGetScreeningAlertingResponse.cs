@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9a6dbade05624033cf7fe782b7c9a9a7:321""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9a6dbade05624033cf7fe782b7c9a9a7:322""}]")]
     public class UserExecutiveGetScreeningAlertingResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _enableScreening;
 
         [XmlElement(ElementName = "enableScreening", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         public bool EnableScreening
         {
             get => _enableScreening;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ExecutiveScreeningAlertType _screeningAlertType;
 
         [XmlElement(ElementName = "screeningAlertType", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         public BroadWorksConnector.Ocip.Models.ExecutiveScreeningAlertType ScreeningAlertType
         {
             get => _screeningAlertType;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _alertBroadWorksMobilityLocation;
 
         [XmlElement(ElementName = "alertBroadWorksMobilityLocation", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         public bool AlertBroadWorksMobilityLocation
         {
             get => _alertBroadWorksMobilityLocation;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _alertBroadWorksAnywhereLocations;
 
         [XmlElement(ElementName = "alertBroadWorksAnywhereLocations", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         public bool AlertBroadWorksAnywhereLocations
         {
             get => _alertBroadWorksAnywhereLocations;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _alertSharedCallAppearanceLocations;
 
         [XmlElement(ElementName = "alertSharedCallAppearanceLocations", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         public bool AlertSharedCallAppearanceLocations
         {
             get => _alertSharedCallAppearanceLocations;
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ExecutiveAlertingMode _alertingMode;
 
         [XmlElement(ElementName = "alertingMode", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         public BroadWorksConnector.Ocip.Models.ExecutiveAlertingMode AlertingMode
         {
             get => _alertingMode;
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode _alertingCallingLineIdNameMode;
 
         [XmlElement(ElementName = "alertingCallingLineIdNameMode", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         public BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode AlertingCallingLineIdNameMode
         {
             get => _alertingCallingLineIdNameMode;
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertingCustomCallingLineIdName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AlertingCustomCallingLineIdName
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unicodeAlertingCustomCallingLineIdName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         [MinLength(1)]
         [MaxLength(80)]
         public string UnicodeAlertingCustomCallingLineIdName
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode _alertingCallingLineIdPhoneNumberMode;
 
         [XmlElement(ElementName = "alertingCallingLineIdPhoneNumberMode", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         public BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode AlertingCallingLineIdPhoneNumberMode
         {
             get => _alertingCallingLineIdPhoneNumberMode;
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertingCustomCallingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         [MinLength(1)]
         [MaxLength(23)]
         public string AlertingCustomCallingLineIdPhoneNumber
@@ -217,7 +217,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _callPushRecallNumberOfRings;
 
         [XmlElement(ElementName = "callPushRecallNumberOfRings", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int CallPushRecallNumberOfRings
@@ -236,7 +236,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _nextAssistantNumberOfRings;
 
         [XmlElement(ElementName = "nextAssistantNumberOfRings", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int NextAssistantNumberOfRings
@@ -255,7 +255,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableRollover;
 
         [XmlElement(ElementName = "enableRollover", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         public bool EnableRollover
         {
             get => _enableRollover;
@@ -273,7 +273,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "rolloverWaitTimeSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         [MinInclusive(0)]
         [MaxInclusive(7200)]
         public int RolloverWaitTimeSeconds
@@ -292,7 +292,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ExecutiveRolloverActionType _rolloverAction;
 
         [XmlElement(ElementName = "rolloverAction", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         public BroadWorksConnector.Ocip.Models.ExecutiveRolloverActionType RolloverAction
         {
             get => _rolloverAction;
@@ -310,7 +310,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "rolloverForwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:321")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:322")]
         [MinLength(1)]
         [MaxLength(161)]
         public string RolloverForwardToPhoneNumber

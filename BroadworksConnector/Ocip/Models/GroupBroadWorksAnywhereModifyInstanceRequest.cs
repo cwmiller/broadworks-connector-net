@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:196""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:197""}]")]
     public class GroupBroadWorksAnywhereModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:196")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:197")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:196")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:197")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "broadWorksAnywhereScope", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:196")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:197")]
         public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope BroadWorksAnywhereScope
         {
             get => _broadWorksAnywhereScope;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "promptForCLID", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:196")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:197")]
         public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt PromptForCLID
         {
             get => _promptForCLID;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "silentPromptMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:196")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:197")]
         public bool SilentPromptMode
         {
             get => _silentPromptMode;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "promptForPasscode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:196")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:197")]
         public bool PromptForPasscode
         {
             get => _promptForPasscode;
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:196")]
+        [Group(@"72f634ecc58842ce9d362ca629a47ea9:197")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

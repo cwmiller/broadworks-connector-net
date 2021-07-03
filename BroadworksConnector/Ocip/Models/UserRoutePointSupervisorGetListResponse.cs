@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:1316""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:1273""}]")]
     public class UserRoutePointSupervisorGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _supervisorTable;
 
         [XmlElement(ElementName = "supervisorTable", IsNullable = false, Namespace = "")]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:1316")]
+        [Group(@"a27224a048c30ff69eab9209dec841cc:1273")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SupervisorTable
         {
             get => _supervisorTable;

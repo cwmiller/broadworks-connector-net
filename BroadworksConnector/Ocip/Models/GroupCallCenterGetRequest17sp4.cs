@@ -10,20 +10,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request the Group level data associated with Call Center.
     /// The response is either a GroupCallCenterGetResponse17sp4 or an
     /// ErrorResponse.
+    /// Replaced by: GroupCallCenterGetRequest23
     /// <see cref="GroupCallCenterGetResponse17sp4"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupCallCenterGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4794""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:1608""}]")]
     public class GroupCallCenterGetRequest17sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4794")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:1608")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4794")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:1608")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

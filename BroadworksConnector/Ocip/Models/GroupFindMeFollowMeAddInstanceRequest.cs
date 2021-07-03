@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:107""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:108""}]")]
     public class GroupFindMeFollowMeAddInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:107")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:108")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:107")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:108")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:107")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:108")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:107")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:108")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:107")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:108")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

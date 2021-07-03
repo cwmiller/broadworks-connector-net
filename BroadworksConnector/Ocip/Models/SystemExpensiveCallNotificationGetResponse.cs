@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8782""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9811""}]")]
     public class SystemExpensiveCallNotificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _enablePostAnnouncementDelayTimer;
 
         [XmlElement(ElementName = "enablePostAnnouncementDelayTimer", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8782")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9811")]
         public bool EnablePostAnnouncementDelayTimer
         {
             get => _enablePostAnnouncementDelayTimer;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _postAnnouncementDelaySeconds;
 
         [XmlElement(ElementName = "postAnnouncementDelaySeconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8782")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9811")]
         [MinInclusive(0)]
         [MaxInclusive(20)]
         public int PostAnnouncementDelaySeconds

@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2086""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:13161""}]")]
     public class GroupTrunkGroupAddInstanceRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2086")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13161")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2086")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13161")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2086")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13161")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfileTrunkGroup _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2086")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13161")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfileTrunkGroup ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2086")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13161")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxActiveCalls;
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2086")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13161")]
         [MinInclusive(1)]
         public int MaxActiveCalls
         {
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxIncomingCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2086")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13161")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int MaxIncomingCalls
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxOutgoingCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2086")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13161")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int MaxOutgoingCalls
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _requireAuthentication;
 
         [XmlElement(ElementName = "requireAuthentication", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2086")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13161")]
         public bool RequireAuthentication
         {
             get => _requireAuthentication;
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sipAuthenticationUserName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2086")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13161")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SipAuthenticationUserName
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sipAuthenticationPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2086")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:13161")]
         [MinLength(1)]
         [MaxLength(60)]
         public string SipAuthenticationPassword

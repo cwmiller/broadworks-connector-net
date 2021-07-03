@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7378"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7380""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:13229"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:13231""}]}]")]
     public class UserEnhancedCallLogsGetListResponse21sp1V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7378")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:13229")]
         public int TotalNumberOfRows
         {
             get => _totalNumberOfRows;
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse21sp1V2LegacyEntry _legacyEntry;
 
         [XmlElement(ElementName = "legacyEntry", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7380")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:13231")]
         public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse21sp1V2LegacyEntry LegacyEntry
         {
             get => _legacyEntry;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse21sp1V2ExtendedEntry _extendedEntry;
 
         [XmlElement(ElementName = "extendedEntry", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7380")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:13231")]
         public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse21sp1V2ExtendedEntry ExtendedEntry
         {
             get => _extendedEntry;

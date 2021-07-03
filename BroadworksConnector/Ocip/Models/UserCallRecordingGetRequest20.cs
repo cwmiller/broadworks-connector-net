@@ -15,20 +15,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// - enableCallRecordingAnnouncement
     /// - enableRecordCallRepeatWarningTone
     /// - recordCallRepeatWarningToneTimerSeconds
+    /// 
+    /// Replaced by: UserCallRecordingGetRequest23.
     /// <see cref="UserCallRecordingGetResponse20"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="UserCallRecordingGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:391""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41698""}]")]
     public class UserCallRecordingGetRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:391")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41698")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

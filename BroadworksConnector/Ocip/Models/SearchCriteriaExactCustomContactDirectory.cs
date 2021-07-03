@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:745""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:804""}]")]
     public class SearchCriteriaExactCustomContactDirectory : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private string _customContactDirectoryName;
 
         [XmlElement(ElementName = "customContactDirectoryName", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:745")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:804")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CustomContactDirectoryName

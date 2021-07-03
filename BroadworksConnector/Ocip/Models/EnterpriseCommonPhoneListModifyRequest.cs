@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:491""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:492""}]")]
     public class EnterpriseCommonPhoneListModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:491")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:492")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _entryName;
 
         [XmlElement(ElementName = "entryName", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:491")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:492")]
         [MinLength(1)]
         [MaxLength(50)]
         public string EntryName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newEntryName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:491")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:492")]
         [MinLength(1)]
         [MaxLength(50)]
         public string NewEntryName
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:491")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:492")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PhoneNumber

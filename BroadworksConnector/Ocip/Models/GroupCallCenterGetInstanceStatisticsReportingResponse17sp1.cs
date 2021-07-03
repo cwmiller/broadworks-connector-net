@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4739""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4697""}]")]
     public class GroupCallCenterGetInstanceStatisticsReportingResponse17sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _generateDailyReport;
 
         [XmlElement(ElementName = "generateDailyReport", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4739")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4697")]
         public bool GenerateDailyReport
         {
             get => _generateDailyReport;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
 
         [XmlElement(ElementName = "collectionPeriodMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4739")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4697")]
         public BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes CollectionPeriodMinutes
         {
             get => _collectionPeriodMinutes;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingEmailAddress1", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4739")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4697")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ReportingEmailAddress1
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingEmailAddress2", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4739")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4697")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ReportingEmailAddress2
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterStatisticsSource17sp1 _statisticsSource;
 
         [XmlElement(ElementName = "statisticsSource", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4739")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:4697")]
         public BroadWorksConnector.Ocip.Models.CallCenterStatisticsSource17sp1 StatisticsSource
         {
             get => _statisticsSource;

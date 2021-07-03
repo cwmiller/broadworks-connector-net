@@ -9,21 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// The response to a SystemBroadWorksMobilityGetRequest.
     /// 
-    /// Replaced by: SystemBroadWorksMobilityGetResponse17sp4.
+    /// Replaced by:  SystemBroadWorksMobilityGetResponse17sp4.
     /// <see cref="SystemBroadWorksMobilityGetRequest"/>
     /// <see cref="SystemBroadWorksMobilityGetResponse17sp4"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:21066""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:20224""}]")]
     public class SystemBroadWorksMobilityGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _enableLocationServices;
 
         [XmlElement(ElementName = "enableLocationServices", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20224")]
         public bool EnableLocationServices
         {
             get => _enableLocationServices;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableMSRNLookup;
 
         [XmlElement(ElementName = "enableMSRNLookup", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20224")]
         public bool EnableMSRNLookup
         {
             get => _enableMSRNLookup;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableMobileStateChecking;
 
         [XmlElement(ElementName = "enableMobileStateChecking", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20224")]
         public bool EnableMobileStateChecking
         {
             get => _enableMobileStateChecking;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _denyCallOriginations;
 
         [XmlElement(ElementName = "denyCallOriginations", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20224")]
         public bool DenyCallOriginations
         {
             get => _denyCallOriginations;
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _denyCallTerminations;
 
         [XmlElement(ElementName = "denyCallTerminations", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20224")]
         public bool DenyCallTerminations
         {
             get => _denyCallTerminations;
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _imrnTimeoutMillisecnds;
 
         [XmlElement(ElementName = "imrnTimeoutMillisecnds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20224")]
         [MinInclusive(100)]
         [MaxInclusive(60000)]
         public int ImrnTimeoutMillisecnds
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scfSignalingIPAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20224")]
         [MinLength(1)]
         [MaxLength(39)]
         public string ScfSignalingIPAddress
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scfSignalingPort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:21066")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20224")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int ScfSignalingPort

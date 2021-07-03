@@ -8,20 +8,20 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Represents a Verify Translation and Routing request which can be either a request containing
-    /// parameters or a request containing a SIP message. The response is a SystemVerifyTranslationAndRoutingResponse.
+    /// parameters or a request containing a SIP message. Returns a SystemVerifyTranslationAndRoutingResponse.
     /// <see cref="SystemVerifyTranslationAndRoutingResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18032""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19104""}]")]
     public class SystemVerifyTranslationAndRoutingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingParameters _parameters;
 
         [XmlElement(ElementName = "parameters", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18032")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19104")]
         public BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingParameters Parameters
         {
             get => _parameters;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _sipMessage;
 
         [XmlElement(ElementName = "sipMessage", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18032")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19104")]
         public string SipMessage
         {
             get => _sipMessage;

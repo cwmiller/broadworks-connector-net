@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12095""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13222""}]")]
     public class SystemNumberPortabilityQueryStatusDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private List<string> _status = new List<string>();
 
         [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12095")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13222")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> Status

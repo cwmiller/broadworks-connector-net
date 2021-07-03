@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""43afb2158d313a1d1a148124d7caba1e:255""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""43afb2158d313a1d1a148124d7caba1e:199""}]")]
     public class GroupFlexibleSeatingHostGetInstanceResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:255")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:199")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _defaultAlias;
 
         [XmlElement(ElementName = "defaultAlias", IsNullable = false, Namespace = "")]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:255")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:199")]
         [MinLength(1)]
         [MaxLength(161)]
         public string DefaultAlias
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:255")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:199")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointRead22 AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:255")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:199")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1611""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2059""}]")]
     public class SystemAccountingReorderChargingFunctionElementServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private List<string> _orderedAddressList = new List<string>();
 
         [XmlElement(ElementName = "orderedAddressList", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1611")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2059")]
         [MinLength(1)]
         [MaxLength(256)]
         public List<string> OrderedAddressList

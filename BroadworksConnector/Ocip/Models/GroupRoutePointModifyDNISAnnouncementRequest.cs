@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:30596""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:12456""}]")]
     public class GroupRoutePointModifyDNISAnnouncementRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.DNISKey _dnisKey;
 
         [XmlElement(ElementName = "dnisKey", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30596")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12456")]
         public BroadWorksConnector.Ocip.Models.DNISKey DnisKey
         {
             get => _dnisKey;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mediaOnHoldSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:30596")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12456")]
         public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldSourceModify17 MediaOnHoldSource
         {
             get => _mediaOnHoldSource;

@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request to determine if a UserService or service pack is assigned to the user.
-    /// The response is either UserServiceIsAssignedResponse or ErrorResponse
+    /// The response is either UserServiceIsAssignedResponse or ErrorResponse.
     /// <see cref="UserServiceIsAssignedResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3815"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3817""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3901"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3903""}]}]")]
     public class UserServiceIsAssignedRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3815")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3901")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.UserService _serviceName;
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3817")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3903")]
         public BroadWorksConnector.Ocip.Models.UserService ServiceName
         {
             get => _serviceName;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _servicePackName;
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3817")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3903")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServicePackName

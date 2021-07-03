@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:2100""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:2101""}]")]
     public class OutgoingCallingPlanRedirectedDepartmentPermissionsModify
     {
 
         private BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2100")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2101")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey
         {
             get => _departmentKey;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissionsModify _permissions;
 
         [XmlElement(ElementName = "permissions", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2100")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2101")]
         public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissionsModify Permissions
         {
             get => _permissions;

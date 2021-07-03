@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44288""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47495""}]")]
     public class AutoAttendantKeyConfigurationEntry
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44288")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47495")]
         [MinLength(1)]
         [MaxLength(20)]
         public string Description
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AutoAttendantKeyAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44288")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47495")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantKeyAction Action
         {
             get => _action;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44288")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47495")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PhoneNumber
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44288")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47495")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AudioFile
         {
             get => _audioFile;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44288")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47495")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VideoFile
         {
             get => _videoFile;

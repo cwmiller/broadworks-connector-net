@@ -15,16 +15,16 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:62""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:78""}]")]
     public class ResellerAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:62")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:78")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string ResellerId
         {
             get => _resellerId;
@@ -42,9 +42,9 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:62")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:78")]
         [MinLength(1)]
-        [MaxLength(80)]
+        [MaxLength(320)]
         public string ResellerName
         {
             get => _resellerName;
@@ -57,6 +57,25 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool ResellerNameSpecified { get; set; }
+
+        private string _resellerExternalId;
+
+        [XmlElement(ElementName = "resellerExternalId", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:78")]
+        [MaxLength(36)]
+        public string ResellerExternalId
+        {
+            get => _resellerExternalId;
+            set
+            {
+                ResellerExternalIdSpecified = true;
+                _resellerExternalId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ResellerExternalIdSpecified { get; set; }
 
     }
 }

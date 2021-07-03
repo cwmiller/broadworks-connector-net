@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:31360""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:17397""}]")]
     public class ServiceProviderBroadWorksMobilityGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.BroadWorksMobilityServiceProviderSettingLevel _useSettingLevel;
 
         [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31360")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17397")]
         public BroadWorksConnector.Ocip.Models.BroadWorksMobilityServiceProviderSettingLevel UseSettingLevel
         {
             get => _useSettingLevel;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableLocationServices;
 
         [XmlElement(ElementName = "enableLocationServices", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31360")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17397")]
         public bool EnableLocationServices
         {
             get => _enableLocationServices;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableMSRNLookup;
 
         [XmlElement(ElementName = "enableMSRNLookup", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31360")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17397")]
         public bool EnableMSRNLookup
         {
             get => _enableMSRNLookup;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableMobileStateChecking;
 
         [XmlElement(ElementName = "enableMobileStateChecking", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31360")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17397")]
         public bool EnableMobileStateChecking
         {
             get => _enableMobileStateChecking;
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _denyCallOriginations;
 
         [XmlElement(ElementName = "denyCallOriginations", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31360")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17397")]
         public bool DenyCallOriginations
         {
             get => _denyCallOriginations;
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _denyCallTerminations;
 
         [XmlElement(ElementName = "denyCallTerminations", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31360")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17397")]
         public bool DenyCallTerminations
         {
             get => _denyCallTerminations;

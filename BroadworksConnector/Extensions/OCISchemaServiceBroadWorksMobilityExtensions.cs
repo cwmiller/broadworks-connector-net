@@ -35,12 +35,12 @@ namespace BroadWorksConnector
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
         /// The department in both the search criteria and sort by fields refer to the department of the user.
-        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse or ErrorResponse.
+        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse22 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListRequestAsync instead.")]
-        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListRequest(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListRequest request)
+        [Obsolete("This method is deprecated. Use EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListRequest22Async instead.")]
+        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse22> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListRequest22(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse22;
         }
 
         /// <summary>
@@ -51,29 +51,29 @@ namespace BroadWorksConnector
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
         /// The department in both the search criteria and sort by fields refer to the department of the user.
-        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse or ErrorResponse.
+        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse22 or ErrorResponse.
         /// </summary>
-        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListRequestAsync(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse22> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListRequest22Async(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse22;
         }
         /// <summary>
         /// Request a list of available Mobile Subscriber Directory Numbers not yet assigned to any user.
-        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse or ErrorResponse.
+        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse22 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListRequestAsync instead.")]
-        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListRequest(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListRequest request)
+        [Obsolete("This method is deprecated. Use EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListRequest22Async instead.")]
+        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse22> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListRequest22(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse22;
         }
 
         /// <summary>
         /// Request a list of available Mobile Subscriber Directory Numbers not yet assigned to any user.
-        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse or ErrorResponse.
+        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse22 or ErrorResponse.
         /// </summary>
-        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListRequestAsync(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse22> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListRequest22Async(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse22;
         }
         /// <summary>
         /// Request a list of available Mobile Subscriber Directory Numbers not yet assigned to any user.
@@ -82,12 +82,12 @@ namespace BroadWorksConnector
         /// If no sortOrder is included the response is sorted by Mobile Number ascending by default.
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
-        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse or ErrorResponse.
+        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse22 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListRequestAsync instead.")]
-        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListRequest(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListRequest request)
+        [Obsolete("This method is deprecated. Use EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListRequest22Async instead.")]
+        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse22> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListRequest22(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse22;
         }
 
         /// <summary>
@@ -97,29 +97,29 @@ namespace BroadWorksConnector
         /// If no sortOrder is included the response is sorted by Mobile Number ascending by default.
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
-        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse or ErrorResponse.
+        /// The response is either EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse22 or ErrorResponse.
         /// </summary>
-        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListRequestAsync(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse22> EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListRequest22Async(this OcipClient client, EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailablePagedSortedListResponse22;
         }
         /// <summary>
         /// Get the group's BroadWorks Mobility settings.
-        /// The response is either a GroupBroadWorksMobilityGetResponse22V3 or an ErrorResponse.
+        /// The response is either a GroupBroadWorksMobilityGetResponse22V4 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupBroadWorksMobilityGetRequest22V3Async instead.")]
-        public static async Task<GroupBroadWorksMobilityGetResponse22V3> GroupBroadWorksMobilityGetRequest22V3(this OcipClient client, GroupBroadWorksMobilityGetRequest22V3 request)
+        [Obsolete("This method is deprecated. Use GroupBroadWorksMobilityGetRequest22V4Async instead.")]
+        public static async Task<GroupBroadWorksMobilityGetResponse22V4> GroupBroadWorksMobilityGetRequest22V4(this OcipClient client, GroupBroadWorksMobilityGetRequest22V4 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupBroadWorksMobilityGetResponse22V3;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupBroadWorksMobilityGetResponse22V4;
         }
 
         /// <summary>
         /// Get the group's BroadWorks Mobility settings.
-        /// The response is either a GroupBroadWorksMobilityGetResponse22V3 or an ErrorResponse.
+        /// The response is either a GroupBroadWorksMobilityGetResponse22V4 or an ErrorResponse.
         /// </summary>
-        public static async Task<GroupBroadWorksMobilityGetResponse22V3> GroupBroadWorksMobilityGetRequest22V3Async(this OcipClient client, GroupBroadWorksMobilityGetRequest22V3 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupBroadWorksMobilityGetResponse22V4> GroupBroadWorksMobilityGetRequest22V4Async(this OcipClient client, GroupBroadWorksMobilityGetRequest22V4 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupBroadWorksMobilityGetResponse22V3;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupBroadWorksMobilityGetResponse22V4;
         }
         /// <summary>
         /// Assign Mobile Subscriber Directory Numbers to a group. It is possible to
@@ -408,6 +408,190 @@ namespace BroadWorksConnector
         public static async Task<SuccessResponse> SystemBroadWorksMobilityDeleteMobileNetworkIMRNListRequestAsync(this OcipClient client, SystemBroadWorksMobilityDeleteMobileNetworkIMRNListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Add a geographical pool to the system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemBroadWorksMobilityGeographicalPoolAddRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolAddRequest(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolAddRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Add a geographical pool to the system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolAddRequestAsync(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolAddRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Delete a geographical pool from the system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemBroadWorksMobilityGeographicalPoolDeleteRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolDeleteRequest(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolDeleteRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Delete a geographical pool from the system.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolDeleteRequestAsync(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolDeleteRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Get a list of geographical pools defined in the system. If countryCode is set, return the IMRN pools associated with the country code.
+        /// The response is either SystemBroadWorksMobilityGeographicalPoolGetListResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemBroadWorksMobilityGeographicalPoolGetListRequestAsync instead.")]
+        public static async Task<SystemBroadWorksMobilityGeographicalPoolGetListResponse> SystemBroadWorksMobilityGeographicalPoolGetListRequest(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemBroadWorksMobilityGeographicalPoolGetListResponse;
+        }
+
+        /// <summary>
+        /// Get a list of geographical pools defined in the system. If countryCode is set, return the IMRN pools associated with the country code.
+        /// The response is either SystemBroadWorksMobilityGeographicalPoolGetListResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemBroadWorksMobilityGeographicalPoolGetListResponse> SystemBroadWorksMobilityGeographicalPoolGetListRequestAsync(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemBroadWorksMobilityGeographicalPoolGetListResponse;
+        }
+        /// <summary>
+        /// Adds BroadWorks Mobility IMRN numbers to a geographical pool. It is possible to add either:
+        /// a single number, a list of numbers, or a range of numbers, or any combination thereof.
+        /// The response is either a SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemBroadWorksMobilityGeographicalPoolIMRNAddListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolIMRNAddListRequest(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolIMRNAddListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Adds BroadWorks Mobility IMRN numbers to a geographical pool. It is possible to add either:
+        /// a single number, a list of numbers, or a range of numbers, or any combination thereof.
+        /// The response is either a SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolIMRNAddListRequestAsync(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolIMRNAddListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Remove BroadWorks Mobility IMRN numbers from a geographical pool.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemBroadWorksMobilityGeographicalPoolIMRNDeleteListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolIMRNDeleteListRequest(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolIMRNDeleteListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Remove BroadWorks Mobility IMRN numbers from a geographical pool.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolIMRNDeleteListRequestAsync(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolIMRNDeleteListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Get a list of BroadWorks Mobility IMRN numbers from a geographical pool.
+        /// The response is either a SystemBroadWorksMobilityGeographicalPoolIMRNGetListResponse
+        /// or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemBroadWorksMobilityGeographicalPoolIMRNGetListRequestAsync instead.")]
+        public static async Task<SystemBroadWorksMobilityGeographicalPoolIMRNGetListResponse> SystemBroadWorksMobilityGeographicalPoolIMRNGetListRequest(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolIMRNGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemBroadWorksMobilityGeographicalPoolIMRNGetListResponse;
+        }
+
+        /// <summary>
+        /// Get a list of BroadWorks Mobility IMRN numbers from a geographical pool.
+        /// The response is either a SystemBroadWorksMobilityGeographicalPoolIMRNGetListResponse
+        /// or an ErrorResponse.
+        /// </summary>
+        public static async Task<SystemBroadWorksMobilityGeographicalPoolIMRNGetListResponse> SystemBroadWorksMobilityGeographicalPoolIMRNGetListRequestAsync(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolIMRNGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemBroadWorksMobilityGeographicalPoolIMRNGetListResponse;
+        }
+        /// <summary>
+        /// Modify the settings of a geographical pool.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemBroadWorksMobilityGeographicalPoolModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolModifyRequest(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify the settings of a geographical pool.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolModifyRequestAsync(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Add a list of geographical prefixes.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemBroadWorksMobilityGeographicalPoolPrefixAddListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolPrefixAddListRequest(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolPrefixAddListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Add a list of geographical prefixes.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolPrefixAddListRequestAsync(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolPrefixAddListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Delete a list of geographical prefixes from a pool.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemBroadWorksMobilityGeographicalPoolPrefixDeleteListRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolPrefixDeleteListRequest(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolPrefixDeleteListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Delete a list of geographical prefixes from a pool.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemBroadWorksMobilityGeographicalPoolPrefixDeleteListRequestAsync(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolPrefixDeleteListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Gets a list of geographical prefixes belonging to a geographical pool.
+        /// The response is either SystemBroadWorksMobilityGeographicalPoolPrefixGetListResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemBroadWorksMobilityGeographicalPoolPrefixGetListRequestAsync instead.")]
+        public static async Task<SystemBroadWorksMobilityGeographicalPoolPrefixGetListResponse> SystemBroadWorksMobilityGeographicalPoolPrefixGetListRequest(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolPrefixGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemBroadWorksMobilityGeographicalPoolPrefixGetListResponse;
+        }
+
+        /// <summary>
+        /// Gets a list of geographical prefixes belonging to a geographical pool.
+        /// The response is either SystemBroadWorksMobilityGeographicalPoolPrefixGetListResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemBroadWorksMobilityGeographicalPoolPrefixGetListResponse> SystemBroadWorksMobilityGeographicalPoolPrefixGetListRequestAsync(this OcipClient client, SystemBroadWorksMobilityGeographicalPoolPrefixGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemBroadWorksMobilityGeographicalPoolPrefixGetListResponse;
         }
         /// <summary>
         /// Request to get the list of BroadWorks Mobility IMRN numbers defined in the system.
@@ -769,10 +953,14 @@ namespace BroadWorksConnector
         /// Adding a new mobile identity using the Share Call Appearance.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useHotline, use value false in XS data mode
+        /// hotlineContact
+        /// 
         /// The request fails when the devicesToRing is set to Mobile and the mobileNumberAlerted list is empty.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserBroadworksMobilityAddMobileIdentityUsingSharedCallAppearanceRequestAsync instead.")]
-        public static async Task<SuccessResponse> UserBroadworksMobilityAddMobileIdentityUsingSharedCallAppearanceRequest(this OcipClient client, UserBroadworksMobilityAddMobileIdentityUsingSharedCallAppearanceRequest request)
+        [Obsolete("This method is deprecated. Use UserBroadworksMobilityAddMobileIdentityUsingSharedCallAppearanceRequest22Async instead.")]
+        public static async Task<SuccessResponse> UserBroadworksMobilityAddMobileIdentityUsingSharedCallAppearanceRequest22(this OcipClient client, UserBroadworksMobilityAddMobileIdentityUsingSharedCallAppearanceRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -781,9 +969,13 @@ namespace BroadWorksConnector
         /// Adding a new mobile identity using the Share Call Appearance.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// useHotline, use value false in XS data mode
+        /// hotlineContact
+        /// 
         /// The request fails when the devicesToRing is set to Mobile and the mobileNumberAlerted list is empty.
         /// </summary>
-        public static async Task<SuccessResponse> UserBroadworksMobilityAddMobileIdentityUsingSharedCallAppearanceRequestAsync(this OcipClient client, UserBroadworksMobilityAddMobileIdentityUsingSharedCallAppearanceRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> UserBroadworksMobilityAddMobileIdentityUsingSharedCallAppearanceRequest22Async(this OcipClient client, UserBroadworksMobilityAddMobileIdentityUsingSharedCallAppearanceRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -811,8 +1003,8 @@ namespace BroadWorksConnector
         /// 
         /// The request fails when the devicesToRing is set to Mobile and the mobileNumberAlerted list is empty.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserBroadWorksMobilityMobileIdentityAddRequest21sp1Async instead.")]
-        public static async Task<SuccessResponse> UserBroadWorksMobilityMobileIdentityAddRequest21sp1(this OcipClient client, UserBroadWorksMobilityMobileIdentityAddRequest21sp1 request)
+        [Obsolete("This method is deprecated. Use UserBroadWorksMobilityMobileIdentityAddRequest22V2Async instead.")]
+        public static async Task<SuccessResponse> UserBroadWorksMobilityMobileIdentityAddRequest22V2(this OcipClient client, UserBroadWorksMobilityMobileIdentityAddRequest22V2 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -823,7 +1015,7 @@ namespace BroadWorksConnector
         /// 
         /// The request fails when the devicesToRing is set to Mobile and the mobileNumberAlerted list is empty.
         /// </summary>
-        public static async Task<SuccessResponse> UserBroadWorksMobilityMobileIdentityAddRequest21sp1Async(this OcipClient client, UserBroadWorksMobilityMobileIdentityAddRequest21sp1 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> UserBroadWorksMobilityMobileIdentityAddRequest22V2Async(this OcipClient client, UserBroadWorksMobilityMobileIdentityAddRequest22V2 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -833,8 +1025,8 @@ namespace BroadWorksConnector
         /// 
         /// The request fails when the devicesToRing is set to Mobile and the mobileNumberAlerted list is empty.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserBroadWorksMobilityMobileIdentityAddRequest22Async instead.")]
-        public static async Task<SuccessResponse> UserBroadWorksMobilityMobileIdentityAddRequest22(this OcipClient client, UserBroadWorksMobilityMobileIdentityAddRequest22 request)
+        [Obsolete("This method is deprecated. Use UserBroadWorksMobilityMobileIdentityConsolidatedAddRequest22Async instead.")]
+        public static async Task<SuccessResponse> UserBroadWorksMobilityMobileIdentityConsolidatedAddRequest22(this OcipClient client, UserBroadWorksMobilityMobileIdentityConsolidatedAddRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -845,29 +1037,7 @@ namespace BroadWorksConnector
         /// 
         /// The request fails when the devicesToRing is set to Mobile and the mobileNumberAlerted list is empty.
         /// </summary>
-        public static async Task<SuccessResponse> UserBroadWorksMobilityMobileIdentityAddRequest22Async(this OcipClient client, UserBroadWorksMobilityMobileIdentityAddRequest22 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
-        }
-        /// <summary>
-        /// Add a mobile identity to the user's list of mobile identities.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// 
-        /// The request fails when the devicesToRing is set to Mobile and the mobileNumberAlerted list is empty.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use UserBroadWorksMobilityMobileIdentityConsolidatedAddRequestAsync instead.")]
-        public static async Task<SuccessResponse> UserBroadWorksMobilityMobileIdentityConsolidatedAddRequest(this OcipClient client, UserBroadWorksMobilityMobileIdentityConsolidatedAddRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Add a mobile identity to the user's list of mobile identities.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// 
-        /// The request fails when the devicesToRing is set to Mobile and the mobileNumberAlerted list is empty.
-        /// </summary>
-        public static async Task<SuccessResponse> UserBroadWorksMobilityMobileIdentityConsolidatedAddRequestAsync(this OcipClient client, UserBroadWorksMobilityMobileIdentityConsolidatedAddRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> UserBroadWorksMobilityMobileIdentityConsolidatedAddRequest22Async(this OcipClient client, UserBroadWorksMobilityMobileIdentityConsolidatedAddRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -959,39 +1129,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the settings for a user's specified mobile identity.
-        /// The response is either a UserBroadWorksMobilityMobileIdentityGetResponse21sp1V2 or an ErrorResponse.
+        /// The response is either a UserBroadWorksMobilityMobileIdentityGetResponse22V3 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserBroadWorksMobilityMobileIdentityGetRequest21sp1V2Async instead.")]
-        public static async Task<UserBroadWorksMobilityMobileIdentityGetResponse21sp1V2> UserBroadWorksMobilityMobileIdentityGetRequest21sp1V2(this OcipClient client, UserBroadWorksMobilityMobileIdentityGetRequest21sp1V2 request)
+        [Obsolete("This method is deprecated. Use UserBroadWorksMobilityMobileIdentityGetRequest22V3Async instead.")]
+        public static async Task<UserBroadWorksMobilityMobileIdentityGetResponse22V3> UserBroadWorksMobilityMobileIdentityGetRequest22V3(this OcipClient client, UserBroadWorksMobilityMobileIdentityGetRequest22V3 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserBroadWorksMobilityMobileIdentityGetResponse21sp1V2;
+            return await client.CallAsync(request).ConfigureAwait(false) as UserBroadWorksMobilityMobileIdentityGetResponse22V3;
         }
 
         /// <summary>
         /// Get the settings for a user's specified mobile identity.
-        /// The response is either a UserBroadWorksMobilityMobileIdentityGetResponse21sp1V2 or an ErrorResponse.
+        /// The response is either a UserBroadWorksMobilityMobileIdentityGetResponse22V3 or an ErrorResponse.
         /// </summary>
-        public static async Task<UserBroadWorksMobilityMobileIdentityGetResponse21sp1V2> UserBroadWorksMobilityMobileIdentityGetRequest21sp1V2Async(this OcipClient client, UserBroadWorksMobilityMobileIdentityGetRequest21sp1V2 request, CancellationToken cancellationToken = default)
+        public static async Task<UserBroadWorksMobilityMobileIdentityGetResponse22V3> UserBroadWorksMobilityMobileIdentityGetRequest22V3Async(this OcipClient client, UserBroadWorksMobilityMobileIdentityGetRequest22V3 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserBroadWorksMobilityMobileIdentityGetResponse21sp1V2;
-        }
-        /// <summary>
-        /// Get the settings for a user's specified mobile identity.
-        /// The response is either a UserBroadWorksMobilityMobileIdentityGetResponse22V2 or an ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use UserBroadWorksMobilityMobileIdentityGetRequest22V2Async instead.")]
-        public static async Task<UserBroadWorksMobilityMobileIdentityGetResponse22V2> UserBroadWorksMobilityMobileIdentityGetRequest22V2(this OcipClient client, UserBroadWorksMobilityMobileIdentityGetRequest22V2 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserBroadWorksMobilityMobileIdentityGetResponse22V2;
-        }
-
-        /// <summary>
-        /// Get the settings for a user's specified mobile identity.
-        /// The response is either a UserBroadWorksMobilityMobileIdentityGetResponse22V2 or an ErrorResponse.
-        /// </summary>
-        public static async Task<UserBroadWorksMobilityMobileIdentityGetResponse22V2> UserBroadWorksMobilityMobileIdentityGetRequest22V2Async(this OcipClient client, UserBroadWorksMobilityMobileIdentityGetRequest22V2 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserBroadWorksMobilityMobileIdentityGetResponse22V2;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserBroadWorksMobilityMobileIdentityGetResponse22V3;
         }
         /// <summary>
         /// Modify the settings for one of the user's BroadWorks Mobility mobile Identities.

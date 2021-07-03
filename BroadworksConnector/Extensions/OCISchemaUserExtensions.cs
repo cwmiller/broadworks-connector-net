@@ -10,6 +10,62 @@ namespace BroadWorksConnector
     {
 
         /// <summary>
+        /// Request to configure a WebEx room/place to have the primary endpoint of WebEx Teams device.
+        /// 
+        /// placeUserId refers to a WebEx room/place.
+        /// webExSIPAddress specifies the WebEx SIP address of the place. The format of this parameter is: user@domain.
+        /// The user part specified in webExSIPAddress will be set to the lineport of the place’s primary endpoint. The endpoint
+        /// will have a static address with URI set to "sip:user@domain".
+        /// The domain specified in webExSIPAddress will be:
+        /// - added to the system if it does not exist yet.
+        /// - assigned to the service provider/enterprise which the place belongs to, if it has not been assigned yet.
+        /// - assigned to the group which the place belongs to, if it has not been assigned yet.
+        /// 
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use PlaceModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> PlaceModifyRequest(this OcipClient client, PlaceModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to configure a WebEx room/place to have the primary endpoint of WebEx Teams device.
+        /// 
+        /// placeUserId refers to a WebEx room/place.
+        /// webExSIPAddress specifies the WebEx SIP address of the place. The format of this parameter is: user@domain.
+        /// The user part specified in webExSIPAddress will be set to the lineport of the place’s primary endpoint. The endpoint
+        /// will have a static address with URI set to "sip:user@domain".
+        /// The domain specified in webExSIPAddress will be:
+        /// - added to the system if it does not exist yet.
+        /// - assigned to the service provider/enterprise which the place belongs to, if it has not been assigned yet.
+        /// - assigned to the group which the place belongs to, if it has not been assigned yet.
+        /// 
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> PlaceModifyRequestAsync(this OcipClient client, PlaceModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Requests the list of access devices associated to a user and their device activation information.
+        /// The response is either UserAccessDeviceDeviceActivationGetListResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use UserAccessDeviceDeviceActivationGetListRequestAsync instead.")]
+        public static async Task<UserAccessDeviceDeviceActivationGetListResponse> UserAccessDeviceDeviceActivationGetListRequest(this OcipClient client, UserAccessDeviceDeviceActivationGetListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as UserAccessDeviceDeviceActivationGetListResponse;
+        }
+
+        /// <summary>
+        /// Requests the list of access devices associated to a user and their device activation information.
+        /// The response is either UserAccessDeviceDeviceActivationGetListResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<UserAccessDeviceDeviceActivationGetListResponse> UserAccessDeviceDeviceActivationGetListRequestAsync(this OcipClient client, UserAccessDeviceDeviceActivationGetListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserAccessDeviceDeviceActivationGetListResponse;
+        }
+        /// <summary>
         /// Request to get the list of Device Management user modifiable files.
         /// The response is either UserAccessDeviceFileGetListResponse or ErrorResponse.
         /// </summary>
@@ -103,42 +159,13 @@ namespace BroadWorksConnector
         /// Request to add a user.
         /// The domain is required in the userId.
         /// The password is not required if external authentication is enabled.
-        /// The following elements are only used in AS data mode and ignored in XS data mode:
-        /// nameDialingName
-        /// alternateUserId
-        /// 
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use UserAddRequest17sp4Async instead.")]
-        public static async Task<SuccessResponse> UserAddRequest17sp4(this OcipClient client, UserAddRequest17sp4 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Request to add a user.
-        /// The domain is required in the userId.
-        /// The password is not required if external authentication is enabled.
-        /// The following elements are only used in AS data mode and ignored in XS data mode:
-        /// nameDialingName
-        /// alternateUserId
-        /// 
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// </summary>
-        public static async Task<SuccessResponse> UserAddRequest17sp4Async(this OcipClient client, UserAddRequest17sp4 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
-        }
-        /// <summary>
-        /// Request to add a user.
-        /// The domain is required in the userId.
-        /// The password is not required if external authentication is enabled.
         /// 
         /// The following elements are only used in AS data mode and will fail in XS data mode:
         /// trunkAddressing
         /// The following elements are only used in AS data mode and ignored in XS data mode:
         /// nameDialingName
         /// alternateUserId
+        /// 
         /// The following elements are only used in XS data mode and ignored in AS data mode:
         /// allowVideo
         /// 
@@ -153,8 +180,8 @@ namespace BroadWorksConnector
         /// 
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserAddRequest22Async instead.")]
-        public static async Task<SuccessResponse> UserAddRequest22(this OcipClient client, UserAddRequest22 request)
+        [Obsolete("This method is deprecated. Use UserAddRequest22V2Async instead.")]
+        public static async Task<SuccessResponse> UserAddRequest22V2(this OcipClient client, UserAddRequest22V2 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -169,6 +196,7 @@ namespace BroadWorksConnector
         /// The following elements are only used in AS data mode and ignored in XS data mode:
         /// nameDialingName
         /// alternateUserId
+        /// 
         /// The following elements are only used in XS data mode and ignored in AS data mode:
         /// allowVideo
         /// 
@@ -183,7 +211,7 @@ namespace BroadWorksConnector
         /// 
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> UserAddRequest22Async(this OcipClient client, UserAddRequest22 request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> UserAddRequest22V2Async(this OcipClient client, UserAddRequest22V2 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -263,6 +291,10 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Add an announcement to the user announcement repository
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserAnnouncementFileAddRequestAsync instead.")]
@@ -273,6 +305,10 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Add an announcement to the user announcement repository
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> UserAnnouncementFileAddRequestAsync(this OcipClient client, UserAnnouncementFileAddRequest request, CancellationToken cancellationToken = default)
@@ -281,6 +317,10 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Delete one or more announcements from the user announcement repository
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserAnnouncementFileDeleteListRequestAsync instead.")]
@@ -291,6 +331,10 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Delete one or more announcements from the user announcement repository
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> UserAnnouncementFileDeleteListRequestAsync(this OcipClient client, UserAnnouncementFileDeleteListRequest request, CancellationToken cancellationToken = default)
@@ -300,7 +344,8 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of available announcement files for a User from the Announcement Repository,
         /// for Virtual subscribers the list will also include the announcements for it's group.
-        /// The response is either UserAnnouncementFileGetAvailableListResponse or ErrorResponse
+        /// 
+        /// The response is either a UserAnnouncementFileGetAvailableListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserAnnouncementFileGetAvailableListRequestAsync instead.")]
         public static async Task<UserAnnouncementFileGetAvailableListResponse> UserAnnouncementFileGetAvailableListRequest(this OcipClient client, UserAnnouncementFileGetAvailableListRequest request)
@@ -311,7 +356,8 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get the list of available announcement files for a User from the Announcement Repository,
         /// for Virtual subscribers the list will also include the announcements for it's group.
-        /// The response is either UserAnnouncementFileGetAvailableListResponse or ErrorResponse
+        /// 
+        /// The response is either a UserAnnouncementFileGetAvailableListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<UserAnnouncementFileGetAvailableListResponse> UserAnnouncementFileGetAvailableListRequestAsync(this OcipClient client, UserAnnouncementFileGetAvailableListRequest request, CancellationToken cancellationToken = default)
         {
@@ -346,8 +392,7 @@ namespace BroadWorksConnector
         /// If no sortOrder is provided, the response is sorted by Name ascending by default.
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
-        /// The response is either a UserAnnouncementFileGetPagedSortedListResponse or an
-        /// ErrorResponse.
+        /// The response is either a UserAnnouncementFileGetPagedSortedListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserAnnouncementFileGetPagedSortedListRequestAsync instead.")]
         public static async Task<UserAnnouncementFileGetPagedSortedListResponse> UserAnnouncementFileGetPagedSortedListRequest(this OcipClient client, UserAnnouncementFileGetPagedSortedListRequest request)
@@ -364,8 +409,7 @@ namespace BroadWorksConnector
         /// If no sortOrder is provided, the response is sorted by Name ascending by default.
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
-        /// The response is either a UserAnnouncementFileGetPagedSortedListResponse or an
-        /// ErrorResponse.
+        /// The response is either a UserAnnouncementFileGetPagedSortedListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<UserAnnouncementFileGetPagedSortedListResponse> UserAnnouncementFileGetPagedSortedListRequestAsync(this OcipClient client, UserAnnouncementFileGetPagedSortedListRequest request, CancellationToken cancellationToken = default)
         {
@@ -373,27 +417,39 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the announcement repository file information.
-        /// The response is either UserAnnouncementFileGetResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
+        /// The response is either UserAnnouncementFileGetResponse22 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserAnnouncementFileGetRequestAsync instead.")]
-        public static async Task<UserAnnouncementFileGetResponse> UserAnnouncementFileGetRequest(this OcipClient client, UserAnnouncementFileGetRequest request)
+        [Obsolete("This method is deprecated. Use UserAnnouncementFileGetRequest22Async instead.")]
+        public static async Task<UserAnnouncementFileGetResponse22> UserAnnouncementFileGetRequest22(this OcipClient client, UserAnnouncementFileGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserAnnouncementFileGetResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as UserAnnouncementFileGetResponse22;
         }
 
         /// <summary>
         /// Request to get the announcement repository file information.
-        /// The response is either UserAnnouncementFileGetResponse or ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
+        /// The response is either UserAnnouncementFileGetResponse22 or ErrorResponse.
         /// </summary>
-        public static async Task<UserAnnouncementFileGetResponse> UserAnnouncementFileGetRequestAsync(this OcipClient client, UserAnnouncementFileGetRequest request, CancellationToken cancellationToken = default)
+        public static async Task<UserAnnouncementFileGetResponse22> UserAnnouncementFileGetRequest22Async(this OcipClient client, UserAnnouncementFileGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserAnnouncementFileGetResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserAnnouncementFileGetResponse22;
         }
         /// <summary>
         /// This command is used to change the name of the file or upload a new announcement file for
         /// an existing announcement in the user repository.
         /// When modifying the file type the command will fail if the media type of the new file changes
         /// the announcement from audio to video (or vice versa).
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserAnnouncementFileModifyRequestAsync instead.")]
@@ -407,6 +463,10 @@ namespace BroadWorksConnector
         /// an existing announcement in the user repository.
         /// When modifying the file type the command will fail if the media type of the new file changes
         /// the announcement from audio to video (or vice versa).
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// announcementFileExternalId
+        /// 
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> UserAnnouncementFileModifyRequestAsync(this OcipClient client, UserAnnouncementFileModifyRequest request, CancellationToken cancellationToken = default)
@@ -415,7 +475,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Return the disk space being used.
-        /// The response is either UserAnnouncementRepositoryGetSettingsResponse or ErrorResponse
+        /// The response is either a UserAnnouncementRepositoryGetSettingsResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserAnnouncementRepositoryGetSettingsRequestAsync instead.")]
         public static async Task<UserAnnouncementRepositoryGetSettingsResponse> UserAnnouncementRepositoryGetSettingsRequest(this OcipClient client, UserAnnouncementRepositoryGetSettingsRequest request)
@@ -425,7 +485,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Return the disk space being used.
-        /// The response is either UserAnnouncementRepositoryGetSettingsResponse or ErrorResponse
+        /// The response is either a UserAnnouncementRepositoryGetSettingsResponse or an ErrorResponse.
         /// </summary>
         public static async Task<UserAnnouncementRepositoryGetSettingsResponse> UserAnnouncementRepositoryGetSettingsRequestAsync(this OcipClient client, UserAnnouncementRepositoryGetSettingsRequest request, CancellationToken cancellationToken = default)
         {
@@ -670,7 +730,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get a list of Communication Barring Authorization Code for a user.
         /// The response is either a UserCommunicationBarringAuthorizationCodeGetListResponse
-        /// or an ErrorResponse.
+        /// or an ErorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserCommunicationBarringAuthorizationCodeGetListRequestAsync instead.")]
         public static async Task<UserCommunicationBarringAuthorizationCodeGetListResponse> UserCommunicationBarringAuthorizationCodeGetListRequest(this OcipClient client, UserCommunicationBarringAuthorizationCodeGetListRequest request)
@@ -681,7 +741,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Get a list of Communication Barring Authorization Code for a user.
         /// The response is either a UserCommunicationBarringAuthorizationCodeGetListResponse
-        /// or an ErrorResponse.
+        /// or an ErorResponse.
         /// </summary>
         public static async Task<UserCommunicationBarringAuthorizationCodeGetListResponse> UserCommunicationBarringAuthorizationCodeGetListRequestAsync(this OcipClient client, UserCommunicationBarringAuthorizationCodeGetListRequest request, CancellationToken cancellationToken = default)
         {
@@ -795,8 +855,8 @@ namespace BroadWorksConnector
         /// thirdPartyVoiceMailMailboxURL
         /// sipAuthenticationData
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserConsolidatedAddRequestAsync instead.")]
-        public static async Task<SuccessResponse> UserConsolidatedAddRequest(this OcipClient client, UserConsolidatedAddRequest request)
+        [Obsolete("This method is deprecated. Use UserConsolidatedAddRequest22Async instead.")]
+        public static async Task<SuccessResponse> UserConsolidatedAddRequest22(this OcipClient client, UserConsolidatedAddRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -869,7 +929,7 @@ namespace BroadWorksConnector
         /// thirdPartyVoiceMailMailboxURL
         /// sipAuthenticationData
         /// </summary>
-        public static async Task<SuccessResponse> UserConsolidatedAddRequestAsync(this OcipClient client, UserConsolidatedAddRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> UserConsolidatedAddRequest22Async(this OcipClient client, UserConsolidatedAddRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -884,7 +944,8 @@ namespace BroadWorksConnector
         /// When set to 'Service Provider', they will be un-assigned from the group and service provider if the command is executed by a provisioning administrator or above.
         /// When omitted, the number(s) will be left assigned to the group.
         /// An ErrorResponse will be returned if any number cannot be unassigned because of insufficient privilege.
-        /// The response is either SuccessResponse or ErrorResponse
+        /// 
+        /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserConsolidatedDeleteRequestAsync instead.")]
         public static async Task<SuccessResponse> UserConsolidatedDeleteRequest(this OcipClient client, UserConsolidatedDeleteRequest request)
@@ -903,7 +964,8 @@ namespace BroadWorksConnector
         /// When set to 'Service Provider', they will be un-assigned from the group and service provider if the command is executed by a provisioning administrator or above.
         /// When omitted, the number(s) will be left assigned to the group.
         /// An ErrorResponse will be returned if any number cannot be unassigned because of insufficient privilege.
-        /// The response is either SuccessResponse or ErrorResponse
+        /// 
+        /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> UserConsolidatedDeleteRequestAsync(this OcipClient client, UserConsolidatedDeleteRequest request, CancellationToken cancellationToken = default)
         {
@@ -912,7 +974,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to modify a user.
         /// 
-        /// If deleteExistingDevices is set to true, when the devices for the main endpoint or SCA service are changed, devices with no more endpoint will be deleted if the command is executed with the correct priviledge.
+        /// If deleteExistingDevices is set to true, when the devices for the main endpoint or SCA service are changed, devices with no more endpoint will be deleted if the command is executed with the correct privilege.
         /// Group administrator or above running this command can delete any group level devices.
         /// Service provider administrator or above can delete any service provider and group devices.
         /// Provisioning administrator or above can delete any devices.
@@ -950,11 +1012,12 @@ namespace BroadWorksConnector
         /// thirdPartyVoiceMailServerMailboxIdType
         /// thirdPartyVoiceMailMailboxURL
         /// sipAuthenticationData
+        /// newUserExternalId
         /// 
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserConsolidatedModifyRequestAsync instead.")]
-        public static async Task<SuccessResponse> UserConsolidatedModifyRequest(this OcipClient client, UserConsolidatedModifyRequest request)
+        [Obsolete("This method is deprecated. Use UserConsolidatedModifyRequest22Async instead.")]
+        public static async Task<SuccessResponse> UserConsolidatedModifyRequest22(this OcipClient client, UserConsolidatedModifyRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -962,7 +1025,7 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to modify a user.
         /// 
-        /// If deleteExistingDevices is set to true, when the devices for the main endpoint or SCA service are changed, devices with no more endpoint will be deleted if the command is executed with the correct priviledge.
+        /// If deleteExistingDevices is set to true, when the devices for the main endpoint or SCA service are changed, devices with no more endpoint will be deleted if the command is executed with the correct privilege.
         /// Group administrator or above running this command can delete any group level devices.
         /// Service provider administrator or above can delete any service provider and group devices.
         /// Provisioning administrator or above can delete any devices.
@@ -1000,10 +1063,11 @@ namespace BroadWorksConnector
         /// thirdPartyVoiceMailServerMailboxIdType
         /// thirdPartyVoiceMailMailboxURL
         /// sipAuthenticationData
+        /// newUserExternalId
         /// 
         /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> UserConsolidatedModifyRequestAsync(this OcipClient client, UserConsolidatedModifyRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> UserConsolidatedModifyRequest22Async(this OcipClient client, UserConsolidatedModifyRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -1022,6 +1086,24 @@ namespace BroadWorksConnector
         public static async Task<SuccessResponse> UserDeleteRequestAsync(this OcipClient client, UserDeleteRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request the Device Activation policies in effect for the user.
+        /// The response is either a UserDeviceActivationPolicyInEffectGetResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use UserDeviceActivationPolicyInEffectGetRequestAsync instead.")]
+        public static async Task<UserDeviceActivationPolicyInEffectGetResponse> UserDeviceActivationPolicyInEffectGetRequest(this OcipClient client, UserDeviceActivationPolicyInEffectGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as UserDeviceActivationPolicyInEffectGetResponse;
+        }
+
+        /// <summary>
+        /// Request the Device Activation policies in effect for the user.
+        /// The response is either a UserDeviceActivationPolicyInEffectGetResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<UserDeviceActivationPolicyInEffectGetResponse> UserDeviceActivationPolicyInEffectGetRequestAsync(this OcipClient client, UserDeviceActivationPolicyInEffectGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserDeviceActivationPolicyInEffectGetResponse;
         }
         /// <summary>
         /// Request the user level data associated with Device Policy.
@@ -1217,6 +1299,10 @@ namespace BroadWorksConnector
         /// 
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
+        /// 
+        /// 
+        /// The following elements are used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
         /// </summary>
         [Obsolete("This method is deprecated. Use UserGetListInGroupPagedSortedListRequestAsync instead.")]
         public static async Task<UserGetListInGroupPagedSortedListResponse> UserGetListInGroupPagedSortedListRequest(this OcipClient client, UserGetListInGroupPagedSortedListRequest request)
@@ -1240,6 +1326,10 @@ namespace BroadWorksConnector
         /// 
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
+        /// 
+        /// 
+        /// The following elements are used in AS data mode and ignored in XS data mode:
+        /// groupExternalId
         /// </summary>
         public static async Task<UserGetListInGroupPagedSortedListResponse> UserGetListInGroupPagedSortedListRequestAsync(this OcipClient client, UserGetListInGroupPagedSortedListRequest request, CancellationToken cancellationToken = default)
         {
@@ -1271,6 +1361,10 @@ namespace BroadWorksConnector
         /// Request the list of users in a service provider or enterprise.
         /// It is possible to search by various criteria to restrict the number of rows returned.
         /// Multiple search criteria are logically ANDed together.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// serviceProviderExternalId
+        /// 
         /// The response is either a UserGetListInServiceProviderResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserGetListInServiceProviderRequestAsync instead.")]
@@ -1283,6 +1377,10 @@ namespace BroadWorksConnector
         /// Request the list of users in a service provider or enterprise.
         /// It is possible to search by various criteria to restrict the number of rows returned.
         /// Multiple search criteria are logically ANDed together.
+        /// 
+        /// The following elements are only used in AS data mode and ignored in XS data mode:
+        /// serviceProviderExternalId
+        /// 
         /// The response is either a UserGetListInServiceProviderResponse or an ErrorResponse.
         /// </summary>
         public static async Task<UserGetListInServiceProviderResponse> UserGetListInServiceProviderRequestAsync(this OcipClient client, UserGetListInServiceProviderRequest request, CancellationToken cancellationToken = default)
@@ -1342,36 +1440,20 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserGetRegistrationListResponse;
         }
         /// <summary>
-        /// Request to get the user information.  The response is either UserGetResponse22V3 or ErrorResponse.
+        /// Request to get the user information.  The response is either UserGetResponse22V8 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserGetRequest22V3Async instead.")]
-        public static async Task<UserGetResponse22V3> UserGetRequest22V3(this OcipClient client, UserGetRequest22V3 request)
+        [Obsolete("This method is deprecated. Use UserGetRequest22V8Async instead.")]
+        public static async Task<UserGetResponse22V8> UserGetRequest22V8(this OcipClient client, UserGetRequest22V8 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserGetResponse22V3;
+            return await client.CallAsync(request).ConfigureAwait(false) as UserGetResponse22V8;
         }
 
         /// <summary>
-        /// Request to get the user information.  The response is either UserGetResponse22V3 or ErrorResponse.
+        /// Request to get the user information.  The response is either UserGetResponse22V8 or ErrorResponse.
         /// </summary>
-        public static async Task<UserGetResponse22V3> UserGetRequest22V3Async(this OcipClient client, UserGetRequest22V3 request, CancellationToken cancellationToken = default)
+        public static async Task<UserGetResponse22V8> UserGetRequest22V8Async(this OcipClient client, UserGetRequest22V8 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserGetResponse22V3;
-        }
-        /// <summary>
-        /// Request to get the user information.  The response is either UserGetResponse22V5 or ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use UserGetRequest22V5Async instead.")]
-        public static async Task<UserGetResponse22V5> UserGetRequest22V5(this OcipClient client, UserGetRequest22V5 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserGetResponse22V5;
-        }
-
-        /// <summary>
-        /// Request to get the user information.  The response is either UserGetResponse22V5 or ErrorResponse.
-        /// </summary>
-        public static async Task<UserGetResponse22V5> UserGetRequest22V5Async(this OcipClient client, UserGetRequest22V5 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserGetResponse22V5;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserGetResponse22V8;
         }
         /// <summary>
         /// Request the list of Service Instances in a service provider or an enterprise.
@@ -1519,7 +1601,8 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get all user's configured line ports.
-        /// The response is either UserLinePortGetListResponse or ErrorResponse
+        /// 
+        /// The response is either a UserLinePortGetListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserLinePortGetListRequestAsync instead.")]
         public static async Task<UserLinePortGetListResponse> UserLinePortGetListRequest(this OcipClient client, UserLinePortGetListRequest request)
@@ -1529,49 +1612,12 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request to get all user's configured line ports.
-        /// The response is either UserLinePortGetListResponse or ErrorResponse
+        /// 
+        /// The response is either a UserLinePortGetListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<UserLinePortGetListResponse> UserLinePortGetListRequestAsync(this OcipClient client, UserLinePortGetListRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserLinePortGetListResponse;
-        }
-        /// <summary>
-        /// Request to modify a user.
-        /// When oldPassword is specified, all password rule applies. If oldPassword in not specified,
-        /// any password rule related to old password does not apply.
-        /// The request will fail if officeZoneName or primaryZoneName is present but the Location-Based Calling Restrictions service is not assigned to the user.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// The following elements are only used in AS data mode and ignored in XS data mode:
-        /// contact[2]-contact[5]
-        /// nameDialingName
-        /// alternateUserIdList
-        /// The impId and impPassword are accepted when the Third-Party IMP service is assigned to the user;
-        /// when Integrated IMP service is assigned to the user and active, only the impPassword is accepted;
-        /// all other cases, the request fails if either field is changed.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use UserModifyRequest17sp4Async instead.")]
-        public static async Task<SuccessResponse> UserModifyRequest17sp4(this OcipClient client, UserModifyRequest17sp4 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Request to modify a user.
-        /// When oldPassword is specified, all password rule applies. If oldPassword in not specified,
-        /// any password rule related to old password does not apply.
-        /// The request will fail if officeZoneName or primaryZoneName is present but the Location-Based Calling Restrictions service is not assigned to the user.
-        /// The response is either SuccessResponse or ErrorResponse.
-        /// The following elements are only used in AS data mode and ignored in XS data mode:
-        /// contact[2]-contact[5]
-        /// nameDialingName
-        /// alternateUserIdList
-        /// The impId and impPassword are accepted when the Third-Party IMP service is assigned to the user;
-        /// when Integrated IMP service is assigned to the user and active, only the impPassword is accepted;
-        /// all other cases, the request fails if either field is changed.
-        /// </summary>
-        public static async Task<SuccessResponse> UserModifyRequest17sp4Async(this OcipClient client, UserModifyRequest17sp4 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Move the user from one group to another group within the same enterprise.
@@ -1598,9 +1644,12 @@ namespace BroadWorksConnector
         /// contact[2]-contact[5]
         /// The following elements are only used in AS data mode and will fail in XS data mode:
         /// trunkAddressing
+        /// newUserExternalId
         /// The following elements are only used in AS data mode and ignored in XS data mode:
         /// nameDialingName
         /// alternateUserIdList
+        /// newUserExternalId
+        /// 
         /// The following elements are only used in XS data mode and ignored in AS data mode:
         /// allowVideo
         /// 
@@ -1609,7 +1658,8 @@ namespace BroadWorksConnector
         /// The impId and impPassword are accepted when the Third-Party IMP service is assigned to the user;
         /// when Integrated IMP service is assigned to the user and active, only the impPassword is accepted;
         /// all other cases, the request fails if either field is changed.
-        /// The response is either SuccessResponse or ErrorResponse
+        /// 
+        /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserModifyRequest22Async instead.")]
         public static async Task<SuccessResponse> UserModifyRequest22(this OcipClient client, UserModifyRequest22 request)
@@ -1622,9 +1672,12 @@ namespace BroadWorksConnector
         /// contact[2]-contact[5]
         /// The following elements are only used in AS data mode and will fail in XS data mode:
         /// trunkAddressing
+        /// newUserExternalId
         /// The following elements are only used in AS data mode and ignored in XS data mode:
         /// nameDialingName
         /// alternateUserIdList
+        /// newUserExternalId
+        /// 
         /// The following elements are only used in XS data mode and ignored in AS data mode:
         /// allowVideo
         /// 
@@ -1633,7 +1686,8 @@ namespace BroadWorksConnector
         /// The impId and impPassword are accepted when the Third-Party IMP service is assigned to the user;
         /// when Integrated IMP service is assigned to the user and active, only the impPassword is accepted;
         /// all other cases, the request fails if either field is changed.
-        /// The response is either SuccessResponse or ErrorResponse
+        /// 
+        /// The response is either SuccessResponse or ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> UserModifyRequest22Async(this OcipClient client, UserModifyRequest22 request, CancellationToken cancellationToken = default)
         {
@@ -1728,6 +1782,44 @@ namespace BroadWorksConnector
         public static async Task<UserPasswordInfoGetResponse> UserPasswordInfoGetRequestAsync(this OcipClient client, UserPasswordInfoGetRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserPasswordInfoGetResponse;
+        }
+        /// <summary>
+        /// Request the user level data associated with PBX Integration service.
+        /// The response is either a UserPBXIntegrationGetResponse or an
+        /// ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use UserPBXIntegrationGetRequestAsync instead.")]
+        public static async Task<UserPBXIntegrationGetResponse> UserPBXIntegrationGetRequest(this OcipClient client, UserPBXIntegrationGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as UserPBXIntegrationGetResponse;
+        }
+
+        /// <summary>
+        /// Request the user level data associated with PBX Integration service.
+        /// The response is either a UserPBXIntegrationGetResponse or an
+        /// ErrorResponse.
+        /// </summary>
+        public static async Task<UserPBXIntegrationGetResponse> UserPBXIntegrationGetRequestAsync(this OcipClient client, UserPBXIntegrationGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserPBXIntegrationGetResponse;
+        }
+        /// <summary>
+        /// Modify the user level data associated with PBX Integration service.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use UserPBXIntegrationModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> UserPBXIntegrationModifyRequest(this OcipClient client, UserPBXIntegrationModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify the user level data associated with PBX Integration service.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> UserPBXIntegrationModifyRequestAsync(this OcipClient client, UserPBXIntegrationModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Add one or more entries to a user's personal phone list.
@@ -2046,6 +2138,8 @@ namespace BroadWorksConnector
         /// <summary>
         /// Modify the user's Portal passcode
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in XS data mode and ignored in AS data mode:
+        /// oldPasscode
         /// </summary>
         [Obsolete("This method is deprecated. Use UserPortalPasscodeModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> UserPortalPasscodeModifyRequest(this OcipClient client, UserPortalPasscodeModifyRequest request)
@@ -2056,6 +2150,8 @@ namespace BroadWorksConnector
         /// <summary>
         /// Modify the user's Portal passcode
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// The following elements are only used in XS data mode and ignored in AS data mode:
+        /// oldPasscode
         /// </summary>
         public static async Task<SuccessResponse> UserPortalPasscodeModifyRequestAsync(this OcipClient client, UserPortalPasscodeModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -2121,21 +2217,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the push notification settings for a user.
-        /// The response is either UserPushNotificationGetResponse or ErrorResponse.
+        /// The response is either UserPushNotificationGetResponse24 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserPushNotificationGetRequestAsync instead.")]
-        public static async Task<UserPushNotificationGetResponse> UserPushNotificationGetRequest(this OcipClient client, UserPushNotificationGetRequest request)
+        [Obsolete("This method is deprecated. Use UserPushNotificationGetRequest24Async instead.")]
+        public static async Task<UserPushNotificationGetResponse24> UserPushNotificationGetRequest24(this OcipClient client, UserPushNotificationGetRequest24 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserPushNotificationGetResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as UserPushNotificationGetResponse24;
         }
 
         /// <summary>
         /// Get the push notification settings for a user.
-        /// The response is either UserPushNotificationGetResponse or ErrorResponse.
+        /// The response is either UserPushNotificationGetResponse24 or ErrorResponse.
         /// </summary>
-        public static async Task<UserPushNotificationGetResponse> UserPushNotificationGetRequestAsync(this OcipClient client, UserPushNotificationGetRequest request, CancellationToken cancellationToken = default)
+        public static async Task<UserPushNotificationGetResponse24> UserPushNotificationGetRequest24Async(this OcipClient client, UserPushNotificationGetRequest24 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserPushNotificationGetResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserPushNotificationGetResponse24;
         }
         /// <summary>
         /// Modify the push notification settings for a user.
@@ -2174,24 +2270,24 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
-        /// Request a table containing all of the push notification registrations for a user by
+        /// Request a list of all of the push notification registrations for a user by
         /// either registration id or user id.
-        /// The response is either UserPushNotificationRegistrationGetListResponse or ErrorResponse.
+        /// The response is either UserPushNotificationRegistrationGetListResponse21sp1 or ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserPushNotificationRegistrationGetListRequestAsync instead.")]
-        public static async Task<UserPushNotificationRegistrationGetListResponse> UserPushNotificationRegistrationGetListRequest(this OcipClient client, UserPushNotificationRegistrationGetListRequest request)
+        [Obsolete("This method is deprecated. Use UserPushNotificationRegistrationGetListRequest21sp1Async instead.")]
+        public static async Task<UserPushNotificationRegistrationGetListResponse21sp1> UserPushNotificationRegistrationGetListRequest21sp1(this OcipClient client, UserPushNotificationRegistrationGetListRequest21sp1 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserPushNotificationRegistrationGetListResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as UserPushNotificationRegistrationGetListResponse21sp1;
         }
 
         /// <summary>
-        /// Request a table containing all of the push notification registrations for a user by
+        /// Request a list of all of the push notification registrations for a user by
         /// either registration id or user id.
-        /// The response is either UserPushNotificationRegistrationGetListResponse or ErrorResponse.
+        /// The response is either UserPushNotificationRegistrationGetListResponse21sp1 or ErrorResponse.
         /// </summary>
-        public static async Task<UserPushNotificationRegistrationGetListResponse> UserPushNotificationRegistrationGetListRequestAsync(this OcipClient client, UserPushNotificationRegistrationGetListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<UserPushNotificationRegistrationGetListResponse21sp1> UserPushNotificationRegistrationGetListRequest21sp1Async(this OcipClient client, UserPushNotificationRegistrationGetListRequest21sp1 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserPushNotificationRegistrationGetListResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserPushNotificationRegistrationGetListResponse21sp1;
         }
         /// <summary>
         /// Add an event to user schedule.
@@ -2344,6 +2440,40 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserScheduleGetListResponse17sp1;
         }
         /// <summary>
+        /// Get the list of schedules viewable by a User. The list can be filtered by schedule name,
+        /// schedule type, and schedule level.
+        /// The response is either a UserScheduleGetPagedSortedListResponse or an ErrorResponse.
+        /// This command is authorized to user who is Executive-Assistant of the Executive.
+        /// If no sortOrder is included, the response is sorted by Name ascending by default.
+        /// If the responsePagingControl element is not provided, the paging startIndex will be
+        /// set to 1 by default, and the responsePageSize will be set to the maximum
+        /// responsePageSize by default.
+        /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option
+        /// is included. Then the search criteria are logically ORed together.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use UserScheduleGetPagedSortedListRequestAsync instead.")]
+        public static async Task<UserScheduleGetPagedSortedListResponse> UserScheduleGetPagedSortedListRequest(this OcipClient client, UserScheduleGetPagedSortedListRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as UserScheduleGetPagedSortedListResponse;
+        }
+
+        /// <summary>
+        /// Get the list of schedules viewable by a User. The list can be filtered by schedule name,
+        /// schedule type, and schedule level.
+        /// The response is either a UserScheduleGetPagedSortedListResponse or an ErrorResponse.
+        /// This command is authorized to user who is Executive-Assistant of the Executive.
+        /// If no sortOrder is included, the response is sorted by Name ascending by default.
+        /// If the responsePagingControl element is not provided, the paging startIndex will be
+        /// set to 1 by default, and the responsePageSize will be set to the maximum
+        /// responsePageSize by default.
+        /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option
+        /// is included. Then the search criteria are logically ORed together.
+        /// </summary>
+        public static async Task<UserScheduleGetPagedSortedListResponse> UserScheduleGetPagedSortedListRequestAsync(this OcipClient client, UserScheduleGetPagedSortedListRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserScheduleGetPagedSortedListResponse;
+        }
+        /// <summary>
         /// Modify an event of a user schedule.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// The startDate element is adjusted to the first occurrence of the recurrent schedule that comes at or after the startDate.
@@ -2421,7 +2551,7 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to determine if a UserService or service pack is assigned to the user.
-        /// The response is either UserServiceIsAssignedResponse or ErrorResponse
+        /// The response is either UserServiceIsAssignedResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserServiceIsAssignedRequestAsync instead.")]
         public static async Task<UserServiceIsAssignedResponse> UserServiceIsAssignedRequest(this OcipClient client, UserServiceIsAssignedRequest request)
@@ -2431,7 +2561,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request to determine if a UserService or service pack is assigned to the user.
-        /// The response is either UserServiceIsAssignedResponse or ErrorResponse
+        /// The response is either UserServiceIsAssignedResponse or ErrorResponse.
         /// </summary>
         public static async Task<UserServiceIsAssignedResponse> UserServiceIsAssignedRequestAsync(this OcipClient client, UserServiceIsAssignedRequest request, CancellationToken cancellationToken = default)
         {
@@ -2564,6 +2694,80 @@ namespace BroadWorksConnector
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SuccessResponse> UserTerminatingAlternateTrunkIdentityModifyRequestAsync(this OcipClient client, UserTerminatingAlternateTrunkIdentityModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Get user Terminating CUG service settings.
+        /// The response is either UserTerminatingClosedUserGroupGetResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use UserTerminatingClosedUserGroupGetRequestAsync instead.")]
+        public static async Task<UserTerminatingClosedUserGroupGetResponse> UserTerminatingClosedUserGroupGetRequest(this OcipClient client, UserTerminatingClosedUserGroupGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as UserTerminatingClosedUserGroupGetResponse;
+        }
+
+        /// <summary>
+        /// Get user Terminating CUG service settings.
+        /// The response is either UserTerminatingClosedUserGroupGetResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<UserTerminatingClosedUserGroupGetResponse> UserTerminatingClosedUserGroupGetRequestAsync(this OcipClient client, UserTerminatingClosedUserGroupGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserTerminatingClosedUserGroupGetResponse;
+        }
+        /// <summary>
+        /// Modify user Terminating CUG service settings.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use UserTerminatingClosedUserGroupModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> UserTerminatingClosedUserGroupModifyRequest(this OcipClient client, UserTerminatingClosedUserGroupModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify user Terminating CUG service settings.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> UserTerminatingClosedUserGroupModifyRequestAsync(this OcipClient client, UserTerminatingClosedUserGroupModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Get the user Xsi policy profile.
+        /// The response is either a UserXsiPolicyProfileGetResponse
+        /// or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use UserXsiPolicyProfileGetRequestAsync instead.")]
+        public static async Task<UserXsiPolicyProfileGetResponse> UserXsiPolicyProfileGetRequest(this OcipClient client, UserXsiPolicyProfileGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as UserXsiPolicyProfileGetResponse;
+        }
+
+        /// <summary>
+        /// Get the user Xsi policy profile.
+        /// The response is either a UserXsiPolicyProfileGetResponse
+        /// or an ErrorResponse.
+        /// </summary>
+        public static async Task<UserXsiPolicyProfileGetResponse> UserXsiPolicyProfileGetRequestAsync(this OcipClient client, UserXsiPolicyProfileGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserXsiPolicyProfileGetResponse;
+        }
+        /// <summary>
+        /// Modifies the default Xsi policy profile for a group.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use UserXsiPolicyProfileModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> UserXsiPolicyProfileModifyRequest(this OcipClient client, UserXsiPolicyProfileModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modifies the default Xsi policy profile for a group.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> UserXsiPolicyProfileModifyRequestAsync(this OcipClient client, UserXsiPolicyProfileModifyRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:591""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:555""}]")]
     public class UserMeetMeConferencingAddConferenceResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _conferenceId;
 
         [XmlElement(ElementName = "conferenceId", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:591")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:555")]
         [MinLength(6)]
         [MaxLength(12)]
         public string ConferenceId
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _moderatorPin;
 
         [XmlElement(ElementName = "moderatorPin", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:591")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:555")]
         [MinLength(6)]
         [MaxLength(12)]
         public string ModeratorPin
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "securityPin", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:591")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:555")]
         [MinLength(4)]
         [MaxLength(12)]
         public string SecurityPin

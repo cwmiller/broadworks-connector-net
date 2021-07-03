@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:236""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:237""}]")]
     public class GroupFindMeFollowMeGetAlertingGroupListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _alertingGroupTable;
 
         [XmlElement(ElementName = "alertingGroupTable", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:236")]
+        [Group(@"79f226053ee345f2ff4c37c37c8e9114:237")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AlertingGroupTable
         {
             get => _alertingGroupTable;

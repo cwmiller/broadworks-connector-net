@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3496""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:13737""}]")]
     public class UserHotelingGuestModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3496")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:13737")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3496")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:13737")]
         public bool IsActive
         {
             get => _isActive;
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3496")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:13737")]
         public bool EnableAssociationLimit
         {
             get => _enableAssociationLimit;
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3496")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:13737")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int AssociationLimitHours
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostUserId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3496")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:13737")]
         [MinLength(1)]
         [MaxLength(161)]
         public string HostUserId

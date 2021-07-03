@@ -5,6 +5,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Indicates the type of service invocation that caused the call to be detached.
+    /// Deprecated by ServiceInvocationDisposition23
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13285""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:28401""}]")]
     public class SystemPerformanceMeasurementReportingModifyFileServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _ftpHostNetAddress;
 
         [XmlElement(ElementName = "ftpHostNetAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13285")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28401")]
         [MinLength(1)]
         [MaxLength(80)]
         public string FtpHostNetAddress
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "passiveFTP", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13285")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28401")]
         public bool PassiveFTP
         {
             get => _passiveFTP;

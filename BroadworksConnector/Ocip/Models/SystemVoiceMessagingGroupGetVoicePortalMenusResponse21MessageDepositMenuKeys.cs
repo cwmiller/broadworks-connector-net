@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:1075""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:1076""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21MessageDepositMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableMessageDeposit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1075")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1076")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string EnableMessageDeposit
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disableMessageDeposit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1075")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1076")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string DisableMessageDeposit
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "listenToMessageDepositStatus", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1075")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1076")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ListenToMessageDepositStatus
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1075")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1076")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1075")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1076")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

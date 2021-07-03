@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:6887""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:40549""}]")]
     public class UserCallCenterModifyAvailabilityListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6887")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40549")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callCenterAvailability", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6887")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40549")]
         public List<BroadWorksConnector.Ocip.Models.CallCenterAgentAvailability> CallCenterAvailability
         {
             get => _callCenterAvailability;

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18595""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19982""}]")]
     public class Q850CauseMapEntry
     {
 
         private int _q850CauseValue;
 
         [XmlElement(ElementName = "q850CauseValue", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18595")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19982")]
         [MinInclusive(1)]
         [MaxInclusive(256)]
         public int Q850CauseValue
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18595")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19982")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TreatmentId

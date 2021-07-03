@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10238""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11276""}]")]
     public class SystemHPBXAlternateCarrierSelectionAddCarrierRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10238")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11276")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _prefix;
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10238")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11276")]
         [MinLength(5)]
         [MaxLength(6)]
         public string Prefix
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _domain;
 
         [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10238")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11276")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Domain
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10238")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11276")]
         public BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType Type
         {
             get => _type;

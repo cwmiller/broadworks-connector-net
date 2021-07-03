@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:620""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:565""}]")]
     public class GroupRoutePointGetInstanceListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:620")]
+        [Group(@"a27224a048c30ff69eab9209dec841cc:565")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:620")]
+        [Group(@"a27224a048c30ff69eab9209dec841cc:565")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupDepartmentName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:620")]
+        [Group(@"a27224a048c30ff69eab9209dec841cc:565")]
         [MinLength(1)]
         [MaxLength(50)]
         public string GroupDepartmentName
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:620")]
+        [Group(@"a27224a048c30ff69eab9209dec841cc:565")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaRoutePointName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:620")]
+        [Group(@"a27224a048c30ff69eab9209dec841cc:565")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaRoutePointName> SearchCriteriaRoutePointName
         {
             get => _searchCriteriaRoutePointName;

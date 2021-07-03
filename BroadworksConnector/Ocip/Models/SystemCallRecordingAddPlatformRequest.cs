@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26032""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24435""}]")]
     public class SystemCallRecordingAddPlatformRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26032")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24435")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26032")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24435")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26032")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24435")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int Port
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MediaStream _mediaStream;
 
         [XmlElement(ElementName = "mediaStream", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26032")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24435")]
         public BroadWorksConnector.Ocip.Models.MediaStream MediaStream
         {
             get => _mediaStream;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.TransportProtocol _transportType;
 
         [XmlElement(ElementName = "transportType", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26032")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24435")]
         public BroadWorksConnector.Ocip.Models.TransportProtocol TransportType
         {
             get => _transportType;
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26032")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24435")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

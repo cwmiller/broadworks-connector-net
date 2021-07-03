@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2586""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:2572""}]")]
     public class UserModifyRequest22Endpoint
     {
 
         private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleIdentityAndContactEndpointModify22 _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2586")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2572")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleIdentityAndContactEndpointModify22 AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.TrunkAddressingMultipleContactModify22 _trunkAddressing;
 
         [XmlElement(ElementName = "trunkAddressing", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2586")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:2572")]
         public BroadWorksConnector.Ocip.Models.TrunkAddressingMultipleContactModify22 TrunkAddressing
         {
             get => _trunkAddressing;

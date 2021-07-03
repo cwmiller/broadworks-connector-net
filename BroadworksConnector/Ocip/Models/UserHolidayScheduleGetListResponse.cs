@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:17289""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:44647""}]")]
     public class UserHolidayScheduleGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _holidayScheduleTable;
 
         [XmlElement(ElementName = "holidayScheduleTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17289")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44647")]
         public BroadWorksConnector.Ocip.Models.C.OCITable HolidayScheduleTable
         {
             get => _holidayScheduleTable;

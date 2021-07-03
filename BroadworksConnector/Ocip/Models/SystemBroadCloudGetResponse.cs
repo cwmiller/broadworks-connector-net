@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2108""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2524""}]")]
     public class SystemBroadCloudGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provisioningUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2108")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2524")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ProvisioningUrl
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provisioningUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2108")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2524")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ProvisioningUserId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableSynchronization;
 
         [XmlElement(ElementName = "enableSynchronization", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2108")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2524")]
         public bool EnableSynchronization
         {
             get => _enableSynchronization;

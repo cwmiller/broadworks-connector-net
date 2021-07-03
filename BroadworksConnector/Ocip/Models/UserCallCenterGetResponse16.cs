@@ -10,14 +10,13 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the UserCallCenterGetRequest16.
     /// Contains the user's call center settings.
     /// Indicates whether the agent is current available (logged in) to each call center in the list.
-    /// Contains a table with column headings: "Service User Id", "Phone Number", "Extension", "Available",
-    /// "Logoff Allowed", "Type", and "Priority".
+    /// Contains a table with column headings: "Service User Id", "Phone Number", "Extension", "Available", "Logoff Allowed", "Type", and "Priority".
     /// <see cref="UserCallCenterGetRequest16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16916""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:40456""}]")]
     public class UserCallCenterGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -25,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentACDState", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16916")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40456")]
         public BroadWorksConnector.Ocip.Models.AgentACDState AgentACDState
         {
             get => _agentACDState;
@@ -42,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useDefaultGuardTimer;
 
         [XmlElement(ElementName = "useDefaultGuardTimer", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16916")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40456")]
         public bool UseDefaultGuardTimer
         {
             get => _useDefaultGuardTimer;
@@ -59,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableGuardTimer;
 
         [XmlElement(ElementName = "enableGuardTimer", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16916")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40456")]
         public bool EnableGuardTimer
         {
             get => _enableGuardTimer;
@@ -76,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _guardTimerSeconds;
 
         [XmlElement(ElementName = "guardTimerSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16916")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40456")]
         [MinInclusive(1)]
         [MaxInclusive(25)]
         public int GuardTimerSeconds
@@ -96,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useSystemDefaultUnavailableSettings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16916")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40456")]
         public bool UseSystemDefaultUnavailableSettings
         {
             get => _useSystemDefaultUnavailableSettings;
@@ -114,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceAgentUnavailableOnDNDActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16916")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40456")]
         public bool ForceAgentUnavailableOnDNDActivation
         {
             get => _forceAgentUnavailableOnDNDActivation;
@@ -132,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceUnavailableOnPersonalCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16916")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40456")]
         public bool ForceUnavailableOnPersonalCalls
         {
             get => _forceUnavailableOnPersonalCalls;
@@ -150,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceAgentUnavailableOnBouncedCallLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16916")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40456")]
         public bool ForceAgentUnavailableOnBouncedCallLimit
         {
             get => _forceAgentUnavailableOnBouncedCallLimit;
@@ -168,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberConsecutiveBouncedCallsToForceAgentUnavailable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16916")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40456")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
         public int NumberConsecutiveBouncedCallsToForceAgentUnavailable
@@ -187,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _callCenterTable;
 
         [XmlElement(ElementName = "callCenterTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16916")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40456")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CallCenterTable
         {
             get => _callCenterTable;

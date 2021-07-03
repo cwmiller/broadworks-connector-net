@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:775""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:834""}]")]
     public class SearchCriteriaExactDeviceManagementEventAction : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private BroadWorksConnector.Ocip.Models.DeviceManagementEventAction _dmEventAction;
 
         [XmlElement(ElementName = "dmEventAction", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:775")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:834")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementEventAction DmEventAction
         {
             get => _dmEventAction;

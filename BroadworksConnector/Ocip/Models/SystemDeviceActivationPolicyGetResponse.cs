@@ -1,0 +1,55 @@
+using System;
+using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
+using System.Collections.Generic;
+
+namespace BroadWorksConnector.Ocip.Models
+{
+    /// <summary>
+    /// Response to SystemDeviceActivationPolicyGetRequest.
+    /// <see cref="SystemDeviceActivationPolicyGetRequest"/>
+    /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7304""}]")]
+    public class SystemDeviceActivationPolicyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
+
+        private bool _allowActivationCodeRequestByUser;
+
+        [XmlElement(ElementName = "allowActivationCodeRequestByUser", IsNullable = false, Namespace = "")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7304")]
+        public bool AllowActivationCodeRequestByUser
+        {
+            get => _allowActivationCodeRequestByUser;
+            set
+            {
+                AllowActivationCodeRequestByUserSpecified = true;
+                _allowActivationCodeRequestByUser = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AllowActivationCodeRequestByUserSpecified { get; set; }
+
+        private bool _sendActivationCodeInEmail;
+
+        [XmlElement(ElementName = "sendActivationCodeInEmail", IsNullable = false, Namespace = "")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7304")]
+        public bool SendActivationCodeInEmail
+        {
+            get => _sendActivationCodeInEmail;
+            set
+            {
+                SendActivationCodeInEmailSpecified = true;
+                _sendActivationCodeInEmail = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool SendActivationCodeInEmailSpecified { get; set; }
+
+    }
+}

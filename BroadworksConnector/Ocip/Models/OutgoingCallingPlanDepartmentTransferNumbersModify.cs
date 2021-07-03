@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1847""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1848""}]")]
     public class OutgoingCallingPlanDepartmentTransferNumbersModify
     {
 
         private BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1847")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1848")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey
         {
             get => _departmentKey;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transferNumbers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1847")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1848")]
         public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify TransferNumbers
         {
             get => _transferNumbers;

@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1104""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:6770""}]")]
     public class GroupCallCenterModifyInstanceStatisticsReportingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1104")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6770")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "clearTodayStatistics", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1104")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6770")]
         public bool ClearTodayStatistics
         {
             get => _clearTodayStatistics;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "generateDailyReport", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1104")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6770")]
         public bool GenerateDailyReport
         {
             get => _generateDailyReport;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "collectionPeriodMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1104")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6770")]
         public BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes CollectionPeriodMinutes
         {
             get => _collectionPeriodMinutes;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingEmailAddress1", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1104")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6770")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ReportingEmailAddress1
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingEmailAddress2", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1104")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6770")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ReportingEmailAddress2

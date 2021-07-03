@@ -8,7 +8,8 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// AuthenticationRequest is 1st stage of the 2 stage OCI login process.
-    /// The response is either AuthenticationResponse or ErrorResponse
+    /// 
+    /// The response is either an AuthenticationResponse or an ErrorResponse.
     /// <see cref="AuthenticationRequest"/>
     /// <see cref="AuthenticationResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -16,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3862""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:325""}]")]
     public class AuthenticationRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3862")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:325")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43499""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47806""}]")]
     public class CommunicationBarringRedirectingRule15sp2
     {
 
         private string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43499")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47806")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Criteria
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction15sp2 _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43499")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47806")]
         public BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction15sp2 Action
         {
             get => _action;

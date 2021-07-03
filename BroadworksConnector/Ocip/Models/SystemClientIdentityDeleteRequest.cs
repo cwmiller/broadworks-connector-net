@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:5040""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:5378""}]")]
     public class SystemClientIdentityDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _clientIdentity;
 
         [XmlElement(ElementName = "clientIdentity", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5040")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5378")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ClientIdentity

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:2911""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:2926""}]")]
     public class GroupCallCenterCallDispositionCodeGetUsageListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _callCenterTable;
 
         [XmlElement(ElementName = "callCenterTable", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2911")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:2926")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CallCenterTable
         {
             get => _callCenterTable;

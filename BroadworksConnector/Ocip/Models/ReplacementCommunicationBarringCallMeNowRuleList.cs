@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18609""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19996""}]")]
     public class ReplacementCommunicationBarringCallMeNowRuleList
     {
 
         private List<BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowRule> _rule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowRule>();
 
         [XmlElement(ElementName = "rule", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18609")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19996")]
         public List<BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowRule> Rule
         {
             get => _rule;

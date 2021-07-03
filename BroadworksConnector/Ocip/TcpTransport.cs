@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip
                         _stream = _tcpClient.GetStream();
                     }
                 }
-                
+
                 var requestData = _options.TcpRequestEncoding.GetBytes(request);
 
                 var responseData = new List<byte>();
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip
                 {
                     throw new BadResponseException("Unable to parse response", e);
                 }
-            } 
+            }
             finally
             {
                 _semaphore.Release();

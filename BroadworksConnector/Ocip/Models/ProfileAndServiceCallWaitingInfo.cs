@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4168""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4352""}]")]
     public class ProfileAndServiceCallWaitingInfo
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4168")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4352")]
         public bool IsActive
         {
             get => _isActive;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _disableCallingLineIdDelivery;
 
         [XmlElement(ElementName = "disableCallingLineIdDelivery", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4168")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4352")]
         public bool DisableCallingLineIdDelivery
         {
             get => _disableCallingLineIdDelivery;

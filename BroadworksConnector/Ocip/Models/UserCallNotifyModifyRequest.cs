@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""26f62134ab1693f4bdddc7c70b20d2eb:301""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""26f62134ab1693f4bdddc7c70b20d2eb:302""}]")]
     public class UserCallNotifyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:301")]
+        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:302")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callNotifyEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:301")]
+        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:302")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CallNotifyEmailAddress
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:301")]
+        [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:302")]
         public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation
         {
             get => _criteriaActivation;

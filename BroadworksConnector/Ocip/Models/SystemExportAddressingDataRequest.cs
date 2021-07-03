@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8902""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9931""}]")]
     public class SystemExportAddressingDataRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _fileName;
 
         [XmlElement(ElementName = "fileName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8902")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9931")]
         [MinLength(1)]
         public string FileName
         {

@@ -11,8 +11,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request the system's legacy automatic callback line type settings.
-        /// The response is either a SystemLegacyAutomaticCallbackGetLineTypeListResponse or
-        /// an ErrorResponse.
+        /// The response is either a SystemLegacyAutomaticCallbackGetLineTypeListResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemLegacyAutomaticCallbackGetLineTypeListRequestAsync instead.")]
         public static async Task<SystemLegacyAutomaticCallbackGetLineTypeListResponse> SystemLegacyAutomaticCallbackGetLineTypeListRequest(this OcipClient client, SystemLegacyAutomaticCallbackGetLineTypeListRequest request)
@@ -22,8 +21,7 @@ namespace BroadWorksConnector
 
         /// <summary>
         /// Request the system's legacy automatic callback line type settings.
-        /// The response is either a SystemLegacyAutomaticCallbackGetLineTypeListResponse or
-        /// an ErrorResponse.
+        /// The response is either a SystemLegacyAutomaticCallbackGetLineTypeListResponse or an ErrorResponse.
         /// </summary>
         public static async Task<SystemLegacyAutomaticCallbackGetLineTypeListResponse> SystemLegacyAutomaticCallbackGetLineTypeListRequestAsync(this OcipClient client, SystemLegacyAutomaticCallbackGetLineTypeListRequest request, CancellationToken cancellationToken = default)
         {

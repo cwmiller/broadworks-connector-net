@@ -22,14 +22,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4941"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4945""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:5850"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:5854""}]}]")]
     public class GroupFeatureAccessCodeModifyRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4941")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5850")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4941")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5850")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useFeatureAccessCodeLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4941")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5850")]
         public BroadWorksConnector.Ocip.Models.GroupFeatureAccessCodeLevel UseFeatureAccessCodeLevel
         {
             get => _useFeatureAccessCodeLevel;
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "restoreDefaultCodes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4945")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5854")]
         public bool RestoreDefaultCodes
         {
             get => _restoreDefaultCodes;
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "featureAccessCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4945")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5854")]
         public List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeModifyEntry> FeatureAccessCode
         {
             get => _featureAccessCode;

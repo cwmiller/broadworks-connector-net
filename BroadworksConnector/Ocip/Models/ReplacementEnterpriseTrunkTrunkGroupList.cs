@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1920""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1999""}]")]
     public class ReplacementEnterpriseTrunkTrunkGroupList
     {
 
         private List<string> _trunkGroup = new List<string>();
 
         [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1920")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1999")]
         [MinLength(1)]
         [MaxLength(30)]
         public List<string> TrunkGroup

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43449""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47737""}]")]
     public class CallCenterMusicOnHoldSourceModifyCustomSource
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43449")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47737")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource AudioFile
         {
             get => _audioFile;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43449")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47737")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource VideoFile
         {
             get => _videoFile;

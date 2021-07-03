@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:669""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:670""}]")]
     public class EnterpriseDepartmentGetAvailableParentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _enterpriseId;
 
         [XmlElement(ElementName = "enterpriseId", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:669")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:670")]
         [MinLength(1)]
         [MaxLength(30)]
         public string EnterpriseId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _departmentName;
 
         [XmlElement(ElementName = "departmentName", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:669")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:670")]
         [MinLength(1)]
         [MaxLength(50)]
         public string DepartmentName

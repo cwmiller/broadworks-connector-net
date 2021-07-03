@@ -17,7 +17,8 @@ namespace BroadWorksConnector.Ocip.Models
     /// When set to 'Service Provider', they will be un-assigned from the group and service provider if the command is executed by a provisioning administrator or above.
     /// When omitted, the number(s) will be left assigned to the group.
     /// An ErrorResponse will be returned if any number cannot be unassigned because of insufficient privilege.
-    /// The response is either SuccessResponse or ErrorResponse
+    /// 
+    /// The response is either SuccessResponse or ErrorResponse.
     /// <see cref="ErrorResponse"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="SuccessResponse"/>
@@ -26,14 +27,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1337""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1411""}]")]
     public class UserConsolidatedDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1337")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1411")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -53,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deleteExistingDevices", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1337")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1411")]
         public bool DeleteExistingDevices
         {
             get => _deleteExistingDevices;
@@ -71,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1337")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1411")]
         public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers
         {
             get => _unassignPhoneNumbers;

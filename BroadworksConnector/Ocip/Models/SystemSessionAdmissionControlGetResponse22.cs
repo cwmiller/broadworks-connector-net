@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15111""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:29227""}]")]
     public class SystemSessionAdmissionControlGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _countLongConnectionsToMediaServer;
 
         [XmlElement(ElementName = "countLongConnectionsToMediaServer", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15111")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29227")]
         public bool CountLongConnectionsToMediaServer
         {
             get => _countLongConnectionsToMediaServer;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType _sacHandlingForMoH;
 
         [XmlElement(ElementName = "sacHandlingForMoH", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15111")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29227")]
         public BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType SacHandlingForMoH
         {
             get => _sacHandlingForMoH;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _blockVMDepositDueToSACLimits;
 
         [XmlElement(ElementName = "blockVMDepositDueToSACLimits", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15111")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29227")]
         public bool BlockVMDepositDueToSACLimits
         {
             get => _blockVMDepositDueToSACLimits;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType _sacCodecSelectionPolicy;
 
         [XmlElement(ElementName = "sacCodecSelectionPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15111")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29227")]
         public BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType SacCodecSelectionPolicy
         {
             get => _sacCodecSelectionPolicy;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _countCallToMobileNumberForSACSubscriber;
 
         [XmlElement(ElementName = "countCallToMobileNumberForSACSubscriber", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15111")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29227")]
         public bool CountCallToMobileNumberForSACSubscriber
         {
             get => _countCallToMobileNumberForSACSubscriber;
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _countBWAnywhereForSACSubscriber;
 
         [XmlElement(ElementName = "countBWAnywhereForSACSubscriber", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15111")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29227")]
         public bool CountBWAnywhereForSACSubscriber
         {
             get => _countBWAnywhereForSACSubscriber;
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _countROForSACSubscriber;
 
         [XmlElement(ElementName = "countROForSACSubscriber", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15111")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29227")]
         public bool CountROForSACSubscriber
         {
             get => _countROForSACSubscriber;
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _excludeBWMobilityForSACSubscriber;
 
         [XmlElement(ElementName = "excludeBWMobilityForSACSubscriber", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15111")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29227")]
         public bool ExcludeBWMobilityForSACSubscriber
         {
             get => _excludeBWMobilityForSACSubscriber;

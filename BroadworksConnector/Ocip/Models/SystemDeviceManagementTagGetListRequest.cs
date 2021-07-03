@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7298"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7299""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8000"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8001""}]}]")]
     public class SystemDeviceManagementTagGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private bool _systemDefaultTagSet;
 
         [XmlElement(ElementName = "systemDefaultTagSet", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7299")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8001")]
         public bool SystemDefaultTagSet
         {
             get => _systemDefaultTagSet;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7299")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8001")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSetName

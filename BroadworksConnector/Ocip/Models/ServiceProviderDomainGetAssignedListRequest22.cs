@@ -13,20 +13,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following elements are only used in AS data mode and will be ignored in XS data mode:
     /// responseSizeLimit
     /// searchCriteriaDomainName
+    /// searchCriteriaExactDomainLevel
     /// <see cref="ServiceProviderDomainGetAssignedListResponse22"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3330""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3989""}]")]
     public class ServiceProviderDomainGetAssignedListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3330")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3989")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -46,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3330")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3989")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -65,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDomainName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3330")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3989")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDomainName> SearchCriteriaDomainName
         {
             get => _searchCriteriaDomainName;
@@ -78,6 +79,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool SearchCriteriaDomainNameSpecified { get; set; }
+
+        private BroadWorksConnector.Ocip.Models.SearchCriteriaExactDomainLevel _searchCriteriaExactDomainLevel;
+
+        [XmlElement(ElementName = "searchCriteriaExactDomainLevel", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3989")]
+        public BroadWorksConnector.Ocip.Models.SearchCriteriaExactDomainLevel SearchCriteriaExactDomainLevel
+        {
+            get => _searchCriteriaExactDomainLevel;
+            set
+            {
+                SearchCriteriaExactDomainLevelSpecified = true;
+                _searchCriteriaExactDomainLevel = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool SearchCriteriaExactDomainLevelSpecified { get; set; }
 
     }
 }

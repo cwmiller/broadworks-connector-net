@@ -11,20 +11,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// If the becomeDefaultLanguage element is present, the language in this request becomes
     /// the default language for the system.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// Replaced by: SystemLanguageModifyRequest22.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemLanguageModifyRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10436""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27402""}]")]
     public class SystemLanguageModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10436")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27402")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -44,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "becomeDefaultLanguage", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10436")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27402")]
         public bool BecomeDefaultLanguage
         {
             get => _becomeDefaultLanguage;
@@ -62,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10436")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27402")]
         [MaxLength(5)]
         public string Locale
         {
@@ -81,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10436")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27402")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Encoding

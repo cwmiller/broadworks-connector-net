@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:884""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1060""}]")]
     public class SystemAccessDeviceGetAllRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1060")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDeviceName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1060")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceName> SearchCriteriaDeviceName
         {
             get => _searchCriteriaDeviceName;
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDeviceMACAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1060")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceMACAddress> SearchCriteriaDeviceMACAddress
         {
             get => _searchCriteriaDeviceMACAddress;
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDeviceNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1060")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceNetAddress> SearchCriteriaDeviceNetAddress
         {
             get => _searchCriteriaDeviceNetAddress;
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1060")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId
         {
             get => _searchCriteriaGroupId;
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactDeviceType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1060")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceType SearchCriteriaExactDeviceType
         {
             get => _searchCriteriaExactDeviceType;
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactDeviceServiceProvider", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1060")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceServiceProvider SearchCriteriaExactDeviceServiceProvider
         {
             get => _searchCriteriaExactDeviceServiceProvider;
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaServiceProviderId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1060")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId
         {
             get => _searchCriteriaServiceProviderId;
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaResellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1060")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId> SearchCriteriaResellerId
         {
             get => _searchCriteriaResellerId;

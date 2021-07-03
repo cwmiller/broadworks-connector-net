@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Modifies the service provider's DTMF based in-call service activation trigger attributes.
-    /// The response is either a SuccessResponse or an ErrorResponse.
+    /// Modifies the service provider's DTMF based in-call service activation trigger attributes.The response is either a SuccessResponse or an ErrorResponse.
     /// Replaced by: ServiceProviderInCallServiceActivationModifyRequest17
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -17,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:14749""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:18957""}]")]
     public class ServiceProviderInCallServiceActivationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14749")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18957")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "activationDigits", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14749")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18957")]
         [MinLength(1)]
         [MaxLength(8)]
         public string ActivationDigits

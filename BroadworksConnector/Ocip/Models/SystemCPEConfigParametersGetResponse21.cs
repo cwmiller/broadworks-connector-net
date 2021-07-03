@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6733""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7073""}]")]
     public class SystemCPEConfigParametersGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _enableIPDeviceManagement;
 
         [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6733")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
         public bool EnableIPDeviceManagement
         {
             get => _enableIPDeviceManagement;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _ftpConnectTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6733")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
         public int FtpConnectTimeoutSeconds
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _ftpFileTransferTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6733")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
         public int FtpFileTransferTimeoutSeconds
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _pauseBetweenFileRebuildMilliseconds;
 
         [XmlElement(ElementName = "pauseBetweenFileRebuildMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6733")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
         [MinInclusive(0)]
         [MaxInclusive(10000)]
         public int PauseBetweenFileRebuildMilliseconds
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceAccessAppServerClusterName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6733")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DeviceAccessAppServerClusterName
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _minTimeBetweenResetMilliseconds;
 
         [XmlElement(ElementName = "minTimeBetweenResetMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6733")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
         [MinInclusive(0)]
         [MaxInclusive(86400000)]
         public int MinTimeBetweenResetMilliseconds
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _alwaysPushFilesOnRebuild;
 
         [XmlElement(ElementName = "alwaysPushFilesOnRebuild", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6733")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
         public bool AlwaysPushFilesOnRebuild
         {
             get => _alwaysPushFilesOnRebuild;
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxFileOperationRetryAttempts;
 
         [XmlElement(ElementName = "maxFileOperationRetryAttempts", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6733")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
         [MinInclusive(0)]
         [MaxInclusive(20)]
         public int MaxFileOperationRetryAttempts
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableAutoRebuildConfig;
 
         [XmlElement(ElementName = "enableAutoRebuildConfig", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6733")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
         public bool EnableAutoRebuildConfig
         {
             get => _enableAutoRebuildConfig;
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _eventQueueSize;
 
         [XmlElement(ElementName = "eventQueueSize", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6733")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
         [MinInclusive(0)]
         [MaxInclusive(100000000)]
         public int EventQueueSize
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowDeviceCredentialsRetrieval;
 
         [XmlElement(ElementName = "allowDeviceCredentialsRetrieval", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6733")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
         public bool AllowDeviceCredentialsRetrieval
         {
             get => _allowDeviceCredentialsRetrieval;

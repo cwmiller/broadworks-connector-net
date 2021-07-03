@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2112""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2475""}]")]
     public class DNRange
     {
 
         private string _minPhoneNumber;
 
         [XmlElement(ElementName = "minPhoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2112")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2475")]
         [MinLength(1)]
         [MaxLength(23)]
         public string MinPhoneNumber
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _maxPhoneNumber;
 
         [XmlElement(ElementName = "maxPhoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2112")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2475")]
         [MinLength(1)]
         [MaxLength(23)]
         public string MaxPhoneNumber

@@ -16,10 +16,6 @@ namespace BroadWorksConnector.Ocip.Models
         Https,
         [XmlEnum(Name = "FTP")]
         FTP,
-        [XmlEnum(Name = "FTPS")]
-        FTPS,
-        [XmlEnum(Name = "SFTP")]
-        SFTP,
         [XmlEnum(Name = "TFTP")]
         TFTP,
     }

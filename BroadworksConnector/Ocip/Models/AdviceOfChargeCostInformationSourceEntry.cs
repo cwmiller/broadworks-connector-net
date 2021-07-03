@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18460""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19847""}]")]
     public class AdviceOfChargeCostInformationSourceEntry
     {
 
         private string _peerIdentity;
 
         [XmlElement(ElementName = "peerIdentity", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18460")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19847")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PeerIdentity
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18460")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19847")]
         [MinInclusive(0)]
         [MaxInclusive(9)]
         public int Priority

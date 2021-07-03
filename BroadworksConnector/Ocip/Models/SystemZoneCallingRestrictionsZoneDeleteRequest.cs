@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16697""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:39220""}]")]
     public class SystemZoneCallingRestrictionsZoneDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16697")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39220")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ZoneName

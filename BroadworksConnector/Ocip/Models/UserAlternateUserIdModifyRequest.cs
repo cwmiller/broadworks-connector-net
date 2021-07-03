@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:458""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:478""}]")]
     public class UserAlternateUserIdModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:458")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:478")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _alternateUserId;
 
         [XmlElement(ElementName = "alternateUserId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:458")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:478")]
         [MinLength(1)]
         [MaxLength(161)]
         public string AlternateUserId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newAlternateUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:458")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:478")]
         [MinLength(1)]
         [MaxLength(161)]
         public string NewAlternateUserId
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:458")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:478")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

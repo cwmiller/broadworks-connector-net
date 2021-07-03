@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3473""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4123""}]")]
     public class SecurityClassificationCustomizationActivation
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3473")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4123")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isCustomized;
 
         [XmlElement(ElementName = "isCustomized", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3473")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4123")]
         public bool IsCustomized
         {
             get => _isCustomized;

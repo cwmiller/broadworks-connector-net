@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13120""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:28260""}]")]
     public class SystemPerformanceMeasurementReportingAddFileServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _ftpHostNetAddress;
 
         [XmlElement(ElementName = "ftpHostNetAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13120")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28260")]
         [MinLength(1)]
         [MaxLength(80)]
         public string FtpHostNetAddress
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _ftpUserId;
 
         [XmlElement(ElementName = "ftpUserId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13120")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28260")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FtpUserId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _ftpUserPassword;
 
         [XmlElement(ElementName = "ftpUserPassword", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13120")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28260")]
         [MinLength(1)]
         [MaxLength(40)]
         public string FtpUserPassword
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "passiveFTP", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13120")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28260")]
         public bool PassiveFTP
         {
             get => _passiveFTP;

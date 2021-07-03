@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:2960""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3756""}]")]
     public class GroupDepartmentAdminAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.GroupDepartmentKey _departmentKey;
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2960")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3756")]
         public BroadWorksConnector.Ocip.Models.GroupDepartmentKey DepartmentKey
         {
             get => _departmentKey;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2960")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3756")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2960")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3756")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2960")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3756")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2960")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3756")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2960")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3756")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language

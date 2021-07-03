@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16878""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:39653""}]")]
     public class UserBroadWorksAnywhereGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _alertAllLocationsForClickToDialCalls;
 
         [XmlElement(ElementName = "alertAllLocationsForClickToDialCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16878")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39653")]
         public bool AlertAllLocationsForClickToDialCalls
         {
             get => _alertAllLocationsForClickToDialCalls;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
 
         [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16878")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39653")]
         public BroadWorksConnector.Ocip.Models.C.OCITable PhoneNumberTable
         {
             get => _phoneNumberTable;

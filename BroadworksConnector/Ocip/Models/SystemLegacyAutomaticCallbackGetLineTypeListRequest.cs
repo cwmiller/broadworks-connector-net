@@ -8,8 +8,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request the system's legacy automatic callback line type settings.
-    /// The response is either a SystemLegacyAutomaticCallbackGetLineTypeListResponse or
-    /// an ErrorResponse.
+    /// The response is either a SystemLegacyAutomaticCallbackGetLineTypeListResponse or an ErrorResponse.
     /// <see cref="SystemLegacyAutomaticCallbackGetLineTypeListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>

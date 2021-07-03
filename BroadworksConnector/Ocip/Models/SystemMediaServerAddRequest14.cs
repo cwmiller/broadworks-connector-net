@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10884""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11925""}]")]
     public class SystemMediaServerAddRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11925")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11925")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int Port
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.TransportProtocol _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11925")]
         public BroadWorksConnector.Ocip.Models.TransportProtocol TransportProtocol
         {
             get => _transportProtocol;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10884")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11925")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

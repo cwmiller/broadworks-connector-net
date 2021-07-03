@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:133""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:239""}]")]
     public class ResellerAdminGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _resellerAdminTable;
 
         [XmlElement(ElementName = "resellerAdminTable", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:133")]
+        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:239")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ResellerAdminTable
         {
             get => _resellerAdminTable;

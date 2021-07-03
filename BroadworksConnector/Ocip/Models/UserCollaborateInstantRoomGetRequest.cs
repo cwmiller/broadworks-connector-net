@@ -9,8 +9,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request the collaborate room settings for an instant room.
     /// The request fails when requesting collaborate room settings for My Room or project rooms.
-    /// The response is either UserCollaborateInstantRoomGetResponse or
-    /// ErrorResponse.
+    /// The response is either UserCollaborateInstantRoomGetResponse or ErrorResponse.
     /// <see cref="UserCollaborateInstantRoomGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>

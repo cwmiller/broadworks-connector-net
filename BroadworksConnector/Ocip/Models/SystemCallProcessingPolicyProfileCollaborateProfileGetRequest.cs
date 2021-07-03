@@ -7,12 +7,11 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Request to get the configuration for a call processing policy profile Collaborate subscriber type
-    /// profile.
+    /// Request to get the configuration for a call processing policy profile Collaborate subscriber type profile.
     /// The response is either a SystemCallProcessingPolicyProfileCollaborateProfileGetResponse or an
     /// ErrorResponse.
     /// 
-    /// Replaced by: SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22
+    /// Replaced by:  SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22
     /// <see cref="SystemCallProcessingPolicyProfileCollaborateProfileGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22"/>
@@ -20,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:37676""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:22558""}]")]
     public class SystemCallProcessingPolicyProfileCollaborateProfileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37676")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22558")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

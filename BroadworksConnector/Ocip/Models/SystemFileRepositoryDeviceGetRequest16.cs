@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Request to get the file repository information.
-    /// The response is either SystemFileRepositoryDeviceGetResponse16 or ErrorResponse.
+    /// Request to get the file repository information.  The response is either SystemFileRepositoryDeviceGetResponse16 or ErrorResponse.
     /// 
     /// Replaced by: SystemFileRepositoryDeviceGetRequest20
     /// <see cref="SystemFileRepositoryDeviceGetResponse16"/>
@@ -18,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41914""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26881""}]")]
     public class SystemFileRepositoryDeviceGetRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41914")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26881")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name

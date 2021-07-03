@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9735""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10773""}]")]
     public class SystemGETSAvpCodeMapAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private int _avpCode;
 
         [XmlElement(ElementName = "avpCode", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9735")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10773")]
         public int AvpCode
         {
             get => _avpCode;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _vendorId;
 
         [XmlElement(ElementName = "vendorId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9735")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10773")]
         public int VendorId
         {
             get => _vendorId;

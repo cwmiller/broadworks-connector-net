@@ -8,21 +8,24 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupGroupPagingTargetsCapacityGetRequest.
+    /// 
+    /// Replaced by: GroupGroupPagingTargetsCapacityGetResponse22 in AS data mode.
     /// <see cref="GroupGroupPagingTargetsCapacityGetRequest"/>
+    /// <see cref="GroupGroupPagingTargetsCapacityGetResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:483""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2658""}]")]
     public class GroupGroupPagingTargetsCapacityGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _maximumTargetUsersFromServiceProvider;
 
         [XmlElement(ElementName = "maximumTargetUsersFromServiceProvider", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:483")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2658")]
         [MinInclusive(1)]
-        [MaxInclusive(294)]
+        [MaxInclusive(149)]
         public int MaximumTargetUsersFromServiceProvider
         {
             get => _maximumTargetUsersFromServiceProvider;
@@ -39,9 +42,9 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maximumTargetUsers;
 
         [XmlElement(ElementName = "maximumTargetUsers", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:483")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2658")]
         [MinInclusive(1)]
-        [MaxInclusive(294)]
+        [MaxInclusive(149)]
         public int MaximumTargetUsers
         {
             get => _maximumTargetUsers;

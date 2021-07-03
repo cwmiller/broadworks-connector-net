@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9a6dbade05624033cf7fe782b7c9a9a7:82""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9a6dbade05624033cf7fe782b7c9a9a7:83""}]")]
     public class SystemExecutiveModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treatVirtualOnNetCallsAsInternal", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:82")]
+        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:83")]
         public bool TreatVirtualOnNetCallsAsInternal
         {
             get => _treatVirtualOnNetCallsAsInternal;

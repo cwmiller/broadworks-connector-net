@@ -8,7 +8,8 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to UserAnnouncementFileGetListRequest.
-    /// When requested, the response contains a table with columns: "Name", "Media Type", "File Size".
+    /// When requested, the response contains a table with columns: "Name",
+    /// "Media Type", "File Size", "Announcement File External Id".
     /// The "Name" column contains the name of the announcement file.
     /// The "Media Type" column contains the media type of the announcement file with the possible values:
     /// WMA - Windows Media Audio file
@@ -16,6 +17,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// 3GP - A 3GP file
     /// MOV - A MOV file using a H.263 or H.264 codec.
     /// The "File Size" column contains the file size in kB of the announcement file.
+    /// The "Announcement File External Id" column contains the external ID of the announcement file.
+    /// 
+    /// The following columns are populated in AS data mode only:
+    /// "Announcement File External Id"
+    /// 
     /// The response also contains the current total file size (KB) for the user across
     /// all media types and the maximum total file size (MB) allowed for the user.
     /// <see cref="UserAnnouncementFileGetListRequest"/>
@@ -23,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:585""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:630""}]")]
     public class UserAnnouncementFileGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -31,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementTable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:585")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:630")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AnnouncementTable
         {
             get => _announcementTable;
@@ -48,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _totalFileSize;
 
         [XmlElement(ElementName = "totalFileSize", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:585")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:630")]
         public int TotalFileSize
         {
             get => _totalFileSize;
@@ -65,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxFileSize;
 
         [XmlElement(ElementName = "maxFileSize", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:585")]
+        [Group(@"53d18cc797d03d802cbc411ad821f1d4:630")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int MaxFileSize

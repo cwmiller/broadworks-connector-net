@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:171""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:255""}]")]
     public class SystemCallRecordingGetPlatformListRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "excludeReseller", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:171")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:255")]
         public bool ExcludeReseller
         {
             get => _excludeReseller;
@@ -44,9 +44,9 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:171")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:255")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string ResellerId
         {
             get => _resellerId;

@@ -8,8 +8,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request the system level data associated with the COLP service.
-    /// The response is either a SystemConnectedLineIdentificationPresentationGetResponse or an
-    /// ErrorResponse.
+    /// The response is either a SystemConnectedLineIdentificationPresentationGetResponse or an ErrorResponse.
     /// <see cref="SystemConnectedLineIdentificationPresentationGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>

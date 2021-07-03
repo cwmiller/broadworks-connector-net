@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1380"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1381""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1468"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1469""}]}]")]
     public class CommunicationBarringIncomingRule19sp1
     {
 
         private string _digitPatternCriteria;
 
         [XmlElement(ElementName = "digitPatternCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1381")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1469")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DigitPatternCriteria
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _incomingCriteria;
 
         [XmlElement(ElementName = "incomingCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1381")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1469")]
         [MinLength(1)]
         [MaxLength(40)]
         public string IncomingCriteria
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1380")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1468")]
         public BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction Action
         {
             get => _action;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1380")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1468")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
         public int CallTimeoutSeconds
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1380")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1468")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TimeSchedule
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1380")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1468")]
         [MinLength(1)]
         [MaxLength(40)]
         public string HolidaySchedule
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         private decimal _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1380")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1468")]
         [MinInclusive(0)]
         [MaxInclusive(1000000)]
         public decimal Priority

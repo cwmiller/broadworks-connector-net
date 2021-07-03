@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7278"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7279""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7980"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7981""}]}]")]
     public class SystemDeviceManagementTagDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private bool _systemDefaultTagSet;
 
         [XmlElement(ElementName = "systemDefaultTagSet", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7279")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7981")]
         public bool SystemDefaultTagSet
         {
             get => _systemDefaultTagSet;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7279")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7981")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSetName
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _tagName = new List<string>();
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7278")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7980")]
         [MinLength(1)]
         [MaxLength(64)]
         public List<string> TagName

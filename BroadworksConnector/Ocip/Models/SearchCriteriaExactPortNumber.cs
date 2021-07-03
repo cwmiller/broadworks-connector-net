@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1060""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1149""}]")]
     public class SearchCriteriaExactPortNumber : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private int _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1060")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:1149")]
         [MinInclusive(1)]
         [MaxInclusive(1024)]
         public int Port

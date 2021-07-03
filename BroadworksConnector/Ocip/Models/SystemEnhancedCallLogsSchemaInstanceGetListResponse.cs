@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f6b3702edb5f67fa12c2c426d98657db:263""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f6b3702edb5f67fa12c2c426d98657db:304""}]")]
     public class SystemEnhancedCallLogsSchemaInstanceGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _schemaInstanceUsageTable;
 
         [XmlElement(ElementName = "schemaInstanceUsageTable", IsNullable = false, Namespace = "")]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:263")]
+        [Group(@"f6b3702edb5f67fa12c2c426d98657db:304")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SchemaInstanceUsageTable
         {
             get => _schemaInstanceUsageTable;

@@ -539,13 +539,13 @@ namespace BroadWorksConnector
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
         /// 
+        /// The response is either EnterprisePhoneDirectoryGetPagedSortedListResponse or ErrorResponse.
+        /// 
         /// ErrorResponse is returned if searchCriteriaExactUserGroup or searchCriteriaExactUserDepartment have multiple entries and searchCriteriaModeOr is not included
         /// 
         /// The following elements are only used in AS data mode and ignored in Amplify and XS data mode:
         /// "sortByImpId"
         /// "searchCriteriaImpId"
-        /// 
-        /// The response is either EnterprisePhoneDirectoryGetPagedSortedListResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use EnterprisePhoneDirectoryGetPagedSortedListRequestAsync instead.")]
         public static async Task<EnterprisePhoneDirectoryGetPagedSortedListResponse> EnterprisePhoneDirectoryGetPagedSortedListRequest(this OcipClient client, EnterprisePhoneDirectoryGetPagedSortedListRequest request)
@@ -567,13 +567,13 @@ namespace BroadWorksConnector
         /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
         /// Then the search criteria are logically ORed together.
         /// 
+        /// The response is either EnterprisePhoneDirectoryGetPagedSortedListResponse or ErrorResponse.
+        /// 
         /// ErrorResponse is returned if searchCriteriaExactUserGroup or searchCriteriaExactUserDepartment have multiple entries and searchCriteriaModeOr is not included
         /// 
         /// The following elements are only used in AS data mode and ignored in Amplify and XS data mode:
         /// "sortByImpId"
         /// "searchCriteriaImpId"
-        /// 
-        /// The response is either EnterprisePhoneDirectoryGetPagedSortedListResponse or ErrorResponse.
         /// </summary>
         public static async Task<EnterprisePhoneDirectoryGetPagedSortedListResponse> EnterprisePhoneDirectoryGetPagedSortedListRequestAsync(this OcipClient client, EnterprisePhoneDirectoryGetPagedSortedListRequest request, CancellationToken cancellationToken = default)
         {

@@ -11,7 +11,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table with column headings: "Event Id", "Status", "Action",
     /// "Level", "Type", "Additional Info", "Is Local", "Completion %",
     /// "Pushed/ Same Hash/ Not Pushed", "Login Id", "Start Time",
-    /// "Process Time".
+    /// "Process Time", "Rx Time", "Total Time", "Request", "Priority".
     /// "Event Id" is a unique identifer for the event.
     /// "Status" can be: Pending, Queued, In Progress,
     /// Process On Other Host, Stale, Completed, Canceled.
@@ -37,26 +37,31 @@ namespace BroadWorksConnector.Ocip.Models
     /// were pushed, not pushed because of same hash, and not pushed when
     /// processing the event.
     /// "LoginId" is the user or admin id who triggered the event.
-    /// "Start Time" is the date when the event was started.  The display
-    /// shows the month, days, hours, and minutes (MM-dd hh:mm).
+    /// "Start Time" is the date when the event's processing started.  The
+    /// display shows the month, day, hours, minutes, and seconds (MM-dd hh:mm:ss).
     /// "Process Time" is the time taken to process the event in hours,
     /// minutes, seconds, and milliseconds (hhhh:mm:ss.SSS).
-    /// Each row represents an event sorted by priority of processing.  The
-    /// first row in the table is an event that has an associated expanded
-    /// event currently being processed or next in line to be processed.
+    /// "Rx Time" is the date when the event was received via OCI-P and
+    /// stored in the system.  The display shows the month, day, hours,
+    /// minutes, and seconds (MM-dd hh:mm:ss).
+    /// "Total Time" is the total time the event was in the system, from the
+    /// moment it was received and stored until its processing ended, in
+    /// hours, minutes, seconds, and milliseconds (hhhh:mm:ss.SSS).
+    /// "Request" is the name of the OCI-P request that triggered the event.
+    /// "Priority" is the priority of the event.
     /// <see cref="ServiceProviderDeviceManagementEventGetListRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:2302""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:2951""}]")]
     public class ServiceProviderDeviceManagementEventGetListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _eventTable;
 
         [XmlElement(ElementName = "eventTable", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2302")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2951")]
         public BroadWorksConnector.Ocip.Models.C.OCITable EventTable
         {
             get => _eventTable;

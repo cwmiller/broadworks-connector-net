@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:300""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:235""}]")]
     public class ExternalAuthenticationAuthorizeTokenRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:300")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:235")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:300")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:235")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Password
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isPasswordHashed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:300")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:235")]
         public bool IsPasswordHashed
         {
             get => _isPasswordHashed;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _loginToken;
 
         [XmlElement(ElementName = "loginToken", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:300")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:235")]
         [MinLength(1)]
         public string LoginToken
         {

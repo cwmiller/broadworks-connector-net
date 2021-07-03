@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b87b6355d5858fdbeb8c1eb05dc1651a:46""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b87b6355d5858fdbeb8c1eb05dc1651a:47""}]")]
     public class GroupServiceInstancePrivacyGetRequest17sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:46")]
+        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:47")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

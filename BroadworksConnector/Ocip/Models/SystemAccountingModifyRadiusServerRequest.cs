@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1591""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2039""}]")]
     public class SystemAccountingModifyRadiusServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1591")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2039")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1591")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2039")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int Port
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1591")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2039")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

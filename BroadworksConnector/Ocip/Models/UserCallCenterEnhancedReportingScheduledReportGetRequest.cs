@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6798""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6823""}]")]
     public class UserCallCenterEnhancedReportingScheduledReportGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _supervisorUserId;
 
         [XmlElement(ElementName = "supervisorUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6798")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6823")]
         [MinLength(1)]
         [MaxLength(161)]
         public string SupervisorUserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6798")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6823")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name

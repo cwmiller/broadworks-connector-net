@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:601""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2974""}]")]
     public class GroupAccessDeviceFileModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:601")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2974")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:601")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2974")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:601")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2974")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _fileType;
 
         [XmlElement(ElementName = "fileType", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:601")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2974")]
         [MinLength(1)]
         [MaxLength(40)]
         public string FileType
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:601")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2974")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource
         {
             get => _fileSource;
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "uploadFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:601")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2974")]
         public BroadWorksConnector.Ocip.Models.FileResource UploadFile
         {
             get => _uploadFile;

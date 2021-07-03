@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10680""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35132""}]")]
     public class SystemSubscriberGetCallProcessingParametersResponse14sp7 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isExtendedCallingLineIdActive;
 
         [XmlElement(ElementName = "isExtendedCallingLineIdActive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10680")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35132")]
         public bool IsExtendedCallingLineIdActive
         {
             get => _isExtendedCallingLineIdActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isRingTimeOutActive;
 
         [XmlElement(ElementName = "isRingTimeOutActive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10680")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35132")]
         public bool IsRingTimeOutActive
         {
             get => _isRingTimeOutActive;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _ringTimeoutSeconds;
 
         [XmlElement(ElementName = "ringTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10680")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35132")]
         [MinInclusive(1)]
         [MaxInclusive(180)]
         public int RingTimeoutSeconds
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowEmergencyRemoteOfficeOriginations;
 
         [XmlElement(ElementName = "allowEmergencyRemoteOfficeOriginations", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10680")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35132")]
         public bool AllowEmergencyRemoteOfficeOriginations
         {
             get => _allowEmergencyRemoteOfficeOriginations;

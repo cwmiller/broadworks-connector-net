@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2180""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2596""}]")]
     public class SystemBroadWorksMobileManagerModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scfApiNetAddress1", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2180")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2596")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ScfApiNetAddress1
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scfApiNetAddress2", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2180")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2596")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ScfApiNetAddress2
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2180")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2596")]
         [MinLength(1)]
         [MaxLength(32)]
         public string UserName
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2180")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2596")]
         [MinLength(1)]
         [MaxLength(128)]
         public string Password
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "emailFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2180")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2596")]
         [MinLength(1)]
         [MaxLength(80)]
         public string EmailFromAddress
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scfIMSOnly", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2180")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2596")]
         public bool ScfIMSOnly
         {
             get => _scfIMSOnly;
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "signalingIPAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2180")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2596")]
         [MinLength(1)]
         [MaxLength(39)]
         public string SignalingIPAddress
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "signalingPort", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2180")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2596")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? SignalingPort

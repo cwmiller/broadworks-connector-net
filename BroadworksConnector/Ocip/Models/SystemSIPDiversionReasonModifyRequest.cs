@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16618""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:17509""}]")]
     public class SystemSIPDiversionReasonModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.SIPDiversionReason _diversionReason;
 
         [XmlElement(ElementName = "diversionReason", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16618")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17509")]
         public BroadWorksConnector.Ocip.Models.SIPDiversionReason DiversionReason
         {
             get => _diversionReason;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _causeValue;
 
         [XmlElement(ElementName = "causeValue", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16618")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17509")]
         [Length(3)]
         public string CauseValue
         {

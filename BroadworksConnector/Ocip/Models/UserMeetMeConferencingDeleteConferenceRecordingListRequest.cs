@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:626""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:590""}]")]
     public class UserMeetMeConferencingDeleteConferenceRecordingListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:626")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:590")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceRecordingKey> _recordingKey = new List<BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceRecordingKey>();
 
         [XmlElement(ElementName = "recordingKey", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:626")]
+        [Group(@"0fd24121d16995c994d40bc408dbcfa5:590")]
         public List<BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceRecordingKey> RecordingKey
         {
             get => _recordingKey;

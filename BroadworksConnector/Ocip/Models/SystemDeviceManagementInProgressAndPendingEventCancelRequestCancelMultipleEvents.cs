@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7169""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7871""}]")]
     public class SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "dmEventStatusForCancel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7169")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7871")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusForCancel DmEventStatusForCancel
         {
             get => _dmEventStatusForCancel;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "dmEventAction", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7169")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7871")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementEventAction DmEventAction
         {
             get => _dmEventAction;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "dmEventLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7169")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7871")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel DmEventLevel
         {
             get => _dmEventLevel;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "dmEventType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7169")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7871")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementEventType DmEventType
         {
             get => _dmEventType;

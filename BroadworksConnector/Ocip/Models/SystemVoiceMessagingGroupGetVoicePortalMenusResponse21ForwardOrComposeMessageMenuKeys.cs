@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:957""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:958""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21ForwardOrComposeMessageMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendToPerson", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:957")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:958")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SendToPerson
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendToAllGroupMembers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:957")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:958")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SendToAllGroupMembers
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendToDistributionList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:957")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:958")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SendToDistributionList
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "changeCurrentIntroductionOrMessage", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:957")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:958")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ChangeCurrentIntroductionOrMessage
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "listenToCurrentIntroductionOrMessage", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:957")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:958")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ListenToCurrentIntroductionOrMessage
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setOrClearUrgentIndicator", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:957")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:958")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetOrClearUrgentIndicator
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "setOrClearConfidentialIndicator", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:957")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:958")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SetOrClearConfidentialIndicator
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:957")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:958")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:957")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:958")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

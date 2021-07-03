@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1867""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1880""}]")]
     public class EnterpriseCallCenterGetRoutingPolicyResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.CallCenterRoutingPolicy _routingPolicy;
 
         [XmlElement(ElementName = "routingPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1867")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1880")]
         public BroadWorksConnector.Ocip.Models.CallCenterRoutingPolicy RoutingPolicy
         {
             get => _routingPolicy;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _callCenterTable;
 
         [XmlElement(ElementName = "callCenterTable", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1867")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:1880")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CallCenterTable
         {
             get => _callCenterTable;

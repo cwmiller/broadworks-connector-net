@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:706""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:707""}]")]
     public class EnterpriseDepartmentGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _enterpriseId;
 
         [XmlElement(ElementName = "enterpriseId", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:706")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:707")]
         [MinLength(1)]
         [MaxLength(30)]
         public string EnterpriseId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _includeGroupDepartments;
 
         [XmlElement(ElementName = "includeGroupDepartments", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:706")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:707")]
         public bool IncludeGroupDepartments
         {
             get => _includeGroupDepartments;

@@ -24,14 +24,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41484"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41485""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:18894"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:18895""}]}]")]
     public class ServiceProviderGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isEnterprise;
 
         [XmlElement(ElementName = "isEnterprise", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41485")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18895")]
         public bool IsEnterprise
         {
             get => _isEnterprise;
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useCustomRoutingProfile;
 
         [XmlElement(ElementName = "useCustomRoutingProfile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41485")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18895")]
         public bool UseCustomRoutingProfile
         {
             get => _useCustomRoutingProfile;
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _defaultDomain;
 
         [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41484")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18894")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultDomain
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceProviderName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41484")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18894")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceProviderName
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "supportEmail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41484")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18894")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SupportEmail
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41484")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18894")]
         public BroadWorksConnector.Ocip.Models.Contact Contact
         {
             get => _contact;
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41484")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18894")]
         public BroadWorksConnector.Ocip.Models.StreetAddress Address
         {
             get => _address;
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useServiceProviderLanguages;
 
         [XmlElement(ElementName = "useServiceProviderLanguages", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41484")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18894")]
         public bool UseServiceProviderLanguages
         {
             get => _useServiceProviderLanguages;
@@ -178,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePolicy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41484")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18894")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServicePolicy
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callProcessingSliceId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41484")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18894")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CallProcessingSliceId
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provisioningSliceId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41484")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18894")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ProvisioningSliceId
@@ -238,7 +238,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "subscriberPartition", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41484")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18894")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SubscriberPartition
@@ -258,7 +258,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "preferredDataCenter", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41484")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18894")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PreferredDataCenter

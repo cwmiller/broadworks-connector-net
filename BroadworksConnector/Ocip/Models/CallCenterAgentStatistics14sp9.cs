@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7297""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7330""}]")]
     public class CallCenterAgentStatistics14sp9
     {
 
         private string _agentUserId;
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7297")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7330")]
         [MinLength(1)]
         [MaxLength(161)]
         public string AgentUserId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.UserDisplayNames _agentDisplayNames;
 
         [XmlElement(ElementName = "agentDisplayNames", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7297")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7330")]
         public BroadWorksConnector.Ocip.Models.UserDisplayNames AgentDisplayNames
         {
             get => _agentDisplayNames;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _available;
 
         [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7297")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7330")]
         public bool Available
         {
             get => _available;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AgentStatistics _statistics;
 
         [XmlElement(ElementName = "statistics", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7297")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7330")]
         public BroadWorksConnector.Ocip.Models.AgentStatistics Statistics
         {
             get => _statistics;

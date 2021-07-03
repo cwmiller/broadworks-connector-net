@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:519""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:542""}]")]
     public class ServiceProviderBroadWorksMobilityMobileSubscriberDirectoryNumberAddListRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:519")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:542")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _mobileNetworkName;
 
         [XmlElement(ElementName = "mobileNetworkName", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:519")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:542")]
         [MinLength(1)]
         [MaxLength(80)]
         public string MobileNetworkName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobileSubscriberDirectoryNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:519")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:542")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> MobileSubscriberDirectoryNumber

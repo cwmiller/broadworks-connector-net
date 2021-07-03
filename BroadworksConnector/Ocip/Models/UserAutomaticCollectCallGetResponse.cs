@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:174""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:177""}]")]
     public class UserAutomaticCollectCallGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _enableAutomaticCollectCall;
 
         [XmlElement(ElementName = "enableAutomaticCollectCall", IsNullable = false, Namespace = "")]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:174")]
+        [Group(@"af1b47d7cab3335a81456e64e42371b0:177")]
         public bool EnableAutomaticCollectCall
         {
             get => _enableAutomaticCollectCall;

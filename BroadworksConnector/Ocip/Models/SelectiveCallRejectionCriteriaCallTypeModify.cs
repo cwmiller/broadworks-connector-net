@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""41cdd93743bd17548f1ded5691680d5a:224""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""41cdd93743bd17548f1ded5691680d5a:225""}]")]
     public class SelectiveCallRejectionCriteriaCallTypeModify
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fromDnCriteriaSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"41cdd93743bd17548f1ded5691680d5a:224")]
+        [Group(@"41cdd93743bd17548f1ded5691680d5a:225")]
         public BroadWorksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallTypeSelection FromDnCriteriaSelection
         {
             get => _fromDnCriteriaSelection;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeAnonymousCallers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"41cdd93743bd17548f1ded5691680d5a:224")]
+        [Group(@"41cdd93743bd17548f1ded5691680d5a:225")]
         public bool IncludeAnonymousCallers
         {
             get => _includeAnonymousCallers;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeUnavailableCallers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"41cdd93743bd17548f1ded5691680d5a:224")]
+        [Group(@"41cdd93743bd17548f1ded5691680d5a:225")]
         public bool IncludeUnavailableCallers
         {
             get => _includeUnavailableCallers;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"41cdd93743bd17548f1ded5691680d5a:224")]
+        [Group(@"41cdd93743bd17548f1ded5691680d5a:225")]
         public BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList PhoneNumberList
         {
             get => _phoneNumberList;

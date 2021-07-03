@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3046""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3842""}]")]
     public class GroupDepartmentAdminGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.GroupDepartmentKey _departmentKey;
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3046")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3842")]
         public BroadWorksConnector.Ocip.Models.GroupDepartmentKey DepartmentKey
         {
             get => _departmentKey;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _departmentFullPath;
 
         [XmlElement(ElementName = "departmentFullPath", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3046")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3842")]
         [MinLength(1)]
         [MaxLength(50)]
         public string DepartmentFullPath
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3046")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3842")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3046")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3842")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3046")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3842")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language

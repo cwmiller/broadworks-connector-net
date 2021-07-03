@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3dd296d55b56269ae23d86a934b8b35c:196""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3dd296d55b56269ae23d86a934b8b35c:197""}]")]
     public class IncomingCallingPlanPermissions
     {
 
         private bool _allowFromWithinGroup;
 
         [XmlElement(ElementName = "allowFromWithinGroup", IsNullable = false, Namespace = "")]
-        [Group(@"3dd296d55b56269ae23d86a934b8b35c:196")]
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:197")]
         public bool AllowFromWithinGroup
         {
             get => _allowFromWithinGroup;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission _allowFromOutsideGroup;
 
         [XmlElement(ElementName = "allowFromOutsideGroup", IsNullable = false, Namespace = "")]
-        [Group(@"3dd296d55b56269ae23d86a934b8b35c:196")]
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:197")]
         public BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission AllowFromOutsideGroup
         {
             get => _allowFromOutsideGroup;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowCollectCalls;
 
         [XmlElement(ElementName = "allowCollectCalls", IsNullable = false, Namespace = "")]
-        [Group(@"3dd296d55b56269ae23d86a934b8b35c:196")]
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:197")]
         public bool AllowCollectCalls
         {
             get => _allowCollectCalls;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "digitPatternPermission", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3dd296d55b56269ae23d86a934b8b35c:196")]
+        [Group(@"3dd296d55b56269ae23d86a934b8b35c:197")]
         public List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> DigitPatternPermission
         {
             get => _digitPatternPermission;

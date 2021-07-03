@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9275""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10304""}]")]
     public class SystemFileRepositoryDeviceGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _fileRepositoryTable;
 
         [XmlElement(ElementName = "fileRepositoryTable", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9275")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10304")]
         public BroadWorksConnector.Ocip.Models.C.OCITable FileRepositoryTable
         {
             get => _fileRepositoryTable;

@@ -13,21 +13,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// If it is the first assigned Network Class of Service in the group,
     /// it will be set as the default one.
     /// However, the Network Classes of Service must be currently assigned to
-    /// the service provider. The response is either a SuccessResponse or an ErrorResponse.
+    /// the service provider. The response is either a SuccessResponse or
+    /// an ErrorResponse.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4153""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4971""}]")]
     public class ServiceProviderNetworkClassOfServiceAssignToAllUsersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4153")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4971")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -46,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4153")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4971")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

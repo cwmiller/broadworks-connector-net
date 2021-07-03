@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7422""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7455""}]")]
     public class CallCenterReportDataTemplateQueryFilterValueReplacementList
     {
 
         private List<string> _filterValue = new List<string>();
 
         [XmlElement(ElementName = "filterValue", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7422")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7455")]
         [MinLength(1)]
         [MaxLength(160)]
         public List<string> FilterValue

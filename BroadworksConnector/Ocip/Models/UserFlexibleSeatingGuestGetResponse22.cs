@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""43afb2158d313a1d1a148124d7caba1e:562""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""43afb2158d313a1d1a148124d7caba1e:420""}]")]
     public class UserFlexibleSeatingGuestGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:562")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:420")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableAssociationLimit;
 
         [XmlElement(ElementName = "enableAssociationLimit", IsNullable = false, Namespace = "")]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:562")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:420")]
         public bool EnableAssociationLimit
         {
             get => _enableAssociationLimit;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _associationLimitHours;
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:562")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:420")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int AssociationLimitHours
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unlockPhonePINCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:562")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:420")]
         [MinLength(4)]
         [MaxLength(10)]
         public string UnlockPhonePINCode
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:562")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:420")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointRead22 AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:562")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:420")]
         [MinLength(1)]
         [MaxLength(161)]
         public string HostUserId
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostLastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:562")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:420")]
         [MinLength(1)]
         [MaxLength(30)]
         public string HostLastName
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostFirstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:562")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:420")]
         [MinLength(1)]
         [MaxLength(30)]
         public string HostFirstName
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostAssociationDateTime", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:562")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:420")]
         public string HostAssociationDateTime
         {
             get => _hostAssociationDateTime;
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostEnforcesAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:562")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:420")]
         public bool HostEnforcesAssociationLimit
         {
             get => _hostEnforcesAssociationLimit;
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostAssociationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"43afb2158d313a1d1a148124d7caba1e:562")]
+        [Group(@"43afb2158d313a1d1a148124d7caba1e:420")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int HostAssociationLimitHours

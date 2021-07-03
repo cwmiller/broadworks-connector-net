@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3877""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:340""}]")]
     public class AuthenticationResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3877")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:340")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _nonce;
 
         [XmlElement(ElementName = "nonce", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3877")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:340")]
         public string Nonce
         {
             get => _nonce;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.DigitalSignatureAlgorithm _passwordAlgorithm;
 
         [XmlElement(ElementName = "passwordAlgorithm", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3877")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:340")]
         public BroadWorksConnector.Ocip.Models.DigitalSignatureAlgorithm PasswordAlgorithm
         {
             get => _passwordAlgorithm;

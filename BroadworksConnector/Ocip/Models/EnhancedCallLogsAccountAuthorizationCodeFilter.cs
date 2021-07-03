@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2126"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2127""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2504"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2505""}]}]")]
     public class EnhancedCallLogsAccountAuthorizationCodeFilter
     {
 
         private bool _callsWithCodes;
 
         [XmlElement(ElementName = "callsWithCodes", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2127")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2505")]
         public bool CallsWithCodes
         {
             get => _callsWithCodes;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _accountAuthorizationCode;
 
         [XmlElement(ElementName = "accountAuthorizationCode", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2127")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2505")]
         [MinLength(2)]
         [MaxLength(14)]
         public string AccountAuthorizationCode

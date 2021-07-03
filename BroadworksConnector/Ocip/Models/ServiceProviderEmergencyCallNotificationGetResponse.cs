@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3397""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4056""}]")]
     public class ServiceProviderEmergencyCallNotificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _sendEmergencyCallNotificationEmail;
 
         [XmlElement(ElementName = "sendEmergencyCallNotificationEmail", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3397")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4056")]
         public bool SendEmergencyCallNotificationEmail
         {
             get => _sendEmergencyCallNotificationEmail;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "emergencyCallNotifyEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3397")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4056")]
         [MinLength(1)]
         [MaxLength(80)]
         public string EmergencyCallNotifyEmailAddress
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowGroupOverride;
 
         [XmlElement(ElementName = "allowGroupOverride", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3397")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4056")]
         public bool AllowGroupOverride
         {
             get => _allowGroupOverride;

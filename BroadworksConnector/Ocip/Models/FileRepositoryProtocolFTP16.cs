@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2373""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2799""}]")]
     public class FileRepositoryProtocolFTP16
     {
 
         private bool _ftpPassive;
 
         [XmlElement(ElementName = "ftpPassive", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2373")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2799")]
         public bool FtpPassive
         {
             get => _ftpPassive;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2373")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2799")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _ftpRemoteVerification;
 
         [XmlElement(ElementName = "ftpRemoteVerification", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2373")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2799")]
         public bool FtpRemoteVerification
         {
             get => _ftpRemoteVerification;

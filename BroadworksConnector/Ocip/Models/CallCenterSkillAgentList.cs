@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7679""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7712""}]")]
     public class CallCenterSkillAgentList
     {
 
         private int _skillLevel;
 
         [XmlElement(ElementName = "skillLevel", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7679")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7712")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int SkillLevel
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agent", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7679")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7712")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> Agent

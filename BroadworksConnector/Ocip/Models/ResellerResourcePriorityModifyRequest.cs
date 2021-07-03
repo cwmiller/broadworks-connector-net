@@ -15,16 +15,16 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0c61aa8506194ca714d0fe1c4a0b57ff:81""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0c61aa8506194ca714d0fe1c4a0b57ff:82""}]")]
     public class ResellerResourcePriorityModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:81")]
+        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:82")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string ResellerId
         {
             get => _resellerId;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useSystemSettings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:81")]
+        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:82")]
         public bool UseSystemSettings
         {
             get => _useSystemSettings;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendResourcePriorityToNetwork", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:81")]
+        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:82")]
         public bool SendResourcePriorityToNetwork
         {
             get => _sendResourcePriorityToNetwork;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resourcePriority", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:81")]
+        [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:82")]
         public BroadWorksConnector.Ocip.Models.ResourcePriorityValue ResourcePriority
         {
             get => _resourcePriority;

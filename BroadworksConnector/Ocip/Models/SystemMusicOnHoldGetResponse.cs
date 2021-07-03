@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""66fe518a637c74cc4b2c97aa7f68fc49:206""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""66fe518a637c74cc4b2c97aa7f68fc49:213""}]")]
     public class SystemMusicOnHoldGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _delayMilliseconds;
 
         [XmlElement(ElementName = "delayMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:206")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:213")]
         [MinInclusive(0)]
         [MaxInclusive(5000)]
         public int DelayMilliseconds

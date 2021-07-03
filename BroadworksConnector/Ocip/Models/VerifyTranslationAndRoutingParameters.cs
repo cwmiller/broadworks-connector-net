@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4592""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:5301""}]")]
     public class VerifyTranslationAndRoutingParameters
     {
 
         private BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination _origination;
 
         [XmlElement(ElementName = "origination", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4592")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5301")]
         public BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination Origination
         {
             get => _origination;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _destination;
 
         [XmlElement(ElementName = "destination", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4592")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5301")]
         [MinLength(1)]
         [MaxLength(500)]
         public string Destination
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4592")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5301")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Contact
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "diversion", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4592")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5301")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Diversion

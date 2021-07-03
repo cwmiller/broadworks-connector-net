@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Request to get the list of device type files managed by the Device Management System, on a per-group
-    /// basis.
+    /// Request to get the list of device type files managed by the Device Management System, on a per-group basis.
     /// The response is either GroupDeviceTypeFileGetListResponse or ErrorResponse.
     /// Replaced By: GroupDeviceTypeFileGetListRequest14sp8
     /// <see cref="GroupDeviceTypeFileGetListResponse"/>
@@ -18,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1419""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:9158""}]")]
     public class GroupDeviceTypeFileGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1419")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9158")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1419")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9158")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -63,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1419")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9158")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType

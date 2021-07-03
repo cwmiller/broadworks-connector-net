@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1462""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1485""}]")]
     public class GroupTrunkGroupUserCreationTaskAddRequest14sp4UserPhoneNumbers
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1462")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1485")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> PhoneNumber
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "dnRange", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1462")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1485")]
         public List<BroadWorksConnector.Ocip.Models.DNRange> DnRange
         {
             get => _dnRange;

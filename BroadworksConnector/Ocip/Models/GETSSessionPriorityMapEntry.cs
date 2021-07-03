@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18546""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19933""}]")]
     public class GETSSessionPriorityMapEntry
     {
 
         private int _priorityLevel;
 
         [XmlElement(ElementName = "priorityLevel", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18546")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19933")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
         public int PriorityLevel
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _sessionPriority;
 
         [XmlElement(ElementName = "sessionPriority", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18546")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19933")]
         [MinInclusive(0)]
         [MaxInclusive(4)]
         public int SessionPriority

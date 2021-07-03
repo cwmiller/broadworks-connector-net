@@ -8,22 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request the service provider level data associated with Emergency Call Notification.
-    /// The response is either a ServiceProviderEmergencyCallNotificationGetResponse
-    /// or an ErrorResponse.
+    /// The response is either a ServiceProviderEmergencyCallNotificationGetResponse or an ErrorResponse.
     /// <see cref="ServiceProviderEmergencyCallNotificationGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3382""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4041""}]")]
     public class ServiceProviderEmergencyCallNotificationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3382")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4041")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

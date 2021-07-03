@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:29504""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5384""}]")]
     public class GroupCallCenterGetDNISAnnouncementRequest19 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private BroadWorksConnector.Ocip.Models.DNISKey _dnisKey;
 
         [XmlElement(ElementName = "dnisKey", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29504")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5384")]
         public BroadWorksConnector.Ocip.Models.DNISKey DnisKey
         {
             get => _dnisKey;

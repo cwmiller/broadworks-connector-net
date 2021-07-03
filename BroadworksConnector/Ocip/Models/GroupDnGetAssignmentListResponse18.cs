@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// The "User Id", "Last Name" and "First Name" columns contains the corresponding attributes of the user possessing the DN(s).
     /// For a service instance, "Last Name" contains the service instance name and "First Name" column contains the corresponding enumerated UserType value.
     /// The "Department" column contains the department of the DN, not the department of the user or service instance.
-    /// The "Activated" column indicates if the DN or DN range has been activated.  Only has a value if the DN(s) is assigned to a user.
+    /// The "Activated" column indicates if the DN or DN range has been activated.
     /// The "User Type" column contains the corresponding enumerated UserType value.
     /// The "Country Code" column indicates the dialing prefix for the phone number.
     /// The "National Prefix" column indicates the digit sequence to be dialed before the telephone number.
@@ -24,14 +24,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4209""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:5075""}]")]
     public class GroupDnGetAssignmentListResponse18 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _dnTable;
 
         [XmlElement(ElementName = "dnTable", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4209")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5075")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DnTable
         {
             get => _dnTable;

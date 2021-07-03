@@ -5,6 +5,8 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// System License type 22.
+    /// 
+    /// Replaced by: SystemLicenseType22V2.
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]

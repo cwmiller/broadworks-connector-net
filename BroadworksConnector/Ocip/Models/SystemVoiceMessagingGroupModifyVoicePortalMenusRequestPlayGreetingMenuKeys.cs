@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:28329""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38781""}]")]
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestPlayGreetingMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "skipBackward", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28329")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38781")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SkipBackward
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pauseOrResume", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28329")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38781")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PauseOrResume
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "skipForward", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28329")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38781")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SkipForward
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "jumpToBegin", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28329")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38781")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string JumpToBegin
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "jumpToEnd", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28329")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38781")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string JumpToEnd

@@ -935,23 +935,23 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request the enterprise level data associated with Call Center.
-        /// The response is either an EnterpriseCallCenterGetResponse17sp4 or an
+        /// The response is either an EnterpriseCallCenterGetResponse23 or an
         /// ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use EnterpriseCallCenterGetRequest17sp4Async instead.")]
-        public static async Task<EnterpriseCallCenterGetResponse17sp4> EnterpriseCallCenterGetRequest17sp4(this OcipClient client, EnterpriseCallCenterGetRequest17sp4 request)
+        [Obsolete("This method is deprecated. Use EnterpriseCallCenterGetRequest23Async instead.")]
+        public static async Task<EnterpriseCallCenterGetResponse23> EnterpriseCallCenterGetRequest23(this OcipClient client, EnterpriseCallCenterGetRequest23 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as EnterpriseCallCenterGetResponse17sp4;
+            return await client.CallAsync(request).ConfigureAwait(false) as EnterpriseCallCenterGetResponse23;
         }
 
         /// <summary>
         /// Request the enterprise level data associated with Call Center.
-        /// The response is either an EnterpriseCallCenterGetResponse17sp4 or an
+        /// The response is either an EnterpriseCallCenterGetResponse23 or an
         /// ErrorResponse.
         /// </summary>
-        public static async Task<EnterpriseCallCenterGetResponse17sp4> EnterpriseCallCenterGetRequest17sp4Async(this OcipClient client, EnterpriseCallCenterGetRequest17sp4 request, CancellationToken cancellationToken = default)
+        public static async Task<EnterpriseCallCenterGetResponse23> EnterpriseCallCenterGetRequest23Async(this OcipClient client, EnterpriseCallCenterGetRequest23 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as EnterpriseCallCenterGetResponse17sp4;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as EnterpriseCallCenterGetResponse23;
         }
         /// <summary>
         /// Request the enterprise call center routing policy.
@@ -984,6 +984,7 @@ namespace BroadWorksConnector
         /// forceAgentUnavailableOnBouncedCallLimit
         /// numberConsecutiveBouncedCallsToForceAgentUnavailable
         /// forceAgentUnavailableOnNotReachable
+        /// wrapUpDestination
         /// </summary>
         [Obsolete("This method is deprecated. Use EnterpriseCallCenterModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> EnterpriseCallCenterModifyRequest(this OcipClient client, EnterpriseCallCenterModifyRequest request)
@@ -1002,6 +1003,7 @@ namespace BroadWorksConnector
         /// forceAgentUnavailableOnBouncedCallLimit
         /// numberConsecutiveBouncedCallsToForceAgentUnavailable
         /// forceAgentUnavailableOnNotReachable
+        /// wrapUpDestination
         /// </summary>
         public static async Task<SuccessResponse> EnterpriseCallCenterModifyRequestAsync(this OcipClient client, EnterpriseCallCenterModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -2492,26 +2494,7 @@ namespace BroadWorksConnector
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupCallCenterGetDNISAgentListResponse;
         }
         /// <summary>
-        /// Get a call center's DNIS Announcements
-        /// The response is either a GroupCallCenterGetDNISAnnouncementResponse20 or an ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use GroupCallCenterGetDNISAnnouncementRequest20Async instead.")]
-        public static async Task<GroupCallCenterGetDNISAnnouncementResponse20> GroupCallCenterGetDNISAnnouncementRequest20(this OcipClient client, GroupCallCenterGetDNISAnnouncementRequest20 request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupCallCenterGetDNISAnnouncementResponse20;
-        }
-
-        /// <summary>
-        /// Get a call center's DNIS Announcements
-        /// The response is either a GroupCallCenterGetDNISAnnouncementResponse20 or an ErrorResponse.
-        /// </summary>
-        public static async Task<GroupCallCenterGetDNISAnnouncementResponse20> GroupCallCenterGetDNISAnnouncementRequest20Async(this OcipClient client, GroupCallCenterGetDNISAnnouncementRequest20 request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupCallCenterGetDNISAnnouncementResponse20;
-        }
-        /// <summary>
-        /// Get a call center's DNIS Announcements
-        /// The response is either a GroupCallCenterGetDNISAnnouncementResponse22 or an ErrorResponse.
+        /// Get a call center's DNIS Announcements. The response is either a GroupCallCenterGetDNISAnnouncementResponse22 or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupCallCenterGetDNISAnnouncementRequest22Async instead.")]
         public static async Task<GroupCallCenterGetDNISAnnouncementResponse22> GroupCallCenterGetDNISAnnouncementRequest22(this OcipClient client, GroupCallCenterGetDNISAnnouncementRequest22 request)
@@ -2520,8 +2503,7 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// Get a call center's DNIS Announcements
-        /// The response is either a GroupCallCenterGetDNISAnnouncementResponse22 or an ErrorResponse.
+        /// Get a call center's DNIS Announcements. The response is either a GroupCallCenterGetDNISAnnouncementResponse22 or an ErrorResponse.
         /// </summary>
         public static async Task<GroupCallCenterGetDNISAnnouncementResponse22> GroupCallCenterGetDNISAnnouncementRequest22Async(this OcipClient client, GroupCallCenterGetDNISAnnouncementRequest22 request, CancellationToken cancellationToken = default)
         {
@@ -2699,23 +2681,23 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request the Group level data associated with Call Center.
-        /// The response is either a GroupCallCenterGetResponse17sp4 or an
+        /// The response is either a GroupCallCenterGetResponse23 or an
         /// ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupCallCenterGetRequest17sp4Async instead.")]
-        public static async Task<GroupCallCenterGetResponse17sp4> GroupCallCenterGetRequest17sp4(this OcipClient client, GroupCallCenterGetRequest17sp4 request)
+        [Obsolete("This method is deprecated. Use GroupCallCenterGetRequest23Async instead.")]
+        public static async Task<GroupCallCenterGetResponse23> GroupCallCenterGetRequest23(this OcipClient client, GroupCallCenterGetRequest23 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupCallCenterGetResponse17sp4;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupCallCenterGetResponse23;
         }
 
         /// <summary>
         /// Request the Group level data associated with Call Center.
-        /// The response is either a GroupCallCenterGetResponse17sp4 or an
+        /// The response is either a GroupCallCenterGetResponse23 or an
         /// ErrorResponse.
         /// </summary>
-        public static async Task<GroupCallCenterGetResponse17sp4> GroupCallCenterGetRequest17sp4Async(this OcipClient client, GroupCallCenterGetRequest17sp4 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupCallCenterGetResponse23> GroupCallCenterGetRequest23Async(this OcipClient client, GroupCallCenterGetRequest23 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupCallCenterGetResponse17sp4;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupCallCenterGetResponse23;
         }
         /// <summary>
         /// Request the group call center routing policy.
@@ -3041,6 +3023,7 @@ namespace BroadWorksConnector
         /// forceAgentUnavailableOnBouncedCallLimit
         /// numberConsecutiveBouncedCallsToForceAgentUnavailable
         /// forceAgentUnavailableOnNotReachable
+        /// wrapUpDestination
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupCallCenterModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> GroupCallCenterModifyRequest(this OcipClient client, GroupCallCenterModifyRequest request)
@@ -3060,6 +3043,7 @@ namespace BroadWorksConnector
         /// forceAgentUnavailableOnBouncedCallLimit
         /// numberConsecutiveBouncedCallsToForceAgentUnavailable
         /// forceAgentUnavailableOnNotReachable
+        /// wrapUpDestination
         /// </summary>
         public static async Task<SuccessResponse> GroupCallCenterModifyRequestAsync(this OcipClient client, GroupCallCenterModifyRequest request, CancellationToken cancellationToken = default)
         {
@@ -3413,21 +3397,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get a call center's stranded calls - unavailable settings.
-        /// The response is either a GroupCallCenterStrandedCallUnavailableGetResponse20 or an ErrorResponse.
+        /// The response is either a GroupCallCenterStrandedCallUnavailableGetResponse or an ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupCallCenterStrandedCallUnavailableGetRequest20Async instead.")]
-        public static async Task<GroupCallCenterStrandedCallUnavailableGetResponse20> GroupCallCenterStrandedCallUnavailableGetRequest20(this OcipClient client, GroupCallCenterStrandedCallUnavailableGetRequest20 request)
+        public static async Task<GroupCallCenterStrandedCallUnavailableGetResponse> GroupCallCenterStrandedCallUnavailableGetRequest20(this OcipClient client, GroupCallCenterStrandedCallUnavailableGetRequest20 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupCallCenterStrandedCallUnavailableGetResponse20;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupCallCenterStrandedCallUnavailableGetResponse;
         }
 
         /// <summary>
         /// Get a call center's stranded calls - unavailable settings.
-        /// The response is either a GroupCallCenterStrandedCallUnavailableGetResponse20 or an ErrorResponse.
+        /// The response is either a GroupCallCenterStrandedCallUnavailableGetResponse or an ErrorResponse.
         /// </summary>
-        public static async Task<GroupCallCenterStrandedCallUnavailableGetResponse20> GroupCallCenterStrandedCallUnavailableGetRequest20Async(this OcipClient client, GroupCallCenterStrandedCallUnavailableGetRequest20 request, CancellationToken cancellationToken = default)
+        public static async Task<GroupCallCenterStrandedCallUnavailableGetResponse> GroupCallCenterStrandedCallUnavailableGetRequest20Async(this OcipClient client, GroupCallCenterStrandedCallUnavailableGetRequest20 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupCallCenterStrandedCallUnavailableGetResponse20;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupCallCenterStrandedCallUnavailableGetResponse;
         }
         /// <summary>
         /// Modify a call center's stranded calls - unavailable settings.
@@ -3743,25 +3727,28 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request to get the system settings for the call center enhanced reporting scheduling tasks.
-        /// The response is either a SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse or an ErrorResponse.
+        /// The response is either a SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse22 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use SystemCallCenterEnhancedReportingScheduledTaskParametersGetRequestAsync instead.")]
-        public static async Task<SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse> SystemCallCenterEnhancedReportingScheduledTaskParametersGetRequest(this OcipClient client, SystemCallCenterEnhancedReportingScheduledTaskParametersGetRequest request)
+        [Obsolete("This method is deprecated. Use SystemCallCenterEnhancedReportingScheduledTaskParametersGetRequest22Async instead.")]
+        public static async Task<SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse22> SystemCallCenterEnhancedReportingScheduledTaskParametersGetRequest22(this OcipClient client, SystemCallCenterEnhancedReportingScheduledTaskParametersGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse22;
         }
 
         /// <summary>
         /// Request to get the system settings for the call center enhanced reporting scheduling tasks.
-        /// The response is either a SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse or an ErrorResponse.
+        /// The response is either a SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse22 or an ErrorResponse.
         /// </summary>
-        public static async Task<SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse> SystemCallCenterEnhancedReportingScheduledTaskParametersGetRequestAsync(this OcipClient client, SystemCallCenterEnhancedReportingScheduledTaskParametersGetRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse22> SystemCallCenterEnhancedReportingScheduledTaskParametersGetRequest22Async(this OcipClient client, SystemCallCenterEnhancedReportingScheduledTaskParametersGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse22;
         }
         /// <summary>
         /// Modify the system settings for the call center enhanced reporting scheduling tasks.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode:
+        /// callCenterEventMode, value “Legacy ECCR" is returned in Amplify data mode
         /// </summary>
         [Obsolete("This method is deprecated. Use SystemCallCenterEnhancedReportingScheduledTaskParametersModifyRequestAsync instead.")]
         public static async Task<SuccessResponse> SystemCallCenterEnhancedReportingScheduledTaskParametersModifyRequest(this OcipClient client, SystemCallCenterEnhancedReportingScheduledTaskParametersModifyRequest request)
@@ -3772,8 +3759,47 @@ namespace BroadWorksConnector
         /// <summary>
         /// Modify the system settings for the call center enhanced reporting scheduling tasks.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// 
+        /// The following elements are only used in AS data mode:
+        /// callCenterEventMode, value “Legacy ECCR" is returned in Amplify data mode
         /// </summary>
         public static async Task<SuccessResponse> SystemCallCenterEnhancedReportingScheduledTaskParametersModifyRequestAsync(this OcipClient client, SystemCallCenterEnhancedReportingScheduledTaskParametersModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Request to get the list of Call Center Event Recording File system parameters.
+        /// The response is either SystemCallCenterEventRecordingFileParametersGetResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemCallCenterEventRecordingFileParametersGetRequestAsync instead.")]
+        public static async Task<SystemCallCenterEventRecordingFileParametersGetResponse> SystemCallCenterEventRecordingFileParametersGetRequest(this OcipClient client, SystemCallCenterEventRecordingFileParametersGetRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SystemCallCenterEventRecordingFileParametersGetResponse;
+        }
+
+        /// <summary>
+        /// Request to get the list of Call Center Event Recording File system parameters.
+        /// The response is either SystemCallCenterEventRecordingFileParametersGetResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SystemCallCenterEventRecordingFileParametersGetResponse> SystemCallCenterEventRecordingFileParametersGetRequestAsync(this OcipClient client, SystemCallCenterEventRecordingFileParametersGetRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SystemCallCenterEventRecordingFileParametersGetResponse;
+        }
+        /// <summary>
+        /// Request to modify Call Center Event Recording File system parameters.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use SystemCallCenterEventRecordingFileParametersModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> SystemCallCenterEventRecordingFileParametersModifyRequest(this OcipClient client, SystemCallCenterEventRecordingFileParametersModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Request to modify Call Center Event Recording File system parameters.
+        /// The response is either SuccessResponse or ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> SystemCallCenterEventRecordingFileParametersModifyRequestAsync(this OcipClient client, SystemCallCenterEventRecordingFileParametersModifyRequest request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
@@ -4103,21 +4129,21 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Get the user's call center settings and the list of call centers the specified user belongs to.
-        /// The response is either a UserCallCenterGetResponse19 or an ErrorResponse.
+        /// The response is either a UserCallCenterGetResponse23 or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use UserCallCenterGetRequest19Async instead.")]
-        public static async Task<UserCallCenterGetResponse19> UserCallCenterGetRequest19(this OcipClient client, UserCallCenterGetRequest19 request)
+        [Obsolete("This method is deprecated. Use UserCallCenterGetRequest23Async instead.")]
+        public static async Task<UserCallCenterGetResponse23> UserCallCenterGetRequest23(this OcipClient client, UserCallCenterGetRequest23 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as UserCallCenterGetResponse19;
+            return await client.CallAsync(request).ConfigureAwait(false) as UserCallCenterGetResponse23;
         }
 
         /// <summary>
         /// Get the user's call center settings and the list of call centers the specified user belongs to.
-        /// The response is either a UserCallCenterGetResponse19 or an ErrorResponse.
+        /// The response is either a UserCallCenterGetResponse23 or an ErrorResponse.
         /// </summary>
-        public static async Task<UserCallCenterGetResponse19> UserCallCenterGetRequest19Async(this OcipClient client, UserCallCenterGetRequest19 request, CancellationToken cancellationToken = default)
+        public static async Task<UserCallCenterGetResponse23> UserCallCenterGetRequest23Async(this OcipClient client, UserCallCenterGetRequest23 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserCallCenterGetResponse19;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserCallCenterGetResponse23;
         }
         /// <summary>
         /// Get a list of agents supervised by a supervisor on a given call
@@ -4212,6 +4238,8 @@ namespace BroadWorksConnector
         /// forceAgentUnavailableOnNotReachable
         /// makeOutgoingCallsAsCallCenter
         /// outgoingCallDNIS
+        /// useSystemDefaultWrapUpDestination
+        /// wrapUpDestination
         /// </summary>
         [Obsolete("This method is deprecated. Use UserCallCenterModifyRequest19Async instead.")]
         public static async Task<SuccessResponse> UserCallCenterModifyRequest19(this OcipClient client, UserCallCenterModifyRequest19 request)
@@ -4238,6 +4266,8 @@ namespace BroadWorksConnector
         /// forceAgentUnavailableOnNotReachable
         /// makeOutgoingCallsAsCallCenter
         /// outgoingCallDNIS
+        /// useSystemDefaultWrapUpDestination
+        /// wrapUpDestination
         /// </summary>
         public static async Task<SuccessResponse> UserCallCenterModifyRequest19Async(this OcipClient client, UserCallCenterModifyRequest19 request, CancellationToken cancellationToken = default)
         {

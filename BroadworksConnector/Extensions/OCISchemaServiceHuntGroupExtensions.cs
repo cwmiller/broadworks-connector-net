@@ -43,6 +43,9 @@ namespace BroadWorksConnector
         /// it will be added to group if the command is executed by a service provider administrator or above
         /// and the number is already assigned to the service provider. The command will fail otherwise.
         /// 
+        /// The weight element inside the agentWeight element will only take effect if the policy element is
+        /// set to "Weighted" in the request.
+        /// 
         /// The response is either SuccessResponse or ErrorResponse.
         /// The following elements are only used in AS data mode:
         /// useSystemHuntGroupCLIDSetting, use value "true" in XS data mode
@@ -61,6 +64,9 @@ namespace BroadWorksConnector
         /// If the phoneNumber has not been assigned to the group and addPhoneNumberToGroup is set to true,
         /// it will be added to group if the command is executed by a service provider administrator or above
         /// and the number is already assigned to the service provider. The command will fail otherwise.
+        /// 
+        /// The weight element inside the agentWeight element will only take effect if the policy element is
+        /// set to "Weighted" in the request.
         /// 
         /// The response is either SuccessResponse or ErrorResponse.
         /// The following elements are only used in AS data mode:

@@ -22,14 +22,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6651""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6676""}]")]
     public class UserCallCenterAgentSignOutRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _agentUserId;
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6651")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6676")]
         [MinLength(1)]
         [MaxLength(161)]
         public string AgentUserId

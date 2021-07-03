@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""23389100b68cef3aa07ee12ac7a2bd16:296""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""23389100b68cef3aa07ee12ac7a2bd16:297""}]")]
     public class SystemIntegratedIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:296")]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:297")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceDomain
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePort", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:296")]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:297")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? ServicePort
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:296")]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:297")]
         public bool AddServiceProviderInIMPUserId
         {
             get => _addServiceProviderInIMPUserId;
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "boshURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:296")]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:297")]
         [MinLength(1)]
         [MaxLength(256)]
         public string BoshURL
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowImpPasswordRetrieval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:296")]
+        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:297")]
         public bool AllowImpPasswordRetrieval
         {
             get => _allowImpPasswordRetrieval;

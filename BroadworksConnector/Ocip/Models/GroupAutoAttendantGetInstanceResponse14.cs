@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:8192""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3779""}]")]
     public class GroupAutoAttendantGetInstanceResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8192")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3779")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8192")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3779")]
         public bool EnableVideo
         {
             get => _enableVideo;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "businessHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8192")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3779")]
         [MinLength(1)]
         [MaxLength(40)]
         public string BusinessHours
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidayScheduleName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8192")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3779")]
         [MinLength(1)]
         [MaxLength(40)]
         public string HolidayScheduleName
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope _extensionDialingScope;
 
         [XmlElement(ElementName = "extensionDialingScope", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8192")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3779")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope ExtensionDialingScope
         {
             get => _extensionDialingScope;
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope _nameDialingScope;
 
         [XmlElement(ElementName = "nameDialingScope", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8192")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3779")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope NameDialingScope
         {
             get => _nameDialingScope;
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AutoAttendantNameDialingEntry _nameDialingEntries;
 
         [XmlElement(ElementName = "nameDialingEntries", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8192")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3779")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantNameDialingEntry NameDialingEntries
         {
             get => _nameDialingEntries;
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AutoAttendantReadMenu _businessHoursMenu;
 
         [XmlElement(ElementName = "businessHoursMenu", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8192")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3779")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantReadMenu BusinessHoursMenu
         {
             get => _businessHoursMenu;
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AutoAttendantReadMenu _afterHoursMenu;
 
         [XmlElement(ElementName = "afterHoursMenu", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:8192")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3779")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantReadMenu AfterHoursMenu
         {
             get => _afterHoursMenu;

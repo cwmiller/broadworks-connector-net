@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:3414""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:3429""}]")]
     public class GroupCallCenterEnhancedReportingReportTemplateAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _dataTemplate;
 
         [XmlElement(ElementName = "dataTemplate", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DataTemplate
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "filterNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int FilterNumber
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.LabeledFileResource _xsltTemplate;
 
         [XmlElement(ElementName = "xsltTemplate", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource XsltTemplate
         {
             get => _xsltTemplate;
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption _scope;
 
         [XmlElement(ElementName = "scope", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption Scope
         {
             get => _scope;
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isEnabled;
 
         [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         public bool IsEnabled
         {
             get => _isEnabled;
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isRealtimeReport", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         public bool IsRealtimeReport
         {
             get => _isRealtimeReport;
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callCompletionThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption CallCompletionThresholdParam
         {
             get => _callCompletionThresholdParam;
@@ -226,7 +226,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "shortDurationThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ShortDurationThresholdParam
         {
             get => _shortDurationThresholdParam;
@@ -244,7 +244,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceLevelThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelThresholdParam
         {
             get => _serviceLevelThresholdParam;
@@ -262,7 +262,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceLevelInclusionsParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelInclusionsParam
         {
             get => _serviceLevelInclusionsParam;
@@ -280,7 +280,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceLevelObjectiveThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelObjectiveThresholdParam
         {
             get => _serviceLevelObjectiveThresholdParam;
@@ -298,7 +298,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "abandonedCallThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption AbandonedCallThresholdParam
         {
             get => _abandonedCallThresholdParam;
@@ -316,7 +316,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceLevelThresholdParamNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
         public int ServiceLevelThresholdParamNumber
@@ -336,7 +336,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "abandonedCallThresholdParamNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         [MinInclusive(1)]
         [MaxInclusive(4)]
         public int AbandonedCallThresholdParamNumber
@@ -356,7 +356,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "filterValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:3414")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:3429")]
         [MinLength(1)]
         [MaxLength(160)]
         public List<string> FilterValue

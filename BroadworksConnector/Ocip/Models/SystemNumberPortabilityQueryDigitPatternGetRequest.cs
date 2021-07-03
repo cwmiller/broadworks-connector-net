@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11982""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13109""}]")]
     public class SystemNumberPortabilityQueryDigitPatternGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _digitPattern;
 
         [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11982")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13109")]
         [MinLength(1)]
         [MaxLength(160)]
         public string DigitPattern

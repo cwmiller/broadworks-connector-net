@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7665""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7698""}]")]
     public class CallCenterScheduledReportServiceLevelInclusionsModify
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeOverflowTimeTransferedInServiceLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7665")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7698")]
         public bool IncludeOverflowTimeTransferedInServiceLevel
         {
             get => _includeOverflowTimeTransferedInServiceLevel;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeOtherTransfersInServiceLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7665")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7698")]
         public bool IncludeOtherTransfersInServiceLevel
         {
             get => _includeOtherTransfersInServiceLevel;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "abandonedCallsInServiceLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7665")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7698")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel AbandonedCallsInServiceLevel
         {
             get => _abandonedCallsInServiceLevel;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "abandonedCallIntervalSeconds", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7665")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7698")]
         [MinInclusive(1)]
         [MaxInclusive(7200)]
         public int? AbandonedCallIntervalSeconds

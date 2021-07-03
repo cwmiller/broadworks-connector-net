@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:773""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:715""}]")]
     public class PasswordForAccessDevice
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:773")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:715")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:773")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:715")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:773")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:715")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _generateDeviceAuthenticationPassword;
 
         [XmlElement(ElementName = "generateDeviceAuthenticationPassword", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:773")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:715")]
         public bool GenerateDeviceAuthenticationPassword
         {
             get => _generateDeviceAuthenticationPassword;

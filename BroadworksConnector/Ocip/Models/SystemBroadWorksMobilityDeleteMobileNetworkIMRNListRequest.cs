@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:704""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:727""}]")]
     public class SystemBroadWorksMobilityDeleteMobileNetworkIMRNListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _mobileNetworkName;
 
         [XmlElement(ElementName = "mobileNetworkName", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:704")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:727")]
         [MinLength(1)]
         [MaxLength(80)]
         public string MobileNetworkName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _imrnNumber = new List<string>();
 
         [XmlElement(ElementName = "imrnNumber", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:704")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:727")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> ImrnNumber

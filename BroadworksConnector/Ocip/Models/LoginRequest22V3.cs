@@ -9,21 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to login to OCI.
     /// password is not required for external authentication login from a trusted host (ACL).
-    /// The response is LoginResponse22V3 or ErrorResponse
+    /// Replaced by LoginRequest22V4 in AS data mode.
+    /// The response is either LoginResponse22V3 or ErrorResponse.
+    /// <see cref="LoginRequest22V4"/>
     /// <see cref="LoginResponse22V3"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:353""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4297""}]")]
     public class LoginRequest22V3 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:353")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4297")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:353")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:4297")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password

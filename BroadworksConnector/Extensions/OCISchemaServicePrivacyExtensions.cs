@@ -50,7 +50,8 @@ namespace BroadWorksConnector
         /// <summary>
         /// Retrieves a list of users in the enterprise or group available
         /// for phone status monitoring the user specified in the userId
-        /// element.  The response is either UserPrivacyGetAvailableMonitorsUserListResponse or ErrorResponse.
+        /// element.
+        /// The response is either UserPrivacyGetAvailableMonitorsUserListResponse or ErrorResponse.
         /// </summary>
         [Obsolete("This method is deprecated. Use UserPrivacyGetAvailableMonitorsUserListRequestAsync instead.")]
         public static async Task<UserPrivacyGetAvailableMonitorsUserListResponse> UserPrivacyGetAvailableMonitorsUserListRequest(this OcipClient client, UserPrivacyGetAvailableMonitorsUserListRequest request)
@@ -61,7 +62,8 @@ namespace BroadWorksConnector
         /// <summary>
         /// Retrieves a list of users in the enterprise or group available
         /// for phone status monitoring the user specified in the userId
-        /// element.  The response is either UserPrivacyGetAvailableMonitorsUserListResponse or ErrorResponse.
+        /// element.
+        /// The response is either UserPrivacyGetAvailableMonitorsUserListResponse or ErrorResponse.
         /// </summary>
         public static async Task<UserPrivacyGetAvailableMonitorsUserListResponse> UserPrivacyGetAvailableMonitorsUserListRequestAsync(this OcipClient client, UserPrivacyGetAvailableMonitorsUserListRequest request, CancellationToken cancellationToken = default)
         {

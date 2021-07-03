@@ -13,6 +13,9 @@ namespace BroadWorksConnector
         /// Add a Group Paging instance to a group.
         /// The domain is required in the serviceUserId.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following element is only used in AS data mode and ignored in XS data mode:
+        /// networkClassOfService
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupGroupPagingAddInstanceRequestAsync instead.")]
         public static async Task<SuccessResponse> GroupGroupPagingAddInstanceRequest(this OcipClient client, GroupGroupPagingAddInstanceRequest request)
@@ -24,6 +27,9 @@ namespace BroadWorksConnector
         /// Add a Group Paging instance to a group.
         /// The domain is required in the serviceUserId.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following element is only used in AS data mode and ignored in XS data mode:
+        /// networkClassOfService
         /// </summary>
         public static async Task<SuccessResponse> GroupGroupPagingAddInstanceRequestAsync(this OcipClient client, GroupGroupPagingAddInstanceRequest request, CancellationToken cancellationToken = default)
         {
@@ -254,6 +260,9 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to modify a Group Paging instance.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following element is only used in AS data mode and ignored in XS data mode:
+        /// networkClassOfService
         /// </summary>
         [Obsolete("This method is deprecated. Use GroupGroupPagingModifyInstanceRequestAsync instead.")]
         public static async Task<SuccessResponse> GroupGroupPagingModifyInstanceRequest(this OcipClient client, GroupGroupPagingModifyInstanceRequest request)
@@ -264,6 +273,9 @@ namespace BroadWorksConnector
         /// <summary>
         /// Request to modify a Group Paging instance.
         /// The response is either SuccessResponse or ErrorResponse.
+        /// 
+        /// The following element is only used in AS data mode and ignored in XS data mode:
+        /// networkClassOfService
         /// </summary>
         public static async Task<SuccessResponse> GroupGroupPagingModifyInstanceRequestAsync(this OcipClient client, GroupGroupPagingModifyInstanceRequest request, CancellationToken cancellationToken = default)
         {
@@ -307,30 +319,30 @@ namespace BroadWorksConnector
         }
         /// <summary>
         /// Request the maximum number of target users per paging group configured for a group.
-        /// The response is either a GroupGroupPagingTargetsCapacityGetResponse
+        /// The response is either a GroupGroupPagingTargetsCapacityGetResponse22
         /// or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupGroupPagingTargetsCapacityGetRequestAsync instead.")]
-        public static async Task<GroupGroupPagingTargetsCapacityGetResponse> GroupGroupPagingTargetsCapacityGetRequest(this OcipClient client, GroupGroupPagingTargetsCapacityGetRequest request)
+        [Obsolete("This method is deprecated. Use GroupGroupPagingTargetsCapacityGetRequest22Async instead.")]
+        public static async Task<GroupGroupPagingTargetsCapacityGetResponse22> GroupGroupPagingTargetsCapacityGetRequest22(this OcipClient client, GroupGroupPagingTargetsCapacityGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as GroupGroupPagingTargetsCapacityGetResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as GroupGroupPagingTargetsCapacityGetResponse22;
         }
 
         /// <summary>
         /// Request the maximum number of target users per paging group configured for a group.
-        /// The response is either a GroupGroupPagingTargetsCapacityGetResponse
+        /// The response is either a GroupGroupPagingTargetsCapacityGetResponse22
         /// or an ErrorResponse.
         /// </summary>
-        public static async Task<GroupGroupPagingTargetsCapacityGetResponse> GroupGroupPagingTargetsCapacityGetRequestAsync(this OcipClient client, GroupGroupPagingTargetsCapacityGetRequest request, CancellationToken cancellationToken = default)
+        public static async Task<GroupGroupPagingTargetsCapacityGetResponse22> GroupGroupPagingTargetsCapacityGetRequest22Async(this OcipClient client, GroupGroupPagingTargetsCapacityGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupGroupPagingTargetsCapacityGetResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as GroupGroupPagingTargetsCapacityGetResponse22;
         }
         /// <summary>
         /// Modify the maximum number of target users per paging group configured for a group.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use GroupGroupPagingTargetsCapacityModifyRequestAsync instead.")]
-        public static async Task<SuccessResponse> GroupGroupPagingTargetsCapacityModifyRequest(this OcipClient client, GroupGroupPagingTargetsCapacityModifyRequest request)
+        [Obsolete("This method is deprecated. Use GroupGroupPagingTargetsCapacityModifyRequest22Async instead.")]
+        public static async Task<SuccessResponse> GroupGroupPagingTargetsCapacityModifyRequest22(this OcipClient client, GroupGroupPagingTargetsCapacityModifyRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -339,36 +351,36 @@ namespace BroadWorksConnector
         /// Modify the maximum number of target users per paging group configured for a group.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> GroupGroupPagingTargetsCapacityModifyRequestAsync(this OcipClient client, GroupGroupPagingTargetsCapacityModifyRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> GroupGroupPagingTargetsCapacityModifyRequest22Async(this OcipClient client, GroupGroupPagingTargetsCapacityModifyRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Request the maximum number of target users per paging group configured for a service provider.
-        /// The response is either a ServiceProviderGroupPagingTargetsCapacityGetResponse
+        /// The response is either a ServiceProviderGroupPagingTargetsCapacityGetResponse22
         /// or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use ServiceProviderGroupPagingTargetsCapacityGetRequestAsync instead.")]
-        public static async Task<ServiceProviderGroupPagingTargetsCapacityGetResponse> ServiceProviderGroupPagingTargetsCapacityGetRequest(this OcipClient client, ServiceProviderGroupPagingTargetsCapacityGetRequest request)
+        [Obsolete("This method is deprecated. Use ServiceProviderGroupPagingTargetsCapacityGetRequest22Async instead.")]
+        public static async Task<ServiceProviderGroupPagingTargetsCapacityGetResponse22> ServiceProviderGroupPagingTargetsCapacityGetRequest22(this OcipClient client, ServiceProviderGroupPagingTargetsCapacityGetRequest22 request)
         {
-            return await client.CallAsync(request).ConfigureAwait(false) as ServiceProviderGroupPagingTargetsCapacityGetResponse;
+            return await client.CallAsync(request).ConfigureAwait(false) as ServiceProviderGroupPagingTargetsCapacityGetResponse22;
         }
 
         /// <summary>
         /// Request the maximum number of target users per paging group configured for a service provider.
-        /// The response is either a ServiceProviderGroupPagingTargetsCapacityGetResponse
+        /// The response is either a ServiceProviderGroupPagingTargetsCapacityGetResponse22
         /// or an ErrorResponse.
         /// </summary>
-        public static async Task<ServiceProviderGroupPagingTargetsCapacityGetResponse> ServiceProviderGroupPagingTargetsCapacityGetRequestAsync(this OcipClient client, ServiceProviderGroupPagingTargetsCapacityGetRequest request, CancellationToken cancellationToken = default)
+        public static async Task<ServiceProviderGroupPagingTargetsCapacityGetResponse22> ServiceProviderGroupPagingTargetsCapacityGetRequest22Async(this OcipClient client, ServiceProviderGroupPagingTargetsCapacityGetRequest22 request, CancellationToken cancellationToken = default)
         {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as ServiceProviderGroupPagingTargetsCapacityGetResponse;
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as ServiceProviderGroupPagingTargetsCapacityGetResponse22;
         }
         /// <summary>
         /// Modify the maximum number of target users per paging group configured for a service provider.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        [Obsolete("This method is deprecated. Use ServiceProviderGroupPagingTargetsCapacityModifyRequestAsync instead.")]
-        public static async Task<SuccessResponse> ServiceProviderGroupPagingTargetsCapacityModifyRequest(this OcipClient client, ServiceProviderGroupPagingTargetsCapacityModifyRequest request)
+        [Obsolete("This method is deprecated. Use ServiceProviderGroupPagingTargetsCapacityModifyRequest22Async instead.")]
+        public static async Task<SuccessResponse> ServiceProviderGroupPagingTargetsCapacityModifyRequest22(this OcipClient client, ServiceProviderGroupPagingTargetsCapacityModifyRequest22 request)
         {
             return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
         }
@@ -377,7 +389,7 @@ namespace BroadWorksConnector
         /// Modify the maximum number of target users per paging group configured for a service provider.
         /// The response is either a SuccessResponse or an ErrorResponse.
         /// </summary>
-        public static async Task<SuccessResponse> ServiceProviderGroupPagingTargetsCapacityModifyRequestAsync(this OcipClient client, ServiceProviderGroupPagingTargetsCapacityModifyRequest request, CancellationToken cancellationToken = default)
+        public static async Task<SuccessResponse> ServiceProviderGroupPagingTargetsCapacityModifyRequest22Async(this OcipClient client, ServiceProviderGroupPagingTargetsCapacityModifyRequest22 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }

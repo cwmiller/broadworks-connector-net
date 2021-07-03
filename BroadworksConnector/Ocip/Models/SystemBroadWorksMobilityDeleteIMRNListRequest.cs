@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:688""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:711""}]")]
     public class SystemBroadWorksMobilityDeleteIMRNListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private List<string> _imrnNumber = new List<string>();
 
         [XmlElement(ElementName = "imrnNumber", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:688")]
+        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:711")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> ImrnNumber

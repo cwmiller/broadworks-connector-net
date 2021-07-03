@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Request the collaborate bridged assigned to the user. The user can only be assigned to one collaborate
-    /// bridge at any given time.
+    /// Request the collaborate bridged assigned to the user. The user can only be assigned to one collaborate bridge at any given time.
     /// The response is either UserCollaborateBridgeGetResponse or ErrorResponse.
     /// 
     /// Replaced by: UserCollaborateBridgeGetRequest20sp1
@@ -19,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:40465""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41869""}]")]
     public class UserCollaborateBridgeGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40465")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41869")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

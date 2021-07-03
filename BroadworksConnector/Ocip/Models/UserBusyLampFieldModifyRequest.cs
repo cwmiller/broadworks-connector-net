@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4faeca417998d23ce2ff6b0b43212aa6:229""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4faeca417998d23ce2ff6b0b43212aa6:203""}]")]
     public class UserBusyLampFieldModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:229")]
+        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:203")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "listURI", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:229")]
+        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:203")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ListURI
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "monitoredUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:229")]
+        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:203")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList MonitoredUserIdList
         {
             get => _monitoredUserIdList;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:229")]
+        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:203")]
         public bool EnableCallParkNotification
         {
             get => _enableCallParkNotification;

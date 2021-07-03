@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4576""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:5285""}]")]
     public class VerifyTranslationAndRoutingOrigination
     {
 
         private string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4576")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5285")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _phone;
 
         [XmlElement(ElementName = "phone", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4576")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5285")]
         [MinLength(1)]
         [MaxLength(23)]
         public string Phone
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4576")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5285")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _url;
 
         [XmlElement(ElementName = "url", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4576")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5285")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Url

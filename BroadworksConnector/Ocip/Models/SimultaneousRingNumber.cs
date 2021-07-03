@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3925""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4606""}]")]
     public class SimultaneousRingNumber
     {
 
         private string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3925")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4606")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PhoneNumber
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3925")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4606")]
         public bool AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;

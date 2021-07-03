@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13653""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14749""}]")]
     public class SystemPushNotificationAllowedApplicationAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _applicationId;
 
         [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13653")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14749")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string ApplicationId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13653")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14749")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

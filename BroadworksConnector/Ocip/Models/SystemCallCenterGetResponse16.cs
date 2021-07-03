@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:14854""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:20860""}]")]
     public class SystemCallCenterGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _defaultFromAddress;
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14854")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20860")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultFromAddress
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes _statisticsSamplingPeriodMinutes;
 
         [XmlElement(ElementName = "statisticsSamplingPeriodMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14854")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20860")]
         public BroadWorksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes StatisticsSamplingPeriodMinutes
         {
             get => _statisticsSamplingPeriodMinutes;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _defaultEnableGuardTimer;
 
         [XmlElement(ElementName = "defaultEnableGuardTimer", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14854")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20860")]
         public bool DefaultEnableGuardTimer
         {
             get => _defaultEnableGuardTimer;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _defaultGuardTimerSeconds;
 
         [XmlElement(ElementName = "defaultGuardTimerSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14854")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20860")]
         [MinInclusive(1)]
         [MaxInclusive(25)]
         public int DefaultGuardTimerSeconds
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _forceAgentUnavailableOnDNDActivation;
 
         [XmlElement(ElementName = "forceAgentUnavailableOnDNDActivation", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14854")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20860")]
         public bool ForceAgentUnavailableOnDNDActivation
         {
             get => _forceAgentUnavailableOnDNDActivation;
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _forceAgentUnavailableOnPersonalCalls;
 
         [XmlElement(ElementName = "forceAgentUnavailableOnPersonalCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14854")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20860")]
         public bool ForceAgentUnavailableOnPersonalCalls
         {
             get => _forceAgentUnavailableOnPersonalCalls;
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _forceAgentUnavailableOnBouncedCallLimit;
 
         [XmlElement(ElementName = "forceAgentUnavailableOnBouncedCallLimit", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14854")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20860")]
         public bool ForceAgentUnavailableOnBouncedCallLimit
         {
             get => _forceAgentUnavailableOnBouncedCallLimit;
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _numberConsecutiveBouncedCallsToForceAgentUnavailable;
 
         [XmlElement(ElementName = "numberConsecutiveBouncedCallsToForceAgentUnavailable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14854")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20860")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
         public int NumberConsecutiveBouncedCallsToForceAgentUnavailable

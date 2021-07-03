@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get the push notification settings for a user.
     /// The response is either UserPushNotificationGetResponse or ErrorResponse.
+    /// 
+    /// Replaced by: UserPushNotificationRequest24
     /// <see cref="UserPushNotificationGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="UserPushNotificationRequest24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3376""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:45719""}]")]
     public class UserPushNotificationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3376")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45719")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

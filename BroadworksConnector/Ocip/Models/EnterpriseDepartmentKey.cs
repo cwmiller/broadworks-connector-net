@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2194""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2572""}]")]
     public class EnterpriseDepartmentKey : BroadWorksConnector.Ocip.Models.DepartmentKey
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2194")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2572")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2194")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2572")]
         [MinLength(1)]
         [MaxLength(50)]
         public string Name

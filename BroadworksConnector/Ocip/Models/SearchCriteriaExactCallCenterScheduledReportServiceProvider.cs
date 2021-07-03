@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:715""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:774""}]")]
     public class SearchCriteriaExactCallCenterScheduledReportServiceProvider : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:715")]
+        [Group(@"f0ada2681ca347fa83b464734259b304:774")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

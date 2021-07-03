@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:350""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:348""}]")]
     public class VirtualOnNetUserRange
     {
 
         private BroadWorksConnector.Ocip.Models.DNRange _dnRange;
 
         [XmlElement(ElementName = "dnRange", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:350")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
         public BroadWorksConnector.Ocip.Models.DNRange DnRange
         {
             get => _dnRange;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ExtensionRange17 _extensionRange;
 
         [XmlElement(ElementName = "extensionRange", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:350")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
         public BroadWorksConnector.Ocip.Models.ExtensionRange17 ExtensionRange
         {
             get => _extensionRange;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _firstName;
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:350")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _lastName;
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:350")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _callingLineIdFirstName;
 
         [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:350")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
         [MinLength(1)]
         [MaxLength(30)]
         public string CallingLineIdFirstName
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _callingLineIdLastName;
 
         [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:350")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
         [MinLength(1)]
         [MaxLength(30)]
         public string CallingLineIdLastName
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _virtualOnNetCallTypeName;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:350")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
         [MinLength(1)]
         [MaxLength(40)]
         public string VirtualOnNetCallTypeName

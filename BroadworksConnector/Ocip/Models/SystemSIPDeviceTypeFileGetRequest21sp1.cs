@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get a sip device type file.
     /// The response is either SystemSIPDeviceTypeFileGetResponse21sp1 or ErrorResponse.
+    /// 
+    /// Replaced by: SystemSIPDeviceTypeFileGetRequest22 in AS data mode.
     /// <see cref="SystemSIPDeviceTypeFileGetResponse21sp1"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemSIPDeviceTypeFileGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15952""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:10168""}]")]
     public class SystemSIPDeviceTypeFileGetRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15952")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:10168")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -41,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _fileFormat;
 
         [XmlElement(ElementName = "fileFormat", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15952")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:10168")]
         [MinLength(1)]
         [MaxLength(128)]
         public string FileFormat

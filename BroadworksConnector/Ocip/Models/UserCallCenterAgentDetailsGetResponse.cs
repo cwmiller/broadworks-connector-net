@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6627""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6652""}]")]
     public class UserCallCenterAgentDetailsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isCallCenterBasicAssigned;
 
         [XmlElement(ElementName = "isCallCenterBasicAssigned", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6627")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6652")]
         public bool IsCallCenterBasicAssigned
         {
             get => _isCallCenterBasicAssigned;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isCallCenterStandardAssigned;
 
         [XmlElement(ElementName = "isCallCenterStandardAssigned", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6627")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6652")]
         public bool IsCallCenterStandardAssigned
         {
             get => _isCallCenterStandardAssigned;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isCallCenterPremiumAssigned;
 
         [XmlElement(ElementName = "isCallCenterPremiumAssigned", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6627")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:6652")]
         public bool IsCallCenterPremiumAssigned
         {
             get => _isCallCenterPremiumAssigned;

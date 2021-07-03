@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1413""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1861""}]")]
     public class SystemAccountingDeleteChargingFunctionElementServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _address;
 
         [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1413")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1861")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Address

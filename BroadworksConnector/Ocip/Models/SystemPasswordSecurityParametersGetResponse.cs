@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13072""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14248""}]")]
     public class SystemPasswordSecurityParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _useExistingHashing;
 
         [XmlElement(ElementName = "useExistingHashing", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13072")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14248")]
         public bool UseExistingHashing
         {
             get => _useExistingHashing;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enforcePasswordChangeOnExpiry;
 
         [XmlElement(ElementName = "enforcePasswordChangeOnExpiry", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13072")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14248")]
         public bool EnforcePasswordChangeOnExpiry
         {
             get => _enforcePasswordChangeOnExpiry;

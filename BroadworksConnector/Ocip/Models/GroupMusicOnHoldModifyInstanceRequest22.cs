@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""66fe518a637c74cc4b2c97aa7f68fc49:168""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""66fe518a637c74cc4b2c97aa7f68fc49:174""}]")]
     public class GroupMusicOnHoldModifyInstanceRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:168")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:174")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:168")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:174")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:168")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:174")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey Department
         {
             get => _department;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActiveDuringCallHold", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:168")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:174")]
         public bool IsActiveDuringCallHold
         {
             get => _isActiveDuringCallHold;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActiveDuringCallPark", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:168")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:174")]
         public bool IsActiveDuringCallPark
         {
             get => _isActiveDuringCallPark;
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActiveDuringBusyCampOn", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:168")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:174")]
         public bool IsActiveDuringBusyCampOn
         {
             get => _isActiveDuringBusyCampOn;
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:168")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:174")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify22 Source
         {
             get => _source;
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:168")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:174")]
         public bool UseAlternateSourceForInternalCalls
         {
             get => _useAlternateSourceForInternalCalls;
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:168")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:174")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify22 InternalSource
         {
             get => _internalSource;
@@ -182,6 +182,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool InternalSourceSpecified { get; set; }
+
+        private bool _useDynamicMOHDuringCallHold;
+
+        [XmlElement(ElementName = "useDynamicMOHDuringCallHold", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:174")]
+        public bool UseDynamicMOHDuringCallHold
+        {
+            get => _useDynamicMOHDuringCallHold;
+            set
+            {
+                UseDynamicMOHDuringCallHoldSpecified = true;
+                _useDynamicMOHDuringCallHold = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool UseDynamicMOHDuringCallHoldSpecified { get; set; }
 
     }
 }

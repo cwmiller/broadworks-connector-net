@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:839""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:840""}]")]
     public class GroupOutgoingCallingPlanTransferNumbersGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers _groupNumbers;
 
         [XmlElement(ElementName = "groupNumbers", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:839")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:840")]
         public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers GroupNumbers
         {
             get => _groupNumbers;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "departmentNumbers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:839")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:840")]
         public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbers> DepartmentNumbers
         {
             get => _departmentNumbers;

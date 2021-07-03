@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25243""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10924""}]")]
     public class GroupMeetMeConferencingAddInstanceRequest18 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
         [XmlElement(ElementName = "allocatedPorts", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts
         {
             get => _allocatedPorts;
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowIndividualOutDial;
 
         [XmlElement(ElementName = "allowIndividualOutDial", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         public bool AllowIndividualOutDial
         {
             get => _allowIndividualOutDial;
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "operatorNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         [MinLength(1)]
         [MaxLength(161)]
         public string OperatorNumber
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "conferenceHostUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> ConferenceHostUserId
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _playWarningPrompt;
 
         [XmlElement(ElementName = "playWarningPrompt", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         public bool PlayWarningPrompt
         {
             get => _playWarningPrompt;
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _conferenceEndWarningPromptMinutes;
 
         [XmlElement(ElementName = "conferenceEndWarningPromptMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         [MinInclusive(1)]
         [MaxInclusive(15)]
         public int ConferenceEndWarningPromptMinutes
@@ -227,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableMaxConferenceDuration;
 
         [XmlElement(ElementName = "enableMaxConferenceDuration", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         public bool EnableMaxConferenceDuration
         {
             get => _enableMaxConferenceDuration;
@@ -244,7 +244,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _maxConferenceDurationMinutes;
 
         [XmlElement(ElementName = "maxConferenceDurationMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10924")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration MaxConferenceDurationMinutes
         {
             get => _maxConferenceDurationMinutes;

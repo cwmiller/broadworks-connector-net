@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:282""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:283""}]")]
     public class UserPersonalAssistantExclusionNumberModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:282")]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:283")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _exclusionNumber;
 
         [XmlElement(ElementName = "exclusionNumber", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:282")]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:283")]
         [MinLength(1)]
         [MaxLength(23)]
         public string ExclusionNumber
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:282")]
+        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:283")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

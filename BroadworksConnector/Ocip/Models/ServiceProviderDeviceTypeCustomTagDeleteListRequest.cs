@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:2493""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3142""}]")]
     public class ServiceProviderDeviceTypeCustomTagDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2493")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3142")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2493")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3142")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _tagName = new List<string>();
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2493")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3142")]
         [MinLength(1)]
         [MaxLength(64)]
         public List<string> TagName

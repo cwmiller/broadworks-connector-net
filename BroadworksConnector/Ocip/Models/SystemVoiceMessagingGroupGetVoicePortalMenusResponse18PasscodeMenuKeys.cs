@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27272""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:36832""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18PasscodeMenuKeys
     {
 
         private string _finishEnteringOrReenteringPasscode;
 
         [XmlElement(ElementName = "finishEnteringOrReenteringPasscode", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27272")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:36832")]
         [Length(1)]
         [RegularExpression(@"\*|#")]
         public string FinishEnteringOrReenteringPasscode
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27272")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:36832")]
         [Length(1)]
         [RegularExpression(@"\*|#")]
         public string ReturnToPreviousMenu

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3008""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3623""}]")]
     public class RecurrenceRecurWeekly
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int RecurInterval
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _sunday;
 
         [XmlElement(ElementName = "sunday", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
         public bool Sunday
         {
             get => _sunday;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _monday;
 
         [XmlElement(ElementName = "monday", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
         public bool Monday
         {
             get => _monday;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _tuesday;
 
         [XmlElement(ElementName = "tuesday", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
         public bool Tuesday
         {
             get => _tuesday;
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _wednesday;
 
         [XmlElement(ElementName = "wednesday", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
         public bool Wednesday
         {
             get => _wednesday;
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _thursday;
 
         [XmlElement(ElementName = "thursday", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
         public bool Thursday
         {
             get => _thursday;
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _friday;
 
         [XmlElement(ElementName = "friday", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
         public bool Friday
         {
             get => _friday;
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _saturday;
 
         [XmlElement(ElementName = "saturday", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3008")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
         public bool Saturday
         {
             get => _saturday;

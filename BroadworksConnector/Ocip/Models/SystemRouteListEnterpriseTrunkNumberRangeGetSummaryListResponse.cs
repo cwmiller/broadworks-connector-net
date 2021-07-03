@@ -8,20 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemRouteListEnterpriseTrunkNumberRangeGetSummaryListRequest.
-    /// The column headings are "Number Range Start", "Number Range End", "Service Provider Id", "Is Enterprise", "User Id", "Enterprise Trunk", "Is Active", "Reseller Id".
+    /// The column headings are "Number Range Start", "Number Range End", "Service Provider Id", "Is Enterprise", "User Id", "Enterprise Trunk",
+    /// "Is Active", "Reseller Id" and "Extension Length".
     /// <see cref="SystemRouteListEnterpriseTrunkNumberRangeGetSummaryListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3f28429898a57a7f7846d3877b22df9f:759""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3f28429898a57a7f7846d3877b22df9f:804""}]")]
     public class SystemRouteListEnterpriseTrunkNumberRangeGetSummaryListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _numberRangeSummaryTable;
 
         [XmlElement(ElementName = "numberRangeSummaryTable", IsNullable = false, Namespace = "")]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:759")]
+        [Group(@"3f28429898a57a7f7846d3877b22df9f:804")]
         public BroadWorksConnector.Ocip.Models.C.OCITable NumberRangeSummaryTable
         {
             get => _numberRangeSummaryTable;

@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:975""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:1442""}]")]
     public class ServiceProviderAdminGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _serviceProviderAdminTable;
 
         [XmlElement(ElementName = "serviceProviderAdminTable", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:975")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:1442")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ServiceProviderAdminTable
         {
             get => _serviceProviderAdminTable;

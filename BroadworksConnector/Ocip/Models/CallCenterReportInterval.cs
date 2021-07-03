@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7433""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7466""}]")]
     public class CallCenterReportInterval
     {
 
         private BroadWorksConnector.Ocip.Models.CallCenterReportIntervalDates _dates;
 
         [XmlElement(ElementName = "dates", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7433")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7466")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportIntervalDates Dates
         {
             get => _dates;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportCurrentInterval _current;
 
         [XmlElement(ElementName = "current", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7433")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7466")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportCurrentInterval Current
         {
             get => _current;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CallCenterReportPastInterval _past;
 
         [XmlElement(ElementName = "past", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7433")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7466")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportPastInterval Past
         {
             get => _past;

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1624""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1818""}]")]
     public class Contact
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contactName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1624")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1818")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ContactName
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contactNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1624")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1818")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ContactNumber
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contactEmail", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1624")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1818")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ContactEmail

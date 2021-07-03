@@ -7,8 +7,7 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Returns a list of all departments that have a Music On Hold instance.
-    /// The response is either GroupMusicOnHoldGetDepartmentListResponse or ErrorResponse.
+    /// Returns a list of all departments that have a Music On Hold instance. The response is either GroupMusicOnHoldGetDepartmentListResponse or ErrorResponse.
     /// It is possible to get the instances within a specified department.
     /// <see cref="GroupMusicOnHoldGetDepartmentListResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -16,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""66fe518a637c74cc4b2c97aa7f68fc49:93""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""66fe518a637c74cc4b2c97aa7f68fc49:96""}]")]
     public class GroupMusicOnHoldGetDepartmentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:93")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:96")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:93")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:96")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupDepartmentName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:93")]
+        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:96")]
         [MinLength(1)]
         [MaxLength(50)]
         public string GroupDepartmentName

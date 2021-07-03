@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:336"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:341""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:364"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:369""}]}]")]
     public class SystemCallRecordingModifyPlatformRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:336")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:364")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:336")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:364")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:336")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:364")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? Port
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mediaStream", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:336")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:364")]
         public BroadWorksConnector.Ocip.Models.MediaStream MediaStream
         {
             get => _mediaStream;
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "becomeSystemDefault", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:341")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:369")]
         public bool BecomeSystemDefault
         {
             get => _becomeSystemDefault;
@@ -118,9 +118,9 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "becomeResellerDefault", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:341")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:369")]
         [MinLength(1)]
-        [MaxLength(30)]
+        [MaxLength(36)]
         public string BecomeResellerDefault
         {
             get => _becomeResellerDefault;
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transportType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:336")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:364")]
         public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol TransportType
         {
             get => _transportType;
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:336")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:364")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "schemaVersion", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:336")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:364")]
         public BroadWorksConnector.Ocip.Models.CallRecordingPlatformSchemaVersion SchemaVersion
         {
             get => _schemaVersion;
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "supportVideoRecording", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:336")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:364")]
         public bool SupportVideoRecording
         {
             get => _supportVideoRecording;
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "route", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:336")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:364")]
         [MinLength(1)]
         [MaxLength(1024)]
         public string Route

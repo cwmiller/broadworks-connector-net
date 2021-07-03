@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1747""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11333""}]")]
     public class GroupMusicOnHoldGetInstanceResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1747")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11333")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isActiveDuringCallHold;
 
         [XmlElement(ElementName = "isActiveDuringCallHold", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1747")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11333")]
         public bool IsActiveDuringCallHold
         {
             get => _isActiveDuringCallHold;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isActiveDuringCallPark;
 
         [XmlElement(ElementName = "isActiveDuringCallPark", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1747")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11333")]
         public bool IsActiveDuringCallPark
         {
             get => _isActiveDuringCallPark;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSelection;
 
         [XmlElement(ElementName = "messageSelection", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1747")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11333")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSelection
         {
             get => _messageSelection;
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1747")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11333")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1747")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11333")]
         public bool EnableVideo
         {
             get => _enableVideo;
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1747")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11333")]
         [MinLength(1)]
         [MaxLength(256)]
         public string AudioFileDescription
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1747")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11333")]
         [MinLength(1)]
         [MaxLength(256)]
         public string VideoFileDescription

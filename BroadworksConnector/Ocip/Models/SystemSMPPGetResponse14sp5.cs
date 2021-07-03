@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3312""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:11545""}]")]
     public class SystemSMPPGetResponse14sp5 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "primarySMPPServerNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3312")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:11545")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PrimarySMPPServerNetAddress
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _primarySMPPPort;
 
         [XmlElement(ElementName = "primarySMPPPort", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3312")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:11545")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int PrimarySMPPPort
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "secondarySMPPServerNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3312")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:11545")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SecondarySMPPServerNetAddress
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _secondarySMPPPort;
 
         [XmlElement(ElementName = "secondarySMPPPort", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3312")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:11545")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int SecondarySMPPPort
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "systemId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3312")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:11545")]
         [MinLength(1)]
         [MaxLength(16)]
         public string SystemId
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3312")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:11545")]
         [MinLength(1)]
         [MaxLength(8)]
         public string Password
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SMPPVersion _version;
 
         [XmlElement(ElementName = "version", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3312")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:11545")]
         public BroadWorksConnector.Ocip.Models.SMPPVersion Version
         {
             get => _version;
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "systemType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3312")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:11545")]
         [MinLength(1)]
         [MaxLength(12)]
         public string SystemType

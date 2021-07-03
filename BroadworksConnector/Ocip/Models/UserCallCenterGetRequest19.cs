@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get the user's call center settings and the list of call centers the specified user belongs to.
     /// The response is either a UserCallCenterGetResponse19 or an ErrorResponse.
+    /// 
+    /// Replaced by UserCallCenterGetRequest23.
     /// <see cref="UserCallCenterGetResponse19"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="UserCallCenterGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7040""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:12577""}]")]
     public class UserCallCenterGetRequest19 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7040")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:12577")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:77""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:79""}]")]
     public class SystemAutomaticCollectCallModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAutomaticCollectCall", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:77")]
+        [Group(@"af1b47d7cab3335a81456e64e42371b0:79")]
         public bool EnableAutomaticCollectCall
         {
             get => _enableAutomaticCollectCall;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableConnectTone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:77")]
+        [Group(@"af1b47d7cab3335a81456e64e42371b0:79")]
         public bool EnableConnectTone
         {
             get => _enableConnectTone;
@@ -54,6 +54,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool EnableConnectToneSpecified { get; set; }
+
+        private bool _includeCountryCodeInCic;
+
+        [XmlElement(ElementName = "includeCountryCodeInCic", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"af1b47d7cab3335a81456e64e42371b0:79")]
+        public bool IncludeCountryCodeInCic
+        {
+            get => _includeCountryCodeInCic;
+            set
+            {
+                IncludeCountryCodeInCicSpecified = true;
+                _includeCountryCodeInCic = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IncludeCountryCodeInCicSpecified { get; set; }
 
     }
 }

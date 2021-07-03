@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15257""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16405""}]")]
     public class SystemShInterfaceParametersGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hssRealm", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15257")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16405")]
         [MinLength(1)]
         [MaxLength(80)]
         public string HssRealm
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _publicIdentityRefreshDelaySeconds;
 
         [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15257")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16405")]
         [MinInclusive(0)]
         [MaxInclusive(30)]
         public int PublicIdentityRefreshDelaySeconds

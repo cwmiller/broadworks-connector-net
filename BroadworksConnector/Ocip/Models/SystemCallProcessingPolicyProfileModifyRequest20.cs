@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:34422""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:23460""}]")]
     public class SystemCallProcessingPolicyProfileModifyRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34422")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23460")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34422")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23460")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34422")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23460")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "assignedSubscriberTypeList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:34422")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:23460")]
         public BroadWorksConnector.Ocip.Models.ReplacementCallProcessingPolicyProfileSubscriberTypeList20 AssignedSubscriberTypeList
         {
             get => _assignedSubscriberTypeList;

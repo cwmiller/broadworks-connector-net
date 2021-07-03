@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:336""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:337""}]")]
     public class ResellerVoiceMessagingGroupGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deliveryFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:336")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:337")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DeliveryFromAddress
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "notificationFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:336")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:337")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NotificationFromAddress
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voicePortalLockoutFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:336")]
+        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:337")]
         [MinLength(1)]
         [MaxLength(80)]
         public string VoicePortalLockoutFromAddress

@@ -25,20 +25,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following elements are only used in XS data mode and ignored in Amplify and AS data mode:
     /// defaultUserCallingLineIdPhoneNumber.
+    /// 
+    /// Replaced by: GroupConsolidatedAddRequest in AS data mode
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupConsolidatedAddRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1024""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:960""}]")]
     public class GroupAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -57,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -76,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _defaultDomain;
 
         [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultDomain
@@ -95,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _userLimit;
 
         [XmlElement(ElementName = "userLimit", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int UserLimit
@@ -115,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(80)]
         public string GroupName
@@ -135,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callingLineIdName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CallingLineIdName
@@ -155,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(127)]
         public string TimeZone
@@ -175,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "locationDialingCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(15)]
         public string LocationDialingCode
@@ -195,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         public BroadWorksConnector.Ocip.Models.Contact Contact
         {
             get => _contact;
@@ -213,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         public BroadWorksConnector.Ocip.Models.StreetAddress Address
         {
             get => _address;
@@ -231,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePolicy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServicePolicy
@@ -251,7 +254,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callProcessingSliceId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CallProcessingSliceId
@@ -271,7 +274,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provisioningSliceId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ProvisioningSliceId
@@ -291,7 +294,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "subscriberPartition", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SubscriberPartition
@@ -311,7 +314,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "preferredDataCenter", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PreferredDataCenter
@@ -331,7 +334,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultUserCallingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1024")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:960")]
         [MinLength(1)]
         [MaxLength(23)]
         public string DefaultUserCallingLineIdPhoneNumber

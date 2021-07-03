@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35408""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:38442""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse20HotelingMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "checkHostStatus", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35408")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38442")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string CheckHostStatus
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "associateWithHost", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35408")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38442")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string AssociateWithHost
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disassociateFromHost", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35408")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38442")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string DisassociateFromHost
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disassociateFromRemoteHost", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35408")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38442")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string DisassociateFromRemoteHost
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35408")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38442")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35408")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38442")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

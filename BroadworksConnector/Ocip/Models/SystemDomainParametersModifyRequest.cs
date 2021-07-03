@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8551""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9580""}]")]
     public class SystemDomainParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useAliasForDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8551")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9580")]
         public bool UseAliasForDomain
         {
             get => _useAliasForDomain;
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8551")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9580")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultDomain

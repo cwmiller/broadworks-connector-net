@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2995"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2996""},{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3061""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3610"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3611""},{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3676""}]}]")]
     public class Recurrence
     {
 
         private BroadWorksConnector.Ocip.Models.RecurrenceRecurDaily _recurDaily;
 
         [XmlElement(ElementName = "recurDaily", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2996")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
         public BroadWorksConnector.Ocip.Models.RecurrenceRecurDaily RecurDaily
         {
             get => _recurDaily;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.RecurrenceRecurWeekly _recurWeekly;
 
         [XmlElement(ElementName = "recurWeekly", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2996")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
         public BroadWorksConnector.Ocip.Models.RecurrenceRecurWeekly RecurWeekly
         {
             get => _recurWeekly;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByDay _recurMonthlyByDay;
 
         [XmlElement(ElementName = "recurMonthlyByDay", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2996")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
         public BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByDay RecurMonthlyByDay
         {
             get => _recurMonthlyByDay;
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByWeek _recurMonthlyByWeek;
 
         [XmlElement(ElementName = "recurMonthlyByWeek", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2996")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
         public BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByWeek RecurMonthlyByWeek
         {
             get => _recurMonthlyByWeek;
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByDay _recurYearlyByDay;
 
         [XmlElement(ElementName = "recurYearlyByDay", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2996")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
         public BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByDay RecurYearlyByDay
         {
             get => _recurYearlyByDay;
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByWeek _recurYearlyByWeek;
 
         [XmlElement(ElementName = "recurYearlyByWeek", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2996")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
         public BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByWeek RecurYearlyByWeek
         {
             get => _recurYearlyByWeek;
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _recurForEver;
 
         [XmlElement(ElementName = "recurForEver", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3061")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3676")]
         public bool RecurForEver
         {
             get => _recurForEver;
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _recurEndDate;
 
         [XmlElement(ElementName = "recurEndDate", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3061")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3676")]
         public string RecurEndDate
         {
             get => _recurEndDate;
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _recurEndOccurrence;
 
         [XmlElement(ElementName = "recurEndOccurrence", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3061")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3676")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int RecurEndOccurrence

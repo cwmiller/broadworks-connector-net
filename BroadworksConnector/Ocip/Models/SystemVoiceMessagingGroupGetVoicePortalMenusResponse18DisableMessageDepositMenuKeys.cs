@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27466""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:37023""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18DisableMessageDepositMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disconnectAfterGreeting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27466")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37023")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string DisconnectAfterGreeting
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardAfterGreeting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27466")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37023")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ForwardAfterGreeting
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "changeForwardingDestination", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27466")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37023")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ChangeForwardingDestination
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27466")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37023")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27466")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37023")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

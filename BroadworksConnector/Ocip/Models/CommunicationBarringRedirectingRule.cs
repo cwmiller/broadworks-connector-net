@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1426""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1514""}]")]
     public class CommunicationBarringRedirectingRule
     {
 
         private string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1426")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1514")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Criteria
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1426")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1514")]
         public BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction Action
         {
             get => _action;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1426")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1514")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
         public int? CallTimeoutSeconds

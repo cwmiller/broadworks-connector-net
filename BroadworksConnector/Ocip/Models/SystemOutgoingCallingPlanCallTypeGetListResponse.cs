@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:923""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:924""}]")]
     public class SystemOutgoingCallingPlanCallTypeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallType> _callType = new List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallType>();
 
         [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:923")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:924")]
         public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallType> CallType
         {
             get => _callType;

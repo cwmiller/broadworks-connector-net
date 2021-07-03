@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:5294""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:5632""}]")]
     public class SystemCommunicationBarringCallTypeDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _callType;
 
         [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5294")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5632")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallType

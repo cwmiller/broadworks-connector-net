@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:14816""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19960""}]")]
     public class SystemAutomaticCallbackGetResponse15sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private int _monitorMinutes;
 
         [XmlElement(ElementName = "monitorMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14816")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19960")]
         [MinInclusive(5)]
         [MaxInclusive(180)]
         public int MonitorMinutes
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxMonitorsPerOriginator;
 
         [XmlElement(ElementName = "maxMonitorsPerOriginator", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14816")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19960")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int MaxMonitorsPerOriginator
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxCallbackRings;
 
         [XmlElement(ElementName = "maxCallbackRings", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14816")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19960")]
         [MinInclusive(3)]
         [MaxInclusive(8)]
         public int MaxCallbackRings
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxMonitorsPerTerminator;
 
         [XmlElement(ElementName = "maxMonitorsPerTerminator", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14816")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19960")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int MaxMonitorsPerTerminator
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _terminatorIdleGuardSeconds;
 
         [XmlElement(ElementName = "terminatorIdleGuardSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14816")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19960")]
         [MinInclusive(5)]
         [MaxInclusive(300)]
         public int TerminatorIdleGuardSeconds
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod _callbackMethod;
 
         [XmlElement(ElementName = "callbackMethod", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14816")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19960")]
         public BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod CallbackMethod
         {
             get => _callbackMethod;
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _pollingIntervalSeconds;
 
         [XmlElement(ElementName = "pollingIntervalSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14816")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19960")]
         [MinInclusive(60)]
         [MaxInclusive(900)]
         public int PollingIntervalSeconds

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:12714""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4764""}]")]
     public class GroupCallCenterComfortMessageBypassModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12714")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4764")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12714")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4764")]
         public bool IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callWaitingAgeThresholdSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12714")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4764")]
         [MinInclusive(1)]
         [MaxInclusive(120)]
         public int CallWaitingAgeThresholdSeconds
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playAnnouncementAfterRinging", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12714")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4764")]
         public bool PlayAnnouncementAfterRinging
         {
             get => _playAnnouncementAfterRinging;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ringTimeBeforePlayingAnnouncementSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12714")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4764")]
         [MinInclusive(0)]
         [MaxInclusive(120)]
         public int RingTimeBeforePlayingAnnouncementSeconds
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12714")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4764")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioMessageSelection
         {
             get => _audioMessageSelection;
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12714")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4764")]
         public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource AudioFile
         {
             get => _audioFile;
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12714")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4764")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection
         {
             get => _videoMessageSelection;
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12714")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4764")]
         public BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource VideoFile
         {
             get => _videoFile;

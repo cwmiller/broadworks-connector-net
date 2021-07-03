@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:73""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:74""}]")]
     public class GroupCollaborateBridgeAddInstanceRequest20sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:73")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:74")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:73")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:74")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:73")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:74")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:73")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:74")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants _maximumBridgeParticipants;
 
         [XmlElement(ElementName = "maximumBridgeParticipants", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:73")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:74")]
         public BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants MaximumBridgeParticipants
         {
             get => _maximumBridgeParticipants;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:73")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:74")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxCollaborateRoomParticipants;
 
         [XmlElement(ElementName = "maxCollaborateRoomParticipants", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:73")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:74")]
         [MinInclusive(3)]
         [MaxInclusive(145)]
         public int MaxCollaborateRoomParticipants
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _supportOutdial;
 
         [XmlElement(ElementName = "supportOutdial", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:73")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:74")]
         public bool SupportOutdial
         {
             get => _supportOutdial;
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "collaborateOwnerUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:73")]
+        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:74")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> CollaborateOwnerUserId

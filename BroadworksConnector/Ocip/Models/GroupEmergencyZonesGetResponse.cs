@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e71c2205fb31894f87810b330a85ede2:136""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e71c2205fb31894f87810b330a85ede2:137""}]")]
     public class GroupEmergencyZonesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:136")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:137")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition _emergencyZonesProhibition;
 
         [XmlElement(ElementName = "emergencyZonesProhibition", IsNullable = false, Namespace = "")]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:136")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:137")]
         public BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition EmergencyZonesProhibition
         {
             get => _emergencyZonesProhibition;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _sendEmergencyCallNotifyEmail;
 
         [XmlElement(ElementName = "sendEmergencyCallNotifyEmail", IsNullable = false, Namespace = "")]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:136")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:137")]
         public bool SendEmergencyCallNotifyEmail
         {
             get => _sendEmergencyCallNotifyEmail;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "emergencyCallNotifyEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:136")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:137")]
         [MinLength(1)]
         [MaxLength(80)]
         public string EmergencyCallNotifyEmailAddress

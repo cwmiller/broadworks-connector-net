@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:97""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:98""}]")]
     public class GroupVirtualOnNetEnterpriseExtensionsAddUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:97")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:98")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:97")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:98")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "virtualOnNetUser", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:97")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:98")]
         public List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser> VirtualOnNetUser
         {
             get => _virtualOnNetUser;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "virtualOnNetUserRange", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:97")]
+        [Group(@"179b744b0183abe614e8c32c17c96b7e:98")]
         public List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange> VirtualOnNetUserRange
         {
             get => _virtualOnNetUserRange;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:965""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:966""}]")]
     public class EnterpriseSessionAdmissionControlGroupDeleteDeviceListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:965")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:966")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:965")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:966")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> _devices = new List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice>();
 
         [XmlElement(ElementName = "devices", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:965")]
+        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:966")]
         public List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> Devices
         {
             get => _devices;

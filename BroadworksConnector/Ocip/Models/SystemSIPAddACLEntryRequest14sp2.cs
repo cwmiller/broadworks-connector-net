@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:15350""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16498""}]")]
     public class SystemSIPAddACLEntryRequest14sp2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15350")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16498")]
         [MinLength(1)]
         [MaxLength(39)]
         public string NetAddress
@@ -38,11 +38,11 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetAddressSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SIPACLTransportProtocol _transportProtocol;
+        private BroadWorksConnector.Ocip.Models.SIPACLExtendedTransportProtocol _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15350")]
-        public BroadWorksConnector.Ocip.Models.SIPACLTransportProtocol TransportProtocol
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16498")]
+        public BroadWorksConnector.Ocip.Models.SIPACLExtendedTransportProtocol TransportProtocol
         {
             get => _transportProtocol;
             set
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15350")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16498")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

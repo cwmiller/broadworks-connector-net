@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""524e0d071a229a44af2f953d6b50db35:190""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""524e0d071a229a44af2f953d6b50db35:212""}]")]
     public class UserSharedCallAppearanceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertAllAppearancesForClickToDialCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         public bool AlertAllAppearancesForClickToDialCalls
         {
             get => _alertAllAppearancesForClickToDialCalls;
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertAllAppearancesForGroupPagingCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         public bool AlertAllAppearancesForGroupPagingCalls
         {
             get => _alertAllAppearancesForGroupPagingCalls;
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowSCACallRetrieve", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         public bool AllowSCACallRetrieve
         {
             get => _allowSCACallRetrieve;
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "multipleCallArrangementIsActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         public bool MultipleCallArrangementIsActive
         {
             get => _multipleCallArrangementIsActive;
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowBridgingBetweenLocations", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         public bool AllowBridgingBetweenLocations
         {
             get => _allowBridgingBetweenLocations;
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bridgeWarningTone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         public BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone
         {
             get => _bridgeWarningTone;
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         public bool EnableCallParkNotification
         {
             get => _enableCallParkNotification;
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useUserPrimaryWithAlternateCallsSetting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         public bool UseUserPrimaryWithAlternateCallsSetting
         {
             get => _useUserPrimaryWithAlternateCallsSetting;
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowSimultaneousPrimaryAndAlternateCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         public bool AllowSimultaneousPrimaryAndAlternateCalls
         {
             get => _allowSimultaneousPrimaryAndAlternateCalls;
@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "restrictCallRetrieveOfPrimaryCall", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         public bool RestrictCallRetrieveOfPrimaryCall
         {
             get => _restrictCallRetrieveOfPrimaryCall;
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "restrictCallBridgingOfPrimaryCall", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:190")]
+        [Group(@"524e0d071a229a44af2f953d6b50db35:212")]
         public bool RestrictCallBridgingOfPrimaryCall
         {
             get => _restrictCallBridgingOfPrimaryCall;

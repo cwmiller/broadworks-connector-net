@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:194""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:278""}]")]
     public class SystemCallRecordingGetPlatformListResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "systemDefault", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:194")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:278")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SystemDefault
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerDefault", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:194")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:278")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ResellerDefault
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _callRecordingPlatformTable;
 
         [XmlElement(ElementName = "callRecordingPlatformTable", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:194")]
+        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:278")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CallRecordingPlatformTable
         {
             get => _callRecordingPlatformTable;

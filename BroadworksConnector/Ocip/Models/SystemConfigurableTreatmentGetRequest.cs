@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10243""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25297""}]")]
     public class SystemConfigurableTreatmentGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10243")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25297")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TreatmentId

@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the maximum number of target users per paging group configured for a group.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// Replaced by: GroupGroupPagingTargetsCapacityModifyRequest22 in AS data mode.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupGroupPagingTargetsCapacityModifyRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:500""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2677""}]")]
     public class GroupGroupPagingTargetsCapacityModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:500")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2677")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:500")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2677")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,9 +64,9 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maximumTargetUsers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:500")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2677")]
         [MinInclusive(1)]
-        [MaxInclusive(294)]
+        [MaxInclusive(149)]
         public int MaximumTargetUsers
         {
             get => _maximumTargetUsers;

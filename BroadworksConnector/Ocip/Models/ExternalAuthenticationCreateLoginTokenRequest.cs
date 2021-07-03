@@ -9,22 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// This command allows a BroadWorks or Third-Party Client Application to
     /// create a Single Sign-On token for a user.
-    /// The response is either ExternalAuthenticationCreateLoginTokenResponse
-    /// or ErrorResponse.
+    /// The response is either ExternalAuthenticationCreateLoginTokenResponse or ErrorResponse.
     /// <see cref="ExternalAuthenticationCreateLoginTokenResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:321""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:255""}]")]
     public class ExternalAuthenticationCreateLoginTokenRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:321")]
+        [Group(@"6b27fcc79475236456fc113a42b75543:255")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

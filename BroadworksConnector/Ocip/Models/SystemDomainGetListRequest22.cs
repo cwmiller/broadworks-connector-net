@@ -7,9 +7,9 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Requests the list of all system-level domains and all reseller level domains.
-    /// If excludeReseller is specified, returns all the system-level domain names only.
-    /// If resellerId is specified, returns all the system-level domain names and the given reseller's domains.
+    /// Requests the list of all matching system-level domains and all matching reseller level domains.
+    /// If excludeReseller is specified, returns all matching system-level domain names only.
+    /// If resellerId is specified, returns all matching system-level domain names and the given reseller's domains.
     /// If reseller administrator sends the request and resellerId is not specified, the administrator's resellerId is used.
     /// 
     /// The response is either SystemDomainGetListResponse22 or ErrorResponse.
@@ -17,13 +17,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following elements are only used in AS data mode:
     /// includeReseller
     /// resellerId
+    /// 
+    /// Replaced by SystemDomainGetListRequest22V2 in AS data mode.
     /// <see cref="SystemDomainGetListResponse22"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemDomainGetListRequest22V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:8422""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26408""}]")]
     public class SystemDomainGetListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
@@ -31,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "excludeReseller", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8422")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26408")]
         public bool ExcludeReseller
         {
             get => _excludeReseller;
@@ -49,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8422")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26408")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ResellerId

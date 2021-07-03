@@ -8,12 +8,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemLicensingGetSystemLicenseListRequest22.
+    /// Replaced by: SystemLicensingGetSystemLicenseListResponse22V2.
     /// <see cref="SystemLicensingGetSystemLicenseListRequest22"/>
+    /// <see cref="SystemLicensingGetSystemLicenseListResponse22V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10511""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:8553""}]")]
     public class SystemLicensingGetSystemLicenseListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "license", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10511")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:8553")]
         public List<BroadWorksConnector.Ocip.Models.SystemLicenseType22> License
         {
             get => _license;

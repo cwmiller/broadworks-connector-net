@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43910""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:49422""}]")]
     public class TimeInterval
     {
 
         private BroadWorksConnector.Ocip.Models.DayOfWeek _startDayOfWeek;
 
         [XmlElement(ElementName = "startDayOfWeek", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]
         public BroadWorksConnector.Ocip.Models.DayOfWeek StartDayOfWeek
         {
             get => _startDayOfWeek;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _startHour;
 
         [XmlElement(ElementName = "startHour", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]
         [MinInclusive(0)]
         [MaxInclusive(23)]
         public int StartHour
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _startMinute;
 
         [XmlElement(ElementName = "startMinute", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]
         [MinInclusive(0)]
         [MaxInclusive(59)]
         public int StartMinute
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.DayOfWeek _endDayOfWeek;
 
         [XmlElement(ElementName = "endDayOfWeek", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]
         public BroadWorksConnector.Ocip.Models.DayOfWeek EndDayOfWeek
         {
             get => _endDayOfWeek;
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _endHour;
 
         [XmlElement(ElementName = "endHour", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]
         [MinInclusive(0)]
         [MaxInclusive(23)]
         public int EndHour
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _endMinute;
 
         [XmlElement(ElementName = "endMinute", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43910")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]
         [MinInclusive(0)]
         [MaxInclusive(59)]
         public int EndMinute

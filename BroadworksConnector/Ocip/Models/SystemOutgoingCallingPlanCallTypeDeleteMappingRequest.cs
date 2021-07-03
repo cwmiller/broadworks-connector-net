@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:893""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:894""}]")]
     public class SystemOutgoingCallingPlanCallTypeDeleteMappingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:893")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:894")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _digitMap;
 
         [XmlElement(ElementName = "digitMap", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:893")]
+        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:894")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DigitMap

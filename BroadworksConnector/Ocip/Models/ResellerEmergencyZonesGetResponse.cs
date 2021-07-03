@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e71c2205fb31894f87810b330a85ede2:227""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e71c2205fb31894f87810b330a85ede2:228""}]")]
     public class ResellerEmergencyZonesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e71c2205fb31894f87810b330a85ede2:227")]
+        [Group(@"e71c2205fb31894f87810b330a85ede2:228")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultFromAddress

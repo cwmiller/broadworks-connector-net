@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a7ae3767516578250f020b627d8fe972:107""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a7ae3767516578250f020b627d8fe972:75""}]")]
     public class UserVideoAddOnModifyRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"a7ae3767516578250f020b627d8fe972:107")]
+        [Group(@"a7ae3767516578250f020b627d8fe972:75")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a7ae3767516578250f020b627d8fe972:107")]
+        [Group(@"a7ae3767516578250f020b627d8fe972:75")]
         public bool IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxOriginatingCallDelaySeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a7ae3767516578250f020b627d8fe972:107")]
+        [Group(@"a7ae3767516578250f020b627d8fe972:75")]
         public BroadWorksConnector.Ocip.Models.VideoAddOnMaxOriginatingCallDelaySeconds MaxOriginatingCallDelaySeconds
         {
             get => _maxOriginatingCallDelaySeconds;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"a7ae3767516578250f020b627d8fe972:107")]
+        [Group(@"a7ae3767516578250f020b627d8fe972:75")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;

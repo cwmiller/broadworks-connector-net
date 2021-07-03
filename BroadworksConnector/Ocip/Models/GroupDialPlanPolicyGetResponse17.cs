@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:3944""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2244""}]")]
     public class GroupDialPlanPolicyGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel _useSetting;
 
         [XmlElement(ElementName = "useSetting", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3944")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2244")]
         public BroadWorksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel UseSetting
         {
             get => _useSetting;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _requiresAccessCodeForPublicCalls;
 
         [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3944")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2244")]
         public bool RequiresAccessCodeForPublicCalls
         {
             get => _requiresAccessCodeForPublicCalls;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowE164PublicCalls;
 
         [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3944")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2244")]
         public bool AllowE164PublicCalls
         {
             get => _allowE164PublicCalls;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _preferE164NumberFormatForCallbackServices;
 
         [XmlElement(ElementName = "preferE164NumberFormatForCallbackServices", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3944")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2244")]
         public bool PreferE164NumberFormatForCallbackServices
         {
             get => _preferE164NumberFormatForCallbackServices;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3944")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2244")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PublicDigitMap
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3944")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2244")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PrivateDigitMap

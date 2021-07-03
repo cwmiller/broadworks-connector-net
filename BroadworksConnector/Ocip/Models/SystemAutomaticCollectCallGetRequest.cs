@@ -9,8 +9,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get system Automatic Collect Call service settings.
     /// The response is either SystemAutomaticCollectCallGetResponse or ErrorResponse.
+    /// 
+    /// Replaced by SystemAutomaticCollectCallGetRequest in AS mode.
     /// <see cref="SystemAutomaticCollectCallGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemAutomaticCollectCallGetRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]

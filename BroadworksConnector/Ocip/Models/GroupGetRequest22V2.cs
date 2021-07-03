@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get the profile for a group.
     /// The response is either a GroupGetResponse22V2 or an ErrorResponse.
+    /// 
+    /// Replaced by: GroupGetRequest22V3
     /// <see cref="GroupGetResponse22V2"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupGetRequest22V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:5229""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2387""}]")]
     public class GroupGetRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5229")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2387")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5229")]
+        [Group(@"de4d76f01f337fe4694212ec9f771753:2387")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:323""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:381""}]")]
     public class ServiceProviderAccessDeviceCustomTagGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _deviceCustomTagsTable;
 
         [XmlElement(ElementName = "deviceCustomTagsTable", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:323")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:381")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DeviceCustomTagsTable
         {
             get => _deviceCustomTagsTable;

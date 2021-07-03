@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:40128""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:40066""}]")]
     public class UserBroadWorksMobilityMobileIdentityGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Description
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _isPrimary;
 
         [XmlElement(ElementName = "isPrimary", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool IsPrimary
         {
             get => _isPrimary;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableAlerting;
 
         [XmlElement(ElementName = "enableAlerting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool EnableAlerting
         {
             get => _enableAlerting;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _alertAgentCalls;
 
         [XmlElement(ElementName = "alertAgentCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool AlertAgentCalls
         {
             get => _alertAgentCalls;
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _alertClickToDialCalls;
 
         [XmlElement(ElementName = "alertClickToDialCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool AlertClickToDialCalls
         {
             get => _alertClickToDialCalls;
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _alertGroupPagingCalls;
 
         [XmlElement(ElementName = "alertGroupPagingCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool AlertGroupPagingCalls
         {
             get => _alertGroupPagingCalls;
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useMobilityCallingLineID;
 
         [XmlElement(ElementName = "useMobilityCallingLineID", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool UseMobilityCallingLineID
         {
             get => _useMobilityCallingLineID;
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableDiversionInhibitor;
 
         [XmlElement(ElementName = "enableDiversionInhibitor", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool EnableDiversionInhibitor
         {
             get => _enableDiversionInhibitor;
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _requireAnswerConfirmation;
 
         [XmlElement(ElementName = "requireAnswerConfirmation", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool RequireAnswerConfirmation
         {
             get => _requireAnswerConfirmation;
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _broadworksCallControl;
 
         [XmlElement(ElementName = "broadworksCallControl", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool BroadworksCallControl
         {
             get => _broadworksCallControl;
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel _useSettingLevel;
 
         [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel UseSettingLevel
         {
             get => _useSettingLevel;
@@ -213,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _denyCallOriginations;
 
         [XmlElement(ElementName = "denyCallOriginations", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool DenyCallOriginations
         {
             get => _denyCallOriginations;
@@ -230,7 +230,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _denyCallTerminations;
 
         [XmlElement(ElementName = "denyCallTerminations", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool DenyCallTerminations
         {
             get => _denyCallTerminations;
@@ -247,7 +247,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _devicesToRing;
 
         [XmlElement(ElementName = "devicesToRing", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing DevicesToRing
         {
             get => _devicesToRing;
@@ -264,7 +264,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _includeSharedCallAppearance;
 
         [XmlElement(ElementName = "includeSharedCallAppearance", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool IncludeSharedCallAppearance
         {
             get => _includeSharedCallAppearance;
@@ -281,7 +281,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _includeBroadworksAnywhere;
 
         [XmlElement(ElementName = "includeBroadworksAnywhere", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool IncludeBroadworksAnywhere
         {
             get => _includeBroadworksAnywhere;
@@ -298,7 +298,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _includeExecutiveAssistant;
 
         [XmlElement(ElementName = "includeExecutiveAssistant", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool IncludeExecutiveAssistant
         {
             get => _includeExecutiveAssistant;
@@ -316,7 +316,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobileNumberAlerted", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> MobileNumberAlerted
@@ -335,7 +335,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _enableCallAnchoring;
 
         [XmlElement(ElementName = "enableCallAnchoring", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public bool EnableCallAnchoring
         {
             get => _enableCallAnchoring;
@@ -353,7 +353,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public BroadWorksConnector.Ocip.Models.ScheduleGlobalKey TimeSchedule
         {
             get => _timeSchedule;
@@ -371,7 +371,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40128")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40066")]
         public BroadWorksConnector.Ocip.Models.ScheduleGlobalKey HolidaySchedule
         {
             get => _holidaySchedule;

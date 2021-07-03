@@ -124,6 +124,24 @@ namespace BroadWorksConnector
         /// <summary>
         /// Modify the user's broadworks mobility service settings.
         /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        [Obsolete("This method is deprecated. Use UserBroadWorksMobilityModifyRequestAsync instead.")]
+        public static async Task<SuccessResponse> UserBroadWorksMobilityModifyRequest(this OcipClient client, UserBroadWorksMobilityModifyRequest request)
+        {
+            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
+        }
+
+        /// <summary>
+        /// Modify the user's broadworks mobility service settings.
+        /// The response is either a SuccessResponse or an ErrorResponse.
+        /// </summary>
+        public static async Task<SuccessResponse> UserBroadWorksMobilityModifyRequestAsync(this OcipClient client, UserBroadWorksMobilityModifyRequest request, CancellationToken cancellationToken = default)
+        {
+            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
+        }
+        /// <summary>
+        /// Modify the user's broadworks mobility service settings.
+        /// The response is either a SuccessResponse or an ErrorResponse.
         /// If the request modifies the mobilePhoneNumber and the new number does not belong to the appropriate Mobile Subscriber Directory Numbers pool, the request is rejected. For a service provider the number must belong to the group Mobile Subscriber Directory Numbers pool. For an enterprise user, the number must belong to the enterprise Mobile Subscriber Directory Numbers pool.
         /// If the request is executed by a user and modifies the mobilePhoneNumber, the request is rejected.
         /// </summary>
@@ -188,24 +206,6 @@ namespace BroadWorksConnector
         public static async Task<UserCustomRingbackUserGetCriteriaResponse16> UserCustomRingbackUserGetCriteriaRequest16Async(this OcipClient client, UserCustomRingbackUserGetCriteriaRequest16 request, CancellationToken cancellationToken = default)
         {
             return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as UserCustomRingbackUserGetCriteriaResponse16;
-        }
-        /// <summary>
-        /// Modify the user's broadworks mobility service settings.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// </summary>
-        [Obsolete("This method is deprecated. Use UserBroadWorksMobilityModifyRequestAsync instead.")]
-        public static async Task<SuccessResponse> UserBroadWorksMobilityModifyRequest(this OcipClient client, UserBroadWorksMobilityModifyRequest request)
-        {
-            return await client.CallAsync(request).ConfigureAwait(false) as SuccessResponse;
-        }
-
-        /// <summary>
-        /// Modify the user's broadworks mobility service settings.
-        /// The response is either a SuccessResponse or an ErrorResponse.
-        /// </summary>
-        public static async Task<SuccessResponse> UserBroadWorksMobilityModifyRequestAsync(this OcipClient client, UserBroadWorksMobilityModifyRequest request, CancellationToken cancellationToken = default)
-        {
-            return await client.CallAsync(request, cancellationToken).ConfigureAwait(false) as SuccessResponse;
         }
         /// <summary>
         /// Modify a criteria for the user's custom ringback

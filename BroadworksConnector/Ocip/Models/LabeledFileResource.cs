@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2510"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2512""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2979"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2981""}]}]")]
     public class LabeledFileResource
     {
 
         private string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2510")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2979")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Description
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _sourceFileName;
 
         [XmlElement(ElementName = "sourceFileName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2512")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2981")]
         [MinLength(1)]
         public string SourceFileName
         {
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _content;
 
         [XmlElement(ElementName = "content", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2512")]
+        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2981")]
         public string Content
         {
             get => _content;

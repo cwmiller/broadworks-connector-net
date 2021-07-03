@@ -9,21 +9,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to GroupMeetMeConferencingGetInstanceRequest.
     /// Contains the service profile information and a table of assigned hosts.
-    /// The table has column headings: "User Id", "Last Name", "First Name", "Hiragana Last Name", and "Hiragana
-    /// First Name".
+    /// The table has column headings: "User Id", "Last Name", "First Name", "Hiragana Last Name", and "Hiragana First Name".
     /// <see cref="GroupMeetMeConferencingGetInstanceRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19775""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11035""}]")]
     public class GroupMeetMeConferencingGetInstanceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19775")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11035")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -40,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
         [XmlElement(ElementName = "allocatedPorts", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19775")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11035")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts
         {
             get => _allocatedPorts;
@@ -58,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19775")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11035")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -77,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _allowIndividualOutDial;
 
         [XmlElement(ElementName = "allowIndividualOutDial", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19775")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11035")]
         public bool AllowIndividualOutDial
         {
             get => _allowIndividualOutDial;
@@ -95,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "operatorNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19775")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11035")]
         [MinLength(1)]
         [MaxLength(161)]
         public string OperatorNumber
@@ -114,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.C.OCITable _conferenceHostUserTable;
 
         [XmlElement(ElementName = "conferenceHostUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19775")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:11035")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ConferenceHostUserTable
         {
             get => _conferenceHostUserTable;

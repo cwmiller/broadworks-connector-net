@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:15531""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27282""}]")]
     public class SystemHuntGroupGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _anonymousInsteadOfPrivateCLID;
 
         [XmlElement(ElementName = "anonymousInsteadOfPrivateCLID", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15531")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27282")]
         public bool AnonymousInsteadOfPrivateCLID
         {
             get => _anonymousInsteadOfPrivateCLID;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _removeHuntGroupNameFromCLID;
 
         [XmlElement(ElementName = "removeHuntGroupNameFromCLID", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15531")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27282")]
         public bool RemoveHuntGroupNameFromCLID
         {
             get => _removeHuntGroupNameFromCLID;

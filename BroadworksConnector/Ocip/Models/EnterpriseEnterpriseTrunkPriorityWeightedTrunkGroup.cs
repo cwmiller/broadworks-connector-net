@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1832""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1911""}]")]
     public class EnterpriseEnterpriseTrunkPriorityWeightedTrunkGroup
     {
 
         private BroadWorksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey _trunkGroup;
 
         [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1832")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1911")]
         public BroadWorksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey TrunkGroup
         {
             get => _trunkGroup;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1832")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1911")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int Priority
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _weight;
 
         [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1832")]
+        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1911")]
         [MinInclusive(1)]
         [MaxInclusive(65536)]
         public int Weight

@@ -10,10 +10,8 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to a SystemTreatmentMappingCallBlockingServiceGetListRequest19sp1.
     /// Contains a table with one row per mapping.
     /// The table columns are: "Service", "Treatment Id".
-    /// The Service column list the service or policy which is using corresponding treatment, and can be OCP,
-    /// EOCP, ICP, ACR,
-    /// SCR, SCA, AAC, Intercept, PTT, CommBarring, SAC, IncomingCommBarring, HierCommBarring,
-    /// IncomHierCommBarring,
+    /// The Service column list the service or policy which is using corresponding treatment, and can be OCP, EOCP, ICP, ACR,
+    /// SCR, SCA, AAC, Intercept, PTT, CommBarring, SAC, IncomingCommBarring, HierCommBarring, IncomHierCommBarring,
     /// BWMobilityDenyOrig, BWMobilityDenyTerm, ETRouteExhaust, CallPark, NumberPortability.
     /// 
     /// Replaced by: SystemTreatmentMappingCallBlockingServiceGetListResponse22
@@ -23,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:39989""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35747""}]")]
     public class SystemTreatmentMappingCallBlockingServiceGetListResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.C.OCITable _treatmentMappingTable;
 
         [XmlElement(ElementName = "treatmentMappingTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39989")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35747")]
         public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentMappingTable
         {
             get => _treatmentMappingTable;

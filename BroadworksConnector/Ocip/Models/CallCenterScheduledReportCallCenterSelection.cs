@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7590""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7623""}]")]
     public class CallCenterScheduledReportCallCenterSelection
     {
 
         private bool _allCallCenter;
 
         [XmlElement(ElementName = "allCallCenter", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7590")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7623")]
         public bool AllCallCenter
         {
             get => _allCallCenter;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _serviceUserId = new List<string>();
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7590")]
+        [Group(@"e2c537e3e39483b96620673a7012ffdd:7623")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> ServiceUserId

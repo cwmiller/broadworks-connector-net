@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19531""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10071""}]")]
     public class GroupGroupPagingGetInstanceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19531")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10071")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _confirmationToneTimeoutSeconds;
 
         [XmlElement(ElementName = "confirmationToneTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19531")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10071")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int ConfirmationToneTimeoutSeconds
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _deliverOriginatorCLIDInstead;
 
         [XmlElement(ElementName = "deliverOriginatorCLIDInstead", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19531")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10071")]
         public bool DeliverOriginatorCLIDInstead
         {
             get => _deliverOriginatorCLIDInstead;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "originatorCLIDPrefix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19531")]
+        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10071")]
         [MinLength(1)]
         [MaxLength(30)]
         public string OriginatorCLIDPrefix

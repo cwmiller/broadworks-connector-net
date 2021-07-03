@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12545""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13672""}]")]
     public class SystemOCIReportingAddMessageNameListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
     {
 
         private string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13672")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         private List<string> _messageNameStartsWith = new List<string>();
 
         [XmlElement(ElementName = "messageNameStartsWith", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12545")]
+        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13672")]
         [MinLength(1)]
         [MaxLength(256)]
         public List<string> MessageNameStartsWith
