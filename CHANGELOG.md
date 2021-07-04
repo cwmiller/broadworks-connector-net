@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.4.0] - 2021-07-04
+### Changed
+- Updated all models using `Rel_24.0_1.944` schema files.
+
 ## [1.3.0] - 2021-03-27
 ### Added
 - Added options to `OcipClientOptions` to adjust the request and response text encoding used by the TCP transport. [@Rogn](https://github.com/Rogn)
@@ -83,6 +87,8 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[1.4.0]: https://github.com/cwmiller/broadworks-connector-net/compare/1.3.0...1.4.0
+[1.3.0]: https://github.com/cwmiller/broadworks-connector-net/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/cwmiller/broadworks-connector-net/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/cwmiller/broadworks-connector-net/compare/1.0.3...1.1.0
 [1.0.3]: https://github.com/cwmiller/broadworks-connector-net/compare/1.0.2...1.0.3
