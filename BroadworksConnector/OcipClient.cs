@@ -291,6 +291,11 @@ namespace BroadWorksConnector
 
             var responseXml = await Transport.SendAsync(xml, cancellationToken).ConfigureAwait(false);
 
+            if (responseXml.Length == 0)
+            {
+                throw new BadResponseException("Response is empty.");
+            }
+
             try
             {
                 response = _serializer.Deserialize(responseXml);
