@@ -66,11 +66,11 @@ namespace BroadWorksConnector.Tests
                 }
             };
 
-            var document = new BroadsoftDocument()
+            var document = new BroadsoftDocument<GroupOutgoingCallingPlanRedirectingModifyListRequest>()
             {
                 SessionId = "636956952081463406",
                 Protocol = "OCI",
-                Command = new List<OCICommand>() { request }
+                Command = new List<GroupOutgoingCallingPlanRedirectingModifyListRequest>() { request }
             };
 
             var xml = _serializer.Serialize(document);
@@ -100,11 +100,11 @@ namespace BroadWorksConnector.Tests
                 }
             };
 
-            var document = new BroadsoftDocument()
+            var document = new BroadsoftDocument<UserGetListInGroupRequest>()
             {
                 SessionId = "acbdf1234567890",
                 Protocol = "OCI",
-                Command = new List<OCICommand>() { request }
+                Command = new List<UserGetListInGroupRequest>() { request }
             };
 
             var xml = _serializer.Serialize(document);
@@ -131,11 +131,11 @@ namespace BroadWorksConnector.Tests
                 }
             };
 
-            var document = new BroadsoftDocument()
+            var document = new BroadsoftDocument<UserServiceAssignListRequest>()
             {
                 SessionId = "acbdf1234567890",
                 Protocol = "OCI",
-                Command = new List<OCICommand>() { request }
+                Command = new List<UserServiceAssignListRequest>() { request }
             };
 
             var xml = _serializer.Serialize(document);
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Tests
             var xmlData = File.ReadAllBytes(@"test-data/UserGetListInGroupResponse.xml");
             var xml = Encoding.UTF8.GetString(xmlData);
 
-            var document = _serializer.Deserialize(xml);
+            var document = _serializer.Deserialize<UserGetListInGroupResponse>(xml);
 
             Assert.IsType<UserGetListInGroupResponse>(document.Command.First());
 
@@ -197,7 +197,7 @@ namespace BroadWorksConnector.Tests
             var xmlData = File.ReadAllBytes(@"test-data/LoginResponse14sp4.xml");
             var xml = Encoding.UTF8.GetString(xmlData);
 
-            var document = _serializer.Deserialize(xml);
+            var document = _serializer.Deserialize<LoginResponse14sp4>(xml);
 
             Assert.IsType<LoginResponse14sp4>(document.Command.First());
 
@@ -223,11 +223,11 @@ namespace BroadWorksConnector.Tests
                 PhoneNumber = null
             };
 
-            var document = new BroadsoftDocument()
+            var document = new BroadsoftDocument<UserModifyRequest22>()
             {
                 SessionId = "636956952081463406",
                 Protocol = "OCI",
-                Command = new List<OCICommand>() { request }
+                Command = new List<UserModifyRequest22>() { request }
             };
 
             var xml = _serializer.Serialize(document);
@@ -250,11 +250,11 @@ namespace BroadWorksConnector.Tests
                 Department = null
             };
 
-            var document = new BroadsoftDocument()
+            var document = new BroadsoftDocument<UserModifyRequest22>()
             {
                 SessionId = "636956952081463406",
                 Protocol = "OCI",
-                Command = new List<OCICommand>() { request }
+                Command = new List<UserModifyRequest22>() { request }
             };
 
             var xml = _serializer.Serialize(document);
@@ -272,7 +272,7 @@ namespace BroadWorksConnector.Tests
             var xmlData = File.ReadAllBytes(@"test-data/ErrorResponse.xml");
             var xml = Encoding.UTF8.GetString(xmlData);
 
-            var document = _serializer.Deserialize(xml);
+            var document = _serializer.Deserialize<ErrorResponse>(xml);
 
             Assert.IsType<ErrorResponse>(document.Command.First());
         }
@@ -283,7 +283,7 @@ namespace BroadWorksConnector.Tests
             var xmlData = File.ReadAllBytes(@"test-data/SuccessResponse.xml");
             var xml = Encoding.UTF8.GetString(xmlData);
 
-            var document = _serializer.Deserialize(xml);
+            var document = _serializer.Deserialize<SuccessResponse>(xml);
 
             Assert.IsType<SuccessResponse>(document.Command.First());
         }

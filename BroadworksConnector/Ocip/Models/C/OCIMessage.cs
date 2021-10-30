@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models.C
     [XmlRoot(Namespace = "C")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:37"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:38""}]}]")]
-    public class OCIMessage
+    public class OCIMessage<T> where T : OCICommand
     {
 
         private string _sessionId;
@@ -121,11 +121,11 @@ namespace BroadWorksConnector.Ocip.Models.C
         [XmlIgnore]
         protected bool TrackingIdSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.C.OCICommand> _command = new List<BroadWorksConnector.Ocip.Models.C.OCICommand>();
+        private List<T> _command = new List<T>();
 
         [XmlElement(ElementName = "command", IsNullable = false, Namespace = "")]
         [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:37")]
-        public List<BroadWorksConnector.Ocip.Models.C.OCICommand> Command
+        public List<T> Command
         {
             get => _command;
             set

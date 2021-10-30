@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public string Serialize(BroadsoftDocument document)
+        public string Serialize<T>(BroadsoftDocument<T> document) where T : OCICommand
         {
             var rootElement = new XDocument(
                 new XDeclaration("1.0", "utf-8", null),
@@ -41,11 +41,11 @@ namespace BroadWorksConnector.Ocip
         /// </summary>
         /// <param name="xml"></param>
         /// <returns></returns>
-        public BroadsoftDocument Deserialize(string xml)
+        public BroadsoftDocument<T> Deserialize<T>(string xml) where T : OCICommand
         {
             var document = XDocument.Parse(xml);
 
-            return DeserializeElement(document.Root, typeof(BroadsoftDocument)) as BroadsoftDocument;
+            return DeserializeElement(document.Root, typeof(BroadsoftDocument<T>)) as BroadsoftDocument<T>;
         }
 
         /// <summary>
@@ -54,15 +54,14 @@ namespace BroadWorksConnector.Ocip
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        private XElement SerializeRoot(BroadsoftDocument document)
+        private XElement SerializeRoot<T>(BroadsoftDocument<T> document) where T : OCICommand
         {
-            //var objType = document.GetType();
-            var documentType = typeof(BroadsoftDocument);
+            var documentType = typeof(BroadsoftDocument<T>);
 
             var ns = XNamespace.None;
 
             // By default, element name will by the class name
-            var elementName = documentType.Name;
+            var elementName = "BroadsoftDocument";
 
             // XmlRoot attribute will contain useful information such as namespace
             var xmlRootAttr = AttributeUtil.Get<XmlRootAttribute>(documentType);
