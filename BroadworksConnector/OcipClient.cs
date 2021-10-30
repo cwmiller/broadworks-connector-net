@@ -81,6 +81,13 @@ namespace BroadWorksConnector
             }
         }
 
+        /// <summary>
+        /// Execute a single request and receive the response
+        /// </summary>
+        /// <typeparam name="TResponse"></typeparam>
+        /// <param name="command"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<TResponse> CallAsync<TResponse>(OCIRequest<TResponse> command, CancellationToken cancellationToken = default) where TResponse : OCICommand
         {
             if (UserDetails == null)
@@ -147,71 +154,11 @@ namespace BroadWorksConnector
                 {
                     if (Options.MinServerVersion == ServerVersion.R22)
                     {
-                        // Release 22 login will return reseller information if logging in as a reseller
-                        var loginRequest = new LoginRequest22V2
-                        {
-                            UserId = _username,
-                            Password = _password
-                        };
-
-                        var loginResponseR = (await ExecuteCommandsAsync(new List<LoginRequest22V2> { loginRequest }, cancellationToken).ConfigureAwait(false));
-                        
-                        var loginResponse = loginResponseR.First();
-
-                        UserDetails = new UserDetails
-                        {
-                            LoginType = loginResponse.LoginType.ToString(),
-                            Locale = loginResponse.Locale,
-                            Encoding = loginResponse.Encoding,
-                            GroupId = loginResponse.GroupId,
-                            ServiceProviderId = loginResponse.ServiceProviderId,
-                            IsEnterprise = loginResponse.IsEnterprise,
-                            PasswordExpiresDays = loginResponse.PasswordExpiresDays,
-                            UserDomain = loginResponse.UserDomain,
-                            ResellerId = loginResponse.ResellerId
-                        };
+                        UserDetails = await Login22Async(cancellationToken);
                     }
                     else
                     {
-                        var authRequest = new AuthenticationRequest
-                        {
-                            UserId = _username
-                        };
-
-                        var authResponseR = (await ExecuteCommandsAsync(new List<AuthenticationRequest> { authRequest }, cancellationToken).ConfigureAwait(false));
-
-                        var authResponse = authResponseR.First();
-                        string signedPassword = null;
-
-                        if (authResponse.PasswordAlgorithm == DigitalSignatureAlgorithm.MD5)
-                        {
-                            signedPassword = Md5($"{authResponse.Nonce}:{Sha1(_password)}");
-                        }
-                        else
-                        {
-                            throw new LoginException("Only MD5 supported for signing");
-                        }
-
-                        // Release 14sp4 if the default login method unless R22 is specified
-                        var loginRequest = new LoginRequest14sp4
-                        {
-                            UserId = _username,
-                            SignedPassword = signedPassword
-                        };
-
-                        var loginResponse = (await ExecuteCommandsAsync(new List<LoginRequest14sp4> { loginRequest }, cancellationToken).ConfigureAwait(false)).First();
-
-                        UserDetails = new UserDetails
-                        {
-                            LoginType = loginResponse.LoginType.ToString(),
-                            Locale = loginResponse.Locale,
-                            Encoding = loginResponse.Encoding,
-                            GroupId = loginResponse.GroupId,
-                            ServiceProviderId = loginResponse.ServiceProviderId,
-                            IsEnterprise = loginResponse.IsEnterprise,
-                            PasswordExpiresDays = loginResponse.PasswordExpiresDays,
-                            UserDomain = loginResponse.UserDomain
-                        };
+                        UserDetails = await Login14Async(cancellationToken);
                     }
                 }
                 catch (ErrorResponseException e)
@@ -225,6 +172,82 @@ namespace BroadWorksConnector
             }
 
             return UserDetails;
+        }
+
+        /// <summary>
+        /// Perform login via V22 method
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        private async Task<UserDetails> Login22Async(CancellationToken cancellationToken = default)
+        {
+            // Release 22 login will return reseller information if logging in as a reseller
+            var loginRequest = new LoginRequest22V2
+            {
+                UserId = _username,
+                Password = _password
+            };
+
+            var loginResponse = (await ExecuteCommandsAsync(new List<LoginRequest22V2> { loginRequest }, cancellationToken).ConfigureAwait(false)).First();
+
+            return new UserDetails
+            {
+                LoginType = loginResponse.LoginType.ToString(),
+                Locale = loginResponse.Locale,
+                Encoding = loginResponse.Encoding,
+                GroupId = loginResponse.GroupId,
+                ServiceProviderId = loginResponse.ServiceProviderId,
+                IsEnterprise = loginResponse.IsEnterprise,
+                PasswordExpiresDays = loginResponse.PasswordExpiresDays,
+                UserDomain = loginResponse.UserDomain,
+                ResellerId = loginResponse.ResellerId
+            };
+        }
+
+        /// <summary>
+        /// Perform login via V14 method
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        private async Task<UserDetails> Login14Async(CancellationToken cancellationToken = default)
+        {
+            var authRequest = new AuthenticationRequest
+            {
+                UserId = _username
+            };
+
+            var authResponse = (await ExecuteCommandsAsync(new List<AuthenticationRequest> { authRequest }, cancellationToken).ConfigureAwait(false)).First();
+
+            string signedPassword = null;
+
+            if (authResponse.PasswordAlgorithm == DigitalSignatureAlgorithm.MD5)
+            {
+                signedPassword = Md5($"{authResponse.Nonce}:{Sha1(_password)}");
+            }
+            else
+            {
+                throw new LoginException("Only MD5 supported for signing");
+            }
+
+            var loginRequest = new LoginRequest14sp4
+            {
+                UserId = _username,
+                SignedPassword = signedPassword
+            };
+
+            var loginResponse = (await ExecuteCommandsAsync(new List<LoginRequest14sp4> { loginRequest }, cancellationToken).ConfigureAwait(false)).First();
+
+            return new UserDetails
+            {
+                LoginType = loginResponse.LoginType.ToString(),
+                Locale = loginResponse.Locale,
+                Encoding = loginResponse.Encoding,
+                GroupId = loginResponse.GroupId,
+                ServiceProviderId = loginResponse.ServiceProviderId,
+                IsEnterprise = loginResponse.IsEnterprise,
+                PasswordExpiresDays = loginResponse.PasswordExpiresDays,
+                UserDomain = loginResponse.UserDomain
+            };
         }
 
         /// <summary>
