@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7a925e891158dfa3cb1319e045608894:241""}]")]
-    public class GroupCallParkGetAvailableUserPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupCallParkGetAvailableUserPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallParkGetAvailableUserPagedSortedListResponse>
     {
 
         private string _serviceProviderId;

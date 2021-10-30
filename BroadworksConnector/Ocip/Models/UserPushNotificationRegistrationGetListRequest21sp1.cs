@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3481"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3482""}]}]")]
-    public class UserPushNotificationRegistrationGetListRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class UserPushNotificationRegistrationGetListRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPushNotificationRegistrationGetListResponse21sp1>
     {
 
         private string _registrationId;

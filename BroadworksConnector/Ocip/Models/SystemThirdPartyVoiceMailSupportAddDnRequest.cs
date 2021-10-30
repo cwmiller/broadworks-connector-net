@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3c311aa5c89c0cf5b46e1cdefd5bc387:105""}]")]
-    public class SystemThirdPartyVoiceMailSupportAddDnRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemThirdPartyVoiceMailSupportAddDnRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _phoneNumber;

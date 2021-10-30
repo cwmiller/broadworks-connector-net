@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:256""}]")]
-    public class GroupCollaborateBridgeGetAvailableUserPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupCollaborateBridgeGetAvailableUserPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCollaborateBridgeGetAvailableUserPagedSortedListResponse>
     {
 
         private string _serviceProviderId;

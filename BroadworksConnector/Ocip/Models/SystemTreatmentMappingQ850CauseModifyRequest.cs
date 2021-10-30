@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19087""}]")]
-    public class SystemTreatmentMappingQ850CauseModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemTreatmentMappingQ850CauseModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private int _q850CauseValue;

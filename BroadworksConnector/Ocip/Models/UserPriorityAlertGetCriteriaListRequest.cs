@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""750c600a9467af6ee77c0dbca839453e:88""}]")]
-    public class UserPriorityAlertGetCriteriaListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class UserPriorityAlertGetCriteriaListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPriorityAlertGetCriteriaListResponse>
     {
 
         private string _userId;

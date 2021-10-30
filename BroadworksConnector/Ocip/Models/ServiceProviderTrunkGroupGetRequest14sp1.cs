@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19187""}]")]
-    public class ServiceProviderTrunkGroupGetRequest14sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class ServiceProviderTrunkGroupGetRequest14sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderTrunkGroupGetResponse14sp1>
     {
 
         private string _serviceProviderId;

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b3afea8308b7fdaab8d385357ca9c2d:167""}]")]
-    public class SystemSecurityClassificationGetClassificationTrunkGroupUsageListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemSecurityClassificationGetClassificationTrunkGroupUsageListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemSecurityClassificationGetClassificationTrunkGroupUsageListResponse>
     {
 
         private string _securityClassification;

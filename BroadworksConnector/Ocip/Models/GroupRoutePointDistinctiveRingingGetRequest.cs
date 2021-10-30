@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:240""}]")]
-    public class GroupRoutePointDistinctiveRingingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupRoutePointDistinctiveRingingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupRoutePointDistinctiveRingingGetResponse>
     {
 
         private string _serviceUserId;

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8df43dca23d99d8ab44c0082aadfbe0:101""}]")]
-    public class UserExternalCustomRingbackGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class UserExternalCustomRingbackGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserExternalCustomRingbackGetResponse>
     {
 
         private string _userId;

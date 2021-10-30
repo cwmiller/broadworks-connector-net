@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4a26e5fa0592a0fd3b4e60e9432f8588:43""}]")]
-    public class SystemPhysicalLocationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemPhysicalLocationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemPhysicalLocationGetResponse>
     {
 
     }

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:819""}]")]
-    public class UserMeetMeConferencingGetConferenceRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class UserMeetMeConferencingGetConferenceRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserMeetMeConferencingGetConferenceResponse23>
     {
 
         private string _userId;

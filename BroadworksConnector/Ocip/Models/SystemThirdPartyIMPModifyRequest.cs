@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""94766dfbb33c7fae7c6022754ea24721:71""}]")]
-    public class SystemThirdPartyIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemThirdPartyIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _serviceNetAddress;

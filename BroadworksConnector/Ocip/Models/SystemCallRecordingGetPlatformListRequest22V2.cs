@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:255""}]")]
-    public class SystemCallRecordingGetPlatformListRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemCallRecordingGetPlatformListRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallRecordingGetPlatformListResponse22V2>
     {
 
         private bool _excludeReseller;

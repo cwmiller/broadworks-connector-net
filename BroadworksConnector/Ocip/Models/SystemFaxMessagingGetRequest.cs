@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f46f967f937c7dc89ddb3db423383aa4:44""}]")]
-    public class SystemFaxMessagingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemFaxMessagingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemFaxMessagingGetResponse>
     {
 
     }

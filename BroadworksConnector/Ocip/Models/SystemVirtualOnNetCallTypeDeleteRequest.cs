@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:261""}]")]
-    public class SystemVirtualOnNetCallTypeDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemVirtualOnNetCallTypeDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _virtualOnNetCallTypeName;

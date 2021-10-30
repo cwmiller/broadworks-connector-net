@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""045ce951b3e25dec090606af4ad50c63:90""}]")]
-    public class GroupCallPickupGetAvailableUserListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupCallPickupGetAvailableUserListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallPickupGetAvailableUserListResponse>
     {
 
         private string _serviceProviderId;

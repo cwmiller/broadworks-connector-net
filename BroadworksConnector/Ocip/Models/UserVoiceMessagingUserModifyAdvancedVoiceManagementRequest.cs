@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:1966"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:1972"",""optional"":true}]}]")]
-    public class UserVoiceMessagingUserModifyAdvancedVoiceManagementRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class UserVoiceMessagingUserModifyAdvancedVoiceManagementRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _userId;

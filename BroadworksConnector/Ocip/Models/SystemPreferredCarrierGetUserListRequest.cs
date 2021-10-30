@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:471""}]")]
-    public class SystemPreferredCarrierGetUserListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemPreferredCarrierGetUserListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemPreferredCarrierGetUserListResponse>
     {
 
         private string _carrier;

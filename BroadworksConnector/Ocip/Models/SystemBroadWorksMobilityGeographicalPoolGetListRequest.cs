@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:779""}]")]
-    public class SystemBroadWorksMobilityGeographicalPoolGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemBroadWorksMobilityGeographicalPoolGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemBroadWorksMobilityGeographicalPoolGetListResponse>
     {
 
         private string _countryCode;

@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
 
-    public class SystemCallRecordingGetPlatformListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemCallRecordingGetPlatformListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallRecordingGetPlatformListResponse>
     {
 
     }

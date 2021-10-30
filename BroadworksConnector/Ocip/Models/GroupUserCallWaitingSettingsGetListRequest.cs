@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:8699"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:8703""}]}]")]
-    public class GroupUserCallWaitingSettingsGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupUserCallWaitingSettingsGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupUserCallWaitingSettingsGetListResponse>
     {
 
         private string _serviceProviderId;

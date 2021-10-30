@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:443""}]")]
-    public class EnterpriseCallCenterAgentThresholdProfileGetAvailableAgentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class EnterpriseCallCenterAgentThresholdProfileGetAvailableAgentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.EnterpriseCallCenterAgentThresholdProfileGetAvailableAgentListResponse>
     {
 
         private string _serviceProviderId;

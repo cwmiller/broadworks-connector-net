@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
 
-    public class SystemThirdPartyIMPGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemThirdPartyIMPGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemThirdPartyIMPGetResponse>
     {
 
     }

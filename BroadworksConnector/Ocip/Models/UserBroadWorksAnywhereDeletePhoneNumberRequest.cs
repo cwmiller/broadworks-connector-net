@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:314""}]")]
-    public class UserBroadWorksAnywhereDeletePhoneNumberRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class UserBroadWorksAnywhereDeletePhoneNumberRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _userId;

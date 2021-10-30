@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:657""}]")]
-    public class UserSingleSignOnCreateDeviceTokenRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class UserSingleSignOnCreateDeviceTokenRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSingleSignOnCreateDeviceTokenResponse>
     {
 
         private string _userId;

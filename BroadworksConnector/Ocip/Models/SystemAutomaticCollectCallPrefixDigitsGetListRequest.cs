@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:129""}]")]
-    public class SystemAutomaticCollectCallPrefixDigitsGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemAutomaticCollectCallPrefixDigitsGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAutomaticCollectCallPrefixDigitsGetListResponse>
     {
 
         private string _countryCode;

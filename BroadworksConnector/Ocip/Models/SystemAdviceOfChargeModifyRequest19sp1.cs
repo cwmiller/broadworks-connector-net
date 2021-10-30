@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a69fde15f3aa7494d83b57461a7a70bb:267""}]")]
-    public class SystemAdviceOfChargeModifyRequest19sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemAdviceOfChargeModifyRequest19sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private int _delayBetweenNotificationSeconds;

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e994db048e7467a66936aa2afd5ac740:44""}]")]
-    public class UserDirectedCallPickupWithBargeInGetRequest14sp7 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class UserDirectedCallPickupWithBargeInGetRequest14sp7 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserDirectedCallPickupWithBargeInGetResponse14sp7>
     {
 
         private string _userId;
