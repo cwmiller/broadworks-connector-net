@@ -82,7 +82,7 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// Execute a single request and receive the response
+        /// Execute a single command and receive the response
         /// </summary>
         /// <typeparam name="TResponse"></typeparam>
         /// <param name="command"></param>
@@ -95,7 +95,7 @@ namespace BroadWorksConnector
                 await LoginAsync(cancellationToken).ConfigureAwait(false);
             }
 
-            var responses = await ExecuteCommandsAsync(new List<OCIRequest<TResponse>> { command }, cancellationToken).ConfigureAwait(false);
+            var responses = await ExecuteCommandsAsync<TResponse>(new List<OCIRequest<TResponse>> { command }, cancellationToken).ConfigureAwait(false);
 
             return responses.First();
         }
@@ -108,17 +108,23 @@ namespace BroadWorksConnector
         /// <returns></returns>
         /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
         /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
-        /*
-        public async Task<IEnumerable<TResponse>> CallAllAsync<TResponse>(IEnumerable<OCIRequest<TResponse>> commands, CancellationToken cancellationToken = default) where TResponse : OCICommand
+        public async Task<BatchResult> CallAllAsync(IEnumerable<OCIRequest> commands, CancellationToken cancellationToken = default)
         {
+            // Do not allow duplicates
+            if (commands.Distinct().Count() != commands.Count())
+            {
+                throw new ArgumentException("Commands list cannot have any duplicate entries.", nameof(commands));
+            }
+
             if (UserDetails == null)
             {
                 await LoginAsync(cancellationToken).ConfigureAwait(false);
             }
 
-            return await ExecuteCommandsAsync(commands, cancellationToken).ConfigureAwait(false);
+            var responses = await ExecuteCommandsAsync<OCIResponse>(commands, cancellationToken).ConfigureAwait(false);
+
+            return new BatchResult(commands, responses);
         }
-        */
 
         /// <summary>
         /// All sessions require a session ID to be generated. This is created once and used for all requests.
@@ -188,7 +194,7 @@ namespace BroadWorksConnector
                 Password = _password
             };
 
-            var loginResponse = (await ExecuteCommandsAsync(new List<LoginRequest22V2> { loginRequest }, cancellationToken).ConfigureAwait(false)).First();
+            var loginResponse = (await ExecuteCommandsAsync<LoginResponse22V2>(new List<LoginRequest22V2> { loginRequest }, cancellationToken).ConfigureAwait(false)).First();
 
             return new UserDetails
             {
@@ -216,7 +222,7 @@ namespace BroadWorksConnector
                 UserId = _username
             };
 
-            var authResponse = (await ExecuteCommandsAsync(new List<AuthenticationRequest> { authRequest }, cancellationToken).ConfigureAwait(false)).First();
+            var authResponse = (await ExecuteCommandsAsync<AuthenticationResponse>(new List<AuthenticationRequest> { authRequest }, cancellationToken).ConfigureAwait(false)).First();
 
             string signedPassword = null;
 
@@ -235,7 +241,7 @@ namespace BroadWorksConnector
                 SignedPassword = signedPassword
             };
 
-            var loginResponse = (await ExecuteCommandsAsync(new List<LoginRequest14sp4> { loginRequest }, cancellationToken).ConfigureAwait(false)).First();
+            var loginResponse = (await ExecuteCommandsAsync<LoginResponse14sp4>(new List<LoginRequest14sp4> { loginRequest }, cancellationToken).ConfigureAwait(false)).First();
 
             return new UserDetails
             {
@@ -275,7 +281,7 @@ namespace BroadWorksConnector
         /// <exception cref="BadResponseException">Thrown when server returns something that isn't expected.</exception>
         /// <exception cref="ErrorResponseException">Thrown when server returns an ErrorResponse object.</exception>
         /// <returns></returns>
-        private async Task<IEnumerable<TResponse>> ExecuteCommandsAsync<TResponse>(IEnumerable<OCIRequest<TResponse>> commands, CancellationToken cancellationToken = default) where TResponse : OCICommand
+        private async Task<IEnumerable<TResponse>> ExecuteCommandsAsync<TResponse>(IEnumerable<OCIRequest> commands, CancellationToken cancellationToken = default) where TResponse : OCICommand
         {
             ValidateCommands(commands);
 
