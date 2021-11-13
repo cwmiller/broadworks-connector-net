@@ -90,6 +90,11 @@ namespace BroadWorksConnector
         /// <returns></returns>
         public async Task<TResponse> CallAsync<TResponse>(OCIRequest<TResponse> command, CancellationToken cancellationToken = default) where TResponse : OCICommand
         {
+            if (command == null)
+            {
+                throw new ArgumentNullException(nameof(command), "Command cannot be NULL");
+            }
+
             if (UserDetails == null)
             {
                 await LoginAsync(cancellationToken).ConfigureAwait(false);
@@ -110,6 +115,16 @@ namespace BroadWorksConnector
         /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
         public async Task<BatchResult> CallAllAsync(IEnumerable<OCIRequest> commands, CancellationToken cancellationToken = default)
         {
+            if (commands == null)
+            {
+                throw new ArgumentNullException(nameof(commands), "Command list cannot be NULL");
+            }
+
+            if (commands.Count() == 0)
+            {
+                throw new ArgumentException("Commands list cannot be empty.", nameof(commands));
+            }
+
             // Do not allow duplicates
             if (commands.Distinct().Count() != commands.Count())
             {
