@@ -3867,7 +3867,11 @@ namespace BroadWorksConnector.Ocip.Models.C
 
     public abstract class OCIRequest : BroadWorksConnector.Ocip.Models.C.OCICommand
     {
-
+        /// <summary>
+        /// Internal ID for tracking requests
+        /// </summary>
+        [XmlIgnore]
+        internal Guid RequestGuid { get; } = Guid.NewGuid();
     }
 
     public abstract class OCIRequest<TResponse> : OCIRequest where TResponse : OCICommand

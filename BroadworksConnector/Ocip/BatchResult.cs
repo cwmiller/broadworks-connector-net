@@ -11,11 +11,11 @@ namespace BroadWorksConnector.Ocip
     /// </summary>
     public class BatchResult : IEnumerable<OCIResponse>
     {
-        private readonly IDictionary<OCIRequest, OCIResponse> _dict = new Dictionary<OCIRequest, OCIResponse>();
+        private readonly IDictionary<Guid, OCIResponse> _dict = new Dictionary<Guid, OCIResponse>();
 
         internal BatchResult(IEnumerable<OCIRequest> requests, IEnumerable<OCIResponse> responses)
         {
-            _dict = requests.Zip(responses, (q, s) => new { q, s }).ToDictionary(x => x.q, x => x.s);
+            _dict = requests.Zip(responses, (q, s) => new { q, s }).ToDictionary(x => x.q.RequestGuid, x => x.s);
         }
 
         /// <summary>
@@ -26,12 +26,12 @@ namespace BroadWorksConnector.Ocip
         /// <returns></returns>
         public TResponse Get<TResponse>(OCIRequest<TResponse> request) where TResponse : OCICommand
         {
-            if (!_dict.ContainsKey(request))
+            if (!_dict.ContainsKey(request.RequestGuid))
             {
                 throw new ArgumentException("Object was not part of request", nameof(request));
             }
 
-            return _dict[request] as TResponse;
+            return _dict[request.RequestGuid] as TResponse;
         }
 
         public IEnumerator<OCIResponse> GetEnumerator() => _dict.Values.GetEnumerator();
