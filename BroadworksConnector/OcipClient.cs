@@ -18,7 +18,7 @@ namespace BroadWorksConnector
     /// <summary>
     /// Client for communicating with BroadWorks OCI-P
     /// </summary>
-    public class OcipClient : IDisposable
+    public class OcipClient : IOcipClient, IDisposable
     {
         private readonly string _username;
 
@@ -106,7 +106,7 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// Executes multiple commands in a single request
+        /// Execute multiple commands in a single request
         /// </summary>
         /// <param name="commands"></param>
         /// <param name="cancellationToken"></param>
@@ -161,7 +161,7 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// Authenticates against OCI-P using the provided username and password
+        /// Authenticate against OCI-P using the provided username and password
         /// </summary>
         /// <returns></returns>
         /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
