@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""958b78cc2a785d78259c1e8a474eb40d:95""}]")]
-    public class GroupMWIDeliveryToMobileEndpointCustomTemplateGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupMWIDeliveryToMobileEndpointCustomTemplateGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupMWIDeliveryToMobileEndpointCustomTemplateGetResponse>
     {
 
         private string _serviceProviderId;

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:8757"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:8761""}]}]")]
-    public class GroupUserHotelingGuestSettingsGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupUserHotelingGuestSettingsGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupUserHotelingGuestSettingsGetListResponse>
     {
 
         private string _serviceProviderId;

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
 
-    public class SystemDialPlanPolicyGetRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemDialPlanPolicyGetRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDialPlanPolicyGetResponse17>
     {
 
     }

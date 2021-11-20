@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24295""}]")]
-    public class SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemCallProcessingPolicyProfileVoiceXMLProfileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallProcessingPolicyProfileVoiceXMLProfileGetResponse>
     {
 
         private string _callProcessingPolicyProfileName;

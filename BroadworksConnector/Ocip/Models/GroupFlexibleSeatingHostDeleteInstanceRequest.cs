@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""43afb2158d313a1d1a148124d7caba1e:124""}]")]
-    public class GroupFlexibleSeatingHostDeleteInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupFlexibleSeatingHostDeleteInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _serviceUserId;

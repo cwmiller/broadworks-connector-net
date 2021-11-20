@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a69fde15f3aa7494d83b57461a7a70bb:154""}]")]
-    public class SystemAdviceOfChargeCostInformationSourceAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemAdviceOfChargeCostInformationSourceAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _peerIdentity;

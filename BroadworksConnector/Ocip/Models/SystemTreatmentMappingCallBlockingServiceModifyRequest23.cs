@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:12092""}]")]
-    public class SystemTreatmentMappingCallBlockingServiceModifyRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemTreatmentMappingCallBlockingServiceModifyRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private BroadWorksConnector.Ocip.Models.CallBlockingService23 _callBlockingService;

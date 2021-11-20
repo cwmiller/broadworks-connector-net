@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:12192""}]")]
-    public class GroupRoutePointGetDNISAnnouncementRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupRoutePointGetDNISAnnouncementRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupRoutePointGetDNISAnnouncementResponse20>
     {
 
         private BroadWorksConnector.Ocip.Models.DNISKey _dnisKey;

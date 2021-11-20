@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ca38ce43363a73a1079bbf73920b7a45:76""}]")]
-    public class SystemCallReturnModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemCallReturnModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private bool _twoLevelActivation;

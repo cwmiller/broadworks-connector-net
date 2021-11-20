@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
 
-    public class SystemAutomaticCollectCallGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemAutomaticCollectCallGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAutomaticCollectCallGetResponse22>
     {
 
     }

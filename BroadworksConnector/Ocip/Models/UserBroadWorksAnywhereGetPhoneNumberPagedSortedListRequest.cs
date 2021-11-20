@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:382"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:385"",""optional"":true}]}]")]
-    public class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserBroadWorksAnywhereGetPhoneNumberPagedSortedListResponse>
     {
 
         private string _userId;

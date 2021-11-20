@@ -82,31 +82,25 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
-        /// Executes a single Request
+        /// Execute a single command and receive the response
         /// </summary>
-        /// <param name="command"></param>
-        /// <returns></returns>
-        /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
-        /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
-        [Obsolete("Deprecated method. Use CallAsync instead.")]
-        public Task<OCICommand> Call(OCICommand command) => CallAsync(command);
-
-        /// <summary>
-        /// Executes a single Request
-        /// </summary>
+        /// <typeparam name="TResponse"></typeparam>
         /// <param name="command"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
-        /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
-        public async Task<OCICommand> CallAsync(OCICommand command, CancellationToken cancellationToken = default)
+        public async Task<TResponse> CallAsync<TResponse>(OCIRequest<TResponse> command, CancellationToken cancellationToken = default) where TResponse : OCICommand
         {
+            if (command == null)
+            {
+                throw new ArgumentNullException(nameof(command), "Command cannot be NULL");
+            }
+
             if (UserDetails == null)
             {
                 await LoginAsync(cancellationToken).ConfigureAwait(false);
             }
 
-            var responses = await ExecuteCommandsAsync(new List<OCICommand> { command }, cancellationToken).ConfigureAwait(false);
+            var responses = await ExecuteCommandsAsync<TResponse>(new List<OCIRequest<TResponse>> { command }, cancellationToken).ConfigureAwait(false);
 
             return responses.First();
         }
@@ -115,28 +109,36 @@ namespace BroadWorksConnector
         /// Executes multiple commands in a single request
         /// </summary>
         /// <param name="commands"></param>
-        /// <returns></returns>
-        /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
-        /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
-        [Obsolete("Deprecated method. Use CallAllAsync instead.")]
-        public Task<IEnumerable<OCICommand>> CallAll(IEnumerable<OCICommand> commands) => CallAllAsync(commands);
-
-        /// <summary>
-        /// Executes multiple commands in a single request
-        /// </summary>
-        /// <param name="commands"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
         /// <exception cref="ValidationException">Thrown when the given request fails local validation.</exception>
-        public async Task<IEnumerable<OCICommand>> CallAllAsync(IEnumerable<OCICommand> commands, CancellationToken cancellationToken = default)
+        public async Task<BatchResult> CallAllAsync(IEnumerable<OCIRequest> commands, CancellationToken cancellationToken = default)
         {
+            if (commands == null)
+            {
+                throw new ArgumentNullException(nameof(commands), "Command list cannot be NULL");
+            }
+
+            if (commands.Count() == 0)
+            {
+                throw new ArgumentException("Commands list cannot be empty.", nameof(commands));
+            }
+
+            // Do not allow duplicates
+            if (commands.Distinct().Count() != commands.Count())
+            {
+                throw new ArgumentException("Commands list cannot have any duplicate entries.", nameof(commands));
+            }
+
             if (UserDetails == null)
             {
                 await LoginAsync(cancellationToken).ConfigureAwait(false);
             }
 
-            return await ExecuteCommandsAsync(commands, cancellationToken).ConfigureAwait(false);
+            var responses = await ExecuteCommandsAsync<OCIResponse>(commands, cancellationToken).ConfigureAwait(false);
+
+            return new BatchResult(commands, responses);
         }
 
         /// <summary>
@@ -163,14 +165,6 @@ namespace BroadWorksConnector
         /// </summary>
         /// <returns></returns>
         /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
-        [Obsolete("Deprecated method. Use LoginAsync instead.")]
-        public Task<UserDetails> Login() => LoginAsync();
-
-        /// <summary>
-        /// Authenticates against OCI-P using the provided username and password
-        /// </summary>
-        /// <returns></returns>
-        /// <exception cref="LoginException">Thrown when the login to the server fails.</exception>
         public async Task<UserDetails> LoginAsync(CancellationToken cancellationToken = default)
         {
             await _semaphore.WaitAsync();
@@ -181,67 +175,11 @@ namespace BroadWorksConnector
                 {
                     if (Options.MinServerVersion == ServerVersion.R22)
                     {
-                        // Release 22 login will return reseller information if logging in as a reseller
-                        var loginRequest = new LoginRequest22V2
-                        {
-                            UserId = _username,
-                            Password = _password
-                        };
-
-                        var loginResponse = (await ExecuteCommandsAsync(new List<OCICommand> { loginRequest }, cancellationToken).ConfigureAwait(false)).First() as LoginResponse22V2;
-
-                        UserDetails = new UserDetails
-                        {
-                            LoginType = loginResponse.LoginType.ToString(),
-                            Locale = loginResponse.Locale,
-                            Encoding = loginResponse.Encoding,
-                            GroupId = loginResponse.GroupId,
-                            ServiceProviderId = loginResponse.ServiceProviderId,
-                            IsEnterprise = loginResponse.IsEnterprise,
-                            PasswordExpiresDays = loginResponse.PasswordExpiresDays,
-                            UserDomain = loginResponse.UserDomain,
-                            ResellerId = loginResponse.ResellerId
-                        };
+                        UserDetails = await Login22Async(cancellationToken);
                     }
                     else
                     {
-                        var authRequest = new AuthenticationRequest
-                        {
-                            UserId = _username
-                        };
-
-                        var authResponse = (await ExecuteCommandsAsync(new List<OCICommand> { authRequest }, cancellationToken).ConfigureAwait(false)).First() as AuthenticationResponse;
-                        string signedPassword = null;
-
-                        if (authResponse.PasswordAlgorithm == DigitalSignatureAlgorithm.MD5)
-                        {
-                            signedPassword = Md5($"{authResponse.Nonce}:{Sha1(_password)}");
-                        }
-                        else
-                        {
-                            throw new LoginException("Only MD5 supported for signing");
-                        }
-
-                        // Release 14sp4 if the default login method unless R22 is specified
-                        var loginRequest = new LoginRequest14sp4
-                        {
-                            UserId = _username,
-                            SignedPassword = signedPassword
-                        };
-
-                        var loginResponse = (await ExecuteCommandsAsync(new List<OCICommand> { loginRequest }, cancellationToken).ConfigureAwait(false)).First() as LoginResponse14sp4;
-
-                        UserDetails = new UserDetails
-                        {
-                            LoginType = loginResponse.LoginType.ToString(),
-                            Locale = loginResponse.Locale,
-                            Encoding = loginResponse.Encoding,
-                            GroupId = loginResponse.GroupId,
-                            ServiceProviderId = loginResponse.ServiceProviderId,
-                            IsEnterprise = loginResponse.IsEnterprise,
-                            PasswordExpiresDays = loginResponse.PasswordExpiresDays,
-                            UserDomain = loginResponse.UserDomain
-                        };
+                        UserDetails = await Login14Async(cancellationToken);
                     }
                 }
                 catch (ErrorResponseException e)
@@ -258,14 +196,90 @@ namespace BroadWorksConnector
         }
 
         /// <summary>
+        /// Perform login via V22 method
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        private async Task<UserDetails> Login22Async(CancellationToken cancellationToken = default)
+        {
+            // Release 22 login will return reseller information if logging in as a reseller
+            var loginRequest = new LoginRequest22V2
+            {
+                UserId = _username,
+                Password = _password
+            };
+
+            var loginResponse = (await ExecuteCommandsAsync<LoginResponse22V2>(new List<LoginRequest22V2> { loginRequest }, cancellationToken).ConfigureAwait(false)).First();
+
+            return new UserDetails
+            {
+                LoginType = loginResponse.LoginType.ToString(),
+                Locale = loginResponse.Locale,
+                Encoding = loginResponse.Encoding,
+                GroupId = loginResponse.GroupId,
+                ServiceProviderId = loginResponse.ServiceProviderId,
+                IsEnterprise = loginResponse.IsEnterprise,
+                PasswordExpiresDays = loginResponse.PasswordExpiresDays,
+                UserDomain = loginResponse.UserDomain,
+                ResellerId = loginResponse.ResellerId
+            };
+        }
+
+        /// <summary>
+        /// Perform login via V14 method
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        private async Task<UserDetails> Login14Async(CancellationToken cancellationToken = default)
+        {
+            var authRequest = new AuthenticationRequest
+            {
+                UserId = _username
+            };
+
+            var authResponse = (await ExecuteCommandsAsync<AuthenticationResponse>(new List<AuthenticationRequest> { authRequest }, cancellationToken).ConfigureAwait(false)).First();
+
+            string signedPassword = null;
+
+            if (authResponse.PasswordAlgorithm == DigitalSignatureAlgorithm.MD5)
+            {
+                signedPassword = Md5($"{authResponse.Nonce}:{Sha1(_password)}");
+            }
+            else
+            {
+                throw new LoginException("Only MD5 supported for signing");
+            }
+
+            var loginRequest = new LoginRequest14sp4
+            {
+                UserId = _username,
+                SignedPassword = signedPassword
+            };
+
+            var loginResponse = (await ExecuteCommandsAsync<LoginResponse14sp4>(new List<LoginRequest14sp4> { loginRequest }, cancellationToken).ConfigureAwait(false)).First();
+
+            return new UserDetails
+            {
+                LoginType = loginResponse.LoginType.ToString(),
+                Locale = loginResponse.Locale,
+                Encoding = loginResponse.Encoding,
+                GroupId = loginResponse.GroupId,
+                ServiceProviderId = loginResponse.ServiceProviderId,
+                IsEnterprise = loginResponse.IsEnterprise,
+                PasswordExpiresDays = loginResponse.PasswordExpiresDays,
+                UserDomain = loginResponse.UserDomain
+            };
+        }
+
+        /// <summary>
         /// Serializes the given list of commands to XML
         /// </summary>
         /// <param name="commands"></param>
         /// <returns></returns>
-        public string SerializeCommands(IEnumerable<OCICommand> commands)
+        public string SerializeCommands<T>(IEnumerable<T> commands) where T : OCICommand
         {
 
-            var broadsoftDocument = new BroadsoftDocument
+            var broadsoftDocument = new BroadsoftDocument<T>
             {
                 SessionId = _sessionId,
                 Protocol = "OCI",
@@ -282,12 +296,12 @@ namespace BroadWorksConnector
         /// <exception cref="BadResponseException">Thrown when server returns something that isn't expected.</exception>
         /// <exception cref="ErrorResponseException">Thrown when server returns an ErrorResponse object.</exception>
         /// <returns></returns>
-        private async Task<IEnumerable<OCICommand>> ExecuteCommandsAsync(IEnumerable<OCICommand> commands, CancellationToken cancellationToken = default)
+        private async Task<IEnumerable<TResponse>> ExecuteCommandsAsync<TResponse>(IEnumerable<OCIRequest> commands, CancellationToken cancellationToken = default) where TResponse : OCICommand
         {
             ValidateCommands(commands);
 
             var xml = SerializeCommands(commands);
-            BroadsoftDocument response = null;
+            BroadsoftDocument<TResponse> response = null;
 
             var responseXml = await Transport.SendAsync(xml, cancellationToken).ConfigureAwait(false);
 
@@ -298,14 +312,14 @@ namespace BroadWorksConnector
 
             try
             {
-                response = _serializer.Deserialize(responseXml);
+                response = _serializer.Deserialize<TResponse>(responseXml);
             }
             catch (Exception e)
             {
                 throw new BadResponseException("Unable to deserialize response.", e);
             }
 
-            if (!(response is BroadsoftDocument))
+            if (!(response is BroadsoftDocument<TResponse>))
             {
                 throw new BadResponseException("Response did not include a BroadsoftDocument element.");
             }

@@ -3863,9 +3863,18 @@ namespace BroadWorksConnector.Ocip.Models.C
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.UserMeetMeConferencingModifyConferenceGreetingExecutionServerRequest))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.UserVoiceMessagingUserModifyGreetingExecutionServerRequest))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.UserVoiceMessagingUserModifyVoicePortalExecutionServerRequest))]
+    [XmlInclude(typeof(OCIRequest<>))]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:129""}]")]
     public abstract class OCIRequest : BroadWorksConnector.Ocip.Models.C.OCICommand
+    {
+        /// <summary>
+        /// Internal ID for tracking requests
+        /// </summary>
+        [XmlIgnore]
+        internal Guid RequestGuid { get; } = Guid.NewGuid();
+    }
+
+    public abstract class OCIRequest<TResponse> : OCIRequest where TResponse : OCICommand
     {
 
     }

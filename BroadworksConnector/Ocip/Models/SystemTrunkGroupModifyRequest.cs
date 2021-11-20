@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1775""}]")]
-    public class SystemTrunkGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemTrunkGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private bool _enforceCLIDServiceAssignmentForPilotUser;

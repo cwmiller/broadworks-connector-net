@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models.C
     [Serializable]
     [XmlRoot(Namespace = "C")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4fe2b27a39183ba1462cf843ba9617:22""}]")]
+
     public class ExternalUserIdentity
     {
 

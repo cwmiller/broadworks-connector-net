@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:1165""}]")]
-    public class SystemVoiceMessagingGroupModifyRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemVoiceMessagingGroupModifyRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private bool _realDeleteForImap;

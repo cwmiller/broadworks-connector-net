@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:592""}]")]
-    public class GroupAccessDeviceFileGetListRequest14sp8 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupAccessDeviceFileGetListRequest14sp8 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupAccessDeviceFileGetListResponse14sp8>
     {
 
         private string _serviceProviderId;

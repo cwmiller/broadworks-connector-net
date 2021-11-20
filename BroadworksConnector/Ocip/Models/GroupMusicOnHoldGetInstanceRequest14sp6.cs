@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:11296""}]")]
-    public class GroupMusicOnHoldGetInstanceRequest14sp6 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupMusicOnHoldGetInstanceRequest14sp6 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupMusicOnHoldGetInstanceResponse14sp6>
     {
 
         private string _serviceProviderId;

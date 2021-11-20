@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4703"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4704""}]}]")]
-    public class ServiceProviderAccessDeviceGetRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class ServiceProviderAccessDeviceGetRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderAccessDeviceGetResponse22V2>
     {
 
         private string _serviceProviderId;

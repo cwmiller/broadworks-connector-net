@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
 
-    public class SystemSystemServiceCallProcessingPoliciesGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemSystemServiceCallProcessingPoliciesGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemSystemServiceCallProcessingPoliciesGetResponse>
     {
 
     }

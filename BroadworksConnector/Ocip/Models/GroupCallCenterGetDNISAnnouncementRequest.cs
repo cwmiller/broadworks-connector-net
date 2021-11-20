@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:5350""}]")]
-    public class GroupCallCenterGetDNISAnnouncementRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class GroupCallCenterGetDNISAnnouncementRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallCenterGetDNISAnnouncementResponse>
     {
 
         private BroadWorksConnector.Ocip.Models.DNISKey _dnisKey;

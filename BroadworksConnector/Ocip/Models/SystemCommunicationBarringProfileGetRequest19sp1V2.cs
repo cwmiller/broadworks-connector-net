@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6437""}]")]
-    public class SystemCommunicationBarringProfileGetRequest19sp1V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemCommunicationBarringProfileGetRequest19sp1V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCommunicationBarringProfileGetResponse19sp1V2>
     {
 
         private string _name;

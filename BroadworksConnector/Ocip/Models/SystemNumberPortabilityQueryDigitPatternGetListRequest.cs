@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13074""}]")]
-    public class SystemNumberPortabilityQueryDigitPatternGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemNumberPortabilityQueryDigitPatternGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemNumberPortabilityQueryDigitPatternGetListResponse>
     {
 
         private List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityQueryDigitPattern> _searchCriteriaNumberPortabilityQueryDigitPattern = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaNumberPortabilityQueryDigitPattern>();

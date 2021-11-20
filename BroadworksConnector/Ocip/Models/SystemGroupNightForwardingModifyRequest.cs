@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1a3849774e8d2ffd90c3a2c57cbdd7a0:132""}]")]
-    public class SystemGroupNightForwardingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemGroupNightForwardingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private bool _nightForwardGroupCallsWithinEnterprise;

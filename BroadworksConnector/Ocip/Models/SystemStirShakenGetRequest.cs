@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
 
-    public class SystemStirShakenGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemStirShakenGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemStirShakenGetResponse>
     {
 
     }

@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:485""}]")]
-    public class EnterpriseLocalGatewayGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class EnterpriseLocalGatewayGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.EnterpriseLocalGatewayGetPagedSortedListResponse>
     {
 
         private string _serviceProviderId;

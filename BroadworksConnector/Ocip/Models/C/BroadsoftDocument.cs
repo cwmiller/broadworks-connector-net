@@ -3,7 +3,7 @@
 namespace BroadWorksConnector.Ocip.Models.C
 {
     [XmlRoot(Namespace = "C")]
-    public class BroadsoftDocument : OCIMessage
+    public class BroadsoftDocument<T> : OCIMessage<T> where T : OCICommand
     {
         [XmlAttribute(AttributeName = "protocol")]
         public string Protocol { get; set; }

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1226""}]")]
-    public class SystemAccessDeviceGetListRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemAccessDeviceGetListRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAccessDeviceGetListResponse14>
     {
 
         private int _responseSizeLimit;

@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
 
-    public class SystemExportSubscriberRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemExportSubscriberRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
     }

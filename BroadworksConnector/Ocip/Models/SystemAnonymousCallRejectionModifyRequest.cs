@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b25f8a296bf72b8b383a287bee9127d:77""}]")]
-    public class SystemAnonymousCallRejectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemAnonymousCallRejectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private bool _paiRequired;

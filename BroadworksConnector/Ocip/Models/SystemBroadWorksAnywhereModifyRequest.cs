@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:248""}]")]
-    public class SystemBroadWorksAnywhereModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemBroadWorksAnywhereModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private bool _enableTransferNotification;

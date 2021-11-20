@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
 
-    public class SystemGETSGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemGETSGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemGETSGetResponse>
     {
 
     }

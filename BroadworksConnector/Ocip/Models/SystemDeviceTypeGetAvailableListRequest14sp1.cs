@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25808""}]")]
-    public class SystemDeviceTypeGetAvailableListRequest14sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemDeviceTypeGetAvailableListRequest14sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponse14sp1>
     {
 
         private bool _allowConference;

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:12255""}]")]
-    public class SystemMigratedUsersGetListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemMigratedUsersGetListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemMigratedUsersGetListResponse22>
     {
 
         private int _userListSizeLimit;

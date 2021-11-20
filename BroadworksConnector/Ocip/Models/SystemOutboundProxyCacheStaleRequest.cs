@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14119"",""optional"":true}]")]
-    public class SystemOutboundProxyCacheStaleRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemOutboundProxyCacheStaleRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _resellerId;

@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:153""}]")]
-    public class DeviceManagementFileAuthLocationGetRequest22V3 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class DeviceManagementFileAuthLocationGetRequest22V3 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.DeviceManagementFileAuthLocationGetResponse22V3>
     {
 
         private BroadWorksConnector.Ocip.Models.DeviceAccessProtocol22 _deviceAccessProtocol;

@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:32006""}]")]
-    public class SystemSIPDeviceTypeGetRequest18 : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemSIPDeviceTypeGetRequest18 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemSIPDeviceTypeGetResponse18>
     {
 
         private string _deviceType;

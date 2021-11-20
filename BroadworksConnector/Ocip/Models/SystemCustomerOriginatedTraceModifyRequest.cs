@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""55636b88804490cf0ead7c9d4f44f28d:73""}]")]
-    public class SystemCustomerOriginatedTraceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class SystemCustomerOriginatedTraceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private bool _screenMaliciousCallers;

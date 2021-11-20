@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ba512c9f02a5f24a24d49cc945f1524d:72""}]")]
-    public class ServiceProviderBroadWorksCommunicatorModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest
+    public class ServiceProviderBroadWorksCommunicatorModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _serviceProviderId;
