@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.1] - 2021-11-20
+### Fixed
+- Fixed exception being thrown by `Validator` when a nillable property was set to null.
+
 ## [2.0.0] - 2021-11-20
 ### Changed
 - `CallAsync` now infers the response type for a request instead of just returning the `OCICommand` base type.
@@ -10,7 +14,7 @@
 - All of the per-request methods have been removed in favor of using `CallAsync` for all requests.
 
 ### Added
-- Added interface IOcipClient which OcipClient implements.
+- Added interface `IOcipClient` which `OcipClient` implements.
 
 ## [1.4.0] - 2021-07-04
 ### Changed
