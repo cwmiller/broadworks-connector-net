@@ -202,37 +202,37 @@ namespace BroadWorksConnector.Ocip.Validation
                 switch (attribute)
                 {
                     case LengthAttribute attr:
-                        if (value.ToString().Length != attr.Length)
+                        if (value != null && value.ToString().Length != attr.Length)
                         {
                             errors.Add(new LengthError(instance, property.Name, value.ToString().Length, attr.Length));
                         }
                         break;
                     case MinLengthAttribute attr:
-                        if (value.ToString().Length < attr.Length)
+                        if (value != null && value.ToString().Length < attr.Length)
                         {
                             errors.Add(new MinLengthError(instance, property.Name, value.ToString().Length, attr.Length));
                         }
                         break;
                     case MaxLengthAttribute attr:
-                        if (value.ToString().Length > attr.Length)
+                        if (value != null && value.ToString().Length > attr.Length)
                         {
                             errors.Add(new MaxLengthError(instance, property.Name, value.ToString().Length, attr.Length));
                         }
                         break;
                     case MinInclusiveAttribute attr:
-                        if ((int)value < attr.Minimum)
+                        if (value != null && (int)value < attr.Minimum)
                         {
                             errors.Add(new MinInclusiveError(instance, property.Name, (int)value, attr.Minimum));
                         }
                         break;
                     case MaxInclusiveAttribute attr:
-                        if ((int)value > attr.Maximum)
+                        if (value != null && (int)value > attr.Maximum)
                         {
                             errors.Add(new MaxInclusiveError(instance, property.Name, (int)value, attr.Maximum));
                         }
                         break;
                     case RegularExpressionAttribute attr:
-                        if (!Regex.IsMatch(value.ToString(), attr.Pattern))
+                        if (value != null && !Regex.IsMatch(value.ToString(), attr.Pattern))
                         {
                             errors.Add(new PatternError(instance, property.Name, value.ToString(), attr.Pattern));
                         }
