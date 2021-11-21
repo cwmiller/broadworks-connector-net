@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.4.1] - 2021-11-20
+### Fixed
+- Fixed exception being thrown by `Validator` when a nillable property was set to null.
+
 ## [1.4.0] - 2021-07-04
 ### Changed
 - Updated all models using `Rel_24.0_1.944` schema files.
