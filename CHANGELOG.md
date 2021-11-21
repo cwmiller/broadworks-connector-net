@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0] - 2021-11-20
+### Changed
+- `CallAsync` now infers the response type for a request instead of just returning the `OCICommand` base type.
+- `CallAllAsync` now returns a `BatchResult` object which can be iterated on like previously, but also has a `Get` method for retrieving the response for a specific request.
+- Exceptions occuring within `TcpTransport` are no longer caught and wrapped in `BadResponseException`.
+
+### Removed
+- All of the per-request methods have been removed in favor of using `CallAsync` for all requests.
+
+### Added
+- Added interface IOcipClient which OcipClient implements.
+
 ## [1.4.0] - 2021-07-04
 ### Changed
 - Updated all models using `Rel_24.0_1.944` schema files.

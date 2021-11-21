@@ -42,7 +42,7 @@ var req1 = new UserGetListInGroupRequest
 
 try
 {
-    var response = await ocip.UserGetListInGroupRequestAsync(req1);
+    var response = await ocip.CallAsync(req1);
 
     foreach (var row in response.UserTable.Row)
     {
@@ -58,7 +58,7 @@ catch (ValidationException e)
     Console.WriteLine($"Validation Error: {e.Message}");
 }
 
-// Multiple requests can be executed in a single call to the API too via the callAll method.
+// Multiple requests can be executed in a single call to the API too via the CallAllAsync method.
 // Here we'll add another request that retrieves all users from another group whose last name starts with an M.
 
 var req2 = new UserGetListInGroupRequest
@@ -77,15 +77,27 @@ var req2 = new UserGetListInGroupRequest
 
 try
 {
-    var responses = await ocip.CallAllAsync(new OCICommand[] { req1, req2 });
+    var responses = await ocip.CallAllAsync(new OCIRequest[] { req1, req2 });
 
     foreach (var response in responses)
     {
-        foreach (var row in (response as UserGetListInGroupResponse).UserTable.Row)
+        if (response is UserGetListInGroupResponse r)
         {
-            Console.WriteLine(row.Col[0]);
+            foreach (var row in r.UserTable.Row)
+            {
+                Console.WriteLine(row.Col[0]);
+            }
         }
     }
+
+    // The response for a request can be also be retreived
+    var res2 = responses.Get(req2);
+
+    foreach (var row in res2.UserTable.Row)
+    {
+        Console.WriteLine(row.Col[0]);
+    }
+
 }
 catch (ErrorResponseException e)
 {
