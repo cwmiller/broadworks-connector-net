@@ -446,5 +446,31 @@ namespace BroadWorksConnector.Tests
             Assert.False(results.Success);
             Assert.Equal(2, results.Errors.Count());
         }
+
+        [Fact]
+        public void TestNillablePropertyNull()
+        {
+            var request = new UserModifyRequest22()
+            {
+                UserId = "john.doe@test.com",
+                PhoneNumber = null
+            };
+            var results = Validator.Validate(request);
+            Assert.True(results.Success);
+        }
+
+        [Fact]
+        public void TestNillablePropertyFilled()
+        {
+            var request = new UserModifyRequest22()
+            {
+                UserId = "john.doe@test.com",
+                PhoneNumber = "15555555555"
+            };
+            var results = Validator.Validate(request);
+            Assert.True(results.Success);
+        }
+
+
     }
 }
