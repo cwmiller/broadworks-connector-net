@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.1.0] - 2021-12-18
+### Changed
+- Adjusted models for TIII-81498 which adds customerId and secretKey fields to the Third-Party Emergency Calling service at SP/Ent/Group levels.
+
 ## [2.0.1] - 2021-11-20
 ### Fixed
 - Fixed exception being thrown by `Validator` when a nillable property was set to null.
@@ -103,6 +107,9 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[2.1.0]: https://github.com/cwmiller/broadworks-connector-net/compare/2.0.1...2.1.0
+[2.0.1]: https://github.com/cwmiller/broadworks-connector-net/compare/2.0.0...2.0.1
+[2.0.0]: https://github.com/cwmiller/broadworks-connector-net/compare/1.4.0...2.0.0
 [1.4.0]: https://github.com/cwmiller/broadworks-connector-net/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/cwmiller/broadworks-connector-net/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/cwmiller/broadworks-connector-net/compare/1.1.0...1.2.0
