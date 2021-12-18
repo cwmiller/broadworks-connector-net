@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1679""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1680""}]")]
     public class GroupAdminGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1679")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1680")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1679")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1680")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1679")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1680")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1679")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1680")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1679")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1680")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _locale;
 
         [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1679")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1680")]
         [MaxLength(20)]
         public string Locale
         {
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _encoding;
 
         [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1679")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1680")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Encoding

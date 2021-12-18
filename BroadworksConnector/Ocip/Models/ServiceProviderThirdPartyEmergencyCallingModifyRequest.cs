@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6991""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:7026""}]")]
     public class ServiceProviderThirdPartyEmergencyCallingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6991")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7026")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6991")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7026")]
         public bool AllowActivation
         {
             get => _allowActivation;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "customerId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6991")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7026")]
         [MinLength(1)]
         [MaxLength(36)]
         public string CustomerId
@@ -75,6 +75,26 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool CustomerIdSpecified { get; set; }
+
+        private string _secretKey;
+
+        [XmlElement(ElementName = "secretKey", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7026")]
+        [MinLength(1)]
+        [MaxLength(16)]
+        public string SecretKey
+        {
+            get => _secretKey;
+            set
+            {
+                SecretKeySpecified = true;
+                _secretKey = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool SecretKeySpecified { get; set; }
 
     }
 }

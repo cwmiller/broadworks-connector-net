@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:8488""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:8527""}]")]
     public class GroupTrunkGroupGetAvailableDetailListResponseTrunkGroup
     {
 
         private string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8488")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8527")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8488")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8527")]
         public bool StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8488")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8527")]
         public bool UseDomain
         {
             get => _useDomain;

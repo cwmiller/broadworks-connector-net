@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1925""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1926""}]")]
     public class GroupAnnouncementFileGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementTable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1925")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1926")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AnnouncementTable
         {
             get => _announcementTable;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _totalFileSize;
 
         [XmlElement(ElementName = "totalFileSize", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1925")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1926")]
         public int TotalFileSize
         {
             get => _totalFileSize;
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         private int _maxFileSize;
 
         [XmlElement(ElementName = "maxFileSize", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1925")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1926")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int MaxFileSize

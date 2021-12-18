@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:8448""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:8485""}]")]
     public class GroupThirdPartyEmergencyCallingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8448")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8485")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8448")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8485")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableDeviceManagement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8448")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8485")]
         public bool EnableDeviceManagement
         {
             get => _enableDeviceManagement;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableRouting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8448")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8485")]
         public bool EnableRouting
         {
             get => _enableRouting;
@@ -92,6 +92,46 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool EnableRoutingSpecified { get; set; }
+
+        private string _customerId;
+
+        [XmlElement(ElementName = "customerId", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8485")]
+        [MinLength(1)]
+        [MaxLength(36)]
+        public string CustomerId
+        {
+            get => _customerId;
+            set
+            {
+                CustomerIdSpecified = true;
+                _customerId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool CustomerIdSpecified { get; set; }
+
+        private string _secretKey;
+
+        [XmlElement(ElementName = "secretKey", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8485")]
+        [MinLength(1)]
+        [MaxLength(16)]
+        public string SecretKey
+        {
+            get => _secretKey;
+            set
+            {
+                SecretKeySpecified = true;
+                _secretKey = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool SecretKeySpecified { get; set; }
 
     }
 }

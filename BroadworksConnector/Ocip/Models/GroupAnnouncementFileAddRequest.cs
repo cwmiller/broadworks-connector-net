@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1823"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1824"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1825""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1830""}]}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1824"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1825"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1826""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1831""}]}]}]")]
     public class GroupAnnouncementFileAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1825")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1826")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1825")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1826")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _announcementFileName;
 
         [XmlElement(ElementName = "announcementFileName", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1825")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1826")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AnnouncementFileName
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _groupExternalId;
 
         [XmlElement(ElementName = "groupExternalId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1830")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1831")]
         [MaxLength(36)]
         public string GroupExternalId
         {
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         private string _announcementFileExternalId;
 
         [XmlElement(ElementName = "announcementFileExternalId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1830")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1831")]
         [MaxLength(36)]
         public string AnnouncementFileExternalId
         {
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _announcementFile;
 
         [XmlElement(ElementName = "announcementFile", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1823")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1824")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AnnouncementFile
         {
             get => _announcementFile;

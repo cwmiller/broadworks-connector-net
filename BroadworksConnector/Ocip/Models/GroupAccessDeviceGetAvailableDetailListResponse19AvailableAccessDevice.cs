@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:778""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:779""}]")]
     public class GroupAccessDeviceGetAvailableDetailListResponse19AvailableAccessDevice
     {
 
         private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:778")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:779")]
         public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
         {
             get => _accessDevice;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:778")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:779")]
         public bool StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:778")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:779")]
         public bool UseDomain
         {
             get => _useDomain;
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _staticLineOrdering;
 
         [XmlElement(ElementName = "staticLineOrdering", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:778")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:779")]
         public bool StaticLineOrdering
         {
             get => _staticLineOrdering;

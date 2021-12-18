@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:852""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:853""}]")]
     public class GroupAccessDeviceGetEnhancedConfigurationTypeResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         private bool _supportsEnhancedConfiguration;
 
         [XmlElement(ElementName = "supportsEnhancedConfiguration", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:852")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:853")]
         public bool SupportsEnhancedConfiguration
         {
             get => _supportsEnhancedConfiguration;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private bool _supportsReset;
 
         [XmlElement(ElementName = "supportsReset", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:852")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:853")]
         public bool SupportsReset
         {
             get => _supportsReset;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurationType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:852")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:853")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigurationType
         {
             get => _configurationType;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:852")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:853")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ConfigurationFileName

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:9047""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:9086""}]")]
     public class SortOrderGroupAccessDeviceGetPagedSortedList
     {
 
         private BroadWorksConnector.Ocip.Models.SortByDeviceName _sortByDeviceName;
 
         [XmlElement(ElementName = "sortByDeviceName", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9047")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9086")]
         public BroadWorksConnector.Ocip.Models.SortByDeviceName SortByDeviceName
         {
             get => _sortByDeviceName;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SortByDeviceType _sortByDeviceType;
 
         [XmlElement(ElementName = "sortByDeviceType", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9047")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9086")]
         public BroadWorksConnector.Ocip.Models.SortByDeviceType SortByDeviceType
         {
             get => _sortByDeviceType;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SortByDeviceNetAddress _sortByDeviceNetAddress;
 
         [XmlElement(ElementName = "sortByDeviceNetAddress", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9047")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9086")]
         public BroadWorksConnector.Ocip.Models.SortByDeviceNetAddress SortByDeviceNetAddress
         {
             get => _sortByDeviceNetAddress;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         private BroadWorksConnector.Ocip.Models.SortByDeviceMACAddress _sortByDeviceMACAddress;
 
         [XmlElement(ElementName = "sortByDeviceMACAddress", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9047")]
+        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9086")]
         public BroadWorksConnector.Ocip.Models.SortByDeviceMACAddress SortByDeviceMACAddress
         {
             get => _sortByDeviceMACAddress;

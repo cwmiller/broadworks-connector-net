@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:7045""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:7081""}]")]
     public class ServiceProviderXsiPolicyProfileAssignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         private string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7045")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7081")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "spXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7045")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7081")]
         [MinLength(1)]
         [MaxLength(40)]
         public string SpXsiPolicyProfile
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7045")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7081")]
         public BroadWorksConnector.Ocip.Models.XsiPolicyProfileAssignEntry GroupXsiPolicyProfile
         {
             get => _groupXsiPolicyProfile;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7045")]
+        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7081")]
         public BroadWorksConnector.Ocip.Models.XsiPolicyProfileAssignEntry UserXsiPolicyProfile
         {
             get => _userXsiPolicyProfile;
