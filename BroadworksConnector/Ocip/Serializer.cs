@@ -49,6 +49,18 @@ namespace BroadWorksConnector.Ocip
         }
 
         /// <summary>
+        /// Deserialize a response to a BroadsoftDocument object
+        /// </summary>
+        /// <param name="xml"></param>
+        /// <returns></returns>
+        public BroadsoftDocument<OCICommand> Deserialize(string xml)
+        {
+            var document = XDocument.Parse(xml);
+
+            return DeserializeElement(document.Root, typeof(BroadsoftDocument<OCICommand>)) as BroadsoftDocument<OCICommand>;
+        }
+
+        /// <summary>
         /// Serialize the root object for a request.
         /// This should always be BroadsoftDocument
         /// </summary>

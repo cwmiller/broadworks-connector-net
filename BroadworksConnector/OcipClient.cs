@@ -100,9 +100,9 @@ namespace BroadWorksConnector
                 await LoginAsync(cancellationToken).ConfigureAwait(false);
             }
 
-            var responses = await ExecuteCommandsAsync<TResponse>(new List<OCIRequest<TResponse>> { command }, cancellationToken).ConfigureAwait(false);
+            var responses = await ExecuteCommandsAsync(new List<OCIRequest<TResponse>> { command }, cancellationToken).ConfigureAwait(false);
 
-            return responses.First();
+            return responses.First() as TResponse;
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace BroadWorksConnector
                 await LoginAsync(cancellationToken).ConfigureAwait(false);
             }
 
-            var responses = await ExecuteCommandsAsync<OCIResponse>(commands, cancellationToken).ConfigureAwait(false);
+            var responses = await ExecuteCommandsAsync(commands, cancellationToken).ConfigureAwait(false);
 
             return new BatchResult(commands, responses);
         }
@@ -209,7 +209,7 @@ namespace BroadWorksConnector
                 Password = _password
             };
 
-            var loginResponse = (await ExecuteCommandsAsync<LoginResponse22V2>(new List<LoginRequest22V2> { loginRequest }, cancellationToken).ConfigureAwait(false)).First();
+            var loginResponse = (await ExecuteCommandsAsync(new LoginRequest22V2[] { loginRequest }, cancellationToken).ConfigureAwait(false)).First() as LoginResponse22V2;
 
             return new UserDetails
             {
@@ -237,7 +237,7 @@ namespace BroadWorksConnector
                 UserId = _username
             };
 
-            var authResponse = (await ExecuteCommandsAsync<AuthenticationResponse>(new List<AuthenticationRequest> { authRequest }, cancellationToken).ConfigureAwait(false)).First();
+            var authResponse = (await ExecuteCommandsAsync(new AuthenticationRequest[] { authRequest }, cancellationToken).ConfigureAwait(false)).First() as AuthenticationResponse;
 
             string signedPassword = null;
 
@@ -256,7 +256,7 @@ namespace BroadWorksConnector
                 SignedPassword = signedPassword
             };
 
-            var loginResponse = (await ExecuteCommandsAsync<LoginResponse14sp4>(new List<LoginRequest14sp4> { loginRequest }, cancellationToken).ConfigureAwait(false)).First();
+            var loginResponse = (await ExecuteCommandsAsync(new LoginRequest14sp4[] { loginRequest }, cancellationToken).ConfigureAwait(false)).First() as LoginResponse14sp4;
 
             return new UserDetails
             {
@@ -296,12 +296,12 @@ namespace BroadWorksConnector
         /// <exception cref="BadResponseException">Thrown when server returns something that isn't expected.</exception>
         /// <exception cref="ErrorResponseException">Thrown when server returns an ErrorResponse object.</exception>
         /// <returns></returns>
-        private async Task<IEnumerable<TResponse>> ExecuteCommandsAsync<TResponse>(IEnumerable<OCIRequest> commands, CancellationToken cancellationToken = default) where TResponse : OCICommand
+        private async Task<IEnumerable<OCIResponse>> ExecuteCommandsAsync(IEnumerable<OCIRequest> commands, CancellationToken cancellationToken = default) 
         {
             ValidateCommands(commands);
 
             var xml = SerializeCommands(commands);
-            BroadsoftDocument<TResponse> response = null;
+            BroadsoftDocument<OCIResponse> response = null;
 
             var responseXml = await Transport.SendAsync(xml, cancellationToken).ConfigureAwait(false);
 
@@ -312,14 +312,14 @@ namespace BroadWorksConnector
 
             try
             {
-                response = _serializer.Deserialize<TResponse>(responseXml);
+                response = _serializer.Deserialize<OCIResponse>(responseXml);
             }
             catch (Exception e)
             {
                 throw new BadResponseException("Unable to deserialize response.", e);
             }
 
-            if (!(response is BroadsoftDocument<TResponse>))
+            if (!(response is BroadsoftDocument<OCIResponse>))
             {
                 throw new BadResponseException("Response did not include a BroadsoftDocument element.");
             }
